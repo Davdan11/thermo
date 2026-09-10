@@ -152,5 +152,6 @@ export async function POST(req: NextRequest) {
   }
   if (!crm.ok) console.warn(`[/api/leads] ${entry.id} reçu sans CRM (${crm.reason}) — voir data/leads.`);
 
-  return NextResponse.json({ success: true, message: "Demande reçue.", emailSent: clientSent === true });
+  // dealId et journalId permettent au client de réserver ensuite un appel (POST /api/rdv) rattaché au même dossier.
+  return NextResponse.json({ success: true, message: "Demande reçue.", emailSent: clientSent === true, dealId, journalId: entry.id });
 }

@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, Zap, Mail, Phone, CalendarCheck } from "lucide-react";
+import { ArrowRight, CalendarCheck } from "lucide-react";
+import { bookableDates, CALL_WINDOWS, formatDay, type CallWindow } from "@/lib/crm/rdv";
 
 /* ─────────────────────────────────────────────────────────────────────────
    Page /soumission — "Votre projet est prêt à être évalué."
@@ -90,6 +91,10 @@ export default function SoumissionPage() {
   const [honeypot, setHoneypot] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [leadRef, setLeadRef] = useState<{ dealId?: number; journalId?: string }>({});
+  const [rdv, setRdv] = useState<{ date: string; window: CallWindow | "" }>({ date: "", window: "" });
+  const [rdvState, setRdvState] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const [rdvWhen, setRdvWhen] = useState("");
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -196,6 +201,7 @@ export default function SoumissionPage() {
       }
       const data = await res.json().catch(() => ({}));
       setEmailSent(!!data?.emailSent);
+      setLeadRef({ dealId: typeof data?.dealId === "number" ? data.dealId : undefined, journalId: typeof data?.journalId === "string" ? data.journalId : undefined });
       track("lead_submitted", { method: contact.methode, has_thermomatch: !!(draftRaw.modeleSelectionne || project.modele), moment: contact.moment || "aucun" });
       setSuccess(true);
     } catch (e) {
@@ -205,84 +211,153 @@ export default function SoumissionPage() {
     }
   }
 
+  async function bookRdv() {
+    if (!rdv.date || !rdv.window || rdvState === "sending") return;
+    setRdvState("sending");
+    try {
+      const res = await fetch("/api/rdv", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: contact.prenom,
+          email: contact.courriel,
+          phone: contact.telephone,
+          dealId: leadRef.dealId,
+          leadJournalId: leadRef.journalId,
+          date: rdv.date,
+          window: rdv.window,
+          website: honeypot,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "");
+      setRdvWhen(typeof data.when === "string" ? data.when : "");
+      setRdvState("done");
+      track("rdv_booked", { window: rdv.window });
+    } catch {
+      setRdvState("error");
+    }
+  }
+
   /* ── Success screen ── */
   if (success) {
-    const finalDraft = typeof window !== 'undefined' ? JSON.parse(sessionStorage.getItem('thermomatch-answers') || '{}') : {};
+    const finalDraft = typeof window !== "undefined" ? JSON.parse(sessionStorage.getItem("thermomatch-answers") || "{}") : {};
     const tmResult = finalDraft?.thermoMatchResult;
-    
+    const dates = bookableDates(5);
+    const rowStyle = { display: "grid", gridTemplateColumns: "150px 1fr", gap: 16, padding: "14px 0", borderBottom: "1px solid #f0ebe4" } as const;
+    const chip = (active: boolean) => ({
+      padding: "10px 14px", fontSize: 13.5, fontWeight: 600, cursor: "pointer", borderRadius: 6,
+      border: active ? `1.5px solid ${NAVY}` : "1px solid #d9d2c8",
+      background: active ? NAVY : "#fff", color: active ? "#fff" : NAVY, transition: "all .15s",
+    });
+    const steps: Array<[string, string]> = [
+      ["Appel de validation", rdvState === "done" && rdvWhen ? `Réservé : ${rdvWhen}.` : contact.moment ? `Sous un jour ouvrable, ${contact.moment.toLowerCase()} comme demandé.` : "Sous un jour ouvrable, au numéro laissé."],
+      ["Visite d\u2019un installateur licencié RBQ", "Évaluation de la maison, du panneau électrique et de l\u2019emplacement. Gratuite et sans engagement."],
+      ["Soumission écrite", "Équipement, installation, électricité, garantie et subvention LogisVert, pour votre maison précise."],
+    ];
+
     return (
-      <div style={{ minHeight: "100vh", backgroundColor: CREAM, display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 20px" }}>
-        <div style={{ maxWidth: 580, width: "100%", backgroundColor: "#fff", borderRadius: 24, padding: "50px 40px", boxShadow: "0 20px 60px rgba(0,0,0,0.06)", position: "relative", overflow: "hidden" }}>
-          
-          <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 6, background: `linear-gradient(90deg, ${ORANGE}, #f77f52)` }} />
+      <div style={{ minHeight: "100vh", backgroundColor: CREAM, display: "flex", alignItems: "flex-start", justifyContent: "center", padding: "56px 20px 80px" }}>
+        <div style={{ maxWidth: 640, width: "100%", backgroundColor: "#fff", border: "1px solid #e4ddd5", borderRadius: 10, overflow: "hidden" }}>
 
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: 24 }}>
-            <div style={{ width: 64, height: 64, borderRadius: "50%", backgroundColor: "rgba(22, 163, 74, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#16a34a" }}>
-              <CheckCircle2 size={32} strokeWidth={2.5} />
-            </div>
+          <div style={{ padding: "34px 36px 8px", borderBottom: "1px solid #e4ddd5" }}>
+            <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: ORANGE }}>Demande reçue</p>
+            <h1 style={{ margin: "10px 0 8px", fontSize: 30, fontWeight: 800, color: NAVY, letterSpacing: "-0.02em", lineHeight: 1.15 }}>
+              Merci, {contact.prenom || "et à bientôt"}.
+            </h1>
+            <p style={{ margin: "0 0 22px", fontSize: 15, color: "#536873", lineHeight: 1.6 }}>
+              Votre dossier est enregistré{emailSent ? " et un récapitulatif vient de vous être envoyé par courriel" : ""}. Voici la suite, dans l&apos;ordre.
+            </p>
           </div>
-          
-          <h1 style={{ fontSize: 32, fontWeight: 800, color: NAVY, margin: "0 0 12px", textAlign: "center", letterSpacing: "-0.02em" }}>
-            Merci, {contact.prenom || "Client"} !
-          </h1>
-          <p style={{ color: "#536873", fontSize: 16, lineHeight: 1.65, margin: "0 0 40px", textAlign: "center" }}>
-            Votre dossier est entre les mains de notre équipe. Un installateur partenaire licencié RBQ de votre région l'évaluera avec vous, et le prix se fera cas par cas, pour votre maison.
-          </p>
 
-          {tmResult?.bestMatch && (
-            <div style={{ backgroundColor: "#f8fafc", borderRadius: 16, padding: 24, marginBottom: 32, border: "1px solid #e2e8f0" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16, color: NAVY, fontWeight: 700, fontSize: 14, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                <Zap size={16} color={ORANGE} />
-                Vos Résultats de l'Algorithme
-              </div>
-              
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-                <div>
-                  <p style={{ fontSize: 12, color: "#64748b", margin: "0 0 4px", fontWeight: 600 }}>MARQUE OPTIMALE</p>
-                  <p style={{ fontSize: 16, color: NAVY, fontWeight: 700, margin: 0 }}>{tmResult.bestMatch.brand}</p>
+          <ol style={{ margin: 0, padding: "6px 36px", listStyle: "none" }}>
+            {steps.map(([title, text], i) => (
+              <li key={title} style={{ ...rowStyle, borderBottom: i < steps.length - 1 ? rowStyle.borderBottom : "none", gridTemplateColumns: "34px 1fr" }}>
+                <span style={{ width: 26, height: 26, borderRadius: "50%", border: `1.5px solid ${i === 0 && rdvState === "done" ? "#1b6b3a" : NAVY}`, color: i === 0 && rdvState === "done" ? "#1b6b3a" : NAVY, fontSize: 12, fontWeight: 700, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</span>
+                <span>
+                  <span style={{ display: "block", fontSize: 15, fontWeight: 700, color: NAVY }}>{title}</span>
+                  <span style={{ display: "block", fontSize: 13.5, color: "#536873", lineHeight: 1.55, marginTop: 2 }}>{text}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+
+          {(tmResult?.bestMatch || contact.telephone || contact.courriel) && (
+            <dl style={{ margin: 0, padding: "4px 36px 10px", borderTop: "1px solid #e4ddd5" }}>
+              {tmResult?.bestMatch && (
+                <div style={rowStyle}>
+                  <dt style={{ fontSize: 13, fontWeight: 600, color: "#536873" }}>Machine retenue</dt>
+                  <dd style={{ margin: 0, fontSize: 14.5, fontWeight: 700, color: NAVY }}>{tmResult.bestMatch.brand}{tmResult.bestMatch.model ? ` ${tmResult.bestMatch.model}` : ""}{tmResult.recommendedBtu ? <span style={{ fontWeight: 500, color: "#536873" }}> · {Number(tmResult.recommendedBtu).toLocaleString("fr-CA")} BTU recommandés</span> : null}</dd>
                 </div>
-                <div>
-                  <p style={{ fontSize: 12, color: "#64748b", margin: "0 0 4px", fontWeight: 600 }}>PUISSANCE REQUISE</p>
-                  <p style={{ fontSize: 16, color: NAVY, fontWeight: 700, margin: 0 }}>{tmResult.recommendedBtu} BTU</p>
+              )}
+              {contact.telephone && (
+                <div style={rowStyle}>
+                  <dt style={{ fontSize: 13, fontWeight: 600, color: "#536873" }}>Téléphone</dt>
+                  <dd style={{ margin: 0, fontSize: 14.5, fontWeight: 600, color: NAVY }}>{contact.telephone}</dd>
                 </div>
-              </div>
-            </div>
+              )}
+              {contact.courriel && (
+                <div style={{ ...rowStyle, borderBottom: "none" }}>
+                  <dt style={{ fontSize: 13, fontWeight: 600, color: "#536873" }}>Courriel</dt>
+                  <dd style={{ margin: 0, fontSize: 14.5, fontWeight: 600, color: NAVY, wordBreak: "break-all" }}>{contact.courriel}</dd>
+                </div>
+              )}
+            </dl>
           )}
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 40 }}>
-            <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
-              <div style={{ width: 40, height: 40, borderRadius: 12, backgroundColor: "rgba(229, 75, 23, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: ORANGE, flexShrink: 0 }}>
-                <Mail size={20} />
+          {/* Réserver l'appel avec un conseiller */}
+          <div style={{ padding: "26px 36px 30px", borderTop: "1px solid #e4ddd5", background: "#faf8f4" }}>
+            {rdvState === "done" ? (
+              <div style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+                <CalendarCheck size={22} color="#1b6b3a" style={{ flexShrink: 0, marginTop: 2 }} />
+                <div>
+                  <p style={{ margin: 0, fontSize: 15, fontWeight: 700, color: NAVY }}>Appel réservé{rdvWhen ? ` : ${rdvWhen}` : ""}</p>
+                  <p style={{ margin: "4px 0 0", fontSize: 13.5, color: "#536873", lineHeight: 1.55 }}>
+                    Un conseiller vous appelle{contact.telephone ? ` au ${contact.telephone}` : ""}. {contact.courriel ? "Une confirmation vous est envoyée par courriel." : ""} Pour changer de moment, appelez le 438-900-3224.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 style={{ margin: "0 0 4px", fontSize: 16, fontWeight: 700, color: NAVY }}>{emailSent ? "Surveillez vos courriels" : "Votre demande est enregistrée"}</h4>
-                <p style={{ margin: 0, fontSize: 14, color: "#536873", lineHeight: 1.5 }}>
-                  {emailSent
-                    ? "Un courriel récapitulatif contenant les détails de votre recommandation vient de vous être envoyé."
-                    : "Votre dossier est enregistré avec vos réponses et, s'il y a lieu, la machine retenue par ThermoMatch."}
+            ) : (
+              <>
+                <p style={{ margin: 0, fontSize: 15, fontWeight: 700, color: NAVY }}>Choisir le moment de l&apos;appel</p>
+                <p style={{ margin: "4px 0 16px", fontSize: 13.5, color: "#536873", lineHeight: 1.55 }}>
+                  Facultatif. Un conseiller vous appelle au moment choisi pour passer en revue votre projet, une quinzaine de minutes.
                 </p>
-              </div>
-            </div>
-            
-            <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
-              <div style={{ width: 40, height: 40, borderRadius: 12, backgroundColor: "rgba(229, 75, 23, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: ORANGE, flexShrink: 0 }}>
-                <Phone size={20} />
-              </div>
-              <div>
-                <h4 style={{ margin: "0 0 4px", fontSize: 16, fontWeight: 700, color: NAVY }}>Appel de validation sous un jour ouvrable</h4>
-                <p style={{ margin: 0, fontSize: 14, color: "#536873", lineHeight: 1.5 }}>
-                  Nous confirmons vos besoins{contact.moment ? ` (${contact.moment.toLowerCase()}, comme demandé)` : ""}, puis un installateur partenaire licencié évalue votre maison et vous remet une soumission écrite : équipement, installation, électricité, garantie et LogisVert. Gratuit et sans engagement.
-                </p>
-              </div>
-            </div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
+                  {dates.map((d) => (
+                    <button key={d} type="button" onClick={() => setRdv((r) => ({ ...r, date: d }))} aria-pressed={rdv.date === d} style={chip(rdv.date === d)}>
+                      {formatDay(d, { weekday: "short", day: "numeric", month: "short" })}
+                    </button>
+                  ))}
+                </div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 18 }}>
+                  {(Object.keys(CALL_WINDOWS) as CallWindow[]).map((w) => (
+                    <button key={w} type="button" onClick={() => setRdv((r) => ({ ...r, window: w }))} aria-pressed={rdv.window === w} style={chip(rdv.window === w)}>
+                      {CALL_WINDOWS[w].short}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  onClick={bookRdv}
+                  disabled={!rdv.date || !rdv.window || rdvState === "sending"}
+                  style={{ width: "100%", padding: "14px 20px", background: !rdv.date || !rdv.window ? "#c9c2b8" : ORANGE, color: "#fff", border: "none", borderRadius: 6, fontWeight: 700, fontSize: 15, cursor: !rdv.date || !rdv.window ? "not-allowed" : "pointer" }}
+                >
+                  {rdvState === "sending" ? "Réservation…" : "Réserver cet appel"}
+                </button>
+                {rdvState === "error" && (
+                  <p style={{ margin: "10px 0 0", fontSize: 13, color: "#b42318" }}>La réservation n&apos;a pas pu être enregistrée. Appelez-nous au 438-900-3224 et nous fixerons le moment ensemble.</p>
+                )}
+              </>
+            )}
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 16, alignItems: "center" }}>
-            <Link href="/" style={{ backgroundColor: NAVY, color: "#fff", textDecoration: "none", padding: "16px 32px", borderRadius: 12, fontWeight: 700, fontSize: 15, display: "flex", alignItems: "center", gap: 8, width: "100%", justifyContent: "center", transition: "all 0.2s" }}>
-              Retour à l'accueil <ArrowRight size={18} />
+          <div style={{ padding: "22px 36px 28px", borderTop: "1px solid #e4ddd5", display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", justifyContent: "space-between" }}>
+            <Link href="/" style={{ color: NAVY, textDecoration: "none", fontWeight: 700, fontSize: 14, display: "inline-flex", alignItems: "center", gap: 8 }}>
+              Retour à l&apos;accueil <ArrowRight size={16} />
             </Link>
-            <p style={{ margin: 0, fontSize: 14, color: "#64748b" }}>
-              Besoin d'aide immédiate? <a href="tel:4389003224" style={{ color: ORANGE, fontWeight: 600, textDecoration: "none" }}>438-900-3224</a>
+            <p style={{ margin: 0, fontSize: 13.5, color: "#536873" }}>
+              Une question maintenant ? <a href="tel:4389003224" style={{ color: ORANGE, fontWeight: 700, textDecoration: "none" }}>438-900-3224</a>
             </p>
           </div>
         </div>

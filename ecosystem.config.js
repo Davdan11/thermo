@@ -12,7 +12,7 @@ module.exports = {
       script: "node_modules/next/dist/bin/next",
       args: "start -p 3003 -H 127.0.0.1",
       env: { NODE_ENV: "production", PORT: "3003" },
-      max_memory_restart: "900M",
+      max_memory_restart: "2500M",
       autorestart: true,
       time: true,
     },

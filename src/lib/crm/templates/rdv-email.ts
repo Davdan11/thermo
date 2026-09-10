@@ -1,5 +1,9 @@
 export interface RdvEmailData {
   firstName: string;
+  /** Moment convenu, déjà formaté (ex. « jeudi 12 septembre, entre 9 h et 12 h »). */
+  when?: string;
+  /** Numéro auquel le conseiller appelle. */
+  phone?: string;
 }
 
 export function getRdvEmailHTML(data: RdvEmailData): string {
@@ -35,13 +39,27 @@ export function getRdvEmailHTML(data: RdvEmailData): string {
               <tr>
                 <td style="padding: 40px;">
                   <h1 style="color: ${dark}; font-size: 24px; font-weight: 700; margin-top: 0; margin-bottom: 20px;">
-                    Votre rendez-vous est confirmé !
+                    ${data.when ? "Votre appel avec un conseiller est réservé" : "Votre rendez-vous est confirmé !"}
                   </h1>
                   
                   <p style="color: ${textDark}; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                     Bonjour ${data.firstName},
                   </p>
 
+                  ${data.when ? `
+                  <p style="color: ${textDark}; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Un conseiller vous appelle <strong>${data.when}</strong>${data.phone ? ` au <strong>${data.phone}</strong>` : ""}.
+                    L'appel dure une quinzaine de minutes, il est gratuit et sans engagement.
+                  </p>
+                  <div style="background-color: ${lightBg}; border-left: 4px solid ${primary}; padding: 20px; border-radius: 8px; margin: 30px 0;">
+                    <h3 style="color: ${dark}; margin-top: 0; font-size: 16px;">Ce que nous verrons ensemble :</h3>
+                    <ul style="color: ${textDark}; font-size: 15px; padding-left: 20px; line-height: 1.6; margin-bottom: 0;">
+                      <li>Vos réponses ThermoMatch et la machine retenue</li>
+                      <li>Votre chauffage actuel, votre panneau électrique et l'emplacement possible</li>
+                      <li>La subvention LogisVert applicable à votre projet</li>
+                      <li>La suite : visite d'un installateur licencié RBQ et soumission écrite</li>
+                    </ul>
+                  </div>` : `
                   <p style="color: ${textDark}; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
                     Votre rendez-vous d'évaluation avec notre expert en efficacité énergétique a bien été ajouté à notre calendrier. 
                     Cette rencontre est 100% gratuite et sans aucune pression de vente. 
@@ -55,7 +73,7 @@ export function getRdvEmailHTML(data: RdvEmailData): string {
                       <li>Validation finale des subventions LogisVert et Maisons Plus Vertes</li>
                       <li>Mesures exactes pour l'installation</li>
                     </ul>
-                  </div>
+                  </div>`}
 
                   <p style="color: ${textDark}; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
                     Si vous devez reprogrammer, n'hésitez pas à répondre directement à ce courriel ou à contacter votre conseiller.

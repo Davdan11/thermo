@@ -60,6 +60,19 @@ const RULES = [
   ["tosot", /^TUD?(42|48|60)/, null, "/images/products/brochures/tosot/tosot-unix-central-grande-capacite-exterieure.webp"],
 ];
 
+// Règles supplémentaires par marque : scripts/image-rules/<marque>.json
+// [{ "brand", "pattern" (regex sur modelNumber), "byCapacity": { "9": "/images/…" }, "series": "/images/…" }]
+const RULES_DIR = path.join(process.cwd(), "scripts/image-rules");
+if (fs.existsSync(RULES_DIR)) {
+  for (const f of fs.readdirSync(RULES_DIR).filter((f) => f.endsWith(".json")).sort()) {
+    const list = JSON.parse(fs.readFileSync(path.join(RULES_DIR, f), "utf8"));
+    for (const r of list) {
+      const byCap = r.byCapacity ? (k) => r.byCapacity[String(k)] ?? null : null;
+      RULES.push([r.brand, new RegExp(r.pattern), byCap, r.series ?? null]);
+    }
+  }
+}
+
 const capK = (m) => Math.round((m.nominalCapacityBtu ?? 0) / 1000);
 let models = 0, series = 0, missing = new Set();
 

@@ -1013,3 +1013,14 @@ input[type="radio"]:disabled {
 @media (prefers-reduced-motion: reduce) {
   .metric-bar-sweep { animation: none; }
 }
+
+/* Flottement lent des visuels (accueil) : 6 s, 8 px, désactivé si l'utilisateur réduit les animations. */
+@keyframes tav-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.tav-float { animation: tav-float 6s ease-in-out infinite; will-change: transform; }
+.tav-float-delay { animation-delay: -3s; }
+@media (prefers-reduced-motion: reduce) {
+  .tav-float { animation: none; }
+}

@@ -291,6 +291,18 @@ export function getCatalogueModels(
           }
         };
 
+        // Calibres réellement vendus au Québec d'abord : 12 000 et 18 000 BTU, puis 9 000 et 24 000 ;
+        // les 6 000 BTU (pièce unique) et les très grosses centrales viennent après.
+        const capRank = (btu: number | null | undefined) => {
+          const k = Math.round((btu ?? 0) / 1000);
+          const order = [12, 18, 9, 24, 15, 36, 30, 48, 42, 60, 6];
+          const i = order.indexOf(k);
+          return i === -1 ? order.length : i;
+        };
+        const capRankA = capRank(a.nominalCapacityBtu);
+        const capRankB = capRank(b.nominalCapacityBtu);
+        if (capRankA !== capRankB) return capRankA - capRankB;
+
         const tierA = getTier(brandA?.slug);
         const tierB = getTier(brandB?.slug);
 
@@ -298,11 +310,10 @@ export function getCatalogueModels(
           return tierA - tierB; // Sort by tier first
         }
 
-        // To interleave brands and show a variety on the first page,
-        // we sort by capacity FIRST, then system type, then brand.
-        const capA = a.nominalCapacityBtu ?? 0;
-        const capB = b.nominalCapacityBtu ?? 0;
-        if (capA !== capB) return capA - capB;
+        // Photo officielle disponible avant fiche sans photo.
+        const imgA = a.imageUrl ? 0 : 1;
+        const imgB = b.imageUrl ? 0 : 1;
+        if (imgA !== imgB) return imgA - imgB;
 
         const typeA = a.systemType.localeCompare(b.systemType);
         if (typeA !== 0) return typeA;

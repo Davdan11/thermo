@@ -129,25 +129,30 @@ export default function HomePage() {
 
             {/* Right: logos 2 rows × 4 cols + cta */}
             <div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-8 sm:gap-x-12 mb-12">
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-y-8 gap-x-6 sm:gap-x-10 mb-12">
                 {[
-                  { src: "/images/marques/logo-daikin-bleu-nuit-cropped.png", alt: "Daikin", href: "/marques/daikin" },
-                  { src: "/images/marques/logo-mitsubishi-electric-bleu-nuit-cropped.png", alt: "Mitsubishi Electric", href: "/marques/mitsubishi-electric" },
-                  { src: "/images/marques/logo-fujitsu-bleu-nuit-cropped.png", alt: "Fujitsu", href: "/marques/fujitsu" },
-                  { src: "/images/marques/logo-gree-bleu-nuit-cropped.png", alt: "Gree", href: "/marques/gree" },
-                  { src: "/images/marques/logo-midea-bleu-nuit-cropped.png", alt: "Midea", href: "/marques/midea" },
-                  { src: "/images/marques/logo-lg-light-cropped.png", alt: "LG", href: "/marques/lg" },
-                  { src: "/images/marques/logo-samsung-bleu-nuit-cropped.png", alt: "Samsung", href: "/marques/samsung" },
-                  { src: "/images/marques/logo-moovair-light-cropped.png", alt: "Moovair", href: "/marques/moovair" },
+                  { src: "/images/marques/mono/daikin.png", alt: "Daikin", href: "/marques/daikin" },
+                  { src: "/images/marques/mono/mitsubishi-electric.png", alt: "Mitsubishi Electric", href: "/marques/mitsubishi-electric" },
+                  { src: "/images/marques/mono/fujitsu.png", alt: "Fujitsu", href: "/marques/fujitsu" },
+                  { src: "/images/marques/mono/gree.png", alt: "Gree", href: "/marques/gree" },
+                  { src: "/images/marques/mono/lg.png", alt: "LG", href: "/marques/lg" },
+                  { src: "/images/marques/mono/samsung.png", alt: "Samsung", href: "/marques/samsung" },
+                  { src: "/images/marques/mono/panasonic.png", alt: "Panasonic", href: "/marques/panasonic" },
+                  { src: "/images/marques/mono/moovair.png", alt: "Moovair", href: "/marques/moovair" },
+                  { src: "/images/marques/mono/bosch.png", alt: "Bosch", href: "/marques/bosch" },
+                  { src: "/images/marques/mono/lennox.png", alt: "Lennox", href: "/marques/lennox" },
+                  { src: "/images/marques/mono/carrier.png", alt: "Carrier", href: "/marques/carrier" },
+                  { src: "/images/marques/mono/tosot.png", alt: "Tosot", href: "/marques/tosot" },
                 ].map((brand, i) => (
-                  <FadeIn key={brand.alt} delay={50 * i} direction="none">
-                    <Link href={brand.href} className="transition-all duration-300 hover:scale-110 hover:opacity-100 opacity-70" style={{ textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", height: 80 }}>
+                  <FadeIn key={brand.alt} delay={40 * i} direction="none">
+                    <Link href={brand.href} title={brand.alt} className="group/logo transition-all duration-300 opacity-60 hover:opacity-100" style={{ textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", height: 56 }}>
                       <Image
                         src={brand.src}
                         alt={brand.alt}
-                        width={220}
-                        height={70}
-                        style={{ objectFit: "contain", maxHeight: 60, maxWidth: "100%", width: "auto" }}
+                        width={180}
+                        height={60}
+                        className="transition-transform duration-300 group-hover/logo:scale-[1.06]"
+                        style={{ objectFit: "contain", maxHeight: 30, maxWidth: 130, width: "auto", height: "auto" }}
                       />
                     </Link>
                   </FadeIn>
@@ -177,6 +182,7 @@ export default function HomePage() {
               width={1000}
               height={676}
               sizes="(max-width: 1024px) 100vw, 920px"
+              className="tav-float"
               style={{ width: "110%", maxWidth: 920, height: "auto", objectFit: "contain", display: "block", marginLeft: "-5%" }}
               priority
             />
@@ -451,7 +457,7 @@ export default function HomePage() {
         {/* Right: transparent thermopompe PNG — big and well positioned */}
         <FadeIn delay={200} direction="left" className="hidden lg:block absolute right-[-80px] top-[-60px] bottom-[-60px] w-[85%] z-0">
           <div style={{ position: "relative", height: "100%", width: "100%" }}>
-            <Image src="/images/thermomatch/thermomatch-cta-unit-transparent.png" alt="Thermopompe" fill style={{ objectFit: "contain", objectPosition: "right bottom" }} />
+            <Image src="/images/thermomatch/thermomatch-cta-unit-transparent.png" alt="Thermopompe" fill className="tav-float tav-float-delay" style={{ objectFit: "contain", objectPosition: "right bottom" }} />
           </div>
         </FadeIn>
 

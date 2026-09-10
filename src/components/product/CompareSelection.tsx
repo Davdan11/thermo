@@ -78,13 +78,13 @@ export function CompareSelection({ products }: CompareSelectionProps) {
                   
                   <div className="relative z-10 max-w-xl">
                     <span className="text-[var(--color-accent)] font-semibold text-xs tracking-widest uppercase mb-2 block">
-                      <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" className="inline-block h-[14px] object-contain mb-3" />
+                      <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" className="inline-block h-[26px] object-contain mb-4 brightness-0 invert" />
                     </span>
                     <h3 className="text-white text-2xl sm:text-3xl font-bold mb-3">
-                      Vous ne savez pas quoi choisir?
+                      Trop de modèles ? ThermoMatch en retient trois pour votre maison.
                     </h3>
                     <p className="text-white/70 text-base sm:text-lg">
-                      Répondez à quelques questions et obtenez des recommandations personnalisées en quelques minutes.
+                      13 questions sur votre maison, 2 minutes. Le calcul croise la capacité certifiée à -15 °C, votre superficie, votre isolation et votre zone climatique, toutes marques confondues.
                     </p>
                   </div>
                   
@@ -93,7 +93,7 @@ export function CompareSelection({ products }: CompareSelectionProps) {
                       onClick={() => router.push("/trouver-ma-thermopompe")}
                       className="w-full sm:w-auto h-12 px-8 rounded bg-[var(--color-accent)] text-white font-semibold hover:opacity-90 transition-opacity flex items-center justify-center"
                     >
-                      Trouver mes modèles
+                      Lancer ThermoMatch
                       <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                       </svg>

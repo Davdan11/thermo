@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
+import { brandLogoPath } from "@/lib/data/brand-logos";
 
 /* ------------------------------------------------------------------
    SimilarModels — compact similar model suggestions
@@ -40,8 +41,10 @@ export function SimilarModels({ models }: SimilarModelsProps) {
                     sizes="(max-width: 640px) 50vw, 200px"
                     className="object-contain w-full h-full p-2"
                   />
+                ) : brandLogoPath(product.brand.slug) ? (
+                  <Image src={brandLogoPath(product.brand.slug)!} alt={`Logo ${product.brand.name}`} width={120} height={40} className="object-contain w-auto h-auto max-w-[110px] max-h-[36px] opacity-90" />
                 ) : (
-                  <span className="text-xs text-[#9ca3af]">Image à venir</span>
+                  <span className="text-xs text-[#9ca3af]">{product.brand.name}</span>
                 )}
               </div>
               <p className="text-xs text-muted uppercase tracking-wide">

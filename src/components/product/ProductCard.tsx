@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
+import { brandLogoPath } from "@/lib/data/brand-logos";
 
 
 
@@ -19,9 +20,9 @@ export function ProductCard({
   const { model, brand, configuration, isColdClimate } = product;
 
   // Warranties should be passed down or accessed safely without importing registry on client
-  const warranties = (product as any).warranties || [];
-  const partsWarranty = warranties.find((w: any) => w.type === "parts")?.durationYears;
-  const compWarranty = warranties.find((w: any) => w.type === "compressor")?.durationYears;
+  const warranties = (product as { warranties?: Array<{ type: string; durationYears?: number }> }).warranties ?? [];
+  const partsWarranty = warranties.find((w) => w.type === "parts")?.durationYears;
+  const compWarranty = warranties.find((w) => w.type === "compressor")?.durationYears;
   
   let warrantyLabel = "";
   if (partsWarranty && compWarranty) {
@@ -32,8 +33,7 @@ export function ProductCard({
   }
 
   // --- LogisVert subsidy lookup ---
-  let logisVertDollars: number | null = (product as any).logisVertDollars || null;
-  let logisVertOfficial = logisVertDollars ? true : false;
+  const logisVertDollars: number | null = (product as { logisVertDollars?: number }).logisVertDollars || null;
 
   return (
     <article
@@ -54,8 +54,13 @@ export function ProductCard({
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className="object-contain w-full h-full p-4"
           />
+        ) : brandLogoPath(brand.slug) ? (
+          <div className="flex flex-col items-center gap-3">
+            <Image src={brandLogoPath(brand.slug)!} alt={`Logo ${brand.name}`} width={160} height={56} className="object-contain w-auto h-auto max-w-[150px] max-h-[48px] opacity-90" />
+            <span className="text-[11px] text-[#9ca3af]">Photo officielle à venir</span>
+          </div>
         ) : (
-          <span className="text-sm text-[#9ca3af]">Image à venir</span>
+          <span className="text-sm text-[#9ca3af]">{brand.name}</span>
         )}
       </div>
 
@@ -110,7 +115,7 @@ export function ProductCard({
             </div>
           )}
           <div className="flex items-center justify-between py-3.5 border-t border-[#E5E5E5]">
-            <span className="text-[15px] text-[#6B7280]">Chauffage jusqu'à</span>
+            <span className="text-[15px] text-[#6B7280]">Chauffage jusqu&apos;à</span>
             <span className="text-[15px] font-semibold text-[#172126]">
               {model.minimumOperatingTemperatureC != null 
                 ? `${model.minimumOperatingTemperatureC}°C` 

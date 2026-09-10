@@ -195,6 +195,30 @@ export async function createActivity(deal_id: number, person_id: number, type: "
   return res.data;
 }
 
+/** Appel planifié par le client depuis le site : activité « call » datée sur l'affaire, plus une note. Ne lance jamais. */
+export async function scheduleCall(dealId: number, slot: { date: string; dueTime: string; subject: string; note: string }): Promise<{ ok: true; activityId: number | null } | { ok: false; reason: "non-configure" | "erreur"; error?: string }> {
+  if (!apiToken()) return { ok: false, reason: "non-configure" };
+  try {
+    const deal = await apiCall<{ person_id?: number | { value: number } | null }>(`/deals/${dealId}`);
+    const p = deal.data?.person_id;
+    const personId = typeof p === "number" ? p : p?.value;
+    const act = await apiCall<{ id: number }>("/activities", "POST", {
+      subject: slot.subject,
+      type: "call",
+      deal_id: dealId,
+      ...(personId ? { person_id: personId } : {}),
+      due_date: slot.date,
+      due_time: slot.dueTime,
+      duration: "00:30",
+      note: slot.note,
+    });
+    await createNote(dealId, slot.note).catch(() => undefined);
+    return { ok: true, activityId: act.data?.id ?? null };
+  } catch (e) {
+    return { ok: false, reason: "erreur", error: e instanceof Error ? e.message : String(e) };
+  }
+}
+
 /* ------------------------------------------------------------------
    Parcours complets
    ------------------------------------------------------------------ */

@@ -17,11 +17,11 @@ import { randomUUID } from "node:crypto";
 export interface JournalEntry {
   id: string;
   at: string;
-  kind: "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre";
+  kind: "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre" | "rendez-vous";
   lead: Record<string, unknown>;
   /** Consigné après les appels externes. */
   outcome?: {
-    pipedrive: "ok" | "non-configure" | "erreur";
+    pipedrive: "ok" | "non-configure" | "erreur" | "sans-affaire";
     dealId?: number;
     error?: string;
     alertEmail?: boolean;

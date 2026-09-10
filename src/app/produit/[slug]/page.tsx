@@ -7,6 +7,7 @@ import { registry } from "@/lib/data/registry";
 import { SITE_URL, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
 import { getSeoModel } from "@/lib/seo/programmatic";
 import { seriesDisplayName } from "@/lib/data/series-label";
+import { brandLogoPath } from "@/lib/data/brand-logos";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
 import { CtaThermoMatch, TrustStrip } from "@/components/seo/SeoBlocks";
 import {
@@ -110,6 +111,7 @@ export default async function ProductPage({
     return [...byCap.entries()].sort((x, y) => x[0] - y[0]).map(([cap, v]) => ({ ...v, label: `${(cap / 1000).toFixed(0)}\u2009000 BTU` }));
   })();
   const imageUrl = model.imageUrl ?? series.imageUrl ?? null;
+  const brandLogo = brandLogoPath(brand.slug);
 
   /* Schema.org — Product (enriched) */
   const additionalProperties: { name: string; value: string }[] = [];
@@ -201,11 +203,19 @@ export default async function ProductPage({
             </ol>
           </nav>
 
-          {/* Product header — single column centered or full width */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 6, maxWidth: 800 }}>
-            <p style={{ margin: 0, fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,.5)", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-              {brand.name}{seriesDisplayName(series.name, series.slug) ? ` · ${seriesDisplayName(series.name, series.slug)}` : ""}
-            </p>
+          {/* Product header : identification à gauche, photo officielle (ou logo de la marque) à droite */}
+          <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-14">
+          <div style={{ display: "flex", flexDirection: "column", gap: 6, maxWidth: 800, flex: 1, minWidth: 0 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+              {brandLogo && (
+                <Link href={`/marques/${brand.slug}`} aria-label={`Marque ${brand.name}`} style={{ display: "inline-flex", alignItems: "center", background: "#fff", padding: "7px 12px", borderRadius: 4 }}>
+                  <Image src={brandLogo} alt={`Logo ${brand.name}`} width={120} height={36} style={{ objectFit: "contain", width: "auto", height: 22, maxWidth: 120 }} />
+                </Link>
+              )}
+              <p style={{ margin: 0, fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,.5)", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                {brand.name}{seriesDisplayName(series.name, series.slug) ? ` · ${seriesDisplayName(series.name, series.slug)}` : ""}
+              </p>
+            </div>
             <h1 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 700, color: "#fff", lineHeight: 1.1, letterSpacing: "-0.025em" }}>
               <span style={{ display: "block", fontSize: "0.5em", fontWeight: 600, color: "rgba(255,255,255,.7)", letterSpacing: "0", marginBottom: 4 }}>Thermopompe {brand.name}</span>
               {model.name}
@@ -290,6 +300,23 @@ export default async function ProductPage({
               </Link>
             </div>
           </div>
+
+          {/* Média : photo officielle du fabricant, sinon logo de la marque */}
+          <div className="w-full lg:w-[400px] shrink-0">
+            <div style={{ background: "#fff", padding: 22, minHeight: 250, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14 }}>
+              {imageUrl ? (
+                <Image src={imageUrl} alt={`${brand.name} ${model.name}`} width={360} height={270} priority style={{ objectFit: "contain", maxWidth: "100%", height: "auto", maxHeight: 250 }} />
+              ) : brandLogo ? (
+                <Image src={brandLogo} alt={`Logo ${brand.name}`} width={240} height={90} priority style={{ objectFit: "contain", width: "auto", height: "auto", maxWidth: 230, maxHeight: 76 }} />
+              ) : (
+                <span style={{ fontSize: 28, fontWeight: 800, color: "#071d2b", letterSpacing: "-0.01em" }}>{brand.name}</span>
+              )}
+              <p style={{ margin: 0, fontSize: 12, color: "#8a989e", textAlign: "center" }}>
+                {imageUrl ? `Photo officielle · ${brand.name} ${model.name}` : `${brand.name} · ${detail.systemTypeLabel}`}
+              </p>
+            </div>
+          </div>
+          </div>
         </div>
       </section>
 
@@ -338,25 +365,6 @@ export default async function ProductPage({
           <aside style={{ position: "relative" }}>
             <div style={{ position: "sticky", top: 100, display: "flex", flexDirection: "column", gap: 24 }}>
 
-              {/* Product Image in Sidebar */}
-              {imageUrl && (
-                <div style={{
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  background: "#fff",
-                  border: "1px solid #e4ddd5",
-                  padding: 24,
-                }}>
-                  <Image
-                    src={imageUrl}
-                    alt={`${brand.name} ${model.name}`}
-                    width={320}
-                    height={240}
-                    style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }}
-                    priority
-                  />
-                </div>
-              )}
-
               {/* Quick specs card */}
               <div style={{ border: "1px solid #e4ddd5", padding: "24px", background: "#fff" }}>
                 <p style={{ margin: "0 0 16px", fontSize: 15, fontWeight: 700, color: "#071d2b" }}>Résumé rapide</p>
@@ -385,24 +393,20 @@ export default async function ProductPage({
                 </dl>
               </div>
 
-              {/* CTA card */}
-              <div style={{ border: "1px solid #e4ddd5", padding: "24px", background: "#fff" }}>
-                <p style={{ margin: "0 0 8px", fontSize: 14, fontWeight: 700, color: "#071d2b" }}>Ce modèle vous intéresse?</p>
-                <p style={{ margin: "0 0 16px", fontSize: 13, color: "#6b7b80", lineHeight: 1.55 }}>
-                  Utilisez Thermo Match pour valider si cette thermopompe correspond à votre habitation.
+              {/* ThermoMatch : validation de la fiche pour la maison du visiteur */}
+              <div style={{ background: "#0C1821", padding: "26px 24px", color: "#fff" }}>
+                <Image src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" width={170} height={34} className="object-contain brightness-0 invert" style={{ height: 26, width: "auto" }} />
+                <p style={{ margin: "16px 0 6px", fontSize: 17, fontWeight: 800, letterSpacing: "-0.01em", lineHeight: 1.25 }}>Ce {brand.name} convient-il à votre maison ?</p>
+                <p style={{ margin: "0 0 18px", fontSize: 13.5, color: "rgba(255,255,255,.7)", lineHeight: 1.55 }}>
+                  13 questions, 2 minutes. ThermoMatch vérifie la capacité certifiée à -15 °C par rapport à votre superficie, votre isolation et votre zone climatique, puis compare avec toutes les marques.
                 </p>
                 <Link
                   href="/trouver-ma-thermopompe"
-                  style={{
-                    display: "flex", justifyContent: "center", alignItems: "center",
-                    padding: "10px 16px",
-                    background: "#071d2b",
-                    textDecoration: "none",
-                    borderRadius: "6px"
-                  }}
+                  style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 8, padding: "13px 16px", background: "#e54b17", color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", borderRadius: 6 }}
                 >
-                  <Image src="/images/logo-thermomatch-tm-720.webp" alt="Utiliser Thermo Match" width={140} height={28} className="object-contain" />
+                  Vérifier avec ThermoMatch
                 </Link>
+                <p style={{ margin: "12px 0 0", fontSize: 12, color: "rgba(255,255,255,.5)", textAlign: "center" }}>Gratuit · données certifiées Hydro-Québec</p>
               </div>
 
               {/* Brochure Download */}

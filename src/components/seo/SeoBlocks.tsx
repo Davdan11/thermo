@@ -11,6 +11,8 @@
    ================================================================== */
 
 import Link from "next/link";
+import Image from "next/image";
+import { brandLogoPath } from "@/lib/data/brand-logos";
 import { Breadcrumbs, type BreadcrumbItem } from "@/components/seo/Breadcrumbs";
 import { getFaqPageSchema } from "@/lib/seo";
 import type { SeoModel } from "@/lib/seo/programmatic";
@@ -141,17 +143,34 @@ export function ModelTable({
             <tr key={m.slug} className="border-t border-[#f0ebe4] hover:bg-[#fffaf5]">
               {showRank && <td className="px-3 py-3 font-bold text-[#e54b17]">{i + 1}</td>}
               <td className="px-3 py-3">
-                <Link href={`/produit/${m.canonicalSlug}`} className="font-semibold text-[#071d2b] hover:text-[#e54b17]">
-                  {m.name}
-                </Link>
-                <div className="text-[11px] font-mono text-[#8a989e]">{m.outdoorModel}</div>
+                <div className="flex items-center gap-3">
+                  <Link href={`/produit/${m.canonicalSlug}`} className="shrink-0 w-14 h-11 bg-[#f4f1ec] rounded-md flex items-center justify-center overflow-hidden" aria-hidden="true" tabIndex={-1}>
+                    {m.imageUrl ? (
+                      <Image src={m.imageUrl} alt="" width={56} height={44} className="object-contain w-full h-full p-1" />
+                    ) : brandLogoPath(m.brandSlug) ? (
+                      <Image src={brandLogoPath(m.brandSlug)!} alt="" width={48} height={20} className="object-contain w-auto h-auto max-w-[44px] max-h-[18px] opacity-80" />
+                    ) : null}
+                  </Link>
+                  <div className="min-w-0">
+                    <Link href={`/produit/${m.canonicalSlug}`} className="font-semibold text-[#071d2b] hover:text-[#e54b17]">
+                      {m.name}
+                    </Link>
+                    <div className="text-[11px] font-mono text-[#8a989e]">{m.outdoorModel}</div>
+                  </div>
+                </div>
                 {m.alsoSoldAs.length > 0 && (
                   <div className="text-[11px] text-[#8a989e]">Aussi : {m.alsoSoldAs.map((a) => a.brand).join(", ")}</div>
                 )}
               </td>
               {showBrand && (
                 <td className="px-3 py-3">
-                  <Link href={`/marques/${m.brandSlug}`} className="text-[#071d2b] hover:text-[#e54b17]">{m.brand}</Link>
+                  <Link href={`/marques/${m.brandSlug}`} className="inline-flex items-center gap-2 text-[#071d2b] hover:text-[#e54b17]" title={m.brand}>
+                    {brandLogoPath(m.brandSlug) ? (
+                      <Image src={brandLogoPath(m.brandSlug)!} alt={m.brand} width={80} height={24} className="object-contain w-auto h-auto max-w-[80px] max-h-[22px]" />
+                    ) : (
+                      <span>{m.brand}</span>
+                    )}
+                  </Link>
                 </td>
               )}
               <td className="px-3 py-3 text-[#536873]">{m.kind === "murale" ? "Murale" : "Centrale"}{m.coldClimate ? " · grand froid" : ""}</td>
