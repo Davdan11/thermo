@@ -53,3 +53,8 @@ export function observedPricesFor(slug: string): ObservedPrice[] {
 export function observedPriceCount(): number {
   return load().size;
 }
+
+/** Slugs ayant au moins un relevé. */
+export function observedSlugs(): string[] {
+  return [...load().keys()];
+}

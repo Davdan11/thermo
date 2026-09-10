@@ -37,7 +37,8 @@ export function PriceSection({ detail, logisVertDollars }: { detail: ProductDeta
       });
     }
   }
-  for (const o of observed.slice(0, 3)) {
+  const seen = new Set<string>();
+  for (const o of observed.filter((x) => !seen.has(x.retailer) && seen.add(x.retailer)).slice(0, 3)) {
     rows.push({
       label: o.priceType === "ensemble" ? "Équipement observé (ensemble)" : o.priceType === "unite-interieure" ? "Unité intérieure observée" : "Unité extérieure observée",
       value: `${o.priceCad.toLocaleString("fr-CA")} $`,
@@ -56,7 +57,7 @@ export function PriceSection({ detail, logisVertDollars }: { detail: ProductDeta
       </div>
       <dl style={{ margin: 0, padding: "4px 24px" }}>
         {rows.map((r, i) => (
-          <div key={r.label} className="grid grid-cols-1 sm:grid-cols-[minmax(150px,200px)_1fr] gap-1 sm:gap-4" style={{ padding: "14px 0", borderBottom: i < rows.length - 1 ? "1px solid #f0ebe4" : "none" }}>
+          <div key={`${r.label}-${i}`} className="grid grid-cols-1 sm:grid-cols-[minmax(150px,200px)_1fr] gap-1 sm:gap-4" style={{ padding: "14px 0", borderBottom: i < rows.length - 1 ? "1px solid #f0ebe4" : "none" }}>
             <dt style={{ fontSize: 13, fontWeight: 600, color: "#536873", paddingTop: 2 }}>{r.label}</dt>
             <dd style={{ margin: 0 }}>
               <p style={{ margin: 0, fontSize: 18, fontWeight: 800, color: "#071d2b", letterSpacing: "-0.01em", fontVariantNumeric: "tabular-nums" }}>{r.value}</p>

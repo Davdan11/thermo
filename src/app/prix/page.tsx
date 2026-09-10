@@ -5,7 +5,8 @@ import { JsonLd } from "@/components/seo/SeoBlocks";
 import { createMetadata, getBreadcrumbSchema } from "@/lib/seo";
 import { PrixApproche, getPrixFaqSchema } from "@/components/prix/PrixApproche";
 import { PRICE_GRID, PRICE_GRID_CONSULTED_AT, TIER_LABEL, money, type PriceCell, type PriceTier } from "@/lib/prices/grille-installee";
-import { observedPriceCount } from "@/lib/prices/observed";
+import { observedSlugs } from "@/lib/prices/observed";
+import { getSeoModel } from "@/lib/seo/programmatic";
 
 /* ------------------------------------------------------------------
    /prix — Prix d'une thermopompe au Québec : fourchettes installées
@@ -67,7 +68,7 @@ function Grid({ title, kind, keyOf, label }: { title: string; kind: PriceCell["k
 }
 
 export default function PrixPage() {
-  const observed = observedPriceCount();
+  const observed = observedSlugs().filter((s) => getSeoModel(s)).length;
   return (
     <main>
       <JsonLd data={getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Prix des thermopompes", url: "/prix" }])} />
