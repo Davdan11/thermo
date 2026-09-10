@@ -267,5 +267,101 @@
     "daikin-fit-aurora-exterieure-detouree.png": "products/official/daikin-fit-aurora-officiel.webp",
     "fujitsu-aouh12kzah1-exterieure-detouree.png": "products/official/fujitsu-aouh12kzah1-exterieure-exacte.webp",
     "date": "2026-09-08"
+  },
+  "elios": {
+    "url": "https://cdn.master.ca/documents/fr/elios/brochures/2025/Elios_EBC_202509_FR_V01.pdf",
+    "source": "https://www.master.ca/ (Le Groupe Master, propriétaire de la marque Elios)",
+    "file": "Elios_EBC_202509_FR_V01.pdf, page 1, logo vectoriel",
+    "license": "Marque de commerce du Groupe Master, usage nominatif",
+    "via": "brochure-officielle-vectoriel",
+    "fetchedAt": "2026-09-10",
+    "format": "pdf"
+  },
+  "zephyr": {
+    "url": "https://thermoclim.com/wp-content/uploads/2022/12/ZEPHYR-23-SEER-brochure.pdf",
+    "source": "Brochure officielle Zephyr 23 SEER (Le Groupe Master, propriétaire de la marque), copie hébergée par un revendeur autorisé",
+    "file": "ZEPHYR-23-SEER-brochure.pdf, page 1, logo vectoriel",
+    "license": "Marque de commerce du Groupe Master, usage nominatif",
+    "via": "brochure-officielle-vectoriel",
+    "fetchedAt": "2026-09-10",
+    "format": "pdf"
+  },
+  "coleman": {
+    "url": "https://cdn.master.ca/virtual_branch/documents/coleman/Coleman_HH8_Heat_Pump_Brochure_en_CA.pdf",
+    "source": "Brochure officielle Coleman HVAC (Johnson Controls / Bosch Home Comfort Group) distribuée par Le Groupe Master",
+    "file": "Coleman_HH8_Heat_Pump_Brochure_en_CA.pdf, page 1, logo vectoriel",
+    "license": "Marque de commerce Coleman HVAC, usage nominatif",
+    "via": "brochure-officielle-vectoriel",
+    "fetchedAt": "2026-09-10",
+    "format": "pdf"
+  },
+  "york": {
+    "url": "https://www.bosch-homecomfortgroup.com/media/brand-logos/brand-logos-gmk/bhc_group_logos_1x1_york_600x338original-2.png",
+    "source": "https://www.bosch-homecomfortgroup.com/en/brands/",
+    "file": "bhc_group_logos_1x1_york_600x338original-2.png",
+    "license": "Marque de commerce YORK (Bosch Home Comfort Group, licence Johnson Controls), usage nominatif",
+    "via": "site-officiel-groupe",
+    "fetchedAt": "2026-09-10",
+    "format": "png",
+    "width": 600,
+    "height": 338
+  },
+  "direct-air": {
+    "url": "https://directairhvac.com/wp-content/uploads/2023/11/direct-air_logo-vectoriel_CMYK-1-scaled.jpg",
+    "source": "https://directairhvac.com/",
+    "file": "direct-air_logo-vectoriel_CMYK-1-scaled.jpg",
+    "license": "Marque de commerce Direct Air, usage nominatif",
+    "via": "site-officiel",
+    "fetchedAt": "2026-09-10",
+    "format": "jpeg",
+    "width": 2560,
+    "height": 1182
+  },
+  "maxi-air": {
+    "url": "https://maxiair.ca/wp-content/uploads/2026/07/maxiair-logo.png",
+    "source": "https://maxiair.ca/",
+    "file": "maxiair-logo.png",
+    "license": "Marque de commerce Maxi Air, usage nominatif",
+    "via": "site-header",
+    "fetchedAt": "2026-09-10",
+    "format": "png",
+    "width": 868,
+    "height": 337
+  },
+  "quebec-vair": {
+    "url": "https://cdn.prod.website-files.com/697cddf1b6921945cd3e134f/697ce2c7a98c5626b1cbf461_footer-logo.svg",
+    "source": "https://www.quebecvair.com/",
+    "file": "697ce2c7a98c5626b1cbf461_footer-logo.svg (logo blanc, converti en bleu nuit)",
+    "license": "Marque de commerce Québec Vair, usage nominatif",
+    "via": "site-header",
+    "fetchedAt": "2026-09-10",
+    "format": "svg"
+  },
+  "hisense": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Hisense_logo.svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hisense_logo.svg",
+    "file": "File:Hisense logo.svg",
+    "license": "Public domain",
+    "via": "wikimedia-commons",
+    "fetchedAt": "2026-09-10",
+    "format": "svg"
+  },
+  "american-standard": {
+    "url": "https://www.americanstandardair.com/",
+    "source": "https://www.americanstandardair.com/",
+    "file": "SVG en ligne de l’en-tête du site officiel (American Standard Heating & Air Conditioning)",
+    "license": "Marque de commerce American Standard HVAC (Trane Technologies), usage nominatif",
+    "via": "site-header-svg",
+    "fetchedAt": "2026-09-10",
+    "format": "svg"
+  },
+  "convectair": {
+    "url": "public/images/marques/logo-convectair-bleu-nuit.svg",
+    "source": "Fichier vectoriel déjà présent dans le dépôt (premier commit), recadré sur le contenu",
+    "file": "logo-convectair-bleu-nuit.svg",
+    "license": "Marque de commerce Convectair, usage nominatif",
+    "via": "depot-existant",
+    "fetchedAt": "2026-09-10",
+    "format": "svg"
   }
 }

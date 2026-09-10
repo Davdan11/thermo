@@ -49,3 +49,6 @@ test-*.mjs
 
 # journal local des leads (renseignements personnels, jamais dans le dépôt)
 /data/leads
+
+# Candidats de logos avant validation (voir scripts/finalize-brand-logos.mjs)
+public/images/marques/_candidats/

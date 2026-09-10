@@ -15,6 +15,10 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   staticPageGenerationTimeout: 1000,
   poweredByHeader: false,
+  async redirects() {
+    // Adresse conventionnelle du plan de site : renvoie vers l'index des sitemaps segmentés.
+    return [{ source: "/sitemap.xml", destination: "/sitemap-index.xml", permanent: true }];
+  },
   async headers() {
     return [
       { source: "/(.*)", headers: securityHeaders },
