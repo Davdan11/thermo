@@ -1,0 +1,47 @@
+[
+  {
+    "fichier": "OTP-H-R32-page.png",
+    "url": "https://www.ouellet.com/getattachment/3b7dbfb1-4293-4ad0-9726-5e7d69c62f7f/OTP-H-R32.aspx",
+    "page": "https://www.ouellet.com/fr-ca/produits/otp-h-r32.aspx",
+    "date": "2026-09-10",
+    "familles": ["OCHX"],
+    "modeles": "Thermopompe simple zone Harmony (série OTP-H-R32) : OCHX-H09/12/18/24/30/36A-O, listés sur la page et dans la fiche PAM-OTP-H-R32_FR.pdf.",
+    "note": "Image produit officielle de la page (composite unité intérieure + unité extérieure avec bandeau SEER en haut), recadrée en deux : unité extérieure (ouellet-ochx-officiel.webp) et unité intérieure (ouellet-ochx-interieure-officiel.webp). Fiche : https://www.ouellet.com/getattachment/Produits/OTP-H-R32/PAM-OTP-H-R32_FR.pdf.aspx?lang=fr-CA"
+  },
+  {
+    "fichier": "PAM-OTP-O-R32_FR_p2_exterieure.jpg",
+    "url": "https://www.ouellet.com/getattachment/Produits/OTP-O-R32/PAM-OTP-O-R32_FR.pdf.aspx?lang=fr-CA",
+    "page": "https://www.ouellet.com/fr-ca/produits/otp-o-r32.aspx",
+    "date": "2026-09-10",
+    "familles": ["OARX"],
+    "modeles": "Thermopompe simple zone Olympia (série OTP-O-R32) : OARX-H09/12/18/24A-O.",
+    "note": "Photo de l'unité extérieure extraite de la page 2 de la fiche technique. Unité intérieure : recadrage de l'image de page OTP-O-R32-page.png (https://www.ouellet.com/getattachment/497be2da-8e1e-450b-9b22-b1b7fa447c2c/OTP-O-R32.aspx)."
+  },
+  {
+    "fichier": "PAM-OTP-P-R32_FR_p2_exterieure.jpg",
+    "url": "https://www.ouellet.com/getattachment/Produits/OTP-P-R32/PAM-OTP-P-R32_FR.pdf.aspx?lang=fr-CA",
+    "page": "https://www.ouellet.com/fr-ca/produits/otp-p-r32.aspx",
+    "date": "2026-09-10",
+    "familles": ["OCVX"],
+    "modeles": "Thermopompe simple zone Pacific (série OTP-P-R32) : OCVX-H09/12/18/24A-O.",
+    "note": "Photo de l'unité extérieure extraite de la page 2 de la fiche (Ouellet emploie la même photo d'unité extérieure dans les fiches Olympia et Pacific). Unité intérieure : recadrage de OTP-P-R32-page.png (https://www.ouellet.com/getattachment/5848b212-3f60-4b79-b972-9bfe26796207/OTP-P-R32.aspx)."
+  },
+  {
+    "fichier": "PAM-OTP-F-R32_FR_p2_exterieure-1-ventilateur.jpg",
+    "url": "https://www.ouellet.com/getattachment/Produits/OTP-F-R32/PAM-OTP-F-R32_FR.pdf.aspx?lang=fr-CA",
+    "page": "https://www.ouellet.com/fr-ca/produits/otp-f-r32.aspx",
+    "date": "2026-09-10",
+    "familles": ["OFLX1"],
+    "modeles": "Système de thermopompe centrale Flexx-R32 (série OTP-F-R32) : la fiche liste OFLX1-H36A-O (1 ventilateur, 24 000 / 34 000 BTU) et OFLX1-H60A-O (2 ventilateurs, 48 000 / 54 000 BTU) ; la règle couvre la famille OFLX1-H24/36/48/60A-O.",
+    "note": "Photo de famille = châssis à un ventilateur ; byCapacity 48 = châssis à deux ventilateurs (PAM-OTP-F-R32_FR_p2_exterieure-2-ventilateurs.jpg, même fiche) ; unité intérieure = cabinet souffleur OAHX1 (PAM-OTP-F-R32_FR_p3_cabinet-souffleur.jpg, page 3 de la fiche)."
+  },
+  {
+    "fichier": "PAM-OTP-MZ-R32_FR_p2_exterieure.jpg",
+    "url": "https://www.ouellet.com/getattachment/Produits/OTP-MZ-R32/PAM-OTP-MZ-R32_FR.pdf.aspx?lang=fr-CA",
+    "page": "https://www.ouellet.com/fr-ca/produits/otp-mz-r32.aspx",
+    "date": "2026-09-10",
+    "familles": ["OFRM"],
+    "modeles": "Thermopompe multizone Myriad Plus (série OTP-MZ-R32) : OFRM2X1-H18A-O, OFRM3X1-H24A-O, OFRM4X1-H30A-O, OFRM4X1-H36A-O, OFRM5X1-H42A-O.",
+    "note": "Photo de l'unité extérieure extraite de la page 2 de la fiche."
+  }
+]

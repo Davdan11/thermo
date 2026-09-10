@@ -1,0 +1,7 @@
+[
+  { "brand": "direct-air", "pattern": "^DIRM-(06|09|12|18|24)HXPRO28-1Z$", "series": "/images/products/official/direct-air-hxpro-exterieure-officielle.webp" },
+  { "brand": "direct-air", "pattern": "^DIRM-(18|28|36|48)HXPRO28-[2-5]Z$", "series": "/images/products/official/direct-air-hxpro-multizone-exterieure-officielle.webp" },
+  { "brand": "direct-air", "pattern": "^DIRM-(09|12|18|24|30)DA25-1Z$", "series": "/images/products/official/direct-air-da25-exterieure-officielle.webp" },
+  { "brand": "direct-air", "pattern": "^DIRM-(18|27|36|48)DA25-[2-5]Z$", "series": "/images/products/official/direct-air-da25-multizone-exterieure-officielle.webp" },
+  { "brand": "direct-air", "pattern": "^DIRM-(18|24|30|36|48|60)MAGICPRO20-OU(1F)?$", "series": "/images/products/official/direct-air-magic-pro-20-exterieure-officielle.webp" }
+]

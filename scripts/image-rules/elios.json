@@ -1,0 +1,12 @@
+[
+  { "brand": "elios", "pattern": "^DE(09|12)HOS19115S1$|^DE(18|24|30|36)HOS19230S1$", "series": "/images/products/official/elios-e19-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^DE(09|12|18|24)HOS23230E2$", "series": "/images/products/official/elios-e23-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^DE(09|12)HOS25230E3$|^DE18HOS25230E3A$", "series": "/images/products/official/elios-e25-2022-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^DEA(09|12)HOS21115S1$|^DEA(18|24|30|36)HOS21230S1$", "series": "/images/products/official/elios-e21-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^DEA(09|12|18|24)HOS25230E8$", "series": "/images/products/official/elios-e25-2024-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^DEA(12|18)HOS28230E8$", "series": "/images/products/official/elios-e28-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^DEA(18|24|30|36|48|60)HOS20230E7$", "series": "/images/products/official/elios-central-elios-2024-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^ESHMA(24|30|48|60)R2AN1$|^ESHMB36R2AN1$", "series": "/images/products/official/elios-central-elios-r454b-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^ESHMA(09|12|18|24|33)C2AN1$", "series": "/images/products/official/elios-emc-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^ESHBA(09|12|18|24|30|36)C[12]AN1$", "series": "/images/products/official/elios-ebc-exterieure-officielle.webp" }
+]

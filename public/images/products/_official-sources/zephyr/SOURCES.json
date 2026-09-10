@@ -1,0 +1,40 @@
+{
+  "marque": "Zephyr (marque de TTI Climatisation Chauffage inc., 690 rue Jean-Neveu, Longueuil — et non du Groupe Master ; site officiel tticlimatisation.com)",
+  "date_collecte": "2026-09-10",
+  "note": "Les brochures Zephyr sont produites par TTI Climatisation (adresse imprimée sur la brochure) ; certaines copies sont hébergées par des revendeurs, ce qui est indiqué ci-dessous. Les pages produits tticlimatisation.com utilisent une même photo générique pour les séries CB22, UB32 et 25 : elle n'a pas été utilisée (non spécifique au châssis).",
+  "sources": [
+    {
+      "fichier": "zephyr-ca22-exterieure-officielle.jpeg",
+      "url": "https://www.echangeurdair.com/wp-content/uploads/2021/02/ZEPHYR-22-SEER.pdf",
+      "page_source": "copie hébergée par un revendeur (echangeurdair.com) de la brochure TTI « Zephyr 22 SEER » (fiche technique ZE-12CA22 / ZE-18CA22) ; même brochure que https://thermoclim.com/wp-content/uploads/2022/12/ZEPHYR-23-SEER-brochure.pdf ; recadrage de l'unité extérieure sur la page 2 (fond blanc du document conservé)",
+      "modeles": "ZE-12CA22EXT, ZE-18CA22EXT",
+      "image_web": "/images/products/official/zephyr-ca22-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "zephyr-serie-25-r454b-exterieure-brochure.jpeg",
+      "url": "https://tticlimatisation.com/docs/ZEPHYR_25SEER_R454b-BRO0125.pdf",
+      "page_source": "https://tticlimatisation.com/produits/zephyr-25-seer-30c-r454b (brochure officielle Zephyr 25 SEER R-454B, 01-2025) ; recadrage du rendu de l'unité extérieure en page 1 — ATTENTION : arrière-plan de scène conservé (pas de fond blanc disponible)",
+      "modeles": "ZE-09/12/18/24CB25O, ZE-09/12DB25O",
+      "image_web": "/images/products/official/zephyr-serie-25-r454b-exterieure-brochure.webp"
+    },
+    {
+      "fichier": "zephyr-central-hpa-exterieure-officielle.jpx",
+      "url": "https://thermoclim.com/wp-content/uploads/2022/12/ZEPHYR-CENTRAL-INVERTER-brochure.pdf",
+      "page_source": "copie hébergée par un revendeur (thermoclim.com) de la brochure TTI « Zephyr Central Inverter » (fiche technique ZE-24HPA / ZE-36HPA / ZE-60HPA), image p. 2 (unité 1 ventilateur, photo de famille)",
+      "modeles": "ZE-24HPA, ZE-36HPA, ZE-60HPA",
+      "image_web": "/images/products/official/zephyr-central-hpa-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "zephyr-central-hpb-r454b-exterieure-officielle.jpg",
+      "url": "https://tticlimatisation.com/storage/product-photos/product_1787695553.jpg",
+      "page_source": "https://tticlimatisation.com/produits/zephyr-centrale-30c-r454b (page produit officielle listant ZE-24HPB, ZE-36HPB, ZE-48HPB, ZE-60HPB) ; recadrage de l'unité extérieure (photo composite ventilo-convecteur + unité extérieure)",
+      "modeles": "ZE-24/36/48/60HPB",
+      "image_web": "/images/products/official/zephyr-central-hpb-r454b-exterieure-officielle.webp"
+    }
+  ],
+  "documents_consultes_sans_photo_exploitable": [
+    "https://tticlimatisation.com/docs/zephyr_multizone_-_2021.pdf (manuel d'installation multizone, aucune photo)",
+    "https://tticlimatisation.com/produits/zephyr-multi-zone-r454b (page sans numéros de modèle)",
+    "https://tticlimatisation.com/produits/thermopompe-murale-zephyr-cb22 (ZE-..CB22/DB22 : photo générique partagée avec d'autres séries)"
+  ]
+}

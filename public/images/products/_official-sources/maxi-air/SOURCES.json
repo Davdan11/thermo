@@ -1,0 +1,29 @@
+[
+  {
+    "fichier": "Maxiair-signature.png",
+    "url": "https://maxiair.ca/wp-content/uploads/2023/02/Maxiair-signature.png",
+    "page": "https://maxiair.ca/maxiair-signature/",
+    "date": "2026-09-10",
+    "familles": ["MAXS"],
+    "modeles": "Unité extérieure Maxi Air Signature (un ventilateur) ; la page cite Maxs2430 et Maxs4260",
+    "note": "Produit : maxi-air-maxs-officiel.webp"
+  },
+  {
+    "fichier": "MAXI146_depliant_Maxi-Air-signature_v5-p1-unite-exterieure-simple.png",
+    "url": "https://maxiair.ca/wp-content/uploads/2023/04/MAXI146_depliant_Maxi-Air-signature_v5.pdf",
+    "page": "https://maxiair.ca/maxiair-signature/",
+    "date": "2026-09-10",
+    "familles": ["MAXS"],
+    "modeles": "MAXS-2430 (2,5 tonnes, hauteur 31,89 po selon le tableau du dépliant) — unité extérieure à un ventilateur",
+    "note": "Produit : maxi-air-maxs-30k.webp. Attribution par la hauteur : 31,89 po (MAXS-2430) vs 52,48 po (MAXS-4260)."
+  },
+  {
+    "fichier": "MAXI146_depliant_Maxi-Air-signature_v5-p1-unite-exterieure-double.png",
+    "url": "https://maxiair.ca/wp-content/uploads/2023/04/MAXI146_depliant_Maxi-Air-signature_v5.pdf",
+    "page": "https://maxiair.ca/maxiair-signature/",
+    "date": "2026-09-10",
+    "familles": ["MAXS"],
+    "modeles": "MAXS-4260 (5 tonnes, hauteur 52,48 po) — unité extérieure à deux ventilateurs",
+    "note": "Produit : maxi-air-maxs-60k.webp. Même unité que maxiair-signature-double.png sur la page."
+  }
+]

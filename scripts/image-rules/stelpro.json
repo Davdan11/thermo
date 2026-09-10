@@ -1,0 +1,6 @@
+[
+  { "brand": "stelpro", "pattern": "^SELB-H(09|12|18|24)A-O", "series": "/images/products/official/stelpro-selb-officiel.webp" },
+  { "brand": "stelpro", "pattern": "^SEPB-H(09|12|18|24)A-O", "series": "/images/products/official/stelpro-sepb-officiel.webp" },
+  { "brand": "stelpro", "pattern": "^SMZ[2-5]B1-H(18|27|36|48|55)A-O", "series": "/images/products/official/stelpro-smz-officiel.webp" },
+  { "brand": "stelpro", "pattern": "^SDB1-H(24|30|36|48|60)A-O", "byCapacity": { "60": "/images/products/official/stelpro-sdb1-60k.webp" }, "series": "/images/products/official/stelpro-sdb1-officiel.webp" }
+]

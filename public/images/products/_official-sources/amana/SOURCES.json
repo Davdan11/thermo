@@ -1,0 +1,47 @@
+[
+  {
+    "fichier": "amana-azv6s-azv7s-officiel.png",
+    "image_web": "/images/products/official/amana-azv6s-azv7s-officiel.webp",
+    "url_fichier": "https://www.amana-hac.com/images/default-source/default-album/azv6s_asxv6_azv7s_.png",
+    "page_source": "https://www.amana-hac.com/products/heat-pumps/azv6s",
+    "date": "2026-09-10",
+    "modeles": "AZV6SA, AZV7SA (image utilisée sur les pages produit AZV6S et AZV7S)",
+    "note": "Image produit officielle."
+  },
+  {
+    "fichier": "amana-azv9s-officiel.png",
+    "image_web": "/images/products/official/amana-azv9s-officiel.webp",
+    "url_fichier": "https://www.amana-hac.com/images/default-source/products/az9vsn.png",
+    "page_source": "https://www.amana-hac.com/products/heat-pumps/az9vs",
+    "date": "2026-09-10",
+    "modeles": "AZV9SA",
+    "note": "Image produit officielle (page AZV9S)."
+  },
+  {
+    "fichier": "amana-aszs6-officiel.png",
+    "image_web": "/images/products/official/amana-aszs6-officiel.webp",
+    "url_fichier": "https://www.amana-hac.com/docs/default-source/default-document-library/ss-aszs6.pdf",
+    "page_source": "https://www.amana-hac.com/products/heat-pumps",
+    "date": "2026-09-10",
+    "modeles": "ASZS6 (18-60k)",
+    "note": "Fiche technique SS-ASZS6, p. 1, image native."
+  },
+  {
+    "fichier": "amana-aszv9-officiel.png",
+    "image_web": "/images/products/official/amana-aszv9-officiel.webp",
+    "url_fichier": "https://www.amana-hac.com/docs/default-source/default-document-library/ss-aszv9.pdf",
+    "page_source": "https://www.amana-hac.com/products/heat-pumps",
+    "date": "2026-09-10",
+    "modeles": "ASZV9 (24-60k)",
+    "note": "Fiche technique SS-ASZV9, p. 1, image native."
+  },
+  {
+    "fichier": "amana-avzc20-officiel.png",
+    "image_web": "/images/products/official/amana-avzc20-officiel.webp",
+    "url_fichier": "https://www.amana-hac.com/docs/default-source/default-document-library/ss-avzc20.pdf",
+    "page_source": "https://www.amana-hac.com/products/heat-pumps",
+    "date": "2026-09-10",
+    "modeles": "AVZC20 (24-60k)",
+    "note": "Fiche technique SS-AVZC20, p. 1, image native."
+  }
+]

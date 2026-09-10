@@ -1,0 +1,124 @@
+[
+  {
+    "brand": "carrier",
+    "pattern": "^25VNA0",
+    "series": "/images/products/official/carrier-25vna0-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^25VNA4",
+    "series": "/images/products/official/carrier-25vna4-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^25VNA8",
+    "series": "/images/products/official/carrier-25vna8-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^27VNA0",
+    "series": "/images/products/official/carrier-27vna0-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^27VNA1",
+    "series": "/images/products/official/carrier-27vna1-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^27VNA3",
+    "series": "/images/products/official/carrier-27vna3-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^37MBHA",
+    "series": "/images/products/official/carrier-37mbha-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^37MBRA",
+    "series": "/images/products/official/carrier-37mbra-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^37MGRA",
+    "series": "/images/products/official/carrier-37mgra-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MAQB",
+    "series": "/images/products/official/carrier-38maqb-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MARB",
+    "series": "/images/products/official/carrier-38marb-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MBRB",
+    "byCapacity": {
+      "36": "/images/products/official/carrier-38mbrb-36k.webp",
+      "48": "/images/products/official/carrier-38mbrb-48k.webp"
+    },
+    "series": "/images/products/official/carrier-38mbrb-36k.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MBRC",
+    "byCapacity": {
+      "36": "/images/products/official/carrier-38mbrc-36k.webp"
+    },
+    "series": "/images/products/official/carrier-38mbrc-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MBRQ",
+    "series": "/images/products/official/carrier-38mbrq-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MGHB",
+    "series": "/images/products/official/carrier-38mghb-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MGRB",
+    "series": "/images/products/official/carrier-38mgrb-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MGRQ",
+    "series": "/images/products/official/carrier-38mgrq-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MHRC",
+    "series": "/images/products/official/carrier-38mhrc-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MPRA",
+    "series": "/images/products/official/carrier-38mpra-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MPRB",
+    "series": "/images/products/official/carrier-38mprb-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38MURA",
+    "series": "/images/products/official/carrier-38mura-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38VMA0",
+    "series": "/images/products/official/carrier-38vma0-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^38VMB0",
+    "series": "/images/products/official/carrier-38vmb0-officiel.webp"
+  }
+]

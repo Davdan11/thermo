@@ -1,0 +1,27 @@
+[
+  {
+    "brand": "york",
+    "pattern": "^HH8(24|36|60)E2S11",
+    "byCapacity": {
+      "24": "/images/products/official/york-hh8-24k.webp",
+      "36": "/images/products/official/york-hh8-36k.webp",
+      "42": "/images/products/official/york-hh8-48-60k.webp"
+    },
+    "series": "/images/products/official/york-hh8-officiel.webp"
+  },
+  {
+    "brand": "york",
+    "pattern": "^HMH72B(24|34|36|48|60)1",
+    "series": "/images/products/official/york-hmh7-officiel.webp"
+  },
+  {
+    "brand": "york",
+    "pattern": "^YHM(24|36|48|60)B2[12]",
+    "series": "/images/products/official/york-yhm-officiel.webp"
+  },
+  {
+    "brand": "york",
+    "pattern": "^YZV(24|36|48|60)B21",
+    "series": "/images/products/official/york-yzv-officiel.webp"
+  }
+]

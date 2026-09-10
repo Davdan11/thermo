@@ -1,0 +1,6 @@
+[
+  { "brand": "napoleon", "pattern": "^NDHAS22", "series": "/images/products/official/napoleon-ndhas22-officiel.webp" },
+  { "brand": "napoleon", "pattern": "^NDHAS26", "series": "/images/products/official/napoleon-ndhas26-officiel.webp" },
+  { "brand": "napoleon", "pattern": "^NDHAM(B|BB)?-", "series": "/images/products/official/napoleon-ndham-officiel.webp" },
+  { "brand": "napoleon", "pattern": "^(WSEHV(2436|4860)[BR]A1-N|NS18HV)", "series": "/images/products/official/napoleon-wsehv-officiel.webp" }
+]

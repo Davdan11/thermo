@@ -1,0 +1,20 @@
+[
+  {
+    "fichier": "X60055_B-Dessin-approbation-EVO-p1-condenseur-EVO.png",
+    "url": "https://www.dettson.com/getattachment/Produits-discontinues/EVO/X60055_B-Dessin-d-approbation-EVO.pdf.aspx?lang=fr-CA",
+    "page": "https://www.dettson.com/fr-ca/produits/thermopompes/dettson/evo.aspx?cat=/Produits/Thermopompes",
+    "date": "2026-09-10",
+    "familles": ["EVD"],
+    "modeles": "Condenseur EVO (unité extérieure) — la page officielle et le dessin d'approbation X60055B listent EVD-24-O, EVD-30-O, EVD-36-O, EVD-48-O, EVD-60-O (série discontinuée)",
+    "note": "Produit : dettson-evd-officiel.webp (image native 344 px). EVD-18-O et le suffixe -S ne sont pas cités dans les documents officiels ; la règle couvre EVD-36-O-S par préfixe. Le PNG de la page (EVO.aspx) porte un filigrane « DISCONTINUÉ », d'où l'extraction depuis le PDF."
+  },
+  {
+    "fichier": "X61006_B-MHD-18-24-p1-unite-exterieure.png",
+    "url": "https://www.dettson.com/dettson.com/files/6a/6ae3ee65-6bc0-4296-94a0-fc795e216766.pdf",
+    "page": "https://www.dettson.com/ (fiche technique officielle X61006_B « Central Heat Pump MHD-18 & MHD-24 »)",
+    "date": "2026-09-10",
+    "familles": ["MHD"],
+    "modeles": "Unité extérieure MHD-18 et MHD-24 (décharge latérale, marquage « Atmos Heat Pump » sur la fiche Dettson)",
+    "note": "Produit : dettson-mhd-officiel.webp"
+  }
+]

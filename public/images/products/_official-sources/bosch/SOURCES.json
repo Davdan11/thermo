@@ -1,0 +1,110 @@
+[
+  {
+    "fichier": "bosch-ids-light-r454b-systeme-officiel.png",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o583137v389_IDS_Inverter_Ducted_Split_v14.png",
+    "page": "https://www.bosch-homecomfort.com/us/en/ocs/residential/ids-light-inverter-ducted-split-heat-pump-r-454b-version-21054929-p/",
+    "date": "2026-09-10",
+    "famille": "IDS Light R-454B (BOVA15, série A)",
+    "modeles": ["BOVA-24RXB-M15S", "BOVA-36RXB-M15S", "BOVA-60RXB-M15S"],
+    "note": "Photo système (condenseur + fournaise) ; la page dit « The BOVA15 outdoor unit … Equipped with R-454B ». Nomenclature (fiche ids_light_series_condensing_unit_product_specification_04.2026.pdf) : A = série A, R = regular, X = non connecté, B = R-454B, 15 = 15 SEER2. Web : condenseur recadré (x 0-1227, y 1027-2210)."
+  },
+  {
+    "fichier": "bosch-ids-light-r410a-systeme-officiel.png",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o523616v389_IDS_Inverter_Ducted_Split_v8.png",
+    "page": "https://www.bosch-homecomfort.com/ca/en/ocs/ids-light-inverter-ducted-split-heat-pump-21324647-p/",
+    "date": "2026-09-10",
+    "famille": "IDS Light R-410A (BOVA15)",
+    "modeles": ["BOVA-24HDN1-M15G", "BOVA-36HDN1-M15G", "BOVA-60HDN1-M15G"],
+    "note": "Fiche : https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/bosch_ids_bova15_product_specification_03.2023.pdf (liste les trois modèles, dessin de couverture identique au condenseur photographié). Web : condenseur recadré."
+  },
+  {
+    "fichier": "bosch-ids-plus-r410a-systeme-officiel.png",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o523613v389_IDS_Inverter_Ducted_Split_v5.png",
+    "page": "https://www.bosch-homecomfort.com/ca/en/ocs/ids-plus-inverter-ducted-split-heat-pump-21324649-p/",
+    "date": "2026-09-10",
+    "famille": "IDS Plus R-410A (BOVB18)",
+    "modeles": ["BOVB-36HDN1-M18M", "BOVB-60HDN1-M18M"],
+    "note": "Page : « combines the efficient and reliable BOVB18 outdoor unit ». Fiche : https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/bosch_ids_bovb18_product_specification_04.2023.pdf. Web : condenseur recadré."
+  },
+  {
+    "fichier": "bosch-ids-premium-r410a-systeme-officiel.png",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o523614v389_IDS_Inverter_Ducted_Split_v6.png",
+    "page": "https://www.bosch-homecomfort.com/ca/en/ocs/ids-premium-inverter-ducted-split-heat-pump-21324650-p/",
+    "date": "2026-09-10",
+    "famille": "IDS Premium R-410A 20 SEER (BOVA20 / BOVC20 / BOVD20)",
+    "modeles": ["BOVA-36HDN1-M20G", "BOVA-60HDN1-M20G", "BOVC-36HDN1-M20G", "BOVD-36HDN1-M20G"],
+    "note": "Page : « combines our top tier BOVA20 and BOVC20 outdoor units ». Fiches : bosch_ids_bova20_product_specification_02.2023.pdf, bosch_ids_bovc20_product_specification_03.2024.pdf, bosch_ids_bovd20_product_specification_03.2024.pdf (même dossier downloads-for-bosch-products/ ; BOVD20 = BOVC20 avec appli EasyAir, même cabinet 29-1/8 po). Réserve : le dessin de couverture de la fiche BOVA20 montre un capot de type IDS 1.0, différent de la photo. Web : condenseur recadré."
+  },
+  {
+    "fichier": "bosch-ids-premium-connected-r410a-systeme-officiel.png",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o523615v389_IDS_Inverter_Ducted_Split_v7.png",
+    "page": "https://www.bosch-homecomfort.com/ca/en/ocs/ids-premium-connected-inverter-ducted-split-heat-pump-21324652-p/",
+    "date": "2026-09-10",
+    "famille": "IDS Premium Connected R-410A (BOVB20)",
+    "modeles": ["BOVB-36HDN1-M20G", "BOVB-60HDN1-M20G"],
+    "note": "Page US discontinuée « IDS Premium Connected (R-410A) » mentionne BOVB20. Fiche : https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/inverter-ducted-split-(ids)/bosch_ids_bovb20_product_specification_09.2023.pdf. Web : condenseur recadré."
+  },
+  {
+    "fichier": "bosch-ids-premium-connected-r454b-systeme-officiel.png",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o583138v389_IDS_Inverter_Ducted_Split_v15.png",
+    "page": "https://www.bosch-homecomfort.com/ca/en/ocs/ids-premium-connected-inverter-ducted-split-heat-pump-r-454b-version-21324651-p/",
+    "date": "2026-09-10",
+    "famille": "IDS Premium Connected R-454B",
+    "modeles": ["BOVA-36RTB-M20S", "BOVA-60RTB-M20S"],
+    "note": "Fiche liée sur la page CA : https://www.bosch-homecomfort.com/ca/media/country_pool/documents/engineering-submittal-sheets/bosch_ids_premium_connected_condensing_unit_product_specification_08.2024.pdf (liste BOVA-36RTB-M20S et BOVA-60RTB-M20S). Web : condenseur recadré."
+  },
+  {
+    "fichier": "bosch-ids-ultra-odu-officiel.webp",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o575567v389_IDS-Ultra_ODU_v6.webp",
+    "page": "https://www.bosch-homecomfort.com/ca/en/ocs/ids-ultra-inverter-ducted-split-cold-climate-heat-pump-21324653-p/",
+    "date": "2026-09-10",
+    "famille": "IDS Ultra (climat froid)",
+    "modeles": ["BOVA-60MTB-M19E"],
+    "note": "Unité extérieure seule. Fiche liée sur la page CA : https://www.bosch-homecomfort.com/ca/media/country_pool/documents/engineering-submittal-sheets/bosch_ids_ultra_series_condensing_unit_product_specification_08.2024.pdf (liste BOVA-60MTB-M19E)."
+  },
+  {
+    "fichier": "bosch-idp-plus-r454b-officiel.png",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o607646v389_Inverter_Ducted_Packaged_Heat_Pump_v1.png",
+    "page": "https://www.bosch-homecomfort.com/us/en/ocs/residential/idp-plus-inverter-ducted-packaged-heat-pump-r-454b-version-21341646-p/",
+    "date": "2026-09-10",
+    "famille": "IDP Plus R-454B (monobloc 16 SEER2)",
+    "modeles": ["BPHA-36RCB-M16S", "BPHA-60RCB-M16S"],
+    "note": "Fiche liée : https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/idp_plus_product_specifications_02.2026.pdf. Photo des deux tailles de monobloc (3 et 5 tonnes) conservée entière."
+  },
+  {
+    "fichier": "bosch-idp-premium-r454b-officiel.png",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o607647v389_Inverter_Ducted_Packaged_Heat_Pump_v2.png",
+    "page": "https://www.bosch-homecomfort.com/us/en/ocs/residential/idp-premium-inverter-ducted-packaged-heat-pump-r-454b-version-21341647-p/",
+    "date": "2026-09-10",
+    "famille": "IDP Premium R-454B (monobloc 18 SEER2)",
+    "modeles": ["BPBA-36RCB-M18S", "BPBA-60RCB-M18S"],
+    "note": "Fiche liée : https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/idp_premium_series_product_specification_04.2026.pdf."
+  },
+  {
+    "fichier": "bosch-climate-5000-gen4-odu-gainable-officiel.webp",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o585452v389_Climate_5000_Ductless_System_Gen4_v5.webp",
+    "page": "https://www.bosch-homecomfort.com/us/en/ocs/residential/climate-5000-ductless-system-mini-split-heat-pump-r-454b-version-21154514-p/",
+    "date": "2026-09-10",
+    "famille": "Climate 5000 gen 4 R-454B (suffixe D), unité extérieure à un ventilateur",
+    "modeles": ["BMS500-AAS009-1CSXHD", "BMS500-AAS009-1CSXRD", "BMS500-AAS012-0CSXRD", "BMS500-AAS012-1CSXHD", "BMS500-AAS012-1CSXRD", "BMS500-AAS018-1CSXHD", "BMS500-AAS018-1CSXRD", "BMS500-AAS024-1CSXHD", "BMS500-AAS024-1CSXRD", "BMS500-AAS030-1CSXRD", "BMS500-AAS036-1CSXRD", "BMS500-AAS036-1CSXLD", "BMS500-AAM018-1CSXHD", "BMS500-AAM018-1CSXRD", "BMS500-AAM027-1CSXHD", "BMS500-AAM027-1CSXRD", "BMS500-AAM036-1CSXHD", "BMS500-AAM036-1CSXRD"],
+    "note": "Photo unité extérieure + gainable ; unité extérieure recadrée (x 150-1531, y 0-790). Modèles et châssis : IOM gen 4 mural https://www.bosch-homecomfort.com/us/media/country_pool/documents/installation-manuals/ductless-minisplits/climate5000_gen4_wall_ductless_single-split_iom_en_04.2026.pdf (tableau 7) et multizone climate5000_gen4_multizone_ductless_iom_en_04.2026.pdf (tableau 19) ; fiches 01.2026 (36k LD : 31,89 po de haut, un ventilateur)."
+  },
+  {
+    "fichier": "bosch-climate-5000-2-0-odu-simple-ventilateur-officiel.webp",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o523603v389_Climate_5000_Ductless_System_2-0_v11.webp",
+    "page": "https://www.bosch-homecomfort.com/ca/en/ocs/climate-5000-ductless-mini-split-heat-pump-21324662-p/",
+    "date": "2026-09-10",
+    "famille": "Climate 5000 R-410A (gen 2 suffixes A/B, gen 3 suffixe C), unité extérieure à un ventilateur",
+    "modeles": ["BMS500-AAS009-1CSXHB", "BMS500-AAS009-1CSXHC", "BMS500-AAS009-1CSXRA", "BMS500-AAS009-1CSXRC", "BMS500-AAS009-1CSXXA", "BMS500-AAS012-0CSXRB", "BMS500-AAS012-0CSXRC", "BMS500-AAS012-1CSXHB", "BMS500-AAS012-1CSXHC", "BMS500-AAS012-1CSXRA", "BMS500-AAS012-1CSXRC", "BMS500-AAS012-1CSXXA", "BMS500-AAS018-1CSXHC", "BMS500-AAS018-1CSXRA", "BMS500-AAS018-1CSXRC", "BMS500-AAS018-1CSXXA", "BMS500-AAS024-1CSXHB", "BMS500-AAS024-1CSXHC", "BMS500-AAS024-1CSXRA", "BMS500-AAS024-1CSXRC", "BMS500-AAS024-1CSXXA", "BMS500-AAS030-1CSXRC", "BMS500-AAS036-1CSXRC", "BMS500-AAS036-1CSXLB", "BMS500-AAS036-1CSXLC", "BMS500-AAM018-1CSXHC", "BMS500-AAM018-1CSXRA", "BMS500-AAM018-1CSXRC", "BMS500-AAM027-1CSXHB", "BMS500-AAM027-1CSXHC", "BMS500-AAM027-1CSXRA", "BMS500-AAM027-1CSXRC", "BMS500-AAM036-1CSXRA", "BMS500-AAM036-1CSXRC"],
+    "note": "Photo officielle Bosch nommée « Climate 5000 Ductless System 2-0 » (génération 2.0) affichée sur la page CA du Climate 5000 R-410A (dont les manuels 2025 listent la gen 3). Châssis à un ventilateur (765x555, 805x554, 845x702/890x673, 946x810 mm) : tableaux IOM climate5000_wall_ductless_single_split_iom_12.2020.pdf, climate5000_multisplit_ductless_iom_12.2020.pdf, climate5000_gen3_wall_ductless_single_split_iom_06.2022.pdf, climate5000_gen3_multisplit_ductless_iom_06.2022.pdf ; fiches g3 (photos 18k/27k/36k multi). 1CSXXA : manuel de service climate5000g2_ductless_ac-hp_odu_service_manual_05.2025.pdf."
+  },
+  {
+    "fichier": "bosch-climate-5000-2-0-odu-double-ventilateur-officiel.webp",
+    "url": "https://www.bosch-homecomfort.com/ocsmedia/optimized/1600x99999/o523608v389_Climate_5000_Ductless_System_2-0_v12.webp",
+    "page": "https://www.bosch-homecomfort.com/ca/en/ocs/climate-5000-ductless-mini-split-heat-pump-21324662-p/",
+    "date": "2026-09-10",
+    "famille": "Climate 5000 R-410A grande capacité, unité extérieure à deux ventilateurs (952x1333 mm)",
+    "modeles": ["BMS500-AAS048-1CSXLB", "BMS500-AAS048-1CSXLC", "BMS500-AAS060-1CSXLB", "BMS500-AAM048-1CSXHC", "BMS500-AAM048-1CSXRA", "BMS500-AAM048-1CSXRC", "BMS500-AAM036-1CSXHC"],
+    "note": "Châssis 952x1333x415 mm : mêmes tableaux IOM 12.2020 / 06.2022 ; photo à deux ventilateurs sur la fiche climate5000_g3_48k_multi_zone_reg_heat_ess_03.2023.pdf."
+  }
+]

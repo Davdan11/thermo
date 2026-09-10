@@ -1,0 +1,118 @@
+[
+  {
+    "brand": "lennox",
+    "pattern": "^MPB0(09|12|18|24|30|36|48)S4",
+    "series": "/images/products/official/lennox-mpb-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^MPC0(09|12|18|24|30|36|48|60)S4",
+    "byCapacity": {
+      "48": "/images/products/official/lennox-mpc-48k.webp",
+      "60": "/images/products/official/lennox-mpc-48k.webp"
+    },
+    "series": "/images/products/official/lennox-mpc-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^MLB0(09|12|18|24|30|36|48)S4",
+    "byCapacity": {
+      "36": "/images/products/official/lennox-mlb-36k.webp",
+      "48": "/images/products/official/lennox-mlb-36k.webp"
+    },
+    "series": "/images/products/official/lennox-mlb-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^MLA0(09|12|18|24|30|36)S4",
+    "series": "/images/products/official/lennox-mla-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^MHB0(09|12|18|24)S4",
+    "series": "/images/products/official/lennox-mhb-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^MWPD0(09|12|15|18|24)S6",
+    "byCapacity": {
+      "9": "/images/products/official/lennox-mwpd-9k.webp",
+      "12": "/images/products/official/lennox-mwpd-9k.webp",
+      "15": "/images/products/official/lennox-mwpd-9k.webp",
+      "18": "/images/products/official/lennox-mwpd-18k.webp",
+      "20": "/images/products/official/lennox-mwpd-18k.webp",
+      "24": "/images/products/official/lennox-mwpd-18k.webp"
+    },
+    "series": "/images/products/official/lennox-mw-serie-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^MWHD0(09|12|15|18|24)S6",
+    "byCapacity": {
+      "9": "/images/products/official/lennox-mwhd-9k.webp",
+      "12": "/images/products/official/lennox-mwhd-9k.webp",
+      "15": "/images/products/official/lennox-mwhd-9k.webp",
+      "18": "/images/products/official/lennox-mwhd-18k.webp",
+      "20": "/images/products/official/lennox-mwhd-18k.webp",
+      "24": "/images/products/official/lennox-mwhd-18k.webp"
+    },
+    "series": "/images/products/official/lennox-mw-serie-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^MWLD0(09|12|15|18|24)S6",
+    "byCapacity": {
+      "9": "/images/products/official/lennox-mwld-9k.webp",
+      "12": "/images/products/official/lennox-mwld-9k.webp",
+      "15": "/images/products/official/lennox-mwld-9k.webp",
+      "18": "/images/products/official/lennox-mwld-18k.webp",
+      "20": "/images/products/official/lennox-mwld-18k.webp",
+      "24": "/images/products/official/lennox-mwld-18k.webp"
+    },
+    "series": "/images/products/official/lennox-mw-serie-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^MMLD0(09|12|18|20|24|30|36|48)S6",
+    "byCapacity": {
+      "18": "/images/products/official/lennox-mmld-18k.webp",
+      "24": "/images/products/official/lennox-mmld-24k.webp"
+    },
+    "series": "/images/products/official/lennox-mmld-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^MMPD0(18|20|24|30|36|48)S6",
+    "series": "/images/products/official/lennox-mmpd-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^XP25-",
+    "series": "/images/products/official/lennox-xp25-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^SL25XPV-",
+    "series": "/images/products/official/lennox-sl25xpv-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^SL22KLV-",
+    "series": "/images/products/official/lennox-sl22klv-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^EL18KSLV-",
+    "series": "/images/products/official/lennox-el18kslv-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^EL21KLV-",
+    "series": "/images/products/official/lennox-el21klv-officiel.webp"
+  },
+  {
+    "brand": "lennox",
+    "pattern": "^(EL22XPV|EL18XPV|XP20)-",
+    "series": "/images/products/official/lennox-elite-xpv-officiel.webp"
+  }
+]

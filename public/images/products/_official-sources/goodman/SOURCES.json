@@ -1,0 +1,38 @@
+[
+  {
+    "fichier": "goodman-gzv-s-officiel.png",
+    "image_web": "/images/products/official/goodman-gzv-s-officiel.webp",
+    "url_fichier": "https://www.goodmanmfg.com/images/librariesprovider6/default-album/gsxs6.png",
+    "page_source": "https://www.goodmanmfg.com/products/heat-pumps/gzv6s",
+    "date": "2026-09-10",
+    "modeles": "GZV6SA, GZV7SA (image utilisée sur les pages produit GZV6S et GZV7S)",
+    "note": "Image produit officielle (pages GZV6S et GZV7S)."
+  },
+  {
+    "fichier": "goodman-gszs6-officiel.png",
+    "image_web": "/images/products/official/goodman-gszs6-officiel.webp",
+    "url_fichier": "https://www.goodmanmfg.com/docs/librariesprovider6/default-document-library/ss-gszs6.pdf",
+    "page_source": "https://www.goodmanmfg.com/products/heat-pumps",
+    "date": "2026-09-10",
+    "modeles": "GSZS6 (18-60k)",
+    "note": "Fiche technique SS-GSZS6, p. 1, image native."
+  },
+  {
+    "fichier": "goodman-gszv9-officiel.png",
+    "image_web": "/images/products/official/goodman-gszv9-officiel.webp",
+    "url_fichier": "https://www.goodmanmfg.com/docs/librariesprovider6/default-document-library/ss-gszv9.pdf",
+    "page_source": "https://www.goodmanmfg.com/products/heat-pumps",
+    "date": "2026-09-10",
+    "modeles": "GSZV9 (24-60k)",
+    "note": "Fiche technique SS-GSZV9, p. 1, image native."
+  },
+  {
+    "fichier": "goodman-gvzc20-officiel.png",
+    "image_web": "/images/products/official/goodman-gvzc20-officiel.webp",
+    "url_fichier": "https://www.goodmanmfg.com/docs/librariesprovider6/default-document-library/ss-gvzc20.pdf",
+    "page_source": "https://www.goodmanmfg.com/products/heat-pumps",
+    "date": "2026-09-10",
+    "modeles": "GVZC20",
+    "note": "Fiche technique SS-GVZC20, p. 1, image native."
+  }
+]

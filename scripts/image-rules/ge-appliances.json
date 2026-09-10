@@ -1,0 +1,230 @@
+[
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G(09|12)AD2BE",
+    "series": "/images/products/official/ge-appliances-altitude-officiel.webp",
+    "note": "Photo officielle GE des modèles 1G09AD2BEA et 1G12AD2BEA — https://www.geappliances.com/appliance/Altitude-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G09AD2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G(15|18)AD2BE",
+    "series": "/images/products/official/ge-appliances-altitude-15-18k.webp",
+    "note": "Photo officielle GE des modèles 1G15AD2BEA et 1G18AD2BEA. — https://www.geappliances.com/appliance/Altitude-Series-208-230V-15-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G15AD2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G(24|3036)AD2BE",
+    "series": "/images/products/official/ge-appliances-altitude-24-36k.webp",
+    "note": "Photo officielle GE des modèles 1G24AD2BEA et 1G3036AD2BEA. — https://www.geappliances.com/appliance/Altitude-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G24AD2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G(09CB1|12CB2)BE",
+    "series": "/images/products/official/ge-appliances-caliber-officiel.webp",
+    "note": "Photo officielle GE des modèles 1G09CB1BEA — https://www.geappliances.com/appliance/Caliber-Series-115V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G09CB1BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G(09CB2|12CB1)BE",
+    "series": "/images/products/official/ge-appliances-caliber-9-12k.webp",
+    "note": "Photo officielle GE des modèles 1G09CB2BEA et 1G12CB1BEA — https://www.geappliances.com/appliance/Caliber-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G09CB2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G18CB2BE",
+    "series": "/images/products/official/ge-appliances-caliber-18k.webp",
+    "note": "Photo officielle GE du modèle 1G18CB2BEA — https://www.geappliances.com/appliance/Caliber-Series-208-230V-18-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G18CB2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G24CB2BE",
+    "series": "/images/products/official/ge-appliances-caliber-24k.webp",
+    "note": "Photo officielle GE du modèle 1G24CB2BEA — https://www.geappliances.com/appliance/Caliber-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G24CB2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G(09|12)ED2BE",
+    "series": "/images/products/official/ge-appliances-endure-officiel.webp",
+    "note": "Photo officielle GE des modèles 1G09ED2BEA et 1G12ED2BEA — https://www.geappliances.com/appliance/Endure-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G09ED2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G18ED2BE",
+    "series": "/images/products/official/ge-appliances-endure-18k.webp",
+    "note": "Photo officielle GE du modèle 1G18ED2BEA. — https://www.geappliances.com/appliance/Endure-Series-208-230V-18-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G18ED2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G24ED2BE",
+    "series": "/images/products/official/ge-appliances-endure-24k.webp",
+    "note": "Photo officielle GE du modèle 1G24ED2BEA. — https://www.geappliances.com/appliance/Endure-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G24ED2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^1G3036ED2BE",
+    "series": "/images/products/official/ge-appliances-endure-30-36k.webp",
+    "note": "Photo officielle GE du modèle 1G3036ED2BEA. Aucune source officielle pour 1G4248ED2BE. — https://www.geappliances.com/appliance/Endure-Series-208-230V-30-000-36-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1G3036ED2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^(2G18|3G24)AD2BE",
+    "series": "/images/products/official/ge-appliances-altitude-multi-officiel.webp",
+    "note": "Photo officielle GE des modèles 2G18AD2BEA et 3G24AD2BEA — https://www.geappliances.com/appliance/Altitude-Series-208-230V-2-Zone-18-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-2G18AD2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^4G36AD2BE",
+    "series": "/images/products/official/ge-appliances-altitude-multi-36k.webp",
+    "note": "Photo officielle GE du modèle 4G36AD2BEA — https://www.geappliances.com/appliance/Altitude-Series-208-230V-4-Zone-36-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-4G36AD2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^(2G20|3G24)ED2BE",
+    "series": "/images/products/official/ge-appliances-endure-multi-officiel.webp",
+    "note": "Photo officielle GE des modèles 2G20ED2BEA et 3G24ED2BEA. — https://www.geappliances.com/appliance/Endure-Series-208-230V-2-Zone-20-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-2G20ED2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^(4G36|5G42)ED2BE",
+    "series": "/images/products/official/ge-appliances-endure-multi-36-42k.webp",
+    "note": "Photo officielle GE des modèles 4G36ED2BEA et 5G42ED2BEA. — https://www.geappliances.com/appliance/Endure-Series-208-230V-4-Zone-36-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-4G36ED2BEA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH1(09|12)PRDB",
+    "series": "/images/products/official/ge-appliances-altitude-prdb-officiel.webp",
+    "note": "Photo officielle GE — https://www.geappliances.com/appliance/Altitude-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH109PRDBB"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH1(15|18)PRDB",
+    "series": "/images/products/official/ge-appliances-altitude-prdb-15-18k.webp",
+    "note": "Photo officielle GE des modèles ASH115PRDBB et ASH118PRDBB. — https://www.geappliances.com/appliance/Altitude-Series-208-230V-15-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH115PRDBB"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH124PRDB",
+    "series": "/images/products/official/ge-appliances-altitude-prdb-24k.webp",
+    "note": "Photo officielle GE du modèle ASH124PRDBB. — https://www.geappliances.com/appliance/Altitude-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH124PRDBB"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH1(09|12|15|18|24)PRDWA",
+    "series": "/images/products/official/ge-appliances-altitude-prdwa-officiel.webp",
+    "note": "Photo officielle GE — https://www.geappliances.com/appliance/Altitude-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH109PRDWA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH1(09|12)URDE$",
+    "series": "/images/products/official/ge-appliances-endure-urde-officiel.webp",
+    "note": "Photo officielle GE des modèles ASH109URDEB et ASH112URDEB — https://www.geappliances.com/appliance/Endure-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH109URDEB"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH118URDE$",
+    "series": "/images/products/official/ge-appliances-endure-urde-18k.webp",
+    "note": "Photo officielle GE du modèle ASH118URDEB. — https://www.geappliances.com/appliance/Endure-Series-208-230V-18-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH118URDEB"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH1(09|12|18)URDSE",
+    "series": "/images/products/official/ge-appliances-endure-urdse-officiel.webp",
+    "note": "Photo officielle GE — https://www.geappliances.com/appliance/Endure-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH109URDSE"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH(124|3036)UCDD",
+    "series": "/images/products/official/ge-appliances-endure-pro-officiel.webp",
+    "note": "Photo officielle GE des modèles ASH124UCDDA et ASH3036UCDDA — https://www.geappliances.com/appliance/Endure-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH124UCDDA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH4248UCDD",
+    "series": "/images/products/official/ge-appliances-endure-pro-42-48k.webp",
+    "note": "Photo officielle GE du modèle ASH4248UCDDA. — https://www.geappliances.com/appliance/Endure-Series-208-230V-42-000-48-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH4248UCDDA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH1(09|12|18|24)CRDW",
+    "series": "/images/products/official/ge-appliances-caliber-crdwa-officiel.webp",
+    "note": "Photo officielle GE — https://www.geappliances.com/appliance/Caliber-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH109CRDWA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH1(18|24)CRDD",
+    "series": "/images/products/official/ge-appliances-caliber-crdd-officiel.webp",
+    "note": "Photo officielle GE des modèles ASH118CRDDA et ASH124CRDDA — https://www.geappliances.com/appliance/Caliber-Series-208-230V-18-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH118CRDDA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH(124|3036)TRDF",
+    "series": "/images/products/official/ge-appliances-caliber-trdf-officiel.webp",
+    "note": "Photo officielle GE des modèles ASH124TRDFA et ASH3036TRDFA — https://www.geappliances.com/appliance/Caliber-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH124TRDFA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH(218|324)JCDD",
+    "series": "/images/products/official/ge-appliances-multilink-officiel.webp",
+    "note": "Photo officielle GE des modèles ASH218JCDDA et ASH324JCDDA — https://www.geappliances.com/appliance/Multilink-Series-208-230V-2-Zones-18-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH218JCDDA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH436JCDD",
+    "series": "/images/products/official/ge-appliances-multilink-36k.webp",
+    "note": "Photo officielle GE du modèle ASH436JCDDA — https://www.geappliances.com/appliance/Multilink-Series-208-230V-4-Zones-36-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH436JCDDA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH542JCDD",
+    "series": "/images/products/official/ge-appliances-multilink-42k.webp",
+    "note": "Photo officielle GE du modèle ASH542JCDDA — https://www.geappliances.com/appliance/Multilink-Series-208-230V-5-Zones-42-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH542JCDDA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH(220|324)NCDD",
+    "series": "/images/products/official/ge-appliances-endure-multi-ncdd-officiel.webp",
+    "note": "Photo officielle GE des modèles ASH220NCDDA et ASH324NCDDA — https://www.geappliances.com/appliance/Endure-Series-208-230V-2-Zones-18-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH220NCDDA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH436NCDD",
+    "series": "/images/products/official/ge-appliances-endure-multi-ncdd-36k.webp",
+    "note": "Photo officielle GE du modèle ASH436NCDDA. — https://www.geappliances.com/appliance/Endure-Series-208-230V-4-Zones-36-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH436NCDDA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^ASH(220|324|436)NCDW",
+    "series": "/images/products/official/ge-appliances-endure-multi-ncdw-officiel.webp",
+    "note": "Photo officielle GE — https://www.geappliances.com/appliance/Endure-Series-208-230V-2-Zones-18-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-ASH220NCDWA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^NS18H24HA5",
+    "series": "/images/products/official/ge-appliances-connect-ns18h-officiel.webp",
+    "note": "Photo officielle GE du modèle NS18H24HA5 — https://www.geappliances.com/appliance/2-Ton-Connect-Series-Side-Discharge-Inverter-Heat-Pump-NS18H24HA5"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^NS18H36HA5",
+    "series": "/images/products/official/ge-appliances-connect-ns18h-36k.webp",
+    "note": "Photo officielle GE du modèle NS18H36HA5. — https://www.geappliances.com/appliance/3-Ton-Connect-Series-Side-Discharge-Inverter-Heat-Pump-NS18H36HA5"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^NS18H60HA5",
+    "series": "/images/products/official/ge-appliances-connect-ns18h-60k.webp",
+    "note": "Photo officielle GE du modèle NS18H60HA5 — https://www.geappliances.com/appliance/4-5-Ton-Connect-Series-Side-Discharge-Inverter-Heat-Pump-NS18H60HA5"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^AUH2436ZGDA",
+    "series": "/images/products/official/ge-appliances-connect-auh-officiel.webp",
+    "note": "Photo officielle GE du modèle AUH2436ZGDA — https://www.geappliances.com/appliance/Connect-Series-24-000-36-000-Heat-Pump-AUH2436ZGDA"
+  },
+  {
+    "brand": "ge-appliances",
+    "pattern": "^AUH4860ZGDA",
+    "series": "/images/products/official/ge-appliances-connect-auh-48-60k.webp",
+    "note": "Photo officielle GE du modèle AUH4860ZGDA. — https://www.geappliances.com/appliance/Connect-Series-48-000-60-000-Heat-Pump-AUH4860ZGDA"
+  }
+]

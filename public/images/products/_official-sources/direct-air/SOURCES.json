@@ -1,0 +1,33 @@
+{
+  "marque": "Direct Air (directairhvac.com ; brochures hébergées sur le S3 officiel du fabricant : s3.amazonaws.com/powrmatic/… et directairhvac.com/wp-content/uploads)",
+  "date_collecte": "2026-09-10",
+  "sources": [
+    {
+      "fichier": "direct-air-hxpro-exterieure-officielle.jpx, direct-air-hxpro-multizone-exterieure-officielle.jpx",
+      "url": "https://s3.amazonaws.com/powrmatic/powrmatic/content/63158_Directair___Hxpro___Brochure_web____2022___FR.pdf",
+      "page_source": "https://directairhvac.com/ductless-system/heatpump/heat-xtreme-pro-series/ (brochure Heat Xtreme Pro FR 2022) ; image p. 1 (monozone 1Z) et p. 6 (multizone 2Z-5Z, photo de famille 2 ventilateurs utilisée par la brochure pour tout le groupe multizone)",
+      "modeles": "DIRM-06/09/12/18/24HXPRO28-1Z ; DIRM-18HXPRO28-2Z, DIRM-28HXPRO28-3Z, DIRM-36HXPRO28-4Z, DIRM-48HXPRO28-5Z",
+      "image_web": "/images/products/official/direct-air-hxpro-exterieure-officielle.webp, /images/products/official/direct-air-hxpro-multizone-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "direct-air-da25-exterieure-officielle.jpeg, direct-air-da25-multizone-exterieure-officielle.jpeg",
+      "url": "https://s3.amazonaws.com/powrmatic/powrmatic/content/63169_DirectAir___DA25___Brochure_web____FR___20230322.pdf",
+      "page_source": "https://directairhvac.com/ductless-system/heatpump/da25-series-heatpump/ (brochure DA25 FR 2023-03) ; image p. 1 (monozone) et p. 6 (multizone 2Z-5Z, photo de famille 2 ventilateurs) ; le DIRM-30DA25-1Z est listé sur la page produit",
+      "modeles": "DIRM-09/12/18/24/30DA25-1Z ; DIRM-18DA25-2Z, DIRM-27DA25-3Z, DIRM-36DA25-4Z, DIRM-48DA25-5Z",
+      "image_web": "/images/products/official/direct-air-da25-exterieure-officielle.webp, /images/products/official/direct-air-da25-multizone-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "direct-air-magic-pro-20-exterieure-officielle.jpx",
+      "url": "https://s3.amazonaws.com/powrmatic/powrmatic/content/website/DIRECTAIR%20-%20MAGICPRO20%20-%20BROCHURE%28WEB%29%20-%20FR%20-%2020230817%20%281%29%20%281%29.pdf",
+      "page_source": "https://directairhvac.com/central-system/heat-pump/magic-pro-system-20-seer/ (brochure Magic Pro System 20 SEER FR 2023-08), image p. 1",
+      "modeles": "DIRM-18/24/30/36/48/60MAGICPRO20-OU (et variante DIRM-36MAGICPRO20-OU1F)",
+      "image_web": "/images/products/official/direct-air-magic-pro-20-exterieure-officielle.webp"
+    }
+  ],
+  "familles_sans_photo_officielle": [
+    "DIRH-12/18HP23-DKO (23 SEER) : page produit sans brochure ni image réelle",
+    "DIRM-..CS19-OU, DIRM-..LCDA25-1Z, DIRM4-..LCHX-1Z : aucune brochure sur directairhvac.com/brochures/",
+    "DIRM4-* : préfixe de révision absent des brochures et du site (qui ne listent que DIRM-) ; non associé par prudence",
+    "M2OF/M3OF/M3OH/M4OH/M5OF/M5OG, MOB30/MOBA30/MOCA31/MOD30/MOD31/MOX430 : numéros Midea, aucune page Direct Air"
+  ]
+}

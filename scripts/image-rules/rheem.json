@@ -1,0 +1,11 @@
+[
+  { "brand": "rheem", "pattern": "^RD16AY", "series": "/images/products/official/rheem-rd16ay-officiel.webp" },
+  { "brand": "rheem", "pattern": "^RD16AZ", "series": "/images/products/official/rheem-rd16az-officiel.webp" },
+  { "brand": "rheem", "pattern": "^RD17AZ", "series": "/images/products/official/rheem-rd17az-officiel.webp" },
+  { "brand": "rheem", "pattern": "^RD18AY", "series": "/images/products/official/rheem-rd18ay-officiel.webp" },
+  { "brand": "rheem", "pattern": "^RP18AZ", "series": "/images/products/official/rheem-rp18az-officiel.webp" },
+  { "brand": "rheem", "pattern": "^RP19AY", "series": "/images/products/official/rheem-rp19ay-officiel.webp" },
+  { "brand": "rheem", "pattern": "^FPHFR", "series": "/images/products/official/rheem-fphfr-officiel.webp" },
+  { "brand": "rheem", "pattern": "^FPHSR", "series": "/images/products/official/rheem-fphsr-officiel.webp" },
+  { "brand": "rheem", "pattern": "^FSHSR", "series": "/images/products/official/rheem-fshsr-officiel.webp" }
+]

@@ -1,0 +1,314 @@
+[
+  {
+    "fichier": "carrier-25vna0-product-data-p1.jpg",
+    "image_web": "/images/products/official/carrier-25vna0-officiel.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/01/25VNA-05PD.pdf",
+    "page": "https://www.carrier.com/residential/en/us/products/heat-pumps/",
+    "date": "2026-09-10",
+    "familles": [
+      "25VNA0"
+    ],
+    "modeles": "Infinity 20 (Greenspeed) 25VNA024/036/048/060",
+    "note": "Photo page 1 de la fiche Product Data 25VNA (nomenclature 25VNA0 dans le document). L'image CDN officielle (…/heat-pumps/infinity-20-heat-pump-with-greenspeed-intelligence-25VNA0.png) porte un logo Greenspeed superposé, non retenue."
+  },
+  {
+    "fichier": "carrier-25vna4-cdn.png",
+    "image_web": "/images/products/official/carrier-25vna4-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1585836668/carrier/residential-hvac/products/heat-pumps/infinity-24-heat-pump-with-greenspeed-intelligence-25VNA4-rotated.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/heat-pumps/27vna1/",
+    "date": "2026-09-10",
+    "familles": [
+      "25VNA4"
+    ],
+    "modeles": "Infinity 24 Greenspeed 25VNA424/436/448/460",
+    "note": "Image CDN Carrier (nom de fichier = 25VNA4) référencée par la page 27VNA1 ; même unité que la fiche Product Data 25VNA4-02PD.pdf (page 1)."
+  },
+  {
+    "fichier": "carrier-25vna8-cdn.png",
+    "image_web": "/images/products/official/carrier-25vna8-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1739908537/carrier/residential-hvac/products/heat-pumps/infinity-18VS-heat-pump-25VNA8.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/heat-pumps/27vna0/",
+    "date": "2026-09-10",
+    "familles": [
+      "25VNA8"
+    ],
+    "modeles": "Infinity 18VS 25VNA824…860 (+TSTAT)",
+    "note": "Image CDN Carrier (nom de fichier = 25VNA8) référencée par la page 27VNA0 (CA) ; même unité que la fiche 25VNA8-04PD.pdf (page 1)."
+  },
+  {
+    "fichier": "carrier-27vna0-cdn.png",
+    "image_web": "/images/products/official/carrier-27vna0-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1739221232/carrier/residential-hvac/products/heat-pumps/infinity-18VS-heat-pump-27VNA0.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/heat-pumps/27vna0/",
+    "date": "2026-09-10",
+    "familles": [
+      "27VNA0"
+    ],
+    "modeles": "Infinity 18VS/20VS 27VNA024/036/048/060",
+    "note": "Photo produit de la page officielle Carrier Canada 27VNA0."
+  },
+  {
+    "fichier": "carrier-27vna1-cdn.png",
+    "image_web": "/images/products/official/carrier-27vna1-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1739221234/carrier/residential-hvac/products/heat-pumps/infinity-24-heat-pump-with-greenspeed-intelligence-27VNA1.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/heat-pumps/27vna1/",
+    "date": "2026-09-10",
+    "familles": [
+      "27VNA1"
+    ],
+    "modeles": "Infinity 24 climat froid 27VNA154",
+    "note": "Photo produit de la page officielle Carrier Canada 27VNA1."
+  },
+  {
+    "fichier": "carrier-27vna3-cdn.png",
+    "image_web": "/images/products/official/carrier-27vna3-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1739221261/carrier/residential-hvac/products/heat-pumps/infinity-24-heat-pump-with-greenspeed-intelligence-27VNA3.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/heat-pumps/27vna3/",
+    "date": "2026-09-10",
+    "familles": [
+      "27VNA3"
+    ],
+    "modeles": "Infinity 23/24 VS 27VNA336/348/360",
+    "note": "Photo produit de la page officielle Carrier Canada 27VNA3."
+  },
+  {
+    "fichier": "carrier-37mbhaq-cdn.png",
+    "image_web": "/images/products/official/carrier-37mbha-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731005940/carrier/residential-hvac/products/ductless/performance-single-zone-mini-split-heat-pump-37MBHAQ.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/37mbha/",
+    "date": "2026-09-10",
+    "familles": [
+      "37MBHA"
+    ],
+    "modeles": "37MBHAQ36/48/58AA3",
+    "note": "Photo produit de la page officielle Carrier Canada 37MBHA (même page sur carrier.com/residential/en/us/…/37mbha/)."
+  },
+  {
+    "fichier": "carrier-37mbra-cdn.png",
+    "image_web": "/images/products/official/carrier-37mbra-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731006469/carrier/residential-hvac/products/ductless/performance-single-zone-mini-split-heat-pump-37MBRA.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/37mbra---performance--single-zone-ductless-heat-pump/",
+    "date": "2026-09-10",
+    "familles": [
+      "37MBRA"
+    ],
+    "modeles": "37MBRAQ36/48/58AA3",
+    "note": "Photo produit de la page officielle Carrier Canada 37MBRA."
+  },
+  {
+    "fichier": "carrier-37mgra-cdn.png",
+    "image_web": "/images/products/official/carrier-37mgra-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731006482/carrier/residential-hvac/products/ductless/performance-multi-zone-mini-split-heat-pump-with-basepan-heater-37MGRA.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/37mgra/",
+    "date": "2026-09-10",
+    "familles": [
+      "37MGRA"
+    ],
+    "modeles": "37MGRAQ55FA3",
+    "note": "Photo produit de la page officielle Carrier Canada 37MGRA."
+  },
+  {
+    "fichier": "carrier-38mar-cdn.png",
+    "image_web": "/images/products/official/carrier-38maqb-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1600611989/carrier/residential-hvac/products/ductless/ductless-systems-performance-heat-pump-with-basepan-heater-38MAR.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/38mar/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MAQB"
+    ],
+    "modeles": "38MAQB09R…36R--3",
+    "note": "Page officielle Carrier Canada « Performance Heat Pump 38MAR » ; la fiche Product Data 38MA*R (shareddocs 1009/Public/0F/38MAR-06PD.pdf) liste les numéros 38MAQB09R…36R avec la même unité en page 1."
+  },
+  {
+    "fichier": "carrier-38marb-cdn.png",
+    "image_web": "/images/products/official/carrier-38marb-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1620396709/carrier/residential-hvac/products/ductless/performance-series-heat-pump-38MARB.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/38marb/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MARB"
+    ],
+    "modeles": "38MARBQ09…36",
+    "note": "Photo produit de la page officielle Carrier Canada 38MARB (idem fiche 38MARB-01PD.pdf p. 1)."
+  },
+  {
+    "fichier": "carrier-38mbrb-36k-product-data-p1.jpg",
+    "image_web": "/images/products/official/carrier-38mbrb-36k.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/09/38MBRB-02PD.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1009/Public/09/38MBRB-02PD.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "38MBRB"
+    ],
+    "modeles": "38MBRBQ36AA3",
+    "note": "Fiche Product Data 38MBRB, page 1, « Fig. 1 — Size 36K »."
+  },
+  {
+    "fichier": "carrier-38mbrb-48k-product-data-p1.jpg",
+    "image_web": "/images/products/official/carrier-38mbrb-48k.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/09/38MBRB-02PD.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1009/Public/09/38MBRB-02PD.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "38MBRB"
+    ],
+    "modeles": "38MBRBQ48AA3",
+    "note": "Fiche Product Data 38MBRB, page 1, « Fig. 2 — Size 48K »."
+  },
+  {
+    "fichier": "carrier-38mbrc-36k-product-data-p1.jpg",
+    "image_web": "/images/products/official/carrier-38mbrc-36k.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/0C/38MBRC-03PD.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1009/Public/0C/38MBRC-03PD.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "38MBRC"
+    ],
+    "modeles": "38MBRCQ36AA3",
+    "note": "Fiche Product Data 38MBRC, page 1, « Fig. 1 — Size 36K »."
+  },
+  {
+    "fichier": "carrier-38mbrc-cdn.png",
+    "image_web": "/images/products/official/carrier-38mbrc-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1663011713/carrier/residential-hvac/products/ductless/performance-single-zone-heat-pump-38MBRC.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/38mbrc/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MBRC"
+    ],
+    "modeles": "38MBRCQ48/58AA3 (unité à deux ventilateurs, « Fig. 2 — Sizes 48K-58K » de la fiche 38MBRC-03PD)",
+    "note": "Photo produit de la page officielle Carrier Canada 38MBRC."
+  },
+  {
+    "fichier": "carrier-38mbr-cdn.png",
+    "image_web": "/images/products/official/carrier-38mbrq-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1599155252/carrier/residential-hvac/products/heat-pumps/performance-single-zone-heat-pump-38MBR.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/38mbr/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MBRQ"
+    ],
+    "modeles": "38MBRQ36/48/58A--3",
+    "note": "Photo produit de la page officielle Carrier Canada « Performance Single-Zone Heat Pump 38MBR »."
+  },
+  {
+    "fichier": "carrier-38mghb-cdn.png",
+    "image_web": "/images/products/official/carrier-38mghb-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1691514263/carrier/residential-hvac/products/ductless/performance-multi-zone-heat-pump-with-basepan-heater-38MGHB.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/38mghb/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MGHB"
+    ],
+    "modeles": "38MGHBQ24…48",
+    "note": "Photo produit de la page officielle Carrier Canada 38MGHB."
+  },
+  {
+    "fichier": "carrier-38mgrb-cdn.png",
+    "image_web": "/images/products/official/carrier-38mgrb-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1654006023/carrier/residential-hvac/products/ductless/performance-multi-zone-heat-pump-with-basepan-heater-38MGRB.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/38mgrb/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MGRB"
+    ],
+    "modeles": "38MGRBQ18…48",
+    "note": "Photo produit de la page officielle Carrier Canada 38MGRB."
+  },
+  {
+    "fichier": "carrier-38mgr-cdn.png",
+    "image_web": "/images/products/official/carrier-38mgrq-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1571597509/carrier/residential-hvac/products/ductless/performance-multi-zone-heat-pump-with-basepan-heater-38MGR.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/38mgr/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MGRQ"
+    ],
+    "modeles": "38MGRQ18B…48E--3",
+    "note": "Photo produit de la page officielle Carrier Canada « Multi-Zone Heat Pump 38MGR »."
+  },
+  {
+    "fichier": "carrier-38mhrcq-cdn.png",
+    "image_web": "/images/products/official/carrier-38mhrc-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1654088945/carrier/residential-hvac/products/ductless/Comfort_Series_Single_Zone_Heat_Pump-38MHRCQ.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/38mhrcq/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MHRC"
+    ],
+    "modeles": "38MHRCQ09…30",
+    "note": "Photo produit de la page officielle Carrier Canada 38MHRCQ (idem fiche 38MHRC-01PD.pdf p. 1)."
+  },
+  {
+    "fichier": "carrier-38mpra-product-data-p1.jpg",
+    "image_web": "/images/products/official/carrier-38mpra-officiel.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/0F/38MPRA-03PD.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1009/Public/0F/38MPRA-03PD.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "38MPRA"
+    ],
+    "modeles": "38MPRAQ09/12/18/24AA3",
+    "note": "Fiche Product Data 38MPRA, photo page 1."
+  },
+  {
+    "fichier": "carrier-38mprb-cdn.png",
+    "image_web": "/images/products/official/carrier-38mprb-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1675802170/carrier/residential-hvac/products/ductless/infinity-heat-pump-with-basepan-heater-38MPRB.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/38mprb/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MPRB"
+    ],
+    "modeles": "38MPRBQ09/12/18AA3",
+    "note": "Photo produit de la page officielle Carrier Canada 38MPRB."
+  },
+  {
+    "fichier": "carrier-38mura-brochure-p1.png",
+    "image_web": "/images/products/official/carrier-38mura-officiel.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1010/Public/06/01-DLS-020-CA-01.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1010/Public/06/01-DLS-020-CA-01.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "38MURA"
+    ],
+    "modeles": "38MURAQ18…60 (AA3/AB3)",
+    "note": "Brochure officielle Carrier « Performance Series 38MURA » (photo page 1) ; même unité en page 1 de la fiche 38MURA-01PD.pdf."
+  },
+  {
+    "fichier": "carrier-38vma048-submittal-p1.png",
+    "image_web": "/images/products/official/carrier-38vma0-officiel.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1001/Public/07/38VMH0483-C-1SD.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1001/Public/07/38VMH0483-C-1SD.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "38VMA0"
+    ],
+    "modeles": "38VMA036/048/060HDS3-1",
+    "note": "Fiche Submittal Data « Single Phase VRF Outdoor Unit 38VMA048HDS3-1 », photo page 1 (découpée à 250 dpi)."
+  },
+  {
+    "fichier": "carrier-38vmb036-submittal-p1.jpg",
+    "image_web": "/images/products/official/carrier-38vmb0-officiel.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1001/Public/00/38VMH0363-C-4SD.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1001/Public/00/38VMH0363-C-4SD.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "38VMB0"
+    ],
+    "modeles": "38VMB036/048/060HDS3-1",
+    "note": "Fiche Submittal Data « Single Phase VRF Outdoor Unit 38VMB036HDS3-1 », photo page 1."
+  },
+  {
+    "fichier": "weathermaker-37mvra-site.png",
+    "image_web": "/images/products/official/weathermaker-37mvra-officiel.webp",
+    "url": "https://www.weathermaker.com/en/us/products/ductless-systems/media_12abc0504a1fb18cff5367404326b8043123f5522.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.weathermaker.com/en/us/products/ductless-systems/37mvra",
+    "date": "2026-09-10",
+    "familles": [
+      "37MVRA"
+    ],
+    "modeles": "37MVRAQ09/12/18/24 (AA1/AA3)",
+    "note": "Seule photo officielle trouvée : site WeatherMaker (marque du groupe Carrier, même plateforme que payne.com) ; l'unité porte le logo WeatherMaker. Aucune page Carrier/Bryant/Payne pour 37MVRA."
+  }
+]

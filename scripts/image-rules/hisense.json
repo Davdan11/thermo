@@ -1,0 +1,84 @@
+[
+  {
+    "brand": "hisense",
+    "pattern": "^AO-(09|12|18|24)U3R25E$",
+    "series": "/images/products/official/hisense-hi-edge-officiel.webp",
+    "note": "Hi-EDGE R-32 : brochure officielle Hisense Comfort (hisensecomfort.com/product-page/hi-edge), unités extérieures AO-09/12/18/24/30/36U3R25E."
+  },
+  {
+    "brand": "hisense",
+    "pattern": "^AO-(09|12)U3T25P$",
+    "series": "/images/products/official/hisense-hi-pro-officiel.webp",
+    "note": "Hi-PRO R-454B : brochure officielle Hisense Comfort (product-page/hi-pro-ductless), AO-09/12/15U3T25P."
+  },
+  {
+    "brand": "hisense",
+    "pattern": "^AO-(09|12|18|24)U3T25U$",
+    "series": "/images/products/official/hisense-hi-ultra-officiel.webp",
+    "note": "Hi-ULTRA R-454B : brochure officielle Hisense Comfort (product-page/hi-ultra), AO-09/12/18/24U3T25U."
+  },
+  {
+    "brand": "hisense",
+    "pattern": "^AOU-(09|12|18|24|36)U3T25U$",
+    "series": "/images/products/official/hisense-hi-uni-officiel.webp",
+    "note": "Hi-UNI R-454B : brochure officielle Hisense Comfort (product-page/hi-uni), AOU-09 a 60U3T25U."
+  },
+  {
+    "brand": "hisense",
+    "pattern": "^AMO[2-5]-(18|27|36|45)U3T25U$",
+    "series": "/images/products/official/hisense-hi-multi-officiel.webp",
+    "note": "Hi-MULTI R-454B : brochure officielle Hisense Comfort (product-page/hi-multi), AMO2-18 / AMO3-27 / AMO4-36 / AMO5-45U3T25U."
+  },
+  {
+    "brand": "hisense",
+    "pattern": "^AOH-(24|36|48|60)U3T25U$",
+    "byCapacity": {
+      "24": "/images/products/official/hisense-hi-ultra-hd-24k.webp",
+      "36": "/images/products/official/hisense-hi-ultra-hd-36k.webp",
+      "48": "/images/products/official/hisense-hi-ultra-hd-48k.webp",
+      "60": "/images/products/official/hisense-hi-ultra-hd-48k.webp"
+    },
+    "series": "/images/products/official/hisense-hi-ultra-hd-officiel.webp",
+    "note": "Hi-ULTRA HD R-454B : brochure officielle Hisense Comfort (product-page/hi-ultra-hd) ; 2T=AOH-24U3T25U, 3T=AOH-36U3T25U, 4T/5T=AOH-48/60U3T25U (meme chassis 4-5T)."
+  },
+  {
+    "brand": "hisense",
+    "pattern": "^(AUWR-(24|36|48|60)24P|AOH-(24|36|48|60)U3T24P)$",
+    "byCapacity": {
+      "24": "/images/products/official/hisense-hi-pro-hd-24k.webp",
+      "30": "/images/products/official/hisense-hi-pro-hd-36k.webp",
+      "36": "/images/products/official/hisense-hi-pro-hd-36k.webp",
+      "48": "/images/products/official/hisense-hi-pro-hd-48k.webp",
+      "60": "/images/products/official/hisense-hi-pro-hd-48k.webp"
+    },
+    "series": "/images/products/official/hisense-hi-pro-hd-officiel.webp",
+    "note": "Hi-PRO HD R-454B : brochure officielle Hisense Comfort (product-page/hi-pro-hd) ; 2T=AUWR-2424P/AOH-24U3T24P, 3T=AUWR-3624P/AOH-36U3T24P (30 000 BTU au catalogue), 4T/5T=AUWR-4824P/6024P et AOH-48/60U3T24P."
+  },
+  {
+    "brand": "hisense",
+    "pattern": "^AUWR-(24U3SF2|36U3SA2|48U3SP2|60U3SP2)$",
+    "byCapacity": {
+      "20": "/images/products/official/hisense-hi-ultra-hd-r410a-24k.webp",
+      "24": "/images/products/official/hisense-hi-ultra-hd-r410a-24k.webp",
+      "30": "/images/products/official/hisense-hi-ultra-hd-r410a-36k.webp",
+      "36": "/images/products/official/hisense-hi-ultra-hd-r410a-36k.webp",
+      "42": "/images/products/official/hisense-hi-ultra-hd-r410a-48k.webp",
+      "48": "/images/products/official/hisense-hi-ultra-hd-r410a-48k.webp",
+      "60": "/images/products/official/hisense-hi-ultra-hd-r410a-48k.webp"
+    },
+    "series": "/images/products/official/hisense-hi-ultra-hd-r410a-officiel.webp",
+    "note": "Hi-ULTRA HD R-410A : brochure Hisense Canada (hisense-canada.com/en/hi-ultra-hd-horizontal-discharge) ; 2T=AUWR-24U3SF2, 3T=AUWR-36U3SA2, 4T/5T=AUWR-48/60U3SP2 (meme chassis 4T-5T)."
+  },
+  {
+    "brand": "hisense",
+    "pattern": "^AVW-(36|48|60)F3DAH2$",
+    "series": "/images/products/official/hisense-hi-comfort-officiel.webp",
+    "note": "Hi-COMFORT R-32 : brochure officielle Hisense Comfort (product-page/hi-comfort), Outdoor Unit Specification AVW-36/48/60F3DAH2."
+  },
+  {
+    "brand": "hisense",
+    "pattern": "^AVW-(24|36|48)H3DH2H1$",
+    "series": "/images/products/official/hisense-h5-officiel.webp",
+    "note": "Hi-Smart H5 R-32 : brochure officielle Hisense Comfort (product-page/h5-series), Outdoor Unit Specification AVW-24/36/48H3DH2H1."
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "fichier": "lennox-mpb-officiel.png",
+    "image_web": "/images/products/official/lennox-mpb-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/21193cc68e/sbmtl_mpb024s4s-1p_mwma024s4-2p_2006.pdf",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/mini-split-systems/mpb",
+    "date": "2026-09-10",
+    "modeles": "MPB (9-48k)",
+    "note": "Fiche de soumission MPB024S4S-1P, page 1, image native (petite)."
+  },
+  {
+    "fichier": "lennox-mpc-officiel.png",
+    "image_web": "/images/products/official/lennox-mpc-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/9537d2ed49/ehb_mpc_single_outdoor_2404.pdf",
+    "page_source": "https://www.lennox.com/dA/9537d2ed49/ehb_mpc_single_outdoor_2404.pdf",
+    "date": "2026-09-10",
+    "modeles": "MPC009-036",
+    "note": "Bulletin produit MPC (04/2024), page 1, image native « MPC009 thru 036 »."
+  },
+  {
+    "fichier": "lennox-mpc-48k.png",
+    "image_web": "/images/products/official/lennox-mpc-48k.webp",
+    "url_fichier": "https://www.lennox.com/dA/9537d2ed49/ehb_mpc_single_outdoor_2404.pdf",
+    "page_source": "https://www.lennox.com/dA/9537d2ed49/ehb_mpc_single_outdoor_2404.pdf",
+    "date": "2026-09-10",
+    "modeles": "MPC048-060",
+    "note": "Bulletin produit MPC, page 1, image native « MPC048 thru 060 »."
+  },
+  {
+    "fichier": "lennox-mlb-officiel.png",
+    "image_web": "/images/products/official/lennox-mlb-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/20dc6286f4/ehb_mlb_single_outdoor_2404.pdf",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/mini-split-systems/mlb",
+    "date": "2026-09-10",
+    "modeles": "MLB009-024",
+    "note": "Bulletin produit MLB (04/2024), page 1, image native « MLB009 thru 024 »."
+  },
+  {
+    "fichier": "lennox-mlb-36k.png",
+    "image_web": "/images/products/official/lennox-mlb-36k.webp",
+    "url_fichier": "https://www.lennox.com/dA/20dc6286f4/ehb_mlb_single_outdoor_2404.pdf",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/mini-split-systems/mlb",
+    "date": "2026-09-10",
+    "modeles": "MLB036-048",
+    "note": "Bulletin produit MLB, page 1, image native « MLB036 and 048 »."
+  },
+  {
+    "fichier": "lennox-mla-officiel.png",
+    "image_web": "/images/products/official/lennox-mla-officiel.webp",
+    "url_fichier": "https://tech.lennoxintl.com/C03e7o14l/VIu12Ch2uV/ehb_mla_mlb_singlezone_2105.pdf",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/mini-split-systems/mla",
+    "date": "2026-09-10",
+    "modeles": "MLA009-036",
+    "note": "Bulletin produit MLA/MLB (05/2021), page 1, image native « MLA018 thru 036 »."
+  },
+  {
+    "fichier": "lennox-mhb-officiel.png",
+    "image_web": "/images/products/official/lennox-mhb-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/dd66e6165b/ehb_mhb_singlezone_2307.pdf",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/mini-split-systems/mhb",
+    "date": "2026-09-10",
+    "modeles": "MHB009-024",
+    "note": "Bulletin produit MHB (07/2023), page 1, image native."
+  },
+  {
+    "fichier": "lennox-mw-serie-officiel.png",
+    "image_web": "/images/products/official/lennox-mw-serie-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/feb7082692/ResidentialProductImageMiniSplitMWPD.png",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/mini-split-systems/high-efficiency-mini-split-outdoor-mwpd",
+    "date": "2026-09-10",
+    "modeles": "MWHD, MWLD, MWPD (image identique utilisée par Lennox sur les trois pages produit)",
+    "note": "Image produit officielle (même fichier pour MWHD, MWLD, MWPD)."
+  },
+  {
+    "fichier": "lennox-mwpd-9k.png",
+    "image_web": "/images/products/official/lennox-mwpd-9k.webp",
+    "url_fichier": "https://www.lennox.com/dA/325e4043e7/ehb_mwpd_single_outdoor_2508.pdf",
+    "page_source": "https://www.lennox.com/dA/325e4043e7/ehb_mwpd_single_outdoor_2508.pdf",
+    "date": "2026-09-10",
+    "modeles": "MWPD009/012/015S6S",
+    "note": "Bulletin MWPD (08/2025), p. 1."
+  },
+  {
+    "fichier": "lennox-mwpd-18k.png",
+    "image_web": "/images/products/official/lennox-mwpd-18k.webp",
+    "url_fichier": "https://www.lennox.com/dA/325e4043e7/ehb_mwpd_single_outdoor_2508.pdf",
+    "page_source": "https://www.lennox.com/dA/325e4043e7/ehb_mwpd_single_outdoor_2508.pdf",
+    "date": "2026-09-10",
+    "modeles": "MWPD018/024S6S",
+    "note": "Bulletin MWPD (08/2025), p. 1."
+  },
+  {
+    "fichier": "lennox-mwhd-9k.png",
+    "image_web": "/images/products/official/lennox-mwhd-9k.webp",
+    "url_fichier": "https://www.lennox.com/dA/3b5ae86ec7/ehb_mwhd_single_outdoor_2412.pdf",
+    "page_source": "https://www.lennox.com/dA/3b5ae86ec7/ehb_mwhd_single_outdoor_2412.pdf",
+    "date": "2026-09-10",
+    "modeles": "MWHD009/012/015S6S",
+    "note": "Bulletin MWHD (12/2024), p. 1."
+  },
+  {
+    "fichier": "lennox-mwhd-18k.png",
+    "image_web": "/images/products/official/lennox-mwhd-18k.webp",
+    "url_fichier": "https://www.lennox.com/dA/3b5ae86ec7/ehb_mwhd_single_outdoor_2412.pdf",
+    "page_source": "https://www.lennox.com/dA/3b5ae86ec7/ehb_mwhd_single_outdoor_2412.pdf",
+    "date": "2026-09-10",
+    "modeles": "MWHD018/024S6S",
+    "note": "Bulletin MWHD (12/2024), p. 1."
+  },
+  {
+    "fichier": "lennox-mwld-9k.png",
+    "image_web": "/images/products/official/lennox-mwld-9k.webp",
+    "url_fichier": "https://www.lennox.com/dA/439904cc4f/ehb_mwld_single_outdoor_2503.pdf",
+    "page_source": "https://www.lennox.com/dA/439904cc4f/ehb_mwld_single_outdoor_2503.pdf",
+    "date": "2026-09-10",
+    "modeles": "MWLD009/012/015S6S",
+    "note": "Bulletin MWLD (03/2025), p. 1."
+  },
+  {
+    "fichier": "lennox-mwld-18k.png",
+    "image_web": "/images/products/official/lennox-mwld-18k.webp",
+    "url_fichier": "https://www.lennox.com/dA/439904cc4f/ehb_mwld_single_outdoor_2503.pdf",
+    "page_source": "https://www.lennox.com/dA/439904cc4f/ehb_mwld_single_outdoor_2503.pdf",
+    "date": "2026-09-10",
+    "modeles": "MWLD018/024S6S",
+    "note": "Bulletin MWLD (03/2025), p. 1."
+  },
+  {
+    "fichier": "lennox-mmld-officiel.png",
+    "image_web": "/images/products/official/lennox-mmld-officiel.webp",
+    "url_fichier": "public/brochures/lennox/ehb_mmld_single_outdoor_2503.pdf (lennox.com)",
+    "page_source": "https://www.lennox.com/",
+    "date": "2026-09-10",
+    "modeles": "MMLD009/012 (et famille MMLD)",
+    "note": "Bulletin MMLD (03/2025), p. 1, « MMLD009 and MMLD012 »."
+  },
+  {
+    "fichier": "lennox-mmld-18k.png",
+    "image_web": "/images/products/official/lennox-mmld-18k.webp",
+    "url_fichier": "public/brochures/lennox/ehb_mmld_single_outdoor_2503.pdf (lennox.com)",
+    "page_source": "https://www.lennox.com/",
+    "date": "2026-09-10",
+    "modeles": "MMLD018",
+    "note": "Bulletin MMLD (03/2025), p. 1, « MMLD018 »."
+  },
+  {
+    "fichier": "lennox-mmld-24k.png",
+    "image_web": "/images/products/official/lennox-mmld-24k.webp",
+    "url_fichier": "public/brochures/lennox/ehb_mmld_single_outdoor_2503.pdf (lennox.com)",
+    "page_source": "https://www.lennox.com/",
+    "date": "2026-09-10",
+    "modeles": "MMLD024",
+    "note": "Bulletin MMLD (03/2025), p. 1, « MMLD024 »."
+  },
+  {
+    "fichier": "lennox-mmpd-officiel.png",
+    "image_web": "/images/products/official/lennox-mmpd-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/d45f050038/ResidentialProductImageMMPDMultiZoneHeatPump.png",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/mini-split-systems",
+    "date": "2026-09-10",
+    "modeles": "MMPD (mono et multi-zone)",
+    "note": "Image produit officielle MMPD (page des systèmes mini-split)."
+  },
+  {
+    "fichier": "lennox-xp25-officiel.png",
+    "image_web": "/images/products/official/lennox-xp25-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/2a6b20cdfa/xp25-prod.png",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/heat-pumps/xp25",
+    "date": "2026-09-10",
+    "modeles": "XP25-024/036/048/060",
+    "note": "Image produit officielle (page XP25) ; socle de gazon retiré par recadrage."
+  },
+  {
+    "fichier": "lennox-sl25xpv-officiel.png",
+    "image_web": "/images/products/official/lennox-sl25xpv-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/054f90614d/sl25xpv-prod.png",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/heat-pumps/sl25xpv",
+    "date": "2026-09-10",
+    "modeles": "SL25XPV-024/036/048/060",
+    "note": "Image produit officielle (page SL25XPV) ; socle de gazon retiré par recadrage."
+  },
+  {
+    "fichier": "lennox-sl22klv-officiel.png",
+    "image_web": "/images/products/official/lennox-sl22klv-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/e9c0560c17/ResidentialDLSCAC&HPProductImage.png",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/heat-pumps/sl22klv",
+    "date": "2026-09-10",
+    "modeles": "SL22KLV-024/036/048/060",
+    "note": "Image produit officielle (page SL22KLV) ; socle de gazon retiré par recadrage."
+  },
+  {
+    "fichier": "lennox-el18kslv-officiel.png",
+    "image_web": "/images/products/official/lennox-el18kslv-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/7118b74d15/ResidentialProductImageHeatPumpElite.png",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/heat-pumps/el18kslv",
+    "date": "2026-09-10",
+    "modeles": "EL18KSLV-024/036/060",
+    "note": "Image produit officielle (page EL18KSLV) ; le socle de gazon du visuel a été retiré par recadrage."
+  },
+  {
+    "fichier": "lennox-el21klv-officiel.png",
+    "image_web": "/images/products/official/lennox-el21klv-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/ada891634c/ResidentialEliteAC&HPProductImage.png",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/heat-pumps/el21klv",
+    "date": "2026-09-10",
+    "modeles": "EL21KLV-024/036/048/060",
+    "note": "Image produit officielle (page EL21KLV) ; socle de gazon retiré par recadrage."
+  },
+  {
+    "fichier": "lennox-elite-xpv-officiel.png",
+    "image_web": "/images/products/official/lennox-elite-xpv-officiel.webp",
+    "url_fichier": "https://www.lennox.com/dA/65f1c9e647/elite product image.png",
+    "page_source": "https://www.lennox.com/residential/products/heating-cooling/heat-pumps/el22xpv",
+    "date": "2026-09-10",
+    "modeles": "EL22XPV, EL18XPV, XP20 (même image produit sur les trois pages Lennox)",
+    "note": "Image produit officielle Elite (fichier identique sur les pages EL22XPV, EL18XPV et XP20) ; socle de gazon retiré."
+  }
+]

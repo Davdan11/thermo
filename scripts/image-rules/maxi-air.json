@@ -1,0 +1,3 @@
+[
+  { "brand": "maxi-air", "pattern": "^MAXS-(2430|4260)$", "byCapacity": { "30": "/images/products/official/maxi-air-maxs-30k.webp", "60": "/images/products/official/maxi-air-maxs-60k.webp" }, "series": "/images/products/official/maxi-air-maxs-officiel.webp" }
+]

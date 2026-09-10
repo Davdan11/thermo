@@ -1,0 +1,56 @@
+[
+  {
+    "fichier": "payne-38marb-site.png",
+    "image_web": "/images/products/official/payne-38marb-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/ductless-systems/media_1d69ede0a1750dafd59e3fe229bde32a02b6e75d7.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/ductless-systems/38marb",
+    "date": "2026-09-10",
+    "familles": [
+      "38MARB"
+    ],
+    "modeles": "38MARBQ09…36",
+    "note": "Photo produit (« Product Image ») de la page officielle Payne 38MARB."
+  },
+  {
+    "fichier": "payne-38mgrb-38mghb-37mgra-site.png",
+    "image_web": "/images/products/official/payne-38mgrb-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/ductless-systems/media_1ac2d998cd281823de3e39d2fe97060839b74228d.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/ductless-systems/38mgrb",
+    "date": "2026-09-10",
+    "familles": [
+      "38MGRB",
+      "38MGHB",
+      "37MGRA"
+    ],
+    "modeles": "38MGRBQ18…48, 38MGHBQ24…48, 37MGRAQ55",
+    "note": "Même photo produit sur les pages officielles Payne 38MGRB, 38MGHB et 37MGRA."
+  },
+  {
+    "fichier": "payne-38mbrc-37mbra-37mbha-site.png",
+    "image_web": "/images/products/official/payne-38mbrc-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/ductless-systems/media_147bed0cf7dbdc622ed28deeab047ece9e0716898.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/ductless-systems/38mbrc",
+    "date": "2026-09-10",
+    "familles": [
+      "38MBRC",
+      "37MBRA",
+      "37MBHA"
+    ],
+    "modeles": "38MBRCQ36/48/58, 37MBRAQ36/48/58, 37MBHAQ36/48/58",
+    "note": "Même photo produit sur les pages officielles Payne 38MBRC, 37MBRA et 37MBHA."
+  },
+  {
+    "fichier": "payne-38mura-37mura-37muha-site.png",
+    "image_web": "/images/products/official/payne-38mura-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/heat-pumps/media_103402b1e724259db54189953d857c5e736567b1a.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/heat-pumps/37mura",
+    "date": "2026-09-10",
+    "familles": [
+      "38MURA",
+      "37MURA",
+      "37MUHA"
+    ],
+    "modeles": "38MURAQ18…60, 37MURAQ24…60, 37MUHAQ18…60",
+    "note": "Même photo produit sur les pages officielles Payne 37MURA (« Compact Heat Pump »), 37MUHAQ (« Crossover Heat Pump ») et 38MURA. Utilisée aussi pour les numéros 37MURA/37MUHA des catalogues Carrier et Bryant (numéros strictement identiques ; Carrier/Bryant n'ont pas de page 37MURA)."
+  }
+]

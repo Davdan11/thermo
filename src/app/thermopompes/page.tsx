@@ -1,6 +1,9 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { brandLogoPath } from "@/lib/data/brand-logos";
+import { existsSync } from "fs";
+import { join } from "path";
+
 import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
 import { getCatalogueModels, getAvailableFilters } from "@/lib/data/queries/catalogue";
@@ -16,6 +19,11 @@ import { CatalogueEmpty } from "@/components/product/CatalogueEmpty";
 import { CataloguePagination } from "@/components/product/CataloguePagination";
 import { buttonVariants } from "@/components/ui/button";
 import { CtaThermoMatch } from "@/components/seo/SeoBlocks";
+/** Logo monochrome (bleu nuit) pour la bande de marques ; logo couleur sinon, null si aucun logo. */
+function monoLogo(slug: string): string | null {
+  const mono = `/images/marques/mono/${slug}.png`;
+  return existsSync(join(process.cwd(), "public", mono)) ? mono : brandLogoPath(slug);
+}
 
 /* ------------------------------------------------------------------
    Metadata
@@ -159,12 +167,12 @@ export default async function ThermopompesPage({
           {/* Row 1: 6 brands */}
           <div className="flex items-stretch border-b border-gray-100 h-[90px] w-full">
             {[
-              { name: "Daikin", slug: "daikin", src: brandLogoPath("daikin") },
-              { name: "Mitsubishi Electric", slug: "mitsubishi-electric", src: brandLogoPath("mitsubishi-electric") },
-              { name: "Fujitsu", slug: "fujitsu", src: brandLogoPath("fujitsu") },
-              { name: "Gree", slug: "gree", src: brandLogoPath("gree") },
-              { name: "Panasonic", slug: "panasonic", src: brandLogoPath("panasonic") },
-              { name: "LG", slug: "lg", src: brandLogoPath("lg") },
+              { name: "Daikin", slug: "daikin", src: monoLogo("daikin") },
+              { name: "Mitsubishi Electric", slug: "mitsubishi-electric", src: monoLogo("mitsubishi-electric") },
+              { name: "Fujitsu", slug: "fujitsu", src: monoLogo("fujitsu") },
+              { name: "Gree", slug: "gree", src: monoLogo("gree") },
+              { name: "Panasonic", slug: "panasonic", src: monoLogo("panasonic") },
+              { name: "LG", slug: "lg", src: monoLogo("lg") },
             ].filter((b) => b.src).map((brand, i) => (
               <Link 
                 key={brand.slug} 
@@ -172,8 +180,8 @@ export default async function ThermopompesPage({
                 className={`flex-1 flex items-center justify-center px-4 py-2 hover:bg-gray-50 transition-colors ${i !== 5 ? 'border-r border-gray-100' : ''}`}
                 title={`Voir les thermopompes ${brand.name}`}
               >
-                <div className="w-[180px] h-[65px] flex items-center justify-center">
-                  <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="180px" className="max-w-full max-h-full object-contain w-auto h-auto" />
+                <div className="w-[150px] h-[65px] flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                  <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="150px" className="max-w-[130px] max-h-[30px] object-contain w-auto h-auto" />
                 </div>
               </Link>
             ))}
@@ -181,13 +189,13 @@ export default async function ThermopompesPage({
           {/* Row 2: 7 brands */}
           <div className="flex items-stretch h-[90px] w-full">
             {[
-              { name: "Samsung", slug: "samsung", src: brandLogoPath("samsung") },
-              { name: "Tosot", slug: "tosot", src: brandLogoPath("tosot") },
-              { name: "Tempstar", slug: "tempstar", src: brandLogoPath("tempstar") },
-              { name: "Lennox", slug: "lennox", src: brandLogoPath("lennox") },
-              { name: "Moovair", slug: "moovair", src: brandLogoPath("moovair") },
-              { name: "Mainline", slug: "mainline", src: brandLogoPath("mainline") },
-              { name: "Haier", slug: "haier", src: brandLogoPath("haier") },
+              { name: "Samsung", slug: "samsung", src: monoLogo("samsung") },
+              { name: "Tosot", slug: "tosot", src: monoLogo("tosot") },
+              { name: "Bosch", slug: "bosch", src: monoLogo("bosch") },
+              { name: "Lennox", slug: "lennox", src: monoLogo("lennox") },
+              { name: "Moovair", slug: "moovair", src: monoLogo("moovair") },
+              { name: "Mainline", slug: "mainline", src: monoLogo("mainline") },
+              { name: "Haier", slug: "haier", src: monoLogo("haier") },
             ].filter((b) => b.src).map((brand, i) => (
               <Link 
                 key={brand.slug} 
@@ -195,8 +203,8 @@ export default async function ThermopompesPage({
                 className={`flex-1 flex items-center justify-center px-4 py-2 hover:bg-gray-50 transition-colors ${i !== 6 ? 'border-r border-gray-100' : ''}`}
                 title={`Voir les thermopompes ${brand.name}`}
               >
-                <div className="w-[180px] h-[65px] flex items-center justify-center">
-                  <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="180px" className="max-w-full max-h-full object-contain w-auto h-auto" />
+                <div className="w-[150px] h-[65px] flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                  <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="150px" className="max-w-[130px] max-h-[30px] object-contain w-auto h-auto" />
                 </div>
               </Link>
             ))}
@@ -207,14 +215,14 @@ export default async function ThermopompesPage({
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8 mt-6 md:hidden">
         <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
           {[
-            { name: "Daikin", slug: "daikin", src: brandLogoPath("daikin") },
-            { name: "Mitsubishi", slug: "mitsubishi-electric", src: brandLogoPath("mitsubishi-electric") },
-            { name: "Fujitsu", slug: "fujitsu", src: brandLogoPath("fujitsu") },
-            { name: "Gree", slug: "gree", src: brandLogoPath("gree") },
-            { name: "Panasonic", slug: "panasonic", src: brandLogoPath("panasonic") },
-            { name: "LG", slug: "lg", src: brandLogoPath("lg") },
-            { name: "Samsung", slug: "samsung", src: brandLogoPath("samsung") },
-            { name: "Tosot", slug: "tosot", src: brandLogoPath("tosot") },
+            { name: "Daikin", slug: "daikin", src: monoLogo("daikin") },
+            { name: "Mitsubishi", slug: "mitsubishi-electric", src: monoLogo("mitsubishi-electric") },
+            { name: "Fujitsu", slug: "fujitsu", src: monoLogo("fujitsu") },
+            { name: "Gree", slug: "gree", src: monoLogo("gree") },
+            { name: "Panasonic", slug: "panasonic", src: monoLogo("panasonic") },
+            { name: "LG", slug: "lg", src: monoLogo("lg") },
+            { name: "Samsung", slug: "samsung", src: monoLogo("samsung") },
+            { name: "Tosot", slug: "tosot", src: monoLogo("tosot") },
           ].filter((b) => b.src).map((brand) => (
             <Link 
               key={brand.slug} 

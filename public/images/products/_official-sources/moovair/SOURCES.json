@@ -1,0 +1,64 @@
+{
+  "marque": "Moovair (Le Groupe Master, Montréal ; fabriqué par Midea)",
+  "date_collecte": "2026-09-10",
+  "note": "Originaux extraits des brochures officielles hébergées sur cdn.master.ca (CDN du Groupe Master, propriétaire de la marque) ; liens repérés depuis les pages produits de moovair.com. Les photos de la série M 2025 (Morelis/Meridian/Mistral, .jp2) étaient déjà présentes avant cette collecte.",
+  "sources": [
+    {
+      "fichier": "moovair-serie-m-2022-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/succursale_virtuelle/documents/moovair/2022/Moovair_brochure_M25-M28-M42_09-2022_fr_CA.pdf",
+      "page_source": "https://www.moovair.com/fr-ca/m25-2022/ (brochure Série M : M42 • M28 • M25, 09-2022), image p. 3",
+      "modeles": "DMA06HOS28230E8 ; DMA09/12/18HOS42230E4 (M42) — famille Série M 2022 (M25/M28/M42)",
+      "image_web": "/images/products/official/moovair-serie-m-2022-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "moovair-serie-m-2024-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/succursale_virtuelle/documents/moovair/2024/Moovair_brochure_SERIE-M_202410_fr_CA.pdf",
+      "page_source": "https://www.moovair.com/fr-ca/m42-2024/ (brochure Série M 2024-10), image p. 3",
+      "modeles": "DMA09/12/18/24HOS25230E8 (M25), DMA09/12/18/24HOS28230E8 (M28), DMB09/12/18HOS42230E8(B) (M42 2024)",
+      "image_web": "/images/products/official/moovair-serie-m-2024-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "moovair-m21-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/documents/fr/moovair/brochures/2024/Moovair_brochure_M21_2024-06_fr_CA.pdf",
+      "page_source": "https://www.moovair.com/fr-ca/m21-2022/ (brochure M21 2024-06), image p. 3",
+      "modeles": "DMA09/12HOS21115S1, DMA18/24/30/36HOS21230S1 (M21)",
+      "image_web": "/images/products/official/moovair-m21-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "moovair-multi-moov-exterieure-officielle.jpeg, moovair-multi-moov-grande-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/documents/fr/moovair/brochures/2024/Moovair_brochure_MULTI-MOOV_2024-01_fr_CA.pdf",
+      "page_source": "https://www.moovair.com/fr-ca/multi-moov-2022/ (brochure Multi-Moov -25/-30, 2024-01), images p. 1 (petite unité 1 ventilateur = photo de famille appliquée ; grande unité 2 ventilateurs conservée sans règle, la brochure ne précise pas quelle capacité correspond à chaque photo)",
+      "modeles": "DMA18/27/36/48HOM23230X2 (Multi-Moov -25), DMA18/27/36/48HOM25230X3 (Multi-Moov -30)",
+      "image_web": "/images/products/official/moovair-multi-moov-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "moovair-central-moov-2022-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/documents/fr/moovair/brochures/Moovair_brochure_CENTRALMOOV_06-2022_fr_CA.pdf",
+      "page_source": "https://www.moovair.com/fr-ca/central-moov-2022/ (brochure Central-Moov 06-2022), image p. 1",
+      "modeles": "DMA18/24/30/36/48HOS20230E7, DMA60HOS19230E7 (Central-Moov 20 TRÉS) ; DMA60HOS20230E7 inclus (même famille, 5 tonnes)",
+      "image_web": "/images/products/official/moovair-central-moov-2022-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "moovair-central-moov-r454b-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/documents/fr/moovair/brochures/Moovair_Central-Moov_202602_FR_V04.pdf",
+      "page_source": "https://www.moovair.com/fr-ca/systeme-central-moov/ (brochure Central-Moov R-454B 2026-02), image p. 1 ; la brochure Moovair_Brochure_Central-Moov_454B_MOOVAIR_R454B_2025_06_V2.pdf (moovair.com) confirme que les MSHEA..R2AN1 partagent le même châssis à décharge latérale (1 ventilateur sauf 5 tonnes Heat+)",
+      "modeles": "MSHMA18/24/30/48/60R2AN1, MSHMB36R2AN1, MSHEA18/24/30/36/48/60R2AN1",
+      "image_web": "/images/products/official/moovair-central-moov-r454b-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "moovair-myriad-exterieure-officielle.jpeg, moovair-myriad-petite-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/documents/fr/moovair/brochures/2026/Moovair_Myriad_202603_FR_V03.pdf",
+      "page_source": "https://www.moovair.com/fr-ca/thermopompe-myriad/ (brochure Myriad 2026-03), images p. 1 (grande unité 2 ventilateurs = photo de famille appliquée ; petite unité conservée sans règle)",
+      "modeles": "MXHSA1832AN1, MXHSA2742/3652/4862AV1 (Myriad -25), MXHZA1832/2742/3652/4862AV1 (Myriad -30)",
+      "image_web": "/images/products/official/moovair-myriad-exterieure-officielle.webp"
+    }
+  ],
+  "brochures_consultees_sans_photo_exploitable": [
+    "https://cdn.master.ca/succursale_virtuelle/documents/moovair/Moovair_M19_brochure_fr_CA.pdf (DM..HOS19 : unité intérieure seulement)",
+    "https://cdn.master.ca/succursale_virtuelle/documents/moovair/Moovair_M23_brochure_fr_CA.pdf (DM..HOS23230E2 : unité intérieure seulement)",
+    "https://cdn.master.ca/succursale_virtuelle/documents/moovair/Moovair_M25_brochure_fr_CA.pdf (DM..HOS25230E3 : unité intérieure seulement)",
+    "https://cdn.master.ca/succursale_virtuelle/documents/moovair/2023/Moovair_brochure_M42_06-2023_fr_CA.pdf (DM09/12HOS42230E4 : aucune photo d'unité extérieure)",
+    "https://cdn.master.ca/succursale_virtuelle/documents/moovair/Moovair_MixMoov_brochure_fr_CA.pdf (DM36/48/60HOS18230E5/S5 : unités intérieures seulement)",
+    "https://cdn.master.ca/succursale_virtuelle/documents/moovair/Moovair_MultiMoov_brochure_fr_CA.pdf (DM..HOM23/25 : image extérieure non extractible)"
+  ]
+}

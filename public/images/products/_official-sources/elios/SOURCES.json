@@ -1,0 +1,81 @@
+{
+  "marque": "Elios (Le Groupe Master, Montréal ; fabriqué par Midea)",
+  "date_collecte": "2026-09-10",
+  "note": "Originaux extraits des brochures officielles hébergées sur cdn.master.ca et master.ca/media (CDN du Groupe Master, propriétaire de la marque).",
+  "sources": [
+    {
+      "fichier": "elios-e19-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/virtual_branch/documents/elios/ELIOS_E19_brochure_en_CA.pdf",
+      "page_source": "brochure Elios e19 (EN), image p. 1",
+      "modeles": "DE09/12HOS19115S1, DE18/24/30/36HOS19230S1",
+      "image_web": "/images/products/official/elios-e19-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-e23-exterieure-officielle.jpeg, elios-e23-interieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/succursale_virtuelle/documents/elios/ELIOS_E23_brochure_fr_CA.pdf",
+      "page_source": "brochure Elios e23 (FR), images p. 2 (extérieure) et p. 1 (intérieure DE..HIW23230E3)",
+      "modeles": "DE09/12/18/24HOS23230E2",
+      "image_web": "/images/products/official/elios-e23-exterieure-officielle.webp, /images/products/official/elios-e23-interieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-e25-2022-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/succursale_virtuelle/documents/elios/ELIOS_E25_brochure_fr_CA.pdf",
+      "page_source": "brochure Elios e25 (FR, 2022), image p. 2",
+      "modeles": "DE09/12HOS25230E3, DE18HOS25230E3A (le 24 000 BTU n'est pas listé dans cette brochure)",
+      "image_web": "/images/products/official/elios-e25-2022-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-e21-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/succursale_virtuelle/documents/elios/Elios_brochure_E21_06-2022_fr_CA.pdf",
+      "page_source": "brochure Elios e21 (FR, 06-2022), image p. 2",
+      "modeles": "DEA09/12HOS21115S1, DEA18/24/30/36HOS21230S1",
+      "image_web": "/images/products/official/elios-e21-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-e25-2024-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/virtual_branch/documents/elios/2024/Elios_brochure_E25_202410_en_CA.pdf",
+      "page_source": "brochure Elios 25 (EN, 2024-10), image p. 2",
+      "modeles": "DEA09/12/18/24HOS25230E8",
+      "image_web": "/images/products/official/elios-e25-2024-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-e28-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/virtual_branch/documents/elios/2024/July/Elios_e28_202406_EN_001_V1.pdf",
+      "page_source": "brochure Elios e28 (EN, 2024-06), image p. 2",
+      "modeles": "DEA12/18HOS28230E8 (seules capacités listées dans la brochure)",
+      "image_web": "/images/products/official/elios-e28-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-central-elios-2024-exterieure-officielle.jpeg, elios-central-elios-2024-grande-exterieure-officielle.jpeg",
+      "url": "https://www.master.ca/media/akeneo_connector/asset_files/E/l/Elios_CentralElios_202401_fr_CA_001_brochure_acb4.pdf",
+      "page_source": "brochure Central-Elios (FR, 2024-01), images p. 3 (1 ventilateur = photo de famille appliquée ; 2 ventilateurs conservée sans règle, capacité non précisée)",
+      "modeles": "DEA18/24/30/36/48/60HOS20230E7",
+      "image_web": "/images/products/official/elios-central-elios-2024-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-central-elios-r454b-exterieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/documents/fr/elios/brochures/2025/Elios_Central-Elios_202509_FR_V02.pdf",
+      "page_source": "brochure Central-Elios R-454B (FR, 2025-09), image p. 1",
+      "modeles": "ESHMA24/30/48/60R2AN1, ESHMB36R2AN1",
+      "image_web": "/images/products/official/elios-central-elios-r454b-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-emc-exterieure-officielle.jpeg, elios-emc-interieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/documents/fr/elios/brochures/2025/Elios_EMC_202509_FR_V01.pdf",
+      "page_source": "brochure Elios EMC (FR, 2025-09), images p. 1",
+      "modeles": "ESHMA09/12/18/24/33C2AN1",
+      "image_web": "/images/products/official/elios-emc-exterieure-officielle.webp, /images/products/official/elios-emc-interieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-ebc-exterieure-officielle.jpeg, elios-ebc-interieure-officielle.jpeg",
+      "url": "https://cdn.master.ca/documents/fr/elios/brochures/2025/Elios_EBC_202509_FR_V01.pdf",
+      "page_source": "brochure Elios EBC (FR, 2025-09), images p. 1",
+      "modeles": "ESHBA12C1AN1, ESHBA09/12/18/24/30/36C2AN1",
+      "image_web": "/images/products/official/elios-ebc-exterieure-officielle.webp, /images/products/official/elios-ebc-interieure-officielle.webp"
+    }
+  ],
+  "brochures_consultees_sans_photo_exploitable": [
+    "https://cdn.master.ca/virtual_branch/documents/elios/2022/ELIOS_eMulti_brochure_en_CA.pdf et https://www.master.ca/media/akeneo_connector/asset_files/E/l/Elios_eMulti_202401_fr_CA_002_brochure_5b64.pdf (DE/DEA..HOM23230X2, DEA..HOM25230X3 : unités intérieures seulement)",
+    "https://www.master.ca/media/akeneo_connector/asset_files/E/l/Elios_CentralEliosAddOn_202404_fr_CA_001_brochure_c1f9.pdf (mêmes DEA..HOS20230E7, photos identiques à la brochure 2024-01)"
+  ]
+}

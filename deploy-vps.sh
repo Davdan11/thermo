@@ -47,7 +47,7 @@ pm2 startOrReload "$ROOT/current/ecosystem.config.js" --update-env
 pm2 save >/dev/null
 
 # Moteurs de recherche : Bing & co. sont prévenus des URL (IndexNow), sans bloquer le déploiement.
-(sleep 20 && node scripts/indexnow.mjs > /var/log/thermo-indexnow.log 2>&1 &) || true
+(sleep 90 && node scripts/indexnow.mjs > /var/log/thermo-indexnow.log 2>&1 &) || true
 
 # Ménage : garder les 3 dernières versions.
 ls -1dt "$ROOT"/releases/* | tail -n +4 | xargs -r rm -rf

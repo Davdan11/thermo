@@ -1,0 +1,65 @@
+[
+  {
+    "fichier": "york-hh8-officiel.png",
+    "url": "https://cdn.master.ca/virtual_branch/documents/york/York_HH8_Heat_Pump_Brochure_en_CA.pdf",
+    "page": "https://cdn.master.ca/virtual_branch/documents/york/ (brochure officielle YORK HH8, distributeur Master)",
+    "date": "2026-09-10",
+    "familles": ["HH8"],
+    "modeles": "HH824E2S11, HH836E2S11, HH860E2S11 (photo de famille : unité 48/60K de la couverture, p. 1)",
+    "note": "Image embarquée xref 171 (695x941, masque alpha) extraite avec PyMuPDF ; fond aplati en blanc, trim, 800 px max, q82."
+  },
+  {
+    "fichier": "york-hh8-24k.png",
+    "url": "https://cdn.master.ca/virtual_branch/documents/york/York_HH8_Heat_Pump_Brochure_en_CA.pdf",
+    "page": "https://cdn.master.ca/virtual_branch/documents/york/ (brochure officielle YORK HH8, p. 6 « Features and benefits », vignette 24K)",
+    "date": "2026-09-10",
+    "familles": ["HH8"],
+    "modeles": "HH824E2S11 (24 000 BTU)",
+    "note": "xref 86 (463x384)."
+  },
+  {
+    "fichier": "york-hh8-36k.png",
+    "url": "https://cdn.master.ca/virtual_branch/documents/york/York_HH8_Heat_Pump_Brochure_en_CA.pdf",
+    "page": "https://cdn.master.ca/virtual_branch/documents/york/ (brochure officielle YORK HH8, p. 6, vignette 36K)",
+    "date": "2026-09-10",
+    "familles": ["HH8"],
+    "modeles": "HH836E2S11 (36 000 BTU)",
+    "note": "xref 88 (449x370)."
+  },
+  {
+    "fichier": "york-hh8-48-60k.png",
+    "url": "https://cdn.master.ca/virtual_branch/documents/york/York_HH8_Heat_Pump_Brochure_en_CA.pdf",
+    "page": "https://cdn.master.ca/virtual_branch/documents/york/ (brochure officielle YORK HH8, p. 6, vignette 48/60K)",
+    "date": "2026-09-10",
+    "familles": ["HH8"],
+    "modeles": "HH860E2S11 (catalogue : 42 000 BTU nominal → clé byCapacity « 42 »)",
+    "note": "xref 90 (581x823), unité à deux ventilateurs."
+  },
+  {
+    "fichier": "york-hmh7-officiel.png",
+    "url": "https://cdn.master.ca/virtual_branch/documents/york/brochures/2023/York_brochure_HMH7_03-2023_en_CA.pdf",
+    "page": "https://cdn.master.ca/virtual_branch/documents/york/brochures/2023/ (brochure officielle YORK HMH7 2023, distributeur Master)",
+    "date": "2026-09-10",
+    "familles": ["HMH7"],
+    "modeles": "HMH72B241, HMH72B341, HMH72B361, HMH72B481, HMH72B601",
+    "note": "xref 721 (1089x799) : photo de groupe des trois tailles d'unités extérieures HMH7 (couverture). Fond blanc d'origine."
+  },
+  {
+    "fichier": "york-yhm-officiel.png",
+    "url": "https://files.hvacnavigator.com/p/publ-7696-d-0916.pdf",
+    "page": "https://files.hvacnavigator.com/ (portail officiel Johnson Controls ; brochure PUBL-7696-D-0916 « YORK LX Series Split System Heat Pumps », tableau YHM24B21SA…YHM60B21SA p. 4)",
+    "date": "2026-09-10",
+    "familles": ["YHM"],
+    "modeles": "YHM24B21, YHM36B22, YHM48B21, YHM60B21 (brochure : YHM24B21SA, YHM36B21SA, YHM48B21SA, YHM60B21SA)",
+    "note": "Brochure rasterisée : recadrage de la photo de l'unité p. 2 (rendu 300 dpi, clip 44,74–292,322 pt) ; fond noir de la mise en page remplacé par du blanc. La brochure couvre YHM (modulante) et YHE (un étage), même caisson LX."
+  },
+  {
+    "fichier": "york-yzv-officiel.png",
+    "url": "https://files.hvacnavigator.com/p/dx2104001f_universaladapter_campaign_premiumequipment_brochure_york_digital.pdf",
+    "page": "https://files.hvacnavigator.com/ (portail officiel Johnson Controls ; brochure « YORK Affinity Variable Capacity Residential Systems », tableau YZV24B21SA…YZV60B21SA p. 4)",
+    "date": "2026-09-10",
+    "familles": ["YZV"],
+    "modeles": "YZV24B21, YZV36B21, YZV48B21, YZV60B21",
+    "note": "xref 20 (428x460, masque alpha), p. 1. La brochure présente la même photo pour le climatiseur YXV et la thermopompe YZV (même caisson Affinity)."
+  }
+]

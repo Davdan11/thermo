@@ -1,0 +1,74 @@
+{
+  "marque": "Senville (senville.ca / senville.com ; images sur le CDN BigCommerce de la boutique officielle cdn11.bigcommerce.com/s-29utwni9ui)",
+  "date_collecte": "2026-09-10",
+  "sources": [
+    {
+      "fichier": "senville-aura-og-exterieure-officielle.jpg",
+      "url": "https://cdn11.bigcommerce.com/s-29utwni9ui/images/stencil/1280x1280/products/1804/3055/senville-24000-btu-aura-series-outdoor-unit-sena24hfoq__09282__53700.1783351409.jpg",
+      "page_source": "https://senville.ca/9000-btu-aura-outdoor-unit-sena-09hf-og/ (même photo sur les pages SENA-06/12/18/24/33HF-OG)",
+      "modeles": "SENA-06/09/12/18/24/33HF-OG",
+      "image_web": "/images/products/official/senville-aura-og-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "senville-aura-oq-exterieure-officielle.webp",
+      "url": "https://cdn11.bigcommerce.com/s-29utwni9ui/images/stencil/1280x1280/products/1235/1925/Aura_outdoor_unit__05889.1683899212.png",
+      "page_source": "https://senville.ca/9000-btu-aura-series-outdoor-unit-sena-09hf-oq/ (page listant SENA/09/12/18/24HF/OQ)",
+      "modeles": "SENA/09/12/18/24HF/OQ",
+      "image_web": "/images/products/official/senville-aura-oq-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "senville-aura-interieure-officielle.png",
+      "url": "https://cdn11.bigcommerce.com/s-29utwni9ui/images/stencil/1280x1280/products/189/1545/aura-indoor__97525.1685112770.png",
+      "page_source": "https://senville.ca/12000-btu-mini-split-air-conditioner-sena-12hf/ (unité intérieure AURA)",
+      "modeles": "unité intérieure murale AURA (SENA-..HF/I)",
+      "image_web": "/images/products/official/senville-aura-interieure-officielle.webp"
+    },
+    {
+      "fichier": "senville-leto-ol-exterieure-officielle.jpg",
+      "url": "https://cdn11.bigcommerce.com/s-29utwni9ui/images/stencil/1280x1280/products/1786/3038/senville-parts-9000-btu-leto-series-outdoor-unit-senl09cdoy__89705__41653.1782745586.jpg",
+      "page_source": "https://senville.ca/9000-btu-leto-series-outdoor-unit-110v-senl-09cd-ol/ (même photo sur les pages SENL-12/18/24/30/36CD-OL et 09/12CD220-OL)",
+      "modeles": "SENL-09/12/18/24/30/36CD-OL, SENL-09/12CD220-OL",
+      "image_web": "/images/products/official/senville-leto-ol-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "senville-leto-oy-exterieure-officielle.png",
+      "url": "https://cdn11.bigcommerce.com/s-29utwni9ui/images/stencil/1280x1280/products/1232/1881/LETO_outdoor_unit__78776.1673552723.png",
+      "page_source": "https://senville.ca/12000-btu-leto-series-outdoor-unit-senl-12cd-oy/ (même photo sur les pages SENL/09/24/30/36CD/OY)",
+      "modeles": "SENL/09/12/18/24/30/36CD/OY",
+      "image_web": "/images/products/official/senville-leto-oy-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "senville-leto-interieure-officielle.png",
+      "url": "https://cdn11.bigcommerce.com/s-29utwni9ui/images/stencil/1280x1280/products/185/1599/leto-indoor-new__30192.1685112756.png",
+      "page_source": "https://senville.ca/12000-btu-mini-split-air-conditioner-senl-12cd/ (unité intérieure LETO)",
+      "modeles": "unité intérieure murale LETO (SENL-..CD/I)",
+      "image_web": "/images/products/official/senville-leto-interieure-officielle.webp"
+    },
+    {
+      "fichier": "senville-sendc-central-exterieure-officielle.jpg",
+      "url": "https://cdn11.bigcommerce.com/s-29utwni9ui/images/stencil/1280x1280/products/1365/2331/AURA-Outdoor-Single-Central%5F%5F90145-2%5F%5F78685.1754569600.jpg",
+      "page_source": "https://senville.ca/24000-btu-central-ducted-outdoor-unit-sendc-24hf-og/ (SKU SENDC-24HF-OG, MPN SENDC-24HF-OM ; page listant aussi SENDC-36/48/60HF-OG)",
+      "modeles": "SENDC-24/36/48/60HF-OG, SENDC-24/36/48/60HF-OM",
+      "image_web": "/images/products/official/senville-sendc-central-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "senville-multizone-moa-exterieure-officielle.jpg",
+      "url": "https://cdn11.bigcommerce.com/s-29utwni9ui/images/stencil/1280x1280/products/311/1261/outdoor__49259.1596049830.jpg",
+      "page_source": "https://senville.ca/18000-btu-mult-zone-outdoor-unit-3-zones/ (SENA-18HF-MOA) ; même photo sur https://senville.ca/28000-btu-multi-zone-outdoor-unit-2-4-zones/ (SENA-28HF-MOA) et https://senville.ca/36000-btu-mult-zone-outdoor-unit-sena-36hf-moa/ (SENA-36HF-MOA)",
+      "modeles": "SENA-18/28/36HF-MOA",
+      "image_web": "/images/products/official/senville-multizone-moa-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "senville-multizone-48-moa-exterieure-officielle.jpg",
+      "url": "https://cdn11.bigcommerce.com/s-29utwni9ui/images/stencil/1280x1280/products/587/1264/48000btu-outdoor-unit__21252.1549377211.1280.1280__71209.1551716732.1280.1280__60098.1596049927.jpg",
+      "page_source": "https://senville.ca/senville-48000-btu-multi-zone-outdoor-unit-2-6-zones/ (SENA-48HF-MOA)",
+      "modeles": "SENA-48HF-MOA",
+      "image_web": "/images/products/official/senville-multizone-48-moa-exterieure-officielle.webp"
+    }
+  ],
+  "familles_sans_page_produit": [
+    "SENA/..HF/OZ, SENA/..HF/MOZ, SENA/..HF/MOQ, SENA-..HF-MOB, SENA-33HF-OQ : seulement des pages de pièces détachées sur senville.com, aucune page produit d'unité extérieure avec photo",
+    "SENL/..CD/OX : page senville.com introuvable (404)",
+    "SENDC-30HF-OG : non listé sur la page SENDC"
+  ]
+}

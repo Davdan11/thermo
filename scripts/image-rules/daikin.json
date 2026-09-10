@@ -1,0 +1,160 @@
+[
+  {
+    "brand": "daikin",
+    "pattern": "^RXF(09|12|18|24)AXVJU",
+    "series": "/images/products/official/daikin-oterra-r32-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RX(09|12|18|24)BXVJU",
+    "series": "/images/products/official/daikin-oterra-r410a-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RX(09|12|15|18|24)WMVJU",
+    "series": "/images/products/official/daikin-vista-rx-wmvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RXL(09|12|15|18|24)WMVJU",
+    "series": "/images/products/official/daikin-aurora-rxl-wmvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RXL(09|12|15)QMVJU",
+    "series": "/images/products/official/daikin-aurora-rxl-qmvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RXL(18|24)UMVJU",
+    "series": "/images/products/official/daikin-aurora-rxl-umvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RX(09|12|15|18|24)RMVJU",
+    "series": "/images/products/official/daikin-rx-rmvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RX(09|12)AXVJU",
+    "series": "/images/products/official/daikin-rx-axvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RXM(09|12|18|24)VVJU",
+    "series": "/images/products/official/daikin-rxm-vvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RXM(18|24)WVJU",
+    "series": "/images/products/official/daikin-atmosphera-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RXS(09|12|15|18|24)LVJU",
+    "series": "/images/products/official/daikin-rxs-lvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^2MX18AXVJU",
+    "series": "/images/products/official/daikin-cirra-2mx-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^[2-5]MXM(18|24|36|48)AVJU",
+    "series": "/images/products/official/daikin-mxm-r32-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^[2-5]MXTH?(18|24|36|40)AVJU",
+    "series": "/images/products/official/daikin-aurora-mxt-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^(2MXL18WMVJU|3MXL24WMVJU|4MXL36WVJU)",
+    "series": "/images/products/official/daikin-aurora-mxl-wmvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^(2MXL18QMVJU|3MXL24RMVJU|4MXL36TVJU)",
+    "series": "/images/products/official/daikin-aurora-mxl-r410a-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^(2MXS18|3MXS24|4MXS36)WMVJU",
+    "series": "/images/products/official/daikin-mxs-wmvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^5MXS48WVJU",
+    "series": "/images/products/official/daikin-mxs-5mxs48-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^3MXS24RMVJU",
+    "series": "/images/products/official/daikin-3mxs24rmvju-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RXTA(24|36|48|60)AAVJU",
+    "series": "/images/products/official/daikin-vrv-s-rxta-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RXTQ(36|48|60)T[AB]VJ",
+    "byCapacity": {
+      "36": "/images/products/official/daikin-vrv-iv-s-rxtq-36k.webp",
+      "48": "/images/products/official/daikin-vrv-iv-s-rxtq-48k.webp",
+      "60": "/images/products/official/daikin-vrv-iv-s-rxtq-48k.webp"
+    },
+    "series": "/images/products/official/daikin-vrv-iv-s-rxtq-36k.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RXSQ(24|36|48|60)TVJU",
+    "series": "/images/products/official/daikin-vrv-iv-s-rxsq-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RZQ(18|24|30|36|42|48)T[AB]VJU",
+    "byCapacity": {
+      "18": "/images/products/official/daikin-skyair-rzq-18-24k.webp",
+      "24": "/images/products/official/daikin-skyair-rzq-18-24k.webp",
+      "30": "/images/products/official/daikin-skyair-rzq-30-48k.webp",
+      "36": "/images/products/official/daikin-skyair-rzq-30-48k.webp",
+      "42": "/images/products/official/daikin-skyair-rzq-30-48k.webp",
+      "48": "/images/products/official/daikin-skyair-rzq-30-48k.webp"
+    },
+    "series": "/images/products/official/daikin-skyair-rzq-18-24k.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^RZA(18|24|30|36|42|48)AAVJU",
+    "series": "/images/products/official/daikin-skyair-rza-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^DZ20VC",
+    "series": "/images/products/official/daikin-dz20vc-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^DZ17VSA60",
+    "series": "/images/products/official/daikin-dz17vsa-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^DH6VSA",
+    "series": "/images/products/official/daikin-fit-dh6vs-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^DH7VSA",
+    "series": "/images/products/official/daikin-fit-dh7vs-officiel.webp"
+  },
+  {
+    "brand": "daikin",
+    "pattern": "^DH9VSA",
+    "series": "/images/products/official/daikin-fit-aurora-dh9vs-officiel.webp"
+  }
+]

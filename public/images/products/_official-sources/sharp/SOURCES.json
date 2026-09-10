@@ -1,0 +1,54 @@
+[
+  {
+    "fichier": "SHARP-2024-catalogue-p24-AE-X3M24BU.png",
+    "url": "https://sharphvac.ca/wp-content/uploads/2025/02/SHARP-2024.pdf",
+    "page": "https://sharphvac.ca/en/heatpumps-2026/",
+    "date": "2026-09-10",
+    "couvre": [
+      "AE-X3M24BU (multizone série BU)"
+    ],
+    "images_produites": [
+      "/images/products/official/sharp-ae-x3m24bu-exterieure-officielle.webp"
+    ],
+    "note": "image extraite de la page 24 « SÉRIE BU » du catalogue SHARP 2024 (sharphvac.ca)"
+  },
+  {
+    "fichier": "thermopompes-ZHU-ZHU1_FR.webp",
+    "url": "https://sharphvac.ca/wp-content/uploads/2025/02/thermopompes-ZHU-ZHU1_FR.webp",
+    "page": "https://sharphvac.ca/en/thermopompes/series-zhu-zhu1/",
+    "date": "2026-09-10",
+    "couvre": [
+      "AE-X12/18ZHU, AE-X12/18ZHU1, AE-X12/15/18/24ZU, AE-X12/15/18/24ZU1 (série ZHU/ZU)"
+    ],
+    "images_produites": [
+      "/images/products/official/sharp-serie-zhu-zu-systeme-officiel.webp"
+    ],
+    "note": "visuel système officiel (intérieure + extérieure) : aucune photo isolée de l'unité extérieure publiée par Sharp HVAC"
+  },
+  {
+    "fichier": "thermopompes-tu.png",
+    "url": "https://sharphvac.ca/wp-content/uploads/2025/02/thermopompes-tu.png",
+    "page": "https://sharphvac.ca/en/thermopompes/serie-tu/",
+    "date": "2026-09-10",
+    "couvre": [
+      "AE-X12/15/18/24TU, AE-X12/18THU (série TU)"
+    ],
+    "images_produites": [
+      "/images/products/official/sharp-serie-tu-systeme-officiel.webp"
+    ],
+    "note": "visuel système officiel (intérieure + extérieure)"
+  },
+  {
+    "fichier": "thermopompes-CPU-Airest-EN.webp",
+    "url": "https://sharphvac.ca/wp-content/uploads/2026/06/thermopompes-CPU-Airest-EN.webp",
+    "page": "https://sharphvac.ca/en/thermopompes/airest-cpu-series/",
+    "date": "2026-09-10",
+    "couvre": [
+      "AE-X12CPU (série CPU Airest)"
+    ],
+    "images_produites": [
+      "/images/products/official/sharp-serie-cpu-airest-systeme-officiel.webp"
+    ],
+    "note": "visuel système officiel (intérieure + extérieure)"
+  }
+]

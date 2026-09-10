@@ -1,0 +1,65 @@
+[
+  {
+    "fichier": "ruud-ultra-up19ay-brochure-AE184684-p4.png",
+    "url": "https://files.myrheem.com/webpartners/ProductDocuments/AE184684-BDB2-45C8-8B9F-FA144BAACFBA.pdf",
+    "page": "https://www.ruud.com/product/UP19AY-ruud-heatpumps-endeavorline/",
+    "date": "2026-09-10",
+    "familles": ["UP19AY", "UP18AZ"],
+    "modeles": "UP19AY36/48/60AJVC et UP18AZ24/36/48/60AJVC — Endeavor Line Ultra, thermopompe centrale à vitesse variable",
+    "note": "Photo extraite (PyMuPDF, page 4, xref 1116, 868×1058 px avec transparence) de la brochure officielle Ruud Endeavor Line Ultra Series liée depuis la page produit UP19AY. Ruud publie exactement la même vignette (fichier identique) pour UP18AZ et UP19AY sur ruud.com, d'où l'emploi de cette photo pour les deux familles."
+  },
+  {
+    "fichier": "ruud-up18az-media-ruud-com-320.png",
+    "url": "https://media.ruud.com/blobazrheem/az-thumbnails/products/up18az--endeavor---line-ultra--series-heat-pumps--2ce897ac-f097-44c9-91b3-41aa11175a8d-320x320.png",
+    "page": "https://www.ruud.com/products/hvac/heat_pumps/",
+    "date": "2026-09-10",
+    "familles": ["UP18AZ"],
+    "modeles": "UP18AZ — Endeavor Line Ultra",
+    "note": "Vignette officielle 320 px conservée comme référence (identique octet pour octet à celle du UP19AY) ; l'image web provient de la brochure ci-dessus, plus grande."
+  },
+  {
+    "fichier": "ruud-up19ay-media-ruud-com-320.png",
+    "url": "https://media.ruud.com/blobazrheem/az-thumbnails/products/up19ay-endeavor---line-ultra--series-heat-pumps-3a454ec0-fe52-4306-8a82-9f288a3ea80a-320x320.png",
+    "page": "https://www.ruud.com/products/hvac/heat_pumps/",
+    "date": "2026-09-10",
+    "familles": ["UP19AY"],
+    "modeles": "UP19AY — Endeavor Line Ultra",
+    "note": "Vignette officielle 320 px conservée comme référence."
+  },
+  {
+    "fichier": "ruud-rd16ay-media-ruud-com-320.png",
+    "url": "https://media.ruud.com/blobazrheem/az-thumbnails/products/rd16ay-endeavor--line-achiever--plus-series-side-discharge-heat-pumps-46a4ec43-2352-42ac-a198-0cba7e9298db-320x320.png",
+    "page": "https://www.ruud.com/product/Ruud-RD16AY-achieverplus-endeavor-side-dischargeheatpump/",
+    "date": "2026-09-10",
+    "familles": ["RD16AY"],
+    "modeles": "RD16AY24/36/48/60AJVC — Endeavor Line Achiever Plus, soufflage latéral (logo Ruud)",
+    "note": "Seule photo Ruud complète disponible (320 px) ; la brochure RD16AY (files.myrheem.com/…/812F632C…) ne contient qu'un cadrage partiel. media.ruud.com ne sert pas de taille supérieure (1280 → 404)."
+  },
+  {
+    "fichier": "ruud-rd16az-media-ruud-com-320.png",
+    "url": "https://media.ruud.com/blobazrheem/az-thumbnails/products/rd16az-endeavor-line-achiever-plus-series-(cold-climate-sound-&-space-constraint-solution)--1ec27428-e2b5-4a6b-a299-78ec24bf3c35-320x320.png",
+    "page": "https://www.ruud.com/product/RD16AZ-Endeavor-Line-Achiever-Plus-Series/",
+    "date": "2026-09-10",
+    "familles": ["RD16AZ"],
+    "modeles": "RD16AZ24/30/36/48 AJVUA/AJHUA — Endeavor Line Achiever Plus climat froid, soufflage latéral (boîtier beige, logo Ruud)",
+    "note": "Vignette officielle 320 px ; la page produit Ruud RD16AZ ne propose aucun PDF."
+  },
+  {
+    "fichier": "ruud-rd17az-brochure-B21C3B55-p1.png",
+    "url": "https://files.myrheem.com/webpartnerspublic/ProductDocuments/B21C3B55-8A33-405B-94CC-ECB4207963F0.pdf",
+    "page": "https://www.ruud.com/product/RD17AZ-endeavor-line-achiever/",
+    "date": "2026-09-10",
+    "familles": ["RD17AZ"],
+    "modeles": "RD17AZ24/36/48/60AJ3N — Endeavor Line Achiever Plus, thermopompe universelle à soufflage latéral",
+    "note": "Photo extraite (page 1, xref 82, 1627×1891 px avec transparence) de la brochure officielle Ruud RD17AZ « Tight spaces. Quiet places. »"
+  },
+  {
+    "fichier": "ruud-rd18ay-brochure-BE397DEC-p1.png",
+    "url": "https://files.myrheem.com/webpartners/ProductDocuments/BE397DEC-835C-4513-A3C7-31AAF4E7A3B4.pdf",
+    "page": "https://www.ruud.com/product/RD18AY-ruud-universalheatpumps-endeavorline-Ultra/",
+    "date": "2026-09-10",
+    "familles": ["RD18AY"],
+    "modeles": "RD18AY24/36/48/60AJVC — Endeavor Line Ultra, thermopompe universelle à soufflage latéral",
+    "note": "Photo extraite (page 1, xref 86, 1637×2046 px avec transparence) de la brochure officielle Ruud RD18AY « Year-round comfort starts here »."
+  }
+]

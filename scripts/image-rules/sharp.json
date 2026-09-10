@@ -1,0 +1,6 @@
+[
+  { "brand": "sharp", "pattern": "^AE-X3M24BU", "series": "/images/products/official/sharp-ae-x3m24bu-exterieure-officielle.webp" },
+  { "brand": "sharp", "pattern": "^AE-X(12|15|18|24)ZH?U1?$", "series": "/images/products/official/sharp-serie-zhu-zu-systeme-officiel.webp" },
+  { "brand": "sharp", "pattern": "^AE-X(12|15|18|24)TH?U$", "series": "/images/products/official/sharp-serie-tu-systeme-officiel.webp" },
+  { "brand": "sharp", "pattern": "^AE-X12CPU", "series": "/images/products/official/sharp-serie-cpu-airest-systeme-officiel.webp" }
+]

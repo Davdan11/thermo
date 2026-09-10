@@ -1,0 +1,47 @@
+[
+  {
+    "brand": "bryant",
+    "pattern": "^280ANV",
+    "series": "/images/products/official/bryant-280anv-officiel.webp"
+  },
+  {
+    "brand": "bryant",
+    "pattern": "^284ANV",
+    "series": "/images/products/official/bryant-284anv-officiel.webp"
+  },
+  {
+    "brand": "bryant",
+    "pattern": "^37MBHA",
+    "series": "/images/products/official/bryant-37mbha-officiel.webp"
+  },
+  {
+    "brand": "bryant",
+    "pattern": "^37MBRA",
+    "series": "/images/products/official/bryant-37mbra-officiel.webp"
+  },
+  {
+    "brand": "bryant",
+    "pattern": "^37MGRA",
+    "series": "/images/products/official/bryant-37mgra-officiel.webp"
+  },
+  {
+    "brand": "bryant",
+    "pattern": "^38MARB",
+    "series": "/images/products/official/bryant-38marb-officiel.webp"
+  },
+  {
+    "brand": "bryant",
+    "pattern": "^38MBRC",
+    "series": "/images/products/official/bryant-38mbrc-officiel.webp"
+  },
+  {
+    "brand": "bryant",
+    "pattern": "^38MGHB",
+    "series": "/images/products/official/bryant-38mghb-officiel.webp"
+  },
+  {
+    "brand": "bryant",
+    "pattern": "^38MGRB",
+    "series": "/images/products/official/bryant-38mgrb-officiel.webp"
+  }
+]

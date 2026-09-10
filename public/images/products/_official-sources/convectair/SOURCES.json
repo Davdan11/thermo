@@ -1,0 +1,29 @@
+[
+  {
+    "fichier": "Legato_SellSheet_EN_p1_exterieure.jpg",
+    "url": "https://www.convectair.ca/sites/g/files/emiian446/files/2025-04/Sell%20Sheet%20-%20EN%20-%20Legato.pdf",
+    "page": "https://www.convectair.ca/en-ca/legato-mini-splits-with-heat-pump-technology",
+    "date": "2026-09-10",
+    "familles": ["500004490"],
+    "modeles": "Legato mini split simple zone (convectair.ca) : la fiche liste 500004490 (9K), 500004492 (12K), 500004494 (18K), 500004496 (24K) et les unités intérieures 500004491/493/495.",
+    "note": "Photo de l'unité extérieure extraite de la page 1 de la fiche (copie : Legato_SellSheet_EN.pdf) ; unité intérieure = Legato_SellSheet_EN_p1_interieure.jpg (même page)."
+  },
+  {
+    "fichier": "PAM-Capella28_FR_p2_exterieure.jpg",
+    "url": "https://www.ouellet.com/getattachment/Produits/Capella-28/PAM-Capella28_FR.pdf.aspx?lang=fr-CA",
+    "page": "https://www.ouellet.com/fr-ca/produits/capella-28.aspx",
+    "date": "2026-09-10",
+    "familles": ["8028"],
+    "modeles": "Convectair Capella 28 simple zone : 8028-C09-O, 8028-C12-O, 8028-C18-O, 8028-C24-O (+ unités intérieures 8028-Cxx-I).",
+    "note": "Convectair est une division d'Ouellet Canada : la fiche technique Convectair et la page produit officielles sont hébergées sur ouellet.com. Photo de l'unité extérieure page 2 de la fiche (copie : PAM-Capella28_FR.pdf). Unité intérieure : Convectair-catalogue-Capella28-p32-interieure.jpg, extraite du catalogue Convectair officiel Convectair-catalogue-Capella28-p32-35.pdf (https://www.ouellet.com/ouellet.com/files/e7/e7da8e7d-406e-43fe-af6f-be8defa61c73.pdf) ; l'unité extérieure de ce catalogue est aussi conservée (Convectair-catalogue-Capella28-p32-exterieure.jpg)."
+  },
+  {
+    "fichier": "PAM-CapellaMZ_FR_p2_exterieure-1-ventilateur.jpg",
+    "url": "https://www.ouellet.com/getattachment/Produits/Capella-MZ/PAM-CapellaMZ_FR.pdf.aspx?lang=fr-CA",
+    "page": "https://www.ouellet.com/fr-ca/produits/capella-mz.aspx",
+    "date": "2026-09-10",
+    "familles": ["8222", "8322", "8422", "8522"],
+    "modeles": "Convectair Capella MZ multizone : 8222-C18-O (18K), 8322-C27-O (27K), 8422-C36-O (36K), 8522-C48-O (48K).",
+    "note": "Photo de famille = châssis à un ventilateur (18K / 27K : débit d'air 2 129-2 147 pcm dans la fiche) ; byCapacity 36 et 48 = châssis à deux ventilateurs (PAM-CapellaMZ_FR_p2_exterieure-2-ventilateurs.jpg, même fiche, 4 500 pcm). Copie de la fiche : PAM-CapellaMZ_FR.pdf. Famille 8090-O / 8120-O / 8180-O / 8240-O = Capella 26 (produit discontinué) : la page ouellet.com/fr-ca/convectair/nos-produits/capella-26.aspx redirige vers convectaircanada.com, dont le certificat TLS est invalide (site injoignable) — aucune règle."
+  }
+]

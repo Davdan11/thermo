@@ -1,0 +1,5 @@
+[
+  { "brand": "conforto", "pattern": "^MHSZ1(06|09|12|18|24)DA", "byCapacity": { "9": "/images/products/official/conforto-mhsz-9k.webp", "12": "/images/products/official/conforto-mhsz-12k.webp" }, "series": "/images/products/official/conforto-mhsz-officiel.webp" },
+  { "brand": "conforto", "pattern": "^MHMZ[2-5](18|27|36|48)DA", "byCapacity": { "48": "/images/products/official/conforto-mhmz-48k.webp" }, "series": "/images/products/official/conforto-mhmz-officiel.webp" },
+  { "brand": "conforto", "pattern": "^MHSD1(18|24|30|36|48|60)DACFC", "series": "/images/products/official/conforto-mhsd-officiel.webp" }
+]

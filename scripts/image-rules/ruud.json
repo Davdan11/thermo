@@ -1,0 +1,8 @@
+[
+  { "brand": "ruud", "pattern": "^UP18AZ", "series": "/images/products/official/ruud-up18az-officiel.webp" },
+  { "brand": "ruud", "pattern": "^UP19AY", "series": "/images/products/official/ruud-up19ay-officiel.webp" },
+  { "brand": "ruud", "pattern": "^RD16AY", "series": "/images/products/official/ruud-rd16ay-officiel.webp" },
+  { "brand": "ruud", "pattern": "^RD16AZ", "series": "/images/products/official/ruud-rd16az-officiel.webp" },
+  { "brand": "ruud", "pattern": "^RD17AZ", "series": "/images/products/official/ruud-rd17az-officiel.webp" },
+  { "brand": "ruud", "pattern": "^RD18AY", "series": "/images/products/official/ruud-rd18ay-officiel.webp" }
+]

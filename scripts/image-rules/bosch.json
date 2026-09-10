@@ -1,0 +1,92 @@
+[
+  {
+    "brand": "bosch",
+    "pattern": "^BOVA-(24|36|60)RXB-M15S$",
+    "series": "/images/products/official/bosch-ids-light-officiel.webp",
+    "note": "IDS Light R-454B (« BOVA15 » série A, non connecté, R-454B selon la nomenclature Bosch). Photo : page produit officielle IDS Light R-454B (o583137v389_IDS_Inverter_Ducted_Split_v14), condenseur recadré ; page CA : https://www.bosch-homecomfort.com/ca/en/ocs/ids-light-inverter-ducted-split-heat-pump-r-454b-version-21324646-p/"
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BOVA-(24|36|60)HDN1-M15G$",
+    "series": "/images/products/official/bosch-ids-light-r410a-officiel.webp",
+    "note": "IDS Light R-410A (BOVA15) : fiche bosch_ids_bova15_product_specification_03.2023.pdf liste BOVA-24/36/60HDN1-M15G. Photo : page CA IDS Light (R-410A) o523616v389_IDS_Inverter_Ducted_Split_v8, condenseur recadré."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BOVB-(36|60)HDN1-M18M$",
+    "series": "/images/products/official/bosch-ids-plus-r410a-officiel.webp",
+    "note": "IDS Plus R-410A (BOVB18) : fiche bosch_ids_bovb18_product_specification_04.2023.pdf liste BOVB-36/60HDN1-M18M. Photo : page CA IDS Plus (R-410A) o523613v389_IDS_Inverter_Ducted_Split_v5, condenseur recadré."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BOV[ACD]-(36|60)HDN1-M20G$",
+    "series": "/images/products/official/bosch-ids-premium-r410a-officiel.webp",
+    "note": "IDS Premium R-410A 20 SEER : page officielle « combines BOVA20 and BOVC20 outdoor units » ; fiches bova20 (BOVA-36/60HDN1-M20G), bovc20 (BOVC-36HDN1-M20G), bovd20 (BOVD-36HDN1-M20G = BOVC20 + appli EasyAir, même cabinet 29-1/8 po). Photo : page CA IDS Premium (R-410A) o523614v389_IDS_Inverter_Ducted_Split_v6. Réserve : le dessin de couverture de la fiche BOVA20 montre un capot plus ancien (type IDS 1.0)."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BOVB-(36|60)HDN1-M20G$",
+    "series": "/images/products/official/bosch-ids-premium-connected-r410a-officiel.webp",
+    "note": "IDS Premium Connected R-410A (BOVB20) : fiche bosch_ids_bovb20_product_specification_09.2023.pdf liste BOVB-36/60HDN1-M20G. Photo : page CA IDS Premium Connected (R-410A) o523615v389_IDS_Inverter_Ducted_Split_v7, condenseur recadré."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BOVA-(36|60)RTB-M20S$",
+    "series": "/images/products/official/bosch-ids-premium-connected-officiel.webp",
+    "note": "IDS Premium Connected R-454B : fiche CA bosch_ids_premium_connected_condensing_unit_product_specification_08.2024.pdf liste BOVA-36/60RTB-M20S. Photo : page produit IDS Premium Connected R-454B o583138v389_IDS_Inverter_Ducted_Split_v15, condenseur recadré."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BOVA-60MTB-M19E$",
+    "series": "/images/products/official/bosch-ids-ultra-officiel.webp",
+    "note": "IDS Ultra : fiche CA bosch_ids_ultra_series_condensing_unit_product_specification_08.2024.pdf liste BOVA-60MTB-M19E. Photo : page produit IDS Ultra, unité extérieure seule o575567v389_IDS-Ultra_ODU_v6."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BPHA-(36|60)RCB-M16S$",
+    "series": "/images/products/official/bosch-idp-plus-officiel.webp",
+    "note": "IDP Plus R-454B (monobloc) : fiche idp_plus_product_specifications_02.2026.pdf liste BPHA-36/60RCB-M16S. Photo : page produit IDP Plus o607646v389_Inverter_Ducted_Packaged_Heat_Pump_v1 (deux tailles du monobloc)."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BPBA-(36|60)RCB-M18S$",
+    "series": "/images/products/official/bosch-idp-premium-officiel.webp",
+    "note": "IDP Premium R-454B (monobloc) : fiche idp_premium_series_product_specification_04.2026.pdf liste BPBA-36/60RCB-M18S. Photo : page produit IDP Premium o607647v389_Inverter_Ducted_Packaged_Heat_Pump_v2."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BMS500-AAS(009|012|018|024)-1CSX(H[BC]|R[ABC]|XA)$",
+    "series": "/images/products/official/bosch-climate-5000-officiel.webp",
+    "note": "Climate 5000 R-410A gen 2 (suffixes A/B) et gen 3 (suffixe C), monozone 9-24k : unité extérieure à un ventilateur (tableaux de dimensions IOM 12.2020 et 06.2022, manuels de service g2/g3 05.2025). Photo : page CA Climate 5000 (R-410A) o523603v389_Climate_5000_Ductless_System_2-0_v11."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BMS500-AAS012-0CSXR[BC]$",
+    "series": "/images/products/official/bosch-climate-5000-officiel.webp",
+    "note": "Climate 5000 R-410A 12k 115 V (gen 2 RB, gen 3 RC) : un ventilateur, même famille (IOM 12.2020 / 06.2022)."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BMS500-AAS030-1CSXRC$|^BMS500-AAS036-1CSX(RC|LB|LC)$",
+    "series": "/images/products/official/bosch-climate-5000-officiel.webp",
+    "note": "Climate 5000 R-410A 30-36k light commercial : châssis 946x810 mm à un ventilateur (IOM 12.2020 / 06.2022, fiches g3 30k/36k)."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BMS500-AAM018-1CSX(HC|RA|RC)$|^BMS500-AAM027-1CSX(HB|HC|RA|RC)$|^BMS500-AAM036-1CSX(RA|RC)$",
+    "series": "/images/products/official/bosch-climate-5000-officiel.webp",
+    "note": "Climate 5000 R-410A multizone 18-36k à un ventilateur (tableaux IOM multizone 12.2020 et 06.2022 ; photo fiche g3 18k/27k/36k multi). AAM036-1CSXHB exclu (listé dans deux châssis)."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BMS500-AAS(048|060)-1CSXL[BC]$|^BMS500-AAM048-1CSX(HC|RA|RC)$|^BMS500-AAM036-1CSXHC$",
+    "series": "/images/products/official/bosch-climate-5000-grande-capacite-officiel.webp",
+    "note": "Climate 5000 R-410A grande capacité : châssis 952x1333 mm à deux ventilateurs (IOM 12.2020 / 06.2022 ; photo fiche g3 48k multi). Photo : page CA Climate 5000 (R-410A) o523608v389_Climate_5000_Ductless_System_2-0_v12."
+  },
+  {
+    "brand": "bosch",
+    "pattern": "^BMS500-AAS(009|012|018|024|030|036)-[01]CSX(HD|RD)$|^BMS500-AAS036-1CSXLD$|^BMS500-AAM(018|027|036)-1CSX(HD|RD)$",
+    "series": "/images/products/official/bosch-climate-5000-gen4-officiel.webp",
+    "note": "Climate 5000 gen 4 R-454B (suffixe D) à un ventilateur : IOM gen 4 04.2026 (mural et multizone), fiches 01.2026. Photo : page produit Climate 5000 R-454B o585452v389_Climate_5000_Ductless_System_Gen4_v5, unité extérieure recadrée. AAM048 et AAS048/060-1CSXLD (deux ventilateurs, 52,5 po) exclus : pas de photo isolée."
+  }
+]

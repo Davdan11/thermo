@@ -1,0 +1,9 @@
+[
+  { "brand": "senville", "pattern": "^SENA-(06|09|12|18|24|33)HF-OG$", "series": "/images/products/official/senville-aura-og-exterieure-officielle.webp" },
+  { "brand": "senville", "pattern": "^SENA/(09|12|18|24)HF/OQ$", "series": "/images/products/official/senville-aura-oq-exterieure-officielle.webp" },
+  { "brand": "senville", "pattern": "^SENL-(09|12|18|24|30|36)CD(220)?-OL$", "series": "/images/products/official/senville-leto-ol-exterieure-officielle.webp" },
+  { "brand": "senville", "pattern": "^SENL/(09|12|18|24|30|36)CD(220)?/OY$", "series": "/images/products/official/senville-leto-oy-exterieure-officielle.webp" },
+  { "brand": "senville", "pattern": "^SENDC-(24|36|48|60)HF-O[GM]$", "series": "/images/products/official/senville-sendc-central-exterieure-officielle.webp" },
+  { "brand": "senville", "pattern": "^SENA-(18|28|36)HF-MOA$", "series": "/images/products/official/senville-multizone-moa-exterieure-officielle.webp" },
+  { "brand": "senville", "pattern": "^SENA-48HF-MOA$", "series": "/images/products/official/senville-multizone-48-moa-exterieure-officielle.webp" }
+]

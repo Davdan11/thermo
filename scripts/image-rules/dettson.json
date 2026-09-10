@@ -1,0 +1,4 @@
+[
+  { "brand": "dettson", "pattern": "^EVD-(24|30|36|48|60)-O", "series": "/images/products/official/dettson-evd-officiel.webp" },
+  { "brand": "dettson", "pattern": "^MHD-(18|24)$", "series": "/images/products/official/dettson-mhd-officiel.webp" }
+]

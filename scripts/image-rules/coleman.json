@@ -1,0 +1,27 @@
+[
+  {
+    "brand": "coleman",
+    "pattern": "^HH8(24|36|60)E2S11",
+    "byCapacity": {
+      "24": "/images/products/official/coleman-hh8-24k.webp",
+      "36": "/images/products/official/coleman-hh8-36k.webp",
+      "42": "/images/products/official/coleman-hh8-48-60k.webp"
+    },
+    "series": "/images/products/official/coleman-hh8-officiel.webp"
+  },
+  {
+    "brand": "coleman",
+    "pattern": "^HMH72B(24|34|36|48|60)1",
+    "series": "/images/products/official/coleman-hmh7-officiel.webp"
+  },
+  {
+    "brand": "coleman",
+    "pattern": "^HC20B(24|36|48|60)21S?",
+    "series": "/images/products/official/coleman-hc20-officiel.webp"
+  },
+  {
+    "brand": "coleman",
+    "pattern": "^CH16B(24|36|48|60)2[12]",
+    "series": "/images/products/official/coleman-ch16-officiel.webp"
+  }
+]

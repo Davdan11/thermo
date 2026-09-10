@@ -1,0 +1,29 @@
+[
+  {
+    "fichier": "samsung-rac-outdoor-unit-officiel.png",
+    "url": "https://res.cloudinary.com/govimg/image/upload/v1577830177/5b294f9467c0d0489028b276/res-max-heat-2.0-front-1.png",
+    "page": "https://www.samsunghvac.com/residential/windfree-max-heat (et /residential/windfree-premium, /residential/windfree-standard)",
+    "date": "2026-09-10",
+    "famille": "WindFree Max Heat / Premium / Standard R32 — unité extérieure RAC",
+    "modeles": ["AR09DXDACWKX", "AR12DXDACWKX", "AR15DXDACWKX", "AR18DXDACWKX", "AR24DXDACWKX", "AR09DXDABWKX", "AR12DXDABWKX", "AR15DXDABWKX", "AR18DXDABWKX", "AR24DXDABWKX", "AR09DXFAMWKX", "AR12DXFAMWKX", "AR15DXFAMWKX", "AR18DXFAMWKX"],
+    "note": "Photo présentée dans la section « Pair With » de chaque page (« RAC Max Heat / Premium / Standard Outdoor Unit ») ; Samsung HVAC utilise la même photo d'unité extérieure pour les trois familles murales. Web : official/samsung-windfree-rac-officiel.webp"
+  },
+  {
+    "fichier": "samsung-fjm-aj048txj5ch-front-officiel.png",
+    "url": "https://res.cloudinary.com/govimg/image/upload/v1591713656/5b294f9467c0d0489028b276/AJ048TXJ5CH-AA_001_Front.png",
+    "page": "https://www.samsunghvac.com/fjm-2021/FJM-2021-ODU ; https://www.samsunghvac.com/fjm-2021/FJM-MH-2023 ; https://www.samsunghvac.com/fjm-2021/FJM-2021-MH-ODU ; pages WindFree (« FJM Premium / Standard Outdoor Unit »)",
+    "date": "2026-09-10",
+    "famille": "Free Joint Multi (FJM) — unité extérieure",
+    "modeles": ["AJ020DXS3CG", "AJ024DXS4CG", "AJ030DXS4CG", "AJ036DXS4CG", "AJ020DXJ2CG", "AJ024DXJ3CG", "AJ036DXJ4CG", "AJ048DXJ5CG", "AJ020BXJ2CH", "AJ024BXJ3CH", "AJ036BXJ4CH", "AJ048BXJ5CH", "AJ020CXS3CH", "AJ024CXS4CH", "AJ030CXS4CH", "AJ036CXS4CH", "AJ020BXS3CH", "AJ024BXS4CH", "AJ030BXS4CH", "AJ036BXS4CH"],
+    "note": "Photo officielle nommée d'après AJ048TXJ5CH, utilisée par Samsung HVAC comme photo de famille FJM sur les pages ODU 2021/2023 et dans les sections « Pair With » des pages WindFree R32. Web : official/samsung-fjm-officiel.webp"
+  },
+  {
+    "fichier": "samsung-dvm-s-mini-r32-officiel.png",
+    "url": "https://res.cloudinary.com/govimg/image/upload/v1747341428/5b294f9467c0d0489028b276/R32-DVM-S-Mini-large-w-small-icon.png",
+    "page": "https://www.samsunghvac.com/light-commercial/dvm-s-mini",
+    "date": "2026-09-10",
+    "famille": "DVM S Mini R32",
+    "modeles": ["AM036FCMDCG", "AM048FCMDCG", "AM060FCMDCG", "AM060FCMDCG1"],
+    "note": "Image de la page produit (badge R-32 recadré). Web : official/samsung-dvm-s-mini-r32-officiel.webp"
+  }
+]

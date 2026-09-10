@@ -1,0 +1,12 @@
+[
+  { "brand": "panasonic", "pattern": "^CU-(2Z18|3Z22)ABUC", "series": "/images/products/official/panasonic-multi-z-2z18-3z22-exterieure-officielle.webp" },
+  { "brand": "panasonic", "pattern": "^CU-(4Z24|5Z36)BBUC", "series": "/images/products/official/panasonic-multi-z-4z24-5z36-exterieure-officielle.webp" },
+  { "brand": "panasonic", "pattern": "^CU-H?M(18|24|30|36|48)BAHU", "series": "/images/products/official/panasonic-interios-petite-exterieure-officielle.webp" },
+  { "brand": "panasonic", "pattern": "^CU-(M60|HM55)BAHU", "series": "/images/products/official/panasonic-interios-grande-exterieure-officielle.webp" },
+  { "brand": "panasonic", "pattern": "^CU-XE(9|12|15|18|24)WKUA", "byCapacity": { "9": "/images/products/official/panasonic-climapure-xe9-exterieure-officielle.webp", "12": "/images/products/official/panasonic-climapure-xe12-exterieure-officielle.webp", "15": "/images/products/official/panasonic-climapure-xe15-exterieure-officielle.webp", "18": "/images/products/official/panasonic-climapure-xe18-exterieure-officielle.webp", "24": "/images/products/official/panasonic-climapure-xe24-exterieure-officielle.webp" }, "series": "/images/products/official/panasonic-climapure-xe-exterieure-officielle.webp" },
+  { "brand": "panasonic", "pattern": "^CU-XE(9|12|15)SKUA", "series": "/images/products/official/panasonic-climapure-xe-exterieure-officielle.webp" },
+  { "brand": "panasonic", "pattern": "^CU-2E18SBU-5", "series": "/images/products/official/panasonic-cu-2e18sbu-5-exterieure-officielle.webp" },
+  { "brand": "panasonic", "pattern": "^CU-3E19RBU", "series": "/images/products/official/panasonic-cu-3e19rbu-exterieure-officielle.webp" },
+  { "brand": "panasonic", "pattern": "^CU-4E24RBU", "series": "/images/products/official/panasonic-cu-4e24rbu-exterieure-officielle.webp" },
+  { "brand": "panasonic", "pattern": "^CU-?5E36QBU", "series": "/images/products/official/panasonic-cu-5e36qbu-exterieure-officielle.webp" }
+]

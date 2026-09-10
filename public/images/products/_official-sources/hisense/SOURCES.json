@@ -1,0 +1,119 @@
+[
+  {
+    "fichier": "hi-edge-r32-exterieure-brochure-us.png",
+    "url": "https://www.hisensecomfort.com/_files/ugd/4283ec_160de5efab9a4be5b4d7b2e6852d8b5e.pdf",
+    "page": "https://www.hisensecomfort.com/product-page/hi-edge",
+    "date": "2026-09-10",
+    "famille": "Hi-EDGE (murale monozone, R-32)",
+    "modeles": ["AO-09U3R25E", "AO-12U3R25E", "AO-18U3R25E", "AO-24U3R25E", "AO-30U3R25E", "AO-36U3R25E"],
+    "note": "Image extraite (avec masque alpha) de la page 1 de la brochure officielle Hisense Comfort « Hi-EDGE Ductless » ; la page 2 liste les unités extérieures AO-xxU3R25E (voir fiche-hi-edge-ductless-brochure-p2.jpg)."
+  },
+  {
+    "fichier": "hi-pro-454b-exterieure-brochure-us.png",
+    "url": "https://www.hisensecomfort.com/_files/ugd/4283ec_3f29143e8fb641f48de8b33a2faceb60.pdf",
+    "page": "https://www.hisensecomfort.com/product-page/hi-pro-ductless",
+    "date": "2026-09-10",
+    "famille": "Hi-PRO (murale monozone, R-454B)",
+    "modeles": ["AO-09U3T25P", "AO-12U3T25P", "AO-15U3T25P"],
+    "note": "Image extraite de la page 1 de la brochure officielle « Hi-PRO Ductless » ; page 2 : unités extérieures AO-09/12/15U3T25P (fiche-hi-pro-ductless-brochure-p2.jpg)."
+  },
+  {
+    "fichier": "hi-ultra-454b-exterieure-brochure-us.png",
+    "url": "https://www.hisensecomfort.com/_files/ugd/4283ec_977f293d1c684e81b270be7e54c803ff.pdf",
+    "page": "https://www.hisensecomfort.com/product-page/hi-ultra",
+    "date": "2026-09-10",
+    "famille": "Hi-ULTRA (murale monozone, R-454B)",
+    "modeles": ["AO-09U3T25U", "AO-12U3T25U", "AO-18U3T25U", "AO-24U3T25U"],
+    "note": "Image extraite de la page 1 de la brochure officielle « Hi-ULTRA Ductless » ; page 2 : unités extérieures AO-09/12/18/24U3T25U (fiche-hi-ultra-ductless-brochure-p2.jpg)."
+  },
+  {
+    "fichier": "hi-uni-454b-exterieure-p2-brochure-us.png",
+    "url": "https://www.hisensecomfort.com/_files/ugd/4283ec_d967984305c0438794b8a7b95efb2fd6.pdf",
+    "page": "https://www.hisensecomfort.com/product-page/hi-uni",
+    "date": "2026-09-10",
+    "famille": "Hi-UNI (universelle monozone, R-454B)",
+    "modeles": ["AOU-09U3T25U", "AOU-12U3T25U", "AOU-18U3T25U", "AOU-24U3T25U", "AOU-36U3T25U", "AOU-48U3T25U", "AOU-60U3T25U"],
+    "note": "Rendu 400 dpi de la page 2 de la brochure officielle « Hi-UNI » (photo de l'unité extérieure au-dessus du tableau cassette AOU-09…36U3T25U) ; fiche-hi-uni-brochure-p2.jpg liste toutes les combinaisons AOU."
+  },
+  {
+    "fichier": "hi-multi-amo-exterieure-brochure-us.png",
+    "url": "https://www.hisensecomfort.com/_files/ugd/4283ec_0085af95451042f6bf14f43d44ec5cdc.pdf",
+    "page": "https://www.hisensecomfort.com/product-page/hi-multi",
+    "date": "2026-09-10",
+    "famille": "Hi-MULTI (multizone, R-454B)",
+    "modeles": ["AMO2-18U3T25U", "AMO3-27U3T25U", "AMO4-36U3T25U", "AMO5-45U3T25U"],
+    "note": "Image extraite de la page 2 de la brochure officielle « Hi-MULTI » ; le tableau « Hi-MULTI-Zone Outdoor Unit » de la même page liste AMO2/3/4/5 (fiche-hi-multi-brochure-p2.jpg)."
+  },
+  {
+    "fichier": "hi-ultra-hd-454b-entete-p2-brochure-us.png",
+    "url": "https://www.hisensecomfort.com/_files/ugd/4283ec_d7ed0704f16744bc9ca0e047b86294f9.pdf",
+    "page": "https://www.hisensecomfort.com/product-page/hi-ultra-hd",
+    "date": "2026-09-10",
+    "famille": "Hi-ULTRA HD (gainable à soufflage horizontal, R-454B)",
+    "modeles": ["AOH-24U3T25U", "AOH-36U3T25U", "AOH-48U3T25U", "AOH-60U3T25U"],
+    "note": "Rendu 400 dpi de l'en-tête de la page 2 (photos 2T / 3T / 4-5T) ; le tableau de la même page associe 2T=AOH-24U3T25U, 3T=AOH-36U3T25U, 4T=AOH-48U3T25U, 5T=AOH-60U3T25U (fiche-hi-ultra-hd-brochure-p2.jpg)."
+  },
+  {
+    "fichier": "hi-pro-hd-454b-entete-p2-brochure-us.png",
+    "url": "https://www.hisensecomfort.com/_files/ugd/4283ec_a96b94f804d14ab3aadec6fb752f5f03.pdf",
+    "page": "https://www.hisensecomfort.com/product-page/hi-pro-hd",
+    "date": "2026-09-10",
+    "famille": "Hi-PRO HD (gainable à soufflage horizontal, R-454B)",
+    "modeles": ["AUWR-2424P", "AOH-24U3T24P", "AUWR-3624P", "AOH-36U3T24P", "AUWR-4824P", "AOH-48U3T24P", "AUWR-6024P", "AOH-60U3T24P"],
+    "note": "Rendu 400 dpi de l'en-tête de la page 2 (photos 2T / 3T / 4-5T) ; le tableau associe 2T=AUWR-2424P/AOH-24U3T24P, 3T=AUWR-3624P/AOH-36U3T24P, 4T=AUWR-4824P/AOH-48U3T24P, 5T=AUWR-6024P/AOH-60U3T24P (fiche-hi-pro-hd-brochure-p2.jpg)."
+  },
+  {
+    "fichier": "hi-ultra-hd-r410a-2t-brochure-ca.png",
+    "url": "https://assets.hisense-canada.com/assets/HVAC-brochures/e612aa34ec/Hi-Ultra-HD-Horizontal-Discharge-specs.pdf",
+    "page": "https://www.hisense-canada.com/en/hi-ultra-hd-horizontal-discharge",
+    "date": "2026-09-10",
+    "famille": "Hi-ULTRA HD R-410A (gainable à soufflage horizontal)",
+    "modeles": ["AUWR-24U3SF2"],
+    "note": "Image 2T extraite de la page 2 de la brochure Hisense Canada ; tableau : Outdoor Model 2T = AUWR-24U3SF2 (fiche-hi-ultra-hd-r410a-canada-p2.jpg). Même contenu dans la brochure US « Hi-ULTRA HD R410A For Service Only »."
+  },
+  {
+    "fichier": "hi-ultra-hd-r410a-entete-p2-brochure-ca.png",
+    "url": "https://assets.hisense-canada.com/assets/HVAC-brochures/e612aa34ec/Hi-Ultra-HD-Horizontal-Discharge-specs.pdf",
+    "page": "https://www.hisense-canada.com/en/hi-ultra-hd-horizontal-discharge",
+    "date": "2026-09-10",
+    "famille": "Hi-ULTRA HD R-410A (gainable à soufflage horizontal)",
+    "modeles": ["AUWR-24U3SF2", "AUWR-36U3SA2", "AUWR-48U3SP2", "AUWR-60U3SP2"],
+    "note": "Rendu 600 dpi de l'en-tête 2T / 3T / 4T-5T de la page 2 (utilisé pour la photo 3T = AUWR-36U3SA2)."
+  },
+  {
+    "fichier": "hi-ultra-hd-r410a-4t-5t-brochure-ca.png",
+    "url": "https://assets.hisense-canada.com/assets/HVAC-brochures/e612aa34ec/Hi-Ultra-HD-Horizontal-Discharge-specs.pdf",
+    "page": "https://www.hisense-canada.com/en/hi-ultra-hd-horizontal-discharge",
+    "date": "2026-09-10",
+    "famille": "Hi-ULTRA HD R-410A (gainable à soufflage horizontal)",
+    "modeles": ["AUWR-48U3SP2", "AUWR-60U3SP2"],
+    "note": "Image 4T-5T extraite de la page 2 de la brochure Hisense Canada ; tableau : 4T = AUWR-48U3SP2, 5T = AUWR-60U3SP2."
+  },
+  {
+    "fichier": "hi-comfort-composite-brochure-us.png",
+    "url": "https://www.hisensecomfort.com/_files/ugd/4283ec_923c54755b9543ee85203b6eaf7f9fe6.pdf",
+    "page": "https://www.hisensecomfort.com/product-page/hi-comfort",
+    "date": "2026-09-10",
+    "famille": "Hi-COMFORT (air-eau / gainable, R-32)",
+    "modeles": ["AVW-36F3DAH2", "AVW-48F3DAH2", "AVW-60F3DAH2"],
+    "note": "Image composite (unité extérieure + réservoir + centrale) extraite de la page 1 de la brochure officielle « Hi-COMFORT » ; l'unité extérieure seule est recadrée pour le web. Page 2 : Outdoor Unit Specification AVW-36/48/60F3DAH2 (fiche-hi-comfort-brochure-p2.jpg)."
+  },
+  {
+    "fichier": "h5-avw-h3dh2h1-exterieure-p2-brochure-us.png",
+    "url": "https://www.hisensecomfort.com/_files/ugd/4283ec_30983f086dda433abdd9bfc346d9bd95.pdf",
+    "page": "https://www.hisensecomfort.com/product-page/h5-series",
+    "date": "2026-09-10",
+    "famille": "Hi-Smart H5 (mini-VRF à soufflage latéral, R-32)",
+    "modeles": ["AVW-24H3DH2H1", "AVW-36H3DH2H1", "AVW-48H3DH2H1"],
+    "note": "Rendu 600 dpi de la photo d'en-tête de la page 2 (Outdoor Unit Specification) qui liste AVW-24/36/48H3DH2H1 (fiche-h5-brochure-p2.jpg)."
+  },
+  {
+    "fichier": "fiche-*.jpg",
+    "url": "(voir les entrées ci-dessus)",
+    "page": "https://www.hisensecomfort.com/documents-search ; https://www.hisense-canada.com/en/hvac-system",
+    "date": "2026-09-10",
+    "famille": "Pages de spécifications (preuve des numéros de modèle)",
+    "modeles": [],
+    "note": "Rendus JPEG 110 dpi de la page de spécifications de chaque brochure officielle, conservés pour la traçabilité photo / numéros de modèle. Les brochures US proviennent de la collection « Documents » du site officiel hisensecomfort.com (Hisense USA HVAC, lié depuis hisensehvac.com et hisense-usa.com)."
+  }
+]

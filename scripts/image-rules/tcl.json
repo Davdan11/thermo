@@ -1,0 +1,38 @@
+[
+  {
+    "brand": "tcl",
+    "pattern": "^H(09|12|18|24)SBH2\\d[BX]PC",
+    "series": "/images/products/official/tcl-breezein-officiel.webp",
+    "note": "Unité extérieure BreezeIN : photo des submittal sheets officielles TCL (us.tcl.com/pages/tcl-breeze-in-series), qui listent H09SBH23BPC/XPC, H12SBH22BPC/XPC, H18SBH22XPC, H24SBH22XPC. Même photo pour toutes les capacités."
+  },
+  {
+    "brand": "tcl",
+    "pattern": "^H(09|12|18|24|36)SEH19[BX]AC",
+    "series": "/images/products/official/tcl-elite-officiel.webp",
+    "note": "Unité extérieure Elite (Elite 20, R-454B) : photo des submittal sheets officielles TCL (us.tcl.com/pages/hvac-elite-ac), qui listent H09/H12SEH19BAC/XAC, H18/H24/H36SEH19XAC. TCL utilise la même photo d'unité extérieure que pour la BreezeIN."
+  },
+  {
+    "brand": "tcl",
+    "pattern": "^H(18|27|36|42)FMH2\\dXPC",
+    "series": "/images/products/official/tcl-multi-match-officiel.webp",
+    "note": "Unité extérieure multizone Multi Match : brochure officielle Multi_Match_Series_HVAC_SpecSheet_2025.pdf (us.tcl.com/pages/multi-match-series), qui liste H18FMH22XPC, H27FMH22XPC, H36FMH21XPC, H42FMH20XPC."
+  },
+  {
+    "brand": "tcl",
+    "pattern": "^H(24|36|48|60)TDH1\\dXAC",
+    "series": "/images/products/official/tcl-advantage-officiel.webp",
+    "note": "Unité extérieure gainable Advantage (IVS) : fiche officielle Advantage_HVAC_Spec_Sheet_2025.pdf (us.tcl.com/pages/hvac-advantage-system), qui liste H24TDH17XAC, H36TDH18XAC, H48TDH18XAC, H60TDH16XAC. Unité intérieure (AHU) : tcl-advantage-interieure-officiel.webp."
+  },
+  {
+    "brand": "tcl",
+    "pattern": "^H(09|12|18|24)SUH2\\dXGC",
+    "series": "/images/products/official/tcl-ultimate-25-interieure-officiel.webp",
+    "note": "UNITÉ INTÉRIEURE (aucune photo officielle de l'unité extérieure trouvée) : fiche officielle Ultimate_25_Series_TCL_ULT_050525_1.pdf (us.tcl.com/pages/tcl-ultimate-25-series), qui liste H09SUH25XGC, H12SUH25XGC, H18SUH23XGC, H24SUH23XGC."
+  },
+  {
+    "brand": "tcl",
+    "pattern": "^H12SFH25XPC",
+    "series": "/images/products/official/tcl-freshin-3-0-interieure-officiel.webp",
+    "note": "UNITÉ INTÉRIEURE (aucune photo officielle de l'unité extérieure trouvée) : fiche officielle FreshIN_3.0_Series_TCL_FSH_050725_1.pdf (us.tcl.com/pages/tcl-fresh-in-3-0-series), qui liste H12SFH25XPC."
+  }
+]

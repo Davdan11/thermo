@@ -1,0 +1,20 @@
+[
+  { "brand": "trane", "pattern": "^4TWV0", "series": "/images/products/official/trane-4twv0-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TWV8", "series": "/images/products/official/trane-4twv8-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TWL9", "series": "/images/products/official/trane-4twl9-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TWV7X", "series": "/images/products/official/trane-4twv7x-officiel.webp" },
+  { "brand": "trane", "pattern": "^5TWR7", "series": "/images/products/official/trane-5twr7-officiel.webp" },
+  { "brand": "trane", "pattern": "^5TWX7", "series": "/images/products/official/trane-5twx7-officiel.webp" },
+  { "brand": "trane", "pattern": "^5TWV8X", "series": "/images/products/official/trane-5twv8x-officiel.webp" },
+  { "brand": "trane", "pattern": "^5TWV0X", "series": "/images/products/official/trane-5twv0x-officiel.webp" },
+  { "brand": "trane", "pattern": "^5HPL5", "series": "/images/products/official/trane-5hpl5-officiel.webp" },
+  { "brand": "trane", "pattern": "^5HCL5", "series": "/images/products/official/trane-5hcl5-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TXK23", "series": "/images/products/official/trane-4txk23-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TXK25", "series": "/images/products/official/trane-4txk25-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TXK27", "series": "/images/products/official/trane-4txk27-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TXK38", "series": "/images/products/official/trane-4txk38-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TXM21", "series": "/images/products/official/trane-4txm21-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TXM22", "series": "/images/products/official/trane-4txm22-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TXM23", "series": "/images/products/official/trane-4txm23-officiel.webp" },
+  { "brand": "trane", "pattern": "^4TXD20", "series": "/images/products/official/trane-4txd20-officiel.webp" }
+]

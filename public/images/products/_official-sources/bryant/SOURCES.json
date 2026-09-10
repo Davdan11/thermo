@@ -1,0 +1,110 @@
+[
+  {
+    "fichier": "bryant-280anv-product-data-p1.jpg",
+    "image_web": "/images/products/official/bryant-280anv-officiel.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/08/PDS280A-04.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1009/Public/08/PDS280A-04.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "280ANV"
+    ],
+    "modeles": "280ANV024/036/048/060 (jumeau Carrier 25VNA0)",
+    "note": "Fiche Product Data Bryant 280A Evolution Extreme (nomenclature 280ANV), photo page 1. Aucune page produit 280ANV sur bryant.com (redirige vers l'accueil)."
+  },
+  {
+    "fichier": "bryant-284anv-product-data-p1.png",
+    "image_web": "/images/products/official/bryant-284anv-officiel.webp",
+    "url": "https://www.shareddocs.com/hvac/docs/1009/Public/05/PDS284ANV-02.pdf",
+    "page": "https://www.bryant.com/en/ca/products/heat-pumps/",
+    "date": "2026-09-10",
+    "familles": [
+      "284ANV"
+    ],
+    "modeles": "284ANV0240/0360/0480/0600 (jumeau Carrier 25VNA4)",
+    "note": "Fiche Product Data Bryant 284ANV Evolution Extreme 24, photo page 1 (fond transparent). L'image CDN de bryant.com/en/ca (…/evolution-extreme-24-variable-speed-heat-pump-red-shield-284A.png) montre la même unité avec un badge Red Shield superposé."
+  },
+  {
+    "fichier": "bryant-37mbhaq-cdn.png",
+    "image_web": "/images/products/official/bryant-37mbha-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1717506231/bryant/products/ductless/preferred-single-zone-heat-pump-37MBHAQ.png",
+    "page": "https://www.bryant.com/en/us/products/ductless-systems/37mbha/",
+    "date": "2026-09-10",
+    "familles": [
+      "37MBHA"
+    ],
+    "modeles": "37MBHAQ36/48/58AA3",
+    "note": "Photo produit de la page officielle Bryant 37MBHA."
+  },
+  {
+    "fichier": "bryant-37mbraq-cdn.png",
+    "image_web": "/images/products/official/bryant-37mbra-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1717506273/bryant/products/ductless/preferred-single-zone-heat-pump-37MBRAQ.png",
+    "page": "https://www.bryant.com/en/us/products/ductless-systems/37mbra/",
+    "date": "2026-09-10",
+    "familles": [
+      "37MBRA"
+    ],
+    "modeles": "37MBRAQ36/48/58AA3",
+    "note": "Photo produit de la page officielle Bryant 37MBRA."
+  },
+  {
+    "fichier": "bryant-37mgraq-cdn.png",
+    "image_web": "/images/products/official/bryant-37mgra-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1717505801/bryant/products/ductless/preferred-multi-zone-heat-pump-with-basepan-heater-37MGRAQ.png",
+    "page": "https://www.bryant.com/en/us/products/ductless-systems/37mgra/",
+    "date": "2026-09-10",
+    "familles": [
+      "37MGRA"
+    ],
+    "modeles": "37MGRAQ55FA3",
+    "note": "Photo produit de la page officielle Bryant 37MGRA."
+  },
+  {
+    "fichier": "bryant-38marb-cdn.png",
+    "image_web": "/images/products/official/bryant-38marb-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1633367510/bryant/products/ductless/Preferred-heat-pump-38MARB.png",
+    "page": "https://www.bryant.com/en/ca/products/ductless-systems/38marb/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MARB"
+    ],
+    "modeles": "38MARBQ09…36",
+    "note": "Photo produit de la page officielle Bryant Canada 38MARB."
+  },
+  {
+    "fichier": "bryant-38mgrb-cdn.png",
+    "image_web": "/images/products/official/bryant-38mgrb-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1654006598/bryant/products/ductless/preferred-multi-zone-heat-pump-with-basepan-heater-38MGRB.png",
+    "page": "https://www.bryant.com/en/ca/products/ductless-systems/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MGRB"
+    ],
+    "modeles": "38MGRBQ18…48",
+    "note": "Vignette produit 38MGRB de la liste officielle Bryant Canada « Ductless Systems »."
+  },
+  {
+    "fichier": "bryant-38mghb-cdn.png",
+    "image_web": "/images/products/official/bryant-38mghb-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1691514293/bryant/products/ductless/preferred-multi-zone-heat-pump-with-basepan-heater-38MGHB.png",
+    "page": "https://www.bryant.com/en/ca/products/ductless-systems/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MGHB"
+    ],
+    "modeles": "38MGHBQ24…48",
+    "note": "Vignette produit 38MGHB de la liste officielle Bryant Canada « Ductless Systems »."
+  },
+  {
+    "fichier": "bryant-38mbrc-cdn.png",
+    "image_web": "/images/products/official/bryant-38mbrc-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1663011806/bryant/products/ductless/preferred-single-zone-heat-pump-38MBRC.png",
+    "page": "https://www.bryant.com/en/ca/products/ductless-systems/",
+    "date": "2026-09-10",
+    "familles": [
+      "38MBRC"
+    ],
+    "modeles": "38MBRCQ36/48/58",
+    "note": "Vignette produit 38MBRC de la liste officielle Bryant Canada « Ductless Systems »."
+  }
+]

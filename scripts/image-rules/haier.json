@@ -1,0 +1,182 @@
+[
+  {
+    "brand": "haier",
+    "pattern": "^1Q(09|12)RT2BE",
+    "series": "/images/products/official/haier-arctic-1q-officiel.webp",
+    "note": "Photo officielle Haier des modèles 1Q09RT2BEA et 1Q12RT2BEA — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q09RT2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q18RT2BE",
+    "series": "/images/products/official/haier-arctic-1q-18k.webp",
+    "note": "Photo officielle Haier du modèle 1Q18RT2BEA. — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-18-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q18RT2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q24RT2BE",
+    "series": "/images/products/official/haier-arctic-1q-24k.webp",
+    "note": "Photo officielle Haier du modèle 1Q24RT2BEA. — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q24RT2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q3036RT2BE",
+    "series": "/images/products/official/haier-arctic-1q-30-36k.webp",
+    "note": "Photo officielle Haier du modèle 1Q3036RT2BEA. — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-30-000-36-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q3036RT2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q(09|12)FF2BE",
+    "series": "/images/products/official/haier-flexfit-1q-officiel.webp",
+    "note": "Photo officielle Haier des modèles 1Q09FF2BEA et 1Q12FF2BEA — https://www.haierappliances.com/appliance/FlexFit-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q09FF2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q(15|18)FF2BE",
+    "series": "/images/products/official/haier-flexfit-1q-15-18k.webp",
+    "note": "Photo officielle Haier des modèles 1Q15FF2BEA et 1Q18FF2BEA. — https://www.haierappliances.com/appliance/FlexFit-Series-208-230V-15-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q15FF2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q(24|3036)FF2BE",
+    "series": "/images/products/official/haier-flexfit-1q-24-36k.webp",
+    "note": "Photo officielle Haier des modèles 1Q24FF2BEA et 1Q3036FF2BEA. — https://www.haierappliances.com/appliance/FlexFit-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q24FF2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q(09|12)TE1BE",
+    "series": "/images/products/official/haier-tempo-1q-115v-officiel.webp",
+    "note": "Photo officielle Haier des modèles 1Q09TE1BEA et 1Q12TE1BEA — https://www.haierappliances.com/appliance/Tempo-Series-115V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q09TE1BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q(09|12)TE2BE",
+    "series": "/images/products/official/haier-tempo-1q-officiel.webp",
+    "note": "Photo officielle Haier des modèles 1Q09TE2BEA et 1Q12TE2BEA — https://www.haierappliances.com/appliance/Tempo-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q09TE2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q18TE2BE",
+    "series": "/images/products/official/haier-tempo-1q-18k.webp",
+    "note": "Photo officielle Haier du modèle 1Q18TE2BEA — https://www.haierappliances.com/appliance/Tempo-Series-208-230V-18-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q18TE2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1Q24TE2BE",
+    "series": "/images/products/official/haier-tempo-1q-24k.webp",
+    "note": "Photo officielle Haier du modèle 1Q24TE2BEA — https://www.haierappliances.com/appliance/Tempo-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-1Q24TE2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1U(09|12|15|18|24)AP2(HD|VHA)",
+    "series": "/images/products/official/haier-advanced-plus-officiel.webp",
+    "note": "Photo officielle Haier, identique pour 1U09-24AP2HDB — https://www.haierappliances.com/appliance/Advanced-Plus-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-1U09AP2HDB"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1U(09|12|18)EH2(HE|VHE)",
+    "series": "/images/products/official/haier-arctic-1u-officiel.webp",
+    "note": "Photo officielle Haier, identique pour 1U09/12/18EH2HEB — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-1U09EH2HEB"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1U(09|12)TE2VHA",
+    "series": "/images/products/official/haier-tempo-1u-vha-officiel.webp",
+    "note": "Photo officielle Haier — https://www.geappliances.com/appliance/Tempo-Series-208-230V-9-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-1U09TE2VHA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1U(18|24)TE2HD",
+    "series": "/images/products/official/haier-tempo-1u-hd-officiel.webp",
+    "note": "Photo officielle Haier des modèles 1U18TE2HDA et 1U24TE2HDA — https://www.haierappliances.com/appliance/Tempo-Series-208-230V-18-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-1U18TE2HDA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1U(24|3036)TL2HF",
+    "series": "/images/products/official/haier-tempo-1u-tl2hf-officiel.webp",
+    "note": "Photo officielle Haier des modèles 1U24TL2HFA et 1U3036TL2HFA — https://www.haierappliances.com/appliance/Tempo-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-1U24TL2HFA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1U(24|3036)LP2HD",
+    "series": "/images/products/official/haier-arctic-pro-officiel.webp",
+    "note": "Photo officielle Haier des modèles 1U24LP2HDA et 1U3036LP2HDA — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-24-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-1U24LP2HDA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^1U4248LP2HD",
+    "series": "/images/products/official/haier-arctic-pro-42-48k.webp",
+    "note": "Photo officielle Haier du modèle 1U4248LP2HDA. — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-42-000-48-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-System-1U4248LP2HDA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^(2Q18|3Q24)FF2BE",
+    "series": "/images/products/official/haier-flexfit-multi-1q-officiel.webp",
+    "note": "Photo officielle Haier des modèles 2Q18FF2BEA et 3Q24FF2BEA — https://www.haierappliances.com/appliance/FlexFit-Series-208-230V-2-Zone-18-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-2Q18FF2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^4Q36FF2BE",
+    "series": "/images/products/official/haier-flexfit-multi-1q-36k.webp",
+    "note": "Photo officielle Haier du modèle 4Q36FF2BEA. — https://www.haierappliances.com/appliance/FlexFit-Series-208-230V-4-Zone-36-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-4Q36FF2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^(2Q20|3Q24)RT2BE",
+    "series": "/images/products/official/haier-arctic-multi-1q-officiel.webp",
+    "note": "Photo officielle Haier des modèles 2Q20RT2BEA et 3Q24RT2BEA — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-2-Zone-20-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-2Q20RT2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^(4Q36|5Q42)RT2BE",
+    "series": "/images/products/official/haier-arctic-multi-1q-36-42k.webp",
+    "note": "Photo officielle Haier des modèles 4Q36RT2BEA et 5Q42RT2BEA. — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-4-Zone-36-000-BTU-Ductless-Mini-Split-Outdoor-Heat-Pump-4Q36RT2BEA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^(2U20|3U24)EH2HD",
+    "series": "/images/products/official/haier-arctic-multi-2u-officiel.webp",
+    "note": "Photo officielle Haier des modèles 2U20EH2HDA et 3U24EH2HDA — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-2-Zones-18-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-2U20EH2HDA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^4U36EH2HD",
+    "series": "/images/products/official/haier-arctic-multi-2u-36k.webp",
+    "note": "Photo officielle Haier du modèle 4U36EH2HDA. — https://www.haierappliances.com/appliance/Arctic-Series-208-230V-4-Zones-36-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-4U36EH2HDA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^(2U20|3U24)EH2VHA",
+    "series": "/images/products/official/haier-arctic-multi-2u-vha-officiel.webp",
+    "note": "Photo officielle Haier — https://www.geappliances.com/appliance/Arctic-Series-208-230V-2-Zones-18-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-2U20EH2VHA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^3U24MS2HD",
+    "series": "/images/products/official/haier-flexfit-multi-3u-officiel.webp",
+    "note": "Photo officielle Haier du modèle 3U24MS2HDA — https://www.haierappliances.com/appliance/FlexFit-Series-208-230V-3-Zones-24-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-3U24MS2HDA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^4U36MS2HD",
+    "series": "/images/products/official/haier-flexfit-multi-3u-36k.webp",
+    "note": "Photo officielle Haier du modèle 4U36MS2HDA. — https://www.haierappliances.com/appliance/FlexFit-Series-208-230V-4-Zones-36-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-4U36MS2HDA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^5U42MS2HD",
+    "series": "/images/products/official/haier-flexfit-multi-3u-42k.webp",
+    "note": "Photo officielle Haier du modèle 5U42MS2HDA. — https://www.haierappliances.com/appliance/FlexFit-Series-208-230V-5-Zones-42-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-5U42MS2HDA"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^3U24MS2VHB",
+    "series": "/images/products/official/haier-flexfit-multi-3u-vhb-officiel.webp",
+    "note": "Photo officielle Haier — https://www.geappliances.com/appliance/FlexFit-Series-208-230V-3-Zones-24-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-3U24MS2VHB"
+  },
+  {
+    "brand": "haier",
+    "pattern": "^4U36MS2VHB",
+    "series": "/images/products/official/haier-flexfit-multi-3u-vhb-36k.webp",
+    "note": "Photo officielle Haier — https://www.geappliances.com/appliance/FlexFit-Series-208-230V-4-Zones-36-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-4U36MS2VHB"
+  }
+]

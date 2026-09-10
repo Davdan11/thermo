@@ -1,0 +1,22 @@
+[
+  {
+    "brand": "goodman",
+    "pattern": "^GZV[67]SA",
+    "series": "/images/products/official/goodman-gzv-s-officiel.webp"
+  },
+  {
+    "brand": "goodman",
+    "pattern": "^GSZS60",
+    "series": "/images/products/official/goodman-gszs6-officiel.webp"
+  },
+  {
+    "brand": "goodman",
+    "pattern": "^GSZV90",
+    "series": "/images/products/official/goodman-gszv9-officiel.webp"
+  },
+  {
+    "brand": "goodman",
+    "pattern": "^GVZC20",
+    "series": "/images/products/official/goodman-gvzc20-officiel.webp"
+  }
+]

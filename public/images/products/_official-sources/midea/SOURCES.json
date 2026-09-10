@@ -1,0 +1,27 @@
+{
+  "marque": "Midea (Midea Comfort North America — Canada : mideacomfortna.ca ; États-Unis : mideacomfort.us)",
+  "date_collecte": "2026-09-10",
+  "note": "Les fichiers midea-all-easy-pro-*.png et midea-evox-g3-officiel.png étaient déjà présents avant cette collecte (provenance non documentée ici).",
+  "sources": [
+    {
+      "fichier": "midea-ep-extreme-heat-mo1es-exterieure-officielle.jpg",
+      "url": "https://www.mideacomfortna.ca/images/new/product-detail/single-advanced-heat-pump/img-1.jpg",
+      "page_source": "https://www.mideacomfortna.ca/product-detail.html?q=single-advanced-heat-pump (« EP Extreme Heat Series », numéro de modèle indiqué : MSEES-H09B-1A / MO1ES-H09B-1A ; le site affiche la même photo pour la fiche « single-extreme-heat-pump »)",
+      "modeles": "MO1ES-H09B-1A/2A, MO1ES-H12B-1A/2A, MO1ES-H18B-2A, MO1ES-H24B-2A (famille MO1ES)",
+      "image_web": "/images/products/official/midea-ep-extreme-heat-mo1es-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "midea-multizone-mo6ex-exterieure-officielle.png",
+      "url": "https://www.mideacomfortna.ca/images/new/product-detail/multi-advanced-heat-pump/img-1.png",
+      "page_source": "https://www.mideacomfortna.ca/product-detail.html?q=multi-advanced-heat-pump (« Multi Zone Advance Heat Series », numéro de modèle indiqué : MO6EX-H48B-2A)",
+      "modeles": "MO6EX-H48B-2A, MO6EX-H60B-2A",
+      "image_web": "/images/products/official/midea-multizone-mo6ex-exterieure-officielle.webp"
+    }
+  ],
+  "documents_consultes_sans_photo_exploitable": [
+    "https://www.mideacomfort.us/pdf/new/Leaflet_Multi-zone_2025.pdf (MO3/4/5/6EX et MO3/4/5/6HX : photos de 108-215 px seulement, trop petites)",
+    "https://www.mideacomfort.us/pdf/new/Leaflet_EVOX%20Central%20Ducted%20Systems_2025.pdf (MO1BE/MO1HE/MO1SE : aucune photo d'unité extérieure extractible)",
+    "https://www.mideacomfort.us/downloads/.../Service%20Manual-DLCSRBH.pdf et Service%20Manual-DLCMRHB.pdf (DLC…/D5C… : manuels de service sans photo produit)",
+    "https://hvac.midea.com/resources/file/2025/03/07/652034372923461.pdf (catalogue unitaire M134A/M152H, modèles absents du catalogue du site)"
+  ]
+}

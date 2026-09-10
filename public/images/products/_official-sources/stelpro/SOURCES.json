@@ -1,0 +1,74 @@
+[
+  {
+    "fichier": "SELB-H09A-O-front.png",
+    "url": "https://www.stelpro.com/wp-content/uploads/SELB-H09A-O-front.png",
+    "page": "https://www.stelpro.com/fr/produits/thermopompe-elite-b-simple-zone-sans-conduit-de-ventilation-selb/",
+    "date": "2026-09-10",
+    "familles": ["SELB"],
+    "modeles": "Thermopompe Élite B simple zone : unité extérieure SELB-H09A-O ; la page liste SELB-H09A-O, H12A-O, H18A-O, H24A-O (photo de famille).",
+    "note": "Image produit officielle (PNG 1000x600, fond transparent)."
+  },
+  {
+    "fichier": "SELB-H09A-I-front.png",
+    "url": "https://www.stelpro.com/wp-content/uploads/SELB-H09A-I-front.png",
+    "page": "https://www.stelpro.com/fr/produits/thermopompe-elite-b-simple-zone-sans-conduit-de-ventilation-selb/",
+    "date": "2026-09-10",
+    "familles": ["SELB"],
+    "modeles": "Unité intérieure murale SELB-H09A-I.",
+    "note": "Utilisée pour stelpro-selb-interieure-officiel.webp."
+  },
+  {
+    "fichier": "SEPB-H09A-O-front.png",
+    "url": "https://www.stelpro.com/wp-content/uploads/SEPB%E2%80%91H09A%E2%80%91O-front-1.png",
+    "page": "https://www.stelpro.com/fr/produits/thermopompe-pro-b-simple-zone-sans-conduit-de-ventilation-sepb/",
+    "date": "2026-09-10",
+    "familles": ["SEPB"],
+    "modeles": "Thermopompe Pro B simple zone : unité extérieure SEPB-H09A-O ; la page liste SEPB-H09A-O, H12A-O, H18A-O, H24A-O.",
+    "note": "L'URL officielle contient des traits d'union insécables (U+2011, encodés %E2%80%91) dans le nom de fichier."
+  },
+  {
+    "fichier": "SEPB-H09A-I-front.png",
+    "url": "https://www.stelpro.com/wp-content/uploads/SEPB-H09A-I-front-1.png",
+    "page": "https://www.stelpro.com/fr/produits/thermopompe-pro-b-simple-zone-sans-conduit-de-ventilation-sepb/",
+    "date": "2026-09-10",
+    "familles": ["SEPB"],
+    "modeles": "Unité intérieure murale SEPB-H09A-I.",
+    "note": "Utilisée pour stelpro-sepb-interieure-officiel.webp."
+  },
+  {
+    "fichier": "SMZ2B1-H18A-O-front.png",
+    "url": "https://www.stelpro.com/wp-content/uploads/SMZ2B1-H18A-O-front.png",
+    "page": "https://www.stelpro.com/fr/produits/thermopompe-multi-b-multi-zones-sans-conduit-de-ventilation-smz/",
+    "date": "2026-09-10",
+    "familles": ["SMZ"],
+    "modeles": "Thermopompe Multi B multizone : unité extérieure SMZ2B1-H18A-O (seule photo de la page) ; la page liste SMZ2B1-H18A-O, SMZ3B1-H27A-O, SMZ4B1-H36A-O, SMZ5B1-H48A-O, SMZ5B1-H55A-O. Les variantes SMZxB1V du catalogue n'apparaissent nulle part sur stelpro.com : exclues de la règle.",
+    "note": "Photo de famille."
+  },
+  {
+    "fichier": "SDB1-H36A-O-front.png",
+    "url": "https://www.stelpro.com/wp-content/uploads/SDB1-H36A-O-front.png",
+    "page": "https://www.stelpro.com/fr/produits/systeme-de-thermopompe-centrale-slim-b-sah-sdb/",
+    "date": "2026-09-10",
+    "familles": ["SDB1"],
+    "modeles": "Système de thermopompe centrale Slim B : unité extérieure SDB1-H36A-O (photo principale de la page) ; la page liste SDB1-H24A-O à SDB1-H60A-O.",
+    "note": "Photo de famille."
+  },
+  {
+    "fichier": "SDB1-H60A-O-front.png",
+    "url": "https://www.stelpro.com/wp-content/uploads/SDB1-H60A-O-front.png",
+    "page": "https://www.stelpro.com/fr/produits/systeme-de-thermopompe-centrale-slim-b-sah-sdb/",
+    "date": "2026-09-10",
+    "familles": ["SDB1"],
+    "modeles": "Unité extérieure SDB1-H60A-O (châssis à deux ventilateurs).",
+    "note": "Règle byCapacity « 60 » (stelpro-sdb1-60k.webp). Le catalogue donne 48 000 BTU à SDB1-H60A-O (même clé que SDB1-H48A-O) : la photo de famille s'applique tant que cette capacité n'est pas corrigée."
+  },
+  {
+    "fichier": "SAHB1-H24A-I-front.png",
+    "url": "https://www.stelpro.com/wp-content/uploads/SAHB1-H24A-I-front.png",
+    "page": "https://www.stelpro.com/fr/produits/systeme-de-thermopompe-centrale-slim-b-sah-sdb/",
+    "date": "2026-09-10",
+    "familles": ["SDB1"],
+    "modeles": "Cabinet souffleur SAHB1-H24A-I du système Slim B (unité intérieure).",
+    "note": "Utilisée pour stelpro-sdb1-interieure-officiel.webp. Familles CCB1 et SINB : aucune page, aucun fichier ni résultat de recherche sur stelpro.com — aucune règle."
+  }
+]

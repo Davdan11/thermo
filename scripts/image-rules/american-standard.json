@@ -1,0 +1,17 @@
+[
+  { "brand": "american-standard", "pattern": "^4A6V0", "series": "/images/products/official/american-standard-4a6v0-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^4A6V8X", "series": "/images/products/official/american-standard-4a6v8x-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^4A6V7X", "series": "/images/products/official/american-standard-4a6v7x-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^4A6L9", "series": "/images/products/official/american-standard-4a6l9-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^5A6H7", "series": "/images/products/official/american-standard-5a6h7-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^5A6V0X", "series": "/images/products/official/american-standard-5a6v0x-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^5A6V8X", "series": "/images/products/official/american-standard-5a6v8x-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^5HPL5", "series": "/images/products/official/american-standard-5hpl5-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^5HCL5", "series": "/images/products/official/american-standard-5hcl5-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^4TXK23", "series": "/images/products/official/american-standard-4txk23-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^4TXK25", "series": "/images/products/official/american-standard-4txk25-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^4TXK38", "series": "/images/products/official/american-standard-4txk38-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^4TXM21", "series": "/images/products/official/american-standard-4txm21-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^4TXM23", "series": "/images/products/official/american-standard-4txm23-officiel.webp" },
+  { "brand": "american-standard", "pattern": "^4TXD20", "series": "/images/products/official/american-standard-4txd20-officiel.webp" }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "fichier": "MHSZ109DA_LEFT_ANGLE_LOGO_V1.png",
+    "url": "https://confortohvac.com/wp-content/uploads/2023/10/MHSZ109DA_LEFT_ANGLE_LOGO_V1.png",
+    "page": "https://confortohvac.com/product/maximum-ductless-mini-split-systems/ (médiathèque officielle confortohvac.com, titre « MHSZ109DA_LEFT_ANGLE_LOGO_V1 »)",
+    "date": "2026-09-10",
+    "familles": ["MHSZ"],
+    "modeles": "Unité extérieure monozone Maximum MHSZ109DA (9 000 BTU) ; photo de famille pour MHSZ106/109/112/118/124DA",
+    "note": "Produit : conforto-mhsz-officiel.webp et conforto-mhsz-9k.webp. La fiche Submittal Maximum Ductless (confortohvac.com, 2026) liste les unités extérieures MHSZ109/112/118/124DACF ; MHSZ106DA (6 000 BTU) n'y figure pas mais porte le même préfixe de famille."
+  },
+  {
+    "fichier": "MHSZ112DA_FRONT_LOGO-.png",
+    "url": "https://confortohvac.com/wp-content/uploads/2023/10/MHSZ112DA_FRONT_LOGO-.png",
+    "page": "https://confortohvac.com/product/maximum-ductless-mini-split-systems/ (médiathèque officielle, titre « MHSZ112DA_FRONT_LOGO »)",
+    "date": "2026-09-10",
+    "familles": ["MHSZ"],
+    "modeles": "Unité extérieure MHSZ112DA (12 000 BTU), vue de face",
+    "note": "Produit : conforto-mhsz-12k.webp"
+  },
+  {
+    "fichier": "Submittal-Ductless-12K-ENG-p1-unite-interieure.png",
+    "url": "https://confortohvac.com/wp-content/uploads/2026/06/Conforto-Submital-Sheet-Maximum-Ductless-Heat-Pumps-12K-ENG.pdf",
+    "page": "https://confortohvac.com/product/maximum-ductless-mini-split-systems/",
+    "date": "2026-09-10",
+    "familles": ["MHSZ"],
+    "modeles": "Unité intérieure murale de la série Maximum Ductless (MHSZ109/112/118/124DACF), image extraite de la fiche Submittal page 1",
+    "note": "Produit : conforto-mhsz-interieure-officiel.webp (non utilisée dans les règles, disponible)"
+  },
+  {
+    "fichier": "MHMZ548DA_LEFT_ANGLE__LOGO.png",
+    "url": "https://confortohvac.com/wp-content/uploads/2023/10/MHMZ548DA_LEFT_ANGLE__LOGO.png",
+    "page": "https://confortohvac.com/product/maximum-ductless-mini-split-systems/ (médiathèque officielle, titre « MHMZ548DA_LEFT_ANGLE__LOGO »)",
+    "date": "2026-09-10",
+    "familles": ["MHMZ"],
+    "modeles": "Unité extérieure multizone MHMZ548DA (48 000 BTU, 5 zones) ; photo de famille pour MHMZ218/327/436/548DA",
+    "note": "Produit : conforto-mhmz-officiel.webp et conforto-mhmz-48k.webp. La brochure officielle Conforto_MaximumHeat_MULTIZONES_FR_8pages_WEB.pdf (confortohvac.com) liste MHMZ218/327/436/548DACF et utilise ce même condenseur bi-ventilateur comme visuel de la série ; les petites capacités (18 k, 27 k) peuvent avoir un châssis plus petit."
+  },
+  {
+    "fichier": "Conforto_Ducted-Heat-Pump.png",
+    "url": "https://confortohvac.com/wp-content/uploads/2025/02/Conforto_Ducted-Heat-Pump.png",
+    "page": "https://confortohvac.com/product/cold-climate-heat-pumps-centrally-ducted-system-with-side-discharge-condenser/",
+    "date": "2026-09-10",
+    "familles": ["MHSD"],
+    "modeles": "Système central gainable Conforto : ventilo-convecteur MHAH + condenseur à décharge latérale MHSD118…160DACFC",
+    "note": "Original complet ; la brochure officielle Conforto_Ducted-Heat-Pump_4-pages_FR_WEB-1.pdf (confortohvac.com) liste MHSD118/124/130/136/148/160DACFC."
+  },
+  {
+    "fichier": "Conforto_Ducted-Heat-Pump_outdoor-crop.png",
+    "url": "https://confortohvac.com/wp-content/uploads/2025/02/Conforto_Ducted-Heat-Pump.png",
+    "page": "https://confortohvac.com/product/cold-climate-heat-pumps-centrally-ducted-system-with-side-discharge-condenser/",
+    "date": "2026-09-10",
+    "familles": ["MHSD"],
+    "modeles": "Recadrage sur le condenseur MHSD (décharge latérale) de l'image ci-dessus",
+    "note": "Produit : conforto-mhsd-officiel.webp"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "brand": "zephyr",
+    "pattern": "^ZE-(12|18)CA22EXT$",
+    "series": "/images/products/official/zephyr-ca22-exterieure-officielle.webp"
+  },
+  {
+    "brand": "zephyr",
+    "pattern": "^ZE-(24|36|60)HPA$",
+    "series": "/images/products/official/zephyr-central-hpa-exterieure-officielle.webp"
+  },
+  {
+    "brand": "zephyr",
+    "pattern": "^ZE-(24|36|48|60)HPB$",
+    "series": "/images/products/official/zephyr-central-hpb-r454b-exterieure-officielle.webp"
+  }
+]

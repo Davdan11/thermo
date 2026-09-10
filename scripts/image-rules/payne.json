@@ -1,0 +1,47 @@
+[
+  {
+    "brand": "payne",
+    "pattern": "^37MBHA",
+    "series": "/images/products/official/payne-38mbrc-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^37MBRA",
+    "series": "/images/products/official/payne-38mbrc-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^37MGRA",
+    "series": "/images/products/official/payne-38mgrb-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^37MU[HR]A",
+    "series": "/images/products/official/payne-38mura-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^38MARB",
+    "series": "/images/products/official/payne-38marb-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^38MBRC",
+    "series": "/images/products/official/payne-38mbrc-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^38MGHB",
+    "series": "/images/products/official/payne-38mgrb-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^38MGRB",
+    "series": "/images/products/official/payne-38mgrb-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^38MURA",
+    "series": "/images/products/official/payne-38mura-officiel.webp"
+  }
+]

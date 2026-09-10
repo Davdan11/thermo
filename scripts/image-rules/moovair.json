@@ -1,0 +1,11 @@
+[
+  { "brand": "moovair", "pattern": "^DMA(09|12|18|24)HOS(25|28)230E8$", "series": "/images/products/official/moovair-serie-m-2024-exterieure-officielle.webp" },
+  { "brand": "moovair", "pattern": "^DMA06HOS28230E8$", "series": "/images/products/official/moovair-serie-m-2022-exterieure-officielle.webp" },
+  { "brand": "moovair", "pattern": "^DMB(09|12|18)HOS42230E8B?$", "series": "/images/products/official/moovair-serie-m-2024-exterieure-officielle.webp" },
+  { "brand": "moovair", "pattern": "^DMA(09|12|18)HOS42230E4$", "series": "/images/products/official/moovair-serie-m-2022-exterieure-officielle.webp" },
+  { "brand": "moovair", "pattern": "^DMA(09|12)HOS21115S1$|^DMA(18|24|30|36)HOS21230S1$", "series": "/images/products/official/moovair-m21-exterieure-officielle.webp" },
+  { "brand": "moovair", "pattern": "^DMA(18|27|36|48)HOM(23230X2|25230X3)$", "series": "/images/products/official/moovair-multi-moov-exterieure-officielle.webp" },
+  { "brand": "moovair", "pattern": "^DMA(18|24|30|36|48|60)HOS20230E7$|^DMA60HOS19230E7$", "series": "/images/products/official/moovair-central-moov-2022-exterieure-officielle.webp" },
+  { "brand": "moovair", "pattern": "^MSH(EA|MA)(18|24|30|36|48|60)R2AN1$|^MSHMB36R2AN1$", "series": "/images/products/official/moovair-central-moov-r454b-exterieure-officielle.webp" },
+  { "brand": "moovair", "pattern": "^MXH[SZ]A(1832|2742|3652|4862)A[NV]1$", "series": "/images/products/official/moovair-myriad-exterieure-officielle.webp" }
+]

@@ -1,0 +1,543 @@
+[
+  {
+    "fichier": "img-fcus-wall-product-KMAS1-03-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/r32/img-fcus-wall-product-KMAS1-03-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/r32/kmas1.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH09KMAS1, AOUH12KMAS1 (Altair 700)"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-kmas1-altair-700-officiel.webp"
+    ],
+    "note": "unité extérieure découpée du visuel système officiel"
+  },
+  {
+    "fichier": "img-fcus-wall-product-KNAS1-03-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/r32/img-fcus-wall-product-KNAS1-03-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/r32/knas1.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOLH09KNAS1, AOLH12KNAS1 (Altair 300)"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-knas1-altair-300-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-fcus-wall-product-KPAS1-03-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/r32/img-fcus-wall-product-KPAS1-03-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/r32/kpas1.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH09/12/18/24/30/36KPAS1 (Altair 500)"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-kpas1-altair-500-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-fcus-wall-product-KTAP1-03-02.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/r32/img-fcus-wall-product-KTAP1-03-02.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/r32/ktap1.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH09/12/15KTAP1 (Orion XLTH+)"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-ktap1-orion-xlth-plus-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-fcus-multi-product-18KWAH2-1-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/r32-2-3-4rooms/kwah/img-fcus-multi-product-18KWAH2-1-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/r32-2-3-4rooms/kwah.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH18KWAH2",
+      "famille AOUH..KWAH (Aquila XLTH)"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-kwah-aquila-xlth-18k.webp",
+      "/images/products/official/fujitsu-kwah-aquila-xlth-officiel.webp"
+    ],
+    "note": ""
+  },
+  {
+    "fichier": "img-fcus-multi-product-24KWAH3-1-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/r32-2-3-4rooms/kwah/img-fcus-multi-product-24KWAH3-1-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/r32-2-3-4rooms/kwah.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH24KWAH3"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-kwah-aquila-xlth-20k.webp"
+    ],
+    "note": ""
+  },
+  {
+    "fichier": "img-fcus-multi-product-36KWAH4-1-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/r32-2-3-4rooms/kwah/img-fcus-multi-product-36KWAH4-1-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/r32-2-3-4rooms/kwah.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH36KWAH4"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-kwah-aquila-xlth-36k.webp"
+    ],
+    "note": ""
+  },
+  {
+    "fichier": "img-fcus-multi-product-18KWAS2-1-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/r32-2-3-4rooms/kwas/img-fcus-multi-product-18KWAS2-1-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/r32-2-3-4rooms/kwas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH18KWAS2",
+      "famille AOUH..KWAS (Aquila)"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-kwas-aquila-18k.webp",
+      "/images/products/official/fujitsu-kwas-aquila-officiel.webp"
+    ],
+    "note": ""
+  },
+  {
+    "fichier": "img-fcus-multi-product-24KWAS3-1-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/r32-2-3-4rooms/kwas/img-fcus-multi-product-24KWAS3-1-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/r32-2-3-4rooms/kwas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH24KWAS3"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-kwas-aquila-20k.webp"
+    ],
+    "note": ""
+  },
+  {
+    "fichier": "img-fcus-multi-product-36KWAS4-1-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/r32-2-3-4rooms/kwas/img-fcus-multi-product-36KWAS4-1-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/r32-2-3-4rooms/kwas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH36KWAS4"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-kwas-aquila-36k.webp"
+    ],
+    "note": ""
+  },
+  {
+    "fichier": "img-fcus-multi-product-45KWAS5-1-01.webp",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/r32-2-3-4rooms/kwas/img-fcus-multi-product-45KWAS5-1-01.webp",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/r32-2-3-4rooms/kwas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH45KWAS5"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-kwas-aquila-42k.webp"
+    ],
+    "note": ""
+  },
+  {
+    "fichier": "img-aou18-24rlxfz-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/2-3-4rooms/img-aou18-24rlxfz-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/2-3-4rooms/aou18rlxfz.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU18RLXFZ, AOU24RLXFZ"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-rlxfz-18-24-officiel.webp"
+    ],
+    "note": ""
+  },
+  {
+    "fichier": "img-aou36rlxfz1-18-24rlxfzh-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/2-3-4rooms/img-aou36rlxfz1-18-24rlxfzh-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/2-3-4rooms/aou18rlxfzh.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU36RLXFZ1, AOU18RLXFZH, AOU24RLXFZH"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aou36rlxfz1-rlxfzh-18-24-officiel.webp"
+    ],
+    "note": ""
+  },
+  {
+    "fichier": "img-aou18-45rlxfz-02.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/2-3-4rooms/top/img-aou18-45rlxfz-02.png",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/2-3-4rooms/index.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU45RLXFZ"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aou45rlxfz-officiel.webp"
+    ],
+    "note": "unité de droite (45k) du visuel de gamme"
+  },
+  {
+    "fichier": "img-aou18-36rlxfzh-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/multi/2-3-4rooms/top/img-aou18-36rlxfzh-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/multi/2-3-4rooms/index.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU36RLXFZH"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aou36rlxfzh-officiel.webp"
+    ],
+    "note": "unité de droite (36k) du visuel de gamme"
+  },
+  {
+    "fichier": "img-18-24rlxfw1-rlxfwh-01.jpg",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rlfw1-series/top/img-18-24rlxfw1-rlxfwh-01.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asu18rlxfw1.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU18/24RLXFW1, AOU18/24RLXFWH"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-rlxfw1-rlxfwh-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-asu15rls3.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rls3-series/asu15rls3/img-asu15rls3.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asu15rls3y.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU15RLS3"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aou15rls3-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-asu15rls3h.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rls3h-series/asu15rls3h/img-asu15rls3h.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asu15rls3hy.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU15RLS3H"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aou15rls3h-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-agu9-15rlf-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/floor/img-agu9-15rlf-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/floor/agu9rlff.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU9/12RLFC, AOU9/12/15RLFF, AOU9/12/15RLFFH (console au sol AGU RLF/RLFF)"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-rlf-console-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-asu18rlb.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rlb-rlxb-series/asu18rlb/img-asu18rlb.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asu18rlb.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU18RLB"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aou18rlb-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-asu24rlb.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rlb-rlxb-series/asu24rlb/img-asu24rlb.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asu24rlb.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU24RLB"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aou24rlb-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-fcus-split-msp-duct-aru-18-30rglx-02.jpg",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/msp-duct/img-fcus-split-msp-duct-aru-18-30rglx-02.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/msp-duct/aru18rglx.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU18/24/30RGLX"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-rglx-18-30-officiel.webp"
+    ],
+    "note": "découpe du visuel système gainable"
+  },
+  {
+    "fichier": "img-fcus-split-msp-duct-aru-36rglx-02.jpg",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/msp-duct/img-fcus-split-msp-duct-aru-36rglx-02.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/msp-duct/aru36rglx.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU36RGLX"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aou36rglx-officiel.webp"
+    ],
+    "note": "découpe du visuel système gainable"
+  },
+  {
+    "fichier": "img-fcus-split-msp-duct-aru-42-48rglx-02.jpg",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/msp-duct/img-fcus-split-msp-duct-aru-42-48rglx-02.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/msp-duct/aru42rglxd.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU42RGLX, AOU48RGLX"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-rglx-42-48-officiel.webp"
+    ],
+    "note": "découpe du visuel système gainable"
+  },
+  {
+    "fichier": "img-30rlxeh-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rls3h-series/asu30rlxeh/img-30rlxeh-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asu30rlxeh.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOU30RLXEH"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aou30rlxeh-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-asu09-12lmas1-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/lmas-series/img-asu09-12lmas1-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asu9lmas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUG09LMAS1, AOUG12LMAS1, AOUH12LMBS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-lmas1-09-12-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-asu18lmas-03.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/lmas-series/img-asu18lmas-03.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asuh18lmas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH18LMAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aouh18lmas1-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-asu24lmas-03.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/lmas-series/img-asu24lmas-03.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asuh24lmas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH24LMAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aouh24lmas1-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-09-12lmah1-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rls3h-series/asuh09-12lmas/img-09-12lmah1-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asuh09lmah1.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH09LMAH1, AOUH12LMAH1, AOUH12LMBH1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-lmah1-09-12-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-amug36lmah-aou36lmah.jpg",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/mp-ah-unit/img-amug36lmah-aou36lmah.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/mp-ah-unit/36lmah1m.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH36LMAH1, AOUH48LMAH1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-lmah1-36-48-officiel.webp"
+    ],
+    "note": "découpe du visuel système (centrale multiposition)"
+  },
+  {
+    "fichier": "img-fcus-split-36-48lmas-01.jpg",
+    "url": "https://www.fujitsugeneral.com/shared/us/img-fcus-split-36-48lmas-01.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/mp-ah-unit/amug36lmas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUG36LMAS1, AOUG48LMAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aoug-lmas1-36-48-officiel.webp"
+    ],
+    "note": "découpe du visuel système (centrale multiposition)"
+  },
+  {
+    "fichier": "img-09lpas1-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rlb-rlxb-series/img-09lpas1-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asuh09lpas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH09LPAS1",
+      "famille AOUH..LPAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-lpas1-9k.webp",
+      "/images/products/official/fujitsu-lpas1-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-12lpas1-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rlb-rlxb-series/img-12lpas1-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asuh12lpas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH12LPAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-lpas1-12k.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-18-24lpas1-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rlb-rlxb-series/img-18-24lpas1-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asuh18lpas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH18LPAS1, AOUH24LPAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-lpas1-18-24k.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-30-36lpas1-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rlb-rlxb-series/img-30-36lpas1-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/asuh30lpas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH30LPAS1, AOUH36LPAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-lpas1-30-36k.webp"
+    ],
+    "note": "découpe du visuel système"
+  },
+  {
+    "fichier": "img-fcus-split-msp-duct-aruh12luas-01.jpg",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/msp-duct/img-fcus-split-msp-duct-aruh12luas-01.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/msp-duct/aruh12luas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH12LUAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aouh12luas1-officiel.webp"
+    ],
+    "note": "découpe du visuel système gainable"
+  },
+  {
+    "fichier": "img-fcus-split-msp-duct-aru-18luas-01.jpg",
+    "url": "https://www.fujitsugeneral.com/shared/us/img-fcus-split-msp-duct-aru-18luas-01.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/msp-duct/aruh18luas1r.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH18LUAS1",
+      "famille AOUH..LUAS1 (gainable)"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aouh18luas1-officiel.webp",
+      "/images/products/official/fujitsu-luas1-officiel.webp"
+    ],
+    "note": "découpe du visuel système gainable"
+  },
+  {
+    "fichier": "img-fcus-split-msp-duct-aru-24luas-01.jpg",
+    "url": "https://www.fujitsugeneral.com/shared/us/img-fcus-split-msp-duct-aru-24luas-01.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/msp-duct/aruh24luas1r.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH24LUAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aouh24luas1-officiel.webp"
+    ],
+    "note": "découpe du visuel système gainable"
+  },
+  {
+    "fichier": "img-fcus-split-msp-duct-aru-30-36luas-01.jpg",
+    "url": "https://www.fujitsugeneral.com/shared/us/img-fcus-split-msp-duct-aru-30-36luas-01.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/msp-duct/aruh30luas1r.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH30LUAS1, AOUH36LUAS1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-luas1-30-36-officiel.webp"
+    ],
+    "note": "découpe du visuel système gainable"
+  },
+  {
+    "fichier": "img-30luah1m-01.jpg",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/mp-ah-unit/img-30luah1m-01.jpg",
+    "page": "https://www.fujitsugeneral.com/us/products/split/mp-ah-unit/30luah1m.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUH30LUAH1"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-aouh30luah1-officiel.webp"
+    ],
+    "note": "découpe du visuel système (centrale multiposition)"
+  },
+  {
+    "fichier": "img-09lzas1-15lzah1-01.png",
+    "url": "https://www.fujitsugeneral.com/us/resources/images/products/split/wall/rls3-series/top/img-09lzas1-15lzah1-01.png",
+    "page": "https://www.fujitsugeneral.com/us/products/split/wall/09lzas.html",
+    "date": "2026-09-10",
+    "couvre": [
+      "AOUG09/12/15LZAS1 (et LZAH1)"
+    ],
+    "images_produites": [
+      "/images/products/official/fujitsu-lzas1-officiel.webp"
+    ],
+    "note": "découpe du visuel système"
+  }
+]

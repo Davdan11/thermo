@@ -1,0 +1,5 @@
+[
+  { "brand": "convectair", "pattern": "^50000449[0-9]$", "series": "/images/products/official/convectair-legato-officiel.webp" },
+  { "brand": "convectair", "pattern": "^8028-C(09|12|18|24)-O", "series": "/images/products/official/convectair-8028-officiel.webp" },
+  { "brand": "convectair", "pattern": "^8[2-5]22-C(18|27|36|48)-O", "byCapacity": { "36": "/images/products/official/convectair-capella-mz-36-48k.webp", "48": "/images/products/official/convectair-capella-mz-36-48k.webp" }, "series": "/images/products/official/convectair-capella-mz-officiel.webp" }
+]

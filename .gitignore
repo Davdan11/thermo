@@ -52,3 +52,8 @@ test-*.mjs
 
 # Candidats de logos avant validation (voir scripts/finalize-brand-logos.mjs)
 public/images/marques/_candidats/
+
+# Originaux des photos officielles (156 Mo) : seule la provenance SOURCES.json est versionnée
+public/images/products/_official-sources/**
+!public/images/products/_official-sources/*/
+!public/images/products/_official-sources/*/SOURCES.json

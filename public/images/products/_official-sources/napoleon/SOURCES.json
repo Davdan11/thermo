@@ -1,0 +1,56 @@
+[
+  {
+    "fichier": "napoleon-ndhas22bb-techsheet-p1.jpg",
+    "url": "https://www.napoleon.com/sites/default/files/hvac_products/NDHAS22BB_Tech%20Sheet_DIGITAL%2020260121_dfdb1857.pdf",
+    "page": "https://www.napoleon.com/en/ca/heating-cooling/products/mini-split-systems/single-zone-heat-pumps/premium-high-wall-series-w-ndhas22-series",
+    "date": "2026-09-10",
+    "familles": ["NDHAS22"],
+    "modeles": "Série Premium haute murale NDHAS22 : la fiche technique officielle liste NDHAS22BA-12/18/24-O ; la page Napoleon nomme la série « NDHAS22 Series », la règle couvre donc aussi les révisions NDHAS22-xx-O et NDHAS22B-xx-O présentes au catalogue.",
+    "note": "Image extraite de la page 1 de la fiche (unité extérieure + unité intérieure + télécommande, 277x183 px : seule photo de l'unité extérieure disponible). Copie de la fiche : NDHAS22BB_TechSheet.pdf."
+  },
+  {
+    "fichier": "single-zone-premium-ndhas22-400px.png",
+    "url": "https://www.napoleon.com/sites/default/files/hvac_products/single-zone-premium-ndhas22-400px_e642fcaa.png",
+    "page": "https://www.napoleon.com/en/ca/heating-cooling/products/mini-split-systems/single-zone-heat-pumps/premium-high-wall-series-w-ndhas22-series",
+    "date": "2026-09-10",
+    "familles": ["NDHAS22"],
+    "modeles": "Unité intérieure murale de la série NDHAS22.",
+    "note": "Image produit officielle de la page ; utilisée pour napoleon-ndhas22-interieure-officiel.webp."
+  },
+  {
+    "fichier": "napoleon-ndhas26bb-techsheet-p1.jpg",
+    "url": "https://www.napoleon.com/sites/default/files/hvac_products/NDHAS26BB_Tech%20Sheet_DIGITAL%2020260310_ec09c3ec.pdf",
+    "page": "https://www.napoleon.com/en/ca/heating-cooling/products/mini-split-systems/single-zone-heat-pumps/ultimate-high-wall-series-w-ndhas26-series",
+    "date": "2026-09-10",
+    "familles": ["NDHAS26"],
+    "modeles": "Série Ultimate haute murale NDHAS26 : la fiche liste NDHAS26BA-06/09/12/18/24/33-O et NDHAS26BS-33-O ; la page nomme la série « NDHAS26 Series », la règle couvre aussi NDHAS26-xx-O et NDHAS26B-xx-O.",
+    "note": "Image extraite de la page 1 de la fiche (extérieure + intérieure + télécommande, 258x185 px). Copie de la fiche : NDHAS26BB_TechSheet.pdf."
+  },
+  {
+    "fichier": "single-zone-ultimate-ndhas26-400px.png",
+    "url": "https://www.napoleon.com/sites/default/files/hvac_products/single-zone-ultimate-ndhas26-400px_c9d5dd2b.png",
+    "page": "https://www.napoleon.com/en/ca/heating-cooling/products/mini-split-systems/single-zone-heat-pumps/ultimate-high-wall-series-w-ndhas26-series",
+    "date": "2026-09-10",
+    "familles": ["NDHAS26"],
+    "modeles": "Unité intérieure murale de la série NDHAS26.",
+    "note": "Utilisée pour napoleon-ndhas26-interieure-officiel.webp."
+  },
+  {
+    "fichier": "multi-zone-ndham-400px.png",
+    "url": "https://www.napoleon.com/sites/default/files/hvac_products/multi-zone-ndham-400px_2f4d9503.png",
+    "page": "https://www.napoleon.com/en/ca/heating-cooling/products/mini-split-systems/multi-zone-heat-pumps/multi-zone-series-w-multi-ndham",
+    "date": "2026-09-10",
+    "familles": ["NDHAM", "NDHAMB", "NDHAMBB"],
+    "modeles": "Unité extérieure multizone série NDHAM ; la fiche NDHAMBB-MultiZone-Technical-Specifications liste NDHAMBB-18/27/36/48-O ; la page nomme la série « Multi NDHAM », la règle couvre NDHAM-, NDHAMB- et NDHAMBB- (y compris NDHAMBB-53-O, absent de la fiche).",
+    "note": "Copie de la fiche : NDHAMBB_TechSpecs.pdf (https://www.napoleon.com/sites/default/files/hvac_products/NDHAMBB-MultiZone-Technical-Specifications-20260824_62f1dd40.pdf)."
+  },
+  {
+    "fichier": "NS18HV24A36-Prod-Str-Low.png",
+    "url": "https://www.napoleon.com/sites/default/files/hvac_products/NS18HV24A36-Prod-Str-Low_5f40c983.png",
+    "page": "https://www.napoleon.com/en/ca/heating-cooling/products/central-heat-pumps/premium-heat-pump-series-w-wsehvr-series",
+    "date": "2026-09-10",
+    "familles": ["WSEHV", "NS18HV"],
+    "modeles": "Thermopompe centrale Premium WSEHVR : image produit officielle de la page (fichier nommé NS18HV24A36 ; la page cite aussi NS18HV48A60). La fiche « R454B / R410A Heat Pump Tech Sheet » liste WSEHV2436BA1-N, WSEHV2436RA1-N, WSEHV4860BA1-N, WSEHV4860RA1-N (+ RB1).",
+    "note": "Copie de la fiche : HeatPump_TechSheet.pdf (https://www.napoleon.com/sites/default/files/hvac_products/R454B%20%20R410A%20Heat%20Pump%20-Tech%20Sheet_DIGITAL_656cac91.pdf). Familles NH21, NH25, NHAS, NMZO, NDHBS20, CDHAS26B : plus aucune page ni PDF sur napoleon.com (404, absentes du sitemap) — aucune règle."
+  }
+]

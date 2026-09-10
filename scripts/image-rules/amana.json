@@ -1,0 +1,27 @@
+[
+  {
+    "brand": "amana",
+    "pattern": "^AZV[67]SA",
+    "series": "/images/products/official/amana-azv6s-azv7s-officiel.webp"
+  },
+  {
+    "brand": "amana",
+    "pattern": "^AZV9SA",
+    "series": "/images/products/official/amana-azv9s-officiel.webp"
+  },
+  {
+    "brand": "amana",
+    "pattern": "^ASZS60",
+    "series": "/images/products/official/amana-aszs6-officiel.webp"
+  },
+  {
+    "brand": "amana",
+    "pattern": "^ASZV90",
+    "series": "/images/products/official/amana-aszv9-officiel.webp"
+  },
+  {
+    "brand": "amana",
+    "pattern": "^AVZC20",
+    "series": "/images/products/official/amana-avzc20-officiel.webp"
+  }
+]

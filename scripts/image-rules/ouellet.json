@@ -1,0 +1,7 @@
+[
+  { "brand": "ouellet", "pattern": "^OCHX-H(09|12|18|24|30|36)A-O", "series": "/images/products/official/ouellet-ochx-officiel.webp" },
+  { "brand": "ouellet", "pattern": "^OARX-H(09|12|18|24)A-O", "series": "/images/products/official/ouellet-oarx-officiel.webp" },
+  { "brand": "ouellet", "pattern": "^OCVX-H(09|12|18|24)A-O", "series": "/images/products/official/ouellet-ocvx-officiel.webp" },
+  { "brand": "ouellet", "pattern": "^OFLX1-H(24|36|48|60)A-O", "byCapacity": { "48": "/images/products/official/ouellet-oflx1-48k.webp" }, "series": "/images/products/official/ouellet-oflx1-officiel.webp" },
+  { "brand": "ouellet", "pattern": "^OFRM[2-5]X1-H(18|24|30|36|42)A-O", "series": "/images/products/official/ouellet-ofrm-officiel.webp" }
+]

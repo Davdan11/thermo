@@ -1,0 +1,210 @@
+[
+  {
+    "fichier": "keeprite-cvh8-site-keeprite.com.png",
+    "url": "https://www.keeprite.com/en/us/products/heat-pumps/media_1ecc529e9f2881e0a32947719bfbdc5ff981330e3.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/heat-pumps/ion-18-variable-speed-heat-pump-vh8",
+    "date": "2026-09-10",
+    "familles": [
+      "CVH8"
+    ],
+    "modeles": "CVH824GKA, CVH825GKA2/3, CVH836GKA2/3, CVH837GKA/GKA2, CVH848GKA/GKA2, CVH860GKA/GKA2 (thermopompe centrale Ion 18 à vitesse variable)",
+    "note": "Image « Product Image » du bloc product-hero de la page officielle Keeprite (fond transparent, logo KeepRite)."
+  },
+  {
+    "fichier": "keeprite-5h0v-site-keeprite.com.png",
+    "url": "https://www.keeprite.com/en/us/products/heat-pumps/media_1ce02bbad6b19b284e52cd06fdd39973ad974af77.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/heat-pumps/ion-20-variable-speed-heat-pump-5h0v",
+    "date": "2026-09-10",
+    "familles": [
+      "C5H0V"
+    ],
+    "modeles": "C5H0V24KAAA, C5H0V36KAAA, C5H0V48KAAA, C5H0V60KAAA (Ion 20 à vitesse variable)",
+    "note": "Image « Product Image » de la page officielle C5H0V (titre og: « C5H0V - Ion Variable-Speed Heat Pump »)."
+  },
+  {
+    "fichier": "keeprite-5h3v-site-keeprite.com.png",
+    "url": "https://www.keeprite.com/en/us/products/heat-pumps/media_1918e11bb134627b44af5f8ef02807ded9937803e.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/heat-pumps/ion-23-variable-speed-heat-pump-5h3v",
+    "date": "2026-09-10",
+    "familles": [
+      "C5H3V"
+    ],
+    "modeles": "C5H3V36KAAA, C5H3V48KAAA, C5H3V60KAAA (Ion 23 à vitesse variable)",
+    "note": "Image « Product Image » de la page officielle C5H3V."
+  },
+  {
+    "fichier": "keeprite-d5cerah-site-keeprite.com.png",
+    "url": "https://www.keeprite.com/en/us/products/ductless-systems/media_1b6254c142ba4c4529eb81ea21e87ccda26c14303.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/ductless-systems/d5cerah",
+    "date": "2026-09-10",
+    "familles": [
+      "D5CERA",
+      "DLCERB"
+    ],
+    "modeles": "D5CERAH09/12/18/24/30/36AAK et DLCERBH09/12AAJ/AAK (sans conduit Performance, monozone)",
+    "note": "Même image « Product Image » servie par Keeprite sur les pages d5cerah, dlcerbh et dlcerba (vérifié par empreinte MD5 identique)."
+  },
+  {
+    "fichier": "keeprite-d5clha-site-keeprite.com.png",
+    "url": "https://www.keeprite.com/en/us/products/ductless-systems/media_12c5d617560b47d4133fe65ed28dce3b03e03990c.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/ductless-systems/d5clha",
+    "date": "2026-09-10",
+    "familles": [
+      "D5CLHA",
+      "D5CLRA",
+      "DLCLRC"
+    ],
+    "modeles": "D5CLHAH36/48/58AAK, D5CLRAH36/48/58AAK, DLCLRCH36/48/58AAK (monozone commercial léger, unité à deux ventilateurs)",
+    "note": "Même image « Product Image » sur les pages d5clha, d5clra et dlclrc (MD5 identique) ; les fichiers keeprite-d5clra-… et keeprite-dlclrc-… sont des copies de la même source."
+  },
+  {
+    "fichier": "keeprite-d5cmha-site-keeprite.com.png",
+    "url": "https://www.keeprite.com/en/us/products/ductless-systems/media_1c804d8e99e6199635fa14645299e34a1b32af6e9.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/ductless-systems/d5cmha",
+    "date": "2026-09-10",
+    "familles": [
+      "D5CMHA",
+      "D5CMRA",
+      "DLCMHB",
+      "DLCMRB"
+    ],
+    "modeles": "D5CMHAH18-55, D5CMRAH18-55, DLCMHBH24-48, DLCMRBH18-48 (multizone)",
+    "note": "Même image « Product Image » sur les pages d5cmha, d5cmra, dlcmhb et dlcmrb (MD5 identique)."
+  },
+  {
+    "fichier": "keeprite-d5cpra-site-keeprite.com.png",
+    "url": "https://www.keeprite.com/en/us/products/ductless-systems/media_143a082b9c6fb25008b89723ef2b451c2c490bc5b.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/ductless-systems/d5cpra",
+    "date": "2026-09-10",
+    "familles": [
+      "D5CPRA",
+      "DLCPRB"
+    ],
+    "modeles": "D5CPRAH06/09/12/18, DLCPRBH09/12/18AAK (monozone Deluxe)",
+    "note": "Même image « Product Image » sur les pages d5cpra et dlcprb (MD5 identique)."
+  },
+  {
+    "fichier": "keeprite-d5csha-site-keeprite.com.png",
+    "url": "https://www.keeprite.com/en/us/products/ductless-systems/media_196f8b2588cc74cde369882914913286986ab22d0.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/ductless-systems/d5csha",
+    "date": "2026-09-10",
+    "familles": [
+      "D5CSHA",
+      "D5CSRA",
+      "D5CUHA",
+      "D5CURA"
+    ],
+    "modeles": "D5CSHAH06-33, D5CSRAH09-36, D5CUHAH18-60, D5CURAH18-60 (monozone Deluxe/QuietComfort et crossover compact)",
+    "note": "Même image « Product Image » (1930x1304) sur les pages d5csha, d5csra et crossover-solutions/d5cuha, d5cura (MD5 identique)."
+  },
+  {
+    "fichier": "keeprite-dlcsrb-site-keeprite.com.png",
+    "url": "https://www.keeprite.com/en/us/products/ductless-systems/media_1f3d6012ab39624cd7e03298587cc99bd75443caf.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/ductless-systems/dlcsrb",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCSRB"
+    ],
+    "modeles": "DLCSRBH06/09/12 (les 18-36 ont déjà une image)",
+    "note": "Image « Product Image » de la page officielle DLCSRB."
+  },
+  {
+    "fichier": "keeprite-dlcsra-fiche-328-39-0484-01.png",
+    "url": "https://www.shareddocs.com/hvac/docs/1011/Public/0E/328-39-0484-01.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1011/Public/0E/328-39-0484-01.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCSRA"
+    ],
+    "modeles": "DLCSRAH09/12/18/24/30/36 (ProComfort, monozone)",
+    "note": "Fiche officielle ICP « PROCOMFORT SERIES DLCSRA OUTDOOR UNIT » (marque KeepRite), photo page 1 avec masque alpha du PDF appliqué."
+  },
+  {
+    "fichier": "keeprite-dlcpra-fiche-32839051601.png",
+    "url": "https://www.shareddocs.com/hvac/docs/1010/Public/09/32839051601.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1010/Public/09/32839051601.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCPRA"
+    ],
+    "modeles": "DLCPRAH09/12/18/24AAK",
+    "note": "Fiche officielle ICP KeepRite « A Versatile Outdoor Unit… » listant DLCPRAH09-24 ; la photo (page 1) est la même que sur la fiche DLCSRA (MD5 identique), choix de l'éditeur ICP."
+  },
+  {
+    "fichier": "keeprite-dlcmra-fiche-328-39-0491-01-moyen.png",
+    "url": "https://www.shareddocs.com/hvac/docs/1011/Public/0B/328-39-0491-01.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1011/Public/0B/328-39-0491-01.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCMRA"
+    ],
+    "modeles": "DLCMRAH27CAK, DLCMRAH36DAK (photo de famille) ; DLCMRAH48EAK (fichier -48k)",
+    "note": "Fiche officielle ICP « PROCOMFORT SERIES DLCMRA OUTDOOR UNIT » (KeepRite + Midea) ; la fiche montre trois tailles sans légende : unité à deux ventilateurs (fichier …-48k, réservée au 48k) et deux unités à un ventilateur (…-moyen utilisée comme photo de famille, …-petit conservée seulement)."
+  },
+  {
+    "fichier": "keeprite-dlcmra-fiche-328-39-0491-01-48k.png",
+    "url": "https://www.shareddocs.com/hvac/docs/1011/Public/0B/328-39-0491-01.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1011/Public/0B/328-39-0491-01.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCMRA"
+    ],
+    "modeles": "DLCMRAH48EAK",
+    "note": "Unité à deux ventilateurs (plus grande taille) de la même fiche."
+  },
+  {
+    "fichier": "keeprite-dlclra-fiche-328-39-0492-01-48k.png",
+    "url": "https://www.shareddocs.com/hvac/docs/1011/Public/08/328-39-0492-01.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1011/Public/08/328-39-0492-01.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCLRA"
+    ],
+    "modeles": "DLCLRAH48AAK, DLCLRAH58AAK (photo de famille, deux ventilateurs) ; DLCLRAH36AAK (fichier -36k, un ventilateur)",
+    "note": "Fiche officielle ICP « PROCOMFORT SERIES DLCLRA OUTDOOR UNIT » (KeepRite + Midea), deux photos page 1."
+  },
+  {
+    "fichier": "keeprite-dlclra-fiche-328-39-0492-01-36k.png",
+    "url": "https://www.shareddocs.com/hvac/docs/1011/Public/08/328-39-0492-01.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1011/Public/08/328-39-0492-01.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCLRA"
+    ],
+    "modeles": "DLCLRAH36AAK",
+    "note": "Unité à un ventilateur de la même fiche."
+  },
+  {
+    "fichier": "dayandnight-dlclrb-brochure-DLS-006-DN-00-36k.png",
+    "url": "https://www.shareddocs.com/hvac/docs/1010/Public/01/DLS-006-DN-00.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1010/Public/01/DLS-006-DN-00.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCLRB"
+    ],
+    "modeles": "DLCLRBH36AAK (un ventilateur) ; DLCLRBH48AAK (fichier -48k, deux ventilateurs)",
+    "note": "Brochure officielle ICP Day & Night « DLCLRB OUTDOOR UNIT, sizes 36/48 » : numéro de modèle strictement identique chez Keeprite/Tempstar (marques ICP), unité portant l'étiquette Day & Night/Midea. Aucune page ni fiche Keeprite trouvée pour DLCLRB."
+  },
+  {
+    "fichier": "dayandnight-dlclrb-brochure-DLS-006-DN-00-48k.png",
+    "url": "https://www.shareddocs.com/hvac/docs/1010/Public/01/DLS-006-DN-00.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1010/Public/01/DLS-006-DN-00.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCLRB"
+    ],
+    "modeles": "DLCLRBH48AAK",
+    "note": "Unité à deux ventilateurs de la même brochure."
+  },
+  {
+    "fichier": "heil-dlcura-brochure-DLS-022-HL-00.png",
+    "url": "https://www.shareddocs.com/hvac/docs/1010/Public/05/DLS-022-HL-00.pdf",
+    "page": "https://www.shareddocs.com/hvac/docs/1010/Public/05/DLS-022-HL-00.pdf",
+    "date": "2026-09-10",
+    "familles": [
+      "DLCURA"
+    ],
+    "modeles": "DLCURAH18-60 AAK/ABK (crossover horizontal Performance)",
+    "note": "Brochure officielle ICP Heil « Performance Series Model DLCURA » : numéro de modèle strictement identique chez Keeprite/Tempstar. Photo page 1 (JPX CMYK 378x276 + masque alpha du PDF), sans logo visible. Aucune page Keeprite/Tempstar/Comfortmaker pour DLCURA (404)."
+  }
+]

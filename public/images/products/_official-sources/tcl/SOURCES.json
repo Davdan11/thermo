@@ -1,0 +1,83 @@
+[
+  {
+    "fichier": "tcl-breezein-exterieure-submittal.png",
+    "url": "https://cdn.shopify.com/s/files/1/0687/7151/2385/files/Submittal_Sheet_-_BREEZEIN24_R454b_-_9K_230V_-_215387259.pdf",
+    "page": "https://us.tcl.com/pages/tcl-breeze-in-series",
+    "date": "2026-09-10",
+    "famille": "BreezeIN (unité extérieure)",
+    "modeles": ["H09SBH23BPC", "H09SBH23XPC", "H12SBH22BPC", "H12SBH22XPC", "H18SBH22XPC", "H24SBH22XPC"],
+    "note": "Image extraite (pymupdf) de la submittal sheet officielle TCL North America. Photo identique (même md5) dans les 6 submittal sheets BreezeIN 9K/12K/18K/24K (115 V et 230 V) et dans les submittal sheets Elite : TCL n'a pas de photo distincte par capacité. Le catalogue liste H12SBH23XPC et H24SBH20XPC (révisions SEER2 de la même famille)."
+  },
+  {
+    "fichier": "tcl-breezein-interieure-fiche.png",
+    "url": "https://cdn.shopify.com/s/files/1/0687/7151/2385/files/BreezeIN_HVAC_Spec_Sheet_2025.pdf",
+    "page": "https://us.tcl.com/pages/tcl-breeze-in-series",
+    "date": "2026-09-10",
+    "famille": "BreezeIN (unité intérieure murale)",
+    "modeles": ["H09SBH23BPC", "H09SBH23XPC", "H12SBH22BPC", "H12SBH23XPC", "H18SBH22XPC", "H24SBH20XPC"],
+    "note": "Image extraite (pymupdf, masque alpha appliqué) de la fiche technique officielle BreezeIN 2025, page 2."
+  },
+  {
+    "fichier": "tcl-elite-exterieure-submittal.png",
+    "url": "https://cdn.shopify.com/s/files/1/0687/7151/2385/files/Submittal_Sheet_-_Elite_20_R454b_-_9K_230V_-_215387252.pdf",
+    "page": "https://us.tcl.com/pages/hvac-elite-ac",
+    "date": "2026-09-10",
+    "famille": "Elite (Elite 20, R-454B) (unité extérieure)",
+    "modeles": ["H09SEH19BAC", "H09SEH19XAC", "H12SEH19BAC", "H12SEH19XAC", "H18SEH19XAC", "H24SEH19XAC", "H36SEH19XAC"],
+    "note": "Image extraite (pymupdf) de la submittal sheet officielle Elite 20 9K 230 V (H09SEH19XAC). Photo identique (même md5) dans les 11 submittal sheets Elite 17 et Elite 20 (9K à 36K) ainsi que dans celles de la BreezeIN."
+  },
+  {
+    "fichier": "tcl-elite-interieure-fiche.png",
+    "url": "https://cdn.shopify.com/s/files/1/0687/7151/2385/files/Elite_HVAC_SpecSheet_TCL_ELS-053025_1.pdf",
+    "page": "https://us.tcl.com/pages/hvac-elite-ac",
+    "date": "2026-09-10",
+    "famille": "Elite (unité intérieure murale)",
+    "modeles": ["H09SEH19BAC", "H09SEH19XAC", "H12SEH19BAC", "H12SEH19XAC", "H18SEH19XAC", "H24SEH19XAC", "H36SEH19XAC"],
+    "note": "Image extraite (pymupdf, masque alpha appliqué) de la fiche technique officielle Elite Series, page 1."
+  },
+  {
+    "fichier": "tcl-multi-match-exterieure-brochure.png",
+    "url": "https://cdn.shopify.com/s/files/1/0687/7151/2385/files/Multi_Match_Series_HVAC_SpecSheet_2025.pdf",
+    "page": "https://us.tcl.com/pages/multi-match-series",
+    "date": "2026-09-10",
+    "famille": "Multi Match (unité extérieure multizone)",
+    "modeles": ["H18FMH22XPC", "H27FMH22XPC", "H36FMH21XPC", "H42FMH20XPC"],
+    "note": "Image extraite (pymupdf, masque alpha appliqué) de la brochure officielle Multi Match 2025, page 2 (« Multi Match Series Products »). Les submittal sheets Multi ODU 18K/27K/36K/42K contiennent la même photo en plus petit (même md5 entre elles)."
+  },
+  {
+    "fichier": "tcl-advantage-exterieure-fiche.png",
+    "url": "https://cdn.shopify.com/s/files/1/0687/7151/2385/files/Advantage_HVAC_Spec_Sheet_2025.pdf",
+    "page": "https://us.tcl.com/pages/hvac-advantage-system",
+    "date": "2026-09-10",
+    "famille": "Advantage / IVS gainable (unité extérieure)",
+    "modeles": ["H24TDH17XAC", "H36TDH18XAC", "H48TDH18XAC", "H60TDH16XAC"],
+    "note": "Image extraite (pymupdf, masque alpha appliqué) de la fiche technique officielle Advantage Series 2025, page 1. Les 4 submittal sheets AHU 24K/36K/48K/60K contiennent la même photo en plus petit."
+  },
+  {
+    "fichier": "tcl-advantage-interieure-fiche.png",
+    "url": "https://cdn.shopify.com/s/files/1/0687/7151/2385/files/Advantage_HVAC_Spec_Sheet_2025.pdf",
+    "page": "https://us.tcl.com/pages/hvac-advantage-system",
+    "date": "2026-09-10",
+    "famille": "Advantage / IVS gainable (unité intérieure, air handler H24/36/48/60AHH)",
+    "modeles": ["H24TDH17XAC", "H36TDH18XAC", "H48TDH18XAC", "H60TDH16XAC"],
+    "note": "Image extraite (pymupdf, masque alpha appliqué) de la fiche technique officielle Advantage Series 2025, page 1."
+  },
+  {
+    "fichier": "tcl-ultimate-25-interieure-fiche.png",
+    "url": "https://cdn.shopify.com/s/files/1/0687/7151/2385/files/Ultimate_25_Series_TCL_ULT_050525_1.pdf",
+    "page": "https://us.tcl.com/pages/tcl-ultimate-25-series",
+    "date": "2026-09-10",
+    "famille": "Ultimate 25 (ExHeat / Ultra Heat) (unité intérieure murale)",
+    "modeles": ["H09SUH25XGC", "H12SUH25XGC", "H18SUH23XGC", "H24SUH23XGC"],
+    "note": "Image extraite (pymupdf, masque alpha appliqué) de la fiche technique officielle Ultimate 25 Series, page 1. Aucune photo d'unité extérieure dans la fiche et aucune submittal sheet publiée pour cette série."
+  },
+  {
+    "fichier": "tcl-freshin-3-0-interieure-fiche.png",
+    "url": "https://cdn.shopify.com/s/files/1/0687/7151/2385/files/FreshIN_3.0_Series_TCL_FSH_050725_1.pdf",
+    "page": "https://us.tcl.com/pages/tcl-fresh-in-3-0-series",
+    "date": "2026-09-10",
+    "famille": "FreshIN 3.0 (unité intérieure murale)",
+    "modeles": ["H12SFH25XPC"],
+    "note": "Image extraite (pymupdf, masque alpha appliqué) de la fiche technique officielle FreshIN 3.0 Series, page 1. Aucune photo d'unité extérieure dans la fiche et aucune submittal sheet publiée pour cette série."
+  }
+]
