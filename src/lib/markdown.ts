@@ -34,6 +34,10 @@ export interface GuideMetadata {
   faq?: GuideFaq[];
   /** Slugs de guides liés. */
   related?: string[];
+  /** Bloc de données à afficher : "ranking:<slug>", "logisvert", "capacites", "marques:a,b". */
+  widget?: string;
+  /** Article produit par le robot de blogue (date de génération). */
+  generatedAt?: string;
 }
 
 export interface Guide extends GuideMetadata {
@@ -70,6 +74,8 @@ function toMetadata(slug: string, raw: matter.GrayMatterFile<string>): GuideMeta
     keywords: data.keywords,
     faq: data.faq,
     related: data.related,
+    widget: data.widget,
+    generatedAt: data.generatedAt,
   };
 }
 

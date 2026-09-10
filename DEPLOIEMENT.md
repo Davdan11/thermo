@@ -59,3 +59,11 @@ Un cron sur le VPS (`30 5 * * *`, `/var/www/thermopompesavendre.ca/bot/run.sh`) 
 3. si la liste a changé : régénération, `vitest`, commit « LogisVert : liste Hydro-Québec du AAAA-MM-JJ », push, puis déploiement sans interruption par `deploy-vps.sh`.
 
 Journal : `/var/log/thermo-logisvert-bot.log`. Lancement manuel : `bash /var/www/thermopompesavendre.ca/bot/run.sh`.
+
+## Robot de nuit (LogisVert + blogue)
+
+`bot/run.sh` (cron 5 h 30) lance `scripts/nightly-bot.sh` : synchronisation GitHub, vérification LogisVert (voir ci-dessus), puis `scripts/blog-bot.mjs` qui publie **un article par jour** avec sa photo générée, si `shared/.env` contient `ANTHROPIC_API_KEY` et `OPENAI_API_KEY` ou `GEMINI_API_KEY`. Un seul commit et un seul déploiement par nuit.
+
+- Sujets : `data/blog/sujets.json` (file d'attente, un sujet par ligne ; ajouter des sujets pour prolonger). Publiés : `data/blog/publies.json`.
+- Garde-fous : seuls les chiffres du contexte factuel (`scripts/blog-context.ts`) sont autorisés ; validation du frontmatter, de la longueur, des liens internes ; second essai avec les erreurs ; abandon sinon (journal `/var/log/thermo-nightly-bot.log`).
+- Essai local : `node scripts/blog-bot.mjs --dry-run --topic <slug>` (affiche l'article sans écrire).

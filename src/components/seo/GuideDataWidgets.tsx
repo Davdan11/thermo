@@ -151,7 +151,26 @@ function LogisVertBrandsBlock() {
   );
 }
 
-export function GuideDataWidgets({ slug }: { slug: string }) {
+export function GuideDataWidgets({ slug, widget }: { slug: string; widget?: string }) {
+  // Bloc déclaré dans le frontmatter (articles du robot) : prioritaire sur la table par slug.
+  if (widget) {
+    if (widget === "logisvert") return <LogisVertBrandsBlock />;
+    if (widget === "capacites") return <CapacityTable />;
+    if (widget.startsWith("marques:")) return <BrandsBlock slugs={widget.slice(8).split(",").map((s) => s.trim()).filter(Boolean)} />;
+    if (widget.startsWith("ranking:")) {
+      const r = widget.slice(8);
+      const titles: Record<string, [string, string]> = {
+        "grand-froid": ["Les machines les plus performantes par grand froid", "Classement par COP certifié à -15 °C, puis par tenue de capacité entre -8 °C et -15 °C."],
+        "efficacite-hspf2": ["Les HSPF2 les plus élevés du marché québécois", "Classement par HSPF2 certifié, toutes marques confondues."],
+        "centrales": ["Les meilleures centrales pour maison avec conduits", "Classement par HSPF2 puis capacité à -15 °C, parmi les centrales certifiées."],
+        "murales-12000-btu": ["Les meilleures murales de 12 000 BTU au Québec", "Classement sur données certifiées, une ligne par machine réellement distincte."],
+        "cop-15": ["Les meilleurs COP à -15 °C", "Classement par COP certifié à -15 °C."],
+        "subvention-logisvert": ["Les machines les plus subventionnées par LogisVert", "Montants officiels de la liste Hydro-Québec, jumelage de référence."],
+      };
+      const [title, intro] = titles[r] ?? ["Classement sur données certifiées", "D'après la liste LogisVert d'Hydro-Québec et ENERGY STAR."];
+      return <RankingBlock slug={r} title={title} intro={intro} />;
+    }
+  }
   switch (slug) {
     case "btu-quelle-capacite-choisir":
     case "thermopompe-condo-appartement":

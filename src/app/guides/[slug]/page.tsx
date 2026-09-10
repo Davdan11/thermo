@@ -111,7 +111,7 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
         />
       </section>
 
-      <GuideDataWidgets slug={slug} />
+      <GuideDataWidgets slug={slug} widget={guide.widget} />
 
       <CtaThermoMatch />
 
