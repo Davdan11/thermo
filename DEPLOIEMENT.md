@@ -33,7 +33,7 @@ certbot --nginx -d thermopompesavendre.ca -d www.thermopompesavendre.ca -n --agr
 Depuis un poste où le dépôt git est à jour (`git pull` d'abord) :
 
 ```bash
-tar czf - --exclude=node_modules --exclude=.next --exclude=data --exclude='.env*' --exclude=.git --exclude=.claude . \
+tar czf - --exclude=./node_modules --exclude=./.next --exclude=./data --exclude='.env*' --exclude=.git --exclude=.claude . \
   | ssh root@31.97.98.22 'cd /var/www/thermopompesavendre.ca && tar xzf -'
 ssh root@31.97.98.22 '/var/www/thermopompesavendre.ca/deploy-vps.sh'
 ```
