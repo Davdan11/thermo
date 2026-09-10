@@ -32,6 +32,19 @@ interface SavedState {
   step: number;
 }
 
+/* Photos d'ambiance par étape (panneau droit) */
+const STEP_BG_IMAGES: Record<string, string> = {
+  postalCode: "/images/thermomatch/postalCode.webp",
+  propertyType: "/images/thermomatch/postalCode.webp",
+  area: "/images/thermomatch/area.webp",
+  floors: "/images/thermomatch/floors.webp",
+  currentSystem: "/images/thermomatch/currentSystem.webp",
+  heatPumpType: "/images/thermomatch/heatPumpType.webp",
+  priority: "/images/thermomatch/priority.webp",
+  budget: "/images/thermomatch/budget.webp",
+  financing: "/images/thermomatch/financing.webp",
+};
+
 /* Option thumbnail images for propertyType */
 const PROPERTY_IMAGES: Record<string, string> = {
   maison: "/images/maison.jpg",
@@ -501,6 +514,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
      ============================================================ */
   const step = STEPS[currentStep];
   const currentValue = answers[step.id];
+  const bgImage = STEP_BG_IMAGES[step.id] ?? STEP_BG_IMAGES.postalCode;
   const hasPropertyImages = step.id === "propertyType";
   const stepOptions = typeof step.options === "function" ? step.options(answers) : step.options;
 
@@ -749,13 +763,14 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
 
         {/* ======== RIGHT PANE ======== */}
         <div className="hidden lg:flex flex-col w-[42%] xl:w-[45%] relative overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
-          {/* Fond sobre : dégradé profond, trame fine et unité extérieure en filigrane (aucune photo d'ambiance) */}
-          <div className="absolute inset-0" style={{ background: "radial-gradient(120% 90% at 100% 0%, #16283a 0%, #0f1a25 45%, #0D1117 100%)" }} />
-          <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px)", backgroundSize: "56px 56px" }} />
-          <div className="absolute right-[-6%] top-[6%] w-[58%] aspect-square opacity-[0.22] pointer-events-none select-none">
-            <Image src="/images/thermomatch/thermomatch-cta-unit-transparent.png" alt="" fill sizes="40vw" style={{ objectFit: "contain", objectPosition: "right top" }} />
-          </div>
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0D1117] to-transparent" />
+          {/* Photo d'ambiance de l'étape (maisons québécoises, chantier, budget), assombrie pour le résumé */}
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+            style={{ backgroundImage: `url('${bgImage}')` }}
+          />
+          <div className="absolute inset-0 bg-[#0D1117]/45" />
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0D1117] to-transparent z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0D1117]/90 to-transparent" />
 
           {/* Résumé panel */}
           <div className="relative z-20 flex flex-col justify-end h-full p-8 xl:p-10">
