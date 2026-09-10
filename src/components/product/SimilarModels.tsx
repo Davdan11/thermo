@@ -37,6 +37,7 @@ export function SimilarModels({ models }: SimilarModelsProps) {
                     alt={`${product.brand.name} ${product.model.name}`}
                     width={200}
                     height={150}
+                    sizes="(max-width: 640px) 50vw, 200px"
                     className="object-contain w-full h-full p-2"
                   />
                 ) : (

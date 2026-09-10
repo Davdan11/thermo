@@ -1,144 +1,168 @@
+import Link from "next/link";
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
-import React from "react";
+import type { SeoModel } from "@/lib/seo/programmatic";
 
 /* ------------------------------------------------------------------
-   GoodChoiceSection — "Est-ce un bon choix pour vous?"
-   Premium Design Version
+   GoodChoiceSection — « Est-ce le bon modèle pour votre maison ? »
+
+   Un verdict sobre, tiré des données certifiées de la fiche : type
+   d'installation, tenue par grand froid, efficacité, subvention. Puis
+   « Convient si / Moins indiqué si ». Aucune formule creuse, aucune
+   valeur inventée : une donnée absente est dite absente.
    ------------------------------------------------------------------ */
 
-interface GoodChoiceSectionProps {
+interface Props {
   detail: ProductDetail;
+  seo?: SeoModel | null;
 }
 
-interface Criterion {
-  label: string;
-  description: string;
-  icon: React.ReactNode;
-}
+const fr = (n: number) => n.toLocaleString("fr-CA");
 
-export function GoodChoiceSection({ detail }: GoodChoiceSectionProps) {
+export function GoodChoiceSection({ detail, seo }: Props) {
   const { model, configuration, isColdClimate, editorial } = detail;
-  const criteria: Criterion[] = [];
+  const nominal = model.nominalCapacityBtu ?? seo?.nominalBtu ?? null;
+  const h5 = seo?.h5Btu ?? null;
+  const cop5 = seo?.cop5 ?? null;
+  const hspf2 = configuration?.hspf2 ?? seo?.hspf2 ?? null;
+  const seer2 = configuration?.seer2 ?? seo?.seer2 ?? null;
+  const minTemp = configuration?.minHeatingTempC ?? null;
+  const logisVert = seo?.logisVertDollars ?? 0;
+  const retention = nominal && h5 ? Math.round((h5 / nominal) * 100) : null;
+  const noise = configuration?.noiseIndoorMinDbA ?? null;
 
-  const icons = {
-    check: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>,
-    home: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>,
-    snow: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m0-18l-4 4m4-4l4 4M5 12h14M5 12l4-4m-4 4l4 4m9-4l-4-4m4 4l-4 4M9 19l3 3m0 0l3-3m-3 3v-6" /></svg>,
-    sun: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>,
-    sound: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M5 10v4a2 2 0 002 2h2l4 4V4L9 8H7a2 2 0 00-2 2z" /></svg>,
-    wifi: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" /></svg>,
-    star: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>,
-  };
+  /* ── Verdict : quatre lignes, une donnée chacune ── */
+  const rows: Array<{ label: string; value: string; note?: string }> = [];
 
-  // System type guidance
   if (model.systemType === "wall-single") {
-    criteria.push({
-      label: "Zone ouverte",
-      description: "Idéal pour climatiser ou chauffer une aire ouverte.",
-      icon: icons.home
-    });
+    rows.push({ label: "Installation", value: "Murale, une zone", note: "Sans conduits. Chauffe et climatise la pièce où elle est posée et les aires ouvertes attenantes." });
   } else if (model.systemType === "central-ducted") {
-    criteria.push({
-      label: "Maison entière",
-      description: "Distribution uniforme dans toute l'habitation via conduits.",
-      icon: icons.home
-    });
+    rows.push({ label: "Installation", value: "Centrale gainable", note: "Réutilise les conduits existants d'une fournaise. Toute la maison, une seule unité intérieure." });
   } else if (model.systemType === "multi-zone") {
-    criteria.push({
-      label: "Plusieurs pièces",
-      description: `Contrôle indépendant pour ${model.zones ?? "plusieurs"} zones.`,
-      icon: icons.home
-    });
+    rows.push({ label: "Installation", value: `Multizone, ${model.zones ? `${model.zones} têtes` : "plusieurs têtes"}`, note: "Une unité extérieure, une tête par pièce, chacune réglée séparément." });
   }
 
-  // Cold climate
-  if (isColdClimate) {
-    criteria.push({
-      label: "Climat froid extrême",
-      description: "Performance maintenue même lors des pires vagues de froid.",
-      icon: icons.snow
+  if (h5 !== null && nominal) {
+    rows.push({
+      label: "Par grand froid",
+      value: `${fr(h5)} BTU/h à -15 °C`,
+      note: `${retention} % de la capacité nominale (${fr(nominal)} BTU/h)${cop5 !== null ? `, COP ${cop5.toLocaleString("fr-CA", { minimumFractionDigits: 2 })} à -15 °C` : ""}${minTemp !== null ? `. Fonctionne jusqu'à ${minTemp} °C` : ""}.`,
     });
   } else {
-    criteria.push({
-      label: "Climat tempéré",
-      description: "Nécessite une plinthe ou source d'appoint en hiver.",
-      icon: icons.sun
+    rows.push({
+      label: "Par grand froid",
+      value: isColdClimate ? "Certifiée climat froid" : "Capacité à -15 °C non publiée",
+      note: isColdClimate
+        ? `Certification ENERGY STAR climat froid${minTemp !== null ? `. Fonctionne jusqu'à ${minTemp} °C` : ""}.`
+        : "ENERGY STAR ne publie pas de mesure à -15 °C pour cet appareil. Prévoyez un appoint (plinthes) les jours de grand froid.",
     });
   }
 
-  // Noise
-  if (configuration?.noiseIndoorMinDbA != null && configuration.noiseIndoorMinDbA <= 22) {
-    criteria.push({
-      label: "Ultra-silencieux",
-      description: `Seulement ${configuration.noiseIndoorMinDbA} dB(A), parfait pour les chambres.`,
-      icon: icons.sound
+  if (hspf2 !== null || seer2 !== null) {
+    rows.push({
+      label: "Efficacité",
+      value: [hspf2 !== null ? `HSPF2 ${fr(hspf2)}` : null, seer2 !== null ? `SEER2 ${fr(seer2)}` : null].filter(Boolean).join(" · "),
+      note: hspf2 !== null
+        ? hspf2 >= 10 ? "Parmi les plus efficaces en chauffage vendues au Québec." : hspf2 >= 8.5 ? "Efficacité de chauffage dans la bonne moyenne du marché." : "Efficacité de chauffage modeste : le coût d'exploitation sera plus élevé."
+        : "Le HSPF2 (chauffage) n'est pas publié ; seul le SEER2 (climatisation) l'est.",
     });
   }
 
-  // Smart control
-  if (configuration?.hasWifi) {
-    criteria.push({
-      label: "Maison intelligente",
-      description: "Contrôle Wi-Fi et intégration domotique inclus.",
-      icon: icons.wifi
-    });
+  rows.push({
+    label: "Subvention LogisVert",
+    value: logisVert > 0 ? `${fr(logisVert)} $` : "Non admissible",
+    note: logisVert > 0
+      ? "Montant officiel d'Hydro-Québec pour le jumelage de référence de cette fiche. Vérifié sur chaque appariement."
+      : "Aucun appariement de cet appareil ne figure dans la liste LogisVert d'Hydro-Québec à ce jour.",
+  });
+
+  /* ── Convient si / Moins indiqué si ── */
+  const pros: string[] = [];
+  const cons: string[] = [];
+
+  if (model.systemType === "wall-single") {
+    pros.push("Vous chauffez aux plinthes ou aux convecteurs, sans conduits.");
+    pros.push("La pièce principale est ouverte : salon, cuisine, aire commune.");
+    cons.push("Votre maison a plusieurs pièces fermées à chauffer : un multizone convient mieux.");
+  } else if (model.systemType === "central-ducted") {
+    pros.push("Votre maison a déjà des conduits (fournaise au gaz, au mazout ou électrique).");
+    pros.push("Vous voulez une seule unité intérieure et un confort uniforme.");
+    cons.push("Vous n'avez pas de conduits : les ajouter coûte souvent plus cher que la machine.");
+  } else if (model.systemType === "multi-zone") {
+    pros.push("Plusieurs pièces fermées à chauffer avec un réglage indépendant.");
+    pros.push("Vous voulez une seule unité extérieure pour limiter le bruit et l'encombrement.");
+    cons.push("Une seule aire ouverte à couvrir : une murale simple zone coûte moins cher.");
   }
 
-  if (editorial?.bestFor) {
-    criteria.push({
-      label: "Pourquoi ce modèle ?",
-      description: editorial.bestFor,
-      icon: icons.star
-    });
+  if (isColdClimate || (retention !== null && retention >= 70)) {
+    pros.push("Vous comptez sur la thermopompe comme chauffage principal en hiver.");
+  } else {
+    cons.push("Vous voulez vous passer d'appoint sous -20 °C : visez une machine certifiée climat froid.");
   }
+  if (noise !== null && noise <= 22) pros.push(`Installation dans une chambre : ${noise} dB(A) au minimum, parmi les plus silencieuses.`);
+  if (configuration?.hasWifi) pros.push("Vous voulez régler la température à distance : Wi-Fi intégré.");
+  if (logisVert === 0) cons.push("La subvention LogisVert compte dans votre budget : elle ne s'applique pas ici.");
+  if (editorial?.bestFor) pros.push(editorial.bestFor);
 
-  if (criteria.length === 0) return null;
+  if (rows.length === 0) return null;
 
   return (
-    <section id="bon-choix" aria-labelledby="bon-choix-title" className="mb-12">
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] border border-[#233554] shadow-2xl p-8 sm:p-10">
-        
-        {/* Decorative ambient blobs */}
-        <div className="absolute top-[-50px] right-[-50px] w-64 h-64 bg-[#e54b17]/20 rounded-full blur-[80px] pointer-events-none" />
-        <div className="absolute bottom-[-50px] left-[-50px] w-64 h-64 bg-[#64ffda]/10 rounded-full blur-[80px] pointer-events-none" />
+    <section id="bon-choix" aria-labelledby="bon-choix-title" style={{ border: "1px solid #e4ddd5", background: "#fff" }}>
+      <div style={{ padding: "28px 28px 8px", borderBottom: "1px solid #e4ddd5" }}>
+        <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e54b17" }}>Verdict</p>
+        <h2 id="bon-choix-title" style={{ margin: "8px 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-0.01em", color: "#071d2b", lineHeight: 1.2 }}>
+          Est-ce le bon modèle pour votre maison ?
+        </h2>
+        <p style={{ margin: "0 0 20px", fontSize: 14, color: "#536873", lineHeight: 1.6, maxWidth: 640 }}>
+          Lecture des données certifiées de cette fiche. Le calibre exact dépend de votre maison, pas de la machine.
+        </p>
+      </div>
 
-        <div className="relative z-10">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#e54b17] to-[#ff7a45] flex items-center justify-center shadow-lg text-white">
-              {icons.star}
-            </div>
-            <div>
-              <h2 id="bon-choix-title" className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                Pourquoi choisir ce modèle ?
-              </h2>
-              <p className="text-[#8892b0] mt-1">Analyse intelligente selon les spécifications</p>
-            </div>
+      <dl style={{ margin: 0, padding: "8px 28px", display: "grid", gridTemplateColumns: "1fr", rowGap: 0 }}>
+        {rows.map((r, i) => (
+          <div key={r.label} style={{ display: "grid", gridTemplateColumns: "minmax(140px, 180px) 1fr", gap: 16, padding: "16px 0", borderBottom: i < rows.length - 1 ? "1px solid #f0ebe4" : "none" }}>
+            <dt style={{ fontSize: 13, fontWeight: 600, color: "#536873", paddingTop: 2 }}>{r.label}</dt>
+            <dd style={{ margin: 0 }}>
+              <p style={{ margin: 0, fontSize: 17, fontWeight: 700, color: "#071d2b", letterSpacing: "-0.01em" }}>{r.value}</p>
+              {r.note && <p style={{ margin: "4px 0 0", fontSize: 13.5, color: "#536873", lineHeight: 1.55 }}>{r.note}</p>}
+            </dd>
           </div>
+        ))}
+      </dl>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
-            {criteria.map((c, i) => (
-              <div 
-                key={i} 
-                className="group relative flex items-start gap-4 p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm"
-              >
-                <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-[#64ffda] group-hover:scale-110 group-hover:bg-[#64ffda]/20 transition-transform duration-300">
-                  {c.icon}
-                </div>
-                <div>
-                  <h3 className="text-[17px] font-semibold text-white mb-1.5">{c.label}</h3>
-                  <p className="text-[15px] text-[#8892b0] leading-relaxed">{c.description}</p>
-                </div>
-              </div>
+      <div style={{ borderTop: "1px solid #e4ddd5", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
+        <div style={{ padding: "22px 28px" }}>
+          <p style={{ margin: "0 0 10px", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1b6b3a" }}>Convient si</p>
+          <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
+            {pros.map((p) => (
+              <li key={p} style={{ display: "flex", gap: 10, fontSize: 14, color: "#172126", lineHeight: 1.5 }}>
+                <span aria-hidden="true" style={{ color: "#1b6b3a", fontWeight: 700, flexShrink: 0 }}>+</span>
+                <span>{p}</span>
+              </li>
             ))}
-          </div>
-          
-          <div className="mt-8 pt-6 border-t border-white/10 flex items-start gap-3">
-            <svg className="w-5 h-5 text-[#8892b0] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <p className="text-sm text-[#8892b0]">
-              Le dimensionnement final dépend des pertes de chaleur de votre habitation, de l'isolation et du climat local.
-            </p>
-          </div>
+          </ul>
         </div>
+        <div style={{ padding: "22px 28px", borderLeft: "1px solid #e4ddd5" }}>
+          <p style={{ margin: "0 0 10px", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8a5a00" }}>Moins indiqué si</p>
+          <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
+            {cons.length ? cons.map((c) => (
+              <li key={c} style={{ display: "flex", gap: 10, fontSize: 14, color: "#172126", lineHeight: 1.5 }}>
+                <span aria-hidden="true" style={{ color: "#8a5a00", fontWeight: 700, flexShrink: 0 }}>–</span>
+                <span>{c}</span>
+              </li>
+            )) : (
+              <li style={{ fontSize: 14, color: "#536873" }}>Aucune réserve particulière d'après les données publiées.</li>
+            )}
+          </ul>
+        </div>
+      </div>
+
+      <div style={{ borderTop: "1px solid #e4ddd5", padding: "16px 28px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 12, background: "#faf8f4" }}>
+        <p style={{ margin: 0, fontSize: 13, color: "#536873" }}>
+          Le dimensionnement dépend de votre superficie, de votre isolation et de votre zone climatique.
+        </p>
+        <Link href="/trouver-ma-thermopompe" style={{ fontSize: 14, fontWeight: 700, color: "#e54b17", textDecoration: "none", whiteSpace: "nowrap" }}>
+          Vérifier pour ma maison →
+        </Link>
       </div>
     </section>
   );

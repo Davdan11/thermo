@@ -309,7 +309,7 @@ export default async function ProductPage({
             <LogisVertBadge detail={detail} />
 
             {/* Good choice */}
-            <GoodChoiceSection detail={detail} />
+            <GoodChoiceSection detail={detail} seo={seoModel} />
 
             {/* Cold climate performance table */}
             {performanceProfile && performanceProfile.dataPoints.length > 0 && (

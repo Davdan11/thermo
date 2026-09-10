@@ -25,12 +25,12 @@ export function CompareSelector({ products, initialSlugs = [], maxCompare }: Com
   const [selected, setSelected] = useState<Set<string>>(new Set(initialSlugs));
   const [search, setSearch] = useState("");
 
-  /* Suggestions : machines avec vraie photo et données certifiées, une par marque, 12 au plus. */
+  /* Suggestions : machines avec données certifiées, photo d'abord, une par marque, 12 au plus. */
   const suggested = useMemo(() => {
     const seen = new Set<string>();
     return products
-      .filter((p) => p.imageUrl && p.hspf2 !== null)
-      .sort((a, b) => (b.hspf2 ?? 0) - (a.hspf2 ?? 0))
+      .filter((p) => p.hspf2 !== null)
+      .sort((a, b) => (Number(!!b.imageUrl) - Number(!!a.imageUrl)) || (b.hspf2 ?? 0) - (a.hspf2 ?? 0))
       .filter((p) => (seen.has(p.brandSlug) ? false : (seen.add(p.brandSlug), true)))
       .slice(0, 12);
   }, [products]);

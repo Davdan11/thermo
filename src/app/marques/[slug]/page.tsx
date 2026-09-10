@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { getBrandDetail } from "@/lib/data/queries/brand-detail";
 import { GENERIC_SERIES_LABEL, isGenericSeries } from "@/lib/data/series-label";
 import { brandLogoPath } from "@/lib/data/brand-logos";
@@ -225,7 +226,7 @@ export default async function BrandPage({
               >
                 <div className="aspect-[16/9] bg-[#EFECE8] flex items-center justify-center overflow-hidden">
                   {s.imageUrl ? (
-                    <img src={s.imageUrl} alt={`${brandName} ${seriesName}`} loading="lazy" className="max-w-full max-h-full object-contain p-4" />
+                    <Image src={s.imageUrl} alt={`${brandName} ${seriesName}`} width={320} height={180} sizes="(max-width: 640px) 100vw, 320px" className="max-w-full max-h-full object-contain p-4" />
                   ) : (
                     <span className="text-xs uppercase tracking-widest text-[#9ca3af]">{sSummary.systemTypeLabel}</span>
                   )}
