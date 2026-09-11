@@ -67,3 +67,13 @@ Journal : `/var/log/thermo-logisvert-bot.log`. Lancement manuel : `bash /var/www
 - Sujets : `data/blog/sujets.json` (file d'attente, un sujet par ligne ; ajouter des sujets pour prolonger). Publiés : `data/blog/publies.json`.
 - Garde-fous : seuls les chiffres du contexte factuel (`scripts/blog-context.ts`) sont autorisés ; validation du frontmatter, de la longueur, des liens internes ; second essai avec les erreurs ; abandon sinon (journal `/var/log/thermo-nightly-bot.log`).
 - Essai local : `node scripts/blog-bot.mjs --dry-run --topic <slug>` (affiche l'article sans écrire).
+
+## Courriels automatiques Pipedrive (étapes du pipeline)
+
+- Webhook Pipedrive (id 19180) : `deal.updated` → `POST https://thermopompesavendre.ca/api/webhooks/pipedrive`, authentification HTTP Basic avec `PIPEDRIVE_WEBHOOK_USER` / `PIPEDRIVE_WEBHOOK_PASSWORD` (shared/.env).
+- À chaque changement d'étape (pipelines Ventes, Installation & Opérations, Service & Maintenance) ou passage en « perdue », le client reçoit un courriel signé Thermopompes À Vendre, personnalisé avec les champs de l'affaire (type de projet, région, modèle proposé, capacité, subvention, date d'installation, installateur). Une note est ajoutée sur l'affaire.
+- Étapes reconnues par leur nom (`src/lib/crm/templates/stage-emails.ts`) : renommer une étape dans Pipedrive sans changer le gabarit coupe l'envoi pour cette étape. « Nouveau lead » n'envoie rien (courriel de bienvenue déjà envoyé à la création).
+- Seules les affaires de ce site sont traitées (champ « Site web » = thermopompesavendre.ca ou titre préfixé `[TAV]`).
+- Anti-doublon : `$LEAD_JOURNAL_DIR/pipedrive-courriels.json` (une clé par affaire et par étape). Supprimer l'entrée pour renvoyer un courriel.
+- Aperçu des gabarits hors production : `http://localhost:3000/api/webhooks/pipedrive/apercu` (en production, ajouter `?cle=<PIPEDRIVE_WEBHOOK_PASSWORD>`).
+- Envoi par le relais SMTP Google Workspace (`SMTP_HOST=smtp-relay.gmail.com`), voir la section courriels.
