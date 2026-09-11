@@ -9,20 +9,22 @@
    ================================================================== */
 import nodemailer from "nodemailer";
 
-const user = process.env.SMTP_USER;
+const user = process.env.SMTP_USER || process.env.EMAIL_FROM || "info@thermopompesavendre.ca";
 const pass = process.env.SMTP_PASS;
-if (!user || !pass) {
-  console.error("SMTP_USER et SMTP_PASS doivent être définis.");
+const hasAuth = Boolean(process.env.SMTP_USER && pass);
+if (!process.env.SMTP_HOST && !hasAuth) {
+  console.error("Définir SMTP_HOST (relais) ou SMTP_USER + SMTP_PASS.");
   process.exit(1);
 }
-const port = Number(process.env.SMTP_PORT || 465);
+const port = Number(process.env.SMTP_PORT || (hasAuth ? 465 : 587));
 const to = process.argv[2] || process.env.NOTIFICATION_EMAIL || user;
 
 const smtp = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "smtp.gmail.com",
   port,
   secure: port === 465,
-  auth: { user, pass },
+  requireTLS: port !== 465,
+  auth: hasAuth ? { user: process.env.SMTP_USER, pass } : undefined,
 });
 
 try {

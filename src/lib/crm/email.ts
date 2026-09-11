@@ -3,8 +3,10 @@
    partenaire, rendez-vous) et confirmations aux clients.
 
    Transport, dans l'ordre :
-     1. SMTP (Google Workspace ou autre) si SMTP_USER et SMTP_PASS sont
-        définis : SMTP_HOST (défaut smtp.gmail.com), SMTP_PORT (défaut 465).
+     1. SMTP si SMTP_HOST est défini (relais Google Workspace
+        smtp-relay.gmail.com:587 autorisé par adresse IP, sans identifiants)
+        ou si SMTP_USER et SMTP_PASS sont définis (smtp.gmail.com:465 avec
+        mot de passe d'application). SMTP_PORT au besoin.
      2. Resend si RESEND_API_KEY est défini.
      3. Sinon rien ne part : journalisé, jamais bloquant pour le lead.
    ================================================================== */
@@ -33,13 +35,15 @@ let transport: Transport | undefined;
 
 function getTransport(): Transport {
   if (transport !== undefined) return transport;
-  if (process.env.SMTP_USER && process.env.SMTP_PASS) {
-    const port = Number(process.env.SMTP_PORT || 465);
+  const hasAuth = Boolean(process.env.SMTP_USER && process.env.SMTP_PASS);
+  if (process.env.SMTP_HOST || hasAuth) {
+    const port = Number(process.env.SMTP_PORT || (hasAuth ? 465 : 587));
     const smtp = nodemailer.createTransport({
       host: process.env.SMTP_HOST || "smtp.gmail.com",
       port,
       secure: port === 465,
-      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+      requireTLS: port !== 465,
+      auth: hasAuth ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS } : undefined,
     });
     transport = {
       name: "smtp",
