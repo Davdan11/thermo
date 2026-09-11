@@ -11,6 +11,8 @@
 export type EventName =
   | "thermomatch_started"
   | "thermomatch_completed"
+  | "thermomatch_shared"
+  | "quote_for_model"
   | "lead_submitted"
   | "rdv_booked"
   | "contact_submitted"

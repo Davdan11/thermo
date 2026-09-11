@@ -10,6 +10,7 @@ import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import { brandTier } from "@/lib/thermomatch/tiers";
 import { installedPriceRange, money, PRICE_GRID_CONSULTED_AT } from "@/lib/prices/grille-installee";
 import { observedPricesFor } from "@/lib/prices/observed";
+import { QuoteForModelLink } from "./QuoteForModelLink";
 
 export function PriceSection({ detail, logisVertDollars }: { detail: ProductDetail; logisVertDollars: number }) {
   const { model, brand } = detail;
@@ -66,6 +67,27 @@ export function PriceSection({ detail, logisVertDollars }: { detail: ProductDeta
           </div>
         ))}
       </dl>
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4" style={{ margin: "0 24px 18px", padding: "16px 18px", borderRadius: 12, background: "#071d2b" }}>
+        <div className="flex-1 min-w-0">
+          <p style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "#fff", letterSpacing: "-0.01em" }}>
+            {observed.length === 0 ? "Aucun prix public pour ce modèle : demandez le vôtre." : "Le prix exact dépend de votre maison."}
+          </p>
+          <p style={{ margin: "4px 0 0", fontSize: 13, color: "rgba(255,255,255,.65)", lineHeight: 1.5 }}>
+            {observed.length === 0
+              ? `${brand.name} vend par installateurs agréés, sans prix affiché en ligne. Un conseiller vous donne un prix installé pour ce modèle, subvention déduite.`
+              : "Un conseiller confirme le prix installé de ce modèle pour votre maison, subvention LogisVert déduite."}
+          </p>
+        </div>
+        <QuoteForModelLink
+          modelId={model.id}
+          brandName={brand.name}
+          systemType={model.systemType}
+          className="inline-flex items-center justify-center whitespace-nowrap rounded-full no-underline transition-colors hover:bg-[#d44315]"
+          style={{ padding: "12px 22px", fontSize: 14, fontWeight: 700, color: "#fff", background: "#e54b17", flexShrink: 0 }}
+        >
+          Obtenir un prix pour ce modèle
+        </QuoteForModelLink>
+      </div>
       <p style={{ margin: 0, padding: "12px 24px", borderTop: "1px solid #e4ddd5", background: "#faf8f4", fontSize: 12.5, color: "#536873", lineHeight: 1.55 }}>
         Sources consultées le {PRICE_GRID_CONSULTED_AT}, méthode et grille complète sur la <Link href="/prix" style={{ color: "#e54b17", fontWeight: 600 }}>page Prix</Link>. Le panneau électrique, l&apos;appoint, les conduits et les travaux d&apos;isolation s&apos;ajoutent selon la maison.
       </p>

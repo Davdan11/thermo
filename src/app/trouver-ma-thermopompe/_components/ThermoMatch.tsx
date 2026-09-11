@@ -16,6 +16,7 @@ import {
   getProjectSummary,
 } from "@/lib/project/project-draft";
 import { ThermoMatchResults } from "./ThermoMatchResults";
+import { ShareResultsButton } from "@/components/thermomatch/ShareResultsButton";
 import { track } from "@/lib/analytics/track";
 
 /* ----------------------------------------------------------
@@ -397,6 +398,9 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
                 setCurrentStep(TOTAL_STEPS - 1);
               }}
             />
+            <div className="mt-10 w-full">
+              <ShareResultsButton answers={answers} />
+            </div>
           </div>
         </div>
       );
@@ -883,6 +887,7 @@ function ThermoMatchHeader({
           width={120} 
           height={24} 
           className="object-contain"
+          style={{ width: 120, height: 24 }}
         />
         <div className="w-px h-4 bg-white/20" />
         <span className="text-white/50 text-sm">

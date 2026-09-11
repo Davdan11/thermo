@@ -168,7 +168,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
                 </div>
                 <div className="relative h-40 w-full mb-4 flex items-center justify-center">
                   <Image
-                    src={product.imageUrl || (product.systemType === "central" ? "/images/categorie-centrale-samsung-hd.png" : summaryContext?.isMultiZone ? "/images/categorie-multizone-mitsubishi-electric-hd.png" : "/images/categorie-murale-daikin-hd.png")}
+                    src={product.imageUrl || (product.systemType === "central" ? "/images/categorie-centrale-samsung-hd.webp" : summaryContext?.isMultiZone ? "/images/categorie-multizone-mitsubishi-electric-hd.webp" : "/images/categorie-murale-daikin-hd.webp")}
                     alt={product.brand} fill className="object-contain"
                   />
                 </div>

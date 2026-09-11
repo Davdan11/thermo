@@ -64,7 +64,7 @@ export default function CalculateurEconomiesPage() {
         {/* Premium Call to Action */}
         <div 
           className="mt-20 relative rounded-2xl overflow-hidden shadow-xl bg-cover bg-center"
-          style={{ backgroundImage: 'url("/images/cta-bg-home.jpg")' }}
+          style={{ backgroundImage: 'url("/images/cta-bg-home.webp")' }}
         >
           {/* Dark Overlay for Text Legibility */}
           <div className="absolute inset-0 bg-[#0C1821]/85 backdrop-blur-[2px]"></div>

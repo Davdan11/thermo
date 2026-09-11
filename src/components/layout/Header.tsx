@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Container } from "./Container";
+import { SiteSearch } from "./SiteSearch";
 
 /* ----------------------------------------------------------
    Navigation data
@@ -130,6 +131,7 @@ export function Header() {
 
             {/* ── Right: CTA + Mobile toggle ── */}
             <div className="flex items-center gap-2 sm:gap-3">
+              <div className="hidden lg:flex"><SiteSearch /></div>
               <a
                 href="tel:4389003224"
                 aria-label="Appeler le 438-900-3224"
@@ -187,6 +189,7 @@ export function Header() {
           aria-label="Menu de navigation"
         >
           <Container className="py-6">
+            <div className="mb-5"><SiteSearch variant="mobile" /></div>
             <nav className="flex flex-col gap-1" aria-label="Navigation mobile">
               {NAV_LINKS.map((link) => (
                 <Link

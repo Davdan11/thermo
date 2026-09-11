@@ -28,7 +28,7 @@ export function ScanHeroVisual() {
         style={{ aspectRatio: "1 / 1", containerType: "size", border: "1px solid rgba(255,255,255,.12)", boxShadow: "0 40px 90px -40px rgba(0,0,0,.8)", background: "#101c26" }}
       >
         <img
-          src="/images/about-cta-product.jpg"
+          src="/images/about-cta-product.webp"
           alt=""
           width={1024}
           height={1024}

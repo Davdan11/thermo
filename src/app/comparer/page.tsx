@@ -34,7 +34,7 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
         {/* Hero image — right side only */}
         <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[55%] z-0">
           <img 
-            src="/images/categorie-murale-daikin-hd.png" 
+            src="/images/categorie-murale-daikin-hd.webp" 
             alt="" 
             style={{ 
               width: "100%", 

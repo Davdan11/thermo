@@ -29,7 +29,7 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
         {/* Background image & gradient */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero_heatpump.jpg"
+            src="/images/hero_heatpump.webp"
             alt="Thermopompe grille"
             fill
             className="object-cover object-[80%_center] opacity-40 mix-blend-luminosity"
@@ -186,7 +186,7 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
         {/* Background image & gradient */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero_heatpump.jpg"
+            src="/images/hero_heatpump.webp"
             alt="Thermopompe grille"
             fill
             className="object-cover object-[80%_center] opacity-30 mix-blend-luminosity"

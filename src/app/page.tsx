@@ -82,9 +82,9 @@ export default function HomePage() {
             {/* Right 3 cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
-                { label: "Murales", href: "/thermopompes?type=murale", src: "/images/categorie-murale-daikin-hd.png" },
-                { label: "Multizones", href: "/thermopompes?type=multizone", src: "/images/categorie-multizone-mitsubishi-electric-hd.png" },
-                { label: "Centrales", href: "/thermopompes?type=centrale", src: "/images/categorie-centrale-samsung-hd.png" },
+                { label: "Murales", href: "/thermopompes?type=murale", src: "/images/categorie-murale-daikin-hd.webp" },
+                { label: "Multizones", href: "/thermopompes?type=multizone", src: "/images/categorie-multizone-mitsubishi-electric-hd.webp" },
+                { label: "Centrales", href: "/thermopompes?type=centrale", src: "/images/categorie-centrale-samsung-hd.webp" },
               ].map((t, i) => (
                 <FadeIn key={t.label} delay={150 * (i + 1)}>
                   <Link href={t.href} className="group block" style={{ textDecoration: "none" }}>

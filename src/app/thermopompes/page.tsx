@@ -117,7 +117,7 @@ export default async function ThermopompesPage({
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0C1821] to-transparent z-10 lg:hidden"></div>
             
             <Image
-              src="/images/categorie-murale-daikin-hd.png"
+              src="/images/categorie-murale-daikin-hd.webp"
               alt="Thermopompe Daikin Murale"
               fill
               sizes="100vw"

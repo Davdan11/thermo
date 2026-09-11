@@ -58,7 +58,7 @@ export default function ThermoScanPage() {
 
           <div className="mt-10 lg:mt-14 grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-10 items-center">
             <div className="max-w-[560px]">
-              <img src="/images/Thermoscan.png" alt="ThermoScan" width={2087} height={754} style={{ height: 44, width: "auto" }} />
+              <img src="/images/thermoscan-logo.webp" alt="ThermoScan" width={2087} height={754} style={{ height: 44, width: "auto" }} />
               <h1 className="mt-7 text-white font-bold tracking-tight" style={{ fontSize: "clamp(34px, 4.6vw, 56px)", lineHeight: 1.04, letterSpacing: "-0.025em" }}>
                 Une photo de l&apos;étiquette.<br />
                 <span style={{ color: "#f0e9e1" }}>La fiche complète de votre thermopompe.</span>
