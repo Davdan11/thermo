@@ -62,7 +62,7 @@ Journal : `/var/log/thermo-logisvert-bot.log`. Lancement manuel : `bash /var/www
 
 ## Robot de nuit (LogisVert + blogue)
 
-`bot/run.sh` (cron 5 h 30) lance `scripts/nightly-bot.sh` : synchronisation GitHub, vérification LogisVert (voir ci-dessus), puis `scripts/blog-bot.mjs` qui publie **un article par jour** avec sa photo générée, si `shared/.env` contient `ANTHROPIC_API_KEY` et `OPENAI_API_KEY` ou `GEMINI_API_KEY`. Un seul commit et un seul déploiement par nuit.
+`bot/run.sh` (cron 5 h 30) lance `scripts/nightly-bot.sh` : synchronisation GitHub, vérification LogisVert (voir ci-dessus), puis `scripts/blog-bot.mjs` qui publie **un article par jour**, si `shared/.env` contient `ANTHROPIC_API_KEY` (Claude) ou, à défaut, `GEMINI_API_KEY` (Gemini 2.5 Flash, palier gratuit suffisant ; c'est la configuration actuelle du VPS). La photo est générée si une clé d'images répond (`OPENAI_API_KEY` ou `GEMINI_API_KEY`), sinon une image de couverture du site est utilisée : l'article ne dépend pas de la photo. Un seul commit et un seul déploiement par nuit. Vérifier un guide écrit à la main : `node scripts/valider-guide.mjs <slug>`.
 
 - Sujets : `data/blog/sujets.json` (file d'attente, un sujet par ligne ; ajouter des sujets pour prolonger). Publiés : `data/blog/publies.json`.
 - Garde-fous : seuls les chiffres du contexte factuel (`scripts/blog-context.ts`) sont autorisés ; validation du frontmatter, de la longueur, des liens internes ; second essai avec les erreurs ; abandon sinon (journal `/var/log/thermo-nightly-bot.log`).

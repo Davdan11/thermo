@@ -5,7 +5,7 @@
 #      impossible → arrêt sans rien déployer ;
 #   2. LogisVert : empreinte de la liste Hydro-Québec, régénération si elle a changé ;
 #   3. Blogue : un nouvel article + sa photo générée (scripts/blog-bot.mjs),
-#      seulement si ANTHROPIC_API_KEY et une clé d'images sont dans shared/.env ;
+#      si ANTHROPIC_API_KEY ou GEMINI_API_KEY est dans shared/.env (Gemini gratuit suffit) ;
 #   4. s'il y a du nouveau : tests, commit, push, déploiement sans interruption.
 # Journal : /var/log/thermo-nightly-bot.log
 # ==================================================================
@@ -54,7 +54,7 @@ case $? in
 esac
 
 # ---- 2. Blogue ----
-if [ -n "${ANTHROPIC_API_KEY:-}" ] && { [ -n "${OPENAI_API_KEY:-}" ] || [ -n "${GEMINI_API_KEY:-}" ]; }; then
+if [ -n "${ANTHROPIC_API_KEY:-}" ] || [ -n "${GEMINI_API_KEY:-}" ]; then
   if node scripts/blog-bot.mjs > /tmp/blog-run.log 2>&1; then
     tail -n 4 /tmp/blog-run.log
     NEW=$(git status --porcelain src/content/guides | grep '^??' | awk '{print $2}' | head -n 1)
@@ -64,7 +64,7 @@ if [ -n "${ANTHROPIC_API_KEY:-}" ] && { [ -n "${OPENAI_API_KEY:-}" ] || [ -n "${
     git checkout -- src/content/guides data/blog 2>/dev/null; git clean -qfd src/content/guides public/images/guides/generes data/blog 2>/dev/null
   fi
 else
-  log "Blogue : clés d'API absentes (ANTHROPIC_API_KEY + OPENAI_API_KEY ou GEMINI_API_KEY), étape sautée."
+  log "Blogue : aucune clé de rédaction (ANTHROPIC_API_KEY ou GEMINI_API_KEY), étape sautée."
 fi
 
 # ---- 3. Publication ----

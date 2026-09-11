@@ -13,7 +13,10 @@
    6. écrit src/content/guides/<slug>.md, public/images/guides/generes/<slug>.webp
       et data/blog/publies.json.
 
-   Variables : ANTHROPIC_API_KEY (requis), OPENAI_API_KEY ou GEMINI_API_KEY (requis
+   Variables : ANTHROPIC_API_KEY ou GEMINI_API_KEY pour le texte (Gemini au palier gratuit
+   suffit pour un article par jour), OPENAI_API_KEY ou GEMINI_API_KEY pour la photo (facultatif :
+   sans photo générée, une image de couverture du site est utilisée). Ancienne note :
+   ANTHROPIC_API_KEY (requis), OPENAI_API_KEY ou GEMINI_API_KEY (requis
    pour la photo), BLOG_BOT_MODEL (défaut claude-sonnet-5), BLOG_BOT_IMAGE_MODEL
    (défaut gemini-3.1-flash-image quand la clé Gemini est utilisée).
    Usage : node scripts/blog-bot.mjs [--topic <slug>] [--dry-run]
@@ -28,7 +31,13 @@ const ROOT = process.cwd();
 const args = process.argv.slice(2);
 const DRY = args.includes("--dry-run");
 const topicArg = args.includes("--topic") ? args[args.indexOf("--topic") + 1] : null;
-const MODEL = process.env.BLOG_BOT_MODEL || "claude-sonnet-5";
+const MODEL = process.env.BLOG_BOT_MODEL || (process.env.ANTHROPIC_API_KEY ? "claude-sonnet-5" : "gemini-2.5-flash");
+const TEXT_PROVIDER = process.env.ANTHROPIC_API_KEY ? "anthropic" : process.env.GEMINI_API_KEY ? "gemini" : null;
+// Couvertures de secours quand aucune photo ne peut être générée (par catégorie).
+const FALLBACK_COVERS = {
+  choisir: "/images/guides/card-interior-living-room.jpg", comparer: "/images/guides/card-outdoor-unit.jpg", prix: "/images/guides/card-interior-living-room.jpg",
+  subventions: "/images/guides/guide-hero-bg.jpg", installation: "/images/guides/card-outdoor-unit.jpg", entretien: "/images/guides/card-outdoor-unit.jpg",
+};
 const TODAY = new Date().toLocaleDateString("en-CA", { timeZone: "America/Toronto" });
 
 // Secrets locaux (.env.local) si présents ; sur le VPS, shared/.env est déjà chargé par le robot de nuit.
@@ -92,6 +101,28 @@ CONTEXTE FACTUEL (seule source de chiffres autorisée)
 ${JSON.stringify(ctx)}
 ${errors ? `\nTA VERSION PRÉCÉDENTE A ÉTÉ REFUSÉE POUR CES RAISONS, CORRIGE-LES :\n- ${errors.join("\n- ")}` : ""}
 Écris l'article maintenant.`;
+}
+
+async function askGemini(errors) {
+  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`, {
+    method: "POST",
+    headers: { "content-type": "application/json", "x-goog-api-key": process.env.GEMINI_API_KEY },
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: system }] },
+      contents: [{ role: "user", parts: [{ text: userPrompt(errors) }] }],
+      generationConfig: { temperature: 0.6, maxOutputTokens: 8192 },
+    }),
+  });
+  if (!res.ok) throw new Error(`Gemini ${res.status} : ${(await res.text()).slice(0, 300)}`);
+  const data = await res.json();
+  const text = (data.candidates?.[0]?.content?.parts ?? []).filter((p) => p.text && !p.thought).map((p) => p.text).join("");
+  const cleaned = text.replace(/^```(?:markdown|md)?\s*/i, "").replace(/\s*```\s*$/, "");
+  const start = cleaned.indexOf("---");
+  return start >= 0 ? cleaned.slice(start) : cleaned;
+}
+
+async function askModel(errors) {
+  return TEXT_PROVIDER === "anthropic" ? askClaude(errors) : askGemini(errors);
 }
 
 async function askClaude(errors) {
@@ -175,14 +206,14 @@ async function generateImage(prompt, slug) {
 
 // ---- Exécution ----
 (async () => {
-  if (!process.env.ANTHROPIC_API_KEY) { log("ANTHROPIC_API_KEY absente : arrêt."); process.exit(2); }
-  if (!process.env.OPENAI_API_KEY && !process.env.GEMINI_API_KEY) { log("Aucune clé d'images (OPENAI_API_KEY ou GEMINI_API_KEY) : arrêt, pas d'article sans photo générée."); process.exit(2); }
+  if (!TEXT_PROVIDER) { log("Aucune clé de rédaction (ANTHROPIC_API_KEY ou GEMINI_API_KEY) : arrêt."); process.exit(2); }
+  log(`Rédaction : ${TEXT_PROVIDER} (${MODEL})`);
 
-  let md = await askClaude();
+  let md = await askModel();
   let v = validate(md);
   if (v.errors.length) {
     log(`Première version refusée : ${v.errors.join(" | ")} ; nouvel essai.`);
-    md = await askClaude(v.errors);
+    md = await askModel(v.errors);
     v = validate(md);
     if (v.errors.length) { log(`Deuxième version refusée : ${v.errors.join(" | ")}. Abandon.`); process.exit(1); }
   }
@@ -190,8 +221,16 @@ async function generateImage(prompt, slug) {
   const d = parsed.data;
   log(`Article accepté : « ${d.title} », ${words} mots.`);
 
-  const cover = DRY ? "/images/guides/guide-hero-bg.jpg" : await generateImage(d.imagePrompt, topic.slug);
-  if (!DRY) log(`Photo générée : ${cover}`);
+  // Photo : générée si une clé d'images répond, sinon une couverture du site (l'article n'attend pas la photo).
+  let cover = FALLBACK_COVERS[d.category] ?? "/images/guides/guide-hero-bg.jpg";
+  if (!DRY && (process.env.OPENAI_API_KEY || process.env.GEMINI_API_KEY)) {
+    try {
+      cover = await generateImage(d.imagePrompt, topic.slug);
+      log(`Photo générée : ${cover}`);
+    } catch (e) {
+      log(`Photo non générée (${e.message.slice(0, 160)}) : couverture de secours ${cover}.`);
+    }
+  }
 
   const front = {
     title: d.title,
