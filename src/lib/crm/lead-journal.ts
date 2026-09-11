@@ -26,6 +26,9 @@ export interface JournalEntry {
     error?: string;
     alertEmail?: boolean;
     clientEmail?: boolean;
+    /** Rendez-vous : état de l'agenda Google et lien Meet obtenu. */
+    agenda?: string;
+    meetLink?: string | null;
   };
 }
 

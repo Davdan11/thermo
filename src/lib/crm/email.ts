@@ -15,11 +15,19 @@ import { Resend } from "resend";
 import { escapeHtml } from "@/lib/security/escape";
 import { getWelcomeEmailHTML, type WelcomeEmailData } from "./templates/welcome-email";
 import { getRdvEmailHTML, type RdvEmailData } from "./templates/rdv-email";
+import { getBookingEmailHTML, bookingEmailSubject, type BookingEmailData } from "./templates/booking-email";
 
 const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "info@thermopompesavendre.ca";
 const SENDER_ADDRESS = process.env.SMTP_USER || process.env.EMAIL_FROM || "info@thermopompesavendre.ca";
 const FROM_TEAM = `Thermopompes À Vendre <${SENDER_ADDRESS}>`;
 const FROM_THERMOMATCH = `L'équipe ThermoMatch <${SENDER_ADDRESS}>`;
+
+export interface MailAttachment {
+  filename: string;
+  /** Contenu en clair (ex. fichier .ics). */
+  content: string;
+  contentType?: string;
+}
 
 interface Mail {
   from: string;
@@ -27,6 +35,7 @@ interface Mail {
   subject: string;
   html: string;
   replyTo?: string;
+  attachments?: MailAttachment[];
 }
 
 type Transport = { name: string; send: (m: Mail) => Promise<void> } | null;
@@ -50,7 +59,10 @@ function getTransport(): Transport {
     transport = {
       name: "smtp",
       send: async (m) => {
-        await smtp.sendMail({ from: m.from, to: m.to, subject: m.subject, html: m.html, replyTo: m.replyTo });
+        await smtp.sendMail({
+          from: m.from, to: m.to, subject: m.subject, html: m.html, replyTo: m.replyTo,
+          attachments: m.attachments?.map((a) => ({ filename: a.filename, content: a.content, contentType: a.contentType })),
+        });
       },
     };
   } else if (process.env.RESEND_API_KEY) {
@@ -58,7 +70,10 @@ function getTransport(): Transport {
     transport = {
       name: "resend",
       send: async (m) => {
-        const r = await resend.emails.send({ from: m.from, to: [m.to], subject: m.subject, html: m.html, replyTo: m.replyTo });
+        const r = await resend.emails.send({
+          from: m.from, to: [m.to], subject: m.subject, html: m.html, replyTo: m.replyTo,
+          attachments: m.attachments?.map((a) => ({ filename: a.filename, content: Buffer.from(a.content).toString("base64") })),
+        });
         if (r.error) throw new Error(r.error.message);
       },
     };
@@ -143,6 +158,10 @@ export interface InternalMessage {
   subject: string;
   replyTo?: string;
   lines: Array<[string, string]>;
+  /** Bandeau d'avertissement en tête (ex. CRM non synchronisé, lien Meet à créer). */
+  warning?: string;
+  links?: Array<[string, string]>;
+  attachments?: MailAttachment[];
 }
 
 /** Message générique vers l'équipe (contact, candidature, rendez-vous). Retourne false si l'envoi est impossible. */
@@ -153,7 +172,8 @@ export async function sendInternalMessage(msg: InternalMessage): Promise<boolean
     to: NOTIFICATION_EMAIL,
     replyTo: msg.replyTo,
     subject: msg.subject,
-    html: `<h2>${e(msg.subject)}</h2><ul>${msg.lines.map(([k, v]) => `<li><strong>${e(k)} :</strong> ${e(v).replace(/\n/g, "<br/>")}</li>`).join("")}</ul>`,
+    attachments: msg.attachments,
+    html: `<h2>${e(msg.subject)}</h2>${msg.warning ? `<p style="color:#b00"><strong>${e(msg.warning)}</strong></p>` : ""}<ul>${msg.lines.map(([k, v]) => `<li><strong>${e(k)} :</strong> ${e(v).replace(/\n/g, "<br/>")}</li>`).join("")}</ul>${msg.links?.length ? `<p>${msg.links.map(([label, href]) => `<a href="${e(href)}">${e(label)}</a>`).join(" &nbsp;·&nbsp; ")}</p>` : ""}`,
   });
 }
 
@@ -172,6 +192,17 @@ export async function sendClientRdvEmail(email: string, data: RdvEmailData): Pro
     to: email,
     subject: "Confirmation de votre rendez-vous ThermoMatch",
     html: getRdvEmailHTML(data),
+  });
+}
+
+/** Confirmation d'un rendez-vous réservé sur /rendez-vous (appel, Google Meet ou visite), avec le fichier .ics. */
+export async function sendClientBookingEmail(email: string, data: BookingEmailData, ics?: string): Promise<boolean> {
+  return deliver("courriel client (rendez-vous)", {
+    from: FROM_TEAM,
+    to: email,
+    subject: bookingEmailSubject(data),
+    html: getBookingEmailHTML(data),
+    attachments: ics ? [{ filename: `rendez-vous-${data.id}.ics`, content: ics, contentType: "text/calendar; charset=utf-8; method=PUBLISH" }] : undefined,
   });
 }
 

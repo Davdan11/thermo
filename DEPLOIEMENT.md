@@ -77,3 +77,34 @@ Journal : `/var/log/thermo-logisvert-bot.log`. Lancement manuel : `bash /var/www
 - Anti-doublon : `$LEAD_JOURNAL_DIR/pipedrive-courriels.json` (une clé par affaire et par étape). Supprimer l'entrée pour renvoyer un courriel.
 - Aperçu des gabarits hors production : `http://localhost:3000/api/webhooks/pipedrive/apercu` (en production, ajouter `?cle=<PIPEDRIVE_WEBHOOK_PASSWORD>`).
 - Envoi par le relais SMTP Google Workspace (`SMTP_HOST=smtp-relay.gmail.com`), voir la section courriels.
+- Le relais n'autorise que l'IPv4 du VPS (31.97.98.22) ; en IPv6 il répond « Invalid credentials for relay ». `ecosystem.config.js` force donc `NODE_OPTIONS=--dns-result-order=ipv4first`. Ne pas retirer cette option, sinon plus aucun courriel ne part.
+
+## Rendez-vous en ligne, Google Agenda et Google Meet
+
+La page `/rendez-vous` propose trois formats : **appel téléphonique** (30 min), **rencontre en ligne**
+(Google Meet, 45 min) et **visite à domicile** par l'équipe (plage de 2 h, secteurs Montréal, Laval,
+Rive-Nord, Rive-Sud, Lanaudière). Moteur : `src/lib/rdv/booking.ts` (conseillers, horaires, plages,
+dates fermées, secteurs par code postal), réservations dans `shared/data/rendez-vous.json`.
+
+Pour chaque réservation : journal des leads, événement dans l'agenda Google du conseiller (`email` dans
+`ADVISORS`, sinon `GOOGLE_CALENDAR_USER`) avec lien Meet pour une rencontre en ligne, affaire et activité
+datée dans Pipedrive, alerte à l'équipe et confirmation au client avec fichier `.ics`. Si l'agenda Google
+n'est pas configuré, le client est prévenu que le lien Meet suivra et l'alerte le signale en rouge.
+
+Mise en place de Google Agenda, une seule fois (environ 15 minutes) :
+
+1. **Google Cloud** (console.cloud.google.com) : créer un projet, puis *API et services → Bibliothèque →
+   Google Calendar API → Activer*.
+2. *IAM et administration → Comptes de service → Créer* (nom `rendez-vous`). Ouvrir le compte, onglet
+   *Clés → Ajouter une clé → JSON*. Noter `client_email`, `private_key` et l'« ID client » (21 chiffres).
+3. **Console d'administration Workspace** (admin.google.com) : *Sécurité → Contrôle des accès et des données
+   → Commandes API → Délégation au niveau du domaine → Ajouter* : l'ID client et le champ d'application
+   `https://www.googleapis.com/auth/calendar.events`.
+4. Dans `shared/.env` : `GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_SERVICE_ACCOUNT_KEY` (la `private_key`
+   telle quelle, entre guillemets, ou encodée en base64), `GOOGLE_CALENDAR_USER` (agenda par défaut).
+   Puis `pm2 restart thermo --update-env`.
+5. Vérifier : `node scripts/verifier-google-agenda.mjs` dans `current/` (crée puis supprime un événement test
+   avec lien Meet). Renseigner ensuite `email` pour chaque conseiller dans `src/lib/rdv/booking.ts`.
+
+Erreurs fréquentes (`pm2 logs thermo`) : `unauthorized_client` (délégation absente ou mauvais champ
+d'application), `invalid_grant` (clé ou horloge), `403 Calendar API has not been used` (API non activée).

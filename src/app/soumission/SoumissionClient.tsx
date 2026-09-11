@@ -348,6 +348,10 @@ export default function SoumissionPage() {
                 {rdvState === "error" && (
                   <p style={{ margin: "10px 0 0", fontSize: 13, color: "#b42318" }}>La réservation n&apos;a pas pu être enregistrée. Appelez-nous au 438-900-3224 et nous fixerons le moment ensemble.</p>
                 )}
+                <p style={{ margin: "14px 0 0", fontSize: 13.5, color: "#536873", lineHeight: 1.55 }}>
+                  Vous préférez une heure précise, une rencontre en ligne sur Google Meet ou une visite à domicile ?{" "}
+                  <Link href="/rendez-vous" style={{ color: ORANGE, fontWeight: 700, textDecoration: "none" }}>Réserver dans le calendrier</Link>.
+                </p>
               </>
             )}
           </div>

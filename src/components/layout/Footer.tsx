@@ -17,6 +17,7 @@ const NAV = [
       { href: "/thermopompe", label: "Thermopompe par ville" },
       { href: "/comparer", label: "Comparer les modèles" },
       { href: "/soumission", label: "Trouver un installateur" },
+      { href: "/rendez-vous", label: "Prendre rendez-vous" },
     ],
   },
   {

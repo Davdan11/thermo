@@ -195,6 +195,42 @@ export async function createActivity(deal_id: number, person_id: number, type: "
   return res.data;
 }
 
+export interface TimedActivityInput {
+  dealId: number;
+  personId?: number;
+  type: "call" | "meeting";
+  subject: string;
+  /** AAAA-MM-JJ et HH:MM en UTC (attendu par Pipedrive). */
+  dueDate: string;
+  dueTime: string;
+  durationMin: number;
+  location?: string;
+  note?: string;
+}
+
+/** Activité datée (appel ou réunion) sur une affaire. Ne lance jamais. */
+export async function createTimedActivity(a: TimedActivityInput): Promise<{ ok: true; activityId: number | null } | { ok: false; error: string }> {
+  if (!apiToken()) return { ok: false, error: "non-configure" };
+  try {
+    const h = String(Math.floor(a.durationMin / 60)).padStart(2, "0");
+    const m = String(a.durationMin % 60).padStart(2, "0");
+    const act = await apiCall<{ id: number }>("/activities", "POST", {
+      subject: a.subject,
+      type: a.type,
+      deal_id: a.dealId,
+      ...(a.personId ? { person_id: a.personId } : {}),
+      due_date: a.dueDate,
+      due_time: a.dueTime,
+      duration: `${h}:${m}`,
+      ...(a.location ? { location: a.location } : {}),
+      ...(a.note ? { note: a.note } : {}),
+    });
+    return { ok: true, activityId: act.data?.id ?? null };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : String(e) };
+  }
+}
+
 /** Appel planifié par le client depuis le site : activité « call » datée sur l'affaire, plus une note. Ne lance jamais. */
 export async function scheduleCall(dealId: number, slot: { date: string; dueTime: string; subject: string; note: string }): Promise<{ ok: true; activityId: number | null } | { ok: false; reason: "non-configure" | "erreur"; error?: string }> {
   if (!apiToken()) return { ok: false, reason: "non-configure" };

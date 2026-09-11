@@ -57,3 +57,6 @@ public/images/marques/_candidats/
 public/images/products/_official-sources/**
 !public/images/products/_official-sources/*/
 !public/images/products/_official-sources/*/SOURCES.json
+
+# réservations de rendez-vous (données locales ; shared/data sur le VPS)
+/data/rendez-vous.json

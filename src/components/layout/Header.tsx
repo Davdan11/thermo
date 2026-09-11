@@ -18,6 +18,7 @@ const NAV_LINKS = [
   { href: "/comparer", label: "Comparer" },
   { href: "/subventions", label: "Subventions" },
   { href: "/guides", label: "Guides" },
+  { href: "/rendez-vous", label: "Rendez-vous" },
 ] as const;
 
 /* ----------------------------------------------------------
