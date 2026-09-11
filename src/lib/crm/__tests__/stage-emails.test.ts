@@ -30,7 +30,7 @@ describe("courriels d'étape Pipedrive", () => {
       const { subject, html } = tpl(ctx);
       expect(subject.length, name).toBeGreaterThan(8);
       expect(html).toContain("Bonjour Marie,");
-      expect(html).toContain("headerlogo-720.webp");
+      expect(html).toContain("logo-thermopompes-a-vendre.png");
       expect(html).toContain("438-900-3224");
       expect(html).toContain("info@thermopompesavendre.ca");
       expect(html).toContain("STOP");

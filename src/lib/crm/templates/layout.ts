@@ -12,7 +12,7 @@ export const BRAND = {
   phone: "438-900-3224",
   phoneHref: "tel:4389003224",
   email: "info@thermopompesavendre.ca",
-  logo: `${SITE_URL}/images/headerlogo-720.webp`,
+  logo: `${SITE_URL}/images/email/logo-thermopompes-a-vendre.png`,
   orange: "#e54b17",
   navy: "#0C1821",
   ink: "#172126",
