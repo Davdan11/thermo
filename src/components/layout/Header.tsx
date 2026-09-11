@@ -11,16 +11,27 @@ import { SiteSearch } from "./SiteSearch";
    Navigation data
    ---------------------------------------------------------- */
 
-const NAV_LINKS = [
+type NavLink = { href: string; label: string; logo?: string; /** Affiché dans la barre seulement sur les très grands écrans (toujours dans le menu mobile). */ wide?: boolean };
+const NAV_LINKS: NavLink[] = [
   { href: "/thermopompes", label: "Thermopompes" },
   { href: "/marques", label: "Marques" },
-  { href: "/meilleures-thermopompes", label: "Classements" },
+  { href: "/meilleures-thermopompes", label: "Classements", wide: true },
   { href: "/comparer", label: "Comparer" },
   { href: "/subventions", label: "Subventions" },
   { href: "/guides", label: "Guides" },
-  { href: "/thermoscan", label: "ThermoScan" },
+  // Le logo ThermoScan (blanc + orange) sur une pastille marine, à la place du texte.
+  { href: "/thermoscan", label: "ThermoScan", logo: "/images/thermoscan-logo.webp" },
   { href: "/rendez-vous", label: "Rendez-vous" },
-] as const;
+];
+
+function NavLabel({ link, height }: { link: NavLink; height: number }) {
+  if (!link.logo) return <>{link.label}</>;
+  return (
+    <span style={{ display: "inline-flex", alignItems: "center", background: "#0C1821", borderRadius: 999, padding: `${Math.round(height * 0.3)}px ${Math.round(height * 0.65)}px`, lineHeight: 0 }}>
+      <img src={link.logo} alt={link.label} width={900} height={325} style={{ height, width: "auto", display: "block" }} />
+    </span>
+  );
+}
 
 /* ----------------------------------------------------------
    Header
@@ -101,24 +112,26 @@ export function Header() {
               <img 
                 src="/images/headerlogo-720.webp" 
                 alt="Thermopompes A Vendre" 
-                style={{ height: 72, width: "auto", display: "block" }}
+                className="h-[60px] 2xl:h-[72px]"
+                style={{ width: "auto", display: "block" }}
               />
             </Link>
 
             {/* ── Desktop Navigation ── */}
             <nav
-              className="hidden lg:flex items-center gap-1"
+              className="hidden xl:flex items-center gap-0.5"
               aria-label="Navigation principale"
             >
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
+                  className={link.wide ? "hidden 2xl:inline-flex" : "inline-flex"}
                   style={{
                     color: isActive(link.href) ? "#0b1b24" : "#536873",
-                    fontSize: 15,
+                    fontSize: 14.5,
                     fontWeight: 500,
-                    padding: "8px 16px",
+                    padding: "8px 10px",
                     textDecoration: "none",
                     transition: "color 0.15s",
                     position: "relative" as const,
@@ -126,21 +139,21 @@ export function Header() {
                   onMouseEnter={(e) => (e.currentTarget.style.color = "#0b1b24")}
                   onMouseLeave={(e) => (e.currentTarget.style.color = isActive(link.href) ? "#0b1b24" : "#536873")}
                 >
-                  {link.label}
+                  <NavLabel link={link} height={15} />
                 </Link>
               ))}
             </nav>
 
             {/* ── Right: CTA + Mobile toggle ── */}
             <div className="flex items-center gap-2 sm:gap-3">
-              <div className="hidden lg:flex"><SiteSearch /></div>
+              <div className="hidden 2xl:flex"><SiteSearch /></div>
               <a
                 href="tel:4389003224"
                 aria-label="Appeler le 438-900-3224"
-                className="inline-flex items-center gap-2 rounded-full border border-[#0b1b24]/15 px-3 py-2 text-[14px] font-semibold text-[#0b1b24] no-underline whitespace-nowrap hover:bg-[#f7f5f0] transition-colors"
+                className="hidden 2xl:inline-flex items-center gap-2 rounded-full border border-[#0b1b24]/15 px-3 py-2 text-[14px] font-semibold text-[#0b1b24] no-underline whitespace-nowrap hover:bg-[#f7f5f0] transition-colors"
               >
                 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>
-                <span className="hidden xl:inline">438-900-3224</span>
+                <span>438-900-3224</span>
               </a>
               <div className="hidden sm:block">
                 <Link
@@ -159,7 +172,7 @@ export function Header() {
               {/* Hamburger */}
               <button
                 onClick={toggleMenu}
-                className="lg:hidden"
+                className="xl:hidden"
                 style={{ background: "none", border: "none", color: "#0b1b24", cursor: "pointer", padding: 8 }}
                 aria-expanded={menuOpen}
                 aria-controls="mobile-menu"
@@ -184,7 +197,7 @@ export function Header() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="fixed inset-x-0 bottom-0 z-40 bg-surface overflow-y-auto lg:hidden border-t border-border"
+          className="fixed inset-x-0 bottom-0 z-40 bg-surface overflow-y-auto xl:hidden border-t border-border"
           style={{ top: `${headerHeight}px` }}
           role="dialog"
           aria-modal="true"
@@ -205,7 +218,7 @@ export function Header() {
                       : "text-foreground hover:bg-background",
                   )}
                 >
-                  {link.label}
+                  <NavLabel link={link} height={17} />
                 </Link>
               ))}
             </nav>

@@ -23,6 +23,7 @@ export function thermoScanEmailSubject(d: ThermoScanEmailData): string {
 export function getThermoScanEmailHTML(d: ThermoScanEmailData): string {
   const age = d.year ? new Date().getFullYear() - d.year : null;
   const body =
+    `<p style="margin:0 0 18px;"><img src="${SITE_URL}/images/email/thermoscan-logo.png" alt="ThermoScan" width="224" style="display:block;width:224px;height:auto;border:0;border-radius:8px;"></p>` +
     p(`Voici la fiche de votre thermopompe actuelle, telle que ${strong("ThermoScan")} l'a lue sur l'étiquette${d.inCatalog ? " et retrouvée dans le catalogue ENERGY STAR Canada" : ""}.`) +
     box("Votre appareil", [
       ["Marque", d.brand],

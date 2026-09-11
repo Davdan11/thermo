@@ -10,7 +10,7 @@ export function ThermoScanEntryCard() {
     >
       <div className="flex items-center justify-between gap-4 px-5 py-4">
         <div className="flex items-center gap-4">
-          <img src="/images/thermoscan-logo.webp" alt="ThermoScan" style={{ height: 30, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.9 }} />
+          <img src="/images/thermoscan-logo.webp" alt="ThermoScan" style={{ height: 30, width: "auto" }} />
           <span className="text-white/50 text-sm">
             Comparez avec votre appareil actuel
           </span>
