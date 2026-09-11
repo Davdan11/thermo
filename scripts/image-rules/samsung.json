@@ -6,5 +6,7 @@
   { "brand": "samsung", "pattern": "^AJ0(20|24|36|48)BXJ\\dCH", "series": "/images/products/official/samsung-fjm-officiel.webp", "note": "FJM Heat Pump 2021 (samsunghvac.com/fjm-2021/FJM-2021-ODU) : la page montre cette photo d'unité extérieure" },
   { "brand": "samsung", "pattern": "^AJ0(20|24|30|36)CXS\\dCH", "series": "/images/products/official/samsung-fjm-officiel.webp", "note": "FJM Max Heat 2023 (samsunghvac.com/fjm-2021/FJM-MH-2023) : la page montre cette photo d'unité extérieure" },
   { "brand": "samsung", "pattern": "^AJ0(20|24|30|36)BXS\\dCH", "series": "/images/products/official/samsung-fjm-officiel.webp", "note": "FJM Max Heat 2021 (samsunghvac.com/fjm-2021/FJM-2021-MH-ODU) : la page montre cette photo d'unité extérieure" },
-  { "brand": "samsung", "pattern": "^AM0(36|48|60)FCMDCG", "series": "/images/products/official/samsung-dvm-s-mini-r32-officiel.webp", "note": "DVM S Mini R32 (samsunghvac.com/light-commercial/dvm-s-mini) : image « R32-DVM-S-Mini-large » de la page" }
+  { "brand": "samsung", "pattern": "^AM0(36|48|60)FCMDCG", "series": "/images/products/official/samsung-dvm-s-mini-r32-officiel.webp", "note": "DVM S Mini R32 (samsunghvac.com/light-commercial/dvm-s-mini) : image « R32-DVM-S-Mini-large » de la page" },
+  { "brand": "samsung", "pattern": "^AR36DXFUMGMX", "series": "/images/products/official/samsung-36k-max-odu-officiel.webp", "note": "36K R32 (samsunghvac.com/residential/36k) : la page liste AR36DXFUMGMNCV / AR36DXFUMGMXCV et montre l'unité extérieure « 2021_Max_ODU »" },
+  { "brand": "samsung", "pattern": "^AM036NXMDCR", "series": "/images/products/official/samsung-dvm-s-eco-officiel.webp", "note": "DVM S Eco R-410A (samsunghvac.com/light-commercial/dvm-s-eco) : la page nomme AM036NXMDCR/AA" }
 ]

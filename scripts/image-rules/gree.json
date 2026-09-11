@@ -148,5 +148,59 @@
   "pattern": "^VIR(09|12|18|24|30|36)HP(115|230)V1[AB]O",
   "series": "/images/products/official/gree-vireo-plus-officiel.webp",
   "note": "Vireo+ R410A (greecomfort.com/assets/our-products/vireo-plus/, page archivée ; catalogue de pièces vireo-plus-parts-ab.pdf listant VIR09…36HP…V1AO/BO)"
+ },
+ {
+  "brand": "gree",
+  "pattern": "^MULTI18HP230V1CO$",
+  "series": "/images/products/official/gree-multi21-plus-18k-officiel.webp",
+  "note": "Multi21+ 18k (greecomfort.com/our-products/multi21-plus) : photo de la fiche de soumission multi21-plus-submittal-18mbh-c.pdf"
+ },
+ {
+  "brand": "gree",
+  "pattern": "^MULTI24HP230V1CO$",
+  "series": "/images/products/official/gree-multi21-plus-24k-officiel.webp",
+  "note": "Multi21+ 24k (greecomfort.com/our-products/multi21-plus) : photo de la fiche de soumission multi21-plus-submittal-24mbh-c.pdf"
+ },
+ {
+  "brand": "gree",
+  "pattern": "^MULTI30HP230V1CO$",
+  "series": "/images/products/official/gree-multi21-plus-30k-officiel.webp",
+  "note": "Multi21+ 30k (greecomfort.com/our-products/multi21-plus) : photo de la fiche de soumission multi21-plus-submittal-30mbh-c.pdf"
+ },
+ {
+  "brand": "gree",
+  "pattern": "^MULTI36HP230V1CO$",
+  "series": "/images/products/official/gree-multi21-plus-36k-officiel.webp",
+  "note": "Multi21+ 36k (greecomfort.com/our-products/multi21-plus) : photo de la fiche de soumission multi21-plus-submittal-36mbh-c.pdf"
+ },
+ {
+  "brand": "gree",
+  "pattern": "^MULTI42HP230V1CO$",
+  "series": "/images/products/official/gree-multi21-plus-42k-officiel.webp",
+  "note": "Multi21+ 42k (greecomfort.com/our-products/multi21-plus) : photo de la fiche de soumission multi21-plus-submittal-42mbh-c.pdf"
+ },
+ {
+  "brand": "gree",
+  "pattern": "^WLWH(09|12)AGCXD-D3DNA1A/O$|^WLWH24AGEXH-D3DNA1A/O$",
+  "series": "/images/products/official/gree-truenorth-pular-officiel.webp",
+  "note": "TrueNorth by Gree PULAR 25 SEER R410A (truenorthbygree.ca/r410a-mini-split) : fiches de soumission WLWH09/12AGCXD-D3DNA1A/O, WLWH24AGEXH-D3DNA1A/O"
+ },
+ {
+  "brand": "gree",
+  "pattern": "^WLUD36W/A-D\\(U\\)$",
+  "series": "/images/products/official/gree-truenorth-cold-climate-2-3t-officiel.webp",
+  "note": "TrueNorth by Gree Cold Climate R410A 2-3 t (truenorthbygree.ca/cold-climate) : WLUD36W/A-D(U)"
+ },
+ {
+  "brand": "gree",
+  "pattern": "^WLUD60W/A-D\\(U\\)$",
+  "series": "/images/products/official/gree-truenorth-cold-climate-4-5t-officiel.webp",
+  "note": "TrueNorth by Gree Cold Climate R410A 4-5 t (truenorthbygree.ca/cold-climate) : WLUD60W/A-D(U)"
+ },
+ {
+  "brand": "gree",
+  "pattern": "^WLUD(24|30|36|42|48|60)W2/D-D\\(U\\)$",
+  "series": "/images/products/official/gree-truenorth-eco-officiel.webp",
+  "note": "TrueNorth by Gree ECO R410A (truenorthbygree.ca/eco) : WLUD24…60W2/D-D(U), brochure ECO FR p. 2"
  }
 ]

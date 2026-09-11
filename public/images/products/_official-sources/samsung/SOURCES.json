@@ -25,5 +25,27 @@
     "famille": "DVM S Mini R32",
     "modeles": ["AM036FCMDCG", "AM048FCMDCG", "AM060FCMDCG", "AM060FCMDCG1"],
     "note": "Image de la page produit (badge R-32 recadré). Web : official/samsung-dvm-s-mini-r32-officiel.webp"
+  },
+  {
+    "fichier": "samsung-36k-max-odu-officiel.png",
+    "url": "https://res.cloudinary.com/govimg/image/upload/v1647447141/5b294f9467c0d0489028b276/2021_Max_ODU.png",
+    "page": "https://www.samsunghvac.com/residential/36k",
+    "date": "2026-09-10",
+    "famille": "36K (monozone murale 36 000 BTU, R32)",
+    "modeles": [
+      "AR36DXFUMGMX"
+    ],
+    "note": "Image « Outdoor Unit » de la page 36K, dont les modèles sont AR36DXFUMGMNCV / AR36DXFUMGMXCV (système AR36DXFUMGMX). Photo de 330 px seulement. Web : official/samsung-36k-max-odu-officiel.webp"
+  },
+  {
+    "fichier": "samsung-dvm-s-eco-side-view-officiel.png",
+    "url": "https://res.cloudinary.com/govimg/image/upload/v1549918769/5b294f9467c0d0489028b276/dvm-s-eco-side-view.png",
+    "page": "https://www.samsunghvac.com/light-commercial/dvm-s-eco",
+    "date": "2026-09-10",
+    "famille": "DVM S Eco (R-410A)",
+    "modeles": [
+      "AM036NXMDCR"
+    ],
+    "note": "Photo « side view » de la page DVM S Eco ; seul AM036NXMDCR/AA est nommé sur la page (3 t). Les 4 / 4,5 / 5 t (AM048/053/060NXMDCR) ne sont pas nommés : non associés. Web : official/samsung-dvm-s-eco-officiel.webp"
   }
 ]

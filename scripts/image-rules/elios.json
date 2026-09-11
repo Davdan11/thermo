@@ -8,5 +8,7 @@
   { "brand": "elios", "pattern": "^DEA(18|24|30|36|48|60)HOS20230E7$", "series": "/images/products/official/elios-central-elios-2024-exterieure-officielle.webp" },
   { "brand": "elios", "pattern": "^ESHMA(24|30|48|60)R2AN1$|^ESHMB36R2AN1$", "series": "/images/products/official/elios-central-elios-r454b-exterieure-officielle.webp" },
   { "brand": "elios", "pattern": "^ESHMA(09|12|18|24|33)C2AN1$", "series": "/images/products/official/elios-emc-exterieure-officielle.webp" },
-  { "brand": "elios", "pattern": "^ESHBA(09|12|18|24|30|36)C[12]AN1$", "series": "/images/products/official/elios-ebc-exterieure-officielle.webp" }
+  { "brand": "elios", "pattern": "^ESHBA(09|12|18|24|30|36)C[12]AN1$", "series": "/images/products/official/elios-ebc-exterieure-officielle.webp" },
+  { "brand": "elios", "pattern": "^ESHEA(09|12|18|24)C2AN1$|^ESHEA(18|24|30|36)R2AN1$|^ESHUA36R2AN1$", "series": "/images/products/official/elios-exterieure-r454b-master-officielle.webp" },
+  { "brand": "elios", "pattern": "^EXHSA(1832AN1|2742AV1|3652AV1|4862AV1)$", "series": "/images/products/official/elios-multizone-exhsa-exterieure-officielle.webp" }
 ]

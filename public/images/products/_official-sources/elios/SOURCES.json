@@ -72,6 +72,20 @@
       "page_source": "brochure Elios EBC (FR, 2025-09), images p. 1",
       "modeles": "ESHBA12C1AN1, ESHBA09/12/18/24/30/36C2AN1",
       "image_web": "/images/products/official/elios-ebc-exterieure-officielle.webp, /images/products/official/elios-ebc-interieure-officielle.webp"
+    },
+    {
+      "fichier": "elios-exterieure-r454b-master-ca.jpg",
+      "url": "https://www.master.ca/media/catalog/product/E/l/Elios_Outdoor_r454b_c9f1.jpg",
+      "page_source": "fiches produit master.ca (Le Groupe Master, propriétaire de la marque), p. ex. https://www.master.ca/consommateur/unite-de-thermopompe-exterieure-elios-9-000-btu-h-230-v-eshea09c2an1-eshea09c2an1 ; même photo (og:image) sur les fiches ESHEA12/18/24C2AN1, ESHEA18/24/30/36R2AN1, ESHUA36/48/60R2AN1",
+      "modeles": "ESHEA09/12/18/24C2AN1, ESHEA18/24/30/36R2AN1, ESHUA36R2AN1 (ESHUA48/60R2AN1 : même photo sur master.ca mais châssis 4-5 t probablement à deux ventilateurs, non associés par prudence)",
+      "image_web": "/images/products/official/elios-exterieure-r454b-master-officielle.webp"
+    },
+    {
+      "fichier": "elios-multizone-exhsa-master-ca.jpg",
+      "url": "https://www.master.ca/media/catalog/product/E/l/Elios_16972699_088c.jpg",
+      "page_source": "fiches produit master.ca : https://www.master.ca/consommateur/unite-exterieure-multizone-avec-thermopompe-elios-18-000-btu-h-exhsa1832an1 ; même photo (og:image) sur les fiches EXHSA2742AV1, EXHSA3652AV1, EXHSA4862AV1. Photo de 400 px.",
+      "modeles": "EXHSA1832AN1, EXHSA2742AV1, EXHSA3652AV1, EXHSA4862AV1",
+      "image_web": "/images/products/official/elios-multizone-exhsa-exterieure-officielle.webp"
     }
   ],
   "brochures_consultees_sans_photo_exploitable": [
