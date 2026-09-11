@@ -128,11 +128,12 @@ export interface Advisor {
 // le rendez-vous est créé dans l'agenda du conseiller ; sinon dans celui de GOOGLE_CALENDAR_USER.
 export const ADVISORS: Advisor[] = [
   {
-    id: "equipe",
-    name: "Conseiller Thermopompes À Vendre",
-    email: null,
+    id: "david",
+    name: "David",
+    // Agenda Google Workspace qui reçoit les rendez-vous et les liens Meet.
+    email: "info@thermopompesavendre.ca",
     areas: AREAS.map((a) => a.slug),
-    schedule: { ...WEEK },
+    schedule: { ...WEEK }, // lundi au vendredi, 8 h à 17 h
   },
 ];
 
