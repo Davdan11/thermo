@@ -1,14 +1,15 @@
 /* ==================================================================
-   POST /api/webhooks/pipedrive — changement d'étape d'une affaire
+   POST /api/webhooks/pipedrive — affaire mise à jour (changement
+   d'étape, affaire perdue) → courriel client personnalisé.
    Protégé par authentification HTTP Basic (configurée dans Pipedrive :
    Webhooks → HTTP Auth). Variables : PIPEDRIVE_WEBHOOK_USER / _PASSWORD.
    Sans ces variables en production, tout appel est refusé.
+   La logique est dans src/lib/crm/stage-emails.ts.
    ================================================================== */
 
 import { NextResponse } from "next/server";
 import { timingSafeEqual } from "node:crypto";
-import { sendClientRdvEmail } from "@/lib/crm/email";
-import { stageRdvConfirmeId } from "@/lib/crm/pipedrive";
+import { handleDealChange, type WebhookDeal } from "@/lib/crm/stage-emails";
 
 function authorized(request: Request): boolean {
   const user = process.env.PIPEDRIVE_WEBHOOK_USER;
@@ -31,21 +32,17 @@ export async function POST(request: Request) {
   if (!authorized(request)) return new Response("Unauthorized", { status: 401, headers: { "WWW-Authenticate": "Basic" } });
 
   try {
-    const body = await request.json();
-    if (body?.meta?.action !== "updated" || body?.meta?.object !== "deal") {
+    const body = (await request.json()) as { meta?: { action?: string; object?: string; entity?: string }; current?: WebhookDeal; previous?: WebhookDeal | null; data?: WebhookDeal };
+    // v1 : meta.object = "deal", current/previous ; v2 : meta.entity = "deal", data/previous.
+    const object = body?.meta?.object ?? body?.meta?.entity;
+    const action = body?.meta?.action;
+    const current = body?.current ?? body?.data;
+    if (object !== "deal" || (action !== "updated" && action !== "change") || !current?.id) {
       return NextResponse.json({ success: true, message: "Événement ignoré" });
     }
-    const { current, previous } = body;
-    const rdvStage = stageRdvConfirmeId();
-    const justMovedToRdv = current?.stage_id === rdvStage && previous?.stage_id !== rdvStage;
-
-    if (justMovedToRdv) {
-      const personName: string = current.person_name || "Client";
-      const personEmail: string | undefined = current.person_id?.email?.[0]?.value;
-      if (personEmail) await sendClientRdvEmail(personEmail, { firstName: personName.split(" ")[0] });
-      else console.log(`[webhook pipedrive] affaire ${current.id} en RDV sans courriel.`);
-    }
-    return NextResponse.json({ success: true });
+    const result = await handleDealChange(current, body.previous ?? null);
+    if (result.action !== "ignore") console.log(`[webhook pipedrive] affaire ${current.id} : ${result.action}${result.key ? ` (${result.key})` : ""}${result.subject ? ` « ${result.subject} »` : ""}`);
+    return NextResponse.json({ success: true, ...result });
   } catch (error) {
     console.error("[webhook pipedrive]", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });

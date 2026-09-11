@@ -282,3 +282,46 @@ export async function capturePhoneLead(input: PhoneLeadInput): Promise<CaptureRe
 function escapeForNote(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
+
+/* ------------------------------------------------------------------
+   Lecture (webhooks) : personne, affaire, étapes
+   ------------------------------------------------------------------ */
+export interface PipedrivePersonDetail {
+  id: number;
+  name?: string;
+  first_name?: string;
+  email?: Array<{ value: string; primary?: boolean }>;
+}
+
+export async function getPerson(personId: number): Promise<PipedrivePersonDetail | null> {
+  try {
+    const res = await apiCall<PipedrivePersonDetail>(`/persons/${personId}`);
+    return res.data ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export interface PipedriveStage {
+  id: number;
+  name: string;
+  pipeline_id: number;
+}
+
+let stagesCache: { at: number; stages: PipedriveStage[] } | null = null;
+
+/** Étapes de tous les pipelines, mises en cache dix minutes. */
+export async function getStages(): Promise<PipedriveStage[]> {
+  if (stagesCache && Date.now() - stagesCache.at < 10 * 60_000) return stagesCache.stages;
+  const res = await apiCall<PipedriveStage[]>("/stages");
+  stagesCache = { at: Date.now(), stages: res.data ?? [] };
+  return stagesCache.stages;
+}
+
+/** Libellé d'une option de liste déroulante à partir de son identifiant (tel que reçu dans un webhook). */
+export function optionLabel(field: keyof typeof PIPEDRIVE_OPTIONS, id: string | number | undefined | null): string | undefined {
+  if (id === undefined || id === null || id === "") return undefined;
+  const n = Number(id);
+  for (const [name, value] of Object.entries(PIPEDRIVE_OPTIONS[field])) if (value === n) return name;
+  return undefined;
+}

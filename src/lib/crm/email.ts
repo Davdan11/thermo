@@ -174,3 +174,8 @@ export async function sendClientRdvEmail(email: string, data: RdvEmailData): Pro
     html: getRdvEmailHTML(data),
   });
 }
+
+/** Courriel client déjà rendu (automatisations d'étape Pipedrive). */
+export async function sendClientEmail(email: string, subject: string, html: string): Promise<boolean> {
+  return deliver("courriel client (étape)", { from: FROM_TEAM, to: email, subject, html });
+}
