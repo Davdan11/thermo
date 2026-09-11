@@ -17,6 +17,7 @@ import { NextResponse } from "next/server";
 import { captureWebLead, optionId, typeProjetOptionId, PIPEDRIVE_FIELDS } from "@/lib/crm/pipedrive";
 import { getTerritoryFromPostalCode } from "@/lib/crm/territory";
 import { sendClientWelcomeEmail, sendInternalLeadAlert } from "@/lib/crm/email";
+import { resolveRecommendedModel, brochureAttachment } from "@/lib/crm/recommended-model";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
 import { leadSchema, CONSENT_VERSION } from "@/lib/validation/lead";
 import { escapeHtml } from "@/lib/security/escape";
@@ -102,7 +103,10 @@ export async function POST(req: NextRequest) {
   });
   const dealId = crm.ok ? crm.dealId : undefined;
 
-  // 4. Courriels, non bloquants.
+  // 4. Courriels, non bloquants. Le modèle recommandé (ThermoMatch ou fiche produit) est retrouvé
+  //    dans le catalogue : sa fiche et sa brochure officielle partent avec le courriel de bienvenue.
+  const recommended = resolveRecommendedModel(lead.modeleSelectionne);
+  const brochure = await brochureAttachment(recommended);
   const [alertSent, clientSent] = await Promise.all([
     sendInternalLeadAlert({
       firstName: lead.firstName,
@@ -113,7 +117,7 @@ export async function POST(req: NextRequest) {
       territory,
       typeThermopompe: lead.typeThermopompe,
       superficie: lead.superficie,
-      modele: marque,
+      modele: recommended ? `${recommended.brand} ${recommended.name} (${recommended.modelNumber})${brochure ? " — brochure jointe" : ""}` : marque,
       moment: lead.momentContact,
       dealId,
       crmStatus: crm.ok ? "ok" : crm.reason,
@@ -126,11 +130,13 @@ export async function POST(req: NextRequest) {
       ? sendClientWelcomeEmail(lead.email, {
           firstName: lead.firstName,
           hasThermoMatch: !!lead.modeleSelectionne,
-          recommendedBrand: marque,
+          recommendedBrand: recommended ? `${recommended.brand} ${recommended.name}` : marque,
           recommendedBtu: btu,
-          estimatedSubvention: "voir la fiche",
+          estimatedSubvention: recommended?.logisVertDollars ? recommended.logisVertDollars.toLocaleString("fr-CA") : "",
           sqft: lead.superficie ?? "N/D",
-        }).catch((e) => {
+          model: recommended,
+          brochureAttached: !!brochure,
+        }, brochure ? [{ filename: brochure.filename, path: brochure.path, contentType: "application/pdf" }] : undefined).catch((e) => {
           console.error("[/api/leads] courriel client :", e);
           return false;
         })

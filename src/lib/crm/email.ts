@@ -11,6 +11,7 @@
      3. Sinon rien ne part : journalisé, jamais bloquant pour le lead.
    ================================================================== */
 import nodemailer from "nodemailer";
+import { readFile } from "node:fs/promises";
 import { Resend } from "resend";
 import { escapeHtml } from "@/lib/security/escape";
 import { getWelcomeEmailHTML, type WelcomeEmailData } from "./templates/welcome-email";
@@ -24,8 +25,9 @@ const FROM_THERMOMATCH = `L'équipe ThermoMatch <${SENDER_ADDRESS}>`;
 
 export interface MailAttachment {
   filename: string;
-  /** Contenu en clair (ex. fichier .ics). */
-  content: string;
+  /** Contenu en clair (ex. fichier .ics) — ou `path` pour un fichier sur le disque (brochure PDF). */
+  content?: string;
+  path?: string;
   contentType?: string;
 }
 
@@ -61,7 +63,7 @@ function getTransport(): Transport {
       send: async (m) => {
         await smtp.sendMail({
           from: m.from, to: m.to, subject: m.subject, html: m.html, replyTo: m.replyTo,
-          attachments: m.attachments?.map((a) => ({ filename: a.filename, content: a.content, contentType: a.contentType })),
+          attachments: m.attachments?.map((a) => (a.path ? { filename: a.filename, path: a.path, contentType: a.contentType } : { filename: a.filename, content: a.content ?? "", contentType: a.contentType })),
         });
       },
     };
@@ -72,7 +74,7 @@ function getTransport(): Transport {
       send: async (m) => {
         const r = await resend.emails.send({
           from: m.from, to: [m.to], subject: m.subject, html: m.html, replyTo: m.replyTo,
-          attachments: m.attachments?.map((a) => ({ filename: a.filename, content: Buffer.from(a.content).toString("base64") })),
+          attachments: await Promise.all((m.attachments ?? []).map(async (a) => ({ filename: a.filename, content: a.path ? (await readFile(a.path)).toString("base64") : Buffer.from(a.content ?? "").toString("base64") }))),
         });
         if (r.error) throw new Error(r.error.message);
       },
@@ -177,12 +179,15 @@ export async function sendInternalMessage(msg: InternalMessage): Promise<boolean
   });
 }
 
-export async function sendClientWelcomeEmail(email: string, data: WelcomeEmailData): Promise<boolean> {
+export async function sendClientWelcomeEmail(email: string, data: WelcomeEmailData, attachments?: MailAttachment[]): Promise<boolean> {
   return deliver("courriel client (dossier)", {
     from: FROM_THERMOMATCH,
     to: email,
-    subject: `Votre dossier ThermoMatch est ouvert, ${data.firstName}`,
+    subject: data.model
+      ? `Votre dossier est ouvert, ${data.firstName} : ${data.model.brand} ${data.model.name}, fiche et brochure`
+      : `Votre dossier ThermoMatch est ouvert, ${data.firstName}`,
     html: getWelcomeEmailHTML(data),
+    attachments,
   });
 }
 
