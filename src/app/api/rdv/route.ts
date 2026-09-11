@@ -72,8 +72,7 @@ export async function POST(req: NextRequest) {
 
   let emailSent = false;
   if (rdv.email) {
-    await sendClientRdvEmail(rdv.email, { firstName: rdv.firstName, when, phone: rdv.phone });
-    emailSent = Boolean(process.env.RESEND_API_KEY);
+    emailSent = await sendClientRdvEmail(rdv.email, { firstName: rdv.firstName, when, phone: rdv.phone });
   }
   if (crm !== "ok") {
     // Sans affaire Pipedrive : l'équipe est prévenue par courriel (si configuré) et le journal fait foi.
