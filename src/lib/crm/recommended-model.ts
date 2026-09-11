@@ -4,10 +4,8 @@
    Le lead porte « Marque — <id du modèle> » (desiredSystem.selectedModelId).
    ================================================================== */
 import { stat } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import path from "node:path";
-import pdfMapping from "@/lib/data/fixtures/documents/pdf-mapping.json";
-import brochureMap from "@/lib/data/fixtures/documents/brochure-map.json";
+import { brochureForProduct, brochureForModelNumber, brochureForSeries } from "@/lib/data/brochures";
 import { registry } from "@/lib/data/registry";
 import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { getSeoModel } from "@/lib/seo/programmatic";
@@ -36,55 +34,6 @@ export interface RecommendedModel {
   logisVertDollars: number | null;
 }
 
-/* Deux fichiers, produits par le pipeline d'enrichissement :
-   - pdf-mapping.json  : marque → [{ serie, model (numéro extérieur, « * » = joker), url d'origine }]
-   - brochure-map.json : marque (slug) → { série (slug) → PDF renommé sur le disque, /documents/brochures/… }
-   Le numéro de modèle mène à la série, la série au PDF. */
-const PDF_MAPPING = pdfMapping as Record<string, Array<{ serie: string; model: string; url?: string }>>;
-const BROCHURE_MAP = brochureMap as Record<string, Record<string, string>>;
-
-const slugify = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const norm = (s: string) => s.toUpperCase().replace(/[^A-Z0-9*]/g, "");
-const patternToRegex = (pattern: string) =>
-  new RegExp(`^${norm(pattern).replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[A-Z0-9]?")}$`);
-
-function existingBrochure(url: string | undefined): string | null {
-  if (!url) return null;
-  return existsSync(path.join(process.cwd(), "public", url)) ? url : null;
-}
-
-/** Brochure d'une série (slug de marque + slug ou nom de série), si le PDF est sur le disque. */
-export function brochureForSeries(brandName: string | undefined | null, seriesName: string | undefined | null): string | null {
-  if (!brandName || !seriesName) return null;
-  const bySeries = BROCHURE_MAP[slugify(brandName)];
-  if (!bySeries) return null;
-  const wanted = slugify(seriesName);
-  const key = Object.keys(bySeries).find((k) => k === wanted || k === `${wanted}-series` || wanted === `${k}-series` || wanted.startsWith(k) || k.startsWith(wanted));
-  return key ? existingBrochure(bySeries[key]) : null;
-}
-
-/**
- * Brochure officielle d'un numéro de modèle extérieur (ex. « RXL15QMVJU », « 4HP17L42P-**A »).
- * Renvoie l'adresse publique (/documents/brochures/…) seulement si le PDF est bien présent.
- */
-export function brochureForModelNumber(modelNumber: string | undefined | null, brandName?: string | null): string | null {
-  if (!modelNumber) return null;
-  const wanted = norm(modelNumber);
-  if (!wanted) return null;
-  for (const [brand, entries] of Object.entries(PDF_MAPPING)) {
-    if (brandName && slugify(brand) !== slugify(brandName)) continue;
-    for (const e of entries) {
-      if (!e.model) continue;
-      const k = norm(e.model);
-      if (k === wanted || (k.includes("*") && patternToRegex(e.model).test(wanted))) {
-        const hit = brochureForSeries(brand, e.serie);
-        if (hit) return hit;
-      }
-    }
-  }
-  return null;
-}
-
 /** Extrait l'identifiant du modèle de « Marque — id » (ou accepte l'id seul). */
 export function modelIdFromSelection(selection: string | undefined | null): string | null {
   if (!selection) return null;
@@ -103,18 +52,14 @@ export function resolveRecommendedModel(selection: string | undefined | null): R
   const brand = detail?.brand ?? registry.brandById.get(model.brandId) ?? null;
   const seo = getSeoModel(model.slug);
   const brandName = brand?.name ?? "";
-  const brochureUrl =
-    model.brochureUrl ?? series?.brochureUrl
-    ?? brochureForModelNumber(detail?.outdoorUnit?.modelNumber, brandName)
-    ?? brochureForModelNumber(model.modelNumber, brandName)
-    ?? brochureForSeries(brandName, series?.name)
-    ?? brochureForSeries(brandName, series?.slug?.replace(new RegExp(`^${slugify(brandName)}-`), ""))
-    ?? null;
+  const brochureUrl = detail
+    ? brochureForProduct(detail)
+    : (model.brochureUrl ?? series?.brochureUrl ?? brochureForModelNumber(model.modelNumber, brandName) ?? brochureForSeries(brandName, series?.name) ?? null);
   const cfg = detail?.configuration ?? null;
   return {
     id,
     slug: model.slug,
-    brand: brand?.name ?? "",
+    brand: brandName,
     name: seriesDisplayName(series?.name, series?.slug) ?? model.name ?? model.modelNumber,
     modelNumber: model.modelNumber,
     url: `${SITE_URL}/produit/${model.slug}`,

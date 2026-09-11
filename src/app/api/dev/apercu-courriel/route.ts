@@ -2,7 +2,8 @@
    Désactivé en production (404). */
 import { NextResponse } from "next/server";
 import { getWelcomeEmailHTML } from "@/lib/crm/templates/welcome-email";
-import { resolveRecommendedModel, brochureAttachment, brochureForModelNumber, brochureForSeries } from "@/lib/crm/recommended-model";
+import { resolveRecommendedModel, brochureAttachment } from "@/lib/crm/recommended-model";
+import { brochureForModelNumber, brochureForSeries } from "@/lib/data/brochures";
 import { registry } from "@/lib/data/registry";
 
 export const dynamic = "force-dynamic";
