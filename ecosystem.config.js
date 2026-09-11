@@ -11,7 +11,7 @@ module.exports = {
       cwd: `${ROOT}/current`,
       script: "node_modules/next/dist/bin/next",
       args: "start -p 3003 -H 127.0.0.1",
-      env: { NODE_ENV: "production", PORT: "3003" },
+      env: { NODE_ENV: "production", PORT: "3003", NODE_OPTIONS: "--dns-result-order=ipv4first" },
       max_memory_restart: "2500M",
       autorestart: true,
       time: true,
