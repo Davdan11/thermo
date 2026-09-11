@@ -43,6 +43,8 @@ function getTransport(): Transport {
       port,
       secure: port === 465,
       requireTLS: port !== 465,
+      // Nom annoncé au EHLO : le relais Google refuse le nom d'hôte brut du VPS.
+      name: process.env.SMTP_EHLO || "thermopompesavendre.ca",
       auth: hasAuth ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS } : undefined,
     });
     transport = {

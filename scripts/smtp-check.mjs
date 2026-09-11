@@ -24,6 +24,7 @@ const smtp = nodemailer.createTransport({
   port,
   secure: port === 465,
   requireTLS: port !== 465,
+  name: process.env.SMTP_EHLO || "thermopompesavendre.ca",
   auth: hasAuth ? { user: process.env.SMTP_USER, pass } : undefined,
 });
 
