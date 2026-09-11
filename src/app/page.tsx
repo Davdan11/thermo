@@ -3,6 +3,7 @@ import Image from "next/image";
 import { HeroThermoMatchBar } from "@/components/home/HeroThermoMatchBar";
 import { CompareSectionAnimated } from "@/components/home/CompareSectionAnimated";
 import { ModelesADecouvrir } from "@/components/home/ModelesADecouvrir";
+import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { createMetadata } from "@/lib/seo";
 
@@ -109,6 +110,8 @@ export default function HomePage() {
       </section>
 
       <CompareSectionAnimated />
+
+      <ThermoScanPromo variant="band" context="accueil" />
 
       <ModelesADecouvrir />
       {/* ══════════════════════════════════════════════════════════════════

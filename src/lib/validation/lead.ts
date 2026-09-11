@@ -43,6 +43,8 @@ export const leadSchema = z
     designTempC: optionalText(10),
     momentContact: optionalText(20),
     notes: optionalText(1500),
+    /** Appareil actuel lu par ThermoScan (marque, modèle, année, fluide). */
+    appareilActuel: optionalText(300),
     source: optionalText(60),
 
     /** Consentement au traitement des renseignements personnels (obligatoire, Loi 25). */

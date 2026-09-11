@@ -65,6 +65,46 @@ export interface ProjectDraft {
   timeline?: string;
   notes?: string;
   selectedProducts?: string[];
+
+  /** Appareil actuel identifié par ThermoScan (repris dans la demande de soumission). */
+  existingUnit?: ExistingUnit;
+}
+
+export interface ExistingUnit {
+  brand: string;
+  model: string;
+  year?: number | null;
+  refrigerant?: string | null;
+  heatingBtu?: number | null;
+  hspf2?: number | null;
+  scannedAt: string;
+}
+
+/** Résumé sur une ligne, pour la note CRM. */
+export function existingUnitSummary(u: ExistingUnit | undefined | null): string {
+  if (!u) return "";
+  return [
+    `${u.brand} ${u.model}`.trim(),
+    u.year ? `mise sur le marché ${u.year}` : "",
+    u.refrigerant ? u.refrigerant : "",
+    u.heatingBtu ? `${u.heatingBtu.toLocaleString("fr-CA")} BTU/h` : "",
+    u.hspf2 ? `HSPF2 ${u.hspf2}` : "",
+  ].filter(Boolean).join(", ");
+}
+
+/** Enregistre l'appareil scanné dans le brouillon de projet (créé au besoin). */
+export function saveExistingUnit(unit: Omit<ExistingUnit, "scannedAt">): void {
+  if (typeof window === "undefined") return;
+  const now = new Date().toISOString();
+  const draft: ProjectDraft = loadProjectDraft() ?? {
+    version: 1, source: "direct-quote", createdAt: now, updatedAt: now, thermoMatchCompleted: false,
+    location: {}, property: {}, currentSystem: {}, desiredSystem: {}, preferences: {}, contact: {},
+  };
+  draft.existingUnit = { ...unit, scannedAt: now };
+  draft.currentSystem = { ...draft.currentSystem, hasExistingHeatPump: true };
+  draft.desiredSystem = { ...draft.desiredSystem, projectType: draft.desiredSystem.projectType ?? "remplacement" };
+  draft.updatedAt = now;
+  saveProjectDraft(draft);
 }
 
 // ---- Persistence helpers ----

@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import type { ScanResult, CatalogMatch, WarrantyEntry } from "@/lib/thermoscan/types";
 import { track } from "@/lib/analytics/track";
+import { saveExistingUnit } from "@/lib/project/project-draft";
 
 
 type Step = "intro" | "guide" | "capture" | "analyzing" | "confirm" | "speccard" | "compare";
@@ -198,12 +199,12 @@ function DeltaRow({ label, current, recommended, better, note }: {
 
 /* device spec card */
 function DeviceSpecCard({
-  brand, model, year, match, labelSpecs, warranties, onCompare, hasThermomatch,
+  brand, model, year, match, labelSpecs, warranties, onCompare, hasThermomatch, sessionId,
 }: {
   brand: string; model: string; year: number | null | undefined;
   match: CatalogMatch | null; labelSpecs?: any | null;
   warranties?: WarrantyEntry[] | null;
-  onCompare: () => void; hasThermomatch: boolean;
+  onCompare: () => void; hasThermomatch: boolean; sessionId?: string;
 }) {
   // Prefer catalog data; fall back to Gemini-read label specs (e.g. CELCIA, Asian brands)
   const ls       = labelSpecs ?? null;
@@ -313,7 +314,96 @@ function DeviceSpecCard({
           <p className="text-xs text-center text-[var(--color-muted)]">ThermoMatch analyse votre profil pour recommander le modèle idéal.</p>
         </div>
       )}
+
+      <a href="/rendez-vous?format=visio" className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg font-semibold text-sm border transition-colors hover:bg-gray-50" style={{ borderColor: "var(--color-border)", color: "var(--color-foreground)" }}>
+        Discuter de cet appareil avec un conseiller (Google Meet) <ArrowRight size={14} />
+      </a>
+
+      <FicheForm
+        sessionId={sessionId}
+        device={{
+          brand, model, year: year ?? null, refrigerant: refStr,
+          heatingBtu: btu5F ?? null, hspf2: hspf2 ?? null, seer2: seer2 ?? null,
+          coldClimate: match ? match.coldClimate : null, inCatalog: !!match,
+          alerts: alerts.map((a) => a.text),
+        }}
+      />
     </div>
+  );
+}
+
+/* La fiche par courriel : un prénom, un courriel, et le visiteur repart avec sa fiche.
+   Côté serveur, c'est un lead (journal, Pipedrive, alerte à l'équipe). */
+function FicheForm({ device, sessionId }: {
+  device: { brand: string; model: string; year: number | null; refrigerant: string | null; heatingBtu: number | null; hspf2: number | null; seer2: number | null; coldClimate: boolean | null; inCatalog: boolean; alerts: string[] };
+  sessionId?: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [website, setWebsite] = useState("");
+  const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!firstName.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim())) { setMessage("Entrez votre prénom et un courriel valide."); return; }
+    if (!consent) { setMessage("Cochez la case pour recevoir la fiche."); return; }
+    setState("sending"); setMessage("");
+    try {
+      const res = await fetch("/api/thermoscan/fiche", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstName: firstName.trim(), email: email.trim(), phone: phone.trim(), consent, website, device, sessionId }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) throw new Error(data.error || "");
+      track("thermoscan_fiche", { in_catalog: device.inCatalog });
+      setState("done");
+      setMessage(data.emailed ? `La fiche part à ${email.trim()}. Vérifiez vos courriels indésirables au besoin.` : "Demande reçue. Un conseiller vous enverra la fiche rapidement.");
+    } catch (err) {
+      setState("error");
+      setMessage(err instanceof Error && err.message ? err.message : "Envoi impossible pour le moment. Réessayez ou appelez le 438-900-3224.");
+    }
+  };
+
+  if (state === "done") return (
+    <div className="p-4 rounded-lg border border-green-200 bg-green-50 text-sm text-green-800 flex gap-2 items-start">
+      <CheckCircle size={16} className="flex-shrink-0 mt-0.5" /> {message}
+    </div>
+  );
+
+  if (!open) return (
+    <button type="button" onClick={() => setOpen(true)} className="text-sm font-semibold underline underline-offset-4 text-[var(--color-foreground)] hover:text-[#e54b17] transition-colors text-left">
+      Recevoir cette fiche par courriel
+    </button>
+  );
+
+  return (
+    <form onSubmit={submit} noValidate className="p-4 rounded-lg border" style={{ borderColor: "var(--color-border)", background: "var(--color-background)" }}>
+      <p className="font-bold text-sm text-[var(--color-foreground)] mb-1">Recevoir cette fiche par courriel</p>
+      <p className="text-xs text-[var(--color-muted)] mb-3">Pour la garder, la partager ou la montrer à un installateur.</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+        <Field label="Prénom" value={firstName} onChange={setFirstName} placeholder="Marie" />
+        <Field label="Courriel" value={email} onChange={setEmail} type="email" placeholder="vous@exemple.ca" />
+      </div>
+      <div className="mb-3">
+        <Field label="Téléphone (facultatif)" value={phone} onChange={setPhone} type="tel" placeholder="(514) 000-0000" />
+      </div>
+      <div className="absolute" style={{ left: -9999, top: -9999 }} aria-hidden="true">
+        <label htmlFor="ts-website">Site web</label>
+        <input id="ts-website" type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
+      </div>
+      <label className="flex items-start gap-2 text-xs text-[var(--color-muted)] leading-relaxed mb-3">
+        <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-0.5" />
+        <span>J&apos;accepte que Thermopompes À Vendre conserve ces renseignements pour m&apos;envoyer la fiche et me proposer un suivi. <a href="/confidentialite" className="underline">Politique de confidentialité</a>.</span>
+      </label>
+      {message && <p className="text-xs text-red-700 mb-3">{message}</p>}
+      <button type="submit" disabled={state === "sending"} className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg font-bold text-sm text-white transition-opacity hover:opacity-90" style={{ background: "#e54b17", opacity: state === "sending" ? 0.7 : 1 }}>
+        {state === "sending" ? "Envoi…" : "Recevoir ma fiche"} <ArrowRight size={16} />
+      </button>
+    </form>
   );
 }
 
@@ -608,8 +698,20 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
         setReSearching(false);
       }
     }
+    // L'appareil identifié est gardé dans le brouillon de projet : la demande de soumission le reprend.
+    if (brand.trim() || model.trim()) {
+      const m = bestMatch;
+      saveExistingUnit({
+        brand: brand.trim() || "Marque inconnue",
+        model: model.trim(),
+        year: year ?? null,
+        refrigerant: m?.refrigerant ?? labelSpecs?.refrigerant ?? null,
+        heatingBtu: m?.heatingCapacity5F?.max ?? m?.nominalBtu ?? labelSpecs?.heatingBtuH ?? null,
+        hspf2: m?.hspf2 ? (typeof m.hspf2 === "object" ? m.hspf2.max : m.hspf2) : null,
+      });
+    }
     setStep("speccard");
-  }, [scan, model, brand]);
+  }, [scan, model, brand, bestMatch, year, labelSpecs]);
 
 
   const handleFile = useCallback((f: File) => {
@@ -852,6 +954,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
         warranties={warranties}
         hasThermomatch={!!(thermomatchResults?.length)}
         onCompare={() => setStep("compare")}
+        sessionId={scan?.sessionId}
       />
     </div>
   );

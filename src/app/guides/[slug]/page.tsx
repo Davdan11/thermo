@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { getAllGuides, getGuideBySlug } from "@/lib/markdown";
 import { createMetadata, getBreadcrumbSchema, SITE_NAME, SITE_URL } from "@/lib/seo";
 import { CtaThermoMatch, FaqBlock, JsonLd, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { GuideDataWidgets } from "@/components/seo/GuideDataWidgets";
 
 interface GuidePageProps {
@@ -112,6 +113,10 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
       </section>
 
       <GuideDataWidgets slug={slug} widget={guide.widget} />
+
+      <section className="mx-auto max-w-3xl px-5 sm:px-8 pb-6">
+        <ThermoScanPromo variant="card" context="guide" />
+      </section>
 
       <CtaThermoMatch />
 

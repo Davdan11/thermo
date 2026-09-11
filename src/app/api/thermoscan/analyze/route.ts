@@ -14,6 +14,7 @@
    ================================================================== */
 
 import { NextResponse } from "next/server";
+import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import fs from "node:fs/promises";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -227,20 +228,32 @@ async function callGeminiVision(imageBase64: string, mimeType: string): Promise<
     generationConfig: {
       temperature: 0,
       maxOutputTokens: 4096,
+      // Sortie JSON garantie par l'API : plus de réponse en prose ou en bloc ``` à décoder.
+      responseMimeType: "application/json",
     },
   };
 
-  const resp = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(30_000),
-  });
-
-  if (!resp.ok) {
-    const errText = await resp.text().catch(() => resp.statusText);
-    throw new Error(`Gemini API error ${resp.status}: ${errText.slice(0, 200)}`);
+  // Une reprise sur erreur passagère (503 surcharge, 429, délai) : c'est fréquent avec Gemini.
+  let resp: Response | null = null;
+  let lastErr = "";
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      resp = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+        signal: AbortSignal.timeout(30_000),
+      });
+      if (resp.ok) break;
+      lastErr = `Gemini API error ${resp.status}: ${(await resp.text().catch(() => resp!.statusText)).slice(0, 200)}`;
+      if (![429, 500, 502, 503, 504].includes(resp.status)) throw new Error(lastErr);
+    } catch (err) {
+      lastErr = err instanceof Error ? err.message : String(err);
+      resp = null;
+    }
+    if (attempt === 0) await new Promise((r) => setTimeout(r, 1500));
   }
+  if (!resp || !resp.ok) throw new Error(lastErr || "Gemini API error");
 
   // Gemini 2.5-flash may include "thinking" parts before the actual response part.
   // Collect all text parts and join them.
@@ -289,6 +302,8 @@ function fieldConfidence(value: string | number | null, hasMatch: boolean): "con
 
 export async function POST(req: Request) {
   const startMs = Date.now();
+  // Chaque analyse coûte un appel Gemini : 10 lectures par 10 minutes et par adresse suffisent largement.
+  if (!rateLimit(req, { name: "thermoscan", limit: 10, windowMs: 10 * 60 * 1000 })) return tooManyRequests();
 
   try {
     // ── Parse multipart form ────────────────────────────────────────

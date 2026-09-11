@@ -19,6 +19,7 @@ export type EventName =
   | "partner_submitted"
   | "compare_started"
   | "thermoscan_analyzed"
+  | "thermoscan_fiche"
   | "subsidy_checked"
   | "phone_click";
 

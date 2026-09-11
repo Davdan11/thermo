@@ -10,6 +10,7 @@ import { seriesDisplayName } from "@/lib/data/series-label";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
 import { PriceSection } from "@/components/product/PriceSection";
+import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { CtaThermoMatch, TrustStrip } from "@/components/seo/SeoBlocks";
 import {
   ProductHeader,
@@ -411,6 +412,9 @@ export default async function ProductPage({
                 </Link>
                 <p style={{ margin: "12px 0 0", fontSize: 12, color: "rgba(255,255,255,.5)", textAlign: "center" }}>Gratuit · données certifiées Hydro-Québec</p>
               </div>
+
+              {/* ThermoScan : comparer avec l'appareil que le visiteur remplace */}
+              <ThermoScanPromo variant="card" context="produit" />
 
               {/* Brochure Download */}
               {(series.brochureUrl || model.brochureUrl) && (

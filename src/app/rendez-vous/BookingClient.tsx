@@ -105,6 +105,13 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
     return out;
   }, [availability]);
 
+  // Format demandé par l'adresse (ex. /rendez-vous?format=visio depuis ThermoScan ou un courriel).
+  useEffect(() => {
+    const wanted = new URLSearchParams(window.location.search).get("format");
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lecture unique de l'URL au montage
+    if (wanted && (MODE_IDS as string[]).includes(wanted)) setMode(wanted as ModeId);
+  }, []);
+
   useEffect(() => {
     if (!visited.current) { visited.current = true; return; }
     headingRef.current?.focus({ preventScroll: true });

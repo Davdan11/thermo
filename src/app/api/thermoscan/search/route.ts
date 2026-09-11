@@ -7,12 +7,14 @@
    ================================================================== */
 
 import { NextResponse } from "next/server";
+import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { normalizeModelNumber, searchCatalog } from "@/lib/thermoscan/model-normalizer";
 import type { SearchRequest, SearchResponse, Confidence } from "@/lib/thermoscan/types";
 
 export async function POST(req: Request) {
+  if (!rateLimit(req, { name: "thermoscan-search", limit: 30, windowMs: 10 * 60 * 1000 })) return tooManyRequests();
   try {
     const body = (await req.json()) as SearchRequest;
 

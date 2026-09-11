@@ -70,6 +70,7 @@ export async function POST(req: NextRequest) {
       ${row("Moment préféré pour l'appel", lead.momentContact)}
       ${row("Budget estimé", lead.budgetEstime)}
       ${row("Modèle sélectionné (ThermoMatch)", marque)}
+      ${lead.appareilActuel ? row("Appareil actuel (ThermoScan)", lead.appareilActuel) : ""}
       ${row("Page d'origine", lead.source ?? "soumission-page")}
       ${lead.notes ? row("Notes", lead.notes) : ""}
     </ul>

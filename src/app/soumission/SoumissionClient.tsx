@@ -10,7 +10,8 @@ import { bookableDates, CALL_WINDOWS, formatDay, type CallWindow } from "@/lib/c
    Reproduit fidèlement depuis la maquette.
    ──────────────────────────────────────────────────────────────────────── */
 
-import { loadProjectDraft, getProjectSummary } from "@/lib/project/project-draft";
+import { loadProjectDraft, getProjectSummary, existingUnitSummary } from "@/lib/project/project-draft";
+import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { track } from "@/lib/analytics/track";
 
@@ -85,6 +86,7 @@ export default function SoumissionPage() {
     designTempC?: string;
     modeleSelectionne?: string;
     budget?: string;
+    appareilActuel?: string;
   }>({});
   const [consent1, setConsent1] = useState(false);
   const [consent2, setConsent2] = useState(false);
@@ -136,6 +138,7 @@ export default function SoumissionPage() {
           ? `${draft.desiredSystem.selectedBrandName} — ${draft.desiredSystem.selectedModelId ?? ""}`
           : "",
         budget: draft.preferences?.budget ?? "",
+        appareilActuel: existingUnitSummary(draft.existingUnit),
       });
     }
   }, []);
@@ -184,6 +187,7 @@ export default function SoumissionPage() {
           urgence: project.echeancier,
           modeleSelectionne: draftRaw.modeleSelectionne || project.modele,
           budgetEstime: draftRaw.budget ?? "",
+          appareilActuel: draftRaw.appareilActuel ?? "",
 
           // Notes complètes
           notes: `Emplacement: ${project.emplacement} | Contact préféré: ${contact.methode}${contact.moment ? " (" + contact.moment + ")" : ""}${draftNotes ? " | " + draftNotes : ""}`,
@@ -414,6 +418,13 @@ export default function SoumissionPage() {
                 Ou répondez à 13 questions et laissez ThermoMatch remplir ceci pour vous →
               </Link>
             </p>
+          )}
+          {draftRaw.appareilActuel ? (
+            <p style={{ margin: "-16px 0 28px", fontSize: 14, color: "#536873", lineHeight: 1.55 }}>
+              Appareil actuel (ThermoScan) : <strong style={{ color: NAVY }}>{draftRaw.appareilActuel}</strong>. Il sera joint à votre demande.
+            </p>
+          ) : (
+            <div style={{ margin: "-16px 0 28px" }}><ThermoScanPromo variant="inline" context="soumission" /></div>
           )}
 
           {/* Summary table */}

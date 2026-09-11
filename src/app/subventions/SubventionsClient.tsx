@@ -1,6 +1,7 @@
 "use client";
 
 import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 
 import { useState, useCallback, useRef, useEffect } from "react";
 import type { LogisVertResult } from "@/lib/subsidies/logisvert-calculator";
@@ -415,6 +416,11 @@ export function SubventionsClient() {
                 </span>
               </div>
             </div>
+          </div>
+
+          {/* ═══ THERMOSCAN : l'appareil actuel ═══ */}
+          <div style={{ marginTop: 20 }}>
+            <ThermoScanPromo variant="card" context="subventions" />
           </div>
 
           {/* ═══ CE QUE NOUS VÉRIFIONS ═══ */}
