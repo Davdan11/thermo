@@ -35,7 +35,7 @@ export async function sendInternalLeadAlert(lead: InternalLeadAlert): Promise<bo
   const crmWarning = lead.crmStatus && lead.crmStatus !== "ok";
   try {
     await resend.emails.send({
-      from: 'Thermopompes À Vendre <leads@thermopompesavendre.ca>',
+      from: 'Thermopompes À Vendre <info@thermopompesavendre.ca>',
       to: [NOTIFICATION_EMAIL],
       subject: `${crmWarning ? "[CRM À SAISIR] " : ""}Nouvelle soumission ${e(lead.territory)} : ${e(lead.firstName)} ${e(lead.lastName ?? "")}`,
       html: `
@@ -81,7 +81,7 @@ export async function sendInternalMessage(msg: InternalMessage): Promise<boolean
   try {
     const e = escapeHtml;
     await resend.emails.send({
-      from: 'Thermopompes À Vendre <leads@thermopompesavendre.ca>',
+      from: 'Thermopompes À Vendre <info@thermopompesavendre.ca>',
       to: [NOTIFICATION_EMAIL],
       replyTo: msg.replyTo,
       subject: msg.subject,
@@ -104,7 +104,7 @@ export async function sendClientWelcomeEmail(email: string, data: WelcomeEmailDa
     const html = getWelcomeEmailHTML(data);
     
     await resend.emails.send({
-      from: 'L\'équipe ThermoMatch <bonjour@thermopompesavendre.ca>',
+      from: 'L\'équipe ThermoMatch <info@thermopompesavendre.ca>',
       to: [email],
       subject: `Votre dossier ThermoMatch est ouvert, ${data.firstName}`,
       html: html,
@@ -126,7 +126,7 @@ export async function sendClientRdvEmail(email: string, data: RdvEmailData) {
     const html = getRdvEmailHTML(data);
     
     await resend.emails.send({
-      from: 'L\'équipe ThermoMatch <bonjour@thermopompesavendre.ca>',
+      from: 'L\'équipe ThermoMatch <info@thermopompesavendre.ca>',
       to: [email],
       subject: `Confirmation de votre rendez-vous ThermoMatch`,
       html: html,

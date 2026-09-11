@@ -114,6 +114,7 @@ export function getOrganizationSchema() {
       "@type": "ContactPoint",
       contactType: "customer service",
       telephone: "+1-438-900-3224",
+      email: "info@thermopompesavendre.ca",
       areaServed: "CA-QC",
       availableLanguage: "French",
     },

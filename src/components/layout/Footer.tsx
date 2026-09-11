@@ -122,6 +122,12 @@ export function Footer() {
             >
               438-900-3224
             </a>
+            <a
+              href="mailto:info@thermopompesavendre.ca"
+              style={{ display: "block", marginTop: 8, color: "rgba(255,255,255,0.8)", fontSize: 14, fontWeight: 500, textDecoration: "none" }}
+            >
+              info@thermopompesavendre.ca
+            </a>
           </div>
 
           {/* ── COL 2-4: Nav sections ── */}

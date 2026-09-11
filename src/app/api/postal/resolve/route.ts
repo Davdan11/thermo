@@ -108,7 +108,7 @@ async function resolveViaNominatim(postalCode: string): Promise<{
   try {
     const url = `https://nominatim.openstreetmap.org/search?postalcode=${encodeURIComponent(formatted)}&country=CA&format=json&limit=1&addressdetails=1`;
     const res = await fetch(url, {
-      headers: { "User-Agent": "ThermopompesAVendre/1.0 (contact@thermopompesavendre.ca)" },
+      headers: { "User-Agent": "ThermopompesAVendre/1.0 (info@thermopompesavendre.ca)" },
       signal: AbortSignal.timeout(5000),
     });
     if (!res.ok) return null;

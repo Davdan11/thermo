@@ -1024,3 +1024,27 @@ input[type="radio"]:disabled {
 @media (prefers-reduced-motion: reduce) {
   .tav-float { animation: none; }
 }
+
+/* ── ThermoScan : viseur du héros et schéma d'étiquette ───────────── */
+@keyframes ts-scan { 0% { transform: translateY(0); opacity: 0; } 6% { opacity: 1; } 94% { opacity: 1; } 100% { transform: translateY(var(--ts-h, 520px)); opacity: 0; } }
+@keyframes ts-pop { 0% { opacity: 0; transform: translateY(8px) scale(.96); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes ts-reticle { 0%, 100% { box-shadow: 0 0 0 4px rgba(255,106,61,.18), 0 0 30px rgba(255,106,61,.4); } 50% { box-shadow: 0 0 0 10px rgba(255,106,61,.06), 0 0 40px rgba(255,106,61,.6); } }
+@keyframes ts-ping { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(2.6); opacity: 0; } }
+@keyframes ts-dash { to { stroke-dashoffset: -16; } }
+@keyframes ts-ring { 0% { r: 12; opacity: .9; } 100% { r: 26; opacity: 0; } }
+@keyframes ts-spin { to { transform: rotate(360deg); } }
+@keyframes ts-air { 0%, 100% { transform: translateY(0); opacity: .5; } 50% { transform: translateY(6px); opacity: 1; } }
+.ts-scanline { --ts-h: 100cqh; animation: ts-scan 3.6s cubic-bezier(.45,.05,.55,.95) infinite; }
+.ts-chip { opacity: 0; animation: ts-pop .5s cubic-bezier(.2,.8,.2,1) forwards; }
+.ts-reticle { animation: ts-reticle 2.4s ease-in-out infinite; }
+.ts-ping { animation: ts-ping 1.6s cubic-bezier(0,0,.2,1) infinite; }
+.ts-link { animation: ts-dash 1.2s linear infinite; }
+.ts-dot-ring { animation: ts-ring 2s ease-out infinite; }
+.ts-fan { animation: ts-spin 9s linear infinite; }
+.ts-air { animation: ts-air 2.4s ease-in-out infinite; }
+.ts-photo { transform: scale(1.02); }
+@media (prefers-reduced-motion: reduce) {
+  .ts-scanline, .ts-reticle, .ts-ping, .ts-link, .ts-dot-ring, .ts-fan, .ts-air { animation: none; }
+  .ts-scanline { top: 46%; opacity: .8; }
+  .ts-chip { opacity: 1; animation: none; }
+}
