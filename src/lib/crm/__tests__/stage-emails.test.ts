@@ -71,8 +71,10 @@ describe("courriels d'étape Pipedrive", () => {
     }, "Marie");
     expect(ctx.projectType).toBe("Multizone 2+ têtes");
     expect(ctx.region).toBe("Montérégie");
-    expect(ctx.btu?.replace(/[202f00a0]/g, " ")).toBe("18 000");
-    expect(ctx.subsidy?.replace(/[202f00a0]/g, " ")).toBe("1 700");
+    // Intl insère une espace fine insécable comme séparateur de milliers.
+    const plain = (s?: string) => s?.replace(/[  ]/g, " ");
+    expect(plain(ctx.btu)).toBe("18 000");
+    expect(plain(ctx.subsidy)).toBe("1 700");
     expect(ctx.installDate).toMatch(/24 septembre 2026/);
     expect(ctx.advisorName).toBe("David");
   });
