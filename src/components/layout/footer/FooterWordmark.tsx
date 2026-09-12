@@ -5,7 +5,7 @@ import { motion, useMotionTemplate, useScroll, useSpring, useTransform } from "m
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
-   Signature du pied de page : « Thermopompes à vendre » en lettres
+   Signature du pied de page : « Thermopompes A VENDRE » (comme le logo) en lettres
    géantes, d'abord au trait, qui s'encrent de gauche à droite à mesure
    que le bas de page défile (lié au défilement, comme une signature).
    Décoratif (aria-hidden) : la marque en texte est dans le pied de page.
@@ -14,7 +14,6 @@ import { useReduced } from "@/components/heroes-v2/outils/motion";
    ================================================================== */
 
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
-const SERIF = "var(--font-serif), 'Times New Roman', serif";
 const CREAM = "#F4EFE7";
 const ORANGE = "#E54B17";
 
@@ -25,19 +24,23 @@ const paint = (p: Paint, color: string) =>
     ? { fill: "none", stroke: "rgba(244,239,231,0.34)", strokeWidth: 1, vectorEffect: "non-scaling-stroke" as const }
     : { fill: color };
 
-/* Géométrie (unités du viewBox), calée sur Inter Tight 600 et Instrument Serif italique. */
-const WIDE = { w: 1440, h: 152, base: 119, size: 138 };
-const TALL = { w: 400, h: 148, base1: 46, size1: 60, base2: 143, size2: 104 };
+/* Géométrie (unités du viewBox), calée sur Inter Tight. Même écriture que le logo de l'en-tête :
+   « Thermopompes » puis « A VENDRE » en capitales espacées, le A en orange, sans accent. */
+const WIDE = { w: 1440, h: 152, base: 119, size: 132 };
+const TALL = { w: 400, h: 140, base1: 50, size1: 62, base2: 128, size2: 70 };
 
 function Wide({ p }: { p: Paint }) {
   return (
     <svg viewBox={`0 0 ${WIDE.w} ${WIDE.h}`} className="hidden w-full sm:block" style={{ aspectRatio: `${WIDE.w} / ${WIDE.h}`, height: "auto", overflow: "visible" }} focusable="false">
-      <text x="0" y={WIDE.base} textLength={WIDE.w} lengthAdjust="spacingAndGlyphs" style={{ fontSize: WIDE.size, whiteSpace: "pre" }}>
-        <tspan style={{ fontFamily: DISPLAY, fontWeight: 600, letterSpacing: "-0.03em" }} {...paint(p, CREAM)}>
+      <text x="0" y={WIDE.base} textLength={WIDE.w} lengthAdjust="spacingAndGlyphs" style={{ fontSize: WIDE.size, whiteSpace: "pre", fontFamily: DISPLAY }}>
+        <tspan style={{ fontWeight: 600, letterSpacing: "-0.03em" }} {...paint(p, CREAM)}>
           Thermopompes
         </tspan>
-        <tspan style={{ fontFamily: SERIF, fontStyle: "italic", fontWeight: 400, fontSize: "1.12em" }} {...paint(p, ORANGE)}>
-          {" à vendre"}
+        <tspan style={{ fontWeight: 700, letterSpacing: "0.02em" }} {...paint(p, ORANGE)}>
+          {"  A"}
+        </tspan>
+        <tspan style={{ fontWeight: 500, letterSpacing: "0.14em" }} {...paint(p, CREAM)}>
+          {" VENDRE"}
         </tspan>
       </text>
     </svg>
@@ -50,8 +53,13 @@ function Tall({ p }: { p: Paint }) {
       <text x="0" y={TALL.base1} textLength={TALL.w} lengthAdjust="spacingAndGlyphs" style={{ fontSize: TALL.size1, fontFamily: DISPLAY, fontWeight: 600, letterSpacing: "-0.03em" }} {...paint(p, CREAM)}>
         Thermopompes
       </text>
-      <text x={TALL.w - 2} y={TALL.base2} textAnchor="end" style={{ fontSize: TALL.size2, fontFamily: SERIF, fontStyle: "italic", fontWeight: 400 }} {...paint(p, ORANGE)}>
-        à vendre
+      <text x="0" y={TALL.base2} textLength={TALL.w} lengthAdjust="spacing" style={{ fontSize: TALL.size2, fontFamily: DISPLAY, whiteSpace: "pre" }}>
+        <tspan style={{ fontWeight: 700 }} {...paint(p, ORANGE)}>
+          A
+        </tspan>
+        <tspan style={{ fontWeight: 500 }} {...paint(p, CREAM)}>
+          {" VENDRE"}
+        </tspan>
       </text>
     </svg>
   );
