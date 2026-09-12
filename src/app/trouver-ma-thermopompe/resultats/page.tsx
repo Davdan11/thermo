@@ -4,6 +4,7 @@ import Image from "next/image";
 import { decodeShareCode } from "@/lib/thermomatch/share-code";
 import { recommendFromAnswers } from "@/lib/thermomatch/recommend";
 import { SharedResults } from "./SharedResults";
+import { displayFont, serifFont } from "@/lib/fonts";
 
 /* ------------------------------------------------------------------
    /trouver-ma-thermopompe/resultats?r=<code>
@@ -37,7 +38,7 @@ export default async function ResultatsPartagesPage({ searchParams }: { searchPa
   const { results, summaryContext } = recommendFromAnswers(answers);
 
   return (
-    <main className="min-h-screen bg-[#0D1117] text-white flex flex-col">
+    <main className={`min-h-screen bg-[#0D1117] text-white flex flex-col ${displayFont.variable} ${serifFont.variable}`}>
       <header className="h-[64px] border-b border-white/10 flex items-center justify-between px-6 sm:px-10 shrink-0">
         <Link href="/" className="text-white font-bold text-sm tracking-tight">
           <span className="text-xs font-black uppercase">THERMOPOMPES</span>

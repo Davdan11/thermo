@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ThermoMatchLoader } from "./_components/ThermoMatchLoader";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
+import { displayFont, serifFont } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Trouver ma thermopompe — ThermoMatch",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 export default function TrouverMaThermopompePage() {
   const catalogueCount = getEligibleModelCount();
   return (
-    <main>
+    <main className={`${displayFont.variable} ${serifFont.variable}`}>
       <div className="sr-only">
         <h1>Trouver ma thermopompe avec ThermoMatch</h1>
         <p>

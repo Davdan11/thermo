@@ -1,0 +1,51 @@
+/* ==================================================================
+   Écran des trois recommandations ThermoMatch (préfixe tm-).
+   ================================================================== */
+
+.tm-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-size: 1.06em;
+}
+
+/* Libellé qui « roule » au survol. */
+.tm-roll { display: inline-grid; overflow: hidden; line-height: 1.25; height: 1.25em; }
+.tm-roll > span { grid-area: 1 / 1; transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.tm-roll > span + span { transform: translateY(100%); }
+:is(a, button):hover .tm-roll > span:first-child { transform: translateY(-100%); }
+:is(a, button):hover .tm-roll > span + span { transform: translateY(0); }
+
+/* Photo de l'appareil qui flotte doucement. */
+.tm-float { animation: tm-float 6s ease-in-out infinite; }
+@keyframes tm-float { 50% { transform: translateY(-7px); } }
+
+/* Reflet qui balaie la carte « Meilleur choix ». */
+.tm-sheen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-120%) skewX(-12deg);
+  animation: tm-sheen 6.5s ease-in-out 1.8s infinite;
+}
+@keyframes tm-sheen {
+  0% { transform: translateX(-120%) skewX(-12deg); }
+  30%, 100% { transform: translateX(340%) skewX(-12deg); }
+}
+
+/* Détails « Comment ThermoMatch a calculé ». */
+.tm-details > summary { list-style: none; cursor: pointer; }
+.tm-details > summary::-webkit-details-marker { display: none; }
+.tm-plus { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.tm-details[open] .tm-plus { transform: rotate(45deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tm-float, .tm-sheen { animation: none; }
+  .tm-sheen { display: none; }
+}
