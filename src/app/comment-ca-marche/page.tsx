@@ -3,17 +3,17 @@ import { JsonLd } from "@/components/seo/SeoBlocks";
 import { LineCta, LineGuarantees, LineRelated, LineSteps, LineTrust } from "@/components/sections-v2/contenu/LineSections";
 import { ThemedFaq } from "@/components/sections-v2/contenu/ThemedFaq";
 import { LineHero } from "@/components/heroes-v2/contenu/LineHero";
-import { SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
+import { createMetadata, SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
 import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 
-export const metadata: Metadata = {
-  title: "Comment ça marche",
+export const metadata: Metadata = createMetadata({
+  title: `Comment ça marche : de la question à l'installation`,
   description:
-    "De la question à l'installation : comment Thermopompes À Vendre.ca compare toutes les marques avec les données d'Hydro-Québec, propose trois machines, puis confie l'installation à un entrepreneur licencié RBQ.",
-  alternates: { canonical: "/comment-ca-marche" },
+    `ThermoMatch compare toutes les marques avec les données d'Hydro-Québec, propose trois machines, puis un entrepreneur licencié RBQ réalise l'installation.`,
+  canonicalPath: "/comment-ca-marche",
   robots: { index: true, follow: true },
-};
+});
 
 const STEPS = [
   {

@@ -1,5 +1,6 @@
 ---
 title: "Subvention LogisVert pour thermopompe : comment ça marche, combien, et comment vérifier"
+seoTitle: "Subvention LogisVert pour thermopompe : guide complet"
 description: "Le programme d'Hydro-Québec fixe un montant par appariement certifié. Voici comment il est déterminé, pourquoi deux modèles de la même marque reçoivent des montants différents, et comment vérifier le montant exact avant de signer."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-08"

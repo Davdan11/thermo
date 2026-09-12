@@ -1,5 +1,6 @@
 ---
 title: "Où installer l'unité extérieure d'une thermopompe : hauteur, distance, bruit, neige"
+seoTitle: "Où installer l'unité extérieure d'une thermopompe"
 description: "L'emplacement de l'unité extérieure décide du rendement, du bruit et de la durée de vie. Règles pratiques : neige, toit, voisins, support mural ou base."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

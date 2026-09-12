@@ -1,5 +1,6 @@
 ---
 title: "Thermopompe dans un duplex ou un triplex : un système par logement ou un multizone?"
+seoTitle: "Thermopompe dans un duplex ou un triplex"
 description: "Compteurs séparés, façades contraintes, LogisVert par logement : dans un plex, le système se choisit autrement qu'en maison. Comment décider, avec les chiffres."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

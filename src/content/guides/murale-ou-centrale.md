@@ -1,5 +1,6 @@
 ---
 title: "Thermopompe murale, multizone ou centrale : laquelle pour votre maison?"
+seoTitle: "Thermopompe murale, multizone ou centrale?"
 description: "Le choix dépend de vos conduits, de la disposition des pièces et de votre chauffage actuel, bien plus que de la marque. Critères, coûts relatifs, cas typiques et erreurs à éviter."
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-03-05"

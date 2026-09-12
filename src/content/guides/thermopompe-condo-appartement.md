@@ -1,5 +1,6 @@
 ---
 title: "Thermopompe en condo ou en appartement : capacité, règles et pièges"
+seoTitle: "Thermopompe en condo ou en appartement"
 description: "Un condo a une charge par pied carré bien plus faible qu'une maison. Comment choisir la bonne petite capacité, obtenir l'accord du syndicat, placer l'unité extérieure et éviter le surdimensionnement qui gâche le confort."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-08"

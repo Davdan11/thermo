@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 import { DictionaryHero, type DictLetter, type DictTerm } from "@/components/heroes-v2/contenu/DictionaryHero";
 import { typo } from "@/components/content-hero/typo";
 import { fraunces } from "@/components/heroes-v2/contenu/fonts";
 import { DictionaryBody, DictionaryEnd, type DictGroup } from "@/components/sections-v2/contenu/DictionarySections";
 
-export const metadata: Metadata = {
-  title: "Glossaire de la thermopompe : SEER2, HSPF2, COP, Inverter, LogisVert expliqués",
-  description: "Le dictionnaire complet du CVAC au Québec. Des définitions exhaustives pour SEER2, HSPF2, Inverter, BTU, COP, Plénum, et bien plus.",
-  alternates: { canonical: "/glossaire" },
-  openGraph: { title: "Glossaire de la thermopompe", description: "Définitions claires des termes du chauffage et de la climatisation au Québec.", type: "website" },
+export const metadata: Metadata = createMetadata({
+  title: `Glossaire thermopompe : SEER2, HSPF2, COP, BTU`,
+  description:
+    `Le dictionnaire complet du CVAC au Québec. Des définitions exhaustives pour SEER2, HSPF2, Inverter, BTU, COP, Plénum, et bien plus.`,
+  canonicalPath: "/glossaire",
   robots: { index: true, follow: true },
-};
+  openGraph: { title: "Glossaire de la thermopompe", description: "Définitions claires des termes du chauffage et de la climatisation au Québec." },
+});
 
 
 function slugifyTerm(term: string): string {

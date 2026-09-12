@@ -1,5 +1,6 @@
 ---
 title: "Dégivrage d'une thermopompe l'hiver : ce qui est normal, ce qui ne l'est pas"
+seoTitle: "Dégivrage d'une thermopompe l'hiver : normal ou problème?"
 description: "Vapeur, bruit d'eau, ventilateur arrêté quelques minutes : le dégivrage inquiète à tort. Le cycle expliqué, les vrais signes de problème et quoi vérifier."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

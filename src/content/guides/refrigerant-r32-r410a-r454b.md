@@ -1,5 +1,6 @@
 ---
 title: "R-410A, R-32 ou R-454B : ce que le réfrigérant change pour votre thermopompe en 2026"
+seoTitle: "R-410A, R-32 ou R-454B : quel réfrigérant en 2026?"
 description: "Le R-410A disparaît des machines neuves, remplacé par le R-32 et le R-454B. Ce que la réglementation canadienne impose, ce que ça change à l'achat, à l'entretien et à la revente, et pourquoi une machine R-410A encore en vente n'est pas forcément un mauvais choix."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

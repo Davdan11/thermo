@@ -4,10 +4,10 @@ import FAQPageClient from "./FaqClient";
 import { FAQ_ITEMS } from "./faqData";
 
 export const metadata: Metadata = createMetadata({
-  title: "FAQ — Questions fréquentes sur les thermopompes au Québec",
+  title: `FAQ thermopompe : questions fréquentes au Québec`,
   description:
-    "Réponses aux questions les plus fréquentes sur les thermopompes : fonctionnement, BTU, SEER2, HSPF2, prix, subventions, installation et entretien au Québec.",
-  alternates: { canonical: "/faq" },
+    `Réponses aux questions les plus fréquentes sur les thermopompes : fonctionnement, BTU, SEER2, HSPF2, prix, subventions, installation et entretien au Québec.`,
+  canonicalPath: "/faq",
   robots: { index: true, follow: true },
 });
 

@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { HERO_EASE } from "@/components/hero/HeroKit";
 import { useReduced } from "./motion";
 import { CARNET as P, splitQuestion } from "./FlowBar";
-import { DISPLAY, SERIF } from "./fonts";
+import { DISPLAY, SERIF } from "./font-stacks";
 import { Fade, MarginRule, PenLine, nbspMark } from "./Carnet";
 
 /* ==================================================================

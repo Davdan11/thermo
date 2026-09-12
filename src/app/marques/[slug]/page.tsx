@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getBrandDetail } from "@/lib/data/queries/brand-detail";
-import { createMetadata, SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
+import { createMetadata, fitTitle, SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
 import { registry } from "@/lib/data/registry";
 import { MonogrammeHero } from "@/components/heroes-v2/marques/MonogrammeHero";
 import { buildMonogramme } from "@/components/heroes-v2/marques/server";
@@ -31,8 +31,11 @@ export async function generateMetadata({
   const name = brand.name.replace(" [DEV]", "");
 
   return createMetadata({
-    title: `Thermopompes ${name} : modèles, capacité au froid et LogisVert`,
-    description: `Découvrez la gamme complète de thermopompes ${name} au Québec. Consultez les séries, comparez les modèles, vérifiez les subventions et trouvez le système idéal pour votre habitation.`,
+    title: fitTitle(`Thermopompes ${name} : modèles, capacité au froid et LogisVert`, `Thermopompes ${name} : modèles et LogisVert`, `Thermopompes ${name} au Québec`, `Thermopompes ${name}`),
+    description: [
+      `Toute la gamme de thermopompes ${name} au Québec : séries, modèles comparés et subvention LogisVert, pour trouver le système adapté à votre habitation.`,
+      `Thermopompes ${name} au Québec : séries, modèles comparés et subvention LogisVert, pour trouver le système adapté à votre maison.`,
+    ].find((d) => d.length <= 158) ?? `Thermopompes ${name} au Québec : séries, modèles comparés et subvention LogisVert.`,
     alternates: { canonical: `${SITE_URL}/marques/${resolvedParams.slug}` },
     robots: { index: true, follow: true },
     openGraph: {

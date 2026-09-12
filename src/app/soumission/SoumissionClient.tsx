@@ -18,7 +18,7 @@ import { loadProjectDraft, getProjectSummary, existingUnitSummary } from "@/lib/
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { track } from "@/lib/analytics/track";
 import { SoumissionBar, SoumissionHero } from "@/components/heroes-v2/outils/Carnet";
-import { DISPLAY, SERIF } from "@/components/heroes-v2/outils/fonts";
+import { DISPLAY, SERIF } from "@/components/heroes-v2/outils/font-stacks";
 import { Reveal, Rise } from "@/components/sections-v2/outils/kit";
 import { CarnetKicker, CarnetScanNote, HandCheckbox, MarginContinue, P, PenLoop, ProcessStrip } from "@/components/sections-v2/outils/carnet/CarnetParts";
 

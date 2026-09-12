@@ -10,7 +10,7 @@ import type { ScanResult, CatalogMatch, WarrantyEntry } from "@/lib/thermoscan/t
 import { track } from "@/lib/analytics/track";
 import { saveExistingUnit } from "@/lib/project/project-draft";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
-import { MONO } from "@/components/heroes-v2/outils/fonts";
+import { MONO } from "@/components/heroes-v2/outils/font-stacks";
 import { Corners } from "@/components/sections-v2/outils/kit";
 import "@/components/sections-v2/outils/viseur/viseur.css";
 

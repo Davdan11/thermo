@@ -4,9 +4,10 @@ import "./outils.css";
 import { useReduced } from "./motion";
 import type { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { HC } from "@/components/hero/HeroKit";
-import { DISPLAY } from "./fonts";
+import { DISPLAY } from "./font-stacks";
 
 /* ==================================================================
    Barre d'en-tête des parcours plein écran (ThermoMatch, soumission),
@@ -37,8 +38,8 @@ export function FlowBar({ center, right, progress, tone = "dark", className = ""
       style={{ fontFamily: DISPLAY, color: light ? CARNET.ink : HC.cream, borderBottom: `1px solid ${light ? CARNET.line : HC.line}` }}
     >
       <Link href="/" aria-label="Thermopompes À Vendre.ca — Accueil" className="shrink-0" style={{ textDecoration: "none" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={light ? "/images/headerlogo-720.webp" : "/images/headerlogo-720-creme.webp"} alt="Thermopompes À Vendre" width={126} height={42} style={{ width: 126, height: 42, maxWidth: "none", display: "block" }} />
+        {/* next/image : le logo à 126 px (AVIF/WebP) au lieu du fichier de 720 px. */}
+        <Image src={light ? "/images/headerlogo-720.webp" : "/images/headerlogo-720-creme.webp"} alt="Thermopompes À Vendre" width={126} height={42} loading="eager" style={{ width: 126, height: 42, maxWidth: "none", display: "block" }} />
       </Link>
 
       {center ? <div className="min-w-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2">{center}</div> : null}

@@ -12,10 +12,10 @@ import { ViseurSections } from "@/components/sections-v2/outils/viseur/ViseurSec
    ------------------------------------------------------------------ */
 
 export const metadata: Metadata = createMetadata({
-  title: "ThermoScan : identifiez votre thermopompe actuelle à partir de son étiquette",
+  title: `ThermoScan : identifiez votre thermopompe actuelle`,
   description:
-    "Photographiez l'étiquette de votre thermopompe. ThermoScan lit la marque, le modèle et l'année, retrouve la fiche ENERGY STAR et compare l'appareil avec les modèles admissibles à LogisVert.",
-  alternates: { canonical: "/thermoscan" },
+    `ThermoScan lit l'étiquette de votre thermopompe (marque, modèle, année), retrouve sa fiche ENERGY STAR et la compare aux modèles admissibles à LogisVert.`,
+  canonicalPath: "/thermoscan",
   robots: { index: true, follow: true },
 });
 

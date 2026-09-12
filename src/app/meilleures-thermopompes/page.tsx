@@ -8,10 +8,11 @@ import { typo } from "@/components/heroes-v2/marques/shared";
 import { JuryNote, PalmaresCta, PalmaresRoot, PalmaresTrust, RankingCategory } from "@/components/sections-v2/marques/Palmares";
 
 export const metadata: Metadata = createMetadata({
-  title: `Meilleures thermopompes au Québec ${new Date().getFullYear()} : classements sur données certifiées`,
+  title: `Meilleures thermopompes au Québec en ${new Date().getFullYear()}`,
   description:
-    "Grand froid, HSPF2, COP à -15 °C, subvention LogisVert, murales 12 000 BTU, centrales : les classements des thermopompes vendues au Québec, bâtis uniquement sur les données certifiées d'Hydro-Québec et ENERGY STAR.",
+    `Grand froid, HSPF2, COP à -15 °C, LogisVert, murales 12 000 BTU, centrales : des classements bâtis sur les données certifiées d'Hydro-Québec et ENERGY STAR.`,
   canonicalPath: "/meilleures-thermopompes",
+  robots: { index: true, follow: true },
 });
 
 /* Libellés courts des critères, pour le tableau des meneurs du héros. */

@@ -7,7 +7,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { CARNET as P } from "@/components/heroes-v2/outils/FlowBar";
-import { SERIF } from "@/components/heroes-v2/outils/fonts";
+import { SERIF } from "@/components/heroes-v2/outils/font-stacks";
 import { ThermoScanBadge } from "@/components/thermoscan/ThermoScanPromo";
 import { EASE, Reveal, VIEW } from "../kit";
 

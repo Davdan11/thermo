@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { motion, useInView } from "motion/react";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
-import { MONO } from "@/components/heroes-v2/outils/fonts";
+import { MONO } from "@/components/heroes-v2/outils/font-stacks";
 import { Corners } from "../kit";
 
 /* ==================================================================

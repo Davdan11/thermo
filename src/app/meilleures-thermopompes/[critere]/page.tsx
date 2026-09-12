@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
+import { createMetadata, fitTitle, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getRanking, RANKINGS } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import { JsonLd } from "@/components/seo/SeoBlocks";
@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: { params: Promise<{ critere: 
   const r = getRanking(critere, 1);
   if (!r) return createMetadata({ title: "Classement introuvable" });
   return createMetadata({
-    title: `${r.def.title} (${new Date().getFullYear()})`,
-    description: r.def.description,
+    title: fitTitle(`${r.def.title} (${new Date().getFullYear()})`, r.def.title, r.def.h1, r.def.h1.replace(/^Les t/, "T")),
+    description: r.def.description.length < 120 ? `${r.def.description} Source : liste officielle d'Hydro-Québec.` : r.def.description,
     canonicalPath: `/meilleures-thermopompes/${critere}`,
   });
 }

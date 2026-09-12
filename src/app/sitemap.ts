@@ -19,16 +19,17 @@ import { registry } from "@/lib/data/registry";
 import { getIndexableModels, getAllBrandStats, getCapacityClasses, getBrandPairs, RANKINGS } from "@/lib/seo/programmatic";
 import { getCities } from "@/lib/seo/cities";
 import { getLandingPages } from "@/lib/seo/landings";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { DATA_DATE, PRODUCTS_PER_SITEMAP, isoDay, sitemapIds } from "@/lib/seo/sitemaps";
 
-import { PRODUCTS_PER_SITEMAP, sitemapIds } from "@/lib/seo/sitemaps";
-
-const DATA_DATE = ((logisVertMetadata as { updatedAt?: string }).updatedAt ?? "2026-09-01").slice(0, 10);
-const CONTENT_DATE = new Date().toISOString().slice(0, 10); // date du build : le contenu est régénéré à chaque déploiement
-
-const entry = (path: string, lastModified: string, changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"], priority: number): MetadataRoute.Sitemap[number] => ({
+/**
+ * lastmod : uniquement quand la date de modification est connue et vérifiable — DATA_DATE (liste
+ * LogisVert) pour les pages bâties sur le catalogue, dates des guides pour les guides. Les pages
+ * éditoriales sans date fiable n'en ont pas : la date du build, changée à chaque déploiement,
+ * n'apprenait rien à Google et l'amenait à ignorer tous les lastmod du site.
+ */
+const entry = (path: string, lastModified: string | undefined, changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"], priority: number): MetadataRoute.Sitemap[number] => ({
   url: `${SITE_URL}${path}`,
-  lastModified,
+  ...(lastModified ? { lastModified } : {}),
   changeFrequency,
   priority,
 });
@@ -42,40 +43,40 @@ export default async function sitemap(props: { id: Promise<string> }): Promise<M
 
   if (id === "pages") {
     return [
-      entry("/", CONTENT_DATE, "weekly", 1.0),
-      entry("/trouver-ma-thermopompe", CONTENT_DATE, "monthly", 0.9),
+      entry("/", DATA_DATE, "weekly", 1.0),
+      entry("/trouver-ma-thermopompe", undefined, "monthly", 0.9),
       entry("/thermopompes", DATA_DATE, "weekly", 0.9),
       entry("/marques", DATA_DATE, "weekly", 0.8),
       entry("/meilleures-thermopompes", DATA_DATE, "weekly", 0.9),
-      entry("/thermopompe", CONTENT_DATE, "monthly", 0.8),
+      entry("/thermopompe", undefined, "monthly", 0.8),
       entry("/subventions", DATA_DATE, "weekly", 0.9),
       entry("/subventions/logisvert", DATA_DATE, "weekly", 0.8),
-      entry("/comparer", CONTENT_DATE, "monthly", 0.7),
-      entry("/prix", CONTENT_DATE, "monthly", 0.7),
-      entry("/prix/prix-thermopompe-quebec", CONTENT_DATE, "monthly", 0.7),
-      entry("/calculateur-economies", CONTENT_DATE, "monthly", 0.7),
-      entry("/guides", CONTENT_DATE, "monthly", 0.7),
-      entry("/faq", CONTENT_DATE, "monthly", 0.7),
-      entry("/glossaire", CONTENT_DATE, "monthly", 0.6),
-      entry("/thermoscan", CONTENT_DATE, "monthly", 0.6),
-      entry("/technologie-thermomatch", CONTENT_DATE, "monthly", 0.6),
-      entry("/comment-ca-marche", CONTENT_DATE, "monthly", 0.5),
-      entry("/a-propos", CONTENT_DATE, "yearly", 0.4),
-      entry("/contact", CONTENT_DATE, "yearly", 0.4),
-      entry("/partenaires", CONTENT_DATE, "yearly", 0.4),
-      entry("/carriere", CONTENT_DATE, "yearly", 0.3),
-      entry("/soumission", CONTENT_DATE, "yearly", 0.5),
-      entry("/confidentialite", CONTENT_DATE, "yearly", 0.2),
-      entry("/conditions", CONTENT_DATE, "yearly", 0.2),
-      entry("/accessibilite", CONTENT_DATE, "yearly", 0.2),
+      entry("/comparer", undefined, "monthly", 0.7),
+      entry("/prix", undefined, "monthly", 0.7),
+      entry("/prix/prix-thermopompe-quebec", undefined, "monthly", 0.7),
+      entry("/calculateur-economies", undefined, "monthly", 0.7),
+      entry("/guides", undefined, "monthly", 0.7),
+      entry("/faq", undefined, "monthly", 0.7),
+      entry("/glossaire", undefined, "monthly", 0.6),
+      entry("/thermoscan", undefined, "monthly", 0.6),
+      entry("/technologie-thermomatch", undefined, "monthly", 0.6),
+      entry("/comment-ca-marche", undefined, "monthly", 0.5),
+      entry("/a-propos", undefined, "yearly", 0.4),
+      entry("/contact", undefined, "yearly", 0.4),
+      entry("/partenaires", undefined, "yearly", 0.4),
+      entry("/carriere", undefined, "yearly", 0.3),
+      entry("/soumission", undefined, "yearly", 0.5),
+      entry("/confidentialite", undefined, "yearly", 0.2),
+      entry("/conditions", undefined, "yearly", 0.2),
+      entry("/accessibilite", undefined, "yearly", 0.2),
     ];
   }
 
   if (id === "guides") {
     const { getAllGuides } = await import("@/lib/markdown");
     return [
-      ...getAllGuides().map((g) => entry(`/guides/${g.slug}`, g.updatedAt ?? g.publishedAt ?? CONTENT_DATE, "monthly", 0.8)),
-      ...getLandingPages().map((p) => entry(`/thermopompes/${p.slug}`, CONTENT_DATE, "monthly", 0.8)),
+      ...getAllGuides().map((g) => entry(`/guides/${g.slug}`, isoDay(g.updatedAt) ?? isoDay(g.publishedAt), "monthly", 0.8)),
+      ...getLandingPages().map((p) => entry(`/thermopompes/${p.slug}`, undefined, "monthly", 0.8)),
       ...getCapacityClasses().map((c) => entry(`/thermopompes/${c.slug}`, DATA_DATE, "weekly", 0.8)),
     ];
   }
@@ -93,7 +94,7 @@ export default async function sitemap(props: { id: Promise<string> }): Promise<M
   }
 
   if (id === "villes-quebec") {
-    return getCities().map((c) => entry(`/thermopompe/${c.slug}`, CONTENT_DATE, "monthly", 0.7));
+    return getCities().map((c) => entry(`/thermopompe/${c.slug}`, DATA_DATE, "monthly", 0.7));
   }
 
   if (id === "classements") {

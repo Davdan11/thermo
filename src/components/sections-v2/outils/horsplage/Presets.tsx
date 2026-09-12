@@ -5,7 +5,9 @@ import "./horsplage.css";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
-import { DISPLAY, MONO, outilsMono } from "@/components/heroes-v2/outils/fonts";
+import { DISPLAY, MONO } from "@/components/heroes-v2/outils/font-stacks";
+// Police sans préchargement : section de la 404, présente dans l’arbre de toutes les routes.
+import { outilsMonoLazy as outilsMono } from "@/components/heroes-v2/outils/fonts-lazy";
 import { EASE, Reveal, Rule, VIEW } from "../kit";
 
 /* ==================================================================

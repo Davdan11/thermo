@@ -1,5 +1,6 @@
 ---
 title: "Panneau électrique de 100 ampères et thermopompe : faut-il vraiment le changer?"
+seoTitle: "Panneau de 100 ampères et thermopompe : à changer?"
 description: "Ce qu'une murale ou une centrale demande au panneau, comment se fait le calcul de charge électrique, les cas où 100 A suffit, ceux où le passage à 200 A s'impose, et ce que ça ajoute à la soumission."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

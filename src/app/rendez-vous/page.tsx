@@ -3,10 +3,10 @@ import { createMetadata, SITE_URL } from "@/lib/seo";
 import BookingClient from "./BookingClient";
 
 export const metadata: Metadata = createMetadata({
-  title: "Prendre rendez-vous avec un conseiller — Thermopompes À Vendre.ca",
+  title: `Prendre rendez-vous avec un conseiller`,
   description:
-    "Réservez en ligne un appel, une rencontre Google Meet ou une visite à domicile avec un conseiller. Gratuit, sans engagement, confirmation immédiate.",
-  alternates: { canonical: "/rendez-vous" },
+    `Réservez en ligne un appel, une rencontre Google Meet ou une visite à domicile avec un conseiller. Gratuit, sans engagement, confirmation immédiate.`,
+  canonicalPath: "/rendez-vous",
   robots: { index: true, follow: true },
 });
 

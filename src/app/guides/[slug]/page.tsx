@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ArticleOpening } from "@/components/heroes-v2/contenu/ArticleOpening";
 import { guideCategoryLabel } from "@/components/content-hero/guideCategories";
 import { getAllGuides, getGuideBySlug } from "@/lib/markdown";
-import { createMetadata, getBreadcrumbSchema, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { createMetadata, getBreadcrumbSchema, SITE_NAME, SITE_URL, TITLE_MAX } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { GuideDataWidgets } from "@/components/seo/GuideDataWidgets";
 import { fraunces } from "@/components/heroes-v2/contenu/fonts";
@@ -27,8 +27,11 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   const guide = await getGuideBySlug(slug);
   if (!guide) return createMetadata({ title: "Guide introuvable" });
 
+  // Balise <title> : seoTitle (≤ 60 car.) si le titre éditorial est long ; au-delà de TITLE_MAX, pas de
+  // suffixe « | TAV.ca » pour ne pas l’allonger encore. Le h1 et og:title gardent le titre complet.
+  const seoTitle = guide.seoTitle ?? guide.title;
   return createMetadata({
-    title: guide.title,
+    title: [...seoTitle].length <= TITLE_MAX ? seoTitle : { absolute: seoTitle },
     description: guide.description,
     keywords: guide.keywords,
     canonicalPath: `/guides/${slug}`,

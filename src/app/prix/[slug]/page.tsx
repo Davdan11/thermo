@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getSeoPagesByPrefix, getSeoPageBySlug } from "@/lib/seo/registry";
-import { createMetadata, getArticleSchema, getBreadcrumbSchema, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { createMetadata, fitTitle, getArticleSchema, getBreadcrumbSchema, SITE_NAME, SITE_URL } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { PrixApproche, getPrixFaqSchema } from "@/components/prix/PrixApproche";
 import { TagHero } from "@/components/heroes-v2/prix/TagHero";
@@ -22,10 +22,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const page = getSeoPageBySlug(`/prix/${slug}/`);
   if (!page) return {};
+  const base = page.h1.replace(/\s*:\s*combien prévoir\??$/i, "");
   return createMetadata({
     canonicalPath: `/prix/${slug}`,
-    title: `${page.h1.replace(/\s*:\s*combien prévoir\??$/i, "")} : ce qui fait varier le coût installé`,
-    description: `Les fourchettes publiées au Québec comme repère, ce qui fait varier le coût installé pour ${page.primaryKeyword.toLowerCase()} et comment obtenir une soumission écrite, cas par cas, subvention LogisVert incluse.`,
+    title: fitTitle(`${base} : ce qui fait varier le coût installé`, `${base} : ce qui fait varier le prix`, `${base} : les facteurs de coût`, base),
+    description: `Les fourchettes publiées au Québec comme repère, ce qui fait varier le coût installé et comment obtenir une soumission écrite, subvention LogisVert incluse.`,
   });
 }
 

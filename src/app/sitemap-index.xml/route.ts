@@ -6,18 +6,20 @@
    ================================================================== */
 
 import { SITE_URL } from "@/lib/seo";
-import { sitemapIds } from "@/lib/seo/sitemaps";
+import { sitemapIds, sitemapLastmod } from "@/lib/seo/sitemaps";
 
 export const dynamic = "force-static";
 
-export function GET() {
-  const today = new Date().toISOString().slice(0, 10);
+export async function GET() {
+  // lastmod = dernière modification réelle du contenu listé (données officielles ou guide le plus récent),
+  // pas la date du build.
+  const rows = await Promise.all(
+    sitemapIds().map(async (id) => `  <sitemap><loc>${SITE_URL}/sitemap/${id}.xml</loc><lastmod>${await sitemapLastmod(id)}</lastmod></sitemap>`),
+  );
   const body =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    sitemapIds()
-      .map((id) => `  <sitemap><loc>${SITE_URL}/sitemap/${id}.xml</loc><lastmod>${today}</lastmod></sitemap>`)
-      .join("\n") +
+    rows.join("\n") +
     `\n</sitemapindex>\n`;
   return new Response(body, { headers: { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=3600" } });
 }

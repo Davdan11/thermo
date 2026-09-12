@@ -1,5 +1,6 @@
 ---
 title: "Thermopompe dans une maison d'avant 1980 : ce qui change, ce qu'il faut faire d'abord"
+seoTitle: "Thermopompe dans une maison d'avant 1980"
 description: "Isolation d'époque, fenêtres simples, sous-sol froid, panneau limité : pourquoi une vieille maison change le calibre, le type de système et l'ordre des travaux, et comment ne pas surdimensionner pour compenser des murs qui fuient."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
+import { createMetadata, fitTitle, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getAllBrandStats, getBrandStats } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import { JsonLd } from "@/components/seo/SeoBlocks";
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ marque: s
   const b = getBrandStats(marque);
   if (!b || b.maxLogisVert <= 0) return createMetadata({ title: "Marque introuvable" });
   return createMetadata({
-    title: `Subvention LogisVert ${b.name} ${new Date().getFullYear()} : montants officiels par modèle (${b.minLogisVert.toLocaleString("fr-CA")} $ à ${b.maxLogisVert.toLocaleString("fr-CA")} $)`,
+    title: fitTitle(`Subvention LogisVert ${b.name} ${new Date().getFullYear()} : montants par modèle`, `Subvention LogisVert ${b.name} : montants par modèle`, `Subvention LogisVert ${b.name} ${new Date().getFullYear()}`, `Subvention LogisVert ${b.name}`),
     description: `Montants LogisVert d'Hydro-Québec pour les thermopompes ${b.name} : ${b.models.filter((m) => m.logisVertDollars > 0).length} modèles admissibles, de ${b.minLogisVert.toLocaleString("fr-CA")} $ à ${b.maxLogisVert.toLocaleString("fr-CA")} $, tirés de la liste officielle.`,
     canonicalPath: `/subventions/logisvert/${b.slug}`,
   });

@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { createMetadata, getBreadcrumbSchema } from "@/lib/seo";
+import { createMetadata, fitTitle, getBreadcrumbSchema } from "@/lib/seo";
 import { getBrandPair, getBrandPairs, type BrandStats } from "@/lib/seo/programmatic";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { getFaqPageSchema } from "@/lib/seo";
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ paire: st
   const p = getBrandPair(paire);
   if (!p) return createMetadata({ title: "Comparaison introuvable" });
   return createMetadata({
-    title: `${p.a.name} ou ${p.b.name}? Comparatif sur données certifiées (grand froid, HSPF2, LogisVert)`,
+    title: fitTitle(`${p.a.name} ou ${p.b.name}? Comparatif sur données certifiées`, `${p.a.name} ou ${p.b.name} : comparatif thermopompes`, `${p.a.name} ou ${p.b.name} : comparatif`, `${p.a.name} ou ${p.b.name}?`),
     description: `${p.a.name} vs ${p.b.name} au Québec : capacité certifiée à -15 °C, COP, HSPF2, nombre de modèles murales et centrales, montants LogisVert. Un comparatif sans parti pris, sur les chiffres d'Hydro-Québec et ENERGY STAR.`,
     canonicalPath: `/comparer/${paire}`,
   });

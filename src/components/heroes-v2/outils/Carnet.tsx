@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 import { HERO_EASE } from "@/components/hero/HeroKit";
 import { CountUp } from "@/components/home/premium/shared";
 import { CARNET as P, FlowBar, splitQuestion } from "./FlowBar";
-import { DISPLAY, SERIF } from "./fonts";
+import { DISPLAY, SERIF } from "./font-stacks";
 
 /* ==================================================================
    « Carnet » — premier écran du questionnaire ThermoMatch et haut de

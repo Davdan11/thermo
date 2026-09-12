@@ -1,5 +1,6 @@
 ---
 title: "Chauffer un sous-sol avec une thermopompe : murale, console ou gainable"
+seoTitle: "Chauffer un sous-sol avec une thermopompe"
 description: "Air froid qui stagne, humidité, murs enterrés : le sous-sol a ses règles. Comment le chauffer à la thermopompe, quelle unité choisir, quel calibre viser."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

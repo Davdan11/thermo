@@ -4,22 +4,26 @@ import "./globals.css";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { Footer } from "@/components/layout/Footer";
 import { cn } from "@/lib/utils";
-import { getOrganizationSchema, getWebSiteSchema, SITE_URL } from "@/lib/seo";
+import { getOrganizationSchema, getWebSiteSchema, jsonLdString, SITE_URL } from "@/lib/seo";
 import { UTMProvider } from "@/components/providers/UTMProvider";
 import { Analytics } from "@/components/analytics/Analytics";
 import { ConsentBanner } from "@/components/analytics/ConsentBanner";
+import { PauseOffscreenAnimations } from "@/components/providers/PauseOffscreenAnimations";
 import { Suspense } from "react";
 import { displayFont, serifFont } from "@/lib/fonts";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
 const inter = Inter({
+  // Jamais rendue (--font-sans et --font-display pointent sur Geist et Inter Tight) : déclarée, pas préchargée.
+  preload: false,
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
 const outfit = Outfit({
+  preload: false,
   variable: "--font-outfit",
   subsets: ["latin"],
   display: "swap",
@@ -29,10 +33,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     template: "%s | TAV.ca",
-    default: "Thermopompes À Vendre.ca — Trouvez la bonne thermopompe pour votre maison.",
+    default: "Thermopompes À Vendre.ca : trouvez la bonne thermopompe",
   },
   description:
-    "Comparez toutes les thermopompes vendues au Québec avec les données officielles d'Hydro-Québec, vérifiez la subvention LogisVert et obtenez une soumission pour votre maison.",
+    "Comparez les thermopompes vendues au Québec avec les données officielles d'Hydro-Québec, vérifiez la subvention LogisVert et obtenez une soumission.",
   openGraph: {
     type: "website",
     siteName: "Thermopompes À Vendre.ca",
@@ -53,11 +57,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex flex-col min-h-screen">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(getOrganizationSchema()) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdString(getOrganizationSchema()) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebSiteSchema()) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdString(getWebSiteSchema()) }}
         />
         <SiteChrome footer={<Footer />}>{children}</SiteChrome>
         <Suspense fallback={null}>
@@ -65,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Suspense>
         <Analytics />
         <ConsentBanner />
+        <PauseOffscreenAnimations />
       </body>
     </html>
   );

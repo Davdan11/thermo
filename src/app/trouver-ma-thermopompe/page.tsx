@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 import { ThermoMatchLoader } from "./_components/ThermoMatchLoader";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
 import { displayFont, serifFont } from "@/lib/fonts";
 
-export const metadata: Metadata = {
-  title: "Trouver ma thermopompe — ThermoMatch",
+export const metadata: Metadata = createMetadata({
+  title: `Trouver ma thermopompe — ThermoMatch`,
   description:
-    "Répondez à quelques questions pour trouver la thermopompe idéale pour votre propriété au Québec. Recommandation personnalisée selon votre habitation.",
-  alternates: { canonical: "/trouver-ma-thermopompe" },
+    `Répondez à quelques questions pour trouver la thermopompe idéale pour votre propriété au Québec. Recommandation personnalisée selon votre habitation.`,
+  canonicalPath: "/trouver-ma-thermopompe",
   robots: { index: true, follow: true },
-};
+});
 
 export default function TrouverMaThermopompePage() {
   const catalogueCount = getEligibleModelCount();

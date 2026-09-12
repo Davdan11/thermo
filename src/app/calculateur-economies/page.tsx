@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import { createMetadata } from "@/lib/seo";
 import { SavingsCalculator } from "@/components/calculators/SavingsCalculator";
@@ -5,11 +6,12 @@ import { MeterHero } from "@/components/heroes-v2/prix/MeterHero";
 import { Root } from "@/components/sections-v2/prix/kit";
 import { CompteurExplain } from "@/components/sections-v2/prix/CompteurSections";
 
-export const metadata = createMetadata({
-  title: "Calculateur d'Économies Thermopompe",
-  description: "Calculez rapidement combien d'argent vous pouvez économiser chaque année sur votre facture d'électricité en installant une thermopompe.",
-  robots: { index: true, follow: true },
+export const metadata: Metadata = createMetadata({
+  title: `Calculateur d'économies de thermopompe`,
+  description:
+    `Calculez rapidement combien d'argent vous pouvez économiser chaque année sur votre facture d'électricité en installant une thermopompe.`,
   canonicalPath: "/calculateur-economies",
+  robots: { index: true, follow: true },
 });
 
 export default function CalculateurEconomiesPage() {

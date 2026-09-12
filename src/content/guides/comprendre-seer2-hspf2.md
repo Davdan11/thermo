@@ -1,5 +1,6 @@
 ---
 title: "SEER2, HSPF2 et COP : lire l'efficacité d'une thermopompe au Québec"
+seoTitle: "SEER2, HSPF2 et COP : lire l'efficacité d'une thermopompe"
 description: "Trois indices, trois usages. Le HSPF2 dit ce que vous paierez en chauffage sur une saison, le COP à -15 °C dit ce qui se passe quand il fait vraiment froid, le SEER2 compte peu au Québec. Explications chiffrées."
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-04-12"

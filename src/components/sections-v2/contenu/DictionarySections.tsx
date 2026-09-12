@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll, MotionConfig } from "motion/react";
 import { typo } from "@/components/content-hero/typo";
-import { FRAUNCES } from "@/components/heroes-v2/contenu/fonts";
+import { FRAUNCES } from "@/components/heroes-v2/contenu/font-stacks";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { EASE, Mask, Rule, VIEW } from "./motion";
 import "./sections.css";

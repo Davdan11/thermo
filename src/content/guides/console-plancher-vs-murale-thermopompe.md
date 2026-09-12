@@ -1,5 +1,6 @@
 ---
 title: "Console au plancher ou murale : quelle unité intérieure choisir"
+seoTitle: "Console au plancher ou murale : quelle unité choisir"
 description: "Même unité extérieure, deux façons de souffler l'air : la console chauffe au sol, la murale d'en haut. Où chacune excelle, confort et prix comparés."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

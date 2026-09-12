@@ -17,6 +17,8 @@ export interface GuideFaq {
 export interface GuideMetadata {
   slug: string;
   title: string;
+  /** Titre de la balise <title> quand le titre éditorial dépasse ~60 caractères (le h1 reste « title »). */
+  seoTitle?: string;
   description: string;
   author: string;
   /** Date de première publication (ISO). */
@@ -63,6 +65,7 @@ function toMetadata(slug: string, raw: matter.GrayMatterFile<string>): GuideMeta
   return {
     slug,
     title: data.title ?? slug,
+    seoTitle: data.seoTitle,
     description: data.description ?? "",
     author: data.author ?? "L'équipe ThermoMatch",
     publishedAt: data.publishedAt ?? "2026-01-01",

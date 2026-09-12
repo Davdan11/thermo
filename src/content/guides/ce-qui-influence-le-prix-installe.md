@@ -1,5 +1,6 @@
 ---
 title: "Prix d'une thermopompe installée : ce qui fait varier la facture"
+seoTitle: "Thermopompe installée : ce qui fait varier le prix"
 description: "Pourquoi deux soumissions pour la même machine diffèrent de plusieurs milliers de dollars : électricité, ligne frigorifique, support, appareil, garantie, subvention. Comment lire une soumission et la comparer."
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-06-18"

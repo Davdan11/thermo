@@ -1,5 +1,6 @@
 ---
 title: "Meilleure thermopompe murale au Québec en 2026 : le classement sur données certifiées"
+seoTitle: "Meilleure thermopompe murale au Québec en 2026"
 description: "Pas d'avis sponsorisé : les murales classées sur HSPF2, COP à -15 °C et tenue de capacité, d'après ENERGY STAR et la liste LogisVert d'Hydro-Québec. Les marques qui dominent, les modèles à regarder et la méthode pour choisir la vôtre."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

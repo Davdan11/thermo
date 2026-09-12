@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/product/Breadcrumb";
 import { JsonLd } from "@/components/seo/SeoBlocks";
@@ -20,11 +21,12 @@ import { RecuBrief, RecuLedgers, RecuMethode, type Ledger } from "@/components/s
    artistique (src/components/sections-v2/prix/).
    ------------------------------------------------------------------ */
 
-export const metadata = createMetadata({
-  title: "Prix d'une thermopompe au Québec en 2026 : fourchettes installées par type et calibre",
+export const metadata: Metadata = createMetadata({
+  title: `Prix d'une thermopompe au Québec en 2026`,
   description:
-    "Ce que coûte une thermopompe installée au Québec en 2026 : murales de 9 000 à 24 000 BTU, multizones, centrales, par gamme de marque, d'après les prix publiés (Protégez-Vous, guides, installateurs). Avant et après LogisVert.",
+    `Prix d'une thermopompe installée au Québec en 2026 : murales de 9 000 à 24 000 BTU, multizones, centrales, d'après les prix publiés, avant et après LogisVert.`,
   canonicalPath: "/prix",
+  robots: { index: true, follow: true },
 });
 
 const TIERS: PriceTier[] = ["economique", "intermediaire", "premium", "toutes"];

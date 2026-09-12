@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Camera, ArrowRight } from "lucide-react";
 
 /* ==================================================================
@@ -28,7 +29,8 @@ export function ThermoScanBadge({ height = 20, href }: { height?: number; href?:
   // Largeur explicite : avec « width: auto » et le « max-width: 100% » de Tailwind, l'image se réduit à
   // zéro dans un conteneur inline-flex et la pastille s'affichait vide.
   const width = Math.round(height * NAV_LOGO_RATIO);
-  const img = <img src={NAV_LOGO} alt="ThermoScan" width={width} height={height} style={{ height, width, maxWidth: "none", display: "block" }} />;
+  // next/image : même rendu, mais quelques Ko au lieu du fichier de 862 px (44 Ko).
+  const img = <Image src={NAV_LOGO} alt="ThermoScan" width={width} height={height} style={{ height, width, maxWidth: "none", display: "block" }} />;
   const style: React.CSSProperties = { display: "inline-flex", alignItems: "center", background: NAVY, borderRadius: 999, padding: `${Math.round(height * 0.28)}px ${Math.round(height * 0.6)}px`, lineHeight: 0 };
   return href ? <Link href={href} style={style} aria-label="ThermoScan">{img}</Link> : <span style={style}>{img}</span>;
 }

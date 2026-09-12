@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 import { AboutManifesto } from "@/components/heroes-v2/entreprise/AboutManifesto";
 import { AboutSections } from "@/components/sections-v2/entreprise/AboutSections";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
 
-export const metadata: Metadata = {
-  title: "À propos de Thermopompes À Vendre.ca",
+export const metadata: Metadata = createMetadata({
+  title: `À propos de Thermopompes À Vendre.ca`,
   description:
-    "Nous construisons une meilleure façon de découvrir, comparer et acheter les systèmes offerts au Québec.",
-  alternates: { canonical: "/a-propos" },
+    `Nous construisons une meilleure façon de découvrir, comparer et acheter les thermopompes au Québec, en traduisant les fiches techniques en repères utiles.`,
+  canonicalPath: "/a-propos",
   robots: { index: true, follow: true },
-};
+});
 
 
 export default function AProposPage() {

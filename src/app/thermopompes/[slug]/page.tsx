@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { createMetadata, getBreadcrumbSchema, getFaqPageSchema, getItemListSchema } from "@/lib/seo";
+import { createMetadata, fitTitle, getBreadcrumbSchema, getFaqPageSchema, getItemListSchema } from "@/lib/seo";
 import { getLandingPage, getLandingPages, type LandingPage } from "@/lib/seo/landings";
 import { getCapacityClass, getCapacityClasses, getRanking, type CapacityClass } from "@/lib/seo/programmatic";
 import { estimateLoad } from "@/lib/thermomatch/sizing";
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const cap = getCapacityClass(slug);
   if (cap) {
     return createMetadata({
-      title: `Thermopompe ${cap.label} : ${cap.models.length} modèles, capacité réelle à -15 °C et subvention LogisVert`,
+      title: fitTitle(`Thermopompe ${cap.label} : ${cap.models.length} modèles et LogisVert`, `Thermopompe ${cap.label} : ${cap.models.length} modèles comparés`, `Thermopompe ${cap.label}`),
       description: `Toutes les thermopompes ${cap.label} vendues au Québec (${cap.wallCount} murales, ${cap.centralCount} centrales) avec capacité certifiée à -15 °C, HSPF2, SEER2 et montant LogisVert officiel. Pour quelle superficie? Réponse chiffrée.`,
       canonicalPath: `/thermopompes/${cap.slug}`,
     });

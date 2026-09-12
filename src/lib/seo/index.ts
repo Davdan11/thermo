@@ -19,6 +19,18 @@ const SITE_DESCRIPTION =
    createMetadata — unified metadata generator
    ------------------------------------------------------------------ */
 
+/**
+ * Image de partage par défaut : celle de src/app/opengraph-image.tsx. Dès qu’une page définit son
+ * propre objet openGraph, Next.js n’hérite plus de l’image du fichier racine : on la redonne donc
+ * explicitement aux pages qui n’ont pas d’image propre.
+ */
+export const DEFAULT_OG_IMAGE = {
+  url: `${SITE_URL}/opengraph-image`,
+  width: 1200,
+  height: 630,
+  alt: "Thermopompes À Vendre.ca — Comparez toutes les thermopompes vendues au Québec",
+};
+
 interface MetadataOverrides extends Metadata {
   /** Will be converted to an absolute canonical URL */
   canonicalPath?: string;
@@ -28,13 +40,37 @@ interface MetadataOverrides extends Metadata {
  * Generate page metadata with consistent defaults.
  * Handles title, description, canonical, robots, Open Graph, and Twitter.
  */
-/** Google tronque vers 155–160 caractères : on coupe proprement sur un mot plutôt que de laisser une phrase hachée. */
+/**
+ * Google tronque vers 155–160 caractères. On garde d'abord des phrases entières quand la coupure
+ * tombe assez loin (≥ 100 caractères) ; sinon on coupe proprement sur un mot plutôt que de laisser
+ * une phrase hachée.
+ */
 export function clampDescription(text: string, max = 158): string {
   const t = text.replace(/\s+/g, " ").trim();
   if (t.length <= max) return t;
+  const head = `${t.slice(0, max)} `;
+  const sentenceEnd = Math.max(head.lastIndexOf(". "), head.lastIndexOf("? "), head.lastIndexOf("! "));
+  if (sentenceEnd >= 100) return head.slice(0, sentenceEnd + 1).trim();
   const cut = t.slice(0, max - 1);
   const at = cut.lastIndexOf(" ");
   return `${cut.slice(0, at > 80 ? at : max - 1).replace(/[,;:\s]+$/, "")}…`;
+}
+
+/**
+ * Longueur visée pour la partie propre à la page : le gabarit « %s | TAV.ca » du layout ajoute
+ * 9 caractères, soit ≈ 60 caractères affichés au total.
+ */
+export const TITLE_MAX = 51;
+
+/** Renvoie le premier titre candidat qui tient dans TITLE_MAX caractères (sinon le plus court). */
+export function fitTitle(...candidates: string[]): string {
+  const clean = candidates.map((c) => c.replace(/\s+/g, " ").trim()).filter(Boolean);
+  return clean.find((c) => [...c].length <= TITLE_MAX) ?? clean.reduce((a, b) => ([...b].length < [...a].length ? b : a));
+}
+
+/** JSON-LD sérialisé pour une balise <script> : « < » échappé pour qu'aucune donnée ne puisse fermer la balise. */
+export function jsonLdString(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
 }
 
 export function createMetadata(overrides: MetadataOverrides = {}): Metadata {
@@ -63,7 +99,9 @@ export function createMetadata(overrides: MetadataOverrides = {}): Metadata {
       ? rest.openGraph.title
       : typeof title === "string"
         ? title
-        : SITE_NAME;
+        : title && typeof title === "object" && "absolute" in title && title.absolute
+          ? title.absolute
+          : SITE_NAME;
   const ogDesc =
     rest.openGraph?.description ??
     (typeof description === "string" ? description : SITE_DESCRIPTION);
@@ -81,15 +119,17 @@ export function createMetadata(overrides: MetadataOverrides = {}): Metadata {
       siteName: SITE_NAME,
       locale: "fr_CA",
       ...rest.openGraph,
-      url: rest.openGraph?.url ?? canonical ?? SITE_URL,
+      // Sans canonique (pages en noindex), pas d’og:url plutôt que celle de l’accueil.
+      ...((rest.openGraph?.url ?? canonical) ? { url: rest.openGraph?.url ?? canonical } : {}),
       title: ogTitle,
       description: ogDesc,
-      // Pas d'image par défaut ici : l'image OG racine (src/app/opengraph-image.tsx) s'applique automatiquement.
+      ...(rest.openGraph?.images ? {} : { images: [DEFAULT_OG_IMAGE] }),
     },
     twitter: {
       card: "summary_large_image",
       title: ogTitle,
       description: ogDesc,
+      ...(rest.twitter?.images || rest.openGraph?.images ? {} : { images: [DEFAULT_OG_IMAGE.url] }),
       ...rest.twitter,
     },
   };
@@ -104,12 +144,14 @@ export function getOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/images/headerlogo-720.webp`,
+    telephone: "+1-438-900-3224",
+    email: "info@thermopompesavendre.ca",
     areaServed: { "@type": "State", name: "Québec", address: { "@type": "PostalAddress", addressRegion: "QC", addressCountry: "CA" } },
-    // À compléter avec les URL réelles des profils sociaux quand ils existeront.
-    sameAs: [],
+    // sameAs : à ajouter avec les URL réelles des profils sociaux quand ils existeront (jamais d'URL inventée).
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
@@ -126,9 +168,11 @@ export function getWebSiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
     url: SITE_URL,
     inLanguage: "fr-CA",
+    publisher: { "@id": `${SITE_URL}/#organization` },
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -176,7 +220,8 @@ export function getProductSchema(data: {
     category: data.category,
     description: data.description,
     url: `${SITE_URL}/produit/${data.slug}`,
-    ...(data.imageUrl ? { image: data.imageUrl } : {}),
+    // Google exige une URL absolue ; aucune image n’est inventée quand la fiche n’en a pas.
+    ...(data.imageUrl ? { image: data.imageUrl.startsWith("http") ? data.imageUrl : `${SITE_URL}${data.imageUrl}` } : {}),
     ...(data.additionalProperties?.length
       ? {
           additionalProperty: data.additionalProperties.map((p) => ({

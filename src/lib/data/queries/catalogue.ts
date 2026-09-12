@@ -393,6 +393,8 @@ export function getCatalogueModels(
    Lightweight model list for the CompareSelector
    ------------------------------------------------------------------ */
 
+/* Seulement les champs que lit le sélecteur : la liste entière (~3 900 modèles) est
+   sérialisée dans la page /comparer, chaque champ en trop y coûte ~4 000 fois. */
 export interface SelectableModelData {
   slug: string;
   name: string;
@@ -402,13 +404,7 @@ export interface SelectableModelData {
   imageUrl: string | null;
   isColdClimate: boolean;
   systemTypeLabel: string;
-  /* ---- Specs from configuration ---- */
-  minHeatingTempC: number | null;
-  seer2: number | null;
   hspf2: number | null;
-  noiseIndoorMinDbA: number | null;
-  hasWifi: boolean | null;
-  refrigerant: string | null;
 }
 
 export function getSelectableModels(): SelectableModelData[] {
@@ -421,10 +417,6 @@ export function getSelectableModels(): SelectableModelData[] {
       const series = seriesById().get(model.seriesId);
       const config =
         configByModelId().get(model.id) ?? null;
-      const outdoorUnit = config
-        ? registry.outdoorUnits.find((u) => u.id === config.outdoorUnitId) ??
-          null
-        : null;
 
       return {
         slug: model.slug,
@@ -435,12 +427,7 @@ export function getSelectableModels(): SelectableModelData[] {
         imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
         isColdClimate: model.categories.includes("cold-climate"),
         systemTypeLabel: SYSTEM_TYPE_LABELS[model.systemType],
-        minHeatingTempC: config?.minHeatingTempC ?? null,
-        seer2: config?.seer2 ?? null,
         hspf2: config?.hspf2 ?? null,
-        noiseIndoorMinDbA: config?.noiseIndoorMinDbA ?? null,
-        hasWifi: config?.hasWifi ?? null,
-        refrigerant: (outdoorUnit?.refrigerant as string | undefined) ?? null,
       } satisfies SelectableModelData;
     });
 

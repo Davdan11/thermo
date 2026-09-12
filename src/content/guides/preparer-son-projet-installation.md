@@ -1,5 +1,6 @@
 ---
 title: "Installation d'une thermopompe : comment préparer la journée"
+seoTitle: "Installation d'une thermopompe : préparer la journée"
 description: "Emplacements, accès, panneau électrique, extérieur, copropriété, mise en service, documents à récupérer : la liste complète pour une installation sans surprise et une garantie valide."
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-07-29"

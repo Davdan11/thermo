@@ -1,5 +1,6 @@
 ---
 title: "Thermopompe multizone : quand c'est le bon choix, et quand deux murales valent mieux"
+seoTitle: "Thermopompe multizone : quand est-ce le bon choix?"
 description: "Un compresseur pour deux à cinq têtes intérieures : ce que ça donne vraiment en chauffage l'hiver, les pièges de la capacité partagée, le coût comparé à plusieurs simples zones, et les situations où la centrale gagne."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

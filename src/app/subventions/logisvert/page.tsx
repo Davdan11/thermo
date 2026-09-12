@@ -10,10 +10,11 @@ import { Root } from "@/components/sections-v2/prix/kit";
 import { BaroBrandTable, BaroCta, BaroProse, BaroTrust } from "@/components/sections-v2/prix/BarometreSections";
 
 export const metadata: Metadata = createMetadata({
-  title: `Subvention LogisVert ${new Date().getFullYear()} par marque de thermopompe : montants officiels Hydro-Québec`,
+  title: `Subvention LogisVert ${new Date().getFullYear()} par marque de thermopompe`,
   description:
-    "Montants LogisVert minimum et maximum pour chaque marque de thermopompe vendue au Québec, tirés de la liste officielle d'Hydro-Québec et mis à jour automatiquement.",
+    `Montants LogisVert minimum et maximum par marque de thermopompe vendue au Québec, tirés de la liste officielle d'Hydro-Québec et mis à jour automatiquement.`,
   canonicalPath: "/subventions/logisvert",
+  robots: { index: true, follow: true },
 });
 
 export default function LogisVertIndex() {

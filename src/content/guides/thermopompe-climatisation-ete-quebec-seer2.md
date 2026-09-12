@@ -1,5 +1,6 @@
 ---
 title: "Thermopompe en été : ce que le SEER2 change vraiment à la facture"
+seoTitle: "Thermopompe en été : ce que le SEER2 change"
 description: "Au Québec, l'été pèse peu sur la facture d'une thermopompe. Ce que le SEER2 mesure, quand il compte, et pourquoi le confort d'été dépend surtout du calibre."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

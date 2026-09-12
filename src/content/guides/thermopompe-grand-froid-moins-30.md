@@ -1,5 +1,6 @@
 ---
 title: "Thermopompe à -30 °C : ce que les données certifiées disent vraiment"
+seoTitle: "Thermopompe à -30 °C : ce que disent les données"
 description: "Capacité à -8 °C et -15 °C, COP au froid, température minimale de fonctionnement, tenue de capacité : comment lire une thermopompe grand froid sans se fier aux slogans, et quoi prévoir en Abitibi, au Saguenay ou sur la Côte-Nord."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-08"

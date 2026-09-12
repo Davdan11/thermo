@@ -28,11 +28,11 @@ import { CityMotif, IsothermsBg } from "@/components/seo/hero/CityMotif";
 import { CitiesMotif } from "@/components/seo/hero/CitiesMotif";
 import { CapacityMotif } from "@/components/seo/hero/CapacityMotif";
 import { GuideMotif } from "@/components/seo/hero/GuideMotif";
-import { getFaqPageSchema } from "@/lib/seo";
+import { getFaqPageSchema, jsonLdString } from "@/lib/seo";
 import type { SeoModel } from "@/lib/seo/programmatic";
 
 export function JsonLd({ data }: { data: object | object[] }) {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(data) }} />;
 }
 
 /** Bande de preuve (pattern « Trust & Authority + Conversion » : Hero → Preuve → Solution → CTA). */

@@ -20,7 +20,7 @@ import { HC } from "@/components/hero/HeroKit";
 import { CARNET, FlowBar, ThermoMatchWordmark } from "@/components/heroes-v2/outils/FlowBar";
 import { CarnetButton, CarnetWelcome } from "@/components/heroes-v2/outils/Carnet";
 import { CarnetBack, CarnetChoice, CarnetChoices, CarnetError, CarnetNote, CarnetStepPage, CarnetSummary } from "@/components/heroes-v2/outils/CarnetSteps";
-import { SERIF } from "@/components/heroes-v2/outils/fonts";
+import { SERIF } from "@/components/heroes-v2/outils/font-stacks";
 
 /* ----------------------------------------------------------
    Constants

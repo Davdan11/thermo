@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/seo";
 import { getComparisonData, MAX_COMPARE } from "@/lib/data/queries/comparator";
-import { getAllCatalogueProducts } from "@/lib/data/queries/catalogue";
+import { getAllCatalogueProducts, type SelectableModelData } from "@/lib/data/queries/catalogue";
 import { CompareSelector } from "@/components/compare/CompareSelector";
 import { ComparePageClient } from "@/components/compare/ComparePageClient";
 import { getProductDetail, type ProductDetail } from "@/lib/data/queries/product-detail";
@@ -27,9 +27,10 @@ function toVs(d: ProductDetail, img: string | null): VsModel {
 }
 
 export const metadata: Metadata = createMetadata({
-  title: "Comparateur de thermopompes",
-  description: "Comparez côte à côte les performances, l'efficacité, le silence et la garantie des thermopompes.",
-  alternates: { canonical: "/comparer" },
+  title: `Comparateur de thermopompes au Québec`,
+  description:
+    `Comparez côte à côte de 2 à 5 thermopompes : performances, efficacité, silence et garantie, avec les chiffres ENERGY STAR et Hydro-Québec.`,
+  canonicalPath: "/comparer",
   robots: { index: true, follow: true },
 });
 
@@ -43,7 +44,8 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
   const slugs = modelsParam.split(",").map((s) => s.trim()).filter(Boolean);
   const data = getComparisonData(slugs);
   const allProducts = getAllCatalogueProducts();
-  const selectable = allProducts.map(p => ({ slug: p.model.slug, name: p.model.name, brandName: p.brand.name, brandSlug: p.brand.slug, capacityBtu: p.model.nominalCapacityBtu ?? null, imageUrl: p.imageUrl, isColdClimate: p.isColdClimate, systemTypeLabel: p.systemTypeLabel, minHeatingTempC: p.configuration?.minHeatingTempC ?? null, seer2: p.configuration?.seer2 ?? null, hspf2: p.configuration?.hspf2 ?? null, noiseIndoorMinDbA: p.configuration?.noiseIndoorMinDbA ?? null, hasWifi: p.configuration?.hasWifi ?? null, refrigerant: p.refrigerant }));
+  // Liste sérialisée en entier dans la page (~3 900 modèles) : seulement les champs que lit le sélecteur.
+  const selectable: SelectableModelData[] = allProducts.map((p) => ({ slug: p.model.slug, name: p.model.name, brandName: p.brand.name, brandSlug: p.brand.slug, capacityBtu: p.model.nominalCapacityBtu ?? null, imageUrl: p.imageUrl, isColdClimate: p.isColdClimate, systemTypeLabel: p.systemTypeLabel, hspf2: p.configuration?.hspf2 ?? null }));
   const hasComparison = data.products.length >= 2;
   const selected = data.products.map((p) => toVs(p.detail, p.imageUrl));
   const vsModels = selected.length

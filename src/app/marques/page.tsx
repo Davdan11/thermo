@@ -10,10 +10,11 @@ import { buildPlacards } from "@/components/heroes-v2/marques/server";
    ------------------------------------------------------------------ */
 
 export const metadata: Metadata = createMetadata({
-  title: "Marques de thermopompes",
+  title: `Marques de thermopompes vendues au Québec`,
   description:
-    "Explorez les marques et les modèles de thermopompes présents dans notre catalogue. Comparez leurs capacités, performances et garanties.",
-  alternates: { canonical: "/marques" },
+    `Explorez les marques et les modèles de thermopompes présents dans notre catalogue. Comparez leurs capacités, performances et garanties.`,
+  canonicalPath: "/marques",
+  robots: { index: true, follow: true },
 });
 
 /* ------------------------------------------------------------------

@@ -5,7 +5,7 @@
    (src/components/heroes-v2/prix/*).
    ================================================================== */
 
-export { MONO, DISPLAY, SERIF } from "@/components/heroes-v2/prix/fonts";
+export { MONO, DISPLAY, SERIF } from "@/components/heroes-v2/prix/font-stacks";
 
 /** /prix — « Le reçu » */
 export const RECU = { paper: "#FAF8F3", sheet: "#FFFEFB", ink: "#1B1B1B", mute: "rgba(27,27,27,0.64)", rule: "rgba(27,27,27,0.16)", faint: "rgba(27,27,27,0.06)" } as const;

@@ -12,5 +12,4 @@ export const fraunces = Fraunces({
   display: "swap",
 });
 
-export const FRAUNCES =
-  "var(--font-fraunces), Georgia, 'Times New Roman', serif";
+export { FRAUNCES } from "./font-stacks";

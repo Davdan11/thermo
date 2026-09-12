@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { registry } from "@/lib/data/registry";
-import { SITE_URL, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
+import { SITE_URL, clampDescription, fitTitle, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
 import { getSeoModel, indexSlug } from "@/lib/seo/programmatic";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
@@ -61,15 +61,37 @@ export async function generateMetadata({
   const indexable = brand.activeInQuebec && model.status === "published";
 
   const facts: string[] = [];
+  if (model.nominalCapacityBtu) facts.push(`${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU nominal`);
   if (seo?.h5Btu) facts.push(`${seo.h5Btu.toLocaleString("fr-CA")} BTU/h à -15 °C`);
+  if (seo && seo.logisVertDollars > 0) facts.push(`LogisVert ${seo.logisVertDollars.toLocaleString("fr-CA")} $`);
   if (seo?.hspf2) facts.push(`HSPF2 ${seo.hspf2.toLocaleString("fr-CA")}`);
   if (seo?.seer2) facts.push(`SEER2 ${seo.seer2.toLocaleString("fr-CA")}`);
-  if (seo && seo.logisVertDollars > 0) facts.push(`LogisVert ${seo.logisVertDollars.toLocaleString("fr-CA")} $`);
-  const title = `Thermopompe ${brand.name} ${model.name}`;
-  const description = (facts.length
-    ? `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`} : ${facts.join(", ")}. Données officielles Hydro-Québec et ENERGY STAR.`
-    : `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`} : fiche technique, type ${detail.systemTypeLabel.toLowerCase()}, admissibilité LogisVert. Données officielles Hydro-Québec.`
-  ).slice(0, 158);
+  // Titre ≤ ~60 caractères avec le gabarit : nom commercial complet si possible, sinon marque + numéro de modèle.
+  const title = fitTitle(
+    `Thermopompe ${brand.name} ${model.name}`,
+    `${brand.name} ${model.name}`,
+    `Thermopompe ${brand.name} ${model.modelNumber}`,
+    `${brand.name} ${model.modelNumber}`,
+  );
+  const fullName = `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`}`;
+  const kind = detail.systemTypeLabel.toLowerCase();
+  // ≤ 158 caractères sans phrase coupée : on retire d'abord la mention ENERGY STAR, puis les indices
+  // secondaires en fin de liste (SEER2, HSPF2…) ; la troncature « … » ne sert qu'en dernier recours.
+  const lead = `Thermopompe ${kind} ${fullName}`;
+  const closings = [" Données officielles Hydro-Québec et ENERGY STAR.", " Données officielles Hydro-Québec."];
+  let description = "";
+  for (let n = facts.length; n >= 1 && !description; n--) {
+    for (const closing of closings) {
+      const d = `${lead} : ${facts.slice(0, n).join(", ")}.${closing}`;
+      if (d.length <= 158) {
+        description = d;
+        break;
+      }
+    }
+  }
+  if (!description) description = clampDescription(`${lead} : fiche technique et admissibilité LogisVert. Données officielles Hydro-Québec.`);
+  const more = " Consultez la fiche technique complète.";
+  if (description.length < 120 && description.length + more.length <= 158) description += more;
 
   const ogImage = `${SITE_URL}/api/og?type=produit&slug=${encodeURIComponent(slug)}`;
 

@@ -3,7 +3,8 @@ import { brandLogoPath } from "@/lib/data/brand-logos";
 import { existsSync, statSync } from "fs";
 import { join } from "path";
 
-import { createMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+import { createMetadata, SITE_URL } from "@/lib/seo";
 import { getCatalogueModels, getAvailableFilters } from "@/lib/data/queries/catalogue";
 import type { CatalogueParams, CatalogueSort } from "@/lib/data/queries/catalogue";
 import type { SystemType } from "@/lib/data/types/enums";
@@ -60,16 +61,52 @@ function stripBrands(list: { name: string; slug: string }[]): StripBrand[] {
 }
 
 /* ------------------------------------------------------------------
-   Metadata
+   Metadata — catalogue, pagination et facettes
+   - /thermopompes           : page canonique, indexable.
+   - /thermopompes?page=N    : chaque page de la pagination est indexable avec sa propre canonique
+                               (recommandation actuelle de Google : ne pas canoniser la page 2 vers la 1).
+   - filtres, tri, recherche : noindex,follow, sans canonique contradictoire. Les liens vers les fiches
+                               restent suivis ; les intentions « murale », « centrale », « 12 000 BTU »…
+                               ont déjà leurs pages dédiées indexables.
+   - paramètres de suivi (utm_*, gclid…) : ignorés, canonique vers l’URL propre.
    ------------------------------------------------------------------ */
 
-export const metadata = createMetadata({
-  title: "Thermopompes — Explorez les modèles offerts au Québec",
-  description:
-    "Comparez les modèles de thermopompes, les capacités et les performances pour trouver un système adapté à votre habitation au Québec.",
-  robots: { index: true, follow: true },
-  canonicalPath: "/thermopompes",
-});
+const CATALOGUE_TITLE = "Thermopompes au Québec : explorez tous les modèles";
+const CATALOGUE_DESCRIPTION =
+  "Comparez les modèles de thermopompes, les capacités et les performances pour trouver un système adapté à votre habitation au Québec.";
+const FACET_KEYS = ["search", "type", "brand", "series", "capacity", "coldClimate", "sort"] as const;
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  const sp = await searchParams;
+  const noindex = { index: false, follow: true } as const;
+  const cleanUrl = `${SITE_URL}/thermopompes`;
+
+  if (FACET_KEYS.some((k) => sp[k] !== undefined)) {
+    return createMetadata({ title: CATALOGUE_TITLE, description: CATALOGUE_DESCRIPTION, robots: noindex, openGraph: { url: cleanUrl } });
+  }
+
+  const params = parseParams(sp);
+  const page = params.page ?? 1;
+  if (page <= 1) {
+    return createMetadata({ title: CATALOGUE_TITLE, description: CATALOGUE_DESCRIPTION, robots: { index: true, follow: true }, canonicalPath: "/thermopompes" });
+  }
+
+  const { totalPages } = getCatalogueModels(params);
+  if (page > totalPages) {
+    // Page au-delà de la dernière : liste vide, rien à indexer.
+    return createMetadata({ title: `Catalogue des thermopompes, page ${page}`, description: CATALOGUE_DESCRIPTION, robots: noindex, openGraph: { url: cleanUrl } });
+  }
+  return createMetadata({
+    title: `Thermopompes au Québec : catalogue, page ${page} sur ${totalPages}`,
+    description: `Page ${page} sur ${totalPages} du catalogue : comparez les modèles de thermopompes vendus au Québec, leurs capacités et leurs performances certifiées.`,
+    robots: { index: true, follow: true },
+    canonicalPath: `/thermopompes?page=${page}`,
+  });
+}
 
 /* ------------------------------------------------------------------
    Param validation

@@ -1,5 +1,6 @@
 ---
 title: "Gree, Daikin ou Fujitsu : comparatif sur données certifiées"
+seoTitle: "Gree, Daikin ou Fujitsu : comparatif thermopompes"
 description: "Trois marques très vendues au Québec, comparées sur ce que publient ENERGY STAR et Hydro-Québec : nombre de modèles, certification climat froid, HSPF2, COP à -15 °C, montants LogisVert. Pas d'avis sponsorisé."
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-05-02"

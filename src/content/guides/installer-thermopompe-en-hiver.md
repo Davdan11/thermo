@@ -1,5 +1,6 @@
 ---
 title: "Installer une thermopompe en hiver au Québec : possible, et souvent plus rapide"
+seoTitle: "Installer une thermopompe en hiver au Québec"
 description: "Ce que le froid change réellement à l'installation d'une murale ou d'une centrale, les limites de température des fabricants, les délais plus courts hors saison, et les vérifications à exiger d'un installateur qui pose en janvier."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Container } from "./Container";
@@ -36,7 +37,8 @@ function NavLabel({ link, height, onDark = false }: { link: NavLink; height: num
   const width = Math.round(height * LOGO_RATIO);
   return (
     <span style={{ display: "inline-flex", alignItems: "center", background: "#0C1821", borderRadius: 999, padding: `${Math.round(height * 0.3)}px ${Math.round(height * 0.65)}px`, lineHeight: 0, boxShadow: onDark ? "inset 0 0 0 1px rgba(244,239,231,0.22)" : "none" }}>
-      <img src={link.logo} alt={link.label} width={width} height={height} style={{ height, width, maxWidth: "none", display: "block" }} />
+      {/* next/image : quelques Ko en AVIF au lieu du fichier de 862 px (44 Ko) sur chaque page ; « eager » garde le menu mobile instantané. */}
+      <Image src={link.logo} alt={link.label} width={width} height={height} loading="eager" style={{ height, width, maxWidth: "none", display: "block" }} />
     </span>
   );
 }
@@ -129,16 +131,25 @@ export function Header() {
             >
               {/* Deux versions superposées (noire et crème) : fondu enchaîné quand l'en-tête devient blanc. */}
               <span className="relative block">
-                <img
+                {/* next/image (AVIF/WebP à la taille affichée, 216 px CSS au plus) ; les dimensions réservent la place avant le chargement. */}
+                <Image
                   src="/images/headerlogo-720.webp"
                   alt="Thermopompes A Vendre"
+                  width={720}
+                  height={240}
+                  sizes="216px"
+                  loading="eager"
                   className="h-[60px] min-[1700px]:h-[72px]"
                   style={{ width: "auto", display: "block", opacity: darkHero ? 0 : 1, transition: "opacity .45s ease" }}
                 />
-                <img
+                <Image
                   src="/images/headerlogo-720-creme.webp"
                   alt=""
                   aria-hidden="true"
+                  width={720}
+                  height={240}
+                  sizes="216px"
+                  loading="eager"
                   className="absolute inset-0 h-[60px] min-[1700px]:h-[72px]"
                   style={{ width: "auto", display: "block", opacity: darkHero ? 1 : 0, transition: "opacity .45s ease", pointerEvents: "none" }}
                 />

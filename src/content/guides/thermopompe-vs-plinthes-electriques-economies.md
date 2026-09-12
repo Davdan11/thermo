@@ -1,5 +1,6 @@
 ---
 title: "Thermopompe ou plinthes électriques : combien on économise vraiment au Québec"
+seoTitle: "Thermopompe ou plinthes : combien on économise?"
 description: "Le calcul honnête, avec les COP certifiés : ce qu'une thermopompe murale ou centrale enlève à une facture de chauffage électrique, pourquoi le chiffre dépend de la région et de la maison, et les cas où l'économie est mince."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

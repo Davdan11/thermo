@@ -1048,3 +1048,10 @@ input[type="radio"]:disabled {
   .ts-scanline { top: 46%; opacity: .8; }
   .ts-chip { opacity: 1; animation: none; }
 }
+
+/* Boucles CSS infinies dont la section est hors écran : en pause (PauseOffscreenAnimations). */
+[data-anim-off~="el"],
+[data-anim-off~="before"]::before,
+[data-anim-off~="after"]::after {
+  animation-play-state: paused !important;
+}

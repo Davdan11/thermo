@@ -1,5 +1,6 @@
 ---
 title: "Entretien d'une thermopompe : filtres, neige, dégivrage et visite annuelle"
+seoTitle: "Entretien d'une thermopompe : filtres, neige et dégivrage"
 description: "Ce que vous faites vous-même chaque mois, ce que l'installateur fait chaque année, et les signes qui annoncent un problème. Un entretien simple préserve la capacité, l'efficacité et la garantie."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-08"

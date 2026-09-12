@@ -9,7 +9,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { createMetadata, getBreadcrumbSchema, getServiceSchema, SITE_URL } from "@/lib/seo";
+import { createMetadata, fitTitle, getBreadcrumbSchema, getServiceSchema, SITE_URL } from "@/lib/seo";
 import { getCities, getCity } from "@/lib/seo/cities";
 import { getCityData, referenceHdd, fmtInt, fmtTemp } from "@/lib/seo/cities-data";
 import { getCanonicalModels, getRanking, getAllBrandStats, type SeoModel } from "@/lib/seo/programmatic";
@@ -58,8 +58,14 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   if (!city) return createMetadata({ title: "Ville introuvable" });
   const hdd = getCityData(ville)?.climate?.hdd18 ?? null;
   return createMetadata({
-    title: `Thermopompe à ${city.name} : hiver à ${city.designTempC} °C, modèles et LogisVert`,
-    description: `Quelle thermopompe à ${city.name} (${city.region})? Température de conception ${city.designTempC} °C${hdd ? `, ${fmtInt(hdd)} degrés-jours de chauffage` : ""}, besoins de chauffage d'une maison type, modèles certifiés pour ce climat et montants LogisVert officiels.`,
+    title: fitTitle(`Thermopompe à ${city.name} : hiver à ${city.designTempC} °C et LogisVert`, `Thermopompe à ${city.name} : modèles et LogisVert`, `Thermopompe à ${city.name} : modèles`, `Thermopompe à ${city.name}`),
+    // ≤ 158 caractères sans troncature : on retire la région, puis les degrés-jours, si la ville a un long nom.
+    description:
+      [
+        `Quelle thermopompe à ${city.name} (${city.region})? Température de conception ${city.designTempC} °C${hdd ? `, ${fmtInt(hdd)} degrés-jours de chauffage` : ""}, modèles certifiés pour ce climat et montants LogisVert officiels.`,
+        `Quelle thermopompe à ${city.name}? Température de conception ${city.designTempC} °C${hdd ? `, ${fmtInt(hdd)} degrés-jours` : ""}, modèles certifiés pour ce climat et montants LogisVert officiels.`,
+        `Quelle thermopompe à ${city.name}? Température de conception ${city.designTempC} °C, modèles certifiés pour ce climat et montants LogisVert officiels.`,
+      ].find((d) => d.length <= 158) ?? `Quelle thermopompe à ${city.name}? Modèles certifiés pour ce climat et montants LogisVert officiels.`,
     canonicalPath: `/thermopompe/${city.slug}`,
   });
 }

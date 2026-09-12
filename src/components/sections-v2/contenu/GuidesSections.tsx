@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import type { GuideCategory, GuideMetadata } from "@/lib/markdown";
 import { typo } from "@/components/content-hero/typo";
-import { FRAUNCES } from "@/components/heroes-v2/contenu/fonts";
+import { FRAUNCES } from "@/components/heroes-v2/contenu/font-stacks";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { EASE, Mask, Rule, VIEW } from "./motion";
 import "./sections.css";

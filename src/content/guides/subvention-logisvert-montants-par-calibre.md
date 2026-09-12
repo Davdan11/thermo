@@ -1,5 +1,6 @@
 ---
 title: "Subvention LogisVert 2026 : les montants réels par calibre, de 9 000 à 60 000 BTU"
+seoTitle: "Subvention LogisVert 2026 : montants par calibre"
 description: "Ce que la liste officielle d'Hydro-Québec accorde vraiment, calibre par calibre : minimum, médiane et maximum pour les murales et les centrales, pourquoi deux machines de 12 000 BTU reçoivent 350 $ ou 2 200 $, et comment vérifier votre appariement."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"

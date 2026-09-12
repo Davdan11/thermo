@@ -3,10 +3,10 @@ import { createMetadata } from "@/lib/seo";
 import EspaceInstallateurClient from "./InstallateurClient";
 
 export const metadata: Metadata = createMetadata({
-  title: "Espace installateur — Thermopompes À Vendre.ca",
+  title: `Espace installateur`,
   description:
-    "Espace dédié aux installateurs certifiés CVAC. Rejoignez le réseau Thermopompes À Vendre.ca et recevez des demandes de soumission qualifiées au Québec.",
-  alternates: { canonical: "/espace-installateur" },
+    `Espace dédié aux installateurs certifiés CVAC. Rejoignez le réseau Thermopompes À Vendre.ca et recevez des demandes de soumission qualifiées au Québec.`,
+  canonicalPath: "/espace-installateur",
   robots: { index: false, follow: true },
 });
 

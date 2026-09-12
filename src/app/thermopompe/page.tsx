@@ -9,10 +9,11 @@ import { FrostCityTable, FrostCta, FrostHead, FrostNote, FrostRegions, FrostTrus
 import { FrostIndexHero, type FrostGroup } from "@/components/heroes-v2/contenu/Frost";
 
 export const metadata: Metadata = createMetadata({
-  title: "Thermopompe par ville au Québec : subvention LogisVert et modèles grand froid",
+  title: `Thermopompe par ville au Québec : climat et modèles`,
   description:
-    "Choisissez votre ville : température de conception, subvention LogisVert d'Hydro-Québec et thermopompes certifiées climat froid pour chaque région du Québec.",
+    `Choisissez votre ville : température de conception, subvention LogisVert d'Hydro-Québec et thermopompes certifiées climat froid pour chaque région du Québec.`,
   canonicalPath: "/thermopompe",
+  robots: { index: true, follow: true },
 });
 
 export default function CitiesIndexPage() {

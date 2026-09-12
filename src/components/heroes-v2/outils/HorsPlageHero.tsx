@@ -6,7 +6,9 @@ import { useEffect, type ReactNode } from "react";
 import Link from "next/link";
 import { animate, motion, useMotionValue, useTransform } from "motion/react";
 import { HERO_EASE } from "@/components/hero/HeroKit";
-import { DISPLAY, MONO, outilsMono } from "./fonts";
+import { DISPLAY, MONO } from "./font-stacks";
+// Police sans préchargement : ce héros ne sert qu’à la 404, présente dans l’arbre de toutes les routes.
+import { outilsMonoLazy as outilsMono } from "./fonts-lazy";
 
 /* ==================================================================
    « Hors plage » — page 404.

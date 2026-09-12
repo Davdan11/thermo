@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
+import { createMetadata, fitTitle, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getAllBrandStats, getBrandStats, modelsForBrandKind, type SeoKind } from "@/lib/seo/programmatic";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { productImage } from "@/components/seo/hero/assets";
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!k || !b) return createMetadata({ title: "Page introuvable" });
   const models = modelsForBrandKind(slug, k.kind);
   return createMetadata({
-    title: `${k.plural} ${b.name} au Québec : ${models.length} modèles, capacité à -15 °C et subvention LogisVert`,
+    title: fitTitle(`${k.plural} ${b.name} : ${models.length} modèles et LogisVert`, `${k.plural} ${b.name} au Québec : ${models.length} modèles`, `${k.plural} ${b.name} au Québec`, `${k.plural} ${b.name}`),
     description: `Toutes les thermopompes ${k.label}s ${b.name} vendues au Québec avec capacité certifiée à -15 °C, HSPF2, SEER2 et montant LogisVert officiel. Comparez et trouvez le bon calibre.`,
     canonicalPath: `/marques/${slug}/${type}`,
   });
