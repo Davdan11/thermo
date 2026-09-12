@@ -8,6 +8,10 @@ import Link from "next/link";
 import { AnimatePresence, motion, useInView, useReducedMotion } from "motion/react";
 import { Snowfall } from "@/components/home/Snowfall";
 import { AirLines, CountUp } from "@/components/home/premium/shared";
+import type { SavingsEstimate } from "@/lib/thermomatch/savings";
+import { SavingsBand } from "./SavingsBand";
+import { ExistingUnitCompare } from "./ExistingUnitCompare";
+import { EmailMyChoices } from "./EmailMyChoices";
 
 /* ==================================================================
    ThermoMatch — écran des trois recommandations (version premium).
@@ -38,6 +42,8 @@ interface SummaryContext {
   candidatesEvaluated?: number;
   candidatesRetained?: number;
   logisVertUpdatedAt?: string | null;
+  /** Économies de chauffage estimées (plinthes électriques seulement). */
+  savings?: SavingsEstimate | null;
 }
 
 interface ThermoMatchResultsProps {
@@ -189,8 +195,11 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
         ))}
       </div>
 
+      {summaryContext?.savings ? <SavingsBand s={summaryContext.savings} /> : null}
+      <ExistingUnitCompare choices={cards.map((c) => ({ key: c.key, brand: c.brand, series: c.series, hspf2: c.hspf2 }))} />
       <Distinctions cards={cards} leaders={leaders} />
       {summaryContext && <HowItWorks ctx={summaryContext} />}
+      <EmailMyChoices topLabel={`${top.brand} ${top.series}`.trim()} />
       <NextStep top={top} onSelect={() => onSelectResult(top.raw)} />
 
       <div className="mx-auto mt-10 flex max-w-[1320px] flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[14px]">

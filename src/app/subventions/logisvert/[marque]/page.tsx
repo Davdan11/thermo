@@ -6,6 +6,7 @@ import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/se
 import { getAllBrandStats, getBrandStats } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+import { LogisVertAlertForm } from "@/components/logisvert/LogisVertAlertForm";
 
 export const dynamicParams = false;
 
@@ -90,6 +91,15 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
           { label: "Certifiés grand froid", value: String(b.coldClimateCount) },
         ]}
       />
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
+        <LogisVertAlertForm
+          target={{ kind: "brand", brandSlug: b.slug }}
+          label={b.name}
+          tone="light"
+          amount={b.maxLogisVert}
+          amountCaption={`Montant maximal ${b.name}`}
+        />
+      </section>
       {walls.length > 0 && (
         <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
           <h2 className="text-[26px] font-bold text-[#172126] mb-4">Murales {b.name} : montants LogisVert</h2>

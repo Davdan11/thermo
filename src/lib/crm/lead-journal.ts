@@ -17,7 +17,7 @@ import { randomUUID } from "node:crypto";
 export interface JournalEntry {
   id: string;
   at: string;
-  kind: "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre" | "rendez-vous" | "thermoscan";
+  kind: "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre" | "rendez-vous" | "thermoscan" | "alerte-logisvert" | "thermomatch";
   lead: Record<string, unknown>;
   /** Consigné après les appels externes. */
   outcome?: {

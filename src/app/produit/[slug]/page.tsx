@@ -12,6 +12,7 @@ import { PriceSection } from "@/components/product/PriceSection";
 import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { brochureForProduct } from "@/lib/data/brochures";
 import { CtaThermoMatch, TrustStrip } from "@/components/seo/SeoBlocks";
+import { LogisVertAlertForm } from "@/components/logisvert/LogisVertAlertForm";
 import {
   ProductHeader,
   KeySpecs,
@@ -161,6 +162,13 @@ export default async function ProductPage({
 
             {/* LogisVert subsidy */}
             <LogisVertBadge detail={detail} />
+
+            {/* Alerte LogisVert : prévenir le visiteur si le montant de ce modèle change */}
+            <LogisVertAlertForm
+              target={{ kind: "model", modelId: model.id }}
+              label={model.name.toLowerCase().startsWith(brand.name.toLowerCase()) ? model.name : `${brand.name} ${model.name}`}
+              tone="dark"
+            />
 
             <PriceSection detail={detail} logisVertDollars={seoModel?.logisVertDollars ?? 0} />
 

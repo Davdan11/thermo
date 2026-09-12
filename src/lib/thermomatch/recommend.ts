@@ -14,6 +14,7 @@ import { buildCandidates, runThermoMatch, type SourceModel, type SourcePairing }
 import { answersToRequest, type QuestionnaireAnswers } from "@/lib/thermomatch/answers";
 import { installedPriceRange } from "@/lib/prices/grille-installee";
 import { minHeatingTempFromBrochures } from "@/lib/thermomatch/min-temp-brochures";
+import { estimateHeatingSavings } from "@/lib/thermomatch/savings";
 
 let eligibleModels: SourceModel[] | null = null;
 
@@ -160,6 +161,8 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
       region: region?.region ?? null,
       climateZone: region?.region ?? null,
       logisVertUpdatedAt: logisVertUpdatedAt ?? null,
+      // Économies de chauffage estimées : maisons aux plinthes seulement (voir savings.ts).
+      savings: estimateHeatingSavings({ postalCode: answers.postalCode, currentSystem: answers.currentSystem, loadBtuH: output.load.loadBtuH }),
       notices: output.warnings,
       weights: output.weights,
       candidatesEvaluated: output.diagnostics.afterSystemKind,

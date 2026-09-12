@@ -60,3 +60,7 @@ public/images/products/_official-sources/**
 
 # réservations de rendez-vous (données locales ; shared/data sur le VPS)
 /data/rendez-vous.json
+
+# abonnés aux alertes LogisVert (courriels ; shared/data sur le VPS, jamais dans le dépôt)
+/data/alertes-logisvert.json
+/data/alertes-logisvert.json.lock

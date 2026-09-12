@@ -47,6 +47,12 @@ case $? in
     log "LogisVert : nouvelle liste, régénération."
     if node scripts/scrape-logisvert.mjs > /tmp/logisvert-run.log 2>&1; then
       CHANGES+=("LogisVert : liste Hydro-Québec du $(date +%Y-%m-%d)")
+      # Alertes LogisVert : avis aux abonnés confirmés dont le montant a changé (abonnés dans shared/data). Jamais bloquant.
+      if NODE_OPTIONS=--max-old-space-size=4096 timeout 900 npx tsx scripts/notify-logisvert-alerts.ts > /tmp/logisvert-alerts.log 2>&1; then
+        log "Alertes LogisVert : $(tail -n 1 /tmp/logisvert-alerts.log)"
+      else
+        log "Alertes LogisVert : passage en échec (code $?), sans effet sur le reste du robot"; tail -n 15 /tmp/logisvert-alerts.log
+      fi
     else
       log "LogisVert : régénération en échec"; tail -n 10 /tmp/logisvert-run.log; git checkout -- src/lib/subsidies
     fi ;;
