@@ -832,7 +832,7 @@ function NextStep({ top, onSelect }: { top: Card; onSelect: () => void }) {
                 <Arrow />
               </span>
             </button>
-            <Link href="/rendez-vous" className="inline-flex items-center rounded-full px-6 py-3.5 text-[15px] font-semibold transition-colors hover:bg-white/10" style={{ border: "1px solid rgba(255,255,255,0.55)", color: "#fff" }}>
+            <Link href={rdvHref(top)} className="inline-flex items-center rounded-full px-6 py-3.5 text-[15px] font-semibold transition-colors hover:bg-white/10" style={{ border: "1px solid rgba(255,255,255,0.55)", color: "#fff" }}>
               Parler à un conseiller
             </Link>
           </div>
@@ -864,6 +864,12 @@ function NextStep({ top, onSelect }: { top: Card; onSelect: () => void }) {
       </div>
     </section>
   );
+}
+
+/** Rendez-vous avec le modèle choisi : la page de réservation le reprend dans les précisions. */
+function rdvHref(c: Card): string {
+  const label = `${c.brand} ${c.series}${c.outdoor ? ` (${c.outdoor})` : ""}`.trim();
+  return `/rendez-vous?source=thermomatch&modele=${encodeURIComponent(label)}`;
 }
 
 /* Barre fixe sur mobile : la soumission du meilleur choix reste à portée de pouce. */

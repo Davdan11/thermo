@@ -60,6 +60,9 @@ export default function HomePage() {
 
       <HeroPremium eligible={getEligibleModelCount()} brands={brandsSummary.length} coldClimate={coldClimate} />
 
+      {/* Le test du froid : juste après le héros. */}
+      <ColdStory coldClimate={coldClimate} with5F={with5F} />
+
       {/* ══════════════════════════════════════════════════════════════════
           MAGASINEZ — 3 type cards (Murales / Multizones / Centrales)
       ══════════════════════════════════════════════════════════════════ */}
@@ -105,8 +108,6 @@ export default function HomePage() {
       </section>
 
       <CompareStage models={compareModels} />
-
-      <ColdStory coldClimate={coldClimate} with5F={with5F} />
 
       <ScanShowcase />
 
