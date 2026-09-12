@@ -1,0 +1,70 @@
+/* ==================================================================
+   Héros premium : fiche produit, comparateur, prix, recherche (préfixe pdh-).
+   Complète la trousse commune (src/components/hero/hero.css).
+   ================================================================== */
+
+/* Fiche produit : grille maison pour garder, sur mobile, l'ordre
+   titre → photo → détails, et sur ordinateur la photo à droite. */
+.pdh-grid {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "a" "b" "c";
+}
+.pdh-a { grid-area: a; min-width: 0; }
+.pdh-b { grid-area: b; min-width: 0; }
+.pdh-c { grid-area: c; min-width: 0; }
+@media (min-width: 1024px) {
+  .pdh-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "a b" "c b";
+    column-gap: 64px;
+    row-gap: 0;
+    align-items: start;
+  }
+  .pdh-b { align-self: center; }
+}
+
+/* Fil d'Ariane partagé (composant Breadcrumb) posé sur le héros sombre. */
+.pdh-crumbs nav { color: rgba(244, 239, 231, 0.6); font-size: 12.5px; font-weight: 500; }
+.pdh-crumbs .text-border { color: rgba(244, 239, 231, 0.3); }
+
+/* Flottement lent de l'appareil sur sa scène. */
+.pdh-float { animation: pdh-float 7s ease-in-out infinite; }
+@keyframes pdh-float { 50% { transform: translateY(-12px); } }
+
+/* Reflet de l'appareil sur le sol de la scène. */
+.pdh-reflect {
+  transform: scaleY(-1);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0) 55%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0) 55%);
+}
+
+/* Puces (capacités, badges cliquables) sur fond sombre. */
+.pdh-chip { transition: background 0.3s, border-color 0.3s, color 0.3s; }
+.pdh-chip:hover { background: rgba(244, 239, 231, 0.1); border-color: rgba(244, 239, 231, 0.42); color: #f4efe7; }
+
+/* Lien texte avec flèche qui glisse. */
+.pdh-link svg { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.pdh-link:hover svg { transform: translateX(4px); }
+.pdh-link:hover { color: #f4efe7; }
+
+/* Recherche : curseur qui clignote après la requête. */
+.pdh-caret { display: inline-block; width: 2px; height: 0.9em; margin-left: 4px; vertical-align: -0.08em; background: #e54b17; animation: pdh-blink 1.1s steps(1) infinite; }
+@keyframes pdh-blink { 50% { opacity: 0; } }
+
+/* Champ de recherche du héros. */
+.pdh-search { transition: border-color 0.3s, background 0.3s; }
+.pdh-search:focus-within { border-color: rgba(244, 239, 231, 0.5); background: rgba(16, 34, 45, 0.85); }
+.pdh-search input::placeholder { color: rgba(244, 239, 231, 0.42); }
+.pdh-search input::-webkit-search-cancel-button { filter: invert(1); opacity: 0.6; }
+
+/* Prix : repère « votre maison » qui balaie la fourchette. */
+.pdh-sweep { animation: pdh-sweep 9s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate; }
+@keyframes pdh-sweep { from { left: 6%; } to { left: 94%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .pdh-float, .pdh-caret, .pdh-sweep { animation: none; }
+  .pdh-sweep { left: 50%; }
+}

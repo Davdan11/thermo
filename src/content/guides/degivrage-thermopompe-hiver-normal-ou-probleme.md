@@ -4,7 +4,7 @@ description: "Vapeur, bruit d'eau, ventilateur arrêté quelques minutes : le d�
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
 updatedAt: "2026-09-11"
-coverImage: "/images/guides/card-outdoor-unit.jpg"
+coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "entretien"
 keywords: ["dégivrage thermopompe", "thermopompe givre", "thermopompe vapeur hiver", "thermopompe glace unité extérieure", "cycle de dégivrage thermopompe"]
 related: ["entretien-thermopompe-hiver", "thermopompe-grand-froid-moins-30", "installer-thermopompe-en-hiver", "quelle-thermopompe-choisir-hiver-quebecois"]

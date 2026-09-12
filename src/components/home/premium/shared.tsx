@@ -58,10 +58,13 @@ export function RevealLines({ lines, as = "h2", id, style, delay = 0 }: { lines:
 /* Compteur qui défile jusqu'à la vraie valeur. */
 export function CountUp({ value, decimals = 0, play, style }: { value: number; decimals?: number; play: boolean; style?: CSSProperties }) {
   const reduce = useReducedMotion();
-  const [n, setN] = useState(reduce ? value : 0);
+  // Toujours 0 au premier rendu (serveur et client identiques, pas d'erreur d'hydratation) ;
+  // « réduire les animations » : la vraie valeur s'affiche d'un coup dans l'effet.
+  const [n, setN] = useState(0);
   useEffect(() => {
     if (!play) return;
     if (reduce) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- valeur finale affichée d'un coup (animations réduites ou démarrage)
       setN(value);
       return;
     }

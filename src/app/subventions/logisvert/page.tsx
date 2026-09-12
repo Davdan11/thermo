@@ -29,6 +29,16 @@ export default function LogisVertIndex() {
         title="Subvention LogisVert par marque de thermopompe"
         intro={`Pour chaque marque, le nombre de modèles admissibles et la fourchette de montants de la liste officielle d'Hydro-Québec${updated ? ` (liste du ${updated})` : ""}.`}
         breadcrumbs={[{ label: "Subventions", href: "/subventions" }, { label: "LogisVert par marque", href: "/subventions/logisvert" }]}
+        titleLines={["Subvention LogisVert", "par marque de thermopompe"]}
+        serif="par marque"
+        motif={{
+          kind: "subsidy",
+          label: "Montant le plus élevé de la liste",
+          amount: Math.max(...brands.map((b) => b.maxLogisVert)),
+          updated,
+          tickerLabel: "Maximum par marque",
+          ticker: brands.slice(0, 16).map((b) => ({ label: b.name, sub: `${b.models.filter((m) => m.logisVertDollars > 0).length} modèles admissibles`, amount: b.maxLogisVert })),
+        }}
         stats={[
           { label: "Marques", value: String(brands.length) },
           { label: "Montant le plus élevé", value: `${Math.max(...brands.map((b) => b.maxLogisVert)).toLocaleString("fr-CA")} $` },

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Container } from "./Container";
 import { SiteSearch } from "./SiteSearch";
+import { hasPremiumHero } from "@/components/hero/routes";
 
 /* ----------------------------------------------------------
    Navigation data
@@ -96,9 +97,9 @@ export function Header() {
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + "/");
 
-  // Accueil et catalogue : en-tête transparent par-dessus le héros sombre tant qu'on n'a pas défilé,
-  // puis fond blanc habituel. Les autres pages gardent l'en-tête blanc.
-  const overHero = (pathname === "/" || pathname === "/thermopompes") && !scrolled && !menuOpen;
+  // Pages à héros premium sombre (voir components/hero/routes) : en-tête transparent par-dessus le héros
+  // tant qu'on n'a pas défilé, puis fond blanc habituel.
+  const overHero = hasPremiumHero(pathname) && !scrolled && !menuOpen;
   const linkColor = (href: string) => (overHero ? "rgba(244,239,231,0.8)" : isActive(href) ? "#0b1b24" : "#536873");
 
   return (

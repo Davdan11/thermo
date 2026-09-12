@@ -1,0 +1,38 @@
+/* ==================================================================
+   Trousse des héros premium (préfixe ph-), commune à toutes les pages.
+   ================================================================== */
+
+/* Le CSS global met overflow-x: hidden sur html et body : l'en-tête sticky ne collerait pas.
+   Sur les pages à héros premium : on coupe le débord sans créer de conteneur de défilement. */
+html:has(.ph-root), body:has(.ph-root) { overflow-x: clip; }
+
+.ph-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-size: 1.06em;
+}
+
+/* Libellé qui « roule » au survol. */
+.ph-roll { display: inline-grid; overflow: hidden; line-height: 1.25; height: 1.25em; }
+.ph-roll > span { grid-area: 1 / 1; transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.ph-roll > span + span { transform: translateY(100%); }
+:is(a, button):hover .ph-roll > span:first-child { transform: translateY(-100%); }
+:is(a, button):hover .ph-roll > span + span { transform: translateY(0); }
+
+.ph-float { animation: ph-float 6.5s ease-in-out infinite; }
+@keyframes ph-float { 50% { transform: translateY(-10px); } }
+
+.ph-ghost { transition: background 0.3s, border-color 0.3s; }
+.ph-ghost:hover { background: rgba(244, 239, 231, 0.1); border-color: rgba(244, 239, 231, 0.45); }
+
+/* Fil d'Ariane sur fond sombre. */
+.ph-crumbs a { color: rgba(244, 239, 231, 0.6); }
+.ph-crumbs a:hover { color: #f4efe7; }
+.ph-crumbs span { color: rgba(244, 239, 231, 0.85); }
+.ph-crumbs .text-gray-400 { color: rgba(244, 239, 231, 0.3); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ph-float { animation: none; }
+}

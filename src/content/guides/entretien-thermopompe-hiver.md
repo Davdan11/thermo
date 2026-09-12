@@ -4,7 +4,7 @@ description: "Ce que vous faites vous-même chaque mois, ce que l'installateur f
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-08"
 updatedAt: "2026-09-08"
-coverImage: "/images/guides/card-outdoor-unit.jpg"
+coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "entretien"
 keywords: ["entretien thermopompe", "nettoyer filtre thermopompe", "thermopompe neige hiver", "dégivrage thermopompe vapeur"]
 related: ["preparer-son-projet-installation", "quelle-thermopompe-choisir-hiver-quebecois", "ce-qui-influence-le-prix-installe"]

@@ -1,0 +1,47 @@
+/* ==================================================================
+   Héros des pages SEO (préfixe sh-) : animations continues discrètes.
+   Tout s'arrête avec « réduire les animations ».
+   ================================================================== */
+
+/* Hélice d'unité extérieure : tourne lentement autour de son centre (coordonnées du viewBox). */
+.sh-fan { transform-box: view-box; animation: sh-spin 7s linear infinite; }
+@keyframes sh-spin { to { transform: rotate(360deg); } }
+
+/* Frigorigène qui circule dans les conduites. */
+.sh-flow { stroke-dasharray: 3 9; animation: sh-flow 1.8s linear infinite; }
+@keyframes sh-flow { to { stroke-dashoffset: -24; } }
+
+/* Lignes d'air soufflé. */
+.sh-air { stroke-dasharray: 2 10; animation: sh-air 4.5s linear infinite; }
+@keyframes sh-air { to { stroke-dashoffset: -96; } }
+
+/* Liste qui défile verticalement (la liste est dupliquée : -50 % = une boucle). */
+.sh-ticker { animation: sh-ticker var(--sh-dur, 40s) linear infinite; }
+.sh-ticker:hover { animation-play-state: paused; }
+@keyframes sh-ticker { to { transform: translateY(-50%); } }
+
+/* Isothermes du décor : dérive très lente. */
+.sh-iso { animation: sh-iso 28s ease-in-out infinite alternate; }
+@keyframes sh-iso { to { transform: translate3d(-60px, 10px, 0); } }
+
+/* Aiguille qui balaie la plage certifiée. */
+.sh-sweep { animation: sh-sweep 7s ease-in-out infinite alternate; }
+@keyframes sh-sweep { from { left: 0%; } to { left: 100%; } }
+
+.sh-float { animation: sh-float 7s ease-in-out infinite; }
+@keyframes sh-float { 50% { transform: translateY(-8px); } }
+
+.sh-link { transition: color 0.4s, border-color 0.4s; }
+.sh-link:hover { color: #f4efe7; }
+.sh-link:hover .sh-arrow { opacity: 1; transform: translateX(0); }
+.sh-arrow { opacity: 0; transform: translateX(-6px); transition: opacity 0.4s, transform 0.4s; }
+
+.sh-pill { transition: background 0.3s, border-color 0.3s, color 0.3s; }
+.sh-pill:hover { border-color: rgba(244, 239, 231, 0.5); color: #f4efe7; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sh-fan, .sh-flow, .sh-air, .sh-ticker, .sh-iso, .sh-sweep, .sh-float { animation: none; }
+}
+
+/* Italique Instrument Serif sans taille imposée (.ph-serif force 1.06em, trop petit pour les grands chiffres). */
+.sh-serif { font-family: var(--font-serif), "Times New Roman", serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; }

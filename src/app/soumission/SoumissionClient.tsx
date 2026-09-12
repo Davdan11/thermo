@@ -14,6 +14,7 @@ import { loadProjectDraft, getProjectSummary, existingUnitSummary } from "@/lib/
 import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { track } from "@/lib/analytics/track";
+import { SoumissionBar, SoumissionHero } from "@/components/flow-hero/SoumissionHero";
 
 
 const ORANGE = "#e54b17";
@@ -374,57 +375,25 @@ export default function SoumissionPage() {
   }
 
   return (
-    <div style={{ minHeight: "100vh", backgroundColor: CREAM, display: "flex", flexDirection: "column" }}>
+    // overflow-x: clip coupe la bande encre du haut, qui déborde jusqu'aux bords de l'écran.
+    <div className="relative overflow-x-clip" style={{ minHeight: "100vh", backgroundColor: CREAM, display: "flex", flexDirection: "column" }}>
 
-      {/* ── HEADER ── */}
-      <header style={{ backgroundColor: "#fff", borderBottom: "1px solid #e8e4de", padding: "0 40px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none" }}>
-          <div style={{ lineHeight: 1.15 }}>
-            <p style={{ color: NAVY, fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", margin: 0 }}>Thermopompes</p>
-            <p style={{ color: NAVY, fontSize: 11, fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", margin: 0, display: "flex", alignItems: "center", gap: 4 }}>
-              <span style={{ color: ORANGE }}>À</span> Vendre
-            </p>
-          </div>
-        </Link>
-
-        {/* Center — title + orange underline */}
-        <div style={{ textAlign: "center" }}>
-          <p style={{ color: NAVY, fontSize: 13, fontWeight: 800, letterSpacing: "0.06em", textTransform: "uppercase", margin: "0 0 3px" }}>Votre demande</p>
-          <p style={{ color: "#536873", fontSize: 12, margin: "0 0 6px" }}>Dernière étape</p>
-          <div style={{ height: 2, backgroundColor: ORANGE, width: "100%" }} />
-        </div>
-
-        {/* Quitter */}
-        <Link href="/" style={{ color: "#536873", fontSize: 13, textDecoration: "none", fontWeight: 500 }}>Quitter</Link>
-      </header>
+      {/* ── HEADER ── (transparent, posé sur la bande encre du héros) */}
+      <SoumissionBar />
 
       {/* ── MAIN CONTENT ── */}
       <div className="flex-1 max-w-[1140px] w-full mx-auto px-5 sm:px-8 lg:px-10 py-8 sm:py-14 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-14 items-start">
 
         {/* ── LEFT: Project summary ── */}
         <div>
-          <h1 style={{ fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 900, color: NAVY, lineHeight: 1.15, margin: "0 0 16px", letterSpacing: "-0.02em" }}>
-            {hasDraft ? <>Votre projet est prêt{" "}<br />à être évalué.</> : <>Dites-nous où et quoi.{" "}<br />On s&apos;occupe du reste.</>}
-          </h1>
-          <p style={{ color: "#536873", fontSize: 15, lineHeight: 1.6, margin: "0 0 40px", maxWidth: 440 }}>
-            {hasDraft
-              ? "Vérifiez les renseignements ci-dessous, puis indiquez comment nous pouvons vous joindre."
-              : "Précisez ce que vous savez déjà, même partiellement. Un installateur licencié RBQ de votre région vous rappelle sous un jour ouvrable, gratuitement et sans engagement."}
-          </p>
-          {!hasDraft && (
-            <p style={{ margin: "-24px 0 32px", fontSize: 14 }}>
-              <Link href="/trouver-ma-thermopompe" style={{ color: ORANGE, fontWeight: 700, textDecoration: "none" }}>
-                Ou répondez à 13 questions et laissez ThermoMatch remplir ceci pour vous →
-              </Link>
-            </p>
-          )}
+          {/* Titre, introduction et lien ThermoMatch sur bande encre animée (mêmes textes). */}
+          <SoumissionHero hasDraft={hasDraft} />
           {draftRaw.appareilActuel ? (
-            <p style={{ margin: "-16px 0 28px", fontSize: 14, color: "#536873", lineHeight: 1.55 }}>
+            <p style={{ margin: "32px 0 28px", fontSize: 14, color: "#536873", lineHeight: 1.55 }}>
               Appareil actuel (ThermoScan) : <strong style={{ color: NAVY }}>{draftRaw.appareilActuel}</strong>. Il sera joint à votre demande.
             </p>
           ) : (
-            <div style={{ margin: "-16px 0 28px" }}><ThermoScanPromo variant="inline" context="soumission" /></div>
+            <div style={{ margin: "32px 0 28px" }}><ThermoScanPromo variant="inline" context="soumission" /></div>
           )}
 
           {/* Summary table */}
@@ -471,7 +440,8 @@ export default function SoumissionPage() {
           onSubmit={(e) => { e.preventDefault(); submit(); }}
           noValidate
           aria-labelledby="contact-title"
-          style={{ backgroundColor: NAVY, borderRadius: 14, padding: "32px 28px", color: "#fff", position: "relative" }}
+          // Panneau un ton au-dessus de la bande encre, filet crème : il se détache du héros qu'il chevauche.
+          style={{ backgroundColor: "#10222D", border: "1px solid rgba(244,239,231,0.12)", boxShadow: "0 40px 90px -50px rgba(10,20,25,0.65)", borderRadius: 20, padding: "32px 28px", color: "#fff", position: "relative" }}
         >
           <h2 id="contact-title" style={{ fontSize: 18, fontWeight: 800, color: "#fff", margin: "0 0 24px", lineHeight: 1.3 }}>
             Comment pouvons-nous{" "}<br />vous joindre?

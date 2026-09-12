@@ -4,7 +4,7 @@ description: "Trois marques très vendues au Québec, comparées sur ce que publ
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-05-02"
 updatedAt: "2026-09-08"
-coverImage: "/images/categorie-murale-daikin-hd.png"
+coverImage: "/images/guides/card-interior-living-room.jpg"
 category: "comparer"
 keywords: ["Gree ou Daikin", "Daikin ou Fujitsu", "meilleure marque thermopompe Québec", "comparatif marques thermopompe"]
 related: ["quelle-thermopompe-choisir-hiver-quebecois", "comprendre-seer2-hspf2", "subvention-logisvert-guide-complet"]

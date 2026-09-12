@@ -8,6 +8,7 @@ import { UTMProvider } from "@/components/providers/UTMProvider";
 import { Analytics } from "@/components/analytics/Analytics";
 import { ConsentBanner } from "@/components/analytics/ConsentBanner";
 import { Suspense } from "react";
+import { displayFont, serifFont } from "@/lib/fonts";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
@@ -47,7 +48,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr-CA" data-scroll-behavior="smooth" className={cn(inter.variable, outfit.variable, "font-sans", geist.variable)}>
+    <html lang="fr-CA" data-scroll-behavior="smooth" className={cn(inter.variable, outfit.variable, "font-sans", geist.variable, displayFont.variable, serifFont.variable)}>
       <body className="flex flex-col min-h-screen">
         <script
           type="application/ld+json"

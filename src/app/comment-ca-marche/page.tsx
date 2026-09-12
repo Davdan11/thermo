@@ -106,6 +106,18 @@ export default function CommentCaMarchePage() {
         title="De la question à l'installation, sans vendre vos coordonnées."
         intro="Vous répondez à des questions sur votre maison, ThermoMatch compare toutes les marques avec les données certifiées d'Hydro-Québec, et un installateur licencié réalise les travaux. Voici chaque étape, et ce qu'elle garantit."
         breadcrumbs={breadcrumbs}
+        titleLines={["De la question", "à l'installation,", "sans vendre vos coordonnées."]}
+        serif="sans vendre vos coordonnées."
+        motif={{
+          kind: "explainer",
+          heading: "Le parcours, étape par étape",
+          // Libellés courts du tracé ; le détail de chaque étape suit plus bas.
+          steps: STEPS.map((s, i) => ({
+            n: s.n,
+            href: s.href,
+            label: ["Vous décrivez votre maison", "ThermoMatch compare tout", "Trois machines retenues", "Une seule soumission", "Un installateur RBQ", "La subvention LogisVert"][i] ?? s.title,
+          })),
+        }}
         stats={[
           { label: "Fiches comparées", value: count.toLocaleString("fr-CA") },
           { label: "Marques", value: "toutes, sans parti pris" },

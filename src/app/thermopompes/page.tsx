@@ -219,7 +219,8 @@ export default async function ThermopompesPage({
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 py-10 sm:py-14">
+      {/* Cible de la recherche du héros (Entrée / loupe) : on descend jusqu’ici. */}
+      <div id="catalogue-resultats" className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 py-10 sm:py-14" style={{ scrollMarginTop: 96 }}>
         {/* ---- Mobile filter trigger & Sort (Mobile only toolbar) ---- */}
         <div className="flex sm:hidden items-center justify-between gap-3 mb-6">
           <Suspense>

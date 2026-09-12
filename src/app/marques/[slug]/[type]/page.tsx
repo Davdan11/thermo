@@ -5,6 +5,7 @@ import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getAllBrandStats, getBrandStats, modelsForBrandKind, type SeoKind } from "@/lib/seo/programmatic";
 import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+import { monoLogo, productImage } from "@/components/seo/hero/assets";
 
 const KINDS: Record<string, { kind: SeoKind; label: string; plural: string; intro: string }> = {
   murales: { kind: "murale", label: "murale", plural: "Thermopompes murales", intro: "sans conduits, une unité intérieure par zone" },
@@ -48,6 +49,8 @@ export default async function BrandKindPage({ params }: { params: Promise<{ slug
   const otherType = type === "murales" ? "centrales" : "murales";
   const hasOther = type === "murales" ? b.centralCount > 0 : b.wallCount > 0;
   const maxLv = models.reduce((a, m) => Math.max(a, m.logisVertDollars), 0);
+  // Photo du héros : un vrai modèle de cette marque et de ce type (jamais une autre marque).
+  const photoModel = models.find((m) => productImage(m.imageUrl));
 
   const faq = [
     {
@@ -89,6 +92,18 @@ export default async function BrandKindPage({ params }: { params: Promise<{ slug
           { label: b.name, href: `/marques/${slug}` },
           { label: k.plural, href: `/marques/${slug}/${type}` },
         ]}
+        titleLines={[k.plural.split(" ")[0], `${k.plural.split(" ").slice(1).join(" ")} ${b.name}`]}
+        serif={k.plural.split(" ").slice(1).join(" ")}
+        motif={{
+          kind: "brand",
+          brand: b.name,
+          logo: monoLogo(slug),
+          typeLabel: type,
+          photo: photoModel
+            ? { src: productImage(photoModel.imageUrl) as string, alt: `Thermopompe ${k.label} ${b.name} ${photoModel.name}`, caption: `${b.name} ${photoModel.name}`, btu: photoModel.nominalBtu }
+            : null,
+          offered: capacities,
+        }}
         stats={[
           { label: "Modèles", value: String(models.length) },
           { label: "Machines distinctes", value: String(canonical.length) },

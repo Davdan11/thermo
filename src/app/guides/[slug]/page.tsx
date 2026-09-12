@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
+import { GuideArticleHero } from "@/components/content-hero/GuideArticleHero";
+import { guideCategoryLabel } from "@/components/content-hero/guideCategories";
 import { getAllGuides, getGuideBySlug } from "@/lib/markdown";
 import { createMetadata, getBreadcrumbSchema, SITE_NAME, SITE_URL } from "@/lib/seo";
 import { CtaThermoMatch, FaqBlock, JsonLd, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
@@ -83,29 +83,22 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
         ]}
       />
 
-      <section className="relative w-full min-h-[420px] flex items-center justify-center overflow-hidden bg-[#0C1821]">
-        <Image src={guide.coverImage} alt="" fill sizes="100vw" className="object-cover brightness-[0.35]" priority />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 py-24 text-center text-white">
-          <nav aria-label="Fil d'Ariane" className="text-white/60 text-[13px] mb-6">
-            <Link href="/" className="hover:text-white">Accueil</Link> <span aria-hidden="true">/</span>{" "}
-            <Link href="/guides" className="hover:text-white">Guides</Link> <span aria-hidden="true">/</span>{" "}
-            <span className="text-white/90">{guide.title}</span>
-          </nav>
-          <h1 className="text-4xl md:text-[56px] font-black mb-6 leading-[1.05] tracking-tight">{guide.title}</h1>
-          <p className="text-lg text-white/75 max-w-2xl mx-auto leading-relaxed">{guide.description}</p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[12px] text-white/70 uppercase tracking-widest font-medium">
-            <span>{guide.author}</span>
-            <span aria-hidden="true">·</span>
-            <span>Mis à jour le {fmtDate(guide.updatedAt ?? guide.publishedAt)}</span>
-            <span aria-hidden="true">·</span>
-            <span>{guide.readTime}</span>
-          </div>
-        </div>
-      </section>
+      {/* Héros d'article premium : fil d'Ariane, titre, fiche de lecture, couverture qui se dévoile,
+          barre de progression de lecture (calculée sur la section #article). */}
+      <GuideArticleHero
+        title={guide.title}
+        description={guide.description}
+        category={guideCategoryLabel(guide.category)}
+        minutes={Number.parseInt(guide.readTime, 10) || Math.max(1, Math.round(guide.wordCount / 200))}
+        updated={fmtDate(guide.updatedAt ?? guide.publishedAt)}
+        author={guide.author}
+        coverImage={guide.coverImage}
+        articleId="article"
+      />
 
       <TrustStrip />
 
-      <section className="mx-auto max-w-3xl px-5 sm:px-8 py-14">
+      <section id="article" className="mx-auto max-w-3xl px-5 sm:px-8 py-14" style={{ scrollMarginTop: 96 }}>
         <article
           className="prose prose-lg prose-slate max-w-none prose-headings:font-black prose-headings:tracking-tight prose-h2:text-[#0C1821] prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-[#0C1821] prose-a:text-[#d94b12] hover:prose-a:text-[#b83808] prose-strong:text-[#071d2b] prose-table:text-[15px]"
           dangerouslySetInnerHTML={{ __html: guide.contentHtml }}

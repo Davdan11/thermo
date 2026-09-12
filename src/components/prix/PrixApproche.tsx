@@ -72,7 +72,7 @@ export function PrixApproche({ keyword = "une thermopompe" }: { keyword?: string
     <div style={{ color: "#172126" }}>
       {/* Pourquoi pas de prix */}
       <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 26, fontWeight: 800, letterSpacing: "-0.01em", margin: "0 0 16px" }}>Pourquoi nous n&apos;affichons pas de prix</h2>
+        <h2 style={{ fontSize: 26, fontWeight: 800, letterSpacing: "-0.01em", margin: "0 0 16px" }}>Pourquoi nous n&apos;affichons pas un prix unique</h2>
         <p style={{ fontSize: 17, lineHeight: 1.7, color: "#3d4a53", margin: "0 0 14px" }}>
           Plus de {nbAppareils()} appareils sont admissibles à LogisVert. Leurs prix bougent avec les stocks, la saison et les promotions des
           distributeurs : un tableau de prix pour {keyword} serait faux quelques semaines après sa publication.

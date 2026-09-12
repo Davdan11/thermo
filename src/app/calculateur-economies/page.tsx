@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo";
 import { SavingsCalculator } from "@/components/calculators/SavingsCalculator";
+import { SavingsHero } from "@/components/content-hero/SavingsHero";
 
 export const metadata = createMetadata({
   title: "Calculateur d'Économies Thermopompe",
@@ -13,26 +14,11 @@ export const metadata = createMetadata({
 export default function CalculateurEconomiesPage() {
   return (
     <main className="min-h-screen bg-[var(--color-background)] pb-20">
-      {/* Hero Section */}
-      <div 
-        className="relative py-24 md:py-32 px-5 bg-cover bg-center"
-        style={{ backgroundImage: 'url("/images/hero-calculator-bg.jpg")' }}
-      >
-        {/* Dark Overlay for Text Legibility */}
-        <div className="absolute inset-0 bg-[#0C1821]/80 backdrop-blur-[2px]"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold !text-white mb-6 tracking-tight drop-shadow-lg" style={{ color: "white" }}>
-            Combien allez-vous économiser ?
-          </h1>
-          <p className="text-xl !text-white/90 max-w-2xl mx-auto font-medium drop-shadow-md" style={{ color: "rgba(255,255,255,0.9)" }}>
-            L'installation d'une thermopompe est l'un des investissements les plus rentables pour une maison au Québec. Utilisez notre outil pour estimer vos économies annuelles.
-          </p>
-        </div>
-      </div>
+      {/* Héros premium : jauge de rendement (COP) animée, sans montant inventé */}
+      <SavingsHero calculatorId="calculateur" />
 
       {/* Calculator Section */}
-      <div className="max-w-7xl mx-auto px-5 -mt-10 relative z-10">
+      <div id="calculateur" className="max-w-7xl mx-auto px-5 -mt-10 relative z-10" style={{ scrollMarginTop: 110 }}>
         <SavingsCalculator />
       </div>
 

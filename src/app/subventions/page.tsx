@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { SubventionsClient } from "./SubventionsClient";
+import { getLogisVertHeroSamples } from "@/components/tools-hero/logisvert-samples";
 
 export const metadata: Metadata = {
   title: "Subventions",
@@ -8,11 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function SubventionsPage() {
-  return <SubventionsClient />;
+  // Extraits réels de la liste officielle LogisVert pour le relevé du héros.
+  return <SubventionsClient heroSamples={getLogisVertHeroSamples()} />;
 }
-
-/* ═══════════════════════════════════════════════════════════════════
-   CLIENT COMPONENT
-   ═══════════════════════════════════════════════════════════════════ */
-
-import { SubventionsClient } from "./SubventionsClient";

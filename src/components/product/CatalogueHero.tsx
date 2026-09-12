@@ -54,7 +54,9 @@ export function CatalogueHero({ stats, wall, search }: { stats: { models: number
 
   return (
     <section
-      className="ch-root relative -mt-[93px] overflow-hidden min-[1700px]:-mt-[105px]"
+      // overflow-x seulement (et z-30) : la liste de suggestions de la recherche peut déborder sous le héros
+      // et passer au-dessus de la bande des marques.
+      className="ch-root relative z-30 -mt-[93px] overflow-x-clip min-[1700px]:-mt-[105px]"
       style={{ background: C.ink, color: C.cream, fontFamily: DISPLAY }}
       aria-labelledby="ch-titre"
     >

@@ -4,7 +4,7 @@ description: "Occupation intermittente, hors-gel, régions froides : au chalet, 
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
 updatedAt: "2026-09-11"
-coverImage: "/images/guides/card-outdoor-unit.jpg"
+coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "choisir"
 keywords: ["thermopompe chalet", "thermopompe résidence secondaire", "chauffer un chalet thermopompe", "thermopompe hors gel chalet", "thermopompe laurentides chalet"]
 related: ["thermopompe-grand-froid-moins-30", "quelle-thermopompe-choisir-hiver-quebecois", "thermopompe-vs-plinthes-electriques-economies", "btu-quelle-capacite-choisir"]

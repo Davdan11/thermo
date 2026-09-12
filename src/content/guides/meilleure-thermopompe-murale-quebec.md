@@ -4,7 +4,7 @@ description: "Pas d'avis sponsorisé : les murales classées sur HSPF2, COP à -
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
 updatedAt: "2026-09-11"
-coverImage: "/images/guides/card-outdoor-unit.jpg"
+coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "comparer"
 keywords: ["meilleure thermopompe murale", "meilleure thermopompe Québec 2026", "thermopompe murale classement", "meilleure marque thermopompe", "thermopompe murale grand froid"]
 related: ["gree-daikin-fujitsu-comparatif", "comprendre-seer2-hspf2", "thermopompe-grand-froid-moins-30", "btu-quelle-capacite-choisir"]

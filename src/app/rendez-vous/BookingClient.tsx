@@ -9,6 +9,7 @@ import Link from "next/link";
 import { CalendarCheck, Phone, Video, Home, MapPin, Clock, ArrowRight, AlertCircle, Check } from "lucide-react";
 import { MODES, MODE_IDS, DEFAULT_MODE, NEEDS, areaFromPostalCode, isPostalCode, hourLabel, type ModeId, type DayAvailability } from "@/lib/rdv/booking";
 import { track } from "@/lib/analytics/track";
+import { BookingHero, BookingConfirmedHero } from "@/components/company-hero/BookingHero";
 
 const ORANGE = "#e54b17";
 const NAVY = "#0b1b24";
@@ -85,7 +86,6 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error" | "taken">("idle");
   const [result, setResult] = useState<Result | null>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const visited = useRef(false);
 
   const modeDef = MODES[mode];
   const pcValid = isPostalCode(postalCode);
@@ -112,8 +112,12 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
     if (wanted && (MODE_IDS as string[]).includes(wanted)) setMode(wanted as ModeId);
   }, []);
 
+  // Ne réagit qu'à un vrai changement d'étape : le double montage du mode strict (dev)
+  // ne fait plus défiler la page jusqu'au formulaire, par-dessus le héros.
+  const prevStep = useRef(step);
   useEffect(() => {
-    if (!visited.current) { visited.current = true; return; }
+    if (prevStep.current === step) return;
+    prevStep.current = step;
     headingRef.current?.focus({ preventScroll: true });
     headingRef.current?.scrollIntoView({ block: "start", behavior: "smooth" });
   }, [step]);
@@ -203,11 +207,11 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
       ["Référence", <span key="ref" style={{ fontFamily: "ui-monospace, Menlo, monospace", letterSpacing: 1 }}>{result.id}</span>],
     ];
     return (
+      <>
+      <BookingConfirmedHero eyebrow={online ? "Rencontre en ligne confirmée" : result.mode === "domicile" ? "Visite confirmée" : "Appel confirmé"} firstName={firstName} ymd={date} dateLabel={result.dateLabel} slot={result.slot} />
       <div style={{ minHeight: "70vh", backgroundColor: CREAM, display: "flex", justifyContent: "center", padding: "56px 20px 80px" }}>
         <div style={card}>
           <div style={{ padding: "36px 36px 28px" }}>
-            <span style={eyebrow}>{online ? "Rencontre en ligne confirmée" : result.mode === "domicile" ? "Visite confirmée" : "Appel confirmé"}</span>
-            <h1 style={{ ...h2, fontSize: 28 }} tabIndex={-1} ref={headingRef}>Merci, {firstName}.</h1>
             <p style={sub}>{online ? "Un conseiller vous rencontre sur Google Meet :" : result.mode === "domicile" ? "Un conseiller de notre équipe passera chez vous :" : "Un conseiller vous appelle :"}</p>
             <dl style={{ margin: "0 0 22px", padding: 0 }}>
               {rows.map(([k, v], i) => (
@@ -236,20 +240,17 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
           </div>
         </div>
       </div>
+      </>
     );
   }
 
   /* ---------- Assistant ---------- */
   return (
+    <>
+    <BookingHero mode={mode} />
     <div style={{ backgroundColor: CREAM }}>
       <div style={{ maxWidth: 1120, margin: "0 auto", padding: "48px 20px 80px", display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: 32 }}>
-        <div style={{ maxWidth: 720 }}>
-          <span style={eyebrow}>Rendez-vous avec un conseiller</span>
-          <h1 style={{ margin: "0 0 12px", fontSize: 38, lineHeight: 1.1, fontWeight: 800, color: NAVY, letterSpacing: "-0.02em" }}>Choisissez le moment.<br />On s&apos;occupe du reste.</h1>
-          <p style={{ ...sub, fontSize: 16 }}>Un appel, une rencontre en ligne sur Google Meet ou une visite à domicile, gratuitement et sans engagement. Confirmation immédiate, du lundi au vendredi de 8 h à 17 h.</p>
-        </div>
-
-        <form style={card} onSubmit={handleSubmit} noValidate>
+        <form id="reservation" style={{ ...card, scrollMarginTop: 110 }} onSubmit={handleSubmit} noValidate>
           <ol aria-label="Étapes de la réservation" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 4, margin: 0, padding: "18px 24px", listStyle: "none", borderBottom: `1px solid ${LINE}`, background: "#fbfaf7" }}>
             {STEPS.map((s, i) => (
               <li key={s} aria-current={i === step ? "step" : undefined} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 700, color: i === step ? NAVY : i < step ? "#1b6b3a" : "#a39d94" }}>
@@ -477,6 +478,7 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
         </section>
       </div>
     </div>
+    </>
   );
 }
 

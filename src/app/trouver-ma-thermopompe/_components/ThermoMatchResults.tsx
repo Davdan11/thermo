@@ -56,6 +56,8 @@ const C = {
   paper: "#FBF8F3",
   orange: "#E54B17",
   orangeText: "#C23F12",
+  /** Vert des montants LogisVert (lisible sur le fond papier). */
+  green: "#1A8F4E",
   mute: "rgba(244,239,231,0.66)",
   faint: "rgba(244,239,231,0.42)",
   line: "rgba(244,239,231,0.12)",
@@ -65,9 +67,12 @@ const C = {
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
 const fr = (n: number, d = 0) => n.toLocaleString("fr-CA", { minimumFractionDigits: d, maximumFractionDigits: d });
+const money = (n: number) => `${fr(Math.round(n / 50) * 50)} $`;
+const temp = (v: number) => `${v < 0 ? "\u2212" : v > 0 ? "+" : ""}${fr(Math.abs(v))} °C`;
 
-type MetricKey = "h5" | "hspf2" | "seer2" | "cop5" | "subsidy";
-const METRICS: { key: MetricKey; label: string; unit: string; d: number; tag: string }[] = [
+type MetricKey = "minTemp" | "h5" | "hspf2" | "seer2" | "cop5" | "subsidy";
+const METRICS: { key: MetricKey; label: string; unit: string; d: number; tag: string; lower?: boolean }[] = [
+  { key: "minTemp", label: "Chauffe jusqu’à", unit: "Température extérieure minimale publiée par le fabricant", d: 0, tag: "Chauffe par le plus grand froid", lower: true },
   { key: "h5", label: "Chaleur à −15 °C", unit: "BTU/h, certifiée ENERGY STAR", d: 0, tag: "Le plus puissant au grand froid" },
   { key: "hspf2", label: "Efficacité en chauffage", unit: "HSPF2", d: 1, tag: "Le plus efficace" },
   { key: "seer2", label: "Efficacité en climatisation", unit: "SEER2", d: 1, tag: "Le meilleur en été" },
@@ -92,6 +97,11 @@ type Card = {
   cop5: number | null;
   subsidy: number;
   coverage: number | null;
+  /** Capacité à -15 °C / capacité nominale. */
+  retention: number | null;
+  /** Température extérieure minimale de chauffage (fabricant), si connue. */
+  minTemp: number | null;
+  price: { min: number; max: number; basis: string; sources: number; tierLabel: string; matchLabel: string } | null;
   reasons: string[];
   warnings: string[];
   architectureNote: string | null;
@@ -131,6 +141,9 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     cop5: num(sp.cop5F?.min),
     subsidy: num(r?.subsidyEstimate) ?? 0,
     coverage: num(r?.fitRatio) ?? (h5 && load ? h5 / load : null),
+    retention: h5 && num(p.nominalBtu) ? h5 / (p.nominalBtu as number) : null,
+    minTemp: num(p.minOperatingTempC),
+    price: r?.priceRange && num(r.priceRange.min) != null && num(r.priceRange.max) != null ? r.priceRange : null,
     reasons: r?.clientReasons ?? r?.reasons ?? [],
     warnings: r?.warnings ?? [],
     architectureNote: r?.architectureNote ?? null,
@@ -141,11 +154,13 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
 
 const valueOf = (c: Card, k: MetricKey): number | null => (k === "subsidy" ? (c.subsidy > 0 ? c.subsidy : null) : c[k]);
 
-function leadersFor(cards: Card[], k: MetricKey): number[] {
+function leadersFor(cards: Card[], k: MetricKey, lower = false): number[] {
   const vals = cards.map((c) => valueOf(c, k));
-  const max = Math.max(...vals.map((v) => v ?? -Infinity));
-  if (!Number.isFinite(max)) return [];
-  return vals.flatMap((v, i) => (v === max ? [i] : []));
+  // Critère « plus bas = meilleur » (température minimale) : on ne désigne un meilleur que si les trois sont connus.
+  if (lower && vals.some((v) => v == null)) return [];
+  const best = lower ? Math.min(...vals.map((v) => v ?? Infinity)) : Math.max(...vals.map((v) => v ?? -Infinity));
+  if (!Number.isFinite(best)) return [];
+  return vals.flatMap((v, i) => (v === best ? [i] : []));
 }
 
 /* ------------------------------------------------------------------ */
@@ -154,7 +169,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
   if (!results || results.length === 0) return <Empty onRetry={onRetry} />;
 
   const cards = results.slice(0, 3).map((r, i) => toCard(r, i, summaryContext));
-  const leaders = Object.fromEntries(METRICS.map((m) => [m.key, leadersFor(cards, m.key)])) as Record<MetricKey, number[]>;
+  const leaders = Object.fromEntries(METRICS.map((m) => [m.key, leadersFor(cards, m.key, m.lower)])) as Record<MetricKey, number[]>;
   const top = cards[0];
 
   return (
@@ -358,6 +373,51 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
         )}
       </div>
 
+      {/* Par grand froid : ce que les acheteurs regardent en premier. */}
+      <div className="mx-6 mt-5 rounded-[18px] px-4 pb-4 pt-3.5 sm:mx-7" style={{ background: C.ink, color: C.cream }}>
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.faint, margin: 0 }}>
+              Par grand froid
+            </p>
+            <p style={{ fontSize: card.minTemp != null ? 26 : 24, fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.05, margin: "8px 0 0" }}>
+              {card.minTemp != null ? (
+                <>Chauffe jusqu’à {temp(card.minTemp)}</>
+              ) : card.h5 != null ? (
+                <>
+                  {fr(card.h5)} BTU/h
+                  <span className="block text-[13px] font-medium" style={{ color: C.mute, letterSpacing: "0", marginTop: 5 }}>
+                    livrés à −15 °C
+                  </span>
+                </>
+              ) : (
+                "Données du fabricant"
+              )}
+            </p>
+          </div>
+          {card.retention != null && (
+            <div className="shrink-0 text-right">
+              <p className="tabular-nums" style={{ fontSize: 24, fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, color: C.orange, margin: 0 }}>
+                {/* Plafonné à 120 %, comme dans les raisons du moteur (explain.ts), pour que la carte ne se contredise pas. */}
+                <CountUp value={Math.round(Math.min(card.retention, 1.2) * 100)} play={inView} /> %
+              </p>
+              <p className="text-[10.5px] leading-tight" style={{ color: C.faint, margin: "4px 0 0" }}>
+                de sa puissance nominale
+                <br />à −15 °C
+              </p>
+            </div>
+          )}
+        </div>
+        <ColdGauge value={card.minTemp ?? -15} known={card.minTemp != null} play={inView} delay={0.5 + i * 0.1} />
+        <p className="text-[11px] leading-snug" style={{ color: C.faint, margin: "8px 0 0" }}>
+          {card.minTemp != null
+            ? "Température extérieure minimale publiée par le fabricant."
+            : card.coldClimate
+              ? "Capacité certifiée ENERGY STAR climat froid. Température minimale de fonctionnement : sur la fiche du fabricant."
+              : "Température minimale de fonctionnement : sur la fiche du fabricant."}
+        </p>
+      </div>
+
       {/* Scène de l'appareil */}
       <div className="relative mx-6 mt-5 h-[170px] overflow-hidden rounded-[20px] sm:mx-7 sm:h-[190px]" style={{ background: card.ownImage ? "#fff" : C.ink }}>
         {card.ownImage ? (
@@ -415,10 +475,18 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
           return (
             <div key={s.k} className="px-4 py-3.5" style={{ borderLeft: si % 2 ? `1px solid ${C.inkLine}` : "none", borderTop: si > 1 ? `1px solid ${C.inkLine}` : "none" }}>
               <dt className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.14em", color: C.inkMute }}>
-                {s.label}
+                {s.k === "subsidy" ? (
+                  <span className="inline-flex items-center gap-1.5">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/images/hydroquebec.png" alt="Hydro-Québec" width={14} height={14} style={{ width: 14, height: 14, objectFit: "contain", maxWidth: "none" }} />
+                    {s.label}
+                  </span>
+                ) : (
+                  s.label
+                )}
               </dt>
               <dd style={{ margin: "4px 0 0" }}>
-                <span className="text-[22px] font-semibold tabular-nums" style={{ letterSpacing: "-0.03em", color: lead ? C.orangeText : C.ink }}>
+                <span className="text-[22px] font-semibold tabular-nums" style={{ letterSpacing: "-0.03em", color: s.k === "subsidy" ? C.green : lead ? C.orangeText : C.ink }}>
                   {s.v == null ? "N/D" : <CountUp value={s.v} decimals={s.d} play={inView} />}
                 </span>{" "}
                 <span className="text-[11px]" style={{ color: C.inkMute }}>
@@ -429,6 +497,27 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
           );
         })}
       </dl>
+
+      {/* Prix approximatif : fourchette installée du marché québécois (grille de la page /prix). */}
+      {card.price && (
+        <div className="mx-6 mt-4 rounded-[18px] px-4 py-3.5 sm:mx-7" style={{ border: `1px solid ${C.inkLine}` }}>
+          <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.14em", color: C.inkMute, margin: 0 }}>
+            Prix approximatif installé
+          </p>
+          <p className="tabular-nums" style={{ fontSize: 22, fontWeight: 600, letterSpacing: "-0.03em", margin: "4px 0 0" }}>
+            {money(card.price.min)} – {money(card.price.max)}
+          </p>
+          {card.subsidy > 0 && (
+            <p className="tabular-nums text-[13px] font-semibold" style={{ color: C.green, margin: "4px 0 0" }}>
+              ≈ {money(Math.max(0, card.price.min - card.subsidy))} – {money(Math.max(0, card.price.max - card.subsidy))} après LogisVert
+            </p>
+          )}
+          <p className="text-[11.5px] leading-snug" style={{ color: C.inkMute, margin: "6px 0 0" }}>
+            Fourchette publiée au Québec pour ce type ({card.price.matchLabel}, {card.price.tierLabel}
+            {card.price.basis === "derive" ? ", case interpolée" : ""}), avant subvention. Le prix exact vient de la soumission.
+          </p>
+        </div>
+      )}
 
       {/* Pourquoi ce choix */}
       {card.reasons.length > 0 && (
@@ -501,6 +590,29 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
   );
 }
 
+/* Échelle 0 → -30 °C : la barre descend jusqu'à la température couverte (fabricant) ou jusqu'à -15 °C (mesure certifiée). */
+function ColdGauge({ value, known, play, delay }: { value: number; known: boolean; play: boolean; delay: number }) {
+  const pct = Math.min(1, Math.max(0, -value / 30));
+  return (
+    <div className="mt-3.5">
+      <div className="relative h-[6px] rounded-full" style={{ background: "rgba(244,239,231,0.14)" }}>
+        <motion.div
+          className="absolute inset-y-0 left-0 origin-left rounded-full"
+          style={{ width: `${pct * 100}%`, background: known ? C.orange : "rgba(244,239,231,0.6)" }}
+          initial={{ scaleX: 0 }}
+          animate={play ? { scaleX: 1 } : undefined}
+          transition={{ duration: 1.4, ease: EASE, delay }}
+        />
+      </div>
+      <div className="mt-1.5 flex justify-between text-[10px] tabular-nums" style={{ color: C.faint }}>
+        {[0, -10, -20, -30].map((t) => (
+          <span key={t}>{t === 0 ? "0 °C" : temp(t)}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Reason({ text }: { text: string }) {
   return (
     <li>
@@ -546,7 +658,7 @@ function Distinctions({ cards, leaders }: { cards: Card[]; leaders: Record<Metri
       <div className="mt-10" style={{ borderTop: `1px solid ${C.line}` }}>
         {rows.map((m, ri) => {
           const vals = cards.map((c) => valueOf(c, m.key));
-          const max = Math.max(0, ...vals.map((v) => v ?? 0));
+          const max = Math.max(0, ...vals.map((v) => (v == null ? 0 : Math.abs(v))));
           return (
             <div key={m.key} className="grid gap-4 py-6 lg:grid-cols-[280px_1fr] lg:gap-10" style={{ borderBottom: `1px solid ${C.line}` }}>
               <div>
@@ -569,14 +681,14 @@ function Distinctions({ cards, leaders }: { cards: Card[]; leaders: Record<Metri
                       <div className="h-[8px] overflow-hidden rounded-full" style={{ background: C.line }}>
                         <motion.div
                           className="h-full origin-left rounded-full"
-                          style={{ width: `${v != null && max > 0 ? (v / max) * 100 : 0}%`, background: lead ? C.orange : "rgba(244,239,231,0.35)" }}
+                          style={{ width: `${v != null && max > 0 ? (Math.abs(v) / max) * 100 : 0}%`, background: lead ? C.orange : "rgba(244,239,231,0.35)" }}
                           initial={{ scaleX: 0 }}
                           animate={inView ? { scaleX: 1 } : undefined}
                           transition={{ duration: 1.2, ease: EASE, delay: 0.12 * ri + 0.08 * ci }}
                         />
                       </div>
                       <span className="text-right text-[15px] font-semibold tabular-nums" style={{ color: lead ? C.orange : C.cream }}>
-                        {v == null ? "N/D" : `${fr(v, m.d)}${m.key === "subsidy" ? " $" : ""}`}
+                        {v == null ? "N/D" : m.key === "minTemp" ? temp(v) : `${fr(v, m.d)}${m.key === "subsidy" ? " $" : ""}`}
                       </span>
                     </div>
                   );

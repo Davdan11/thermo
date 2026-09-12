@@ -1,0 +1,54 @@
+/* ==================================================================
+   Héros des pages outils (préfixe th-) : subventions, technologie
+   ThermoMatch, ThermoScan et page 404. Animations continues discrètes,
+   toutes coupées sous « réduire les animations ».
+   ================================================================== */
+
+/* Extraits de la liste officielle qui défilent (subventions). La liste est doublée : -50 % = une boucle. */
+.th-ticker { animation: th-ticker var(--th-dur, 40s) linear infinite; }
+@keyframes th-ticker { to { transform: translateY(-50%); } }
+
+/* Machines qui traversent l'entonnoir (ThermoMatch). Trajet en deux temps : jusqu'au filtre, puis sortie. */
+.th-drop {
+  opacity: 0;
+  animation: th-drop var(--d, 6s) cubic-bezier(0.4, 0.1, 0.6, 0.9) var(--w, 0s) infinite;
+}
+@keyframes th-drop {
+  0% { transform: translate(0, 0); opacity: 0; }
+  10% { opacity: var(--o, 0.8); }
+  64% { transform: translate(var(--mx), var(--my)); opacity: var(--o, 0.8); }
+  100% { transform: translate(var(--ex), var(--ey)); opacity: 0; }
+}
+
+/* Ligne de lecture qui balaie la plaque signalétique (ThermoScan). */
+.th-sweep { animation: th-sweep 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
+@keyframes th-sweep { 0%, 100% { top: 6%; } 50% { top: 92%; } }
+
+/* Petit témoin de lecture qui clignote. */
+.th-blink { animation: th-blink 1.4s steps(2, jump-none) infinite; }
+@keyframes th-blink { 50% { opacity: 0.25; } }
+
+/* Rafales de vent (404) : un trait court qui file le long d'une courbe. */
+.th-gust { stroke-dasharray: 110 1500; animation: th-gust var(--d, 7s) linear var(--w, 0s) infinite; }
+@keyframes th-gust { from { stroke-dashoffset: 1610; } to { stroke-dashoffset: 0; } }
+
+/* Chiffres du 404 qui tanguent sous le vent. */
+.th-sway { display: inline-block; transform-origin: 50% 90%; animation: th-sway var(--d, 9s) ease-in-out var(--w, 0s) infinite; }
+@keyframes th-sway { 0%, 100% { transform: rotate(0deg) translateX(0); } 50% { transform: rotate(var(--r, -1.4deg)) translateX(var(--x, -4px)); } }
+
+/* Liens sur fond sombre (fil d'Ariane, chemins utiles). */
+.th-crumb { color: rgba(244, 239, 231, 0.55); transition: color 0.3s; }
+.th-crumb:hover { color: #f4efe7; }
+.th-row { transition: padding 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.th-row .th-row-arrow { transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s; }
+.th-row:hover { padding-left: 10px; }
+.th-row:hover .th-row-arrow { transform: translateX(4px); color: #e54b17; }
+.th-row:focus-visible { outline: 2px solid #e54b17; outline-offset: 4px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .th-ticker, .th-sweep, .th-blink, .th-gust, .th-sway { animation: none; }
+  .th-drop { animation: none; opacity: 0; }
+  .th-gust { opacity: 0; }
+  .th-sweep { top: 50%; }
+  .th-row, .th-row .th-row-arrow { transition: none; }
+}

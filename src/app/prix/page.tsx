@@ -7,6 +7,8 @@ import { PrixApproche, getPrixFaqSchema } from "@/components/prix/PrixApproche";
 import { PRICE_GRID, PRICE_GRID_CONSULTED_AT, TIER_LABEL, money, type PriceCell, type PriceTier } from "@/lib/prices/grille-installee";
 import { observedSlugs } from "@/lib/prices/observed";
 import { getSeoModel } from "@/lib/seo/programmatic";
+import { PrixHero } from "@/components/product/hero/PrixHero";
+import { frDate, prixBoardSets } from "@/components/product/hero/prix-sets";
 
 /* ------------------------------------------------------------------
    /prix — Prix d'une thermopompe au Québec : fourchettes installées
@@ -73,15 +75,17 @@ export default function PrixPage() {
     <main>
       <JsonLd data={getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Prix des thermopompes", url: "/prix" }])} />
       <JsonLd data={getPrixFaqSchema()} />
+      <PrixHero
+        crumbs={<Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Prix des thermopompes" }]} />}
+        sets={prixBoardSets()}
+        stats={[
+          { value: 211, label: "fourchettes relevées" },
+          { value: 56, label: "pages publiées" },
+          ...(observed > 0 ? [{ value: observed, label: "fiches avec prix détaillant" }] : []),
+        ]}
+        footnote={`Médianes des fourchettes publiées, installation standard, avant LogisVert. Consultées le ${frDate(PRICE_GRID_CONSULTED_AT)}.`}
+      />
       <Container className="max-w-4xl py-10">
-        <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Prix des thermopompes" }]} />
-
-        <p className="mt-6 mb-3 text-[11px] font-bold uppercase tracking-[0.16em] text-[#e54b17]">Prix et coûts</p>
-        <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Prix d&apos;une thermopompe au Québec en 2026</h1>
-        <p className="text-lg text-muted mb-6 max-w-2xl leading-relaxed">
-          Les fourchettes ci-dessous sont celles que le marché québécois publie, relevées page par page et regroupées par type, calibre et gamme de marque. Elles servent à situer une soumission, pas à la remplacer : le prix exact dépend de votre maison.
-        </p>
-
         <div className="rounded-xl border border-[#e4ddd5] bg-white px-5 py-4 mb-10">
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#e54b17]">En bref</p>
           <p className="mt-1.5 text-[15px] leading-relaxed text-[#071d2b]">

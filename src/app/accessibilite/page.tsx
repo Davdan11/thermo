@@ -20,9 +20,19 @@ export default function AccessibilitePage() {
         title="Accessibilité"
         intro="Nous voulons que chacun puisse comparer et choisir une thermopompe sur ce site, quel que soit l'appareil ou l'outil d'assistance utilisé."
         breadcrumbs={[{ label: "Accessibilité", href: "/accessibilite" }]}
+        serif="Accessibilité"
+        motif={{
+          kind: "legal",
+          heading: "Sommaire",
+          items: [
+            { id: "ce-que-nous-appliquons", label: "Ce que nous appliquons" },
+            { id: "limites-connues", label: "Limites connues" },
+            { id: "signaler-un-obstacle", label: "Nous signaler un obstacle" },
+          ],
+        }}
       />
       <Prose>
-        <h2>Ce que nous appliquons</h2>
+        <h2 id="ce-que-nous-appliquons" className="scroll-mt-28">Ce que nous appliquons</h2>
         <ul>
           <li>Structure de titres cohérente et un seul titre principal par page.</li>
           <li>Navigation entièrement possible au clavier, y compris le questionnaire ThermoMatch et la pagination du catalogue.</li>
@@ -32,14 +42,14 @@ export default function AccessibilitePage() {
           <li>Aucune information transmise uniquement par la couleur : les résultats sont toujours accompagnés d'un texte.</li>
         </ul>
 
-        <h2>Limites connues</h2>
+        <h2 id="limites-connues" className="scroll-mt-28">Limites connues</h2>
         <ul>
           <li>Certaines animations d'apparition peuvent gêner les personnes sensibles au mouvement ; elles respectent le réglage « réduire les animations » du système.</li>
           <li>ThermoScan requiert une photo ; une alternative par saisie du numéro de modèle est disponible sur la page <Link href="/subventions">Subventions</Link>.</li>
           <li>Les documents PDF des fabricants, lorsqu'ils sont proposés, ne sont pas produits par nous et peuvent ne pas être accessibles.</li>
         </ul>
 
-        <h2>Nous signaler un obstacle</h2>
+        <h2 id="signaler-un-obstacle" className="scroll-mt-28">Nous signaler un obstacle</h2>
         <p>
           Si une page ou une fonction vous pose problème, dites-le-nous via la <Link href="/contact">page Contact</Link> en précisant la page et
           l'outil utilisé. Nous corrigeons les obstacles signalés en priorité.

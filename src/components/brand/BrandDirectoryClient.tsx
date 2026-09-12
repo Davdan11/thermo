@@ -6,14 +6,19 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { BrandSummary } from "@/lib/data/queries/brand-detail";
+import { BrandDirectoryHero, type OrbitBrand } from "./hero/BrandDirectoryHero";
 
 export type BrandSummaryWithLogo = BrandSummary & { hasLogo: boolean };
 
 interface BrandDirectoryClientProps {
   brands: BrandSummaryWithLogo[];
+  /** Marques affichées sur les orbites du héros (logos monochromes vérifiés). */
+  orbit: OrbitBrand[];
+  /** Chiffres réels de l'annuaire. */
+  totals: { brands: number; models: number; cold: number };
 }
 
-export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
+export function BrandDirectoryClient({ brands, orbit, totals }: BrandDirectoryClientProps) {
   const [search, setSearch] = useState("");
 
   const filteredBrands = useMemo(() => {
@@ -24,61 +29,18 @@ export function BrandDirectoryClient({ brands }: BrandDirectoryClientProps) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-[#07131a] overflow-hidden min-h-[500px] flex items-center">
-        {/* Background image & gradient */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero_heatpump.webp"
-            alt="Thermopompe grille"
-            fill
-            className="object-cover object-[80%_center] opacity-40 mix-blend-luminosity"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07131a] via-[#07131a]/90 to-transparent" />
-          
-          {/* Decorative circles (approximating the screenshot) */}
-          <div className="absolute left-[-100px] bottom-[-100px] w-[600px] h-[600px] rounded-full border-[0.5px] border-white/5 pointer-events-none" />
-          <div className="absolute left-[-50px] bottom-[-50px] w-[500px] h-[500px] rounded-full border-[0.5px] border-white/5 pointer-events-none" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-6 sm:px-10 py-16">
-          <div className="max-w-[650px]">
-            <h1 className="text-[42px] sm:text-[56px] font-bold leading-[1.05] tracking-tight mb-5" style={{ color: "#ffffff" }}>
-              Toutes les marques.<br />
-              Un seul endroit pour{" "}<br />les comprendre.
-            </h1>
-            <p className="text-[#9ca3af] text-[17px] leading-relaxed mb-6 max-w-[500px]">
-              Explorez les fabricants, les séries et les configurations documentées pour le marché québécois.
-            </p>
-            <div className="w-10 h-[2px] bg-[#e54b17] mb-12" />
-
-            {/* Search Bar */}
-            <div className="relative w-full max-w-[500px] flex">
-              <div className="relative flex-1">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
-                  </svg>
-                </div>
-                <input
-                  type="text"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  placeholder="Rechercher une marque"
-                  className="w-full bg-[#0b1b24] text-white placeholder-[#9ca3af] border border-[#1a2d3d] border-r-0 rounded-l-sm h-14 pl-12 pr-4 focus:outline-none focus:border-[#e54b17] transition-colors"
-                />
-              </div>
-              <button className="bg-[#e54b17] hover:bg-[#d44315] text-white w-14 flex items-center justify-center rounded-r-sm transition-colors border border-[#e54b17] hover:border-[#d44315]">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Héros premium : planétarium des marques + recherche qui filtre l'annuaire */}
+      <BrandDirectoryHero
+        orbit={orbit}
+        totals={totals}
+        search={search}
+        onSearch={setSearch}
+        resultCount={filteredBrands.length}
+        resultsId="annuaire"
+      />
 
       {/* Grid Section */}
-      <section className="bg-[#F7F5F0] py-16 sm:py-24 flex-1">
+      <section id="annuaire" className="bg-[#F7F5F0] py-16 sm:py-24 flex-1 scroll-mt-24">
         <div className="max-w-[1360px] mx-auto px-6 sm:px-10">
           
           {/* Header */}

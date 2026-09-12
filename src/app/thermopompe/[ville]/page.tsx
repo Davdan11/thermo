@@ -277,6 +277,20 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
           { label: city.name, href: `/thermopompe/${city.slug}` },
         ]}
         stats={stats}
+        titleLines={["Thermopompe à", city.name]}
+        serif={city.name}
+        motif={{
+          kind: "city",
+          city: city.name,
+          designTempC: city.designTempC,
+          janMeanC: cl?.janMeanC ?? null,
+          janMinC: cl?.janMinC ?? null,
+          extremeMinC: cl?.extremeMinC ?? null,
+          extremeMinYear: cl?.extremeMinYear ?? null,
+          source: cl?.station
+            ? `Normales climatiques${cl.normalsPeriod ? ` ${cl.normalsPeriod}` : ""} d’Environnement et Changement climatique Canada, station ${cl.station}.`
+            : null,
+        }}
       />
 
       <Rows id="climat" eyebrow="Profil climatique" title={`L'hiver de ${city.name} en chiffres`} intro="Les valeurs qui servent au calcul de charge d'une maison et au choix de la machine." rows={climateRows} />

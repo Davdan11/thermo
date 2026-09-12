@@ -6,8 +6,19 @@ import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/se
 import { getRanking, RANKINGS } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+import { monoLogo, productImage } from "@/components/seo/hero/assets";
 
 export const dynamicParams = false;
+
+/* Partie du h1 mise en italique dans le héros, par classement. */
+const SERIF: Record<string, string> = {
+  "grand-froid": "grand froid québécois",
+  "efficacite-hspf2": "plus efficaces",
+  "cop-15": "meilleur COP",
+  "subvention-logisvert": "plus subventionnées",
+  "murales-12000-btu": "murales",
+  centrales: "centrales",
+};
 
 export async function generateStaticParams() {
   return RANKINGS.map((r) => ({ critere: r.slug }));
@@ -59,12 +70,24 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
         ]}
       />
       <SeoHero
-        image="/images/about-process.jpg"
-        imageAlt="Unité extérieure de thermopompe installée sur une maison de bois, en hiver"
         eyebrow="Classement sur données certifiées"
         title={r.def.h1}
+        serif={SERIF[critere]}
+        motif={{
+          kind: "podium",
+          metricLabel: r.def.metricLabel,
+          items: r.models.slice(0, 3).map((m, i) => ({
+            rank: i + 1,
+            brand: m.brand,
+            name: m.name,
+            value: r.def.value(m),
+            href: `/produit/${m.canonicalSlug}`,
+            image: productImage(m.imageUrl),
+            logo: monoLogo(m.brandSlug),
+          })),
+        }}
         intro={r.def.description}
-        answer={`${r.models.length} machines vendues au Québec, classées sur ${r.def.metricLabel.toLowerCase()} d'après les données d'Hydro-Québec et d'ENERGY STAR${updated ? ` (liste du ${updated})` : ""}.${r.models[0] ? ` En tête : ${r.models[0].brand} ${r.models[0].name}, ${r.def.value(r.models[0])}.` : ""} Un classement compare une seule donnée ; la bonne machine dépend aussi de votre maison, que ThermoMatch prend en compte.`}
+        answer={`${r.models.length} machines vendues au Québec, classées sur ${/^[A-Z]{2}/.test(r.def.metricLabel) ? r.def.metricLabel : r.def.metricLabel.charAt(0).toLowerCase() + r.def.metricLabel.slice(1)} d'après les données d'Hydro-Québec et d'ENERGY STAR${updated ? ` (liste du ${updated})` : ""}.${r.models[0] ? ` En tête : ${r.models[0].brand} ${r.models[0].name}, ${r.def.value(r.models[0])}.` : ""} Un classement compare une seule donnée ; la bonne machine dépend aussi de votre maison, que ThermoMatch prend en compte.`}
         breadcrumbs={[
           { label: "Meilleures thermopompes", href: "/meilleures-thermopompes" },
           { label: r.def.h1, href: `/meilleures-thermopompes/${critere}` },

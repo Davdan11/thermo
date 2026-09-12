@@ -17,6 +17,11 @@
 }
 
 /* ---- Trust bar ---- */
+/* Même encre que le héros premium : la bande le prolonge sans cassure. */
+.tm-trust-section {
+  background: #0a1419;
+}
+
 .tm-trust-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

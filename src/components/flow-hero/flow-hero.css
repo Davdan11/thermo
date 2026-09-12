@@ -1,0 +1,37 @@
+/* ==================================================================
+   Parcours plein écran (ThermoMatch, soumission) — préfixe fh-.
+   Complète la trousse des héros (hero.css) sans la modifier.
+   ================================================================== */
+
+/* Champ en pastille : le contour passe à l'orange quand on y écrit (c'est lui qui montre le focus)
+   ou quand la réponse est refusée (data-error). */
+.fh-pill {
+  border: 1px solid rgba(244, 239, 231, 0.22);
+  background-color: rgba(244, 239, 231, 0.05);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s, background-color 0.3s;
+}
+.fh-pill:focus-within { border-color: rgba(229, 75, 23, 0.9); background-color: rgba(244, 239, 231, 0.08); }
+.fh-pill[data-error] { border-color: #e54b17; }
+.fh-input::placeholder { color: rgba(244, 239, 231, 0.38); }
+
+/* Lien souligné qui se trace au survol. */
+.fh-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 2px;
+  transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fh-link:hover, .fh-link:focus-visible { background-size: 100% 1px; }
+
+/* Choix de réponse : léger glissement au survol. */
+.fh-option { transition: border-color 0.3s, background-color 0.3s, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.fh-option:hover { transform: translateX(3px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .fh-pill, .fh-link, .fh-option { transition: none; }
+  .fh-option:hover { transform: none; }
+}

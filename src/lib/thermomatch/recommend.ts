@@ -12,6 +12,7 @@ import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { buildCandidates, runThermoMatch, type SourceModel, type SourcePairing } from "@/lib/thermomatch";
 import { answersToRequest, type QuestionnaireAnswers } from "@/lib/thermomatch/answers";
+import { installedPriceRange } from "@/lib/prices/grille-installee";
 
 let eligibleModels: SourceModel[] | null = null;
 
@@ -36,6 +37,22 @@ function getEligibleModels(): SourceModel[] {
       imageUrl: m.imageUrl ?? null,
     }));
   return eligibleModels;
+}
+
+let minTempByModel: Map<string, number> | null = null;
+
+/** Température extérieure minimale de chauffage publiée par le fabricant (disponible pour quelques modèles seulement). */
+function minHeatingTempFor(modelId: string): number | null {
+  if (!minTempByModel) {
+    minTempByModel = new Map();
+    for (const c of registry.configurations) {
+      const v = (c as { minHeatingTempC?: number | null }).minHeatingTempC;
+      if (typeof v !== "number") continue;
+      const prev = minTempByModel.get(c.modelId);
+      if (prev === undefined || v < prev) minTempByModel.set(c.modelId, v);
+    }
+  }
+  return minTempByModel.get(modelId) ?? null;
 }
 
 function pairingsFor(outdoorModel: string): SourcePairing[] {
@@ -88,6 +105,7 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
         heatingCapacity5FBtuH: { min: c.h5Btu, max: c.h5Btu },
         h5Certified: c.h5Certified,
         heatingCapacity17FBtuH: c.h17Btu,
+        minOperatingTempC: minHeatingTempFor(c.id),
         tier: c.tier,
         alsoSoldAs: c.alsoSoldAs,
         imageUrl: c.imageUrl ?? null,
@@ -101,6 +119,16 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
       },
       subsidyEstimate: c.logisVertDollars,
       subsidyIsOfficial: true,
+      // Fourchette installée du marché québécois (grille de la page /prix) pour ce type, ce calibre et cette gamme, avant subvention.
+      priceRange: (() => {
+        const range = installedPriceRange({
+          systemType: registry.modelById.get(c.id)?.systemType ?? (c.systemKind === "central" ? "central-ducted" : "wall-single"),
+          nominalBtu: c.nominalBtu,
+          zones: req.zones,
+          brandTier: c.tier,
+        });
+        return range ? { min: range.min, max: range.max, basis: range.basis, sources: range.sources, tierLabel: range.tierLabel, matchLabel: range.matchLabel } : null;
+      })(),
       reasons: r.reasons,
       clientReasons: r.reasons,
       warnings: r.warnings,

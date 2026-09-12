@@ -4,11 +4,23 @@ import { getSeoPagesByPrefix, getSeoPageBySlug } from "@/lib/seo/registry";
 import { createMetadata, getArticleSchema, getBreadcrumbSchema, SITE_NAME, SITE_URL } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { PrixApproche, getPrixFaqSchema } from "@/components/prix/PrixApproche";
+import { Serif } from "@/components/hero/HeroKit";
+import { PrixDependsHero } from "@/components/product/hero/PrixHero";
+import { frDate, murale12Rows } from "@/components/product/hero/prix-sets";
+import { PRICE_GRID_CONSULTED_AT } from "@/lib/prices/grille-installee";
+
+/** Titre en deux lignes : la question après « : » passe en italique (mêmes mots, espace insécable avant « ? »). */
+function titleLines(h1: string) {
+  const t = h1.replace(/\s*([?!;])$/, " $1");
+  const i = t.indexOf(" : ");
+  if (i < 0) return [t];
+  return [`${t.slice(0, i)} :`, <Serif key="q">{t.slice(i + 3)}</Serif>];
+}
 
 /* ------------------------------------------------------------------
    /prix/[slug] — pages de mots-clés « prix » du registre SEO.
-   Même approche que /prix : aucun prix publié, tout est documenté et
-   la soumission se fait cas par cas par un installateur partenaire.
+   Même approche que /prix : les fourchettes publiées par le marché servent
+   de repère, le prix exact vient d’une soumission écrite, cas par cas.
    ------------------------------------------------------------------ */
 
 export async function generateStaticParams() {
@@ -22,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return createMetadata({
     canonicalPath: `/prix/${slug}`,
     title: `${page.h1.replace(/\s*:\s*combien prévoir\??$/i, "")} : ce qui fait varier le coût installé`,
-    description: `Pourquoi nous ne publions pas de prix pour ${page.primaryKeyword.toLowerCase()}, ce qui fait varier le coût installé et comment obtenir une soumission écrite, cas par cas, subvention LogisVert incluse.`,
+    description: `Les fourchettes publiées au Québec comme repère, ce qui fait varier le coût installé pour ${page.primaryKeyword.toLowerCase()} et comment obtenir une soumission écrite, cas par cas, subvention LogisVert incluse.`,
   });
 }
 
@@ -53,24 +65,29 @@ export default async function PrixKeywordPage({ params }: { params: Promise<{ sl
         <JsonLd key={i} data={d} />
       ))}
 
-      <section className="bg-[#0C1821] text-white">
-        <div className="max-w-3xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
-          <nav aria-label="Fil d'Ariane" className="text-sm text-white/60 mb-6 flex flex-wrap gap-2">
-            <Link href="/" className="hover:text-white">Accueil</Link>
-            <span aria-hidden="true">/</span>
-            <Link href="/prix" className="hover:text-white">Prix : notre approche</Link>
-            <span aria-hidden="true">/</span>
-            <span className="text-white">{page.h1}</span>
+      <PrixDependsHero
+        crumbs={
+          <nav aria-label="Fil d’Ariane" className="text-[12.5px] font-medium">
+            <ol className="m-0 flex list-none flex-wrap items-center gap-x-2 gap-y-1 p-0">
+              <li><Link href="/">Accueil</Link></li>
+              <li aria-hidden="true" className="text-gray-400">/</li>
+              <li><Link href="/prix">Prix : notre approche</Link></li>
+              <li aria-hidden="true" className="text-gray-400">/</li>
+              <li><span aria-current="page">{page.h1.replace(/\s*([?!;])$/, " $1")}</span></li>
+            </ol>
           </nav>
-          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#e54b17] mb-3">Prix et coûts</p>
-          <h1 className="text-3xl sm:text-5xl font-bold leading-tight tracking-tight mb-5">{page.h1}</h1>
-          <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-            La réponse honnête : ça dépend de votre maison. Nous ne publions aucun prix pour {page.primaryKeyword.toLowerCase()}, parce qu&apos;un
-            chiffre au catalogue serait faux pour vous. Ce que nous faisons à la place : documenter ce qui fait varier le coût, et vous obtenir un
-            prix écrit, cas par cas, d&apos;un installateur partenaire licencié.
-          </p>
-        </div>
-      </section>
+        }
+        titleLines={titleLines(page.h1)}
+        lead={
+          <>
+            La réponse honnête : ça dépend de votre maison. Comme repère, voici ce que le marché québécois publie pour une murale de 12 000 BTU installée.
+            Pour {page.primaryKeyword.toLowerCase()}, nous documentons ce qui fait varier le coût, et le prix exact vient d’une soumission écrite, cas par
+            cas, d’un installateur partenaire licencié.
+          </>
+        }
+        rows={murale12Rows()}
+        footnote={`Médianes des fourchettes que le marché publie, installation standard, avant LogisVert. Consultées le ${frDate(PRICE_GRID_CONSULTED_AT)}.`}
+      />
 
       <div className="max-w-3xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
         <PrixApproche keyword={page.primaryKeyword.toLowerCase()} />

@@ -3,22 +3,17 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { GuideMetadata } from "@/lib/markdown";
+import type { GuideCategory, GuideMetadata } from "@/lib/markdown";
+import { GuidesHero } from "@/components/content-hero/GuidesHero";
+import { GUIDE_CATEGORIES } from "@/components/content-hero/guideCategories";
 
 /* ─────────────────────────────────────────────────────────────────────────
-   Données — catégories et guides
+   Données — catégories (rubriques partagées avec le héros et les articles)
 ───────────────────────────────────────────────────────────────────────────*/
 
-const CATEGORIES = [
-  { id: "choisir",       label: "Bien choisir",  icon: "check-circle" },
-  { id: "comparer",      label: "Comparer",       icon: "scales" },
-  { id: "prix",          label: "Prix",            icon: "currency-circle-dollar" },
-  { id: "subventions",   label: "Subventions",    icon: "gift" },
-  { id: "installation",  label: "Installation",   icon: "wrench" },
-  { id: "entretien",     label: "Entretien",      icon: "shield-check" },
-] as const;
+const CATEGORIES = GUIDE_CATEGORIES;
 
-type CategoryId = typeof CATEGORIES[number]["id"];
+type CategoryId = GuideCategory;
 
 /* ─────────────────────────────────────────────────────────────────────────
    Composant principal
@@ -34,58 +29,20 @@ export default function GuidesPageClient({ initialGuides }: Props) {
   const filtered = initialGuides.filter((g) => g.category === activeCategory);
   const displayed = filtered.length > 0 ? filtered : initialGuides;
 
+  // Sommaire du héros : filtre la liste puis y descend.
+  const pick = (id: CategoryId) => {
+    setActiveCategory(id);
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.requestAnimationFrame(() => document.getElementById("guides-liste")?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }));
+  };
+
   return (
     <div className="guides-page">
-      {/* ── Hero ───────────────────────────────────────────────────────── */}
-      <section className="guides-hero">
-        <div className="guides-hero__bg" style={{ position: 'absolute', inset: 0 }}>
-          <Image
-            src="/images/guides/guide-hero-bg.jpg"
-            alt="Maison moderne dans une forêt enneigée au crépuscule"
-            fill
-            className="guides-hero__bg-img"
-            priority
-          />
-        </div>
-        <div className="guides-hero__overlay" />
-
-        <div className="guides-hero__inner container">
-          {/* Texte gauche */}
-          <div className="guides-hero__text">
-            <p className="guides-hero__eyebrow">Guides &amp; Conseils</p>
-            <h1 className="guides-hero__heading">
-              Mieux comprendre{" "}<br />avant de choisir.
-            </h1>
-            <p className="guides-hero__subtext">
-              Des explications claires sur les modèles,<br />
-              les BTU, les prix, les aides et l&apos;installation.
-            </p>
-          </div>
-
-          {/* Carte guide vedette */}
-          <div className="guides-hero__featured">
-            <div className="guides-featured-card">
-              <p className="guides-featured-card__eyebrow">Guide d&apos;achat</p>
-              <h2 className="guides-featured-card__title">
-                Quelle thermopompe choisir pour l&apos;hiver québécois?
-              </h2>
-              <div className="guides-featured-card__divider" />
-              <p className="guides-featured-card__desc">
-                Un guide complet pour sélectionner le bon modèle selon votre maison, votre région et votre budget.
-              </p>
-              <Link href="/guides/quelle-thermopompe-choisir-hiver-quebecois" className="guides-featured-card__link">
-                Lire le guide
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ── Héros : couverture de magazine ─────────────────────────────── */}
+      <GuidesHero guides={initialGuides} onPick={pick} />
 
       {/* ── Onglets catégories ─────────────────────────────────────────── */}
-      <section className="guides-tabs">
+      <section id="guides-liste" className="guides-tabs" style={{ scrollMarginTop: 96 }}>
         <div className="container">
           <div className="guides-tabs__list" role="tablist">
             {CATEGORIES.map((cat, i) => (

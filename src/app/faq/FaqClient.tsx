@@ -16,6 +16,18 @@ const T = {
 };
 
 import { FAQ_ITEMS } from "./faqData";
+import { FaqHero, type FaqHeroItem } from "@/components/content-hero/FaqHero";
+
+// Questions à plat pour le héros (défilement + recherche). `key` = clé de l'accordéon, `domId` = ancre.
+const HERO_ITEMS: FaqHeroItem[] = FAQ_ITEMS.flatMap((section, ci) =>
+  section.questions.map((item, idx) => ({
+    key: `${section.category}-${idx}`,
+    domId: `faq-${ci}-${idx}`,
+    q: item.q,
+    a: item.a,
+    category: section.category,
+  }))
+);
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<string | null>("Général & Fonctionnement-0");
@@ -24,40 +36,24 @@ export default function FAQPage() {
     setOpenIndex(openIndex === id ? null : id);
   };
 
+  // Depuis le héros : ouvre la réponse, descend jusqu'à elle et y place le focus.
+  const openFromHero = (it: FaqHeroItem) => {
+    setOpenIndex(it.key);
+    const behavior: ScrollBehavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    const go = () => document.getElementById(it.domId)?.scrollIntoView({ behavior, block: "start" });
+    window.requestAnimationFrame(go);
+    // La réponse précédente se referme en 0,4 s : on recale une fois l'animation finie.
+    window.setTimeout(() => {
+      go();
+      document.getElementById(`${it.domId}-q`)?.focus({ preventScroll: true });
+    }, 460);
+  };
+
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: T.surface, minHeight: "100vh" }}>
       
-      {/* ── HEADER ── */}
-      <section style={{ padding: "clamp(80px, 10vw, 120px) clamp(24px, 5vw, 64px) 0", maxWidth: "1000px", margin: "0 auto" }}>
-        <p
-          style={{
-            margin: "0 0 16px",
-            color: T.orange,
-            fontSize: "13px",
-            fontWeight: 700,
-            letterSpacing: "0.09em",
-            textTransform: "uppercase",
-          }}
-        >
-          BASE DE CONNAISSANCES
-        </p>
-        <h1
-          style={{
-            margin: "0 0 32px",
-            color: T.ink,
-            fontSize: "clamp(48px, 6vw, 72px)",
-            fontWeight: 500,
-            lineHeight: 1.05,
-            letterSpacing: "-0.04em",
-          }}
-        >
-          La référence québécoise{" "}<br />de la thermopompe.
-        </h1>
-        <p style={{ color: T.muted, fontSize: "18px", lineHeight: 1.6, maxWidth: "600px", marginBottom: "40px" }}>
-          Des réponses exhaustives et transparentes, rédigées par des experts de l'industrie du CVAC au Québec, pour vous accompagner dans votre réflexion.
-        </p>
-        <div style={{ width: "100%", height: "1px", backgroundColor: T.border }} />
-      </section>
+      {/* ── HÉROS : questions qui défilent + recherche de question ── */}
+      <FaqHero items={HERO_ITEMS} themes={FAQ_ITEMS.length} onOpen={openFromHero} />
 
       {/* ── CONTENT ── */}
       <section style={{ padding: "clamp(40px, 5vw, 80px) clamp(24px, 5vw, 64px) clamp(80px, 10vw, 120px)" }}>
@@ -80,13 +76,17 @@ export default function FAQPage() {
                 {section.questions.map((item, idx) => {
                   const id = `${section.category}-${idx}`;
                   const isOpen = openIndex === id;
-                  
+                  const domId = `faq-${FAQ_ITEMS.indexOf(section)}-${idx}`;
+
                   return (
-                    <div 
-                      key={idx} 
-                      style={{ borderBottom: `1px solid ${T.border}` }}
+                    <div
+                      key={idx}
+                      id={domId}
+                      style={{ borderBottom: `1px solid ${T.border}`, scrollMarginTop: 110 }}
                     >
-                      <button 
+                      <button
+                        id={`${domId}-q`}
+                        aria-expanded={isOpen}
                         onClick={() => toggleOpen(id)}
                         style={{
                           width: "100%",

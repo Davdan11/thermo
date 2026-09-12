@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import { ContactHero } from "@/components/company-hero/ContactHero";
 import { motion } from "framer-motion";
 import { Phone, Mail, Clock, MapPin, CheckCircle, ArrowRight, ShieldCheck, MessageCircle, Info } from "lucide-react";
 import { track } from "@/lib/analytics/track";
@@ -31,32 +31,8 @@ export default function ContactPageClient() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* ── HERO ── */}
-      <section className="relative w-full pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-[#0b1b24]">
-        <Image
-          src="/images/contact-support.jpg"
-          alt="Support Thermopompe A Vendre"
-          fill
-          priority
-          className="object-cover object-center opacity-30 mix-blend-overlay"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0b1b24] via-[#0b1b24]/80 to-transparent" />
-        
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-2xl">
-            <span className="inline-block py-1 px-3 rounded-full bg-[#e54b17]/20 text-[#e54b17] font-bold text-xs uppercase tracking-widest mb-6">
-              Contact & Support
-            </span>
-            <h1 className="text-4xl lg:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
-              Nous sommes là <br />
-              <span className="text-[#e54b17]">pour vous aider.</span>
-            </h1>
-            <p className="text-lg text-gray-300 leading-relaxed font-medium">
-              Avez-vous des questions sur un modèle, besoin d'assistance avec une soumission ou d'informations sur les subventions gouvernementales ? Notre équipe d'experts québécois est prête à vous accompagner.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* HÉROS premium : src/components/company-hero/ContactHero.tsx */}
+      <ContactHero />
 
       {/* ── MAIN CONTENT ── */}
       <section className="py-20 lg:py-32 px-6 lg:px-8 relative z-20 -mt-10">
@@ -140,7 +116,7 @@ export default function ContactPageClient() {
             </div>
 
             {/* Right: Form */}
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-7">
+            <motion.div id="message" style={{ scrollMarginTop: 110 }} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-7">
               <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl shadow-gray-200/50 border border-gray-100">
                 {submitted ? (
                   <div className="text-center py-16">

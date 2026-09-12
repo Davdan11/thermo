@@ -72,6 +72,17 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
           { label: "LogisVert par marque", href: "/subventions/logisvert" },
           { label: b.name, href: `/subventions/logisvert/${b.slug}` },
         ]}
+        titleLines={["Subvention", `LogisVert ${b.name}`]}
+        serif="LogisVert"
+        motif={{
+          kind: "subsidy",
+          label: `${b.name} · jusqu’à`,
+          amount: b.maxLogisVert,
+          min: b.minLogisVert,
+          updated,
+          tickerLabel: "Montants par modèle",
+          ticker: subsidised.slice(0, 16).map((m) => ({ label: m.name, sub: m.outdoorModel, amount: m.logisVertDollars })),
+        }}
         stats={[
           { label: "Modèles admissibles", value: String(subsidised.length) },
           { label: "Montant minimum", value: `${b.minLogisVert.toLocaleString("fr-CA")} $` },

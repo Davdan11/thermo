@@ -7,7 +7,6 @@ import { registry } from "@/lib/data/registry";
 import { SITE_URL, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
 import { getSeoModel, indexSlug } from "@/lib/seo/programmatic";
 import { seriesDisplayName } from "@/lib/data/series-label";
-import { brandLogoPath } from "@/lib/data/brand-logos";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
 import { PriceSection } from "@/components/product/PriceSection";
 import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
@@ -102,21 +101,7 @@ export default async function ProductPage({
   const { brand, series, model, configuration, performanceProfile } = detail;
   // Brochure officielle : adresse du modèle ou de la série, sinon retrouvée par les tables d'enrichissement.
   const brochureUrl = brochureForProduct(detail);
-  // Regroupe les fiches sœurs par capacité ; garde par capacité la fiche la mieux documentée.
-  const capacityChips = (() => {
-    const byCap = new Map<number, { slug: string; modelNumber: string; count: number; score: number }>();
-    for (const sib of detail.seriesSiblings) {
-      const cap = sib.nominalCapacityBtu ?? 0;
-      if (!cap || cap === model.nominalCapacityBtu) continue;
-      const score = (sib.certifiedPairings ?? 0) + (sib.imageUrl ? 1000 : 0) + (sib.seer2Max ? 100 : 0);
-      const cur = byCap.get(cap);
-      if (!cur) byCap.set(cap, { slug: sib.slug, modelNumber: sib.modelNumber, count: 1, score });
-      else { cur.count++; if (score > cur.score) { cur.slug = sib.slug; cur.modelNumber = sib.modelNumber; cur.score = score; } }
-    }
-    return [...byCap.entries()].sort((x, y) => x[0] - y[0]).map(([cap, v]) => ({ ...v, label: `${(cap / 1000).toFixed(0)}\u2009000 BTU` }));
-  })();
   const imageUrl = model.imageUrl ?? series.imageUrl ?? null;
-  const brandLogo = brandLogoPath(brand.slug);
 
   /* Schema.org — Product (enriched) */
   const additionalProperties: { name: string; value: string }[] = [];
@@ -158,172 +143,9 @@ export default async function ProductPage({
       />
 
       {/* ═══════════════════════════════════════════════════════════
-          HERO
+          HÉROS — photo officielle sur scène, chiffres certifiés, LogisVert
           ═══════════════════════════════════════════════════════════ */}
-      <section style={{ position: "relative", backgroundColor: "#0C1821", padding: "0 0 48px", overflow: "hidden" }}>
-        
-        {/* Blended Background Image */}
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          opacity: 0.25,
-          maskImage: "linear-gradient(to right, #0C1821 0%, transparent 50%, #0C1821 100%), linear-gradient(to bottom, black 0%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to right, black 20%, transparent 80%), linear-gradient(to bottom, black 0%, transparent 100%)",
-          pointerEvents: "none",
-        }} >
-          <Image src="/images/hero-a-propos-maison-hiver.webp" alt="" fill priority fetchPriority="high" sizes="100vw" quality={60} style={{ objectFit: "cover", objectPosition: "center" }} />
-        </div>
-
-        {/* Faint Brand Watermark */}
-        <div style={{
-          position: "absolute",
-          left: "50%",
-          bottom: "-5%",
-          transform: "translateX(-50%)",
-          fontSize: "clamp(80px, 15vw, 250px)",
-          fontWeight: 900,
-          color: "rgba(255,255,255,0.03)",
-          whiteSpace: "nowrap",
-          zIndex: 0,
-          pointerEvents: "none",
-          userSelect: "none",
-          letterSpacing: "0.02em",
-          lineHeight: 0.75,
-        }}>
-          {brand.name.toUpperCase()}
-        </div>
-
-        <div className="relative z-10 w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10">
-
-          {/* Breadcrumb */}
-          <nav style={{ paddingTop: 100, paddingBottom: 24 }}>
-            <ol style={{ display: "flex", flexWrap: "wrap", gap: 6, margin: 0, padding: 0, listStyle: "none", fontSize: 12, color: "rgba(255,255,255,.45)", fontWeight: 500 }}>
-              <li><Link href="/" style={{ color: "inherit", textDecoration: "none" }}>Accueil</Link></li>
-              <li aria-hidden="true">/</li>
-              <li><Link href="/marques" style={{ color: "inherit", textDecoration: "none" }}>Marques</Link></li>
-              <li aria-hidden="true">/</li>
-              <li><Link href={`/marques/${brand.slug}`} style={{ color: "inherit", textDecoration: "none" }}>{brand.name}</Link></li>
-              <li aria-hidden="true">/</li>
-              <li style={{ color: "rgba(255,255,255,.85)" }}>{model.name}</li>
-            </ol>
-          </nav>
-
-          {/* Product header : identification à gauche, photo officielle (ou logo de la marque) à droite */}
-          <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-14">
-          <div style={{ display: "flex", flexDirection: "column", gap: 6, maxWidth: 800, flex: 1, minWidth: 0 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-              {brandLogo && (
-                <Link href={`/marques/${brand.slug}`} aria-label={`Marque ${brand.name}`} style={{ display: "inline-flex", alignItems: "center", background: "#fff", padding: "7px 12px", borderRadius: 4 }}>
-                  <Image src={brandLogo} alt={`Logo ${brand.name}`} width={120} height={36} style={{ objectFit: "contain", width: "auto", height: 22, maxWidth: 120 }} />
-                </Link>
-              )}
-              <p style={{ margin: 0, fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,.5)", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-                {brand.name}{seriesDisplayName(series.name, series.slug) ? ` · ${seriesDisplayName(series.name, series.slug)}` : ""}
-              </p>
-            </div>
-            <h1 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 700, color: "#fff", lineHeight: 1.1, letterSpacing: "-0.025em" }}>
-              <span style={{ display: "block", fontSize: "0.5em", fontWeight: 600, color: "rgba(255,255,255,.7)", letterSpacing: "0", marginBottom: 4 }}>Thermopompe {brand.name}</span>
-              {model.name}
-            </h1>
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, marginTop: 8 }}>
-              <span style={{ fontSize: 14, color: "rgba(255,255,255,.6)" }}>{detail.systemTypeLabel}</span>
-              {model.nominalCapacityBtu && (
-                <>
-                  <span style={{ color: "rgba(255,255,255,.25)" }} aria-hidden="true">·</span>
-                  <span style={{ fontSize: 14, fontWeight: 600, color: "#fff" }}>
-                    {(model.nominalCapacityBtu / 1000).toFixed(0)}&thinsp;000 BTU/h
-                  </span>
-                </>
-              )}
-              {detail.isColdClimate && (
-                <span style={{ fontSize: 11, fontWeight: 600, padding: "3px 10px", background: "rgba(27,107,58,.25)", color: "#6ee7a0" }}>
-                  Climat froid
-                </span>
-              )}
-            </div>
-            <p style={{ margin: "6px 0 0", fontSize: 12, color: "rgba(255,255,255,.7)" }}>
-              Modèle : <span style={{ fontFamily: "monospace" }}>{model.modelNumber}</span>
-            </p>
-
-            {/* Autres capacités de la série : une puce par capacité (fiche la mieux documentée), jamais une par machine */}
-            {capacityChips.length > 0 && (
-              <div style={{ marginTop: 16 }}>
-                <p style={{ margin: "0 0 8px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,.4)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                  Autres capacités{seriesDisplayName(series.name, series.slug) ? ` — ${seriesDisplayName(series.name, series.slug)}` : ""}
-                  {detail.seriesSiblings.length > capacityChips.length ? ` · ${detail.seriesSiblings.length + 1} modèles` : ""}
-                </p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                  {capacityChips.map((chip) => (
-                    <Link
-                      key={chip.slug}
-                      href={`/produit/${chip.slug}`}
-                      title={chip.count > 1 ? `${chip.count} modèles de ${chip.label} dans cette série` : chip.modelNumber}
-                      style={{
-                        fontSize: 12, padding: "6px 14px",
-                        border: "1px solid rgba(255,255,255,.15)",
-                        color: "rgba(255,255,255,.7)",
-                        textDecoration: "none",
-                        transition: "border-color .2s",
-                      }}
-                    >
-                      {chip.label}{chip.count > 1 ? ` ×${chip.count}` : ""}
-                    </Link>
-                  ))}
-                  {detail.seriesSiblings.length > capacityChips.length && seriesDisplayName(series.name, series.slug) && (
-                    <Link
-                      href={`/thermopompes?brand=${brand.slug}&series=${series.slug}`}
-                      style={{ fontSize: 12, padding: "6px 14px", border: "1px dashed rgba(255,255,255,.25)", color: "rgba(255,255,255,.55)", textDecoration: "none" }}
-                    >
-                      Tous les modèles {seriesDisplayName(series.name, series.slug)}
-                    </Link>
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* CTAs */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 20 }}>
-              <Link
-                href="/trouver-ma-thermopompe"
-                style={{
-                  fontSize: 14, fontWeight: 600, padding: "12px 24px",
-                  background: "#e54b17", color: "#fff",
-                  textDecoration: "none", transition: "background .2s",
-                }}
-              >
-                Vérifier si ce modèle me convient
-              </Link>
-              <Link
-                href="/soumission"
-                style={{
-                  fontSize: 14, fontWeight: 600, padding: "12px 24px",
-                  border: "1px solid rgba(255,255,255,.25)", color: "#fff",
-                  textDecoration: "none", transition: "border-color .2s",
-                }}
-              >
-                Demander une soumission
-              </Link>
-            </div>
-          </div>
-
-          {/* Média : photo officielle du fabricant, sinon logo de la marque */}
-          <div className="w-full lg:w-[400px] shrink-0">
-            <div style={{ background: "#fff", padding: 22, minHeight: 250, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14 }}>
-              {imageUrl ? (
-                <Image src={imageUrl} alt={`${brand.name} ${model.name}`} width={360} height={270} priority style={{ objectFit: "contain", maxWidth: "100%", height: "auto", maxHeight: 250 }} />
-              ) : brandLogo ? (
-                <Image src={brandLogo} alt={`Logo ${brand.name}`} width={240} height={90} priority style={{ objectFit: "contain", width: "auto", height: "auto", maxWidth: 230, maxHeight: 76 }} />
-              ) : (
-                <span style={{ fontSize: 28, fontWeight: 800, color: "#071d2b", letterSpacing: "-0.01em" }}>{brand.name}</span>
-              )}
-              <p style={{ margin: 0, fontSize: 12, color: "#8a989e", textAlign: "center" }}>
-                {imageUrl ? `Photo officielle · ${brand.name} ${model.name}` : `${brand.name} · ${detail.systemTypeLabel}`}
-              </p>
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
+      <ProductHeader detail={detail} seo={seoModel} />
 
       {/* ═══════════════════════════════════════════════════════════
           BODY — Two-column layout

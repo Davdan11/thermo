@@ -38,6 +38,9 @@ export default function CitiesIndexPage() {
         title="Thermopompe par ville au Québec"
         intro="La bonne machine dépend de votre maison, mais chaque ville a son hiver : température de conception, degrés-jours de chauffage, moyenne de janvier. Nous chiffrons ce que ça change, ville par ville, avec les normales d'Environnement Canada et les données certifiées d'Hydro-Québec."
         breadcrumbs={[{ label: "Thermopompe par ville", href: "/thermopompe" }]}
+        titleLines={["Thermopompe", "par ville au Québec"]}
+        serif="par ville"
+        motif={{ kind: "cities", cities: cities.map((c) => ({ name: c.name, designTempC: c.designTempC })) }}
         stats={[
           { label: "Villes couvertes", value: String(cities.length) },
           { label: "Régions", value: String(regions.length) },

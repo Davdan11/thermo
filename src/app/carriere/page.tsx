@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CareerHero, type Poste } from "@/components/company-hero/CareerHero";
 
 export const metadata: Metadata = {
   title: "Carrières — Thermopompes À Vendre.ca",
@@ -20,99 +21,18 @@ const T = {
   lightText: "#f7f2e9",
 };
 
+// Postes ouverts : une seule liste pour le héros et la section « Postes actuellement ouverts ».
+const POSTES: Poste[] = [
+  { title: "Développeur(se) Full-Stack (ThermoMatch)", type: "Temps plein", loc: "Montréal / Hybride" },
+  { title: "Spécialiste Expérience Client (HVAC)", type: "Temps plein", loc: "Télétravail (Québec)" },
+  { title: "Gestionnaire Réseau Partenaires", type: "Temps plein", loc: "Montréal / Hybride" },
+];
+
 export default function CarrierePage() {
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light" }}>
-      {/* ── HERO ── */}
-      <section
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "clamp(500px, 37.7vw, 770px)",
-          overflow: "hidden",
-          isolation: "isolate",
-          background: "#031923",
-        }}
-      >
-        <img
-          src="/images/carriere-hero.jpg"
-          alt="Équipe Thermopompe A Vendre"
-          style={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center center",
-            display: "block",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 1,
-            pointerEvents: "none",
-            background: "linear-gradient(90deg, rgba(3,20,30,0.85) 0%, rgba(3,20,30,0.5) 40%, rgba(3,20,30,0) 80%)",
-          }}
-        />
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            width: "min(600px, 44vw)",
-            height: "100%",
-            marginLeft: "clamp(48px, 5.5vw, 96px)",
-            color: "#ffffff",
-          }}
-        >
-          <p
-            style={{
-              margin: "0 0 24px",
-              color: T.orange,
-              fontSize: "13px",
-              fontWeight: 700,
-              letterSpacing: "0.09em",
-              textTransform: "uppercase",
-            }}
-          >
-            CARRIÈRES
-          </p>
-          <h1
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              margin: 0,
-              color: "#f8f5f0",
-              fontSize: "clamp(48px, 4vw, 68px)",
-              fontWeight: 500,
-              lineHeight: 1.08,
-              letterSpacing: "-0.045em",
-              fontFamily: "var(--font-sans)",
-            }}
-          >
-            <span style={{ display: "block", whiteSpace: "nowrap" }}>Bâtissons ensemble</span>
-            <span style={{ display: "block", whiteSpace: "nowrap" }}>le confort de demain.</span>
-          </h1>
-          <div style={{ width: "31px", height: "2px", margin: "26px 0 22px", backgroundColor: T.orange }} />
-          <p
-            style={{
-              maxWidth: "420px",
-              margin: 0,
-              color: "rgba(255,255,255,0.87)",
-              fontSize: "17px",
-              lineHeight: 1.55,
-            }}
-          >
-            Nous sommes toujours à la recherche de talents passionnés pour simplifier l'achat et l'installation de thermopompes au Québec.
-          </p>
-        </div>
-      </section>
+      {/* HÉROS premium : src/components/company-hero/CareerHero.tsx */}
+      <CareerHero postes={POSTES} />
 
       {/* ── CONTENU ── */}
       <section
@@ -171,7 +91,7 @@ export default function CarrierePage() {
                 <span aria-hidden="true" style={{ fontSize: "18px", fontWeight: 300, marginLeft: "16px" }}>›</span>
               </Link>
             </div>
-            
+
             <div style={{ position: "relative", width: "100%", aspectRatio: "4/3", borderRadius: "8px", overflow: "hidden" }}>
               <img
                 src="/images/thermomatch/thermomatch-recommendation-home.png"
@@ -203,11 +123,7 @@ export default function CarrierePage() {
             </h2>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              {[
-                { title: "Développeur(se) Full-Stack (ThermoMatch)", type: "Temps plein", loc: "Montréal / Hybride" },
-                { title: "Spécialiste Expérience Client (HVAC)", type: "Temps plein", loc: "Télétravail (Québec)" },
-                { title: "Gestionnaire Réseau Partenaires", type: "Temps plein", loc: "Montréal / Hybride" }
-              ].map((poste, i) => (
+              {POSTES.map((poste, i) => (
                 <div
                   key={i}
                   style={{
@@ -248,4 +164,3 @@ export default function CarrierePage() {
     </main>
   );
 }
-

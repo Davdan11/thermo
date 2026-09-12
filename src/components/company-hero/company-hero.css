@@ -1,0 +1,55 @@
+/* ==================================================================
+   Héros des pages « entreprise » (à propos, carrière, partenaires,
+   espace installateur, contact, rendez-vous). Préfixe cx-.
+   ================================================================== */
+
+/* Lignes pointillées qui circulent (air, fluide frigorigène, transfert). */
+.cx-flow { stroke-dasharray: 2 10; animation: cx-flow 9s linear infinite; }
+.cx-flow-slow { stroke-dasharray: 1.5 9; animation: cx-flow 16s linear infinite; }
+@keyframes cx-flow { to { stroke-dashoffset: -240; } }
+
+/* Hélice d'unité extérieure. */
+.cx-spin { transform-box: fill-box; transform-origin: center; animation: cx-spin 3.2s linear infinite; }
+@keyframes cx-spin { to { transform: rotate(360deg); } }
+
+/* Barres de remplacement (dossier ThermoMatch, portail en préparation). */
+.cx-skel {
+  background: linear-gradient(90deg, rgba(244, 239, 231, 0.1) 0%, rgba(244, 239, 231, 0.2) 50%, rgba(244, 239, 231, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: cx-skel 3.4s ease-in-out infinite;
+}
+@keyframes cx-skel { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+
+/* Pastille d'état (ouvert, en préparation) : simple battement d'opacité. */
+.cx-beat { animation: cx-beat 2.4s ease-in-out infinite; }
+@keyframes cx-beat { 50% { opacity: 0.35; } }
+
+/* Tuiles du tableau à palettes (contact). */
+.cx-flap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 300px;
+  border-radius: 6px;
+  background: #0a1419;
+  box-shadow: inset 0 0 0 1px rgba(244, 239, 231, 0.1);
+  font-variant-numeric: tabular-nums;
+}
+.cx-flap::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+/* Liens soulignés au survol sur fond sombre. */
+.cx-link { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.cx-link:hover, .cx-link:focus-visible { background-size: 100% 1px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cx-flow, .cx-flow-slow, .cx-spin, .cx-skel, .cx-beat { animation: none; }
+}

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GlossaryHero, type GlossaryEntry } from "@/components/content-hero/GlossaryHero";
+import { excerpt, typo } from "@/components/content-hero/typo";
 
 export const metadata: Metadata = {
   title: "Glossaire de la thermopompe : SEER2, HSPF2, COP, Inverter, LogisVert expliqués",
@@ -70,6 +72,20 @@ export default function GlossairePage() {
     grouped[letter].push(item);
   });
 
+  // Héros : pour chaque lettre, son nombre de termes et le premier terme (aperçu de sa vraie définition).
+  const letterEntries: GlossaryEntry[] = Object.keys(grouped)
+    .sort()
+    .map((letter) => {
+      const first = grouped[letter][0];
+      return {
+        letter,
+        count: grouped[letter].length,
+        term: typo(first.term),
+        slug: slugifyTerm(first.term),
+        excerpt: typo(excerpt(first.definition, 170)),
+      };
+    });
+
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: "white", minHeight: "100vh" }}>
       <script
@@ -90,17 +106,11 @@ export default function GlossairePage() {
         }}
       />
       
-      {/* ── HEADER ── */}
-      <section style={{ backgroundColor: T.inkDeep, padding: "clamp(80px, 10vw, 120px) clamp(24px, 5vw, 64px)", textAlign: "center" }}>
-        <p style={{ margin: "0 0 16px", color: T.orange, fontSize: "13px", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase" }}>DICTIONNAIRE DU CVAC</p>
-        <h1 style={{ margin: "0 0 24px", color: "#f8f5f0", fontSize: "clamp(48px, 6vw, 72px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-0.04em" }}>Glossaire</h1>
-        <p style={{ maxWidth: "600px", margin: "0 auto", color: "rgba(255,255,255,0.7)", fontSize: "18px", lineHeight: 1.55 }}>
-          Décodez le jargon de l'industrie. Des définitions claires et exhaustives pour maîtriser les termes techniques, de l'achat à l'entretien.
-        </p>
-      </section>
+      {/* ── HÉROS : dictionnaire qui feuillette ses entrées, index A–Z ── */}
+      <GlossaryHero entries={letterEntries} termCount={sortedTerms.length} />
 
       {/* ── CONTENT ── */}
-      <section style={{ padding: "clamp(64px, 8vw, 120px) clamp(24px, 5vw, 64px)", backgroundColor: T.surface }}>
+      <section id="lexique" style={{ padding: "clamp(64px, 8vw, 120px) clamp(24px, 5vw, 64px)", backgroundColor: T.surface, scrollMarginTop: 72 }}>
         <div className="max-w-[900px] mx-auto">
           <div style={{ backgroundColor: "white", padding: "clamp(40px, 6vw, 80px) clamp(32px, 5vw, 64px)", borderRadius: "12px", border: `1px solid ${T.border}`, boxShadow: "0 10px 40px rgba(0,0,0,0.02)" }}>
             {Object.keys(grouped).sort().map((letter, idx) => {

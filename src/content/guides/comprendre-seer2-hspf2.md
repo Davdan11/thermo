@@ -4,7 +4,7 @@ description: "Trois indices, trois usages. Le HSPF2 dit ce que vous paierez en c
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-04-12"
 updatedAt: "2026-09-08"
-coverImage: "/images/guides/card-outdoor-unit.jpg"
+coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "choisir"
 keywords: ["HSPF2 thermopompe", "SEER2 signification", "COP thermopompe -15", "efficacité thermopompe Québec"]
 related: ["btu-quelle-capacite-choisir", "quelle-thermopompe-choisir-hiver-quebecois", "subvention-logisvert-guide-complet"]

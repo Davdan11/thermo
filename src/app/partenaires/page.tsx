@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PartnerForm } from "./PartnerForm";
+import { PartnersHero } from "@/components/company-hero/PartnersHero";
 
 export const metadata: Metadata = {
   title: "Devenir Partenaire Installateur — Thermopompes À Vendre.ca",
@@ -23,109 +24,8 @@ const T = {
 export default function PartenairesPage() {
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: T.surface }}>
-      {/* ── HERO ── */}
-      <section
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "clamp(600px, 45vw, 850px)",
-          overflow: "hidden",
-          isolation: "isolate",
-          background: T.inkDeep,
-        }}
-      >
-        <img
-          src="/images/about-experience-house.jpg"
-          alt="Installateur premium"
-          style={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "60% center",
-            display: "block",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 1,
-            pointerEvents: "none",
-            background: "linear-gradient(90deg, rgba(3,20,30,0.95) 0%, rgba(3,20,30,0.7) 45%, rgba(3,20,30,0) 80%)",
-          }}
-        />
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            width: "min(680px, 50vw)",
-            height: "100%",
-            marginLeft: "clamp(48px, 5.5vw, 96px)",
-            color: "#ffffff",
-          }}
-        >
-          <p
-            style={{
-              margin: "0 0 24px",
-              color: T.orange,
-              fontSize: "13px",
-              fontWeight: 700,
-              letterSpacing: "0.09em",
-              textTransform: "uppercase",
-            }}
-          >
-            POUR LES PROFESSIONNELS CERTIFIÉS
-          </p>
-          <h1
-            style={{
-              margin: 0,
-              color: "#f8f5f0",
-              fontSize: "clamp(44px, 4.5vw, 72px)",
-              fontWeight: 500,
-              lineHeight: 1.05,
-              letterSpacing: "-0.04em",
-            }}
-          >
-            Rejoignez le réseau d'installateurs d'élite.
-          </h1>
-          <div style={{ width: "31px", height: "2px", margin: "26px 0 22px", backgroundColor: T.orange }} />
-          <p
-            style={{
-              maxWidth: "500px",
-              margin: "0 0 40px",
-              color: "rgba(255,255,255,0.85)",
-              fontSize: "18px",
-              lineHeight: 1.55,
-            }}
-          >
-            Nous ne vendons pas de "leads" ou de listes de contacts froids. Nous formons des partenariats stratégiques pour connecter votre expertise avec une clientèle déjà éduquée par ThermoMatch.
-          </p>
-          <a
-            href="#candidature"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              height: "60px",
-              padding: "0 32px",
-              backgroundColor: T.orange,
-              color: "white",
-              textDecoration: "none",
-              fontWeight: 600,
-              fontSize: "15px",
-              borderRadius: "4px",
-            }}
-          >
-            Soumettre une candidature
-          </a>
-        </div>
-      </section>
+      {/* HÉROS premium : src/components/company-hero/PartnersHero.tsx */}
+      <PartnersHero />
 
       {/* ── TECHNOLOGIE THERMOSCAN ── */}
       {/* Dark section for the white logo to stand out */}

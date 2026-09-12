@@ -1,0 +1,69 @@
+/* ==================================================================
+   Héros des pages de contenu (guides, article, glossaire, FAQ,
+   calculateur). Préfixe ct- : rien d'autre sur le site n'est touché.
+   ================================================================== */
+
+/* Soulignement qui se trace au survol. */
+.ct-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.6s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s;
+}
+.ct-underline:hover,
+.ct-underline:focus-visible { background-size: 100% 1px; }
+
+/* Sommaire des guides : points de conduite qui virent à l'orange. */
+.ct-toc { color: rgba(244, 239, 231, 0.86); transition: color 0.3s; }
+.ct-toc .ct-leader { border-color: rgba(244, 239, 231, 0.2); transition: border-color 0.4s; }
+.ct-toc .ct-num { transition: color 0.3s; }
+.ct-toc:hover, .ct-toc:focus-visible { color: #f4efe7; }
+.ct-toc:hover .ct-leader, .ct-toc:focus-visible .ct-leader { border-color: #e54b17; }
+.ct-toc:hover .ct-num, .ct-toc:focus-visible .ct-num { color: #e54b17; }
+
+/* Questions qui défilent (FAQ). La moitié dupliquée boucle sans couture. */
+.ct-vtrack { animation: ct-v var(--ct-dur, 60s) linear infinite; }
+.ct-vtrack[data-reverse="true"] { animation-direction: reverse; }
+@keyframes ct-v { to { transform: translateY(-50%); } }
+.ct-htrack { display: flex; width: max-content; animation: ct-h var(--ct-dur, 60s) linear infinite; }
+.ct-htrack[data-reverse="true"] { animation-direction: reverse; }
+@keyframes ct-h { to { transform: translateX(-50%); } }
+.ct-marquee:hover .ct-vtrack,
+.ct-marquee:hover .ct-htrack { animation-play-state: paused; }
+
+.ct-pill { transition: border-color 0.35s, background-color 0.35s; }
+.ct-pill:hover { border-color: rgba(229, 75, 23, 0.65); background-color: rgba(16, 34, 45, 0.98); }
+.ct-plus { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s; }
+.ct-pill:hover .ct-plus { transform: rotate(90deg); color: #e54b17; }
+
+/* Champ de recherche de la FAQ. */
+.ct-search { transition: border-color 0.3s, background-color 0.3s; }
+.ct-search:focus-within { border-color: rgba(244, 239, 231, 0.5); background-color: rgba(244, 239, 231, 0.09); }
+.ct-search input::placeholder { color: rgba(244, 239, 231, 0.42); }
+.ct-search input::-webkit-search-cancel-button { filter: invert(1); opacity: 0.45; }
+.ct-result { transition: background-color 0.25s; }
+.ct-result:hover, .ct-result:focus-visible { background-color: rgba(244, 239, 231, 0.06); }
+
+/* Index A–Z du glossaire. */
+.ct-letter { color: rgba(244, 239, 231, 0.88); transition: color 0.3s, background-color 0.3s; }
+.ct-letter:hover, .ct-letter:focus-visible { background-color: rgba(244, 239, 231, 0.07); color: #f4efe7; }
+.ct-letter[data-on="true"] { color: #e54b17; }
+
+/* Jauge du calculateur : l'aiguille oscille dans la plage 3 à 4 (le COP varie avec le froid). */
+.ct-needle {
+  transform-box: view-box;
+  transform-origin: 220px 236px;
+  transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ct-idle { transform-box: view-box; transform-origin: 220px 236px; animation: ct-idle 7s ease-in-out infinite; }
+@keyframes ct-idle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ct-vtrack, .ct-htrack, .ct-idle { animation: none; }
+  .ct-needle { transition: none; }
+}

@@ -7,8 +7,23 @@ import { getLandingPage, getLandingPages, type LandingPage } from "@/lib/seo/lan
 import { getCapacityClass, getCapacityClasses, getRanking, type CapacityClass } from "@/lib/seo/programmatic";
 import { estimateLoad } from "@/lib/thermomatch/sizing";
 import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+import type { GuideVariant } from "@/components/seo/hero/types";
 
 export const dynamicParams = false;
+
+/* Schéma de principe du héros, selon le sujet du guide. */
+const GUIDE_VARIANT: Record<string, GuideVariant> = {
+  "thermopompe-murale": "murale",
+  "thermopompe-centrale": "centrale",
+  "thermopompe-multizone": "multizone",
+  "thermopompe-a-vendre": "catalogue",
+  "comparateur-thermopompe": "catalogue",
+  "installation-thermopompe": "installation",
+  "soumission-thermopompe": "installation",
+  "remplacement-thermopompe": "remplacement",
+  "thermopompe-climat-froid": "froid",
+  "thermopompe-haute-efficacite": "efficacite",
+};
 
 export async function generateStaticParams() {
   return [
@@ -85,6 +100,7 @@ function LandingView({ page }: { page: LandingPage }) {
           { label: "Thermopompes", href: "/thermopompes" },
           { label: page.h1, href: `/thermopompes/${page.slug}` },
         ]}
+        motif={{ kind: "guide", variant: GUIDE_VARIANT[page.slug] ?? "catalogue" }}
       />
       <Prose>
         {cb.intro && <p className="text-[18px]">{cb.intro}</p>}
@@ -242,6 +258,18 @@ function CapacityView({ cap }: { cap: CapacityClass }) {
           { label: "Thermopompes", href: "/thermopompes" },
           { label: `Thermopompe ${cap.label}`, href: `/thermopompes/${cap.slug}` },
         ]}
+        titleLines={["Thermopompe", cap.label]}
+        serif={cap.label}
+        motif={{
+          kind: "capacity",
+          btu: cap.btu,
+          h5Min: h5Values.length ? h5Min : null,
+          h5Max: h5Values.length ? h5Max : null,
+          certified: certified.length,
+          classes: classes.map((c) => c.btu),
+          areaMin: area.min,
+          areaMax: area.max,
+        }}
         stats={[
           { label: "Murales / centrales", value: `${walls.length} / ${centrals.length}` },
           { label: "Certifiées grand froid", value: String(cap.coldClimateCount) },

@@ -4,7 +4,7 @@ description: "Compteurs séparés, façades contraintes, LogisVert par logement 
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
 updatedAt: "2026-09-11"
-coverImage: "/images/guides/card-outdoor-unit.jpg"
+coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "choisir"
 keywords: ["thermopompe duplex", "thermopompe triplex", "thermopompe plex", "thermopompe logement locatif", "thermopompe immeuble montréal"]
 related: ["thermopompe-condo-appartement", "thermopompe-multizone-bon-choix", "thermopompe-maison-ancienne-avant-1980", "subvention-logisvert-guide-complet"]

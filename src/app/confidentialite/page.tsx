@@ -22,15 +22,33 @@ export default function ConfidentialitePage() {
         title="Politique de confidentialité"
         intro={`Dernière mise à jour : ${UPDATED}. Cette politique décrit les renseignements personnels que nous recueillons sur ce site, l'usage que nous en faisons et vos droits.`}
         breadcrumbs={[{ label: "Politique de confidentialité", href: "/confidentialite" }]}
+        titleLines={["Politique de", "confidentialité"]}
+        serif="confidentialité"
+        motif={{
+          kind: "legal",
+          heading: "Sommaire",
+          note: `Mise à jour : ${UPDATED}`,
+          items: [
+            { id: "qui-nous-sommes", label: "Qui nous sommes" },
+            { id: "renseignements-recueillis", label: "Renseignements que nous recueillons" },
+            { id: "utilisation", label: "Pourquoi nous les utilisons" },
+            { id: "partage", label: "Avec qui nous les partageons" },
+            { id: "conservation", label: "Conservation" },
+            { id: "vos-droits", label: "Vos droits" },
+            { id: "temoins", label: "Témoins (cookies) et stockage local" },
+            { id: "securite", label: "Sécurité" },
+            { id: "modifications", label: "Modifications" },
+          ],
+        }}
       />
       <Prose>
-        <h2>1. Qui nous sommes</h2>
+        <h2 id="qui-nous-sommes" className="scroll-mt-28">1. Qui nous sommes</h2>
         <p>
           Thermopompes À Vendre.ca (« nous ») exploite ce site de comparaison et de sélection de thermopompes au Québec. Nous agissons comme
           responsable des renseignements personnels recueillis par le site. Pour toute question, utilisez la <Link href="/contact">page Contact</Link>.
         </p>
 
-        <h2>2. Renseignements que nous recueillons</h2>
+        <h2 id="renseignements-recueillis" className="scroll-mt-28">2. Renseignements que nous recueillons</h2>
         <ul>
           <li><strong>Questionnaire ThermoMatch</strong> : code postal, type de propriété, superficie, année de construction, isolation, système de chauffage actuel, priorités et budget. Ces réponses servent uniquement à calculer la recommandation et sont conservées dans votre navigateur tant que vous n'avez pas demandé de soumission.</li>
           <li><strong>Demande de soumission</strong> : prénom, nom, téléphone, courriel, adresse ou code postal, et le résumé de votre projet.</li>
@@ -39,7 +57,7 @@ export default function ConfidentialitePage() {
           <li><strong>Données techniques</strong> : adresse IP, type de navigateur, pages consultées et paramètres de provenance (utm), utilisés pour la sécurité et la mesure d'audience.</li>
         </ul>
 
-        <h2>3. Pourquoi nous les utilisons</h2>
+        <h2 id="utilisation" className="scroll-mt-28">3. Pourquoi nous les utilisons</h2>
         <ul>
           <li>Produire votre recommandation ThermoMatch et votre estimation de subvention.</li>
           <li>Vous rappeler et préparer une soumission, puis coordonner l'installation avec un installateur partenaire.</li>
@@ -47,7 +65,7 @@ export default function ConfidentialitePage() {
           <li>Améliorer le site et mesurer son audience de façon agrégée.</li>
         </ul>
 
-        <h2>4. Avec qui nous les partageons</h2>
+        <h2 id="partage" className="scroll-mt-28">4. Avec qui nous les partageons</h2>
         <p>
           Nous ne vendons pas vos renseignements. Ils sont communiqués uniquement aux fournisseurs nécessaires à l'exploitation du service :
           notre outil de gestion de la relation client (pour le suivi de votre demande), notre service d'envoi de courriels, notre fournisseur de
@@ -55,20 +73,20 @@ export default function ConfidentialitePage() {
           demandé une soumission. Certains de ces fournisseurs sont situés hors du Québec ; nous les choisissons pour leurs garanties de sécurité.
         </p>
 
-        <h2>5. Conservation</h2>
+        <h2 id="conservation" className="scroll-mt-28">5. Conservation</h2>
         <p>
           Les réponses au questionnaire restent dans votre navigateur et peuvent être effacées à tout moment via « Recommencer ». Les demandes de
           soumission sont conservées le temps nécessaire au suivi du projet, puis archivées ou supprimées. Les photos ThermoScan ne sont pas conservées.
         </p>
 
-        <h2>6. Vos droits</h2>
+        <h2 id="vos-droits" className="scroll-mt-28">6. Vos droits</h2>
         <p>
           Conformément à la Loi sur la protection des renseignements personnels dans le secteur privé (Loi 25), vous pouvez demander l'accès à vos
           renseignements, leur rectification, leur suppression, ou retirer votre consentement. Écrivez-nous via la <Link href="/contact">page Contact</Link> ;
           nous répondons dans les 30 jours. Vous pouvez aussi porter plainte auprès de la Commission d'accès à l'information du Québec.
         </p>
 
-        <h2>7. Témoins (cookies) et stockage local</h2>
+        <h2 id="temoins" className="scroll-mt-28">7. Témoins (cookies) et stockage local</h2>
         <p>
           Le site utilise le stockage local de votre navigateur pour mémoriser vos réponses au questionnaire et votre brouillon de projet. Aucun témoin
           publicitaire n'est déposé. Pour mesurer la fréquentation du site, nous pouvons utiliser Google Analytics 4 en mode consentement : tant que vous
@@ -77,12 +95,12 @@ export default function ConfidentialitePage() {
           depuis les paramètres de votre navigateur.
         </p>
 
-        <h2>8. Sécurité</h2>
+        <h2 id="securite" className="scroll-mt-28">8. Sécurité</h2>
         <p>
           Les échanges avec le site sont chiffrés (HTTPS). L'accès aux dossiers clients est limité aux personnes qui en ont besoin pour traiter votre demande.
         </p>
 
-        <h2>9. Modifications</h2>
+        <h2 id="modifications" className="scroll-mt-28">9. Modifications</h2>
         <p>Cette politique peut être mise à jour. La date en haut de page indique la version en vigueur.</p>
       </Prose>
     </main>

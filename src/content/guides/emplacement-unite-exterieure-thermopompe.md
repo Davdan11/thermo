@@ -4,7 +4,7 @@ description: "L'emplacement de l'unité extérieure décide du rendement, du bru
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
 updatedAt: "2026-09-11"
-coverImage: "/images/guides/card-outdoor-unit.jpg"
+coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "installation"
 keywords: ["emplacement thermopompe extérieure", "installation thermopompe mur", "thermopompe support mural", "où installer thermopompe", "thermopompe neige toit"]
 related: ["installer-thermopompe-en-hiver", "preparer-son-projet-installation", "entretien-thermopompe-hiver", "thermopompe-condo-appartement"]

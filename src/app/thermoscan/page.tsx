@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo";
 import { ThermoScanSection } from "@/components/thermoscan/ThermoScanSection";
-import { ScanHeroVisual, LabelLocator } from "@/components/thermoscan/ThermoScanArt";
+import { LabelLocator } from "@/components/thermoscan/ThermoScanArt";
+import { ThermoScanHero } from "@/components/tools-hero/ThermoScanHero";
 import { Camera, ScanLine, GitCompareArrows, Thermometer, Clock, ShieldCheck, Leaf, Trash2, Database, PencilLine, ArrowRight } from "lucide-react";
 
 /* ------------------------------------------------------------------
@@ -42,67 +43,8 @@ const TRUST = [
 export default function ThermoScanPage() {
   return (
     <main className="min-h-screen bg-[var(--color-background)]">
-      {/* ── Héros ──────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden" style={{ background: "#0C1821" }}>
-        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(60% 80% at 80% 50%, rgba(229,75,23,0.16) 0%, rgba(12,24,33,0) 70%)" }} />
-        <div className="relative mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10 pt-8 pb-14 lg:pt-10 lg:pb-20">
-          <nav aria-label="Fil d'Ariane">
-            <ol className="flex flex-wrap gap-1.5 text-xs" style={{ color: "rgba(255,255,255,.35)" }}>
-              <li><Link href="/" className="hover:text-white/70 transition-colors">Accueil</Link></li>
-              <li aria-hidden="true">/</li>
-              <li><Link href="/comparer" className="hover:text-white/70 transition-colors">Comparer</Link></li>
-              <li aria-hidden="true">/</li>
-              <li style={{ color: "rgba(255,255,255,.7)" }}>ThermoScan</li>
-            </ol>
-          </nav>
-
-          <div className="mt-10 lg:mt-14 grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-10 items-center">
-            <div className="max-w-[560px]">
-              <img src="/images/thermoscan-logo.webp" alt="ThermoScan" width={2087} height={754} style={{ height: 44, width: "auto" }} />
-              <h1 className="mt-7 text-white font-bold tracking-tight" style={{ fontSize: "clamp(34px, 4.6vw, 56px)", lineHeight: 1.04, letterSpacing: "-0.025em" }}>
-                Une photo de l&apos;étiquette.<br />
-                <span style={{ color: "#f0e9e1" }}>La fiche complète de votre thermopompe.</span>
-              </h1>
-              <p className="mt-5 text-[17px] leading-relaxed" style={{ color: "rgba(255,255,255,.62)", maxWidth: 480 }}>
-                ThermoScan lit la plaque signalétique de l&apos;appareil que vous avez déjà, retrouve sa fiche certifiée et mesure ce que vous gagneriez avec un modèle d&apos;aujourd&apos;hui.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <a
-                  href="#scanner"
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-bold text-white transition-transform hover:-translate-y-0.5"
-                  style={{ background: "#e54b17", boxShadow: "0 10px 30px -10px rgba(229,75,23,.7)" }}
-                >
-                  <Camera size={18} /> Scanner mon appareil
-                </a>
-                <a
-                  href="#etiquette"
-                  className="inline-flex items-center gap-2 rounded-full px-5 py-3.5 text-[15px] font-semibold transition-colors hover:bg-white/10"
-                  style={{ color: "#fff", border: "1px solid rgba(255,255,255,.22)" }}
-                >
-                  Où est l&apos;étiquette ?
-                </a>
-              </div>
-              <dl className="mt-10 grid grid-cols-3 gap-4 max-w-[440px]">
-                {[
-                  ["< 1 min", "de la photo à la fiche"],
-                  ["2011 à 2026", "modèles ENERGY STAR reconnus"],
-                  ["0 photo", "conservée après lecture"],
-                ].map(([v, l]) => (
-                  <div key={l} style={{ borderLeft: "2px solid rgba(229,75,23,.6)", paddingLeft: 12 }}>
-                    <dt className="sr-only">{l}</dt>
-                    <dd className="m-0">
-                      <span className="block text-white font-bold text-[20px] leading-none tracking-tight">{v}</span>
-                      <span className="block mt-1.5 text-[12px] leading-snug" style={{ color: "rgba(255,255,255,.5)" }}>{l}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
-            <ScanHeroVisual />
-          </div>
-        </div>
-      </section>
+      {/* ── Héros : viseur animé sur photo réelle (trousse premium) ── */}
+      <ThermoScanHero />
 
       {/* ── Scanner ───────────────────────────────────────────── */}
       <section id="scanner" className="scroll-mt-24">

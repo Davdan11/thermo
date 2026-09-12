@@ -2,6 +2,8 @@
 
 import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
+import { SubventionsHero } from "@/components/tools-hero/SubventionsHero";
+import type { LogisVertSample } from "@/components/tools-hero/types";
 
 import { useState, useCallback, useRef, useEffect } from "react";
 import type { LogisVertResult } from "@/lib/subsidies/logisvert-calculator";
@@ -59,7 +61,7 @@ interface ProductResult {
 /* ══════════════════════════════════════════════════════════════════
    COMPONENT
    ══════════════════════════════════════════════════════════════════ */
-export function SubventionsClient() {
+export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSample[] }) {
   const [query, setQuery] = useState("");
   const [showDD, setShowDD] = useState(false);
   const [selected, setSelected] = useState<ProductResult | null>(null);
@@ -163,29 +165,15 @@ export function SubventionsClient() {
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", minHeight: "100vh", background: "#f8f5f0", color: INK }}>
 
-      {/* ═══ HERO ═══ */}
-      <section style={{ position: "relative", height: "clamp(280px, 22vw, 380px)", overflow: "hidden", background: "#041a27" }}>
-        <img src="/images/subventions-hero-gree.png" alt="" aria-hidden="true"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center right", display: "block" }} />
-        <div aria-hidden="true" style={{ position: "absolute", inset: 0,
-          background: "linear-gradient(90deg,rgba(2,22,33,.98) 0%,rgba(2,22,33,.90) 31%,rgba(2,22,33,.42) 58%,rgba(2,22,33,.08) 100%)" }} />
-        <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10 flex flex-col justify-center h-full py-8 sm:py-11">
-          <h1 style={{ margin: 0, maxWidth: 680, fontSize: "clamp(42px, 3.5vw, 60px)", fontWeight: 550, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#fff" }}>
-            Vérifiez les aides disponibles{" "}<br />pour votre thermopompe.
-          </h1>
-          <p style={{ margin: "18px 0 0", maxWidth: 580, fontSize: 17, lineHeight: 1.55, color: "rgba(255,255,255,.8)" }}>
-            Sélectionnez une configuration exacte pour consulter{" "}<br />les programmes et les conditions documentées.
-          </p>
-          <div style={{ width: 40, height: 3, marginTop: 22, background: ORG }} />
-        </div>
-      </section>
+      {/* ═══ HÉROS : relevé LogisVert animé (montants réels de la liste officielle) ═══ */}
+      <SubventionsHero samples={heroSamples} />
 
       {/* ═══ MAIN ═══ */}
       <div style={{ padding: "24px 0 20px" }}>
         <div className="w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10">
 
           {/* ── TOOL CARD ── */}
-          <div className="subventions-main-card" style={{
+          <div id="verification" className="subventions-main-card scroll-mt-28" style={{
             display: "grid", overflow: "hidden", background: "rgba(255,255,255,.24)",
             border: `1px solid ${BDR}`, borderRadius: 6, minHeight: 0,
           }}>
@@ -424,7 +412,7 @@ export function SubventionsClient() {
           </div>
 
           {/* ═══ CE QUE NOUS VÉRIFIONS ═══ */}
-          <div style={{ marginTop: 20, border: `1px solid #e0d7ca`, borderRadius: 6,
+          <div id="ce-que-nous-verifions" className="scroll-mt-28" style={{ marginTop: 20, border: `1px solid #e0d7ca`, borderRadius: 6,
             background: "rgba(255,255,255,.2)", overflow: "hidden" }}>
             {/* Header */}
             <div style={{ padding: "28px 34px 14px" }}>

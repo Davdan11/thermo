@@ -2,7 +2,7 @@
 /* ==================================================================
    Blocs partagés des pages SEO programmatiques (rendu serveur)
 
-   - SeoHero        : en-tête sombre avec fil d'Ariane et accroche
+   - SeoHero        : héros premium sombre + motif animé propre à la page
    - ModelTable     : tableau de modèles avec données certifiées
    - FaqBlock       : questions/réponses + JSON-LD FAQPage
    - CtaThermoMatch : appel à l'action vers le questionnaire
@@ -13,7 +13,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { brandLogoPath } from "@/lib/data/brand-logos";
-import { Breadcrumbs, type BreadcrumbItem } from "@/components/seo/Breadcrumbs";
+import type { ReactNode } from "react";
+import type { BreadcrumbItem } from "@/components/seo/Breadcrumbs";
+import { SeoHeroView, type TitleLine } from "@/components/seo/hero/SeoHeroView";
+import type { SeoMotif } from "@/components/seo/hero/types";
+import { LegalMotif } from "@/components/seo/hero/LegalMotif";
+import { StepsMotif } from "@/components/seo/hero/StepsMotif";
+import { VersusMotif } from "@/components/seo/hero/VersusMotif";
+import { BrandMotif } from "@/components/seo/hero/BrandMotif";
+import { PodiumMotif } from "@/components/seo/hero/PodiumMotif";
+import { LeadersMotif } from "@/components/seo/hero/LeadersMotif";
+import { SubsidyMotif } from "@/components/seo/hero/SubsidyMotif";
+import { CityMotif, IsothermsBg } from "@/components/seo/hero/CityMotif";
+import { CitiesMotif } from "@/components/seo/hero/CitiesMotif";
+import { CapacityMotif } from "@/components/seo/hero/CapacityMotif";
+import { GuideMotif } from "@/components/seo/hero/GuideMotif";
 import { getFaqPageSchema } from "@/lib/seo";
 import type { SeoModel } from "@/lib/seo/programmatic";
 
@@ -43,6 +57,79 @@ export function TrustStrip() {
   );
 }
 
+/* ------------------------------------------------------------------
+   Héros des pages SEO (version premium)
+   Coquille sombre commune (HeroShell, passe sous l'en-tête transparent)
+   + motif animé propre au sujet de la page : chaque page passe `motif`
+   avec les données qu'elle a déjà calculées. Les motifs vivent dans
+   src/components/seo/hero/.
+   ------------------------------------------------------------------ */
+
+/** Typographie française à l'affichage : apostrophe courbe, espace insécable avant « : ; ? ! ». */
+function typo(s: string): string {
+  return s
+    .replace(/'/g, "’")
+    .replace(/ ([:;?!])/g, " $1")
+    .replace(/([^\s ])([?!;])(?=\s|$)/g, "$1 $2");
+}
+
+/**
+ * Lignes du h1. `titleLines` doit reproduire exactement le titre (mêmes mots, c'est du SEO) :
+ * sinon on garde le titre d'un bloc. Sans découpage, « Sujet : précision » passe sur deux lignes.
+ */
+function titleLinesFor(title: string, lines?: string[], serif?: string): TitleLine[] {
+  const t = typo(title);
+  let parts = [t];
+  const colon = t.indexOf(" : ");
+  if (lines?.length) {
+    const typed = lines.map(typo);
+    if (typed.join(" ") === t) parts = typed;
+    else if (process.env.NODE_ENV !== "production") console.warn(`[SeoHero] titleLines ne reproduit pas le titre « ${title} »`);
+  } else if (colon > 0) {
+    parts = [t.slice(0, colon + 2), t.slice(colon + 3)];
+  }
+  const accent = serif ? typo(serif) : !lines?.length && colon > 0 ? parts[1] : undefined;
+  let done = false;
+  return parts.map((p) => {
+    const k = accent && !done ? p.indexOf(accent) : -1;
+    if (k < 0 || !accent) return { before: p };
+    done = true;
+    return { before: p.slice(0, k), serif: accent, after: p.slice(k + accent.length) };
+  });
+}
+
+function motifParts(m?: SeoMotif): { visual?: ReactNode; background?: ReactNode; snow: number } {
+  if (!m) return { snow: 0 };
+  switch (m.kind) {
+    case "legal":
+      return { visual: <LegalMotif heading={m.heading} note={m.note} items={m.items} />, snow: 0 };
+    case "explainer":
+      return { visual: <StepsMotif heading={m.heading} steps={m.steps} />, snow: 0 };
+    case "compare":
+      return { visual: <VersusMotif a={m.a} b={m.b} rows={m.rows} shared={m.shared} />, snow: 0 };
+    case "brand":
+      return { visual: <BrandMotif brand={m.brand} logo={m.logo} typeLabel={m.typeLabel} photo={m.photo} offered={m.offered} />, snow: 0 };
+    case "podium":
+      return { visual: <PodiumMotif metricLabel={m.metricLabel} items={m.items} />, snow: 0 };
+    case "leaders":
+      return { visual: <LeadersMotif rows={m.rows} />, snow: 0 };
+    case "subsidy":
+      return { visual: <SubsidyMotif label={m.label} amount={m.amount} min={m.min} updated={m.updated} tickerLabel={m.tickerLabel} ticker={m.ticker} />, snow: 0 };
+    case "city":
+      return {
+        visual: <CityMotif city={m.city} designTempC={m.designTempC} janMeanC={m.janMeanC} janMinC={m.janMinC} extremeMinC={m.extremeMinC} extremeMinYear={m.extremeMinYear} source={m.source} />,
+        background: <IsothermsBg />,
+        snow: 0.35,
+      };
+    case "cities":
+      return { visual: <CitiesMotif cities={m.cities} />, background: <IsothermsBg />, snow: 0.3 };
+    case "capacity":
+      return { visual: <CapacityMotif btu={m.btu} h5Min={m.h5Min} h5Max={m.h5Max} certified={m.certified} classes={m.classes} areaMin={m.areaMin} areaMax={m.areaMax} />, snow: 0 };
+    case "guide":
+      return { visual: <GuideMotif variant={m.variant} />, snow: m.variant === "froid" ? 0.4 : 0 };
+  }
+}
+
 export function SeoHero({
   eyebrow,
   title,
@@ -52,6 +139,9 @@ export function SeoHero({
   answer,
   image,
   imageAlt = "",
+  titleLines,
+  serif,
+  motif,
 }: {
   eyebrow?: string;
   title: string;
@@ -60,56 +150,34 @@ export function SeoHero({
   stats?: Array<{ label: string; value: string }>;
   /** Réponse directe en 40-60 mots, en tête de page : ce qu'un lecteur pressé ou un moteur de réponse doit retenir. */
   answer?: string;
-  /** Photo pleine hauteur à droite, fondue dans le fond sombre (facultatif). */
+  /** Photo en fond, fondue dans le fond sombre (facultatif). */
   image?: string;
   imageAlt?: string;
+  /** Découpage du h1 en lignes (mots identiques au titre). */
+  titleLines?: string[];
+  /** Partie du titre en italique Instrument Serif. */
+  serif?: string;
+  /** Visuel animé propre au sujet de la page. */
+  motif?: SeoMotif;
 }) {
+  const { visual, background, snow } = motifParts(motif);
   return (
     <>
-    <section className="relative overflow-hidden bg-[#0C1821] text-white pt-28 pb-14">
-      {image && (
-        <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] pointer-events-none" aria-hidden="true">
-          <Image src={image} alt={imageAlt} fill priority sizes="(max-width: 1024px) 100vw, 58vw" className="object-cover object-center opacity-50 lg:opacity-100" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0C1821] via-[#0C1821]/80 to-[#0C1821]/25 lg:via-[#0C1821]/55 lg:to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0C1821] to-transparent" />
-        </div>
-      )}
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="[&_a]:text-white/60 [&_a:hover]:text-white [&_span]:text-white/90 [&_.text-gray-400]:text-white/30">
-          <Breadcrumbs items={breadcrumbs} />
-        </div>
-        {eyebrow && <p className="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-[#e54b17]">{eyebrow}</p>}
-        <h1 className="mt-3 text-[34px] sm:text-[52px] font-black leading-[1.05] tracking-tight max-w-4xl">{title}</h1>
-        <p className="mt-5 text-lg text-white/70 max-w-3xl leading-relaxed">{intro}</p>
-        {answer && (
-          <div className="mt-6 max-w-3xl rounded-xl border border-[#e54b17]/40 bg-white/5 px-5 py-4" role="note" aria-label="En bref">
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#e54b17]">En bref</p>
-            <p className="mt-1.5 text-[15px] leading-relaxed text-white/90">{answer}</p>
-          </div>
-        )}
-        <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
-          <Link href="/trouver-ma-thermopompe" className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-[#e54b17] hover:bg-[#d44315] px-6 font-bold text-[15px] text-white transition-colors">
-            Trouver ma thermopompe en 2 min
-          </Link>
-          <a href="tel:4389003224" className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-white/25 px-5 font-semibold text-[15px] text-white hover:bg-white/10 transition-colors">
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>
-            438-900-3224
-          </a>
-          <span className="text-[13px] text-white/60">Gratuit, sans engagement. Un installateur licencié RBQ vous rappelle.</span>
-        </div>
-        {stats && stats.length > 0 && (
-          <dl className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {stats.map((s) => (
-              <div key={s.label} className="rounded-xl border border-white/10 bg-white/5 px-4 py-4">
-                <dt className="text-[11px] uppercase tracking-wider text-white/50">{s.label}</dt>
-                <dd className="mt-1 text-2xl font-black">{s.value}</dd>
-              </div>
-            ))}
-          </dl>
-        )}
-      </div>
-    </section>
-    <TrustStrip />
+      <SeoHeroView
+        eyebrow={eyebrow ? typo(eyebrow) : undefined}
+        lines={titleLinesFor(title, titleLines, serif)}
+        titleLength={title.length}
+        intro={typo(intro)}
+        answer={answer ? typo(answer) : undefined}
+        breadcrumbs={breadcrumbs}
+        stats={stats?.map((s) => ({ label: typo(s.label), value: typo(s.value) }))}
+        visual={visual}
+        background={background}
+        snow={snow}
+        image={image}
+        imageAlt={imageAlt}
+      />
+      <TrustStrip />
     </>
   );
 }

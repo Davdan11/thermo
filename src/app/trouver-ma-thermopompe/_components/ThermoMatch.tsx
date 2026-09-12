@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { motion, useReducedMotion } from "motion/react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { STEPS, formatPostalCode } from "./steps";
@@ -18,6 +17,10 @@ import {
 import { ThermoMatchResults } from "./ThermoMatchResults";
 import { ShareResultsButton } from "@/components/thermomatch/ShareResultsButton";
 import { track } from "@/lib/analytics/track";
+import { HC, HERO_DISPLAY, HeroButton } from "@/components/hero/HeroKit";
+import { Snowfall } from "@/components/home/Snowfall";
+import { FlowBar } from "@/components/flow-hero/FlowBar";
+import { FlowFacts, QuestionTitle, ThermoMatchWelcome } from "@/components/flow-hero/ThermoMatchWelcome";
 
 /* ----------------------------------------------------------
    Constants
@@ -100,30 +103,43 @@ interface PostalTextInputProps {
   inputRef: React.RefObject<HTMLInputElement | null>;
   onChange: (raw: string) => void;
   onEnter: () => void;
+  /** Bouton posé dans la pastille, à droite du champ (présentation seulement). */
+  action?: React.ReactNode;
 }
 
-function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange, onEnter }: PostalTextInputProps) {
+function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange, onEnter, action }: PostalTextInputProps) {
   const { data, loading } = usePostalResolve(value);
   const isPostal = stepId === "postalCode";
 
   return (
     <div className="mt-6">
-      <input
-        ref={inputRef}
-        type="text"
-        value={value}
-        placeholder={placeholder}
-        onChange={(e) => onChange(e.target.value)}
-        onKeyDown={(e) => { if (e.key === "Enter") onEnter(); }}
-        autoComplete={isPostal ? "postal-code" : "off"}
-        className="w-full max-w-sm h-14 px-5 text-xl font-medium bg-white/5 border border-white/20 rounded-[6px] text-white placeholder:text-white/50 focus:outline-none focus:border-[#C66E42] transition-colors"
-      />
+      {/* Champ en pastille de verre, bouton Continuer intégré (même geste que le héros de l'accueil). */}
+      {/* Contour et fond dans flow-hero.css : le contour orange signale le focus et l'erreur. */}
+      <div
+        className="fh-pill flex w-full max-w-[520px] items-center gap-2 rounded-full p-1.5"
+        data-error={error ? "" : undefined}
+      >
+        <input
+          ref={inputRef}
+          type="text"
+          value={value}
+          placeholder={placeholder}
+          onChange={(e) => onChange(e.target.value)}
+          onKeyDown={(e) => { if (e.key === "Enter") onEnter(); }}
+          autoComplete={isPostal ? "postal-code" : "off"}
+          aria-label={isPostal ? "Code postal" : undefined}
+          className="fh-input min-w-0 flex-1 py-3 pl-5 text-[19px] font-medium"
+          // Styles en ligne : ils l'emportent sur le contour de focus global, déjà porté par la pastille.
+          style={{ color: HC.cream, letterSpacing: "0.06em", background: "transparent", border: 0, outline: "none", boxShadow: "none" }}
+        />
+        {action}
+      </div>
 
       {/* Confirmation ville / zone climatique */}
       {isPostal && (
-        <div className="mt-3 max-w-sm min-h-[44px]">
+        <div className="mt-3 max-w-[520px] min-h-[44px]">
           {loading && (
-            <div className="flex items-center gap-2 text-white/40 text-sm">
+            <div className="flex items-center gap-2 pl-5 text-sm" style={{ color: HC.faint }}>
               <svg className="animate-spin" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
               </svg>
@@ -131,17 +147,20 @@ function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange
             </div>
           )}
           {!loading && data && (
-            <div className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-lg px-4 py-3 animate-in fade-in slide-in-from-bottom-2 duration-300">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C66E42" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 mt-0.5">
+            <div
+              className="flex items-start gap-3 rounded-[16px] px-4 py-3 animate-in fade-in slide-in-from-bottom-2 duration-300"
+              style={{ background: "rgba(16,34,45,0.72)", border: `1px solid ${HC.line}` }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={HC.orange} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 mt-0.5">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
               <div>
-                <p className="text-white font-semibold text-sm leading-tight">
+                <p className="font-semibold text-sm leading-tight" style={{ color: HC.cream }}>
                   {data.municipality}
-                  <span className="text-white/50 font-normal">, {data.province}</span>
+                  <span className="font-normal" style={{ color: HC.mute }}>, {data.province}</span>
                 </p>
-                <p className="text-white/50 text-xs mt-0.5">
+                <p className="text-xs mt-0.5" style={{ color: HC.faint }}>
                   Zone climatique {data.climateZone} — {data.designTempC}°C de conception
                   {data.hdd18 ? ` — ${data.hdd18.toLocaleString("fr-CA")} DJC` : ""}
                 </p>
@@ -152,7 +171,7 @@ function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange
       )}
 
       {error && (
-        <p className="mt-3 text-sm text-red-400" role="alert">{error}</p>
+        <p className="mt-3 pl-5 text-sm" style={{ color: "#FF9C77" }} role="alert">{error}</p>
       )}
     </div>
   );
@@ -186,6 +205,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isMounted = useRef(false);
+  const reduceMotion = useReducedMotion();
 
   /* ---- Persist to sessionStorage + ProjectDraft ---- */
   useEffect(() => {
@@ -521,9 +541,196 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   const bgImage = STEP_BG_IMAGES[step.id] ?? STEP_BG_IMAGES.postalCode;
   const hasPropertyImages = step.id === "propertyType";
   const stepOptions = typeof step.options === "function" ? step.options(answers) : step.options;
+  // Premier écran du parcours : présentation « héros » (la logique de l'étape ne change pas).
+  const isWelcome = currentStep === 0;
+
+  // Champs de réponse de l'étape : mêmes gestionnaires, mêmes rôles ARIA qu'avant.
+  const inputs = (
+    <>
+      {/* ---- Text input ---- */}
+      {step.type === "text" && (
+        <PostalTextInput
+          stepId={step.id}
+          value={(currentValue as string) ?? ""}
+          placeholder={step.placeholder ?? ""}
+          error={error}
+          inputRef={inputRef}
+          onChange={(raw) => handleTextChange(step.id, raw)}
+          onEnter={handleContinue}
+          action={<HeroButton onClick={handleContinue}>Continuer</HeroButton>}
+        />
+      )}
+
+      {/* ---- Radio: with property images ---- */}
+      {step.type === "radio" && stepOptions && hasPropertyImages && (
+        <div
+          className="mt-6 overflow-hidden rounded-[18px]"
+          style={{ border: `1px solid ${HC.line}` }}
+          role="radiogroup"
+          aria-label={step.question}
+        >
+          {stepOptions.map((option, idx) => {
+            const isSelected = currentValue === option.value;
+            const imgUrl = PROPERTY_IMAGES[option.value];
+            return (
+              <button
+                key={option.value}
+                type="button"
+                role="radio"
+                aria-checked={isSelected}
+                onClick={() => handleRadioSelect(step.id, option.value)}
+                className={cn(
+                  "relative w-full flex items-center justify-between text-left h-[72px] overflow-hidden transition-all group",
+                  "border-t border-white/10",
+                  idx === 0 && "border-t-0",
+                  isSelected
+                    ? "border-l-[3px] border-l-[#E54B17]"
+                    : "border-l-[3px] border-l-transparent hover:border-l-white/20",
+                )}
+                style={{
+                  background: isSelected
+                    ? "rgba(229, 75, 23, 0.1)"
+                    : "transparent",
+                }}
+              >
+                {/* Right side image blending */}
+                {imgUrl && (
+                  <div
+                    className="absolute right-0 top-0 bottom-0 w-[55%] bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-500"
+                    style={{ backgroundImage: `url('${imgUrl}')` }}
+                  />
+                )}
+                {/* Gradient to blend */}
+                <div className="absolute right-0 top-0 bottom-0 w-[65%] bg-gradient-to-r from-[#0A1419] to-transparent" />
+
+                {/* Label */}
+                <span
+                  className={cn(
+                    "relative z-10 pl-5 text-[16px] font-semibold tracking-tight",
+                    isSelected ? "text-white" : "text-white/80 group-hover:text-white",
+                  )}
+                >
+                  {option.label}
+                </span>
+
+                {/* Arrow */}
+                <span className={cn("relative z-10 pr-5 transition-colors", isSelected ? "text-[#E54B17]" : "text-white/40 group-hover:text-white/70")}>
+                  <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
+                  </svg>
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* ---- Radio: standard list (no images) ---- */}
+      {step.type === "radio" && stepOptions && !hasPropertyImages && (
+        <div
+          className="mt-6 space-y-2"
+          role="radiogroup"
+          aria-label={step.question}
+        >
+          {stepOptions.map((option) => {
+            const isSelected = currentValue === option.value;
+            return (
+              <button
+                key={option.value}
+                type="button"
+                role="radio"
+                aria-checked={isSelected}
+                onClick={() => handleRadioSelect(step.id, option.value)}
+                className={cn(
+                  "fh-option w-full flex items-center justify-between text-left h-[56px] px-5 rounded-[10px] border group",
+                  isSelected
+                    ? "border-[#E54B17] bg-[#E54B17]/10 border-l-[3px]"
+                    : "border-white/10 hover:border-white/30 hover:bg-white/[0.03] border-l-[3px] border-l-transparent hover:border-l-white/30",
+                )}
+              >
+                <span
+                  className={cn(
+                    "text-[15px] font-semibold",
+                    isSelected ? "text-white" : "text-white/80 group-hover:text-white",
+                  )}
+                >
+                  {option.label}
+                </span>
+                <svg
+                  className={cn(
+                    "w-4 h-4 transition-colors",
+                    isSelected ? "text-[#E54B17]" : "text-white/30 group-hover:text-white/60",
+                  )}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* ---- Multi select ---- */}
+      {step.type === "multi" && stepOptions && (
+        <div>
+          <div className="mt-6 space-y-2" role="group" aria-label={step.question}>
+            {stepOptions.map((option) => {
+              const selected = Array.isArray(currentValue)
+                ? currentValue.includes(option.value)
+                : false;
+              return (
+                <button
+                  key={option.value}
+                  type="button"
+                  role="checkbox"
+                  aria-checked={selected}
+                  onClick={() => handleMultiToggle(step.id, option.value)}
+                  className={cn(
+                    "fh-option w-full flex items-center gap-4 text-left h-[56px] px-5 rounded-[10px] border",
+                    selected
+                      ? "border-[#E54B17] bg-[#E54B17]/10"
+                      : "border-white/10 hover:border-white/30 hover:bg-white/[0.03]",
+                  )}
+                >
+                  {/* Checkbox */}
+                  <span
+                    className={cn(
+                      "flex items-center justify-center w-5 h-5 rounded-[3px] border-2 shrink-0 transition-colors",
+                      selected ? "border-[#E54B17] bg-[#E54B17]" : "border-white/30",
+                    )}
+                  >
+                    {selected && (
+                      <svg viewBox="0 0 12 12" className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M2 6l3 3 5-5" />
+                      </svg>
+                    )}
+                  </span>
+                  <span
+                    className={cn(
+                      "text-[15px] font-semibold",
+                      selected ? "text-white" : "text-white/80",
+                    )}
+                  >
+                    {option.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+          {error && (
+            <p className="mt-3 text-sm" style={{ color: "#FF9C77" }} role="alert">{error}</p>
+          )}
+        </div>
+      )}
+    </>
+  );
 
   return (
-    <div className="min-h-screen bg-[#0D1117] text-white flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ background: HC.ink, color: HC.cream, fontFamily: HERO_DISPLAY }}>
       {/* Header */}
       <ThermoMatchHeader
         currentStep={currentStep}
@@ -532,256 +739,114 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
       />
 
       {/* Body: Left (question) + Right (visual + summary) */}
-      <div className="flex-1 flex flex-col lg:flex-row min-h-[calc(100vh-64px)] items-stretch">
-        
+      <div className="relative flex-1 flex flex-col lg:flex-row min-h-[calc(100vh-64px)] items-stretch">
+        {/* Neige légère sur tout le parcours : derrière le texte, devant la photo. */}
+        <Snowfall className="pointer-events-none absolute inset-0 z-[5] h-full w-full opacity-70" density={0.3} />
+
         {/* ======== LEFT PANE ======== */}
-        <div className="flex-1 flex flex-col justify-between px-8 md:px-12 lg:px-16 xl:px-20 py-10 lg:py-14 max-w-[660px]">
-          
+        <div className="relative z-10 flex-1 min-w-0 flex flex-col lg:justify-between px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-10 lg:py-14">
+
           {/* Question text */}
-          <div>
-            <h2 className="text-[38px] sm:text-[48px] font-bold leading-[1.1] tracking-tight mb-4">
-              {step.question}
-            </h2>
-            {step.subtitle && (
-              <p className="text-[#9CA3AF] text-[15px] mb-8">{step.subtitle}</p>
-            )}
-
-            {/* ---- Text input ---- */}
-            {step.type === "text" && (
-              <PostalTextInput
-                stepId={step.id}
-                value={(currentValue as string) ?? ""}
-                placeholder={step.placeholder ?? ""}
-                error={error}
-                inputRef={inputRef}
-                onChange={(raw) => handleTextChange(step.id, raw)}
-                onEnter={handleContinue}
-              />
-            )}
-
-            {/* ---- Radio: with property images ---- */}
-            {step.type === "radio" && stepOptions && hasPropertyImages && (
-              <div
-                className="mt-6 border border-white/10 overflow-hidden"
-                role="radiogroup"
-                aria-label={step.question}
+          <div className={cn("w-full", isWelcome ? "max-w-[720px]" : "max-w-[620px]")}>
+            {isWelcome ? (
+              <ThermoMatchWelcome question={step.question} subtitle={step.subtitle} totalSteps={TOTAL_STEPS}>
+                {inputs}
+              </ThermoMatchWelcome>
+            ) : (
+              <motion.div
+                key={step.id}
+                initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               >
-                {stepOptions.map((option, idx) => {
-                  const isSelected = currentValue === option.value;
-                  const imgUrl = PROPERTY_IMAGES[option.value];
-                  return (
-                    <button
-                      key={option.value}
-                      type="button"
-                      role="radio"
-                      aria-checked={isSelected}
-                      onClick={() => handleRadioSelect(step.id, option.value)}
-                      className={cn(
-                        "relative w-full flex items-center justify-between text-left h-[72px] overflow-hidden transition-all group",
-                        "border-t border-white/10",
-                        idx === 0 && "border-t-0",
-                        isSelected
-                          ? "border-l-[3px] border-l-[#C66E42]"
-                          : "border-l-[3px] border-l-transparent hover:border-l-white/20",
-                      )}
-                      style={{
-                        background: isSelected
-                          ? "rgba(198, 110, 66, 0.08)"
-                          : "transparent",
-                      }}
-                    >
-                      {/* Right side image blending */}
-                      {imgUrl && (
-                        <div
-                          className="absolute right-0 top-0 bottom-0 w-[55%] bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity"
-                          style={{ backgroundImage: `url('${imgUrl}')` }}
-                        />
-                      )}
-                      {/* Gradient to blend */}
-                      <div className="absolute right-0 top-0 bottom-0 w-[65%] bg-gradient-to-r from-[#0D1117] to-transparent" />
-
-                      {/* Label */}
-                      <span
-                        className={cn(
-                          "relative z-10 pl-5 text-base font-semibold tracking-tight",
-                          isSelected ? "text-white" : "text-white/80 group-hover:text-white",
-                        )}
-                      >
-                        {option.label}
-                      </span>
-
-                      {/* Arrow */}
-                      <span className="relative z-10 pr-5 text-white/40 group-hover:text-white/70 transition-colors">
-                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
-                        </svg>
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
-
-            {/* ---- Radio: standard list (no images) ---- */}
-            {step.type === "radio" && stepOptions && !hasPropertyImages && (
-              <div
-                className="mt-6 space-y-2"
-                role="radiogroup"
-                aria-label={step.question}
-              >
-                {stepOptions.map((option) => {
-                  const isSelected = currentValue === option.value;
-                  return (
-                    <button
-                      key={option.value}
-                      type="button"
-                      role="radio"
-                      aria-checked={isSelected}
-                      onClick={() => handleRadioSelect(step.id, option.value)}
-                      className={cn(
-                        "w-full flex items-center justify-between text-left h-[56px] px-5 border transition-all group",
-                        isSelected
-                          ? "border-[#C66E42] bg-[#C66E42]/10 border-l-[3px]"
-                          : "border-white/10 hover:border-white/30 border-l-[3px] border-l-transparent hover:border-l-white/30",
-                      )}
-                    >
-                      <span
-                        className={cn(
-                          "text-[15px] font-semibold",
-                          isSelected ? "text-white" : "text-white/80 group-hover:text-white",
-                        )}
-                      >
-                        {option.label}
-                      </span>
-                      <svg
-                        className={cn(
-                          "w-4 h-4 transition-colors",
-                          isSelected ? "text-[#C66E42]" : "text-white/30 group-hover:text-white/60",
-                        )}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
-                      </svg>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
-
-            {/* ---- Multi select ---- */}
-            {step.type === "multi" && stepOptions && (
-              <div>
-                <div className="mt-6 space-y-2" role="group" aria-label={step.question}>
-                  {stepOptions.map((option) => {
-                    const selected = Array.isArray(currentValue)
-                      ? currentValue.includes(option.value)
-                      : false;
-                    return (
-                      <button
-                        key={option.value}
-                        type="button"
-                        role="checkbox"
-                        aria-checked={selected}
-                        onClick={() => handleMultiToggle(step.id, option.value)}
-                        className={cn(
-                          "w-full flex items-center gap-4 text-left h-[56px] px-5 border transition-all",
-                          selected
-                            ? "border-[#C66E42] bg-[#C66E42]/10"
-                            : "border-white/10 hover:border-white/30",
-                        )}
-                      >
-                        {/* Checkbox */}
-                        <span
-                          className={cn(
-                            "flex items-center justify-center w-5 h-5 rounded-[3px] border-2 shrink-0 transition-colors",
-                            selected ? "border-[#C66E42] bg-[#C66E42]" : "border-white/30",
-                          )}
-                        >
-                          {selected && (
-                            <svg viewBox="0 0 12 12" className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
-                              <path d="M2 6l3 3 5-5" />
-                            </svg>
-                          )}
-                        </span>
-                        <span
-                          className={cn(
-                            "text-[15px] font-semibold",
-                            selected ? "text-white" : "text-white/80",
-                          )}
-                        >
-                          {option.label}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-                {error && (
-                  <p className="mt-3 text-sm text-red-400" role="alert">{error}</p>
+                <QuestionTitle question={step.question} />
+                {step.subtitle && (
+                  <p className="text-[15px] leading-[1.6] mb-8" style={{ color: HC.mute }}>{step.subtitle}</p>
                 )}
-              </div>
+                {inputs}
+              </motion.div>
             )}
           </div>
 
-          {/* Bottom bar: Back + Continue */}
-          <div className="mt-10 flex items-center gap-4">
-            {currentStep > 0 && (
-              <button
-                type="button"
-                onClick={handleBack}
-                className="flex items-center gap-2 border border-white/20 text-white/70 hover:text-white hover:border-white/40 text-[15px] font-semibold px-5 h-[52px] rounded-[4px] transition-colors"
-              >
-                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" />
-                </svg>
-                Retour
-              </button>
+          {/* Bottom: chiffres réels (premier écran), puis Retour + Continuer */}
+          <div className="mt-10">
+            {isWelcome && (
+              <FlowFacts
+                items={[
+                  ...(catalogueCount ? [{ value: catalogueCount, label: "modèles admissibles" }] : []),
+                  { value: TOTAL_STEPS, label: "questions" },
+                  { value: 3, label: "modèles retenus" },
+                ]}
+              />
             )}
 
-            {/* Show Continue button for text & multi steps */}
-            {(step.type === "text" || step.type === "multi") && (
-              <button
-                type="button"
-                onClick={handleContinue}
-                className="flex items-center gap-2 bg-[#C66E42] hover:bg-[#B05E35] text-white font-semibold text-[15px] px-7 h-[52px] rounded-[4px] transition-colors"
-              >
-                Continuer
-                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
-                </svg>
-              </button>
-            )}
+            <div className={cn("flex flex-wrap items-center gap-4", isWelcome && "mt-7")}>
+              {currentStep > 0 && (
+                <button
+                  type="button"
+                  onClick={handleBack}
+                  className="ph-ghost inline-flex items-center gap-2 rounded-full px-5 h-[52px] text-[15px] font-semibold"
+                  style={{ border: `1px solid ${HC.line}`, color: HC.cream }}
+                >
+                  <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" />
+                  </svg>
+                  Retour
+                </button>
+              )}
 
-            {/* Lock icon + note */}
-            <p className="ml-auto text-sm text-white/30 flex items-center gap-2">
-              <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
-              Vous pourrez modifier vos réponses avant l&apos;envoi.
-            </p>
+              {/* Continuer : dans la pastille du champ pour les étapes texte, ici pour les choix multiples */}
+              {step.type === "multi" && (
+                <HeroButton onClick={handleContinue}>Continuer</HeroButton>
+              )}
+
+              {/* Lock icon + note */}
+              <p className={cn("text-[13px] flex items-center gap-2", !isWelcome && "sm:ml-auto")} style={{ color: HC.faint }}>
+                <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                Vous pourrez modifier vos réponses avant l&apos;envoi.
+              </p>
+            </div>
           </div>
         </div>
 
         {/* ======== RIGHT PANE ======== */}
         <div className="hidden lg:flex flex-col w-[42%] xl:w-[45%] relative overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
-          {/* Photo d'ambiance de l'étape (maisons québécoises, chantier, budget), assombrie pour le résumé */}
-          <div
-            className="absolute inset-0 bg-cover bg-center transition-all duration-700"
-            style={{ backgroundImage: `url('${bgImage}')` }}
-          />
-          <div className="absolute inset-0 bg-[#0D1117]/45" />
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0D1117] to-transparent z-10" />
-          <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0D1117]/90 to-transparent" />
+          {/* Photo d'ambiance de l'étape (maisons québécoises, chantier, budget), qui recule à l'arrivée */}
+          <motion.div
+            className="absolute inset-0"
+            initial={reduceMotion ? false : { scale: 1.08 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+              style={{ backgroundImage: `url('${bgImage}')` }}
+            />
+          </motion.div>
+          <div className="absolute inset-0" style={{ background: "rgba(10,20,25,0.45)" }} />
+          <div className="absolute inset-y-0 left-0 w-28" style={{ background: "linear-gradient(90deg, #0A1419 0%, rgba(10,20,25,0) 100%)" }} />
+          <div className="absolute inset-x-0 bottom-0 h-1/2" style={{ background: "linear-gradient(0deg, rgba(10,20,25,0.94) 0%, rgba(10,20,25,0) 100%)" }} />
 
           {/* Résumé panel */}
           <div className="relative z-20 flex flex-col justify-end h-full p-8 xl:p-10">
-            
+
             {/* Résumé de votre projet */}
-            <div className="bg-[#0D1117]/80 backdrop-blur-sm border border-white/10 p-6 rounded-[6px] mb-4">
-              <p className="text-[12px] font-bold tracking-[0.2em] text-white/50 uppercase mb-4">
+            <div
+              className="relative overflow-hidden rounded-[22px] p-6 mb-4"
+              style={{ background: "rgba(16,34,45,0.72)", border: `1px solid ${HC.line}`, backdropFilter: "blur(16px) saturate(130%)", WebkitBackdropFilter: "blur(16px) saturate(130%)" }}
+            >
+              <motion.span
+                aria-hidden="true"
+                className="absolute left-0 top-0 h-[2px] w-full origin-left"
+                style={{ background: HC.orange }}
+                initial={reduceMotion ? false : { scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
+              />
+              <p className="text-[11.5px] font-medium uppercase mb-4" style={{ letterSpacing: "0.2em", color: HC.faint }}>
                 Résumé de votre projet
               </p>
 
@@ -794,15 +859,15 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
                   if (isCurrentStep && !val) return null;
                   return (
                     <div key={s.id} className="flex items-center justify-between py-2.5 text-sm">
-                      <span className="text-white/50 text-sm">{s.id === "postalCode" ? "Ville" : s.id === "propertyType" ? "Projet" : s.question.replace("?", "")}</span>
+                      <span className="text-sm" style={{ color: HC.mute }}>{s.id === "postalCode" ? "Ville" : s.id === "propertyType" ? "Projet" : s.question.replace("?", "")}</span>
                       <div className="flex items-center gap-3">
-                        <span className="font-semibold text-white text-sm">{formatAnswer(s, val, answers)}</span>
+                        <span className="font-semibold text-sm" style={{ color: HC.cream }}>{formatAnswer(s, val, answers)}</span>
                         <button
                           onClick={() => {
                             setCurrentStep(i);
                             setError(null);
                           }}
-                          className="text-[12px] font-bold text-[#C66E42] hover:underline"
+                          className="text-[12px] font-bold text-[#E54B17] hover:underline"
                         >
                           Modifier
                         </button>
@@ -814,8 +879,10 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
 
               {/* Remaining questions (not yet answered) */}
               {STEPS.slice(currentStep + 1, currentStep + 4).map((s, i) => (
-                <div key={s.id} className="flex items-center justify-between py-2 text-xs text-white/30 border-t border-white/10">
-                  <span>{currentStep + i + 2}. {s.question}</span>
+                <div key={s.id} className="flex items-center justify-between gap-4 py-2.5 text-[13px] border-t border-white/10" style={{ color: HC.faint }}>
+                  <span>
+                    <span style={{ fontVariantNumeric: "tabular-nums" }}>{currentStep + i + 2}.</span> {s.question}
+                  </span>
                   <span>—</span>
                 </div>
               ))}
@@ -831,21 +898,19 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
 
             {/* Next step preview */}
             {currentStep < TOTAL_STEPS - 1 && (
-              <div className="bg-[#0D1117]/60 border border-white/10 px-5 py-4 rounded-[6px] flex items-center gap-4">
+              <div
+                className="rounded-[18px] px-6 py-4 flex items-center gap-4"
+                style={{ background: "rgba(10,20,25,0.62)", border: `1px solid ${HC.line}`, backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}
+              >
                 <div className="flex-1">
-                  <p className="text-[12px] font-bold tracking-[0.15em] text-white/40 uppercase mb-1">
+                  <p className="text-[11.5px] font-medium uppercase mb-1" style={{ letterSpacing: "0.18em", color: HC.faint }}>
                     Prochaine étape
                   </p>
-                  <p className="text-white font-semibold text-sm">
+                  <p className="font-semibold text-[15px]" style={{ color: HC.cream }}>
                     {STEPS[currentStep + 1].question}
                   </p>
                 </div>
-                <div className="w-9 h-9 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-white/50">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor" stroke="none" />
-                  </svg>
-                </div>
-                <button className="text-[12px] font-bold text-white/50 border border-white/20 px-3 py-1.5 rounded-[3px] hover:text-white transition-colors">
+                <button className="ph-ghost text-[12px] font-semibold rounded-full px-4 py-2" style={{ border: `1px solid ${HC.line}`, color: HC.mute }}>
                   Aperçu
                 </button>
               </div>
@@ -870,44 +935,43 @@ function ThermoMatchHeader({
   totalSteps: number;
   onQuit: () => void;
 }) {
+  const shown = Math.min(currentStep + 1, totalSteps);
   return (
-    <header className="h-[64px] border-b border-white/10 flex items-center px-6 sm:px-10 shrink-0">
-      {/* Logo */}
-      <Link href="/" className="text-white font-bold text-sm tracking-tight mr-auto">
-        <span className="text-xs font-black uppercase">THERMOPOMPES</span>
-        <br />
-        <span className="text-xs font-black uppercase tracking-[0.2em]">À VENDRE</span>
-      </Link>
-
-      {/* Center: Logo + step label */}
-      <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-4">
-        <Image 
-          src="/images/logo-thermomatch-tm-720.webp" 
-          alt="ThermoMatch" 
-          width={120} 
-          height={24} 
-          className="object-contain"
-          style={{ width: 120, height: 24 }}
-        />
-        <div className="w-px h-4 bg-white/20" />
-        <span className="text-white/50 text-sm">
-          Étape {Math.min(currentStep + 1, totalSteps)} sur {totalSteps}
-        </span>
-      </div>
-
-      {/* Quit */}
-      <button
-        type="button"
-        onClick={onQuit}
-        className="ml-auto flex items-center gap-2 text-white/50 hover:text-white text-sm font-medium transition-colors"
-        aria-label="Quitter ThermoMatch"
-      >
-        Quitter
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
-      </button>
-    </header>
+    <FlowBar
+      // Filet orange de progression sous la barre.
+      progress={shown / totalSteps}
+      center={
+        <div className="flex items-center gap-4 whitespace-nowrap">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-thermomatch-nav.webp"
+            alt="ThermoMatch"
+            width={118}
+            height={16}
+            className="hidden sm:block"
+            style={{ width: 118, height: 16, maxWidth: "none" }}
+          />
+          <span aria-hidden="true" className="hidden h-4 w-px sm:block" style={{ background: HC.line }} />
+          <span className="text-[13px] font-medium" style={{ color: HC.mute, fontVariantNumeric: "tabular-nums" }}>
+            Étape {shown} sur {totalSteps}
+          </span>
+        </div>
+      }
+      right={
+        <button
+          type="button"
+          onClick={onQuit}
+          className="flex items-center gap-2 text-sm font-medium transition-colors hover:text-white"
+          style={{ color: HC.mute }}
+          aria-label="Quitter ThermoMatch"
+        >
+          Quitter
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      }
+    />
   );
 }

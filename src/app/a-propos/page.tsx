@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AboutHero } from "@/components/company-hero/AboutHero";
+import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
+import { getEligibleModelCount } from "@/lib/data/queries/stats";
 
 export const metadata: Metadata = {
   title: "À propos de Thermopompes À Vendre.ca",
@@ -28,120 +31,18 @@ const T = {
 };
 
 export default function AProposPage() {
+  // Chiffres vivants du catalogue (mêmes calculs que l’accueil).
+  const brandsSummary = getPublishedBrandsSummary();
+  const heroStats = {
+    eligible: getEligibleModelCount(),
+    brands: brandsSummary.length,
+    coldClimate: brandsSummary.reduce((sum, b) => sum + b.coldClimateCount, 0),
+  };
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light" }}>
 
-      {/* ════════════════════════════════════════════════════════════
-          HERO — full-bleed image with text overlay on dark left
-      ════════════════════════════════════════════════════════════ */}
-      <section
-        className="about-hero"
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "clamp(620px, 37.7vw, 770px)",
-          overflow: "hidden",
-          isolation: "isolate",
-          background: "#031923",
-        }}
-      >
-        {/* Full-bleed photo */}
-        <img
-          src="/images/hero-a-propos-maison-hiver.webp"
-          alt=""
-          aria-hidden="true"
-          className="about-hero-image"
-          style={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center center",
-            display: "block",
-          }}
-        />
-
-        {/* Subtle left overlay — don't darken the right side */}
-        <div
-          aria-hidden="true"
-          className="about-hero-overlay"
-          style={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 1,
-            pointerEvents: "none",
-            background: "linear-gradient(90deg, rgba(2,22,31,0.34) 0%, rgba(2,22,31,0.16) 28%, rgba(2,22,31,0) 53%)",
-          }}
-        />
-
-        {/* Content — left side over dark area */}
-        <div
-          className="about-hero-content"
-          style={{
-            position: "relative",
-            zIndex: 2,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            width: "min(600px, 44vw)",
-            height: "100%",
-            marginLeft: "clamp(48px, 5.5vw, 96px)",
-            color: "#ffffff",
-          }}
-        >
-          {/* Eyebrow */}
-          <p
-            style={{
-              margin: "0 0 24px",
-              color: "#ed501b",
-              fontSize: "13px",
-              fontWeight: 700,
-              letterSpacing: "0.09em",
-              textTransform: "uppercase",
-            }}
-          >
-            À PROPOS
-          </p>
-
-          {/* H1 — exactly 3 lines */}
-          <h1
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              margin: 0,
-              color: "#f8f5f0",
-              fontSize: "clamp(48px, 4vw, 68px)",
-              fontWeight: 500,
-              lineHeight: 1.08,
-              letterSpacing: "-0.045em",
-              fontFamily: "var(--font-sans)",
-            }}
-          >
-            <span style={{ display: "block", whiteSpace: "nowrap" }}>Rendre l&apos;achat</span>
-            <span style={{ display: "block", whiteSpace: "nowrap" }}>d&apos;une thermopompe</span>
-            <span style={{ display: "block", whiteSpace: "nowrap" }}>plus clair.</span>
-          </h1>
-
-          {/* Orange accent */}
-          <div style={{ width: "31px", height: "2px", margin: "26px 0 22px", backgroundColor: "#e94d17" }} />
-
-          {/* Description */}
-          <p
-            style={{
-              maxWidth: "420px",
-              margin: 0,
-              color: "rgba(255,255,255,0.87)",
-              fontSize: "17px",
-              lineHeight: 1.55,
-            }}
-          >
-            Nous construisons une meilleure façon de découvrir, comparer et acheter les systèmes offerts au Québec.
-          </p>
-        </div>
-      </section>
+      {/* HÉROS premium : src/components/company-hero/AboutHero.tsx */}
+      <AboutHero stats={heroStats} />
 
       {/* ════════════════════════════════════════════════════════════
           NOTRE MISSION  —  y: 377 → 837px

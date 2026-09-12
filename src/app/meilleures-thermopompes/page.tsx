@@ -12,7 +12,20 @@ export const metadata: Metadata = createMetadata({
   canonicalPath: "/meilleures-thermopompes",
 });
 
+/* Libellés courts des critères, pour le tableau des meneurs du héros. */
+const SHORT: Record<string, string> = {
+  "grand-froid": "Grand froid",
+  "efficacite-hspf2": "Efficacité HSPF2",
+  "cop-15": "COP à −15 °C",
+  "subvention-logisvert": "Subvention LogisVert",
+  "murales-12000-btu": "Murales 12 000 BTU",
+  centrales: "Centrales",
+};
+
 export default function RankingsIndex() {
+  const year = new Date().getFullYear();
+  // Un seul calcul par classement : sert au héros (meneur) et aux tableaux.
+  const tables = RANKINGS.map((def) => ({ def, r: getRanking(def.slug, 5)! }));
   return (
     <main className="bg-[#f8f5f0] text-[#071d2b]">
       <JsonLd
@@ -22,16 +35,21 @@ export default function RankingsIndex() {
         ]}
       />
       <SeoHero
-        image="/images/about-process.jpg"
-        imageAlt="Unité extérieure de thermopompe installée sur une maison de bois, en hiver"
         eyebrow="Classements"
-        title={`Les meilleures thermopompes au Québec en ${new Date().getFullYear()}`}
+        title={`Les meilleures thermopompes au Québec en ${year}`}
+        titleLines={["Les meilleures", "thermopompes au Québec", `en ${year}`]}
+        serif="meilleures"
         intro="Pas d'avis sponsorisés, pas de « choix de la rédaction » : chaque classement trie les machines vendues au Québec sur une donnée certifiée, publiée par Hydro-Québec et ENERGY STAR."
         breadcrumbs={[{ label: "Meilleures thermopompes", href: "/meilleures-thermopompes" }]}
+        motif={{
+          kind: "leaders",
+          rows: tables.flatMap(({ def, r }) =>
+            r.models[0] ? [{ label: SHORT[def.slug] ?? def.metricLabel, href: `/meilleures-thermopompes/${def.slug}`, leader: `${r.models[0].brand} ${r.models[0].name}`, value: def.value(r.models[0]) }] : [],
+          ),
+        }}
       />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12 space-y-14">
-        {RANKINGS.map((def) => {
-          const r = getRanking(def.slug, 5)!;
+        {tables.map(({ def, r }) => {
           return (
             <div key={def.slug}>
               <h2 className="text-[24px] font-bold text-[#172126]">

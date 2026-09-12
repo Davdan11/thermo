@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Container } from "@/components/layout";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ThermoMatchTechHero } from "@/components/tools-hero/ThermoMatchTechHero";
 import "./thermomatch-tech.css";
 
 /* ==============================================================
@@ -118,84 +119,14 @@ export function ThermoMatchTechClient({ modelCount }: { modelCount: number }) {
   return (
     <>
       {/* ============================================================
-          SECTION 1 — Hero
+          SECTION 1 — Héros : l'entonnoir des machines évaluées (trousse premium)
           ============================================================ */}
-      <section
-        className="relative w-full bg-[var(--tm-navy)] overflow-hidden"
-        style={{ height: 520 }}
-      >
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url('/images/thermomatch/thermomatch-hero-winter-home.png')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center right",
-          }}
-        />
-        {/* Blue tint on the left */}
-        <div
-          className="absolute inset-0 z-[1]"
-          style={{
-            background: "linear-gradient(90deg, rgba(6,29,42,1) 0%, rgba(6,29,42,0.85) 35%, rgba(6,29,42,0) 80%)",
-          }}
-        />
-
-        <div className="relative z-10 w-full h-full max-w-[1280px] mx-auto px-6 lg:px-[80px] flex items-center justify-between">
-          {/* Left content */}
-          <div className="w-full" style={{ maxWidth: 500 }}>
-              <div style={{ color: 'var(--tm-orange)', fontSize: 12, letterSpacing: "0.15em", textTransform: "uppercase" }} className="font-bold mb-4 flex items-center">
-                Technologie <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" className="inline-block h-[14px] ml-2 object-contain" />
-              </div>
-            <h1
-              className="font-display"
-              style={{ color: '#ffffff', fontSize: 58, fontWeight: 700, lineHeight: 1.03, marginBottom: 24, letterSpacing: "-0.02em" }}
-            >
-              Votre maison.
-              <br />
-              Vos critères.
-              <br />
-              Les bonnes options.
-            </h1>
-            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 17, lineHeight: 1.55, marginBottom: 40, maxWidth: 390, fontWeight: 300 }}>
-              ThermoMatch transforme les caractéristiques de votre propriété et vos priorités en recommandations faciles à comprendre.
-            </p>
-            <div className="flex flex-row items-center gap-10 whitespace-nowrap">
-              <Link
-                href="/trouver-ma-thermopompe"
-                className="inline-flex items-center justify-center font-medium transition-colors text-white"
-                style={{ backgroundColor: 'var(--tm-orange)', height: 50, padding: "0 28px", fontSize: 16, borderRadius: 4 }}
-              >
-                Commencer mon analyse
-                <svg className="ml-3 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" /></svg>
-              </Link>
-              <a
-                href="#fonctionnement"
-                style={{ color: 'rgba(255,255,255,0.7)', fontSize: 15 }}
-                className="hover:text-white transition-colors"
-              >
-                Voir comment ça fonctionne
-              </a>
-            </div>
-          </div>
-
-          {/* Right — laptop */}
-          <div className="hidden lg:flex relative h-full flex-1 items-end justify-end pb-[10px]">
-            <Image
-              src="/images/thermomatch/thermomatch-hero-device-transparent.png"
-              alt="Interface ThermoMatch"
-              width={1000}
-              height={700}
-              className="object-contain object-bottom h-[110%] drop-shadow-2xl translate-x-[40px] translate-y-[20px]"
-              priority
-            />
-          </div>
-        </div>
-      </section>
+      <ThermoMatchTechHero modelCount={modelCount} />
 
       {/* ============================================================
-          SECTION 1B — Trust bar (Bande des avantages)
+          SECTION 1B — Trust bar (Bande des avantages), dans le prolongement du héros
           ============================================================ */}
-      <section className="bg-[var(--tm-navy)] w-full border-t border-[rgba(255,255,255,0.05)]">
+      <section className="tm-trust-section w-full border-t border-[rgba(244,239,231,0.1)]">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-[80px]">
           <div className="tm-trust-bar relative" style={{ height: 80 }}>
             {/* Vertical Separators (Absolute positioned for precision instead of borders) */}

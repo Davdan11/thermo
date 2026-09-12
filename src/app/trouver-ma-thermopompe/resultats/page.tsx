@@ -27,7 +27,7 @@ export default async function ResultatsPartagesPage({ searchParams }: { searchPa
   if (!answers) {
     return (
       <main className="min-h-screen bg-[#0D1117] text-white flex flex-col items-center justify-center px-6 text-center">
-        <Image src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" width={160} height={32} className="object-contain mb-8" />
+        <Image src="/images/logo-thermomatch-nav.webp" alt="ThermoMatch" width={147} height={20} className="mb-8" />
         <h1 className="text-2xl font-bold mb-3">Ce lien de résultats est incomplet</h1>
         <p className="text-[#9CA3AF] max-w-md mb-8">Il a peut-être été tronqué en le copiant. Demandez un nouveau lien à la personne qui vous l&apos;a envoyé, ou refaites le questionnaire : il prend trois minutes.</p>
         <Link href="/trouver-ma-thermopompe" className="bg-[#e54b17] text-white px-6 py-3 rounded-md font-bold">Faire le questionnaire</Link>
@@ -46,7 +46,7 @@ export default async function ResultatsPartagesPage({ searchParams }: { searchPa
           <span className="text-xs font-black uppercase tracking-[0.2em]">À VENDRE</span>
         </Link>
         <div className="flex items-center gap-4">
-          <Image src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" width={120} height={24} className="object-contain" />
+          <Image src="/images/logo-thermomatch-nav.webp" alt="ThermoMatch" width={118} height={16} />
           <span className="hidden sm:inline text-white/50 text-sm">Résultats partagés</span>
         </div>
         <Link href="/trouver-ma-thermopompe" className="text-white/50 hover:text-white text-sm font-medium transition-colors">Refaire le test</Link>

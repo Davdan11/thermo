@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/layout";
 import { Breadcrumb } from "@/components/product/Breadcrumb";
 import { searchSite, type SearchKind } from "@/lib/search/site-search";
+import { SearchHero } from "@/components/product/hero/SearchHero";
 
 /* /recherche?q=… — page de résultats complète (Entrée dans le champ de l'en-tête). Non indexée. */
 
@@ -22,22 +23,15 @@ export default async function RecherchePage({ searchParams }: { searchParams: Pr
 
   return (
     <main>
-      <Container className="max-w-4xl py-10">
-        <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Recherche" }]} />
-        <h1 className="mt-6 text-3xl font-bold text-foreground">{q ? `Résultats pour « ${q} »` : "Recherche"}</h1>
-        <form action="/recherche" method="get" className="mt-5 flex gap-2 max-w-xl">
-          <input
-            type="search"
-            name="q"
-            defaultValue={q}
-            placeholder="Modèle, marque, ville, guide…"
-            aria-label="Rechercher"
-            className="flex-1 rounded-full px-5 py-3 text-[16px] outline-none"
-            style={{ border: "1px solid #dedcd5", background: "#fff", color: "#071d2b" }}
-          />
-          <button type="submit" className="rounded-full px-5 py-3 text-[15px] font-bold text-white" style={{ background: "#e54b17" }}>Chercher</button>
-        </form>
-
+      <SearchHero
+        q={q}
+        total={hits.length}
+        counts={groups.map((g) => ({ kind: g.kind, label: KIND_LABEL[g.kind], n: g.items.length }))}
+        thumbs={hits.filter((h) => h.kind === "modele" && h.imageUrl).slice(0, 4).map((h) => ({ href: h.href, img: h.imageUrl as string, title: h.title }))}
+        crumbs={<Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Recherche" }]} />}
+      />
+      {q && (
+      <Container className="max-w-4xl pb-10 pt-2">
         {q && hits.length === 0 && (
           <p className="mt-8 text-[16px]" style={{ color: "#536873" }}>
             Aucun résultat. Essayez un nom de marque, un numéro de modèle (par exemple MUZ-FS12NA) ou une ville, ou passez par le <Link href="/thermopompes" className="font-semibold underline underline-offset-4" style={{ color: "#071d2b" }}>catalogue</Link>.
@@ -67,6 +61,7 @@ export default async function RecherchePage({ searchParams }: { searchParams: Pr
           </section>
         ))}
       </Container>
+      )}
     </main>
   );
 }

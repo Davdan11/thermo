@@ -29,3 +29,7 @@ html:has(.ch-root), body:has(.ch-root) { overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) {
   .ch-track, .ch-htrack { animation: none; }
 }
+
+/* Recherche du héros : on masque le « x » bleu natif du navigateur (bouton d'effacement maison). */
+.ch-search::-webkit-search-cancel-button,
+.ch-search::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }
