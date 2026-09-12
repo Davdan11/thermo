@@ -10,6 +10,7 @@ import { AidesLedger } from "@/components/home/premium/AidesLedger";
 import { GuidesEditorial } from "@/components/home/premium/GuidesEditorial";
 import { FinalCta, ProcessRail } from "@/components/home/premium/JourneyFinale";
 import { getRanking, getSeoModel } from "@/lib/seo/programmatic";
+import { getCity } from "@/lib/seo/cities";
 import { getLogisVertStats } from "@/lib/subsidies/logisvert-official";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { getAvailableFilters } from "@/lib/data/queries/catalogue";
@@ -29,6 +30,10 @@ export const metadata = createMetadata({
     "Toutes les thermopompes vendues au Québec, comparées avec les données certifiées d'Hydro-Québec : capacité à -15 °C, HSPF2, subvention LogisVert. Trois bons choix en 2 minutes.",
   canonicalPath: "/",
 });
+
+/* Villes que le relevé du héros fait défiler, de la plus douce à la plus froide. Températures de
+   conception tirées de la table des codes postaux (postal-zones.ts), comme sur les pages villes. */
+const HERO_CITIES = ["montreal", "quebec", "rimouski", "saguenay", "rouyn-noranda"];
 
 /* Logos de la bande « Toutes les grandes marques » (liens vers les fiches marques). */
 const BRAND_LOGOS: BrandLogo[] = [
@@ -95,10 +100,15 @@ export default function HomePage() {
     hspf2: c.hspf2,
     subsidy: getSeoModel(c.slug)?.logisVertDollars || null,
   }));
+  const heroPlaces = HERO_CITIES.flatMap((slug) => {
+    const c = getCity(slug);
+    // « Saguenay (Chicoutimi) » → « Saguenay » : le nom court suffit sur la carte de température.
+    return c ? [{ name: c.name.split(" (")[0], region: c.region, t: c.designTempC }] : [];
+  });
   return (
     <main className={`${display.variable} ${serif.variable}`} style={{ fontFamily: "var(--font-sans, 'Inter', sans-serif)", color: "#172126", backgroundColor: "#fff" }}>
 
-      <HeroPremium eligible={getEligibleModelCount()} brands={brandsSummary.length} coldClimate={coldClimate} />
+      <HeroPremium eligible={getEligibleModelCount()} brands={brandsSummary.length} coldClimate={coldClimate} places={heroPlaces} />
 
       {/* Le test du froid : juste après le héros. */}
       <ColdStory coldClimate={coldClimate} with5F={with5F} />
