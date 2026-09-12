@@ -96,9 +96,9 @@ export function Header() {
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + "/");
 
-  // Accueil : en-tête transparent par-dessus le héros (photo sombre) tant qu'on n'a pas défilé,
+  // Accueil et catalogue : en-tête transparent par-dessus le héros sombre tant qu'on n'a pas défilé,
   // puis fond blanc habituel. Les autres pages gardent l'en-tête blanc.
-  const overHero = pathname === "/" && !scrolled && !menuOpen;
+  const overHero = (pathname === "/" || pathname === "/thermopompes") && !scrolled && !menuOpen;
   const linkColor = (href: string) => (overHero ? "rgba(244,239,231,0.8)" : isActive(href) ? "#0b1b24" : "#536873");
 
   return (

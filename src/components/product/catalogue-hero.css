@@ -1,0 +1,31 @@
+/* ==================================================================
+   Héros du catalogue /thermopompes (préfixe ch-).
+   ================================================================== */
+
+/* overflow-x: hidden global sur html/body : l'en-tête sticky ne colle pas. Sur cette page seulement. */
+html:has(.ch-root), body:has(.ch-root) { overflow-x: clip; }
+
+.ch-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-size: 1.06em;
+}
+
+/* Mur de produits : colonnes qui défilent à la verticale (sens inverses), pause au survol. */
+.ch-track { animation: ch-up var(--ch-dur, 60s) linear infinite; }
+.ch-track[data-reverse="true"] { animation-direction: reverse; }
+.ch-col:hover .ch-track { animation-play-state: paused; }
+@keyframes ch-up { to { transform: translateY(-50%); } }
+
+/* Variante mobile : ruban horizontal. */
+.ch-htrack { display: flex; width: max-content; animation: ch-left var(--ch-dur, 50s) linear infinite; }
+@keyframes ch-left { to { transform: translateX(-50%); } }
+
+.ch-chip { transition: background 0.3s, border-color 0.3s, color 0.3s; }
+.ch-chip:hover { background: rgba(244, 239, 231, 0.12); border-color: rgba(244, 239, 231, 0.4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ch-track, .ch-htrack { animation: none; }
+}

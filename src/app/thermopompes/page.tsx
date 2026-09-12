@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { brandLogoPath } from "@/lib/data/brand-logos";
-import { existsSync } from "fs";
+import { existsSync, statSync } from "fs";
 import { join } from "path";
 
 import Image from "next/image";
@@ -19,10 +19,38 @@ import { CatalogueEmpty } from "@/components/product/CatalogueEmpty";
 import { CataloguePagination } from "@/components/product/CataloguePagination";
 import { buttonVariants } from "@/components/ui/button";
 import { CtaThermoMatch } from "@/components/seo/SeoBlocks";
+import { CatalogueHero, type WallItem } from "@/components/product/CatalogueHero";
+import { getEligibleModelCount } from "@/lib/data/queries/stats";
+import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
+import { registry } from "@/lib/data/registry";
+import { displayFont, serifFont } from "@/lib/fonts";
 /** Logo monochrome (bleu nuit) pour la bande de marques ; logo couleur sinon, null si aucun logo. */
 function monoLogo(slug: string): string | null {
   const mono = `/images/marques/mono/${slug}.png`;
   return existsSync(join(process.cwd(), "public", mono)) ? mono : brandLogoPath(slug);
+}
+
+/** Chiffres et mur de produits du héros : catalogue réel, une photo officielle par marque (les plus grandes marques d’abord). */
+function getHeroData(): { stats: { models: number; brands: number; coldClimate: number }; wall: WallItem[] } {
+  const brands = getPublishedBrandsSummary().sort((a, b) => b.modelCount - a.modelCount);
+  const firstByBrand = new Map<string, WallItem>();
+  const seenImg = new Set<string>();
+  const names = new Map(brands.map((b) => [b.brand.id, b.brand.name]));
+  for (const m of registry.models) {
+    if (m.status !== "published" || !m.isActive2026 || !m.thermomatchEligible || !m.imageUrl || m.systemType !== "wall-single") continue;
+    const name = names.get(m.brandId);
+    if (!name || firstByBrand.has(m.brandId) || seenImg.has(m.imageUrl)) continue;
+    const file = join(process.cwd(), "public", m.imageUrl);
+    // Photos trop petites (vignettes de quelques ko) : floues une fois agrandies, on les écarte.
+    if (!existsSync(file) || statSync(file).size < 12000) continue;
+    seenImg.add(m.imageUrl);
+    firstByBrand.set(m.brandId, { slug: m.slug, brand: name, btu: m.nominalCapacityBtu ?? null, img: m.imageUrl });
+  }
+  const wall = brands.flatMap((b) => (firstByBrand.has(b.brand.id) ? [firstByBrand.get(b.brand.id)!] : [])).slice(0, 18);
+  return {
+    stats: { models: getEligibleModelCount(), brands: brands.length, coldClimate: brands.reduce((sum, b) => sum + b.coldClimateCount, 0) },
+    wall,
+  };
 }
 
 /* ------------------------------------------------------------------
@@ -97,69 +125,23 @@ export default async function ThermopompesPage({
   const { products, totalCount, page, totalPages } = getCatalogueModels(params);
   const filters = getAvailableFilters();
 
+  const hero = getHeroData();
+
   const hasActiveFilters = !!(params.type || params.brand || params.capacity || params.coldClimate || params.search);
   const resultCount = totalCount;
 
   return (
-    <main className="min-h-screen bg-[var(--color-background)]">
-      {/* ---- Dark Hero Header ---- */}
-      <div className="relative w-full bg-[#0C1821] overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center">
-        {/* Background Image (Right Side) */}
-        <div className="absolute inset-0 z-0 flex justify-end pointer-events-none">
-          <div className="relative w-full lg:w-1/2 h-full opacity-30 lg:opacity-100">
-            {/* Gradient mask to blend image into the dark background on desktop */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0C1821] via-[#0C1821]/80 lg:via-transparent to-transparent z-10 hidden lg:block"></div>
-            {/* Gradient mask for bottom blending */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0C1821] to-transparent z-10"></div>
-            {/* Top mask */}
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0C1821] to-transparent z-10"></div>
-            {/* Left mask for mobile */}
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0C1821] to-transparent z-10 lg:hidden"></div>
-            
-            <Image
-              src="/images/categorie-murale-daikin-hd.webp"
-              alt="Thermopompe Daikin Murale"
-              fill
-              sizes="100vw"
-              quality={70}
-              className="object-cover object-right lg:object-right"
-              priority
-              fetchPriority="high"
-            />
-          </div>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 py-16 md:py-28 z-10 flex flex-col justify-center">
-          
-          {/* Text Content */}
-          <div className="max-w-xl">
-            <span className="text-[var(--color-accent)] font-bold text-[13px] tracking-widest uppercase mb-6 block">
-              CATALOGUE QUÉBÉCOIS
-            </span>
-            <h1 
-              className="text-white font-bold tracking-tight mb-5"
-              style={{
-                color: "#FFFFFF",
-                fontSize: "clamp(3rem, 5vw, 4.5rem)",
-                lineHeight: "1.1",
-              }}
-            >
-              Explorez les{" "}<br />thermopompes.
-            </h1>
-            <p className="text-white/70 text-lg md:text-xl font-medium mb-10">
-              Comparez les marques, les capacités et les performances selon vos besoins.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="w-full max-w-lg">
-              <Suspense>
-                <CatalogueSearch variant="dark" />
-              </Suspense>
-            </div>
-          </div>
-
-        </div>
-      </div>
+    <main className={`min-h-screen bg-[var(--color-background)] ${displayFont.variable} ${serifFont.variable}`}>
+      {/* ---- Héros premium : titre animé, recherche, mur de produits ---- */}
+      <CatalogueHero
+        stats={hero.stats}
+        wall={hero.wall}
+        search={
+          <Suspense>
+            <CatalogueSearch variant="premium" />
+          </Suspense>
+        }
+      />
 
       {/* ---- Featured Brands Strip ---- */}
       {/* ---- Featured Brands Strip ---- */}
