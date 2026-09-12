@@ -63,6 +63,8 @@ export function ColdStory({ coldClimate, with5F }: { coldClimate: number; with5F
 
   return (
     <section ref={ref} className="cs-root relative" style={{ height: "420vh", background: C.ink, color: C.cream }} aria-labelledby="cs-titre">
+      {/* Fondu depuis le héros : pas de coupure nette entre les deux photos ; défile avec la section. */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[140px]" style={{ background: "linear-gradient(180deg, rgba(10,20,25,1) 0%, rgba(10,20,25,0) 100%)" }} />
       {/* Version lisible par les lecteurs d'écran et les moteurs : les quatre seuils d'un coup. */}
       <h2 id="cs-titre" className="sr-only">
         Le test du froid : ce que mesure chaque température
