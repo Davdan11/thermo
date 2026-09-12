@@ -11,7 +11,7 @@ import { SiteSearch } from "./SiteSearch";
    Navigation data
    ---------------------------------------------------------- */
 
-type NavLink = { href: string; label: string; logo?: string; /** Affiché dans la barre seulement sur les très grands écrans (toujours dans le menu mobile). */ wide?: boolean };
+type NavLink = { href: string; label: string; logo?: string; /** Affiché dans la barre seulement à partir de 1700 px (toujours dans le menu mobile). */ wide?: boolean };
 const NAV_LINKS: NavLink[] = [
   { href: "/thermopompes", label: "Thermopompes" },
   { href: "/marques", label: "Marques" },
@@ -20,15 +20,21 @@ const NAV_LINKS: NavLink[] = [
   { href: "/subventions", label: "Subventions" },
   { href: "/guides", label: "Guides" },
   // Le logo ThermoScan (blanc + orange) sur une pastille marine, à la place du texte.
-  { href: "/thermoscan", label: "ThermoScan", logo: "/images/thermoscan-logo.webp" },
+  // Version recadrée (862 × 191) : sans les marges du fichier original, le mot reste lisible à petite taille.
+  { href: "/thermoscan", label: "ThermoScan", logo: "/images/thermoscan-logo-nav.webp" },
   { href: "/rendez-vous", label: "Rendez-vous" },
 ];
 
+const LOGO_RATIO = 862 / 191;
+
 function NavLabel({ link, height }: { link: NavLink; height: number }) {
   if (!link.logo) return <>{link.label}</>;
+  // Largeur explicite : avec « width: auto » et le « max-width: 100% » de Tailwind, l'image se réduit à
+  // zéro dans un conteneur inline-flex et la pastille s'affichait vide.
+  const width = Math.round(height * LOGO_RATIO);
   return (
     <span style={{ display: "inline-flex", alignItems: "center", background: "#0C1821", borderRadius: 999, padding: `${Math.round(height * 0.3)}px ${Math.round(height * 0.65)}px`, lineHeight: 0 }}>
-      <img src={link.logo} alt={link.label} width={900} height={325} style={{ height, width: "auto", display: "block" }} />
+      <img src={link.logo} alt={link.label} width={width} height={height} style={{ height, width, maxWidth: "none", display: "block" }} />
     </span>
   );
 }
@@ -112,7 +118,7 @@ export function Header() {
               <img 
                 src="/images/headerlogo-720.webp" 
                 alt="Thermopompes A Vendre" 
-                className="h-[60px] 2xl:h-[72px]"
+                className="h-[60px] min-[1700px]:h-[72px]"
                 style={{ width: "auto", display: "block" }}
               />
             </Link>
@@ -126,12 +132,13 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={link.wide ? "hidden 2xl:inline-flex" : "inline-flex"}
+                  className={link.wide ? "hidden min-[1700px]:inline-flex" : "inline-flex"}
                   style={{
                     color: isActive(link.href) ? "#0b1b24" : "#536873",
                     fontSize: 14.5,
                     fontWeight: 500,
-                    padding: "8px 10px",
+                    padding: "8px 8px",
+                    whiteSpace: "nowrap",
                     textDecoration: "none",
                     transition: "color 0.15s",
                     position: "relative" as const,
@@ -139,7 +146,7 @@ export function Header() {
                   onMouseEnter={(e) => (e.currentTarget.style.color = "#0b1b24")}
                   onMouseLeave={(e) => (e.currentTarget.style.color = isActive(link.href) ? "#0b1b24" : "#536873")}
                 >
-                  <NavLabel link={link} height={15} />
+                  <NavLabel link={link} height={16} />
                 </Link>
               ))}
             </nav>
@@ -218,7 +225,7 @@ export function Header() {
                       : "text-foreground hover:bg-background",
                   )}
                 >
-                  <NavLabel link={link} height={17} />
+                  <NavLabel link={link} height={19} />
                 </Link>
               ))}
             </nav>

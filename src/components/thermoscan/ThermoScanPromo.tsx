@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Camera, ScanLine, GitCompareArrows, ArrowRight } from "lucide-react";
+import { Camera, ArrowRight } from "lucide-react";
 
 /* ==================================================================
    Mise en avant de ThermoScan ailleurs sur le site (accueil, fiches
@@ -10,18 +10,25 @@ import { Camera, ScanLine, GitCompareArrows, ArrowRight } from "lucide-react";
    Composant serveur : aucun état, aucune dépendance client.
    ================================================================== */
 
+/* Les trois gestes, en liste numérotée sobre : pas d'icône, pas d'encadré. */
 const STEPS = [
-  { Icon: Camera, text: "Photographiez l'étiquette de votre appareil actuel" },
-  { Icon: ScanLine, text: "ThermoScan lit la marque, le modèle, l'année et le fluide" },
-  { Icon: GitCompareArrows, text: "Vous voyez l'écart avec les modèles d'aujourd'hui et le montant LogisVert" },
+  { title: "Photographiez l'étiquette", text: "La plaque signalétique de votre appareil actuel, depuis votre téléphone." },
+  { title: "ThermoScan lit la plaque", text: "Marque, modèle, année, fluide, puis la fiche certifiée ENERGY STAR correspondante." },
+  { title: "Vous voyez l'écart", text: "L'efficacité face aux modèles d'aujourd'hui et le montant LogisVert admissible." },
 ];
 
 const ORANGE = "#e54b17";
 const NAVY = "#0C1821";
+/** Logo recadré (862 × 191), sans les marges du fichier original : lisible à petite taille. */
+const NAV_LOGO = "/images/thermoscan-logo-nav.webp";
+const NAV_LOGO_RATIO = 862 / 191;
 
 /** Le logo ThermoScan est blanc et orange : sur un fond clair, on le pose sur une pastille marine. */
 export function ThermoScanBadge({ height = 20, href }: { height?: number; href?: string }) {
-  const img = <img src="/images/thermoscan-logo.webp" alt="ThermoScan" width={900} height={325} style={{ height, width: "auto", display: "block" }} />;
+  // Largeur explicite : avec « width: auto » et le « max-width: 100% » de Tailwind, l'image se réduit à
+  // zéro dans un conteneur inline-flex et la pastille s'affichait vide.
+  const width = Math.round(height * NAV_LOGO_RATIO);
+  const img = <img src={NAV_LOGO} alt="ThermoScan" width={width} height={height} style={{ height, width, maxWidth: "none", display: "block" }} />;
   const style: React.CSSProperties = { display: "inline-flex", alignItems: "center", background: NAVY, borderRadius: 999, padding: `${Math.round(height * 0.28)}px ${Math.round(height * 0.6)}px`, lineHeight: 0 };
   return href ? <Link href={href} style={style} aria-label="ThermoScan">{img}</Link> : <span style={style}>{img}</span>;
 }
@@ -44,9 +51,8 @@ export function ThermoScanPromo({ variant = "card", context }: { variant?: "band
 
   if (variant === "band") {
     return (
-      <section aria-labelledby="thermoscan-promo" style={{ background: NAVY, position: "relative", overflow: "hidden" }} className="py-16 sm:py-20">
-        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(60% 80% at 85% 50%, rgba(229,75,23,0.18) 0%, rgba(12,24,33,0) 70%)" }} />
-        <div className="relative max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center">
+      <section aria-labelledby="thermoscan-promo" style={{ background: NAVY }} className="py-16 sm:py-20">
+        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center">
           <div>
             <img src="/images/thermoscan-logo.webp" alt="ThermoScan" width={900} height={325} style={{ height: 52, width: "auto" }} />
             <h2 id="thermoscan-promo" className="text-white font-bold tracking-tight" style={{ fontSize: "clamp(28px, 3.4vw, 42px)", lineHeight: 1.08, margin: "22px 0 14px", letterSpacing: "-0.02em" }}>
@@ -65,11 +71,14 @@ export function ThermoScanPromo({ variant = "card", context }: { variant?: "band
               </Link>
             </div>
           </div>
-          <ol className="grid gap-3" style={{ margin: 0, padding: 0, listStyle: "none" }}>
-            {STEPS.map(({ Icon, text }, i) => (
-              <li key={text} className="flex items-center gap-4 rounded-xl px-5 py-4" style={{ background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.1)" }}>
-                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full" style={{ background: "rgba(229,75,23,.18)", color: "#ff8a5c" }}><Icon size={20} /></span>
-                <span style={{ color: "#fff", fontSize: 15, lineHeight: 1.4 }}><span style={{ color: "rgba(255,255,255,.45)", fontWeight: 700, marginRight: 8 }}>0{i + 1}</span>{text}</span>
+          <ol style={{ margin: 0, padding: 0, listStyle: "none", borderTop: "1px solid rgba(255,255,255,.14)" }}>
+            {STEPS.map(({ title, text }, i) => (
+              <li key={title} style={{ display: "grid", gridTemplateColumns: "44px 1fr", gap: "0 16px", padding: "20px 0", borderBottom: "1px solid rgba(255,255,255,.14)" }}>
+                <span aria-hidden="true" style={{ color: ORANGE, fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", fontVariantNumeric: "tabular-nums", paddingTop: 4 }}>0{i + 1}</span>
+                <span>
+                  <span style={{ display: "block", color: "#fff", fontSize: 18, fontWeight: 700, lineHeight: 1.25, letterSpacing: "-0.01em" }}>{title}</span>
+                  <span style={{ display: "block", color: "rgba(255,255,255,.6)", fontSize: 15, lineHeight: 1.5, marginTop: 4 }}>{text}</span>
+                </span>
               </li>
             ))}
           </ol>
