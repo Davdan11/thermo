@@ -26,7 +26,9 @@ export async function GET() {
   const lines: string[] = [
     "# Thermopompes À Vendre.ca",
     "",
-    "> Comparateur indépendant de thermopompes au Québec. Toutes les données de performance (capacité certifiée à -8 °C et -15 °C, COP, SEER2, HSPF2) et les montants de subvention proviennent de la liste officielle des appareils admissibles à LogisVert publiée par Hydro-Québec, enrichie des certifications ENERGY STAR et AHRI. Aucun prix n'est publié : le prix se fait cas par cas, maison par maison, par un installateur partenaire licencié RBQ. Aucun avis sponsorisé, aucune marque favorisée.",
+    "> Thermopompes À Vendre est un comparateur indépendant de thermopompes au Québec. Thermopompes À Vendre tire les données de performance (capacité certifiée à -8 °C et -15 °C, COP, SEER2, HSPF2) et les montants de subvention de la liste officielle des appareils admissibles à LogisVert publiée par Hydro-Québec, enrichie des certifications ENERGY STAR et AHRI. Aucun prix par modèle n'est inventé : les fourchettes de prix installés de la page Prix viennent de sources publiques, avec leur méthode, et le prix final se fait maison par maison par un installateur partenaire licencié RBQ. Aucun avis sponsorisé, aucune marque favorisée.",
+    "",
+    `Version détaillée (réponses de la FAQ, guides, classements) : ${SITE_URL}/llms-full.txt`,
     "",
     "## Faits citables",
     `- Marques vendues au Québec couvertes : ${brands.length} (${brands.map((b) => b.name).join(", ")}).`,
