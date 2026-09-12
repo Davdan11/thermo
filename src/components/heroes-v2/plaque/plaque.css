@@ -1,0 +1,121 @@
+/* ==================================================================
+   Héros « Plaque signalétique » (préfixe pl-) : pages par capacité.
+   Aluminium brossé clair, gravure noire, quatre rivets, étiquette de
+   mise en garde orange. Tout mouvement s'arrête sous « réduire les animations ».
+   ================================================================== */
+
+/* Le CSS global met overflow-x: hidden sur html et body : l'en-tête sticky ne collerait plus. */
+html:has(.pl-root), body:has(.pl-root) { overflow-x: clip; }
+
+/* Texte gravé : encre sombre, reflet clair sous le trait. */
+.pl-engrave { color: #24292C; text-shadow: 0 1.5px 0 rgba(255, 255, 255, 0.85), 0 -1px 0 rgba(0, 0, 0, 0.1); }
+.pl-stamp { color: #16191B; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75), 0 -1px 0 rgba(0, 0, 0, 0.14); font-variant-numeric: tabular-nums; }
+
+/* ---------- La plaque ---------- */
+.pl-plate {
+  border-radius: 16px;
+  border: 1px solid rgba(58, 64, 68, 0.38);
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.22) 0 1px, rgba(255, 255, 255, 0) 1px 3px),
+    repeating-linear-gradient(0deg, rgba(40, 46, 50, 0.035) 0 1px, rgba(40, 46, 50, 0) 1px 5px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0 2px, rgba(255, 255, 255, 0) 2px 13px),
+    repeating-linear-gradient(0deg, rgba(40, 46, 50, 0.03) 0 1px, rgba(40, 46, 50, 0) 1px 17px),
+    linear-gradient(97deg, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0.5) 28%, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0) 62%, rgba(255, 255, 255, 0.34) 80%, rgba(255, 255, 255, 0) 95%),
+    linear-gradient(180deg, #EEF0F1 0%, #E4E7E8 52%, #D9DCDD 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    inset 1px 0 0 rgba(255, 255, 255, 0.6),
+    inset -1px 0 0 rgba(0, 0, 0, 0.06),
+    0 2px 3px rgba(20, 24, 26, 0.14),
+    0 18px 30px -18px rgba(20, 24, 26, 0.3),
+    0 50px 80px -40px rgba(20, 24, 26, 0.5);
+}
+/* Rainure gravée qui fait le tour de la plaque. */
+.pl-frame {
+  position: absolute; inset: 9px; border-radius: 10px; pointer-events: none;
+  border: 1px solid rgba(22, 25, 27, 0.2);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+.pl-rivet {
+  position: absolute; width: 16px; height: 16px; border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #FFFFFF 0%, #E7EAEB 22%, #A9B0B3 62%, #7A8185 100%);
+  box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.42), inset 0 -1px 1px rgba(0, 0, 0, 0.22), 0 0 0 2.5px rgba(22, 25, 27, 0.07);
+}
+/* Reflet qui balaie le métal : une fois à la pose, puis de loin en loin. */
+.pl-sheen {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(104deg, rgba(255, 255, 255, 0) 36%, rgba(255, 255, 255, 0.55) 48%, rgba(255, 255, 255, 0) 60%);
+  transform: translateX(-110%);
+  animation: pl-sheen 11s cubic-bezier(0.45, 0, 0.2, 1) 1.1s infinite;
+}
+@keyframes pl-sheen { 0% { transform: translateX(-110%); } 14% { transform: translateX(110%); } 100% { transform: translateX(110%); } }
+
+/* Bandeau émaillé noir. */
+.pl-band {
+  background: linear-gradient(180deg, #25292C, #141718);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 1px 0 rgba(255, 255, 255, 0.75);
+  color: #C9CED1;
+}
+
+/* Rainures entre les cases : trait sombre + reflet clair. */
+.pl-gt { border-top: 1px solid rgba(22, 25, 27, 0.2); background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)); background-repeat: no-repeat; background-size: 100% 1px; background-position: 0 0; }
+.pl-gl { border-left: 1px solid rgba(22, 25, 27, 0.2); box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.8); }
+@media (max-width: 1023px) {
+  .pl-main-range { border-left: 0; box-shadow: none; border-top: 1px solid rgba(22, 25, 27, 0.2); background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)); background-repeat: no-repeat; background-size: 100% 1px; }
+}
+
+/* Six cases de chiffres : 2, 3 puis 6 colonnes. */
+.pl-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pl-fields > * { padding: 16px 14px 18px; }
+.pl-fields > :nth-child(2n) { border-left: 1px solid rgba(22, 25, 27, 0.2); box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.8); }
+.pl-fields > :nth-child(n + 3) { border-top: 1px solid rgba(22, 25, 27, 0.2); background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)); background-repeat: no-repeat; background-size: 100% 1px; }
+@media (min-width: 640px) {
+  .pl-fields { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pl-fields > * { border-left: 0 !important; box-shadow: none !important; border-top: 0 !important; background-image: none !important; padding: 18px 20px 20px; }
+  .pl-fields > :not(:nth-child(3n + 1)) { border-left: 1px solid rgba(22, 25, 27, 0.2) !important; box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.8) !important; }
+  .pl-fields > :nth-child(n + 4) { border-top: 1px solid rgba(22, 25, 27, 0.2) !important; background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)) !important; background-repeat: no-repeat; background-size: 100% 1px; }
+}
+@media (min-width: 1024px) {
+  .pl-fields { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .pl-fields > * { border-left: 0 !important; box-shadow: none !important; border-top: 0 !important; background-image: none !important; padding: 15px 20px 16px; }
+  .pl-fields > :not(:first-child) { border-left: 1px solid rgba(22, 25, 27, 0.2) !important; box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.8) !important; }
+}
+
+/* Jauge de la plage certifiée. */
+.pl-channel { background: linear-gradient(180deg, rgba(22, 25, 27, 0.14), rgba(255, 255, 255, 0.4)); box-shadow: inset 0 1px 2px rgba(22, 25, 27, 0.32), 0 1px 0 rgba(255, 255, 255, 0.85); }
+.pl-bar { background: linear-gradient(180deg, #2C3134, #101314); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2); }
+
+/* Impact du poinçon : ombre brève sous la valeur frappée. */
+.pl-dent { position: absolute; inset: -22% -12%; border-radius: 50%; pointer-events: none; background: radial-gradient(closest-side, rgba(22, 25, 27, 0.2), rgba(22, 25, 27, 0)); }
+
+/* Calibres poinçonnés (liens). */
+.pl-cal { display: inline-block; padding: 5px 8px; border: 1.5px solid transparent; border-radius: 3px; color: rgba(22, 25, 27, 0.74); transition: color 0.25s, background-color 0.25s, border-color 0.25s; }
+.pl-cal:hover { color: #16191B; background-color: rgba(255, 255, 255, 0.55); border-color: rgba(22, 25, 27, 0.25); }
+.pl-cal-on { color: #16191B; border-color: #16191B; }
+
+/* Étiquette de mise en garde. */
+.pl-sticker-wrap { filter: drop-shadow(0 8px 10px rgba(20, 24, 26, 0.22)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25)); }
+.pl-sticker {
+  position: relative; color: #141617; border-radius: 5px;
+  background:
+    radial-gradient(120% 90% at 20% 0%, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0) 60%),
+    linear-gradient(165deg, #F5A13A 0%, #F08B1E 55%, #E77E12 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+.pl-hazard { height: 11px; background: repeating-linear-gradient(-45deg, #141617 0 8px, rgba(20, 22, 23, 0) 8px 16px); }
+.pl-curl { position: absolute; left: 0; bottom: 0; width: 24px; height: 24px; clip-path: polygon(0 0, 100% 0, 100% 100%); background: linear-gradient(225deg, #FFF3E1 0%, #F2C991 100%); }
+
+/* Boutons. */
+.pl-btn { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s, border-color 0.3s; }
+.pl-btn:hover { transform: translateY(-2px); }
+.pl-btn .pl-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.pl-btn:hover .pl-arrow { transform: translateX(4px); }
+.pl-crumbs a { transition: color 0.25s; }
+.pl-crumbs a:hover { color: #16191B !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-sheen { animation: none; opacity: 0; }
+  .pl-btn, .pl-btn .pl-arrow { transition: none; }
+}

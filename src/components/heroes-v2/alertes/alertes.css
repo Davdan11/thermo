@@ -1,0 +1,53 @@
+/* ==================================================================
+   Héros « L’enveloppe » (préfixe al-) : pages de statut des alertes
+   LogisVert (confirmation, désabonnement). Vert forêt, menthe, crème.
+   Tout mouvement s'arrête sous « réduire les animations ».
+   ================================================================== */
+
+html:has(.al-root), body:has(.al-root) { overflow-x: clip; }
+
+/* Géométrie de l'enveloppe : hauteur, poche avant, rabat, marge du fond. */
+.al-scene { --env: 290px; --pocket: 136px; --flap: 210px; --gap: 18px; }
+@media (max-width: 639px) { .al-scene { --env: 180px; --pocket: 100px; --flap: 128px; --gap: 12px; } }
+
+/* Intérieur de l'enveloppe : doublure menthe finement hachurée. */
+.al-liner {
+  background:
+    repeating-linear-gradient(-38deg, rgba(15, 61, 43, 0.1) 0 1px, rgba(15, 61, 43, 0) 1px 7px),
+    linear-gradient(180deg, #CDEEDC, #B7E2CB);
+}
+.al-back {
+  position: absolute; left: 0; right: 0; bottom: 0; height: var(--env); z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 50px 90px -40px rgba(0, 0, 0, 0.6), 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+.al-flap { position: absolute; left: 0; right: 0; bottom: calc(var(--env) - var(--flap)); height: var(--flap); }
+.al-flap svg { display: block; width: 100%; height: 100%; overflow: visible; }
+
+.al-letter-clip { position: relative; z-index: 3; padding-bottom: var(--gap); clip-path: inset(-1600px -160px var(--gap) -160px); }
+.al-letter {
+  position: relative; width: 80%; margin: 0 auto;
+  padding-bottom: calc(var(--pocket) + 22px);
+  border-radius: 4px;
+  background: radial-gradient(140% 70% at 50% 0%, #FFFDF8, #FAF6EC 70%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 30px 60px -30px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 639px) { .al-letter { width: 91%; } }
+
+.al-pocket { position: absolute; left: 0; right: 0; bottom: 0; height: var(--pocket); z-index: 5; filter: drop-shadow(0 -5px 9px rgba(10, 46, 32, 0.2)); }
+.al-pocket svg { display: block; width: 100%; height: 100%; }
+
+/* Oblitération : sinusoïdes qui défilent en continu derrière la scène. */
+.al-waves { -webkit-mask-image: linear-gradient(90deg, transparent, #000 22%, #000 70%, transparent); mask-image: linear-gradient(90deg, transparent, #000 22%, #000 70%, transparent); }
+.al-waves-track { animation: al-drift 7s linear infinite; }
+@keyframes al-drift { from { transform: translateX(0); } to { transform: translateX(-120px); } }
+
+.al-btn { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s, border-color 0.3s; }
+.al-btn:hover { transform: translateY(-2px); }
+.al-btn .al-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.al-btn:hover .al-arrow { transform: translateX(4px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .al-waves-track { animation: none; }
+  .al-btn, .al-btn .al-arrow { transition: none; }
+}

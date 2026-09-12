@@ -30,6 +30,18 @@ const LIGHT_HEROES: Array<{ path: string; exact?: boolean }> = [
   { path: "/conditions" },
   { path: "/confidentialite" },
   { path: "/accessibilite" },
+  // Pages par capacité : plaque signalétique en aluminium clair.
+  { path: "/thermopompes/thermopompe-6000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-9000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-12000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-15000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-18000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-24000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-30000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-36000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-42000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-48000-btu", exact: true },
+  { path: "/thermopompes/thermopompe-60000-btu", exact: true },
 ];
 
 export function heroTone(pathname: string): "light" | "dark" {

@@ -6,8 +6,10 @@ import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/se
 import { getLandingPage, getLandingPages, type LandingPage } from "@/lib/seo/landings";
 import { getCapacityClass, getCapacityClasses, getRanking, type CapacityClass } from "@/lib/seo/programmatic";
 import { estimateLoad } from "@/lib/thermomatch/sizing";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero, TrustStrip } from "@/components/seo/SeoBlocks";
+import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
 import { AtelierHero } from "@/components/heroes-v2/marques/AtelierHero";
+import { PlaqueHero } from "@/components/heroes-v2/plaque/PlaqueHero";
+import { buildPlaque } from "@/components/heroes-v2/plaque/data";
 import { typo } from "@/components/heroes-v2/marques/shared";
 import type { GuideVariant } from "@/components/seo/hero/types";
 
@@ -250,34 +252,29 @@ function CapacityView({ cap }: { cap: CapacityClass }) {
           getItemListSchema({ name: `Thermopompes ${cap.label}`, items: cap.models.slice(0, 50).map((m) => ({ name: `${m.brand} ${m.name}`, url: `/produit/${m.canonicalSlug}` })) }),
         ]}
       />
-      <SeoHero
-        eyebrow="Par capacité"
-        title={`Thermopompe ${cap.label}`}
-        intro={`${cap.models.length} machines distinctes de ${brands.length} marques, avec leur capacité certifiée à -15 °C, leur efficacité et leur subvention LogisVert. Pour une maison standard de ${area.min.toLocaleString("fr-CA")} à ${area.max.toLocaleString("fr-CA")} pi².`}
-        answer={`${cap.models.length} thermopompes ${cap.label} de ${brands.length} marques sont vendues au Québec : ${walls.length} murales et ${centrals.length} centrales. ${h5Values.length ? `Leur capacité certifiée à -15 °C va de ${h5Min.toLocaleString("fr-CA")} à ${h5Max.toLocaleString("fr-CA")} BTU/h` : "La capacité certifiée à -15 °C n'est pas publiée pour toutes"}${cap.maxLogisVert > 0 ? `, avec une subvention LogisVert jusqu'à ${cap.maxLogisVert.toLocaleString("fr-CA")} $` : ""}. Convient en général à une maison de ${area.min.toLocaleString("fr-CA")} à ${area.max.toLocaleString("fr-CA")} pi², selon l'isolation.`}
-        breadcrumbs={[
-          { label: "Thermopompes", href: "/thermopompes" },
-          { label: `Thermopompe ${cap.label}`, href: `/thermopompes/${cap.slug}` },
-        ]}
-        titleLines={["Thermopompe", cap.label]}
-        serif={cap.label}
-        motif={{
-          kind: "capacity",
+      {/* Héros « Plaque signalétique » : les chiffres de la classe poinçonnés sur une plaque d'aluminium. */}
+      <PlaqueHero
+        d={buildPlaque({
           btu: cap.btu,
+          label: cap.label,
+          slug: cap.slug,
+          models: cap.models.length,
+          brands: brands.length,
+          walls: walls.length,
+          centrals: centrals.length,
+          cold: cap.coldClimateCount,
+          certified: certified.length,
           h5Min: h5Values.length ? h5Min : null,
           h5Max: h5Values.length ? h5Max : null,
-          certified: certified.length,
-          classes: classes.map((c) => c.btu),
+          maxLogisVert: cap.maxLogisVert,
           areaMin: area.min,
           areaMax: area.max,
-        }}
-        stats={[
-          { label: "Murales / centrales", value: `${walls.length} / ${centrals.length}` },
-          { label: "Certifiées grand froid", value: String(cap.coldClimateCount) },
-          { label: "À -15 °C (certifié)", value: h5Values.length ? `${h5Min.toLocaleString("fr-CA")} à ${h5Max.toLocaleString("fr-CA")}` : "—" },
-          { label: "LogisVert jusqu'à", value: cap.maxLogisVert > 0 ? `${cap.maxLogisVert.toLocaleString("fr-CA")} $` : "—" },
-        ]}
+          classes: classes.map((c) => ({ btu: c.btu, slug: c.slug })),
+          intro: `${cap.models.length} machines distinctes de ${brands.length} marques, avec leur capacité certifiée à -15 °C, leur efficacité et leur subvention LogisVert. Pour une maison standard de ${area.min.toLocaleString("fr-CA")} à ${area.max.toLocaleString("fr-CA")} pi².`,
+          answer: `${cap.models.length} thermopompes ${cap.label} de ${brands.length} marques sont vendues au Québec : ${walls.length} murales et ${centrals.length} centrales. ${h5Values.length ? `Leur capacité certifiée à -15 °C va de ${h5Min.toLocaleString("fr-CA")} à ${h5Max.toLocaleString("fr-CA")} BTU/h` : "La capacité certifiée à -15 °C n'est pas publiée pour toutes"}${cap.maxLogisVert > 0 ? `, avec une subvention LogisVert jusqu'à ${cap.maxLogisVert.toLocaleString("fr-CA")} $` : ""}. Convient en général à une maison de ${area.min.toLocaleString("fr-CA")} à ${area.max.toLocaleString("fr-CA")} pi², selon l'isolation.`,
+        })}
       />
+      <TrustStrip />
       <Prose>
         <h2>« {cap.label} » ne veut pas dire {cap.label} en hiver</h2>
         <p>
