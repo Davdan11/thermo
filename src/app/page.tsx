@@ -6,6 +6,8 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { ColdStory } from "@/components/home/ColdStory";
 import { ScanShowcase } from "@/components/home/premium/ScanShowcase";
 import { CompareStage, type CompareModel } from "@/components/home/premium/CompareStage";
+import { ThermoMatchStage, type StageModel } from "@/components/home/premium/ThermoMatchStage";
+import { getSeoModel } from "@/lib/seo/programmatic";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { registry } from "@/lib/data/registry";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
@@ -43,6 +45,16 @@ export default function HomePage() {
     const m = registry.modelBySlug.get(c.slug);
     return m ? [{ ...c, name: m.name, h5: m.heatingCapacity5FMaxBtu ?? null, hspf2: m.hspf2Max ?? null, seer2: m.seer2Max ?? null, cop5: m.cop5FMax ?? null }] : [];
   });
+  // Section ThermoMatch : l'écran animé montre ces trois mêmes modèles, avec le montant LogisVert officiel.
+  const stageModels: StageModel[] = compareModels.map((c) => ({
+    slug: c.slug,
+    brand: c.brand,
+    name: c.name,
+    img: c.img,
+    h5: c.h5,
+    hspf2: c.hspf2,
+    subsidy: getSeoModel(c.slug)?.logisVertDollars || null,
+  }));
   return (
     <main className={`${display.variable} ${serif.variable}`} style={{ fontFamily: "var(--font-sans, 'Inter', sans-serif)", color: "#172126", backgroundColor: "#fff" }}>
 
@@ -157,86 +169,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════════════════
-          THERMOMATCH — dark section with laptop mockup + 3 steps
-      ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: "#0b1b24", overflow: "hidden", position: "relative" }} className="py-10 sm:py-14 lg:py-16">
-        {/* Laptop bleeds to the left edge on desktop */}
-        <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-[58%] z-0">
-          <FadeIn direction="left" delay={200} className="h-full flex items-center justify-end">
-            <Image
-              src="/images/thermomatch/thermomatch-hero-device-transparent.png"
-              alt="ThermoMatch — Trouvez la bonne thermopompe"
-              width={1000}
-              height={676}
-              sizes="(max-width: 1024px) 100vw, 920px"
-              className="tav-float"
-              style={{ width: "110%", maxWidth: 920, height: "auto", objectFit: "contain", display: "block", marginLeft: "-5%" }}
-              priority
-            />
-          </FadeIn>
-        </div>
-
-        <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[58%_1fr] gap-8 lg:gap-8 items-center">
-            {/* Left: laptop mockup — mobile only (desktop uses absolute) */}
-            <FadeIn direction="left" delay={200} className="lg:hidden">
-              <Image
-                src="/images/thermomatch/thermomatch-hero-device-transparent.png"
-                alt="ThermoMatch — Trouvez la bonne thermopompe"
-                width={800}
-                height={540}
-                sizes="100vw"
-                style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
-                priority
-              />
-            </FadeIn>
-
-            {/* Spacer for the absolute-positioned laptop on desktop */}
-            <div className="hidden lg:block" />
-
-            {/* Right: title + steps */}
-            <FadeIn>
-              <div>
-                <h2 style={{ color: "#fff", fontSize: "clamp(26px,3vw,38px)", fontWeight: 800, lineHeight: 1.15, marginBottom: 16, letterSpacing: "-0.01em" }}>
-                  Votre maison. Vos critères.{" "}<br />Les bonnes options.
-                </h2>
-                <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 15, lineHeight: 1.6, marginBottom: 36, maxWidth: 460 }}>
-                  Répondez à quelques questions — ThermoMatch identifie les systèmes qui correspondent à votre maison, votre région et vos priorités.
-                </p>
-
-                {/* 3 Steps — horizontal with connecting lines */}
-                <div className="flex flex-col sm:flex-row gap-6 sm:gap-0 mb-10">
-                  {[
-                    { n: "1", title: "Décrivez votre maison", desc: "Répondez à quelques questions sur votre logement et vos besoins." },
-                    { n: "2", title: "Comparez les options", desc: "Découvrez les modèles qui correspondent et comprenez les différences." },
-                    { n: "3", title: "Recevez une soumission pour votre maison", desc: "Un installateur partenaire licencié évalue votre projet sur place. Le prix se fait cas par cas, jamais au catalogue." },
-                  ].map((s, i) => (
-                    <div key={s.n} className="flex-1 flex flex-col items-start sm:items-center text-left sm:text-center relative">
-                      {/* Connecting line (between circles) */}
-                      {i < 2 && (
-                        <div className="hidden sm:block absolute top-[16px] left-[calc(50%+18px)] right-[calc(-50%+18px)] h-[2px] bg-[#1a2d3d]" />
-                      )}
-                      <div style={{ width: 34, height: 34, borderRadius: "50%", backgroundColor: "#e54b17", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginBottom: 12, position: "relative", zIndex: 2 }}>
-                        <span style={{ color: "#fff", fontSize: 13, fontWeight: 800 }}>{s.n}</span>
-                      </div>
-                      <p style={{ color: "#fff", fontWeight: 700, fontSize: 14, margin: "0 0 6px", lineHeight: 1.3 }}>{s.title}</p>
-                      <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 12, lineHeight: 1.5, margin: 0, maxWidth: 200 }}>{s.desc}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <Link href="/trouver-ma-thermopompe" className="group flex items-center bg-[#e54b17] text-white font-semibold text-[18px] pl-8 pr-6 py-4 rounded-sm no-underline transition-all duration-300 hover:bg-[#d44315] hover:shadow-lg w-fit">
-                  Commencer <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch™" className="inline-block h-[40px] ml-3 mr-1 object-contain brightness-0 invert" />
-                  <svg className="ml-2 transition-transform duration-300 group-hover:translate-x-1" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                </Link>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <ThermoMatchStage models={stageModels} evaluated={getEligibleModelCount()} />
 
       {/* ══════════════════════════════════════════════════════════════════
           LES AIDES FINANCIÈRES — light section with unit photo + grant info

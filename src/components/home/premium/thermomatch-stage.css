@@ -1,0 +1,36 @@
+/* Section ThermoMatch de l'accueil : curseur de saisie, reflet de l'écran, flottement des appareils. */
+.tms-caret {
+  display: inline-block;
+  width: 0.08em;
+  height: 1.05em;
+  margin-left: 0.08em;
+  vertical-align: -0.16em;
+  background: currentColor;
+  animation: tms-blink 1s steps(2, start) infinite;
+}
+@keyframes tms-blink {
+  to { visibility: hidden; }
+}
+
+.tms-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.28) 50%, rgba(255, 255, 255, 0) 58%);
+  background-size: 260% 100%;
+  mix-blend-mode: soft-light;
+  animation: tms-glare 10s ease-in-out infinite;
+}
+@keyframes tms-glare {
+  0%, 68% { background-position: 150% 0; }
+  100% { background-position: -60% 0; }
+}
+
+.tms-float { animation: tms-float 6s ease-in-out infinite; }
+@keyframes tms-float {
+  50% { transform: translateY(-0.35em); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tms-caret, .tms-glare, .tms-float { animation: none; }
+}
