@@ -40,10 +40,10 @@ const TICKS = [
 
 function stagesFor(with5F: number) {
   return [
-    { at: "+8,3 °C", title: "Le chiffre de la boîte", body: "La capacité nominale se mesure par temps doux. C’est le chiffre le plus visible, et le moins utile en janvier." },
-    { at: "−8,3 °C", title: "Le premier vrai test", body: "La capacité à 17 °F, publiée dans la liste LogisVert d’Hydro-Québec pour chaque modèle admissible." },
-    { at: "−15 °C", title: "Le chiffre qui compte", body: `La capacité à 5 °F, certifiée par ENERGY STAR. Nous la publions pour ${fmt(with5F)} modèles.` },
-    { at: "−25 °C", title: "Le grand froid", body: "Sous ce seuil, on vérifie la plage de fonctionnement du fabricant et la place du chauffage d’appoint. Aucune thermopompe ne se choisit sans ça." },
+    { at: "+8,3 °C", title: "La puissance sur la boîte", body: "Le chiffre écrit sur la boîte (ex. 12 000 BTU) est mesuré quand il fait doux dehors. En janvier, la thermopompe chauffe moins que ça." },
+    { at: "−8,3 °C", title: "Il commence à faire froid", body: "Plus il fait froid dehors, moins une thermopompe donne de chaleur. Hydro-Québec publie combien chaque modèle en donne encore à −8 °C." },
+    { at: "−15 °C", title: "Le vrai test de l’hiver", body: `Combien de chaleur elle donne encore par une nuit de janvier ordinaire. C’est LE chiffre à comparer : certifié, et affiché pour ${fmt(with5F)} modèles.` },
+    { at: "−25 °C", title: "Les nuits de grand froid", body: "À ce froid-là, certaines thermopompes arrêtent de chauffer. Vérifiez jusqu’où elle fonctionne, et gardez un chauffage d’appoint pour les pires nuits." },
   ];
 }
 
