@@ -1,8 +1,9 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import type { GuideVariant } from "./types";
 import { Caption, EASE, K, Parallax } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Guides éditoriaux : schéma de principe tracé au trait, comme un
@@ -21,7 +22,7 @@ const circ = (cx: number, cy: number, r: number) => `M${cx - r} ${cy} a${r} ${r}
 
 /** Trait qui se dessine. */
 function P({ d, t, c = CREAM, w = 1.5 }: { d: string; t: number; c?: string; w?: number }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <motion.path
       d={d}
@@ -39,7 +40,7 @@ function P({ d, t, c = CREAM, w = 1.5 }: { d: string; t: number; c?: string; w?:
 
 /** Trait animé en continu (conduite ou air) : il apparaît en fondu, puis ses tirets circulent. */
 function Flow({ d, t, kind = "flow" }: { d: string; t: number; kind?: "flow" | "air" }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <motion.path
       d={d}
@@ -58,7 +59,7 @@ function Flow({ d, t, kind = "flow" }: { d: string; t: number; kind?: "flow" | "
 }
 
 function Label({ x, y, t, children, anchor = "start", c = FAINT }: { x: number; y: number; t: number; children: string; anchor?: "start" | "middle" | "end"; c?: string }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <motion.text x={x} y={y} textAnchor={anchor} fill={c} fontSize={11} letterSpacing={2.2} fontWeight={500} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: t }}>
       {children}
@@ -68,7 +69,7 @@ function Label({ x, y, t, children, anchor = "start", c = FAINT }: { x: number; 
 
 /** Unité extérieure : caisson, grille, hélice qui tourne, ailettes latérales. */
 function Outdoor({ x, y, w, h, t }: { x: number; y: number; w: number; h: number; t: number }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const cx = x + w * 0.38;
   const cy = y + h * 0.54;
   const r = h * 0.33;
@@ -97,7 +98,7 @@ function Outdoor({ x, y, w, h, t }: { x: number; y: number; w: number; h: number
 
 /** Unité murale intérieure, avec son voyant et l'air qu'elle souffle. */
 function WallHead({ x, y, w, h, t, air = true }: { x: number; y: number; w: number; h: number; t: number; air?: boolean }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <g>
       <P d={rr(x, y, w, h, h * 0.3)} t={t} />
@@ -302,12 +303,12 @@ function Scene({ variant }: { variant: GuideVariant }) {
 }
 
 function Dot({ cx, cy, t }: { cx: number; cy: number; t: number }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return <motion.circle cx={cx} cy={cy} r={4.5} fill={K.ink} stroke={K.orange} strokeWidth={2} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: t }} />;
 }
 
 export function GuideMotif({ variant }: { variant: GuideVariant }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const meta = LABEL[variant];
   return (
     <Parallax distance={-45} className="lg:ml-auto lg:max-w-[580px]">

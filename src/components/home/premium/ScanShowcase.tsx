@@ -5,10 +5,11 @@ import "./sections.css";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion, useInView, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { AnimatePresence, motion, useInView, useScroll, useTransform } from "motion/react";
 import { Camera } from "lucide-react";
 import { ThermoScanBadge } from "@/components/thermoscan/ThermoScanPromo";
 import { Arrow, C, DISPLAY, EASE, RevealLines } from "./shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    ThermoScan — un téléphone rejoue le scan en trois temps, synchronisé
@@ -29,7 +30,7 @@ const PLATE = { left: 73, top: 44, width: 9, height: 21, originX: 77, originY: 5
 export function ScanShowcase() {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { margin: "0px 0px -20% 0px" });
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const [step, setStep] = useState(0);
   const [cycle, setCycle] = useState(0);
 

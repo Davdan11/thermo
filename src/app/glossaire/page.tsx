@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { DictionaryHero, type DictLetter, type DictTerm } from "@/components/heroes-v2/contenu/DictionaryHero";
 import { typo } from "@/components/content-hero/typo";
+import { fraunces } from "@/components/heroes-v2/contenu/fonts";
+import { DictionaryBody, DictionaryEnd, type DictGroup } from "@/components/sections-v2/contenu/DictionarySections";
 
 export const metadata: Metadata = {
   title: "Glossaire de la thermopompe : SEER2, HSPF2, COP, Inverter, LogisVert expliqués",
@@ -11,16 +12,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const T = {
-  ink: "#071b27",
-  inkDeep: "#03141e",
-  ivory: "#f5f1ea",
-  surface: "#faf8f4",
-  text: "#10202d",
-  muted: "#49545b",
-  orange: "#d94b12",
-  border: "rgba(16,32,45,0.14)",
-};
 
 function slugifyTerm(term: string): string {
   return term
@@ -77,9 +68,13 @@ export default function GlossairePage() {
   const dictLetters: DictLetter[] = Object.keys(grouped)
     .sort()
     .map((letter) => ({ letter, slug: slugifyTerm(grouped[letter][0].term), count: grouped[letter].length }));
+  // Corps du dictionnaire : mêmes termes, mêmes définitions, mêmes ancres (slugifyTerm) que l'ancienne liste.
+  const dictGroups: DictGroup[] = Object.keys(grouped)
+    .sort()
+    .map((letter) => ({ letter, items: grouped[letter].map((item) => ({ term: item.term, slug: slugifyTerm(item.term), definition: item.definition })) }));
 
   return (
-    <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: "white", minHeight: "100vh" }}>
+    <main className={`dxs-root cs-sticky-root ${fraunces.variable}`} style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: "#FBFAF6", color: "#1A1714", minHeight: "100vh" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -101,60 +96,11 @@ export default function GlossairePage() {
       {/* ── HÉROS : une entrée de dictionnaire qui tourne comme une page, ruban A–Z ── */}
       <DictionaryHero terms={dictTerms} letters={dictLetters} termCount={sortedTerms.length} />
 
-      {/* ── CONTENT ── */}
-      <section id="lexique" style={{ padding: "clamp(64px, 8vw, 120px) clamp(24px, 5vw, 64px)", backgroundColor: T.surface, scrollMarginTop: 72 }}>
-        <div className="max-w-[900px] mx-auto">
-          <div style={{ backgroundColor: "white", padding: "clamp(40px, 6vw, 80px) clamp(32px, 5vw, 64px)", borderRadius: "12px", border: `1px solid ${T.border}`, boxShadow: "0 10px 40px rgba(0,0,0,0.02)" }}>
-            {Object.keys(grouped).sort().map((letter, idx) => {
-              const items = grouped[letter];
-              return (
-                <div key={letter} style={{ position: "relative", marginBottom: "80px", paddingTop: idx !== 0 ? "80px" : "0", borderTop: idx !== 0 ? `1px solid ${T.border}` : "none" }}>
-                  
-                  {/* Giant watermark letter */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: idx !== 0 ? "40px" : "-20px",
-                      left: "-20px",
-                      fontSize: "200px",
-                      fontWeight: 800,
-                      color: T.surface,
-                      lineHeight: 1,
-                      zIndex: 0,
-                      userSelect: "none",
-                      pointerEvents: "none",
-                    }}
-                  >
-                    {letter}
-                  </div>
-
-                  <div style={{ position: "relative", zIndex: 1 }}>
-                    {items.map((item, i) => (
-                      <div key={i} style={{ marginBottom: i === items.length - 1 ? 0 : "48px" }}>
-                        <h2 id={slugifyTerm(item.term)} style={{ color: T.ink, fontSize: "24px", fontWeight: 750, letterSpacing: "-0.02em", margin: "0 0 16px", scrollMarginTop: 96 }}>
-                          {item.term}
-                        </h2>
-                        <p style={{ color: T.text, fontSize: "17px", lineHeight: 1.7, maxWidth: "700px" }}>
-                          {item.definition}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* CTA */}
-          <div style={{ marginTop: "120px", textAlign: "center" }}>
-            <p style={{ color: T.muted, fontSize: "18px", marginBottom: "32px", fontWeight: 500 }}>Prêt à mettre vos connaissances à profit ?</p>
-            <Link
-              href="/trouver-ma-thermopompe"
-              style={{ display: "inline-flex", alignItems: "center", height: "56px", padding: "0 40px", backgroundColor: T.orange, color: "white", textDecoration: "none", fontWeight: 600, fontSize: "15px", borderRadius: "4px" }}
-            >
-              Démarrer ThermoMatch
-            </Link>
-          </div>
+      {/* ── LEXIQUE : pages de dictionnaire, lettre par lettre (titres courants, onglets de pouce) ── */}
+      <section id="lexique" style={{ padding: "clamp(40px, 5vw, 72px) clamp(20px, 4vw, 48px) clamp(64px, 8vw, 110px)", backgroundColor: "#FBFAF6", scrollMarginTop: 72 }}>
+        <div className="mx-auto max-w-[1440px]">
+          <DictionaryBody groups={dictGroups} />
+          <DictionaryEnd />
         </div>
       </section>
     </main>

@@ -1,10 +1,8 @@
 import { Suspense } from "react";
-import Link from "next/link";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import { existsSync, statSync } from "fs";
 import { join } from "path";
 
-import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
 import { getCatalogueModels, getAvailableFilters } from "@/lib/data/queries/catalogue";
 import type { CatalogueParams, CatalogueSort } from "@/lib/data/queries/catalogue";
@@ -14,16 +12,16 @@ import { CatalogueFilters, ActiveFilterChips } from "@/components/product/Catalo
 import { CatalogueSearch } from "@/components/product/CatalogueSearch";
 import { CatalogueSortSelect } from "@/components/product/CatalogueSortSelect";
 import { MobileFilterDrawer } from "@/components/product/MobileFilterDrawer";
-import { CompareSelection } from "@/components/product/CompareSelection";
 import { CatalogueEmpty } from "@/components/product/CatalogueEmpty";
 import { CataloguePagination } from "@/components/product/CataloguePagination";
-import { buttonVariants } from "@/components/ui/button";
-import { CtaThermoMatch } from "@/components/seo/SeoBlocks";
 import { CatalogueHero, type WallItem } from "@/components/product/CatalogueHero";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { registry } from "@/lib/data/registry";
 import { displayFont, serifFont } from "@/lib/fonts";
+import { MotionRoot } from "@/components/sections-v2/catalogue/motion";
+import { BrandStrip, CatalogueCta, FilterTitle, ResultCount, type StripBrand } from "@/components/sections-v2/catalogue/GallerySections";
+import { GalleryGrid } from "@/components/sections-v2/catalogue/GalleryGrid";
 /** Logo monochrome (bleu nuit) pour la bande de marques ; logo couleur sinon, null si aucun logo. */
 function monoLogo(slug: string): string | null {
   const mono = `/images/marques/mono/${slug}.png`;
@@ -51,6 +49,14 @@ function getHeroData(): { stats: { models: number; brands: number; coldClimate: 
     stats: { models: getEligibleModelCount(), brands: brands.length, coldClimate: brands.reduce((sum, b) => sum + b.coldClimateCount, 0) },
     wall,
   };
+}
+
+/** Bande de marques : mêmes marques et mêmes liens qu’avant (deux rangées sur ordinateur, huit sur téléphone). */
+function stripBrands(list: { name: string; slug: string }[]): StripBrand[] {
+  return list.flatMap((b) => {
+    const src = monoLogo(b.slug);
+    return src ? [{ ...b, src }] : [];
+  });
 }
 
 /* ------------------------------------------------------------------
@@ -143,154 +149,92 @@ export default async function ThermopompesPage({
         }
       />
 
-      {/* ---- Featured Brands Strip ---- */}
-      {/* ---- Featured Brands Strip ---- */}
-      <div className="w-full bg-white border-y border-gray-200 shadow-sm relative z-20 hidden md:flex flex-col">
-          {/* Row 1: 6 brands */}
-          <div className="flex items-stretch border-b border-gray-100 h-[90px] w-full">
-            {[
-              { name: "Daikin", slug: "daikin", src: monoLogo("daikin") },
-              { name: "Mitsubishi Electric", slug: "mitsubishi-electric", src: monoLogo("mitsubishi-electric") },
-              { name: "Fujitsu", slug: "fujitsu", src: monoLogo("fujitsu") },
-              { name: "Gree", slug: "gree", src: monoLogo("gree") },
-              { name: "Panasonic", slug: "panasonic", src: monoLogo("panasonic") },
-              { name: "LG", slug: "lg", src: monoLogo("lg") },
-            ].filter((b) => b.src).map((brand, i) => (
-              <Link 
-                key={brand.slug} 
-                href={`/thermopompes?brand=${brand.slug}`}
-                className={`flex-1 flex items-center justify-center px-4 py-2 hover:bg-gray-50 transition-colors ${i !== 5 ? 'border-r border-gray-100' : ''}`}
-                title={`Voir les thermopompes ${brand.name}`}
-              >
-                <div className="w-[150px] h-[65px] flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
-                  <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="150px" className="max-w-[130px] max-h-[30px] object-contain w-auto h-auto" />
+      <MotionRoot className="catg-root">
+        {/* ---- Bande de marques : prolonge le héros sur l’encre ---- */}
+        <BrandStrip
+          rows={[
+            stripBrands([
+              { name: "Daikin", slug: "daikin" },
+              { name: "Mitsubishi Electric", slug: "mitsubishi-electric" },
+              { name: "Fujitsu", slug: "fujitsu" },
+              { name: "Gree", slug: "gree" },
+              { name: "Panasonic", slug: "panasonic" },
+              { name: "LG", slug: "lg" },
+            ]),
+            stripBrands([
+              { name: "Samsung", slug: "samsung" },
+              { name: "Tosot", slug: "tosot" },
+              { name: "Bosch", slug: "bosch" },
+              { name: "Lennox", slug: "lennox" },
+              { name: "Moovair", slug: "moovair" },
+              { name: "Mainline", slug: "mainline" },
+              { name: "Haier", slug: "haier" },
+            ]),
+          ]}
+          mobile={stripBrands([
+            { name: "Daikin", slug: "daikin" },
+            { name: "Mitsubishi", slug: "mitsubishi-electric" },
+            { name: "Fujitsu", slug: "fujitsu" },
+            { name: "Gree", slug: "gree" },
+            { name: "Panasonic", slug: "panasonic" },
+            { name: "LG", slug: "lg" },
+            { name: "Samsung", slug: "samsung" },
+            { name: "Tosot", slug: "tosot" },
+          ])}
+        />
+
+        {/* ---- La galerie : une feuille de papier chaud qui remonte sur l’encre ---- */}
+        <div className="relative z-[25] -mt-8 rounded-[28px] sm:rounded-[40px]" style={{ background: "#F4EFE7" }}>
+          {/* Cible de la recherche du héros (Entrée / loupe) : on descend jusqu’ici. */}
+          <div id="catalogue-resultats" className="mx-auto max-w-[1440px] px-5 pb-16 pt-10 sm:px-8 sm:pb-20 sm:pt-14 lg:px-12" style={{ scrollMarginTop: 96 }}>
+            <div className="flex flex-col gap-10 lg:flex-row xl:gap-14">
+              {/* Filtres (ordinateur) */}
+              <aside className="hidden w-[300px] shrink-0 lg:block">
+                <div className="sticky top-28 rounded-[22px] bg-white p-7" style={{ boxShadow: "0 0 0 1px rgba(10,20,25,0.05), 0 30px 60px -44px rgba(10,20,25,0.4)" }}>
+                  <FilterTitle>Filtrer</FilterTitle>
+                  <Suspense>
+                    <CatalogueFilters filters={filters} />
+                  </Suspense>
                 </div>
-              </Link>
-            ))}
-          </div>
-          {/* Row 2: 7 brands */}
-          <div className="flex items-stretch h-[90px] w-full">
-            {[
-              { name: "Samsung", slug: "samsung", src: monoLogo("samsung") },
-              { name: "Tosot", slug: "tosot", src: monoLogo("tosot") },
-              { name: "Bosch", slug: "bosch", src: monoLogo("bosch") },
-              { name: "Lennox", slug: "lennox", src: monoLogo("lennox") },
-              { name: "Moovair", slug: "moovair", src: monoLogo("moovair") },
-              { name: "Mainline", slug: "mainline", src: monoLogo("mainline") },
-              { name: "Haier", slug: "haier", src: monoLogo("haier") },
-            ].filter((b) => b.src).map((brand, i) => (
-              <Link 
-                key={brand.slug} 
-                href={`/thermopompes?brand=${brand.slug}`}
-                className={`flex-1 flex items-center justify-center px-4 py-2 hover:bg-gray-50 transition-colors ${i !== 6 ? 'border-r border-gray-100' : ''}`}
-                title={`Voir les thermopompes ${brand.name}`}
-              >
-                <div className="w-[150px] h-[65px] flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
-                  <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="150px" className="max-w-[130px] max-h-[30px] object-contain w-auto h-auto" />
+              </aside>
+
+              {/* Résultats */}
+              <div className="min-w-0 flex-1">
+                <div className="mb-7 flex flex-wrap items-end justify-between gap-x-6 gap-y-5 pb-6" style={{ borderBottom: "1px solid rgba(10,20,25,0.1)" }}>
+                  <ResultCount count={resultCount} />
+                  <div className="flex flex-wrap items-center gap-3">
+                    <Suspense>
+                      <MobileFilterDrawer filters={filters} resultCount={resultCount} />
+                    </Suspense>
+                    <Suspense>
+                      <CatalogueSortSelect />
+                    </Suspense>
+                  </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-      </div>
-      
-      {/* Mobile Brands Grid (visible only on small screens) */}
-      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 mt-6 md:hidden">
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
-          {[
-            { name: "Daikin", slug: "daikin", src: monoLogo("daikin") },
-            { name: "Mitsubishi", slug: "mitsubishi-electric", src: monoLogo("mitsubishi-electric") },
-            { name: "Fujitsu", slug: "fujitsu", src: monoLogo("fujitsu") },
-            { name: "Gree", slug: "gree", src: monoLogo("gree") },
-            { name: "Panasonic", slug: "panasonic", src: monoLogo("panasonic") },
-            { name: "LG", slug: "lg", src: monoLogo("lg") },
-            { name: "Samsung", slug: "samsung", src: monoLogo("samsung") },
-            { name: "Tosot", slug: "tosot", src: monoLogo("tosot") },
-          ].filter((b) => b.src).map((brand) => (
-            <Link 
-              key={brand.slug} 
-              href={`/thermopompes?brand=${brand.slug}`}
-              className="bg-white border border-gray-200 rounded-md p-1 flex items-center justify-center h-[55px] hover:bg-gray-50 transition-colors"
-            >
-              <div className="w-full h-full flex items-center justify-center">
-                <Image src={brand.src ?? ""} alt={brand.name} width={180} height={65} sizes="180px" className="max-w-full max-h-full object-contain w-auto h-auto" />
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
 
-      {/* Cible de la recherche du héros (Entrée / loupe) : on descend jusqu’ici. */}
-      <div id="catalogue-resultats" className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 py-10 sm:py-14" style={{ scrollMarginTop: 96 }}>
-        {/* ---- Mobile filter trigger & Sort (Mobile only toolbar) ---- */}
-        <div className="flex sm:hidden items-center justify-between gap-3 mb-6">
-          <Suspense>
-            <MobileFilterDrawer filters={filters} resultCount={resultCount} />
-          </Suspense>
-          <Suspense>
-            <CatalogueSortSelect />
-          </Suspense>
-        </div>
+                <div className="mb-6 empty:hidden">
+                  <Suspense>
+                    <ActiveFilterChips />
+                  </Suspense>
+                </div>
 
-        {/* ---- Main content: sidebar + results ---- */}
-        <div className="flex flex-col lg:flex-row gap-10">
-          
-          {/* Desktop sidebar */}
-          <aside className="hidden lg:block w-72 shrink-0">
-            <div className="sticky top-28">
-              <div className="mb-8">
-                <h2 className="text-[22px] font-bold text-[#172126]">Filtrer</h2>
-                <div className="w-8 h-[2px] bg-[var(--color-accent)] mt-2"></div>
-              </div>
-              <Suspense>
-                <CatalogueFilters filters={filters} />
-              </Suspense>
-            </div>
-          </aside>
-
-          {/* Results */}
-          <div className="flex-1 min-w-0">
-            
-            {/* Desktop Sort & Count */}
-            <div className="hidden sm:flex items-center justify-between border-y border-[#E5E5E5] py-4 mb-8">
-              <p className="text-[15px] font-medium text-[#172126]" aria-live="polite">
-                {resultCount} modèles documentés
-              </p>
-              <div className="flex items-center gap-3">
-                <Suspense>
-                  <CatalogueSortSelect />
-                </Suspense>
+                {resultCount > 0 ? <GalleryGrid products={products} /> : <CatalogueEmpty hasFilters={hasActiveFilters} />}
               </div>
             </div>
 
-            {/* Active filters (if any) */}
-            <div className="mb-6">
-              <Suspense>
-                <ActiveFilterChips />
-              </Suspense>
-            </div>
-
-            {/* Grid */}
-            {resultCount > 0 ? (
-              <div className="flex flex-col gap-10">
-                <CompareSelection products={products} />
+            {resultCount > 0 && totalPages > 1 && (
+              <div className="mt-14">
+                <CataloguePagination page={page} totalPages={totalPages} />
               </div>
-            ) : (
-              <CatalogueEmpty hasFilters={hasActiveFilters} />
             )}
           </div>
         </div>
 
-        {/* Global Pagination centered on the entire page */}
-        {resultCount > 0 && totalPages > 1 && (
-          <div className="mt-12">
-            <CataloguePagination page={page} totalPages={totalPages} />
-          </div>
-        )}
-      </div>
-      <CtaThermoMatch
-        title="Trop de modèles ? Laissez ThermoMatch trier pour vous."
-        text="Répondez à 13 questions sur votre maison. ThermoMatch retient trois machines vraiment adaptées parmi toutes les marques certifiées par Hydro-Québec, sans parti pris."
-      />
+        <CatalogueCta
+          title="Trop de modèles ? Laissez ThermoMatch trier pour vous."
+          text="Répondez à 13 questions sur votre maison. ThermoMatch retient trois machines vraiment adaptées parmi toutes les marques certifiées par Hydro-Québec, sans parti pris."
+        />
+      </MotionRoot>
     </main>
   );
 }

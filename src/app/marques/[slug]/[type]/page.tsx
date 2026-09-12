@@ -4,11 +4,13 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getAllBrandStats, getBrandStats, modelsForBrandKind, type SeoKind } from "@/lib/seo/programmatic";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { JsonLd } from "@/components/seo/SeoBlocks";
 import { productImage } from "@/components/seo/hero/assets";
 import { CalibresHero } from "@/components/heroes-v2/marques/CalibresHero";
 import { monoLogo } from "@/components/heroes-v2/marques/server";
 import { typo } from "@/components/heroes-v2/marques/shared";
+import { Calm } from "@/components/sections-v2/marques/Calm";
+import { CalibresCta, CalibresFaq, CalibresLinks, CalibresNotice, CalibresTable, CalibresTrust } from "@/components/sections-v2/marques/Calibres";
 
 const KINDS: Record<string, { kind: SeoKind; label: string; plural: string; intro: string }> = {
   murales: { kind: "murale", label: "murale", plural: "Thermopompes murales", intro: "sans conduits, une unité intérieure par zone" },
@@ -73,7 +75,7 @@ export default async function BrandKindPage({ params }: { params: Promise<{ slug
   ];
 
   return (
-    <main className="bg-[#f8f5f0] text-[#071d2b]">
+    <main className="mqs-root bg-[#E5EBEE] text-[#0F2233]">
       <JsonLd
         data={[
           getBreadcrumbSchema([
@@ -111,33 +113,39 @@ export default async function BrandKindPage({ params }: { params: Promise<{ slug
           { label: typo("LogisVert jusqu'à"), value: maxLv > 0 ? `${maxLv.toLocaleString("fr-CA")} $` : "—" },
         ]}
       />
-      <TrustStrip />
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <ModelTable models={models} showBrand={false} caption={`Trié par qualité des données certifiées, tenue de capacité à -15 °C, HSPF2 puis subvention. ${models.length - canonical.length > 0 ? `${models.length - canonical.length} fiches sont des variantes de machines vendues aussi sous d'autres marques.` : ""}`} />
-      </section>
-      <Prose>
-        <h2>Choisir le bon calibre {b.name}</h2>
-        <p>
-          La capacité nominale (« 12 000 BTU ») est mesurée à 8 °C. Au Québec, la valeur qui compte est la capacité certifiée à -15 °C, colonne
-          « À -15 °C » du tableau. Une machine surdimensionnée cycle et coûte plus cher ; une machine sous-dimensionnée laisse vos plinthes
-          travailler. <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> calcule votre charge et sélectionne le calibre juste, toutes marques confondues.
-        </p>
-      </Prose>
-      <CtaThermoMatch title={`Quelle ${k.label} ${b.name} pour votre maison?`} />
-      <RelatedLinks
-        title={`Explorer ${b.name}`}
-        links={[
-          { href: `/marques/${slug}`, label: `Toute la gamme ${b.name}` },
-          ...(hasOther ? [{ href: `/marques/${slug}/${otherType}`, label: `${KINDS[otherType].plural} ${b.name}` }] : []),
-          ...(b.maxLogisVert > 0 ? [{ href: `/subventions/logisvert/${slug}`, label: `Subvention LogisVert ${b.name}`, hint: `jusqu'à ${b.maxLogisVert.toLocaleString("fr-CA")} $` }] : []),
-          // Seulement les partenaires qui ont réellement des machines de ce type (sinon la page n'existe pas).
-          ...b.sharedWith
-            .filter((s) => { const p = getBrandStats(s.brandSlug); return p ? (type === "murales" ? p.wallCount : p.centralCount) > 0 : false; })
-            .slice(0, 3)
-            .map((s) => ({ href: `/marques/${s.brandSlug}/${type}`, label: `${k.plural} ${s.brand}`, hint: `${s.count} machines en commun avec ${b.name}` })),
-        ]}
-      />
-      <FaqBlock items={faq} />
+      {/* La suite, en instrument de mesure : étalonnage (sources), relevé des modèles avec mini-règles,
+          notice et thermomètre-règle, appel à ThermoMatch, onglets de liens, questions numérotées. */}
+      <Calm>
+        <CalibresTrust />
+        <CalibresTable
+          models={models}
+          brandName={b.name}
+          kindLabel={k.label}
+          caption={`Trié par qualité des données certifiées, tenue de capacité à -15 °C, HSPF2 puis subvention. ${models.length - canonical.length > 0 ? `${models.length - canonical.length} fiches sont des variantes de machines vendues aussi sous d'autres marques.` : ""}`}
+        />
+        <CalibresNotice title={`Choisir le bon calibre ${b.name}`}>
+          <p>
+            La capacité nominale (« 12 000 BTU ») est mesurée à 8 °C. Au Québec, la valeur qui compte est la capacité certifiée à -15 °C, colonne
+            « À -15 °C » du tableau. Une machine surdimensionnée cycle et coûte plus cher ; une machine sous-dimensionnée laisse vos plinthes
+            travailler. <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> calcule votre charge et sélectionne le calibre juste, toutes marques confondues.
+          </p>
+        </CalibresNotice>
+        <CalibresCta title={`Quelle ${k.label} ${b.name} pour votre maison?`} />
+        <CalibresLinks
+          title={`Explorer ${b.name}`}
+          links={[
+            { href: `/marques/${slug}`, label: `Toute la gamme ${b.name}` },
+            ...(hasOther ? [{ href: `/marques/${slug}/${otherType}`, label: `${KINDS[otherType].plural} ${b.name}` }] : []),
+            ...(b.maxLogisVert > 0 ? [{ href: `/subventions/logisvert/${slug}`, label: `Subvention LogisVert ${b.name}`, hint: `jusqu'à ${b.maxLogisVert.toLocaleString("fr-CA")} $` }] : []),
+            // Seulement les partenaires qui ont réellement des machines de ce type (sinon la page n'existe pas).
+            ...b.sharedWith
+              .filter((s) => { const p = getBrandStats(s.brandSlug); return p ? (type === "murales" ? p.wallCount : p.centralCount) > 0 : false; })
+              .slice(0, 3)
+              .map((s) => ({ href: `/marques/${s.brandSlug}/${type}`, label: `${k.plural} ${s.brand}`, hint: `${s.count} machines en commun avec ${b.name}` })),
+          ]}
+        />
+        <CalibresFaq items={faq} />
+      </Calm>
     </main>
   );
 }

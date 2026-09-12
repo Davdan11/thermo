@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
-import { animate, useReducedMotion } from "motion/react";
+import { animate } from "motion/react";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Petits outils communs aux héros « prix et subventions » (v2).
@@ -38,7 +39,7 @@ export function useAfter(ms: number, enabled = true): boolean {
  * identique serveur/client. La vraie valeur est toujours lue par les lecteurs d'écran.
  */
 export function CountTo({ value, play, duration = 1.4, from = 0, style, className }: { value: number; play: boolean; duration?: number; from?: number; style?: CSSProperties; className?: string }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const [n, setN] = useState(from);
   const cur = useRef(from);
   useEffect(() => {

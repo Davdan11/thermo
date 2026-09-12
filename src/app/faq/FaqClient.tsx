@@ -2,18 +2,9 @@
 // FAQ Client component — re-exported from page.tsx
 
 import { useState } from "react";
-import Link from "next/link";
-
-const T = {
-  ink: "#071b27",
-  inkDeep: "#03141e",
-  ivory: "#f5f1ea",
-  surface: "#faf8f4",
-  text: "#10202d",
-  muted: "#49545b",
-  orange: "#d94b12",
-  border: "rgba(16,32,45,0.14)",
-};
+import { MotionConfig, motion, useMotionValueEvent, useScroll } from "motion/react";
+import { typo } from "@/components/content-hero/typo";
+import { FaqSide, FaqEnd, FQ, FQ_DISPLAY } from "@/components/sections-v2/contenu/FaqSections";
 
 import { FAQ_ITEMS } from "./faqData";
 import { ConversationHero, type FaqHeroItem } from "@/components/heroes-v2/contenu/ConversationHero";
@@ -28,6 +19,13 @@ const HERO_ITEMS: FaqHeroItem[] = FAQ_ITEMS.flatMap((section, ci) =>
     category: section.category,
   }))
 );
+
+// Les réponses marquent l'insistance entre astérisques (*crée*) : affichée en italique, texte inchangé.
+const emphasis = (s: string) =>
+  s.split(/\*([^*]+)\*/g).map((part, k) => (k % 2 ? <em key={k}>{part}</em> : part));
+
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+const VIEW = { once: true, margin: "0px 0px -10% 0px" } as const;
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<string | null>("Général & Fonctionnement-0");
@@ -49,131 +47,153 @@ export default function FAQPage() {
     }, 460);
   };
 
+  // Présentation seulement : thème en cours de lecture (colonne des conversations, à gauche).
+  const [theme, setTheme] = useState(0);
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", () => {
+    let cur = 0;
+    FAQ_ITEMS.forEach((_, ci) => {
+      const el = document.getElementById(`faq-theme-${ci}`);
+      if (el && el.getBoundingClientRect().top < window.innerHeight * 0.4) cur = ci;
+    });
+    setTheme(cur);
+  });
+
   return (
-    <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: T.surface, minHeight: "100vh" }}>
-      
+    <main className="fqs-root cs-sticky-root" style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: FQ.bg, minHeight: "100vh" }}>
+
       {/* ── HÉROS : la conversation (vraies questions en bulles) + barre de rédaction = recherche ── */}
       <ConversationHero items={HERO_ITEMS} themes={FAQ_ITEMS.length} onOpen={openFromHero} />
 
-      {/* ── CONTENT ── */}
-      <section style={{ padding: "clamp(40px, 5vw, 80px) clamp(24px, 5vw, 64px) clamp(80px, 10vw, 120px)" }}>
-        <div className="max-w-[1000px]">
-          {FAQ_ITEMS.map((section) => (
-            <div key={section.category} style={{ marginBottom: "80px" }}>
-              <h2
-                style={{
-                  color: T.ink,
-                  fontSize: "24px",
-                  fontWeight: 750,
-                  letterSpacing: "-0.02em",
-                  margin: "0 0 32px",
-                }}
-              >
-                {section.category}
-              </h2>
-              
-              <div style={{ borderTop: `1px solid ${T.border}` }}>
-                {section.questions.map((item, idx) => {
-                  const id = `${section.category}-${idx}`;
-                  const isOpen = openIndex === id;
-                  const domId = `faq-${FAQ_ITEMS.indexOf(section)}-${idx}`;
+      {/* ── CONTENU : une conversation par thème ── */}
+      <MotionConfig reducedMotion="user">
+        <section style={{ background: FQ.bg, color: FQ.ink }}>
+          <div className="mx-auto grid max-w-[1320px] gap-10 px-4 pb-20 pt-6 sm:px-8 lg:grid-cols-[272px_minmax(0,1fr)] lg:gap-14 lg:px-12 lg:pb-28">
+            <FaqSide
+              themes={FAQ_ITEMS.map((s) => ({ category: s.category, count: s.questions.length, first: s.questions[0]?.q ?? "" }))}
+              active={theme}
+            />
 
-                  return (
-                    <div
-                      key={idx}
-                      id={domId}
-                      style={{ borderBottom: `1px solid ${T.border}`, scrollMarginTop: 110 }}
+            <div className="min-w-0 max-w-[880px]">
+              {FAQ_ITEMS.map((section, ci) => (
+                <div key={section.category} id={`faq-theme-${ci}`} style={{ marginBottom: "72px", scrollMarginTop: 104 }}>
+                  {/* En-tête du fil : le thème, comme la date d'une conversation */}
+                  <motion.div
+                    className="mb-6 flex flex-wrap items-end justify-between gap-x-6 gap-y-2 pb-4"
+                    style={{ borderBottom: `1px solid ${FQ.line}` }}
+                    initial={{ opacity: 0, y: 14 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={VIEW}
+                    transition={{ duration: 0.8, ease: EASE }}
+                  >
+                    <h2
+                      style={{
+                        color: FQ.ink,
+                        fontFamily: FQ_DISPLAY,
+                        fontSize: "clamp(26px, 2.6vw, 36px)",
+                        fontWeight: 600,
+                        letterSpacing: "-0.035em",
+                        lineHeight: 1.05,
+                        margin: 0,
+                      }}
                     >
-                      <button
-                        id={`${domId}-q`}
-                        aria-expanded={isOpen}
-                        onClick={() => toggleOpen(id)}
-                        style={{
-                          width: "100%",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          padding: "32px 0",
-                          background: "none",
-                          border: "none",
-                          textAlign: "left",
-                          cursor: "pointer",
-                          color: T.ink,
-                        }}
-                      >
-                        <span style={{ fontSize: "19px", fontWeight: isOpen ? 700 : 500, color: isOpen ? T.orange : T.ink, paddingRight: "32px", transition: "color 0.2s", lineHeight: 1.4 }}>
-                          {item.q}
-                        </span>
-                        <span style={{ fontSize: "28px", fontWeight: 300, color: isOpen ? T.orange : T.muted, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.3s" }}>
-                          {isOpen ? "−" : "+"}
-                        </span>
-                      </button>
-                      
-                      <div 
-                        style={{
-                          overflow: "hidden",
-                          transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                          maxHeight: isOpen ? "800px" : "0",
-                          opacity: isOpen ? 1 : 0,
-                        }}
-                      >
-                        <div style={{ paddingBottom: "40px", color: T.text, fontSize: "17px", lineHeight: 1.7, maxWidth: "800px" }}>
-                          {item.a}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+                      {typo(section.category)}
+                    </h2>
+                    <span
+                      className="rounded-full px-3.5 py-1 text-[12px] font-medium tabular-nums"
+                      style={{ background: "rgba(255,255,255,0.6)", color: FQ.mute }}
+                    >
+                      {section.questions.length} question{section.questions.length > 1 ? "s" : ""}
+                    </span>
+                  </motion.div>
 
-          {/* CTA */}
-          <div style={{ marginTop: "100px", padding: "64px clamp(32px, 5vw, 64px)", backgroundColor: "white", borderRadius: "8px", border: `1px solid ${T.border}`, textAlign: "center" }}>
-            <h3 style={{ fontSize: "28px", fontWeight: 750, color: T.ink, margin: "0 0 16px", letterSpacing: "-0.02em" }}>Vous avez un projet précis en tête ?</h3>
-            <p style={{ color: T.muted, fontSize: "17px", marginBottom: "40px", maxWidth: "600px", marginInline: "auto", lineHeight: 1.6 }}>
-              Laissez notre outil exclusif ThermoMatch analyser votre maison et vos besoins, et obtenez des recommandations de modèles exactes pour votre situation.
-            </p>
-            <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
-              <Link
-                href="/trouver-ma-thermopompe"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  height: "56px",
-                  padding: "0 32px",
-                  backgroundColor: T.orange,
-                  color: "white",
-                  textDecoration: "none",
-                  fontWeight: 600,
-                  fontSize: "15px",
-                  borderRadius: "4px",
-                }}
-              >
-                Essayer ThermoMatch
-              </Link>
-              <Link
-                href="/contact"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  height: "56px",
-                  padding: "0 32px",
-                  backgroundColor: "transparent",
-                  color: T.ink,
-                  border: `1px solid ${T.border}`,
-                  textDecoration: "none",
-                  fontWeight: 600,
-                  fontSize: "15px",
-                  borderRadius: "4px",
-                }}
-              >
-                Nous contacter
-              </Link>
+                  <div className="flex flex-col gap-2.5">
+                    {section.questions.map((item, idx) => {
+                      const id = `${section.category}-${idx}`;
+                      const isOpen = openIndex === id;
+                      const domId = `faq-${FAQ_ITEMS.indexOf(section)}-${idx}`;
+
+                      return (
+                        <div
+                          key={idx}
+                          id={domId}
+                          style={{ scrollMarginTop: 110 }}
+                        >
+                          {/* Question du visiteur : bulle à droite (encre quand elle est ouverte) */}
+                          <motion.div
+                            className="flex justify-end"
+                            initial={{ opacity: 0, scale: 0.7, y: 12 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                            viewport={VIEW}
+                            transition={{ type: "spring", stiffness: 300, damping: 24, delay: Math.min(idx, 6) * 0.06 }}
+                            style={{ transformOrigin: "100% 100%" }}
+                          >
+                            <button
+                              id={`${domId}-q`}
+                              aria-expanded={isOpen}
+                              aria-controls={`${domId}-a`}
+                              onClick={() => toggleOpen(id)}
+                              className="fqs-q flex max-w-[92%] items-start gap-4 px-5 py-3.5 text-left sm:max-w-[78%] sm:px-6 sm:py-4"
+                              style={{
+                                background: isOpen ? FQ.ink : FQ.white,
+                                color: isOpen ? FQ.white : FQ.ink,
+                                border: 0,
+                                borderRadius: "24px 24px 8px 24px",
+                                cursor: "pointer",
+                              }}
+                            >
+                              <span style={{ fontSize: "clamp(16px, 1.2vw, 17.5px)", fontWeight: 500, lineHeight: 1.4 }}>
+                                {typo(item.q)}
+                              </span>
+                              <span aria-hidden="true" className="cs-plus mt-[5px]" style={{ color: isOpen ? "rgba(255,255,255,0.7)" : FQ.faint }} />
+                            </button>
+                          </motion.div>
+
+                          {/* Réponse du site : bulle blanche à gauche, toujours présente dans le DOM */}
+                          <motion.div
+                            id={`${domId}-a`}
+                            role="region"
+                            aria-labelledby={`${domId}-q`}
+                            inert={!isOpen}
+                            initial={false}
+                            animate={isOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                            transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                            style={{ overflow: "hidden" }}
+                          >
+                            <div className="flex flex-col items-start pb-3 pt-3">
+                              <span className="mb-1.5 ml-4 text-[11.5px] font-semibold" style={{ color: FQ.faint }}>
+                                Thermopompes À Vendre.ca
+                              </span>
+                              <motion.div
+                                className="max-w-[94%] px-5 py-4 text-[16px] leading-[1.68] sm:max-w-[84%] sm:px-7 sm:py-5 sm:text-[16.5px]"
+                                style={{
+                                  background: FQ.white,
+                                  color: FQ.text,
+                                  borderRadius: "26px 26px 26px 8px",
+                                  transformOrigin: "0% 100%",
+                                  boxShadow: "0 1px 0 rgba(23,21,43,0.04), 0 22px 44px -34px rgba(23,21,43,0.45)",
+                                }}
+                                initial={false}
+                                animate={isOpen ? { scale: 1, y: 0 } : { scale: 0.86, y: 10 }}
+                                transition={{ type: "spring", stiffness: 280, damping: 24 }}
+                              >
+                                {emphasis(typo(item.a))}
+                              </motion.div>
+                            </div>
+                          </motion.div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+
+              {/* CTA : le dernier message du site, avec deux réponses rapides */}
+              <FaqEnd />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </MotionConfig>
     </main>
   );
 }

@@ -1,16 +1,17 @@
-/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
+import { createMetadata, getBreadcrumbSchema, getFaqPageSchema, getItemListSchema } from "@/lib/seo";
 import { getLandingPage, getLandingPages, type LandingPage } from "@/lib/seo/landings";
 import { getCapacityClass, getCapacityClasses, getRanking, type CapacityClass } from "@/lib/seo/programmatic";
 import { estimateLoad } from "@/lib/thermomatch/sizing";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { JsonLd } from "@/components/seo/SeoBlocks";
 import { AtelierHero } from "@/components/heroes-v2/marques/AtelierHero";
 import { PlaqueHero } from "@/components/heroes-v2/plaque/PlaqueHero";
 import { buildPlaque } from "@/components/heroes-v2/plaque/data";
 import { typo } from "@/components/heroes-v2/marques/shared";
+import { GuideSections } from "@/components/sections-v2/atelier/GuideSections";
+import { CapacitySections } from "@/components/sections-v2/atelier/CapacitySections";
+import { toPartRows } from "@/components/sections-v2/atelier/data";
 import type { GuideVariant } from "@/components/seo/hero/types";
 
 export const dynamicParams = false;
@@ -88,7 +89,7 @@ function LandingView({ page }: { page: LandingPage }) {
   const classes = getCapacityClasses();
 
   return (
-    <main className="bg-[#f8f5f0] text-[#071d2b]">
+    <main className="bg-[#0D3B66] text-[#071d2b]">
       <JsonLd
         data={getBreadcrumbSchema([
           { name: "Accueil", url: "/" },
@@ -96,6 +97,7 @@ function LandingView({ page }: { page: LandingPage }) {
           { name: page.h1, url: `/thermopompes/${page.slug}` },
         ])}
       />
+      {faq.length > 0 && <JsonLd data={getFaqPageSchema(faq)} />}
       {/* Héros « Plan d'atelier » : planche technique du système, titre dans le cartouche. */}
       <AtelierHero
         eyebrow={typo(page.pageType)}
@@ -104,90 +106,22 @@ function LandingView({ page }: { page: LandingPage }) {
         crumbs={[{ label: "Thermopompes", href: "/thermopompes" }, { label: typo(page.h1) }]}
         variant={GUIDE_VARIANT[page.slug] ?? "catalogue"}
       />
-      <TrustStrip />
-      <Prose>
-        {cb.intro && <p className="text-[18px]">{cb.intro}</p>}
-
-        {cb.benefits.length > 0 && (
-          <>
-            <h2>Ce qu'il faut savoir</h2>
-            {cb.benefits.map((b) => (
-              <div key={b.title}>
-                <h3>{b.title}</h3>
-                <p>{b.desc}</p>
-              </div>
-            ))}
-          </>
-        )}
-
-        {cb.steps.length > 0 && (
-          <>
-            <h2>Les étapes d'un projet réussi</h2>
-            <ol className="list-decimal pl-6 mb-4 space-y-2">
-              {cb.steps.map((s) => (
-                <li key={s.title}>
-                  <strong>{s.title}.</strong> {s.desc}
-                </li>
-              ))}
-            </ol>
-          </>
-        )}
-
-        {(cb.forWho.length > 0 || cb.notForWho.length > 0) && (
-          <>
-            <h2>Pour qui, et pour qui pas</h2>
-            {cb.forWho.length > 0 && (
-              <>
-                <h3>Un bon choix si</h3>
-                <ul>{cb.forWho.map((x) => <li key={x}>{x}</li>)}</ul>
-              </>
-            )}
-            {cb.notForWho.length > 0 && (
-              <>
-                <h3>À reconsidérer si</h3>
-                <ul>{cb.notForWho.map((x) => <li key={x}>{x}</li>)}</ul>
-              </>
-            )}
-          </>
-        )}
-
-        {cb.grants.length > 0 && (
-          <>
-            <h2>Subventions applicables</h2>
-            {cb.grants.map((g) => (
-              <div key={g.name}>
-                <h3>{g.name}</h3>
-                <p>
-                  {g.conditions}
-                  {g.source && (
-                    <>
-                      {" "}
-                      <a href={g.source} rel="noopener noreferrer nofollow" target="_blank">Source officielle</a>.
-                    </>
-                  )}
-                </p>
-              </div>
-            ))}
-            <p>
-              Les montants LogisVert exacts par appareil sont dans notre <Link href="/subventions/logisvert">tableau par marque</Link>, tiré de la liste
-              officielle d'Hydro-Québec et mis à jour automatiquement.
-            </p>
-          </>
-        )}
-      </Prose>
-
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-4">
-        <h2 className="text-[26px] font-bold text-[#172126] mb-2">Les machines les plus performantes par grand froid</h2>
-        <p className="text-[#536873] mb-5">Classement sur le COP certifié à -15 °C, toutes marques confondues.</p>
-        <ModelTable models={cold.models} showRank metric={{ label: cold.def.metricLabel, value: cold.def.value }} />
-        <p className="mt-3 text-sm"><Link href="/meilleures-thermopompes" className="text-[#e54b17] font-semibold">Tous les classements →</Link></p>
-      </section>
-
-      <CtaThermoMatch />
-
-      <RelatedLinks title="Par capacité" links={classes.map((c) => ({ href: `/thermopompes/${c.slug}`, label: `Thermopompe ${c.label}`, hint: `${c.models.length} machines` }))} />
-      <RelatedLinks title="Voir aussi" links={cb.relatedLinks.map((l) => ({ href: l.href, label: l.label }))} />
-      <FaqBlock items={faq} />
+      {/* Suite en planches numérotées : feuilles de papier, montage, nomenclature, index, notes. */}
+      <GuideSections
+        d={{
+          doc: typo(page.pageType),
+          intro: typo(cb.intro),
+          benefits: cb.benefits.map((b) => ({ title: typo(b.title), desc: typo(b.desc) })),
+          steps: cb.steps.map((s) => ({ title: typo(s.title), desc: typo(s.desc) })),
+          forWho: cb.forWho.map(typo),
+          notForWho: cb.notForWho.map(typo),
+          grants: cb.grants.map((g) => ({ name: typo(g.name), conditions: typo(g.conditions), source: g.source ?? null })),
+          cold: { rows: toPartRows(cold.models, cold.def.value), metricLabel: typo(cold.def.metricLabel) },
+          capacities: classes.map((c) => ({ href: `/thermopompes/${c.slug}`, label: `Thermopompe ${c.label}`, btu: c.btu, count: c.models.length })),
+          related: cb.relatedLinks.map((l) => ({ href: l.href, label: typo(l.label) })),
+          faq: faq.map((f) => ({ question: typo(f.question), answer: typo(f.answer) })),
+        }}
+      />
     </main>
   );
 }
@@ -241,7 +175,7 @@ function CapacityView({ cap }: { cap: CapacityClass }) {
   ];
 
   return (
-    <main className="bg-[#f8f5f0] text-[#071d2b]">
+    <main className="bg-[#E7E6E1] text-[#071d2b]">
       <JsonLd
         data={[
           getBreadcrumbSchema([
@@ -252,6 +186,7 @@ function CapacityView({ cap }: { cap: CapacityClass }) {
           getItemListSchema({ name: `Thermopompes ${cap.label}`, items: cap.models.slice(0, 50).map((m) => ({ name: `${m.brand} ${m.name}`, url: `/produit/${m.canonicalSlug}` })) }),
         ]}
       />
+      <JsonLd data={getFaqPageSchema(faq)} />
       {/* Héros « Plaque signalétique » : les chiffres de la classe poinçonnés sur une plaque d'aluminium. */}
       <PlaqueHero
         d={buildPlaque({
@@ -274,45 +209,30 @@ function CapacityView({ cap }: { cap: CapacityClass }) {
           answer: `${cap.models.length} thermopompes ${cap.label} de ${brands.length} marques sont vendues au Québec : ${walls.length} murales et ${centrals.length} centrales. ${h5Values.length ? `Leur capacité certifiée à -15 °C va de ${h5Min.toLocaleString("fr-CA")} à ${h5Max.toLocaleString("fr-CA")} BTU/h` : "La capacité certifiée à -15 °C n'est pas publiée pour toutes"}${cap.maxLogisVert > 0 ? `, avec une subvention LogisVert jusqu'à ${cap.maxLogisVert.toLocaleString("fr-CA")} $` : ""}. Convient en général à une maison de ${area.min.toLocaleString("fr-CA")} à ${area.max.toLocaleString("fr-CA")} pi², selon l'isolation.`,
         })}
       />
-      <TrustStrip />
-      <Prose>
-        <h2>« {cap.label} » ne veut pas dire {cap.label} en hiver</h2>
-        <p>
-          La capacité nominale est mesurée à 8 °C. Au Québec, ce qui compte est la capacité certifiée à -15 °C : dans cette classe, elle va de{" "}
-          {h5Values.length ? <><strong>{h5Min.toLocaleString("fr-CA")}</strong> à <strong>{h5Max.toLocaleString("fr-CA")} BTU/h</strong></> : "valeurs non publiées"} selon la machine.
-          Deux « {cap.label} » peuvent donc chauffer très différemment quand il fait froid.
-        </p>
-        <p>
-          Pour une maison unifamiliale standard, une {cap.label} convient à environ {area.min.toLocaleString("fr-CA")} à {area.max.toLocaleString("fr-CA")} pi². Ce repère vient du
-          calcul de charge de <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> (15 BTU/h par pi², ajusté selon l'âge, l'isolation, la fenestration et le sous-sol) et doit être
-          confirmé sur place par un calcul CSA F280.
-        </p>
-      </Prose>
-      {walls.length > 0 && (
-        <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-10">
-          <h2 className="text-[26px] font-bold text-[#172126] mb-4">Murales {cap.label}</h2>
-          <ModelTable models={walls} caption="Triées par qualité des données certifiées, tenue de capacité au froid, HSPF2 puis subvention." />
-        </section>
-      )}
-      {centrals.length > 0 && (
-        <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-10">
-          <h2 className="text-[26px] font-bold text-[#172126] mb-4">Centrales {cap.label}</h2>
-          <ModelTable models={centrals} />
-        </section>
-      )}
-      <CtaThermoMatch title={`Une ${cap.label} est-elle le bon calibre pour votre maison?`} />
-      <RelatedLinks
-        title="Autres capacités"
-        links={[
-          ...(prev ? [{ href: `/thermopompes/${prev.slug}`, label: `Thermopompe ${prev.label}`, hint: "calibre inférieur" }] : []),
-          ...(next ? [{ href: `/thermopompes/${next.slug}`, label: `Thermopompe ${next.label}`, hint: "calibre supérieur" }] : []),
-          { href: "/meilleures-thermopompes", label: "Classements sur données certifiées" },
-          { href: "/thermopompes/thermopompe-murale", label: "Guide : thermopompe murale" },
-          { href: "/thermopompes/thermopompe-centrale", label: "Guide : thermopompe centrale" },
-          { href: "/subventions/logisvert", label: "LogisVert par marque" },
-        ]}
+      {/* Suite en plaques rivetées : conformité, grand froid, plaques de caractéristiques, étiquette, renvois, notice. */}
+      <CapacitySections
+        d={{
+          label: cap.label,
+          btu: cap.btu,
+          nominal: cap.btu.toLocaleString("fr-CA"),
+          h5: h5Values.length ? { min: h5Min.toLocaleString("fr-CA"), max: h5Max.toLocaleString("fr-CA"), minN: h5Min, maxN: h5Max } : null,
+          certified: certified.length.toLocaleString("fr-CA"),
+          area: { min: area.min.toLocaleString("fr-CA"), max: area.max.toLocaleString("fr-CA") },
+          walls: toPartRows(walls),
+          centrals: toPartRows(centrals),
+          wallsCaption: "Triées par qualité des données certifiées, tenue de capacité au froid, HSPF2 puis subvention.",
+          ctaTitle: typo(`Une ${cap.label} est-elle le bon calibre pour votre maison?`),
+          related: [
+            ...(prev ? [{ href: `/thermopompes/${prev.slug}`, label: `Thermopompe ${prev.label}`, hint: "calibre inférieur" }] : []),
+            ...(next ? [{ href: `/thermopompes/${next.slug}`, label: `Thermopompe ${next.label}`, hint: "calibre supérieur" }] : []),
+            { href: "/meilleures-thermopompes", label: "Classements sur données certifiées" },
+            { href: "/thermopompes/thermopompe-murale", label: "Guide : thermopompe murale" },
+            { href: "/thermopompes/thermopompe-centrale", label: "Guide : thermopompe centrale" },
+            { href: "/subventions/logisvert", label: "LogisVert par marque" },
+          ].map((l) => ({ ...l, label: typo(l.label) })),
+          faq: faq.map((f) => ({ question: typo(f.question), answer: typo(f.answer) })),
+        }}
       />
-      <FaqBlock items={faq} />
     </main>
   );
 }

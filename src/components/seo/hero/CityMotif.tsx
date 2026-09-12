@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Caption, EASE, K, Parallax, deg } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Page ville : échelle de froid verticale. La colonne descend jusqu'à
@@ -13,7 +14,7 @@ import { Caption, EASE, K, Parallax, deg } from "./parts";
 type Mark = { t: number; label: string; main?: boolean };
 
 export function CityMotif({ city, designTempC, janMeanC, janMinC, extremeMinC, extremeMinYear, source }: { city: string; designTempC: number; janMeanC: number | null; janMinC: number | null; extremeMinC: number | null; extremeMinYear: number | null; source: string | null }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const marks: Mark[] = [
     ...(janMeanC !== null ? [{ t: janMeanC, label: "Moyenne de janvier" }] : []),
     ...(janMinC !== null ? [{ t: janMinC, label: "Nuits de janvier, en moyenne" }] : []),

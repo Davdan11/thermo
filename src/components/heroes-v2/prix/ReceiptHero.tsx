@@ -3,10 +3,11 @@
 import "./prix-v2.css";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
-import { animate, motion, steps, useInView, useMotionValue, useReducedMotion } from "motion/react";
+import { animate, motion, steps, useInView, useMotionValue } from "motion/react";
 import type { RangeSet } from "@/components/product/hero/prix-sets";
 import { DISPLAY, MONO, plexMono } from "./fonts";
 import { CountTo, EASE, fr, useAfter } from "./shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    /prix — « Le reçu ».
@@ -26,7 +27,7 @@ const RULE = "rgba(27,27,27,0.16)";
 type Stat = { value: number; label: string };
 
 export function ReceiptHero({ crumbs, sets, stats, consulted, footnote }: { crumbs: ReactNode; sets: RangeSet[]; stats: Stat[]; consulted: string; footnote: string }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const play = useAfter(1250);
   // Le titre s'imprime lui aussi : révélé de gauche à droite, par à-coups de tête d'impression.
   const printIn = (delay: number) =>
@@ -150,7 +151,7 @@ export function ReceiptHero({ crumbs, sets, stats, consulted, footnote }: { crum
    ------------------------------------------------------------------ */
 
 function Printer({ sets, stats, consulted, footnote }: { sets: RangeSet[]; stats: Stat[]; consulted: string; footnote: string }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const box = useRef<HTMLDivElement>(null);
   const paper = useRef<HTMLDivElement>(null);
   const inView = useInView(box, { once: true, margin: "0px 0px -12% 0px" });

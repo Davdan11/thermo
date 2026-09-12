@@ -36,33 +36,34 @@ export function CataloguePagination({ page, totalPages }: CataloguePaginationPro
   }
   for (let i = startPage; i <= endPage; i++) pages.push(i);
 
-  const btn = "w-11 h-11 inline-flex items-center justify-center border rounded-md text-sm font-medium transition-colors";
-  const nav = "w-[105px] inline-flex items-center justify-center py-2 border border-input-border rounded-md text-sm font-medium hover:bg-surface transition-colors";
+  const btn = "catg-pill w-11 h-11 inline-flex items-center justify-center rounded-full border text-sm font-medium tabular-nums";
+  const idle = "border-[#0A1419]/12 bg-white text-[#0A1419] hover:border-[#0A1419]";
+  const nav = "catg-pill catg-link inline-flex h-11 items-center justify-center gap-2 rounded-full border border-[#0A1419]/12 bg-white px-5 text-sm font-medium text-[#0A1419] hover:border-[#0A1419]";
 
   return (
-    <nav aria-label="Pagination du catalogue" className="flex items-center justify-center gap-2 mt-8 mb-12">
+    <nav aria-label="Pagination du catalogue" className="mt-8 mb-4 flex flex-wrap items-center justify-center gap-2">
       {page > 1 ? (
         <Link href={hrefFor(page - 1)} rel="prev" className={nav} scroll>
           Précédent
         </Link>
       ) : (
-        <span className={cn(nav, "opacity-50")} aria-disabled="true">Précédent</span>
+        <span className={cn(nav, "opacity-40")} aria-disabled="true">Précédent</span>
       )}
 
       {startPage > 1 && (
         <>
-          <Link href={hrefFor(1)} className={cn(btn, "border-input-border hover:bg-surface text-foreground")}>1</Link>
-          {startPage > 2 && <span className="px-2 text-foreground/50">…</span>}
+          <Link href={hrefFor(1)} className={cn(btn, idle)}>1</Link>
+          {startPage > 2 && <span className="px-1 text-[#0A1419]/45">…</span>}
         </>
       )}
 
       {pages.map((p) =>
         p === page ? (
-          <span key={p} aria-current="page" className={cn(btn, "border-[var(--color-accent)] bg-[var(--color-accent)] text-white")}>
+          <span key={p} aria-current="page" className={cn(btn, "border-[#E54B17] bg-[#E54B17] text-white shadow-[0_12px_24px_-12px_rgba(229,75,23,0.7)]")}>
             {p}
           </span>
         ) : (
-          <Link key={p} href={hrefFor(p)} className={cn(btn, "border-input-border hover:bg-surface text-foreground")}>
+          <Link key={p} href={hrefFor(p)} className={cn(btn, idle)}>
             {p}
           </Link>
         ),
@@ -70,8 +71,8 @@ export function CataloguePagination({ page, totalPages }: CataloguePaginationPro
 
       {endPage < totalPages && (
         <>
-          {endPage < totalPages - 1 && <span className="px-2 text-foreground/50">…</span>}
-          <Link href={hrefFor(totalPages)} className={cn(btn, "border-input-border hover:bg-surface text-foreground")}>{totalPages}</Link>
+          {endPage < totalPages - 1 && <span className="px-1 text-[#0A1419]/45">…</span>}
+          <Link href={hrefFor(totalPages)} className={cn(btn, idle)}>{totalPages}</Link>
         </>
       )}
 
@@ -80,7 +81,7 @@ export function CataloguePagination({ page, totalPages }: CataloguePaginationPro
           Suivant
         </Link>
       ) : (
-        <span className={cn(nav, "opacity-50")} aria-disabled="true">Suivant</span>
+        <span className={cn(nav, "opacity-40")} aria-disabled="true">Suivant</span>
       )}
     </nav>
   );

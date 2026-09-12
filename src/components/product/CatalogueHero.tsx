@@ -4,9 +4,10 @@ import "./catalogue-hero.css";
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Snowfall } from "@/components/home/Snowfall";
 import { CountUp } from "@/components/home/premium/shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Héros du catalogue (/thermopompes), version premium.
@@ -198,7 +199,7 @@ function Tile({ item, dup, small = false }: { item: WallItem; dup: boolean; smal
 }
 
 function Line({ i, children }: { i: number; children: ReactNode }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.14em", marginBottom: "-0.14em" }}>
       <motion.span style={{ display: "block" }} initial={reduce ? false : { y: "115%" }} animate={{ y: "0%" }} transition={{ duration: 1.15, ease: EASE, delay: 0.25 + i * 0.1 }}>
@@ -209,7 +210,7 @@ function Line({ i, children }: { i: number; children: ReactNode }) {
 }
 
 function Fade({ delay, className, style, children }: { delay: number; className?: string; style?: CSSProperties; children: ReactNode }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <motion.div className={className} style={style} initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay }}>
       {children}

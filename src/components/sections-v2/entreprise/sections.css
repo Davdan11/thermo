@@ -1,0 +1,99 @@
+/* ==================================================================
+   Sections v2 des pages « entreprise » (sous les héros v2).
+   Préfixe xs-. Même mono que les héros (--font-xe-mono, posée par
+   xeMono.variable sur chaque racine .xs-root).
+   ================================================================== */
+
+/* L'en-tête du site est sticky : le overflow-x: hidden global l'en empêcherait. */
+html:has(.xs-root), body:has(.xs-root) { overflow-x: clip; }
+
+.xs-root { font-family: var(--font-display), var(--font-sans), sans-serif; }
+.xs-mono { font-family: var(--font-xe-mono), ui-monospace, SFMono-Regular, Menlo, monospace; }
+.xs-serif { font-family: var(--font-serif), "Times New Roman", serif; font-weight: 400; }
+
+/* Lien souligné qui se trace au survol. */
+.xs-under { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.xs-under:hover, .xs-under:focus-visible { background-size: 100% 1px; }
+.xs-under-on { background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.xs-under-on:hover { background-size: 0% 1px; background-position: 100% 100%; }
+
+/* Flèche qui glisse au survol du parent. */
+.xs-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+:is(a, button, label):hover .xs-arrow, :is(a, button):focus-visible .xs-arrow { transform: translateX(4px); }
+
+/* Défilement continu (bandeau) : deux copies, la seconde aria-hidden. */
+.xs-marquee { display: flex; width: max-content; animation: xs-marquee var(--xs-marquee-s, 48s) linear infinite; }
+.xs-marquee:hover { animation-play-state: paused; }
+@keyframes xs-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Palettes du tableau des départs. */
+.xs-flap { display: inline-block; transform-origin: 50% 50%; animation: xs-flap 0.11s ease-out; backface-visibility: hidden; }
+@keyframes xs-flap { from { transform: rotateX(-85deg); opacity: 0.35; } to { transform: rotateX(0deg); opacity: 1; } }
+.xs-tile { position: relative; }
+.xs-tile::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(0, 0, 0, 0.55); pointer-events: none; }
+
+/* Lignes en attente (espace installateur). */
+.xs-wait { background: linear-gradient(90deg, #e7eaee 0%, #f3f5f7 50%, #e7eaee 100%); background-size: 200% 100%; animation: xs-wait 2.8s ease-in-out infinite; }
+@keyframes xs-wait { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+.xs-pulse { animation: xs-pulse 2.2s ease-in-out infinite; }
+@keyframes xs-pulse { 50% { opacity: 0.3; } }
+.xs-blink { animation: xs-blink 1.2s steps(1) infinite; }
+@keyframes xs-blink { 50% { opacity: 0; } }
+
+/* ---------- Champs de formulaire (focus visible maison, sans le carré global) ---------- */
+.xs-field { transition: border-color 0.25s ease, box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s ease; }
+.xs-field::placeholder { color: var(--xs-ph, rgba(0, 0, 0, 0.42)); opacity: 1; }
+
+/* Contact : bloc orange qui pousse derrière le champ. */
+.xs-ct-field { border: 2px solid #0e1417; background: #fff; color: #0e1417; }
+.xs-ct-field:hover { border-color: #56606a; }
+.xs-ct-field:focus, .xs-ct-field:focus-visible { border-color: #0e1417; box-shadow: 6px 6px 0 0 #e54b17; background: #fff; }
+.xs-ct-field:user-invalid { border-color: #b42318; box-shadow: 6px 6px 0 0 rgba(180, 35, 24, 0.22); }
+
+/* Partenaires : ligne de formulaire tapée à la machine. */
+.xs-pf-field { border: 0; border-bottom: 1.5px solid rgba(31, 58, 95, 0.35); background: rgba(31, 58, 95, 0.035); color: #1f3a5f; border-radius: 3px 3px 0 0; }
+.xs-pf-field:hover { background: rgba(31, 58, 95, 0.06); }
+.xs-pf-field:focus, .xs-pf-field:focus-visible { border-bottom-color: #e54b17; background: #fff; box-shadow: 0 2px 0 0 #e54b17, 0 0 0 2px rgba(31, 58, 95, 0.28); }
+.xs-pf-field:user-invalid { border-bottom-color: #b42318; }
+
+/* Rendez-vous : papier de calendrier. */
+.xs-rv-field { border: 1.5px solid #e3cbbb; background: #fffcf9; color: #1b1512; border-radius: 10px; }
+.xs-rv-field:hover { border-color: #c9a894; }
+.xs-rv-field:focus, .xs-rv-field:focus-visible { border-color: #1b1512; box-shadow: 0 0 0 3px rgba(229, 75, 23, 0.35); }
+.xs-rv-field[aria-invalid="true"] { border-color: #b42318; background: #fff7f5; }
+
+/* Cartes à choix (radio masqué) : le focus clavier se voit sur la carte. */
+.xs-opt:has(input:focus-visible) { box-shadow: 0 0 0 3px #1b1512, 0 0 0 6px rgba(229, 75, 23, 0.45); }
+/* Boutons et liens maison : anneau net, sans carré global décalé. */
+.xs-ring:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+.xs-ring-dark:focus-visible { outline: 3px solid #1b1512; outline-offset: 3px; }
+.xs-ring-ice:focus-visible { outline: 3px solid #eef3f8; outline-offset: 3px; }
+.xs-ring-orange:focus-visible { outline: 3px solid #e54b17; outline-offset: 3px; }
+
+/* Cases à cocher dans nos couleurs (le reste du style vient de globals.css). */
+.xs-check-orange:checked { background-color: #e54b17 !important; border-color: #e54b17 !important; }
+.xs-check-orange { border-color: #0e1417 !important; }
+.xs-check-orange:focus-visible { outline: 3px solid #0e1417 !important; outline-offset: 3px; }
+.xs-check-rv:checked { background-color: #e54b17 !important; border-color: #e54b17 !important; }
+.xs-check-rv { border-color: #a8958a !important; background-color: #fffcf9; }
+.xs-check-rv[aria-invalid="true"] { border-color: #b42318 !important; }
+.xs-check-rv:focus-visible { outline: 3px solid #1b1512 !important; outline-offset: 3px; }
+
+/* Rangée du tableau des départs. */
+.xs-board-row { transition: background-color 0.35s ease; }
+.xs-board-row:hover { background-color: rgba(255, 244, 236, 0.045); }
+
+/* Surligneur (partenaires). */
+.xs-mark { background-image: linear-gradient(transparent 58%, rgba(229, 75, 23, 0.32) 58%, rgba(229, 75, 23, 0.32) 92%, transparent 92%); background-repeat: no-repeat; background-size: 0% 100%; transition: background-size 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.xs-mark[data-on="true"] { background-size: 100% 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .xs-marquee, .xs-flap, .xs-wait, .xs-pulse, .xs-blink { animation: none; }
+  .xs-mark { transition: none; }
+}
+
+/* Lettrine (à propos) : la vraie première lettre, agrandie. */
+.xs-dropcap::first-letter { float: left; font-family: var(--font-serif), "Times New Roman", serif; font-weight: 400; font-size: 4.6em; line-height: 0.8; margin: 0.08em 0.12em 0 0; color: #b5523b; }
+
+/* Champ en erreur et au focus : bord rouge conservé, le bloc orange du focus reste visible. */
+.xs-ct-field:user-invalid:focus { border-color: #b42318; box-shadow: 6px 6px 0 0 #e54b17; }

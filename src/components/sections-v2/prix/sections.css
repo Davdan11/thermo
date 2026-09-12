@@ -1,0 +1,156 @@
+/* ==================================================================
+   Sections v2 « prix et subventions » (préfixe ps2-).
+   ================================================================== */
+
+/* overflow-x: hidden global casse position: sticky ; clip ne crée pas de conteneur de défilement. */
+html:has(.ps2-root), body:has(.ps2-root) { overflow-x: clip; }
+.ps2-root { overflow-x: clip; }
+
+/* ---------- Papier : bords déchirés en haut et en bas ---------- */
+.ps2-zz {
+  -webkit-mask:
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / 14px 51% repeat-x,
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 14px 51% repeat-x;
+  mask:
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / 14px 51% repeat-x,
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 14px 51% repeat-x;
+}
+.ps2-zz-b {
+  -webkit-mask:
+    linear-gradient(#000, #000) top / 100% 51% no-repeat,
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 14px 51% repeat-x;
+  mask:
+    linear-gradient(#000, #000) top / 100% 51% no-repeat,
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 14px 51% repeat-x;
+}
+
+/* ---------- Papier listing à entraînement : trous d'entraînement ---------- */
+.ps2-feed {
+  background-image: radial-gradient(circle at 50% 50%, var(--hole, #FAF8F3) 0 4.6px, rgba(27,27,27,0.22) 5px, transparent 5.8px);
+  background-size: 100% 24px;
+  background-repeat: repeat-y;
+  background-position: 50% 12px;
+}
+
+/* ---------- Grand livre : bandes, survol encré ---------- */
+.ps2-ledger tbody tr { transition: background-color .25s, color .25s; }
+.ps2-ledger tbody th { background-color: #FFFEFB; transition: background-color .25s; }
+.ps2-ledger tbody tr:nth-child(even), .ps2-ledger tbody tr:nth-child(even) th { background-color: #F6F4EE; }
+.ps2-ledger tbody tr:hover, .ps2-ledger tbody tr:hover th { background-color: #1B1B1B; color: #FAF8F3; }
+.ps2-ledger tbody tr:hover .ps2-sub { color: rgba(250,248,243,0.66); }
+.ps2-ledger tbody tr:hover .ps2-der { border-color: rgba(250,248,243,0.5); color: #FAF8F3; }
+.ps2-ledger tbody tr .ps2-caret { opacity: 0; transform: translateX(-4px); transition: opacity .25s, transform .25s; display: inline-block; }
+.ps2-ledger tbody tr:hover .ps2-caret { opacity: 1; transform: none; }
+
+/* ---------- Perforation ---------- */
+.ps2-perf { position: relative; height: 0; border-top: 2px dashed currentColor; }
+.ps2-perf::before, .ps2-perf::after { content: ""; position: absolute; top: -11px; width: 20px; height: 20px; border-radius: 50%; background: var(--notch, #FAF8F3); }
+.ps2-perf::before { left: -10px; }
+.ps2-perf::after { right: -10px; }
+
+/* ---------- Tampon ---------- */
+.ps2-stamp {
+  border: 2.5px solid currentColor; outline: 1px solid currentColor; outline-offset: 3px; border-radius: 4px; mix-blend-mode: multiply;
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='80'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.3' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.1'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='80'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.3' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.1'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* ---------- Liens soulignés ---------- */
+.ps2-uline { background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; transition: background-size .35s cubic-bezier(.22,1,.36,1); padding-bottom: 2px; }
+.ps2-uline:hover { background-size: 0% 1px; background-position: 100% 100%; }
+
+/* ---------- Boutons ---------- */
+.ps2-btn { transition: transform .3s cubic-bezier(.22,1,.36,1), background-color .3s, color .3s, box-shadow .3s; }
+.ps2-btn:hover { transform: translateY(-2px); }
+.ps2-btn .ps2-arrow { display: inline-block; transition: transform .3s cubic-bezier(.22,1,.36,1); }
+.ps2-btn:hover .ps2-arrow { transform: translateX(4px); }
+.ps2-btn:active { transform: translateY(0); }
+
+/* ---------- FAQ en talons ---------- */
+.ps2-faq summary { list-style: none; cursor: pointer; }
+.ps2-faq summary::-webkit-details-marker { display: none; }
+.ps2-faq .ps2-plus { transition: transform .35s cubic-bezier(.22,1,.36,1), background-color .25s, color .25s; }
+.ps2-faq[open] .ps2-plus { transform: rotate(45deg); }
+.ps2-faq[open] .ps2-ans { animation: ps2-unfold .5s cubic-bezier(.22,1,.36,1); }
+@keyframes ps2-unfold { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Formes d'étiquettes (kraft) ---------- */
+.ps2-tagshape {
+  clip-path: polygon(34px 0, calc(100% - 34px) 0, 100% 34px, 100% 100%, 0 100%, 0 34px);
+  -webkit-mask: radial-gradient(circle 7px at 50% 24px, #0000 95%, #000 100%);
+  mask: radial-gradient(circle 7px at 50% 24px, #0000 95%, #000 100%);
+}
+.ps2-htag {
+  clip-path: polygon(24px 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 24px), 0 24px);
+  -webkit-mask: radial-gradient(circle 6px at 22px 36px, #0000 95%, #000 100%);
+  mask: radial-gradient(circle 6px at 22px 36px, #0000 95%, #000 100%);
+}
+.ps2-htag-wrap { transition: transform .5s cubic-bezier(.3,1.5,.45,1); transform-origin: 0 36px; }
+.ps2-htag-wrap:hover { transform: rotate(-0.8deg) translateX(3px); }
+
+/* ---------- Étiquettes suspendues ---------- */
+.ps2-sway { animation: ps2-sway 6.5s ease-in-out infinite; transform-origin: 50% 0; }
+@keyframes ps2-sway { 0%, 100% { transform: rotate(1.3deg); } 50% { transform: rotate(-1.3deg); } }
+.ps2-swing { transition: transform .9s cubic-bezier(.3,1.6,.4,1); transform-origin: 50% 0; }
+.ps2-hang:hover .ps2-swing, .ps2-hang:focus-within .ps2-swing { transform: rotate(-4deg); }
+.ps2-hang:nth-child(even):hover .ps2-swing, .ps2-hang:nth-child(even):focus-within .ps2-swing { transform: rotate(4deg); }
+
+/* ---------- Voyant ---------- */
+.ps2-blink { animation: ps2-blink 1.1s steps(2, jump-none) infinite; }
+@keyframes ps2-blink { 50% { opacity: .25; } }
+
+/* ---------- Champs du bordereau (subventions) ---------- */
+.ps2-field { transition: border-color .25s, box-shadow .25s, background-color .25s; }
+.ps2-field:focus-within { border-color: #0B3D2E !important; box-shadow: 0 0 0 3px rgba(28,107,74,0.25); background-color: #FFFDF6 !important; }
+.ps2-field input::placeholder { color: rgba(14,53,39,0.45); }
+.ps2-opt { transition: background-color .2s; }
+.ps2-opt:hover, .ps2-opt:focus-visible { background-color: #EAF3EC !important; }
+.ps2-cheque-btn { transition: transform .3s cubic-bezier(.22,1,.36,1), background-color .3s, box-shadow .3s; }
+.ps2-cheque-btn:not(:disabled):hover { transform: translateY(-2px); background-color: #08301F !important; box-shadow: 0 14px 30px -14px rgba(8,48,31,0.7); }
+.ps2-cheque-link { transition: color .25s; }
+.ps2-cheque-link:hover { color: #0B3D2E !important; }
+.ps2-cheque-link .ps2-arrow { display: inline-block; transition: transform .3s cubic-bezier(.22,1,.36,1); }
+.ps2-cheque-link:hover .ps2-arrow { transform: translate(2px, -2px); }
+
+/* ---------- Rangées-barres (baromètre) ---------- */
+.ps2-barrow { transition: background-color .25s; }
+.ps2-barrow:hover { background-color: rgba(15,61,43,0.05); }
+.ps2-barrow:hover .ps2-barfill { background-color: #0F3D2B !important; }
+.ps2-linkrow { transition: background-color .25s, color .25s, border-color .25s; }
+.ps2-linkrow:hover, .ps2-linkrow:focus-visible { background-color: #0F3D2B; color: #EAF5EE; }
+.ps2-linkrow:hover .ps2-linkbar, .ps2-linkrow:focus-visible .ps2-linkbar { background-color: #7FD3A2 !important; }
+.ps2-linkrow:hover .ps2-linkhint, .ps2-linkrow:focus-visible .ps2-linkhint { color: rgba(234,245,238,0.75) !important; }
+.ps2-baro-faq summary { list-style: none; cursor: pointer; }
+.ps2-baro-faq summary::-webkit-details-marker { display: none; }
+.ps2-baro-faq .ps2-plus { transition: transform .35s cubic-bezier(.22,1,.36,1); }
+.ps2-baro-faq[open] .ps2-plus { transform: rotate(45deg); }
+.ps2-baro-faq[open] .ps2-ans { animation: ps2-unfold .5s cubic-bezier(.22,1,.36,1); }
+
+/* ---------- Compteur (calculateur) ---------- */
+.ps2-range { -webkit-appearance: none; appearance: none; background: transparent; width: 100%; height: 44px; cursor: pointer; margin: 0; }
+.ps2-range::-webkit-slider-runnable-track { height: 10px; border-radius: 6px; background: transparent; }
+.ps2-range::-moz-range-track { height: 10px; background: transparent; }
+.ps2-range::-webkit-slider-thumb { -webkit-appearance: none; width: 30px; height: 30px; margin-top: -10px; border-radius: 50%; background: #F4C542; border: 3px solid #151515; box-shadow: 0 3px 0 #151515; transition: transform .2s; }
+.ps2-range::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: #F4C542; border: 3px solid #151515; box-shadow: 0 3px 0 #151515; }
+.ps2-range:hover::-webkit-slider-thumb { transform: scale(1.08); }
+.ps2-range:focus-visible { outline: none; }
+.ps2-range:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 4px #FBFAF4, 0 0 0 7px #151515; }
+.ps2-range:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 4px #FBFAF4, 0 0 0 7px #151515; }
+.ps2-key { transition: transform .15s ease, box-shadow .15s ease, background-color .2s, color .2s; }
+.ps2-key:hover { transform: translateY(-1px); }
+.ps2-key[aria-pressed="true"] { transform: translateY(3px); box-shadow: 0 0 0 #151515 !important; }
+.ps2-hard { transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s cubic-bezier(.22,1,.36,1); }
+.ps2-hard:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 #151515 !important; }
+
+.ps2-wheel { transition: transform .9s cubic-bezier(.3,1.3,.5,1); }
+.ps2-bill-bar { transition: width .8s cubic-bezier(.22,1,.36,1); }
+.ps2-disc { animation: ps2-disc 7s linear infinite; }
+@keyframes ps2-disc { from { background-position: 0 0, 0 0; } to { background-position: -540px 0, -540px 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ps2-wheel, .ps2-bill-bar { transition: none; }
+  .ps2-disc { animation: none; }
+  .ps2-sway, .ps2-blink { animation: none; }
+  .ps2-swing, .ps2-hard, .ps2-btn, .ps2-key, .ps2-cheque-btn { transition: none; }
+  .ps2-faq[open] .ps2-ans, .ps2-baro-faq[open] .ps2-ans { animation: none; }
+}

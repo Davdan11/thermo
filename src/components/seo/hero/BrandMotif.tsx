@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Caption, EASE, K, Parallax, fr } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Marque × type d'appareil : logo de la marque, vraie photo d'un de
@@ -13,7 +14,7 @@ import { Caption, EASE, K, Parallax, fr } from "./parts";
 const AXIS = [0, 12000, 24000, 36000, 48000, 60000];
 
 export function BrandMotif({ brand, logo, typeLabel, photo, offered }: { brand: string; logo: string | null; typeLabel: string; photo: { src: string; alt: string; caption: string; btu: number } | null; offered: number[] }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const caps = [...new Set(offered)].sort((a, b) => a - b);
   const lo = caps[0];
   const hi = caps[caps.length - 1];

@@ -1,16 +1,36 @@
 "use client";
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useId, type ReactNode } from "react";
 import {
   Camera, Upload, Search, RotateCcw, ArrowRight,
   AlertCircle, X, CheckCircle, Thermometer, Zap,
   Shield, TrendingUp, Info,
 } from "lucide-react";
+import { motion } from "motion/react";
 import type { ScanResult, CatalogMatch, WarrantyEntry } from "@/lib/thermoscan/types";
 import { track } from "@/lib/analytics/track";
 import { saveExistingUnit } from "@/lib/project/project-draft";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { MONO } from "@/components/heroes-v2/outils/fonts";
+import { Corners } from "@/components/sections-v2/outils/kit";
+import "@/components/sections-v2/outils/viseur/viseur.css";
 
+/* ==================================================================
+   Outil ThermoScan (page /thermoscan). Présentation « viseur » : graphite,
+   blanc, orange d'affichage tête haute, relevés en mono, coins de mise
+   au point. Chaque étape arrive par une mise au point (flou vers net).
+   La logique est inchangée : photo (caméra ou galerie), appel à
+   /api/thermoscan/analyze, confirmation des champs, recherche dans le
+   catalogue, fiche technique, comparaison, fiche par courriel, brouillon
+   de projet.
+   ================================================================== */
 
 type Step = "intro" | "guide" | "capture" | "analyzing" | "confirm" | "speccard" | "compare";
+
+const HUD = "#FF6A2B";
+const LINE = "rgba(255,255,255,0.14)";
+const MUTE = "rgba(255,255,255,0.72)";
+const FAINT = "rgba(255,255,255,0.5)";
+const TONE = { danger: "#FF7A5C", warn: "#F2B64C", ok: "#6FD39B" } as const;
 
 /* helpers */
 function fmtBtu(v: number | null | undefined): string {
@@ -50,6 +70,25 @@ function ageAlert(year: number | null | undefined) {
   return null;
 }
 
+/* Petit titre mono (relevé du viseur). */
+function Kicker({ children, color = HUD }: { children: ReactNode; color?: string }) {
+  return (
+    <p className="text-[11px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.16em", color, margin: 0 }}>
+      {children}
+    </p>
+  );
+}
+
+/* Chaque étape arrive par une mise au point : flou vers net. */
+function Focus({ children }: { children: ReactNode }) {
+  const reduce = useReduced();
+  return (
+    <motion.div initial={{ opacity: 0, filter: "blur(8px)" }} animate={{ opacity: 1, filter: "blur(0px)" }} transition={reduce ? { duration: 0 } : { duration: 0.55, ease: [0.22, 1, 0.36, 1] }}>
+      {children}
+    </motion.div>
+  );
+}
+
 /* analyzing animation */
 const STEPS_TXT = [
   "Lecture de l'étiquette…",
@@ -65,16 +104,18 @@ function AnalyzingView() {
     return () => clearInterval(t);
   }, []);
   return (
-    <div className="py-16 text-center">
-      <div className="w-12 h-12 rounded-full border-4 border-[var(--color-border)] mx-auto mb-6"
-        style={{ borderTopColor: "#e54b17", animation: "spin 0.8s linear infinite" }} />
-      <style>{`@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}`}</style>
-      <p className="font-bold text-[var(--color-foreground)] mb-2">Analyse en cours…</p>
-      <p className="text-sm text-[var(--color-muted)]">{STEPS_TXT[idx]}</p>
-      <div className="flex gap-1.5 justify-center mt-5">
+    <div className="py-6" role="status" aria-live="polite">
+      <div className="relative mx-auto overflow-hidden" style={{ aspectRatio: "16 / 7", maxWidth: 520, background: "rgba(255,255,255,0.02)" }}>
+        <Corners color={HUD} size={18} weight={2} />
+        <span aria-hidden="true" className="vz-scan absolute inset-x-[8%] h-px" style={{ background: HUD }} />
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+          <p className="text-[18px] font-semibold text-white" style={{ margin: 0, letterSpacing: "-0.01em" }}>Analyse en cours…</p>
+          <p className="mt-2 text-[12px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.1em", color: HUD, margin: "8px 0 0" }}>{STEPS_TXT[idx]}</p>
+        </div>
+      </div>
+      <div aria-hidden="true" className="mx-auto mt-5 flex max-w-[520px] gap-1.5">
         {STEPS_TXT.map((_, i) => (
-          <span key={i} className="w-2 h-2 rounded-full transition-colors"
-            style={{ background: i <= idx ? "#e54b17" : "var(--color-border)" }} />
+          <span key={i} className="h-[3px] flex-1" style={{ background: i <= idx ? HUD : "rgba(255,255,255,0.14)", transition: "background-color 0.3s" }} />
         ))}
       </div>
     </div>
@@ -83,10 +124,9 @@ function AnalyzingView() {
 
 /* alert banner */
 function AlertBanner({ level, text }: { level: "danger" | "warn" | "ok"; text: string }) {
-  const cls = { danger: "bg-red-50 border-red-200 text-red-700", warn: "bg-amber-50 border-amber-200 text-amber-700", ok: "bg-green-50 border-green-200 text-green-700" };
   return (
-    <div className={`flex gap-2 items-start p-3 rounded-lg border text-sm ${cls[level]}`}>
-      <AlertCircle size={15} className="flex-shrink-0 mt-0.5" />{text}
+    <div className="flex gap-3 items-start py-3 pl-4 pr-3 text-[14px] leading-relaxed" style={{ borderLeft: `2px solid ${TONE[level]}`, background: "rgba(255,255,255,0.03)", color: "rgba(255,255,255,0.86)" }}>
+      <AlertCircle size={15} className="flex-shrink-0 mt-[3px]" style={{ color: TONE[level] }} />{text}
     </div>
   );
 }
@@ -94,11 +134,11 @@ function AlertBanner({ level, text }: { level: "danger" | "warn" | "ok"; text: s
 /* spec row */
 function SpecRow({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
-    <div className="flex items-start justify-between gap-4 py-2.5 border-b last:border-0" style={{ borderColor: "var(--color-border)" }}>
-      <span className="text-sm text-[var(--color-muted)]">{label}</span>
+    <div className="flex items-start justify-between gap-4 py-3 border-b last:border-0" style={{ borderColor: LINE }}>
+      <span className="text-[11.5px] uppercase pt-[3px]" style={{ fontFamily: MONO, letterSpacing: "0.06em", color: FAINT }}>{label}</span>
       <div className="text-right">
-        <span className="text-sm font-semibold text-[var(--color-foreground)]">{value}</span>
-        {sub && <p className="text-xs text-[var(--color-muted)]">{sub}</p>}
+        <span className="text-[15px] font-semibold text-white">{value}</span>
+        {sub && <p className="text-[12px] mt-0.5" style={{ color: FAINT, margin: "2px 0 0" }}>{sub}</p>}
       </div>
     </div>
   );
@@ -107,10 +147,10 @@ function SpecRow({ label, value, sub }: { label: string; value: string; sub?: st
 /* section card */
 function SectionCard({ icon: Icon, title, children }: { icon: any; title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-xl border overflow-hidden" style={{ borderColor: "var(--color-border)", background: "var(--color-surface)" }}>
-      <div className="flex items-center gap-2 px-4 py-3 border-b" style={{ borderColor: "var(--color-border)", background: "var(--color-background)" }}>
-        <Icon size={15} style={{ color: "#e54b17" }} />
-        <p className="font-bold text-xs uppercase tracking-wider text-[var(--color-foreground)]">{title}</p>
+    <div className="relative" style={{ border: `1px solid ${LINE}`, background: "rgba(255,255,255,0.02)" }}>
+      <div className="flex items-center gap-2.5 px-4 py-3 border-b" style={{ borderColor: LINE, background: "rgba(255,255,255,0.03)" }}>
+        <Icon size={15} style={{ color: HUD }} />
+        <p className="text-[11px] uppercase text-white" style={{ fontFamily: MONO, letterSpacing: "0.14em", margin: 0 }}>{title}</p>
       </div>
       <div className="px-4">{children}</div>
     </div>
@@ -119,6 +159,7 @@ function SectionCard({ icon: Icon, title, children }: { icon: any; title: string
 
 /* warranty card */
 function WarrantyCard({ warranties }: { warranties: WarrantyEntry[] }) {
+  const reduce = useReduced();
   if (!warranties || warranties.length === 0) return null;
 
   // Pick best warranty (most years of parts coverage)
@@ -128,15 +169,15 @@ function WarrantyCard({ warranties }: { warranties: WarrantyEntry[] }) {
   function WarBar({ years, max = 12, label }: { years: number | null; max?: number; label: string }) {
     if (!years) return null;
     const pct = Math.min(100, (years / max) * 100);
-    const color = years >= 10 ? "#16a34a" : years >= 7 ? "#d97706" : "#dc2626";
+    const color = years >= 10 ? TONE.ok : years >= 7 ? TONE.warn : TONE.danger;
     return (
-      <div className="mb-2.5">
-        <div className="flex justify-between text-xs mb-1">
-          <span className="text-[var(--color-muted)]">{label}</span>
-          <span className="font-bold" style={{ color }}>{years} an{years > 1 ? "s" : ""}</span>
+      <div className="mb-3">
+        <div className="flex justify-between text-[11.5px] mb-1.5 uppercase" style={{ fontFamily: MONO, letterSpacing: "0.06em" }}>
+          <span style={{ color: FAINT }}>{label}</span>
+          <span style={{ color }}>{years} an{years > 1 ? "s" : ""}</span>
         </div>
-        <div className="h-1.5 rounded-full bg-gray-100 overflow-hidden">
-          <div className="h-full rounded-full transition-all" style={{ width: `${pct}%`, background: color }} />
+        <div className="h-[3px] overflow-hidden" style={{ background: "rgba(255,255,255,0.1)" }}>
+          <motion.div className="h-full" style={{ background: color }} initial={{ width: 0 }} animate={{ width: `${pct}%` }} transition={reduce ? { duration: 0 } : { duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }} />
         </div>
       </div>
     );
@@ -144,9 +185,9 @@ function WarrantyCard({ warranties }: { warranties: WarrantyEntry[] }) {
 
   return (
     <SectionCard icon={Shield} title="Garantie fabricant">
-      <div className="py-3">
+      <div className="py-4">
         {hasMultiple && (
-          <p className="text-xs text-[var(--color-muted)] mb-3 italic">
+          <p className="text-[12.5px] mb-3 italic" style={{ color: FAINT, margin: "0 0 12px" }}>
             {warranties.length} options de garantie disponibles selon le modèle et l&apos;installateur.
           </p>
         )}
@@ -156,12 +197,12 @@ function WarrantyCard({ warranties }: { warranties: WarrantyEntry[] }) {
           <WarBar years={best.laborYears} label="Main-d'oeuvre" />
         )}
         {best.registrationNote && (
-          <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mt-3">
+          <p className="text-[12.5px] leading-relaxed mt-3 py-2 pl-3" style={{ borderLeft: `2px solid ${TONE.warn}`, color: "rgba(255,255,255,0.82)", margin: "12px 0 0" }}>
             {best.registrationNote}
           </p>
         )}
         {hasMultiple && (
-          <p className="text-xs text-[var(--color-muted)] mt-2">
+          <p className="text-[12px] mt-2" style={{ color: FAINT, margin: "8px 0 0" }}>
             Option maximale affichée. Durée selon la série et les conditions d&apos;inscription.
           </p>
         )}
@@ -176,23 +217,23 @@ function DeltaRow({ label, current, recommended, better, note }: {
   label: string; current: string; recommended: string; better: boolean; note?: string;
 }) {
   return (
-    <div className="py-3 border-b last:border-0" style={{ borderColor: "var(--color-border)" }}>
-      <div className="flex items-center justify-between gap-2 mb-1">
-        <span className="text-xs font-semibold text-[var(--color-muted)] uppercase tracking-wide">{label}</span>
-        {better && <span className="text-xs font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">Mieux</span>}
+    <div className="py-3.5 border-b last:border-0" style={{ borderColor: LINE }}>
+      <div className="flex items-center justify-between gap-2 mb-2">
+        <span className="text-[11px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.1em", color: FAINT }}>{label}</span>
+        {better && <span className="text-[10.5px] uppercase px-1.5 py-[2px]" style={{ fontFamily: MONO, letterSpacing: "0.12em", color: TONE.ok, border: `1px solid ${TONE.ok}` }}>Mieux</span>}
       </div>
       <div className="flex items-center gap-3 text-sm">
         <div className="flex-1 text-center">
-          <p className="text-xs text-[var(--color-muted)] mb-0.5">Actuel</p>
-          <p className="font-semibold text-[var(--color-foreground)]">{current}</p>
+          <p className="text-[11px] uppercase mb-0.5" style={{ fontFamily: MONO, letterSpacing: "0.08em", color: FAINT, margin: "0 0 2px" }}>Actuel</p>
+          <p className="font-semibold text-white" style={{ margin: 0 }}>{current}</p>
         </div>
-        <ArrowRight size={16} style={{ color: "#e54b17", flexShrink: 0 }} />
+        <ArrowRight size={16} style={{ color: HUD, flexShrink: 0 }} />
         <div className="flex-1 text-center">
-          <p className="text-xs text-[var(--color-muted)] mb-0.5">Recommandé</p>
-          <p className={`font-bold ${better ? "text-green-700" : "text-[var(--color-foreground)]"}`}>{recommended}</p>
+          <p className="text-[11px] uppercase mb-0.5" style={{ fontFamily: MONO, letterSpacing: "0.08em", color: FAINT, margin: "0 0 2px" }}>Recommandé</p>
+          <p className="font-bold" style={{ margin: 0, color: better ? TONE.ok : "#fff" }}>{recommended}</p>
         </div>
       </div>
-      {note && <p className="text-xs text-[var(--color-muted)] mt-1.5 italic">{note}</p>}
+      {note && <p className="text-[12.5px] mt-2 italic" style={{ color: FAINT, margin: "8px 0 0" }}>{note}</p>}
     </div>
   );
 }
@@ -225,21 +266,23 @@ function DeviceSpecCard({
   const weightS  = ls?.weightKg ?? null;
   const hasLabelW = !!(heatW || coolW);
   const alerts = [ageNote, refNote].filter(Boolean) as { level: "danger" | "warn" | "ok"; text: string }[];
-  const btnPrimary = "flex items-center justify-center gap-2 w-full px-4 py-3.5 rounded-lg font-bold text-sm text-white transition-opacity hover:opacity-90";
+  const btnPrimary = "vz-btn vz-primary w-full px-4 py-3.5 text-[14.5px]";
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "#e54b17" }}>Appareil identifié</p>
-          <h3 className="font-bold text-[var(--color-foreground)] text-xl leading-tight">{brand}</h3>
-          {model && <p className="text-sm text-[var(--color-muted)] font-mono mt-0.5">{model}</p>}
+      {/* Cartouche : l'appareil verrouillé */}
+      <div className="relative flex items-start justify-between gap-3 px-5 py-4" style={{ background: "rgba(255,255,255,0.02)" }}>
+        <Corners color={HUD} size={12} weight={2} />
+        <div className="min-w-0">
+          <Kicker>Appareil identifié</Kicker>
+          <h3 className="font-semibold text-white text-[24px] leading-tight mt-1.5" style={{ letterSpacing: "-0.02em", margin: "6px 0 0" }}>{brand}</h3>
+          {model && <p className="text-[13px] mt-1 break-all" style={{ fontFamily: MONO, color: MUTE, margin: "4px 0 0" }}>{model}</p>}
         </div>
         {year && (
           <div className="text-right flex-shrink-0">
-            <p className="text-xs text-[var(--color-muted)]">Mis sur le marché</p>
-            <p className="font-bold text-[var(--color-foreground)]">{year}</p>
-            <p className="text-xs text-[var(--color-muted)]">{ageLabel(year)}</p>
+            <p className="text-[10.5px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.1em", color: FAINT, margin: 0 }}>Mis sur le marché</p>
+            <p className="font-semibold text-white text-[20px]" style={{ margin: "2px 0 0" }}>{year}</p>
+            <p className="text-[12px]" style={{ color: FAINT, margin: 0 }}>{ageLabel(year)}</p>
           </div>
         )}
       </div>
@@ -287,8 +330,8 @@ function DeviceSpecCard({
         {weightS ? <SpecRow label="Poids" value={weightS} /> : null}
       </SectionCard>
 
-      <p className="text-xs text-[var(--color-muted)] flex items-center gap-1">
-        <Info size={12} className="flex-shrink-0" />
+      <p className="text-[11px] uppercase flex items-center gap-2" style={{ fontFamily: MONO, letterSpacing: "0.06em", color: FAINT, margin: 0 }}>
+        <Info size={12} className="flex-shrink-0" style={{ color: HUD }} />
         {match?.source === "legacy-catalog"
           ? "Données ENERGY STAR Canada 2011 à 2026"
           : match?.source === "catalog-2026"
@@ -303,20 +346,20 @@ function DeviceSpecCard({
       )}
 
       {hasThermomatch ? (
-        <button onClick={onCompare} className={btnPrimary} style={{ background: "#e54b17" }}>
-          Voir la comparaison ThermoMatch <ArrowRight size={16} />
+        <button onClick={onCompare} className={btnPrimary}>
+          Voir la comparaison ThermoMatch <ArrowRight size={16} className="vz-arrow" />
         </button>
       ) : (
         <div className="flex flex-col gap-2">
-          <a href="/trouver-ma-thermopompe" className={btnPrimary} style={{ background: "#e54b17" }}>
-            Obtenir mes recommandations ThermoMatch <ArrowRight size={16} />
+          <a href="/trouver-ma-thermopompe" className={btnPrimary}>
+            Obtenir mes recommandations ThermoMatch <ArrowRight size={16} className="vz-arrow" />
           </a>
-          <p className="text-xs text-center text-[var(--color-muted)]">ThermoMatch analyse votre profil pour recommander le modèle idéal.</p>
+          <p className="text-[12.5px] text-center" style={{ color: FAINT, margin: 0 }}>ThermoMatch analyse votre profil pour recommander le modèle idéal.</p>
         </div>
       )}
 
-      <a href="/rendez-vous?format=visio" className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg font-semibold text-sm border transition-colors hover:bg-gray-50" style={{ borderColor: "var(--color-border)", color: "var(--color-foreground)" }}>
-        Discuter de cet appareil avec un conseiller (Google Meet) <ArrowRight size={14} />
+      <a href="/rendez-vous?format=visio" className="vz-btn vz-ghost w-full px-4 py-3 text-[14px] text-center">
+        Discuter de cet appareil avec un conseiller (Google Meet) <ArrowRight size={14} className="vz-arrow flex-shrink-0" />
       </a>
 
       <FicheForm
@@ -369,39 +412,42 @@ function FicheForm({ device, sessionId }: {
   };
 
   if (state === "done") return (
-    <div className="p-4 rounded-lg border border-green-200 bg-green-50 text-sm text-green-800 flex gap-2 items-start">
-      <CheckCircle size={16} className="flex-shrink-0 mt-0.5" /> {message}
+    <div role="status" className="py-3 pl-4 pr-3 text-[14px] flex gap-3 items-start" style={{ borderLeft: `2px solid ${TONE.ok}`, background: "rgba(255,255,255,0.03)", color: "rgba(255,255,255,0.88)" }}>
+      <CheckCircle size={16} className="flex-shrink-0 mt-0.5" style={{ color: TONE.ok }} /> {message}
     </div>
   );
 
   if (!open) return (
-    <button type="button" onClick={() => setOpen(true)} className="text-sm font-semibold underline underline-offset-4 text-[var(--color-foreground)] hover:text-[#e54b17] transition-colors text-left">
+    <button type="button" onClick={() => setOpen(true)} className="vz-link self-start text-[14px] font-semibold text-left">
       Recevoir cette fiche par courriel
     </button>
   );
 
   return (
-    <form onSubmit={submit} noValidate className="p-4 rounded-lg border" style={{ borderColor: "var(--color-border)", background: "var(--color-background)" }}>
-      <p className="font-bold text-sm text-[var(--color-foreground)] mb-1">Recevoir cette fiche par courriel</p>
-      <p className="text-xs text-[var(--color-muted)] mb-3">Pour la garder, la partager ou la montrer à un installateur.</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+    <form onSubmit={submit} noValidate className="relative p-5" style={{ border: `1px solid ${LINE}`, background: "rgba(255,255,255,0.02)" }}>
+      <p className="font-semibold text-[16px] text-white" style={{ margin: "0 0 4px" }}>Recevoir cette fiche par courriel</p>
+      <p className="text-[13px]" style={{ color: FAINT, margin: "0 0 16px" }}>Pour la garder, la partager ou la montrer à un installateur.</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
         <Field label="Prénom" value={firstName} onChange={setFirstName} placeholder="Marie" />
         <Field label="Courriel" value={email} onChange={setEmail} type="email" placeholder="vous@exemple.ca" />
       </div>
-      <div className="mb-3">
+      <div className="mb-4">
         <Field label="Téléphone (facultatif)" value={phone} onChange={setPhone} type="tel" placeholder="(514) 000-0000" />
       </div>
       <div className="absolute" style={{ left: -9999, top: -9999 }} aria-hidden="true">
         <label htmlFor="ts-website">Site web</label>
         <input id="ts-website" type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
       </div>
-      <label className="flex items-start gap-2 text-xs text-[var(--color-muted)] leading-relaxed mb-3">
-        <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-0.5" />
-        <span>J&apos;accepte que Thermopompes À Vendre conserve ces renseignements pour m&apos;envoyer la fiche et me proposer un suivi. <a href="/confidentialite" className="underline">Politique de confidentialité</a>.</span>
+      <label className="flex items-start gap-3 text-[12.5px] leading-relaxed mb-4 cursor-pointer" style={{ color: MUTE }}>
+        <span className="vz-check">
+          <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
+          <svg aria-hidden="true" width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.4l2.8 2.6L12.5 4.8" stroke="#141414" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+        </span>
+        <span>J&apos;accepte que Thermopompes À Vendre conserve ces renseignements pour m&apos;envoyer la fiche et me proposer un suivi. <a href="/confidentialite" className="vz-link">Politique de confidentialité</a>.</span>
       </label>
-      {message && <p className="text-xs text-red-700 mb-3">{message}</p>}
-      <button type="submit" disabled={state === "sending"} className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg font-bold text-sm text-white transition-opacity hover:opacity-90" style={{ background: "#e54b17", opacity: state === "sending" ? 0.7 : 1 }}>
-        {state === "sending" ? "Envoi…" : "Recevoir ma fiche"} <ArrowRight size={16} />
+      {message && <p role="alert" className="text-[13px] mb-3" style={{ color: TONE.danger, margin: "0 0 12px" }}>{message}</p>}
+      <button type="submit" disabled={state === "sending"} className="vz-btn vz-primary w-full px-4 py-3 text-[14.5px]" style={{ opacity: state === "sending" ? 0.7 : 1 }}>
+        {state === "sending" ? "Envoi…" : "Recevoir ma fiche"} <ArrowRight size={16} className="vz-arrow" />
       </button>
     </form>
   );
@@ -463,21 +509,22 @@ function CompareView({
     setTab(allRecs.length);
   };
 
-  const btnPrimary = "flex items-center justify-center gap-2 w-full px-4 py-3.5 rounded-lg font-bold text-sm text-white transition-opacity hover:opacity-90";
-  const btnSecondary = "flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg font-semibold text-sm border transition-colors hover:bg-gray-50";
+  const btnPrimary = "vz-btn vz-primary w-full px-4 py-3.5 text-[14.5px]";
+  const btnSecondary = "vz-btn vz-ghost w-full px-4 py-3 text-[14px]";
 
   if (allRecs.length === 0 && !isSearching) return (
-    <div className="text-center py-12">
-      <CheckCircle size={32} className="text-green-600 mx-auto mb-4" />
-      <p className="font-bold text-[var(--color-foreground)] text-lg mb-2">{currentBrand} {currentModel}</p>
-      <p className="text-sm text-[var(--color-muted)] mb-6 max-w-sm mx-auto">
+    <div className="relative text-center py-10 px-4" style={{ background: "rgba(255,255,255,0.02)" }}>
+      <Corners color={HUD} size={16} weight={2} />
+      <CheckCircle size={28} className="mx-auto mb-4" style={{ color: TONE.ok }} />
+      <p className="font-semibold text-white text-[19px] mb-2" style={{ margin: "0 0 8px" }}>{currentBrand} {currentModel}</p>
+      <p className="text-[14px] mb-6 max-w-sm mx-auto" style={{ color: MUTE, margin: "0 auto 24px" }}>
         Obtenez des recommandations automatiques ou cherchez un modèle précis à comparer.
       </p>
       <div className="flex flex-col gap-3 max-w-sm mx-auto">
-        <a href="/trouver-ma-thermopompe" className="inline-flex justify-center items-center gap-2 px-5 py-3 rounded-lg font-bold text-sm text-white" style={{ background: "#e54b17" }}>
-          Faire le questionnaire <ArrowRight size={16} />
+        <a href="/trouver-ma-thermopompe" className="vz-btn vz-primary px-5 py-3 text-[14.5px]">
+          Faire le questionnaire <ArrowRight size={16} className="vz-arrow" />
         </a>
-        <button onClick={() => setIsSearching(true)} className={btnSecondary} style={{ borderColor: "var(--color-border)", color: "var(--color-muted)" }}>
+        <button onClick={() => setIsSearching(true)} className={btnSecondary}>
           <Search size={16} /> Chercher un modèle à comparer
         </button>
       </div>
@@ -486,34 +533,35 @@ function CompareView({
 
   if (isSearching) return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-bold text-[var(--color-foreground)] text-lg">Rechercher un modèle</h3>
-        <button onClick={() => setIsSearching(false)} className="p-2 text-[var(--color-muted)] hover:bg-gray-100 rounded-full transition-colors"><X size={18} /></button>
+      <div className="flex items-center justify-between mb-1">
+        <h3 className="font-semibold text-white text-[19px]" style={{ margin: 0 }}>Rechercher un modèle</h3>
+        <button onClick={() => setIsSearching(false)} aria-label="Fermer la recherche" className="vz-btn p-2" style={{ color: MUTE }}><X size={18} /></button>
       </div>
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-muted)]" size={18} />
-        <input 
-          type="text" 
+        <Search className="absolute left-1 top-1/2 -translate-y-1/2" size={17} style={{ color: FAINT }} />
+        <input
+          type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Ex: Daikin Aurora, Moovair..."
-          className="w-full pl-10 pr-4 py-3 rounded-xl border outline-none text-sm focus:border-[#e54b17]"
-          style={{ borderColor: "var(--color-border)", background: "var(--color-surface)", color: "var(--color-foreground)" }}
+          aria-label="Rechercher un modèle"
+          className="vz-input"
+          style={{ paddingLeft: 30, outline: "none" }}
           autoFocus
         />
       </div>
-      {searchLoading && <p className="text-xs text-[var(--color-muted)] text-center py-4">Recherche...</p>}
+      {searchLoading && <p className="text-[11px] uppercase text-center py-4" style={{ fontFamily: MONO, letterSpacing: "0.12em", color: HUD, margin: 0 }}>Recherche...</p>}
       {!searchLoading && searchQuery.trim().length >= 3 && searchResults.length === 0 && (
-        <p className="text-xs text-[var(--color-muted)] text-center py-4">Aucun modèle trouvé pour "{searchQuery}".</p>
+        <p className="text-[13px] text-center py-4" style={{ color: FAINT, margin: 0 }}>Aucun modèle trouvé pour "{searchQuery}".</p>
       )}
       {!searchLoading && searchResults.length > 0 && (
-        <div className="flex flex-col gap-2 mt-2">
+        <div className="flex flex-col gap-2 mt-1">
           {searchResults.map((m, i) => (
-            <button key={i} onClick={() => handleSelectManual(m)} className="flex flex-col text-left p-3 rounded-lg border transition-colors hover:bg-gray-50" style={{ borderColor: "var(--color-border)", background: "white" }}>
-              <p className="font-bold text-sm text-[var(--color-foreground)]">{m.brand} <span className="font-mono text-xs">{m.outdoorModel}</span></p>
-              <p className="text-xs text-[var(--color-muted)] mt-1 flex items-center gap-2">
+            <button key={i} onClick={() => handleSelectManual(m)} className="vz-result flex flex-col text-left p-3.5" style={{ border: `1px solid ${LINE}`, background: "rgba(255,255,255,0.02)" }}>
+              <p className="font-semibold text-[14.5px] text-white" style={{ margin: 0 }}>{m.brand} <span className="text-[12.5px]" style={{ fontFamily: MONO, color: MUTE }}>{m.outdoorModel}</span></p>
+              <p className="text-[12px] mt-1 flex items-center gap-2" style={{ fontFamily: MONO, color: FAINT, margin: "4px 0 0" }}>
                 <span>SEER2: {m.seer2 ? (typeof m.seer2 === "number" ? m.seer2 : m.seer2.min) : "N/D"}</span>
-                {m.coldClimate && <span className="text-blue-600 bg-blue-50 border border-blue-200 px-1.5 py-0.5 rounded font-semibold text-[10px] uppercase">Climat Froid</span>}
+                {m.coldClimate && <span className="px-1.5 py-0.5 text-[10px] uppercase" style={{ color: "#9CC8FF", border: "1px solid rgba(156,200,255,0.5)", letterSpacing: "0.08em" }}>Climat Froid</span>}
               </p>
             </button>
           ))}
@@ -577,42 +625,43 @@ function CompareView({
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "#e54b17" }}>Comparaison ThermoMatch</p>
-        <h3 className="font-bold text-[var(--color-foreground)] text-lg">
+        <Kicker>Comparaison ThermoMatch</Kicker>
+        <h3 className="font-semibold text-white text-[21px] mt-1.5" style={{ letterSpacing: "-0.02em", margin: "6px 0 0" }}>
           {currentBrand} {currentModel}
-          {currentYear && <span className="text-[var(--color-muted)] font-normal text-base"> ({currentYear})</span>}
+          {currentYear && <span className="font-normal text-[16px]" style={{ color: FAINT }}> ({currentYear})</span>}
         </h3>
       </div>
 
       <div className="flex gap-2 overflow-x-auto pb-1 items-center">
         {allRecs.map((r, i) => (
-          <button key={i} onClick={() => setTab(i)}
-            className="flex-shrink-0 px-4 py-2 rounded-lg text-sm font-bold transition-colors"
+          <button key={i} onClick={() => setTab(i)} aria-pressed={tab === i}
+            className="vz-tab flex-shrink-0 px-4 py-2 text-[13px] font-semibold"
             style={{
-              background: tab === i ? "var(--color-foreground)" : "white",
-              color: tab === i ? "white" : "var(--color-muted)",
-              border: `1px solid ${tab === i ? "var(--color-foreground)" : "var(--color-border)"}`,
+              background: tab === i ? "#fff" : "transparent",
+              color: tab === i ? "#141414" : MUTE,
+              border: `1px solid ${tab === i ? "#fff" : LINE}`,
+              borderRadius: 3,
             }}
           >
             {i < recommendations.length ? `${i + 1}. ${r.product?.brand}` : `Manuel : ${r.product?.brand}`}
           </button>
         ))}
-        <button onClick={() => setIsSearching(true)} className="flex-shrink-0 px-3 py-2 rounded-lg text-sm font-bold transition-colors border flex items-center gap-1 hover:bg-gray-50" style={{ borderColor: "var(--color-border)", color: "var(--color-muted)", background: "white" }}>
+        <button onClick={() => setIsSearching(true)} className="vz-tab flex-shrink-0 px-3 py-2 text-[13px] font-semibold flex items-center gap-1" style={{ border: `1px dashed ${LINE}`, color: MUTE, borderRadius: 3 }}>
           <Search size={14} /> + Modèle
         </button>
       </div>
 
       {bigWins.length > 0 && (
-        <div className="rounded-xl p-4 border border-green-200 bg-green-50">
-          <p className="font-bold text-sm text-green-800 mb-2 flex items-center gap-2">
+        <div className="py-4 pl-4 pr-3" style={{ borderLeft: `2px solid ${TONE.ok}`, background: "rgba(255,255,255,0.03)" }}>
+          <p className="font-semibold text-[14px] mb-2 flex items-center gap-2" style={{ color: TONE.ok, margin: "0 0 8px" }}>
             <TrendingUp size={15} />
             {bigWins.length} amélioration{bigWins.length > 1 ? "s" : ""} clé{bigWins.length > 1 ? "s" : ""}
           </p>
-          <ul className="space-y-1">
+          <ul className="space-y-1.5" style={{ listStyle: "none", margin: 0, padding: 0 }}>
             {bigWins.map((w: any, i: number) => (
-              <li key={i} className="text-sm text-green-700 flex items-start gap-2">
-                <span className="text-green-600 mt-0.5 flex-shrink-0">+</span>
-                <span><strong>{w.label}</strong>{w.note ? ` - ${w.note}` : ""}</span>
+              <li key={i} className="text-[13.5px] flex items-start gap-2" style={{ color: "rgba(255,255,255,0.84)" }}>
+                <span className="mt-0.5 flex-shrink-0" style={{ color: TONE.ok, fontFamily: MONO }}>+</span>
+                <span><strong className="text-white">{w.label}</strong>{w.note ? ` - ${w.note}` : ""}</span>
               </li>
             ))}
           </ul>
@@ -635,10 +684,10 @@ function CompareView({
         </SectionCard>
       )}
 
-      <a href="/soumission" className={btnPrimary} style={{ background: "#e54b17" }}>
-        Obtenir une soumission pour ce modèle <ArrowRight size={16} />
+      <a href="/soumission" className={btnPrimary}>
+        Obtenir une soumission pour ce modèle <ArrowRight size={16} className="vz-arrow" />
       </a>
-      <button onClick={onReset} className={btnSecondary} style={{ borderColor: "var(--color-border)", color: "var(--color-muted)" }}>
+      <button onClick={onReset} className={btnSecondary}>
         Scanner un autre appareil
       </button>
     </div>
@@ -650,16 +699,24 @@ function Field({ label, value, onChange, note, type = "text", placeholder }: {
   label: string; value: string; onChange?: (v: string) => void;
   note?: string | null; type?: string; placeholder?: string;
 }) {
+  const id = useId();
   return (
     <div>
-      <label className="block text-xs font-semibold text-[var(--color-muted)] uppercase tracking-wider mb-1.5">{label}</label>
-      <input type={type} value={value} placeholder={placeholder}
+      <label htmlFor={id} className="block text-[11px] uppercase mb-1" style={{ fontFamily: MONO, letterSpacing: "0.12em", color: FAINT }}>{label}</label>
+      <input id={id} type={type} value={value} placeholder={placeholder}
         onChange={onChange ? (e) => onChange(e.target.value) : undefined}
-        className="w-full px-3 py-2.5 text-sm rounded-lg border bg-white text-[var(--color-foreground)] focus:outline-none focus:border-[#e54b17]"
-        style={{ borderColor: "var(--color-border)" }}
+        className="vz-input"
+        style={{ outline: "none" }}
       />
-      {note && <p className="mt-1 text-xs text-amber-600">{note}</p>}
+      {note && <p className="mt-1.5 text-[12.5px]" style={{ color: TONE.warn, margin: "6px 0 0" }}>{note}</p>}
     </div>
+  );
+}
+
+/* Coins de mise au point d'une tuile, visibles au survol et au focus clavier. */
+function TileCorners({ color = HUD }: { color?: string }) {
+  return (
+    <span aria-hidden="true" className="vz-corners pointer-events-none absolute -inset-[6px]"><Corners color={color} size={10} weight={1.5} /></span>
   );
 }
 
@@ -679,6 +736,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
   const [labelSpecs, setLabelSpecs] = useState<any | null>(null);
   const [warranties, setWarranties] = useState<WarrantyEntry[] | null>(null);
   const [reSearching, setReSearching] = useState(false);
+  const typeId = useId();
 
   /* Si le client corrige la marque ou le modèle lu sur l'étiquette, on relance la recherche
      dans le catalogue au lieu de garder la correspondance de la lecture initiale. */
@@ -760,130 +818,126 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
   };
 
 
-  const btnPrimary = "flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg font-bold text-sm text-white transition-opacity hover:opacity-90";
-  const btnSecondary = "flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg font-semibold text-sm border transition-colors hover:bg-gray-50";
+  const btnPrimary = "vz-btn vz-primary w-full px-4 py-3.5 text-[14.5px]";
+  const btnSecondary = "vz-btn vz-ghost w-full px-4 py-3.5 text-[14px]";
 
   const Back = ({ to }: { to: Step }) => (
     <button onClick={() => setStep(to)}
-      className="flex items-center gap-1 text-xs text-[var(--color-muted)] hover:text-[var(--color-foreground)] transition-colors mb-6">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      className="vz-btn mb-6 gap-1.5 px-0 text-[11px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.14em", color: FAINT }}>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
         <path d="M9 11L5 7l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
       Retour
     </button>
   );
   const ErrorBanner = () => error ? (
-    <div className="flex gap-2 items-start p-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-700 mb-4">
-      <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />{error}
+    <div role="alert" className="flex gap-3 items-start py-3 pl-4 pr-3 text-[14px] mb-5" style={{ borderLeft: `2px solid ${TONE.danger}`, background: "rgba(255,122,92,0.08)", color: "#fff" }}>
+      <AlertCircle size={16} className="flex-shrink-0 mt-0.5" style={{ color: TONE.danger }} />{error}
     </div>
   ) : null;
 
   if (step === "intro") return (
-    <div>
+    <Focus>
       <ErrorBanner />
-      <div className="flex flex-col gap-3">
-        <label htmlFor="ts-camera"
-          className="flex items-center gap-4 p-4 rounded-lg cursor-pointer border transition-opacity hover:opacity-90"
-          style={{ background: "#e54b17", borderColor: "#e54b17" }}>
-          <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Camera size={20} className="text-white" />
-          </div>
-          <div>
-            <p className="font-bold text-white text-sm">Prendre une photo</p>
-            <p className="text-white/70 text-xs">Ouvre la caméra de votre téléphone</p>
-          </div>
-          <input id="ts-camera" type="file" accept="image/*" capture="environment" className="hidden" onChange={onInput} />
+      <div className="flex flex-col gap-3" data-compact={compact ? "" : undefined}>
+        <label htmlFor="ts-camera" className="vz-tile vz-tile-main">
+          <TileCorners color="#fff" />
+          <Camera size={22} className="text-white flex-shrink-0" />
+          <span className="min-w-0 flex-1">
+            <span className="block font-semibold text-white text-[16px]">Prendre une photo</span>
+            <span className="block text-[13px]" style={{ color: "rgba(255,255,255,0.8)" }}>Ouvre la caméra de votre téléphone</span>
+          </span>
+          <ArrowRight size={17} className="vz-arrow flex-shrink-0" />
+          <input id="ts-camera" type="file" accept="image/*" capture="environment" className="sr-only" onChange={onInput} />
         </label>
-        <label htmlFor="ts-import"
-          className="flex items-center gap-4 p-4 rounded-lg cursor-pointer border transition-colors hover:bg-gray-50"
-          style={{ borderColor: "var(--color-border)", background: "white" }}>
-          <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Upload size={18} className="text-[var(--color-muted)]" />
-          </div>
-          <div>
-            <p className="font-bold text-[var(--color-foreground)] text-sm">Importer une photo</p>
-            <p className="text-[var(--color-muted)] text-xs">Depuis votre galerie</p>
-          </div>
-          <input id="ts-import" type="file" accept="image/jpeg,image/png,image/webp,image/heic" className="hidden" onChange={onInput} />
+        <label htmlFor="ts-import" className="vz-tile">
+          <TileCorners />
+          <Upload size={20} className="flex-shrink-0" style={{ color: HUD }} />
+          <span className="min-w-0 flex-1">
+            <span className="block font-semibold text-white text-[16px]">Importer une photo</span>
+            <span className="block text-[13px]" style={{ color: FAINT }}>Depuis votre galerie</span>
+          </span>
+          <ArrowRight size={17} className="vz-arrow flex-shrink-0" />
+          <input id="ts-import" type="file" accept="image/jpeg,image/png,image/webp,image/heic" className="sr-only" onChange={onInput} />
         </label>
-        <button onClick={() => setStep("guide")}
-          className="flex items-center gap-4 p-4 rounded-lg border transition-colors hover:bg-gray-50 text-left w-full"
-          style={{ borderColor: "var(--color-border)", background: "white" }}>
-          <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Info size={18} className="text-[var(--color-muted)]" />
-          </div>
-          <div>
-            <p className="font-bold text-[var(--color-foreground)] text-sm">Où trouver l&apos;étiquette ?</p>
-            <p className="text-[var(--color-muted)] text-xs">Guide photos en 30 secondes</p>
-          </div>
+        <button onClick={() => setStep("guide")} className="vz-tile">
+          <TileCorners />
+          <Info size={20} className="flex-shrink-0" style={{ color: HUD }} />
+          <span className="min-w-0 flex-1">
+            <span className="block font-semibold text-white text-[16px]">Où trouver l&apos;étiquette ?</span>
+            <span className="block text-[13px]" style={{ color: FAINT }}>Guide photos en 30 secondes</span>
+          </span>
+          <ArrowRight size={17} className="vz-arrow flex-shrink-0" />
         </button>
       </div>
-    </div>
+    </Focus>
   );
 
   if (step === "guide") return (
-    <div>
+    <Focus>
       <Back to="intro" />
-      <h3 className="font-bold text-[var(--color-foreground)] text-lg mb-5">Où trouver l&apos;étiquette ?</h3>
-      <div className="flex flex-col gap-3 mb-6">
+      <h3 className="font-semibold text-white text-[21px] mb-5" style={{ letterSpacing: "-0.02em", margin: "0 0 20px" }}>Où trouver l&apos;étiquette ?</h3>
+      <ol className="flex flex-col mb-6" style={{ listStyle: "none", margin: "0 0 24px", padding: 0, borderTop: `1px solid ${LINE}` }}>
         {[
           { n: 1, title: "Unité intérieure (murale)", desc: "Côté ou dessous de l'unité accrochée au mur." },
           { n: 2, title: "Unité extérieure", desc: "Panneau latéral ou arrière de l'unité métallique dehors." },
           { n: 3, title: "Ce que vous cherchez", desc: "Autocollant ou plaque : Model, M/N, Serial, BTU." },
         ].map(item => (
-          <div key={item.n} className="flex gap-3 p-4 rounded-lg border items-start" style={{ borderColor: "var(--color-border)", background: "white" }}>
-            <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5" style={{ background: "#e54b17" }}>{item.n}</div>
+          <li key={item.n} className="flex gap-4 py-4 items-start" style={{ borderBottom: `1px solid ${LINE}` }}>
+            <span className="text-[12px] flex-shrink-0 pt-0.5" style={{ fontFamily: MONO, color: HUD }}>[{item.n}]</span>
             <div>
-              <p className="font-semibold text-sm text-[var(--color-foreground)] mb-0.5">{item.title}</p>
-              <p className="text-xs text-[var(--color-muted)]">{item.desc}</p>
+              <p className="font-semibold text-[15px] text-white" style={{ margin: "0 0 2px" }}>{item.title}</p>
+              <p className="text-[13.5px]" style={{ color: FAINT, margin: 0 }}>{item.desc}</p>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
-      <div className="p-4 rounded-lg border border-amber-200 bg-amber-50 mb-6">
+      </ol>
+      <div className="py-4 pl-4 pr-3 mb-6" style={{ borderLeft: `2px solid ${HUD}`, background: "rgba(255,255,255,0.03)" }}>
         <div className="flex items-center gap-2 mb-2">
-          <Info size={14} className="text-amber-700 flex-shrink-0" />
-          <p className="font-bold text-sm text-amber-800">Conseils photo</p>
+          <Info size={14} className="flex-shrink-0" style={{ color: HUD }} />
+          <p className="text-[11px] uppercase text-white" style={{ fontFamily: MONO, letterSpacing: "0.14em", margin: 0 }}>Conseils photo</p>
         </div>
-        <ul className="space-y-1 text-xs text-amber-700 list-disc list-inside">
-          <li>Approchez-vous : toute l&apos;étiquette doit être visible</li>
-          <li>Bon éclairage, sans reflets ni ombres</li>
-          <li>Le numéro de modèle doit être parfaitement net</li>
+        <ul className="space-y-1.5 text-[13.5px]" style={{ color: MUTE, listStyle: "none", margin: 0, padding: 0 }}>
+          <li>— Approchez-vous : toute l&apos;étiquette doit être visible</li>
+          <li>— Bon éclairage, sans reflets ni ombres</li>
+          <li>— Le numéro de modèle doit être parfaitement net</li>
         </ul>
       </div>
-      <label htmlFor="ts-guide-cam" className={`${btnPrimary} cursor-pointer`} style={{ background: "#e54b17" }}>
+      <label htmlFor="ts-guide-cam" className={`${btnPrimary} vz-tile-label cursor-pointer relative`}>
         <Camera size={18} /> Prendre la photo maintenant
-        <input id="ts-guide-cam" type="file" accept="image/*" capture="environment" className="hidden" onChange={onInput} />
+        <input id="ts-guide-cam" type="file" accept="image/*" capture="environment" className="sr-only" onChange={onInput} />
       </label>
-    </div>
+    </Focus>
   );
 
   if (step === "capture") return (
-    <div>
+    <Focus>
       <Back to="intro" />
-      <h3 className="font-bold text-[var(--color-foreground)] text-lg mb-4">Vérifiez la photo</h3>
+      <h3 className="font-semibold text-white text-[21px] mb-4" style={{ letterSpacing: "-0.02em", margin: "0 0 16px" }}>Vérifiez la photo</h3>
       {preview && (
-        <div className="relative mb-4 rounded-xl overflow-hidden border" style={{ borderColor: "var(--color-border)" }}>
-          <img src={preview} alt="Étiquette" className="w-full max-h-72 object-contain bg-gray-50" />
+        <div className="relative mb-5 p-3" style={{ background: "#0F0F0F" }}>
+          <Corners color={HUD} size={16} weight={2} />
+          <img src={preview} alt="Étiquette" className="w-full max-h-72 object-contain" />
+          <span aria-hidden="true" className="absolute left-4 top-3 text-[10.5px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.14em", color: HUD }}>Plaque · prête</span>
           <button onClick={() => { setPreview(null); setFile(null); setStep("intro"); }}
-            className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors">
-            <X size={14} />
+            aria-label="Retirer la photo"
+            className="vz-btn absolute top-3 right-3 w-9 h-9 text-white" style={{ background: "rgba(0,0,0,0.6)", border: `1px solid ${LINE}` }}>
+            <X size={15} />
           </button>
         </div>
       )}
       <ErrorBanner />
-      <div className="flex gap-3">
+      <div className="flex flex-col sm:flex-row gap-3">
         <button onClick={analyze} disabled={!file} className={`${btnPrimary} flex-1`}
-          style={{ background: file ? "#e54b17" : "var(--color-border)", cursor: file ? "pointer" : "not-allowed" }}>
+          style={file ? undefined : { background: "rgba(255,255,255,0.1)", borderColor: "transparent", color: FAINT }}>
           <Search size={16} /> Analyser l&apos;étiquette
         </button>
-        <label htmlFor="ts-retake" className={`${btnSecondary} flex-shrink-0 w-auto px-4 cursor-pointer`}
-          style={{ borderColor: "var(--color-border)", color: "var(--color-muted)" }}>
+        <label htmlFor="ts-retake" className={`${btnSecondary} vz-tile-label relative sm:w-auto sm:flex-shrink-0 cursor-pointer`}>
           <RotateCcw size={16} /> Autre photo
-          <input id="ts-retake" type="file" accept="image/*" capture="environment" className="hidden" onChange={onInput} />
+          <input id="ts-retake" type="file" accept="image/*" capture="environment" className="sr-only" onChange={onInput} />
         </label>
       </div>
-    </div>
+    </Focus>
   );
 
   if (step === "analyzing") return <AnalyzingView />;
@@ -891,35 +945,35 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
   if (step === "confirm") {
     const f = scan?.fields;
     return (
-      <div>
+      <Focus>
         <Back to="capture" />
-        <div className="flex items-center gap-2 mb-5">
+        <div className="flex items-center gap-3 mb-5">
           {scan?.confidence === "confirmed"
-            ? <CheckCircle size={20} className="text-green-600 flex-shrink-0" />
-            : <AlertCircle size={20} className="text-amber-500 flex-shrink-0" />}
+            ? <CheckCircle size={20} className="flex-shrink-0" style={{ color: TONE.ok }} />
+            : <AlertCircle size={20} className="flex-shrink-0" style={{ color: TONE.warn }} />}
           <div>
-            <p className="font-bold text-[var(--color-foreground)] text-base">Vérifiez les informations</p>
-            <p className="text-xs text-[var(--color-muted)]">{scan?.statusMessage ?? ""}</p>
+            <p className="font-semibold text-white text-[18px]" style={{ margin: 0 }}>Vérifiez les informations</p>
+            <p className="text-[12.5px]" style={{ color: FAINT, margin: "2px 0 0" }}>{scan?.statusMessage ?? ""}</p>
           </div>
         </div>
         {scan && scan.warnings.length > 0 && (
-          <div className="p-3 rounded-lg border border-amber-200 bg-amber-50 mb-5">
+          <div className="py-3 pl-4 pr-3 mb-5 flex flex-col gap-1" style={{ borderLeft: `2px solid ${TONE.warn}`, background: "rgba(255,255,255,0.03)" }}>
             {scan.warnings.map((w, i) => (
-              <p key={i} className="text-xs text-amber-700 flex items-start gap-1">
-                <AlertCircle size={12} className="flex-shrink-0 mt-0.5" />{w}
+              <p key={i} className="text-[13px] flex items-start gap-2" style={{ color: "rgba(255,255,255,0.84)", margin: 0 }}>
+                <AlertCircle size={12} className="flex-shrink-0 mt-[4px]" style={{ color: TONE.warn }} />{w}
               </p>
             ))}
           </div>
         )}
-        <div className="flex flex-col gap-3 mb-5">
+        <div className="flex flex-col gap-4 mb-6">
           <Field label="Marque" value={brand} onChange={setBrand} />
           <Field label="Numéro de modèle" value={model} onChange={setModel} note={f?.modelNumber.note ?? null} />
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-4">
             <Field label="Année approx." value={year?.toString() ?? ""}
               onChange={v => setYear(parseInt(v) || undefined)} type="number" placeholder="Ex: 2012" />
             <div>
-              <label className="block text-xs font-semibold text-[var(--color-muted)] uppercase tracking-wider mb-1.5">Type</label>
-              <select className="w-full px-3 py-2.5 text-sm rounded-lg border focus:outline-none" style={{ borderColor: "var(--color-border)" }}>
+              <label htmlFor={typeId} className="block text-[11px] uppercase mb-1" style={{ fontFamily: MONO, letterSpacing: "0.12em", color: FAINT }}>Type</label>
+              <select id={typeId} className="vz-input" style={{ outline: "none" }}>
                 <option value="outdoor">Unité extérieure</option>
                 <option value="indoor">Unité intérieure</option>
               </select>
@@ -927,23 +981,24 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
           </div>
         </div>
         {bestMatch && (
-          <div className="p-3 rounded-lg border mb-5 flex items-center gap-3" style={{ borderColor: "var(--color-border)", background: "var(--color-background)" }}>
-            <CheckCircle size={16} className="text-green-600 flex-shrink-0" />
+          <div className="relative p-3.5 mb-5 flex items-center gap-3" style={{ background: "rgba(255,255,255,0.03)" }}>
+            <Corners color={TONE.ok} size={9} weight={1.5} />
+            <CheckCircle size={16} className="flex-shrink-0" style={{ color: TONE.ok }} />
             <div>
-              <p className="font-semibold text-sm text-[var(--color-foreground)]">{bestMatch.brand} — {bestMatch.outdoorModel}</p>
-              <p className="text-xs text-[var(--color-muted)]">Trouvé dans le catalogue, score {bestMatch.matchScore}/100</p>
+              <p className="font-semibold text-[14.5px] text-white" style={{ margin: 0 }}>{bestMatch.brand} — {bestMatch.outdoorModel}</p>
+              <p className="text-[11px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.06em", color: FAINT, margin: "3px 0 0" }}>Trouvé dans le catalogue, score {bestMatch.matchScore}/100</p>
             </div>
           </div>
         )}
-        <button onClick={confirmAndSearch} disabled={reSearching} className={btnPrimary} style={{ background: "#e54b17", opacity: reSearching ? 0.7 : 1 }}>
-          {reSearching ? "Recherche dans le catalogue…" : "Voir la fiche technique"} <ArrowRight size={16} />
+        <button onClick={confirmAndSearch} disabled={reSearching} className={btnPrimary} style={{ opacity: reSearching ? 0.7 : 1 }}>
+          {reSearching ? "Recherche dans le catalogue…" : "Voir la fiche technique"} <ArrowRight size={16} className="vz-arrow" />
         </button>
-      </div>
+      </Focus>
     );
   }
 
   if (step === "speccard") return (
-    <div>
+    <Focus>
       <Back to="confirm" />
       <DeviceSpecCard
         brand={brand || "Marque inconnue"}
@@ -956,11 +1011,11 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
         onCompare={() => setStep("compare")}
         sessionId={scan?.sessionId}
       />
-    </div>
+    </Focus>
   );
 
   if (step === "compare") return (
-    <div>
+    <Focus>
       <Back to="speccard" />
       <CompareView
         currentBrand={brand || "Appareil actuel"}
@@ -970,7 +1025,7 @@ export function ThermoScanSection({ thermomatchResults, compact }: Props) {
         recommendations={thermomatchResults ?? []}
         onReset={reset}
       />
-    </div>
+    </Focus>
   );
 
   return null;

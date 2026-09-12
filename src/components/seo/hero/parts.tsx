@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useState, type CSSProperties, type ReactNode } from "react";
-import { animate, motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { animate, motion, useScroll, useTransform } from "motion/react";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Petits outils communs aux motifs des héros SEO.
@@ -43,7 +44,7 @@ const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayout
  * À placer dans un conteneur qui apparaît en fondu (le passage à 0 reste invisible).
  */
 export function Count({ value, decimals = 0, delay = 0, duration = 1.6, style }: { value: number; decimals?: number; delay?: number; duration?: number; style?: CSSProperties }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const [n, setN] = useState(value);
   useIsoLayoutEffect(() => {
     if (!reduce) setN(0);
@@ -62,7 +63,7 @@ export function Count({ value, decimals = 0, delay = 0, duration = 1.6, style }:
 
 /** Léger décalage vertical lié au défilement de la page (le héros est tout en haut). */
 export function Parallax({ children, distance = -50, className, style }: { children: ReactNode; distance?: number; className?: string; style?: CSSProperties }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 900], [0, distance]);
   return (
@@ -74,7 +75,7 @@ export function Parallax({ children, distance = -50, className, style }: { child
 
 /** Apparition en fondu montant. */
 export function Rise({ children, delay = 0, y = 22, duration = 1.2, className, style }: { children: ReactNode; delay?: number; y?: number; duration?: number; className?: string; style?: CSSProperties }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <motion.div className={className} style={style} initial={reduce ? false : { opacity: 0, y }} animate={{ opacity: 1, y: 0 }} transition={{ duration, ease: EASE, delay }}>
       {children}
@@ -93,7 +94,7 @@ export function Caption({ children, style, className = "" }: { children: ReactNo
 
 /** Vrai quand le composant tourne dans le navigateur et que les animations sont permises. */
 export function useLive(): boolean {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const [mounted, setMounted] = useState(false);
   // eslint-disable-next-line react-hooks/set-state-in-effect -- valeur finale affichée d'un coup (animations réduites ou démarrage)
   useEffect(() => setMounted(true), []);
@@ -118,7 +119,7 @@ function parseStat(v: string): { n: number; d: number; suffix: string } | null {
 }
 
 export function StatsPanel({ items, delay = 1 }: { items: Array<{ label: string; value: string }>; delay?: number }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   if (!items.length) return null;
   return (
     <Rise delay={delay} y={16} className="mt-10 max-w-[720px]">

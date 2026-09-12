@@ -12,8 +12,9 @@
      <LogisVertAlertForm target={{ kind: "brand", brandSlug: "daikin" }} label="Daikin" tone="light" amount={3250} />
    ================================================================== */
 import { useId, useState, type FormEvent } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { track } from "@/lib/analytics/track";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 export type LogisVertAlertTarget = { kind: "model"; modelId: string } | { kind: "brand"; brandSlug: string };
 
@@ -75,7 +76,7 @@ function formatAmount(n: number): string {
 
 export function LogisVertAlertForm({ target, label, tone = "dark", amount, amountCaption, firstName, className = "" }: Props) {
   const p = PALETTE[tone];
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const uid = useId();
   const titleId = `${uid}-titre`;
   const emailId = `${uid}-courriel`;

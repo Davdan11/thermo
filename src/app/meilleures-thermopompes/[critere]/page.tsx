@@ -5,11 +5,12 @@ import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getRanking, RANKINGS } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { JsonLd } from "@/components/seo/SeoBlocks";
 import { productImage } from "@/components/seo/hero/assets";
 import { PalmaresPodiumHero } from "@/components/heroes-v2/marques/PalmaresHeroes";
 import { monoLogo } from "@/components/heroes-v2/marques/server";
 import { typo } from "@/components/heroes-v2/marques/shared";
+import { AwardTable, BookletPage, JuryNote, PalmaresCta, PalmaresFaq, PalmaresProgramme, PalmaresRoot, PalmaresTrust } from "@/components/sections-v2/marques/Palmares";
 
 export const dynamicParams = false;
 
@@ -61,7 +62,7 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
   ];
 
   return (
-    <main className="bg-[#f8f5f0] text-[#071d2b]">
+    <main className="bg-[#0F2E26] text-[#F3EBDD]">
       <JsonLd
         data={[
           getBreadcrumbSchema([
@@ -97,27 +98,46 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
           { label: "Liste du", value: updated ?? "—" },
         ]}
       />
-      <TrustStrip />
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <ModelTable models={r.models} showRank metric={{ label: r.def.metricLabel, value: r.def.value }} caption="Une ligne par machine réellement distincte. Cliquez sur un modèle pour la fiche complète." />
-      </section>
-      {top && (
-        <Prose>
-          <h2>Comment lire ce classement</h2>
-          <p>
-            En tête : <Link href={`/produit/${top.canonicalSlug}`}>{top.brand} {top.name}</Link> ({top.outdoorModel}), avec {r.def.value(top)}.
-            {top.alsoSoldAs.length > 0 && <> La même machine est aussi vendue sous {top.alsoSoldAs.map((a) => a.brand).join(", ")}.</>}
-          </p>
-          <p>
-            Le <strong>COP à -15 °C</strong> indique combien de chaleur la machine produit par unité d'électricité quand il fait froid. Le <strong>HSPF2</strong> mesure
-            l'efficacité sur toute une saison de chauffage. La <strong>capacité à -15 °C</strong> dit ce que la machine fournit réellement au froid, et non ce qu'annonce
-            son étiquette nominale. Le <strong>montant LogisVert</strong> est celui de la liste Hydro-Québec pour l'appariement de référence.
-          </p>
-        </Prose>
-      )}
-      <CtaThermoMatch />
-      <RelatedLinks title="Autres classements" links={RANKINGS.filter((x) => x.slug !== critere).map((x) => ({ href: `/meilleures-thermopompes/${x.slug}`, label: x.h1 }))} />
-      <FaqBlock items={faq} />
+      {/* La suite, en livret de la soirée : le palmarès complet sur une page crème à double filet doré,
+          la note du jury (comment lire), l'appel à ThermoMatch, le programme des autres catégories, les questions. */}
+      <PalmaresRoot>
+        <PalmaresTrust />
+        <div className="px-3 py-16 sm:px-8 lg:py-24" style={{ background: "linear-gradient(180deg, #0A221C 0%, #0F2E26 22%)" }}>
+          <BookletPage folio="Palmarès">
+            <AwardTable
+              models={r.models}
+              podium
+              metric={{ label: r.def.metricLabel, value: r.def.value }}
+              caption="Une ligne par machine réellement distincte. Cliquez sur un modèle pour la fiche complète."
+            />
+          </BookletPage>
+        </div>
+        {top && (
+          <JuryNote id="lecture-titre" title="Comment lire ce classement">
+            <p>
+              En tête : <Link href={`/produit/${top.canonicalSlug}`}>{top.brand} {top.name}</Link> ({top.outdoorModel}), avec {typo(r.def.value(top))}.
+              {top.alsoSoldAs.length > 0 && <> La même machine est aussi vendue sous {top.alsoSoldAs.map((a) => a.brand).join(", ")}.</>}
+            </p>
+            <ul>
+              <li>
+                Le <strong>COP à -15 °C</strong> indique combien de chaleur la machine produit par unité d’électricité quand il fait froid.
+              </li>
+              <li>
+                Le <strong>HSPF2</strong> mesure l’efficacité sur toute une saison de chauffage.
+              </li>
+              <li>
+                La <strong>capacité à -15 °C</strong> dit ce que la machine fournit réellement au froid, et non ce qu’annonce son étiquette nominale.
+              </li>
+              <li>
+                Le <strong>montant LogisVert</strong> est celui de la liste Hydro-Québec pour l’appariement de référence.
+              </li>
+            </ul>
+          </JuryNote>
+        )}
+        <PalmaresCta />
+        <PalmaresProgramme title="Autres classements" links={RANKINGS.filter((x) => x.slug !== critere).map((x) => ({ href: `/meilleures-thermopompes/${x.slug}`, label: x.h1 }))} />
+        <PalmaresFaq items={faq} />
+      </PalmaresRoot>
     </main>
   );
 }

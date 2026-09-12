@@ -7,7 +7,7 @@ import type { AvailableFilters } from "@/lib/data/queries/catalogue";
 
 /* ------------------------------------------------------------------
    MobileFilterDrawer — fullscreen filter panel for mobile
-   
+
    - Body scroll lock
    - Escape to close
    - Focus management
@@ -58,7 +58,7 @@ export function MobileFilterDrawer({ filters, resultCount }: MobileFilterDrawerP
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="lg:hidden inline-flex items-center gap-2 h-10 px-4 rounded-md bg-surface border border-input-border text-sm text-foreground hover:border-border-hover transition-colors"
+        className="catg-pill lg:hidden inline-flex h-[44px] items-center gap-2.5 rounded-full bg-[#0A1419] px-5 text-sm font-semibold text-[#F4EFE7] hover:bg-[#1a2830]"
         aria-expanded={isOpen}
         aria-controls="mobile-filter-drawer"
       >
@@ -69,7 +69,7 @@ export function MobileFilterDrawer({ filters, resultCount }: MobileFilterDrawerP
         </svg>
         Filtrer
         {activeCount > 0 && (
-          <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-brand text-white text-xs font-medium">
+          <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-[#E54B17] px-1.5 text-xs font-semibold text-white">
             {activeCount}
           </span>
         )}
@@ -86,22 +86,22 @@ export function MobileFilterDrawer({ filters, resultCount }: MobileFilterDrawerP
         >
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-black/30"
+            className="absolute inset-0 bg-[#0A1419]/55 backdrop-blur-[2px] animate-in fade-in duration-300"
             onClick={() => setIsOpen(false)}
             aria-hidden="true"
           />
 
           {/* Panel */}
-          <div className="absolute inset-y-0 right-0 w-full max-w-sm bg-background shadow-lg flex flex-col animate-in slide-in-from-right duration-200">
+          <div className="absolute inset-y-0 right-0 flex w-full max-w-sm flex-col bg-[#F4EFE7] shadow-2xl animate-in slide-in-from-right duration-300">
             {/* Header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-border">
-              <h2 className="text-base font-semibold text-foreground">
-                Filtres
+            <div className="flex items-center justify-between border-b border-[#0A1419]/10 px-6 py-5">
+              <h2 className="catg-serif m-0 text-[32px] leading-none text-[#0A1419]">
+                Filtres<span className="text-[#E54B17]" aria-hidden="true">.</span>
               </h2>
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="w-9 h-9 flex items-center justify-center rounded-md text-muted hover:text-foreground hover:bg-surface transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-full text-[#0A1419]/60 transition-colors hover:bg-[#0A1419]/5 hover:text-[#0A1419]"
                 aria-label="Fermer les filtres"
               >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
@@ -112,16 +112,16 @@ export function MobileFilterDrawer({ filters, resultCount }: MobileFilterDrawerP
             </div>
 
             {/* Scrollable content */}
-            <div className="flex-1 overflow-y-auto px-5 py-5">
+            <div className="flex-1 overflow-y-auto px-6 py-6">
               <CatalogueFilters filters={filters} />
             </div>
 
             {/* Footer */}
-            <div className="border-t border-border px-5 py-4 safe-bottom">
+            <div className="safe-bottom border-t border-[#0A1419]/10 px-6 py-4">
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="w-full h-11 rounded-md bg-brand text-white text-sm font-medium hover:bg-brand-hover transition-colors"
+                className="h-12 w-full rounded-full bg-[#E54B17] text-sm font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Voir {resultCount} résultat{resultCount !== 1 ? "s" : ""}
               </button>

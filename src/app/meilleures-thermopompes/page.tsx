@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from "next";
-import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getCollectionPageSchema } from "@/lib/seo";
 import { getRanking, RANKINGS } from "@/lib/seo/programmatic";
-import { CtaThermoMatch, JsonLd, ModelTable, Prose, TrustStrip } from "@/components/seo/SeoBlocks";
+import { JsonLd } from "@/components/seo/SeoBlocks";
 import { PalmaresIndexHero } from "@/components/heroes-v2/marques/PalmaresHeroes";
 import { typo } from "@/components/heroes-v2/marques/shared";
+import { JuryNote, PalmaresCta, PalmaresRoot, PalmaresTrust, RankingCategory } from "@/components/sections-v2/marques/Palmares";
 
 export const metadata: Metadata = createMetadata({
   title: `Meilleures thermopompes au Québec ${new Date().getFullYear()} : classements sur données certifiées`,
@@ -18,9 +18,9 @@ export const metadata: Metadata = createMetadata({
 const SHORT: Record<string, string> = {
   "grand-froid": "Grand froid",
   "efficacite-hspf2": "Efficacité HSPF2",
-  "cop-15": "COP à −15 °C",
+  "cop-15": "COP à −15 °C",
   "subvention-logisvert": "Subvention LogisVert",
-  "murales-12000-btu": "Murales 12 000 BTU",
+  "murales-12000-btu": "Murales 12 000 BTU",
   centrales: "Centrales",
 };
 
@@ -29,7 +29,7 @@ export default function RankingsIndex() {
   // Un seul calcul par classement : sert au héros (meneur) et aux tableaux.
   const tables = RANKINGS.map((def) => ({ def, r: getRanking(def.slug, 5)! }));
   return (
-    <main className="bg-[#f8f5f0] text-[#071d2b]">
+    <main className="bg-[#0F2E26] text-[#F3EBDD]">
       <JsonLd
         data={[
           getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Meilleures thermopompes", url: "/meilleures-thermopompes" }]),
@@ -46,33 +46,33 @@ export default function RankingsIndex() {
           r.models[0] ? [{ label: SHORT[def.slug] ?? def.metricLabel, href: `/meilleures-thermopompes/${def.slug}`, leader: `${r.models[0].brand} ${r.models[0].name}`, value: typo(def.value(r.models[0])) }] : [],
         )}
       />
-      <TrustStrip />
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12 space-y-14">
-        {tables.map(({ def, r }) => {
-          return (
-            <div key={def.slug}>
-              <h2 className="text-[24px] font-bold text-[#172126]">
-                <Link href={`/meilleures-thermopompes/${def.slug}`} className="hover:text-[#e54b17]">{def.h1}</Link>
-              </h2>
-              <p className="text-[#536873] mt-1 mb-5">{def.description}</p>
-              <ModelTable models={r.models} showRank metric={{ label: def.metricLabel, value: def.value }} />
-              <p className="mt-3 text-sm">
-                <Link href={`/meilleures-thermopompes/${def.slug}`} className="text-[#e54b17] font-semibold">Voir les 25 premières →</Link>
-              </p>
-            </div>
-          );
-        })}
-      </section>
-      <Prose>
-        <h2>Notre méthode</h2>
-        <p>
-          Nous partons de la liste officielle des appareils admissibles à LogisVert publiée par Hydro-Québec, mise à jour automatiquement. Chaque
-          appariement y est identifié par sa référence AHRI, avec sa capacité de chauffage certifiée à -8 °C et à -15 °C, son COP à -15 °C, ses
-          indices SEER2 et HSPF2 et son montant de subvention. Les machines identiques vendues sous plusieurs marques sont regroupées. Aucune
-          valeur n'est estimée dans ces classements : une machine sans donnée certifiée n'y figure pas.
-        </p>
-      </Prose>
-      <CtaThermoMatch />
+      {/* La suite, en livret de la soirée : une page crème à double filet doré par catégorie,
+          la note du jury (méthode) et l'appel à ThermoMatch. */}
+      <PalmaresRoot>
+        <PalmaresTrust />
+        <div className="space-y-14 px-3 py-16 sm:space-y-20 sm:px-8 lg:py-24" style={{ background: "linear-gradient(180deg, #0A221C 0%, #0F2E26 18%, #0F2E26 100%)" }}>
+          {tables.map(({ def, r }, i) => (
+            <RankingCategory
+              key={def.slug}
+              index={i}
+              href={`/meilleures-thermopompes/${def.slug}`}
+              title={def.h1}
+              description={def.description}
+              models={r.models}
+              metric={{ label: def.metricLabel, value: def.value }}
+            />
+          ))}
+        </div>
+        <JuryNote id="methode-titre" title="Notre méthode">
+          <p>
+            Nous partons de la liste officielle des appareils admissibles à LogisVert publiée par Hydro-Québec, mise à jour automatiquement. Chaque
+            appariement y est identifié par sa référence AHRI, avec sa capacité de chauffage certifiée à -8 °C et à -15 °C, son COP à -15 °C, ses
+            indices SEER2 et HSPF2 et son montant de subvention. Les machines identiques vendues sous plusieurs marques sont regroupées. Aucune
+            valeur n’est estimée dans ces classements : une machine sans donnée certifiée n’y figure pas.
+          </p>
+        </JuryNote>
+        <PalmaresCta />
+      </PalmaresRoot>
     </main>
   );
 }

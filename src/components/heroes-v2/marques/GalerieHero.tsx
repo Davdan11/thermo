@@ -3,8 +3,9 @@
 import "./marques.css";
 import type { CSSProperties, FormEvent } from "react";
 import Link from "next/link";
-import { motion, MotionConfig, useReducedMotion } from "motion/react";
+import { motion, MotionConfig } from "motion/react";
 import { DISPLAY, EASE, fr, type Placard, calmNow, CALM } from "./shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    « Galerie » : héros de l’annuaire des marques (/marques).
@@ -53,7 +54,7 @@ type Props = {
 };
 
 export function GalerieHero({ placards, totals, search, onSearch, resultCount, resultsId }: Props) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const q = search.trim();
   const hung = HANG.flatMap((h, k) => (placards[h.rank] ? [{ ...h, k, p: placards[h.rank] }] : []));
   const figures = [

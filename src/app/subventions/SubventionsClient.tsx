@@ -1,9 +1,14 @@
 "use client";
 
 import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
-import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { ChequeHero } from "@/components/heroes-v2/prix/ChequeHero";
 import type { LogisVertSample } from "@/components/tools-hero/types";
+import "@/components/heroes-v2/prix/prix-v2.css";
+import { AnimatePresence, motion } from "motion/react";
+import { Reveal, Root, Stagger, Item } from "@/components/sections-v2/prix/kit";
+import { ChequeThermoScan } from "@/components/sections-v2/prix/ChequeThermoScan";
+import { CHEQUE, MONO, SERIF, DISPLAY, guillocheRosette, guillocheWave } from "@/components/sections-v2/prix/tokens";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 import { useState, useCallback, useRef, useEffect } from "react";
 import type { LogisVertResult } from "@/lib/subsidies/logisvert-calculator";
@@ -58,8 +63,14 @@ interface ProductResult {
   searchable: string;
 }
 
+/* ── Guillochis du bordereau (déterministes : identiques au serveur et au client) ── */
+const WAVES = Array.from({ length: 12 }, (_, i) => guillocheWave(12 + i * 12, 5, 130, i * 0.6, 1440));
+const ROSETTE = Array.from({ length: 12 }, (_, i) => guillocheRosette(300, 300, 150 + i * 9, 18 + i, 16, i * 0.42));
+
 /* ══════════════════════════════════════════════════════════════════
    COMPONENT
+   Présentation « Le chèque » (bordereau, talons, tampons) ; la logique
+   de vérification, la recherche et les états sont inchangés.
    ══════════════════════════════════════════════════════════════════ */
 export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSample[] }) {
   const [query, setQuery] = useState("");
@@ -79,7 +90,7 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
   // Fetch products from API with debounce
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
-    
+
     if (!query || query.length < 2) {
       setFiltered([]);
       return;
@@ -155,63 +166,77 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
     setTimeout(() => { setLoading(false); setChecked(true); }, 900);
   }, [canCheck, selected]);
 
-  /* ── colours ── */
-  const INK = "#071d2b";
-  const BDR = "#ded5c8";
-  const MUT = "#4b555b";
-  const ORG = "#e34816";
-  const HELP = "#7a8286";
+  /* ── colours (« Le chèque ») ── */
+  const INK = CHEQUE.ink;
+  const BDR = "rgba(14,53,39,0.26)";
+  const MUT = CHEQUE.mute;
+  const ORG = CHEQUE.stamp;
+  const HELP = "rgba(14,53,39,0.55)";
+  const GREEN = CHEQUE.stamp;
+
+  const LABEL = { display: "block", marginBottom: 8, color: MUT, fontSize: 10.5, fontWeight: 500, fontFamily: MONO, letterSpacing: "0.14em", textTransform: "uppercase" } as const;
+  const FIELD = { display: "flex", alignItems: "center", gap: 10, border: `1px solid ${BDR}`, borderBottom: `2px solid ${INK}`, borderRadius: 3, padding: "0 14px", height: 52, background: "rgba(255,255,255,.55)" } as const;
+  const amountOk = checked && !!logisVertResult && logisVertResult.estimatedAmountDollars > 0;
 
   return (
-    <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", minHeight: "100vh", background: "#f8f5f0", color: INK }}>
+    <main style={{ fontFamily: DISPLAY, colorScheme: "light", minHeight: "100vh", background: CHEQUE.cream, color: INK }}>
 
       {/* ═══ HÉROS : relevé LogisVert animé (montants réels de la liste officielle) ═══ */}
       <ChequeHero samples={heroSamples} />
 
-      {/* ═══ MAIN ═══ */}
-      <div style={{ padding: "24px 0 20px" }}>
-        <div className="w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10">
+      {/* ═══ MAIN : le bordereau posé à cheval sur l'émeraude du héros ═══ */}
+      <Root>
+      <div style={{ padding: "0 0 20px", background: `linear-gradient(${CHEQUE.emerald} 0 300px, ${CHEQUE.cream} 300px)` }}>
+        <div className="w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
 
-          {/* ── TOOL CARD ── */}
-          <div id="verification" className="subventions-main-card scroll-mt-28" style={{
-            display: "grid", overflow: "hidden", background: "rgba(255,255,255,.24)",
-            border: `1px solid ${BDR}`, borderRadius: 6, minHeight: 0,
-          }}>
-            <style>{`
-              .subventions-main-card { grid-template-columns: 1fr; }
-              @media (min-width: 900px) { .subventions-main-card { grid-template-columns: minmax(420px, 540px) minmax(0,1fr); } }
-            `}</style>
+          {/* ── TOOL CARD : bordereau de vérification ── */}
+          <Reveal y={50} duration={1.1}>
+          <div id="verification" className="scroll-mt-28 relative" style={{ filter: "drop-shadow(0 40px 50px rgba(8,48,31,0.35)) drop-shadow(0 2px 2px rgba(8,48,31,0.18))" }}>
+          <div className="relative overflow-hidden" style={{ background: CHEQUE.paper, borderRadius: 6 }}>
+            {/* Guillochis de sécurité */}
+            <svg aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-[170px] w-full" viewBox="0 0 1440 170" preserveAspectRatio="none" fill="none">
+              {WAVES.map((d, k) => (
+                <path key={k} d={d} stroke="rgba(28,107,74,0.09)" strokeWidth="1" />
+              ))}
+            </svg>
+
+            {/* En-tête du bordereau */}
+            <div aria-hidden="true" className="relative flex flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-3 sm:px-8" style={{ borderBottom: `1px dashed ${BDR}`, fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.18em", textTransform: "uppercase", color: MUT }}>
+              <span>Bordereau de vérification · aides financières</span>
+              <span>⑆ {logisvertMetadata.count.toLocaleString("fr-CA")} jumelages ⑈</span>
+            </div>
+
+            <div className="relative grid grid-cols-1 min-[900px]:grid-cols-[minmax(420px,540px)_minmax(0,1fr)]">
 
             {/* ═══ COL 1 — FORM ═══ */}
-            <div className="p-5 sm:p-8" style={{ borderRight: `1px solid #e2d9cc` }}>
+            <div className="p-5 sm:p-8">
               {/* Heading */}
-              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
-                <span style={{ display: "grid", width: 32, height: 32, placeItems: "center", flex: "0 0 32px",
-                  color: INK, border: "1px solid #d8cebe", borderRadius: "50%", fontSize: 15, fontWeight: 600 }}>1</span>
-                <span style={{ margin: 0, color: INK, fontSize: 21, fontWeight: 600 }}>Votre thermopompe</span>
+              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
+                <span style={{ display: "grid", width: 34, height: 34, placeItems: "center", flex: "0 0 34px",
+                  color: CHEQUE.paper, background: INK, borderRadius: 3, fontSize: 15, fontWeight: 600, fontFamily: MONO }}>1</span>
+                <span style={{ margin: 0, color: INK, fontSize: 28, fontWeight: 400, fontFamily: SERIF, lineHeight: 1 }}>Votre thermopompe</span>
               </div>
 
               {/* Search */}
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: "block", marginBottom: 8, color: INK, fontSize: 14, fontWeight: 600 }}>
+                <label style={LABEL}>
                   Rechercher une marque ou un numéro de modèle
                 </label>
                 <div ref={ddRef} style={{ position: "relative" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 10, border: `1px solid #d7cec1`,
-                    borderRadius: 5, padding: "0 16px", height: 52, background: "rgba(255,255,255,.4)" }}>
+                  <div className="ps2-field" style={FIELD}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={HELP} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
                     </svg>
                     <input type="text" placeholder="Rechercher une marque ou un numéro de modèle"
                       value={query} onChange={(e) => { setQuery(e.target.value); setShowDD(true); }} onFocus={() => setShowDD(true)}
-                      style={{ flex: 1, border: "none", outline: "none", background: "transparent", fontSize: 15, color: INK }} />
+                      style={{ flex: 1, border: "none", outline: "none", background: "transparent", fontSize: 15, color: INK, minWidth: 0 }} />
                   </div>
                   {showDD && !selected && (
                     <div style={{ position: "absolute", top: "100%", left: 0, right: 0, zIndex: 10,
-                      background: "#fff", border: `1px solid ${BDR}`, borderTop: "none",
-                      borderRadius: "0 0 5px 5px", maxHeight: 280, overflowY: "auto",
-                      boxShadow: "0 8px 24px rgba(0,0,0,.08)" }}>
-                      
+                      background: "#FFFDF6", border: `1px solid ${BDR}`, borderTop: "none",
+                      borderRadius: "0 0 4px 4px", maxHeight: 280, overflowY: "auto",
+                      boxShadow: "0 18px 30px -10px rgba(8,48,31,.28)" }}>
+
                       {query.length < 2 ? (
                         <div style={{ padding: 16, textAlign: "center", fontSize: 14, color: MUT }}>Tapez au moins 2 caractères pour rechercher...</div>
                       ) : searching ? (
@@ -220,15 +245,15 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
                         <div style={{ padding: 16, textAlign: "center", fontSize: 14, color: MUT }}>Aucun modèle trouvé.</div>
                       ) : (
                         filtered.map((p) => (
-                          <button key={p.id} type="button"
+                          <button key={p.id} type="button" className="ps2-opt"
                             onClick={() => { setSelected(p); setShowDD(false); setQuery(""); setChecked(false); }}
                             style={{ width: "100%", textAlign: "left", padding: "12px 16px", border: "none",
                               background: "transparent", cursor: "pointer", fontSize: 14, color: INK,
-                              borderBottom: `1px solid #eee` }}
-                            onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "#f5f3ee"; }}
+                              borderBottom: `1px dashed rgba(14,53,39,0.16)` }}
+                            onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "#EAF3EC"; }}
                             onMouseLeave={(e) => { (e.target as HTMLElement).style.background = "transparent"; }}>
-                            <strong>{p.brand}</strong>{p.series ? ` ${p.series}` : ""} — <span style={{ fontWeight: 400 }}>{p.model}</span>
-                            <br /><span style={{ fontSize: 12, color: MUT }}>{p.btu.toLocaleString("fr-CA")} BTU/h à -8 °C · LogisVert : <strong style={{ color: "#16a34a" }}>{p.logisVertDollars.toLocaleString("fr-CA")} $</strong> · {p.isColdClimate ? "Climat froid" : "Standard"} · {p.systemType === "C" ? "Centrale" : "Murale / multizone"}</span>
+                            <strong>{p.brand}</strong>{p.series ? ` ${p.series}` : ""} — <span style={{ fontWeight: 400, fontFamily: MONO, fontSize: 13 }}>{p.model}</span>
+                            <br /><span style={{ fontSize: 12, color: MUT }}>{p.btu.toLocaleString("fr-CA")} BTU/h à -8 °C · LogisVert : <strong style={{ color: GREEN, fontFamily: MONO }}>{p.logisVertDollars.toLocaleString("fr-CA")} $</strong> · {p.isColdClimate ? "Climat froid" : "Standard"} · {p.systemType === "C" ? "Centrale" : "Murale / multizone"}</span>
                           </button>
                         ))
                       )}
@@ -240,51 +265,51 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
               {/* Selected config */}
               {selected && (
                 <div style={{ marginBottom: 20 }}>
-                  <label style={{ display: "block", marginBottom: 8, color: INK, fontSize: 14, fontWeight: 600 }}>
+                  <label style={LABEL}>
                     Configuration sélectionnée
                   </label>
-                  <div style={{ display: "grid", gridTemplateColumns: "80px minmax(0,1fr) auto",
-                    alignItems: "center", gap: 16, minHeight: 72, padding: "10px 16px",
-                    border: `1px solid #ddd3c5`, borderRadius: 5 }}>
+                  <motion.div initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}
+                    className="grid grid-cols-[56px_minmax(0,1fr)] items-center gap-x-4 gap-y-3 sm:grid-cols-[72px_minmax(0,1fr)_auto]"
+                    style={{ minHeight: 72, padding: "10px 14px", border: `1.5px solid ${INK}`, borderRadius: 3, background: "rgba(255,255,255,.6)" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/images/gree-extreme-miniature.png" alt=""
-                      style={{ width: 72, height: 48, objectFit: "contain" }} />
+                      style={{ width: 64, maxWidth: "100%", height: 44, objectFit: "contain" }} />
                     <div style={{ minWidth: 0 }}>
                       <div style={{ color: INK, fontSize: 15, fontWeight: 650 }}>
-                        {selected.brand}{selected.series ? ` ${selected.series}` : ""} — {selected.model}
+                        {selected.brand}{selected.series ? ` ${selected.series}` : ""} — <span style={{ fontFamily: MONO, fontSize: 13.5 }}>{selected.model}</span>
                       </div>
                       <div style={{ marginTop: 4, color: MUT, fontSize: 13 }}>{selected.btu.toLocaleString("fr-CA")} BTU/h à -8 °C · {selected.isColdClimate ? "Climat froid" : "Standard"} · {selected.systemType === "C" ? "Centrale" : "Murale / multizone"}</div>
                     </div>
                     <button type="button" onClick={() => { setSelected(null); setChecked(false); }}
-                      style={{ minWidth: 72, height: 36, color: ORG, background: "transparent",
-                        border: `1px solid rgba(227,72,22,.55)`, borderRadius: 4, fontSize: 13,
+                      className="col-span-2 justify-self-start sm:col-span-1 sm:justify-self-end"
+                      style={{ minWidth: 84, height: 36, color: ORG, background: "transparent",
+                        border: `1.5px solid ${ORG}`, borderRadius: 999, fontSize: 13,
                         fontWeight: 600, cursor: "pointer" }}>
                       Modifier
                     </button>
-                  </div>
+                  </motion.div>
                 </div>
               )}
 
               {/* Postal + City */}
               <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: 16, marginBottom: 20 }}>
                 <div>
-                  <label style={{ display: "block", marginBottom: 8, color: INK, fontSize: 14, fontWeight: 600 }}>Code postal</label>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, border: `1px solid #d7cec1`,
-                    borderRadius: 5, padding: "0 14px", height: 52, background: "rgba(255,255,255,.4)" }}>
+                  <label style={LABEL}>Code postal</label>
+                  <div className="ps2-field" style={{ ...FIELD, gap: 8 }}>
                     <input type="text" placeholder="J4B 5H2" maxLength={7} value={postal}
                       onChange={(e) => setPostal(normalizePostal(e.target.value))}
                       style={{ flex: 1, border: "none", outline: "none", background: "transparent",
-                        fontSize: 15, color: INK, textTransform: "uppercase", minWidth: 0 }} />
+                        fontSize: 15, color: INK, textTransform: "uppercase", minWidth: 0, fontFamily: MONO, letterSpacing: "0.06em" }} />
                     {postalOk && (
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={GREEN} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
                       </svg>
                     )}
                   </div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <label style={{ display: "block", marginBottom: 8, color: INK, fontSize: 14, fontWeight: 600 }}>Lieu détecté</label>
-                  <div style={{ display: "flex", alignItems: "center", border: `1px solid #d7cec1`,
-                    borderRadius: 5, padding: "0 14px", height: 52, background: "rgba(248,245,240,.5)", minWidth: 0 }}>
+                  <label style={LABEL}>Lieu détecté</label>
+                  <div style={{ ...FIELD, gap: 0, borderBottom: `2px dotted ${BDR}`, background: "rgba(239,230,207,.5)", minWidth: 0 }}>
                     <input type="text" value={city} readOnly tabIndex={-1} placeholder="—"
                       style={{ flex: 1, minWidth: 0, border: "none", outline: "none", background: "transparent",
                         fontSize: 15, color: city ? INK : HELP, textOverflow: "ellipsis" }} />
@@ -294,15 +319,14 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
 
               {/* Date */}
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: "block", marginBottom: 8, color: INK, fontSize: 14, fontWeight: 600 }}>Installation prévue</label>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, border: `1px solid #d7cec1`,
-                  borderRadius: 5, padding: "0 14px", height: 52, background: "rgba(255,255,255,.4)" }}>
+                <label style={LABEL}>Installation prévue</label>
+                <div className="ps2-field" style={FIELD}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={HELP} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
                   </svg>
                   <input type="date" value={date} onChange={(e) => setDate(e.target.value)}
                     style={{ flex: 1, border: "none", outline: "none", background: "transparent",
-                      fontSize: 15, color: date ? INK : HELP }} />
+                      fontSize: 15, color: date ? INK : HELP, minWidth: 0, fontFamily: MONO }} />
                 </div>
                 <p style={{ margin: "6px 0 0", color: HELP, fontSize: 12, lineHeight: 1.4 }}>
                   Date à laquelle l&apos;installation sera terminée ou mise en service.
@@ -310,91 +334,101 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
               </div>
 
               {/* CTA */}
-              <button type="button" disabled={!canCheck || loading} onClick={doCheck}
+              <button type="button" disabled={!canCheck || loading} onClick={doCheck} className="ps2-cheque-btn"
                 style={{ width: "100%", height: 56, marginTop: 6, display: "flex", alignItems: "center",
-                  justifyContent: "center", gap: 10, color: "#fff", border: 0, borderRadius: 5,
+                  justifyContent: "center", gap: 10, color: canCheck ? CHEQUE.mint : "rgba(14,53,39,0.55)", border: 0, borderRadius: 999,
                   fontSize: 16, fontWeight: 600, cursor: canCheck ? "pointer" : "not-allowed",
-                  background: canCheck ? "linear-gradient(90deg,#d9430d,#eb4b0d)" : "#bbb",
+                  background: canCheck ? CHEQUE.emerald : "rgba(14,53,39,0.12)",
                   opacity: loading ? .65 : 1, letterSpacing: "0.01em" }}>
                 {loading ? "Vérification en cours…" : <><span>Vérifier les programmes</span><span style={{ fontSize: 20 }}>›</span></>}
               </button>
-              <p style={{ margin: "8px 0 0", textAlign: "center", color: "#6d777d", fontSize: 12 }}>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6d777d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: 5, verticalAlign: "-2px" }}>
+              <p style={{ margin: "10px 0 0", textAlign: "center", color: HELP, fontSize: 12 }}>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={HELP} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: 5, verticalAlign: "-2px", display: "inline" }}>
                   <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                 </svg>
                 Vos informations ne sont pas conservées.
               </p>
             </div>
 
-            {/* ═══ COL 2 — RESULTS ═══ */}
-            <div style={{ padding: "32px 36px 28px", background: "rgba(248,245,240,.35)" }}>
+            {/* ═══ COL 2 — RESULTS : le talon ═══ */}
+            <div className="relative p-5 sm:p-8 lg:p-9" style={{ background: "rgba(239,230,207,.72)" }}>
+              {/* Perforation entre le bordereau et le talon */}
+              <span aria-hidden="true" className="absolute inset-x-0 top-0 block min-[900px]:hidden" style={{ borderTop: `2px dashed ${BDR}` }} />
+              <span aria-hidden="true" className="absolute bottom-0 left-0 top-0 hidden min-[900px]:block" style={{ borderLeft: `2px dashed ${BDR}` }} />
+
               {/* Header */}
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-                  <span style={{ display: "grid", width: 32, height: 32, placeItems: "center", flex: "0 0 32px",
-                    color: INK, border: "1px solid #d8cebe", borderRadius: "50%", fontSize: 15, fontWeight: 600 }}>2</span>
-                  <span style={{ color: INK, fontSize: 21, fontWeight: 600 }}>Résultat préliminaire</span>
+                  <span style={{ display: "grid", width: 34, height: 34, placeItems: "center", flex: "0 0 34px",
+                    color: CHEQUE.paper, background: INK, borderRadius: 3, fontSize: 15, fontWeight: 600, fontFamily: MONO }}>2</span>
+                  <span style={{ color: INK, fontSize: 28, fontWeight: 400, fontFamily: SERIF, lineHeight: 1 }}>Résultat préliminaire</span>
                 </div>
-                <span style={{ padding: "7px 18px", borderRadius: 999, background: "#f0e9dc",
-                  fontSize: 13, color: "#61594d", whiteSpace: "nowrap" }}>Résultat indicatif</span>
+                <span style={{ padding: "5px 12px", borderRadius: 3, border: `1.5px solid ${MUT}`, transform: "rotate(-2deg)",
+                  fontSize: 11, color: MUT, whiteSpace: "nowrap", fontFamily: MONO, letterSpacing: "0.14em", textTransform: "uppercase" }}>Résultat indicatif</span>
               </div>
-              <p style={{ margin: "16px 0 18px", fontSize: 15, color: "#334049", lineHeight: 1.5 }}>
+              <p style={{ margin: "16px 0 18px", fontSize: 15, color: "rgba(14,53,39,0.82)", lineHeight: 1.5 }}>
                 Voici ce que nous avons trouvé selon les informations fournies.
               </p>
 
               {/* Single result table */}
               <div aria-live="polite" style={{ overflow: "hidden", width: "100%",
-                border: `1px solid ${BDR}`, borderRadius: 6, background: "rgba(255,255,255,.18)" }}>
-                {renderRow(
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke={checked && logisVertResult && logisVertResult.estimatedAmountDollars > 0 ? "#16a34a" : INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                border: `1px solid ${BDR}`, borderRadius: 4, background: "rgba(255,253,246,.7)" }}>
+                <ResultRow
+                  index={1}
+                  checked={checked}
+                  icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={amountOk ? GREEN : INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-                  </svg>,
-                  "LogisVert (Hydro-Québec)",
-                  checked 
-                    ? (logisVertResult && logisVertResult.estimatedAmountDollars > 0 
-                        ? <span style={{ color: "#16a34a", fontSize: 18, fontWeight: 700 }}>{logisVertResult.estimatedAmountDollars} $</span> 
-                        : "Non admissible") 
-                    : "En attente",
-                  checked
-                    ? (logisVertResult 
-                        ? (logisVertResult.estimatedAmountDollars > 0 
-                            ? `Montant officiel Hydro-Québec pour ce jumelage certifié (capacité de ${logisVertResult.capacityBtuUsed.toLocaleString("fr-CA")} BTU/h à -8 °C)${logisVertResult.isColdClimate ? ", appareil certifié climat froid" : ""}.` 
-                            : "La capacité de ce modèle ne permet pas de se qualifier pour la subvention LogisVert.") 
+                  </svg>}
+                  name="LogisVert (Hydro-Québec)"
+                  status={checked
+                    ? (logisVertResult && logisVertResult.estimatedAmountDollars > 0
+                        ? <span style={{ color: GREEN, fontSize: 24, fontWeight: 600, fontFamily: MONO, letterSpacing: "-0.03em" }}>{logisVertResult.estimatedAmountDollars} $</span>
+                        : "Non admissible")
+                    : "En attente"}
+                  desc={checked
+                    ? (logisVertResult
+                        ? (logisVertResult.estimatedAmountDollars > 0
+                            ? `Montant officiel Hydro-Québec pour ce jumelage certifié (capacité de ${logisVertResult.capacityBtuUsed.toLocaleString("fr-CA")} BTU/h à -8 °C)${logisVertResult.isColdClimate ? ", appareil certifié climat froid" : ""}.`
+                            : "La capacité de ce modèle ne permet pas de se qualifier pour la subvention LogisVert.")
                         : "Cette configuration pourrait être admissible à un programme provincial en vigueur.")
-                    : "Remplissez le formulaire pour consulter les résultats.",
-                  "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/",
-                  false
-                )}
-                {renderRow(
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    : "Remplissez le formulaire pour consulter les résultats."}
+                  href="https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/"
+                  border={false}
+                />
+                <ResultRow
+                  index={2}
+                  checked={checked}
+                  icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
-                  </svg>,
-                  "Configuration exacte",
-                  checked ? "Inscrite sur la liste officielle" : "En attente",
-                  checked
+                  </svg>}
+                  name="Configuration exacte"
+                  status={checked ? "Inscrite sur la liste officielle" : "En attente"}
+                  desc={checked
                     ? "Ce jumelage (unité extérieure + unité intérieure) figure dans la liste des appareils admissibles d'Hydro-Québec. L'installateur doit poser exactement cette combinaison."
-                    : "Sélectionnez un modèle pour démarrer la vérification.",
-                  "https://www.nrcan.gc.ca/energy-efficiency/energy-star-canada",
-                  true
-                )}
-                {renderRow(
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    : "Sélectionnez un modèle pour démarrer la vérification."}
+                  href="https://www.nrcan.gc.ca/energy-efficiency/energy-star-canada"
+                  border
+                />
+                <ResultRow
+                  index={3}
+                  checked={checked}
+                  icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/>
-                  </svg>,
-                  "Date d\u2019installation",
-                  checked ? "À confirmer" : "En attente",
-                  checked
-                    ? "L\u2019admissibilité dépend de la date de fin des travaux ou de la mise en service."
-                    : "Indiquez votre date d\u2019installation prévue.",
-                  "https://www.quebec.ca/habitation-et-logement/chauffage-et-climatisation",
-                  true
-                )}
+                  </svg>}
+                  name={"Date d’installation"}
+                  status={checked ? "À confirmer" : "En attente"}
+                  desc={checked
+                    ? "L’admissibilité dépend de la date de fin des travaux ou de la mise en service."
+                    : "Indiquez votre date d’installation prévue."}
+                  href="https://www.quebec.ca/habitation-et-logement/chauffage-et-climatisation"
+                  border
+                />
               </div>
 
-              {/* Notice — flat, no bg */}
+              {/* Notice — petits caractères */}
               <div style={{ display: "grid", gridTemplateColumns: "18px minmax(0,1fr)", gap: 10,
-                marginTop: 28, padding: 0, color: "#414c52", background: "transparent",
-                border: "none", fontSize: 13, lineHeight: 1.5 }}>
+                marginTop: 26, padding: "14px 0 0", color: "rgba(14,53,39,0.78)", background: "transparent",
+                borderTop: `1px dashed ${BDR}`, fontSize: 13, lineHeight: 1.5 }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: 2 }} aria-hidden="true">
                   <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
                 </svg>
@@ -405,113 +439,127 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
               </div>
             </div>
           </div>
+          </div>
+          </div>
+          </Reveal>
 
           {/* ═══ THERMOSCAN : l'appareil actuel ═══ */}
-          <div style={{ marginTop: 20 }}>
-            <ThermoScanPromo variant="card" context="subventions" />
+          <div style={{ marginTop: 28 }}>
+            <ChequeThermoScan context="subventions" />
           </div>
 
-          {/* ═══ CE QUE NOUS VÉRIFIONS ═══ */}
-          <div id="ce-que-nous-verifions" className="scroll-mt-28" style={{ marginTop: 20, border: `1px solid #e0d7ca`, borderRadius: 6,
-            background: "rgba(255,255,255,.2)", overflow: "hidden" }}>
+          {/* ═══ CE QUE NOUS VÉRIFIONS : un certificat guilloché ═══ */}
+          <Reveal y={30} className="scroll-mt-28" id="ce-que-nous-verifions" style={{ marginTop: 28 }}>
+          <div className="relative overflow-hidden" style={{ border: `1px solid ${BDR}`, borderRadius: 6, background: CHEQUE.paper }}>
+            <div aria-hidden="true" className="pointer-events-none absolute inset-[8px]" style={{ border: `1px solid rgba(28,107,74,0.28)`, borderRadius: 3 }} />
+            <CertRosette />
             {/* Header */}
-            <div style={{ padding: "28px 34px 14px" }}>
-              <h2 style={{ margin: 0, fontSize: 21, fontWeight: 650, color: INK }}>Ce que nous vérifions</h2>
-              <div style={{ width: 32, height: 2, marginTop: 14, background: ORG }} />
+            <div className="relative" style={{ padding: "34px 34px 10px" }}>
+              <p aria-hidden="true" style={{ margin: 0, fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.2em", textTransform: "uppercase", color: GREEN }}>Trois vérifications par configuration</p>
+              <h2 style={{ margin: "10px 0 0", fontSize: "clamp(34px, 3.6vw, 52px)", fontWeight: 400, color: INK, fontFamily: SERIF, lineHeight: 1 }}>Ce que nous vérifions</h2>
+              <div style={{ width: 48, height: 2, marginTop: 18, background: GREEN }} />
             </div>
             {/* Grid */}
-            <div className="subventions-verify-grid" style={{ display: "grid", gap: 20, padding: "0 20px 28px" }}>
-              <style>{`
-                .subventions-verify-grid { grid-template-columns: 1fr; }
-                @media (min-width: 768px) { .subventions-verify-grid { grid-template-columns: repeat(3,1fr); gap: 0; padding: 0 34px 28px !important; } }
-              `}</style>
+            <Stagger as="div" className="relative grid grid-cols-1 gap-8 px-[34px] pb-9 pt-6 md:grid-cols-3 md:gap-0" gap={0.14}>
               {/* 1 */}
-              <div style={{ display: "grid", gridTemplateColumns: "34px minmax(0,1fr)", gap: 16, paddingRight: 32 }}>
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
-                </svg>
-                <div>
-                  <h3 style={{ margin: "0 0 8px", color: INK, fontSize: 16, fontWeight: 650 }}>Configuration</h3>
-                  <p style={{ margin: 0, color: "#414b51", fontSize: 14, lineHeight: 1.5 }}>
-                    Nous validons la marque, le numéro de modèle, la capacité et le type de thermopompe selon les exigences des programmes en vigueur.
-                  </p>
-                </div>
-              </div>
+              <Item as="div" className="md:pr-8">
+                <p aria-hidden="true" style={{ margin: 0, fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.16em", textTransform: "uppercase", color: MUT }}>Article <span style={{ fontFamily: SERIF, fontStyle: "italic", fontSize: 34, letterSpacing: 0, color: GREEN, marginLeft: 6, verticalAlign: "-6px" }}>1</span></p>
+                <h3 style={{ margin: "10px 0 8px", color: INK, fontSize: 17, fontWeight: 650 }}>Configuration</h3>
+                <p style={{ margin: 0, color: "rgba(14,53,39,0.8)", fontSize: 14.5, lineHeight: 1.6 }}>
+                  Nous validons la marque, le numéro de modèle, la capacité et le type de thermopompe selon les exigences des programmes en vigueur.
+                </p>
+              </Item>
               {/* 2 */}
-              <div style={{ display: "grid", gridTemplateColumns: "34px minmax(0,1fr)", gap: 16, padding: "0 32px", borderLeft: "1px solid #e3dace" }}>
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/>
-                </svg>
-                <div>
-                  <h3 style={{ margin: "0 0 8px", color: INK, fontSize: 16, fontWeight: 650 }}>Date des travaux</h3>
-                  <p style={{ margin: 0, color: "#414b51", fontSize: 14, lineHeight: 1.5 }}>
-                    Nous vérifions que la date d&apos;installation prévue respecte les périodes admissibles précisées par les programmes officiels.
-                  </p>
-                </div>
-              </div>
+              <Item as="div" className="md:border-l md:border-dashed md:px-8" style={{ borderColor: BDR }}>
+                <p aria-hidden="true" style={{ margin: 0, fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.16em", textTransform: "uppercase", color: MUT }}>Article <span style={{ fontFamily: SERIF, fontStyle: "italic", fontSize: 34, letterSpacing: 0, color: GREEN, marginLeft: 6, verticalAlign: "-6px" }}>2</span></p>
+                <h3 style={{ margin: "10px 0 8px", color: INK, fontSize: 17, fontWeight: 650 }}>Date des travaux</h3>
+                <p style={{ margin: 0, color: "rgba(14,53,39,0.8)", fontSize: 14.5, lineHeight: 1.6 }}>
+                  Nous vérifions que la date d&apos;installation prévue respecte les périodes admissibles précisées par les programmes officiels.
+                </p>
+              </Item>
               {/* 3 */}
-              <div style={{ display: "grid", gridTemplateColumns: "34px minmax(0,1fr)", gap: 16, paddingLeft: 32, borderLeft: "1px solid #e3dace" }}>
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-                </svg>
-                <div>
-                  <h3 style={{ margin: "0 0 8px", color: INK, fontSize: 16, fontWeight: 650 }}>Conditions du programme</h3>
-                  <p style={{ margin: 0, color: "#414b51", fontSize: 14, lineHeight: 1.5 }}>
-                    Nous comparons votre entrée avec les critères spécifiques (usage, résidence admissible, documents requis, etc.) des programmes concernés.
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* Legal bar */}
-            <div style={{ minHeight: 52, padding: "12px 34px", background: "rgba(239,233,223,.45)",
-              borderTop: "1px solid #e3dace", color: "#4a5257", fontSize: 13, lineHeight: 1.5,
-              display: "flex", alignItems: "center", gap: 10 }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5257" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }} aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
-              </svg>
+              <Item as="div" className="md:border-l md:border-dashed md:pl-8" style={{ borderColor: BDR }}>
+                <p aria-hidden="true" style={{ margin: 0, fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.16em", textTransform: "uppercase", color: MUT }}>Article <span style={{ fontFamily: SERIF, fontStyle: "italic", fontSize: 34, letterSpacing: 0, color: GREEN, marginLeft: 6, verticalAlign: "-6px" }}>3</span></p>
+                <h3 style={{ margin: "10px 0 8px", color: INK, fontSize: 17, fontWeight: 650 }}>Conditions du programme</h3>
+                <p style={{ margin: 0, color: "rgba(14,53,39,0.8)", fontSize: 14.5, lineHeight: 1.6 }}>
+                  Nous comparons votre entrée avec les critères spécifiques (usage, résidence admissible, documents requis, etc.) des programmes concernés.
+                </p>
+              </Item>
+            </Stagger>
+            {/* Legal bar : ligne de caractères magnétiques */}
+            <div className="relative" style={{ minHeight: 52, padding: "14px 34px 18px", background: "rgba(239,230,207,.6)",
+              borderTop: `1px dashed ${BDR}`, color: "rgba(14,53,39,0.8)", fontSize: 13, lineHeight: 1.5,
+              display: "flex", alignItems: "center", gap: 12 }}>
+              <span aria-hidden="true" style={{ fontFamily: MONO, fontSize: 14, color: GREEN, flexShrink: 0 }}>⑆</span>
               <span>
                 L&apos;admissibilité finale est déterminée par l&apos;organisme responsable.
                 Thermopompes À Vendre.ca n&apos;est pas responsable des décisions d&apos;admissibilité ou du versement des aides financières.
               </span>
             </div>
           </div>
+          </Reveal>
 
-          <div style={{ height: 48 }} />
+          <div style={{ height: 56 }} />
         </div>
       </div>
+      </Root>
     </main>
   );
 }
 
-/* ── Result row helper ── */
-function renderRow(icon: React.ReactNode, name: string, status: React.ReactNode, desc: string, href: string, border: boolean) {
+/* ── Rosace de guillochis du certificat (lente) ── */
+function CertRosette() {
+  const reduce = useReduced();
   return (
-    <div className="subventions-result-row" style={{
-      display: "grid",
-      alignItems: "center", gap: 16, minHeight: 88, padding: "22px 20px",
-      borderTop: border ? "1px solid #e3dacd" : "none",
+    <div aria-hidden="true" className="pointer-events-none absolute -right-[180px] -top-[200px] h-[600px] w-[600px] opacity-[0.16]">
+      <motion.svg viewBox="0 0 600 600" className="h-full w-full" fill="none" animate={reduce ? undefined : { rotate: 360 }} transition={{ duration: 200, ease: "linear", repeat: Infinity }}>
+        {ROSETTE.map((d, i) => (
+          <path key={i} d={d} stroke="#1C6B4A" strokeWidth="0.9" />
+        ))}
+      </motion.svg>
+    </div>
+  );
+}
+
+/* ── Result row : un talon, le statut tamponné une fois vérifié ── */
+function ResultRow({ icon, name, status, desc, href, border, index, checked }: { icon: React.ReactNode; name: string; status: React.ReactNode; desc: string; href: string; border: boolean; index: number; checked: boolean }) {
+  const reduce = useReduced();
+  return (
+    <div className="grid grid-cols-1 items-center gap-4 px-5 py-[22px] md:grid-cols-[minmax(180px,1.05fr)_minmax(200px,1.35fr)_132px] md:px-[26px]" style={{
+      minHeight: 88,
+      borderTop: border ? "1px dashed rgba(14,53,39,0.22)" : "none",
     }}>
-      <style>{`
-        .subventions-result-row { grid-template-columns: 1fr; }
-        @media (min-width: 768px) { .subventions-result-row { grid-template-columns: minmax(180px,1.05fr) minmax(200px,1.35fr) 140px; padding: 22px 26px !important; } }
-      `}</style>
-      <div style={{ display: "grid", gridTemplateColumns: "34px minmax(0,1fr)", alignItems: "center", gap: 14 }}>
-        {icon}
+      <div style={{ display: "grid", gridTemplateColumns: "30px minmax(0,1fr)", alignItems: "start", gap: 12 }}>
+        <span style={{ paddingTop: 2 }}>{icon}</span>
         <div>
-          <span style={{ display: "block", marginBottom: 4, color: "#071d2b", fontSize: 15, fontWeight: 650, lineHeight: 1.25 }}>{name}</span>
-          <span style={{ display: "block", color: "#3f4950", fontSize: 13, lineHeight: 1.35 }}>{status}</span>
+          <span aria-hidden="true" style={{ display: "block", fontFamily: MONO, fontSize: 10, letterSpacing: "0.16em", color: "rgba(14,53,39,0.55)", marginBottom: 2 }}>TALON {String(index).padStart(2, "0")}</span>
+          <span style={{ display: "block", marginBottom: 6, color: "#0E3527", fontSize: 15, fontWeight: 650, lineHeight: 1.25 }}>{name}</span>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.span
+              key={checked ? "ok" : "wait"}
+              style={checked
+                ? { display: "inline-block", color: "#1C6B4A", fontSize: 12.5, lineHeight: 1.3, fontFamily: MONO, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", padding: "4px 8px", border: "2px solid #1C6B4A", outline: "1px solid #1C6B4A", outlineOffset: 2, borderRadius: 3, rotate: -3, mixBlendMode: "multiply" }
+                : { display: "inline-flex", alignItems: "center", gap: 7, color: "rgba(14,53,39,0.7)", fontSize: 12.5, lineHeight: 1.35, fontFamily: MONO, letterSpacing: "0.04em" }}
+              initial={reduce ? false : checked ? { opacity: 0, scale: 2.1, rotate: 4 } : { opacity: 0 }}
+              animate={checked ? { opacity: 1, scale: 1, rotate: -3 } : { opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.15 } }}
+              transition={checked ? { duration: 0.28, ease: [0.6, 0, 1, 0.5], delay: reduce ? 0 : 0.12 * index } : { duration: 0.3 }}
+            >
+              {!checked && <span aria-hidden="true" className="ps2-blink" style={{ width: 6, height: 6, borderRadius: 6, background: "#C9A34A", display: "inline-block" }} />}
+              {status}
+            </motion.span>
+          </AnimatePresence>
         </div>
       </div>
-      <p style={{ margin: 0, color: "#3d474d", fontSize: 14, lineHeight: 1.55 }}>{desc}</p>
-      <a href={href} target="_blank" rel="noopener noreferrer"
+      <p style={{ margin: 0, color: "rgba(14,53,39,0.82)", fontSize: 14, lineHeight: 1.55 }}>{desc}</p>
+      <a href={href} target="_blank" rel="noopener noreferrer" className="ps2-cheque-link"
         style={{ display: "inline-flex", alignItems: "center", gap: 8, justifySelf: "start",
-          color: "#e34816", fontSize: 13, fontWeight: 500, lineHeight: 1.35, textDecoration: "none" }}>
+          color: "#1C6B4A", fontSize: 13, fontWeight: 600, lineHeight: 1.35, textDecoration: "none" }}>
         <span>Voir les conditions{" "}<br />officielles</span>
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="ps2-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
         </svg>
       </a>
     </div>
   );
 }
-

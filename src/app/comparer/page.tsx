@@ -6,6 +6,7 @@ import { CompareSelector } from "@/components/compare/CompareSelector";
 import { ComparePageClient } from "@/components/compare/ComparePageClient";
 import { getProductDetail, type ProductDetail } from "@/lib/data/queries/product-detail";
 import { DuelGlissiere, type VsModel } from "@/components/heroes-v2/produit/DuelGlissiere";
+import { DuelIntro, DuelSection } from "@/components/sections-v2/catalogue/DuelSections";
 
 /* Exemple du face-à-face sans sélection : deux murales 12 000 BTU climat froid (photos officielles, comme à l'accueil). */
 const EXEMPLE_VS = [
@@ -57,30 +58,21 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
       {/* ── Héros : duel à glissière ─────────────────────────── */}
       <DuelGlissiere models={vsModels} mode={selected.length ? "selection" : "exemple"} extra={Math.max(0, selected.length - 2)} hasComparison={hasComparison} />
 
-      {/* ── Comparison ───────────────────────────────────────── */}
-      <section id="comparateur" style={{ background: "var(--color-background)", scrollMarginTop: 100 }}>
-        <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 pt-8 pb-16 sm:pb-20">
-          {hasComparison ? (
-            <ComparePageClient data={data} maxCompare={MAX_COMPARE} selectableModels={selectable} />
-          ) : (
-            <div>
-              <div style={{ textAlign: "center", marginBottom: 32, padding: "28px 24px", background: "var(--color-surface)", border: "1px solid var(--color-border)", borderRadius: 10 }}>
-                <h2 style={{ margin: 0, fontSize: 22, fontWeight: 700, color: "var(--color-foreground)" }}>
-                  Sélectionnez vos thermopompes à comparer
-                </h2>
-                <p style={{ margin: "8px 0 0", fontSize: 14, color: "var(--color-muted)", maxWidth: 480, marginLeft: "auto", marginRight: "auto" }}>
-                  Choisissez entre 2 et {MAX_COMPARE} modèles pour les comparer côte à côte.
-                </p>
-              </div>
-              <CompareSelector
-                products={selectable}
-                initialSlugs={slugs.filter((s) => data.products.some((p) => p.detail.model.slug === s))}
-                maxCompare={MAX_COMPARE}
-              />
-            </div>
-          )}
-        </div>
-      </section>
+      {/* ── Comparaison : la scène acier / sable du héros continue, colonne vertébrale au centre ── */}
+      <DuelSection>
+        {hasComparison ? (
+          <ComparePageClient data={data} maxCompare={MAX_COMPARE} selectableModels={selectable} />
+        ) : (
+          <div>
+            <DuelIntro max={MAX_COMPARE} />
+            <CompareSelector
+              products={selectable}
+              initialSlugs={slugs.filter((s) => data.products.some((p) => p.detail.model.slug === s))}
+              maxCompare={MAX_COMPARE}
+            />
+          </div>
+        )}
+      </DuelSection>
     </main>
   );
 }

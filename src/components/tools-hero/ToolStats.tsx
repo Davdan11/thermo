@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { HC, HERO_EASE, HeroFade } from "@/components/hero/HeroKit";
 import { CountUp } from "@/components/home/premium/shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Repères du héros dans un panneau de verre dépoli (pages outils).
@@ -16,7 +17,7 @@ import { CountUp } from "@/components/home/premium/shared";
 export type ToolStat = { value: number | string; label: string };
 
 export function ToolStats({ items, delay = 1 }: { items: ToolStat[]; delay?: number }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const [play, setPlay] = useState(false);
   useEffect(() => {
     const t = window.setTimeout(() => setPlay(true), delay * 1000 + 150);

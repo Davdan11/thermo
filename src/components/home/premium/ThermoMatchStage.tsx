@@ -3,8 +3,9 @@
 import "./thermomatch-stage.css";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useInView, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { AnimatePresence, motion, useInView, useScroll, useTransform } from "motion/react";
 import { AirLines, Arrow, C, CountUp, DISPLAY, EASE, RevealLines, fmt } from "./shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Section ThermoMatch de l'accueil.
@@ -51,7 +52,7 @@ export function ThermoMatchStage({ models, evaluated }: { models: StageModel[]; 
   const sectionRef = useRef<HTMLElement>(null);
   const deviceRef = useRef<HTMLDivElement>(null);
   const inView = useInView(deviceRef, { margin: "-15% 0px -15% 0px" });
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const [phase, setPhase] = useState(0);
   const [cycle, setCycle] = useState(0);
   const shown = reduce ? RESULTS : phase;

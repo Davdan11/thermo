@@ -1,0 +1,35 @@
+/* ==================================================================
+   Corps des pages légales (préfixe sd-) : suite du héros « Document ».
+   Papier blanc, encre, filet orange. Texte très lisible.
+   ================================================================== */
+
+.sd-text { color: #3A4147; font-size: 17px; line-height: 1.78; }
+@media (min-width: 640px) { .sd-text { font-size: 17.5px; } }
+.sd-text p { margin: 0 0 1.1em; }
+.sd-text p:last-child { margin-bottom: 0; }
+.sd-text strong { color: #111418; font-weight: 600; }
+.sd-text ul { list-style: none; margin: 0 0 1.1em; padding: 0; }
+.sd-text ul:last-child { margin-bottom: 0; }
+.sd-text li { position: relative; padding: 0.6em 0 0.6em 1.75em; border-top: 1px solid rgba(17, 20, 24, 0.08); }
+.sd-text li:first-child { border-top: none; padding-top: 0; }
+.sd-text li::before { content: ""; position: absolute; left: 0; top: calc(0.6em + 0.88em); width: 0.95em; height: 1.5px; background: #E54B17; }
+.sd-text li:first-child::before { top: 0.88em; }
+.sd-text a {
+  color: #111418;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: linear-gradient(#E54B17, #E54B17);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 1.5px;
+  padding-bottom: 1px;
+  transition: color 0.3s;
+}
+.sd-text a:hover { color: #C23F12; }
+
+.sd-toc a { transition: color 0.3s; }
+.sd-toc a:hover { color: #E54B17; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sd-text a, .sd-toc a { transition: none; }
+}

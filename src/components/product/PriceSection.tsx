@@ -4,6 +4,8 @@
    Fourchette publiée (type × calibre × gamme de marque), avant et après
    LogisVert, plus les prix d'équipement observés chez des détaillants
    canadiens quand ils existent. Jamais un prix par modèle inventé.
+   Présentation : feuille « Prix » — la fourchette est cotée au trait,
+   puis la même fourchette glisse du montant LogisVert.
    ================================================================== */
 import Link from "next/link";
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
@@ -11,6 +13,9 @@ import { brandTier } from "@/lib/thermomatch/tiers";
 import { installedPriceRange, money, PRICE_GRID_CONSULTED_AT } from "@/lib/prices/grille-installee";
 import { observedPricesFor } from "@/lib/prices/observed";
 import { QuoteForModelLink } from "./QuoteForModelLink";
+import { PriceRanges } from "@/components/sections-v2/produit/charts";
+import { Arrow, Reveal, SheetHead } from "@/components/sections-v2/produit/motion";
+import { GREEN, INK, LABEL, LINE, MUTE, ORANGE } from "@/components/sections-v2/produit/tokens";
 
 export function PriceSection({ detail, logisVertDollars }: { detail: ProductDetail; logisVertDollars: number }) {
   const { model, brand } = detail;
@@ -23,7 +28,7 @@ export function PriceSection({ detail, logisVertDollars }: { detail: ProductDeta
   const observed = observedPricesFor(model.slug);
   if (!range && observed.length === 0) return null;
 
-  const rows: Array<{ label: string; value: string; note?: string }> = [];
+  const rows: Array<{ label: string; value: string; note?: string; tone?: "lv" }> = [];
   if (range) {
     rows.push({
       label: "Installée, ordre de grandeur",
@@ -35,6 +40,7 @@ export function PriceSection({ detail, logisVertDollars }: { detail: ProductDeta
         label: "Après LogisVert",
         value: `${money(Math.max(0, range.min - logisVertDollars))} à ${money(Math.max(0, range.max - logisVertDollars))}`,
         note: `Subvention officielle de ${logisVertDollars.toLocaleString("fr-CA")} $ pour le jumelage de référence, déduite de la fourchette.`,
+        tone: "lv",
       });
     }
   }
@@ -47,32 +53,70 @@ export function PriceSection({ detail, logisVertDollars }: { detail: ProductDeta
     });
   }
 
+  const lv = range && logisVertDollars > 0 ? logisVertDollars : 0;
+
   return (
-    <section aria-labelledby="prix-fiche" style={{ border: "1px solid #e4ddd5", background: "#fff", borderRadius: 10, overflow: "hidden" }}>
-      <div style={{ padding: "22px 24px 6px", borderBottom: "1px solid #e4ddd5" }}>
-        <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e54b17" }}>Prix</p>
-        <h2 id="prix-fiche" style={{ margin: "8px 0 6px", fontSize: 22, fontWeight: 800, letterSpacing: "-0.01em", color: "#071d2b", lineHeight: 1.2 }}>Ce que coûte ce type de machine, installé</h2>
-        <p style={{ margin: "0 0 16px", fontSize: 13.5, color: "#536873", lineHeight: 1.55, maxWidth: 640 }}>
-          Fourchettes tirées de prix publiés au Québec (Protégez-Vous, guides et installateurs qui affichent leurs prix), pour ce type, ce calibre et cette gamme de marque. Le prix exact de votre maison vient d&apos;une soumission écrite.
-        </p>
-      </div>
-      <dl style={{ margin: 0, padding: "4px 24px" }}>
+    <section aria-labelledby="prix-fiche">
+      <SheetHead
+        id="prix-fiche"
+        kicker="Prix"
+        title="Ce que coûte ce type de machine, installé"
+        lead={
+          <>
+            Fourchettes tirées de prix publiés au Québec (Protégez-Vous, guides et installateurs qui affichent leurs prix), pour ce type, ce calibre et cette gamme de marque. Le prix exact de votre maison vient d&apos;une soumission écrite.
+          </>
+        }
+      />
+
+      {range && (
+        <div className="mt-8 px-1">
+          <PriceRanges
+            min={range.min}
+            max={range.max}
+            lv={lv}
+            labels={{
+              min: money(range.min),
+              max: money(range.max),
+              afterMin: money(Math.max(0, range.min - lv)),
+              afterMax: money(Math.max(0, range.max - lv)),
+              lv: `− ${lv.toLocaleString("fr-CA")} $`,
+            }}
+          />
+        </div>
+      )}
+
+      <dl className="m-0 mt-7" style={{ borderTop: `1px solid ${INK}` }}>
         {rows.map((r, i) => (
-          <div key={`${r.label}-${i}`} className="grid grid-cols-1 sm:grid-cols-[minmax(150px,200px)_1fr] gap-1 sm:gap-4" style={{ padding: "14px 0", borderBottom: i < rows.length - 1 ? "1px solid #f0ebe4" : "none" }}>
-            <dt style={{ fontSize: 13, fontWeight: 600, color: "#536873", paddingTop: 2 }}>{r.label}</dt>
-            <dd style={{ margin: 0 }}>
-              <p style={{ margin: 0, fontSize: 18, fontWeight: 800, color: "#071d2b", letterSpacing: "-0.01em", fontVariantNumeric: "tabular-nums" }}>{r.value}</p>
-              {r.note && <p style={{ margin: "4px 0 0", fontSize: 13, color: "#536873", lineHeight: 1.55 }}>{r.note}</p>}
+          <Reveal
+            key={`${r.label}-${i}`}
+            delay={0.06 * i}
+            y={10}
+            className="sv2f-tr grid grid-cols-1 gap-1.5 py-4 pl-3 pr-2 sm:grid-cols-[minmax(170px,230px)_1fr] sm:gap-6 sm:pl-4"
+            style={{ borderBottom: `1px solid ${LINE}` }}
+          >
+            <dt className="sv2f-mono pt-1.5 text-[10.5px] uppercase" style={{ letterSpacing: "0.1em", color: LABEL }}>
+              {r.label}
+            </dt>
+            <dd className="m-0">
+              <p className="sv2f-mono m-0 text-[20px] sm:text-[24px]" style={{ color: r.tone === "lv" ? GREEN : INK, fontWeight: 500, letterSpacing: "-0.045em", lineHeight: 1.2 }}>
+                {r.value}
+              </p>
+              {r.note && (
+                <p className="m-0 mt-1.5 max-w-[640px] text-[13.5px] leading-[1.55]" style={{ color: MUTE }}>
+                  {r.note}
+                </p>
+              )}
             </dd>
-          </div>
+          </Reveal>
         ))}
       </dl>
-      <div className="flex flex-col sm:flex-row sm:items-center gap-4" style={{ margin: "0 24px 18px", padding: "16px 18px", borderRadius: 12, background: "#071d2b" }}>
-        <div className="flex-1 min-w-0">
-          <p style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "#fff", letterSpacing: "-0.01em" }}>
+
+      <Reveal delay={0.1} className="sv2f-dark mt-6 flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:p-7" style={{ background: INK, color: "#fff" }}>
+        <div className="min-w-0 flex-1">
+          <p className="m-0 text-[17px] font-semibold" style={{ letterSpacing: "-0.02em" }}>
             {observed.length === 0 ? "Aucun prix public pour ce modèle : demandez le vôtre." : "Le prix exact dépend de votre maison."}
           </p>
-          <p style={{ margin: "4px 0 0", fontSize: 13, color: "rgba(255,255,255,.65)", lineHeight: 1.5 }}>
+          <p className="m-0 mt-1.5 text-[13.5px] leading-[1.55]" style={{ color: "rgba(255,255,255,.7)" }}>
             {observed.length === 0
               ? `${brand.name} vend par installateurs agréés, sans prix affiché en ligne. Un conseiller vous donne un prix installé pour ce modèle, subvention déduite.`
               : "Un conseiller confirme le prix installé de ce modèle pour votre maison, subvention LogisVert déduite."}
@@ -82,15 +126,24 @@ export function PriceSection({ detail, logisVertDollars }: { detail: ProductDeta
           modelId={model.id}
           brandName={brand.name}
           systemType={model.systemType}
-          className="inline-flex items-center justify-center whitespace-nowrap rounded-full no-underline transition-colors hover:bg-[#d44315]"
-          style={{ padding: "12px 22px", fontSize: 14, fontWeight: 700, color: "#fff", background: "#e54b17", flexShrink: 0 }}
+          className="sv2f-btn sv2f-orange inline-flex shrink-0 items-center justify-center gap-3 whitespace-nowrap rounded-[3px] no-underline"
+          style={{ padding: "14px 20px", fontSize: 15, fontWeight: 600, color: "#fff", background: ORANGE }}
         >
           Obtenir un prix pour ce modèle
+          <Arrow />
         </QuoteForModelLink>
-      </div>
-      <p style={{ margin: 0, padding: "12px 24px", borderTop: "1px solid #e4ddd5", background: "#faf8f4", fontSize: 12.5, color: "#536873", lineHeight: 1.55 }}>
-        Sources consultées le {PRICE_GRID_CONSULTED_AT}, méthode et grille complète sur la <Link href="/prix" style={{ color: "#e54b17", fontWeight: 600 }}>page Prix</Link>. Le panneau électrique, l&apos;appoint, les conduits et les travaux d&apos;isolation s&apos;ajoutent selon la maison.
-      </p>
+      </Reveal>
+
+      <Reveal as="p" delay={0.1} className="m-0 mt-4 text-[12.5px] leading-[1.6]" style={{ color: LABEL }}>
+        <span className="sv2f-mono" style={{ color: INK }}>
+          Note —{" "}
+        </span>
+        Sources consultées le {PRICE_GRID_CONSULTED_AT}, méthode et grille complète sur la{" "}
+        <Link href="/prix" className="font-semibold underline underline-offset-2" style={{ color: INK, textDecorationColor: ORANGE }}>
+          page Prix
+        </Link>
+        . Le panneau électrique, l&apos;appoint, les conduits et les travaux d&apos;isolation s&apos;ajoutent selon la maison.
+      </Reveal>
     </section>
   );
 }

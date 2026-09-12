@@ -3,9 +3,10 @@
 import "./hero.css";
 import { useEffect, useState, type CSSProperties, type ElementType, type ReactNode } from "react";
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Snowfall } from "@/components/home/Snowfall";
 import { CountUp } from "@/components/home/premium/shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Trousse des héros premium — base commune à toutes les pages.
@@ -73,7 +74,7 @@ export function HeroShell({ children, visual, background, snow = 0, size = "md",
 }
 
 export function HeroFade({ delay = 0, className, style, children }: { delay?: number; className?: string; style?: CSSProperties; children: ReactNode }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <motion.div className={className} style={style} initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: HERO_EASE, delay }}>
       {children}
@@ -99,7 +100,7 @@ const TITLE_SIZE = {
 /** Titre révélé ligne par ligne. Chaque élément de `lines` est une ligne ; utiliser <Serif> pour l'accent. */
 export function HeroTitle({ lines, id, as = "h1", size = "md", delay = 0.25, style }: { lines: ReactNode[]; id?: string; as?: ElementType; size?: "lg" | "md" | "sm"; delay?: number; style?: CSSProperties }) {
   const Tag = as;
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <Tag id={id} style={{ fontSize: TITLE_SIZE[size], lineHeight: 0.95, letterSpacing: "-0.045em", fontWeight: 600, margin: "24px 0 0", ...style }}>
       {lines.map((line, i) => (

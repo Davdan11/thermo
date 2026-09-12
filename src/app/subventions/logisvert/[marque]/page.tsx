@@ -5,9 +5,11 @@ import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getAllBrandStats, getBrandStats } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { JsonLd } from "@/components/seo/SeoBlocks";
 import { BarometreBrandHero } from "@/components/heroes-v2/prix/BarometreHeroes";
 import { LogisVertAlertForm } from "@/components/logisvert/LogisVertAlertForm";
+import { Root } from "@/components/sections-v2/prix/kit";
+import { BaroAlertFrame, BaroCta, BaroFaq, BaroModelSection, BaroProse, BaroRelated, BaroTrust } from "@/components/sections-v2/prix/BarometreSections";
 
 export const dynamicParams = false;
 
@@ -52,7 +54,7 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
   ];
 
   return (
-    <main className="bg-[#f8f5f0] text-[#071d2b]">
+    <main className="bg-[#EAF5EE] text-[#0F3D2B]">
       <JsonLd
         data={[
           getBreadcrumbSchema([
@@ -84,44 +86,40 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
           { label: "Certifiés grand froid", value: String(b.coldClimateCount) },
         ]}
       />
-      <TrustStrip />
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
-        <LogisVertAlertForm
-          target={{ kind: "brand", brandSlug: b.slug }}
-          label={b.name}
-          tone="light"
-          amount={b.maxLogisVert}
-          amountCaption={`Montant maximal ${b.name}`}
+      {/* Sous le héros « Baromètre » : instruments de mesure (src/components/sections-v2/prix/). */}
+      <Root>
+        <BaroTrust />
+        <BaroAlertFrame brand={b.name} max={b.maxLogisVert} updated={updated}>
+          <LogisVertAlertForm
+            target={{ kind: "brand", brandSlug: b.slug }}
+            label={b.name}
+            tone="light"
+            amount={b.maxLogisVert}
+            amountCaption={`Montant maximal ${b.name}`}
+          />
+        </BaroAlertFrame>
+        {walls.length > 0 && <BaroModelSection id="baro-murales" title={`Murales ${b.name} : montants LogisVert`} models={walls} max={b.maxLogisVert} />}
+        {centrals.length > 0 && <BaroModelSection id="baro-centrales" title={`Centrales ${b.name} : montants LogisVert`} models={centrals} max={b.maxLogisVert} />}
+        <div className="h-20" style={{ background: "#EAF5EE" }} />
+        <BaroProse title="Comment le montant est calculé">
+          <p>
+            Hydro-Québec fixe le montant selon la capacité de chauffage certifiée et la performance de l'appariement. Les thermopompes certifiées
+            climat froid et les grosses centrales reçoivent les montants les plus élevés. Pour {b.name}, l'appariement le plus subventionné de notre base
+            est {b.bestSubsidy ? <Link href={`/produit/${b.bestSubsidy.canonicalSlug}`}>{b.bestSubsidy.name} ({b.bestSubsidy.outdoorModel})</Link> : "indiqué dans le tableau"} avec{" "}
+            {b.maxLogisVert.toLocaleString("fr-CA")} $.
+          </p>
+          <p>
+            Voir aussi la <Link href={`/marques/${b.slug}`}>gamme complète {b.name}</Link> et le classement des{" "}
+            <Link href="/meilleures-thermopompes/subvention-logisvert">thermopompes les plus subventionnées</Link>.
+          </p>
+        </BaroProse>
+        <BaroCta title={`Quelle ${b.name} pour votre maison?`} />
+        <BaroRelated
+          title="LogisVert pour les autres marques"
+          links={others.map((x) => ({ href: `/subventions/logisvert/${x.slug}`, label: `Subvention LogisVert ${x.name}`, hint: `jusqu'à ${x.maxLogisVert.toLocaleString("fr-CA")} $`, value: x.maxLogisVert }))}
         />
-      </section>
-      {walls.length > 0 && (
-        <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
-          <h2 className="text-[26px] font-bold text-[#172126] mb-4">Murales {b.name} : montants LogisVert</h2>
-          <ModelTable models={walls} showBrand={false} />
-        </section>
-      )}
-      {centrals.length > 0 && (
-        <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
-          <h2 className="text-[26px] font-bold text-[#172126] mb-4">Centrales {b.name} : montants LogisVert</h2>
-          <ModelTable models={centrals} showBrand={false} />
-        </section>
-      )}
-      <Prose>
-        <h2>Comment le montant est calculé</h2>
-        <p>
-          Hydro-Québec fixe le montant selon la capacité de chauffage certifiée et la performance de l'appariement. Les thermopompes certifiées
-          climat froid et les grosses centrales reçoivent les montants les plus élevés. Pour {b.name}, l'appariement le plus subventionné de notre base
-          est {b.bestSubsidy ? <Link href={`/produit/${b.bestSubsidy.canonicalSlug}`}>{b.bestSubsidy.name} ({b.bestSubsidy.outdoorModel})</Link> : "indiqué dans le tableau"} avec{" "}
-          {b.maxLogisVert.toLocaleString("fr-CA")} $.
-        </p>
-        <p>
-          Voir aussi la <Link href={`/marques/${b.slug}`}>gamme complète {b.name}</Link> et le classement des{" "}
-          <Link href="/meilleures-thermopompes/subvention-logisvert">thermopompes les plus subventionnées</Link>.
-        </p>
-      </Prose>
-      <CtaThermoMatch title={`Quelle ${b.name} pour votre maison?`} />
-      <RelatedLinks title="LogisVert pour les autres marques" links={others.map((x) => ({ href: `/subventions/logisvert/${x.slug}`, label: `Subvention LogisVert ${x.name}`, hint: `jusqu'à ${x.maxLogisVert.toLocaleString("fr-CA")} $` }))} />
-      <FaqBlock items={faq} />
+        <BaroFaq items={faq} />
+      </Root>
     </main>
   );
 }

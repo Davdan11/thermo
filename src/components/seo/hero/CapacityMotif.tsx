@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Caption, Count, EASE, K, Parallax, fr, kBtu } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Classe de capacité : le chiffre nominal (mesuré à 8 °C) face à la
@@ -12,7 +13,7 @@ import { Caption, Count, EASE, K, Parallax, fr, kBtu } from "./parts";
    ================================================================== */
 
 export function CapacityMotif({ btu, h5Min, h5Max, certified, classes, areaMin, areaMax }: { btu: number; h5Min: number | null; h5Max: number | null; certified: number; classes: number[]; areaMin: number; areaMax: number }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const hasRange = h5Min !== null && h5Max !== null;
   const top = Math.ceil((Math.max(btu, h5Max ?? 0) * 1.12) / 2000) * 2000;
   const pos = (v: number) => (v / top) * 100;

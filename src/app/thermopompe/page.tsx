@@ -4,7 +4,8 @@ import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getCollectionPageSchema, getItemListSchema } from "@/lib/seo";
 import { getCitiesByRegion, getCities } from "@/lib/seo/cities";
 import { getCityData, fmtInt, fmtTemp } from "@/lib/seo/cities-data";
-import { CtaThermoMatch, JsonLd, Prose, TrustStrip } from "@/components/seo/SeoBlocks";
+import { JsonLd } from "@/components/seo/SeoBlocks";
+import { FrostCityTable, FrostCta, FrostHead, FrostNote, FrostRegions, FrostTrust } from "@/components/sections-v2/contenu/FrostSections";
 import { FrostIndexHero, type FrostGroup } from "@/components/heroes-v2/contenu/Frost";
 
 export const metadata: Metadata = createMetadata({
@@ -30,7 +31,7 @@ export default function CitiesIndexPage() {
     .sort((a, b) => (b.climate?.hdd18 ?? 0) - (a.climate?.hdd18 ?? 0) || a.city.designTempC - b.city.designTempC);
 
   return (
-    <main className="bg-[#f8f5f0] text-[#071d2b]">
+    <main className="frs-root" style={{ background: "#FFFFFF", color: "#0B2540" }}>
       <JsonLd
         data={[
           getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Thermopompe par ville", url: "/thermopompe" }]),
@@ -52,69 +53,57 @@ export default function CitiesIndexPage() {
           { label: "Données", value: "ENERGY STAR / AHRI" },
         ]}
       />
-      <TrustStrip />
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
-        <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#e54b17] mb-2">Comparatif</p>
-        <h2 className="text-[26px] font-extrabold tracking-tight text-[#071d2b] mb-2">Où l'hiver demande le plus d'une thermopompe</h2>
-        <p className="text-[#536873] mb-6 max-w-3xl">
-          {hasHdd
-            ? "Les villes classées par degrés-jours de chauffage (normales d'Environnement Canada) : plus le chiffre est élevé, plus la machine travaille sur l'année. La température de conception fixe la pointe à couvrir."
-            : "Les villes classées par température de conception, le froid de référence du calcul de charge de chauffage."}
-        </p>
-        <div className="overflow-x-auto rounded-xl border border-[#e4ddd5] bg-white">
-          <table className="w-full text-sm">
-            <thead className="bg-[#f8f5f0] text-[11px] uppercase tracking-wider text-[#536873]">
-              <tr>
-                <th className="px-3 py-3 text-left">Ville</th>
-                <th className="px-3 py-3 text-left">Région</th>
-                <th className="px-3 py-3 text-right">Conception</th>
-                {hasHdd && <th className="px-3 py-3 text-right">Degrés-jours</th>}
-                {hasHdd && <th className="px-3 py-3 text-right">Janvier</th>}
-                {hasHdd && <th className="px-3 py-3 text-right">Record de froid</th>}
-              </tr>
-            </thead>
-            <tbody>
-              {ranked.map(({ city: c, climate: cl }) => (
-                <tr key={c.slug} className="border-t border-[#f0ebe4] hover:bg-[#fffaf5]">
-                  <td className="px-3 py-2.5"><Link href={`/thermopompe/${c.slug}`} className="font-semibold text-[#071d2b] hover:text-[#e54b17]">{c.name}</Link></td>
-                  <td className="px-3 py-2.5 text-[#536873]">{c.region}</td>
-                  <td className="px-3 py-2.5 text-right font-semibold">{c.designTempC} °C</td>
-                  {hasHdd && <td className="px-3 py-2.5 text-right">{cl?.hdd18 ? fmtInt(cl.hdd18) : <span className="text-[#a0aab0]">n/d</span>}</td>}
-                  {hasHdd && <td className="px-3 py-2.5 text-right">{cl?.janMeanC !== null && cl?.janMeanC !== undefined ? fmtTemp(cl.janMeanC) : <span className="text-[#a0aab0]">n/d</span>}</td>}
-                  {hasHdd && <td className="px-3 py-2.5 text-right">{cl?.extremeMinC !== null && cl?.extremeMinC !== undefined ? fmtTemp(cl.extremeMinC) : <span className="text-[#a0aab0]">n/d</span>}</td>}
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* Sous le héros, l'atlas continue : bande de preuve, journal comparatif des villes (barres de givre),
+          légende de carte par région, note de l'atlas et appel. */}
+      <FrostTrust />
+      <section style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #EEF5F9 100%)" }}>
+        <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+          <FrostHead
+            eyebrow="Comparatif"
+            title="Où l'hiver demande le plus d'une thermopompe"
+            intro={
+              hasHdd
+                ? "Les villes classées par degrés-jours de chauffage (normales d'Environnement Canada) : plus le chiffre est élevé, plus la machine travaille sur l'année. La température de conception fixe la pointe à couvrir."
+                : "Les villes classées par température de conception, le froid de référence du calcul de charge de chauffage."
+            }
+          />
+          <div className="mt-10">
+            <FrostCityTable
+              hasHdd={hasHdd}
+              rows={ranked.map(({ city: c, climate: cl }) => ({
+                slug: c.slug,
+                name: c.name,
+                region: c.region,
+                design: c.designTempC,
+                hdd: cl?.hdd18 ?? null,
+                hddLabel: cl?.hdd18 ? fmtInt(cl.hdd18) : null,
+                jan: cl?.janMeanC !== null && cl?.janMeanC !== undefined ? fmtTemp(cl.janMeanC) : null,
+                record: cl?.extremeMinC !== null && cl?.extremeMinC !== undefined ? fmtTemp(cl.extremeMinC) : null,
+              }))}
+            />
+          </div>
         </div>
       </section>
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <h2 className="text-[26px] font-extrabold tracking-tight text-[#071d2b] mb-6">Par région</h2>
-        {regions.map((r) => (
-          <div key={r} className="mb-10">
-            <h2 className="text-[20px] font-bold text-[#172126] mb-3">{r}</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {byRegion.get(r)!.map((c) => (
-                <li key={c.slug}>
-                  <Link href={`/thermopompe/${c.slug}`} className="block rounded-lg border border-[#e4ddd5] bg-white px-4 py-3 hover:border-[#e54b17] transition-colors">
-                    <span className="font-semibold">Thermopompe à {c.name}</span>
-                    <span className="block text-[12px] text-[#8a989e]">Température de conception {c.designTempC} °C</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <section style={{ background: "#FFFFFF" }}>
+        <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
+          <FrostRegions
+            title="Par région"
+            regions={regions.map((r) => ({
+              name: r,
+              cities: byRegion.get(r)!.map((c) => ({ slug: c.slug, name: c.name, t: c.designTempC })),
+            }))}
+          />
+        </div>
       </section>
-      <Prose>
+      <FrostNote>
         <h2>Pourquoi la ville ne change pas la machine recommandée</h2>
         <p>
           Partout au Québec, on achète des thermopompes conçues pour -25 °C ou -30 °C. Ce qui distingue deux maisons, c'est leur superficie,
           leur âge, leur isolation et leur système de chauffage actuel. C'est pourquoi notre questionnaire <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> ne
           demande votre code postal que pour vous situer et trouver des installateurs près de chez vous.
         </p>
-      </Prose>
-      <CtaThermoMatch />
+      </FrostNote>
+      <FrostCta />
     </main>
   );
 }

@@ -3,10 +3,11 @@
 import "./prix-v2.css";
 import { useCallback, useEffect, useRef, type CSSProperties, type ReactNode, type RefObject } from "react";
 import Link from "next/link";
-import { motion, useInView, useMotionValue, useReducedMotion } from "motion/react";
+import { motion, useInView, useMotionValue } from "motion/react";
 import type { RangeRow } from "@/components/product/hero/prix-sets";
 import { DISPLAY, MONO, SERIF, plexMono } from "./fonts";
 import { EASE, fr } from "./shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    /prix/[slug] — « L'étiquette ».
@@ -41,7 +42,7 @@ function splitTitle(h1: string): string[] {
 }
 
 export function TagHero({ crumbs, title, lead, rows, footnote }: { crumbs: ReactNode; title: string; lead: ReactNode; rows: RangeRow[]; footnote: string }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const root = useRef<HTMLElement>(null);
   const lines = splitTitle(title);
 
@@ -177,7 +178,7 @@ const STRING_LEN = 96;
 const TAG_W = "min(330px, calc(100vw - 64px))";
 
 function HangingTag({ rows, footnote, root }: { rows: RangeRow[]; footnote: string; root: RefObject<HTMLElement | null> }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const wrap = useRef<HTMLDivElement>(null);
   const tagRef = useRef<HTMLDivElement>(null);
   const inView = useInView(wrap, { margin: "-5% 0px" });

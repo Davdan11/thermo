@@ -5,13 +5,14 @@ import "@/components/home/premium/sections.css";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion, useInView, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion, useInView } from "motion/react";
 import { Snowfall } from "@/components/home/Snowfall";
 import { AirLines, CountUp } from "@/components/home/premium/shared";
 import type { SavingsEstimate } from "@/lib/thermomatch/savings";
 import { SavingsBand } from "./SavingsBand";
 import { ExistingUnitCompare } from "./ExistingUnitCompare";
 import { EmailMyChoices } from "./EmailMyChoices";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    ThermoMatch — écran des trois recommandations (version premium).
@@ -239,12 +240,12 @@ function Intro({ ctx, kept }: { ctx: SummaryContext | null; kept: number }) {
           Analyse terminée
         </Fade>
 
-        <h2 style={{ fontSize: "clamp(38px, 5.4vw, 88px)", lineHeight: 0.95, letterSpacing: "-0.045em", fontWeight: 600, margin: "28px 0 0" }}>
+        <h1 style={{ fontSize: "clamp(38px, 5.4vw, 88px)", lineHeight: 0.95, letterSpacing: "-0.045em", fontWeight: 600, margin: "28px 0 0" }}>
           <Line i={0}>Vos trois thermopompes,</Line>
           <Line i={1}>
             <span className="tm-serif">calibrées pour votre maison.</span>
           </Line>
-        </h2>
+        </h1>
 
         {ctx && (
           <Fade delay={0.5} className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
@@ -314,7 +315,7 @@ function Funnel({ evaluated, retained, kept, play }: { evaluated: number; retain
 
 function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number; tags: string[]; leads: MetricKey[]; onSelect: () => void }) {
   const top = i === 0;
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -8% 0px" });
   const [open, setOpen] = useState(false);
@@ -935,7 +936,7 @@ function Empty({ onRetry }: { onRetry: () => void }) {
 /* ------------------------------ Outils ------------------------------ */
 
 function Line({ i, play = true, children }: { i: number; play?: boolean; children: ReactNode }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.14em", marginBottom: "-0.14em" }}>
       <motion.span
@@ -951,7 +952,7 @@ function Line({ i, play = true, children }: { i: number; play?: boolean; childre
 }
 
 function Fade({ delay, className, style, children }: { delay: number; className?: string; style?: CSSProperties; children: ReactNode }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <motion.div className={className} style={style} initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay }}>
       {children}

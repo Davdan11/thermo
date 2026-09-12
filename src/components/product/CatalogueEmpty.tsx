@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
+import { Reveal } from "@/components/sections-v2/catalogue/motion";
 
 /* ------------------------------------------------------------------
    CatalogueEmpty — shown when filters return zero results
+   (présentation alignée sur la galerie du catalogue)
    ------------------------------------------------------------------ */
 
 interface CatalogueEmptyProps {
@@ -11,46 +12,44 @@ interface CatalogueEmptyProps {
 
 export function CatalogueEmpty({ hasFilters }: CatalogueEmptyProps) {
   return (
-    <div className="flex flex-col items-center justify-center text-center py-16 sm:py-24 px-4">
-      {/* Icon */}
-      <div className="w-12 h-12 rounded-full bg-background border border-border flex items-center justify-center mb-5">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-muted-fg" aria-hidden="true">
-          <circle cx="9" cy="9" r="7" />
-          <line x1="14" y1="14" x2="18" y2="18" />
-        </svg>
-      </div>
+    <Reveal>
+      <div className="flex flex-col items-center justify-center rounded-[22px] bg-white px-6 py-16 text-center sm:py-24" style={{ boxShadow: "0 0 0 1px rgba(10,20,25,0.05), 0 30px 60px -44px rgba(10,20,25,0.4)" }}>
+        <h3 className="catg-serif m-0 mb-4 text-[36px] leading-none text-[#0A1419] sm:text-[48px]">
+          Aucun modèle trouvé<span className="text-[#E54B17]" aria-hidden="true">.</span>
+        </h3>
 
-      <h3 className="text-lg font-semibold text-foreground mb-2">
-        Aucun modèle trouvé
-      </h3>
-
-      {hasFilters ? (
-        <p className="text-sm text-muted max-w-sm mb-6">
-          Aucun modèle ne correspond exactement à ces critères.
-          Essayez d&apos;élargir votre recherche ou de retirer certains filtres.
-        </p>
-      ) : (
-        <p className="text-sm text-muted max-w-sm mb-6">
-          Le catalogue ne contient pas encore de modèles publiés.
-        </p>
-      )}
-
-      <div className="flex flex-col sm:flex-row gap-3">
-        {hasFilters && (
-          <Link
-            href="/thermopompes"
-            className={buttonVariants({ variant: "secondary", size: "lg" })}
-          >
-            Réinitialiser les filtres
-          </Link>
+        {hasFilters ? (
+          <p className="mb-8 max-w-sm text-[15px] leading-relaxed text-[#0A1419]/60">
+            Aucun modèle ne correspond exactement à ces critères.
+            Essayez d’élargir votre recherche ou de retirer certains filtres.
+          </p>
+        ) : (
+          <p className="mb-8 max-w-sm text-[15px] leading-relaxed text-[#0A1419]/60">
+            Le catalogue ne contient pas encore de modèles publiés.
+          </p>
         )}
-        <Link
-          href="/trouver-ma-thermopompe"
-          className={buttonVariants({ variant: "default", size: "lg" })}
-        >
-          Essayer <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" className="inline-block h-[18px] ml-1 object-contain brightness-0 invert" />
-        </Link>
+
+        <div className="flex flex-col gap-3 sm:flex-row">
+          {hasFilters && (
+            <Link
+              href="/thermopompes"
+              className="catg-pill catg-btn inline-flex h-12 items-center justify-center rounded-full border border-[#0A1419]/15 px-6 text-[15px] font-semibold text-[#0A1419] hover:border-[#0A1419]"
+            >
+              Réinitialiser les filtres
+            </Link>
+          )}
+          <Link
+            href="/trouver-ma-thermopompe"
+            className="catg-pill catg-btn inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#E54B17] px-6 text-[15px] font-semibold text-white"
+          >
+            Essayer
+            <span className="inline-block shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" className="block object-contain brightness-0 invert" style={{ height: 18, width: "auto", maxWidth: "none" }} />
+            </span>
+          </Link>
+        </div>
       </div>
-    </div>
+    </Reveal>
   );
 }

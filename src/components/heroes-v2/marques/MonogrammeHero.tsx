@@ -4,9 +4,10 @@ import "./marques.css";
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { animate, motion, MotionConfig, useMotionValue, useReducedMotion, useScroll, useTransform, type MotionStyle, type MotionValue } from "motion/react";
+import { animate, motion, MotionConfig, useMotionValue, useScroll, useTransform, type MotionStyle, type MotionValue } from "motion/react";
 import { Crumbs } from "./Crumbs";
 import { DISPLAY, EASE, fr, type MonogrammeData, calmNow, CALM } from "./shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    « Monogramme » : héros d’une marque (/marques/[slug]).
@@ -55,7 +56,7 @@ function InkLine({ text, index, count, empty, fit, last }: { text: string; index
 }
 
 export function MonogrammeHero({ name, slug, logo, stats, types, cold, capacity, photo, fit }: MonogrammeData) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const { scrollY } = useScroll();
   // 1 = lettres vides. À l’arrivée, l’encre monte un peu (0,8) ; le défilement la fait monter jusqu’en haut.
   const intro = useMotionValue(1);

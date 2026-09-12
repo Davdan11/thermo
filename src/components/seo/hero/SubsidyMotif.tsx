@@ -1,9 +1,10 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import type { TickerRow } from "./types";
 import { Caption, Count, EASE, K, Parallax, fr, useLive } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Subvention LogisVert : avis d'aide d'Hydro-Québec. Le montant
@@ -26,7 +27,7 @@ function Row({ r }: { r: TickerRow }) {
 }
 
 export function SubsidyMotif({ label, amount, min, updated, tickerLabel, ticker }: { label: string; amount: number; min?: number; updated?: string | null; tickerLabel: string; ticker: TickerRow[] }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const live = useLive();
   const scroll = live && ticker.length >= 5;
   const range = min !== undefined && min < amount;

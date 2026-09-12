@@ -1,0 +1,110 @@
+/* ==================================================================
+   Sections v2 — famille « produit ».
+   sv2f- : fiche d'ingénierie (/produit/[slug]), prolongement du héros
+           (blanc, encre, filets gris, orange pour les chiffres certifiés,
+           chiffres en JetBrains Mono, cotes et lignes de rappel).
+   sv2r- : page blanche (/recherche), papier, encre, curseur orange,
+           Instrument Serif.
+   ================================================================== */
+
+/* Le débord horizontal global casse position: sticky : on coupe sans conteneur de défilement. */
+html:has(.sv2f), body:has(.sv2f), html:has(.sv2r), body:has(.sv2r) { overflow-x: clip; }
+
+.sv2f {
+  counter-reset: fiche;
+  background: #fff;
+  color: #121417;
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+}
+.sv2f-mono { font-family: var(--font-tech-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
+
+/* Numérotation de feuille : 01, 02… (les sections absentes ne comptent pas). */
+.sv2f-head { counter-increment: fiche; counter-reset: ligne grp; }
+.sv2f-num::before { content: counter(fiche, decimal-leading-zero); }
+.sv2f-row { counter-increment: ligne; }
+.sv2f-rownum::before { content: counter(fiche, decimal-leading-zero) "." counter(ligne); }
+.sv2f-grp { counter-increment: grp; }
+.sv2f-grpnum::before { content: counter(fiche, decimal-leading-zero) "." counter(grp); }
+
+.sv2f-h2 {
+  font-size: clamp(28px, 3.1vw, 46px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  color: #121417;
+  text-wrap: balance;
+}
+
+/* Liens, boutons, puces */
+.sv2f-btn { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s, color 0.25s, border-color 0.25s; }
+.sv2f-btn:hover { transform: translateY(-2px); }
+.sv2f-btn svg, .sv2f-lnk svg { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.sv2f-btn:hover svg, .sv2f-lnk:hover svg { transform: translateX(4px); }
+.sv2f-lnk:hover .sv2f-lnk-t { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.sv2f-ghost:hover { background: #121417; color: #fff; }
+.sv2f-orange:hover { background: #cc3f10; }
+.sv2f-chip { transition: border-color 0.25s, background-color 0.25s, color 0.25s; }
+.sv2f-chip:hover { border-color: #121417; background: #121417; color: #fff; }
+.sv2f-dark a:focus-visible, .sv2f-dark button:focus-visible { outline-color: #fff; }
+
+/* Rangée de tableau : filet orange qui entre au survol */
+.sv2f-tr { position: relative; transition: background-color 0.25s; }
+.sv2f-tr::before {
+  content: ""; position: absolute; left: 0; top: -1px; bottom: -1px; width: 2px;
+  background: #e54b17; transform: scaleY(0); transform-origin: top;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sv2f-tr:hover { background: #f6f7f8; }
+.sv2f-tr:hover::before { transform: scaleY(1); }
+
+.sv2f-h2-xl { font-size: clamp(32px, 3.7vw, 60px); line-height: 0.98; letter-spacing: -0.05em; overflow-wrap: anywhere; }
+
+/* Rangée de vrai tableau : pas de pseudo-élément sur un <tr> (Chrome en ferait une cellule anonyme) */
+.sv2f-trow td { transition: background-color 0.25s, box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+.sv2f-trow:hover td { background: #f6f7f8; }
+.sv2f-trow:hover td:first-child { box-shadow: inset 2px 0 0 #e54b17; }
+
+/* Points de conduite entre libellé et valeur (dans le dt, pour rester valide dans un dl) */
+.sv2f-dt-lead { display: flex; align-items: baseline; gap: 12px; flex: 1 1 auto; min-width: 0; }
+.sv2f-dt-lead::after { content: ""; flex: 1 1 auto; min-width: 12px; height: 1px; align-self: flex-end; margin-bottom: 0.35em; border-bottom: 1px dotted #b9bdc1; }
+
+/* Carte « modèle similaire » */
+.sv2f-card .sv2f-card-ph { transition: border-color 0.3s; }
+.sv2f-card .sv2f-card-img { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.sv2f-card:hover .sv2f-card-ph { border-color: #121417; }
+.sv2f-card:hover .sv2f-card-img { transform: translateY(-4px) scale(1.035); }
+.sv2f-card:hover .sv2f-card-name { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+/* Liste de liens de la colonne : flèche qui avance */
+.sv2f-side a { transition: color 0.25s; }
+.sv2f-side a:hover { color: #121417; }
+
+/* ── Page blanche (/recherche) ──────────────────────────────────── */
+.sv2r { background: #f3f2ef; color: #121417; font-family: var(--font-display), var(--font-sans), sans-serif; }
+.sv2r-serif { font-family: var(--font-serif), "Times New Roman", serif; font-weight: 400; }
+.sv2r-row { position: relative; }
+.sv2r-row .sv2r-t { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.sv2r-row .sv2r-caret {
+  position: absolute; left: -14px; top: 0.12em; width: 2px; height: 0.82em; background: #e54b17;
+  opacity: 0; transition: opacity 0.2s;
+}
+.sv2r-row .sv2r-under { transform: scaleX(0); transform-origin: left; transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.sv2r-row .sv2r-go { opacity: 0; transform: translateX(-6px); transition: opacity 0.3s, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.sv2r-row:hover .sv2r-t, .sv2r-row:focus-visible .sv2r-t { transform: translateX(14px); }
+.sv2r-row:hover .sv2r-caret, .sv2r-row:focus-visible .sv2r-caret { opacity: 1; animation: sv2r-blink 1.05s steps(1) infinite; }
+.sv2r-row:hover .sv2r-under, .sv2r-row:focus-visible .sv2r-under { transform: scaleX(1); }
+.sv2r-row:hover .sv2r-go, .sv2r-row:focus-visible .sv2r-go { opacity: 1; transform: none; }
+.sv2r-row .sv2r-thumb img { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.sv2r-row:hover .sv2r-thumb img { transform: scale(1.07); }
+.sv2r-row:focus-visible { outline: 2px solid #121417; outline-offset: 4px; }
+.sv2r-caret-end { display: inline-block; width: max(2px, 0.06em); height: 0.8em; margin-left: 0.08em; vertical-align: -0.04em; background: #e54b17; animation: sv2r-blink 1.05s steps(1) infinite; }
+.sv2r-lnk { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; text-decoration-color: rgba(18, 20, 23, 0.35); transition: text-decoration-color 0.25s, color 0.25s; }
+.sv2r-lnk:hover { text-decoration-color: #e54b17; }
+@keyframes sv2r-blink { 50% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .sv2f-btn:hover { transform: none; }
+  .sv2f-card:hover .sv2f-card-img { transform: none; }
+  .sv2r-row:hover .sv2r-t, .sv2r-row:focus-visible .sv2r-t { transform: none; }
+  .sv2r-row:hover .sv2r-caret, .sv2r-caret-end { animation: none; }
+}

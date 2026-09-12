@@ -1,0 +1,47 @@
+/* ==================================================================
+   /technologie-thermomatch, sous le héros « Le mécanisme » (préfixe
+   mc-) : manuel technique. Papier blanc, encre, trait orange.
+   Tout mouvement s'arrête sous « réduire les animations ».
+   ================================================================== */
+
+.mc-link { color: #10212B; text-decoration: none; background-image: linear-gradient(#E54B17, #E54B17); background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 1.5px; padding-bottom: 2px; transition: color 0.3s; }
+.mc-link:hover { color: #C23F12; }
+.mc-link .mc-chev { display: inline-block; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.mc-link:hover .mc-chev { transform: translateX(4px); }
+.mc-link-light { color: #fff; background-image: linear-gradient(#FF6A2B, #FF6A2B); }
+.mc-link-light:hover { color: #FF8A57; }
+
+/* Questions fréquentes */
+.mc-faq-q { transition: background-color 0.3s; }
+.mc-faq-q:hover { background-color: rgba(16, 33, 43, 0.025); }
+.mc-faq-q:focus-visible { outline: 2px solid #E54B17; outline-offset: -2px; }
+.mc-faq-q .mc-plus-v { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); transform-origin: center; transform-box: fill-box; }
+.mc-faq-q[aria-expanded="true"] .mc-plus-v { transform: scaleY(0); }
+
+/* Décision : figures qui réagissent au survol de leur colonne */
+.mc-col .mc-knob { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.mc-col:hover .mc-knob-1 { transform: translateX(22px); }
+.mc-col:hover .mc-knob-2 { transform: translateX(-26px); }
+.mc-col:hover .mc-knob-3 { transform: translateX(30px); }
+.mc-col .mc-lens { transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.mc-col:hover .mc-lens { transform: translateX(34px); }
+
+/* Point qui descend le long du bus (schéma vertical) et impulsion du moteur */
+.mc-bus-dot { animation: mc-bus 3.2s linear infinite; }
+.mc-bus-dot:nth-child(2) { animation-delay: 1.05s; }
+.mc-bus-dot:nth-child(3) { animation-delay: 2.1s; }
+@keyframes mc-bus { 0% { top: 100%; opacity: 0; } 8% { opacity: 1; } 88% { opacity: 1; } 100% { top: 0%; opacity: 0; } }
+.mc-core { animation: mc-core 2.4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+@keyframes mc-core { 0%, 100% { opacity: 0.35; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1); } }
+.mc-wire-dot { animation: mc-wire 5.6s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
+@keyframes mc-wire { 0% { left: 0%; opacity: 0; } 6% { opacity: 1; } 94% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+.mc-fan { animation: mc-spin 6s linear infinite; transform-origin: center; transform-box: fill-box; }
+@keyframes mc-spin { to { transform: rotate(360deg); } }
+[data-play="false"] .mc-loop, [data-play="false"] .mc-loop * { animation-play-state: paused !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mc-link, .mc-link .mc-chev, .mc-faq-q, .mc-faq-q .mc-plus-v, .mc-col .mc-knob, .mc-col .mc-lens { transition: none; }
+  .mc-link:hover .mc-chev, .mc-col:hover .mc-knob-1, .mc-col:hover .mc-knob-2, .mc-col:hover .mc-knob-3, .mc-col:hover .mc-lens { transform: none; }
+  .mc-bus-dot, .mc-core, .mc-wire-dot, .mc-fan { animation: none; }
+  .mc-bus-dot, .mc-wire-dot { display: none; }
+}

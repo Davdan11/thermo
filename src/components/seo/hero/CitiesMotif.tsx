@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Caption, EASE, K, Parallax, deg, signed } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Index des villes : chaque point est une ville, empilée au-dessus de
@@ -11,7 +12,7 @@ import { Caption, EASE, K, Parallax, deg, signed } from "./parts";
    ================================================================== */
 
 export function CitiesMotif({ cities }: { cities: Array<{ name: string; designTempC: number }> }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const temps = cities.map((c) => Math.round(c.designTempC));
   const warm = Math.max(...temps);
   const cold = Math.min(...temps);

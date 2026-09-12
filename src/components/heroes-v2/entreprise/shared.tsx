@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
-import { useReducedMotion } from "motion/react";
+
 import { HERO_EASE } from "@/components/hero/HeroKit";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* Petits outils communs aux héros v2 « entreprise ». Chaque page garde sa propre direction
    artistique : ici, seulement la mécanique (sous l'en-tête, liens, flèche). */
@@ -49,7 +50,7 @@ export function fmtInt(n: number): string {
 /** « Réduire les animations », sans écart d'hydratation : false au rendu serveur et au premier
     rendu client, puis la vraie préférence. Les sections sont aussi sous <MotionConfig reducedMotion="user">. */
 export function useReducedSafe(): boolean {
-  const pref = useReducedMotion();
+  const pref = useReduced();
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     const t = window.setTimeout(() => setMounted(true), 0);

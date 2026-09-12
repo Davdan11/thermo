@@ -4,9 +4,13 @@ import { ArticleOpening } from "@/components/heroes-v2/contenu/ArticleOpening";
 import { guideCategoryLabel } from "@/components/content-hero/guideCategories";
 import { getAllGuides, getGuideBySlug } from "@/lib/markdown";
 import { createMetadata, getBreadcrumbSchema, SITE_NAME, SITE_URL } from "@/lib/seo";
-import { CtaThermoMatch, FaqBlock, JsonLd, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
-import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
+import { JsonLd } from "@/components/seo/SeoBlocks";
 import { GuideDataWidgets } from "@/components/seo/GuideDataWidgets";
+import { fraunces } from "@/components/heroes-v2/contenu/fonts";
+import { articleAccent } from "@/components/sections-v2/contenu/accents";
+import { dropCapIndex, pullQuotes, splitArticle } from "@/components/sections-v2/contenu/article-split";
+import { ArticleBody, ArticleColophon, ArticleCta, ArticleInsert, ArticleRelated } from "@/components/sections-v2/contenu/ArticleSections";
+import { ThemedFaq } from "@/components/sections-v2/contenu/ThemedFaq";
 
 interface GuidePageProps {
   params: Promise<{ slug: string }>;
@@ -70,8 +74,18 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
 
   const faq = (guide.faq ?? []).map((f) => ({ question: f.q, answer: f.a }));
 
+  // Mise en page de magazine : le HTML de remark est seulement coupé avant chaque <h2> (contenu intact),
+  // exergues = phrases existantes de l'article, une seule teinte : celle de la rubrique.
+  const accent = articleAccent(guide.category);
+  const parts = splitArticle(guide.contentHtml);
+  const quotes = pullQuotes(parts);
+  const drop = dropCapIndex(parts);
+
   return (
-    <main className="bg-[#f8f5f0] min-h-screen text-[#071d2b]">
+    <main
+      className={`gas-root ${fraunces.variable} min-h-screen`}
+      style={{ background: "#FFFFFF", color: "#111417", ["--gas-accent" as string]: accent } as React.CSSProperties}
+    >
       <JsonLd
         data={[
           articleSchema,
@@ -97,28 +111,32 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
         articleId="article"
       />
 
-      <TrustStrip />
+      <ArticleColophon accent={accent} />
 
-      <section id="article" className="mx-auto max-w-3xl px-5 sm:px-8 py-14" style={{ scrollMarginTop: 96 }}>
-        <article
-          className="prose prose-lg prose-slate max-w-none prose-headings:font-black prose-headings:tracking-tight prose-h2:text-[#0C1821] prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-[#0C1821] prose-a:text-[#d94b12] hover:prose-a:text-[#b83808] prose-strong:text-[#071d2b] prose-table:text-[15px]"
-          dangerouslySetInnerHTML={{ __html: guide.contentHtml }}
-        />
-      </section>
+      {/* Corps : section#article (même ancre, même HTML), sommaire épinglé, lettrine, exergues. */}
+      <ArticleBody parts={parts} quotes={quotes} accent={accent} drop={drop} />
 
-      <GuideDataWidgets slug={slug} widget={guide.widget} />
+      <GuideDataWidgets slug={slug} widget={guide.widget} accent={accent} />
 
-      <section className="mx-auto max-w-3xl px-5 sm:px-8 pb-6">
-        <ThermoScanPromo variant="card" context="guide" />
-      </section>
+      <ArticleInsert accent={accent} />
 
-      <CtaThermoMatch />
+      <ArticleCta accent={accent} />
 
       {relatedGuides.length > 0 && (
-        <RelatedLinks title="Guides liés" links={relatedGuides.map((g) => ({ href: `/guides/${g.slug}`, label: g.title, hint: g.readTime }))} />
+        <ArticleRelated
+          title="Guides liés"
+          items={relatedGuides.map((g) => ({
+            href: `/guides/${g.slug}`,
+            label: g.title,
+            hint: g.readTime,
+            cover: g.coverImage,
+            category: g.category,
+            rubrique: guideCategoryLabel(g.category),
+          }))}
+        />
       )}
 
-      <FaqBlock items={faq} />
+      <ThemedFaq items={faq} variant="article" accent={accent} />
     </main>
   );
 }

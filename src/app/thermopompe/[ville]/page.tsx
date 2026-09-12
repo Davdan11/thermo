@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 /* ==================================================================
    Page locale « Thermopompe à [ville] »
 
@@ -14,7 +13,10 @@ import { createMetadata, getBreadcrumbSchema, getServiceSchema, SITE_URL } from 
 import { getCities, getCity } from "@/lib/seo/cities";
 import { getCityData, referenceHdd, fmtInt, fmtTemp } from "@/lib/seo/cities-data";
 import { getCanonicalModels, getRanking, getAllBrandStats, type SeoModel } from "@/lib/seo/programmatic";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { JsonLd } from "@/components/seo/SeoBlocks";
+import { FrostCta, FrostHead, FrostNearby, FrostReadouts, FrostTrust, type ReadingRow } from "@/components/sections-v2/contenu/FrostSections";
+import { MT_FROST, ThemedModelTable } from "@/components/sections-v2/contenu/ThemedModelTable";
+import { ThemedFaq } from "@/components/sections-v2/contenu/ThemedFaq";
 import { FrostCityHero } from "@/components/heroes-v2/contenu/Frost";
 
 export const dynamicParams = false;
@@ -62,34 +64,6 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   });
 }
 
-/* Bloc de lignes label / valeur / note, dans le style « Verdict » du site */
-function Rows({ eyebrow, title, intro, rows, footnote, id }: { eyebrow: string; title: string; intro?: string; rows: Array<{ label: string; value: string; note?: string }>; footnote?: string; id: string }) {
-  if (rows.length === 0) return null;
-  return (
-    <section aria-labelledby={id} className="mx-auto max-w-4xl px-5 sm:px-8 pt-12">
-      <div className="rounded-[10px] border border-[#e4ddd5] bg-white overflow-hidden">
-        <div className="px-6 sm:px-7 pt-6 pb-2 border-b border-[#e4ddd5]">
-          <p className="m-0 text-[11px] font-bold uppercase tracking-[0.14em] text-[#e54b17]">{eyebrow}</p>
-          <h2 id={id} className="mt-2 mb-1.5 text-[24px] font-extrabold tracking-tight text-[#071d2b] leading-tight">{title}</h2>
-          {intro && <p className="mb-4 text-[14px] leading-relaxed text-[#536873] max-w-2xl">{intro}</p>}
-        </div>
-        <dl className="m-0 px-6 sm:px-7 py-1">
-          {rows.map((r, i) => (
-            <div key={r.label} className={`grid grid-cols-1 sm:grid-cols-[minmax(150px,200px)_1fr] gap-1 sm:gap-4 py-[15px] ${i < rows.length - 1 ? "border-b border-[#f0ebe4]" : ""}`}>
-              <dt className="text-[13px] font-semibold text-[#536873] pt-0.5">{r.label}</dt>
-              <dd className="m-0">
-                <p className="m-0 text-[16px] font-bold text-[#071d2b] tracking-tight">{r.value}</p>
-                {r.note && <p className="mt-1 mb-0 text-[13.5px] leading-relaxed text-[#536873]">{r.note}</p>}
-              </dd>
-            </div>
-          ))}
-        </dl>
-        {footnote && <p className="m-0 px-6 sm:px-7 py-3.5 border-t border-[#e4ddd5] bg-[#faf8f4] text-[12.5px] leading-relaxed text-[#536873]">{footnote}</p>}
-      </div>
-    </section>
-  );
-}
-
 export default async function CityPage({ params }: { params: Promise<{ ville: string }> }) {
   const { ville } = await params;
   const city = getCity(ville);
@@ -125,11 +99,12 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
   const nearby = (city.near ?? []).map((s) => getCity(s)).filter((c): c is NonNullable<typeof c> => !!c);
 
   /* ---- Profil climatique ---- */
-  const climateRows: Array<{ label: string; value: string; note?: string }> = [
+  const climateRows: ReadingRow[] = [
     {
       label: "Température de conception",
       value: `${city.designTempC} °C`,
       note: `Froid de référence du calcul de charge de chauffage pour ${city.climateLabel}. Une maison bien dimensionnée doit être chauffée à cette température, appoint compris.`,
+      gauge: { t: city.designTempC },
     },
   ];
   if (hdd) {
@@ -139,6 +114,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
       note: vsMontreal !== null
         ? `${vsMontreal >= 0 ? "+" : ""}${pct(vsMontreal)} par rapport à Montréal (${fmtInt(refHdd)}). C'est la mesure du travail annuel de chauffage : plus le chiffre est élevé, plus l'efficacité saisonnière de la machine pèse sur la facture.`
         : "Mesure du travail annuel de chauffage : plus le chiffre est élevé, plus l'efficacité saisonnière de la machine pèse sur la facture.",
+      gauge: vsMontreal !== null && refHdd ? { a: hdd, b: refHdd, aLabel: city.name, bLabel: "Montréal" } : undefined,
     });
   }
   if (cl?.janMeanC !== null && cl?.janMeanC !== undefined) {
@@ -146,6 +122,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
       label: "Janvier",
       value: `${fmtTemp(cl.janMeanC)} en moyenne${cl.janMinC !== null && cl.janMinC !== undefined ? `, ${fmtTemp(cl.janMinC)} la nuit` : ""}`,
       note: "Moyennes quotidiennes du mois le plus froid. Une thermopompe certifiée climat froid fonctionne encore à pleine charge dans cette plage.",
+      gauge: { t: cl.janMeanC },
     });
   }
   if (cl?.extremeMinC !== null && cl?.extremeMinC !== undefined) {
@@ -153,6 +130,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
       label: "Minimum extrême",
       value: `${fmtTemp(cl.extremeMinC)}${cl.extremeMinYear ? ` (${cl.extremeMinYear})` : ""}`,
       note: "Record enregistré à la station de référence. Aucune thermopompe résidentielle ne couvre seule une telle pointe : c'est le rôle du chauffage d'appoint.",
+      gauge: { t: cl.extremeMinC },
     });
   }
   if (cl?.daysBelowMinus20 !== null && cl?.daysBelowMinus20 !== undefined) {
@@ -171,7 +149,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
   }
 
   /* ---- Ce que ça change ---- */
-  const choiceRows: Array<{ label: string; value: string; note?: string }> = [
+  const choiceRows: ReadingRow[] = [
     {
       label: "Certification climat froid",
       value: cold ? "Indispensable" : "Fortement recommandée",
@@ -205,11 +183,11 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
   }
 
   /* ---- Estimation locale ---- */
-  const estimateRows = est
+  const estimateRows: ReadingRow[] = est
     ? [
         { label: "Besoins de chauffage", value: `${fmtInt(est.kwh)} kWh par an`, note: `Pour une ${REF_HOUSE_LABEL}, d'après les ${fmtInt(hdd)} degrés-jours de ${city.name}.${vsMontreal !== null ? ` La même maison à Montréal : ${fmtInt((REF_HOUSE_UA_W_PER_K * (refHdd ?? 0) * 24) / 1000)} kWh.` : ""}` },
         { label: "Aux plinthes électriques", value: `${money(est.baseboardCost)} par an`, note: `Rendement de 1 : chaque kWh d'électricité donne un kWh de chaleur, au tarif D d'Hydro-Québec (${RATE_D_PER_KWH.toLocaleString("fr-CA")} $/kWh).` },
-        { label: "Avec une thermopompe climat froid", value: `${money(est.hpCost)} par an`, note: `COP saisonnier de ${SEASONAL_COP.mid.toLocaleString("fr-CA")} sur l'hiver de ${city.name}, appoint compris : ${fmtInt(est.hpKwh)} kWh au lieu de ${fmtInt(est.kwh)}.` },
+        { label: "Avec une thermopompe climat froid", value: `${money(est.hpCost)} par an`, note: `COP saisonnier de ${SEASONAL_COP.mid.toLocaleString("fr-CA")} sur l'hiver de ${city.name}, appoint compris : ${fmtInt(est.hpKwh)} kWh au lieu de ${fmtInt(est.kwh)}.`, gauge: { a: est.hpCost, b: est.baseboardCost, aLabel: "Thermopompe", bLabel: "Plinthes" } },
         { label: "Économie annuelle", value: `${money(est.savingLow)} à ${money(est.savingHigh)}`, note: `Selon un COP saisonnier de ${SEASONAL_COP.low.toLocaleString("fr-CA")} à ${SEASONAL_COP.high.toLocaleString("fr-CA")}. La machine, son calibre et l'isolation de votre maison déplacent ce chiffre : ThermoMatch le recalcule pour votre cas.` },
       ]
     : [];
@@ -266,7 +244,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
   ];
 
   return (
-    <main className="bg-[#f8f5f0] text-[#071d2b]">
+    <main className="frs-root" style={{ background: "#FFFFFF", color: "#0B2540" }}>
       <JsonLd data={jsonLd} />
       {/* Héros « Carte des froids » : le nom de la ville, son thermomètre (conception, normales de janvier, record). */}
       <FrostCityHero
@@ -286,14 +264,17 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
         extremeMinYear={cl?.extremeMinYear ?? null}
         source={cl?.station ? `Normales climatiques${cl.normalsPeriod ? ` ${cl.normalsPeriod}` : ""} d’Environnement et Changement climatique Canada, station ${cl.station}.` : null}
       />
-      <TrustStrip />
+      {/* Sous le héros, l'atlas de la ville : relevés d'instruments (normales), journal de choix, estimation,
+          classement en journal de station, appel, villes voisines en légende de carte, questions. */}
+      <FrostTrust />
 
-      <Rows id="climat" eyebrow="Profil climatique" title={`L'hiver de ${city.name} en chiffres`} intro="Les valeurs qui servent au calcul de charge d'une maison et au choix de la machine." rows={climateRows} />
+      <FrostReadouts layout="instruments" id="climat" eyebrow="Profil climatique" title={`L'hiver de ${city.name} en chiffres`} intro="Les valeurs qui servent au calcul de charge d'une maison et au choix de la machine." rows={climateRows} />
 
-      <Rows id="choix" eyebrow="Ce que ça change" title={`Choisir une thermopompe pour ${city.name}`} rows={choiceRows} />
+      <FrostReadouts layout="log" id="choix" eyebrow="Ce que ça change" title={`Choisir une thermopompe pour ${city.name}`} rows={choiceRows} />
 
       {estimateRows.length > 0 && (
-        <Rows
+        <FrostReadouts
+          layout="ledger"
           id="couts"
           eyebrow="Estimation locale"
           title={`Chauffer une maison type à ${city.name}`}
@@ -303,32 +284,34 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
         />
       )}
 
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-14 pb-6">
-        <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#e54b17] mb-2">Classement pour ce climat</p>
-        <h2 className="text-[26px] font-extrabold tracking-tight text-[#071d2b] mb-2">{rankingTitle}</h2>
-        <p className="text-[#536873] mb-6 max-w-3xl">{rankingIntro}</p>
-        <ModelTable models={ranking.models as SeoModel[]} showRank metric={{ label: ranking.def.metricLabel, value: ranking.def.value }} />
-        <p className="mt-3 text-sm">
-          <Link href={`/meilleures-thermopompes/${rankingSlug}`} className="text-[#e54b17] font-semibold">Voir le classement complet →</Link>
-        </p>
+      <section style={{ background: "#FFFFFF" }}>
+        <div className="mx-auto max-w-[1440px] px-5 pb-10 pt-16 sm:px-8 lg:px-12 lg:pt-24">
+          <FrostHead eyebrow="Classement pour ce climat" title={rankingTitle} intro={rankingIntro} />
+          <div className="mt-10">
+            <ThemedModelTable models={ranking.models as SeoModel[]} showRank metric={{ label: ranking.def.metricLabel, value: ranking.def.value }} theme={MT_FROST} />
+          </div>
+          <p className="mt-4 text-sm">
+            <Link href={`/meilleures-thermopompes/${rankingSlug}`} className="font-semibold underline decoration-1 underline-offset-4" style={{ color: "#1F5F8B" }}>Voir le classement complet →</Link>
+          </p>
+        </div>
       </section>
 
-      <CtaThermoMatch
+      <FrostCta
         title={`Quelle thermopompe pour votre maison à ${city.name}?`}
         text={`13 questions sur votre maison. ThermoMatch applique le froid de ${city.name} (${city.designTempC} °C) à votre superficie, votre isolation et votre système actuel, puis retient trois machines parmi toutes les marques certifiées par Hydro-Québec.`}
       />
 
       {nearby.length > 0 && (
-        <RelatedLinks
+        <FrostNearby
           title="Villes voisines"
           links={nearby.map((c) => {
             const h = getCityData(c.slug)?.climate?.hdd18 ?? null;
-            return { href: `/thermopompe/${c.slug}`, label: `Thermopompe à ${c.name}`, hint: `${c.designTempC} °C${h ? ` · ${fmtInt(h)} degrés-jours` : ` · ${c.region}`}` };
+            return { href: `/thermopompe/${c.slug}`, label: `Thermopompe à ${c.name}`, hint: `${c.designTempC} °C${h ? ` · ${fmtInt(h)} degrés-jours` : ` · ${c.region}`}`, t: c.designTempC };
           })}
         />
       )}
 
-      <FaqBlock items={faq} title={`Questions fréquentes à ${city.name}`} />
+      <ThemedFaq items={faq} title={`Questions fréquentes à ${city.name}`} variant="frost" />
     </main>
   );
 }

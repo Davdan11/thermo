@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView, useReducedMotion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { CountUp } from "@/components/home/premium/shared";
 import type { SavingsEstimate } from "@/lib/thermomatch/savings";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* Économies de chauffage estimées (maison aux plinthes électriques) :
    une fourchette, deux barres « plinthes / thermopompe » et les hypothèses en clair. */
@@ -23,7 +24,7 @@ const fr = (n: number, d = 0) => n.toLocaleString("fr-CA", { minimumFractionDigi
 export function SavingsBand({ s }: { s: SavingsEstimate }) {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -15% 0px" });
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const hpBest = s.baseboardCost - s.savingHigh;
   const hpWorst = s.baseboardCost - s.savingLow;
 

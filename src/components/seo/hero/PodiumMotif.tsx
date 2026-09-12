@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import type { PodiumItem } from "./types";
 import { Caption, EASE, K, Parallax } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Classement : podium des trois premiers. Les socles montent (hauteur
@@ -15,7 +16,7 @@ import { Caption, EASE, K, Parallax } from "./parts";
 const HEIGHT: Record<number, number> = { 1: 232, 2: 190, 3: 160 };
 
 export function PodiumMotif({ metricLabel, items }: { metricLabel: string; items: PodiumItem[] }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const byRank = [items.find((x) => x.rank === 2), items.find((x) => x.rank === 1), items.find((x) => x.rank === 3)].filter((x): x is PodiumItem => !!x);
   // Ordre de montée : troisième, deuxième, puis premier.
   const riseDelay = (r: number) => 0.5 + (3 - r) * 0.28;

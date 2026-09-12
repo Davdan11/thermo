@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Caption, EASE, K, Parallax } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Pages juridiques : sommaire typographique, sobre et lent.
@@ -11,7 +12,7 @@ import { Caption, EASE, K, Parallax } from "./parts";
    ================================================================== */
 
 export function LegalMotif({ heading, note, items }: { heading: string; note?: string; items: Array<{ id: string; label: string }> }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const [active, setActive] = useState(0);
   useEffect(() => {
     if (reduce || items.length < 2) return;

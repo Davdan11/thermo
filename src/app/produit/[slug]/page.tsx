@@ -1,6 +1,4 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { registry } from "@/lib/data/registry";
@@ -9,10 +7,13 @@ import { getSeoModel, indexSlug } from "@/lib/seo/programmatic";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
 import { PriceSection } from "@/components/product/PriceSection";
-import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { brochureForProduct } from "@/lib/data/brochures";
-import { CtaThermoMatch, TrustStrip } from "@/components/seo/SeoBlocks";
 import { LogisVertAlertForm } from "@/components/logisvert/LogisVertAlertForm";
+import { techMono } from "@/components/heroes-v2/produit/fonts-mono";
+import { MotionRoot, SheetColumn } from "@/components/sections-v2/produit/motion";
+import { Cartouche, SideBrochure, SideLinks, SideThermoMatch, SideThermoScan, type CartoucheRow } from "@/components/sections-v2/produit/Sidebar";
+import { SheetCta, SheetTrust } from "@/components/sections-v2/produit/Closing";
+import { fr } from "@/components/sections-v2/produit/tokens";
 import {
   ProductHeader,
   KeySpecs,
@@ -29,6 +30,8 @@ import {
 /* ==================================================================
    /produit/[slug] — Product Detail Page
    Assembles all product data into a complete product sheet.
+   Sous le héros « Fiche d'ingénierie », chaque section est une
+   feuille numérotée du même dossier technique (sections-v2/produit).
    ================================================================== */
 
 /* ── Static generation ── */
@@ -132,8 +135,20 @@ export default async function ProductPage({
     { name: model.name, url: `${SITE_URL}/produit/${slug}` },
   ]);
 
+  /* Cartouche « Résumé rapide » : mêmes lignes qu'avant. */
+  const summary: CartoucheRow[] = [{ label: "Marque", value: brand.name }];
+  const seriesLabel = seriesDisplayName(series.name, series.slug);
+  if (seriesLabel) summary.push({ label: "Série", value: seriesLabel });
+  summary.push({ label: "Type", value: detail.systemTypeLabel });
+  if (model.nominalCapacityBtu) summary.push({ label: "Capacité", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU/h`, mono: true });
+  if (configuration?.seer2 != null) summary.push({ label: "SEER2", value: fr(configuration.seer2), mono: true });
+  if (configuration?.hspf2 != null) summary.push({ label: "HSPF2", value: fr(configuration.hspf2), mono: true });
+  if (configuration?.minHeatingTempC != null) summary.push({ label: "Temp. min", value: `${fr(configuration.minHeatingTempC)} °C`, mono: true });
+  if (configuration?.hasWifi) summary.push({ label: "Wi-Fi", value: "Intégré" });
+  if (detail.outdoorUnit?.refrigerant) summary.push({ label: "Réfrigérant", value: detail.outdoorUnit.refrigerant, mono: true });
+
   return (
-    <main style={{ fontFamily: "var(--font-sans)", minHeight: "100vh", background: "#f8f5f0", color: "#071d2b" }}>
+    <main style={{ fontFamily: "var(--font-sans)", minHeight: "100vh", background: "#FFFFFF", color: "#121417" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
@@ -149,190 +164,98 @@ export default async function ProductPage({
       <ProductHeader detail={detail} seo={seoModel} />
 
       {/* ═══════════════════════════════════════════════════════════
-          BODY — Two-column layout
+          FEUILLES — la suite du dossier technique
           ═══════════════════════════════════════════════════════════ */}
-      <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 py-8 sm:py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-8 lg:gap-12">
+      <MotionRoot>
+        <div className={`sv2f ${techMono.variable}`}>
+          <div className="mx-auto w-full max-w-[1440px] px-5 pb-6 pt-10 sm:px-8 lg:px-12 lg:pt-14">
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-[minmax(0,1fr)_310px] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_330px] xl:gap-16">
+              {/* ── MAIN COLUMN ── */}
+              <SheetColumn className="flex min-w-0 flex-col gap-16 lg:gap-20">
+                {/* Key specs grid */}
+                <KeySpecs detail={detail} />
 
-          {/* ── MAIN COLUMN ── */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 40, minWidth: 0 }}>
+                {/* LogisVert subsidy */}
+                <LogisVertBadge detail={detail} />
 
-            {/* Key specs grid */}
-            <KeySpecs detail={detail} />
+                {/* Alerte LogisVert : prévenir le visiteur si le montant de ce modèle change */}
+                <LogisVertAlertForm
+                  target={{ kind: "model", modelId: model.id }}
+                  label={model.name.toLowerCase().startsWith(brand.name.toLowerCase()) ? model.name : `${brand.name} ${model.name}`}
+                  tone="dark"
+                  className="-mt-6 rounded-[3px]! lg:-mt-10"
+                />
 
-            {/* LogisVert subsidy */}
-            <LogisVertBadge detail={detail} />
+                <PriceSection detail={detail} logisVertDollars={seoModel?.logisVertDollars ?? 0} />
 
-            {/* Alerte LogisVert : prévenir le visiteur si le montant de ce modèle change */}
-            <LogisVertAlertForm
-              target={{ kind: "model", modelId: model.id }}
-              label={model.name.toLowerCase().startsWith(brand.name.toLowerCase()) ? model.name : `${brand.name} ${model.name}`}
-              tone="dark"
-            />
+                {/* Good choice */}
+                <GoodChoiceSection detail={detail} seo={seoModel} />
 
-            <PriceSection detail={detail} logisVertDollars={seoModel?.logisVertDollars ?? 0} />
+                {/* Cold climate performance table */}
+                {performanceProfile && performanceProfile.dataPoints.length > 0 && (
+                  <ColdClimatePerformance
+                    profile={performanceProfile}
+                    minHeatingTempC={configuration?.minHeatingTempC}
+                  />
+                )}
 
-            {/* Good choice */}
-            <GoodChoiceSection detail={detail} seo={seoModel} />
+                {/* Comfort / noise */}
+                {configuration && <ComfortSection configuration={configuration} />}
 
-            {/* Cold climate performance table */}
-            {performanceProfile && performanceProfile.dataPoints.length > 0 && (
-              <ColdClimatePerformance
-                profile={performanceProfile}
-                minHeatingTempC={configuration?.minHeatingTempC}
-              />
-            )}
+                {/* Full tech specs */}
+                <TechSpecs detail={detail} />
 
-            {/* Comfort / noise */}
-            {configuration && <ComfortSection configuration={configuration} />}
+                {/* Warranties */}
+                <WarrantySection warranties={detail.warranties} />
 
-            {/* Full tech specs */}
-            <TechSpecs detail={detail} />
+                {/* Sources */}
+                <SourcesSection sources={detail.sources} />
 
-            {/* Warranties */}
-            <WarrantySection warranties={detail.warranties} />
+                <ProductSeoLinks slug={slug} />
+              </SheetColumn>
 
-            {/* Sources */}
-            <SourcesSection sources={detail.sources} />
+              {/* ── SIDEBAR ── */}
+              <aside className="relative flex min-w-0 flex-col gap-6">
+                {/* Quick specs card */}
+                <Cartouche title="Résumé rapide" rows={summary} />
 
-            <ProductSeoLinks slug={slug} />
-          </div>
+                {/* ThermoScan : comparer avec l'appareil que le visiteur remplace */}
+                <SideThermoScan context="produit" />
 
-          {/* ── SIDEBAR ── */}
-          <aside style={{ position: "relative" }}>
-            <div style={{ position: "sticky", top: 100, display: "flex", flexDirection: "column", gap: 24 }}>
+                {/* Brochure Download */}
+                {brochureUrl && <SideBrochure href={brochureUrl} brandName={brand.name} />}
 
-              {/* Quick specs card */}
-              <div style={{ border: "1px solid #e4ddd5", padding: "24px", background: "#fff" }}>
-                <p style={{ margin: "0 0 16px", fontSize: 15, fontWeight: 700, color: "#071d2b" }}>Résumé rapide</p>
-                <dl style={{ margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-                  <SidebarRow label="Marque" value={brand.name} />
-                  {seriesDisplayName(series.name, series.slug) && <SidebarRow label="Série" value={seriesDisplayName(series.name, series.slug)!} />}
-                  <SidebarRow label="Type" value={detail.systemTypeLabel} />
-                  {model.nominalCapacityBtu && (
-                    <SidebarRow label="Capacité" value={`${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU/h`} />
-                  )}
-                  {configuration?.seer2 != null && (
-                    <SidebarRow label="SEER2" value={`${configuration.seer2}`} />
-                  )}
-                  {configuration?.hspf2 != null && (
-                    <SidebarRow label="HSPF2" value={`${configuration.hspf2}`} />
-                  )}
-                  {configuration?.minHeatingTempC != null && (
-                    <SidebarRow label="Temp. min" value={`${configuration.minHeatingTempC} °C`} />
-                  )}
-                  {configuration?.hasWifi && (
-                    <SidebarRow label="Wi-Fi" value="Intégré" />
-                  )}
-                  {detail.outdoorUnit?.refrigerant && (
-                    <SidebarRow label="Réfrigérant" value={detail.outdoorUnit.refrigerant} />
-                  )}
-                </dl>
-              </div>
+                {/* Links */}
+                <SideLinks
+                  links={[
+                    { href: "/subventions", label: "Vérifier les subventions" },
+                    { href: `/marques/${brand.slug}`, label: `Tous les modèles ${brand.name}` },
+                    { href: "/thermopompes", label: "Catalogue complet" },
+                    { href: "/comparer", label: "Comparer des modèles" },
+                  ]}
+                />
 
-              {/* ThermoMatch : validation de la fiche pour la maison du visiteur */}
-              <div style={{ background: "#0C1821", padding: "26px 24px", color: "#fff" }}>
-                <Image src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" width={170} height={34} className="object-contain brightness-0 invert" style={{ height: 26, width: "auto" }} />
-                <p style={{ margin: "16px 0 6px", fontSize: 17, fontWeight: 800, letterSpacing: "-0.01em", lineHeight: 1.25 }}>Ce {brand.name} convient-il à votre maison ?</p>
-                <p style={{ margin: "0 0 18px", fontSize: 13.5, color: "rgba(255,255,255,.7)", lineHeight: 1.55 }}>
-                  13 questions, 2 minutes. ThermoMatch vérifie la capacité certifiée à -15 °C par rapport à votre superficie, votre isolation et votre zone climatique, puis compare avec toutes les marques.
-                </p>
-                <Link
-                  href="/trouver-ma-thermopompe"
-                  style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 8, padding: "13px 16px", background: "#e54b17", color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none", borderRadius: 6 }}
-                >
-                  Vérifier avec ThermoMatch
-                </Link>
-                <p style={{ margin: "12px 0 0", fontSize: 12, color: "rgba(255,255,255,.5)", textAlign: "center" }}>Gratuit · données certifiées Hydro-Québec</p>
-              </div>
-
-              {/* ThermoScan : comparer avec l'appareil que le visiteur remplace */}
-              <ThermoScanPromo variant="card" context="produit" />
-
-              {/* Brochure Download */}
-              {brochureUrl && (
-                <div style={{ border: "1px solid #e4ddd5", padding: "24px", background: "#fff" }}>
-                  <p style={{ margin: "0 0 8px", fontSize: 14, fontWeight: 700, color: "#071d2b" }}><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: "inline-block", verticalAlign: "-3px", marginRight: 6 }}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /></svg>Brochure officielle</p>
-                  <p style={{ margin: "0 0 16px", fontSize: 13, color: "#6b7b80", lineHeight: 1.55 }}>
-                    Téléchargez la documentation technique officielle du fabricant {brand.name}.
-                  </p>
-                  <a
-                    href={brochureUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    download
-                    style={{
-                      display: "flex", justifyContent: "center", alignItems: "center", gap: 8,
-                      padding: "10px 16px",
-                      background: "linear-gradient(135deg, #1b6b3a, #0d4423)",
-                      color: "#fff",
-                      fontSize: 13, fontWeight: 600,
-                      textDecoration: "none",
-                      borderRadius: "6px",
-                      transition: "opacity .2s",
-                    }}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                      <polyline points="7 10 12 15 17 10" />
-                      <line x1="12" y1="15" x2="12" y2="3" />
-                    </svg>
-                    Télécharger la brochure (PDF)
-                  </a>
+                {/* ThermoMatch : validation de la fiche pour la maison du visiteur (reste à l'écran pendant la lecture) */}
+                <div className="lg:sticky lg:top-[104px]">
+                  <SideThermoMatch brandName={brand.name} />
                 </div>
-              )}
-
-              {/* Links */}
-              <div>
-                <p style={{ margin: "0 0 12px", fontSize: 11, fontWeight: 600, color: "#a0aab0", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-                  Sur ce site
-                </p>
-                <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
-                  <SidebarLink href="/subventions" label="Vérifier les subventions" />
-                  <SidebarLink href={`/marques/${brand.slug}`} label={`Tous les modèles ${brand.name}`} />
-                  <SidebarLink href="/thermopompes" label="Catalogue complet" />
-                  <SidebarLink href="/comparer" label="Comparer des modèles" />
-                </ul>
-              </div>
+              </aside>
             </div>
-          </aside>
-        </div>
 
-        {/* Similar models — full width below */}
-        <div style={{ marginTop: 48 }}>
-          <SimilarModels models={detail.similarModels} />
+            {/* Similar models — full width below */}
+            <div className="mt-20 lg:mt-24">
+              <SimilarModels models={detail.similarModels} />
+            </div>
+          </div>
+          <div className="mt-16 lg:mt-20">
+            <SheetTrust />
+          </div>
+          <SheetCta
+            title={`Ce ${brand.name} ${model.name} convient-il à votre maison ?`}
+            text="ThermoMatch vérifie la capacité certifiée à -15 °C par rapport à votre superficie, votre isolation et votre zone climatique, puis compare avec les autres marques. Trois machines vraiment adaptées, gratuitement, sans parti pris."
+          />
         </div>
-      </div>
-      <TrustStrip />
-      <CtaThermoMatch
-        title={`Ce ${brand.name} ${model.name} convient-il à votre maison ?`}
-        text="ThermoMatch vérifie la capacité certifiée à -15 °C par rapport à votre superficie, votre isolation et votre zone climatique, puis compare avec les autres marques. Trois machines vraiment adaptées, gratuitement, sans parti pris."
-      />
+      </MotionRoot>
     </main>
-  );
-}
-
-/* ── Sidebar helpers ── */
-
-function SidebarRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
-      <dt style={{ fontSize: 13, color: "#6b7b80", flexShrink: 0 }}>{label}</dt>
-      <dd style={{ margin: 0, fontSize: 13, fontWeight: 600, color: "#071d2b", textAlign: "right" }}>{value}</dd>
-    </div>
-  );
-}
-
-function SidebarLink({ href, label }: { href: string; label: string }) {
-  return (
-    <li>
-      <Link
-        href={href}
-        style={{ fontSize: 13, color: "#6b7b80", textDecoration: "none" }}
-      >
-        <span style={{ color: "#d4cec5", marginRight: 8 }}>›</span>
-        {label}
-      </Link>
-    </li>
   );
 }

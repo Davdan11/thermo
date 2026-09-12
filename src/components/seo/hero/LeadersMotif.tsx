@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Caption, EASE, K, Parallax } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Index des classements : tableau des meneurs, un par critère. Un
@@ -11,7 +12,7 @@ import { Caption, EASE, K, Parallax } from "./parts";
    ================================================================== */
 
 export function LeadersMotif({ rows }: { rows: Array<{ label: string; href: string; leader: string; value: string }> }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const [active, setActive] = useState(0);
   useEffect(() => {
     if (reduce || rows.length < 2) return;

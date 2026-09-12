@@ -1,12 +1,19 @@
 import type { SystemConfiguration } from "@/lib/data/types";
+import { NoiseScale } from "@/components/sections-v2/produit/charts";
+import { Reveal, SheetHead } from "@/components/sections-v2/produit/motion";
+import { INK, LABEL, LINE, MUTE } from "@/components/sections-v2/produit/tokens";
 
 /* ------------------------------------------------------------------
    ComfortSection — noise levels with accessible explanation
+   Présentation : feuille « Acoustique » — une règle graduée en dB(A)
+   où se posent la plage intérieure et le repère extérieur.
    ------------------------------------------------------------------ */
 
 interface ComfortSectionProps {
   configuration: SystemConfiguration;
 }
+
+const fr = (n: number) => n.toLocaleString("fr-CA");
 
 export function ComfortSection({ configuration }: ComfortSectionProps) {
   const { noiseIndoorMinDbA, noiseIndoorMaxDbA, noiseOutdoorDbA } = configuration;
@@ -16,46 +23,54 @@ export function ComfortSection({ configuration }: ComfortSectionProps) {
 
   if (!hasIndoor && !hasOutdoor) return null;
 
-  return (
-    <section id="confort" aria-labelledby="confort-title">
-      <h2 id="confort-title" className="text-xl font-bold text-foreground mb-4">
-        Confort et niveau sonore
-      </h2>
+  const figure = "sv2f-mono block text-[22px] sm:text-[26px]";
 
-      <dl className="space-y-4">
+  return (
+    <section id="confort" aria-labelledby="confort-title" style={{ scrollMarginTop: 110 }}>
+      <SheetHead id="confort-title" kicker="Acoustique" title="Confort et niveau sonore" />
+
+      <div className="mt-9 px-1">
+        <NoiseScale inMin={noiseIndoorMinDbA ?? null} inMax={noiseIndoorMaxDbA ?? null} out={noiseOutdoorDbA ?? null} />
+      </div>
+
+      <dl className={`m-0 mt-6 grid grid-cols-1 ${hasIndoor && hasOutdoor ? "sm:grid-cols-2" : ""}`} style={{ borderTop: `1px solid ${INK}` }}>
         {hasIndoor && (
-          <div>
-            <dt className="text-sm font-medium text-foreground">Unité intérieure</dt>
-            <dd className="text-sm text-muted mt-0.5">
+          <Reveal className="py-5 pl-3 pr-6" style={{ borderBottom: `1px solid ${LINE}` }}>
+            <dt className="sv2f-mono text-[10.5px] uppercase" style={{ letterSpacing: "0.1em", color: LABEL }}>
+              Unité intérieure
+            </dt>
+            <dd className="m-0 mt-2">
               {noiseIndoorMinDbA != null && noiseIndoorMaxDbA != null ? (
-                <span className="text-foreground font-medium">
-                  {noiseIndoorMinDbA} à {noiseIndoorMaxDbA} dB(A)
+                <span className={figure} style={{ color: INK, fontWeight: 500, letterSpacing: "-0.04em" }}>
+                  {fr(noiseIndoorMinDbA)} à {fr(noiseIndoorMaxDbA)} dB(A)
                 </span>
               ) : noiseIndoorMinDbA != null ? (
-                <span className="text-foreground font-medium">
-                  à partir de {noiseIndoorMinDbA} dB(A)
+                <span className={figure} style={{ color: INK, fontWeight: 500, letterSpacing: "-0.04em" }}>
+                  à partir de {fr(noiseIndoorMinDbA)} dB(A)
                 </span>
               ) : null}
-              <span className="block mt-1 text-xs text-muted">
+              <span className="mt-2 block max-w-[440px] text-[13.5px] leading-[1.55]" style={{ color: MUTE }}>
                 Le niveau varie selon la vitesse de ventilation sélectionnée.
-                {noiseIndoorMinDbA != null && noiseIndoorMinDbA <= 25 && (
-                  " À la vitesse minimale, le niveau est comparable au bruit ambiant d'une pièce calme."
-                )}
+                {noiseIndoorMinDbA != null && noiseIndoorMinDbA <= 25 && " À la vitesse minimale, le niveau est comparable au bruit ambiant d'une pièce calme."}
               </span>
             </dd>
-          </div>
+          </Reveal>
         )}
 
         {hasOutdoor && (
-          <div>
-            <dt className="text-sm font-medium text-foreground">Unité extérieure</dt>
-            <dd className="text-sm text-muted mt-0.5">
-              <span className="text-foreground font-medium">{noiseOutdoorDbA} dB(A)</span>
-              <span className="block mt-1 text-xs text-muted">
+          <Reveal delay={0.1} className={`py-5 pl-3 pr-6 ${hasIndoor ? "sm:border-l sm:pl-6" : ""}`} style={{ borderBottom: `1px solid ${LINE}`, borderColor: LINE }}>
+            <dt className="sv2f-mono text-[10.5px] uppercase" style={{ letterSpacing: "0.1em", color: LABEL }}>
+              Unité extérieure
+            </dt>
+            <dd className="m-0 mt-2">
+              <span className={figure} style={{ color: INK, fontWeight: 500, letterSpacing: "-0.04em" }}>
+                {fr(noiseOutdoorDbA!)} dB(A)
+              </span>
+              <span className="mt-2 block max-w-[440px] text-[13.5px] leading-[1.55]" style={{ color: MUTE }}>
                 Mesuré dans des conditions standard. Le bruit perçu peut varier selon l&apos;emplacement et l&apos;environnement.
               </span>
             </dd>
-          </div>
+          </Reveal>
         )}
       </dl>
     </section>

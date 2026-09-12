@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import type { SeoModel } from "@/lib/seo/programmatic";
+import { Arrow, Reveal, SheetHead, VRule } from "@/components/sections-v2/produit/motion";
+import { AMBER, GREEN, INK, LABEL, LINE, MUTE, ORANGE, WASH } from "@/components/sections-v2/produit/tokens";
 
 /* ------------------------------------------------------------------
    GoodChoiceSection — « Est-ce le bon modèle pour votre maison ? »
@@ -9,6 +11,7 @@ import type { SeoModel } from "@/lib/seo/programmatic";
    d'installation, tenue par grand froid, efficacité, subvention. Puis
    « Convient si / Moins indiqué si ». Aucune formule creuse, aucune
    valeur inventée : une donnée absente est dite absente.
+   Présentation : feuille « Verdict », lignes numérotées (05.1, 05.2…).
    ------------------------------------------------------------------ */
 
 interface Props {
@@ -105,65 +108,99 @@ export function GoodChoiceSection({ detail, seo }: Props) {
 
   if (rows.length === 0) return null;
 
-  return (
-    <section id="bon-choix" aria-labelledby="bon-choix-title" style={{ border: "1px solid #e4ddd5", background: "#fff" }}>
-      <div style={{ padding: "28px 28px 8px", borderBottom: "1px solid #e4ddd5" }}>
-        <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e54b17" }}>Verdict</p>
-        <h2 id="bon-choix-title" style={{ margin: "8px 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-0.01em", color: "#071d2b", lineHeight: 1.2 }}>
-          Est-ce le bon modèle pour votre maison ?
-        </h2>
-        <p style={{ margin: "0 0 20px", fontSize: 14, color: "#536873", lineHeight: 1.6, maxWidth: 640 }}>
-          Lecture des données certifiées de cette fiche. Le calibre exact dépend de votre maison, pas de la machine.
-        </p>
-      </div>
+  /* Couleur de la valeur : orange pour la mesure certifiée à -15 °C, vert pour un montant LogisVert. */
+  const valueColor = (label: string) => (label === "Par grand froid" && h5 !== null && nominal ? ORANGE : label === "Subvention LogisVert" && logisVert > 0 ? GREEN : INK);
 
-      <dl style={{ margin: 0, padding: "8px 28px", display: "grid", gridTemplateColumns: "1fr", rowGap: 0 }}>
+  return (
+    <section id="bon-choix" aria-labelledby="bon-choix-title" style={{ scrollMarginTop: 110 }}>
+      <SheetHead
+        id="bon-choix-title"
+        kicker="Verdict"
+        title="Est-ce le bon modèle pour votre maison ?"
+        lead="Lecture des données certifiées de cette fiche. Le calibre exact dépend de votre maison, pas de la machine."
+      />
+
+      <dl className="m-0 mt-7" style={{ borderTop: `1px solid ${INK}` }}>
         {rows.map((r, i) => (
-          <div key={r.label} className="grid grid-cols-1 sm:grid-cols-[minmax(140px,180px)_1fr] gap-1 sm:gap-4" style={{ padding: "16px 0", borderBottom: i < rows.length - 1 ? "1px solid #f0ebe4" : "none" }}>
-            <dt style={{ fontSize: 13, fontWeight: 600, color: "#536873", paddingTop: 2 }}>{r.label}</dt>
-            <dd style={{ margin: 0 }}>
-              <p style={{ margin: 0, fontSize: 17, fontWeight: 700, color: "#071d2b", letterSpacing: "-0.01em" }}>{r.value}</p>
-              {r.note && <p style={{ margin: "4px 0 0", fontSize: 13.5, color: "#536873", lineHeight: 1.55 }}>{r.note}</p>}
+          <Reveal
+            key={r.label}
+            delay={0.07 * i}
+            y={10}
+            className="sv2f-row sv2f-tr grid grid-cols-1 gap-1.5 py-5 pl-3 pr-2 sm:grid-cols-[minmax(190px,250px)_1fr] sm:gap-6 sm:pl-4"
+            style={{ borderBottom: `1px solid ${LINE}` }}
+          >
+            <dt className="sv2f-mono pt-1.5 text-[10.5px] uppercase" style={{ letterSpacing: "0.1em", color: LABEL }}>
+              <span aria-hidden="true" className="sv2f-rownum" style={{ color: INK }} />
+              <span aria-hidden="true"> — </span>
+              {r.label}
+            </dt>
+            <dd className="m-0">
+              <p className="m-0 text-[19px] font-semibold sm:text-[21px]" style={{ letterSpacing: "-0.03em", color: valueColor(r.label), lineHeight: 1.25 }}>
+                {r.value}
+              </p>
+              {r.note && (
+                <p className="m-0 mt-1.5 max-w-[640px] text-[13.5px] leading-[1.55]" style={{ color: MUTE }}>
+                  {r.note}
+                </p>
+              )}
             </dd>
-          </div>
+          </Reveal>
         ))}
       </dl>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2" style={{ borderTop: "1px solid #e4ddd5" }}>
-        <div style={{ padding: "22px 28px" }}>
-          <p style={{ margin: "0 0 10px", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1b6b3a" }}>Convient si</p>
-          <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
-            {pros.map((p) => (
-              <li key={p} style={{ display: "flex", gap: 10, fontSize: 14, color: "#172126", lineHeight: 1.5 }}>
-                <span aria-hidden="true" style={{ color: "#1b6b3a", fontWeight: 700, flexShrink: 0 }}>+</span>
+      <div className="mt-9 grid grid-cols-1 gap-9 sm:grid-cols-[minmax(0,1fr)_1px_minmax(0,1fr)] sm:gap-8">
+        <div className="min-w-0">
+          <Reveal as="p" className="sv2f-mono m-0 flex items-center gap-3 text-[11px] uppercase" style={{ letterSpacing: "0.14em", color: GREEN }}>
+            <span aria-hidden="true" className="block h-px w-6" style={{ background: GREEN }} />
+            Convient si
+          </Reveal>
+          <ul className="m-0 mt-3 list-none p-0">
+            {pros.map((p, i) => (
+              <Reveal as="li" key={p} delay={0.08 * i} y={8} className="flex gap-3 py-3 text-[14.5px] leading-[1.5]" style={{ borderTop: i ? `1px solid ${LINE}` : "none", color: INK }}>
+                <span aria-hidden="true" className="sv2f-mono shrink-0" style={{ color: GREEN, fontWeight: 600 }}>
+                  +
+                </span>
                 <span>{p}</span>
-              </li>
+              </Reveal>
             ))}
           </ul>
         </div>
-        <div className="border-t sm:border-t-0 sm:border-l border-[#e4ddd5]" style={{ padding: "22px 28px" }}>
-          <p style={{ margin: "0 0 10px", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8a5a00" }}>Moins indiqué si</p>
-          <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
-            {cons.length ? cons.map((c) => (
-              <li key={c} style={{ display: "flex", gap: 10, fontSize: 14, color: "#172126", lineHeight: 1.5 }}>
-                <span aria-hidden="true" style={{ color: "#8a5a00", fontWeight: 700, flexShrink: 0 }}>–</span>
-                <span>{c}</span>
+        <VRule className="hidden h-full sm:block" />
+        <div className="min-w-0">
+          <Reveal as="p" delay={0.1} className="sv2f-mono m-0 flex items-center gap-3 text-[11px] uppercase" style={{ letterSpacing: "0.14em", color: AMBER }}>
+            <span aria-hidden="true" className="block h-px w-6" style={{ background: AMBER }} />
+            Moins indiqué si
+          </Reveal>
+          <ul className="m-0 mt-3 list-none p-0">
+            {cons.length ? (
+              cons.map((c, i) => (
+                <Reveal as="li" key={c} delay={0.1 + 0.08 * i} y={8} className="flex gap-3 py-3 text-[14.5px] leading-[1.5]" style={{ borderTop: i ? `1px solid ${LINE}` : "none", color: INK }}>
+                  <span aria-hidden="true" className="sv2f-mono shrink-0" style={{ color: AMBER, fontWeight: 600 }}>
+                    –
+                  </span>
+                  <span>{c}</span>
+                </Reveal>
+              ))
+            ) : (
+              <li className="py-3 text-[14px]" style={{ color: MUTE }}>
+                Aucune réserve particulière d&apos;après les données publiées.
               </li>
-            )) : (
-              <li style={{ fontSize: 14, color: "#536873" }}>Aucune réserve particulière d'après les données publiées.</li>
             )}
           </ul>
         </div>
       </div>
 
-      <div style={{ borderTop: "1px solid #e4ddd5", padding: "16px 28px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 12, background: "#faf8f4" }}>
-        <p style={{ margin: 0, fontSize: 13, color: "#536873" }}>
+      <Reveal delay={0.1} className="mt-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 px-5 py-4" style={{ background: WASH, borderTop: `1px solid ${LINE}` }}>
+        <p className="m-0 text-[13.5px]" style={{ color: MUTE }}>
           Le dimensionnement dépend de votre superficie, de votre isolation et de votre zone climatique.
         </p>
-        <Link href="/trouver-ma-thermopompe" style={{ fontSize: 14, fontWeight: 700, color: "#e54b17", textDecoration: "none", whiteSpace: "nowrap" }}>
-          Vérifier pour ma maison →
+        <Link href="/trouver-ma-thermopompe" className="sv2f-lnk inline-flex items-center gap-2 whitespace-nowrap text-[14.5px] font-semibold" style={{ color: INK }}>
+          <span className="sv2f-lnk-t">Vérifier pour ma maison</span>
+          <span style={{ color: ORANGE, display: "inline-flex" }}>
+            <Arrow size={14} />
+          </span>
         </Link>
-      </div>
+      </Reveal>
     </section>
   );
 }

@@ -1,0 +1,131 @@
+/* ==================================================================
+   Sections v2 « marques et classements » (préfixe mqs-).
+   Suivent la direction artistique de chaque héros de la famille :
+   Galerie, Monogramme, Règle des calibres, Palmarès.
+   Tout mouvement continu s’arrête avec « réduire les animations ».
+   ================================================================== */
+
+/* position: sticky a besoin d’un ancêtre sans overflow-x: hidden. */
+html:has(.mqs-root),
+body:has(.mqs-root) { overflow-x: clip; }
+
+.mqs-root a:focus-visible,
+.mqs-root button:focus-visible,
+.mqs-root summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+.mqs-u { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; transition: text-underline-offset 0.3s; }
+.mqs-u:hover { text-underline-offset: 8px; }
+.mqs-btn { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s, color 0.3s, border-color 0.3s; }
+.mqs-btn:hover { transform: translateY(-2px); }
+.mqs-arrow { display: inline-block; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+a:hover .mqs-arrow, a:focus-visible .mqs-arrow { transform: translateX(5px); }
+
+/* ---------- Galerie (/marques) ---------- */
+.mqs-placard .mqs-lift { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-placard:hover .mqs-lift, .mqs-placard:focus-visible .mqs-lift { transform: translateY(-8px) rotate(-0.4deg); }
+.mqs-placard .mqs-box { box-shadow: 0 16px 24px -16px rgba(34, 33, 31, 0.5), 0 2px 3px rgba(34, 33, 31, 0.12); transition: box-shadow 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-placard:hover .mqs-box, .mqs-placard:focus-visible .mqs-box { box-shadow: 0 38px 46px -24px rgba(34, 33, 31, 0.46), 0 6px 10px rgba(34, 33, 31, 0.1); }
+.mqs-placard .mqs-spot { transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-placard:hover .mqs-spot, .mqs-placard:focus-visible .mqs-spot { opacity: 1 !important; transform: scale(1.08); }
+.mqs-placard .mqs-label-name { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-placard:hover .mqs-label-name, .mqs-placard:focus-visible .mqs-label-name { background-size: 100% 1px; }
+.mqs-placard:focus-visible { outline: 2px solid #22211f; outline-offset: 8px; }
+.mqs-room-link { transition: background-color 0.3s, color 0.3s; }
+.mqs-room-link:hover { background: #22211f; color: #ecebe5 !important; }
+.mqs-panel { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-panel:hover { transform: translateY(-6px); box-shadow: 0 30px 40px -28px rgba(34, 33, 31, 0.42); }
+
+/* ---------- Monogramme (/marques/[slug]) ---------- */
+.mqs-outline { color: transparent; -webkit-text-stroke: var(--mqs-stroke, 1.5px) var(--mqs-ink, #15171a); position: relative; }
+.mqs-outline::after {
+  content: attr(data-ink);
+  position: absolute;
+  inset: 0;
+  color: var(--mqs-ink, #15171a);
+  -webkit-text-stroke: 0;
+  clip-path: inset(var(--mqs-fill, 100%) 0 0 0);
+  pointer-events: none;
+}
+.mqs-plate .mqs-print { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-plate:hover .mqs-print, .mqs-plate:focus-within .mqs-print { transform: translateY(-6px); box-shadow: 0 34px 44px -30px rgba(21, 23, 26, 0.5); }
+.mqs-plate .mqs-plate-title { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1.5px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-plate:hover .mqs-plate-title, .mqs-plate:focus-within .mqs-plate-title { background-size: 100% 1.5px; }
+.mqs-fiche { transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-fiche:hover, .mqs-fiche:focus-within { transform: translateY(-4px); box-shadow: 0 26px 34px -26px rgba(21, 23, 26, 0.45); }
+.mqs-fiche img { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-fiche:hover img { transform: scale(1.04); }
+.mqs-leader { flex: 1; min-width: 12px; border-bottom: 1px dotted rgba(21, 23, 26, 0.32); transform: translateY(-4px); }
+.mqs-chip-ink { transition: background-color 0.3s, color 0.3s; }
+.mqs-chip-ink:hover { background: #15171a; color: #f6f1e8 !important; }
+
+/* ---------- Règle des calibres (/marques/[slug]/[type]) ---------- */
+.mqs-ticks { background-image: repeating-linear-gradient(90deg, rgba(15, 34, 51, 0.38) 0 1px, transparent 1px 12px); background-size: 100% 6px; background-repeat: no-repeat; background-position: 0 100%; }
+.mqs-ticks-top { background-image: repeating-linear-gradient(90deg, rgba(15, 34, 51, 0.4) 0 1px, transparent 1px 12px); background-size: 100% 7px; background-repeat: no-repeat; background-position: 0 0; }
+.mqs-ticks-light { background-image: repeating-linear-gradient(90deg, rgba(229, 235, 238, 0.4) 0 1px, transparent 1px 12px); background-size: 100% 8px; background-repeat: no-repeat; background-position: 0 0; }
+.mqs-mrow { transition: background-color 0.25s; }
+.mqs-mrow:hover { background: #ffffff; }
+.mqs-mrow:hover .mqs-sticky-col { background: #ffffff; }
+.mqs-mrow .mqs-mark { transform: scaleY(0); transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-mrow:hover .mqs-mark, .mqs-mrow:focus-within .mqs-mark { transform: scaleY(1); }
+.mqs-tab { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s; }
+.mqs-tab:hover, .mqs-tab:focus-visible { transform: translateY(-3px); background: #ffffff; }
+.mqs-tab .mqs-tab-mark { transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-tab:hover .mqs-tab-mark, .mqs-tab:focus-visible .mqs-tab-mark { left: calc(100% - 2px) !important; }
+
+/* Tableau défilant : la première colonne reste en place. */
+.mqs-sticky-col { position: sticky; left: 0; z-index: 1; }
+
+/* ---------- Palmarès ---------- */
+.mqs-foil {
+  background-image: linear-gradient(100deg, #b38a35 0%, #c9a24b 40%, #f4e4b4 50%, #c9a24b 60%, #b38a35 100%);
+  background-size: 260% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: mqs-foil 7s ease-in-out var(--mqs-delay, 0s) infinite;
+}
+@keyframes mqs-foil { 0%, 62% { background-position: 100% 0; } 100% { background-position: 0% 0; } }
+/* Dorure sur papier crème : plus foncée pour rester lisible. */
+.mqs-foil-ink {
+  background-image: linear-gradient(100deg, #6f5114 0%, #8a6a22 40%, #d9bd73 50%, #8a6a22 60%, #6f5114 100%);
+  background-size: 260% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: mqs-foil 7s ease-in-out var(--mqs-delay, 0s) infinite;
+}
+/* Note du jury : lettrine dorée, critères numérotés en chiffres romains. */
+.mqs-jury p { margin: 0 0 1.1em; }
+.mqs-jury > p:first-of-type::first-letter { float: left; font-size: 3.6em; line-height: 0.82; padding: 0.06em 0.12em 0 0; color: #c9a24b; font-style: italic; font-weight: 300; }
+.mqs-jury a { color: #e3c987; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.mqs-jury a:hover { color: #f3ebdd; }
+.mqs-jury strong { color: #f3ebdd; font-weight: 600; }
+.mqs-jury ul { list-style: none; padding: 0; margin: 1.4em 0 0; counter-reset: jury; }
+.mqs-jury li { counter-increment: jury; position: relative; padding: 0.9em 0 0.9em 3.1em; border-top: 1px solid rgba(201, 162, 75, 0.3); }
+.mqs-jury li:last-child { border-bottom: 1px solid rgba(201, 162, 75, 0.3); }
+.mqs-jury li::before { content: counter(jury, upper-roman); position: absolute; left: 0; top: 0.62em; font-style: italic; font-size: 1.45em; font-weight: 300; color: #c9a24b; }
+/* Notice des calibres : lien souligné d’orange. */
+.mqs-notice p { margin: 0 0 1em; }
+.mqs-notice a { color: #0f2233; font-weight: 600; text-decoration: underline; text-decoration-color: #e0592a; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.mqs-prow { transition: background-color 0.35s; }
+.mqs-prow:hover { background: #efe4cf; }
+.mqs-prow:hover .mqs-sticky-col { background: #efe4cf; }
+.mqs-prow .mqs-pname { transition: color 0.3s; }
+.mqs-prow:hover .mqs-pname { color: #7a5a17; }
+.mqs-prog-link .mqs-prog-t { transition: color 0.4s; }
+.mqs-prog-link:hover .mqs-prog-t, .mqs-prog-link:focus-visible .mqs-prog-t { color: #e3c987; }
+
+/* ---------- Questions (toutes familles) ---------- */
+.mqs-faq summary { list-style: none; cursor: pointer; }
+.mqs-faq summary::-webkit-details-marker { display: none; }
+.mqs-faq .mqs-plus { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.mqs-faq[open] .mqs-plus { transform: rotate(45deg); }
+.mqs-faq .mqs-answer { animation: mqs-open 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
+@keyframes mqs-open { from { opacity: 0; transform: translateY(-6px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .mqs-foil, .mqs-faq .mqs-answer { animation: none; }
+  .mqs-placard .mqs-lift, .mqs-placard .mqs-box, .mqs-plate .mqs-print, .mqs-fiche, .mqs-fiche img, .mqs-btn, .mqs-panel, .mqs-tab, .mqs-arrow { transition: none; }
+}

@@ -1,0 +1,147 @@
+/* ==================================================================
+   Sections sous les héros — famille « catalogue ».
+   catg- : galerie du catalogue (/thermopompes)
+   cmpd- : duel à glissière (/comparer)
+   cmpp- : affiche de combat (/comparer/[paire])
+   ================================================================== */
+
+/* ── Affiche de combat ──────────────────────────────────────────── */
+.cmpp-root { font-family: var(--font-display), var(--font-sans), sans-serif; interpolate-size: allow-keywords; }
+.cmpp-root :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.cmpp-poster { font-family: var(--font-poster), "Anton", Impact, "Arial Narrow", sans-serif; font-weight: 400; letter-spacing: 0.005em; }
+.cmpp-serif { font-family: var(--font-serif), "Times New Roman", serif; font-style: italic; font-weight: 400; text-transform: none; }
+.cmpp-mono { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
+
+.cmpp-link { background: linear-gradient(currentColor, currentColor) 0 100% / 0% 1px no-repeat; transition: background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1), color 0.25s; }
+.cmpp-link:hover { background-size: 100% 1px; }
+
+.cmpp-btn { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s, color 0.25s; }
+.cmpp-btn:hover { transform: translateY(-2px); }
+.cmpp-btn svg { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.cmpp-btn:hover svg { transform: translateX(4px); }
+.cmpp-ghost:hover { background: #fff; color: #000; }
+
+/* Affiches de la carte des combats : une tranche orange balaie la case au survol. */
+.cmpp-bout { position: relative; isolation: isolate; overflow: hidden; transition: color 0.3s; }
+.cmpp-bout::before {
+  content: ""; position: absolute; inset: 0 -20%; z-index: -1; background: #e54b17;
+  transform: translateX(-102%) skewX(-18deg); transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cmpp-bout:hover, .cmpp-bout:focus-visible { color: #000; }
+.cmpp-bout:hover::before, .cmpp-bout:focus-visible::before { transform: translateX(0) skewX(-18deg); }
+.cmpp-bout:hover .cmpp-serif, .cmpp-bout:focus-visible .cmpp-serif { color: #fff; }
+.cmpp-bout .cmpp-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.cmpp-bout:hover .cmpp-arrow { transform: translateX(6px); }
+
+/* Tableaux : défilement horizontal dans leur boîte seulement. */
+.cmpp-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+.cmpp-row { transition: background-color 0.25s; }
+.cmpp-row:hover { background: rgba(255, 255, 255, 0.05); }
+.cmpp-orange .cmpp-row:hover { background: rgba(0, 0, 0, 0.06); }
+
+/* Texte courant de la reprise 3 */
+.cmpp-prose { display: grid; gap: 28px; }
+.cmpp-prose h2 { font-family: var(--font-poster), "Anton", Impact, sans-serif; font-weight: 400; text-transform: uppercase; font-size: clamp(44px, 6.4vw, 108px); line-height: 0.9; letter-spacing: 0.005em; margin: 0; }
+.cmpp-prose p { font-size: clamp(16.5px, 1.35vw, 19px); line-height: 1.7; color: rgba(0, 0, 0, 0.74); margin: 0; max-width: 640px; }
+.cmpp-prose a { color: #c23d0f; font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; transition: color 0.25s; }
+.cmpp-prose a:hover { color: #000; }
+@media (min-width: 1024px) {
+  .cmpp-prose { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: end; }
+}
+
+/* FAQ : ouverture animée (navigateurs qui gèrent ::details-content). */
+.cmpp-faq details::details-content { block-size: 0; overflow-y: clip; transition: block-size 0.45s cubic-bezier(0.22, 1, 0.36, 1), content-visibility 0.45s allow-discrete; }
+.cmpp-faq details[open]::details-content { block-size: auto; }
+.cmpp-faq summary { list-style: none; }
+.cmpp-faq summary::-webkit-details-marker { display: none; }
+.cmpp-cross { position: relative; width: 18px; height: 18px; flex-shrink: 0; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.cmpp-cross::before, .cmpp-cross::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: #e54b17; }
+.cmpp-cross::after { transform: rotate(90deg); }
+.cmpp-faq details[open] .cmpp-cross { transform: rotate(135deg); }
+.cmpp-faq summary:hover .cmpp-q { color: #c23d0f; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cmpp-btn:hover, .cmpp-btn:hover svg, .cmpp-bout:hover .cmpp-arrow { transform: none; }
+  .cmpp-bout::before { transition: none; }
+  .cmpp-faq details::details-content { transition: none; }
+}
+
+/* ── Galerie du catalogue ───────────────────────────────────────── */
+.catg-root { font-family: var(--font-display), var(--font-sans), sans-serif; }
+.catg-root :focus-visible { outline-color: #e54b17; }
+.catg-serif { font-family: var(--font-serif), "Times New Roman", serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+
+/* Tuiles : même langage que le mur du héros (grand rayon, ombre portée longue). */
+.catg-card {
+  box-shadow: 0 0 0 1px rgba(10, 20, 25, 0.05), 0 30px 60px -40px rgba(10, 20, 25, 0.42);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.catg-card:hover { transform: translateY(-5px); box-shadow: 0 0 0 1px rgba(10, 20, 25, 0.07), 0 46px 72px -42px rgba(10, 20, 25, 0.55); }
+.catg-card:focus-within { box-shadow: 0 0 0 2px #e54b17, 0 46px 72px -42px rgba(10, 20, 25, 0.55); }
+
+.catg-link svg { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.catg-link:hover svg { transform: translateX(4px); }
+.catg-pill { transition: background-color 0.25s, color 0.25s, border-color 0.25s, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s; }
+.catg-pill[aria-pressed="false"]:not(:disabled):hover { border-color: #0a1419 !important; }
+.catg-btn:hover { transform: translateY(-2px); }
+
+/* Bande des marques : logos en crème sur l'encre, trait orange au survol. */
+.catg-brand img { filter: brightness(0) invert(1); opacity: 0.52; transition: opacity 0.35s, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.catg-brand:hover img, .catg-brand:focus-visible img { opacity: 1; transform: translateY(-2px); }
+.catg-brand .catg-rule { transform: translateX(-50%) scaleX(0); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.catg-brand:hover .catg-rule, .catg-brand:focus-visible .catg-rule { transform: translateX(-50%) scaleX(1); }
+.catg-brand:focus-visible { outline: 2px solid #e54b17; outline-offset: -2px; }
+
+/* Champs : pas le carré du focus global, un anneau orange à la place. */
+.catg-select:focus-visible { box-shadow: 0 0 0 3px rgba(229, 75, 23, 0.28); border-color: #e54b17 !important; }
+
+.catg-chip { animation: catg-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes catg-pop { from { opacity: 0; transform: scale(0.85); } }
+.catg-tick path, .catg-tick polyline { stroke-dasharray: 24; stroke-dashoffset: 0; animation: catg-draw 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes catg-draw { from { stroke-dashoffset: 24; } }
+.catg-reset { background: linear-gradient(currentColor, currentColor) 0 100% / 0% 1px no-repeat; transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.catg-reset:hover { background-size: 100% 1px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .catg-card:hover, .catg-btn:hover, .catg-brand:hover img { transform: none; }
+  .catg-chip, .catg-tick path, .catg-tick polyline { animation: none; }
+}
+
+/* ── Duel à glissière ───────────────────────────────────────────── */
+.cmpd-root { font-family: var(--font-display), var(--font-sans), sans-serif; color: #141a1f; }
+.cmpd-root :focus-visible { outline: 2px solid #141a1f; outline-offset: 3px; }
+/* Acier à gauche, sable à droite : la scène du héros continue sous lui. */
+.cmpd-split { background: linear-gradient(90deg, #dce3e8 0%, #dce3e8 50%, #efe5d6 50%, #efe5d6 100%); }
+.cmpd-btn { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s, color 0.25s, border-color 0.25s; }
+.cmpd-btn:hover { transform: translateY(-2px); }
+.cmpd-ghost:hover { background: rgba(20, 26, 31, 0.08) !important; }
+.cmpd-card { transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s, background-color 0.3s; }
+.cmpd-card:not(:disabled):hover { transform: translateY(-3px); box-shadow: 0 26px 44px -30px rgba(20, 26, 31, 0.5); border-color: rgba(20, 26, 31, 0.45) !important; background-color: #fff !important; }
+.cmpd-photo { mix-blend-mode: multiply; }
+.cmpd-input:focus, .cmpd-input:focus-visible { border-color: #141a1f !important; box-shadow: 0 0 0 4px rgba(20, 26, 31, 0.12), 0 18px 40px -30px rgba(20, 26, 31, 0.5) !important; }
+.cmpd-input::-webkit-search-cancel-button, .cmpd-input::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }
+.cmpd-input::placeholder { color: rgba(20, 26, 31, 0.45); }
+
+/* Tableau : colonne vertébrale au centre (deux modèles), colonne de critères collante (trois et plus). */
+.cmpd-spine { background: rgba(255, 255, 255, 0.5); border-left: 1px solid rgba(20, 26, 31, 0.14); border-right: 1px solid rgba(20, 26, 31, 0.14); }
+.cmpd-spinecol { width: 100px; }
+.cmpd-labelcol { width: 112px; }
+.cmpd-many { min-width: calc(112px + var(--n) * 160px); }
+@media (min-width: 640px) {
+  .cmpd-spinecol { width: 190px; }
+  .cmpd-labelcol { width: 200px; }
+  .cmpd-many { min-width: calc(200px + var(--n) * 210px); }
+}
+@media (min-width: 1024px) { .cmpd-spinecol { width: 230px; } }
+.cmpd-sticky { position: sticky; left: 0; z-index: 2; background: #e9edf0; }
+.cmpd-link svg { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.cmpd-link:hover svg { transform: translateX(4px); }
+.cmpd-link:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cmpd-btn:hover, .cmpd-card:not(:disabled):hover, .cmpd-link:hover svg { transform: none; }
+}
+
+/* Critères dans la colonne vertébrale : serrés sur téléphone pour tenir dans 100 px. */
+.cmpd-lab { font-size: 9px; letter-spacing: 0.05em; overflow-wrap: anywhere; hyphens: auto; }
+@media (min-width: 640px) { .cmpd-lab { font-size: 11px; letter-spacing: 0.16em; overflow-wrap: normal; } }

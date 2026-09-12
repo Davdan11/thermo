@@ -1,0 +1,24 @@
+/* ==================================================================
+   404, sous le héros « Hors plage » (préfixe nf-) : préréglages.
+   ================================================================== */
+
+.nf-preset { color: #F3F1EE; transition: background-color 0.35s; }
+.nf-preset:hover, .nf-preset:focus-visible { background-color: rgba(255, 255, 255, 0.035); }
+.nf-preset:focus-visible { outline: 2px solid #FF6A2B; outline-offset: -2px; }
+.nf-preset .nf-arc { transition: stroke-dashoffset 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.nf-preset:hover .nf-arc, .nf-preset:focus-visible .nf-arc { stroke-dashoffset: 0 !important; }
+.nf-preset .nf-knob { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.nf-preset:hover .nf-knob, .nf-preset:focus-visible .nf-knob { transform: rotate(135deg) !important; }
+.nf-preset .nf-arrow { color: rgba(243, 241, 238, 0.5); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s; }
+.nf-preset:hover .nf-arrow, .nf-preset:focus-visible .nf-arrow { transform: translateX(4px); color: #FF6A2B; }
+
+/* Champ de recherche : filet du bas, orange et plus épais au focus (contour global retiré en ligne). */
+.nf-field input::placeholder { color: rgba(243, 241, 238, 0.32); }
+.nf-field input { border-bottom: 1.5px solid rgba(243, 241, 238, 0.35) !important; transition: border-color 0.3s, box-shadow 0.3s; }
+.nf-field input:hover { border-bottom-color: rgba(243, 241, 238, 0.6) !important; }
+.nf-field input:focus-visible, .nf-field input:focus { border-bottom-color: #FF6A2B !important; box-shadow: 0 1.5px 0 #FF6A2B; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nf-preset, .nf-preset .nf-arc, .nf-preset .nf-knob, .nf-preset .nf-arrow, .nf-field input { transition: none; }
+  .nf-preset:hover .nf-arrow { transform: none; }
+}

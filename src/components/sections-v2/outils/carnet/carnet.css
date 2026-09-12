@@ -1,0 +1,57 @@
+/* ==================================================================
+   /soumission, sous le héros « Carnet » (préfixe cn-) : pages de
+   carnet. Papier chaud, encre, orange ; traits de plume.
+   Tout mouvement s'arrête sous « réduire les animations ».
+   ================================================================== */
+
+/* Champ du carnet : une ligne d'écriture ; orange et plus épaisse au focus. */
+.cn-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid rgba(23, 27, 30, 0.55);
+  border-radius: 0;
+  color: #171B1E;
+  font-size: 17px;
+  padding: 12px 2px 10px;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.cn-input::placeholder { color: rgba(23, 27, 30, 0.4); }
+.cn-input:hover { border-bottom-color: rgba(23, 27, 30, 0.85); }
+.cn-input:focus { border-bottom-color: #E54B17; box-shadow: 0 1.5px 0 #E54B17; background-color: rgba(229, 75, 23, 0.04); }
+
+/* Choix écrits (méthode, moment, date, plage) : entourés à la plume quand ils sont choisis. */
+.cn-choice { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 12px; border-radius: 2px; color: rgba(23, 27, 30, 0.72); cursor: pointer; transition: color 0.25s, background-color 0.25s; background: transparent; border: none; font-weight: 500; }
+.cn-choice:hover { color: #171B1E; background: rgba(23, 27, 30, 0.04); }
+.cn-choice[aria-pressed="true"] { color: #171B1E; font-weight: 600; }
+.cn-choice:focus-visible, .cn-btn:focus-visible, .cn-link:focus-visible { outline: 2px solid #E54B17; outline-offset: 3px; }
+
+/* Case du carnet : vraie case invisible, carré à l'encre, coche à la plume. */
+.cn-box { position: relative; display: block; width: 19px; height: 19px; flex-shrink: 0; margin-top: 1px; border: 1.3px solid rgba(23, 27, 30, 0.55); border-radius: 2px; transition: border-color 0.3s; }
+.cn-box input { position: absolute; inset: -5px; width: calc(100% + 10px); height: calc(100% + 10px); opacity: 0; margin: 0; cursor: pointer; }
+.cn-box:has(input:checked) { border-color: #171B1E; }
+.cn-box:has(input:focus-visible) { outline: 2px solid #E54B17; outline-offset: 3px; }
+
+/* Boutons */
+.cn-btn { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s, color 0.3s, border-color 0.3s; }
+.cn-btn:hover:not(:disabled) { transform: translateY(-2px); }
+.cn-btn:hover:not(:disabled) .cn-arrow { transform: translateX(4px); }
+.cn-btn .cn-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.cn-btn-ink { background: #171B1E; color: #fff; }
+.cn-btn-ink:hover:not(:disabled) { background: #E54B17; }
+
+/* Lien à la plume */
+.cn-link { text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 1.5px; padding-bottom: 1px; transition: background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s; }
+.cn-link:hover, .cn-link:focus-visible { background-size: 100% 1.5px; }
+.cn-link-on { background-size: 100% 1.5px; }
+
+/* Ligne du récapitulatif : le bouton « Modifier » avance au survol de la ligne. */
+.cn-row .cn-edit-arrow { display: inline-block; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.cn-row:hover .cn-edit-arrow { transform: translateX(3px); }
+.cn-row { transition: background-color 0.3s; }
+.cn-row:hover { background-color: rgba(23, 27, 30, 0.025); }
+
+@media (prefers-reduced-motion: reduce) {
+  .cn-input, .cn-choice, .cn-box, .cn-btn, .cn-btn .cn-arrow, .cn-link, .cn-row, .cn-row .cn-edit-arrow { transition: none; }
+  .cn-btn:hover:not(:disabled), .cn-btn:hover:not(:disabled) .cn-arrow, .cn-row:hover .cn-edit-arrow { transform: none; }
+}

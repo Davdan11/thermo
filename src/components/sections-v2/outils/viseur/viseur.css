@@ -1,0 +1,98 @@
+/* ==================================================================
+   ThermoScan, sous le héros « Viseur » (préfixe vz-) : graphite,
+   blanc, orange d'affichage tête haute. Outil et sections explicatives
+   en interface d'appareil photo (cadres, coins de mise au point,
+   relevés en mono). Tout mouvement s'arrête sous « réduire les animations ».
+   ================================================================== */
+
+/* ---------- Boutons ---------- */
+.vz-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 3px; font-weight: 600; cursor: pointer; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s, border-color 0.3s, color 0.3s, opacity 0.3s; }
+.vz-btn:hover:not(:disabled) { transform: translateY(-2px); }
+.vz-btn .vz-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.vz-btn:hover:not(:disabled) .vz-arrow { transform: translateX(4px); }
+.vz-btn:disabled { cursor: not-allowed; }
+.vz-primary { background: #E54B17; color: #fff; border: 1px solid #E54B17; }
+.vz-primary:hover:not(:disabled) { background: #F0561F; }
+.vz-ghost { background: transparent; color: #fff; border: 1px solid rgba(255, 255, 255, 0.22); }
+.vz-ghost:hover:not(:disabled) { border-color: rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.04); }
+.vz-btn:focus-visible, .vz-tile:focus-within, .vz-tile-label:focus-within, .vz-tab:focus-visible, .vz-result:focus-visible { outline: 2px solid #FF6A2B; outline-offset: 3px; }
+/* La vraie case « fichier » (réduite visuellement) porte le focus : le contour est sur la tuile. */
+.vz-tile input:focus-visible, .vz-tile-label input:focus-visible { outline: none; }
+
+/* ---------- Tuiles d'entrée (prendre, importer, guide) ---------- */
+.vz-tile { position: relative; display: flex; align-items: center; gap: 18px; width: 100%; text-align: left; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.14); background: rgba(255, 255, 255, 0.02); padding: 18px 20px; transition: border-color 0.3s, background-color 0.3s; }
+.vz-tile:hover { border-color: rgba(255, 106, 43, 0.7); background: rgba(255, 255, 255, 0.04); }
+.vz-tile .vz-corners { opacity: 0; transform: scale(1.06); transition: opacity 0.25s, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+.vz-tile:hover .vz-corners, .vz-tile:focus-within .vz-corners { opacity: 1; transform: scale(1); }
+.vz-tile .vz-arrow { color: rgba(255, 255, 255, 0.45); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s; }
+.vz-tile:hover .vz-arrow { transform: translateX(4px); color: #FF6A2B; }
+.vz-tile-main { background: #E54B17; border-color: #E54B17; }
+.vz-tile-main:hover { background: #F0561F; border-color: #F0561F; }
+.vz-tile-main .vz-arrow, .vz-tile-main:hover .vz-arrow { color: #fff; }
+
+/* ---------- Champs ---------- */
+.vz-input { width: 100%; background: rgba(255, 255, 255, 0.03); border: none; border-bottom: 1.5px solid rgba(255, 255, 255, 0.3); color: #fff; padding: 10px 2px 9px; font-size: 16px; border-radius: 0; transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s; }
+.vz-input::placeholder { color: rgba(255, 255, 255, 0.3); }
+.vz-input:hover { border-bottom-color: rgba(255, 255, 255, 0.55); }
+.vz-input:focus { border-bottom-color: #FF6A2B; background: rgba(255, 106, 43, 0.06); box-shadow: 0 1.5px 0 #FF6A2B; }
+.vz-input option { background: #1B1B1B; color: #fff; }
+select.vz-input { appearance: none; -webkit-appearance: none; background-image: linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.6) 50%), linear-gradient(135deg, rgba(255,255,255,0.6) 50%, transparent 50%); background-position: calc(100% - 14px) 52%, calc(100% - 9px) 52%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right: 28px; }
+
+/* Case à cocher : vraie case (réduite visuellement), carré dessiné, coche orange. */
+.vz-check { position: relative; display: inline-flex; width: 18px; height: 18px; flex-shrink: 0; border: 1.5px solid rgba(255, 255, 255, 0.5); margin-top: 1px; transition: border-color 0.2s, background-color 0.2s; }
+.vz-check input { position: absolute; inset: -4px; opacity: 0; margin: 0; cursor: pointer; }
+.vz-check svg { opacity: 0; transition: opacity 0.15s; }
+.vz-check:has(input:checked) { border-color: #FF6A2B; background: #FF6A2B; }
+.vz-check:has(input:checked) svg { opacity: 1; }
+.vz-check:has(input:focus-visible) { outline: 2px solid #FF6A2B; outline-offset: 3px; }
+
+/* Onglets de la comparaison, résultats de recherche */
+.vz-tab { transition: background-color 0.25s, color 0.25s, border-color 0.25s; }
+.vz-tab:hover { border-color: rgba(255, 255, 255, 0.5) !important; }
+.vz-result { transition: border-color 0.25s, background-color 0.25s; }
+.vz-result:hover { border-color: rgba(255, 106, 43, 0.7) !important; background: rgba(255, 255, 255, 0.04) !important; }
+
+/* Lien texte */
+.vz-link { color: #fff; text-decoration: none; background-image: linear-gradient(#FF6A2B, #FF6A2B); background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 1px; padding-bottom: 2px; transition: color 0.3s; }
+.vz-link:hover { color: #FF6A2B; }
+
+/* ---------- Cartes « ce que vous obtenez » ---------- */
+.vz-card { transition: background-color 0.35s; }
+.vz-card:hover { background-color: rgba(255, 255, 255, 0.03); }
+.vz-card .vz-corners { opacity: 0; transform: scale(1.05); transition: opacity 0.25s, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+.vz-card:hover .vz-corners { opacity: 1; transform: scale(1); }
+
+/* ---------- Figures animées (boucles ; en pause hors de l'écran) ---------- */
+[data-play="false"] .vz-loop, [data-play="false"] .vz-loop * { animation-play-state: paused !important; }
+.vz-fan { animation: vz-spin 2.6s linear infinite; }
+@keyframes vz-spin { to { transform: rotate(360deg); } }
+.vz-air path { animation: vz-air 2.8s ease-in-out infinite; }
+.vz-air path:nth-child(2) { animation-delay: 0.35s; }
+.vz-air path:nth-child(3) { animation-delay: 0.7s; }
+@keyframes vz-air { 0%, 100% { opacity: 0.2; transform: translateY(0); } 50% { opacity: 1; transform: translateY(5px); } }
+
+.vz-sweep { animation: vz-sweep 2.8s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
+@keyframes vz-sweep { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(var(--travel, 60px)); } }
+
+.vz-shutter-a, .vz-shutter-b { animation: vz-shutter 3.8s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
+.vz-shutter-a { transform-origin: 50% 0%; }
+.vz-shutter-b { transform-origin: 50% 100%; }
+@keyframes vz-shutter { 0%, 70% { transform: scaleY(0); } 76% { transform: scaleY(1); } 84%, 100% { transform: scaleY(0); } }
+.vz-flash { animation: vz-flash 3.8s ease-out infinite; }
+@keyframes vz-flash { 0%, 76% { opacity: 0; } 78% { opacity: 0.55; } 92%, 100% { opacity: 0; } }
+
+.vz-bar { transform-origin: 0 50%; animation: vz-grow 4.2s cubic-bezier(0.22, 1, 0.36, 1) infinite; }
+.vz-bar-2 { animation-delay: 0.35s; }
+.vz-bar-3 { animation-delay: 0.7s; }
+@keyframes vz-grow { 0% { transform: scaleX(0); opacity: 1; } 30%, 86% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }
+
+/* Analyse en cours : balayage vertical sur la photo */
+.vz-scan { animation: vz-scan 1.7s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
+@keyframes vz-scan { 0%, 100% { top: 6%; } 50% { top: 92%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .vz-btn, .vz-btn .vz-arrow, .vz-tile, .vz-tile .vz-corners, .vz-tile .vz-arrow, .vz-input, .vz-card, .vz-card .vz-corners, .vz-link, .vz-tab, .vz-result { transition: none; }
+  .vz-btn:hover:not(:disabled), .vz-btn:hover:not(:disabled) .vz-arrow, .vz-tile:hover .vz-arrow { transform: none; }
+  .vz-fan, .vz-air path, .vz-sweep, .vz-shutter-a, .vz-shutter-b, .vz-flash, .vz-bar, .vz-scan { animation: none; }
+  .vz-scan { top: 50%; }
+}

@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Caption, EASE, K, Parallax, useLive } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    « Comment ça marche » : un tracé sinueux relie les étapes ; il se
@@ -13,7 +14,7 @@ const ROW = 70;
 const X = 26;
 
 export function StepsMotif({ heading, steps }: { heading: string; steps: Array<{ n: string; label: string; href: string }> }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const live = useLive();
   const h = steps.length * ROW;
   const ys = steps.map((_, i) => ROW / 2 + i * ROW);

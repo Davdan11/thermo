@@ -4,7 +4,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema } from "@/lib/seo";
 import { getBrandPair, getBrandPairs, type BrandStats } from "@/lib/seo/programmatic";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { JsonLd } from "@/components/seo/SeoBlocks";
+import { getFaqPageSchema } from "@/lib/seo";
+import { posterFont } from "@/components/heroes-v2/produit/fonts-poster";
+import { MotionRoot } from "@/components/sections-v2/catalogue/motion";
+import { PosterBouts, PosterCta, PosterFaq, PosterProse, PosterTape, PosterTopModels, PosterTrust } from "@/components/sections-v2/catalogue/PosterSections";
 import { AfficheCombat } from "@/components/heroes-v2/produit/AfficheCombat";
 import { monoLogo } from "@/components/seo/hero/assets";
 
@@ -26,17 +30,6 @@ export async function generateMetadata({ params }: { params: Promise<{ paire: st
 }
 
 const fmt = (n: number | null, suffix = "") => (n === null ? "—" : `${n.toLocaleString("fr-CA")}${suffix}`);
-
-function Row({ label, a, b, better }: { label: string; a: string; b: string; better?: "a" | "b" | null }) {
-  const cls = (side: "a" | "b") => (better === side ? "font-bold text-[#1b6b3a]" : "");
-  return (
-    <tr className="border-t border-[#f0ebe4]">
-      <th scope="row" className="px-4 py-3 text-left font-medium text-[#536873]">{label}</th>
-      <td className={`px-4 py-3 text-right ${cls("a")}`}>{a}</td>
-      <td className={`px-4 py-3 text-right ${cls("b")}`}>{b}</td>
-    </tr>
-  );
-}
 
 function cmp(x: number | null, y: number | null, higherIsBetter = true): "a" | "b" | null {
   if (x === null || y === null || x === y) return null;
@@ -73,7 +66,7 @@ export default async function BrandPairPage({ params }: { params: Promise<{ pair
   ];
 
   return (
-    <main className="bg-[#f8f5f0] text-[#071d2b]">
+    <main className="bg-black text-white">
       <JsonLd
         data={getBreadcrumbSchema([
           { name: "Accueil", url: "/" },
@@ -99,52 +92,46 @@ export default async function BrandPairPage({ params }: { params: Promise<{ pair
           { label: "LogisVert maximum", a: a.maxLogisVert > 0 ? a.maxLogisVert : null, b: b.maxLogisVert > 0 ? b.maxLogisVert : null, suffix: " $", better: true },
         ]}
       />
-      <TrustStrip />
-      <section className="mx-auto max-w-4xl px-5 sm:px-8 py-12">
-        <div className="overflow-x-auto rounded-xl border border-[#e4ddd5] bg-white">
-          <table className="w-full text-sm">
-            <thead className="bg-[#f8f5f0] text-[11px] uppercase tracking-wider text-[#536873]">
-              <tr>
-                <th className="px-4 py-3 text-left">Critère</th>
-                <th className="px-4 py-3 text-right"><Link href={`/marques/${a.slug}`} className="hover:text-[#e54b17]">{a.name}</Link></th>
-                <th className="px-4 py-3 text-right"><Link href={`/marques/${b.slug}`} className="hover:text-[#e54b17]">{b.name}</Link></th>
-              </tr>
-            </thead>
-            <tbody>
-              <Row label="Modèles vendus au Québec" a={String(a.models.length)} b={String(b.models.length)} />
-              <Row label="Murales / centrales" a={`${a.wallCount} / ${a.centralCount}`} b={`${b.wallCount} / ${b.centralCount}`} />
-              <Row label="Certifiés climat froid" a={String(a.coldClimateCount)} b={String(b.coldClimateCount)} better={cmp(a.coldClimateCount, b.coldClimateCount)} />
-              <Row label="HSPF2 moyen" a={fmt(a.avgHspf2)} b={fmt(b.avgHspf2)} better={cmp(a.avgHspf2, b.avgHspf2)} />
-              <Row label="HSPF2 maximum" a={fmt(a.maxHspf2)} b={fmt(b.maxHspf2)} better={cmp(a.maxHspf2, b.maxHspf2)} />
-              <Row label="COP moyen à -15 °C" a={fmt(a.avgCop5)} b={fmt(b.avgCop5)} better={cmp(a.avgCop5, b.avgCop5)} />
-              <Row label="LogisVert maximum" a={fmt(a.maxLogisVert, " $")} b={fmt(b.maxLogisVert, " $")} better={cmp(a.maxLogisVert, b.maxLogisVert)} />
-              <Row label="Capacités offertes" a={`${a.capacities[0]?.toLocaleString("fr-CA")} à ${a.capacities[a.capacities.length - 1]?.toLocaleString("fr-CA")} BTU`} b={`${b.capacities[0]?.toLocaleString("fr-CA")} à ${b.capacities[b.capacities.length - 1]?.toLocaleString("fr-CA")} BTU`} />
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-3 text-[12px] text-[#8a989e]">Moyennes calculées sur les modèles dont ENERGY STAR publie la valeur. En vert : l'avantage sur le critère.</p>
-      </section>
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-6 grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div>
-          <h2 className="text-[22px] font-bold text-[#172126] mb-3">Top 5 {a.name} par COP à -15 °C</h2>
-          <ModelTable models={bestOf(a)} showBrand={false} showRank />
-        </div>
-        <div>
-          <h2 className="text-[22px] font-bold text-[#172126] mb-3">Top 5 {b.name} par COP à -15 °C</h2>
-          <ModelTable models={bestOf(b)} showBrand={false} showRank />
-        </div>
-      </section>
-      <Prose>
-        <h2>Ce que ce comparatif ne dit pas</h2>
-        <p>
-          Le prix installé, la garantie réellement honorée et la qualité de l'installateur pèsent autant que les chiffres. Ce comparatif se limite aux
-          données certifiées ; il ne remplace pas une soumission. Pour savoir laquelle de ces marques a le modèle le mieux calibré pour votre maison,
-          lancez <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> : il compare {a.name}, {b.name} et toutes les autres marques sur votre charge réelle.
-        </p>
-      </Prose>
-      <CtaThermoMatch />
-      <RelatedLinks title="Autres comparatifs" links={getBrandPairs().filter((x) => x.slug !== paire).slice(0, 9).map((x) => ({ href: `/comparer/${x.slug}`, label: `${x.a.name} ou ${x.b.name}?` }))} />
-      <FaqBlock items={faq} />
+      <MotionRoot className={`cmpp-root ${posterFont.variable}`}>
+        <PosterTrust />
+        <PosterTape
+          a={{ name: a.name, href: `/marques/${a.slug}` }}
+          b={{ name: b.name, href: `/marques/${b.slug}` }}
+          note="Moyennes calculées sur les modèles dont ENERGY STAR publie la valeur. En orange : l'avantage sur le critère."
+          rows={[
+            { label: "Modèles vendus au Québec", a: a.models.length, b: b.models.length },
+            { label: "Murales / centrales", a: null, b: null, text: [`${a.wallCount} / ${a.centralCount}`, `${b.wallCount} / ${b.centralCount}`] },
+            { label: "Certifiés climat froid", a: a.coldClimateCount, b: b.coldClimateCount, better: cmp(a.coldClimateCount, b.coldClimateCount) },
+            { label: "HSPF2 moyen", a: a.avgHspf2, b: b.avgHspf2, better: cmp(a.avgHspf2, b.avgHspf2) },
+            { label: "HSPF2 maximum", a: a.maxHspf2, b: b.maxHspf2, better: cmp(a.maxHspf2, b.maxHspf2) },
+            { label: "COP moyen à -15 °C", a: a.avgCop5, b: b.avgCop5, better: cmp(a.avgCop5, b.avgCop5) },
+            { label: "LogisVert maximum", a: a.maxLogisVert, b: b.maxLogisVert, suffix: " $", better: cmp(a.maxLogisVert, b.maxLogisVert) },
+            {
+              label: "Capacités offertes",
+              a: null,
+              b: null,
+              text: [
+                `${a.capacities[0]?.toLocaleString("fr-CA")} à ${a.capacities[a.capacities.length - 1]?.toLocaleString("fr-CA")} BTU`,
+                `${b.capacities[0]?.toLocaleString("fr-CA")} à ${b.capacities[b.capacities.length - 1]?.toLocaleString("fr-CA")} BTU`,
+              ],
+            },
+          ]}
+        />
+        <PosterTopModels round={2} tone="black" title={`Top 5 ${a.name} par COP à -15 °C`} models={bestOf(a)} />
+        <PosterTopModels tone="orange" title={`Top 5 ${b.name} par COP à -15 °C`} models={bestOf(b)} />
+        <PosterProse>
+          <h2>Ce que ce comparatif ne dit pas</h2>
+          <p>
+            Le prix installé, la garantie réellement honorée et la qualité de l’installateur pèsent autant que les chiffres. Ce comparatif se limite aux
+            données certifiées ; il ne remplace pas une soumission. Pour savoir laquelle de ces marques a le modèle le mieux calibré pour votre maison,
+            lancez <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> : il compare {a.name}, {b.name} et toutes les autres marques sur votre charge réelle.
+          </p>
+        </PosterProse>
+        <PosterCta />
+        <PosterBouts title="Autres comparatifs" links={getBrandPairs().filter((x) => x.slug !== paire).slice(0, 9).map((x) => ({ href: `/comparer/${x.slug}`, label: `${x.a.name} ou ${x.b.name}?` }))} />
+        <JsonLd data={getFaqPageSchema(faq)} />
+        <PosterFaq items={faq} />
+      </MotionRoot>
     </main>
   );
 }

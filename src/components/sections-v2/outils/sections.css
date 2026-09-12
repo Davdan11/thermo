@@ -1,0 +1,32 @@
+/* ==================================================================
+   Sections v2 de la famille « outils » (préfixe so-) : suites des
+   héros Viseur (ThermoScan), Mécanisme (technologie ThermoMatch),
+   Carnet (soumission), Hors plage (404) et Document (pages légales).
+   Tout mouvement s'arrête sous « réduire les animations ».
+   ================================================================== */
+
+/* Le CSS global coupe le débord horizontal avec overflow-x: hidden, ce qui casse position: sticky. */
+html:has(.so-root), body:has(.so-root) { overflow-x: clip; }
+
+.so-btn { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s; }
+.so-btn:hover:not(:disabled) { transform: translateY(-2px); }
+.so-btn .so-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.so-btn:hover:not(:disabled) .so-arrow { transform: translateX(4px); }
+
+/* Lien dont le soulignement se trace au survol (ou reste tracé : so-link-on). */
+.so-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 2px;
+  transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s;
+}
+.so-link:hover, .so-link:focus-visible { background-size: 100% 1px; }
+.so-link-on { background-size: 100% 1px; }
+.so-link-on:hover { background-size: 0% 1px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .so-btn, .so-btn .so-arrow, .so-link { transition: none; }
+  .so-btn:hover:not(:disabled), .so-btn:hover:not(:disabled) .so-arrow { transform: none; }
+}

@@ -80,9 +80,9 @@ export default async function PrixKeywordPage({ params }: { params: Promise<{ sl
         footnote={`Médianes des fourchettes que le marché publie, installation standard, avant LogisVert. Consultées le ${frDate(PRICE_GRID_CONSULTED_AT)}.`}
       />
 
-      <div className="max-w-3xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
-        <PrixApproche keyword={page.primaryKeyword.toLowerCase()} />
-      </div>
+      {/* Sous le héros « L’étiquette » : kraft, ficelle et étiquettes (src/components/sections-v2/prix/). */}
+      <PrixApproche keyword={page.primaryKeyword.toLowerCase()} variant="etiquette" />
+
     </main>
   );
 }

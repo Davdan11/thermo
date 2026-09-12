@@ -86,7 +86,7 @@ export function BookingHero({ mode }: { mode: ModeId }) {
             </motion.span>
           </h1>
           <motion.p className="max-w-[540px] text-[17px] leading-[1.65] sm:text-[18px]" style={{ color: C.mute, margin: "24px 0 0" }} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.5 }}>
-            Un appel, une rencontre en ligne sur Google Meet ou une visite à domicile, gratuitement et sans engagement. Confirmation immédiate, du lundi au vendredi de 8&nbsp;h à 17&nbsp;h.
+            Un appel, une rencontre en ligne sur Google Meet ou une visite à domicile, gratuitement et sans engagement. Confirmation immédiate. Nous sommes ouverts du lundi au vendredi de 8&nbsp;h à 18&nbsp;h ; les rendez-vous se prennent de 8&nbsp;h à 17&nbsp;h.
           </motion.p>
           <motion.div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4" initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.65 }}>
             <XLink href="#reservation" className="inline-flex items-center gap-3 rounded-[10px] px-6 py-4 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#1B1512]" style={{ background: C.orange }}>
@@ -172,7 +172,7 @@ function WallCalendar({ mode }: { mode: ModeId }) {
           </div>
           <div>
             <p className="xe-mono text-[11px] uppercase" style={{ letterSpacing: "0.16em", color: C.faint, margin: 0 }}>
-              Ouvert du
+              Rendez-vous du
             </p>
             <p style={{ fontSize: "clamp(34px, 4.4vw, 64px)", fontWeight: 700, letterSpacing: "-0.045em", lineHeight: 1, margin: "8px 0 0", color: C.ink }}>
               {DAYS_LABEL}

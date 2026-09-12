@@ -276,3 +276,52 @@ export function getLogisVertRange(outdoorModel: string): string | null {
   if (min === max) return fmt(max);
   return `${fmt(min)} – ${fmt(max)}`;
 }
+
+/* ------------------------------------------------------------------
+   Statistiques de la liste officielle (section des aides de l'accueil) :
+   montant le plus élevé, médiane, part des jumelages par tranche de
+   montant, nombre de jumelages et dates tirées des métadonnées.
+   ------------------------------------------------------------------ */
+export interface LogisVertStats {
+  count: number;
+  max: number;
+  median: number;
+  buckets: Array<{ label: string; share: number }>;
+  listDate: string | null;
+  checkedDate: string | null;
+}
+
+let statsCache: LogisVertStats | null = null;
+
+export function getLogisVertStats(): LogisVertStats {
+  if (statsCache) return statsCache;
+  const entries = Object.keys(data).map((ahri) => toEntry(ahri, data[ahri] as Record<string, unknown>));
+  // Ligne mal découpée du CSV d'Hydro-Québec (guillemet parasite dans un champ texte) : colonnes décalées,
+  // montant impossible (ex. 39 000 $). On l'écarte des statistiques.
+  const clean = (e: LogisVertOfficialEntry) => ![e.brand, e.outdoorModel, e.indoorModel].some((t) => typeof t === "string" && t.includes('"'));
+  const amounts = entries
+    .filter(clean)
+    .map((e) => e?.logisVertDollars)
+    .filter((n): n is number => typeof n === "number" && n > 0)
+    .sort((a, b) => a - b);
+  const total = amounts.length || 1;
+  const share = (lo: number, hi: number) => amounts.filter((n) => n >= lo && n < hi).length / total;
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const meta = require("./logisvert-metadata.json") as { updatedAt?: string; sourceFile?: string; count?: number };
+  const dm = String(meta.sourceFile ?? "").match(/(\d{2})-(\d{2})-(\d{4})/);
+  const frDate = (d: Date, timeZone: string) => d.toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric", timeZone });
+  statsCache = {
+    count: typeof meta.count === "number" ? meta.count : amounts.length,
+    max: amounts[amounts.length - 1] ?? 0,
+    median: amounts.length ? amounts[Math.floor(amounts.length / 2)] : 0,
+    buckets: [
+      { label: "Moins de 1 000 $", share: share(0, 1000) },
+      { label: "1 000 à 2 999 $", share: share(1000, 3000) },
+      { label: "3 000 à 4 999 $", share: share(3000, 5000) },
+      { label: "5 000 $ et plus", share: share(5000, Infinity) },
+    ],
+    listDate: dm ? frDate(new Date(Date.UTC(+dm[3], +dm[2] - 1, +dm[1], 12)), "UTC") : null,
+    checkedDate: meta.updatedAt ? frDate(new Date(meta.updatedAt), "America/Toronto") : null,
+  };
+  return statsCache;
+}

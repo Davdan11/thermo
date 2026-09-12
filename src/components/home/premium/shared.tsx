@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties, type ElementType, type ReactNode } from "react";
-import { animate, motion, useInView, useReducedMotion } from "motion/react";
+import { animate, motion, useInView } from "motion/react";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* Jetons et petits outils communs aux sections premium de l'accueil. */
 
@@ -36,7 +37,7 @@ export function RevealLines({ lines, as = "h2", id, style, delay = 0 }: { lines:
   const Tag = as;
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -12% 0px" });
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <Tag ref={ref} id={id} style={style}>
       {lines.map((line, i) => (
@@ -57,7 +58,7 @@ export function RevealLines({ lines, as = "h2", id, style, delay = 0 }: { lines:
 
 /* Compteur qui défile jusqu'à la vraie valeur. */
 export function CountUp({ value, decimals = 0, play, style }: { value: number; decimals?: number; play: boolean; style?: CSSProperties }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   // Toujours 0 au premier rendu (serveur et client identiques, pas d'erreur d'hydratation) ;
   // « réduire les animations » : la vraie valeur s'affiche d'un coup dans l'effet.
   const [n, setN] = useState(0);

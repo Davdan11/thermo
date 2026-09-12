@@ -3,11 +3,12 @@
 import "./prix-v2.css";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useAnimationControls, useInView, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion, useAnimationControls, useInView } from "motion/react";
 import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import type { LogisVertSample } from "@/components/tools-hero/types";
 import { DISPLAY, MONO, SERIF, plexMono } from "./fonts";
 import { CountTo, EASE, fr, useAfter } from "./shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    /subventions — « Le chèque ».
@@ -94,7 +95,7 @@ const ROSETTE = Array.from({ length: 16 }, (_, i) => rosette(400, 400, 250 + i *
 const WAVES = Array.from({ length: 16 }, (_, i) => wave(14 + i * 13, 5, 120, i * 0.55, 720));
 
 export function ChequeHero({ samples }: { samples: LogisVertSample[] }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const count = logisvertMetadata.count;
   const play = useAfter(1100);
 
@@ -202,7 +203,7 @@ export function ChequeHero({ samples }: { samples: LogisVertSample[] }) {
    ------------------------------------------------------------------ */
 
 function Cheque({ samples, count }: { samples: LogisVertSample[]; count: number }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { margin: "0px 0px -10% 0px" });
   const thud = useAnimationControls();

@@ -3,9 +3,10 @@
 import "./prix-v2.css";
 import { Fragment, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { animate, motion, useAnimationFrame, useInView, useMotionValue, useReducedMotion } from "motion/react";
+import { animate, motion, useAnimationFrame, useInView, useMotionValue } from "motion/react";
 import { DISPLAY, MONO, plexMono } from "./fonts";
 import { EASE } from "./shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    /calculateur-economies — « Le compteur ».
@@ -25,7 +26,7 @@ const FACE = "#FBFAF4";
 const RED = "#B8412A";
 
 export function MeterHero({ calculatorId }: { calculatorId: string }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   // 0 : repos, 1 : plinthes électriques, 2 : thermopompe climat froid.
   const [phase, setPhase] = useState(0);
   useEffect(() => {
@@ -122,7 +123,7 @@ export function MeterHero({ calculatorId }: { calculatorId: string }) {
    Titre dont chaque lettre roule en place, comme une roue de compteur.
    ------------------------------------------------------------------ */
 function RollTitle({ id, lines }: { id: string; lines: string[] }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   let n = 0;
   return (
     <h1 id={id} className="text-center" style={{ fontSize: "clamp(52px, 9.4vw, 172px)", lineHeight: 0.88, letterSpacing: "-0.06em", fontWeight: 800, margin: "20px 0 0" }}>
@@ -177,7 +178,7 @@ function tickAt(a: number, k: number) {
 }
 
 function Meter({ phase }: { phase: number }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const wrap = useRef<HTMLDivElement>(null);
   const inView = useInView(wrap);
   const speed = useMotionValue(0);
@@ -341,7 +342,7 @@ function Register({ x, y, digits, on, delay }: { x: number; y: number; digits: [
 
 const WH = 40;
 function Wheel({ x, y, digit, on, delay, dec }: { x: number; y: number; digit: number; on: boolean; delay: number; dec?: boolean }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   // Deux tours de chiffres : chaque roue fait un tour complet avant de s'arrêter.
   const target = on ? -(digit + 10) * WH : 0;
   return (

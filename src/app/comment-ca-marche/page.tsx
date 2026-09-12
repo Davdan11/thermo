@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CtaThermoMatch, FaqBlock, JsonLd, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { JsonLd } from "@/components/seo/SeoBlocks";
+import { LineCta, LineGuarantees, LineRelated, LineSteps, LineTrust } from "@/components/sections-v2/contenu/LineSections";
+import { ThemedFaq } from "@/components/sections-v2/contenu/ThemedFaq";
 import { LineHero } from "@/components/heroes-v2/contenu/LineHero";
 import { SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
@@ -82,6 +83,22 @@ const FAQ = [
   },
 ];
 
+/* Engagements (mêmes titres, mêmes textes que la version précédente). */
+const GUARANTEES = [
+  {
+    title: "Ce que nous ne faisons pas",
+    text: "Nous ne vendons pas de listes de contacts, nous n'affichons aucun avis sponsorisé et nous n'inventons aucun prix : quand une donnée manque, la fiche le dit.",
+  },
+  {
+    title: "Ce qui est vérifié",
+    text: "Chaque montant LogisVert vient du jumelage certifié AHRI de la liste d'Hydro-Québec. Chaque capacité au froid vient d'ENERGY STAR. Les sources sont affichées au bas de chaque fiche.",
+  },
+  {
+    title: "Ce qui reste à vous",
+    text: "La décision. Vous pouvez modifier vos réponses, comparer d'autres modèles et refuser la proposition. Le calcul de charge final est confirmé sur place par l'installateur.",
+  },
+];
+
 export default function CommentCaMarchePage() {
   const count = getEligibleModelCount();
   const updated = new Date(logisvertMetadata.updatedAt).toLocaleDateString("fr-CA", { year: "numeric", month: "long", day: "numeric" });
@@ -116,43 +133,17 @@ export default function CommentCaMarchePage() {
           { label: "Liste LogisVert", value: `mise à jour le ${updated}` },
         ]}
       />
-      <TrustStrip />
+      {/* Sous le héros, la ligne continue : garanties en stations, étapes sur la ligne verticale,
+          engagements en terminus, puis l'arrivée (appel) et les correspondances. */}
+      <LineTrust />
 
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16">
-        <ol className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[#e4ddd5] border border-[#e4ddd5]">
-          {STEPS.map((s) => (
-            <li key={s.n} className="bg-white p-8 flex flex-col">
-              <span className="text-[13px] font-bold tracking-[0.2em] text-[var(--color-accent)] mb-3">{s.n}</span>
-              <h2 className="text-[22px] font-bold text-[#172126] mb-3 leading-snug">{s.title}</h2>
-              <p className="text-[15px] text-[#3f4a52] leading-relaxed mb-5">{s.text}</p>
-              <Link href={s.href} className="mt-auto text-sm font-bold text-[var(--color-accent)] hover:opacity-80 transition-opacity">
-                {s.link} →
-              </Link>
-            </li>
-          ))}
-        </ol>
-      </section>
+      <LineSteps steps={STEPS} caption="Le parcours, étape par étape" />
 
-      <section className="bg-[#0C1821] text-white">
-        <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div>
-            <h2 className="text-2xl font-bold mb-3">Ce que nous ne faisons pas</h2>
-            <p className="text-white/75 leading-relaxed">Nous ne vendons pas de listes de contacts, nous n'affichons aucun avis sponsorisé et nous n'inventons aucun prix : quand une donnée manque, la fiche le dit.</p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-3">Ce qui est vérifié</h2>
-            <p className="text-white/75 leading-relaxed">Chaque montant LogisVert vient du jumelage certifié AHRI de la liste d'Hydro-Québec. Chaque capacité au froid vient d'ENERGY STAR. Les sources sont affichées au bas de chaque fiche.</p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-3">Ce qui reste à vous</h2>
-            <p className="text-white/75 leading-relaxed">La décision. Vous pouvez modifier vos réponses, comparer d'autres modèles et refuser la proposition. Le calcul de charge final est confirmé sur place par l'installateur.</p>
-          </div>
-        </div>
-      </section>
+      <LineGuarantees items={GUARANTEES} />
 
-      <FaqBlock items={FAQ} />
-      <CtaThermoMatch />
-      <RelatedLinks
+      <ThemedFaq items={FAQ} variant="line" />
+      <LineCta />
+      <LineRelated
         title="Pour aller plus loin"
         links={[
           { href: "/technologie-thermomatch", label: "La méthode ThermoMatch", hint: "Charge, score, sélection" },

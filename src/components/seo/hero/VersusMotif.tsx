@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import type { VsBrand, VsRow } from "./types";
 import { Caption, Count, EASE, K } from "./parts";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Comparatif de deux marques : face-à-face, puis barres en miroir qui
@@ -28,7 +29,7 @@ function Plate({ b, align }: { b: VsBrand; align: "left" | "right" }) {
 }
 
 export function VersusMotif({ a, b, rows, shared }: { a: VsBrand; b: VsBrand; rows: VsRow[]; shared?: number }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   const { scrollY } = useScroll();
   const left = useTransform(scrollY, [0, 700], [0, -28]);
   const right = useTransform(scrollY, [0, 700], [0, 28]);

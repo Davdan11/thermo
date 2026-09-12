@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { MotionConfig } from "motion/react";
 import type { GuideCategory, GuideMetadata } from "@/lib/markdown";
 import { GuidesCover } from "@/components/heroes-v2/contenu/GuidesCover";
-import { GUIDE_CATEGORIES } from "@/components/content-hero/guideCategories";
+import { fraunces } from "@/components/heroes-v2/contenu/fonts";
+import { GUIDE_CATEGORIES, guideCategoryLabel } from "@/components/content-hero/guideCategories";
+import { GV, GuidesCta, GuidesDepartments, GuidesPanel } from "@/components/sections-v2/contenu/GuidesSections";
 
 /* ─────────────────────────────────────────────────────────────────────────
    Données — catégories (rubriques partagées avec le héros et les articles)
@@ -17,6 +18,9 @@ type CategoryId = GuideCategory;
 
 /* ─────────────────────────────────────────────────────────────────────────
    Composant principal
+   Sous la couverture de magazine : le sommaire (rubriques = onglets),
+   la rubrique choisie en articles d'appel numérotés, puis l'encart
+   ThermoMatch. Présentation dans src/components/sections-v2/contenu.
 ───────────────────────────────────────────────────────────────────────────*/
 
 interface Props {
@@ -36,89 +40,52 @@ export default function GuidesPageClient({ initialGuides }: Props) {
     window.requestAnimationFrame(() => document.getElementById("guides-liste")?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }));
   };
 
+  const counts: Record<string, number> = Object.fromEntries(
+    CATEGORIES.map((c) => [c.id, initialGuides.filter((g) => g.category === c.id).length]),
+  );
+  const activeIndex = Math.max(0, CATEGORIES.findIndex((c) => c.id === activeCategory));
+
   return (
-    <div className="guides-page">
+    <div className={`guides-page gvs-root ${fraunces.variable}`}>
       {/* ── Héros : couverture de magazine ─────────────────────────────── */}
       <GuidesCover guides={initialGuides} onPick={pick} />
 
-      {/* ── Onglets catégories ─────────────────────────────────────────── */}
-      <section id="guides-liste" className="guides-tabs" style={{ scrollMarginTop: 96 }}>
-        <div className="container">
-          <div className="guides-tabs__list" role="tablist">
-            {CATEGORIES.map((cat, i) => (
-              <button
-                key={cat.id}
-                role="tab"
-                aria-selected={activeCategory === cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={[
-                  "guides-tabs__tab",
-                  i < CATEGORIES.length - 1 && "guides-tabs__tab--bordered",
-                  activeCategory === cat.id && "guides-tabs__tab--active",
-                ].filter(Boolean).join(" ")}
-              >
-                <span className="guides-tabs__tab-label">{cat.label}</span>
-              </button>
-            ))}
+      <MotionConfig reducedMotion="user">
+        {/* ── Sommaire : les rubriques (onglets) ─────────────────────────── */}
+        <section
+          id="guides-liste"
+          className="relative"
+          style={{ scrollMarginTop: 96, background: GV.paper, color: GV.ink }}
+        >
+          <div aria-hidden="true" className="gv-grain pointer-events-none absolute inset-0" />
+          <div className="relative mx-auto max-w-[1440px] px-5 pt-8 sm:px-8 lg:px-12">
+            <GuidesDepartments
+              categories={CATEGORIES}
+              counts={counts}
+              total={initialGuides.length}
+              active={activeCategory}
+              onSelect={(id) => setActiveCategory(id)}
+            />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Grille de guides ───────────────────────────────────────────── */}
-      <section className="guides-grid-section">
-        <div className="container">
-          <div className="guides-grid">
-            {displayed.map((guide) => (
-              <Link key={guide.slug} href={`/guides/${guide.slug}`} className="guides-card">
-                {/* wrapper with explicit inline position so Next.js Image fill detects it */}
-                <div style={{ position: 'absolute', inset: 0 }}>
-                  <Image
-                    src={guide.coverImage}
-                    alt={guide.title}
-                    fill
-                    className="guides-card__img"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="guides-card__overlay" />
-                </div>
-                <div className="guides-card__body">
-                  <h3 className="guides-card__title">{guide.title}</h3>
-                  <p className="guides-card__desc">{guide.description}</p>
-                  <span className="guides-card__arrow" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                      <path d="M3 9h12M11 4l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </span>
-                </div>
-              </Link>
-            ))}
+        {/* ── Rubrique choisie : articles d'appel ────────────────────────── */}
+        <section className="relative" style={{ background: GV.paper, color: GV.ink }}>
+          <div aria-hidden="true" className="gv-grain pointer-events-none absolute inset-0" />
+          <div className="relative mx-auto max-w-[1440px] px-5 pb-16 sm:px-8 lg:px-12 lg:pb-24">
+            <GuidesPanel
+              guides={displayed}
+              active={activeCategory}
+              label={guideCategoryLabel(activeCategory)}
+              index={activeIndex + 1}
+              labelOf={guideCategoryLabel}
+            />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Bannière CTA ───────────────────────────────────────────────── */}
-      <section className="guides-cta-section">
-        <div className="container">
-          <div className="guides-cta-banner">
-            <Image src="/images/logo-thermomatch-tm-720.webp" alt="ThermoMatch" width={160} height={32} className="guides-cta-banner__brand-img" />
-            <div className="guides-cta-banner__divider" />
-            <div className="guides-cta-banner__text">
-              <p className="guides-cta-banner__heading">
-                Vous préférez une recommandation personnalisée?
-              </p>
-              <p className="guides-cta-banner__sub">
-                Répondez à quelques questions et obtenez des suggestions adaptées à votre maison.
-              </p>
-            </div>
-            <Link href="/trouver-ma-thermopompe" className="guides-cta-banner__btn">
-              Commencer ThermoMatch
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
+        {/* ── Encart ThermoMatch ─────────────────────────────────────────── */}
+        <GuidesCta />
+      </MotionConfig>
     </div>
   );
 }

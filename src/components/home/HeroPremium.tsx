@@ -5,9 +5,10 @@ import "./hero-premium.css";
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { Snowfall } from "./Snowfall";
 import { CountUp } from "./premium/shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    Héros de l'accueil : photo plein écran qui recule au chargement puis
@@ -28,7 +29,7 @@ const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export function HeroPremium({ eligible, brands, coldClimate }: { eligible: number; brands: number; coldClimate: number }) {
   const ref = useRef<HTMLElement>(null);
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   // Les chiffres défilent une fois leur panneau apparu.
   const [play, setPlay] = useState(false);
   useEffect(() => {
@@ -159,7 +160,7 @@ export function HeroPremium({ eligible, brands, coldClimate }: { eligible: numbe
 
 /* Une ligne de titre qui monte derrière un masque. */
 function Line({ i, children }: { i: number; children: ReactNode }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.14em", marginBottom: "-0.14em" }}>
       <motion.span
@@ -175,7 +176,7 @@ function Line({ i, children }: { i: number; children: ReactNode }) {
 }
 
 function Appear({ delay, className, style, children }: { delay: number; className?: string; style?: React.CSSProperties; children: ReactNode }) {
-  const reduce = useReducedMotion();
+  const reduce = useReduced();
   return (
     <motion.div className={className} style={style} initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, ease: EASE, delay }}>
       {children}

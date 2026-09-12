@@ -5,6 +5,20 @@ import { cn } from "@/lib/utils";
 import type { AvailableFilters } from "@/lib/data/queries/catalogue";
 import type { SystemType } from "@/lib/data/types/enums";
 
+/* Panneau de filtres du catalogue (/thermopompes seulement).
+   Présentation alignée sur le héros (encre, papier, orange) ; logique d'URL inchangée. */
+
+const CHEVRON = (
+  <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-[#0A1419]/55">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </div>
+);
+
+const SELECT =
+  "catg-select w-full cursor-pointer appearance-none rounded-[14px] border border-[#0A1419]/12 bg-[#F4EFE7] h-[46px] pl-4 pr-10 text-[14px] text-[#0A1419] transition-colors hover:border-[#0A1419]/35";
+
 export function CatalogueFilters({ filters, className }: { filters: AvailableFilters; className?: string; }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -54,10 +68,10 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
 
   return (
     <div className={cn("space-y-6", className)}>
-      
+
       {/* Type de système */}
       {filters.types.length > 0 && (
-        <div className="pb-6 border-b border-[#E5E5E5]">
+        <div className="pb-6 border-b border-[#0A1419]/10">
           <FilterGroup label="Type de système">
             {filters.types.map((t) => (
               <CustomCheckbox
@@ -71,16 +85,17 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
         </div>
       )}
 
-      {/* Marque (Dropdown) */}
+      {/* Marque */}
       {filters.brands.length > 0 && (
-        <div className="pb-6 border-b border-[#E5E5E5]">
+        <div className="pb-6 border-b border-[#0A1419]/10">
           <FilterGroup label="Marque">
-            <div className="relative mt-2">
+            <div className="relative">
               <select
                 aria-label="Marque"
                 value={activeBrand}
                 onChange={(e) => setParam("brand", e.target.value)}
-                className="w-full appearance-none bg-[#F9F9F9] border border-[#E5E5E5] rounded-[4px] h-[42px] px-3 text-sm text-[#172126] focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
+                className={SELECT}
+                style={{ outline: "none" }}
               >
                 <option value="">Toutes les marques</option>
                 {filters.brands.map((b) => (
@@ -89,26 +104,23 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
                   </option>
                 ))}
               </select>
-              <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-[#6B7280]">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </div>
+              {CHEVRON}
             </div>
           </FilterGroup>
         </div>
       )}
 
-      {/* Capacité (Slider + Dropdown) */}
+      {/* Capacité */}
       {filters.capacities.length > 0 && (
-        <div className="pb-6 border-b border-[#E5E5E5]">
+        <div className="pb-6 border-b border-[#0A1419]/10">
           <FilterGroup label="Capacité (BTU)">
-            <div className="relative mt-2">
+            <div className="relative">
               <select
                 aria-label="Capacité (BTU)"
                 value={activeCapacity}
                 onChange={(e) => setParam("capacity", e.target.value)}
-                className="w-full appearance-none bg-[#F9F9F9] border border-[#E5E5E5] rounded-[4px] h-[42px] px-3 text-sm text-[#172126] focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
+                className={SELECT}
+                style={{ outline: "none" }}
               >
                 <option value="">Tous les BTU</option>
                 {filters.capacities.map((c) => (
@@ -117,11 +129,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
                   </option>
                 ))}
               </select>
-              <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-[#6B7280]">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </div>
+              {CHEVRON}
             </div>
           </FilterGroup>
         </div>
@@ -129,7 +137,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
 
       {/* Climat froid */}
       {filters.hasColdClimate && (
-        <div className="pb-6 border-b border-[#E5E5E5]">
+        <div className="pb-6 border-b border-[#0A1419]/10">
           <FilterGroup label="Climat froid">
             <CustomCheckbox
               label="Seulement les modèles Climat froid"
@@ -140,14 +148,12 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
         </div>
       )}
 
-
-
       {/* Reset */}
-      <div className="pt-2">
+      <div className="pt-1">
         <button
           type="button"
           onClick={clearAll}
-          className="text-[13px] font-semibold text-[var(--color-accent)] hover:underline transition-all"
+          className="catg-reset text-[13px] font-semibold text-[#E54B17]"
         >
           Réinitialiser les filtres
         </button>
@@ -163,7 +169,7 @@ export function CatalogueFilters({ filters, className }: { filters: AvailableFil
 function FilterGroup({ label, children }: { label: string; children: React.ReactNode; }) {
   return (
     <fieldset>
-      <legend className="text-sm font-bold text-[#172126] mb-3">
+      <legend className="mb-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0A1419]/55">
         {label}
       </legend>
       <div className="space-y-3">
@@ -175,8 +181,8 @@ function FilterGroup({ label, children }: { label: string; children: React.React
 
 function CustomCheckbox({ label, checked, onChange }: { label: string; checked: boolean; onChange: () => void; }) {
   return (
-    <label className="flex items-start gap-3 cursor-pointer group text-sm select-none">
-      <div className="relative flex items-center justify-center shrink-0 w-4 h-4 mt-0.5">
+    <label className="group flex cursor-pointer select-none items-start gap-3 text-[14px]">
+      <div className="relative mt-px flex h-[18px] w-[18px] shrink-0 items-center justify-center">
         <input
           type="checkbox"
           checked={checked}
@@ -184,21 +190,21 @@ function CustomCheckbox({ label, checked, onChange }: { label: string; checked: 
           className="peer sr-only"
         />
         <div className={cn(
-          "w-4 h-4 rounded-[3px] border transition-colors flex items-center justify-center",
-          checked 
-            ? "bg-[var(--color-accent)] border-[var(--color-accent)]" 
-            : "bg-white border-[#C4C1B8] group-hover:border-[#172126]"
+          "flex h-[18px] w-[18px] items-center justify-center rounded-[6px] border transition-all duration-300 peer-focus-visible:ring-2 peer-focus-visible:ring-[#E54B17] peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-white",
+          checked
+            ? "border-[#E54B17] bg-[#E54B17]"
+            : "border-[#0A1419]/25 bg-white group-hover:border-[#0A1419]",
         )}>
           {checked && (
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="catg-tick" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12" />
             </svg>
           )}
         </div>
       </div>
       <span className={cn(
-        "transition-colors leading-tight",
-        checked ? "text-[#172126]" : "text-[#6B7280] group-hover:text-[#172126]",
+        "leading-tight transition-colors",
+        checked ? "font-medium text-[#0A1419]" : "text-[#0A1419]/65 group-hover:text-[#0A1419]",
       )}>
         {label}
       </span>
@@ -225,7 +231,7 @@ export function ActiveFilterChips() {
   const capacity = searchParams.get("capacity");
   if (capacity) {
     const btuk = parseInt(capacity, 10);
-    chips.push({ key: "capacity", label: `${(btuk / 1000).toFixed(0)}\u2009000 BTU` });
+    chips.push({ key: "capacity", label: `${(btuk / 1000).toFixed(0)} 000 BTU` });
   }
 
   if (searchParams.get("coldClimate") === "true") {
@@ -247,7 +253,7 @@ export function ActiveFilterChips() {
           key={chip.key}
           type="button"
           onClick={() => removeFilter(chip.key)}
-          className="inline-flex items-center gap-1.5 h-7 px-2.5 rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-xs font-semibold hover:bg-[var(--color-accent)] hover:text-white transition-colors"
+          className="catg-chip inline-flex h-8 items-center gap-2 rounded-full bg-[#0A1419] px-3.5 text-[12.5px] font-medium text-[#F4EFE7] transition-colors hover:bg-[#E54B17]"
         >
           {chip.label}
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">

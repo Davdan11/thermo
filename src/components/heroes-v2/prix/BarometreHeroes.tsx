@@ -3,10 +3,11 @@
 import "./prix-v2.css";
 import { useRef, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
-import { motion, useInView, useReducedMotion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { Breadcrumbs, type BreadcrumbItem } from "@/components/seo/Breadcrumbs";
 import { DISPLAY, MONO, plexMono } from "./fonts";
 import { CountTo, EASE, fr, typo, useAfter } from "./shared";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* ==================================================================
    /subventions/logisvert et /subventions/logisvert/[marque] — « Baromètre ».
@@ -36,7 +37,7 @@ function Shell({ children, labelledBy }: { children: ReactNode; labelledBy: stri
 }
 
 function Top({ breadcrumbs, eyebrow }: { breadcrumbs: BreadcrumbItem[]; eyebrow: string }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   return (
     <motion.div initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
       <div className="pv2-crumbs -mt-1" style={{ "--c-link": MUTE, "--c-cur": FOREST, "--c-sep": "rgba(15,61,43,0.35)" } as CSSProperties}>
@@ -56,7 +57,7 @@ function Top({ breadcrumbs, eyebrow }: { breadcrumbs: BreadcrumbItem[]; eyebrow:
 
 /** Titre : linéale légère, un segment en gras (et en vert si demandé). */
 function Title({ id, lines, size }: { id: string; lines: Array<Array<{ t: string; bold?: boolean; green?: boolean }>>; size: string }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   return (
     <h1 id={id} style={{ fontSize: size, lineHeight: 0.98, letterSpacing: "-0.045em", fontWeight: 300, margin: "18px 0 0" }}>
       {lines.map((segs, k) => (
@@ -76,7 +77,7 @@ function Title({ id, lines, size }: { id: string; lines: Array<Array<{ t: string
 }
 
 function Actions({ delay = 0.7 }: { delay?: number }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   return (
     <motion.div initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay }}>
       <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -101,7 +102,7 @@ function Actions({ delay = 0.7 }: { delay?: number }) {
 }
 
 function Readouts({ items, cols, delay }: { items: BaroStat[]; cols: string; delay: number }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   if (!items.length) return null;
   return (
     <motion.dl className={`m-0 grid ${cols}`} style={{ borderTop: `1.5px solid ${FOREST}` }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay }}>
@@ -120,7 +121,7 @@ function Readouts({ items, cols, delay }: { items: BaroStat[]; cols: string; del
 }
 
 function Fade({ children, delay, className }: { children: ReactNode; delay: number; className?: string }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   return (
     <motion.div className={className} initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay }}>
       {children}
@@ -172,7 +173,7 @@ export function BarometreIndexHero({ intro, breadcrumbs, updated, brands, stats 
 }
 
 function BrandBars({ brands, updated }: { brands: BaroBrand[]; updated: string | null }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -8% 0px" });
   const grow = inView || reduce;
@@ -353,7 +354,7 @@ export function BarometreBrandHero({
 }
 
 function Histogram({ amounts }: { amounts: number[] }) {
-  const reduce = !!useReducedMotion();
+  const reduce = !!useReduced();
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -8% 0px" });
   const grow = inView || reduce;

@@ -32,19 +32,20 @@ export function CatalogueSortSelect() {
   }
 
   return (
-    <div className="flex items-center gap-2">
-      <label htmlFor="catalogue-sort" className="text-[13px] text-[#6B7280] whitespace-nowrap hidden sm:inline">
+    <div className="flex items-center gap-3">
+      <label htmlFor="catalogue-sort" className="hidden whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0A1419]/55 sm:inline">
         Trier par
       </label>
       <select
         id="catalogue-sort"
         value={currentSort}
         onChange={handleChange}
-        className="h-[42px] px-3 pr-8 rounded-[4px] bg-[#F9F9F9] border border-[#E5E5E5] text-[13px] text-[#172126] transition-colors focus-visible:outline-none focus-visible:border-[var(--color-accent)] appearance-none cursor-pointer"
+        className="catg-select h-[44px] cursor-pointer appearance-none rounded-full border border-[#0A1419]/12 bg-white pl-4 pr-10 text-[13.5px] font-medium text-[#0A1419] transition-colors hover:border-[#0A1419]/35"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E")`,
+          outline: "none",
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%230A1419' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9' /%3E%3C/svg%3E")`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "right 10px center",
+          backgroundPosition: "right 15px center",
         }}
       >
         {SORT_OPTIONS.map((opt) => (
