@@ -377,7 +377,7 @@ function Conditions({ d, no, total }: { d: GuideData; no: number; total: number 
               <Grant key={g.name} g={g} i={i} />
             ))}
             <motion.p {...up(0.1)} className="mt-8 text-[15.5px] leading-[1.75]">
-              Les montants LogisVert exacts par appareil sont dans notre{" "}
+              Thermopompes À Vendre réunit les montants LogisVert exacts par appareil dans son{" "}
               <Link href="/subventions/logisvert" className="at-link">
                 tableau par marque
               </Link>

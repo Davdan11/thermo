@@ -34,7 +34,7 @@ export const PRIX_FAQ: Array<{ q: string; a: string }> = [
   },
   {
     q: "La subvention LogisVert est-elle déduite du prix?",
-    a: "Le montant LogisVert est fixé par Hydro-Québec pour chaque jumelage certifié : nous l'affichons sur chaque fiche. Il est versé après l'installation par un entrepreneur licencié, selon les conditions du programme. Une soumission complète l'indique clairement, séparément du prix.",
+    a: "Le montant LogisVert est fixé par Hydro-Québec pour chaque jumelage certifié : Thermopompes À Vendre l'affiche sur chaque fiche. Il est versé après l'installation par un entrepreneur licencié, selon les conditions du programme. Une soumission complète l'indique clairement, séparément du prix.",
   },
 ];
 

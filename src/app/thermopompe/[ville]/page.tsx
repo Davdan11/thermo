@@ -304,7 +304,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
 
       <FrostCta
         title={`Quelle thermopompe pour votre maison à ${city.name}?`}
-        text={`13 questions sur votre maison. ThermoMatch applique le froid de ${city.name} (${city.designTempC} °C) à votre superficie, votre isolation et votre système actuel, puis retient trois machines parmi toutes les marques certifiées par Hydro-Québec.`}
+        text={`13 questions sur votre maison. Avec ThermoMatch, Thermopompes À Vendre applique le froid de ${city.name} (${city.designTempC} °C) à votre superficie, votre isolation et votre système actuel, puis retient trois machines parmi toutes les marques certifiées.`}
       />
 
       {nearby.length > 0 && (

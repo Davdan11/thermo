@@ -41,7 +41,7 @@ const REASONS = [
 
 const FAQ = [
   { q: "Comment fonctionne ThermoMatch ?", a: "ThermoMatch est un outil de comparaison qui analyse vos besoins (superficie, étages, isolation) pour vous recommander les 3 meilleures thermopompes pour votre situation spécifique, en calculant la puissance exacte requise." },
-  { q: "Est-ce que je peux obtenir la subvention Logis Vert ?", a: "Chaque fiche de notre catalogue affiche le montant LogisVert officiel d'Hydro-Québec pour le jumelage exact. Toutes les marques sont traitées de la même façon, et l'installateur partenaire s'occupe des documents avec vous." },
+  { q: "Est-ce que je peux obtenir la subvention Logis Vert ?", a: "Sur chaque fiche, Thermopompes À Vendre affiche le montant LogisVert officiel d'Hydro-Québec pour le jumelage exact. Toutes les marques sont traitées de la même façon, et l'installateur partenaire s'occupe des documents avec vous." },
   { q: "Combien de temps faut-il pour l'installation ?", a: "Une fois la soumission approuvée, l'installation peut généralement être effectuée en 1 à 2 semaines, selon la saison. L'installation elle-même prend généralement moins d'une journée." },
 ];
 

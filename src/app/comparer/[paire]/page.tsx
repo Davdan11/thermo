@@ -76,7 +76,7 @@ export default async function BrandPairPage({ params }: { params: Promise<{ pair
       />
       <AfficheCombat
         eyebrow="Comparatif de marques"
-        intro={`Comparaison des deux marques sur leurs données certifiées ENERGY STAR et les montants LogisVert d'Hydro-Québec : ${a.models.length} modèles ${a.name} contre ${b.models.length} modèles ${b.name} vendus au Québec.`}
+        intro={`Thermopompes À Vendre compare les deux marques sur leurs données certifiées ENERGY STAR et les montants LogisVert d'Hydro-Québec : ${a.models.length} modèles ${a.name} contre ${b.models.length} modèles ${b.name} vendus au Québec.`}
         crumbs={[
           { label: "Comparer", href: "/comparer" },
           { label: `${a.name} vs ${b.name}`, href: `/comparer/${paire}` },

@@ -74,7 +74,7 @@ export function GoodChoiceSection({ detail, seo }: Props) {
     label: "Subvention LogisVert",
     value: logisVert > 0 ? `${fr(logisVert)} $` : "Non admissible",
     note: logisVert > 0
-      ? "Montant officiel d'Hydro-Québec pour le jumelage de référence de cette fiche. Vérifié sur chaque appariement."
+      ? "Montant officiel d'Hydro-Québec pour le jumelage de référence. Thermopompes À Vendre le vérifie sur chaque appariement."
       : "Aucun appariement de cet appareil ne figure dans la liste LogisVert d'Hydro-Québec à ce jour.",
   });
 

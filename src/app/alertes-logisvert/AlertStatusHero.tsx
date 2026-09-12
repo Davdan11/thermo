@@ -30,7 +30,7 @@ export function AlertStatusHero({ variant, label, kind, summary, listDate, path,
     case "confirmed":
     case "already":
       title = variant === "confirmed" ? ["Votre alerte", "est active."] : ["Alerte déjà", "active."];
-      lead = `Nous vous écrirons dès qu’Hydro-Québec modifie le montant LogisVert pour ${what} : hausse, baisse, ajout à la liste ou retrait. Aucun autre courriel.`;
+      lead = `Thermopompes À Vendre vous écrira dès qu’Hydro-Québec modifie le montant LogisVert pour ${what} : hausse, baisse, ajout à la liste ou retrait. Aucun autre courriel.`;
       actions = [
         ...(path ? [{ href: path, label: "Voir les montants actuels" }] : []),
         ...(unsubscribeHref ? [{ href: unsubscribeHref, label: "Me désabonner", ghost: true }] : []),

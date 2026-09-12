@@ -93,7 +93,7 @@ export default async function BrandKindPage({ params }: { params: Promise<{ slug
         logo={monoLogo(slug)?.src ?? null}
         lines={[typo(k.plural.split(" ")[0]), typo(`${k.plural.split(" ").slice(1).join(" ")} ${b.name}`)]}
         accent={typo(k.plural.split(" ").slice(1).join(" "))}
-        intro={typo(`Tous les modèles ${k.label}s ${b.name} vendus au Québec (${k.intro}), avec leurs données certifiées ENERGY STAR et le montant LogisVert officiel d'Hydro-Québec.`)}
+        intro={typo(`Thermopompes À Vendre réunit tous les modèles ${k.label}s ${b.name} vendus au Québec (${k.intro}), avec leurs données certifiées ENERGY STAR et le montant LogisVert officiel d'Hydro-Québec.`)}
         answer={typo(`${b.name} vend ${models.length} ${k.label}s au Québec, soit ${canonical.length} machines distinctes, dont ${certified.length} avec une capacité certifiée à -15 °C publiée${maxLv > 0 ? ` et une subvention LogisVert jusqu'à ${maxLv.toLocaleString("fr-CA")} $` : ""}. Le bon calibre dépend de la charge de chauffage de votre maison, que ThermoMatch calcule en 13 questions.`)}
         crumbs={[
           { label: "Marques", href: "/marques" },

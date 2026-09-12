@@ -105,7 +105,7 @@ export function ThermoMatchStage({ models, evaluated }: { models: StageModel[]; 
             style={{ fontSize: "clamp(40px, 4.4vw, 72px)", lineHeight: 0.98, letterSpacing: "-0.045em", fontWeight: 600, margin: "22px 0 0" }}
           />
           <p className="max-w-[500px] text-[17px] leading-[1.6]" style={{ color: C.mute, margin: "24px 0 0" }}>
-            {`Répondez à quelques questions${NB}: ThermoMatch identifie les systèmes qui correspondent à votre maison, votre région et vos priorités.`}
+            {`Répondez à quelques questions${NB}: Thermopompes À Vendre identifie les systèmes qui correspondent à votre maison, votre région et vos priorités.`}
           </p>
 
           <ol className="mt-10" style={{ listStyle: "none", padding: 0, margin: "40px 0 0" }}>

@@ -62,7 +62,7 @@ export function ScanShowcase() {
             style={{ fontSize: "clamp(38px, 4.6vw, 80px)", lineHeight: 0.98, letterSpacing: "-0.045em", fontWeight: 600, margin: "28px 0 0" }}
           />
           <p className="mt-7 max-w-[540px] text-[17px] leading-[1.65]" style={{ color: C.inkMute }}>
-            ThermoScan lit la plaque signalétique, retrouve la fiche certifiée ENERGY STAR et mesure l’écart d’efficacité avec les modèles admissibles à LogisVert. Gratuit, sans inscription, photo effacée après lecture.
+            Avec ThermoScan, Thermopompes À Vendre lit la plaque signalétique, retrouve la fiche certifiée ENERGY STAR et mesure l’écart d’efficacité avec les modèles admissibles à LogisVert. Gratuit, sans inscription, photo effacée après lecture.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link href="/thermoscan?depuis=accueil" className="inline-flex items-center gap-2.5 rounded-full py-3.5 pl-5 pr-6 text-[15px] font-semibold text-white" style={{ background: C.orange }}>

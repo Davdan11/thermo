@@ -45,7 +45,7 @@ export default function CitiesIndexPage() {
         eyebrow="Guides locaux"
         breadcrumbs={[{ label: "Thermopompe par ville", href: "/thermopompe" }]}
         lines={["Thermopompe", "par ville au Québec"]}
-        intro="La bonne machine dépend de votre maison, mais chaque ville a son hiver : température de conception, degrés-jours de chauffage, moyenne de janvier. Nous chiffrons ce que ça change, ville par ville, avec les normales d'Environnement Canada et les données certifiées d'Hydro-Québec."
+        intro="La bonne machine dépend de votre maison, mais chaque ville a son hiver : température de conception, degrés-jours de chauffage, moyenne de janvier. Thermopompes À Vendre chiffre ce que ça change, ville par ville, avec les normales d'Environnement Canada et les données certifiées d'Hydro-Québec."
         groups={groups}
         stats={[
           { label: "Villes couvertes", value: String(cities.length) },

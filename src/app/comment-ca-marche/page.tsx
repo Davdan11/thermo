@@ -67,7 +67,7 @@ const FAQ = [
   },
   {
     question: "D'où viennent les chiffres affichés?",
-    answer: "De la liste officielle des appareils admissibles à LogisVert publiée par Hydro-Québec, enrichie des données ENERGY STAR (capacité à -15 °C, COP, SEER2, HSPF2). Rien n'est saisi à la main, et une valeur inconnue est affichée comme telle.",
+    answer: "Thermopompes À Vendre les tire de la liste officielle des appareils admissibles à LogisVert publiée par Hydro-Québec, enrichie des données ENERGY STAR (capacité à -15 °C, COP, SEER2, HSPF2). Rien n'est saisi à la main, et une valeur inconnue est affichée comme telle.",
   },
   {
     question: "Pourquoi seulement trois machines?",
@@ -91,7 +91,7 @@ const GUARANTEES = [
   },
   {
     title: "Ce qui est vérifié",
-    text: "Chaque montant LogisVert vient du jumelage certifié AHRI de la liste d'Hydro-Québec. Chaque capacité au froid vient d'ENERGY STAR. Les sources sont affichées au bas de chaque fiche.",
+    text: "Thermopompes À Vendre vérifie chaque montant LogisVert dans la liste d'Hydro-Québec, selon le jumelage certifié AHRI. Chaque capacité au froid vient d'ENERGY STAR. Les sources sont affichées au bas de chaque fiche.",
   },
   {
     title: "Ce qui reste à vous",
@@ -124,7 +124,7 @@ export default function CommentCaMarchePage() {
         eyebrow="Comment ça marche"
         breadcrumbs={breadcrumbs}
         lines={["De la question", "à l'installation,", "sans vendre vos coordonnées."]}
-        intro="Vous répondez à des questions sur votre maison, ThermoMatch compare toutes les marques avec les données certifiées d'Hydro-Québec, et un installateur licencié réalise les travaux. Voici chaque étape, et ce qu'elle garantit."
+        intro="Vous répondez à des questions sur votre maison, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec, et un installateur licencié réalise les travaux. Voici chaque étape, et ce qu'elle garantit."
         caption="Le parcours, étape par étape"
         steps={STEPS}
         stats={[

@@ -58,7 +58,7 @@ export function SideThermoMatch({ brandName }: { brandName: string }) {
         <Arrow />
       </Link>
       <p className="sv2f-mono m-0 mt-3 text-center text-[10.5px]" style={{ color: "rgba(255,255,255,.58)" }}>
-        Gratuit · données certifiées Hydro-Québec
+        Gratuit · par Thermopompes À Vendre
       </p>
     </Reveal>
   );

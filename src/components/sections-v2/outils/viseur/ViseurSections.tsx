@@ -39,7 +39,7 @@ const G = {
 
 const STEPS = [
   { title: "Photographiez l’étiquette", text: "La plaque signalétique, sur le côté de l’unité extérieure ou sous l’unité murale. Depuis votre téléphone, en plein jour de préférence." },
-  { title: "ThermoScan lit la plaque", text: "Marque, numéro de modèle, année, capacité et fluide sont extraits, puis vérifiés dans le catalogue ENERGY STAR Canada. Vous corrigez si besoin." },
+  { title: "ThermoScan lit la plaque", text: "Marque, numéro de modèle, année, capacité et fluide sont extraits, puis Thermopompes À Vendre les vérifie dans le catalogue ENERGY STAR Canada. Vous corrigez si besoin." },
   { title: "Vous voyez l’écart avec le neuf", text: "Efficacité HSPF2, tenue au froid, fluide, garantie et montant LogisVert des modèles comparables. Puis une soumission si vous le voulez." },
 ];
 

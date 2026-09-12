@@ -49,7 +49,7 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
     },
     {
       question: "Les montants changent-ils?",
-      answer: "Oui. Hydro-Québec met la liste à jour régulièrement. Notre base est resynchronisée automatiquement chaque jour et la date de la liste utilisée est indiquée sur cette page.",
+      answer: "Oui. Hydro-Québec met la liste à jour régulièrement. Thermopompes À Vendre resynchronise sa base automatiquement chaque jour et indique sur cette page la date de la liste utilisée.",
     },
   ];
 
@@ -68,7 +68,7 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
       />
       <BarometreBrandHero
         brand={b.name}
-        intro={`Montants officiels de la liste LogisVert d'Hydro-Québec pour chaque thermopompe ${b.name} admissible, par appariement certifié AHRI. Mise à jour automatique${updated ? `, liste du ${updated}` : ""}.`}
+        intro={`Thermopompes À Vendre vous montre les montants officiels de la liste LogisVert d'Hydro-Québec pour chaque thermopompe ${b.name} admissible, par appariement certifié AHRI. Mise à jour automatique${updated ? `, liste du ${updated}` : ""}.`}
         answer={`Selon la liste LogisVert d'Hydro-Québec${updated ? ` du ${updated}` : ""}, ${subsidised.length} thermopompes ${b.name} sont admissibles, pour un montant de ${b.minLogisVert.toLocaleString("fr-CA")} $ à ${b.maxLogisVert.toLocaleString("fr-CA")} $ selon l'appariement exact entre l'unité extérieure et l'unité intérieure (référence AHRI). ${b.coldClimateCount} de ces machines sont certifiées grand froid.`}
         breadcrumbs={[
           { label: "Subventions", href: "/subventions" },

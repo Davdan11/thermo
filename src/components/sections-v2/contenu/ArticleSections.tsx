@@ -436,7 +436,7 @@ export function ArticleCta({ accent }: { accent: string }) {
           transition={{ duration: 1, ease: EASE, delay: 0.5 }}
         >
           {typo(
-            "Répondez à 13 questions sur votre maison. ThermoMatch compare toutes les marques avec les données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
+            "Répondez à 13 questions sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
           )}
         </motion.p>
         <motion.div

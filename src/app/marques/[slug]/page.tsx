@@ -111,7 +111,7 @@ export default async function BrandPage({
         <MonoBackCover
           brandName={brandName}
           title={`Quelle thermopompe ${brand.name} pour votre maison ?`}
-          text={`ThermoMatch compare les modèles ${brand.name} certifiés par Hydro-Québec avec ceux des autres marques, selon votre superficie, votre isolation et votre zone climatique. Trois machines adaptées, sans parti pris.`}
+          text={`Avec ThermoMatch, Thermopompes À Vendre compare les modèles ${brand.name} certifiés avec ceux des autres marques, selon votre superficie, votre isolation et votre zone climatique. Trois machines adaptées, sans parti pris.`}
         />
       </Calm>
     </main>

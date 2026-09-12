@@ -80,7 +80,7 @@ export function AidesLedger({ stats }: { stats: AidesStats }) {
               style={{ fontSize: "clamp(40px, 3.7vw, 66px)", lineHeight: 0.98, letterSpacing: "-0.045em", fontWeight: 600, margin: "26px 0 0" }}
             />
             <p className="max-w-[470px] text-[17px] leading-[1.6]" style={{ color: C.inkMute, margin: "26px 0 0" }}>
-              Nous vérifions pour vous les programmes d’aide disponibles au Québec. Le montant LogisVert, lui, est déjà connu pour chaque jumelage : c’est
+              Thermopompes À Vendre vérifie pour vous les programmes d’aide disponibles au Québec. Le montant LogisVert, lui, est déjà connu pour chaque jumelage : c’est
               celui de la liste officielle.
             </p>
 

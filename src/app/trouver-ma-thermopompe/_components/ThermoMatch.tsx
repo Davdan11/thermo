@@ -410,7 +410,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
           <div className="w-12 h-12 border-4 border-white/20 border-t-[#C66E42] rounded-full animate-spin mb-6" />
           <h2 className="text-2xl font-bold mb-2">Analyse en cours...</h2>
           <p className="text-[#9CA3AF]">
-            {catalogueCount ? `Analyse de ${catalogueCount.toLocaleString("fr-CA")} fiches certifiées par Hydro-Québec` : "Analyse des fiches certifiées par Hydro-Québec"}
+            {catalogueCount ? `Analyse de ${catalogueCount.toLocaleString("fr-CA")} fiches certifiées` : "Analyse des fiches certifiées"}
           </p>
         </div>
       );

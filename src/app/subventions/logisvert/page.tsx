@@ -29,7 +29,7 @@ export default function LogisVertIndex() {
         ]}
       />
       <BarometreIndexHero
-        intro={`Pour chaque marque, le nombre de modèles admissibles et la fourchette de montants de la liste officielle d'Hydro-Québec${updated ? ` (liste du ${updated})` : ""}.`}
+        intro={`Pour chaque marque, Thermopompes À Vendre affiche le nombre de modèles admissibles et la fourchette des montants de la liste officielle d'Hydro-Québec${updated ? ` (liste du ${updated})` : ""}.`}
         breadcrumbs={[{ label: "Subventions", href: "/subventions" }, { label: "LogisVert par marque", href: "/subventions/logisvert" }]}
         updated={updated}
         brands={brands.slice(0, 16).map((b) => ({ slug: b.slug, name: b.name, max: b.maxLogisVert, models: b.models.filter((m) => m.logisVertDollars > 0).length }))}

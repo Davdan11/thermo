@@ -41,7 +41,7 @@ export default function RankingsIndex() {
       <PalmaresIndexHero
         year={year}
         lines={["Les meilleures thermopompes", `au Québec en ${year}`]}
-        intro={typo("Pas d'avis sponsorisés, pas de « choix de la rédaction » : chaque classement trie les machines vendues au Québec sur une donnée certifiée, publiée par Hydro-Québec et ENERGY STAR.")}
+        intro={typo("Pas d'avis sponsorisés, pas de « choix de la rédaction » : Thermopompes À Vendre classe les machines vendues au Québec sur une donnée certifiée, publiée par Hydro-Québec et ENERGY STAR.")}
         crumbs={[{ label: "Meilleures thermopompes" }]}
         rows={tables.flatMap(({ def, r }) =>
           r.models[0] ? [{ label: SHORT[def.slug] ?? def.metricLabel, href: `/meilleures-thermopompes/${def.slug}`, leader: `${r.models[0].brand} ${r.models[0].name}`, value: typo(def.value(r.models[0])) }] : [],

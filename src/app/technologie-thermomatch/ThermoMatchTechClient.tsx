@@ -23,7 +23,7 @@ const FAQ_ITEMS = [
   {
     id: "faq-2",
     question: "D'où viennent les données?",
-    answer: "Les capacités de chauffage à -15 °C, les COP, HSPF2, SEER2 et les montants de subvention proviennent de la liste officielle LogisVert d'Hydro-Québec, bâtie sur les appariements certifiés AHRI et ENERGY STAR. Chaque recommandation cite la référence AHRI de l'appariement et la date de la liste utilisée. Quand une donnée n'est pas certifiée, nous l'indiquons comme estimée.",
+    answer: "Thermopompes À Vendre tire les capacités de chauffage à -15 °C, les COP, HSPF2, SEER2 et les montants de subvention de la liste officielle LogisVert d'Hydro-Québec, bâtie sur les appariements certifiés AHRI et ENERGY STAR. Chaque recommandation cite la référence AHRI de l'appariement et la date de la liste utilisée. Quand une donnée n'est pas certifiée, nous l'indiquons comme estimée.",
   },
   {
     id: "faq-3",

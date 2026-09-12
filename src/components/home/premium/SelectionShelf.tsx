@@ -41,7 +41,7 @@ export function SelectionShelf({ models }: { models: ShelfModel[] }) {
             <Link href="/meilleures-thermopompes/grand-froid" className="font-semibold underline underline-offset-4" style={{ color: C.ink }}>
               classement grand froid
             </Link>
-            {" "}: capacité et COP certifiés à −15 °C (ENERGY STAR, liste LogisVert d’Hydro-Québec).
+            {" "}de Thermopompes À Vendre : capacité et COP certifiés à −15 °C (ENERGY STAR, liste LogisVert d’Hydro-Québec).
           </p>
 
           {/* Défilement horizontal sur mobile, trois colonnes sur grand écran. */}

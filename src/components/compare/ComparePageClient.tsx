@@ -763,7 +763,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                   Lequel choisir&nbsp;?
                 </h2>
                 <p className="m-0 mt-5 max-w-[440px] text-[14.5px] leading-[1.65]" style={{ color: D.mute }}>
-                  Ce que les données certifiées d’Hydro-Québec et d’ENERGY STAR permettent de dire de ces {products.length} machines. Le calibre exact dépend de votre maison.
+                  Ce que Thermopompes À Vendre peut dire de ces {products.length} machines, d’après les données certifiées d’Hydro-Québec et d’ENERGY STAR. Le calibre exact dépend de votre maison.
                 </p>
               </div>
             </div>

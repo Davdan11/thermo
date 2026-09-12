@@ -269,7 +269,7 @@ export default async function ThermopompesPage({
 
         <CatalogueCta
           title="Trop de modèles ? Laissez ThermoMatch trier pour vous."
-          text="Répondez à 13 questions sur votre maison. ThermoMatch retient trois machines vraiment adaptées parmi toutes les marques certifiées par Hydro-Québec, sans parti pris."
+          text="Répondez à 13 questions sur votre maison. Thermopompes À Vendre retient trois machines vraiment adaptées parmi toutes les marques, sur des données certifiées, sans parti pris."
         />
       </MotionRoot>
     </main>
