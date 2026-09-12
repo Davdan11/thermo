@@ -77,9 +77,6 @@ const fsaMap: Record<string, ClimateZone> = {
   "J8": { region: "Outaouais (Gatineau)", designTempC: -25 },
 };
 
-/** Région renvoyée pour un code postal québécois absent de la table : valeur générique, pas une mesure locale. */
-export const QUEBEC_FALLBACK_REGION = "Québec (Général)";
-
 export function resolvePostalCode(postalCode: string): ClimateZone | null {
   if (!postalCode) return null;
   // Clean up postal code: uppercase and remove spaces
@@ -102,7 +99,7 @@ export function resolvePostalCode(postalCode: string): ClimateZone | null {
 
   // Default fallback for any valid Quebec postal code starting with G, H, or J
   if (fsa1 === "G" || fsa1 === "H" || fsa1 === "J") {
-    return { region: QUEBEC_FALLBACK_REGION, designTempC: -25 };
+    return { region: "Québec (Général)", designTempC: -25 };
   }
 
   // Not a Quebec postal code or invalid
