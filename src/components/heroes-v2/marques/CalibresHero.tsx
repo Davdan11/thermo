@@ -238,13 +238,13 @@ function Ruler({ offered, photo, brand }: { offered: CalibresProps["offered"]; p
           {photo && photoX !== null ? (
             <motion.figure
               className="absolute bottom-0 m-0 w-[128px] -translate-x-1/2 sm:w-[220px]"
-              style={{ left: `${photoX}%` }}
+              style={{ left: `${photoX}%`, mixBlendMode: "multiply" }}
               initial={{ opacity: 0, y: -28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: photoDelay }}
             >
               <div className="relative aspect-[4/3]">
-                <Image src={photo.src} alt={photo.alt} fill sizes="220px" style={{ objectFit: "contain", mixBlendMode: "multiply" }} />
+                <Image src={photo.src} alt={photo.alt} fill sizes="220px" style={{ objectFit: "contain" }} />
               </div>
               <figcaption className="mt-1 text-center text-[10.5px] leading-snug" style={{ fontFamily: MONO, color: C.mute }}>
                 {caption}

@@ -450,6 +450,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       <th key={p.detail.model.id} scope="col" className="px-3 pb-8 pt-2 align-bottom font-normal sm:px-5" style={{ background: s === "n" ? tone(i) : undefined }}>
         <motion.div
           className={`flex flex-col ${s === "a" ? "items-end text-right" : "items-start text-left"}`}
+          style={{ mixBlendMode: "multiply" }}
           initial={{ opacity: 0, x: s === "a" ? -48 : s === "b" ? 48 : 0, y: s === "n" ? 20 : 0 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true }}

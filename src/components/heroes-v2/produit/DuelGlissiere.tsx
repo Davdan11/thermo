@@ -268,7 +268,7 @@ function Half({ side, m, other, clip, bg, reduce }: { side: "a" | "b"; m: VsMode
   return (
     <motion.div className="absolute inset-0" style={{ background: bg, clipPath: clip }}>
       {/* Photo, face à l'adversaire */}
-      <motion.div className={`dg-${side}-photo absolute`} initial={reduce ? false : { opacity: 0, x: from }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.3, ease: EASE, delay: 0.35 }}>
+      <motion.div className={`dg-${side}-photo absolute`} style={{ mixBlendMode: "multiply" }} initial={reduce ? false : { opacity: 0, x: from }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.3, ease: EASE, delay: 0.35 }}>
         {m ? (
           <Link href={`/produit/${m.slug}`} aria-label={`${m.brand} ${m.name} : voir la fiche`} className="group absolute inset-0 block" draggable={false}>
             {m.img ? (

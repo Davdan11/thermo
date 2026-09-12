@@ -35,7 +35,8 @@ export function DuelSection({ children }: { children: ReactNode }) {
           animate={seen ? { scaleY: 1 } : undefined}
           transition={{ duration: 2, ease: EASE }}
         />
-        <div className="relative z-10 mx-auto w-full max-w-[1280px] px-5 pb-24 pt-14 sm:px-8 sm:pb-28 sm:pt-20 lg:px-10">{children}</div>
+        {/* Sans z-index : un calque isolerait le fond acier / sable, et le blanc des photos (multiply) resterait visible. */}
+        <div className="relative mx-auto w-full max-w-[1280px] px-5 pb-24 pt-14 sm:px-8 sm:pb-28 sm:pt-20 lg:px-10">{children}</div>
       </section>
     </MotionConfig>
   );
