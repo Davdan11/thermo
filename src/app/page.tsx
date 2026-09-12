@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { HeroPremium } from "@/components/home/HeroPremium";
-import { CompareSectionAnimated } from "@/components/home/CompareSectionAnimated";
 import { ModelesADecouvrir } from "@/components/home/ModelesADecouvrir";
-import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ColdStory } from "@/components/home/ColdStory";
+import { ScanShowcase } from "@/components/home/premium/ScanShowcase";
+import { CompareStage, type CompareModel } from "@/components/home/premium/CompareStage";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { registry } from "@/lib/data/registry";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
@@ -33,6 +33,16 @@ export default function HomePage() {
   const brandsSummary = getPublishedBrandsSummary();
   const coldClimate = brandsSummary.reduce((sum, b) => sum + b.coldClimateCount, 0);
   const with5F = registry.models.filter((m) => m.status === "published" && m.heatingCapacity5FMinBtu != null).length;
+
+  // Comparaison : trois murales de 12 000 BTU certifiées climat froid, chiffres du catalogue (N/D si absents).
+  const compareModels: CompareModel[] = [
+    { slug: "mitsubishi-electric-muz-fx12nlhz", brand: "Mitsubishi Electric", img: "/images/comparer-accueil/mitsubishi-muz-fx12nlhz.webp" },
+    { slug: "daikin-rxt12avju", brand: "Daikin", img: "/images/comparer-accueil/daikin-rxt12avju.webp" },
+    { slug: "fujitsu-aouh12ktap1", brand: "Fujitsu", img: "/images/comparer-accueil/fujitsu-aouh12ktap1.webp" },
+  ].flatMap((c) => {
+    const m = registry.modelBySlug.get(c.slug);
+    return m ? [{ ...c, name: m.name, h5: m.heatingCapacity5FMaxBtu ?? null, hspf2: m.hspf2Max ?? null, seer2: m.seer2Max ?? null, cop5: m.cop5FMax ?? null }] : [];
+  });
   return (
     <main className={`${display.variable} ${serif.variable}`} style={{ fontFamily: "var(--font-sans, 'Inter', sans-serif)", color: "#172126", backgroundColor: "#fff" }}>
 
@@ -82,11 +92,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CompareSectionAnimated />
+      <CompareStage models={compareModels} />
 
       <ColdStory coldClimate={coldClimate} with5F={with5F} />
 
-      <ThermoScanPromo variant="band" context="accueil" />
+      <ScanShowcase />
 
       <ModelesADecouvrir />
       {/* ══════════════════════════════════════════════════════════════════

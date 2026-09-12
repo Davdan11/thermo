@@ -1,0 +1,72 @@
+/* ==================================================================
+   Sections premium de l'accueil (catégories, comparaison, ThermoScan).
+   Préfixe ps- pour ne rien toucher au reste du site.
+   ================================================================== */
+
+/* Lignes d'air : pointillés qui circulent lentement, comme un flux d'air. */
+.ps-air { stroke-dasharray: 2 12; animation: ps-air linear infinite; }
+@keyframes ps-air { to { stroke-dashoffset: -280; } }
+
+/* Panneaux de catégories : le panneau actif s'élargit. */
+.ps-panel { transition: flex-grow 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.ps-desc {
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition: grid-template-rows 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s;
+}
+.ps-desc > * { overflow: hidden; min-height: 0; }
+@media (min-width: 1024px) {
+  .ps-panel:not([data-active="true"]) .ps-desc { grid-template-rows: 0fr; opacity: 0; }
+  /* Panneau replié : la flèche passerait sous le titre ; elle n'apparaît que sur le panneau ouvert. */
+  .ps-panel:not([data-active="true"]) .ps-panel-arrow { opacity: 0; transform: scale(0.6); }
+}
+
+/* Onglets défilants sur mobile, sans barre visible. */
+.ps-tabs { scrollbar-width: none; }
+.ps-tabs::-webkit-scrollbar { display: none; }
+.ps-panel-arrow { transition: background 0.4s, color 0.4s, border-color 0.4s, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.ps-panel[data-active="true"] .ps-panel-arrow { background: #e54b17; border-color: #e54b17; color: #fff; transform: rotate(-45deg); }
+
+/* Ligne de lecture dans l'écran du téléphone. */
+.ps-scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e54b17;
+  box-shadow: 0 0 0 1px rgba(229, 75, 23, 0.25);
+  animation: ps-scanline 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+@keyframes ps-scanline { 0% { top: 18%; } 50% { top: 82%; } 100% { top: 18%; } }
+
+/* Ondes derrière le téléphone. */
+.ps-wave { transform-origin: center; transform-box: fill-box; animation: ps-wave 6s cubic-bezier(0.2, 0.6, 0.3, 1) infinite; }
+@keyframes ps-wave { 0% { transform: scale(0.3); opacity: 0.9; } 100% { transform: scale(1.2); opacity: 0; } }
+
+/* Scène de comparaison : reflet au sol. */
+.ps-reflection {
+  transform: scaleY(-1);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0) 45%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0) 45%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps-air, .ps-scanline, .ps-wave { animation: none; }
+}
+
+/* Comparaison : flottement des appareils et reflet qui parcourt la barre du meilleur. */
+.ps-float { animation: ps-float 6.5s ease-in-out infinite; }
+@keyframes ps-float { 50% { transform: translateY(-10px); } }
+.ps-sweep {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  animation: ps-sweep 2.6s ease-in-out infinite;
+}
+@keyframes ps-sweep { 0% { left: -30%; } 100% { left: 100%; } }
+@media (prefers-reduced-motion: reduce) {
+  .ps-float, .ps-sweep { animation: none; }
+}

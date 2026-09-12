@@ -15,7 +15,7 @@ const KIND_LABEL: Record<SearchKind, string> = { modele: "Modèles", marque: "Ma
 const KIND_ICON: Record<SearchKind, typeof Search> = { modele: Wind, marque: Building2, ville: MapPin, guide: BookOpen, page: FileText };
 const KIND_ORDER: SearchKind[] = ["modele", "marque", "ville", "guide", "page"];
 
-export function SiteSearch({ variant = "desktop" }: { variant?: "desktop" | "mobile" }) {
+export function SiteSearch({ variant = "desktop", onDark = false }: { variant?: "desktop" | "mobile"; /** Bouton en crème sur fond sombre (en-tête transparent de l’accueil). */ onDark?: boolean }) {
   const router = useRouter();
   const [open, setOpen] = useState(variant === "mobile");
   const [q, setQ] = useState("");
@@ -192,8 +192,8 @@ export function SiteSearch({ variant = "desktop" }: { variant?: "desktop" | "mob
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Rechercher"
-          className="inline-flex items-center justify-center w-10 h-10 rounded-full hover:bg-[#f7f5f0] transition-colors"
-          style={{ color: "#0b1b24" }}
+          className={`inline-flex items-center justify-center w-10 h-10 rounded-full transition-colors duration-300 ${onDark ? "hover:bg-white/10" : "hover:bg-[#f7f5f0]"}`}
+          style={{ color: onDark ? "#F4EFE7" : "#0b1b24" }}
         >
           <Search size={19} />
         </button>

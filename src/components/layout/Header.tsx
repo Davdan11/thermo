@@ -26,14 +26,15 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 const LOGO_RATIO = 862 / 191;
+const CREAM = "#F4EFE7";
 
-function NavLabel({ link, height }: { link: NavLink; height: number }) {
+function NavLabel({ link, height, onDark = false }: { link: NavLink; height: number; onDark?: boolean }) {
   if (!link.logo) return <>{link.label}</>;
   // Largeur explicite : avec « width: auto » et le « max-width: 100% » de Tailwind, l'image se réduit à
   // zéro dans un conteneur inline-flex et la pastille s'affichait vide.
   const width = Math.round(height * LOGO_RATIO);
   return (
-    <span style={{ display: "inline-flex", alignItems: "center", background: "#0C1821", borderRadius: 999, padding: `${Math.round(height * 0.3)}px ${Math.round(height * 0.65)}px`, lineHeight: 0 }}>
+    <span style={{ display: "inline-flex", alignItems: "center", background: "#0C1821", borderRadius: 999, padding: `${Math.round(height * 0.3)}px ${Math.round(height * 0.65)}px`, lineHeight: 0, boxShadow: onDark ? "inset 0 0 0 1px rgba(244,239,231,0.22)" : "none" }}>
       <img src={link.logo} alt={link.label} width={width} height={height} style={{ height, width, maxWidth: "none", display: "block" }} />
     </span>
   );
@@ -95,14 +96,22 @@ export function Header() {
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + "/");
 
+  // Accueil : en-tête transparent par-dessus le héros (photo sombre) tant qu'on n'a pas défilé,
+  // puis fond blanc habituel. Les autres pages gardent l'en-tête blanc.
+  const overHero = pathname === "/" && !scrolled && !menuOpen;
+  const linkColor = (href: string) => (overHero ? "rgba(244,239,231,0.8)" : isActive(href) ? "#0b1b24" : "#536873");
+
   return (
     <>
       <header
         ref={headerRef}
-        style={{ backgroundColor: "#fff", borderBottom: "1px solid #e5e5e5" }}
+        style={{
+          backgroundColor: overHero ? "rgba(255,255,255,0)" : "#fff",
+          borderBottom: `1px solid ${overHero ? "rgba(255,255,255,0)" : "#e5e5e5"}`,
+          transition: "background-color .45s ease, border-color .45s ease, padding .2s ease-in-out",
+        }}
         className={cn(
           "sticky top-0 z-50",
-          "transition-[padding] duration-200 ease-in-out",
           scrolled ? "py-3" : "py-4",
         )}
       >
@@ -115,12 +124,22 @@ export function Header() {
               aria-label="Thermopompes À Vendre.ca — Accueil"
               style={{ textDecoration: "none" }}
             >
-              <img 
-                src="/images/headerlogo-720.webp" 
-                alt="Thermopompes A Vendre" 
-                className="h-[60px] min-[1700px]:h-[72px]"
-                style={{ width: "auto", display: "block" }}
-              />
+              {/* Deux versions superposées (noire et crème) : fondu enchaîné quand l'en-tête devient blanc. */}
+              <span className="relative block">
+                <img
+                  src="/images/headerlogo-720.webp"
+                  alt="Thermopompes A Vendre"
+                  className="h-[60px] min-[1700px]:h-[72px]"
+                  style={{ width: "auto", display: "block", opacity: overHero ? 0 : 1, transition: "opacity .45s ease" }}
+                />
+                <img
+                  src="/images/headerlogo-720-creme.webp"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-[60px] min-[1700px]:h-[72px]"
+                  style={{ width: "auto", display: "block", opacity: overHero ? 1 : 0, transition: "opacity .45s ease", pointerEvents: "none" }}
+                />
+              </span>
             </Link>
 
             {/* ── Desktop Navigation ── */}
@@ -134,30 +153,33 @@ export function Header() {
                   href={link.href}
                   className={link.wide ? "hidden min-[1700px]:inline-flex" : "inline-flex"}
                   style={{
-                    color: isActive(link.href) ? "#0b1b24" : "#536873",
+                    color: linkColor(link.href),
                     fontSize: 14.5,
                     fontWeight: 500,
                     padding: "8px 8px",
                     whiteSpace: "nowrap",
                     textDecoration: "none",
-                    transition: "color 0.15s",
+                    transition: "color 0.3s",
                     position: "relative" as const,
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "#0b1b24")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = isActive(link.href) ? "#0b1b24" : "#536873")}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = overHero ? CREAM : "#0b1b24")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = linkColor(link.href))}
                 >
-                  <NavLabel link={link} height={16} />
+                  <NavLabel link={link} height={16} onDark={overHero} />
                 </Link>
               ))}
             </nav>
 
             {/* ── Right: CTA + Mobile toggle ── */}
             <div className="flex items-center gap-2 sm:gap-3">
-              <div className="hidden 2xl:flex"><SiteSearch /></div>
+              <div className="hidden 2xl:flex"><SiteSearch onDark={overHero} /></div>
               <a
                 href="tel:4389003224"
                 aria-label="Appeler le 438-900-3224"
-                className="hidden 2xl:inline-flex items-center gap-2 rounded-full border border-[#0b1b24]/15 px-3 py-2 text-[14px] font-semibold text-[#0b1b24] no-underline whitespace-nowrap hover:bg-[#f7f5f0] transition-colors"
+                className={cn(
+                  "hidden 2xl:inline-flex items-center gap-2 rounded-full border px-3 py-2 text-[14px] font-semibold no-underline whitespace-nowrap transition-colors duration-300",
+                  overHero ? "border-white/25 text-[#F4EFE7] hover:bg-white/10" : "border-[#0b1b24]/15 text-[#0b1b24] hover:bg-[#f7f5f0]",
+                )}
               >
                 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>
                 <span>438-900-3224</span>
@@ -180,7 +202,7 @@ export function Header() {
               <button
                 onClick={toggleMenu}
                 className="xl:hidden"
-                style={{ background: "none", border: "none", color: "#0b1b24", cursor: "pointer", padding: 8 }}
+                style={{ background: "none", border: "none", color: overHero ? CREAM : "#0b1b24", cursor: "pointer", padding: 8, transition: "color .3s" }}
                 aria-expanded={menuOpen}
                 aria-controls="mobile-menu"
                 aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}

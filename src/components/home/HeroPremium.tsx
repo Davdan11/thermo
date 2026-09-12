@@ -23,8 +23,6 @@ const C = {
   line: "rgba(244,239,231,0.14)",
 };
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
-/** Hauteur de l'en-tête du site au-dessus du héros (92 px + bordure de 1 px). */
-const HEADER_H = 93;
 
 export function HeroPremium({ eligible, brands }: { eligible: number; brands: number }) {
   const ref = useRef<HTMLElement>(null);
@@ -45,8 +43,10 @@ export function HeroPremium({ eligible, brands }: { eligible: number; brands: nu
   return (
     <section
       ref={ref}
-      className="cs-grain relative overflow-hidden"
-      style={{ height: `calc(100svh - ${HEADER_H}px)`, minHeight: 640, background: C.ink, color: C.cream, fontFamily: "var(--font-display), var(--font-sans), sans-serif" }}
+      // L'en-tête (transparent sur l'accueil : 93 px, 105 px dès 1700 px) passe par-dessus :
+      // le héros remonte sous lui et occupe tout l'écran.
+      className="cs-grain relative -mt-[93px] overflow-hidden min-[1700px]:-mt-[105px]"
+      style={{ height: "100svh", minHeight: 720, background: C.ink, color: C.cream, fontFamily: "var(--font-display), var(--font-sans), sans-serif" }}
       aria-labelledby="hp-titre"
     >
       <motion.div className="absolute inset-0" style={reduce ? undefined : { scale: imgScale, y: imgY }}>
@@ -64,12 +64,14 @@ export function HeroPremium({ eligible, brands }: { eligible: number; brands: nu
       </motion.div>
       <div aria-hidden="true" className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(10,20,25,0.94) 0%, rgba(10,20,25,0.72) 34%, rgba(10,20,25,0.16) 66%, rgba(10,20,25,0) 100%)" }} />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[55%]" style={{ background: "linear-gradient(0deg, #0A1419 6%, rgba(10,20,25,0) 100%)" }} />
+      {/* Haut assombri : les menus en crème de l'en-tête transparent restent lisibles. */}
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[28%]" style={{ background: "linear-gradient(180deg, rgba(10,20,25,0.6) 0%, rgba(10,20,25,0) 100%)" }} />
       {/* Mobile : la photo passe sous le texte, on la fonce davantage. */}
       <div aria-hidden="true" className="absolute inset-0 lg:hidden" style={{ background: "rgba(10,20,25,0.5)" }} />
       <motion.div aria-hidden="true" className="absolute inset-0" style={{ background: C.ink, opacity: shade }} />
 
       <motion.div
-        className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-8 sm:px-8 lg:px-12 lg:pb-12"
+        className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-8 pt-[93px] sm:px-8 lg:px-12 lg:pb-12 min-[1700px]:pt-[105px]"
         style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
       >
         <Appear delay={0.1} className="mb-7 flex items-center gap-3 text-[12px] font-medium uppercase" style={{ letterSpacing: "0.22em", color: C.mute }}>
