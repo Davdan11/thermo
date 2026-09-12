@@ -1,10 +1,41 @@
 /* ==================================================================
-   Héros du catalogue /thermopompes (préfixe ch-).
+   Héros du catalogue /thermopompes : « Le showroom » (préfixe ch-).
+   Salle d'exposition claire, plateau tournant en perspective.
    ================================================================== */
 
-/* overflow-x: hidden global sur html/body : l'en-tête sticky ne colle pas. Sur cette page seulement. */
+/* overflow-x: hidden global sur html/body : l'en-tête sticky et le panneau de filtres ne collent pas.
+   Sur cette page seulement. */
 html:has(.ch-root), body:has(.ch-root) { overflow-x: clip; }
 
+/* Mur de pierre chaude en haut, sol blanc lumineux en bas. */
+.ch-root { background: linear-gradient(180deg, #f1ede6 0%, #f5f2ed 55%, #ffffff 100%); }
+.ch-root :focus-visible { outline: 2px solid #e54b17; outline-offset: 3px; }
+
+/* Téléphone : titre, plateau, recherche, chiffres. Ordinateur : titre et recherche à gauche, plateau à droite. */
+.ch-grid { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "title" "stage" "copy" "facts"; }
+.ch-a-title { grid-area: title; }
+.ch-a-stage { grid-area: stage; min-width: 0; }
+.ch-a-copy { grid-area: copy; }
+.ch-a-facts { grid-area: facts; }
+@media (min-width: 1024px) {
+  .ch-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "title stage" "copy stage" "facts stage";
+    column-gap: 40px;
+  }
+  .ch-a-facts { align-self: end; }
+}
+
+.ch-title {
+  font-size: clamp(54px, 8.6vw, 136px);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  font-weight: 600;
+  margin: 22px 0 0;
+}
+/* Masque de révélation : un peu d'air à droite et en bas pour l'italique et les jambages. */
+.ch-line { display: block; overflow: hidden; padding: 0 0.12em 0.14em 0; margin: 0 -0.12em -0.14em 0; }
 .ch-serif {
   font-family: var(--font-serif), "Times New Roman", serif;
   font-style: italic;
@@ -13,21 +44,170 @@ html:has(.ch-root), body:has(.ch-root) { overflow-x: clip; }
   font-size: 1.06em;
 }
 
-/* Mur de produits : colonnes qui défilent à la verticale (sens inverses), pause au survol. */
-.ch-track { animation: ch-up var(--ch-dur, 60s) linear infinite; }
-.ch-track[data-reverse="true"] { animation-direction: reverse; }
-.ch-col:hover .ch-track { animation-play-state: paused; }
-@keyframes ch-up { to { transform: translateY(-50%); } }
+.ch-chip {
+  border: 1px solid rgba(18, 20, 23, 0.16);
+  background: rgba(255, 255, 255, 0.7);
+  color: #121417;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+.ch-chip:hover { background: #121417; border-color: #121417; color: #f4f1ec; }
+.ch-match { background: linear-gradient(currentColor, currentColor) 8px 88% / 0% 1px no-repeat; transition: background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.ch-match:hover { background-size: calc(100% - 16px) 1px; }
 
-/* Variante mobile : ruban horizontal. */
-.ch-htrack { display: flex; width: max-content; animation: ch-left var(--ch-dur, 50s) linear infinite; }
-@keyframes ch-left { to { transform: translateX(-50%); } }
+/* ── Plateau tournant ──────────────────────────────────────────────
+   --rx/--ry demi-axes de l'ellipse où posent les appareils, --iw/--ih cadre d'un appareil
+   (celui de devant), --cy hauteur du centre du plateau dans la scène. */
+.ch-stage {
+  position: relative;
+  height: 350px;
+  margin: 14px -20px 0;
+  --rx: 132px; --ry: 40px; --iw: 170px; --ih: 124px; --cy: 212px;
+  outline-offset: -6px;
+}
+@media (min-width: 640px) { .ch-stage { margin: 18px -32px 0; } }
+@media (min-width: 768px) { .ch-stage { height: 460px; --rx: 220px; --ry: 62px; --iw: 240px; --ih: 176px; --cy: 300px; } }
+@media (min-width: 1024px) { .ch-stage { height: 540px; margin: 0 -24px 0 -96px; --rx: 186px; --ry: 56px; --iw: 216px; --ih: 158px; --cy: 360px; } }
+@media (min-width: 1280px) { .ch-stage { height: 590px; --rx: 236px; --ry: 68px; --iw: 262px; --ih: 192px; --cy: 392px; } }
+@media (min-width: 1536px) { .ch-stage { height: 640px; margin: 0 -40px 0 -130px; --rx: 262px; --ry: 78px; --iw: 296px; --ih: 216px; --cy: 418px; } }
 
-.ch-chip { transition: background 0.3s, border-color 0.3s, color 0.3s; }
-.ch-chip:hover { background: rgba(244, 239, 231, 0.12); border-color: rgba(244, 239, 231, 0.4); }
+/* Sol : flaque de lumière blanche sous le plateau. */
+.ch-floor {
+  position: absolute;
+  left: 50%;
+  top: var(--cy);
+  width: calc(var(--rx) * 3.2);
+  height: calc(var(--ry) * 4.2);
+  transform: translate(-50%, -44%);
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7) 45%, rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+/* Cône de projecteur, fixe, qui tombe sur l'appareil de devant. */
+.ch-cone {
+  position: absolute;
+  left: 50%;
+  top: -90px;
+  width: calc(var(--iw) * 1.9);
+  height: calc(var(--cy) + var(--ry) + 90px);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+/* Plateau vu en perspective : face supérieure éclairée devant, tranche, ombre portée ; repère orange devant. */
+.ch-disc {
+  position: absolute;
+  left: 50%;
+  top: var(--cy);
+  width: calc(var(--rx) * 2 + var(--iw) * 0.42);
+  height: calc(var(--ry) * 2 + var(--iw) * 0.13);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(ellipse 62% 58% at 50% 66%, #ffffff 0%, #fcfbf8 42%, #eeeae3 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(18, 20, 23, 0.05),
+    0 12px 0 0 #e6e0d6,
+    0 12px 0 1px rgba(18, 20, 23, 0.07),
+    0 42px 54px -26px rgba(18, 20, 23, 0.3);
+  pointer-events: none;
+}
+.ch-disc::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  background: #e54b17;
+  transform: translateX(-50%);
+}
+
+.ch-ring { position: absolute; inset: 0; touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; }
+.ch-ring:active { cursor: grabbing; }
+/* Chaque appareil se fond dans la salle (multiply) : le fond blanc des photos disparaît.
+   Aucun parent entre la section et l'appareil ne doit isoler le mélange (ni transform, ni opacity, ni filter). */
+.ch-ring-item {
+  position: absolute;
+  left: calc(50% - var(--iw) / 2);
+  top: calc(var(--cy) - var(--ih));
+  width: var(--iw);
+  height: var(--ih);
+  transform-origin: 50% 100%;
+  mix-blend-mode: multiply;
+  will-change: transform, opacity;
+}
+.ch-ring-link { position: absolute; inset: 0; display: block; -webkit-user-drag: none; }
+.ch-ring-shadow {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: -6%;
+  height: 12%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(18, 20, 23, 0.34), rgba(18, 20, 23, 0));
+  pointer-events: none;
+}
+
+/* Photo : descendue du vide mesuré sous l'appareil, posée à l'arrivée. */
+.ch-photo {
+  --rh: min(var(--ih), var(--iw) / var(--a, 1));
+  --rw: min(var(--iw), var(--ih) * var(--a, 1));
+  opacity: 0;
+  translate: 0 calc(var(--f, 0) * var(--rh) - 14px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), translate 1s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.ch-photo[data-ready="true"] { opacity: 1; translate: 0 calc(var(--f, 0) * var(--rh)); }
+/* Photo sur fond noir : masque de détourage calculé au chargement, calé comme l'image (contain, en bas au centre). */
+.ch-photo[data-cut="true"] {
+  -webkit-mask-size: var(--rw) var(--rh);
+  mask-size: var(--rw) var(--rh);
+  -webkit-mask-position: 50% 100%;
+  mask-position: 50% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+/* Repli (masque impossible) : petit panneau aux coins arrondis. */
+.ch-photo[data-tone="dark"] { clip-path: inset(calc(var(--ih) - var(--rh)) calc((var(--iw) - var(--rw)) / 2) 0 round 6px 6px 0 0); }
+
+/* Légende sous le plateau. */
+.ch-caption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 120; display: flex; align-items: center; justify-content: center; gap: 14px; }
+.ch-caption-body { min-width: 230px; text-align: center; }
+.ch-caption-slot { min-height: 34px; }
+.ch-kicker {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(18, 20, 23, 0.52);
+}
+.ch-kicker::before { content: ""; width: 18px; height: 1px; background: #e54b17; }
+.ch-caption-link { display: inline-flex; align-items: baseline; gap: 10px; margin-top: 8px; font-size: clamp(18px, 1.45vw, 22px); letter-spacing: -0.02em; color: #121417; text-decoration: none; }
+.ch-caption-link .ch-go { color: #c23d0f; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.ch-caption-link:hover .ch-go { transform: translateX(4px); }
+.ch-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: none;
+  color: #121417;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.25s, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ch-arrow:hover { color: #c23d0f; }
+.ch-arrow[data-dir="prev"]:hover { transform: translateX(-3px); }
+.ch-arrow[data-dir="next"]:hover { transform: translateX(3px); }
 
 @media (prefers-reduced-motion: reduce) {
-  .ch-track, .ch-htrack { animation: none; }
+  .ch-photo { transition: opacity 0.3s; }
+  .ch-arrow:hover, .ch-caption-link:hover .ch-go { transform: none; }
 }
 
 /* Recherche du héros : on masque le « x » bleu natif du navigateur (bouton d'effacement maison). */

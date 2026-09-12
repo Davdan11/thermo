@@ -11,8 +11,8 @@ import { EASE, MaskLines, Reveal, typo, useSeen } from "./motion";
 /* ==================================================================
    Sections du catalogue (/thermopompes) sous le héros.
    Encre #0A1419, crème, orange ; Inter Tight + Instrument Serif italique.
-   - Bande de marques : prolonge le héros sur l'encre, logos en crème.
-   - Feuille de papier chaud qui remonte sur l'encre : la galerie.
+   - Bande de marques : prolonge le héros clair « Le showroom », logos à l’encre.
+   - Feuille de papier chaud qui remonte sur la pierre : la galerie.
    - Serre-livre final sur l'encre (appel à l'action).
    ================================================================== */
 
@@ -20,6 +20,9 @@ const INK = "#0A1419";
 const CREAM = "#F4EFE7";
 const ORANGE = "#E54B17";
 const LINE = "rgba(244,239,231,0.12)";
+/* Bande des marques sous le héros clair : part du sol blanc du showroom et se creuse vers la pierre, pour que la feuille de la galerie se lise en montant. */
+const STONE = "linear-gradient(180deg, #FFFFFF 0%, #EAE5DC 100%)";
+const STRIP_LINE = "rgba(18,20,23,0.1)";
 
 export type StripBrand = { name: string; slug: string; src: string };
 
@@ -28,18 +31,18 @@ export function BrandStrip({ rows, mobile }: { rows: StripBrand[][]; mobile: Str
   const { ref, seen, reduce } = useSeen<HTMLDivElement>("0px 0px -5% 0px");
   let k = 0;
   return (
-    <div ref={ref} className="relative z-20" style={{ background: INK, color: CREAM }}>
-      {/* Ordinateur : deux rangées, filets crème */}
+    <div ref={ref} className="relative z-20" style={{ background: STONE, color: INK }}>
+      {/* Ordinateur : deux rangées, filets d’encre */}
       <div className="mx-auto hidden max-w-[1440px] px-8 pb-16 pt-2 md:block lg:px-12">
         {rows.map((row, r) => (
-          <div key={r} className="flex items-stretch" style={{ borderTop: `1px solid ${LINE}`, borderBottom: r === rows.length - 1 ? `1px solid ${LINE}` : undefined }}>
+          <div key={r} className="flex items-stretch" style={{ borderTop: `1px solid ${STRIP_LINE}`, borderBottom: r === rows.length - 1 ? `1px solid ${STRIP_LINE}` : undefined }}>
             {row.map((brand, i) => {
               const d = 0.05 * k++;
               return (
                 <motion.div
                   key={brand.slug}
                   className="flex-1"
-                  style={{ borderLeft: i > 0 ? `1px solid ${LINE}` : undefined }}
+                  style={{ borderLeft: i > 0 ? `1px solid ${STRIP_LINE}` : undefined }}
                   initial={reduce ? false : { opacity: 0, y: 14 }}
                   animate={seen ? { opacity: 1, y: 0 } : undefined}
                   transition={{ duration: 0.8, ease: EASE, delay: d }}
@@ -56,9 +59,9 @@ export function BrandStrip({ rows, mobile }: { rows: StripBrand[][]; mobile: Str
       </div>
       {/* Téléphone : grille */}
       <div className="mx-auto max-w-[1440px] px-5 pb-14 pt-2 sm:px-8 md:hidden">
-        <div className="grid grid-cols-4 gap-px" style={{ background: LINE, border: `1px solid ${LINE}` }}>
+        <div className="grid grid-cols-4 gap-px" style={{ background: STRIP_LINE, border: `1px solid ${STRIP_LINE}` }}>
           {mobile.map((brand, i) => (
-            <motion.div key={brand.slug} style={{ background: INK }} initial={reduce ? false : { opacity: 0 }} animate={seen ? { opacity: 1 } : undefined} transition={{ duration: 0.7, delay: i * 0.04 }}>
+            <motion.div key={brand.slug} style={{ background: "#F8F6F2" }} initial={reduce ? false : { opacity: 0 }} animate={seen ? { opacity: 1 } : undefined} transition={{ duration: 0.7, delay: i * 0.04 }}>
               <Link href={`/thermopompes?brand=${brand.slug}`} className="catg-brand flex h-[58px] items-center justify-center p-2.5">
                 <Image src={brand.src} alt={brand.name} width={180} height={65} sizes="110px" className="h-auto max-h-[22px] w-auto max-w-full object-contain" />
               </Link>

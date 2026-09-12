@@ -30,6 +30,8 @@ const LIGHT_HEROES: Array<{ path: string; exact?: boolean }> = [
   { path: "/conditions" },
   { path: "/confidentialite" },
   { path: "/accessibilite" },
+  // Catalogue : héros « L’étagère » sur pierre claire (la route seule ; les sous-pages gardent leur ton).
+  { path: "/thermopompes", exact: true },
   // Pages par capacité : plaque signalétique en aluminium clair.
   { path: "/thermopompes/thermopompe-6000-btu", exact: true },
   { path: "/thermopompes/thermopompe-9000-btu", exact: true },

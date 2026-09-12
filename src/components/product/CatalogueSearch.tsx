@@ -14,20 +14,20 @@ import type { SearchHit } from "@/lib/search/site-search";
    ------------------------------------------------------------------ */
 
 interface CatalogueSearchProps {
-  /** « premium » : pastille de verre du héros du catalogue. */
+  /** « premium » : pastille blanche du héros du catalogue (« L’étagère », fond clair). */
   variant?: "default" | "dark" | "premium";
 }
 
 /** Zone des résultats du catalogue (src/app/thermopompes/page.tsx). */
 const RESULTS_ID = "catalogue-resultats";
 
-/** Logo monochrome de la marque, passé en crème ; initiale si le logo n'existe pas. */
+/** Logo monochrome de la marque, passé à l’encre ; initiale si le logo n'existe pas. */
 function BrandMark({ href, title }: { href: string; title: string }) {
   const [failed, setFailed] = useState(false);
   const slug = href.split("/").filter(Boolean).pop() ?? "";
   if (failed || !slug) {
     return (
-      <span className="text-[15px] font-bold" style={{ color: "#F4EFE7" }}>
+      <span className="text-[15px] font-bold" style={{ color: "#121417" }}>
         {title.charAt(0)}
       </span>
     );
@@ -40,7 +40,7 @@ function BrandMark({ href, title }: { href: string; title: string }) {
       width={40}
       height={24}
       onError={() => setFailed(true)}
-      style={{ width: 34, height: 20, objectFit: "contain", filter: "brightness(0) invert(1)" }}
+      style={{ width: 34, height: 20, objectFit: "contain", filter: "brightness(0)", opacity: 0.82 }}
     />
   );
 }
@@ -160,7 +160,7 @@ export function CatalogueSearch({ variant = "default" }: CatalogueSearchProps) {
           aria-expanded={open && query.length >= 2}
           aria-controls="catalogue-suggestions"
           aria-autocomplete="list"
-          className="ch-search h-[58px] w-full rounded-full border border-[rgba(244,239,231,0.22)] bg-[rgba(244,239,231,0.07)] pl-6 pr-[104px] text-[15px] text-[#F4EFE7] backdrop-blur-md transition-colors placeholder:text-[rgba(244,239,231,0.45)] hover:border-[rgba(244,239,231,0.4)] focus-visible:border-[rgba(244,239,231,0.55)] focus-visible:shadow-[0_0_0_4px_rgba(229,75,23,0.22)] focus-visible:outline-none"
+          className="ch-search h-[58px] w-full rounded-full border border-[rgba(18,20,23,0.14)] bg-white pl-6 pr-[104px] text-[15px] text-[#121417] shadow-[0_22px_44px_-30px_rgba(18,20,23,0.5)] transition-[border-color,box-shadow] placeholder:text-[rgba(18,20,23,0.48)] hover:border-[rgba(18,20,23,0.32)] focus-visible:border-[#121417] focus-visible:shadow-[0_0_0_4px_rgba(229,75,23,0.24),0_22px_44px_-30px_rgba(18,20,23,0.5)] focus-visible:outline-none"
           // Le :focus-visible global dessine un rectangle de 2 px : on le coupe dans la pastille.
           style={{ outline: "none" }}
           autoComplete="off"
@@ -172,7 +172,7 @@ export function CatalogueSearch({ variant = "default" }: CatalogueSearchProps) {
             type="button"
             onClick={handleClear}
             aria-label="Effacer la recherche"
-            className="absolute right-[60px] top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-[rgba(244,239,231,0.6)] transition-colors hover:bg-white/10 hover:text-[#F4EFE7]"
+            className="absolute right-[60px] top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-[rgba(18,20,23,0.5)] transition-colors hover:bg-[rgba(18,20,23,0.06)] hover:text-[#121417]"
           >
             <svg aria-hidden="true" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" viewBox="0 0 24 24">
               <path d="M6 6l12 12M18 6L6 18" />
@@ -194,35 +194,35 @@ export function CatalogueSearch({ variant = "default" }: CatalogueSearchProps) {
           <div
             id="catalogue-suggestions"
             className="absolute left-0 right-0 top-[calc(100%+10px)] z-30 overflow-hidden rounded-[22px]"
-            style={{ background: "rgba(16,34,45,0.97)", border: "1px solid rgba(244,239,231,0.14)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", boxShadow: "0 40px 80px -30px rgba(0,0,0,0.85)" }}
+            style={{ background: "#FFFFFF", border: "1px solid rgba(18,20,23,0.08)", boxShadow: "0 1px 0 rgba(18,20,23,0.04), 0 44px 80px -34px rgba(18,20,23,0.42)" }}
           >
             {shownHits.length === 0 ? (
-              <p className="px-5 py-4 text-[14px]" style={{ color: "rgba(244,239,231,0.6)", margin: 0 }}>
+              <p className="px-5 py-4 text-[14px]" style={{ color: "rgba(18,20,23,0.6)", margin: 0 }}>
                 {loading || hits.q !== query ? "Recherche…" : `Aucune suggestion pour « ${query} ». Appuyez sur Entrée pour filtrer le catalogue.`}
               </p>
             ) : (
               <ul role="listbox" style={{ listStyle: "none", margin: 0, padding: "8px 0" }}>
                 {shownHits.map((h) => (
                   <li key={h.href}>
-                    <Link href={h.href} onClick={() => setOpen(false)} className="flex items-center gap-3 px-5 py-2.5 transition-colors hover:bg-white/5">
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl" style={{ background: h.imageUrl ? "#fff" : "rgba(244,239,231,0.08)" }}>
+                    <Link href={h.href} onClick={() => setOpen(false)} className="flex items-center gap-3 px-5 py-2.5 transition-colors hover:bg-[#F4F1EC]">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl" style={{ background: h.imageUrl ? "#fff" : "#F1EDE6", boxShadow: "inset 0 0 0 1px rgba(18,20,23,0.07)" }}>
                         {h.imageUrl ? (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img src={h.imageUrl} alt="" width={40} height={40} loading="lazy" style={{ width: 36, height: 36, objectFit: "contain" }} />
                         ) : h.kind === "marque" ? (
                           <BrandMark href={h.href} title={h.title} />
                         ) : (
-                          <span className="text-[15px] font-bold" style={{ color: "#F4EFE7" }}>
+                          <span className="text-[15px] font-bold" style={{ color: "#121417" }}>
                             {h.title.charAt(0)}
                           </span>
                         )}
                       </span>
                       <span className="min-w-0">
-                        <span className="block truncate text-[14.5px] font-semibold" style={{ color: "#F4EFE7" }}>
+                        <span className="block truncate text-[14.5px] font-semibold" style={{ color: "#121417" }}>
                           {h.title}
                         </span>
                         {h.subtitle && (
-                          <span className="block truncate text-[12.5px]" style={{ color: "rgba(244,239,231,0.55)" }}>
+                          <span className="block truncate text-[12.5px]" style={{ color: "rgba(18,20,23,0.55)" }}>
                             {h.subtitle}
                           </span>
                         )}
@@ -235,8 +235,8 @@ export function CatalogueSearch({ variant = "default" }: CatalogueSearchProps) {
             <button
               type="button"
               onClick={showResults}
-              className="flex w-full items-center justify-between px-5 py-3.5 text-left text-[13.5px] font-semibold transition-colors hover:bg-white/5"
-              style={{ borderTop: "1px solid rgba(244,239,231,0.12)", color: "#E54B17" }}
+              className="flex w-full items-center justify-between px-5 py-3.5 text-left text-[13.5px] font-semibold transition-colors hover:bg-[#F4F1EC]"
+              style={{ borderTop: "1px solid rgba(18,20,23,0.08)", color: "#C23D0F" }}
             >
               Voir tous les résultats dans le catalogue
               <span aria-hidden="true">↓</span>

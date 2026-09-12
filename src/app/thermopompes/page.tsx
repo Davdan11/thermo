@@ -138,7 +138,7 @@ export default async function ThermopompesPage({
 
   return (
     <main className={`min-h-screen bg-[var(--color-background)] ${displayFont.variable} ${serifFont.variable}`}>
-      {/* ---- Héros premium : titre animé, recherche, mur de produits ---- */}
+      {/* ---- Héros « Le showroom » : titre animé, recherche, plateau tournant ---- */}
       <CatalogueHero
         stats={hero.stats}
         wall={hero.wall}
@@ -150,7 +150,7 @@ export default async function ThermopompesPage({
       />
 
       <MotionRoot className="catg-root">
-        {/* ---- Bande de marques : prolonge le héros sur l’encre ---- */}
+        {/* ---- Bande de marques : prolonge le héros sur la pierre ---- */}
         <BrandStrip
           rows={[
             stripBrands([
@@ -183,8 +183,8 @@ export default async function ThermopompesPage({
           ])}
         />
 
-        {/* ---- La galerie : une feuille de papier chaud qui remonte sur l’encre ---- */}
-        <div className="relative z-[25] -mt-8 rounded-[28px] sm:rounded-[40px]" style={{ background: "#F4EFE7" }}>
+        {/* ---- La galerie : une feuille de papier chaud qui remonte sur la pierre ---- */}
+        <div className="relative z-[25] -mt-8 rounded-[28px] sm:rounded-[40px]" style={{ background: "#F4EFE7", boxShadow: "0 -1px 0 rgba(18,20,23,0.05), 0 -28px 56px -38px rgba(18,20,23,0.32)" }}>
           {/* Cible de la recherche du héros (Entrée / loupe) : on descend jusqu’ici. */}
           <div id="catalogue-resultats" className="mx-auto max-w-[1440px] px-5 pb-16 pt-10 sm:px-8 sm:pb-20 sm:pt-14 lg:px-12" style={{ scrollMarginTop: 96 }}>
             <div className="flex flex-col gap-10 lg:flex-row xl:gap-14">

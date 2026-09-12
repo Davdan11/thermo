@@ -85,8 +85,8 @@
 .catg-pill[aria-pressed="false"]:not(:disabled):hover { border-color: #0a1419 !important; }
 .catg-btn:hover { transform: translateY(-2px); }
 
-/* Bande des marques : logos en crème sur l'encre, trait orange au survol. */
-.catg-brand img { filter: brightness(0) invert(1); opacity: 0.52; transition: opacity 0.35s, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+/* Bande des marques : logos à l’encre sur la pierre (sous le héros clair), trait orange au survol. */
+.catg-brand img { filter: brightness(0); opacity: 0.5; transition: opacity 0.35s, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
 .catg-brand:hover img, .catg-brand:focus-visible img { opacity: 1; transform: translateY(-2px); }
 .catg-brand .catg-rule { transform: translateX(-50%) scaleX(0); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
 .catg-brand:hover .catg-rule, .catg-brand:focus-visible .catg-rule { transform: translateX(-50%) scaleX(1); }
