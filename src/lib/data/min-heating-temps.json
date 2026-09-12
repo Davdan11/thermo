@@ -1,0 +1,1559 @@
+[
+  {
+    "outdoorModel": "AOUH09KTAP1",
+    "brand": "Fujitsu",
+    "series": "Orion XLTH+ (KTAP1)",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 23,
+    "quote": "Htg. Operating Range °F (°C) -22 to 75 (-30 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH12KTAP1",
+    "brand": "Fujitsu",
+    "series": "Orion XLTH+ (KTAP1)",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 23,
+    "quote": "Htg. Operating Range °F (°C) -22 to 75 (-30 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH15KTAP1",
+    "brand": "Fujitsu",
+    "series": "Orion XLTH+ (KTAP1)",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 23,
+    "quote": "Htg. Operating Range °F (°C) -22 to 75 (-30 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH09KZAH1",
+    "brand": "Fujitsu",
+    "series": "Orion XLTH (KZAH1)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 25,
+    "quote": "Htg. Operating Range °F (°C) -15 to 75 (-26 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH12KZAH1",
+    "brand": "Fujitsu",
+    "series": "Orion XLTH (KZAH1)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 25,
+    "quote": "Htg. Operating Range °F (°C) -15 to 75 (-26 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH15KZAH1",
+    "brand": "Fujitsu",
+    "series": "Orion XLTH (KZAH1)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 25,
+    "quote": "Htg. Operating Range °F (°C) -15 to 75 (-26 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH18KZAH1",
+    "brand": "Fujitsu",
+    "series": "Orion XLTH (KZAH1)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 25,
+    "quote": "Htg. Operating Range °F (°C) -15 to 75 (-26 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH24KZAH1",
+    "brand": "Fujitsu",
+    "series": "Orion XLTH (KZAH1)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 25,
+    "quote": "Htg. Operating Range °F (°C) -15 to 75 (-26 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH09KMAS1",
+    "brand": "Fujitsu",
+    "series": "KMAS1",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 27,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH12KMAS1",
+    "brand": "Fujitsu",
+    "series": "KMAS1",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 27,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH09KPAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 500 (KPAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 29,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH12KPAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 500 (KPAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 29,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH18KPAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 500 (KPAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 29,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH24KPAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 500 (KPAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 29,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH30KPAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 500 (KPAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 29,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH36KPAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 500 (KPAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 29,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH09KNAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 300 (KNAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 31,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH12KNAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 300 (KNAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 31,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH18KNAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 300 (KNAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 31,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH24KNAS1",
+    "brand": "Fujitsu",
+    "series": "Altair 300 (KNAS1)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 31,
+    "quote": "Htg. Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH09KUAS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUAS1, cassette)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 35,
+    "quote": "Heating Operating Range °F (°C) -5~75 (-21~24)"
+  },
+  {
+    "outdoorModel": "AOUH12KUAS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUAS1, cassette)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 35,
+    "quote": "Heating Operating Range °F (°C) -5~75 (-21~24)"
+  },
+  {
+    "outdoorModel": "AOUH18KUAS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUAS1, cassette)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 35,
+    "quote": "Heating Operating Range °F (°C) -5~75 (-21~24)"
+  },
+  {
+    "outdoorModel": "AOUH09KUBS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUBS1)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 45,
+    "quote": "Heating Operating Range °F (°C) -5~75 (-21~24)"
+  },
+  {
+    "outdoorModel": "AOUH12KUBS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUBS1)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 45,
+    "quote": "Heating Operating Range °F (°C) -5~75 (-21~24)"
+  },
+  {
+    "outdoorModel": "AOUH24KUAS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUAS1, ducted)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 37,
+    "quote": "Htg. Operating Range °F (°C) -5 ~ 75 (-21 ~ 24) (AOUH12-48KUAS1)"
+  },
+  {
+    "outdoorModel": "AOUH30KUAS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUAS1, ducted)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 37,
+    "quote": "Htg. Operating Range °F (°C) -5 ~ 75 (-21 ~ 24) (AOUH12-48KUAS1)"
+  },
+  {
+    "outdoorModel": "AOUH36KUAS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUAS1, ducted)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 37,
+    "quote": "Htg. Operating Range °F (°C) -5 ~ 75 (-21 ~ 24) (AOUH12-48KUAS1)"
+  },
+  {
+    "outdoorModel": "AOUH42KUAS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUAS1, ducted)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 37,
+    "quote": "Htg. Operating Range °F (°C) -5 ~ 75 (-21 ~ 24) (AOUH12-48KUAS1)"
+  },
+  {
+    "outdoorModel": "AOUH48KUAS1",
+    "brand": "Fujitsu",
+    "series": "Centauri Universal (KUAS1, ducted)",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 37,
+    "quote": "Htg. Operating Range °F (°C) -5 ~ 75 (-21 ~ 24) (AOUH12-48KUAS1)"
+  },
+  {
+    "outdoorModel": "AOUH30KUAH1",
+    "brand": "Fujitsu",
+    "series": "Centauri XLTH (KUAH1)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 37,
+    "quote": "Htg. Operating Range °F (°C) -15 ~ 75 (-26 ~ 24) (AOUH30-48KUAH1)"
+  },
+  {
+    "outdoorModel": "AOUH36KUAH1",
+    "brand": "Fujitsu",
+    "series": "Centauri XLTH (KUAH1)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 37,
+    "quote": "Htg. Operating Range °F (°C) -15 ~ 75 (-26 ~ 24) (AOUH30-48KUAH1)"
+  },
+  {
+    "outdoorModel": "AOUH42KUAH1",
+    "brand": "Fujitsu",
+    "series": "Centauri XLTH (KUAH1)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 37,
+    "quote": "Htg. Operating Range °F (°C) -15 ~ 75 (-26 ~ 24) (AOUH30-48KUAH1)"
+  },
+  {
+    "outdoorModel": "AOUH48KUAH1",
+    "brand": "Fujitsu",
+    "series": "Centauri XLTH (KUAH1)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 37,
+    "quote": "Htg. Operating Range °F (°C) -15 ~ 75 (-26 ~ 24) (AOUH30-48KUAH1)"
+  },
+  {
+    "outdoorModel": "AOUH18KWAS2",
+    "brand": "Fujitsu",
+    "series": "Aquila multi-zone (KWAS)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 63,
+    "quote": "Heating Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH24KWAS3",
+    "brand": "Fujitsu",
+    "series": "Aquila multi-zone (KWAS)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 63,
+    "quote": "Heating Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH36KWAS4",
+    "brand": "Fujitsu",
+    "series": "Aquila multi-zone (KWAS)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 63,
+    "quote": "Heating Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH45KWAS5",
+    "brand": "Fujitsu",
+    "series": "Aquila multi-zone (KWAS)",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 63,
+    "quote": "Heating Operating Range °F (°C) 5 to 75 (-15 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH18KWAH2",
+    "brand": "Fujitsu",
+    "series": "Aquila XLTH multi-zone (KWAH)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 65,
+    "quote": "Heating Operating Range °F (°C) -15 to 75 (-26 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH24KWAH3",
+    "brand": "Fujitsu",
+    "series": "Aquila XLTH multi-zone (KWAH)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 65,
+    "quote": "Heating Operating Range °F (°C) -15 to 75 (-26 to 24)"
+  },
+  {
+    "outdoorModel": "AOUH36KWAH4",
+    "brand": "Fujitsu",
+    "series": "Aquila XLTH multi-zone (KWAH)",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/documents/brochures/fujitsu/airstage-h-series.pdf",
+    "page": 65,
+    "quote": "Heating Operating Range °F (°C) -15 to 75 (-26 to 24)"
+  },
+  {
+    "outdoorModel": "PUMY-P36NKMU4",
+    "brand": "Mitsubishi Electric",
+    "series": "PUMY-P NKMU4",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/mitsubishi-electric/DB_PUMY-(H)P-NKMU(2)(4)_M-P0891A_202309.pdf",
+    "page": 4,
+    "quote": "Guaranteed operation range (Heating) D.B.-13 to 70°F [D.B. -25 to 21°C]"
+  },
+  {
+    "outdoorModel": "PUMY-P48NKMU4",
+    "brand": "Mitsubishi Electric",
+    "series": "PUMY-P NKMU4",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/mitsubishi-electric/DB_PUMY-(H)P-NKMU(2)(4)_M-P0891A_202309.pdf",
+    "page": 4,
+    "quote": "Guaranteed operation range (Heating) D.B.-13 to 70°F [D.B. -25 to 21°C]"
+  },
+  {
+    "outdoorModel": "PUMY-HP36NKMU2",
+    "brand": "Mitsubishi Electric",
+    "series": "PUMY-HP NKMU2",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/mitsubishi-electric/DB_PUMY-(H)P-NKMU(2)(4)_M-P0891A_202309.pdf",
+    "page": 5,
+    "quote": "Guaranteed operation range (Heating) D.B. -13 to 70°F [D.B. -25 to 21°C]"
+  },
+  {
+    "outdoorModel": "PUMY-HP42NKMU2",
+    "brand": "Mitsubishi Electric",
+    "series": "PUMY-HP NKMU2",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/mitsubishi-electric/DB_PUMY-(H)P-NKMU(2)(4)_M-P0891A_202309.pdf",
+    "page": 5,
+    "quote": "Guaranteed operation range (Heating) D.B. -13 to 70°F [D.B. -25 to 21°C]"
+  },
+  {
+    "outdoorModel": "PUMY-HP48NKMU2",
+    "brand": "Mitsubishi Electric",
+    "series": "PUMY-HP NKMU2",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/mitsubishi-electric/DB_PUMY-(H)P-NKMU(2)(4)_M-P0891A_202309.pdf",
+    "page": 5,
+    "quote": "Guaranteed operation range (Heating) D.B. -13 to 70°F [D.B. -25 to 21°C]"
+  },
+  {
+    "outdoorModel": "PUMY-P60NKMU4",
+    "brand": "Mitsubishi Electric",
+    "series": "PUMY-P NKMU4",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/mitsubishi-electric/DB_PUMY-(H)P-NKMU(2)(4)_M-P0891A_202309.pdf",
+    "page": 6,
+    "quote": "Guaranteed operation range (Heating) D.B. -13 to 70°F [D.B. -25 to 21°C]"
+  },
+  {
+    "outdoorModel": "MSHHA12C2AN1",
+    "brand": "Moovair",
+    "series": "Morelis",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 7,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -30~24 (-22~75)"
+  },
+  {
+    "outdoorModel": "MSHHA18C2AN1",
+    "brand": "Moovair",
+    "series": "Morelis",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 7,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -30~24 (-22~75)"
+  },
+  {
+    "outdoorModel": "MSHMA09C2AN1",
+    "brand": "Moovair",
+    "series": "Meridian",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 9,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -30~24 (-22~75)"
+  },
+  {
+    "outdoorModel": "MSHMA12C2AN1",
+    "brand": "Moovair",
+    "series": "Meridian",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 9,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -30~24 (-22~75)"
+  },
+  {
+    "outdoorModel": "MSHMA15C2AN1",
+    "brand": "Moovair",
+    "series": "Meridian",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 9,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -30~24 (-22~75)"
+  },
+  {
+    "outdoorModel": "MSHMA18C2AN1",
+    "brand": "Moovair",
+    "series": "Meridian",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 9,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -30~24 (-22~75)"
+  },
+  {
+    "outdoorModel": "MSHMA24C2AN1",
+    "brand": "Moovair",
+    "series": "Meridian",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 9,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -30~24 (-22~75)"
+  },
+  {
+    "outdoorModel": "MSHMA33C2AN1",
+    "brand": "Moovair",
+    "series": "Meridian",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 9,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -30~24 (-22~75)"
+  },
+  {
+    "outdoorModel": "MSHEA09C2AN1",
+    "brand": "Moovair",
+    "series": "Mistral",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 11,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -25~24 (-13~75)"
+  },
+  {
+    "outdoorModel": "MSHEA12C2AN1",
+    "brand": "Moovair",
+    "series": "Mistral",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 11,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -25~24 (-13~75)"
+  },
+  {
+    "outdoorModel": "MSHEA15C2AN1",
+    "brand": "Moovair",
+    "series": "Mistral",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 11,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -25~24 (-13~75)"
+  },
+  {
+    "outdoorModel": "MSHEA18C2AN1",
+    "brand": "Moovair",
+    "series": "Mistral",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 11,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -25~24 (-13~75)"
+  },
+  {
+    "outdoorModel": "MSHEA24C2AN1",
+    "brand": "Moovair",
+    "series": "Mistral",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/documents/brochures/moovair/msh-series.pdf",
+    "page": 11,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -25~24 (-13~75)"
+  },
+  {
+    "outdoorModel": "OCHX-H09A-O",
+    "brand": "Ouellet",
+    "series": "OTP-H-R32",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-H-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -25 à 24 (-13 à 75)"
+  },
+  {
+    "outdoorModel": "OCHX-H12A-O",
+    "brand": "Ouellet",
+    "series": "OTP-H-R32",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-H-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -25 à 24 (-13 à 75)"
+  },
+  {
+    "outdoorModel": "OCHX-H18A-O",
+    "brand": "Ouellet",
+    "series": "OTP-H-R32",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-H-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -25 à 24 (-13 à 75)"
+  },
+  {
+    "outdoorModel": "OCHX-H24A-O",
+    "brand": "Ouellet",
+    "series": "OTP-H-R32",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-H-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -25 à 24 (-13 à 75)"
+  },
+  {
+    "outdoorModel": "OCHX-H30A-O",
+    "brand": "Ouellet",
+    "series": "OTP-H-R32",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-H-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -25 à 24 (-13 à 75)"
+  },
+  {
+    "outdoorModel": "OCHX-H36A-O",
+    "brand": "Ouellet",
+    "series": "OTP-H-R32",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-H-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -25 à 24 (-13 à 75)"
+  },
+  {
+    "outdoorModel": "OARX-H09A-O",
+    "brand": "Ouellet",
+    "series": "OTP-O-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-O-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "OARX-H12A-O",
+    "brand": "Ouellet",
+    "series": "OTP-O-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-O-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "OARX-H18A-O",
+    "brand": "Ouellet",
+    "series": "OTP-O-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-O-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "OARX-H24A-O",
+    "brand": "Ouellet",
+    "series": "OTP-O-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-O-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "OCVX-H09A-O",
+    "brand": "Ouellet",
+    "series": "OTP-P-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-P-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "OCVX-H12A-O",
+    "brand": "Ouellet",
+    "series": "OTP-P-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-P-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "OCVX-H18A-O",
+    "brand": "Ouellet",
+    "series": "OTP-P-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-P-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "OCVX-H24A-O",
+    "brand": "Ouellet",
+    "series": "OTP-P-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-P-R32_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "OFRM2X1-H18A-O",
+    "brand": "Ouellet",
+    "series": "OTP-MZ-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-MZ-R32_FR.pdf",
+    "page": 3,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 24 (-22 à 75)"
+  },
+  {
+    "outdoorModel": "OFRM3X1-H24A-O",
+    "brand": "Ouellet",
+    "series": "OTP-MZ-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-MZ-R32_FR.pdf",
+    "page": 3,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 24 (-22 à 75)"
+  },
+  {
+    "outdoorModel": "OFRM4X1-H30A-O",
+    "brand": "Ouellet",
+    "series": "OTP-MZ-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-MZ-R32_FR.pdf",
+    "page": 3,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 24 (-22 à 75)"
+  },
+  {
+    "outdoorModel": "OFRM4X1-H36A-O",
+    "brand": "Ouellet",
+    "series": "OTP-MZ-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-MZ-R32_FR.pdf",
+    "page": 3,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 24 (-22 à 75)"
+  },
+  {
+    "outdoorModel": "OFRM5X1-H42A-O",
+    "brand": "Ouellet",
+    "series": "OTP-MZ-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-MZ-R32_FR.pdf",
+    "page": 3,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 24 (-22 à 75)"
+  },
+  {
+    "outdoorModel": "OFLX1-H36A-O",
+    "brand": "Ouellet",
+    "series": "OTP-F-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-F-R32_FR.pdf",
+    "page": 2,
+    "quote": "Plage de fonctionnement de la température pour le chauffage °C (°F) -30 à 24 (-22 à 75)"
+  },
+  {
+    "outdoorModel": "OFLX1-H60A-O",
+    "brand": "Ouellet",
+    "series": "OTP-F-R32",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/ouellet/PAM-OTP-F-R32_FR.pdf",
+    "page": 2,
+    "quote": "Plage de fonctionnement de la température pour le chauffage °C (°F) -30 à 24 (-22 à 75)"
+  },
+  {
+    "outdoorModel": "8028-C09-O",
+    "brand": "Convectair",
+    "series": "Capella 28",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/convectair/PAM-Capella28_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "8028-C12-O",
+    "brand": "Convectair",
+    "series": "Capella 28",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/convectair/PAM-Capella28_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "8028-C18-O",
+    "brand": "Convectair",
+    "series": "Capella 28",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/convectair/PAM-Capella28_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "8028-C24-O",
+    "brand": "Convectair",
+    "series": "Capella 28",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/convectair/PAM-Capella28_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "8222-C18-O",
+    "brand": "Convectair",
+    "series": "Capella MZ",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/convectair/PAM-CapellaMZ_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "8322-C27-O",
+    "brand": "Convectair",
+    "series": "Capella MZ",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/convectair/PAM-CapellaMZ_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "8422-C36-O",
+    "brand": "Convectair",
+    "series": "Capella MZ",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/convectair/PAM-CapellaMZ_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "8522-C48-O",
+    "brand": "Convectair",
+    "series": "Capella MZ",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/convectair/PAM-CapellaMZ_FR.pdf",
+    "page": 4,
+    "quote": "Température ambiante de fonctionnement Chauffage °C (°F) -30 à 30 (-22 à 86)"
+  },
+  {
+    "outdoorModel": "WSEHV2436BA1-N",
+    "brand": "Napoleon",
+    "series": "F Series (R454B)",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/HeatPump_TechSheet.pdf",
+    "page": 2,
+    "quote": "OPERATION TEMPERATURE FOR HEATING °C/°F -30~24/(-22~75.2)"
+  },
+  {
+    "outdoorModel": "WSEHV4860BA1-N",
+    "brand": "Napoleon",
+    "series": "F Series (R454B)",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/HeatPump_TechSheet.pdf",
+    "page": 2,
+    "quote": "OPERATION TEMPERATURE FOR HEATING °C/°F -30~24/(-22~75.2)"
+  },
+  {
+    "outdoorModel": "WSEHV2436RA1-N",
+    "brand": "Napoleon",
+    "series": "F Series (R410A)",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/HeatPump_TechSheet.pdf",
+    "page": 4,
+    "quote": "OPERATION TEMPERATURE FOR HEATING °C/°F -30~24/(-22~75.2)"
+  },
+  {
+    "outdoorModel": "WSEHV4860RA1-N",
+    "brand": "Napoleon",
+    "series": "F Series (R410A)",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/HeatPump_TechSheet.pdf",
+    "page": 4,
+    "quote": "OPERATION TEMPERATURE FOR HEATING °C/°F -30~24/(-22~75.2)"
+  },
+  {
+    "outdoorModel": "NDHAS22BA-12-O",
+    "brand": "Napoleon",
+    "series": "NDHAS22",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/images/products/_official-sources/napoleon/NDHAS22BB_TechSheet.pdf",
+    "page": 2,
+    "quote": "Outdoor (cooling/heating) -25ºC (-13ºF) to 50ºC (122ºF) / -25ºC (-13ºF) to 24ºC (75ºF)"
+  },
+  {
+    "outdoorModel": "NDHAS22BA-18-O",
+    "brand": "Napoleon",
+    "series": "NDHAS22",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/images/products/_official-sources/napoleon/NDHAS22BB_TechSheet.pdf",
+    "page": 2,
+    "quote": "Outdoor (cooling/heating) -25ºC (-13ºF) to 50ºC (122ºF) / -25ºC (-13ºF) to 24ºC (75ºF)"
+  },
+  {
+    "outdoorModel": "NDHAS22BA-24-O",
+    "brand": "Napoleon",
+    "series": "NDHAS22",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/images/products/_official-sources/napoleon/NDHAS22BB_TechSheet.pdf",
+    "page": 2,
+    "quote": "Outdoor (cooling/heating) -25ºC (-13ºF) to 50ºC (122ºF) / -25ºC (-13ºF) to 24ºC (75ºF)"
+  },
+  {
+    "outdoorModel": "NDHAS26BA-06-O",
+    "brand": "Napoleon",
+    "series": "NDHAS26",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/NDHAS26BB_TechSheet.pdf",
+    "page": 2,
+    "quote": "Outdoor (cooling/heating) -30ºC~50ºC / -30ºC~24ºC"
+  },
+  {
+    "outdoorModel": "NDHAS26BA-09-O",
+    "brand": "Napoleon",
+    "series": "NDHAS26",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/NDHAS26BB_TechSheet.pdf",
+    "page": 2,
+    "quote": "Outdoor (cooling/heating) -30ºC~50ºC / -30ºC~24ºC"
+  },
+  {
+    "outdoorModel": "NDHAS26BA-12-O",
+    "brand": "Napoleon",
+    "series": "NDHAS26",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/NDHAS26BB_TechSheet.pdf",
+    "page": 2,
+    "quote": "Outdoor (cooling/heating) -30ºC~50ºC / -30ºC~24ºC"
+  },
+  {
+    "outdoorModel": "NDHAS26BA-18-O",
+    "brand": "Napoleon",
+    "series": "NDHAS26",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/NDHAS26BB_TechSheet.pdf",
+    "page": 2,
+    "quote": "Outdoor (cooling/heating) -30ºC~50ºC / -30ºC~24ºC"
+  },
+  {
+    "outdoorModel": "NDHAS26BA-24-O",
+    "brand": "Napoleon",
+    "series": "NDHAS26",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/NDHAS26BB_TechSheet.pdf",
+    "page": 2,
+    "quote": "Outdoor (cooling/heating) -30ºC~50ºC / -30ºC~24ºC"
+  },
+  {
+    "outdoorModel": "NDHAS26BA-33-O",
+    "brand": "Napoleon",
+    "series": "NDHAS26",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/napoleon/NDHAS26BB_TechSheet.pdf",
+    "page": 2,
+    "quote": "Outdoor (cooling/heating) -30ºC~50ºC / -30ºC~24ºC"
+  },
+  {
+    "outdoorModel": "MOS18H2BH0A",
+    "brand": "Innovair",
+    "series": "M4+",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/innovair/Innovair-M4-Floor-Ceiling-Heat-Pump-System-Submittals_0326A-1.pdf",
+    "page": 2,
+    "quote": "PERFORMANCE of Heating — Standard Operating Range (℉/℃) -22 ～ 75 (-30 ～ 24)"
+  },
+  {
+    "outdoorModel": "MOS24H2BH0A",
+    "brand": "Innovair",
+    "series": "M4+",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/innovair/Innovair-M4-Floor-Ceiling-Heat-Pump-System-Submittals_0326A-1.pdf",
+    "page": 6,
+    "quote": "PERFORMANCE of Heating — Standard Operating Range (℉/℃) -22 ～ 75 (-30 ～ 24)"
+  },
+  {
+    "outdoorModel": "MOS36H2BH0A",
+    "brand": "Innovair",
+    "series": "M4+",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/innovair/Innovair-M4-Floor-Ceiling-Heat-Pump-System-Submittals_0326A-1.pdf",
+    "page": 10,
+    "quote": "PERFORMANCE of Heating — Standard Operating Range (℉/℃) -22 ～ 75 (-30 ～ 24)"
+  },
+  {
+    "outdoorModel": "MOS48H2BH0A",
+    "brand": "Innovair",
+    "series": "M4+",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/innovair/Innovair-M4-Floor-Ceiling-Heat-Pump-System-Submittals_0326A-1.pdf",
+    "page": 14,
+    "quote": "PERFORMANCE of Heating — Standard Operating Range (℉/℃) -22 ～ 75 (-30 ～ 24)"
+  },
+  {
+    "outdoorModel": "MOS60H2BH0A",
+    "brand": "Innovair",
+    "series": "M4+",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/innovair/Innovair-M4-Floor-Ceiling-Heat-Pump-System-Submittals_0326A-1.pdf",
+    "page": 18,
+    "quote": "PERFORMANCE of Heating — Standard Operating Range (℉/℃) -22 ～ 75 (-30 ～ 24)"
+  },
+  {
+    "outdoorModel": "PXV36H2A",
+    "brand": "Innovair",
+    "series": "Corvus",
+    "minHeatingTempC": -20,
+    "sourceFile": "public/brochures/innovair/Innovair-CORVUS-Package-Uniter-Submittals-125A.pdf",
+    "page": 1,
+    "quote": "PERFORMANCE of Heating — Standard Operating Range (℉/℃) -4~75 (-20~24)"
+  },
+  {
+    "outdoorModel": "PXV60H2A",
+    "brand": "Innovair",
+    "series": "Corvus",
+    "minHeatingTempC": -20,
+    "sourceFile": "public/brochures/innovair/Innovair-CORVUS-Package-Uniter-Submittals-125A.pdf",
+    "page": 4,
+    "quote": "PERFORMANCE of Heating — Standard Operating Range (℉/℃) -4~75 (-20~24)"
+  },
+  {
+    "outdoorModel": "FLEXX36HP230V1AO",
+    "brand": "Gree",
+    "series": "FLEXX",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/gree/flexx-sales-brochure-a.pdf",
+    "page": 2,
+    "quote": "Heating Temperature Range °F -22 - 75"
+  },
+  {
+    "outdoorModel": "FLEXX60HP230V1AO",
+    "brand": "Gree",
+    "series": "FLEXX",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/gree/flexx-sales-brochure-a.pdf",
+    "page": 2,
+    "quote": "Heating Temperature Range °F -22 - 75"
+  },
+  {
+    "outdoorModel": "MUL60HP230V1R32AO",
+    "brand": "Gree",
+    "series": "Multi R32 (Free Match)",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/gree/multi-r32-submittal-60mbh-a.pdf",
+    "page": 3,
+    "quote": "Heating Temperature Range °F -22 - 75"
+  },
+  {
+    "outdoorModel": "WLWHD(18)ND3MO",
+    "brand": "Gree",
+    "series": "TrueNorth multizone",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/gree/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+    "page": 2,
+    "quote": "Température ambiante Chauffage °C (°F) - 30°C à 24°C (-22°F à 75°F)"
+  },
+  {
+    "outdoorModel": "WLWHD(18)ND3PO",
+    "brand": "Gree",
+    "series": "TrueNorth multizone",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/gree/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+    "page": 2,
+    "quote": "Température ambiante Chauffage °C (°F) - 30°C à 24°C (-22°F à 75°F)"
+  },
+  {
+    "outdoorModel": "WLWHD(24)ND3MO",
+    "brand": "Gree",
+    "series": "TrueNorth multizone",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/gree/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+    "page": 2,
+    "quote": "Température ambiante Chauffage °C (°F) - 30°C à 24°C (-22°F à 75°F)"
+  },
+  {
+    "outdoorModel": "WLWHD(30)ND3MO",
+    "brand": "Gree",
+    "series": "TrueNorth multizone",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/gree/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+    "page": 2,
+    "quote": "Température ambiante Chauffage °C (°F) - 30°C à 24°C (-22°F à 75°F)"
+  },
+  {
+    "outdoorModel": "WLWHD(36)ND3MO",
+    "brand": "Gree",
+    "series": "TrueNorth multizone",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/gree/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+    "page": 2,
+    "quote": "Température ambiante Chauffage °C (°F) - 30°C à 24°C (-22°F à 75°F)"
+  },
+  {
+    "outdoorModel": "WLWHD(42)ND3MO",
+    "brand": "Gree",
+    "series": "TrueNorth multizone",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/gree/TrueNorth-Multi-zone-Brochure-20251211-FR_Web.pdf",
+    "page": 2,
+    "quote": "Température ambiante Chauffage °C (°F) - 30°C à 24°C (-22°F à 75°F)"
+  },
+  {
+    "outdoorModel": "EL21KLV-024-230A",
+    "brand": "Lennox",
+    "series": "EL21KLV",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/brochures/lennox/ehb_el21klv_2606.pdf",
+    "page": 5,
+    "quote": "Cold Climate Heating Operation • Unit can operate down to –15°F in the heating mode"
+  },
+  {
+    "outdoorModel": "EL21KLV-036-230A",
+    "brand": "Lennox",
+    "series": "EL21KLV",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/brochures/lennox/ehb_el21klv_2606.pdf",
+    "page": 5,
+    "quote": "Cold Climate Heating Operation • Unit can operate down to –15°F in the heating mode"
+  },
+  {
+    "outdoorModel": "EL21KLV-048-230A",
+    "brand": "Lennox",
+    "series": "EL21KLV",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/brochures/lennox/ehb_el21klv_2606.pdf",
+    "page": 5,
+    "quote": "Cold Climate Heating Operation • Unit can operate down to –15°F in the heating mode"
+  },
+  {
+    "outdoorModel": "EL21KLV-060-230A",
+    "brand": "Lennox",
+    "series": "EL21KLV",
+    "minHeatingTempC": -26,
+    "sourceFile": "public/brochures/lennox/ehb_el21klv_2606.pdf",
+    "page": 5,
+    "quote": "Cold Climate Heating Operation • Unit can operate down to –15°F in the heating mode"
+  },
+  {
+    "outdoorModel": "MMLD009S6S-1P",
+    "brand": "Lennox",
+    "series": "MMLD",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/lennox/ehb_mmld_single_outdoor_2503.pdf",
+    "page": 9,
+    "quote": "Ambient Temperature Range - °F Heating –13 to 75 (MMLD009S6S, MMLD012S6S, MMLD018S6S)"
+  },
+  {
+    "outdoorModel": "MMLD012S6S-1P",
+    "brand": "Lennox",
+    "series": "MMLD",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/lennox/ehb_mmld_single_outdoor_2503.pdf",
+    "page": 9,
+    "quote": "Ambient Temperature Range - °F Heating –13 to 75 (MMLD009S6S, MMLD012S6S, MMLD018S6S)"
+  },
+  {
+    "outdoorModel": "MMLD018S6S-1P",
+    "brand": "Lennox",
+    "series": "MMLD",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/lennox/ehb_mmld_single_outdoor_2503.pdf",
+    "page": 9,
+    "quote": "Ambient Temperature Range - °F Heating –13 to 75 (MMLD009S6S, MMLD012S6S, MMLD018S6S)"
+  },
+  {
+    "outdoorModel": "MMLD030S6S-1P",
+    "brand": "Lennox",
+    "series": "MMLD",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/lennox/ehb_mmld_single_outdoor_2503.pdf",
+    "page": 9,
+    "quote": "Ambient Temperature Range - °F Heating –13 to 75 (MMLD030S6S, MMLD036S6S)"
+  },
+  {
+    "outdoorModel": "MMLD036S6S-1P",
+    "brand": "Lennox",
+    "series": "MMLD",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/lennox/ehb_mmld_single_outdoor_2503.pdf",
+    "page": 9,
+    "quote": "Ambient Temperature Range - °F Heating –13 to 75 (MMLD030S6S, MMLD036S6S)"
+  },
+  {
+    "outdoorModel": "MMPD036S6S-1P",
+    "brand": "Lennox",
+    "series": "MMPD (vertical AHU)",
+    "minHeatingTempC": -20,
+    "sourceFile": "public/brochures/lennox/sbmtl_mmpd036s6s-1p_mmd036s6-1p_2501.pdf",
+    "page": 2,
+    "quote": "Outdoor Operating Temperatures Heating -4 - 75°F (-20 - 24°C)"
+  },
+  {
+    "outdoorModel": "DH7VSA2410A*",
+    "brand": "Daikin",
+    "series": "DH7VSA",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh7vs-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "DH7VSA3610A*",
+    "brand": "Daikin",
+    "series": "DH7VSA",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh7vs-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "DH7VSA4210A*",
+    "brand": "Daikin",
+    "series": "DH7VSA",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh7vs-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "DH7VSA4810A*",
+    "brand": "Daikin",
+    "series": "DH7VSA",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh7vs-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "DH7VSA6010A*",
+    "brand": "Daikin",
+    "series": "DH7VSA",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh7vs-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "DH6VSA121MA*",
+    "brand": "Daikin",
+    "series": "DH6VSA*M (multifamilial)",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh6vs-mf-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "DH6VSA181MA*",
+    "brand": "Daikin",
+    "series": "DH6VSA*M (multifamilial)",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh6vs-mf-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "DH6VSA241MA*",
+    "brand": "Daikin",
+    "series": "DH6VSA*M (multifamilial)",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh6vs-mf-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "DH6VSA301MA*",
+    "brand": "Daikin",
+    "series": "DH6VSA*M (multifamilial)",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh6vs-mf-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "DH6VSA361MA*",
+    "brand": "Daikin",
+    "series": "DH6VSA*M (multifamilial)",
+    "minHeatingTempC": -23,
+    "sourceFile": "public/brochures/daikin/ss-dh6vs-mf-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -10 to 70 (-23.3 to 21.1)"
+  },
+  {
+    "outdoorModel": "MOVA-18HN10-M152L",
+    "brand": "Midea",
+    "series": "M152H",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/brochures/midea/652011735310405.pdf",
+    "page": 3,
+    "quote": "OPERATION RANGE Heating (°C) -15~30 / Heating (°F) 5~86"
+  },
+  {
+    "outdoorModel": "MOVA-24HN10-M152L",
+    "brand": "Midea",
+    "series": "M152H",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/brochures/midea/652011735310405.pdf",
+    "page": 3,
+    "quote": "OPERATION RANGE Heating (°C) -15~30 / Heating (°F) 5~86"
+  },
+  {
+    "outdoorModel": "MOVA-30HN10-M152L",
+    "brand": "Midea",
+    "series": "M152H",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/brochures/midea/652011735310405.pdf",
+    "page": 3,
+    "quote": "OPERATION RANGE Heating (°C) -15~30 / Heating (°F) 5~86"
+  },
+  {
+    "outdoorModel": "MOVA-36HN10-M152L",
+    "brand": "Midea",
+    "series": "M152H",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/brochures/midea/652011735310405.pdf",
+    "page": 3,
+    "quote": "OPERATION RANGE Heating (°C) -15~30 / Heating (°F) 5~86"
+  },
+  {
+    "outdoorModel": "MOVA-42HN10-M152L",
+    "brand": "Midea",
+    "series": "M152H",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/brochures/midea/652011735310405.pdf",
+    "page": 3,
+    "quote": "OPERATION RANGE Heating (°C) -15~30 / Heating (°F) 5~86"
+  },
+  {
+    "outdoorModel": "MOVA-48HN10-M152L",
+    "brand": "Midea",
+    "series": "M152H",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/brochures/midea/652011735310405.pdf",
+    "page": 3,
+    "quote": "OPERATION RANGE Heating (°C) -15~30 / Heating (°F) 5~86"
+  },
+  {
+    "outdoorModel": "MOVA-60HN10-M152L",
+    "brand": "Midea",
+    "series": "M152H",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/brochures/midea/652011735310405.pdf",
+    "page": 3,
+    "quote": "OPERATION RANGE Heating (°C) -15~30 / Heating (°F) 5~86"
+  },
+  {
+    "outdoorModel": "MOVA-61HN10-M152L",
+    "brand": "Midea",
+    "series": "M152H",
+    "minHeatingTempC": -15,
+    "sourceFile": "public/brochures/midea/652011735310405.pdf",
+    "page": 3,
+    "quote": "OPERATION RANGE Heating (°C) -15~30 / Heating (°F) 5~86"
+  },
+  {
+    "outdoorModel": "SPHP-Z-V018BB",
+    "brand": "AC PRO",
+    "series": "SPHP Z-Series",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/ac-pro/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+    "page": 2,
+    "quote": "OPERATION RANGE Outdoor Temperature (Heating) °F -22 – 75"
+  },
+  {
+    "outdoorModel": "SPHP-Z-V024BB",
+    "brand": "AC PRO",
+    "series": "SPHP Z-Series",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/ac-pro/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+    "page": 2,
+    "quote": "OPERATION RANGE Outdoor Temperature (Heating) °F -22 – 75"
+  },
+  {
+    "outdoorModel": "SPHP-Z-V036BB",
+    "brand": "AC PRO",
+    "series": "SPHP Z-Series",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/ac-pro/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+    "page": 2,
+    "quote": "OPERATION RANGE Outdoor Temperature (Heating) °F -22 – 75"
+  },
+  {
+    "outdoorModel": "SPHP-Z-V048BB",
+    "brand": "AC PRO",
+    "series": "SPHP Z-Series",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/ac-pro/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+    "page": 2,
+    "quote": "OPERATION RANGE Outdoor Temperature (Heating) °F -22 – 75"
+  },
+  {
+    "outdoorModel": "SPHP-Z-V060BB",
+    "brand": "AC PRO",
+    "series": "SPHP Z-Series",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/brochures/ac-pro/PS-10143EN-C_-_SPHP-Z_Product_Specification.pdf",
+    "page": 2,
+    "quote": "OPERATION RANGE Outdoor Temperature (Heating) °F -22 – 75"
+  },
+  {
+    "outdoorModel": "SPHP-Y-V018BB",
+    "brand": "AC PRO",
+    "series": "SPHP Y-Series",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/ac-pro/SS-10184EN-C_-_SPHP-Y-V018BB_Submittal_Data_Sheet.pdf",
+    "page": 1,
+    "quote": "OPERATING RANGE Outdoor Temperature (Heating) °F -13 – 75"
+  },
+  {
+    "outdoorModel": "HH824E2S11",
+    "brand": "York",
+    "series": "HH8",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/johnson-controls/hh8_techguide.pdf",
+    "page": 12,
+    "quote": "Ambient temperature limits Outdoor coil °F (°C) — DB heat Minimum -13 (-25)"
+  },
+  {
+    "outdoorModel": "HH836E2S11",
+    "brand": "York",
+    "series": "HH8",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/johnson-controls/hh8_techguide.pdf",
+    "page": 12,
+    "quote": "Ambient temperature limits Outdoor coil °F (°C) — DB heat Minimum -13 (-25)"
+  },
+  {
+    "outdoorModel": "HH860E2S11",
+    "brand": "York",
+    "series": "HH8",
+    "minHeatingTempC": -25,
+    "sourceFile": "public/brochures/johnson-controls/hh8_techguide.pdf",
+    "page": 12,
+    "quote": "Ambient temperature limits Outdoor coil °F (°C) — DB heat Minimum -13 (-25)"
+  },
+  {
+    "outdoorModel": "HMH72B241S",
+    "brand": "York",
+    "series": "HMH7",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/brochures/york/hmh7tech.pdf",
+    "page": 181,
+    "quote": "Ambient temperature limits Outdoor coil °F (°C) — DB heat Minimum -5 (-21)"
+  },
+  {
+    "outdoorModel": "HMH72B341S",
+    "brand": "York",
+    "series": "HMH7",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/brochures/york/hmh7tech.pdf",
+    "page": 181,
+    "quote": "Ambient temperature limits Outdoor coil °F (°C) — DB heat Minimum -5 (-21)"
+  },
+  {
+    "outdoorModel": "HMH72B361S",
+    "brand": "York",
+    "series": "HMH7",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/brochures/york/hmh7tech.pdf",
+    "page": 181,
+    "quote": "Ambient temperature limits Outdoor coil °F (°C) — DB heat Minimum -5 (-21)"
+  },
+  {
+    "outdoorModel": "HMH72B481S",
+    "brand": "York",
+    "series": "HMH7",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/brochures/york/hmh7tech.pdf",
+    "page": 181,
+    "quote": "Ambient temperature limits Outdoor coil °F (°C) — DB heat Minimum -5 (-21)"
+  },
+  {
+    "outdoorModel": "HMH72B601S",
+    "brand": "York",
+    "series": "HMH7",
+    "minHeatingTempC": -21,
+    "sourceFile": "public/brochures/york/hmh7tech.pdf",
+    "page": 181,
+    "quote": "Ambient temperature limits Outdoor coil °F (°C) — DB heat Minimum -5 (-21)"
+  },
+  {
+    "outdoorModel": "YH618E2S11",
+    "brand": "York",
+    "series": "YH6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/york/yh6_techguide.pdf",
+    "page": 15,
+    "quote": "Units shall be approved for heating operation between 0ºF and 75ºF without modification."
+  },
+  {
+    "outdoorModel": "YH624E2S11",
+    "brand": "York",
+    "series": "YH6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/york/yh6_techguide.pdf",
+    "page": 15,
+    "quote": "Units shall be approved for heating operation between 0ºF and 75ºF without modification."
+  },
+  {
+    "outdoorModel": "YH630E2S11",
+    "brand": "York",
+    "series": "YH6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/york/yh6_techguide.pdf",
+    "page": 15,
+    "quote": "Units shall be approved for heating operation between 0ºF and 75ºF without modification."
+  },
+  {
+    "outdoorModel": "YH636E2S11",
+    "brand": "York",
+    "series": "YH6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/york/yh6_techguide.pdf",
+    "page": 15,
+    "quote": "Units shall be approved for heating operation between 0ºF and 75ºF without modification."
+  },
+  {
+    "outdoorModel": "YH648E2S11",
+    "brand": "York",
+    "series": "YH6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/york/yh6_techguide.pdf",
+    "page": 15,
+    "quote": "Units shall be approved for heating operation between 0ºF and 75ºF without modification."
+  },
+  {
+    "outdoorModel": "YH660E2S11",
+    "brand": "York",
+    "series": "YH6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/york/yh6_techguide.pdf",
+    "page": 15,
+    "quote": "Units shall be approved for heating operation between 0ºF and 75ºF without modification."
+  },
+  {
+    "outdoorModel": "5TWR6018A1000A",
+    "brand": "Trane",
+    "series": "5TWR6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/trane/ODR-SVX024B-EN_04172026.pdf",
+    "page": 6,
+    "quote": "Table 1. Operating range — Heating 1.5 – 5 Ton 0°F – 66°F"
+  },
+  {
+    "outdoorModel": "5TWR6024A1000A",
+    "brand": "Trane",
+    "series": "5TWR6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/trane/ODR-SVX024B-EN_04172026.pdf",
+    "page": 6,
+    "quote": "Table 1. Operating range — Heating 1.5 – 5 Ton 0°F – 66°F"
+  },
+  {
+    "outdoorModel": "5TWR6030A1000A",
+    "brand": "Trane",
+    "series": "5TWR6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/trane/ODR-SVX024B-EN_04172026.pdf",
+    "page": 6,
+    "quote": "Table 1. Operating range — Heating 1.5 – 5 Ton 0°F – 66°F"
+  },
+  {
+    "outdoorModel": "5TWR6036A1000A",
+    "brand": "Trane",
+    "series": "5TWR6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/trane/ODR-SVX024B-EN_04172026.pdf",
+    "page": 6,
+    "quote": "Table 1. Operating range — Heating 1.5 – 5 Ton 0°F – 66°F"
+  },
+  {
+    "outdoorModel": "5TWR6042A1000A",
+    "brand": "Trane",
+    "series": "5TWR6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/trane/ODR-SVX024B-EN_04172026.pdf",
+    "page": 6,
+    "quote": "Table 1. Operating range — Heating 1.5 – 5 Ton 0°F – 66°F"
+  },
+  {
+    "outdoorModel": "5TWR6048A1000A",
+    "brand": "Trane",
+    "series": "5TWR6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/trane/ODR-SVX024B-EN_04172026.pdf",
+    "page": 6,
+    "quote": "Table 1. Operating range — Heating 1.5 – 5 Ton 0°F – 66°F"
+  },
+  {
+    "outdoorModel": "5TWR6060A1000A",
+    "brand": "Trane",
+    "series": "5TWR6",
+    "minHeatingTempC": -18,
+    "sourceFile": "public/brochures/trane/ODR-SVX024B-EN_04172026.pdf",
+    "page": 6,
+    "quote": "Table 1. Operating range — Heating 1.5 – 5 Ton 0°F – 66°F"
+  }
+]

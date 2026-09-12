@@ -13,6 +13,7 @@ import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { buildCandidates, runThermoMatch, type SourceModel, type SourcePairing } from "@/lib/thermomatch";
 import { answersToRequest, type QuestionnaireAnswers } from "@/lib/thermomatch/answers";
 import { installedPriceRange } from "@/lib/prices/grille-installee";
+import { minHeatingTempFromBrochures } from "@/lib/thermomatch/min-temp-brochures";
 
 let eligibleModels: SourceModel[] | null = null;
 
@@ -52,7 +53,12 @@ function minHeatingTempFor(modelId: string): number | null {
       if (prev === undefined || v < prev) minTempByModel.set(c.modelId, v);
     }
   }
-  return minTempByModel.get(modelId) ?? null;
+  const known = minTempByModel.get(modelId);
+  if (known !== undefined) return known;
+  // Sinon : température imprimée dans la brochure du fabricant (citation vérifiée, voir src/lib/data/min-heating-temps.json).
+  const m = registry.modelById.get(modelId);
+  if (!m) return null;
+  return minHeatingTempFromBrochures({ outdoorModel: m.modelNumber, brand: registry.brandById.get(m.brandId)?.name ?? null });
 }
 
 function pairingsFor(outdoorModel: string): SourcePairing[] {
