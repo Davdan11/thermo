@@ -17,7 +17,7 @@ export function Lines({ lines, as = "h2", id, style, delay = 0 }: { lines: React
   return (
     <Tag ref={ref} id={id} style={style}>
       {lines.map((line, i) => (
-        <span key={i} style={{ display: "block", overflow: "hidden", paddingBottom: "0.14em", marginBottom: "-0.14em" }}>
+        <span key={i} style={{ display: "block", overflow: "hidden", paddingTop: "0.14em", marginTop: "-0.14em", paddingBottom: "0.14em", marginBottom: "-0.14em" }}>
           <motion.span style={{ display: "block" }} initial={{ y: "115%" }} animate={inView ? { y: "0%" } : undefined} transition={{ duration: 1.15, ease: EASE, delay: delay + i * 0.08 }}>
             {line}
           </motion.span>
@@ -57,7 +57,7 @@ export function Marker({ children, color = C.orange, delay = 0.45 }: { children:
     <span className="relative inline-block px-[0.12em]">
       <motion.span
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-[0.06em] top-[0.24em] origin-left"
+        className="absolute inset-x-0 bottom-[0.04em] top-[0.02em] origin-left"
         style={{ background: color, skewX: -8 }}
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
