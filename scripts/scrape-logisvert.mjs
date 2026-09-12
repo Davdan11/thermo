@@ -8,14 +8,15 @@
    
    Source: hydroquebec.com/themes/mieux-consommer/recherche-themopompes-efficaces/data/
    
-   Usage: node scripts/scrape-logisvert.mjs
+   Usage: node scripts/scrape-logisvert.mjs [--check] [--csv <copie locale .csv.gz>]
    ================================================================== */
 
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { createHash } from "crypto";
 import { gunzipSync } from "zlib";
-import { dirname, join } from "path";
+import { basename, dirname, join } from "path";
 import { fileURLToPath } from "url";
+import { buildHqEntries, readLogisVertCsv } from "./lib/logisvert-csv.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = join(__dirname, "../src/lib/subsidies/logisvert-official-amounts.json");
@@ -29,25 +30,37 @@ const ES_API = "https://data.energystar.gov/resource/83eb-xbyy.json";
 async function main() {
   console.log("🔄 Scraping LogisVert official data from Hydro-Québec...\n");
 
-  // ── Step 1: Find the latest CSV file ──────────────────────────────
-  console.log("📋 Fetching file index from HQ...");
-  const indexRes = await fetch(HQ_FILES_INDEX);
-  if (!indexRes.ok) throw new Error(`Failed to fetch file index: ${indexRes.status}`);
-  const filesIndex = await indexRes.json();
+  // ── Step 1: Find the CSV file ─────────────────────────────────────
+  // --csv <proprio-maison-fr-JJ-MM-AAAA.csv.gz> : copie locale d'un fichier officiel
+  // (même nom que sur le site d'HQ) pour régénérer à partir d'une liste précise.
+  const csvArg = process.argv.indexOf("--csv");
+  const localCsv = csvArg >= 0 ? process.argv[csvArg + 1] : null;
+  if (csvArg >= 0 && !localCsv) throw new Error("--csv attend le chemin d'un fichier .csv.gz d'Hydro-Québec");
+  let latestCsv;
+  let gzBuffer;
+  if (localCsv) {
+    latestCsv = basename(localCsv);
+    gzBuffer = readFileSync(localCsv);
+    console.log(`📥 Local copy of ${latestCsv}: ${localCsv}`);
+  } else {
+    console.log("📋 Fetching file index from HQ...");
+    const indexRes = await fetch(HQ_FILES_INDEX);
+    if (!indexRes.ok) throw new Error(`Failed to fetch file index: ${indexRes.status}`);
+    const filesIndex = await indexRes.json();
 
-  // Get the latest CSV file for "proprio-maison" (residential owners)
-  const proprioMaison = filesIndex[0]["proprio-maison"];
-  const csvFiles = proprioMaison.fr.csv;
-  const latestCsv = csvFiles[csvFiles.length - 1].file;
-  console.log(`   Latest CSV: ${latestCsv}`);
+    // Get the latest CSV file for "proprio-maison" (residential owners)
+    const proprioMaison = filesIndex[0]["proprio-maison"];
+    const csvFiles = proprioMaison.fr.csv;
+    latestCsv = csvFiles[csvFiles.length - 1].file;
+    console.log(`   Latest CSV: ${latestCsv}`);
 
-  // ── Step 2: Download and decompress the CSV ───────────────────────
-  console.log("📥 Downloading CSV from HQ...");
+    // ── Step 2: Download the CSV ────────────────────────────────────
+    console.log("📥 Downloading CSV from HQ...");
+    const csvRes = await fetch(`${HQ_BASE}/${latestCsv}`);
+    if (!csvRes.ok) throw new Error(`Failed to download CSV: ${csvRes.status}`);
+    gzBuffer = Buffer.from(await csvRes.arrayBuffer());
+  }
   const csvUrl = `${HQ_BASE}/${latestCsv}`;
-  const csvRes = await fetch(csvUrl);
-  if (!csvRes.ok) throw new Error(`Failed to download CSV: ${csvRes.status}`);
-  
-  const gzBuffer = Buffer.from(await csvRes.arrayBuffer());
   const sourceSha256 = createHash("sha256").update(gzBuffer).digest("hex");
   const metaPathEarly = join(__dirname, "../src/lib/subsidies/logisvert-metadata.json");
   // Mode --check (robot quotidien) : compare l'empreinte du fichier HQ avec celle de la liste en place.
@@ -59,42 +72,15 @@ async function main() {
     process.exit(same ? 0 : 3);
   }
   const csvText = gunzipSync(gzBuffer).toString("utf8");
-  const lines = csvText.split("\n").filter(l => l.trim());
-  console.log(`   Total lines: ${lines.length - 1}`);
 
   // ── Step 3: Parse CSV → entries keyed by AHRI ─────────────────────
+  // CSV RFC 4180 à « ; » : un champ entre guillemets peut contenir « ; » ou une
+  // tabulation (ex. "EA(C;U)1P24A+TDR+TXV"). Découpage et colonnes (lues par leur
+  // nom) : scripts/lib/logisvert-csv.mjs. Une ligne décalée fait échouer le script.
   console.log("🔍 Parsing HQ data...");
-  const header = lines[0].split(";");
-  console.log(`   Columns: ${header.join(", ")}`);
-
-  // ahri;marque;modele_exterieur;modele_interieur;fournaise;puissance_nominale;puissance_moins_8;aide_financiere_a;aide_financiere_b;haut_rendement
-  const hqEntries = new Map();
-  for (let i = 1; i < lines.length; i++) {
-    const cols = lines[i].split(";");
-    const ahri = (cols[0] || "").trim();
-    if (!ahri || ahri === "ahri") continue;
-
-    const aide = parseFloat(cols[7]) || 0;
-    if (aide <= 0) continue;
-
-    // Keep the entry with highest aide if duplicate AHRI
-    const existing = hqEntries.get(ahri);
-    if (existing && existing.a >= aide) continue;
-
-    hqEntries.set(ahri, {
-      ahri,
-      b: (cols[1] || "").trim().replace(/\r/g, ""),           // brand
-      m: (cols[2] || "").trim().replace(/\r/g, ""),            // outdoor model
-      im: (cols[3] || "").trim().replace(/\r/g, ""),           // indoor model
-      f: (cols[4] || "").trim().replace(/\r/g, ""),            // furnace
-      hn: parseInt(cols[5]) || 0,                               // puissance nominale
-      h17: parseInt(cols[6]) || 0,                              // puissance @ -8°C
-      a: aide,                                                  // REAL LogisVert amount
-      ab: parseFloat(cols[8]) || 0,                             // aide_financiere_b
-      hr: (cols[9] || "").trim().replace(/\r/g, "").toUpperCase().startsWith("OUI"),
-    });
-  }
-
+  const rows = readLogisVertCsv(csvText);
+  console.log(`   Rows: ${rows.length}`);
+  const hqEntries = buildHqEntries(rows);
   console.log(`   Unique AHRI entries: ${hqEntries.size}`);
 
   // ── Step 4: Enrich with ENERGY STAR data (series, SEER2, cold climate) ──
@@ -220,6 +206,16 @@ async function main() {
   console.log(`   Type detected from furnace column: ${typeFromFurnace}`);
   console.log(`   Total enriched: ${enriched}/${hqEntries.size}`);
 
+  // ── Step 5b: Garde-fou — rien n'est écrit si un montant est invraisemblable ──
+  // Le maximum officiel est de 7 560 $ (liste du 17-07-2025). Un montant plus élevé
+  // vient presque toujours d'une puissance (BTU/h) lue dans la colonne du montant.
+  // À relever seulement si Hydro-Québec augmente réellement ses aides.
+  const MAX_PLAUSIBLE_AMOUNT = 15000;
+  const suspects = Object.entries(result).filter(([, e]) => !(e.a > 0 && e.a <= MAX_PLAUSIBLE_AMOUNT));
+  if (suspects.length) {
+    throw new Error(`${suspects.length} montant(s) hors de 1 à ${MAX_PLAUSIBLE_AMOUNT} $, ex. ${suspects.slice(0, 3).map(([k, e]) => `AHRI ${k} ${e.b} ${e.m} = ${e.a} $`).join(" ; ")}`);
+  }
+
   // ── Step 6: Write output ──────────────────────────────────────────
   writeFileSync(OUTPUT_PATH, JSON.stringify(result, null, 0));
   
@@ -252,8 +248,8 @@ async function main() {
   const brands = [...new Set(Object.values(result).map(e => e.b))];
   console.log(`\n📊 Stats:`);
   console.log(`   Brands: ${brands.length}`);
-  console.log(`   Min amount: ${Math.min(...aides.slice(0, 10000))} $`);
-  console.log(`   Max amount: ${Math.max(...aides.slice(0, 10000))} $`);
+  console.log(`   Min amount: ${aides.reduce((x, y) => Math.min(x, y), Infinity)} $`);
+  console.log(`   Max amount: ${aides.reduce((x, y) => Math.max(x, y), 0)} $`);
 }
 
 async function fetchESCount() {

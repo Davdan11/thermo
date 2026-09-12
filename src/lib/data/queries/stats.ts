@@ -27,3 +27,8 @@ export function roundDownHundreds(n: number): number {
 export function formatCount(n: number): string {
   return n.toLocaleString("fr-CA").replace(/ |\s/g, " ");
 }
+
+/** Marques publiées et actives au Québec (même compte que getPublishedBrandsSummary().length). */
+export function getActiveBrandCount(): number {
+  return registry.brands.filter((b) => b.status === "published" && b.activeInQuebec).length;
+}

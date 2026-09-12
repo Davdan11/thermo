@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Outfit, Geist } from "next/font/google";
 import "./globals.css";
 import { SiteChrome } from "@/components/layout/SiteChrome";
+import { Footer } from "@/components/layout/Footer";
 import { cn } from "@/lib/utils";
 import { getOrganizationSchema, getWebSiteSchema, SITE_URL } from "@/lib/seo";
 import { UTMProvider } from "@/components/providers/UTMProvider";
@@ -58,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebSiteSchema()) }}
         />
-        <SiteChrome>{children}</SiteChrome>
+        <SiteChrome footer={<Footer />}>{children}</SiteChrome>
         <Suspense fallback={null}>
           <UTMProvider />
         </Suspense>

@@ -2,14 +2,14 @@
 
 import { usePathname } from "next/navigation";
 import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 
 const ROUTES_WITHOUT_CHROME: string[] = [
   "/trouver-ma-thermopompe",
   "/soumission",
 ];
 
-export function SiteChrome({ children }: { children: React.ReactNode }) {
+/* Le pied de page arrive du layout racine (composant serveur) : passé en prop, il reste rendu au serveur. */
+export function SiteChrome({ children, footer }: { children: React.ReactNode; footer: React.ReactNode }) {
   const pathname = usePathname();
   const hideChrome = ROUTES_WITHOUT_CHROME.some((route) =>
     pathname.startsWith(route),
@@ -21,7 +21,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
     return (
       <>
         <div className="flex-1">{children}</div>
-        <Footer />
+        {footer}
       </>
     );
   }
@@ -30,7 +30,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
     <>
       <Header />
       <div className="flex-1">{children}</div>
-      <Footer />
+      {footer}
     </>
   );
 }

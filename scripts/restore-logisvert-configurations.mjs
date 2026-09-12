@@ -2,6 +2,7 @@
 /** Restore indoor-unit and furnace identifiers from an official LogisVert CSV. */
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { readLogisVertCsv } from "./lib/logisvert-csv.mjs";
 
 const csvPath = process.argv[2];
 if (!csvPath) {
@@ -10,22 +11,18 @@ if (!csvPath) {
 
 const jsonPath = resolve("src/lib/subsidies/logisvert-official-amounts.json");
 const register = JSON.parse(readFileSync(jsonPath, "utf8"));
-const lines = readFileSync(resolve(csvPath), "utf8").split(/\r?\n/);
-const header = lines.shift()?.split(";") ?? [];
-const column = Object.fromEntries(header.map((name, index) => [name.replace(/^\uFEFF/, ""), index]));
+// D\u00E9coupage RFC 4180 : un champ entre guillemets peut contenir \u00AB ; \u00BB ou une tabulation.
+const rows = readLogisVertCsv(readFileSync(resolve(csvPath), "utf8"));
 
 let matched = 0;
 let indoorRestored = 0;
 let furnaceRestored = 0;
-for (const line of lines) {
-  if (!line) continue;
-  const cells = line.split(";");
-  const ahri = cells[column.ahri]?.trim();
-  const entry = register[ahri];
+for (const row of rows) {
+  const entry = register[row.ahri];
   if (!entry) continue;
   matched++;
-  const indoor = cells[column.modele_interieur]?.trim();
-  const furnace = cells[column.fournaise]?.trim();
+  const indoor = row.modele_interieur;
+  const furnace = row.fournaise;
   if (indoor) {
     entry.im = indoor;
     indoorRestored++;

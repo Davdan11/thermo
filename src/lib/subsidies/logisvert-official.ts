@@ -10,6 +10,7 @@
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { getLogisVertListInfo } from "./logisvert-meta";
 
 // Chargé par fs plutôt qu'importé : un import TypeScript d'un JSON de 34 Mo fait
 // exploser la mémoire du vérificateur de types et du lanceur de tests.
@@ -306,12 +307,9 @@ export function getLogisVertStats(): LogisVertStats {
     .sort((a, b) => a - b);
   const total = amounts.length || 1;
   const share = (lo: number, hi: number) => amounts.filter((n) => n >= lo && n < hi).length / total;
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const meta = require("./logisvert-metadata.json") as { updatedAt?: string; sourceFile?: string; count?: number };
-  const dm = String(meta.sourceFile ?? "").match(/(\d{2})-(\d{2})-(\d{4})/);
-  const frDate = (d: Date, timeZone: string) => d.toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric", timeZone });
+  const info = getLogisVertListInfo();
   statsCache = {
-    count: typeof meta.count === "number" ? meta.count : amounts.length,
+    count: info.count ?? amounts.length,
     max: amounts[amounts.length - 1] ?? 0,
     median: amounts.length ? amounts[Math.floor(amounts.length / 2)] : 0,
     buckets: [
@@ -320,8 +318,8 @@ export function getLogisVertStats(): LogisVertStats {
       { label: "3 000 à 4 999 $", share: share(3000, 5000) },
       { label: "5 000 $ et plus", share: share(5000, Infinity) },
     ],
-    listDate: dm ? frDate(new Date(Date.UTC(+dm[3], +dm[2] - 1, +dm[1], 12)), "UTC") : null,
-    checkedDate: meta.updatedAt ? frDate(new Date(meta.updatedAt), "America/Toronto") : null,
+    listDate: info.listDate,
+    checkedDate: info.checkedDate,
   };
   return statsCache;
 }

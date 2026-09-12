@@ -1,0 +1,176 @@
+/* ==================================================================
+   Pied de page : fond d'encre, texte crème, accents orange.
+   Il suit toutes les pages : son arête haute (filet orange tracé)
+   se lit après une section sombre, claire ou colorée.
+   ================================================================== */
+
+.ft {
+  --ft-ink: #0a1419;
+  --ft-cream: #f4efe7;
+  --ft-orange: #e54b17;
+  --ft-soft: rgba(244, 239, 231, 0.74);
+  --ft-mute: rgba(244, 239, 231, 0.62);
+  --ft-line: rgba(244, 239, 231, 0.13);
+  --ft-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+  background: var(--ft-ink);
+  color: var(--ft-cream);
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+}
+.ft ::selection { background: var(--ft-orange); color: #fff; }
+.ft :is(a, button):focus-visible { outline: 2px solid var(--ft-orange); outline-offset: 4px; border-radius: 3px; }
+
+/* ---- Arête haute : filet orange d'un bord à l'autre ---- */
+.ft-edge-wrap { position: absolute; inset: 0 0 auto 0; height: 2px; }
+.ft-edge { display: block; height: 100%; background: var(--ft-orange); transform-origin: left center; }
+
+/* ---- Typographie ---- */
+.ft-serif { font-family: var(--font-serif), "Times New Roman", serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+.ft-caps { margin: 0; font-size: 11.5px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ft-mute); }
+.ft-tick { display: inline-block; width: 40px; height: 1px; background: var(--ft-orange); transform-origin: left center; }
+.ft-title { margin: 22px 0 0; font-size: clamp(34px, 3.45vw, 62px); line-height: 0.98; letter-spacing: -0.045em; font-weight: 600; color: var(--ft-cream); }
+.ft-accent { color: var(--ft-orange); font-size: 1.1em; letter-spacing: -0.02em; }
+.ft-line { display: block; overflow: hidden; padding: 0.1em 0 0.16em; margin: -0.1em 0 -0.16em; }
+.ft-line > span { display: block; }
+.ft-body { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--ft-mute); max-width: 36ch; }
+
+/* ---- Liens : soulignement orange qui se trace (aussi sur deux lignes) ---- */
+.ft-link { color: var(--ft-soft); text-decoration: none; transition: color 0.3s; }
+.ft-link > span {
+  background: linear-gradient(var(--ft-orange), var(--ft-orange)) 0 100% / 0% 1px no-repeat;
+  padding-bottom: 3px;
+  transition: background-size 0.55s var(--ft-ease);
+}
+.ft-link:hover, .ft-link:focus-visible { color: var(--ft-cream); }
+.ft-link:hover > span, .ft-link:focus-visible > span { background-size: 100% 1px; }
+.ft-link > .ft-tag { background: none; }
+
+/* ---- Libellé qui roule au survol (téléphone, pastille) ---- */
+.ft-roll { display: inline-grid; overflow: hidden; line-height: 1.12; height: 1.12em; vertical-align: bottom; }
+.ft-roll > span { grid-area: 1 / 1; transition: transform 0.6s var(--ft-ease); }
+.ft-roll > span + span { transform: translateY(100%); }
+:is(a, button):is(:hover, :focus-visible) > .ft-roll > span:first-child { transform: translateY(-100%); }
+:is(a, button):is(:hover, :focus-visible) > .ft-roll > span + span { transform: translateY(0); }
+
+/* ---- Appel final ---- */
+.ft-phone {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: clamp(38px, 3.7vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ft-cream);
+  text-decoration: none;
+}
+.ft-phone .ft-roll > span + span { color: var(--ft-orange); }
+.ft-mail { display: inline-block; margin-top: 10px; font-size: 16px; }
+.ft-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 8px 8px 28px;
+  border-radius: 999px;
+  background: var(--ft-orange);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.35s var(--ft-ease), background-color 0.3s;
+}
+.ft-pill:hover { transform: translateY(-2px); background-color: #d44315; }
+.ft-knob {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ft-orange);
+  transition: transform 0.6s var(--ft-ease);
+}
+.ft-pill:is(:hover, :focus-visible) .ft-knob { transform: rotate(-45deg); }
+
+/* ---- Bande de chiffres ---- */
+.ft-figs { display: grid; border-top: 1px solid var(--ft-line); border-bottom: 1px solid var(--ft-line); }
+.ft-figs-head { padding: 22px 0 4px; }
+.ft-figs-head .ft-body { margin-top: 8px; font-size: 13px; }
+.ft-figs-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; }
+.ft-fig { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 10px; margin: 0; padding: 18px 0 22px; }
+.ft-fig:nth-child(even) { padding-left: 18px; border-left: 1px solid var(--ft-line); }
+.ft-fig:nth-child(n + 3) { border-top: 1px solid var(--ft-line); }
+.ft-fig dt { font-size: 13px; line-height: 1.35; color: var(--ft-mute); }
+.ft-fig dd { margin: 0; font-size: clamp(26px, 2.35vw, 38px); font-weight: 500; line-height: 1; letter-spacing: -0.035em; color: var(--ft-cream); font-variant-numeric: tabular-nums; }
+.ft-fig dd .ft-serif { font-size: 0.92em; letter-spacing: -0.01em; }
+.ft-count { display: inline-grid; }
+.ft-count > span[aria-hidden] { grid-area: 1 / 1; }
+.ft-count-ghost { visibility: hidden; }
+
+/* ---- Colonnes de liens ---- */
+.ft-coltitle { display: flex; align-items: baseline; gap: 10px; margin: 0 0 20px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ft-cream); }
+.ft-idx { font-size: 18px; letter-spacing: 0; text-transform: none; color: var(--ft-orange); }
+.ft-list { display: flex; flex-direction: column; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.ft-list a { font-size: 14.5px; line-height: 1.22; }
+.ft-list-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 20px; }
+
+/* ---- Mentions légales et retour en haut ---- */
+.ft-legal { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; padding: 24px 0; border-top: 1px solid var(--ft-line); }
+.ft-small { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ft-mute); }
+.ft-legal-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; }
+.ft-tag { margin-left: 8px; color: var(--ft-orange); }
+.ft-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ft-cream);
+}
+.ft-top-arrow { display: inline-flex; color: var(--ft-orange); }
+.ft-top-arrow svg { transition: transform 0.5s var(--ft-ease); }
+.ft-top:is(:hover, :focus-visible) .ft-top-arrow svg { transform: translateY(-4px); }
+
+/* ---- Signature géante ---- */
+.ft-mark { padding: 6px clamp(12px, 1.7vw, 30px) clamp(16px, 2vw, 34px); pointer-events: none; user-select: none; }
+
+@media (min-width: 1024px) {
+  .ft-figs { grid-template-columns: 250px minmax(0, 1fr); }
+  .ft-figs-head { padding: 30px 28px 30px 0; }
+  .ft-figs-list { grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); }
+  .ft-fig, .ft-fig:nth-child(even) { padding: 30px 0 30px 28px; border-left: 1px solid var(--ft-line); }
+  .ft-fig:nth-child(n + 3) { border-top: 0; }
+  .ft-list a { font-size: 15px; }
+  .ft-list-duo { display: flex; flex-direction: column; }
+  .ft-legal { flex-direction: row; align-items: center; justify-content: space-between; gap: 32px; padding: 26px 0; }
+}
+
+/* ==================================================================
+   Apparition : les groupes [data-rv] encore sous l'écran sont « armés »
+   après l'hydratation, puis révélés (« in ») à leur entrée. Sans JS ou
+   avec « réduire les animations », rien n'est jamais masqué.
+   ================================================================== */
+.ft [data-rv="armed"] .ft-rv { opacity: 0; transform: translate3d(0, 20px, 0); }
+.ft [data-rv="armed"] .ft-line > span { transform: translate3d(0, 112%, 0); }
+.ft [data-rv="armed"] :is(.ft-edge, .ft-tick) { transform: scaleX(0); }
+.ft [data-rv="in"] .ft-rv {
+  transition: opacity 0.9s var(--ft-ease), transform 1.1s var(--ft-ease);
+  transition-delay: calc(var(--i, 0) * 65ms + 60ms);
+}
+.ft [data-rv="in"] .ft-line > span { transition: transform 1.15s var(--ft-ease); transition-delay: calc(var(--i, 0) * 90ms + 120ms); }
+.ft [data-rv="in"] .ft-edge { transition: transform 1.7s var(--ft-ease); }
+.ft [data-rv="in"] .ft-tick { transition: transform 0.9s var(--ft-ease) 0.1s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ft [data-rv] :is(.ft-rv, .ft-line > span, .ft-edge, .ft-tick) { opacity: 1 !important; transform: none !important; }
+}

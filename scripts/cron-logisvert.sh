@@ -52,11 +52,12 @@ NEW_COUNT=$(node -e "
 if [ "$OLD_COUNT" -gt 0 ] && [ "$(node -e "console.log($NEW_COUNT >= $OLD_COUNT * $MIN_RATIO ? 'ok' : 'ko')")" != "ok" ]; then
   log "VALIDATION ÉCHOUÉE : $NEW_COUNT entrées contre $OLD_COUNT avant (chute > 10 %) — anciennes données restaurées"; restore; exit 1
 fi
-rm -f "$AMOUNTS.bak" "$INDEX.bak" "$META.bak"
+# Sauvegardes gardées jusqu’à la fin de la reconstruction du catalogue : restore en a besoin si elle échoue.
+drop_backup() { rm -f "$AMOUNTS.bak" "$INDEX.bak" "$META.bak"; }
 
 NEW_HASH=$(md5 -q "$AMOUNTS" 2>/dev/null || echo "none")
 if [ "$OLD_HASH" = "$NEW_HASH" ]; then
-  log "Aucun changement ($NEW_COUNT entrées)."; exit 0
+  drop_backup; log "Aucun changement ($NEW_COUNT entrées)."; exit 0
 fi
 
 # ── Commit sur une branche de revue ────────────────────────────────
@@ -70,10 +71,11 @@ git stash pop -q || true
 CATALOGUE="src/lib/data/fixtures/brands/all-auto-datasets.json"
 CATALOGUE_REPORT="src/lib/data/fixtures/brands/catalogue-build-report.json"
 if ! node scripts/build-catalogue.mjs 2>&1 | tee -a "$LOG_FILE"; then
-  log "Reconstruction du catalogue refusée : liste LogisVert conservée, catalogue inchangé."
-  restore_backup
+  log "Reconstruction du catalogue refusée : ancienne liste LogisVert restaurée, catalogue inchangé."
+  restore
   exit 1
 fi
+drop_backup
 
 git add "$AMOUNTS" "$INDEX" "$META" "$CATALOGUE" "$CATALOGUE_REPORT"
 git commit -q -m "chore(logisvert): liste Hydro-Québec du $(date '+%Y-%m-%d') ($NEW_COUNT entrées)"
