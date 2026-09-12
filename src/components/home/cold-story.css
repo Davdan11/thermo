@@ -1,0 +1,52 @@
+/* ==================================================================
+   Section « Le test du froid » (accueil).
+   ================================================================== */
+
+/* Le CSS global met overflow-x: hidden sur html et body : body devient un conteneur de
+   défilement et position: sticky ne colle plus (la section épinglée se viderait).
+   Sur les pages qui contiennent cette section seulement : on coupe le débord sans créer
+   de conteneur de défilement. */
+html:has(.cs-root), body:has(.cs-root) { overflow-x: clip; }
+
+/* Même police de titre que le héros (Inter Tight), sinon celle du site. */
+.cs-root { font-family: var(--font-display), var(--font-sans), sans-serif; }
+
+/* Grain de pellicule très léger ; le parent est positionné et masque son débord. */
+.cs-grain { isolation: isolate; }
+.cs-grain::after {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  z-index: 5;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  animation: cs-grain 1s steps(5) infinite;
+}
+@keyframes cs-grain {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(3%, 3%); }
+}
+
+.cs-link { position: relative; }
+.cs-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cs-link:hover::after, .cs-link:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-grain::after { animation: none; }
+}

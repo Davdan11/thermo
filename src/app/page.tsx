@@ -1,11 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-import { HeroThermoMatchBar } from "@/components/home/HeroThermoMatchBar";
+import { HeroPremium } from "@/components/home/HeroPremium";
 import { CompareSectionAnimated } from "@/components/home/CompareSectionAnimated";
 import { ModelesADecouvrir } from "@/components/home/ModelesADecouvrir";
 import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { ColdStory } from "@/components/home/ColdStory";
+import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
+import { registry } from "@/lib/data/registry";
+import { getEligibleModelCount } from "@/lib/data/queries/stats";
+import { Inter_Tight, Instrument_Serif } from "next/font/google";
 import { createMetadata } from "@/lib/seo";
+
+// Polices des titres du héros et de « Le test du froid », chargées sur l’accueil seulement.
+const display = Inter_Tight({ subsets: ["latin"], variable: "--font-display", display: "swap" });
+const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
 
 export const metadata = createMetadata({
   title: { absolute: "Thermopompe au Québec : comparez toutes les marques | Thermopompes À Vendre.ca" },
@@ -20,50 +29,14 @@ export const metadata = createMetadata({
    All colours are inlined (hex) so they survive any CSS-variable failure.
 ───────────────────────────────────────────────────────────────────────────*/
 export default function HomePage() {
+  // Chiffres de la section « Le test du froid », calculés à partir du catalogue.
+  const brandsSummary = getPublishedBrandsSummary();
+  const coldClimate = brandsSummary.reduce((sum, b) => sum + b.coldClimateCount, 0);
+  const with5F = registry.models.filter((m) => m.status === "published" && m.heatingCapacity5FMinBtu != null).length;
   return (
-    <main style={{ fontFamily: "var(--font-sans, 'Inter', sans-serif)", color: "#172126", backgroundColor: "#fff" }}>
+    <main className={`${display.variable} ${serif.variable}`} style={{ fontFamily: "var(--font-sans, 'Inter', sans-serif)", color: "#172126", backgroundColor: "#fff" }}>
 
-      {/* ══════════════════════════════════════════════════════════════════
-          HERO — full-width dark background with winter house photo
-      ══════════════════════════════════════════════════════════════════ */}
-      <section style={{ position: "relative", backgroundColor: "#0b1b24", display: "flex", flexDirection: "column" }} className="min-h-[85vh] lg:min-h-[75vh]">
-        {/* Background photo — right side, fading to dark on left */}
-        <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
-          <Image
-            src="/images/thermomatch/thermomatch-hero-winter-home.png"
-            alt="Maison moderne en hiver avec thermopompe Mitsubishi"
-            fill
-            priority
-            fetchPriority="high"
-            sizes="100vw"
-            quality={70}
-            style={{ objectFit: "cover", objectPosition: "60% center" }}
-          />
-          {/* Dark overlay gradient — stronger on mobile */}
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(11,27,36,1) 0%, rgba(11,27,36,0.92) 35%, rgba(11,27,36,0.55) 62%, rgba(11,27,36,0.15) 100%)" }} />
-          <div className="absolute inset-0 bg-[rgba(11,27,36,0.55)] md:hidden" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 w-full flex-1 flex flex-col justify-center max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-10">
-          <div className="pt-20 pb-10 md:pt-32 md:pb-24">
-            <FadeIn delay={100}>
-              <h1 style={{ color: "#fff", fontSize: "clamp(36px, 5vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", margin: "0 0 24px 0", maxWidth: 720, fontStyle: "italic" }}>
-                Trouvez la thermopompe qui convient vraiment à votre maison.
-              </h1>
-            </FadeIn>
-            
-            <FadeIn delay={300}>
-              <p className="text-sm sm:text-lg hidden sm:block" style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.6, maxWidth: 540, marginBottom: 48 }}>
-                Comparez les modèles selon votre région, votre maison et votre budget. Des données vérifiées, pas de la publicité.
-              </p>
-            </FadeIn>
-
-            {/* ThermoMatch bar — includes trust badges below */}
-            <HeroThermoMatchBar />
-          </div>
-        </div>
-      </section>
+      <HeroPremium eligible={getEligibleModelCount()} brands={brandsSummary.length} />
 
       {/* ══════════════════════════════════════════════════════════════════
           MAGASINEZ — 3 type cards (Murales / Multizones / Centrales)
@@ -110,6 +83,8 @@ export default function HomePage() {
       </section>
 
       <CompareSectionAnimated />
+
+      <ColdStory coldClimate={coldClimate} with5F={with5F} />
 
       <ThermoScanPromo variant="band" context="accueil" />
 
