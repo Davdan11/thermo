@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GlossaryHero, type GlossaryEntry } from "@/components/content-hero/GlossaryHero";
-import { excerpt, typo } from "@/components/content-hero/typo";
+import { DictionaryHero, type DictLetter, type DictTerm } from "@/components/heroes-v2/contenu/DictionaryHero";
+import { typo } from "@/components/content-hero/typo";
 
 export const metadata: Metadata = {
   title: "Glossaire de la thermopompe : SEER2, HSPF2, COP, Inverter, LogisVert expliqués",
@@ -72,19 +72,11 @@ export default function GlossairePage() {
     grouped[letter].push(item);
   });
 
-  // Héros : pour chaque lettre, son nombre de termes et le premier terme (aperçu de sa vraie définition).
-  const letterEntries: GlossaryEntry[] = Object.keys(grouped)
+  // Héros : toutes les entrées (vraies définitions) et, pour chaque lettre, son premier terme et son nombre de termes.
+  const dictTerms: DictTerm[] = sortedTerms.map((t) => ({ term: typo(t.term), slug: slugifyTerm(t.term), definition: typo(t.definition) }));
+  const dictLetters: DictLetter[] = Object.keys(grouped)
     .sort()
-    .map((letter) => {
-      const first = grouped[letter][0];
-      return {
-        letter,
-        count: grouped[letter].length,
-        term: typo(first.term),
-        slug: slugifyTerm(first.term),
-        excerpt: typo(excerpt(first.definition, 170)),
-      };
-    });
+    .map((letter) => ({ letter, slug: slugifyTerm(grouped[letter][0].term), count: grouped[letter].length }));
 
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: "white", minHeight: "100vh" }}>
@@ -106,8 +98,8 @@ export default function GlossairePage() {
         }}
       />
       
-      {/* ── HÉROS : dictionnaire qui feuillette ses entrées, index A–Z ── */}
-      <GlossaryHero entries={letterEntries} termCount={sortedTerms.length} />
+      {/* ── HÉROS : une entrée de dictionnaire qui tourne comme une page, ruban A–Z ── */}
+      <DictionaryHero terms={dictTerms} letters={dictLetters} termCount={sortedTerms.length} />
 
       {/* ── CONTENT ── */}
       <section id="lexique" style={{ padding: "clamp(64px, 8vw, 120px) clamp(24px, 5vw, 64px)", backgroundColor: T.surface, scrollMarginTop: 72 }}>

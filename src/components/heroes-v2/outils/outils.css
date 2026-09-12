@@ -1,0 +1,104 @@
+/* ==================================================================
+   Héros v2 de la famille « outils » (préfixe ou-) : Viseur (ThermoScan),
+   Mécanisme (technologie ThermoMatch), Carnet (questionnaire et
+   soumission), Hors plage (404) et Document (pages légales).
+   Chaque page a sa propre direction ; seules les règles techniques
+   sont partagées ici. Tout mouvement s'arrête sous « réduire les animations ».
+   ================================================================== */
+
+/* Le CSS global met overflow-x: hidden sur html et body : l'en-tête sticky ne collerait plus.
+   Sur ces pages, on coupe le débord sans créer de conteneur de défilement. */
+html:has(.ou-root), body:has(.ou-root) { overflow-x: clip; }
+
+/* ---------- Boutons et liens communs ---------- */
+.ou-btn { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s, color 0.3s, border-color 0.3s; }
+.ou-btn:hover { transform: translateY(-2px); }
+.ou-btn .ou-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.ou-btn:hover .ou-arrow { transform: translateX(4px); }
+.ou-btn:hover .ou-arrow-down { transform: translateY(3px); }
+
+/* Lien dont le soulignement se trace au survol. */
+.ou-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 2px;
+  transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s;
+}
+.ou-link:hover, .ou-link:focus-visible { background-size: 100% 1px; }
+.ou-link-on { background-size: 100% 1px; }
+.ou-link-on:hover { background-size: 0% 1px; }
+
+/* ---------- Viseur (ThermoScan) ---------- */
+.ou-v-stage { container-type: size; }
+.ou-v-wrap {
+  --S: max(100cqw, 100cqh);
+  position: absolute;
+  width: var(--S);
+  height: var(--S);
+  left: calc((100cqw - var(--S)) * 0.5);
+  top: calc((100cqh - var(--S)) * 0.7);
+}
+.ou-v-crumbs a { color: rgba(255, 255, 255, 0.6); transition: color 0.3s; }
+.ou-v-crumbs a:hover { color: #fff; }
+.ou-v-blink { animation: ou-blink 1.3s steps(2, jump-none) infinite; }
+@keyframes ou-blink { 50% { opacity: 0.18; } }
+.ou-v-sweep { animation: ou-v-sweep 1.7s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
+@keyframes ou-v-sweep { 0%, 100% { top: 5%; } 50% { top: 93%; } }
+/* Valeur lue qui s'écrit caractère par caractère (police mono). */
+.ou-type { display: inline-block; animation: ou-type var(--dur, 0.6s) steps(var(--n, 12), end) var(--delay, 0s) both; }
+@keyframes ou-type { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+
+/* ---------- Carnet (questionnaire et soumission) ---------- */
+.ou-field { border-bottom: 1.5px solid rgba(23, 27, 30, 0.72); transition: border-color 0.3s; }
+.ou-field:focus-within { border-color: #e54b17; }
+.ou-field[data-error] { border-color: #b8360c; }
+.ou-field input::placeholder { color: rgba(23, 27, 30, 0.28); }
+
+/* ---------- Hors plage (404) ---------- */
+.ou-h-preset { transition: background-color 0.35s, border-color 0.35s; }
+.ou-h-preset:hover { background-color: rgba(255, 255, 255, 0.04); border-color: rgba(229, 75, 23, 0.7); }
+.ou-h-preset .ou-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s; }
+.ou-h-preset:hover .ou-arrow { transform: translateX(4px); color: #ff6a2b; }
+.ou-h-blink { animation: ou-blink 1.6s steps(2, jump-none) infinite; }
+
+/* ---------- Document (pages légales) ---------- */
+.ou-d-crumbs a { color: #5f6468; transition: color 0.3s; }
+.ou-d-crumbs a:hover { color: #e54b17; }
+.ou-d-toc a { transition: color 0.3s; }
+.ou-d-toc a:hover { color: #e54b17; }
+.ou-d-toc a:hover .ou-d-num { color: #e54b17; }
+
+/* ---------- Parcours sombre existant (étapes 2 et suivantes du questionnaire) ---------- */
+/* Repris tels quels de l'ancien flow-hero.css : champ en pastille, lien, choix de réponse. */
+.fh-pill {
+  border: 1px solid rgba(244, 239, 231, 0.22);
+  background-color: rgba(244, 239, 231, 0.05);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s, background-color 0.3s;
+}
+.fh-pill:focus-within { border-color: rgba(229, 75, 23, 0.9); background-color: rgba(244, 239, 231, 0.08); }
+.fh-pill[data-error] { border-color: #e54b17; }
+.fh-input::placeholder { color: rgba(244, 239, 231, 0.38); }
+.fh-option { transition: border-color 0.3s, background-color 0.3s, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.fh-option:hover { transform: translateX(3px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ou-btn, .ou-btn .ou-arrow, .ou-link, .ou-h-preset, .ou-h-preset .ou-arrow, .fh-pill, .fh-option { transition: none; }
+  .ou-btn:hover, .fh-option:hover { transform: none; }
+  .ou-v-blink, .ou-v-sweep, .ou-h-blink { animation: none; }
+  .ou-v-sweep { top: 50%; }
+  .ou-type { animation: none; clip-path: none; }
+}
+
+/* ---------- Carnet : réponses des questions 2 à 13 ---------- */
+.ou-choice { transition: background-color 0.3s; }
+.ou-choice:hover { background-color: rgba(23, 27, 30, 0.035); }
+.ou-choice .ou-choice-arrow { color: rgba(23, 27, 30, 0.28); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s; }
+.ou-choice:hover .ou-choice-arrow, .ou-choice[aria-checked="true"] .ou-choice-arrow { transform: translateX(4px); color: #e54b17; }
+@media (prefers-reduced-motion: reduce) {
+  .ou-choice, .ou-choice .ou-choice-arrow { transition: none; }
+  .ou-choice:hover .ou-choice-arrow, .ou-choice[aria-checked="true"] .ou-choice-arrow { transform: none; }
+}

@@ -4,7 +4,8 @@ import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getCollectionPageSchema } from "@/lib/seo";
 import { getAllBrandStats } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
-import { CtaThermoMatch, JsonLd, Prose, SeoHero } from "@/components/seo/SeoBlocks";
+import { CtaThermoMatch, JsonLd, Prose, TrustStrip } from "@/components/seo/SeoBlocks";
+import { BarometreIndexHero } from "@/components/heroes-v2/prix/BarometreHeroes";
 
 export const metadata: Metadata = createMetadata({
   title: `Subvention LogisVert ${new Date().getFullYear()} par marque de thermopompe : montants officiels Hydro-Québec`,
@@ -24,21 +25,11 @@ export default function LogisVertIndex() {
           getCollectionPageSchema({ name: "Subvention LogisVert par marque", description: "Montants officiels par marque.", url: "/subventions/logisvert" }),
         ]}
       />
-      <SeoHero
-        eyebrow="Subvention Hydro-Québec"
-        title="Subvention LogisVert par marque de thermopompe"
+      <BarometreIndexHero
         intro={`Pour chaque marque, le nombre de modèles admissibles et la fourchette de montants de la liste officielle d'Hydro-Québec${updated ? ` (liste du ${updated})` : ""}.`}
         breadcrumbs={[{ label: "Subventions", href: "/subventions" }, { label: "LogisVert par marque", href: "/subventions/logisvert" }]}
-        titleLines={["Subvention LogisVert", "par marque de thermopompe"]}
-        serif="par marque"
-        motif={{
-          kind: "subsidy",
-          label: "Montant le plus élevé de la liste",
-          amount: Math.max(...brands.map((b) => b.maxLogisVert)),
-          updated,
-          tickerLabel: "Maximum par marque",
-          ticker: brands.slice(0, 16).map((b) => ({ label: b.name, sub: `${b.models.filter((m) => m.logisVertDollars > 0).length} modèles admissibles`, amount: b.maxLogisVert })),
-        }}
+        updated={updated}
+        brands={brands.slice(0, 16).map((b) => ({ slug: b.slug, name: b.name, max: b.maxLogisVert, models: b.models.filter((m) => m.logisVertDollars > 0).length }))}
         stats={[
           { label: "Marques", value: String(brands.length) },
           { label: "Montant le plus élevé", value: `${Math.max(...brands.map((b) => b.maxLogisVert)).toLocaleString("fr-CA")} $` },
@@ -46,6 +37,7 @@ export default function LogisVertIndex() {
           { label: "Liste du", value: updated ?? "—" },
         ]}
       />
+      <TrustStrip />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="overflow-x-auto rounded-xl border border-[#e4ddd5] bg-white">
           <table className="w-full text-sm">

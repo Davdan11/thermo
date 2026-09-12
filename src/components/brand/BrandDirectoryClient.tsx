@@ -6,19 +6,20 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { BrandSummary } from "@/lib/data/queries/brand-detail";
-import { BrandDirectoryHero, type OrbitBrand } from "./hero/BrandDirectoryHero";
+import { GalerieHero } from "@/components/heroes-v2/marques/GalerieHero";
+import type { Placard } from "@/components/heroes-v2/marques/shared";
 
 export type BrandSummaryWithLogo = BrandSummary & { hasLogo: boolean };
 
 interface BrandDirectoryClientProps {
   brands: BrandSummaryWithLogo[];
-  /** Marques affichées sur les orbites du héros (logos monochromes vérifiés). */
-  orbit: OrbitBrand[];
+  /** Marques accrochées au mur du héros (logos officiels vérifiés). */
+  placards: Placard[];
   /** Chiffres réels de l'annuaire. */
   totals: { brands: number; models: number; cold: number };
 }
 
-export function BrandDirectoryClient({ brands, orbit, totals }: BrandDirectoryClientProps) {
+export function BrandDirectoryClient({ brands, placards, totals }: BrandDirectoryClientProps) {
   const [search, setSearch] = useState("");
 
   const filteredBrands = useMemo(() => {
@@ -29,9 +30,9 @@ export function BrandDirectoryClient({ brands, orbit, totals }: BrandDirectoryCl
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Héros premium : planétarium des marques + recherche qui filtre l'annuaire */}
-      <BrandDirectoryHero
-        orbit={orbit}
+      {/* Héros « Galerie » : logos accrochés au mur + recherche qui filtre l'annuaire */}
+      <GalerieHero
+        placards={placards}
         totals={totals}
         search={search}
         onSearch={setSearch}

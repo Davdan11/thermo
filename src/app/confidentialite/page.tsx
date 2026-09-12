@@ -2,7 +2,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema } from "@/lib/seo";
-import { JsonLd, Prose, SeoHero } from "@/components/seo/SeoBlocks";
+import { JsonLd, Prose, TrustStrip } from "@/components/seo/SeoBlocks";
+import { DocumentHero } from "@/components/heroes-v2/outils/DocumentHero";
 
 export const metadata: Metadata = createMetadata({
   title: "Politique de confidentialité",
@@ -11,36 +12,35 @@ export const metadata: Metadata = createMetadata({
   robots: { index: true, follow: true },
 });
 
-const UPDATED = "8 septembre 2026";
+const UPDATED = "12 septembre 2026";
 
 export default function ConfidentialitePage() {
   return (
     <main className="bg-[#f8f5f0] text-[#071d2b]">
       <JsonLd data={getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Politique de confidentialité", url: "/confidentialite" }])} />
-      <SeoHero
+      <DocumentHero
+        variant="confidentialite"
         eyebrow="Loi 25"
-        title="Politique de confidentialité"
+        titleLines={["Politique de", "confidentialité"]}
         intro={`Dernière mise à jour : ${UPDATED}. Cette politique décrit les renseignements personnels que nous recueillons sur ce site, l'usage que nous en faisons et vos droits.`}
         breadcrumbs={[{ label: "Politique de confidentialité", href: "/confidentialite" }]}
-        titleLines={["Politique de", "confidentialité"]}
-        serif="confidentialité"
-        motif={{
-          kind: "legal",
+        toc={{
           heading: "Sommaire",
           note: `Mise à jour : ${UPDATED}`,
           items: [
-            { id: "qui-nous-sommes", label: "Qui nous sommes" },
-            { id: "renseignements-recueillis", label: "Renseignements que nous recueillons" },
-            { id: "utilisation", label: "Pourquoi nous les utilisons" },
-            { id: "partage", label: "Avec qui nous les partageons" },
-            { id: "conservation", label: "Conservation" },
-            { id: "vos-droits", label: "Vos droits" },
-            { id: "temoins", label: "Témoins (cookies) et stockage local" },
-            { id: "securite", label: "Sécurité" },
-            { id: "modifications", label: "Modifications" },
-          ],
+          { id: "qui-nous-sommes", label: "Qui nous sommes" },
+          { id: "renseignements-recueillis", label: "Renseignements que nous recueillons" },
+          { id: "utilisation", label: "Pourquoi nous les utilisons" },
+          { id: "partage", label: "Avec qui nous les partageons" },
+          { id: "conservation", label: "Conservation" },
+          { id: "vos-droits", label: "Vos droits" },
+          { id: "temoins", label: "Témoins (cookies) et stockage local" },
+          { id: "securite", label: "Sécurité" },
+          { id: "modifications", label: "Modifications" },
+        ],
         }}
       />
+      <TrustStrip />
       <Prose>
         <h2 id="qui-nous-sommes" className="scroll-mt-28">1. Qui nous sommes</h2>
         <p>
@@ -52,6 +52,8 @@ export default function ConfidentialitePage() {
         <ul>
           <li><strong>Questionnaire ThermoMatch</strong> : code postal, type de propriété, superficie, année de construction, isolation, système de chauffage actuel, priorités et budget. Ces réponses servent uniquement à calculer la recommandation et sont conservées dans votre navigateur tant que vous n'avez pas demandé de soumission.</li>
           <li><strong>Demande de soumission</strong> : prénom, nom, téléphone, courriel, adresse ou code postal, et le résumé de votre projet.</li>
+          <li><strong>Vos recommandations par courriel</strong> : prénom, courriel et, si vous le donnez, téléphone, avec les réponses du questionnaire qui servent à recalculer vos trois choix. Nous vous envoyons le courriel, et un conseiller peut vous contacter au sujet de votre projet, comme pour une demande de soumission.</li>
+          <li><strong>Alerte LogisVert</strong> : courriel, prénom s'il est donné, et le modèle ou la marque que vous suivez. Il sert à vous prévenir quand le montant officiel change ; notre équipe est avisée de votre inscription.</li>
           <li><strong>ThermoScan</strong> : la photo de la plaque signalétique de votre appareil actuel, transmise à un service d'analyse d'image pour en lire le texte. Nous ne conservons pas la photo après l'analyse. Évitez de photographier des éléments personnels autour de l'étiquette.</li>
           <li><strong>Appels téléphoniques</strong> : numéro de l'appelant, messages vocaux et leur transcription, lorsque vous appelez notre ligne.</li>
           <li><strong>Données techniques</strong> : adresse IP, type de navigateur, pages consultées et paramètres de provenance (utm), utilisés pour la sécurité et la mesure d'audience.</li>
@@ -77,6 +79,7 @@ export default function ConfidentialitePage() {
         <p>
           Les réponses au questionnaire restent dans votre navigateur et peuvent être effacées à tout moment via « Recommencer ». Les demandes de
           soumission sont conservées le temps nécessaire au suivi du projet, puis archivées ou supprimées. Les photos ThermoScan ne sont pas conservées.
+          Une alerte LogisVert jamais confirmée est effacée après 30 jours, et une alerte est effacée dès que vous vous désabonnez, en un clic depuis chaque courriel.
         </p>
 
         <h2 id="vos-droits" className="scroll-mt-28">6. Vos droits</h2>

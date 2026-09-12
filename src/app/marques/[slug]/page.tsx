@@ -7,7 +7,8 @@ import { ProductCard } from "@/components/product/ProductCard";
 import { createMetadata, SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
 import { registry } from "@/lib/data/registry";
 import { CtaThermoMatch, TrustStrip } from "@/components/seo/SeoBlocks";
-import { BrandHeader } from "@/components/brand/BrandHeader";
+import { MonogrammeHero } from "@/components/heroes-v2/marques/MonogrammeHero";
+import { buildMonogramme } from "@/components/heroes-v2/marques/server";
 
 /* ── Static generation for all active Quebec brands ── */
 
@@ -96,9 +97,9 @@ export default async function BrandPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
-      {/* Héros premium : logo, photo réelle d'un modèle, filtres et chiffres de la marque
-          (remplace aussi l'ancienne barre de catégories : types et climat froid y sont en pastilles). */}
-      <BrandHeader detail={brandDetail} />
+      {/* Héros « Monogramme » : nom géant au trait qui se remplit d'encre au défilement, photo réelle
+          d'un modèle, filtres (types, climat froid) et chiffres réels de la marque. */}
+      <MonogrammeHero {...buildMonogramme(brandDetail)} />
 
       {/* =========================================
           SÉRIES DOCUMENTÉES

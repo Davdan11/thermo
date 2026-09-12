@@ -6,7 +6,9 @@ import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/se
 import { getLandingPage, getLandingPages, type LandingPage } from "@/lib/seo/landings";
 import { getCapacityClass, getCapacityClasses, getRanking, type CapacityClass } from "@/lib/seo/programmatic";
 import { estimateLoad } from "@/lib/thermomatch/sizing";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero, TrustStrip } from "@/components/seo/SeoBlocks";
+import { AtelierHero } from "@/components/heroes-v2/marques/AtelierHero";
+import { typo } from "@/components/heroes-v2/marques/shared";
 import type { GuideVariant } from "@/components/seo/hero/types";
 
 export const dynamicParams = false;
@@ -92,16 +94,15 @@ function LandingView({ page }: { page: LandingPage }) {
           { name: page.h1, url: `/thermopompes/${page.slug}` },
         ])}
       />
-      <SeoHero
-        eyebrow={page.pageType}
-        title={page.h1}
-        intro={cb.hero.subtitle}
-        breadcrumbs={[
-          { label: "Thermopompes", href: "/thermopompes" },
-          { label: page.h1, href: `/thermopompes/${page.slug}` },
-        ]}
-        motif={{ kind: "guide", variant: GUIDE_VARIANT[page.slug] ?? "catalogue" }}
+      {/* Héros « Plan d'atelier » : planche technique du système, titre dans le cartouche. */}
+      <AtelierHero
+        eyebrow={typo(page.pageType)}
+        title={typo(page.h1)}
+        intro={typo(cb.hero.subtitle)}
+        crumbs={[{ label: "Thermopompes", href: "/thermopompes" }, { label: typo(page.h1) }]}
+        variant={GUIDE_VARIANT[page.slug] ?? "catalogue"}
       />
+      <TrustStrip />
       <Prose>
         {cb.intro && <p className="text-[18px]">{cb.intro}</p>}
 

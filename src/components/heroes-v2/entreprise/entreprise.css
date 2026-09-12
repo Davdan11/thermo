@@ -1,0 +1,41 @@
+/* ==================================================================
+   Héros v2 des pages « entreprise » (à propos, carrière, partenaires,
+   espace installateur, contact, rendez-vous). Préfixe xe-.
+   ================================================================== */
+
+/* L'en-tête du site est sticky : le overflow-x: hidden global l'en empêcherait. */
+html:has(.xe-root), body:has(.xe-root) { overflow-x: clip; }
+
+.xe-root { font-family: var(--font-display), var(--font-sans), sans-serif; }
+.xe-mono { font-family: var(--font-xe-mono), ui-monospace, SFMono-Regular, Menlo, monospace; }
+.xe-serif { font-family: var(--font-serif), "Times New Roman", serif; font-weight: 400; }
+
+/* Lien souligné qui se trace au survol. */
+.xe-under { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.xe-under:hover, .xe-under:focus-visible { background-size: 100% 1px; }
+
+/* Flèche qui glisse au survol du parent. */
+.xe-arrow { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+:is(a, button):hover .xe-arrow { transform: translateX(4px); }
+
+/* ---------- Carrière : tableau des départs ---------- */
+.xe-flap { display: inline-block; transform-origin: 50% 50%; animation: xe-flap 0.11s ease-out; backface-visibility: hidden; }
+@keyframes xe-flap { from { transform: rotateX(-85deg); opacity: 0.35; } to { transform: rotateX(0deg); opacity: 1; } }
+.xe-board-row { transition: background-color 0.35s ease; }
+.xe-board-row:hover { background-color: rgba(20, 10, 6, 0.08); }
+.xe-split { position: relative; }
+.xe-split::after { content: ""; position: absolute; left: 0; right: 0; top: 52%; height: 1px; background: rgba(60, 16, 0, 0.18); pointer-events: none; }
+
+/* ---------- Espace installateur : lignes en attente ---------- */
+.xe-wait {
+  background: linear-gradient(90deg, #e7eaee 0%, #f3f5f7 50%, #e7eaee 100%);
+  background-size: 200% 100%;
+  animation: xe-wait 2.8s ease-in-out infinite;
+}
+@keyframes xe-wait { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+.xe-pulse { animation: xe-pulse 2.2s ease-in-out infinite; }
+@keyframes xe-pulse { 50% { opacity: 0.3; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .xe-flap, .xe-wait, .xe-pulse { animation: none; }
+}

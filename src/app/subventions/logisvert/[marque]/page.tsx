@@ -5,7 +5,8 @@ import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getAllBrandStats, getBrandStats } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { BarometreBrandHero } from "@/components/heroes-v2/prix/BarometreHeroes";
 import { LogisVertAlertForm } from "@/components/logisvert/LogisVertAlertForm";
 
 export const dynamicParams = false;
@@ -63,9 +64,8 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
           getItemListSchema({ name: `Thermopompes ${b.name} admissibles à LogisVert`, items: subsidised.slice(0, 50).map((m) => ({ name: `${b.name} ${m.name}`, url: `/produit/${m.canonicalSlug}` })) }),
         ]}
       />
-      <SeoHero
-        eyebrow="Subvention Hydro-Québec"
-        title={`Subvention LogisVert ${b.name}`}
+      <BarometreBrandHero
+        brand={b.name}
         intro={`Montants officiels de la liste LogisVert d'Hydro-Québec pour chaque thermopompe ${b.name} admissible, par appariement certifié AHRI. Mise à jour automatique${updated ? `, liste du ${updated}` : ""}.`}
         answer={`Selon la liste LogisVert d'Hydro-Québec${updated ? ` du ${updated}` : ""}, ${subsidised.length} thermopompes ${b.name} sont admissibles, pour un montant de ${b.minLogisVert.toLocaleString("fr-CA")} $ à ${b.maxLogisVert.toLocaleString("fr-CA")} $ selon l'appariement exact entre l'unité extérieure et l'unité intérieure (référence AHRI). ${b.coldClimateCount} de ces machines sont certifiées grand froid.`}
         breadcrumbs={[
@@ -73,17 +73,10 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
           { label: "LogisVert par marque", href: "/subventions/logisvert" },
           { label: b.name, href: `/subventions/logisvert/${b.slug}` },
         ]}
-        titleLines={["Subvention", `LogisVert ${b.name}`]}
-        serif="LogisVert"
-        motif={{
-          kind: "subsidy",
-          label: `${b.name} · jusqu’à`,
-          amount: b.maxLogisVert,
-          min: b.minLogisVert,
-          updated,
-          tickerLabel: "Montants par modèle",
-          ticker: subsidised.slice(0, 16).map((m) => ({ label: m.name, sub: m.outdoorModel, amount: m.logisVertDollars })),
-        }}
+        min={b.minLogisVert}
+        max={b.maxLogisVert}
+        amounts={subsidised.map((m) => m.logisVertDollars)}
+        top={subsidised.slice(0, 3).map((m) => ({ name: m.name, sub: m.outdoorModel, amount: m.logisVertDollars }))}
         stats={[
           { label: "Modèles admissibles", value: String(subsidised.length) },
           { label: "Montant minimum", value: `${b.minLogisVert.toLocaleString("fr-CA")} $` },
@@ -91,6 +84,7 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
           { label: "Certifiés grand froid", value: String(b.coldClimateCount) },
         ]}
       />
+      <TrustStrip />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
         <LogisVertAlertForm
           target={{ kind: "brand", brandSlug: b.slug }}

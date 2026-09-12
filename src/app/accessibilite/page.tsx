@@ -2,7 +2,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema } from "@/lib/seo";
-import { JsonLd, Prose, SeoHero } from "@/components/seo/SeoBlocks";
+import { JsonLd, Prose, TrustStrip } from "@/components/seo/SeoBlocks";
+import { DocumentHero } from "@/components/heroes-v2/outils/DocumentHero";
 
 export const metadata: Metadata = createMetadata({
   title: "Accessibilité",
@@ -15,22 +16,22 @@ export default function AccessibilitePage() {
   return (
     <main className="bg-[#f8f5f0] text-[#071d2b]">
       <JsonLd data={getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Accessibilité", url: "/accessibilite" }])} />
-      <SeoHero
+      <DocumentHero
+        variant="accessibilite"
         eyebrow="Engagement"
-        title="Accessibilité"
+        titleLines={["Accessibilité"]}
         intro="Nous voulons que chacun puisse comparer et choisir une thermopompe sur ce site, quel que soit l'appareil ou l'outil d'assistance utilisé."
         breadcrumbs={[{ label: "Accessibilité", href: "/accessibilite" }]}
-        serif="Accessibilité"
-        motif={{
-          kind: "legal",
+        toc={{
           heading: "Sommaire",
           items: [
-            { id: "ce-que-nous-appliquons", label: "Ce que nous appliquons" },
-            { id: "limites-connues", label: "Limites connues" },
-            { id: "signaler-un-obstacle", label: "Nous signaler un obstacle" },
-          ],
+          { id: "ce-que-nous-appliquons", label: "Ce que nous appliquons" },
+          { id: "limites-connues", label: "Limites connues" },
+          { id: "signaler-un-obstacle", label: "Nous signaler un obstacle" },
+        ],
         }}
       />
+      <TrustStrip />
       <Prose>
         <h2 id="ce-que-nous-appliquons" className="scroll-mt-28">Ce que nous appliquons</h2>
         <ul>

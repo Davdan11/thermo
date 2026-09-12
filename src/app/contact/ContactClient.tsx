@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ContactHero } from "@/components/company-hero/ContactHero";
+import { ContactNumber } from "@/components/heroes-v2/entreprise/ContactNumber";
 import { motion } from "framer-motion";
 import { Phone, Mail, Clock, MapPin, CheckCircle, ArrowRight, ShieldCheck, MessageCircle, Info } from "lucide-react";
 import { track } from "@/lib/analytics/track";
@@ -31,8 +31,8 @@ export default function ContactPageClient() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* HÉROS premium : src/components/company-hero/ContactHero.tsx */}
-      <ContactHero />
+      {/* HÉROS « Le numéro » : src/components/heroes-v2/entreprise/ContactNumber.tsx */}
+      <ContactNumber />
 
       {/* ── MAIN CONTENT ── */}
       <section className="py-20 lg:py-32 px-6 lg:px-8 relative z-20 -mt-10">

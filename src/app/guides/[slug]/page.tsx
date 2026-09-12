@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { GuideArticleHero } from "@/components/content-hero/GuideArticleHero";
+import { ArticleOpening } from "@/components/heroes-v2/contenu/ArticleOpening";
 import { guideCategoryLabel } from "@/components/content-hero/guideCategories";
 import { getAllGuides, getGuideBySlug } from "@/lib/markdown";
 import { createMetadata, getBreadcrumbSchema, SITE_NAME, SITE_URL } from "@/lib/seo";
@@ -83,10 +83,11 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
         ]}
       />
 
-      {/* Héros d'article premium : fil d'Ariane, titre, fiche de lecture, couverture qui se dévoile,
-          barre de progression de lecture (calculée sur la section #article). */}
-      <GuideArticleHero
+      {/* Ouverture d’article : rubrique, grand titre centré, chapeau, signature, photo pleine largeur qui s’ouvre
+          depuis le centre, barre de progression de lecture (calculée sur la section #article). */}
+      <ArticleOpening
         title={guide.title}
+        categoryId={guide.category}
         description={guide.description}
         category={guideCategoryLabel(guide.category)}
         minutes={Number.parseInt(guide.readTime, 10) || Math.max(1, Math.round(guide.wordCount / 200))}

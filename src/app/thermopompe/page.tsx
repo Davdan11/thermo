@@ -4,7 +4,8 @@ import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getCollectionPageSchema, getItemListSchema } from "@/lib/seo";
 import { getCitiesByRegion, getCities } from "@/lib/seo/cities";
 import { getCityData, fmtInt, fmtTemp } from "@/lib/seo/cities-data";
-import { CtaThermoMatch, JsonLd, Prose, SeoHero } from "@/components/seo/SeoBlocks";
+import { CtaThermoMatch, JsonLd, Prose, TrustStrip } from "@/components/seo/SeoBlocks";
+import { FrostIndexHero, type FrostGroup } from "@/components/heroes-v2/contenu/Frost";
 
 export const metadata: Metadata = createMetadata({
   title: "Thermopompe par ville au Québec : subvention LogisVert et modèles grand froid",
@@ -17,6 +18,10 @@ export default function CitiesIndexPage() {
   const byRegion = getCitiesByRegion();
   const cities = getCities();
   const regions = [...byRegion.keys()].sort((a, b) => a.localeCompare(b, "fr-CA"));
+  // Héros : villes regroupées par température de conception, de la plus douce à la plus froide
+  const groups: FrostGroup[] = [...new Set(cities.map((c) => c.designTempC))]
+    .sort((a, b) => b - a)
+    .map((t) => ({ t, cities: cities.filter((c) => c.designTempC === t).map((c) => ({ name: c.name, slug: c.slug })).sort((a, b) => a.name.localeCompare(b.name, "fr-CA")) }));
   // Tableau comparatif : villes classées de l'hiver le plus exigeant au plus doux (degrés-jours, sinon température de conception)
   const withData = cities.map((c) => ({ city: c, climate: getCityData(c.slug)?.climate ?? null }));
   const hasHdd = withData.some((x) => x.climate?.hdd18);
@@ -33,14 +38,13 @@ export default function CitiesIndexPage() {
           getItemListSchema({ name: "Villes du Québec", items: cities.map((c) => ({ name: `Thermopompe à ${c.name}`, url: `/thermopompe/${c.slug}` })) }),
         ]}
       />
-      <SeoHero
+      {/* Héros « Carte des froids » : chaque température de conception réelle et ses villes. */}
+      <FrostIndexHero
         eyebrow="Guides locaux"
-        title="Thermopompe par ville au Québec"
-        intro="La bonne machine dépend de votre maison, mais chaque ville a son hiver : température de conception, degrés-jours de chauffage, moyenne de janvier. Nous chiffrons ce que ça change, ville par ville, avec les normales d'Environnement Canada et les données certifiées d'Hydro-Québec."
         breadcrumbs={[{ label: "Thermopompe par ville", href: "/thermopompe" }]}
-        titleLines={["Thermopompe", "par ville au Québec"]}
-        serif="par ville"
-        motif={{ kind: "cities", cities: cities.map((c) => ({ name: c.name, designTempC: c.designTempC })) }}
+        lines={["Thermopompe", "par ville au Québec"]}
+        intro="La bonne machine dépend de votre maison, mais chaque ville a son hiver : température de conception, degrés-jours de chauffage, moyenne de janvier. Nous chiffrons ce que ça change, ville par ville, avec les normales d'Environnement Canada et les données certifiées d'Hydro-Québec."
+        groups={groups}
         stats={[
           { label: "Villes couvertes", value: String(cities.length) },
           { label: "Régions", value: String(regions.length) },
@@ -48,6 +52,7 @@ export default function CitiesIndexPage() {
           { label: "Données", value: "ENERGY STAR / AHRI" },
         ]}
       />
+      <TrustStrip />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pt-12">
         <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#e54b17] mb-2">Comparatif</p>
         <h2 className="text-[26px] font-extrabold tracking-tight text-[#071d2b] mb-2">Où l'hiver demande le plus d'une thermopompe</h2>

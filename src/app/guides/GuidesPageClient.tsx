@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { GuideCategory, GuideMetadata } from "@/lib/markdown";
-import { GuidesHero } from "@/components/content-hero/GuidesHero";
+import { GuidesCover } from "@/components/heroes-v2/contenu/GuidesCover";
 import { GUIDE_CATEGORIES } from "@/components/content-hero/guideCategories";
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -39,7 +39,7 @@ export default function GuidesPageClient({ initialGuides }: Props) {
   return (
     <div className="guides-page">
       {/* ── Héros : couverture de magazine ─────────────────────────────── */}
-      <GuidesHero guides={initialGuides} onPick={pick} />
+      <GuidesCover guides={initialGuides} onPick={pick} />
 
       {/* ── Onglets catégories ─────────────────────────────────────────── */}
       <section id="guides-liste" className="guides-tabs" style={{ scrollMarginTop: 96 }}>

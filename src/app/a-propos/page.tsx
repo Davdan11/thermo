@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AboutHero } from "@/components/company-hero/AboutHero";
+import { AboutManifesto } from "@/components/heroes-v2/entreprise/AboutManifesto";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
 
@@ -41,8 +41,8 @@ export default function AProposPage() {
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light" }}>
 
-      {/* HÉROS premium : src/components/company-hero/AboutHero.tsx */}
-      <AboutHero stats={heroStats} />
+      {/* HÉROS « Manifeste » : src/components/heroes-v2/entreprise/AboutManifesto.tsx */}
+      <AboutManifesto stats={heroStats} />
 
       {/* ════════════════════════════════════════════════════════════
           NOTRE MISSION  —  y: 377 → 837px

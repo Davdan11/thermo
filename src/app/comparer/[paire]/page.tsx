@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema } from "@/lib/seo";
 import { getBrandPair, getBrandPairs, type BrandStats } from "@/lib/seo/programmatic";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { AfficheCombat } from "@/components/heroes-v2/produit/AfficheCombat";
 import { monoLogo } from "@/components/seo/hero/assets";
 
 export const dynamicParams = false;
@@ -80,30 +81,25 @@ export default async function BrandPairPage({ params }: { params: Promise<{ pair
           { name: `${a.name} vs ${b.name}`, url: `/comparer/${paire}` },
         ])}
       />
-      <SeoHero
+      <AfficheCombat
         eyebrow="Comparatif de marques"
-        title={`${a.name} ou ${b.name}?`}
         intro={`Comparaison des deux marques sur leurs données certifiées ENERGY STAR et les montants LogisVert d'Hydro-Québec : ${a.models.length} modèles ${a.name} contre ${b.models.length} modèles ${b.name} vendus au Québec.`}
-        breadcrumbs={[
+        crumbs={[
           { label: "Comparer", href: "/comparer" },
           { label: `${a.name} vs ${b.name}`, href: `/comparer/${paire}` },
         ]}
-        titleLines={[a.name, `ou ${b.name}?`]}
-        serif="ou"
-        motif={{
-          kind: "compare",
-          a: { name: a.name, href: `/marques/${a.slug}`, logo: monoLogo(a.slug) },
-          b: { name: b.name, href: `/marques/${b.slug}`, logo: monoLogo(b.slug) },
-          shared: shared?.count,
-          rows: [
-            { label: "Modèles vendus au Québec", a: a.models.length, b: b.models.length },
-            { label: "Certifiés climat froid", a: a.coldClimateCount, b: b.coldClimateCount, better: true },
-            { label: "COP moyen à −15 °C", a: a.avgCop5, b: b.avgCop5, decimals: 2, better: true },
-            { label: "HSPF2 moyen", a: a.avgHspf2, b: b.avgHspf2, decimals: 2, better: true },
-            { label: "LogisVert maximum", a: a.maxLogisVert > 0 ? a.maxLogisVert : null, b: b.maxLogisVert > 0 ? b.maxLogisVert : null, suffix: " $", better: true },
-          ],
-        }}
+        a={{ name: a.name, href: `/marques/${a.slug}`, logo: monoLogo(a.slug) }}
+        b={{ name: b.name, href: `/marques/${b.slug}`, logo: monoLogo(b.slug) }}
+        shared={shared?.count}
+        rows={[
+          { label: "Modèles vendus au Québec", a: a.models.length, b: b.models.length },
+          { label: "Certifiés climat froid", a: a.coldClimateCount, b: b.coldClimateCount, better: true },
+          { label: "COP moyen à −15 °C", a: a.avgCop5, b: b.avgCop5, decimals: 2, better: true },
+          { label: "HSPF2 moyen", a: a.avgHspf2, b: b.avgHspf2, decimals: 2, better: true },
+          { label: "LogisVert maximum", a: a.maxLogisVert > 0 ? a.maxLogisVert : null, b: b.maxLogisVert > 0 ? b.maxLogisVert : null, suffix: " $", better: true },
+        ]}
       />
+      <TrustStrip />
       <section className="mx-auto max-w-4xl px-5 sm:px-8 py-12">
         <div className="overflow-x-auto rounded-xl border border-[#e4ddd5] bg-white">
           <table className="w-full text-sm">

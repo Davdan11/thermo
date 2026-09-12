@@ -1,0 +1,147 @@
+/* ==================================================================
+   Héros v2 — fiche produit (fi-), comparateur (dg-), affiche de
+   combat (ac-), recherche (pb-). Chaque page a sa propre direction.
+   ================================================================== */
+
+/* Le CSS global coupe le débord horizontal sur html/body (overflow-x: hidden), ce qui
+   empêche l'en-tête sticky de coller : sur ces pages, on coupe sans conteneur de défilement. */
+html:has(.pv2-root),
+body:has(.pv2-root) {
+  overflow-x: clip;
+}
+
+/* ── Fiche d'ingénierie (/produit/[slug]) ───────────────────────── */
+.fi-mono {
+  font-family: var(--font-tech-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+.fi-crumbs a { color: rgba(18, 20, 23, 0.5); transition: color 0.25s; }
+.fi-crumbs a:hover { color: #121417; }
+
+.fi-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "l1 r1" "ph ph" "l2 r2";
+  gap: 26px 18px;
+}
+.fi-l1 { grid-area: l1; }
+.fi-r1 { grid-area: r1; }
+.fi-l2 { grid-area: l2; }
+.fi-r2 { grid-area: r2; }
+.fi-l1, .fi-l2 { --fi-al: flex-start; text-align: left; }
+.fi-r1, .fi-r2 { --fi-al: flex-end; text-align: right; }
+.fi-cell { display: flex; flex-direction: column; align-items: var(--fi-al); min-width: 0; }
+.fi-ph { grid-area: ph; position: relative; height: clamp(220px, 60vw, 340px); }
+
+@media (min-width: 1024px) {
+  .fi-stage {
+    grid-template-columns: 250px minmax(0, 1fr) 250px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "l1 ph r1" "l2 ph r2";
+    column-gap: 36px;
+    row-gap: 0;
+    height: clamp(320px, calc(100svh - 555px), 470px);
+  }
+  .fi-ph { height: auto; }
+  .fi-l1, .fi-l2 { --fi-al: flex-end; text-align: right; }
+  .fi-r1, .fi-r2 { --fi-al: flex-start; text-align: left; }
+  .fi-l1, .fi-r1 { align-self: start; padding-top: 14px; }
+  .fi-l2, .fi-r2 { align-self: end; padding-bottom: 54px; }
+}
+
+/* Nom du modèle, à la largeur de la page : --fi-kd = longueur du nom, --fi-km = mot le plus long. */
+.fi-name { font-size: min(76px, calc((100vw - 40px) / var(--fi-km))); }
+@media (min-width: 640px) {
+  .fi-name { font-size: min(150px, calc((100vw - 64px) / var(--fi-kd))); }
+}
+@media (min-width: 1024px) {
+  .fi-name { font-size: min(196px, calc((min(100vw, 1440px) - 96px) / var(--fi-kd))); }
+}
+
+.fi-chip { transition: border-color 0.25s, background-color 0.25s, color 0.25s; }
+.fi-chip:hover { border-color: #121417; background: #121417; color: #fff; }
+.fi-btn { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s, color 0.25s; }
+.fi-btn:hover { transform: translateY(-2px); }
+.fi-ghost:hover { background: #121417; color: #fff; }
+.fi-btn svg, .fi-lnk svg { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.fi-btn:hover svg, .fi-lnk:hover svg { transform: translateX(4px); }
+.fi-lnk:hover .fi-lnk-t { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ── Duel à glissière (/comparer) ───────────────────────────────── */
+.dg-stage { touch-action: pan-y; cursor: ew-resize; -webkit-user-select: none; user-select: none; }
+.dg-stage a { cursor: pointer; }
+.dg-photo { mix-blend-mode: multiply; }
+.dg-knob { cursor: grab; transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
+.dg-knob:active { cursor: grabbing; }
+.dg-knob:hover { transform: scale(1.06); }
+.dg-knob:focus-visible { outline: 2px solid #141a1f; outline-offset: 5px; }
+.dg-btn { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s, color 0.25s; }
+.dg-btn:hover { transform: translateY(-2px); }
+.dg-ghost:hover { background: rgba(20, 26, 31, 0.08); }
+.dg-name:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+/* Positions dans chaque moitié (en % de la largeur totale : le séparateur découpe en %). */
+.dg-a-photo { left: 4%; width: 42%; top: 0; height: 150px; }
+.dg-b-photo { right: 4%; width: 42%; top: 0; height: 150px; }
+.dg-a-figs { left: 5%; width: 41%; top: 168px; }
+.dg-b-figs { right: 5%; width: 41%; top: 168px; text-align: right; }
+.dg-a-adv { left: 54%; width: 41%; top: 168px; }
+.dg-b-adv { right: 54%; width: 41%; top: 168px; text-align: right; }
+@media (min-width: 1024px) {
+  .dg-a-photo { left: 24%; width: 23%; top: 6%; height: 80%; }
+  .dg-b-photo { right: 24%; width: 23%; top: 6%; height: 80%; }
+  .dg-a-figs { left: 5.5%; width: 17%; top: 50%; transform: translateY(-50%); }
+  .dg-b-figs { right: 5.5%; width: 17%; top: 50%; transform: translateY(-50%); }
+  .dg-a-adv { left: 53.5%; width: 26%; top: 50%; transform: translateY(-50%); }
+  .dg-b-adv { right: 53.5%; width: 26%; top: 50%; transform: translateY(-50%); }
+}
+
+/* ── Affiche de combat (/comparer/[paire]) ──────────────────────── */
+.ac-poster { font-family: var(--font-poster), "Anton", Impact, "Arial Narrow", sans-serif; font-weight: 400; }
+.ac-serif { font-family: var(--font-serif), "Times New Roman", serif; font-style: italic; font-weight: 400; }
+.ac-crumbs a { color: rgba(255, 255, 255, 0.55); transition: color 0.25s; }
+.ac-crumbs a:hover { color: #e54b17; }
+/* --ac-k : largeur du nom entier (ordinateur) ; --ac-km : mot le plus long (mobile). */
+.ac-name { font-size: min(120px, calc((100vw - 40px) / var(--ac-km))); line-height: 0.88; }
+@media (min-width: 1024px) {
+  .ac-name { font-size: min(var(--ac-max, 230px), calc((min(100vw, 1440px) - 96px) / var(--ac-k))); }
+}
+.ac-btn { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s, color 0.25s; }
+.ac-btn:hover { transform: translateY(-2px); }
+.ac-ghost:hover { background: #fff; color: #000; }
+.ac-brand:hover .ac-brand-t { color: #e54b17; }
+
+/* ── Page blanche (/recherche) ──────────────────────────────────── */
+.pb-q {
+  font-family: var(--font-serif), "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+.pb-caret {
+  display: inline-block;
+  width: max(3px, 0.05em);
+  height: 0.8em;
+  margin-left: 0.05em;
+  vertical-align: -0.02em;
+  background: #e54b17;
+}
+.pb-caret.is-idle { animation: pb-blink 1.05s steps(1) infinite; }
+@keyframes pb-blink { 50% { opacity: 0; } }
+.pb-crumbs nav { color: rgba(18, 20, 23, 0.55); font-size: 13px; }
+.pb-crumbs ol { justify-content: center; }
+.pb-field { position: relative; }
+.pb-field input::placeholder { color: rgba(18, 20, 23, 0.38); }
+.pb-field:focus-within .pb-rule { background: #e54b17; height: 2px; }
+.pb-count { transition: color 0.25s; }
+.pb-count:hover { color: #e54b17; }
+.pb-go svg { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.pb-go:hover svg { transform: translateX(4px); }
+.pb-chip { transition: border-color 0.25s, color 0.25s; }
+.pb-chip:hover { border-color: #121417; color: #121417; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pb-caret.is-idle { animation: none; }
+  .fi-btn:hover, .dg-btn:hover, .ac-btn:hover, .dg-knob:hover { transform: none; }
+}

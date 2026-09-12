@@ -2,11 +2,10 @@ import { seriesDisplayName } from "@/lib/data/series-label";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import type { SeoModel } from "@/lib/seo/programmatic";
-import type { HeroStat } from "@/components/hero/HeroKit";
-import { ProductHero, type CapacityChip } from "./hero/ProductHero";
+import { FicheIngenierie, type CapacityChip, type FicheFigure } from "@/components/heroes-v2/produit/FicheIngenierie";
 
 /* ------------------------------------------------------------------
-   ProductHeader — en-tête de la fiche produit (héros premium sombre).
+   ProductHeader — en-tête de la fiche produit (« fiche d'ingénierie »).
    Composant serveur : prépare des valeurs simples à partir de la fiche
    (chiffres certifiés, LogisVert officiel, autres capacités) et les
    passe au héros animé. Rien n'est inventé : valeur absente = non
@@ -48,20 +47,20 @@ export function ProductHeader({ detail, seo = null }: ProductHeaderProps) {
     }
     return [...byCap.entries()]
       .sort((x, y) => x[0] - y[0])
-      .map(([cap, v]) => ({ slug: v.slug, modelNumber: v.modelNumber, count: v.count, label: `${(cap / 1000).toFixed(0)} 000 BTU` }));
+      .map(([cap, v]) => ({ slug: v.slug, modelNumber: v.modelNumber, count: v.count, label: `${(cap / 1000).toFixed(0)} 000 BTU` }));
   })();
 
   // Chiffres certifiés : mêmes sources que les métadonnées et le résumé rapide de la fiche.
   const h5 = seo?.h5Btu ?? model.heatingCapacity5FMaxBtu ?? null;
   const hspf2 = configuration?.hspf2 ?? seo?.hspf2 ?? model.hspf2Max ?? null;
   const seer2 = configuration?.seer2 ?? seo?.seer2 ?? model.seer2Max ?? null;
-  const stats: HeroStat[] = [];
-  if (h5) stats.push({ value: h5, label: "BTU/h à −15 °C" });
-  if (hspf2) stats.push({ value: hspf2, label: "HSPF2 chauffage", decimals: decimalsOf(hspf2) });
-  if (seer2) stats.push({ value: seer2, label: "SEER2 climatisation", decimals: decimalsOf(seer2) });
+  const figures: FicheFigure[] = [];
+  if (h5) figures.push({ key: "h5", value: h5, label: "BTU/h à −15 °C", decimals: 0 });
+  if (hspf2) figures.push({ key: "hspf2", value: hspf2, label: "HSPF2 chauffage", decimals: decimalsOf(hspf2) });
+  if (seer2) figures.push({ key: "seer2", value: seer2, label: "SEER2 climatisation", decimals: decimalsOf(seer2) });
 
   return (
-    <ProductHero
+    <FicheIngenierie
       slug={model.slug}
       brandName={brand.name}
       brandSlug={brand.slug}
@@ -77,7 +76,7 @@ export function ProductHeader({ detail, seo = null }: ProductHeaderProps) {
       discontinued={model.status === "discontinued"}
       minTempC={configuration?.minHeatingTempC ?? null}
       imageUrl={model.imageUrl ?? series.imageUrl ?? null}
-      stats={stats}
+      figures={figures}
       logisVert={seo && seo.logisVertDollars > 0 ? seo.logisVertDollars : 0}
       chips={chips}
       siblings={detail.seriesSiblings.length}

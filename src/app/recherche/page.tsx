@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/layout";
 import { Breadcrumb } from "@/components/product/Breadcrumb";
 import { searchSite, type SearchKind } from "@/lib/search/site-search";
-import { SearchHero } from "@/components/product/hero/SearchHero";
+import { PageBlanche } from "@/components/heroes-v2/produit/PageBlanche";
 
 /* /recherche?q=… — page de résultats complète (Entrée dans le champ de l'en-tête). Non indexée. */
 
@@ -23,7 +23,7 @@ export default async function RecherchePage({ searchParams }: { searchParams: Pr
 
   return (
     <main>
-      <SearchHero
+      <PageBlanche
         q={q}
         total={hits.length}
         counts={groups.map((g) => ({ kind: g.kind, label: KIND_LABEL[g.kind], n: g.items.length }))}
@@ -39,7 +39,7 @@ export default async function RecherchePage({ searchParams }: { searchParams: Pr
         )}
 
         {groups.map((g) => (
-          <section key={g.kind} className="mt-10">
+          <section key={g.kind} id={`resultats-${g.kind}`} className="mt-10" style={{ scrollMarginTop: 110 }}>
             <h2 className="text-[11px] font-bold uppercase tracking-[0.16em] mb-3" style={{ color: "#e54b17" }}>{KIND_LABEL[g.kind]}</h2>
             <ul className="divide-y rounded-2xl overflow-hidden" style={{ border: "1px solid #e4ddd5", background: "#fff", borderColor: "#e4ddd5" }}>
               {g.items.map((h) => (

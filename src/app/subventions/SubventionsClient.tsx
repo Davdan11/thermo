@@ -2,7 +2,7 @@
 
 import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
 import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
-import { SubventionsHero } from "@/components/tools-hero/SubventionsHero";
+import { ChequeHero } from "@/components/heroes-v2/prix/ChequeHero";
 import type { LogisVertSample } from "@/components/tools-hero/types";
 
 import { useState, useCallback, useRef, useEffect } from "react";
@@ -166,7 +166,7 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", minHeight: "100vh", background: "#f8f5f0", color: INK }}>
 
       {/* ═══ HÉROS : relevé LogisVert animé (montants réels de la liste officielle) ═══ */}
-      <SubventionsHero samples={heroSamples} />
+      <ChequeHero samples={heroSamples} />
 
       {/* ═══ MAIN ═══ */}
       <div style={{ padding: "24px 0 20px" }}>

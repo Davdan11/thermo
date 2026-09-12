@@ -2,7 +2,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema } from "@/lib/seo";
-import { JsonLd, Prose, SeoHero } from "@/components/seo/SeoBlocks";
+import { JsonLd, Prose, TrustStrip } from "@/components/seo/SeoBlocks";
+import { DocumentHero } from "@/components/heroes-v2/outils/DocumentHero";
 
 export const metadata: Metadata = createMetadata({
   title: "Conditions d'utilisation",
@@ -15,30 +16,29 @@ export default function ConditionsPage() {
   return (
     <main className="bg-[#f8f5f0] text-[#071d2b]">
       <JsonLd data={getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Conditions d'utilisation", url: "/conditions" }])} />
-      <SeoHero
+      <DocumentHero
+        variant="conditions"
         eyebrow="Cadre d'utilisation"
-        title="Conditions d'utilisation"
+        titleLines={["Conditions", "d'utilisation"]}
         intro="En utilisant ce site, vous acceptez les conditions ci-dessous. Elles précisent surtout ce que nos outils sont, et ce qu'ils ne sont pas."
         breadcrumbs={[{ label: "Conditions d'utilisation", href: "/conditions" }]}
-        titleLines={["Conditions", "d'utilisation"]}
-        serif="d'utilisation"
-        motif={{
-          kind: "legal",
+        toc={{
           heading: "Sommaire",
           note: "9 articles",
           items: [
-            { id: "nature-du-service", label: "Nature du service" },
-            { id: "sources-des-donnees", label: "Sources des données" },
-            { id: "subventions", label: "Subventions" },
-            { id: "prix", label: "Prix" },
-            { id: "installateurs-partenaires", label: "Installateurs partenaires" },
-            { id: "propriete-intellectuelle", label: "Propriété intellectuelle" },
-            { id: "limitation-de-responsabilite", label: "Limitation de responsabilité" },
-            { id: "renseignements-personnels", label: "Renseignements personnels" },
-            { id: "droit-applicable", label: "Droit applicable" },
-          ],
+          { id: "nature-du-service", label: "Nature du service" },
+          { id: "sources-des-donnees", label: "Sources des données" },
+          { id: "subventions", label: "Subventions" },
+          { id: "prix", label: "Prix" },
+          { id: "installateurs-partenaires", label: "Installateurs partenaires" },
+          { id: "propriete-intellectuelle", label: "Propriété intellectuelle" },
+          { id: "limitation-de-responsabilite", label: "Limitation de responsabilité" },
+          { id: "renseignements-personnels", label: "Renseignements personnels" },
+          { id: "droit-applicable", label: "Droit applicable" },
+        ],
         }}
       />
+      <TrustStrip />
       <Prose>
         <h2 id="nature-du-service" className="scroll-mt-28">1. Nature du service</h2>
         <p>

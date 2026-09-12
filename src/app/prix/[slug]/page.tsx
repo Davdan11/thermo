@@ -4,18 +4,9 @@ import { getSeoPagesByPrefix, getSeoPageBySlug } from "@/lib/seo/registry";
 import { createMetadata, getArticleSchema, getBreadcrumbSchema, SITE_NAME, SITE_URL } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { PrixApproche, getPrixFaqSchema } from "@/components/prix/PrixApproche";
-import { Serif } from "@/components/hero/HeroKit";
-import { PrixDependsHero } from "@/components/product/hero/PrixHero";
+import { TagHero } from "@/components/heroes-v2/prix/TagHero";
 import { frDate, murale12Rows } from "@/components/product/hero/prix-sets";
 import { PRICE_GRID_CONSULTED_AT } from "@/lib/prices/grille-installee";
-
-/** Titre en deux lignes : la question après « : » passe en italique (mêmes mots, espace insécable avant « ? »). */
-function titleLines(h1: string) {
-  const t = h1.replace(/\s*([?!;])$/, " $1");
-  const i = t.indexOf(" : ");
-  if (i < 0) return [t];
-  return [`${t.slice(0, i)} :`, <Serif key="q">{t.slice(i + 3)}</Serif>];
-}
 
 /* ------------------------------------------------------------------
    /prix/[slug] — pages de mots-clés « prix » du registre SEO.
@@ -65,7 +56,7 @@ export default async function PrixKeywordPage({ params }: { params: Promise<{ sl
         <JsonLd key={i} data={d} />
       ))}
 
-      <PrixDependsHero
+      <TagHero
         crumbs={
           <nav aria-label="Fil d’Ariane" className="text-[12.5px] font-medium">
             <ol className="m-0 flex list-none flex-wrap items-center gap-x-2 gap-y-1 p-0">
@@ -77,7 +68,7 @@ export default async function PrixKeywordPage({ params }: { params: Promise<{ sl
             </ol>
           </nav>
         }
-        titleLines={titleLines(page.h1)}
+        title={page.h1}
         lead={
           <>
             La réponse honnête : ça dépend de votre maison. Comme repère, voici ce que le marché québécois publie pour une murale de 12 000 BTU installée.

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CtaThermoMatch, FaqBlock, JsonLd, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+import { CtaThermoMatch, FaqBlock, JsonLd, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { LineHero } from "@/components/heroes-v2/contenu/LineHero";
 import { SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
 import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
@@ -101,29 +102,21 @@ export default function CommentCaMarchePage() {
           },
         ]}
       />
-      <SeoHero
+      {/* Héros « La ligne » : les six étapes sur une piste que le défilement fait avancer. */}
+      <LineHero
         eyebrow="Comment ça marche"
-        title="De la question à l'installation, sans vendre vos coordonnées."
-        intro="Vous répondez à des questions sur votre maison, ThermoMatch compare toutes les marques avec les données certifiées d'Hydro-Québec, et un installateur licencié réalise les travaux. Voici chaque étape, et ce qu'elle garantit."
         breadcrumbs={breadcrumbs}
-        titleLines={["De la question", "à l'installation,", "sans vendre vos coordonnées."]}
-        serif="sans vendre vos coordonnées."
-        motif={{
-          kind: "explainer",
-          heading: "Le parcours, étape par étape",
-          // Libellés courts du tracé ; le détail de chaque étape suit plus bas.
-          steps: STEPS.map((s, i) => ({
-            n: s.n,
-            href: s.href,
-            label: ["Vous décrivez votre maison", "ThermoMatch compare tout", "Trois machines retenues", "Une seule soumission", "Un installateur RBQ", "La subvention LogisVert"][i] ?? s.title,
-          })),
-        }}
+        lines={["De la question", "à l'installation,", "sans vendre vos coordonnées."]}
+        intro="Vous répondez à des questions sur votre maison, ThermoMatch compare toutes les marques avec les données certifiées d'Hydro-Québec, et un installateur licencié réalise les travaux. Voici chaque étape, et ce qu'elle garantit."
+        caption="Le parcours, étape par étape"
+        steps={STEPS}
         stats={[
           { label: "Fiches comparées", value: count.toLocaleString("fr-CA") },
           { label: "Marques", value: "toutes, sans parti pris" },
           { label: "Liste LogisVert", value: `mise à jour le ${updated}` },
         ]}
       />
+      <TrustStrip />
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16">
         <ol className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[#e4ddd5] border border-[#e4ddd5]">

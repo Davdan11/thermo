@@ -5,7 +5,7 @@ import { getAllCatalogueProducts } from "@/lib/data/queries/catalogue";
 import { CompareSelector } from "@/components/compare/CompareSelector";
 import { ComparePageClient } from "@/components/compare/ComparePageClient";
 import { getProductDetail, type ProductDetail } from "@/lib/data/queries/product-detail";
-import { CompareHero, type VsModel } from "@/components/product/hero/CompareHero";
+import { DuelGlissiere, type VsModel } from "@/components/heroes-v2/produit/DuelGlissiere";
 
 /* Exemple du face-à-face sans sélection : deux murales 12 000 BTU climat froid (photos officielles, comme à l'accueil). */
 const EXEMPLE_VS = [
@@ -54,8 +54,8 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
 
   return (
     <main style={{ minHeight: "100vh" }}>
-      {/* ── Héros : face-à-face ─────────────────────────────── */}
-      <CompareHero models={vsModels} mode={selected.length ? "selection" : "exemple"} extra={Math.max(0, selected.length - 2)} hasComparison={hasComparison} />
+      {/* ── Héros : duel à glissière ─────────────────────────── */}
+      <DuelGlissiere models={vsModels} mode={selected.length ? "selection" : "exemple"} extra={Math.max(0, selected.length - 2)} hasComparison={hasComparison} />
 
       {/* ── Comparison ───────────────────────────────────────── */}
       <section id="comparateur" style={{ background: "var(--color-background)", scrollMarginTop: 100 }}>

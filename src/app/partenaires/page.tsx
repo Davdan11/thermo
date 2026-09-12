@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PartnerForm } from "./PartnerForm";
-import { PartnersHero } from "@/components/company-hero/PartnersHero";
+import { PartnersDossier } from "@/components/heroes-v2/entreprise/PartnersDossier";
 
 export const metadata: Metadata = {
   title: "Devenir Partenaire Installateur — Thermopompes À Vendre.ca",
@@ -24,8 +24,8 @@ const T = {
 export default function PartenairesPage() {
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: T.surface }}>
-      {/* HÉROS premium : src/components/company-hero/PartnersHero.tsx */}
-      <PartnersHero />
+      {/* HÉROS « Dossier » : src/components/heroes-v2/entreprise/PartnersDossier.tsx */}
+      <PartnersDossier />
 
       {/* ── TECHNOLOGIE THERMOSCAN ── */}
       {/* Dark section for the white logo to stand out */}

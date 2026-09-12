@@ -9,7 +9,7 @@ import Link from "next/link";
 import { CalendarCheck, Phone, Video, Home, MapPin, Clock, ArrowRight, AlertCircle, Check } from "lucide-react";
 import { MODES, MODE_IDS, DEFAULT_MODE, NEEDS, areaFromPostalCode, isPostalCode, hourLabel, type ModeId, type DayAvailability } from "@/lib/rdv/booking";
 import { track } from "@/lib/analytics/track";
-import { BookingHero, BookingConfirmedHero } from "@/components/company-hero/BookingHero";
+import { BookingHero, BookingConfirmedHero } from "@/components/heroes-v2/entreprise/BookingCalendar";
 
 const ORANGE = "#e54b17";
 const NAVY = "#0b1b24";
@@ -81,6 +81,7 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
   const [monthIndex, setMonthIndex] = useState(0);
   const [date, setDate] = useState("");
   const [slot, setSlot] = useState("");
+  const [bookingSource, setBookingSource] = useState("rendez-vous");
   const [values, setValues] = useState({ need: "installation", firstName: "", lastName: "", phone: "", email: "", address: "", city: "", notes: "", consent: false, website: "" });
   const [errors, setErrors] = useState<Record<string, string | undefined>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error" | "taken">("idle");
@@ -107,9 +108,16 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
 
   // Format demandé par l'adresse (ex. /rendez-vous?format=visio depuis ThermoScan ou un courriel).
   useEffect(() => {
-    const wanted = new URLSearchParams(window.location.search).get("format");
+    const params = new URLSearchParams(window.location.search);
+    const wanted = params.get("format");
     // eslint-disable-next-line react-hooks/set-state-in-effect -- lecture unique de l'URL au montage
     if (wanted && (MODE_IDS as string[]).includes(wanted)) setMode(wanted as ModeId);
+    // Venu des résultats ThermoMatch : le modèle choisi va dans les précisions, que le conseiller lit avant le rendez-vous.
+    const modele = params.get("modele")?.trim().slice(0, 160);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lecture unique de l'URL au montage
+    if (modele) setValues((v) => (v.notes ? v : { ...v, notes: `Modèle choisi dans ThermoMatch : ${modele}` }));
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- lecture unique de l'URL au montage
+    if (params.get("source") === "thermomatch") setBookingSource("thermomatch");
   }, []);
 
   // Ne réagit qu'à un vrai changement d'étape : le double montage du mode strict (dev)
@@ -175,7 +183,7 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
       const res = await fetch("/api/rendez-vous", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, mode, postalCode, date, slot, source: "rendez-vous", page: typeof window !== "undefined" ? window.location.pathname : "" }),
+        body: JSON.stringify({ ...values, mode, postalCode, date, slot, source: bookingSource, page: typeof window !== "undefined" ? window.location.pathname : "" }),
       });
       const data = await res.json().catch(() => ({}));
       if (res.status === 409) {

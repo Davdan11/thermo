@@ -14,7 +14,8 @@ import { createMetadata, getBreadcrumbSchema, getServiceSchema, SITE_URL } from 
 import { getCities, getCity } from "@/lib/seo/cities";
 import { getCityData, referenceHdd, fmtInt, fmtTemp } from "@/lib/seo/cities-data";
 import { getCanonicalModels, getRanking, getAllBrandStats, type SeoModel } from "@/lib/seo/programmatic";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
+import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { FrostCityHero } from "@/components/heroes-v2/contenu/Frost";
 
 export const dynamicParams = false;
 
@@ -267,9 +268,10 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
   return (
     <main className="bg-[#f8f5f0] text-[#071d2b]">
       <JsonLd data={jsonLd} />
-      <SeoHero
-        eyebrow={city.region}
-        title={`Thermopompe à ${city.name}`}
+      {/* Héros « Carte des froids » : le nom de la ville, son thermomètre (conception, normales de janvier, record). */}
+      <FrostCityHero
+        region={city.region}
+        city={city.name}
         intro={`Ce que l'hiver de ${city.name} exige d'une thermopompe, ce qu'elle coûte à chauffer, les machines qui tiennent ce climat et la subvention LogisVert. Données officielles d'Environnement Canada, d'Hydro-Québec et d'ENERGY STAR, toutes marques confondues.`}
         answer={answer}
         breadcrumbs={[
@@ -277,21 +279,14 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
           { label: city.name, href: `/thermopompe/${city.slug}` },
         ]}
         stats={stats}
-        titleLines={["Thermopompe à", city.name]}
-        serif={city.name}
-        motif={{
-          kind: "city",
-          city: city.name,
-          designTempC: city.designTempC,
-          janMeanC: cl?.janMeanC ?? null,
-          janMinC: cl?.janMinC ?? null,
-          extremeMinC: cl?.extremeMinC ?? null,
-          extremeMinYear: cl?.extremeMinYear ?? null,
-          source: cl?.station
-            ? `Normales climatiques${cl.normalsPeriod ? ` ${cl.normalsPeriod}` : ""} d’Environnement et Changement climatique Canada, station ${cl.station}.`
-            : null,
-        }}
+        designTempC={city.designTempC}
+        janMeanC={cl?.janMeanC ?? null}
+        janMinC={cl?.janMinC ?? null}
+        extremeMinC={cl?.extremeMinC ?? null}
+        extremeMinYear={cl?.extremeMinYear ?? null}
+        source={cl?.station ? `Normales climatiques${cl.normalsPeriod ? ` ${cl.normalsPeriod}` : ""} d’Environnement et Changement climatique Canada, station ${cl.station}.` : null}
       />
+      <TrustStrip />
 
       <Rows id="climat" eyebrow="Profil climatique" title={`L'hiver de ${city.name} en chiffres`} intro="Les valeurs qui servent au calcul de charge d'une maison et au choix de la machine." rows={climateRows} />
 

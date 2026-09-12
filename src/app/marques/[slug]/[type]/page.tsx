@@ -4,8 +4,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getAllBrandStats, getBrandStats, modelsForBrandKind, type SeoKind } from "@/lib/seo/programmatic";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
-import { monoLogo, productImage } from "@/components/seo/hero/assets";
+import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { productImage } from "@/components/seo/hero/assets";
+import { CalibresHero } from "@/components/heroes-v2/marques/CalibresHero";
+import { monoLogo } from "@/components/heroes-v2/marques/server";
+import { typo } from "@/components/heroes-v2/marques/shared";
 
 const KINDS: Record<string, { kind: SeoKind; label: string; plural: string; intro: string }> = {
   murales: { kind: "murale", label: "murale", plural: "Thermopompes murales", intro: "sans conduits, une unité intérieure par zone" },
@@ -82,35 +85,33 @@ export default async function BrandKindPage({ params }: { params: Promise<{ slug
           getItemListSchema({ name: `${k.plural} ${b.name}`, items: canonical.slice(0, 50).map((m) => ({ name: `${b.name} ${m.name}`, url: `/produit/${m.canonicalSlug}` })) }),
         ]}
       />
-      <SeoHero
-        eyebrow={b.name}
-        title={`${k.plural} ${b.name}`}
-        intro={`Tous les modèles ${k.label}s ${b.name} vendus au Québec (${k.intro}), avec leurs données certifiées ENERGY STAR et le montant LogisVert officiel d'Hydro-Québec.`}
-        answer={`${b.name} vend ${models.length} ${k.label}s au Québec, soit ${canonical.length} machines distinctes, dont ${certified.length} avec une capacité certifiée à -15 °C publiée${maxLv > 0 ? ` et une subvention LogisVert jusqu'à ${maxLv.toLocaleString("fr-CA")} $` : ""}. Le bon calibre dépend de la charge de chauffage de votre maison, que ThermoMatch calcule en 13 questions.`}
-        breadcrumbs={[
+      {/* Héros « Règle des calibres » : les calibres réellement offerts sur une règle 6 000 → 60 000 BTU. */}
+      <CalibresHero
+        brand={b.name}
+        logo={monoLogo(slug)?.src ?? null}
+        lines={[typo(k.plural.split(" ")[0]), typo(`${k.plural.split(" ").slice(1).join(" ")} ${b.name}`)]}
+        accent={typo(k.plural.split(" ").slice(1).join(" "))}
+        intro={typo(`Tous les modèles ${k.label}s ${b.name} vendus au Québec (${k.intro}), avec leurs données certifiées ENERGY STAR et le montant LogisVert officiel d'Hydro-Québec.`)}
+        answer={typo(`${b.name} vend ${models.length} ${k.label}s au Québec, soit ${canonical.length} machines distinctes, dont ${certified.length} avec une capacité certifiée à -15 °C publiée${maxLv > 0 ? ` et une subvention LogisVert jusqu'à ${maxLv.toLocaleString("fr-CA")} $` : ""}. Le bon calibre dépend de la charge de chauffage de votre maison, que ThermoMatch calcule en 13 questions.`)}
+        crumbs={[
           { label: "Marques", href: "/marques" },
           { label: b.name, href: `/marques/${slug}` },
-          { label: k.plural, href: `/marques/${slug}/${type}` },
+          { label: k.plural },
         ]}
-        titleLines={[k.plural.split(" ")[0], `${k.plural.split(" ").slice(1).join(" ")} ${b.name}`]}
-        serif={k.plural.split(" ").slice(1).join(" ")}
-        motif={{
-          kind: "brand",
-          brand: b.name,
-          logo: monoLogo(slug),
-          typeLabel: type,
-          photo: photoModel
+        photo={
+          photoModel
             ? { src: productImage(photoModel.imageUrl) as string, alt: `Thermopompe ${k.label} ${b.name} ${photoModel.name}`, caption: `${b.name} ${photoModel.name}`, btu: photoModel.nominalBtu }
-            : null,
-          offered: capacities,
-        }}
+            : null
+        }
+        offered={[...models.reduce((acc, m) => acc.set(m.nominalBtu, (acc.get(m.nominalBtu) ?? 0) + 1), new Map<number, number>())].map(([btu, count]) => ({ btu, count }))}
         stats={[
-          { label: "Modèles", value: String(models.length) },
-          { label: "Machines distinctes", value: String(canonical.length) },
-          { label: "Avec capacité certifiée à -15 °C", value: String(certified.length) },
-          { label: "LogisVert jusqu'à", value: maxLv > 0 ? `${maxLv.toLocaleString("fr-CA")} $` : "—" },
+          { label: "Modèles", value: models.length.toLocaleString("fr-CA") },
+          { label: "Machines distinctes", value: canonical.length.toLocaleString("fr-CA") },
+          { label: "Avec capacité certifiée à -15 °C", value: certified.length.toLocaleString("fr-CA") },
+          { label: typo("LogisVert jusqu'à"), value: maxLv > 0 ? `${maxLv.toLocaleString("fr-CA")} $` : "—" },
         ]}
       />
+      <TrustStrip />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <ModelTable models={models} showBrand={false} caption={`Trié par qualité des données certifiées, tenue de capacité à -15 °C, HSPF2 puis subvention. ${models.length - canonical.length > 0 ? `${models.length - canonical.length} fiches sont des variantes de machines vendues aussi sous d'autres marques.` : ""}`} />
       </section>

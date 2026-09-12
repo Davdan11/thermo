@@ -3,7 +3,7 @@ import Link from "next/link";
 import { createMetadata } from "@/lib/seo";
 import { ThermoScanSection } from "@/components/thermoscan/ThermoScanSection";
 import { LabelLocator } from "@/components/thermoscan/ThermoScanArt";
-import { ThermoScanHero } from "@/components/tools-hero/ThermoScanHero";
+import { ViseurHero } from "@/components/heroes-v2/outils/ViseurHero";
 import { Camera, ScanLine, GitCompareArrows, Thermometer, Clock, ShieldCheck, Leaf, Trash2, Database, PencilLine, ArrowRight } from "lucide-react";
 
 /* ------------------------------------------------------------------
@@ -43,8 +43,8 @@ const TRUST = [
 export default function ThermoScanPage() {
   return (
     <main className="min-h-screen bg-[var(--color-background)]">
-      {/* ── Héros : viseur animé sur photo réelle (trousse premium) ── */}
-      <ThermoScanHero />
+      {/* ── Héros « Viseur » : mise au point sur la plaque, photo réelle ── */}
+      <ViseurHero />
 
       {/* ── Scanner ───────────────────────────────────────────── */}
       <section id="scanner" className="scroll-mt-24">

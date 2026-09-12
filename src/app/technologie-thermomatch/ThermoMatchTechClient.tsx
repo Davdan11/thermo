@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Container } from "@/components/layout";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ThermoMatchTechHero } from "@/components/tools-hero/ThermoMatchTechHero";
+import { MecanismeHero } from "@/components/heroes-v2/outils/MecanismeHero";
 import "./thermomatch-tech.css";
 
 /* ==============================================================
@@ -119,9 +119,9 @@ export function ThermoMatchTechClient({ modelCount }: { modelCount: number }) {
   return (
     <>
       {/* ============================================================
-          SECTION 1 — Héros : l'entonnoir des machines évaluées (trousse premium)
+          SECTION 1 — Héros « Le mécanisme » : schéma éclaté du tri du catalogue
           ============================================================ */}
-      <ThermoMatchTechHero modelCount={modelCount} />
+      <MecanismeHero modelCount={modelCount} />
 
       {/* ============================================================
           SECTION 1B — Trust bar (Bande des avantages), dans le prolongement du héros

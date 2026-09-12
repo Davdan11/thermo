@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getCollectionPageSchema } from "@/lib/seo";
 import { getRanking, RANKINGS } from "@/lib/seo/programmatic";
-import { CtaThermoMatch, JsonLd, ModelTable, Prose, SeoHero } from "@/components/seo/SeoBlocks";
+import { CtaThermoMatch, JsonLd, ModelTable, Prose, TrustStrip } from "@/components/seo/SeoBlocks";
+import { PalmaresIndexHero } from "@/components/heroes-v2/marques/PalmaresHeroes";
+import { typo } from "@/components/heroes-v2/marques/shared";
 
 export const metadata: Metadata = createMetadata({
   title: `Meilleures thermopompes au Québec ${new Date().getFullYear()} : classements sur données certifiées`,
@@ -34,20 +36,17 @@ export default function RankingsIndex() {
           getCollectionPageSchema({ name: "Meilleures thermopompes au Québec", description: "Classements sur données certifiées.", url: "/meilleures-thermopompes" }),
         ]}
       />
-      <SeoHero
-        eyebrow="Classements"
-        title={`Les meilleures thermopompes au Québec en ${year}`}
-        titleLines={["Les meilleures", "thermopompes au Québec", `en ${year}`]}
-        serif="meilleures"
-        intro="Pas d'avis sponsorisés, pas de « choix de la rédaction » : chaque classement trie les machines vendues au Québec sur une donnée certifiée, publiée par Hydro-Québec et ENERGY STAR."
-        breadcrumbs={[{ label: "Meilleures thermopompes", href: "/meilleures-thermopompes" }]}
-        motif={{
-          kind: "leaders",
-          rows: tables.flatMap(({ def, r }) =>
-            r.models[0] ? [{ label: SHORT[def.slug] ?? def.metricLabel, href: `/meilleures-thermopompes/${def.slug}`, leader: `${r.models[0].brand} ${r.models[0].name}`, value: def.value(r.models[0]) }] : [],
-          ),
-        }}
+      {/* Héros « Palmarès » : le programme de la soirée, le n° 1 de chaque classement. */}
+      <PalmaresIndexHero
+        year={year}
+        lines={["Les meilleures thermopompes", `au Québec en ${year}`]}
+        intro={typo("Pas d'avis sponsorisés, pas de « choix de la rédaction » : chaque classement trie les machines vendues au Québec sur une donnée certifiée, publiée par Hydro-Québec et ENERGY STAR.")}
+        crumbs={[{ label: "Meilleures thermopompes" }]}
+        rows={tables.flatMap(({ def, r }) =>
+          r.models[0] ? [{ label: SHORT[def.slug] ?? def.metricLabel, href: `/meilleures-thermopompes/${def.slug}`, leader: `${r.models[0].brand} ${r.models[0].name}`, value: typo(def.value(r.models[0])) }] : [],
+        )}
       />
+      <TrustStrip />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12 space-y-14">
         {tables.map(({ def, r }) => {
           return (

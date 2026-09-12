@@ -16,7 +16,7 @@ const T = {
 };
 
 import { FAQ_ITEMS } from "./faqData";
-import { FaqHero, type FaqHeroItem } from "@/components/content-hero/FaqHero";
+import { ConversationHero, type FaqHeroItem } from "@/components/heroes-v2/contenu/ConversationHero";
 
 // Questions à plat pour le héros (défilement + recherche). `key` = clé de l'accordéon, `domId` = ancre.
 const HERO_ITEMS: FaqHeroItem[] = FAQ_ITEMS.flatMap((section, ci) =>
@@ -52,8 +52,8 @@ export default function FAQPage() {
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light", backgroundColor: T.surface, minHeight: "100vh" }}>
       
-      {/* ── HÉROS : questions qui défilent + recherche de question ── */}
-      <FaqHero items={HERO_ITEMS} themes={FAQ_ITEMS.length} onOpen={openFromHero} />
+      {/* ── HÉROS : la conversation (vraies questions en bulles) + barre de rédaction = recherche ── */}
+      <ConversationHero items={HERO_ITEMS} themes={FAQ_ITEMS.length} onOpen={openFromHero} />
 
       {/* ── CONTENT ── */}
       <section style={{ padding: "clamp(40px, 5vw, 80px) clamp(24px, 5vw, 64px) clamp(80px, 10vw, 120px)" }}>

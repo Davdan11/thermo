@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion, useReducedMotion } from "motion/react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { STEPS, formatPostalCode } from "./steps";
@@ -17,10 +16,11 @@ import {
 import { ThermoMatchResults } from "./ThermoMatchResults";
 import { ShareResultsButton } from "@/components/thermomatch/ShareResultsButton";
 import { track } from "@/lib/analytics/track";
-import { HC, HERO_DISPLAY, HeroButton } from "@/components/hero/HeroKit";
-import { Snowfall } from "@/components/home/Snowfall";
-import { FlowBar } from "@/components/flow-hero/FlowBar";
-import { FlowFacts, QuestionTitle, ThermoMatchWelcome } from "@/components/flow-hero/ThermoMatchWelcome";
+import { HC } from "@/components/hero/HeroKit";
+import { CARNET, FlowBar, ThermoMatchWordmark } from "@/components/heroes-v2/outils/FlowBar";
+import { CarnetButton, CarnetWelcome } from "@/components/heroes-v2/outils/Carnet";
+import { CarnetBack, CarnetChoice, CarnetChoices, CarnetError, CarnetNote, CarnetStepPage, CarnetSummary } from "@/components/heroes-v2/outils/CarnetSteps";
+import { SERIF } from "@/components/heroes-v2/outils/fonts";
 
 /* ----------------------------------------------------------
    Constants
@@ -105,18 +105,21 @@ interface PostalTextInputProps {
   onEnter: () => void;
   /** Bouton posé dans la pastille, à droite du champ (présentation seulement). */
   action?: React.ReactNode;
+  /** « light » : ligne de réponse du carnet (premier écran, fond papier). */
+  tone?: "dark" | "light";
 }
 
-function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange, onEnter, action }: PostalTextInputProps) {
+function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange, onEnter, action, tone = "dark" }: PostalTextInputProps) {
   const { data, loading } = usePostalResolve(value);
   const isPostal = stepId === "postalCode";
+  const light = tone === "light";
 
   return (
-    <div className="mt-6">
-      {/* Champ en pastille de verre, bouton Continuer intégré (même geste que le héros de l'accueil). */}
-      {/* Contour et fond dans flow-hero.css : le contour orange signale le focus et l'erreur. */}
+    <div className={light ? "mt-9" : "mt-6"}>
+      {/* Sombre : champ en pastille de verre, bouton Continuer intégré. Clair : réponse écrite sur la ligne du carnet. */}
+      {/* Contour et soulignement dans heroes-v2/outils/outils.css : l'orange signale le focus et l'erreur. */}
       <div
-        className="fh-pill flex w-full max-w-[520px] items-center gap-2 rounded-full p-1.5"
+        className={light ? "ou-field flex w-full max-w-[680px] items-end gap-4 pb-3" : "fh-pill flex w-full max-w-[520px] items-center gap-2 rounded-full p-1.5"}
         data-error={error ? "" : undefined}
       >
         <input
@@ -128,25 +131,43 @@ function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange
           onKeyDown={(e) => { if (e.key === "Enter") onEnter(); }}
           autoComplete={isPostal ? "postal-code" : "off"}
           aria-label={isPostal ? "Code postal" : undefined}
-          className="fh-input min-w-0 flex-1 py-3 pl-5 text-[19px] font-medium"
-          // Styles en ligne : ils l'emportent sur le contour de focus global, déjà porté par la pastille.
-          style={{ color: HC.cream, letterSpacing: "0.06em", background: "transparent", border: 0, outline: "none", boxShadow: "none" }}
+          className={light ? "min-w-0 flex-1 py-1 text-[34px] sm:text-[42px]" : "fh-input min-w-0 flex-1 py-3 pl-5 text-[19px] font-medium"}
+          // Styles en ligne : ils l'emportent sur le contour de focus global, déjà porté par la pastille ou la ligne.
+          style={
+            light
+              ? { color: CARNET.ink, fontFamily: SERIF, fontStyle: "italic", letterSpacing: "0.02em", lineHeight: 1.1, background: "transparent", border: 0, outline: "none", boxShadow: "none" }
+              : { color: HC.cream, letterSpacing: "0.06em", background: "transparent", border: 0, outline: "none", boxShadow: "none" }
+          }
         />
         {action}
       </div>
 
       {/* Confirmation ville / zone climatique */}
       {isPostal && (
-        <div className="mt-3 max-w-[520px] min-h-[44px]">
+        <div className={cn("mt-3 min-h-[44px]", light ? "max-w-[680px]" : "max-w-[520px]")}>
           {loading && (
-            <div className="flex items-center gap-2 pl-5 text-sm" style={{ color: HC.faint }}>
+            <div className={cn("flex items-center gap-2 text-sm", !light && "pl-5")} style={{ color: light ? CARNET.faint : HC.faint }}>
               <svg className="animate-spin" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
               </svg>
               Identification de la municipalité...
             </div>
           )}
-          {!loading && data && (
+          {!loading && data && light && (
+            <p className="flex items-baseline gap-2 animate-in fade-in slide-in-from-bottom-2 duration-300" style={{ margin: 0, color: CARNET.ink }}>
+              <span aria-hidden="true" style={{ color: CARNET.orange }}>→</span>
+              <span>
+                <span className="text-[19px]" style={{ fontFamily: SERIF, fontStyle: "italic" }}>
+                  {data.municipality}, {data.province}
+                </span>
+                <span className="ml-2 text-[13px]" style={{ color: CARNET.soft }}>
+                  Zone climatique {data.climateZone} — {data.designTempC}°C de conception
+                  {data.hdd18 ? ` — ${data.hdd18.toLocaleString("fr-CA")} DJC` : ""}
+                </span>
+              </span>
+            </p>
+          )}
+          {!loading && data && !light && (
             <div
               className="flex items-start gap-3 rounded-[16px] px-4 py-3 animate-in fade-in slide-in-from-bottom-2 duration-300"
               style={{ background: "rgba(16,34,45,0.72)", border: `1px solid ${HC.line}` }}
@@ -171,7 +192,7 @@ function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange
       )}
 
       {error && (
-        <p className="mt-3 pl-5 text-sm" style={{ color: "#FF9C77" }} role="alert">{error}</p>
+        <p className={cn("mt-3 text-sm", !light && "pl-5")} style={{ color: light ? CARNET.rust : "#FF9C77" }} role="alert">{error}</p>
       )}
     </div>
   );
@@ -205,7 +226,6 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isMounted = useRef(false);
-  const reduceMotion = useReducedMotion();
 
   /* ---- Persist to sessionStorage + ProjectDraft ---- */
   useEffect(() => {
@@ -544,7 +564,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   // Premier écran du parcours : présentation « héros » (la logique de l'étape ne change pas).
   const isWelcome = currentStep === 0;
 
-  // Champs de réponse de l'étape : mêmes gestionnaires, mêmes rôles ARIA qu'avant.
+  // Champs de réponse de l'étape : mêmes gestionnaires, mêmes rôles ARIA qu'avant ; présentation « Carnet ».
   const inputs = (
     <>
       {/* ---- Text input ---- */}
@@ -557,368 +577,114 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
           inputRef={inputRef}
           onChange={(raw) => handleTextChange(step.id, raw)}
           onEnter={handleContinue}
-          action={<HeroButton onClick={handleContinue}>Continuer</HeroButton>}
+          tone="light"
+          action={<CarnetButton onClick={handleContinue}>Continuer</CarnetButton>}
         />
       )}
 
-      {/* ---- Radio: with property images ---- */}
-      {step.type === "radio" && stepOptions && hasPropertyImages && (
-        <div
-          className="mt-6 overflow-hidden rounded-[18px]"
-          style={{ border: `1px solid ${HC.line}` }}
-          role="radiogroup"
-          aria-label={step.question}
-        >
-          {stepOptions.map((option, idx) => {
-            const isSelected = currentValue === option.value;
-            const imgUrl = PROPERTY_IMAGES[option.value];
-            return (
-              <button
-                key={option.value}
-                type="button"
-                role="radio"
-                aria-checked={isSelected}
-                onClick={() => handleRadioSelect(step.id, option.value)}
-                className={cn(
-                  "relative w-full flex items-center justify-between text-left h-[72px] overflow-hidden transition-all group",
-                  "border-t border-white/10",
-                  idx === 0 && "border-t-0",
-                  isSelected
-                    ? "border-l-[3px] border-l-[#E54B17]"
-                    : "border-l-[3px] border-l-transparent hover:border-l-white/20",
-                )}
-                style={{
-                  background: isSelected
-                    ? "rgba(229, 75, 23, 0.1)"
-                    : "transparent",
-                }}
-              >
-                {/* Right side image blending */}
-                {imgUrl && (
-                  <div
-                    className="absolute right-0 top-0 bottom-0 w-[55%] bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-500"
-                    style={{ backgroundImage: `url('${imgUrl}')` }}
-                  />
-                )}
-                {/* Gradient to blend */}
-                <div className="absolute right-0 top-0 bottom-0 w-[65%] bg-gradient-to-r from-[#0A1419] to-transparent" />
-
-                {/* Label */}
-                <span
-                  className={cn(
-                    "relative z-10 pl-5 text-[16px] font-semibold tracking-tight",
-                    isSelected ? "text-white" : "text-white/80 group-hover:text-white",
-                  )}
-                >
-                  {option.label}
-                </span>
-
-                {/* Arrow */}
-                <span className={cn("relative z-10 pr-5 transition-colors", isSelected ? "text-[#E54B17]" : "text-white/40 group-hover:text-white/70")}>
-                  <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
-                  </svg>
-                </span>
-              </button>
-            );
-          })}
-        </div>
-      )}
-
-      {/* ---- Radio: standard list (no images) ---- */}
-      {step.type === "radio" && stepOptions && !hasPropertyImages && (
-        <div
-          className="mt-6 space-y-2"
-          role="radiogroup"
-          aria-label={step.question}
-        >
-          {stepOptions.map((option) => {
-            const isSelected = currentValue === option.value;
-            return (
-              <button
-                key={option.value}
-                type="button"
-                role="radio"
-                aria-checked={isSelected}
-                onClick={() => handleRadioSelect(step.id, option.value)}
-                className={cn(
-                  "fh-option w-full flex items-center justify-between text-left h-[56px] px-5 rounded-[10px] border group",
-                  isSelected
-                    ? "border-[#E54B17] bg-[#E54B17]/10 border-l-[3px]"
-                    : "border-white/10 hover:border-white/30 hover:bg-white/[0.03] border-l-[3px] border-l-transparent hover:border-l-white/30",
-                )}
-              >
-                <span
-                  className={cn(
-                    "text-[15px] font-semibold",
-                    isSelected ? "text-white" : "text-white/80 group-hover:text-white",
-                  )}
-                >
-                  {option.label}
-                </span>
-                <svg
-                  className={cn(
-                    "w-4 h-4 transition-colors",
-                    isSelected ? "text-[#E54B17]" : "text-white/30 group-hover:text-white/60",
-                  )}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
-                </svg>
-              </button>
-            );
-          })}
-        </div>
+      {/* ---- Radio (photos des types de propriété sur la première question à choix) ---- */}
+      {step.type === "radio" && stepOptions && (
+        <CarnetChoices kind="radio" label={step.question}>
+          {stepOptions.map((option, idx) => (
+            <CarnetChoice
+              key={option.value}
+              kind="radio"
+              index={idx}
+              label={option.label}
+              selected={currentValue === option.value}
+              image={hasPropertyImages ? PROPERTY_IMAGES[option.value] : undefined}
+              onClick={() => handleRadioSelect(step.id, option.value)}
+            />
+          ))}
+        </CarnetChoices>
       )}
 
       {/* ---- Multi select ---- */}
       {step.type === "multi" && stepOptions && (
         <div>
-          <div className="mt-6 space-y-2" role="group" aria-label={step.question}>
-            {stepOptions.map((option) => {
-              const selected = Array.isArray(currentValue)
-                ? currentValue.includes(option.value)
-                : false;
-              return (
-                <button
-                  key={option.value}
-                  type="button"
-                  role="checkbox"
-                  aria-checked={selected}
-                  onClick={() => handleMultiToggle(step.id, option.value)}
-                  className={cn(
-                    "fh-option w-full flex items-center gap-4 text-left h-[56px] px-5 rounded-[10px] border",
-                    selected
-                      ? "border-[#E54B17] bg-[#E54B17]/10"
-                      : "border-white/10 hover:border-white/30 hover:bg-white/[0.03]",
-                  )}
-                >
-                  {/* Checkbox */}
-                  <span
-                    className={cn(
-                      "flex items-center justify-center w-5 h-5 rounded-[3px] border-2 shrink-0 transition-colors",
-                      selected ? "border-[#E54B17] bg-[#E54B17]" : "border-white/30",
-                    )}
-                  >
-                    {selected && (
-                      <svg viewBox="0 0 12 12" className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M2 6l3 3 5-5" />
-                      </svg>
-                    )}
-                  </span>
-                  <span
-                    className={cn(
-                      "text-[15px] font-semibold",
-                      selected ? "text-white" : "text-white/80",
-                    )}
-                  >
-                    {option.label}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-          {error && (
-            <p className="mt-3 text-sm" style={{ color: "#FF9C77" }} role="alert">{error}</p>
-          )}
+          <CarnetChoices kind="checkbox" label={step.question}>
+            {stepOptions.map((option, idx) => (
+              <CarnetChoice
+                key={option.value}
+                kind="checkbox"
+                index={idx}
+                label={option.label}
+                selected={Array.isArray(currentValue) ? currentValue.includes(option.value) : false}
+                onClick={() => handleMultiToggle(step.id, option.value)}
+              />
+            ))}
+          </CarnetChoices>
+          {error && <CarnetError>{error}</CarnetError>}
         </div>
       )}
     </>
   );
 
-  return (
-    <div className="min-h-screen flex flex-col" style={{ background: HC.ink, color: HC.cream, fontFamily: HERO_DISPLAY }}>
-      {/* Header */}
-      <ThermoMatchHeader
-        currentStep={currentStep}
+  // Premier écran : page de carnet sur papier (présentation « Carnet », mêmes champs et gestionnaires).
+  if (isWelcome) {
+    return (
+      <CarnetWelcome
+        header={<ThermoMatchHeader currentStep={currentStep} totalSteps={TOTAL_STEPS} onQuit={handleReset} tone="light" />}
+        question={step.question}
+        subtitle={step.subtitle}
         totalSteps={TOTAL_STEPS}
-        onQuit={handleReset}
-      />
+        facts={[
+          ...(catalogueCount ? [{ value: catalogueCount, label: "modèles admissibles" }] : []),
+          { value: TOTAL_STEPS, label: "questions" },
+          { value: 3, label: "modèles retenus" },
+        ]}
+        questions={STEPS.map((s) => s.question)}
+      >
+        {inputs}
+      </CarnetWelcome>
+    );
+  }
 
-      {/* Body: Left (question) + Right (visual + summary) */}
-      <div className="relative flex-1 flex flex-col lg:flex-row min-h-[calc(100vh-64px)] items-stretch">
-        {/* Neige légère sur tout le parcours : derrière le texte, devant la photo. */}
-        <Snowfall className="pointer-events-none absolute inset-0 z-[5] h-full w-full opacity-70" density={0.3} />
+  // Résumé en marge : mêmes lignes qu'avant (réponses données, modifiables), puis les trois questions suivantes.
+  const summaryRows = STEPS.slice(0, currentStep + 1).flatMap((s, i) => {
+    const val = answers[s.id];
+    if (!val) return [];
+    return [
+      {
+        key: s.id,
+        label: s.id === "postalCode" ? "Ville" : s.id === "propertyType" ? "Projet" : s.question.replace("?", ""),
+        value: formatAnswer(s, val, answers),
+        onEdit: () => {
+          setCurrentStep(i);
+          setError(null);
+        },
+      },
+    ];
+  });
 
-        {/* ======== LEFT PANE ======== */}
-        <div className="relative z-10 flex-1 min-w-0 flex flex-col lg:justify-between px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-10 lg:py-14">
-
-          {/* Question text */}
-          <div className={cn("w-full", isWelcome ? "max-w-[720px]" : "max-w-[620px]")}>
-            {isWelcome ? (
-              <ThermoMatchWelcome question={step.question} subtitle={step.subtitle} totalSteps={TOTAL_STEPS}>
-                {inputs}
-              </ThermoMatchWelcome>
-            ) : (
-              <motion.div
-                key={step.id}
-                initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <QuestionTitle question={step.question} />
-                {step.subtitle && (
-                  <p className="text-[15px] leading-[1.6] mb-8" style={{ color: HC.mute }}>{step.subtitle}</p>
-                )}
-                {inputs}
-              </motion.div>
-            )}
-          </div>
-
-          {/* Bottom: chiffres réels (premier écran), puis Retour + Continuer */}
-          <div className="mt-10">
-            {isWelcome && (
-              <FlowFacts
-                items={[
-                  ...(catalogueCount ? [{ value: catalogueCount, label: "modèles admissibles" }] : []),
-                  { value: TOTAL_STEPS, label: "questions" },
-                  { value: 3, label: "modèles retenus" },
-                ]}
-              />
-            )}
-
-            <div className={cn("flex flex-wrap items-center gap-4", isWelcome && "mt-7")}>
-              {currentStep > 0 && (
-                <button
-                  type="button"
-                  onClick={handleBack}
-                  className="ph-ghost inline-flex items-center gap-2 rounded-full px-5 h-[52px] text-[15px] font-semibold"
-                  style={{ border: `1px solid ${HC.line}`, color: HC.cream }}
-                >
-                  <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" />
-                  </svg>
-                  Retour
-                </button>
-              )}
-
-              {/* Continuer : dans la pastille du champ pour les étapes texte, ici pour les choix multiples */}
-              {step.type === "multi" && (
-                <HeroButton onClick={handleContinue}>Continuer</HeroButton>
-              )}
-
-              {/* Lock icon + note */}
-              <p className={cn("text-[13px] flex items-center gap-2", !isWelcome && "sm:ml-auto")} style={{ color: HC.faint }}>
-                <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                </svg>
-                Vous pourrez modifier vos réponses avant l&apos;envoi.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* ======== RIGHT PANE ======== */}
-        <div className="hidden lg:flex flex-col w-[42%] xl:w-[45%] relative overflow-hidden" style={{ minHeight: "calc(100vh - 64px)" }}>
-          {/* Photo d'ambiance de l'étape (maisons québécoises, chantier, budget), qui recule à l'arrivée */}
-          <motion.div
-            className="absolute inset-0"
-            initial={reduceMotion ? false : { scale: 1.08 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-all duration-700"
-              style={{ backgroundImage: `url('${bgImage}')` }}
-            />
-          </motion.div>
-          <div className="absolute inset-0" style={{ background: "rgba(10,20,25,0.45)" }} />
-          <div className="absolute inset-y-0 left-0 w-28" style={{ background: "linear-gradient(90deg, #0A1419 0%, rgba(10,20,25,0) 100%)" }} />
-          <div className="absolute inset-x-0 bottom-0 h-1/2" style={{ background: "linear-gradient(0deg, rgba(10,20,25,0.94) 0%, rgba(10,20,25,0) 100%)" }} />
-
-          {/* Résumé panel */}
-          <div className="relative z-20 flex flex-col justify-end h-full p-8 xl:p-10">
-
-            {/* Résumé de votre projet */}
-            <div
-              className="relative overflow-hidden rounded-[22px] p-6 mb-4"
-              style={{ background: "rgba(16,34,45,0.72)", border: `1px solid ${HC.line}`, backdropFilter: "blur(16px) saturate(130%)", WebkitBackdropFilter: "blur(16px) saturate(130%)" }}
-            >
-              <motion.span
-                aria-hidden="true"
-                className="absolute left-0 top-0 h-[2px] w-full origin-left"
-                style={{ background: HC.orange }}
-                initial={reduceMotion ? false : { scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
-              />
-              <p className="text-[11.5px] font-medium uppercase mb-4" style={{ letterSpacing: "0.2em", color: HC.faint }}>
-                Résumé de votre projet
-              </p>
-
-              {/* Show first 2 confirmed answers as key/value */}
-              <div className="space-y-0 divide-y divide-white/10 mb-4">
-                {STEPS.slice(0, currentStep + 1).map((s, i) => {
-                  const val = answers[s.id];
-                  if (!val && i !== currentStep) return null;
-                  const isCurrentStep = i === currentStep;
-                  if (isCurrentStep && !val) return null;
-                  return (
-                    <div key={s.id} className="flex items-center justify-between py-2.5 text-sm">
-                      <span className="text-sm" style={{ color: HC.mute }}>{s.id === "postalCode" ? "Ville" : s.id === "propertyType" ? "Projet" : s.question.replace("?", "")}</span>
-                      <div className="flex items-center gap-3">
-                        <span className="font-semibold text-sm" style={{ color: HC.cream }}>{formatAnswer(s, val, answers)}</span>
-                        <button
-                          onClick={() => {
-                            setCurrentStep(i);
-                            setError(null);
-                          }}
-                          className="text-[12px] font-bold text-[#E54B17] hover:underline"
-                        >
-                          Modifier
-                        </button>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Remaining questions (not yet answered) */}
-              {STEPS.slice(currentStep + 1, currentStep + 4).map((s, i) => (
-                <div key={s.id} className="flex items-center justify-between gap-4 py-2.5 text-[13px] border-t border-white/10" style={{ color: HC.faint }}>
-                  <span>
-                    <span style={{ fontVariantNumeric: "tabular-nums" }}>{currentStep + i + 2}.</span> {s.question}
-                  </span>
-                  <span>—</span>
-                </div>
-              ))}
-
-              {STEPS.length > currentStep + 4 && (
-                <div className="mt-3 text-center">
-                  <svg className="mx-auto w-4 h-4 text-white/30" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              )}
-            </div>
-
-            {/* Next step preview */}
-            {currentStep < TOTAL_STEPS - 1 && (
-              <div
-                className="rounded-[18px] px-6 py-4 flex items-center gap-4"
-                style={{ background: "rgba(10,20,25,0.62)", border: `1px solid ${HC.line}`, backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}
-              >
-                <div className="flex-1">
-                  <p className="text-[11.5px] font-medium uppercase mb-1" style={{ letterSpacing: "0.18em", color: HC.faint }}>
-                    Prochaine étape
-                  </p>
-                  <p className="font-semibold text-[15px]" style={{ color: HC.cream }}>
-                    {STEPS[currentStep + 1].question}
-                  </p>
-                </div>
-                <button className="ph-ghost text-[12px] font-semibold rounded-full px-4 py-2" style={{ border: `1px solid ${HC.line}`, color: HC.mute }}>
-                  Aperçu
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+  return (
+    <CarnetStepPage
+      header={<ThermoMatchHeader currentStep={currentStep} totalSteps={TOTAL_STEPS} onQuit={handleReset} tone="light" />}
+      stepKey={step.id}
+      index={currentStep}
+      totalSteps={TOTAL_STEPS}
+      question={step.question}
+      subtitle={step.subtitle}
+      photo={bgImage}
+      aside={
+        <CarnetSummary
+          rows={summaryRows}
+          upcoming={STEPS.slice(currentStep + 1, currentStep + 4).map((s, i) => ({ n: currentStep + i + 2, question: s.question }))}
+          more={STEPS.length > currentStep + 4}
+          next={currentStep < TOTAL_STEPS - 1 ? STEPS[currentStep + 1].question : undefined}
+        />
+      }
+      footer={
+        <>
+          {currentStep > 0 && <CarnetBack onClick={handleBack} />}
+          {/* Continuer : dans la ligne du champ pour les étapes texte, ici pour les choix multiples */}
+          {step.type === "multi" && <CarnetButton onClick={handleContinue}>Continuer</CarnetButton>}
+          <CarnetNote />
+        </>
+      }
+    >
+      {inputs}
+    </CarnetStepPage>
   );
 }
 
@@ -930,29 +696,40 @@ function ThermoMatchHeader({
   currentStep,
   totalSteps,
   onQuit,
+  tone = "dark",
 }: {
   currentStep: number;
   totalSteps: number;
   onQuit: () => void;
+  /** « light » : questions (papier du carnet) ; « dark » : écran des résultats. */
+  tone?: "dark" | "light";
 }) {
   const shown = Math.min(currentStep + 1, totalSteps);
+  const light = tone === "light";
   return (
     <FlowBar
+      tone={tone}
       // Filet orange de progression sous la barre.
       progress={shown / totalSteps}
       center={
         <div className="flex items-center gap-4 whitespace-nowrap">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/logo-thermomatch-nav.webp"
-            alt="ThermoMatch"
-            width={118}
-            height={16}
-            className="hidden sm:block"
-            style={{ width: 118, height: 16, maxWidth: "none" }}
-          />
-          <span aria-hidden="true" className="hidden h-4 w-px sm:block" style={{ background: HC.line }} />
-          <span className="text-[13px] font-medium" style={{ color: HC.mute, fontVariantNumeric: "tabular-nums" }}>
+          {light ? (
+            <span className="hidden sm:block">
+              <ThermoMatchWordmark size={12} />
+            </span>
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src="/images/logo-thermomatch-nav.webp"
+              alt="ThermoMatch"
+              width={118}
+              height={16}
+              className="hidden sm:block"
+              style={{ width: 118, height: 16, maxWidth: "none" }}
+            />
+          )}
+          <span aria-hidden="true" className="hidden h-4 w-px sm:block" style={{ background: light ? CARNET.line : HC.line }} />
+          <span className="text-[13px] font-medium" style={{ color: light ? CARNET.soft : HC.mute, fontVariantNumeric: "tabular-nums" }}>
             Étape {shown} sur {totalSteps}
           </span>
         </div>
@@ -961,8 +738,8 @@ function ThermoMatchHeader({
         <button
           type="button"
           onClick={onQuit}
-          className="flex items-center gap-2 text-sm font-medium transition-colors hover:text-white"
-          style={{ color: HC.mute }}
+          className={cn("flex items-center gap-2 text-sm font-medium transition-colors", light ? "hover:text-[#E54B17]" : "hover:text-white")}
+          style={{ color: light ? CARNET.soft : HC.mute }}
           aria-label="Quitter ThermoMatch"
         >
           Quitter

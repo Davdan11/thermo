@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo";
 import { SavingsCalculator } from "@/components/calculators/SavingsCalculator";
-import { SavingsHero } from "@/components/content-hero/SavingsHero";
+import { MeterHero } from "@/components/heroes-v2/prix/MeterHero";
 
 export const metadata = createMetadata({
   title: "Calculateur d'Économies Thermopompe",
@@ -14,8 +14,8 @@ export const metadata = createMetadata({
 export default function CalculateurEconomiesPage() {
   return (
     <main className="min-h-screen bg-[var(--color-background)] pb-20">
-      {/* Héros premium : jauge de rendement (COP) animée, sans montant inventé */}
-      <SavingsHero calculatorId="calculateur" />
+      {/* Héros « Le compteur » : compteur électrique animé (COP 1 contre 3 à 4), sans montant inventé */}
+      <MeterHero calculatorId="calculateur" />
 
       {/* Calculator Section */}
       <div id="calculateur" className="max-w-7xl mx-auto px-5 -mt-10 relative z-10" style={{ scrollMarginTop: 110 }}>

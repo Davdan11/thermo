@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { NotFoundHero } from "@/components/tools-hero/NotFoundHero";
+import { HorsPlageHero } from "@/components/heroes-v2/outils/HorsPlageHero";
 
 export const metadata: Metadata = {
   title: "Page introuvable",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <main>
-      <NotFoundHero />
+      <HorsPlageHero />
     </main>
   );
 }

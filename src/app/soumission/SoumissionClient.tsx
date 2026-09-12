@@ -14,12 +14,12 @@ import { loadProjectDraft, getProjectSummary, existingUnitSummary } from "@/lib/
 import { ThermoScanPromo } from "@/components/thermoscan/ThermoScanPromo";
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { track } from "@/lib/analytics/track";
-import { SoumissionBar, SoumissionHero } from "@/components/flow-hero/SoumissionHero";
+import { SoumissionBar, SoumissionHero } from "@/components/heroes-v2/outils/Carnet";
 
 
 const ORANGE = "#e54b17";
 const NAVY = "#0b1b24";
-const CREAM = "#f7f5f0";
+const CREAM = "#F7F3EC"; // papier du « Carnet »
 
 /* Lignes du récapitulatif, modifiables en place. Vides tant que le visiteur n'a rien dit :
    on n'affiche jamais un projet inventé à la place du sien. */
@@ -375,10 +375,10 @@ export default function SoumissionPage() {
   }
 
   return (
-    // overflow-x: clip coupe la bande encre du haut, qui déborde jusqu'aux bords de l'écran.
+    // overflow-x: clip : le filet de marge du carnet ne crée jamais de défilement horizontal.
     <div className="relative overflow-x-clip" style={{ minHeight: "100vh", backgroundColor: CREAM, display: "flex", flexDirection: "column" }}>
 
-      {/* ── HEADER ── (transparent, posé sur la bande encre du héros) */}
+      {/* ── HEADER ── (transparent, ton clair sur le papier du carnet) */}
       <SoumissionBar />
 
       {/* ── MAIN CONTENT ── */}
@@ -386,7 +386,7 @@ export default function SoumissionPage() {
 
         {/* ── LEFT: Project summary ── */}
         <div>
-          {/* Titre, introduction et lien ThermoMatch sur bande encre animée (mêmes textes). */}
+          {/* Titre à la plume, introduction, lien ThermoMatch et engagements cochés (mêmes textes). */}
           <SoumissionHero hasDraft={hasDraft} />
           {draftRaw.appareilActuel ? (
             <p style={{ margin: "32px 0 28px", fontSize: 14, color: "#536873", lineHeight: 1.55 }}>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CareerHero, type Poste } from "@/components/company-hero/CareerHero";
+import { CareerBoard, type Poste } from "@/components/heroes-v2/entreprise/CareerBoard";
 
 export const metadata: Metadata = {
   title: "Carrières — Thermopompes À Vendre.ca",
@@ -31,8 +31,8 @@ const POSTES: Poste[] = [
 export default function CarrierePage() {
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light" }}>
-      {/* HÉROS premium : src/components/company-hero/CareerHero.tsx */}
-      <CareerHero postes={POSTES} />
+      {/* HÉROS « Plein orange » : src/components/heroes-v2/entreprise/CareerBoard.tsx */}
+      <CareerBoard postes={POSTES} />
 
       {/* ── CONTENU ── */}
       <section

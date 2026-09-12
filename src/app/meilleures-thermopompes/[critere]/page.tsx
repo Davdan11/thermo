@@ -5,8 +5,11 @@ import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getRanking, RANKINGS } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
-import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, SeoHero } from "@/components/seo/SeoBlocks";
-import { monoLogo, productImage } from "@/components/seo/hero/assets";
+import { CtaThermoMatch, FaqBlock, JsonLd, ModelTable, Prose, RelatedLinks, TrustStrip } from "@/components/seo/SeoBlocks";
+import { productImage } from "@/components/seo/hero/assets";
+import { PalmaresPodiumHero } from "@/components/heroes-v2/marques/PalmaresHeroes";
+import { monoLogo } from "@/components/heroes-v2/marques/server";
+import { typo } from "@/components/heroes-v2/marques/shared";
 
 export const dynamicParams = false;
 
@@ -69,29 +72,24 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
           getItemListSchema({ name: r.def.title, items: r.models.map((m) => ({ name: `${m.brand} ${m.name}`, url: `/produit/${m.canonicalSlug}` })) }),
         ]}
       />
-      <SeoHero
+      {/* Héros « Palmarès » : podium des trois premiers, vraies photos. */}
+      <PalmaresPodiumHero
         eyebrow="Classement sur données certifiées"
-        title={r.def.h1}
-        serif={SERIF[critere]}
-        motif={{
-          kind: "podium",
-          metricLabel: r.def.metricLabel,
-          items: r.models.slice(0, 3).map((m, i) => ({
-            rank: i + 1,
-            brand: m.brand,
-            name: m.name,
-            value: r.def.value(m),
-            href: `/produit/${m.canonicalSlug}`,
-            image: productImage(m.imageUrl),
-            logo: monoLogo(m.brandSlug),
-          })),
-        }}
-        intro={r.def.description}
-        answer={`${r.models.length} machines vendues au Québec, classées sur ${/^[A-Z]{2}/.test(r.def.metricLabel) ? r.def.metricLabel : r.def.metricLabel.charAt(0).toLowerCase() + r.def.metricLabel.slice(1)} d'après les données d'Hydro-Québec et d'ENERGY STAR${updated ? ` (liste du ${updated})` : ""}.${r.models[0] ? ` En tête : ${r.models[0].brand} ${r.models[0].name}, ${r.def.value(r.models[0])}.` : ""} Un classement compare une seule donnée ; la bonne machine dépend aussi de votre maison, que ThermoMatch prend en compte.`}
-        breadcrumbs={[
-          { label: "Meilleures thermopompes", href: "/meilleures-thermopompes" },
-          { label: r.def.h1, href: `/meilleures-thermopompes/${critere}` },
-        ]}
+        title={typo(r.def.h1)}
+        accent={SERIF[critere] ? typo(SERIF[critere]) : undefined}
+        metricLabel={r.def.metricLabel}
+        items={r.models.slice(0, 3).map((m, i) => ({
+          rank: i + 1,
+          brand: m.brand,
+          name: m.name,
+          value: typo(r.def.value(m)),
+          href: `/produit/${m.canonicalSlug}`,
+          image: productImage(m.imageUrl),
+          logo: monoLogo(m.brandSlug)?.src ?? null,
+        }))}
+        intro={typo(r.def.description)}
+        answer={typo(`${r.models.length} machines vendues au Québec, classées sur ${/^[A-Z]{2}/.test(r.def.metricLabel) ? r.def.metricLabel : r.def.metricLabel.charAt(0).toLowerCase() + r.def.metricLabel.slice(1)} d'après les données d'Hydro-Québec et d'ENERGY STAR${updated ? ` (liste du ${updated})` : ""}.${r.models[0] ? ` En tête : ${r.models[0].brand} ${r.models[0].name}, ${r.def.value(r.models[0])}.` : ""} Un classement compare une seule donnée ; la bonne machine dépend aussi de votre maison, que ThermoMatch prend en compte.`)}
+        crumbs={[{ label: "Meilleures thermopompes", href: "/meilleures-thermopompes" }, { label: typo(r.def.h1) }]}
         stats={[
           { label: "Machines classées", value: String(r.models.length) },
           { label: "Critère", value: r.def.metricLabel },
@@ -99,6 +97,7 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
           { label: "Liste du", value: updated ?? "—" },
         ]}
       />
+      <TrustStrip />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <ModelTable models={r.models} showRank metric={{ label: r.def.metricLabel, value: r.def.value }} caption="Une ligne par machine réellement distincte. Cliquez sur un modèle pour la fiche complète." />
       </section>

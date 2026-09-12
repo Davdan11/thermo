@@ -3,8 +3,7 @@ import { brandLogoPath } from "@/lib/data/brand-logos";
 import { createMetadata } from "@/lib/seo";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { BrandDirectoryClient, type BrandSummaryWithLogo } from "@/components/brand/BrandDirectoryClient";
-import type { OrbitBrand } from "@/components/brand/hero/BrandDirectoryHero";
-import { orbitLogo } from "@/components/brand/hero/brand-hero-data";
+import { buildPlacards } from "@/components/heroes-v2/marques/server";
 
 /* ------------------------------------------------------------------
    Metadata
@@ -29,23 +28,14 @@ export default function MarquesPage() {
     hasLogo: brandLogoPath(summary.brand.slug) !== null
   }));
 
-  // Héros : les 20 marques les plus fournies qui ont un logo monochrome vérifié (orbites),
+  // Héros « Galerie » : les marques les plus fournies qui ont un logo officiel vérifié (cadres au mur),
   // et les totaux réels de l'annuaire.
-  const orbit: OrbitBrand[] = brands
-    .flatMap((s) => {
-      const logo = orbitLogo(s.brand.slug);
-      return logo
-        ? [{ slug: s.brand.slug, name: s.brand.name.replace(" [DEV]", ""), logo: logo.src, ratio: logo.ratio, models: s.modelCount, cold: s.coldClimateCount }]
-        : [];
-    })
-    .sort((a, b) => b.models - a.models || a.name.localeCompare(b.name))
-    .slice(0, 20);
+  const placards = buildPlacards(brands, 7);
   const totals = {
     brands: brands.length,
     models: brands.reduce((sum, s) => sum + s.modelCount, 0),
     cold: brands.reduce((sum, s) => sum + s.coldClimateCount, 0),
   };
 
-  return <BrandDirectoryClient brands={brandsWithLogo} orbit={orbit} totals={totals} />;
+  return <BrandDirectoryClient brands={brandsWithLogo} placards={placards} totals={totals} />;
 }
-

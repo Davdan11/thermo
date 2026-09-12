@@ -7,7 +7,7 @@ import { PrixApproche, getPrixFaqSchema } from "@/components/prix/PrixApproche";
 import { PRICE_GRID, PRICE_GRID_CONSULTED_AT, TIER_LABEL, money, type PriceCell, type PriceTier } from "@/lib/prices/grille-installee";
 import { observedSlugs } from "@/lib/prices/observed";
 import { getSeoModel } from "@/lib/seo/programmatic";
-import { PrixHero } from "@/components/product/hero/PrixHero";
+import { ReceiptHero } from "@/components/heroes-v2/prix/ReceiptHero";
 import { frDate, prixBoardSets } from "@/components/product/hero/prix-sets";
 
 /* ------------------------------------------------------------------
@@ -75,9 +75,10 @@ export default function PrixPage() {
     <main>
       <JsonLd data={getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Prix des thermopompes", url: "/prix" }])} />
       <JsonLd data={getPrixFaqSchema()} />
-      <PrixHero
+      <ReceiptHero
         crumbs={<Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Prix des thermopompes" }]} />}
         sets={prixBoardSets()}
+        consulted={frDate(PRICE_GRID_CONSULTED_AT)}
         stats={[
           { value: 211, label: "fourchettes relevées" },
           { value: 56, label: "pages publiées" },
