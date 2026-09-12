@@ -2,10 +2,12 @@
 
 import "./cold-story.css";
 import "./hero-premium.css";
-import { useRef, useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { Snowfall } from "./Snowfall";
+import { CountUp } from "./premium/shared";
 
 /* ==================================================================
    Héros de l'accueil : photo plein écran qui recule au chargement puis
@@ -24,9 +26,15 @@ const C = {
 };
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
-export function HeroPremium({ eligible, brands }: { eligible: number; brands: number }) {
+export function HeroPremium({ eligible, brands, coldClimate }: { eligible: number; brands: number; coldClimate: number }) {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  // Les chiffres défilent une fois leur panneau apparu.
+  const [play, setPlay] = useState(false);
+  useEffect(() => {
+    const t = window.setTimeout(() => setPlay(true), 1100);
+    return () => window.clearTimeout(t);
+  }, []);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const imgScale = useTransform(scrollYProgress, [0, 1], [1, 1.16]);
   const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
@@ -35,9 +43,9 @@ export function HeroPremium({ eligible, brands }: { eligible: number; brands: nu
   const shade = useTransform(scrollYProgress, [0, 1], [0, 0.7]);
 
   const facts = [
-    { value: eligible.toLocaleString("fr-CA"), label: "modèles admissibles" },
-    { value: String(brands), label: "marques actives au Québec" },
-    { value: "Chaque nuit", label: "la liste LogisVert est relue" },
+    { value: eligible, label: "modèles admissibles" },
+    { value: brands, label: "marques au Québec" },
+    { value: coldClimate, label: "certifiés grand froid" },
   ];
 
   return (
@@ -68,6 +76,8 @@ export function HeroPremium({ eligible, brands }: { eligible: number; brands: nu
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[28%]" style={{ background: "linear-gradient(180deg, rgba(10,20,25,0.6) 0%, rgba(10,20,25,0) 100%)" }} />
       {/* Mobile : la photo passe sous le texte, on la fonce davantage. */}
       <div aria-hidden="true" className="absolute inset-0 lg:hidden" style={{ background: "rgba(10,20,25,0.5)" }} />
+      {/* Neige qui tombe devant la maison, derrière le texte. */}
+      <Snowfall className="pointer-events-none absolute inset-0 h-full w-full" />
       <motion.div aria-hidden="true" className="absolute inset-0" style={{ background: C.ink, opacity: shade }} />
 
       <motion.div
@@ -84,8 +94,17 @@ export function HeroPremium({ eligible, brands }: { eligible: number; brands: nu
           <Line i={0}>L’hiver d’ici</Line>
           <Line i={1}>ne pardonne pas</Line>
           <Line i={2}>
-            <span className="hp-serif">
-              le mauvais choix<span style={{ color: C.orange }}>.</span>
+            {/* Coup de marqueur orange qui se trace derrière les mots, juste après leur apparition. */}
+            <span className="relative inline-block px-[0.14em]">
+              <motion.span
+                aria-hidden="true"
+                className="absolute inset-x-0 bottom-[0.06em] top-[0.22em] origin-left"
+                style={{ background: C.orange, skewX: -8 }}
+                initial={reduce ? false : { scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.9, ease: EASE, delay: 1.05 }}
+              />
+              <span className="hp-serif relative">le mauvais choix.</span>
             </span>
           </Line>
         </h1>
@@ -98,15 +117,27 @@ export function HeroPremium({ eligible, brands }: { eligible: number; brands: nu
             <PostalForm id="hp-cp" />
           </Appear>
 
-          <Appear delay={0.95} className="hidden gap-10 lg:flex">
-            <dl className="flex gap-10" style={{ margin: 0 }}>
-              {facts.map((f) => (
-                <div key={f.label} className="flex flex-col gap-1.5 pl-5" style={{ borderLeft: `1px solid ${C.line}` }}>
-                  <dt className="order-2 text-[13px]" style={{ color: C.faint }}>
+          {/* Chiffres du catalogue dans un panneau de verre dépoli ; ils défilent jusqu'aux vraies valeurs. */}
+          <Appear delay={0.95} className="hidden lg:block">
+            <dl
+              className="relative flex overflow-hidden rounded-[22px]"
+              style={{ margin: 0, background: "rgba(10,20,25,0.38)", border: `1px solid ${C.line}`, backdropFilter: "blur(16px) saturate(130%)", WebkitBackdropFilter: "blur(16px) saturate(130%)" }}
+            >
+              <motion.span
+                aria-hidden="true"
+                className="absolute left-0 top-0 h-[2px] w-full origin-left"
+                style={{ background: C.orange }}
+                initial={reduce ? false : { scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 1.4, ease: EASE, delay: 1.2 }}
+              />
+              {facts.map((f, i) => (
+                <div key={f.label} className="flex flex-col gap-2 px-7 py-5" style={{ borderLeft: i ? `1px solid ${C.line}` : "none" }}>
+                  <dt className="order-2 text-[12px] font-medium uppercase" style={{ color: C.faint, letterSpacing: "0.14em" }}>
                     {f.label}
                   </dt>
-                  <dd className="order-1 text-[26px] font-semibold tabular-nums" style={{ letterSpacing: "-0.03em", margin: 0 }}>
-                    {f.value}
+                  <dd className="order-1" style={{ fontSize: 38, fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 1, margin: 0 }}>
+                    <CountUp value={f.value} play={play} />
                   </dd>
                 </div>
               ))}
@@ -172,16 +203,23 @@ function PostalForm({ id }: { id: string }) {
   }
 
   return (
-    <div className="w-full max-w-[520px]">
+    <div className="w-full max-w-[560px]">
+      <div className="mb-3 flex items-center gap-2 pl-5 2xl:hidden">
+        <img src="/images/logo-thermomatch-nav.webp" alt="ThermoMatch" width={103} height={14} style={{ width: 103, height: 14, maxWidth: "none", display: "block" }} />
+      </div>
       <form
         onSubmit={submit}
         noValidate
-        className="flex items-center gap-2 rounded-full p-1.5"
+        className="hp-form flex items-center gap-2 rounded-full p-1.5"
         style={{ border: `1px solid ${error ? C.orange : "rgba(244,239,231,0.22)"}`, background: "rgba(244,239,231,0.06)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}
       >
         <label htmlFor={id} className="sr-only">
           Code postal
         </label>
+        {/* Signature ThermoMatch dans la pastille sur grand écran ; au-dessus du champ ailleurs (sinon le texte d'aide est coupé). */}
+        <span className="hidden shrink-0 items-center self-stretch px-4 2xl:flex" style={{ borderRight: `1px solid ${C.line}` }}>
+          <img src="/images/logo-thermomatch-nav.webp" alt="ThermoMatch" width={118} height={16} style={{ width: 118, height: 16, maxWidth: "none", display: "block" }} />
+        </span>
         <input
           id={id}
           value={pc}
@@ -193,7 +231,7 @@ function PostalForm({ id }: { id: string }) {
           autoComplete="postal-code"
           aria-invalid={error}
           aria-describedby={hint}
-          className="hp-input min-w-0 flex-1 bg-transparent py-3 pl-5 text-[16px] outline-none"
+          className="hp-input min-w-0 flex-1 bg-transparent py-3 pl-5 text-[16px] outline-none 2xl:pl-2"
           style={{ color: C.cream, letterSpacing: "0.06em" }}
         />
         <button type="submit" className="inline-flex shrink-0 items-center gap-3 rounded-full py-2.5 pl-5 pr-2.5 text-[15px] font-semibold text-white" style={{ background: C.orange }}>

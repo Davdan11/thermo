@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useInView, useReducedMotion, useScroll, useTransform } from "motion/react";
-import { AirLines, Arrow, C, CountUp, DISPLAY, EASE, RevealLines } from "./shared";
+import { Arrow, C, CountUp, DISPLAY, EASE, RevealLines } from "./shared";
 
 /* ==================================================================
    « Comparez les modèles qui comptent » — studio blanc, trois vraies
@@ -65,21 +65,7 @@ export function CompareStage({ models }: { models: CompareModel[] }) {
 
   return (
     <section ref={ref} className="relative overflow-hidden" style={{ background: "#fff", color: C.ink, fontFamily: DISPLAY }} aria-labelledby="ps-cmp-titre">
-      {/* Grille de fiche technique, estompée vers les bords. */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage: `linear-gradient(${C.inkLine} 1px, transparent 1px), linear-gradient(90deg, ${C.inkLine} 1px, transparent 1px)`,
-          backgroundSize: "88px 88px",
-          opacity: 0.5,
-          maskImage: "radial-gradient(ellipse 70% 60% at 50% 60%, #000 25%, transparent 80%)",
-          WebkitMaskImage: "radial-gradient(ellipse 70% 60% at 50% 60%, #000 25%, transparent 80%)",
-        }}
-      />
 
-      {/* Lignes d’air qui circulent derrière la scène. */}
-      <AirLines color={C.ink} opacity={0.07} className="pointer-events-none absolute inset-x-0 bottom-[14%] h-[380px] w-full" />
 
       <div className="relative mx-auto max-w-[1440px] px-5 py-[13vh] sm:px-8 lg:px-12">
         <div className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-end">

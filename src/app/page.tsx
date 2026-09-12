@@ -46,7 +46,7 @@ export default function HomePage() {
   return (
     <main className={`${display.variable} ${serif.variable}`} style={{ fontFamily: "var(--font-sans, 'Inter', sans-serif)", color: "#172126", backgroundColor: "#fff" }}>
 
-      <HeroPremium eligible={getEligibleModelCount()} brands={brandsSummary.length} />
+      <HeroPremium eligible={getEligibleModelCount()} brands={brandsSummary.length} coldClimate={coldClimate} />
 
       {/* ══════════════════════════════════════════════════════════════════
           MAGASINEZ — 3 type cards (Murales / Multizones / Centrales)

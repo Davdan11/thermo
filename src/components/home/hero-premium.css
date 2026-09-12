@@ -27,3 +27,17 @@
 @media (prefers-reduced-motion: reduce) {
   .hp-cue::after { animation: none; }
 }
+
+/* Champ du code postal : le :focus-visible global dessine un rectangle de 2 px (coins carrés dans la
+   pastille) et l'autoremplissage du navigateur pose un fond rectangulaire. On neutralise les deux ;
+   c'est la pastille entière qui s'allume au focus. */
+.hp-input, .hp-input:focus, .hp-input:focus-visible { outline: none !important; box-shadow: none !important; border-radius: 999px; }
+.hp-input:-webkit-autofill,
+.hp-input:-webkit-autofill:hover,
+.hp-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f4efe7;
+  caret-color: #f4efe7;
+  transition: background-color 99999s ease-out 0s;
+}
+.hp-form { transition: border-color 0.3s, box-shadow 0.3s; }
+.hp-form:focus-within { border-color: rgba(244, 239, 231, 0.55) !important; box-shadow: 0 0 0 4px rgba(229, 75, 23, 0.22); }
