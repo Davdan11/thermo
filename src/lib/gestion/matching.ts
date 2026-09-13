@@ -90,6 +90,9 @@ export interface MatchOptions {
   now: Date;
   /** Nom affiché d'une marque à partir de son identifiant. */
   brandLabel?: (id: string) => string;
+  /** Volet B (paiements) : raison qui met les offres de cet installateur en pause (paiement de commission en retard), ou null.
+      Voir src/lib/gestion/commissions/blocker.ts (paymentBlocker) ; la pause se lève dès le paiement. */
+  blockers?: (installerId: string) => string | null;
 }
 
 const plural = (n: number, one: string, many: string) => (n <= 1 ? `${n} ${one}` : `${n} ${many}`);
@@ -104,6 +107,9 @@ export function evaluateInstaller(job: Job, installer: Installer, jobs: Job[], o
   const pendingOffer = mine.some((o) => offerState(o, opts.now) === "en-attente");
 
   if (!installer.active) failures.push("en pause");
+  // Volet B : offres en pause tant qu'une facture de commission est en retard (raison affichée au propriétaire).
+  const blocked = opts.blockers?.(installer.id);
+  if (blocked) failures.push(blocked);
 
   // Zone : rayon autour du code postal de base, ou région cochée en plus.
   const km = job.geo && installer.base ? Math.round(distanceKm(job.geo, installer.base)) : null;

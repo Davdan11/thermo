@@ -7,6 +7,7 @@ import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { homeView } from "@/lib/gestion/crm/service";
 import { parsePeriod } from "@/lib/gestion/statistiques";
 import { HomeView } from "@/components/gestion/crm/HomeView";
+import { ArgentStrip } from "@/components/gestion/argent/ArgentStrip";
 
 export const metadata: Metadata = { title: "Accueil" };
 
@@ -14,5 +15,11 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
   await requireAdmin();
   const period = parsePeriod((await searchParams).periode);
   const h = await homeView(period);
-  return <HomeView h={h} />;
+  return (
+    <>
+      <HomeView h={h} />
+      {/* Volet B : commissions des partenaires, satisfaction et LogisVert des clients (bloc 05). */}
+      <ArgentStrip />
+    </>
+  );
 }
