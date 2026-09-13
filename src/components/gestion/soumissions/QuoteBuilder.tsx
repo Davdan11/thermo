@@ -167,7 +167,7 @@ export function QuoteBuilder(props: BuilderProps) {
   const catalog = useMemo(() => [...settings.extras, ...settings.labour], [settings]);
   const byRole = (role: CatalogRole) => catalog.find((x) => x.role === role) ?? null;
   const m = c.machine;
-  const lvAmount = logisvertAmount({ machine: m, logisvert: { mode: "cession" } });
+  const lvAmount = logisvertAmount({ machine: m, logisvert: { mode: "client" } });
   const unit = c.placement.lengthUnit;
 
   const pickModel = (pick: ModelPick | null) => {
@@ -197,7 +197,7 @@ export function QuoteBuilder(props: BuilderProps) {
     up((d) => {
       if (!d.machine) return;
       Object.assign(d.machine, patch);
-      if (logisvertAmount({ machine: d.machine, logisvert: { mode: "cession" } }) === 0) d.logisvert.mode = "aucune";
+      if (logisvertAmount({ machine: d.machine, logisvert: { mode: "client" } }) === 0) d.logisvert.mode = "aucune";
     });
 
   const setUnit = (id: string, patch: Partial<IndoorPlacement>) =>
@@ -591,12 +591,12 @@ export function QuoteBuilder(props: BuilderProps) {
             <p className="sq-sub">Aide LogisVert</p>
             <Seg
               value={c.logisvert.mode}
-              options={[["cession", "Déduite du prix : l’aide est versée à l’entreprise"], ["client", "Versée au client par Hydro-Québec après l’installation"], ["aucune", "Aucune aide LogisVert"]]}
+              options={[["client", "Versée au client par Hydro-Québec après l’installation"], ["aucune", "Aucune aide LogisVert"]]}
               onChange={(v) => up((d) => void (d.logisvert.mode = lvAmount || v === "aucune" ? v : "aucune"))}
             />
             {!lvAmount ? <p className="g-hint">Choisissez d’abord un jumelage de la liste officielle avec un montant.</p> : null}
             <p className="sq-note" style={{ marginTop: 10 }}>
-              À confirmer avec Hydro-Québec avant d’offrir l’un ou l’autre mode : admissibilité, cession de l’aide à l’entrepreneur, délais et pièces exigées. Le texte montré au client se modifie dans les <Link href="/gestion/soumissions/reglages#logisvert">réglages</Link>.{" "}
+              L’aide LogisVert est versée au client par Hydro-Québec, jamais à l’entreprise. Admissibilité, délais et pièces exigées : à confirmer avec Hydro-Québec. Le texte montré au client se modifie dans les <Link href="/gestion/soumissions/reglages#logisvert">réglages</Link>.{" "}
               <a href={LINKS.logisvert} target="_blank" rel="noreferrer">Page officielle du programme</a>
             </p>
             <p className="sq-sub">Acompte</p>

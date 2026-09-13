@@ -70,7 +70,6 @@ export function textChecks(t: DocumentTexts): CheckItem[] {
     item("depositRule", "Règle de l’acompte", "avertissement"),
     item("weatherClause", "Clause météo", "avertissement"),
     item("changeOrder", "Avenants (changements en cours de travaux)", "avertissement"),
-    item("logisvertCession", "Texte LogisVert : aide versée à l’entreprise", "avertissement"),
     item("logisvertClient", "Texte LogisVert : aide versée au client", "avertissement"),
   ];
 }

@@ -86,20 +86,6 @@ describe("computeTotals", () => {
     expect(computeTotals(c, ["l_req"], RATES, TODAY).grossCents).toBe(100_000);
   });
 
-  it("LogisVert « cession » : déduit de ce que le client paie ; acompte calculé sur ce montant", () => {
-    const c = readyContent();
-    c.lines = [line("l_a", { unitPriceCents: 400_000 })];
-    c.deposit = { kind: "pourcentage", value: 20 };
-    const t = computeTotals(c, [], RATES, TODAY);
-    expect(t.totalCents).toBe(459_900);
-    expect(t.logisvertMode).toBe("cession");
-    expect(t.logisvertCents).toBe(150_000);
-    expect(t.clientPaysCents).toBe(309_900);
-    expect(t.netAfterAidCents).toBe(309_900);
-    expect(t.depositCents).toBe(61_980);
-    expect(t.balanceCents).toBe(309_900 - 61_980);
-  });
-
   it("LogisVert « client » : le client paie le total ; l'aide est montrée à part", () => {
     const c = readyContent();
     c.lines = [line("l_a", { unitPriceCents: 400_000 })];

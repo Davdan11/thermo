@@ -57,7 +57,7 @@ export function readyContent(settings = fullSettings()): QuoteContent {
   c.placement.electrical.circuit = "existant";
   c.schedule = { ...c.schedule, mode: "date", date: "2026-10-01", duration: "Une journée", arrival: "Entre 8 h et 9 h" };
   c.lines = [line("l_forfait", { label: "Installation murale complète", unitPriceCents: 400_000 }), line("l_opt", { kind: "extra", label: "Support au sol", unitPriceCents: 25_000, optional: true, selectedByDefault: true })];
-  c.logisvert = { mode: "cession" };
+  c.logisvert = { mode: "client" };
   c.deposit = { kind: "pourcentage", value: 20 };
   return c;
 }

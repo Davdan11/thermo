@@ -151,7 +151,7 @@ describe("acceptation : instantané figé et empreinte", () => {
     expect(d.company).toMatchObject({ legalName: "Entreprise Exemple inc.", neq: "1234567890", rbq: "1234-5678-90" });
     expect(d.texts.terms).toBe("Texte validé (test).");
     // Totaux avec rabais : ligne (−200 $), puis 5 % sur 3 800 $ (−190 $), taxes sur 3 610 $.
-    expect(a.snapshot.totals).toMatchObject({ grossCents: 400_000, lineDiscountsCents: 20_000, quoteDiscountsCents: 19_000, taxableCents: 361_000, tpsCents: 18_050, tvqCents: 36_010, totalCents: 415_060, logisvertCents: 150_000, clientPaysCents: 265_060 });
+    expect(a.snapshot.totals).toMatchObject({ grossCents: 400_000, lineDiscountsCents: 20_000, quoteDiscountsCents: 19_000, taxableCents: 361_000, tpsCents: 18_050, tvqCents: 36_010, totalCents: 415_060, logisvertCents: 150_000, clientPaysCents: 415_060 });
     expect(a.totalCents).toBe(415_060);
   });
 

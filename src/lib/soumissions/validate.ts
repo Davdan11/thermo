@@ -143,7 +143,7 @@ export const quoteInputSchema = z.object({
     inclusions: items,
     exclusions: items,
     assumptions: items,
-    logisvert: z.object({ mode: z.enum(["cession", "client", "aucune"]) }),
+    logisvert: z.object({ mode: z.enum(["client", "aucune"]) }),
     deposit: z
       .object({ kind: z.enum(["pourcentage", "montant", "aucun"]), value: z.number().min(0).max(100_000_000) })
       .refine((d) => d.kind !== "pourcentage" || d.value <= 100, "L’acompte en pourcentage ne dépasse pas 100 %."),
