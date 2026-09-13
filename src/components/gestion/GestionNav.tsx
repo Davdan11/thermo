@@ -12,7 +12,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Banknote, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
+import { Banknote, Megaphone, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
 import { openSearch } from "./crm/CommandSearch";
 import { openQuickActions } from "./crm/QuickActions";
 import { Sheet } from "./kit/Sheet";
@@ -64,6 +64,7 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
     label: "Analyse",
     items: [
       { href: "/gestion/statistiques", label: "Statistiques", icon: ChartColumn, match: starts("/gestion/statistiques") },
+      { href: "/gestion/presence", label: "Présence", icon: Megaphone, match: starts("/gestion/presence") },
       { href: "/gestion/reglages", label: "Réglages", icon: Settings2, match: starts("/gestion/reglages") },
     ],
   },
