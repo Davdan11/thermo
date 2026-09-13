@@ -12,7 +12,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Banknote, Megaphone, Target, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
+import { Banknote, Boxes, MapPinned, Megaphone, Target, UserPlus, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
 import { openSearch } from "./crm/CommandSearch";
 import { openQuickActions } from "./crm/QuickActions";
 import { Sheet } from "./kit/Sheet";
@@ -57,6 +57,9 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
       { href: "/gestion/partenaires", label: "Partenaires", icon: Handshake, match: starts("/gestion/partenaires") },
       { href: "/gestion/entente", label: "Entente", icon: FileSignature, match: starts("/gestion/entente") },
       { href: "/gestion/photos", label: "Photos à vérifier", icon: Camera, match: starts("/gestion/photos") },
+      { href: "/gestion/carte", label: "Carte", icon: MapPinned, match: starts("/gestion/carte") },
+      { href: "/gestion/recrutement", label: "Recrutement", icon: UserPlus, match: starts("/gestion/recrutement") },
+      { href: "/gestion/inventaire", label: "Inventaire", icon: Boxes, match: starts("/gestion/inventaire") },
       { href: "/gestion/candidatures", label: "Candidatures", icon: Inbox, match: starts("/gestion/candidatures"), badge: "candidatures" },
     ],
   },
