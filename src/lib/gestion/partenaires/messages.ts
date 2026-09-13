@@ -132,8 +132,9 @@ export function fieldLinkSms(d: { jobNumber: number; link: string; ticketNumber?
   return d.ticketNumber ? `${BRAND.name} : appel de service n° ${d.ticketNumber} assigné (job n° ${d.jobNumber}). ${d.link}` : `${BRAND.name} : page de chantier du job n° ${d.jobNumber}. ${d.link}`;
 }
 
-export function clientEnRouteSms(d: { company: string; eta: string | null }): string {
-  return `${BRAND.name} : votre installateur (${d.company}) est en route${d.eta ? `, arrivée prévue vers ${d.eta}` : ""}. Répondez ARRÊT pour ne plus recevoir de textos.`;
+/* Chantier P : `link` (facultatif) = portail « Mon projet » du client, où l'arrivée se suit en direct. */
+export function clientEnRouteSms(d: { company: string; eta: string | null; link?: string | null }): string {
+  return `${BRAND.name} : votre installateur (${d.company}) est en route${d.eta ? `, arrivée prévue vers ${d.eta}` : ""}.${d.link ? ` Suivez son arrivée : ${d.link}` : ""} Répondez ARRÊT pour ne plus recevoir de textos.`;
 }
 
 export function jobClosedOwner(d: { jobNumber: number; company: string; city: string; serials: string; photos: number; by: string; link: string; missing: string[] }): Rendered {

@@ -15,6 +15,7 @@
 
 import { createHash, timingSafeEqual } from "node:crypto";
 import { runTick } from "@/lib/gestion/automatisations/engine";
+import { runPortalTick } from "@/lib/gestion/portail/tick"; // Chantier P
 
 export const dynamic = "force-dynamic";
 
@@ -40,7 +41,9 @@ export async function POST(req: Request) {
   if (auth === "refuse") return json({ error: "Non autorisé." }, 401);
   try {
     const r = await runTick({ log: (line) => console.log(`[automatisations] ${line}`) });
-    return json({ ok: true, at: r.at, ms: r.ms, fait: r.done, echecs: r.failed, ignores: r.ignored, reportes: r.deferred, enAttente: r.waiting });
+    // Chantier P : visites d'entretien annuelles et invitations « choisissez votre date » (portail client).
+    const p = await runPortalTick({ log: (line) => console.log(`[portail] ${line}`) }).catch((e) => (console.error("[portail] passage interrompu :", e), null));
+    return json({ ok: true, at: r.at, ms: r.ms, fait: r.done, echecs: r.failed, ignores: r.ignored, reportes: r.deferred, enAttente: r.waiting, portail: p ? { visites: p.visits, invitations: p.invites, adhesions: p.attached } : { erreur: true } });
   } catch (e) {
     console.error("[automatisations] passage interrompu :", e);
     return json({ error: "Passage interrompu : voir le journal du serveur." }, 500);

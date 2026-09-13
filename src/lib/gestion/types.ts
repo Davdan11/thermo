@@ -120,8 +120,37 @@ export interface Job {
   /** Volet A — fin de chantier (ISO 8601, UTC) : posée au passage à « terminé », retirée à la réouverture.
       Signal du volet B (facture, sondage) ; détail dans src/lib/gestion/terrain/completion.ts. */
   completedAt?: string;
+  /* Chantier P (portail client) — champs facultatifs, absents des jobs existants :
+     - kind : « entretien » pour une visite d'un plan d'entretien (absent = installation) ;
+     - maintenance : adhésion et montants figés à l'adhésion (base de la commission de la visite) ;
+     - scheduledTime (« HH:MM », lu par l'agenda), scheduledWindow (« 8 h à 12 h ») et slotId :
+       date choisie par le client dans son portail (créneau publié par l'installateur). */
+  kind?: JobKind;
+  maintenance?: JobMaintenance;
+  scheduledTime?: string;
+  scheduledWindow?: string;
+  slotId?: string;
   offers: Offer[];
   audit: AuditEntry[];
+}
+
+/** Chantier P — type de job. */
+export type JobKind = "installation" | "entretien";
+
+/** Chantier P — visite d'entretien : d'où elle vient et ce qu'elle rapporte (montants réels, figés à l'adhésion). */
+export interface JobMaintenance {
+  membershipId: string;
+  planId: string;
+  planName: string;
+  /** Prix annuel du plan payé par le client, avant taxes (cents). */
+  priceCents: number;
+  /** Pourcentage de commission du plan. */
+  commissionPercent: number;
+  /** Année de la visite (1, 2, 3…). */
+  visit: number;
+  /** Job d'installation d'origine. */
+  originJobId: string;
+  joinedAt: string;
 }
 
 export type CandidatureStatus = "nouvelle" | "ajoutee" | "ecartee";

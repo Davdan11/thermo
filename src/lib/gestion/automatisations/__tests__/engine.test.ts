@@ -116,7 +116,7 @@ describe("passage du moteur", () => {
     expect(h.count("clientSms", "rappel la veille")).toBe(1);
     expect(h.count("clientMail", "rappel la veille")).toBe(1);
     const sms = h.calls.find((c) => c.kind === "clientSms")!.body!;
-    expect(sms).toContain("https://exemple.ca/suivi/");
+    expect(sms).toContain("https://exemple.ca/projet/"); // Chantier P : les liens mènent au portail « Mon projet »
     expect(sms).toContain("ARRET");
     expect(sms).not.toContain("514 555-0199");
 

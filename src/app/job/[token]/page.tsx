@@ -160,6 +160,8 @@ export default async function JobOfferPage({ params, searchParams }: { params: P
             </div>
             {/* Volet A : page de chantier (en route, photos obligatoires, numéros de série, signature du client). */}
             <a href={`/chantier/${encodeURIComponent(token)}`} className="g-btn g-btn--primary g-btn--lg g-btn--block" style={{ marginTop: 14 }}>Ouvrir la page du chantier</a>
+            {/* Chantier P : l'installateur publie ses disponibilités ; ses clients y choisissent leur date. */}
+            <a href={`/disponibilites/${encodeURIComponent(token)}`} className="g-btn g-btn--ghost g-btn--lg g-btn--block" style={{ marginTop: 10, color: "var(--g-ink)", justifyContent: "center" }}>Publier mes disponibilités</a>
             <hr className="g-divider" />
             {details}
           </div>

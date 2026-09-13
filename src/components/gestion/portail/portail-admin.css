@@ -1,0 +1,95 @@
+/* Chantier P — « Plans d'entretien » et « Créneaux » dans /gestion : quelques compléments au kit (k-*, g-*, ar-form). */
+
+.pa-plans {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+}
+.pa-plan__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 12px;
+}
+.pa-todo {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fbf0dc;
+  color: #9a5b0b;
+  font-size: 14px;
+  font-weight: 600;
+}
+.pa-days {
+  display: grid;
+  gap: 14px;
+}
+.pa-day h4 {
+  margin: 0 0 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5b6770;
+}
+.pa-day ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pa-slot {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 4px 6px 4px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(12, 24, 33, 0.16);
+  background: #fff;
+  font-weight: 650;
+  font-size: 14px;
+  animation: pa-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.pa-slot.is-booked {
+  padding-right: 14px;
+  background: #e4f3ea;
+  border-color: transparent;
+  color: #1d7a4e;
+}
+.pa-slot small {
+  font-weight: 500;
+  color: inherit;
+  opacity: 0.8;
+}
+.pa-events {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  font-size: 13.5px;
+}
+.pa-events li {
+  display: grid;
+  grid-template-columns: 9.5em 1fr;
+  gap: 10px;
+  color: #5b6770;
+}
+.pa-events b {
+  color: #0c1821;
+  font-weight: 600;
+}
+@keyframes pa-in {
+  from {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pa-slot {
+    animation: none;
+  }
+}
