@@ -92,6 +92,12 @@ describe("Server Actions sans session", () => {
       () => actions.linkDealAction(id, fd),
       () => actions.saveSettingsAction({}),
       () => actions.savePricesAction({}),
+      () => actions.duplicateForClientAction(id),
+      () => actions.searchClientsAction("Exemple"),
+      () => actions.pickClientAction("c_0123456789ab"),
+      () => actions.saveTemplateAction({ name: "Murale standard", content: {} }),
+      () => actions.loadTemplateAction("tm_aaaaaaaa11"),
+      () => actions.deleteTemplateAction("tm_aaaaaaaa11"),
     ];
     for (const call of calls) {
       const err = await call().then(() => null, (e: unknown) => e);

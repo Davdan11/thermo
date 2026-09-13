@@ -17,7 +17,8 @@ import { getClientView, recordClientView, remindService, respondToQuote, sendQuo
 import { mutateSettings, mutateSoumissions, readSoumissions, soumissionsFile, viewsFile } from "../store";
 import { computeTotals } from "../totals";
 import type { Settings } from "../types";
-import { fullSettings, readyContent, TODAY } from "./fixtures";
+import { fullSettings, INSTALLER_ID, readyContent, TODAY } from "./fixtures";
+import { seedPartner } from "./partner-fixtures";
 
 const env = process.env;
 let dir: string;
@@ -32,11 +33,12 @@ async function writeSettings(s: Settings) {
 }
 
 async function newDraft(): Promise<string> {
-  return mutateSoumissions((d) => ({ result: createQuote(d, readyContent(), "proprio@exemple.ca", NOW).id, changed: true }));
+  return mutateSoumissions((d) => ({ result: createQuote(d, readyContent(), "proprio@exemple.ca", NOW, { contractorId: INSTALLER_ID }).id, changed: true }));
 }
 
 async function sentQuote(): Promise<{ id: string; token: string }> {
   await writeSettings(fullSettings());
+  await seedPartner();
   const id = await newDraft();
   const r = await sendQuoteService(id, "proprio@exemple.ca", BASE, { sms: false }, NOW);
   expect(r.ok).toBe(true);
@@ -83,12 +85,12 @@ afterEach(async () => {
 });
 
 describe("envoi", () => {
-  it("bloqué tant que l'identité légale manque : rien ne part, la version reste en brouillon", async () => {
+  it("bloqué tant que l'entrepreneur manque et que les textes sont à compléter : rien ne part, la version reste en brouillon", async () => {
     await writeSettings(defaultSettings());
-    const id = await newDraft();
+    const id = await newDraft(); // entrepreneur choisi, mais absent des installateurs
     const r = await sendQuoteService(id, "proprio@exemple.ca", BASE, { sms: true }, NOW);
     expect(r.ok).toBe(false);
-    if (!r.ok) expect(r.blockers?.map((b) => b.id)).toEqual(expect.arrayContaining(["legalName", "neq", "rbq", "address", "tps", "tvq"]));
+    if (!r.ok) expect(r.blockers?.map((b) => b.id)).toEqual(expect.arrayContaining(["entrepreneur", "texte-paymentTerms", "texte-warranty"]));
     expect(mail.sendClientEmail).not.toHaveBeenCalled();
     expect(calls).toHaveLength(0);
     expect((await readSoumissions()).quotes[0].versions[0].status).toBe("brouillon");
@@ -239,6 +241,7 @@ describe("Pipedrive configuré", () => {
     const s = fullSettings();
     s.pipedriveStages = { envoyee: 5, ouverte: null, acceptee: 8, refusee: null };
     await writeSettings(s);
+    await seedPartner();
     const id = await newDraft();
     const r = await sendQuoteService(id, "proprio@exemple.ca", BASE, { sms: false }, NOW);
     expect(r.ok && r.pipedrive.ok).toBe(true);

@@ -1,6 +1,53 @@
 /* Données fictives des tests du créateur de soumissions (aucun vrai client, aucune vraie entreprise). */
+import { NO_CONTRACTOR, type ContractorPick, type ContractorStatus } from "../contractor";
 import { defaultSettings, emptyContent } from "../defaults";
-import type { MachineInfo, QuoteContent, QuoteLine, Settings } from "../types";
+import type { ContractorIdentity, MachineInfo, QuoteContent, QuoteLine, Settings } from "../types";
+
+export { NO_CONTRACTOR };
+
+/** Installateur partenaire fictif qui réalise les travaux. */
+export const INSTALLER_ID = "i_exemple0001";
+
+export function contractorIdentity(over: Partial<ContractorIdentity> = {}): ContractorIdentity {
+  return {
+    legalName: "Installations Exemple inc.",
+    tradeName: "Exemple Climatisation",
+    neq: "1234567890",
+    rbq: "1234-5678-90",
+    address: "2 rue Fictive",
+    city: "Laval",
+    postalCode: "H7A 1A1",
+    phone: "514 555-0142",
+    email: "installations@exemple.ca",
+    tps: "123456789 RT0001",
+    tvq: "1234567890 TQ0001",
+    ...over,
+  };
+}
+
+/** État d'un entrepreneur complet et en règle (licence et assurance valides). */
+export function contractorStatus(over: Partial<ContractorStatus> = {}): ContractorStatus {
+  return {
+    installerId: INSTALLER_ID,
+    company: "Exemple Climatisation",
+    city: "Laval",
+    legalName: "Installations Exemple inc.",
+    rbqNumber: "1234-5678-90",
+    missing: [],
+    formatIssues: [],
+    verified: true,
+    source: "proprietaire",
+    submittedAt: null,
+    rbq: { state: "valide", expiresOn: "2027-12-31" },
+    assurance: { state: "valide", expiresOn: "2027-12-31" },
+    ended: false,
+    active: true,
+    blockWhenMissing: false,
+    ...over,
+  };
+}
+
+export const pick = (over: Partial<ContractorStatus> = {}): ContractorPick => ({ id: INSTALLER_ID, status: contractorStatus(over) });
 
 export const RATES = { tpsPer100k: 5_000, tvqPer100k: 9_975 };
 export const TODAY = "2026-09-12";
