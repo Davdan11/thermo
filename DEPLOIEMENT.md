@@ -68,6 +68,28 @@ Journal : `/var/log/thermo-logisvert-bot.log`. Lancement manuel : `bash /var/www
 - Garde-fous : seuls les chiffres du contexte factuel (`scripts/blog-context.ts`) sont autorisés ; validation du frontmatter, de la longueur, des liens internes ; second essai avec les erreurs ; abandon sinon (journal `/var/log/thermo-nightly-bot.log`).
 - Essai local : `node scripts/blog-bot.mjs --dry-run --topic <slug>` (affiche l'article sans écrire).
 
+## IndexNow (Bing, Yandex, Naver, Seznam)
+
+`scripts/indexnow-cron.sh` lance `scripts/indexnow.ts` depuis la version servie : premier passage, toutes les adresses du plan du site (par lots de 10 000, format du protocole) ; ensuite, seulement les adresses ajoutées, modifiées (`lastmod` du plan) ou retirées. État : `shared/data/gestion-indexnow.json`. Envoi réel seulement avec `NODE_ENV=production` (le script le pose) ; ailleurs, simulé.
+
+1. Dans `shared/.env` : `INDEXNOW_KEY=` suivi d'une clé de 8 à 128 caractères (lettres, chiffres, « - »), par exemple `openssl rand -hex 16`. Elle est servie à `https://thermopompesavendre.ca/<clé>.txt` (réécriture de `next.config.ts`), jamais dans le dépôt. Puis `pm2 reload thermo --update-env`.
+2. Crontab (root), après le robot de 5 h 30 :
+   `45 6 * * * /bin/bash /var/www/thermopompesavendre.ca/current/scripts/indexnow-cron.sh >> /var/log/thermo-indexnow.log 2>&1`
+3. `deploy-vps.sh` le lance aussi 90 secondes après chaque déploiement (même verrou, donc jamais deux envois en même temps).
+
+Journal : `/var/log/thermo-indexnow.log` (sans la clé). À la main : `NODE_ENV=production npx tsx scripts/indexnow.ts --dry-run` (plan seulement), `--complet` (tout renvoyer). État visible dans /gestion/referencement.
+
+## Search Console (/gestion/referencement)
+
+Lecture seule par compte de service. Le compte de Google Agenda (`GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_SERVICE_ACCOUNT_KEY`) est réutilisé ; un autre compte peut être donné par `GSC_SERVICE_ACCOUNT_JSON` (fichier JSON, texte ou base64) ou `GSC_SERVICE_ACCOUNT_EMAIL` et `GSC_SERVICE_ACCOUNT_KEY`.
+
+1. Google Cloud, même projet que le compte : « API et services », « Bibliothèque », **Google Search Console API**, « Activer ».
+2. Search Console, propriété thermopompesavendre.ca : « Paramètres », « Utilisateurs et autorisations », « Ajouter un utilisateur » : l'adresse du compte de service (affichée sur la page), autorisation « Restreint ».
+3. Facultatif : `GSC_SITE_URL=sc-domain:thermopompesavendre.ca` (ou `https://thermopompesavendre.ca/`) ; sans elle, la première propriété de ce domaine accessible au compte.
+4. `pm2 reload thermo --update-env`.
+
+Cache de 6 heures dans `shared/data/gestion-search-console.json` (« Actualiser » : une fois par 10 minutes au plus). Mots-clés suivis : `shared/data/gestion-referencement.json`, réglables sur la page. Page réservée au propriétaire ; à ajouter au menu (section Analyse / Marketing) dans `src/components/gestion/GestionNav.tsx`.
+
 ## Courriels automatiques Pipedrive (étapes du pipeline)
 
 - Webhook Pipedrive (id 19180) : `deal.updated` → `POST https://thermopompesavendre.ca/api/webhooks/pipedrive`, authentification HTTP Basic avec `PIPEDRIVE_WEBHOOK_USER` / `PIPEDRIVE_WEBHOOK_PASSWORD` (shared/.env).
