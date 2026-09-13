@@ -60,6 +60,7 @@ const NAV = [
 const LEGAL: { href: string; label: string; tag?: string }[] = [
   { href: "/confidentialite", label: "Confidentialité", tag: "Loi 25" },
   { href: "/conditions", label: "Conditions d’utilisation" },
+  { href: "/garantie-legale", label: "Garantie légale" },
   { href: "/accessibilite", label: "Accessibilité" },
 ];
 
