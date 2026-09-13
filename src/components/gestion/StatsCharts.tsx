@@ -6,6 +6,13 @@
 import { motion } from "motion/react";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 
+/* Graphiques du CRM (accueil, statistiques), en SVG maison : réexportés ici. */
+export { Donut } from "./charts/Donut";
+export { Funnel } from "./charts/Funnel";
+export { SeriesBars } from "./charts/SeriesBars";
+export { Sparkline } from "./charts/Sparkline";
+export { StageBar } from "./charts/StageBar";
+
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 /** Sommet de l'axe : pair sous 10, sinon 1-2-3-4-5-6-8 × 10ⁿ (la demi-graduation reste entière). */
@@ -89,6 +96,8 @@ export interface BarRow {
   href?: string;
   note?: string;
   tone?: "orange" | "ink" | "muted";
+  /** Valeur affichée à la place du nombre (ex. « 12 450 $ »). */
+  display?: string;
 }
 
 export function BarList({ rows, empty }: { rows: BarRow[]; empty: string }) {
@@ -112,7 +121,7 @@ export function BarList({ rows, empty }: { rows: BarRow[]; empty: string }) {
                 </span>
               )}
               <span className="g-bars__n">
-                {r.n}
+                {r.display ?? r.n}
                 {r.note ? <small> · {r.note}</small> : null}
               </span>
             </div>

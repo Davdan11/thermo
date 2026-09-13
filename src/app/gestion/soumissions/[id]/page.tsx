@@ -3,7 +3,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Copy, Eye, FilePlus2, Pencil, RefreshCw, Send, ShieldCheck, ShieldX, Trash2 } from "lucide-react";
+import { Copy, Eye, FilePlus2, Pencil, RefreshCw, Send, ShieldCheck, ShieldX, Trash2, UserRound, Wrench } from "lucide-react";
+import { clientIdForQuote } from "@/lib/gestion/crm/service";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { publicBaseUrl } from "@/lib/gestion/request";
 import { smsConfigured } from "@/lib/gestion/sms";
@@ -54,6 +55,7 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
   const a = shown.acceptance;
   const status = effectiveStatus(shown, today);
   const name = `${c.client.firstName} ${c.client.lastName}`.trim() || c.client.email || "Client à préciser";
+  const clientId = await clientIdForQuote(q.id);
 
   const flash =
     sp.envoi === "ok"
@@ -78,6 +80,7 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
         </div>
         <div className="sq-actions">
           <QuoteStatus status={status} />
+          {clientId ? <Link href={`/gestion/clients/${clientId}`} className="g-btn g-btn--ghost"><UserRound size={16} aria-hidden /> Fiche client</Link> : null}
           <form action={duplicateAction.bind(null, q.id)}>
             <SubmitButton className="g-btn g-btn--ghost" pendingLabel="Copie…"><Copy size={16} aria-hidden /> Dupliquer</SubmitButton>
           </form>
@@ -156,7 +159,10 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
                 ) : null}
               </dl>
               <div style={{ marginTop: 12 }}><CopyLink url={clientLink(base, sent.token)} /></div>
-              <div className="sq-actions" style={{ marginTop: 12 }}>
+              <div className="sq-actions" style={{ marginTop: 12 }} id="relance">
+                {sent.acceptance ? (
+                  <Link href={`/gestion/jobs/nouveau?soumission=${q.id}`} className="g-btn g-btn--primary"><Wrench size={16} aria-hidden /> Créer le job depuis la soumission acceptée</Link>
+                ) : null}
                 {canRespond(sent, today) ? (
                   <form action={remindAction.bind(null, q.id)} className="sq-actions">
                     {sms ? <label className="sq-inline-check"><input type="checkbox" name="sms" value="oui" /> et par texto</label> : null}

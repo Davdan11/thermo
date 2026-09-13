@@ -71,31 +71,53 @@ export interface LeadRecord {
 
 /* ---------------- Lecture du journal ---------------- */
 
-/** Première ligne de chaque demande (les lignes de résultat sont ignorées). Ne lance pas si le dossier manque. */
-export async function readJournalEntries(dir = journalDir(), opts: { includeDemo?: boolean } = {}): Promise<JournalEntry[]> {
+/** Fichiers de démonstration (statistiques, CRM) : lus seulement si includeDemo (jamais en production). */
+export const DEMO_JOURNAL_FILES: readonly string[] = [DEMO_JOURNAL_FILE, "demo-crm.jsonl"];
+
+/** Toutes les lignes lisibles du journal, fichier par fichier (mois, puis démonstration si demandée). */
+async function readJournalLines(dir: string, includeDemo: boolean): Promise<JournalEntry[]> {
   let files: string[];
   try {
     files = await readdir(dir);
   } catch {
     return [];
   }
-  const wanted = files.filter((f) => MONTH_FILE.test(f) || (opts.includeDemo && f === DEMO_JOURNAL_FILE)).sort();
-  const seen = new Set<string>();
+  const wanted = files.filter((f) => MONTH_FILE.test(f) || (includeDemo && DEMO_JOURNAL_FILES.includes(f))).sort();
   const out: JournalEntry[] = [];
   for (const f of wanted) {
     const text = await readFile(path.join(dir, f), "utf8").catch(() => "");
     for (const line of text.split("\n")) {
       if (!line.trim()) continue;
-      let e: JournalEntry;
       try {
-        e = JSON.parse(line) as JournalEntry;
+        const e = JSON.parse(line) as JournalEntry;
+        if (e && typeof e.id === "string" && typeof e.at === "string") out.push(e);
       } catch {
-        continue;
+        /* ligne abîmée : ignorée */
       }
-      if (!e || typeof e.id !== "string" || typeof e.at !== "string" || e.outcome || seen.has(e.id)) continue;
-      seen.add(e.id);
-      out.push(e);
     }
+  }
+  return out;
+}
+
+/** Première ligne de chaque demande (les lignes de résultat sont ignorées). Ne lance pas si le dossier manque. */
+export async function readJournalEntries(dir = journalDir(), opts: { includeDemo?: boolean } = {}): Promise<JournalEntry[]> {
+  const seen = new Set<string>();
+  const out: JournalEntry[] = [];
+  for (const e of await readJournalLines(dir, Boolean(opts.includeDemo))) {
+    if (e.outcome || seen.has(e.id)) continue;
+    seen.add(e.id);
+    out.push(e);
+  }
+  return out;
+}
+
+/** Lignes de résultat (affaire Pipedrive, courriels…) réunies par demande : la plus récente l'emporte, le dealId connu est gardé. */
+export async function readJournalOutcomes(dir = journalDir(), opts: { includeDemo?: boolean } = {}): Promise<Map<string, NonNullable<JournalEntry["outcome"]>>> {
+  const out = new Map<string, NonNullable<JournalEntry["outcome"]>>();
+  for (const e of await readJournalLines(dir, Boolean(opts.includeDemo))) {
+    if (!e.outcome) continue;
+    const prev = out.get(e.id);
+    out.set(e.id, { ...prev, ...e.outcome, dealId: e.outcome.dealId ?? prev?.dealId });
   }
   return out;
 }

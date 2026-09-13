@@ -1,6 +1,7 @@
 /* Outil de gestion privé : aucun élément du site public (voir SiteChrome), jamais indexé. */
 import type { Metadata, Viewport } from "next";
 import "@/components/gestion/gestion.css";
+import "@/components/gestion/crm.css";
 
 export const metadata: Metadata = {
   title: { template: "%s · Gestion", default: "Gestion" },

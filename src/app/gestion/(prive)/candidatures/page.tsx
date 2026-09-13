@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { UserPlus } from "lucide-react";
+import { Inbox, UserPlus } from "lucide-react";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { brandHints, regionHints } from "@/lib/gestion/candidatures";
 import { brandLabel, brandOptions } from "@/lib/gestion/catalog";
@@ -8,28 +8,33 @@ import { regionName } from "@/lib/gestion/regions";
 import { loadCandidatures } from "@/lib/gestion/service";
 import { formatDateTime } from "@/lib/gestion/summary";
 import { candidatureStatusAction } from "../actions";
+import { Chip, type ChipTone } from "@/components/gestion/kit/Chip";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import { Reveal, StaggerList } from "@/components/gestion/Reveal";
 import { SubmitButton } from "@/components/gestion/SubmitButton";
 
 export const metadata: Metadata = { title: "Candidatures" };
 
-const STATUS = {
-  nouvelle: { label: "Nouvelle", cls: "g-pill--nouveau" },
-  ajoutee: { label: "Ajoutée", cls: "g-pill--termine" },
-  ecartee: { label: "Écartée", cls: "g-pill--muted" },
-} as const;
+const STATUS: Record<string, { label: string; tone: ChipTone }> = {
+  nouvelle: { label: "Nouvelle", tone: "orange" },
+  ajoutee: { label: "Ajoutée", tone: "ok" },
+  ecartee: { label: "Écartée", tone: "muted" },
+};
 
 export default async function CandidaturesPage() {
   await requireAdmin();
   const list = await loadCandidatures();
   const brands = brandOptions();
+  const fresh = list.filter((c) => c.status === "nouvelle").length;
   return (
     <>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div>
-          <p className="g-eyebrow">Page Partenaires</p>
-          <h1 className="g-h1">Candidatures</h1>
-          <p className="g-lead">Chaque candidature reçue sur /partenaires est gardée ici. « Ajouter » ouvre la fiche pré-remplie ; vous confirmez les marques et les régions devinées.</p>
+          <p className="k-eyebrow">Page Partenaires</p>
+          <h1 className="k-h1">Candidatures</h1>
+          <p className="k-lead">
+            {fresh ? `${fresh} nouvelle${fresh > 1 ? "s" : ""}. ` : ""}Chaque candidature reçue sur /partenaires est gardée ici. « Ajouter » ouvre la fiche pré-remplie ; vous confirmez les marques et les régions devinées.
+          </p>
         </div>
       </Reveal>
       {list.length ? (
@@ -44,7 +49,9 @@ export default async function CandidaturesPage() {
                     <div className="g-cand__name">{c.company}</div>
                     <div className="g-cand__sub">Reçue le {formatDateTime(c.receivedAt)}</div>
                   </div>
-                  <span className={`g-pill ${STATUS[c.status].cls}`}>{STATUS[c.status].label}</span>
+                  <Chip tone={STATUS[c.status].tone} dot>
+                    {STATUS[c.status].label}
+                  </Chip>
                 </div>
                 <dl className="g-kv">
                   <dt>Contact</dt>
@@ -64,18 +71,26 @@ export default async function CandidaturesPage() {
                 </dl>
                 {b.length || r.length ? (
                   <div className="g-tags">
-                    {b.map((id) => <span key={id} className="g-tag g-tag--ok">{brandLabel(id)}</span>)}
-                    {r.map((code) => <span key={code} className="g-tag">{regionName(code)}</span>)}
+                    {b.map((id) => (
+                      <Chip key={id} tone="ok">
+                        {brandLabel(id)}
+                      </Chip>
+                    ))}
+                    {r.map((code) => (
+                      <Chip key={code} tone="blue">
+                        {regionName(code)}
+                      </Chip>
+                    ))}
                   </div>
                 ) : null}
                 <div className="g-actions" style={{ marginTop: "auto" }}>
                   {c.status === "ajoutee" && c.installerId ? (
-                    <Link href={`/gestion/installateurs/${c.installerId}`} className="g-btn g-btn--ghost">Voir la fiche</Link>
+                    <Link href={`/gestion/installateurs/${c.installerId}`} className="k-btn">Voir la fiche</Link>
                   ) : (
                     <>
-                      <Link href={`/gestion/installateurs/nouveau?candidature=${c.id}`} className="g-btn g-btn--primary"><UserPlus size={16} aria-hidden /> Ajouter comme installateur</Link>
+                      <Link href={`/gestion/installateurs/nouveau?candidature=${c.id}`} className="k-btn k-btn--primary"><UserPlus size={16} aria-hidden /> Ajouter comme installateur</Link>
                       <form action={candidatureStatusAction.bind(null, c.id, c.status === "ecartee" ? "nouvelle" : "ecartee")}>
-                        <SubmitButton className="g-btn g-btn--quiet" pendingLabel="…">{c.status === "ecartee" ? "Remettre" : "Écarter"}</SubmitButton>
+                        <SubmitButton className="k-btn k-btn--ghost" pendingLabel="…">{c.status === "ecartee" ? "Remettre" : "Écarter"}</SubmitButton>
                       </form>
                     </>
                   )}
@@ -85,7 +100,7 @@ export default async function CandidaturesPage() {
           })}
         </StaggerList>
       ) : (
-        <p className="g-empty">Aucune candidature pour l’instant. Elles arrivent par la page Partenaires du site.</p>
+        <EmptyState icon={<Inbox size={20} />} title="Aucune candidature pour l’instant" body="Elles arrivent par la page Partenaires du site." />
       )}
     </>
   );

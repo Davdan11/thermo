@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight, Mail, MessageSquare, Pencil, Phone } from "lucide-react";
+import { ChevronRight, Mail, MessageSquare, Pencil, Phone, UserRound } from "lucide-react";
+import { clientIdForJob } from "@/lib/gestion/crm/service";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { brandLabel, brandOptions } from "@/lib/gestion/catalog";
 import { availableActions, offerState, STATUS_ACTIONS } from "@/lib/gestion/offers";
@@ -71,6 +72,7 @@ export default async function JobPage({ params, searchParams }: { params: Promis
   const actions = availableActions(job);
   const sent = sp.envoye !== undefined ? Number(sp.envoye) : null;
   const offers = [...job.offers].reverse();
+  const clientId = await clientIdForJob(job.id);
 
   return (
     <>
@@ -85,7 +87,10 @@ export default async function JobPage({ params, searchParams }: { params: Promis
             {job.systemType ? <span className="g-tag">{SYSTEM_TYPE_LABELS[job.systemType]}</span> : null}
           </div>
         </div>
-        <Link href={`/gestion/jobs/${job.id}/modifier`} className="g-btn g-btn--ghost"><Pencil size={16} aria-hidden /> Modifier</Link>
+        <div className="g-actions">
+          {clientId ? <Link href={`/gestion/clients/${clientId}`} className="g-btn g-btn--ghost"><UserRound size={16} aria-hidden /> Fiche client</Link> : null}
+          <Link href={`/gestion/jobs/${job.id}/modifier`} className="g-btn g-btn--ghost"><Pencil size={16} aria-hidden /> Modifier</Link>
+        </div>
       </Reveal>
 
       {sp.cree ? <Reveal><p className="g-alert g-alert--ok" role="status">Job créé. Choisissez maintenant à qui l’offrir.</p></Reveal> : null}

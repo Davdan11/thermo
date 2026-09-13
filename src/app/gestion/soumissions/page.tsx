@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Plus } from "lucide-react";
+import { CircleDollarSign, Eye, FileText, Plus, Send } from "lucide-react";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { settingsChecks } from "@/lib/soumissions/checklist";
 import { formatShort } from "@/lib/soumissions/dates";
 import { money } from "@/lib/soumissions/money";
 import { listQuotes, type ToolRow } from "@/lib/soumissions/service";
 import { readSettings } from "@/lib/soumissions/store";
+import { DataTable } from "@/components/gestion/kit/DataTable";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
+import { dollars } from "@/components/gestion/kit/format";
+import { KpiTile } from "@/components/gestion/kit/KpiTile";
 import { Reveal } from "@/components/gestion/Reveal";
 import { QuoteStatus } from "@/components/gestion/soumissions/ui";
 
@@ -38,15 +42,18 @@ export default async function SoumissionsPage({ searchParams }: { searchParams: 
   const tab = TABS.find((t) => t.key === statut) ?? TABS[0];
   const shown = rows.filter(tab.test);
   const accepted = rows.filter((r) => r.status === "acceptee");
+  const opened = rows.filter((r) => r.status === "ouverte");
+  const sentOnly = rows.filter((r) => r.status === "envoyee");
 
   return (
     <>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div>
-          <p className="g-eyebrow">Créateur de soumissions</p>
-          <h1 className="g-h1">Soumissions</h1>
+          <p className="k-eyebrow">Créateur de soumissions</p>
+          <h1 className="k-h1">Soumissions</h1>
+          <p className="k-lead">Montants taxes comprises. Une soumission ouverte sans réponse devient une tâche « Relancer » après quelques jours.</p>
         </div>
-        <Link href="/gestion/soumissions/nouvelle" className="g-btn g-btn--primary">
+        <Link href="/gestion/soumissions/nouvelle" className="k-btn k-btn--primary k-btn--lg">
           <Plus size={18} aria-hidden /> Nouvelle soumission
         </Link>
       </Reveal>
@@ -70,16 +77,14 @@ export default async function SoumissionsPage({ searchParams }: { searchParams: 
         </Reveal>
       ) : null}
 
-      <Reveal delay={0.06}>
-        <div className="g-stats" role="list" aria-label="Soumissions par statut">
-          <div className="g-stat" role="listitem"><span className="g-stat__n">{rows.filter((r) => r.status === "brouillon").length}</span><span className="g-stat__l">Brouillons</span></div>
-          <div className="g-stat" role="listitem"><span className="g-stat__n">{rows.filter((r) => r.status === "envoyee").length}</span><span className="g-stat__l">Envoyées, pas ouvertes</span></div>
-          <div className="g-stat g-stat--hot" role="listitem"><span className="g-stat__n">{rows.filter((r) => r.status === "ouverte").length}</span><span className="g-stat__l">Ouvertes, à relancer</span></div>
-          <div className="g-stat" role="listitem"><span className="g-stat__n">{accepted.length}</span><span className="g-stat__l">Acceptées · {money(accepted.reduce((s, r) => s + r.totalCents, 0))}</span></div>
-        </div>
-      </Reveal>
+      <div className="cr-grid3" style={{ marginBottom: 20 }}>
+        <KpiTile label="Brouillons" icon={<FileText size={16} />} value={rows.filter((r) => r.status === "brouillon").length} href="/gestion/soumissions?statut=brouillon" />
+        <KpiTile label="Envoyées, pas ouvertes" icon={<Send size={16} />} value={sentOnly.length} sub={sentOnly.length ? dollars(sentOnly.reduce((s, r) => s + r.totalCents, 0)) : undefined} href="/gestion/soumissions?statut=attente" />
+        <KpiTile label="Ouvertes, à relancer" icon={<Eye size={16} />} value={opened.length} tone={opened.length ? "ink" : "paper"} sub={opened.length ? dollars(opened.reduce((s, r) => s + r.totalCents, 0)) : undefined} href="/gestion/soumissions?statut=attente" />
+        <KpiTile label="Acceptées" icon={<CircleDollarSign size={16} />} value={dollars(accepted.reduce((s, r) => s + r.totalCents, 0))} sub={`${accepted.length} soumission${accepted.length > 1 ? "s" : ""}`} href="/gestion/soumissions?statut=acceptee" />
+      </div>
 
-      <nav className="sq-tabs" aria-label="Filtrer">
+      <nav className="k-tabs" aria-label="Filtrer" style={{ marginBottom: 16 }}>
         {TABS.map((t) => (
           <Link key={t.key} href={t.key ? `/gestion/soumissions?statut=${t.key}` : "/gestion/soumissions"} aria-current={t === tab ? "page" : undefined}>
             {t.label} <b>{rows.filter(t.test).length}</b>
@@ -87,33 +92,53 @@ export default async function SoumissionsPage({ searchParams }: { searchParams: 
         ))}
       </nav>
 
-      {shown.length ? (
-        <ul className="sq-rows">
-          {shown.map((r, i) => (
-            <Reveal as="li" key={r.id} delay={Math.min(i, 8) * 0.03}>
-              <Link href={`/gestion/soumissions/${r.id}`} className="sq-row">
-                <span style={{ minWidth: 0 }}>
-                  <span className="sq-row__num">{r.number} · v{r.v}{r.kind === "avenant" ? " (avenant)" : ""}</span>
-                  <span className="sq-row__who" style={{ display: "block" }}>{r.client}{r.city ? ` · ${r.city}` : ""}</span>
-                  <span className="sq-row__meta" style={{ display: "block" }}>{[r.machine, tracking(r)].filter(Boolean).join(" · ")}</span>
-                  {r.hasDraft ? <span className="sq-row__meta" style={{ display: "block", color: "var(--g-orange-2)" }}>Nouvelle version en brouillon</span> : null}
-                  {r.pipedriveError ? <span className="sq-row__meta" style={{ display: "block", color: "var(--g-bad)" }}>Pipedrive : dernière synchronisation en erreur</span> : null}
+      <DataTable
+        label="Soumissions"
+        columns={[
+          { key: "who", label: "Soumission", width: "minmax(0, 2fr)" },
+          { key: "status", label: "Statut", width: "120px" },
+          { key: "track", label: "Suivi", width: "minmax(0, 2fr)" },
+          { key: "total", label: "Total", width: "130px", align: "end" },
+        ]}
+        rows={shown.map((r) => ({
+          key: r.id,
+          href: `/gestion/soumissions/${r.id}`,
+          tone: r.status === "ouverte" ? "hot" : r.status === "refusee" || r.status === "expiree" || r.status === "remplacee" ? "muted" : undefined,
+          cells: {
+            who: (
+              <span className="cr-who__text">
+                <span className="cr-who__name">{r.client}</span>
+                <span className="cr-who__sub">
+                  {r.number} · v{r.v}
+                  {r.kind === "avenant" ? " (avenant)" : ""}
+                  {r.city ? ` · ${r.city}` : ""}
                 </span>
-                <span className="sq-row__end">
-                  <QuoteStatus status={r.status} />
-                  <span className="sq-row__total">{money(r.totalCents)}</span>
-                  {r.questions ? <span className="g-count">{r.questions} question{r.questions > 1 ? "s" : ""}</span> : null}
-                </span>
+              </span>
+            ),
+            status: <QuoteStatus status={r.status} />,
+            track: (
+              <span className="cr-who__text">
+                <span className="cr-who__sub" style={{ whiteSpace: "normal" }}>{[r.machine, tracking(r)].filter(Boolean).join(" · ")}</span>
+                {r.hasDraft ? <span className="cr-who__sub" style={{ color: "var(--g-orange-2)" }}>Nouvelle version en brouillon</span> : null}
+                {r.questions ? <span className="cr-who__sub" style={{ color: "var(--g-warn)" }}>{r.questions} question{r.questions > 1 ? "s" : ""} du client</span> : null}
+                {r.pipedriveError ? <span className="cr-who__sub" style={{ color: "var(--g-bad)" }}>Pipedrive : dernière synchronisation en erreur</span> : null}
+              </span>
+            ),
+            total: <span className="k-money">{money(r.totalCents)}</span>,
+          },
+        }))}
+        empty={
+          <EmptyState
+            icon={<FileText size={20} />}
+            title={rows.length ? "Aucune soumission dans ce filtre" : "Aucune soumission pour l’instant"}
+            action={
+              <Link href="/gestion/soumissions/nouvelle" className="k-btn k-btn--primary">
+                <Plus size={16} aria-hidden /> {rows.length ? "Nouvelle soumission" : "Créer la première"}
               </Link>
-            </Reveal>
-          ))}
-        </ul>
-      ) : (
-        <div className="sq-card sq-empty-state">
-          <p>{rows.length ? "Aucune soumission dans ce filtre." : "Aucune soumission pour l’instant."}</p>
-          <Link href="/gestion/soumissions/nouvelle" className="g-btn g-btn--primary"><Plus size={18} aria-hidden /> Créer la première</Link>
-        </div>
-      )}
+            }
+          />
+        }
+      />
     </>
   );
 }

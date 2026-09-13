@@ -162,6 +162,25 @@ export async function syncEvent(input: {
   }
 }
 
+/**
+ * Changement d'étape fait À LA MAIN dans le pipeline du CRM (/gestion/pipeline) : l'affaire suit, seulement si le
+ * propriétaire a associé une étape Pipedrive à cette étape (réglage désactivé par défaut) et que l'étape existe
+ * dans le pipeline des ventes. Les étapes des soumissions restent poussées par syncSent / syncEvent : jamais deux fois.
+ * Jamais d'exception vers l'appelant.
+ */
+export async function moveDealToStage(dealId: number, stageId: number): Promise<{ ok: boolean; detail: string }> {
+  if (!isPipedriveConfigured()) return { ok: false, detail: "Pipedrive non configuré (PIPEDRIVE_API_TOKEN absent)." };
+  try {
+    const stage = await validStage(stageId);
+    if (!stage) return { ok: false, detail: "Étape Pipedrive introuvable : affaire non déplacée." };
+    await updateDeal(dealId, { stage_id: stage.id });
+    return { ok: true, detail: `Affaire ${dealId} déplacée à l’étape « ${stage.name} ».` };
+  } catch (e) {
+    console.error("[crm] Pipedrive (étape) :", e);
+    return { ok: false, detail: `Erreur Pipedrive : ${errMsg(e)}` };
+  }
+}
+
 /** Étapes du pipeline des ventes, pour le choix dans les réglages. */
 export async function salesStages(): Promise<{ ok: true; stages: Array<{ id: number; name: string }> } | { ok: false; error: string }> {
   if (!isPipedriveConfigured()) return { ok: false, error: "Pipedrive non configuré." };
