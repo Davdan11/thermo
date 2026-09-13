@@ -62,7 +62,7 @@
 }
 .nv-sec__txt small {
   font-size: 11.5px;
-  color: rgba(244, 239, 231, 0.4);
+  color: rgba(244, 239, 231, 0.62);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

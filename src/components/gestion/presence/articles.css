@@ -333,3 +333,10 @@
   font-weight: 600;
   color: #9a5b00;
 }
+
+/* Mouvement réduit : les lignes de la liste changent sans transition. */
+@media (prefers-reduced-motion: reduce) {
+  .ar-row {
+    transition: none;
+  }
+}
