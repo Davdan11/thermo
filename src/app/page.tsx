@@ -65,11 +65,11 @@ export default function HomePage() {
   const typeCount = new Map(getAvailableFilters().types.map((t) => [t.value, t.count]));
   const typePanels: TypePanel[] = (
     [
-      { key: "wall-single", label: "Murales", src: "/images/categorie-murale-daikin-hd.webp", href: "/thermopompes?type=wall-single" },
+      { key: "wall-single", label: "Murales", src: "/images/categorie-murale-daikin-hd.webp", href: "/thermopompes/thermopompe-murale" },
       { key: "multi-zone", label: "Multizones", src: "/images/categorie-multizone-mitsubishi-electric-hd.webp", href: "/thermopompes/thermopompe-multizone" },
-      { key: "central-ducted", label: "Centrales", src: "/images/categorie-centrale-samsung-hd.webp", href: "/thermopompes?type=central-ducted" },
+      { key: "central-ducted", label: "Centrales", src: "/images/categorie-centrale-samsung-hd.webp", href: "/thermopompes/thermopompe-centrale" },
     ] satisfies { key: SystemType; label: string; src: string; href: string }[]
-  ).map((t) => ({ ...t, sub: SYSTEM_TYPE_LABELS[t.key], count: t.href.includes("?type=") ? (typeCount.get(t.key) ?? null) : null }));
+  ).map((t) => ({ ...t, sub: SYSTEM_TYPE_LABELS[t.key], count: typeCount.get(t.key) ?? null }));
 
   // Comparaison : trois murales de 12 000 BTU certifiées climat froid, chiffres du catalogue (N/D si absents).
   const compareModels: CompareModel[] = [
