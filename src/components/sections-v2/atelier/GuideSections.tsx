@@ -8,7 +8,7 @@ import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { DISPLAY, EASE } from "@/components/heroes-v2/marques/shared";
 import { Counter } from "./Counter";
 import { PartsTable } from "./PartsTable";
-import { CTA_TEXT, CTA_TITLE, TRUST, type GuideData } from "./data";
+import { CTA_TEXT, CTA_TITLE, SOUMISSION_STEPS, TRUST, type GuideData, type GuideLogisVert, type GuidePrices } from "./data";
 
 /* ==================================================================
    Suite du héros « Plan d’atelier » (guides /thermopompes/[slug]).
@@ -41,10 +41,13 @@ function useKit() {
 export function GuideSections({ d }: { d: GuideData }) {
   const hasIntro = d.intro.length > 0 || d.benefits.length > 0;
   const hasWho = d.forWho.length + d.notForWho.length > 0;
-  const hasGrants = d.grants.length > 0;
+  const hasGrants = d.grants.length > 0 || !!d.logisVert;
+  const prices = d.prices && d.prices.rows.length > 0 ? d.prices : null;
   const order = [
     ...(hasIntro ? ["presentation"] : []),
     ...(d.steps.length ? ["etapes"] : []),
+    ...(prices ? ["devis"] : []),
+    ...(d.soumission ? ["soumission"] : []),
     ...(hasWho || hasGrants ? ["conditions"] : []),
     "nomenclature",
     "index",
@@ -60,6 +63,8 @@ export function GuideSections({ d }: { d: GuideData }) {
         <Sources />
         {hasIntro && <Presentation d={d} no={no("presentation")} total={total} />}
         {d.steps.length > 0 && <Etapes steps={d.steps} no={no("etapes")} total={total} />}
+        {prices && <Devis p={prices} doc={d.doc} no={no("devis")} total={total} />}
+        {d.soumission && <Soumission no={no("soumission")} total={total} />}
         {(hasWho || hasGrants) && <Conditions d={d} no={no("conditions")} total={total} />}
         <Nomenclature d={d} no={no("nomenclature")} total={total} />
         <Commande />
@@ -347,13 +352,197 @@ function Etapes({ steps, no, total }: { steps: GuideData["steps"]; no: number; t
 }
 
 /* ------------------------------------------------------------------
+   Planche : devis (prix publiés, et ce qui les fait varier)
+   Feuille de papier : le relevé est un tableau tracé à l’encre, double
+   filet d’en-tête, lignes qui arrivent une à une.
+   ------------------------------------------------------------------ */
+
+function Devis({ p, doc, no, total }: { p: GuidePrices; doc: string; no: number; total: number }) {
+  const { up } = useKit();
+  return (
+    <Sheet no={no} total={total} label="Devis" doc={doc}>
+      <PlateHead tone="paper" no={no} total={total} label="Devis" />
+      <div className="mt-9 grid gap-10 lg:grid-cols-12 lg:gap-10">
+        <div className="lg:col-span-4">
+          <div className="lg:sticky lg:top-[120px]">
+            <Title id="at-devis" tone="paper">
+              {p.title}
+            </Title>
+            {p.intro ? (
+              <motion.p {...up(0.3)} className="mt-5 text-[16px] leading-[1.7]" style={{ maxWidth: "46ch" }}>
+                {p.intro}
+              </motion.p>
+            ) : null}
+          </div>
+        </div>
+        <div className="min-w-0 lg:col-span-8">
+          <motion.div {...up(0.2, 16)}>
+            <table className="at-ledger">
+              <caption className="sr-only">{p.title}</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Configuration</th>
+                  <th scope="col">Gamme</th>
+                  <th scope="col" className="at-r">
+                    Prix installé
+                  </th>
+                  <th scope="col" className="at-r">
+                    Relevés
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {p.rows.map((r, i) => (
+                  <motion.tr key={r.key} {...up(0.05 * i, 8)}>
+                    <td className="at-l-label">{r.label}</td>
+                    <td className="at-l-tier">{r.tier}</td>
+                    <td className="at-l-range">{r.range}</td>
+                    <td className="at-l-src">{r.sources}</td>
+                  </motion.tr>
+                ))}
+              </tbody>
+            </table>
+          </motion.div>
+          <motion.p {...up(0.1)} className="mt-5 text-[13.5px] leading-[1.65]" style={{ color: INK_MUTE }}>
+            Médiane des fourchettes publiées pour chaque case, installation standard, avant LogisVert ; les sources précisent rarement les taxes. Consultées le {p.consulted}.{" "}
+            <Link href="/prix" className="at-link">
+              Toutes les fourchettes et la méthode
+            </Link>
+            .
+          </motion.p>
+          {p.factors.length > 0 ? (
+            <div className="mt-14">
+              <Title id="at-varie" tone="paper" size="sm">
+                Ce qui fait varier le prix
+              </Title>
+              <ul className="m-0 mt-8 grid list-none gap-10 p-0 sm:grid-cols-2">
+                {p.factors.map((f, i) => (
+                  <Detail key={f.title} letter={LETTERS[i] ?? String(i + 1)} title={f.title} desc={f.desc} />
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </div>
+    </Sheet>
+  );
+}
+
+/* ------------------------------------------------------------------
+   Planche : soumission (parcours de la demande gratuite)
+   Bordereau en cases sur la planche : chaque case se coche en arrivant.
+   ------------------------------------------------------------------ */
+
+function Soumission({ no, total }: { no: number; total: number }) {
+  const { up, t } = useKit();
+  return (
+    <section aria-labelledby="at-soumission">
+      <PlateHead tone="blue" no={no} total={total} label="Soumission" />
+      <div className="mt-8 grid gap-5 lg:grid-cols-12 lg:items-end lg:gap-10">
+        <div className="lg:col-span-7">
+          <Title id="at-soumission" tone="blue">
+            Comment fonctionne la soumission gratuite
+          </Title>
+        </div>
+        <motion.p {...up(0.3)} className="text-[15.5px] leading-relaxed lg:col-span-5 lg:pb-1" style={{ color: "rgba(255,255,255,0.8)" }}>
+          Thermopompes À Vendre compare les machines ; le prix final vient d’un entrepreneur licencié RBQ, par écrit.
+        </motion.p>
+      </div>
+      <ol className="at-route mt-10" style={{ "--n": SOUMISSION_STEPS.length } as CSSProperties}>
+        {SOUMISSION_STEPS.map((s, i) => (
+          <motion.li key={s.title} {...up(0.08 * i)}>
+            <div aria-hidden="true" className="flex items-center gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <motion.path
+                  d="M20 6 9 17l-5-5"
+                  stroke={PALE}
+                  strokeWidth={2.2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  viewport={VIEW}
+                  transition={t(0.3 + i * 0.12, 0.6)}
+                />
+              </svg>
+              <span className="at-mono text-[10.5px] uppercase" style={{ letterSpacing: "0.22em", color: PALE }}>
+                Étape {pad(i + 1)}
+              </span>
+            </div>
+            <h3 className="mt-4 text-[18px] font-semibold leading-snug text-white">{s.title}</h3>
+            <p className="mt-2 text-[15px] leading-[1.7]" style={{ color: "rgba(255,255,255,0.8)" }}>
+              {s.desc}
+            </p>
+          </motion.li>
+        ))}
+      </ol>
+      <motion.div {...up(0.2)} className="mt-10 flex flex-col gap-3 sm:flex-row">
+        <Link href="/soumission" className="at-btn at-btn-paper">
+          Demander ma soumission
+          <Arrow />
+        </Link>
+        <Link href="/trouver-ma-thermopompe" className="at-btn at-btn-line">
+          Commencer par ThermoMatch
+        </Link>
+      </motion.div>
+    </section>
+  );
+}
+
+/* ------------------------------------------------------------------
+   LogisVert en chiffres : trois cotes, puis la répartition des montants
+   en barres qui se tracent comme des lignes de cote.
+   ------------------------------------------------------------------ */
+
+function LogisVertBars({ lv }: { lv: GuideLogisVert }) {
+  const { up, grow } = useKit();
+  const scope =
+    lv.scope === "liste"
+      ? `jumelages de la liste officielle d’Hydro-Québec${lv.listDate ? ` du ${lv.listDate}` : ""}`
+      : `${lv.scope === "murale" ? "murales" : "centrales"} du catalogue qui ont un montant officiel${lv.listDate ? ` (liste du ${lv.listDate})` : ""}`;
+  return (
+    <motion.div {...up(0.1)} className="mt-10">
+      <h3 className="text-[18px] font-semibold leading-snug" style={{ color: INK }}>
+        LogisVert en chiffres
+      </h3>
+      <p className="mt-2 text-[15px] leading-[1.7]">
+        Répartition des montants sur les {lv.count} {scope}.
+      </p>
+      <div className="at-lvfig at-mono mt-5 text-[10px] uppercase" style={{ letterSpacing: "0.16em", color: INK_MUTE }}>
+        <div>
+          Maximum<b>{lv.max}</b>
+        </div>
+        <div>
+          Médian<b>{lv.median}</b>
+        </div>
+        <div>
+          {lv.scope === "liste" ? "Jumelages" : "Machines"}
+          <b>{lv.count}</b>
+        </div>
+      </div>
+      <ul className="at-bars mt-6">
+        {lv.buckets.map((b, i) => (
+          <li key={b.label} className="at-bar-row">
+            <span>{b.label}</span>
+            <span aria-hidden="true" className="at-bar-track">
+              <motion.span {...grow(0.15 + i * 0.1, 1)} className="at-bar-fill" style={{ width: `${b.pct}%` }} />
+            </span>
+            <span className="at-bar-pct">{b.pctLabel}</span>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+}
+
+/* ------------------------------------------------------------------
    Planche : conditions (pour qui + subventions)
    ------------------------------------------------------------------ */
 
 function Conditions({ d, no, total }: { d: GuideData; no: number; total: number }) {
   const { up } = useKit();
   const hasWho = d.forWho.length + d.notForWho.length > 0;
-  const hasGrants = d.grants.length > 0;
+  const hasGrants = d.grants.length > 0 || !!d.logisVert;
   const both = hasWho && hasGrants;
   return (
     <Sheet no={no} total={total} label={both ? "Conditions" : hasWho ? "Pour qui" : "Subventions"} doc={d.doc}>
@@ -376,6 +565,7 @@ function Conditions({ d, no, total }: { d: GuideData; no: number; total: number 
             {d.grants.map((g, i) => (
               <Grant key={g.name} g={g} i={i} />
             ))}
+            {d.logisVert ? <LogisVertBars lv={d.logisVert} /> : null}
             <motion.p {...up(0.1)} className="mt-8 text-[15.5px] leading-[1.75]">
               Thermopompes À Vendre réunit les montants LogisVert exacts par appareil dans son{" "}
               <Link href="/subventions/logisvert" className="at-link">
@@ -543,6 +733,7 @@ function Index({ d, no, total }: { d: GuideData; no: number; total: number }) {
           </section>
         ) : null}
       </div>
+      {d.cities && d.cities.length > 0 ? <CityIndex groups={d.cities} /> : null}
     </div>
   );
 }
@@ -561,6 +752,47 @@ function CapRow({ c, pct, i }: { c: GuideData["capacities"][number]; pct: number
         </span>
       </Link>
     </motion.li>
+  );
+}
+
+/** Index « Par ville » : pages locales existantes, groupées par région, en colonnes. */
+function CityIndex({ groups }: { groups: NonNullable<GuideData["cities"]> }) {
+  const { up } = useKit();
+  const n = groups.reduce((a, g) => a + g.items.length, 0);
+  return (
+    <section aria-labelledby="at-villes" className="mt-16 lg:mt-20">
+      <div className="grid gap-4 lg:grid-cols-12 lg:items-end lg:gap-12">
+        <div className="lg:col-span-7">
+          <Title id="at-villes" tone="blue" size="sm">
+            Par ville
+          </Title>
+        </div>
+        <motion.p {...up(0.25)} className="text-[15px] leading-relaxed lg:col-span-5" style={{ color: "rgba(255,255,255,0.8)" }}>
+          Climat et modèles adaptés, ville par ville : {n} pages locales.{" "}
+          <Link href="/thermopompe" className="at-more at-mono whitespace-nowrap">
+            Toutes les villes →
+          </Link>
+        </motion.p>
+      </div>
+      <ul className="at-cities mt-6">
+        {groups.map((g, i) => (
+          <motion.li key={g.region} {...up(0.03 * i, 8)}>
+            <p aria-hidden="true" className="at-mono m-0 text-[10.5px] uppercase" style={{ letterSpacing: "0.2em", color: PALE }}>
+              {g.region}
+            </p>
+            <ul className="m-0 mt-2 list-none space-y-1 p-0" aria-label={g.region}>
+              {g.items.map((c) => (
+                <li key={c.href}>
+                  <Link href={c.href} className="at-city">
+                    Thermopompe à {c.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.li>
+        ))}
+      </ul>
+    </section>
   );
 }
 

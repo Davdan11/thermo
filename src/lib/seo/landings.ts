@@ -4,6 +4,7 @@
    ================================================================== */
 
 import raw from "@/data/seo/thermopompes.json";
+import type { LogisVertScope, PriceSelector } from "./landing-facts";
 
 export interface LandingGrant {
   name: string;
@@ -34,6 +35,18 @@ export interface LandingPage {
     grants: LandingGrant[];
     faq: Array<{ q: string; a: string }>;
     relatedLinks: Array<{ label: string; href: string }>;
+    /** Cases publiées de la grille des prix de /prix à afficher (planche « Devis »). */
+    prices?: PriceSelector[];
+    priceTitle?: string;
+    priceIntro?: string;
+    /** Ce qui fait varier le prix, propre à la page. */
+    priceFactors?: Array<{ title: string; desc: string }>;
+    /** Répartition des montants LogisVert : liste officielle entière ou machines du type. */
+    logisVert?: LogisVertScope;
+    /** Parcours de la soumission gratuite (faits de la FAQ du site). */
+    soumission?: boolean;
+    /** Index « Par ville » vers les pages /thermopompe/[ville]. */
+    cities?: boolean;
   };
 }
 

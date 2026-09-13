@@ -6,8 +6,8 @@
     "primaryKeyword": "thermopompe murale",
     "pageType": "Guide d'achat",
     "intent": "Transactionnel",
-    "seoTitle": "Thermopompe murale (mini-split) au Québec : guide",
-    "metaDescription": "Tout ce qu'il faut savoir sur la thermopompe murale au Québec : avantages, installation, entretien, subventions et comment choisir le bon modèle pour votre maison.",
+    "seoTitle": "Thermopompe murale (mini-split) : prix et choix",
+    "metaDescription": "Thermopompe murale au Québec : {{cat:murales}} murales comparées sur données certifiées, prix installés de 9 000 à 24 000 BTU, LogisVert et soumission gratuite.",
     "h1": "Thermopompe Murale : Guide Complet pour le Québec",
     "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
     "canonicalUrl": "https://thermopompesavendre.ca/thermopompes/thermopompe-murale/",
@@ -16,11 +16,11 @@
       "hero": {
         "subtitle": "Sans conduits, silencieuse, chauffante jusqu'à -30 °C. Découvrez pourquoi c'est le système le plus installé au Québec."
       },
-      "intro": "La thermopompe murale — aussi appelée mini-split ou unité murale — fonctionne sans conduits de ventilation, s'installe en une demi-journée et offre des performances sérieuses même par grands froids. Ce guide explique ce qu'elle fait réellement, pour qui elle convient, et ce à quoi vous attendre lors de l'installation.",
+      "intro": "La thermopompe murale, aussi appelée mini-split, chauffe et climatise une zone sans conduits : une unité au mur, un compresseur dehors, reliés par une ligne de réfrigérant. D'après les prix publiés au Québec, une murale de 9 000 BTU installée se situe entre {{prix:murale:9000:economique}} en gamme économique, et une de 18 000 BTU entre {{prix:murale:18000:premium}} en gamme premium. Le bon choix dépend de la pièce à chauffer et de la tenue de l'appareil par grand froid.",
       "benefits": [
         { "title": "Chauffage et climatisation dans un seul appareil", "desc": "La murale remplace votre climatiseur d'été et devient une source de chauffage principale ou d'appoint l'hiver, selon le modèle choisi et la configuration de votre maison." },
         { "title": "Performance au froid — pas tous les modèles sont égaux", "desc": "Les séries de type Hyper Heat ou H2i+ maintiennent une capacité de chauffage significative jusqu'à -25 °C. Un modèle d'entrée de gamme, lui, peut perdre 50 % de sa capacité dès -15 °C. La sélection du modèle selon votre zone climatique est critique." },
-        { "title": "Consommation bien en dessous des plinthes électriques", "desc": "Le COP (coefficient de performance) d'une thermopompe moderne tourne entre 2,5 et 4,0 selon les conditions extérieures. Comparé à une plinthe qui transforme 1 kWh en 1 kWh de chaleur, l'écart est substantiel sur une saison complète." },
+        { "title": "Consommation bien en dessous des plinthes électriques", "desc": "Une thermopompe produit plus de chaleur qu'elle ne consomme d'électricité : c'est ce que mesure son COP (coefficient de performance). Une plinthe, elle, transforme 1 kWh en 1 kWh de chaleur. Le COP baisse quand il fait froid : Thermopompes À Vendre affiche le COP certifié à -15 °C sur les fiches qui le publient." },
         { "title": "Installation peu invasive", "desc": "Un seul trou de 7 à 8 cm dans le mur pour la ligne frigorifique. Pas de travaux dans les plafonds, pas de modifications aux conduits. La pose complète prend généralement entre 4 et 8 heures." }
       ],
       "steps": [
@@ -47,22 +47,49 @@
           "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/chauffage/thermopompe/programme-chauffez-vert.html"
         },
         {
-          "name": "LogisVert — Transition énergétique Québec",
-          "conditions": "Programme d'aide à la rénovation écoénergétique résidentielle incluant les thermopompes haute efficacité. Conditions d'admissibilité liées au revenu du ménage et au type de travaux. Une évaluation énergétique préalable peut être requise.",
-          "source": "https://transitionenergetique.gouv.qc.ca"
+          "name": "LogisVert, Hydro-Québec",
+          "conditions": "Aide financière pour une thermopompe dont le jumelage (unité extérieure et unité intérieure) figure sur la liste officielle d'Hydro-Québec, installée par un entrepreneur licencié RBQ. Le montant dépend du jumelage exact et il est versé après l'installation, selon les conditions du programme.",
+          "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert.html"
         }
       ],
+      "prices": [
+        { "kind": "murale", "btu": 9000, "tier": "economique" },
+        { "kind": "murale", "btu": 9000, "tier": "premium" },
+        { "kind": "murale", "btu": 12000, "tier": "economique" },
+        { "kind": "murale", "btu": 12000, "tier": "intermediaire" },
+        { "kind": "murale", "btu": 12000, "tier": "premium" },
+        { "kind": "murale", "btu": 18000, "tier": "economique" },
+        { "kind": "murale", "btu": 18000, "tier": "premium" },
+        { "kind": "murale", "btu": 24000, "tier": "premium" }
+      ],
+      "priceTitle": "Prix d'une thermopompe murale installée",
+      "priceIntro": "Par calibre et par gamme de marque, d'après les prix publiés au Québec : équipement, pose standard et main-d'œuvre, avant LogisVert.",
+      "priceFactors": [
+        { "title": "Le calibre", "desc": "Il se choisit selon la pièce, l'isolation et la région. Chaque page de calibre indique la superficie couverte dans une maison standard, selon le calcul de ThermoMatch." },
+        { "title": "La série et la tenue au froid", "desc": "Deux murales du même calibre peuvent coûter et chauffer très différemment par grand froid : la capacité certifiée à -15 °C fait la différence." },
+        { "title": "L'emplacement de l'unité extérieure", "desc": "Support mural ou au sol, hauteur au-dessus de la neige, distance jusqu'à l'unité intérieure : autant de détails qui changent le temps de pose." }
+      ],
+      "logisVert": "murale",
+      "soumission": true,
+      "cities": true,
       "faq": [
-        { "q": "Une thermopompe murale peut-elle chauffer toute ma maison ?", "a": "Cela dépend de la configuration. Pour une maison à aire ouverte ou un bungalow bien isolé, une unité correctement dimensionnée peut couvrir 60 à 80 % des besoins. Pour une maison à plusieurs pièces fermées, un système multizone ou central est généralement plus adapté." },
+        { "q": "Combien coûte une thermopompe murale installée ?", "a": "D'après les prix publiés au Québec, avant LogisVert, une murale de 12 000 BTU se situe entre {{prix:murale:12000:toutes}} et une de 24 000 BTU entre {{prix:murale:24000:toutes}}, toutes gammes confondues. Le tableau de cette page détaille les gammes économique, intermédiaire et premium." },
+        { "q": "Quelle subvention LogisVert pour une murale ?", "a": "Le montant dépend du jumelage exact. Parmi les {{lvkind:murale:count}} murales du catalogue qui ont un montant officiel sur la liste d'Hydro-Québec, le montant médian est de {{lvkind:murale:median}} et le plus élevé atteint {{lvkind:murale:max}}. Chaque page de calibre affiche le maximum de sa classe." },
+        { "q": "Une thermopompe murale peut-elle chauffer toute ma maison ?", "a": "Cela dépend de la maison. Dans une maison à aire ouverte ou un bungalow bien isolé, une murale bien dimensionnée peut chauffer une grande partie de la maison, avec les plinthes en appoint dans les pièces fermées. Dans une maison à plusieurs pièces fermées, un multizone ou une centrale est généralement plus adapté. ThermoMatch fait le calcul pour votre maison." },
         { "q": "Quel entretien dois-je prévoir ?", "a": "L'entretien de base est accessible : nettoyage des filtres intérieurs toutes les 3 à 4 semaines, dégagement du compresseur extérieur en hiver. Une vérification professionnelle annuelle est recommandée pour inspecter le circuit frigorifique et les connexions électriques." },
-        { "q": "Quel est le niveau de bruit d'une thermopompe murale ?", "a": "L'unité intérieure émet généralement entre 19 et 35 décibels selon le mode et la vitesse de ventilation. À titre de comparaison, un réfrigérateur tourne autour de 40 dB. C'est nettement en dessous d'un climatiseur de fenêtre ou d'une thermopompe centrale." },
+        { "q": "Quel est le niveau de bruit d'une thermopompe murale ?", "a": "L'unité intérieure est conçue pour être discrète, surtout en vitesse basse, et le compresseur reste dehors. Le niveau sonore de chaque modèle est publié par le fabricant : Thermopompes À Vendre l'affiche sur les fiches qui le fournissent. Comparez-le avant d'acheter." },
         { "q": "Faut-il un permis pour installer un compresseur extérieur ?", "a": "Dans la plupart des municipalités québécoises, oui. Un permis de construction ou de rénovation mineure est habituellement requis. Si vous êtes en copropriété ou en zone patrimoniale, des règlements supplémentaires peuvent s'appliquer. Un installateur sérieux devrait clarifier ce point dès l'évaluation." },
         { "q": "La garantie est-elle valide si j'installe moi-même ?", "a": "Non. Tous les grands fabricants conditionnent leur garantie à une installation effectuée par un technicien certifié. La manipulation du circuit frigorifique est également encadrée par la réglementation québécoise sur les gaz frigorigènes." },
         { "q": "Quelle est la durée de vie réaliste d'une thermopompe murale ?", "a": "En moyenne, entre 12 et 18 ans pour un appareil de qualité, bien installé et correctement entretenu. La durée dépend beaucoup du soin apporté à l'entretien préventif et de la qualité de l'installation initiale." }
       ],
       "relatedLinks": [
-        { "label": "Thermopompe centrale — confort dans toute la maison", "href": "/thermopompes/thermopompe-centrale" },
-        { "label": "Thermopompe multizone — plusieurs pièces à traiter", "href": "/thermopompes/thermopompe-multizone" },
+        { "label": "Demander une soumission gratuite", "href": "/soumission" },
+        { "label": "ThermoMatch : quelle murale pour votre maison", "href": "/trouver-ma-thermopompe" },
+        { "label": "Prix installés par calibre", "href": "/prix" },
+        { "label": "Meilleures murales de 12 000 BTU", "href": "/meilleures-thermopompes/murales-12000-btu" },
+        { "label": "9 000 ou 12 000 BTU : quelle murale pour quelle pièce", "href": "/guides/thermopompe-9000-ou-12000-btu-quelle-piece" },
+        { "label": "Thermopompe centrale : toute la maison par les conduits", "href": "/thermopompes/thermopompe-centrale" },
+        { "label": "Thermopompe multizone : plusieurs pièces sans conduits", "href": "/thermopompes/thermopompe-multizone" },
         { "label": "Subventions disponibles au Québec", "href": "/subventions" },
         { "label": "Comparer les marques", "href": "/marques" }
       ]
@@ -75,8 +102,8 @@
     "primaryKeyword": "thermopompe centrale",
     "pageType": "Guide d'achat",
     "intent": "Transactionnel",
-    "seoTitle": "Thermopompe centrale avec conduits au Québec",
-    "metaDescription": "La thermopompe centrale s'intègre à votre système de conduits existant pour chauffer et climatiser toute la maison. Ce guide explique quand c'est la bonne solution et ce que l'installation implique.",
+    "seoTitle": "Thermopompe centrale avec conduits : prix et choix",
+    "metaDescription": "Thermopompe centrale au Québec : prix installés sur conduits existants de 24 000 à 60 000 BTU, {{cat:centrales}} centrales comparées, LogisVert et soumission gratuite.",
     "h1": "Thermopompe Centrale : Confort Uniforme dans Toute la Maison",
     "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
     "canonicalUrl": "https://thermopompesavendre.ca/thermopompes/thermopompe-centrale/",
@@ -85,9 +112,9 @@
       "hero": {
         "subtitle": "Remplacez votre fournaise et climatisez toute la maison via les conduits existants. La solution pour les maisons déjà équipées à air pulsé."
       },
-      "intro": "La thermopompe centrale — parfois appelée thermopompe gainable — s'intègre au réseau de conduits de votre maison. Elle remplace ou complète votre fournaise existante et distribue l'air conditionné ou chauffé dans toutes les pièces via les bouches d'aération habituelles. C'est une option particulièrement pertinente pour les propriétaires qui chauffent encore au gaz ou au mazout et cherchent à réduire leur empreinte carbone et leur facture énergétique.",
+      "intro": "La thermopompe centrale se branche sur les conduits d'une maison à air pulsé et chauffe et climatise toutes les pièces à la fois. D'après les prix publiés au Québec, une centrale de 24 000 BTU ajoutée sur des conduits existants se situe entre {{prix:centrale:24000:toutes}}, et une de 36 000 BTU entre {{prix:centrale:36000:toutes}}, sans fournaise neuve et avant LogisVert. C'est le choix logique si votre maison a déjà des conduits en bon état.",
       "benefits": [
-        { "title": "Température uniforme dans chaque pièce", "desc": "Contrairement aux plinthes ou à une murale murale unique, la centrale traite l'ensemble de la maison. Les pièces du fond sont aussi bien chauffées que celles proches de la salle mécanique." },
+        { "title": "Température uniforme dans chaque pièce", "desc": "Contrairement aux plinthes ou à une murale unique, la centrale traite l'ensemble de la maison. Les pièces du fond sont aussi bien chauffées que celles proches de la salle mécanique." },
         { "title": "Aucune unité murale visible", "desc": "Seules les bouches d'aération habituelles restent en place. L'équipement principal est dans votre salle mécanique et le compresseur à l'extérieur." },
         { "title": "Meilleure qualité de l'air", "desc": "Tout l'air de la maison passe par le filtre central, ce qui réduit la poussière, les allergènes et peut améliorer significativement la qualité de l'air pour les personnes sensibles." },
         { "title": "Transition énergétique accélérée", "desc": "Si vous chauffez au mazout ou au propane, un passage à une thermopompe centrale électrique peut réduire considérablement vos émissions de GES et simplifier votre système en éliminant la citerne." }
@@ -106,16 +133,56 @@
           "name": "Chauffez Vert — Hydro-Québec",
           "conditions": "Remplacement d'un système au mazout, gaz naturel ou propane par une thermopompe centrale certifiée ENERGY STAR. Conditions et montants vérifiés directement sur le site d'Hydro-Québec.",
           "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/chauffage/thermopompe/programme-chauffez-vert.html"
+        },
+        {
+          "name": "LogisVert, Hydro-Québec",
+          "conditions": "Aide financière pour une thermopompe dont le jumelage (unité extérieure et unité intérieure) figure sur la liste officielle d'Hydro-Québec, installée par un entrepreneur licencié RBQ. Le montant dépend du jumelage exact et il est versé après l'installation, selon les conditions du programme.",
+          "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert.html"
         }
       ],
+      "steps": [
+        { "title": "Inspection des conduits", "desc": "L'installateur vérifie le diamètre, l'état et l'étanchéité des conduits. Un scellage ou un retour d'air peut s'ajouter." },
+        { "title": "Calcul de la charge", "desc": "La capacité se choisit pour la maison entière, selon la superficie, l'isolation et la région, pas d'après l'ancienne fournaise." },
+        { "title": "Choix de l'appoint", "desc": "Fournaise existante, fournaise électrique ou autre : l'appoint prend le relais pendant les grands froids." },
+        { "title": "Travaux électriques", "desc": "Un circuit 240 V dédié alimente l'unité extérieure ; un électricien vérifie que le panneau suffit." },
+        { "title": "Mise en service", "desc": "Réglage du thermostat et du passage à l'appoint, puis tests en chauffage et en climatisation." }
+      ],
+      "prices": [
+        { "kind": "centrale", "btu": 24000, "tier": "intermediaire" },
+        { "kind": "centrale", "btu": 24000, "tier": "premium" },
+        { "kind": "centrale", "btu": 24000, "tier": "toutes" },
+        { "kind": "centrale", "btu": 30000, "tier": "toutes" },
+        { "kind": "centrale", "btu": 36000, "tier": "intermediaire" },
+        { "kind": "centrale", "btu": 36000, "tier": "premium" },
+        { "kind": "centrale", "btu": 36000, "tier": "toutes" },
+        { "kind": "centrale", "btu": 48000, "tier": "toutes" },
+        { "kind": "centrale", "btu": 60000, "tier": "toutes" }
+      ],
+      "priceTitle": "Prix d'une thermopompe centrale installée",
+      "priceIntro": "Centrale ajoutée sur un réseau de conduits existant, sans fournaise, d'après les prix publiés au Québec, avant LogisVert. Une fournaise neuve, des conduits à refaire ou un panneau à changer s'ajoutent.",
+      "priceFactors": [
+        { "title": "L'état des conduits", "desc": "Des conduits étanches et bien dimensionnés gardent le projet simple ; un scellage ou un retour d'air ajouté se chiffre à part." },
+        { "title": "La fournaise et l'appoint", "desc": "Les fourchettes publiées supposent une fournaise existante. La remplacer en même temps change nettement le total." },
+        { "title": "Le panneau électrique", "desc": "Pour un système central puissant, un panneau de 200 ampères est très souvent nécessaire : seul un maître électricien peut évaluer votre charge." }
+      ],
+      "logisVert": "centrale",
+      "soumission": true,
+      "cities": true,
       "faq": [
+        { "q": "Combien coûte une thermopompe centrale ?", "a": "D'après les prix publiés au Québec, avant LogisVert, une centrale de 30 000 BTU ajoutée sur des conduits existants se situe entre {{prix:centrale:30000:toutes}}, et une de 48 000 BTU entre {{prix:centrale:48000:toutes}}. Une fournaise neuve, des conduits à modifier ou un panneau à changer ne sont pas compris." },
+        { "q": "Quelle subvention LogisVert pour une centrale ?", "a": "Le montant dépend du jumelage exact. Parmi les {{lvkind:centrale:count}} centrales du catalogue qui ont un montant officiel sur la liste d'Hydro-Québec, le montant médian est de {{lvkind:centrale:median}} et le plus élevé atteint {{lvkind:centrale:max}}." },
         { "q": "Dois-je conserver ma fournaise si j'installe une thermopompe centrale ?", "a": "Pas nécessairement, mais dans certaines régions très froides du Québec, les installateurs recommandent de garder une source de chauffage d'appoint pour les quelques jours extrêmes sous -25 °C. Certains modèles modernes peuvent fonctionner seuls dans la majorité des situations québécoises — à discuter avec l'installateur selon votre zone." },
         { "q": "Mes conduits existants sont-ils adaptés ?", "a": "Dans la plupart des cas, oui. L'installateur vérifie le diamètre, l'état et l'étanchéité des conduits lors de l'évaluation. Des modifications mineures (scellage, ajout de retour d'air) sont parfois nécessaires mais restent généralement dans la portée des travaux inclus." },
         { "q": "La thermopompe centrale nécessite-t-elle un panneau de 200 ampères ?", "a": "Pas toujours. La plupart des systèmes résidentiels fonctionnent sur un circuit 240V de 40 à 60 ampères. Si votre panneau est à 100 ampères et déjà bien sollicité, une mise à niveau peut être requise — à évaluer par un électricien." },
         { "q": "Peut-on combiner une thermopompe centrale avec un échangeur d'air (VRC) ?", "a": "Oui, et c'est souvent recommandé dans les maisons récentes bien étanches. L'échangeur de chaleur améliore la qualité de l'air intérieur et peut récupérer une partie de l'énergie contenue dans l'air extrait." }
       ],
       "relatedLinks": [
-        { "label": "Thermopompe murale — la solution sans conduits", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Demander une soumission gratuite", "href": "/soumission" },
+        { "label": "ThermoMatch : le bon calibre pour toute la maison", "href": "/trouver-ma-thermopompe" },
+        { "label": "Prix installés par calibre", "href": "/prix" },
+        { "label": "Meilleures centrales sur données certifiées", "href": "/meilleures-thermopompes/centrales" },
+        { "label": "Thermopompe ou fournaise : la biénergie", "href": "/guides/thermopompe-ou-fournaise-bi-energie" },
+        { "label": "Thermopompe murale : la solution sans conduits", "href": "/thermopompes/thermopompe-murale" },
         { "label": "Comparer les marques de thermopompes", "href": "/marques" },
         { "label": "Subventions pour remplacement de fournaise", "href": "/subventions" }
       ]
@@ -128,8 +195,8 @@
     "primaryKeyword": "thermopompe multizone",
     "pageType": "Guide d'achat",
     "intent": "Transactionnel",
-    "seoTitle": "Thermopompe multizone au Québec : guide complet",
-    "metaDescription": "La thermopompe multizone connecte 2 à 5 unités intérieures à un seul compresseur, sans conduits. Ce guide explique comment ça fonctionne, pour qui c'est adapté et ce que l'installation implique.",
+    "seoTitle": "Thermopompe multizone : prix par nombre de zones",
+    "metaDescription": "Thermopompe multizone au Québec : prix installés publiés de 2 à 5 zones, quand la choisir plutôt que plusieurs murales, LogisVert et soumission gratuite.",
     "h1": "Thermopompe Multizone : Contrôler Chaque Pièce Sans Conduits",
     "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
     "canonicalUrl": "https://thermopompesavendre.ca/thermopompes/thermopompe-multizone/",
@@ -138,7 +205,7 @@
       "hero": {
         "subtitle": "Un compresseur extérieur, plusieurs unités intérieures indépendantes. La solution pour les maisons à étages qui n'ont pas de conduits."
       },
-      "intro": "Un système multizone — aussi appelé multi-split — connecte de 2 à 5 unités intérieures à un seul compresseur extérieur. Chaque unité intérieure est contrôlée indépendamment : vous pouvez chauffer le salon à 21 °C pendant que la chambre reste à 18 °C. C'est l'alternative aux conduits pour les maisons à plusieurs niveaux ou à configuration complexe.",
+      "intro": "Une thermopompe multizone relie plusieurs unités intérieures à un seul compresseur extérieur, et chaque pièce garde son propre réglage. D'après les prix publiés au Québec, un multizone à deux zones installé se situe entre {{prix:multizone:2:toutes}} toutes gammes confondues, et un à trois zones de marque premium entre {{prix:multizone:3:premium}}, avant LogisVert. C'est la solution des maisons à étages ou à pièces fermées qui n'ont pas de conduits.",
       "benefits": [
         { "title": "Contrôle indépendant par zone", "desc": "Chaque unité intérieure dispose de son propre thermostat, généralement accessible via télécommande ou application mobile selon les modèles. Les zones inoccupées peuvent être éteintes ou en mode économie." },
         { "title": "Un seul compresseur pour plusieurs zones", "desc": "Évitez d'avoir plusieurs unités extérieures sur votre terrain ou votre balcon. Un compresseur multizone bien dimensionné suffit à alimenter l'ensemble des zones, ce qui simplifie l'installation électrique et l'entretien." },
@@ -158,15 +225,53 @@
           "name": "Chauffez Vert — Hydro-Québec",
           "conditions": "Si le système multizone remplace un chauffage principal au mazout, gaz ou propane, il peut être admissible. Vérifiez les critères spécifiques aux systèmes multi-split sur le site officiel.",
           "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/chauffage/thermopompe/programme-chauffez-vert.html"
+        },
+        {
+          "name": "LogisVert, Hydro-Québec",
+          "conditions": "Aide financière pour une thermopompe dont le jumelage (unité extérieure et unité intérieure) figure sur la liste officielle d'Hydro-Québec, installée par un entrepreneur licencié RBQ. Le montant dépend du jumelage exact et il est versé après l'installation, selon les conditions du programme.",
+          "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert.html"
         }
       ],
+      "steps": [
+        { "title": "Plan des zones", "desc": "Pièce par pièce : aires de vie, chambres, sous-sol. Chaque unité intérieure est choisie pour sa pièce." },
+        { "title": "Choix du compresseur", "desc": "Sa capacité doit couvrir l'ensemble des unités intérieures, dans les combinaisons documentées par le fabricant." },
+        { "title": "Tracé des lignes", "desc": "Les lignes de réfrigérant relient chaque unité intérieure au compresseur : leur longueur et leur passage dans la maison pèsent dans le prix." },
+        { "title": "Pose et mise en service", "desc": "Tests de chaque zone en chauffage et en climatisation, puis explication des réglages pièce par pièce." }
+      ],
+      "prices": [
+        { "kind": "multizone", "zones": 2, "tier": "premium" },
+        { "kind": "multizone", "zones": 2, "tier": "toutes" },
+        { "kind": "multizone", "zones": 3, "tier": "premium" },
+        { "kind": "multizone", "zones": 3, "tier": "toutes" },
+        { "kind": "multizone", "zones": 4, "tier": "premium" },
+        { "kind": "multizone", "zones": 4, "tier": "toutes" },
+        { "kind": "multizone", "zones": 5, "tier": "premium" },
+        { "kind": "multizone", "zones": 5, "tier": "toutes" }
+      ],
+      "priceTitle": "Prix d'une thermopompe multizone installée",
+      "priceIntro": "Par nombre de zones, d'après les prix publiés au Québec : équipement, pose standard et main-d'œuvre, avant LogisVert.",
+      "priceFactors": [
+        { "title": "Le nombre d'unités intérieures", "desc": "Chaque zone ajoute une unité, une ligne et du temps de pose : le tableau montre l'écart d'une zone à l'autre." },
+        { "title": "La longueur des lignes", "desc": "Une unité à l'étage, loin du compresseur, demande plus de matériel qu'une unité au rez-de-chaussée, juste derrière le mur." },
+        { "title": "La gamme de la marque", "desc": "Pour un même nombre de zones, les marques premium se situent plus haut : comparez les lignes « Gamme premium » et « Toutes gammes »." }
+      ],
+      "logisVert": "liste",
+      "soumission": true,
+      "cities": true,
       "faq": [
+        { "q": "Combien coûte une thermopompe multizone ?", "a": "D'après les prix publiés au Québec, avant LogisVert, un multizone à quatre zones se situe entre {{prix:multizone:4:toutes}} toutes gammes confondues, et un à cinq zones de marque premium entre {{prix:multizone:5:premium}}. Le tableau de cette page donne chaque nombre de zones." },
+        { "q": "Multizone ou plusieurs murales ?", "a": "Un multizone limite l'encombrement extérieur à un seul compresseur. Plusieurs murales ont chacune leur compresseur et restent indépendantes. Le bon choix dépend du nombre de pièces, de leur éloignement et des soumissions reçues : le guide multizone compare les deux cas." },
         { "q": "Toutes les zones doivent-elles fonctionner en même temps ?", "a": "Non. Le compresseur extérieur s'adapte automatiquement à la demande totale grâce à la technologie Inverter. Vous pouvez n'activer qu'une ou deux zones si les autres pièces sont inoccupées." },
         { "q": "Peut-on mélanger différents types d'unités intérieures ?", "a": "Oui, chez la plupart des fabricants. Une unité murale au salon, une cassette dans un couloir et une unité à gaine courte dans un sous-sol peuvent être connectées au même compresseur, selon les combinaisons compatibles documentées par le fabricant." },
         { "q": "Un multizone consomme-t-il plus qu'une murale simple ?", "a": "Le compresseur gère plusieurs zones et son efficacité varie selon la charge totale demandée. En pratique, l'économie réalisée en n'activant que les zones occupées compense souvent la légère différence d'efficacité par rapport à des monozones dédiés." }
       ],
       "relatedLinks": [
-        { "label": "Thermopompe murale — une seule zone", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Demander une soumission gratuite", "href": "/soumission" },
+        { "label": "ThermoMatch : combien de zones pour votre maison", "href": "/trouver-ma-thermopompe" },
+        { "label": "Prix installés par nombre de zones", "href": "/prix" },
+        { "label": "Multizone ou deux murales : le guide", "href": "/guides/thermopompe-multizone-bon-choix" },
+        { "label": "Thermopompe murale : une seule zone", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Thermopompe centrale : si la maison a des conduits", "href": "/thermopompes/thermopompe-centrale" },
         { "label": "Comparer les marques", "href": "/comparer" },
         { "label": "Subventions disponibles", "href": "/subventions" }
       ]
@@ -179,8 +284,8 @@
     "primaryKeyword": "thermopompe à vendre",
     "pageType": "Guide d'achat",
     "intent": "Transactionnel",
-    "seoTitle": "Thermopompe à vendre au Québec : comment choisir",
-    "metaDescription": "Guide pour magasiner une thermopompe au Québec : types de systèmes, critères de sélection, subventions disponibles et points à vérifier avant d'acheter.",
+    "seoTitle": "Thermopompe à vendre au Québec : prix et modèles",
+    "metaDescription": "Thermopompe à vendre au Québec : {{cat:machines}} machines comparées sur données certifiées, prix installés publiés, montant LogisVert et soumission gratuite.",
     "h1": "Thermopompe à Vendre : Comment Faire le Bon Choix",
     "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
     "canonicalUrl": "https://thermopompesavendre.ca/thermopompes/thermopompe-a-vendre/",
@@ -189,12 +294,13 @@
       "hero": {
         "subtitle": "Il y a des dizaines de modèles sur le marché. Ce guide vous aide à poser les bonnes questions avant d'acheter."
       },
-      "intro": "Magasiner une thermopompe au Québec sans repères, c'est facile de se retrouver avec un appareil inadapté à son climat, à sa maison ou à son budget. Les critères importants ne sont pas toujours ceux mis en avant dans les publicités. Ce guide présente les éléments objectifs à évaluer.",
+      "intro": "Au Québec, une thermopompe s'achète installée : le bon achat, c'est la bonne machine pour votre maison, posée par un installateur licencié RBQ. Thermopompes À Vendre compare {{cat:machines}} machines distinctes, toutes marques confondues, avec leur capacité certifiée à -15 °C, leur efficacité et leur montant LogisVert officiel. Choisissez le type, le calibre et la tenue au froid, puis demandez un prix écrit, gratuit et sans engagement.",
       "benefits": [
         { "title": "Le seuil de fonctionnement au froid, d'abord", "desc": "Au Québec, la priorité n'est pas le SEER (efficacité estivale) — c'est le comportement de l'appareil à -20 °C et en dessous. Cherchez les données du fabricant sur la capacité à basse température, pas uniquement la puissance nominale." },
         { "title": "L'adéquation avec la configuration de votre maison", "desc": "Une murale pour une maison ouverte, un multizone pour plusieurs pièces sans conduits, une centrale si vous avez déjà de l'air pulsé. Le type de système doit correspondre à votre réalité." },
         { "title": "La qualité de l'installation, pas juste l'équipement", "desc": "Un bon appareil mal installé donnera de mauvais résultats. Le choix de l'installateur, sa certification RBQ et son expérience avec la marque choisie comptent autant que le modèle lui-même." },
-        { "title": "Les subventions disponibles au moment de l'achat", "desc": "Les programmes d'aide changent régulièrement. Certains exigent un modèle ENERGY STAR, d'autres ciblent le remplacement de systèmes au mazout ou au gaz. Vérifiez avant de signer." }
+        { "title": "Les subventions disponibles au moment de l'achat", "desc": "Les programmes d'aide changent régulièrement. Certains exigent un modèle ENERGY STAR, d'autres ciblent le remplacement de systèmes au mazout ou au gaz. Vérifiez avant de signer." },
+        { "title": "Acheter l'appareil seul, en ligne ou en magasin", "desc": "C'est possible, mais l'installateur ne garantit généralement pas son travail sur un équipement qu'il n'a pas fourni, et la subvention LogisVert demande une installation par un entrepreneur licencié. Acheter la machine installée évite ces deux problèmes." }
       ],
       "grants": [
         {
@@ -203,17 +309,51 @@
           "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/chauffage/thermopompe/programme-chauffez-vert.html"
         },
         {
-          "name": "LogisVert — Transition énergétique Québec",
-          "conditions": "Programme d'aide à la rénovation écoénergétique incluant les thermopompes haute efficacité. Peut être cumulable selon les conditions.",
-          "source": "https://transitionenergetique.gouv.qc.ca"
+          "name": "LogisVert, Hydro-Québec",
+          "conditions": "Aide financière pour une thermopompe dont le jumelage (unité extérieure et unité intérieure) figure sur la liste officielle d'Hydro-Québec, installée par un entrepreneur licencié RBQ. Le montant dépend du jumelage exact et il est versé après l'installation, selon les conditions du programme.",
+          "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert.html"
         }
       ],
+      "steps": [
+        { "title": "Décrire votre maison", "desc": "Superficie, isolation, étages, conduits ou non, région : ThermoMatch pose 13 questions et retient trois machines adaptées." },
+        { "title": "Choisir le type", "desc": "Murale pour une aire ouverte, multizone pour plusieurs pièces sans conduits, centrale si la maison a déjà de l'air pulsé." },
+        { "title": "Choisir le calibre et la tenue au froid", "desc": "Regardez la capacité certifiée à -15 °C, pas seulement la capacité nominale : deux machines du même calibre peuvent être très différentes par grand froid." },
+        { "title": "Vérifier le montant LogisVert", "desc": "Chaque fiche affiche le montant officiel du jumelage, tiré de la liste d'Hydro-Québec." },
+        { "title": "Obtenir un prix écrit", "desc": "Un installateur partenaire licencié RBQ visite votre maison et remet une soumission détaillée, gratuite et sans engagement." }
+      ],
+      "prices": [
+        { "kind": "murale", "btu": 9000, "tier": "intermediaire" },
+        { "kind": "murale", "btu": 12000, "tier": "toutes" },
+        { "kind": "murale", "btu": 15000, "tier": "premium" },
+        { "kind": "murale", "btu": 18000, "tier": "toutes" },
+        { "kind": "multizone", "zones": 2, "tier": "premium" },
+        { "kind": "multizone", "zones": 4, "tier": "toutes" },
+        { "kind": "centrale", "btu": 48000, "tier": "toutes" }
+      ],
+      "priceTitle": "Prix d'une thermopompe installée au Québec",
+      "priceIntro": "Une thermopompe se vend installée : ces fourchettes comprennent l'équipement, la pose standard et la main-d'œuvre, d'après les prix publiés au Québec, avant LogisVert.",
+      "priceFactors": [
+        { "title": "Le type de système", "desc": "Murale, multizone ou centrale : le matériel et le temps de pose ne sont pas les mêmes." },
+        { "title": "Le calibre", "desc": "La capacité en BTU fait varier la facture, mais le bon calibre dépend de votre maison, pas de la plus grosse machine possible." },
+        { "title": "La gamme de la marque", "desc": "Économique, intermédiaire ou premium : la page des prix montre l'écart pour un même calibre." }
+      ],
+      "logisVert": "liste",
+      "soumission": true,
+      "cities": true,
       "faq": [
+        { "q": "Combien coûte une thermopompe installée ?", "a": "D'après les prix publiés au Québec, avant LogisVert : une murale de 12 000 BTU se situe entre {{prix:murale:12000:toutes}}, un multizone à deux zones de marque premium entre {{prix:multizone:2:premium}} et une centrale de 48 000 BTU ajoutée sur des conduits existants entre {{prix:centrale:48000:toutes}}." },
+        { "q": "Où acheter une thermopompe au Québec ?", "a": "Le plus simple est de l'acheter installée, chez un installateur qui fournit et pose l'appareil : c'est lui qui garantit la main-d'œuvre, et LogisVert demande un entrepreneur licencié. Thermopompes À Vendre compare les machines, puis transmet votre demande à un installateur partenaire licencié RBQ de votre région." },
+        { "q": "Combien de thermopompes sont vendues au Québec ?", "a": "Le catalogue de Thermopompes À Vendre compte {{cat:eligible}} appareils admissibles. Comme une même machine est souvent vendue sous plusieurs marques ou plusieurs numéros, ses classements et ses comparaisons portent sur {{cat:machines}} machines distinctes." },
         { "q": "Quelle est la différence entre une thermopompe murale et centrale ?", "a": "Une murale fonctionne sans conduits et traite une zone. Une centrale utilise les conduits existants pour traiter toute la maison. Le type de système doit être choisi selon la configuration de votre maison, pas selon le prix seul." },
-        { "q": "Comment identifier un modèle adapté au climat québécois ?", "a": "Cherchez dans la fiche technique du fabricant les données de capacité à -15 °C, -20 °C et idéalement -25 °C. Un modèle standard perd 40 à 60 % de sa capacité à -20 °C. Un modèle 'climat froid' maintient 75 à 100 % de sa capacité à cette température." },
+        { "q": "Comment identifier un modèle adapté au climat québécois ?", "a": "Regardez la capacité certifiée à -15 °C, que Thermopompes À Vendre affiche sur chaque fiche : plus elle reste proche de la capacité nominale, mieux l'appareil tient le froid. Pour les froids plus intenses, vérifiez aussi jusqu'à quelle température le fabricant garantit le fonctionnement." },
         { "q": "Les subventions sont-elles cumulables ?", "a": "Dans certains cas oui — Chauffez Vert et LogisVert peuvent être cumulables sous certaines conditions. La situation de chaque ménage étant différente, il est recommandé de vérifier directement auprès des organismes concernés ou avec un conseiller en énergie." }
       ],
       "relatedLinks": [
+        { "label": "ThermoMatch : trois machines pour votre maison", "href": "/trouver-ma-thermopompe" },
+        { "label": "Demander une soumission gratuite", "href": "/soumission" },
+        { "label": "Toutes les thermopompes du catalogue", "href": "/thermopompes" },
+        { "label": "Prix installés par type et calibre", "href": "/prix" },
+        { "label": "Classements sur données certifiées", "href": "/meilleures-thermopompes" },
         { "label": "Guide thermopompe murale", "href": "/thermopompes/thermopompe-murale" },
         { "label": "Guide thermopompe centrale", "href": "/thermopompes/thermopompe-centrale" },
         { "label": "Subventions disponibles au Québec", "href": "/subventions" },
@@ -228,8 +368,8 @@
     "primaryKeyword": "installation thermopompe Québec",
     "pageType": "Guide d'achat",
     "intent": "Transactionnel",
-    "seoTitle": "Installation de thermopompe au Québec : l’essentiel",
-    "metaDescription": "Ce guide explique ce qu'inclut une installation de thermopompe, comment choisir un installateur certifié RBQ, et les points à vérifier avant de signer un contrat.",
+    "seoTitle": "Installation de thermopompe : prix et étapes",
+    "metaDescription": "Installation de thermopompe au Québec : prix installés publiés, étapes du chantier, LogisVert jusqu'à {{lv:max}} et soumission écrite gratuite, sans engagement.",
     "h1": "Installation de Thermopompe : Ce Qu'il Faut Vérifier Avant de Signer",
     "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
     "canonicalUrl": "https://thermopompesavendre.ca/thermopompes/installation-thermopompe/",
@@ -238,7 +378,7 @@
       "hero": {
         "subtitle": "Une mauvaise installation coûte cher — garantie annulée, fuites de réfrigérant, performances réduites. Voici comment choisir le bon installateur et savoir ce que vous payez."
       },
-      "intro": "L'installation d'une thermopompe n'est pas un travail de bricolage. Elle implique la manipulation de réfrigérant (encadrée par la réglementation québécoise), des travaux électriques sur 240V et un positionnement qui influence directement les performances de l'appareil pour les 10 à 15 ans à venir. Ce guide explique ce à quoi ressemble une installation bien faite.",
+      "intro": "Une installation de thermopompe comprend la pose des deux unités, la ligne de réfrigérant, le branchement électrique et la mise en service. Au Québec, une murale de 12 000 BTU installée se situe entre {{prix:murale:12000:economique}} en gamme économique et entre {{prix:murale:12000:premium}} en gamme premium, d'après les prix publiés relevés par Thermopompes À Vendre. Le prix exact de votre maison vient d'une soumission écrite, remise gratuitement après la visite d'un installateur licencié RBQ.",
       "steps": [
         { "title": "Visite d'évaluation", "desc": "L'installateur évalue la superficie à traiter, l'état du câblage, l'emplacement optimal de l'unité intérieure et les contraintes d'installation du compresseur extérieur (exposition, distance, drainage de condensat)." },
         { "title": "Soumission écrite", "desc": "La soumission devrait préciser : marque et modèle exact, capacité en BTU, numéro de série ou référence du modèle proposé, garantie fabricant, main-d'œuvre incluse, et délai d'installation." },
@@ -246,15 +386,49 @@
         { "title": "Déroulement de l'installation", "desc": "Pose de l'unité intérieure, installation du compresseur extérieur (avec fixation adéquate), passage et isolation de la ligne frigorifique, raccordement électrique, charge du réfrigérant et tests de fonctionnement dans tous les modes." },
         { "title": "Documentation remise à la fin", "desc": "Un installateur sérieux vous remet les documents de garantie du fabricant, la fiche d'installation signée et les instructions d'utilisation. Ces documents sont nécessaires pour toute réclamation ultérieure." }
       ],
+      "benefits": [
+        { "title": "Ce que comprend une installation standard", "desc": "L'équipement, la pose de l'unité intérieure et de l'unité extérieure, la ligne de réfrigérant et son isolation, le drain, le support extérieur, le circuit électrique dédié et les tests dans tous les modes. Les fourchettes publiées couvrent ce périmètre. Elles ne comprennent pas un panneau électrique à changer, des conduits ou des travaux d'isolation." },
+        { "title": "L'installateur compte autant que la machine", "desc": "La manipulation du réfrigérant et le branchement sur 240 V sont des travaux de professionnels. Les grands fabricants lient leur garantie à une installation par un technicien qualifié, et LogisVert exige un entrepreneur qui détient les licences RBQ appropriées." },
+        { "title": "Installer avant le grand froid", "desc": "À l'automne et en hiver, on obtient en général un rendez-vous plus vite qu'au printemps ou à la fin de l'été, et l'appareil chauffe dès la saison froide. Une thermopompe s'installe aussi en plein hiver." }
+      ],
+      "prices": [
+        { "kind": "murale", "btu": 12000, "tier": "economique" },
+        { "kind": "murale", "btu": 12000, "tier": "intermediaire" },
+        { "kind": "murale", "btu": 12000, "tier": "premium" },
+        { "kind": "murale", "btu": 18000, "tier": "toutes" },
+        { "kind": "murale", "btu": 24000, "tier": "toutes" },
+        { "kind": "multizone", "zones": 3, "tier": "premium" },
+        { "kind": "centrale", "btu": 36000, "tier": "toutes" }
+      ],
+      "priceTitle": "Prix d'une installation de thermopompe",
+      "priceIntro": "Fourchettes de prix installé relevées dans les prix publiés au Québec : équipement, pose standard et main-d'œuvre, avant la subvention LogisVert. Elles donnent l'ordre de grandeur ; votre prix vient de la visite.",
+      "priceFactors": [
+        { "title": "La distance entre les deux unités", "desc": "Chaque mètre de ligne de réfrigérant et de câble ajoute du matériel et du temps de pose." },
+        { "title": "Le panneau électrique", "desc": "Un circuit dédié est prévu. Un panneau déjà plein peut demander des travaux de plus, chiffrés par un maître électricien." },
+        { "title": "Le support et l'accès", "desc": "Support au mur ou au sol, hauteur, mur de brique ou de béton, drain de condensat : chaque maison est différente." },
+        { "title": "Le type et la gamme de l'appareil", "desc": "Une murale, un multizone et une centrale ne demandent ni le même matériel ni le même temps. La gamme de la marque fait aussi varier le prix, comme le montre le tableau." }
+      ],
+      "logisVert": "liste",
+      "soumission": true,
+      "cities": true,
       "faq": [
+        { "q": "Combien coûte l'installation d'une thermopompe murale ?", "a": "D'après les prix publiés au Québec, avant LogisVert, une murale de 12 000 BTU installée se situe entre {{prix:murale:12000:toutes}} et une de 18 000 BTU entre {{prix:murale:18000:toutes}}, toutes gammes confondues. Les fourchettes de chaque type et calibre sont sur la page des prix ; le prix de votre maison vient de la soumission écrite." },
+        { "q": "Combien de temps dure l'installation ?", "a": "Pour une murale, la pose prend généralement entre 4 et 8 heures. La visite d'évaluation se fait habituellement dans la semaine qui suit la demande, et l'installation en général de une à trois semaines après l'acceptation de la soumission, selon la saison et la disponibilité de l'appareil." },
+        { "q": "La subvention LogisVert est-elle déduite du prix ?", "a": "Elle est versée après l'installation par un entrepreneur licencié, selon les conditions du programme. Son montant dépend du jumelage exact des unités extérieure et intérieure : sur la liste officielle d'Hydro-Québec du {{lv:date}}, il va jusqu'à {{lv:max}}, et le montant médian est de {{lv:median}}. Une soumission complète l'indique à part." },
         { "q": "Comment vérifier la licence RBQ d'un entrepreneur ?", "a": "Sur le site de la Régie du bâtiment du Québec (rbq.gouv.qc.ca), dans la section 'Vérification d'un entrepreneur'. Vous cherchez par nom d'entreprise ou numéro de licence. La licence doit être active et couvrir les sous-catégories pertinentes." },
         { "q": "Puis-je acheter l'équipement moi-même et faire installer uniquement ?", "a": "Techniquement oui, mais c'est rarement avantageux. L'installateur ne garantira généralement pas son travail sur un équipement qu'il n'a pas fourni. En cas de problème, la responsabilité entre l'équipement et l'installation devient difficile à établir." },
-        { "q": "Y a-t-il un délai d'attente en haute saison ?", "a": "En printemps et en été, les délais peuvent être significatifs chez les bons installateurs. Planifier son installation à l'automne ou en hiver permet généralement d'obtenir un rendez-vous plus rapidement et de bénéficier de l'installation pour la saison de chauffage." },
         { "q": "Que doit inclure le contrat d'installation ?", "a": "Au minimum : description de l'équipement (marque, modèle, BTU), description des travaux inclus, précision sur les exclusions éventuelles (mise à niveau électrique, dalle, etc.), garantie sur la main-d'œuvre et conditions de paiement." }
       ],
       "relatedLinks": [
-        { "label": "Thermopompe murale — quel modèle choisir ?", "href": "/thermopompes/thermopompe-murale" },
-        { "label": "Thermo Match — analyse de vos besoins", "href": "/trouver-ma-thermopompe" }
+        { "label": "Demander une soumission gratuite", "href": "/soumission" },
+        { "label": "ThermoMatch : trois machines adaptées à votre maison", "href": "/trouver-ma-thermopompe" },
+        { "label": "Prix installés par type et calibre", "href": "/prix" },
+        { "label": "Comparer des soumissions de thermopompe", "href": "/thermopompes/soumission-thermopompe" },
+        { "label": "Remplacer une vieille thermopompe", "href": "/thermopompes/remplacement-thermopompe" },
+        { "label": "Thermopompe murale : quel modèle choisir", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Subventions disponibles au Québec", "href": "/subventions" },
+        { "label": "Classements sur données certifiées", "href": "/meilleures-thermopompes" },
+        { "label": "Installer une thermopompe en hiver", "href": "/guides/installer-thermopompe-en-hiver" }
       ]
     }
   },
@@ -265,8 +439,8 @@
     "primaryKeyword": "remplacement thermopompe",
     "pageType": "Guide d'achat",
     "intent": "Transactionnel",
-    "seoTitle": "Remplacement de thermopompe : réparer ou remplacer?",
-    "metaDescription": "Votre thermopompe tombe souvent en panne ou perd en efficacité ? Ce guide vous aide à décider entre réparation et remplacement, et explique ce que l'opération implique.",
+    "seoTitle": "Remplacement de thermopompe : quand et à quel prix",
+    "metaDescription": "Remplacement de thermopompe au Québec : quand remplacer plutôt que réparer, prix installés publiés, étapes du changement, LogisVert et soumission gratuite.",
     "h1": "Remplacement de Thermopompe : Réparer ou Remplacer ?",
     "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
     "canonicalUrl": "https://thermopompesavendre.ca/thermopompes/remplacement-thermopompe/",
@@ -275,21 +449,61 @@
       "hero": {
         "subtitle": "Pannes répétées, seuil de froid limité, gaz R22 hors production — plusieurs raisons peuvent justifier un remplacement plutôt qu'une réparation."
       },
-      "intro": "Une thermopompe dure en moyenne 12 à 18 ans si elle est bien entretenue. Mais l'âge n'est pas le seul critère : le gaz réfrigérant utilisé, la fréquence des pannes, et l'évolution de vos besoins entrent aussi en ligne de compte. Ce guide présente les éléments concrets pour prendre une décision éclairée.",
+      "intro": "Remplacer une thermopompe se justifie quand les pannes se répètent, quand l'appareil utilise encore du R22 ou quand le chauffage d'appoint prend le relais trop tôt en hiver. Une thermopompe bien entretenue dure en moyenne de 12 à 15 ans au Québec. Le remplacement se chiffre comme une installation neuve : une murale de 12 000 BTU installée se situe entre {{prix:murale:12000:toutes}}, d'après les prix publiés, avant LogisVert.",
       "benefits": [
         { "title": "Le coût de réparation versus le coût de remplacement", "desc": "La règle souvent citée dans l'industrie : si le coût de réparation dépasse 50 % de la valeur d'un appareil équivalent neuf, le remplacement est généralement plus économique à moyen terme — surtout si l'appareil a déjà plus de 10 ans." },
         { "title": "Le gaz réfrigérant de l'ancien appareil", "desc": "Les appareils fabriqués avant 2010 utilisent souvent du R22, dont la production est arrêtée depuis 2020. Les recharges sont encore possibles à partir de stocks recyclés, mais à un coût croissant. Un appareil nécessitant fréquemment des recharges de R22 est un candidat sérieux au remplacement." },
         { "title": "La performance hivernale actuelle", "desc": "Si votre thermopompe s'arrête souvent et que le chauffage d'appoint prend le relais dès -10 °C ou -15 °C, c'est souvent le signe que l'équipement n'est plus adapté aux hivers québécois actuels ou que son compresseur est en fin de vie." }
       ],
+      "steps": [
+        { "title": "Diagnostic de l'appareil actuel", "desc": "Un technicien vérifie le compresseur, cherche les fuites, identifie le réfrigérant utilisé et chiffre la réparation." },
+        { "title": "Réparer ou remplacer", "desc": "Mettez le coût de la réparation en face du prix d'un appareil neuf installé, en tenant compte de l'âge de la machine." },
+        { "title": "Choisir la nouvelle machine", "desc": "Pas forcément le même calibre : si la maison a été isolée depuis, le besoin a pu changer. ThermoMatch calcule la charge de votre maison." },
+        { "title": "Retrait de l'ancien appareil", "desc": "Le réfrigérant est récupéré selon les normes environnementales en vigueur, puis l'appareil est repris par l'entrepreneur ou apporté à un écocentre." },
+        { "title": "Pose et mise en service", "desc": "L'installateur vérifie le filage existant, le réutilise quand il convient, puis teste le nouvel appareil dans tous les modes." }
+      ],
+      "prices": [
+        { "kind": "murale", "btu": 12000, "tier": "toutes" },
+        { "kind": "murale", "btu": 18000, "tier": "toutes" },
+        { "kind": "murale", "btu": 24000, "tier": "toutes" },
+        { "kind": "multizone", "zones": 3, "tier": "toutes" },
+        { "kind": "centrale", "btu": 24000, "tier": "toutes" },
+        { "kind": "centrale", "btu": 36000, "tier": "toutes" }
+      ],
+      "priceTitle": "Prix d'un remplacement de thermopompe",
+      "priceIntro": "Un remplacement se chiffre comme une installation neuve. Fourchettes publiées au Québec, installation standard, avant LogisVert ; ce qui peut être réutilisé chez vous joue sur le prix final.",
+      "priceFactors": [
+        { "title": "Ce qui peut être réutilisé", "desc": "Un filage conforme et de bon calibre peut rester en place ; sinon, une mise à niveau s'ajoute." },
+        { "title": "Le retrait de l'ancien appareil", "desc": "La récupération du réfrigérant et la reprise de l'appareil font partie des travaux : vérifiez qu'elles figurent sur la soumission." },
+        { "title": "Un changement de type", "desc": "Passer d'une murale à un multizone, ou d'un appareil mural à une centrale sur des conduits, ne se chiffre pas comme un simple échange." }
+      ],
+      "grants": [
+        {
+          "name": "LogisVert, Hydro-Québec",
+          "conditions": "Aide financière pour une thermopompe dont le jumelage (unité extérieure et unité intérieure) figure sur la liste officielle d'Hydro-Québec, installée par un entrepreneur licencié RBQ. Le montant dépend du jumelage exact et il est versé après l'installation, selon les conditions du programme.",
+          "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert.html"
+        }
+      ],
+      "logisVert": "liste",
+      "soumission": true,
+      "cities": true,
       "faq": [
+        { "q": "Combien coûte le remplacement d'une thermopompe ?", "a": "Il se chiffre comme une installation neuve du même type : d'après les prix publiés au Québec, une murale de 18 000 BTU installée se situe entre {{prix:murale:18000:toutes}} et une centrale de 24 000 BTU ajoutée sur des conduits existants entre {{prix:centrale:24000:toutes}}, avant LogisVert. La visite précise ce qui peut être réutilisé." },
+        { "q": "Quelle est la durée de vie d'une thermopompe ?", "a": "De 12 à 15 ans en moyenne au Québec pour une murale ou une centrale bien entretenue. Les modèles haut de gamme bien installés et entretenus rigoureusement peuvent atteindre 15 à 20 ans. La qualité de l'installation initiale compte énormément." },
         { "q": "Mon appareil utilise encore du R22 — est-ce une raison de le remplacer ?", "a": "Pas nécessairement immédiatement, mais c'est un facteur à intégrer dans le calcul. Les recharges de R22 sont encore disponibles mais coûtent significativement plus cher qu'avant l'arrêt de la production. Si votre appareil perd du gaz régulièrement, c'est le bon moment pour évaluer le remplacement." },
         { "q": "Peut-on conserver le même filage électrique lors du remplacement ?", "a": "Dans la majorité des cas oui, surtout si vous remplacez par un appareil de capacité similaire. L'installateur vérifiera le calibre et l'état du câblage existant. Si les normes électriques ont évolué depuis l'installation originale, une mise à niveau peut être requise." },
         { "q": "Qu'arrive-t-il à l'ancien appareil ?", "a": "L'installateur est responsable de la récupération du réfrigérant selon les normes environnementales en vigueur. L'appareil lui-même peut être récupéré par l'entrepreneur ou déposé dans un écocentre. Certains appareils ont une valeur de récupération sur les pièces." }
       ],
       "relatedLinks": [
-        { "label": "Thermopompe murale — nouveaux modèles performants", "href": "/thermopompes/thermopompe-murale" },
-        { "label": "Thermopompe climat froid — haute performance", "href": "/thermopompes/thermopompe-climat-froid" },
-        { "label": "Subventions pour remplacement", "href": "/subventions" }
+        { "label": "Demander une soumission de remplacement", "href": "/soumission" },
+        { "label": "ThermoMatch : le bon calibre pour votre maison", "href": "/trouver-ma-thermopompe" },
+        { "label": "Prix installés par type et calibre", "href": "/prix" },
+        { "label": "Installation de thermopompe : prix et étapes", "href": "/thermopompes/installation-thermopompe" },
+        { "label": "Thermopompe murale : les modèles actuels", "href": "/thermopompes/thermopompe-murale" },
+        { "label": "Thermopompe climat froid : tenir le grand froid", "href": "/thermopompes/thermopompe-climat-froid" },
+        { "label": "Subventions pour remplacement", "href": "/subventions" },
+        { "label": "R-410A, R-32 ou R-454B : le réfrigérant", "href": "/guides/refrigerant-r32-r410a-r454b" },
+        { "label": "Classements sur données certifiées", "href": "/meilleures-thermopompes" }
       ]
     }
   },
@@ -308,7 +522,7 @@
     "schemaTypes": ["BreadcrumbList"],
     "contentBlocks": {
       "hero": {
-        "subtitle": "Un modèle standard perd 50 à 70 % de sa capacité à -20 °C. Les modèles conçus pour le climat froid maintiennent 75 à 100 % de leur capacité à cette température."
+        "subtitle": "Par grand froid, toute thermopompe donne moins de chaleur. Les modèles conçus pour le climat froid en gardent bien plus : comparez leur capacité certifiée à -15 °C."
       },
       "intro": "Toutes les thermopompes fonctionnent en extrayant la chaleur contenue dans l'air extérieur pour la transférer à l'intérieur. Plus il fait froid dehors, moins il y a de chaleur à extraire, et plus le travail est difficile pour le compresseur. La différence entre un modèle standard et un modèle dit « climat froid » tient principalement à la conception du compresseur et à sa capacité à maintenir des performances acceptables à très basse pression d'évaporation.",
       "benefits": [
@@ -317,7 +531,7 @@
         { "title": "Dégivrage amélioré", "desc": "Les modèles conçus pour le froid gèrent également mieux les cycles de dégivrage — ces moments où le compresseur inverse le cycle pour réchauffer le serpentin extérieur gelé. Un dégivrage mal géré se traduit par des périodes de soufflage d'air froid inconfortables." }
       ],
       "faq": [
-        { "q": "Comment distinguer un vrai modèle climat froid d'un modèle ordinaire ?", "a": "La seule façon fiable : consulter la fiche technique du fabricant et chercher les données de capacité à -20 °C et -25 °C. Un modèle standard n'aura pas ces données, ou elles montreront une chute de capacité de 50 % ou plus. Un modèle climat froid maintiendra 70 à 100 % de sa capacité nominale." },
+        { "q": "Comment distinguer un vrai modèle climat froid d'un modèle ordinaire ?", "a": "La façon la plus fiable : comparer la capacité certifiée à -15 °C à la capacité nominale. Thermopompes À Vendre affiche les deux sur chaque fiche. Pour les froids plus intenses, consultez aussi la plage de fonctionnement indiquée par le fabricant." },
         { "q": "Un modèle climat froid est-il nécessaire à Montréal ?", "a": "Montréal est en zone climatique 6A. Les épisodes à -20 °C et en dessous sont réguliers en janvier et février. Pour un usage comme chauffage principal (et non d'appoint), un modèle capable de maintenir sa performance à ces températures est fortement recommandé." },
         { "q": "Est-ce que je peux quand même avoir un chauffage d'appoint ?", "a": "Oui, et c'est souvent judicieux dans les régions les plus froides (zones 6B, 7). La thermopompe couvre l'essentiel de la saison de chauffage, et le chauffage d'appoint (plinthes, fournaise) prend le relais lors des quelques journées les plus froides, ce qui reste plus économique que de dimensionner excessivement la thermopompe." }
       ],
@@ -371,8 +585,8 @@
     "primaryKeyword": "soumission thermopompe",
     "pageType": "Guide",
     "intent": "Transactionnel",
-    "seoTitle": "Soumission thermopompe : comparer et vérifier",
-    "metaDescription": "Ce guide vous explique comment lire une soumission de thermopompe, quoi comparer entre plusieurs offres, et les pièges à éviter avant de signer.",
+    "seoTitle": "Soumission thermopompe gratuite : quoi comparer",
+    "metaDescription": "Soumission de thermopompe gratuite et sans engagement : un seul installateur licencié RBQ, un prix écrit après visite, et quoi comparer avant de signer.",
     "h1": "Soumission Thermopompe : Comment Comparer Sans se Tromper",
     "indexGate": { "hasUniqueContent": true, "hasRealData": true, "isApproved": true },
     "canonicalUrl": "https://thermopompesavendre.ca/thermopompes/soumission-thermopompe/",
@@ -381,22 +595,55 @@
       "hero": {
         "subtitle": "Une soumission qui paraît moins chère n'est pas toujours avantageuse. Voici comment lire entre les lignes et comparer des offres de façon équitable."
       },
-      "intro": "Obtenir plusieurs soumissions pour l'installation d'une thermopompe est une bonne pratique. Encore faut-il savoir les comparer. Une différence de prix peut refléter une différence de qualité d'équipement, d'étendue des travaux ou de garanties offertes. Ce guide présente les éléments à vérifier dans chaque soumission.",
+      "intro": "Pour obtenir une soumission de thermopompe, décrivez votre maison dans ThermoMatch ou dans le formulaire : Thermopompes À Vendre transmet votre dossier à un seul installateur partenaire licencié RBQ de votre région, qui visite et remet un prix écrit, gratuitement et sans engagement. Cette page explique ensuite comment lire une soumission, ou en comparer plusieurs, ligne par ligne.",
       "steps": [
         { "title": "Vérifier que le modèle exact est spécifié", "desc": "La soumission doit mentionner la marque, la série et le modèle exact (ex: Mitsubishi MSZ-FS12NA), pas seulement la marque ou la capacité. C'est la seule façon de comparer des offres équivalentes." },
         { "title": "Distinguer fourniture, installation et travaux connexes", "desc": "Certaines soumissions incluent la fourniture de l'équipement, d'autres non. Les travaux électriques, la dalle de béton ou les modifications de conduits peuvent être inclus ou exclus. Lisez les exclusions attentivement." },
-        { "title": "Vérifier la garantie sur la main-d'œuvre", "desc": "La garantie fabricant couvre l'équipement, pas l'installation. Une garantie séparée sur la main-d'œuvre de 1 à 2 ans est standard dans l'industrie pour les bons installateurs." },
+        { "title": "Vérifier la garantie sur la main-d'œuvre", "desc": "La garantie du fabricant couvre l'appareil, pas l'installation. Demandez par écrit la garantie de l'installateur sur la main-d'œuvre : sa durée varie d'une entreprise à l'autre." },
         { "title": "Demander la confirmation de la licence RBQ", "desc": "Le numéro de licence RBQ devrait figurer sur la soumission ou être fourni sur demande. Vérifiez qu'elle est valide et qu'elle couvre les travaux prévus." }
       ],
+      "benefits": [
+        { "title": "Ce qu'une soumission sérieuse contient", "desc": "Le modèle exact des unités extérieure et intérieure avec le numéro AHRI du jumelage, la main-d'œuvre et le matériel, les travaux électriques, la mise en service, la garantie du fabricant et celle de l'installateur, le montant LogisVert indiqué à part, l'échéancier et les conditions de paiement." },
+        { "title": "Le jumelage, clé du montant LogisVert", "desc": "Le montant LogisVert est fixé par Hydro-Québec pour chaque jumelage d'une unité extérieure et d'une unité intérieure. Avec les numéros de modèle inscrits sur la soumission, vous retrouvez le montant officiel sur la fiche de l'appareil, chez Thermopompes À Vendre." },
+        { "title": "Comparer au prix du marché", "desc": "Une soumission nettement au-dessus ou au-dessous des fourchettes publiées pour le même type, le même calibre et la même gamme mérite une question simple : qu'est-ce qui est inclus, et qu'est-ce qui ne l'est pas ?" },
+        { "title": "Pourquoi le prix vient après la visite", "desc": "Le coût installé dépend d'abord de votre maison : distance entre les unités, panneau électrique, conduits, accès. Un prix donné au téléphone, sans visite, peut changer une fois l'installateur sur place." }
+      ],
+      "prices": [
+        { "kind": "murale", "btu": 9000, "tier": "economique" },
+        { "kind": "murale", "btu": 12000, "tier": "toutes" },
+        { "kind": "murale", "btu": 18000, "tier": "toutes" },
+        { "kind": "multizone", "zones": 2, "tier": "toutes" },
+        { "kind": "multizone", "zones": 3, "tier": "toutes" },
+        { "kind": "centrale", "btu": 24000, "tier": "toutes" },
+        { "kind": "centrale", "btu": 36000, "tier": "toutes" }
+      ],
+      "priceTitle": "Repères de prix pour juger une soumission",
+      "priceIntro": "Médianes des fourchettes publiées au Québec, installation standard, avant LogisVert. Placez le prix de votre soumission en face de la ligne du même type et du même calibre.",
+      "priceFactors": [
+        { "title": "La gamme de l'appareil", "desc": "À calibre égal, la gamme de la marque fait varier le prix : comparez les lignes économique et premium de la page des prix." },
+        { "title": "Les travaux inclus ou exclus", "desc": "Électricité, support, drain, retrait de l'ancien appareil : lisez la section des exclusions avant de comparer les totaux." },
+        { "title": "La garantie de main-d'œuvre", "desc": "Deux prix identiques ne se valent pas si l'un inclut plusieurs années de main-d'œuvre et l'autre rien." }
+      ],
+      "logisVert": "liste",
+      "soumission": true,
+      "cities": true,
       "faq": [
+        { "q": "La soumission est-elle vraiment gratuite ?", "a": "Oui. ThermoMatch, le comparateur et la demande de soumission sont gratuits et sans engagement. Thermopompes À Vendre est rémunéré sur l'installation réalisée par un installateur partenaire, jamais en vendant vos coordonnées." },
+        { "q": "Combien d'installateurs vont me contacter ?", "a": "Un seul, choisi selon votre région et le type de système. Vous restez libre de refuser sa proposition, sans frais ni relance. Si vous avez déjà une autre soumission, comparez-la avec la grille de cette page." },
+        { "q": "Combien de temps pour recevoir ma soumission ?", "a": "Un appel de validation arrive sous un jour ouvrable, puis la visite d'évaluation se fait habituellement dans la semaine qui suit la demande. La soumission écrite est remise après cette visite." },
         { "q": "Comment comparer deux soumissions qui incluent des modèles différents ?", "a": "Comparez les capacités en BTU à basse température (pas uniquement nominales), les cotes HSPF2, et la durée de la garantie compresseur. Un modèle moins cher avec une garantie de 5 ans peut être moins avantageux qu'un modèle plus cher avec une garantie compresseur de 12 ans." },
-        { "q": "Un acompte élevé est-il normal ?", "a": "Un acompte de 25 à 40 % à la commande est courant dans l'industrie, notamment pour couvrir le coût de l'équipement. Un acompte de 80 à 100 % avant les travaux est inhabituel et mérite d'être questionné." },
+        { "q": "Un acompte élevé est-il normal ?", "a": "Demandez par écrit le montant de l'acompte et ce qu'il couvre, souvent l'achat de l'appareil. Un acompte qui représente presque tout le prix avant le début des travaux est inhabituel et mérite d'être questionné." },
         { "q": "Dois-je avoir une soumission écrite avant l'installation ?", "a": "Oui, c'est fortement recommandé. Un contrat écrit détaillé vous protège en cas de litige sur les travaux inclus, le modèle installé ou le total facturé." }
       ],
       "relatedLinks": [
-        { "label": "Comment choisir un installateur certifié RBQ", "href": "/thermopompes/installation-thermopompe" },
-        { "label": "Thermo Match — analyser vos besoins d'abord", "href": "/trouver-ma-thermopompe" },
-        { "label": "Subventions disponibles", "href": "/subventions" }
+        { "label": "Demander ma soumission gratuite", "href": "/soumission" },
+        { "label": "ThermoMatch : analyser vos besoins d'abord", "href": "/trouver-ma-thermopompe" },
+        { "label": "Prix installés par type et calibre", "href": "/prix" },
+        { "label": "Installation de thermopompe : prix et étapes", "href": "/thermopompes/installation-thermopompe" },
+        { "label": "Montants LogisVert par marque", "href": "/subventions/logisvert" },
+        { "label": "Subventions disponibles au Québec", "href": "/subventions" },
+        { "label": "Ce qui fait varier le prix installé", "href": "/guides/ce-qui-influence-le-prix-installe" },
+        { "label": "Classements sur données certifiées", "href": "/meilleures-thermopompes" }
       ]
     }
   },

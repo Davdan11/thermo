@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createMetadata, fitTitle, getBreadcrumbSchema, getFaqPageSchema, getItemListSchema } from "@/lib/seo";
 import { getLandingPage, getLandingPages, type LandingPage } from "@/lib/seo/landings";
+import { cityGroups, logisVertFacts, priceRows, PRICES_CONSULTED, resolveFactsDeep } from "@/lib/seo/landing-facts";
 import { getCapacityClass, getCapacityClasses, getRanking, type CapacityClass } from "@/lib/seo/programmatic";
 import { estimateLoad } from "@/lib/thermomatch/sizing";
 import { JsonLd } from "@/components/seo/SeoBlocks";
@@ -42,8 +43,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const landing = getLandingPage(slug);
   if (landing) {
     return createMetadata({
-      title: landing.seoTitle,
-      description: landing.metaDescription,
+      title: resolveFactsDeep(landing.seoTitle, slug),
+      description: resolveFactsDeep(landing.metaDescription, slug),
       canonicalPath: `/thermopompes/${landing.slug}`,
     });
   }
@@ -71,7 +72,9 @@ export default async function ThermopompesSlugPage({ params }: { params: Promise
    Page éditoriale (contenu rédigé)
    ------------------------------------------------------------------ */
 
-function LandingView({ page }: { page: LandingPage }) {
+function LandingView({ page: source }: { page: LandingPage }) {
+  // Jetons {{…}} du contenu rédigé remplacés par les chiffres des modules de données (landing-facts).
+  const page = resolveFactsDeep(source, source.slug);
   const raw = page.contentBlocks ?? ({} as LandingPage["contentBlocks"]);
   const cb = {
     hero: raw.hero ?? { subtitle: page.metaDescription },
@@ -118,6 +121,18 @@ function LandingView({ page }: { page: LandingPage }) {
           grants: cb.grants.map((g) => ({ name: typo(g.name), conditions: typo(g.conditions), source: g.source ?? null })),
           cold: { rows: toPartRows(cold.models, cold.def.value), metricLabel: typo(cold.def.metricLabel) },
           capacities: classes.map((c) => ({ href: `/thermopompes/${c.slug}`, label: `Thermopompe ${c.label}`, btu: c.btu, count: c.models.length })),
+          prices: raw.prices?.length
+            ? {
+                title: typo(raw.priceTitle ?? "Ce que coûte le projet"),
+                intro: typo(raw.priceIntro ?? ""),
+                rows: priceRows(raw.prices),
+                consulted: PRICES_CONSULTED,
+                factors: (raw.priceFactors ?? []).map((f) => ({ title: typo(f.title), desc: typo(f.desc) })),
+              }
+            : null,
+          soumission: raw.soumission === true,
+          logisVert: raw.logisVert ? logisVertFacts(raw.logisVert) : null,
+          cities: raw.cities ? cityGroups().map((g) => ({ region: g.region, items: g.items.map((c) => ({ href: c.href, label: typo(c.label) })) })) : [],
           related: cb.relatedLinks.map((l) => ({ href: l.href, label: typo(l.label) })),
           faq: faq.map((f) => ({ question: typo(f.question), answer: typo(f.answer) })),
         }}

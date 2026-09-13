@@ -171,6 +171,62 @@ a:hover > .at-arrow, a:focus-visible > .at-arrow { transform: translateX(4px); }
 .at-notes > li:last-child { border-bottom: 1px solid rgba(13, 59, 102, 0.28); }
 .at-note summary:hover .at-q { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
 
+/* Devis : relevé des prix publiés, à l’encre sur la feuille */
+.at-ledger { width: 100%; border-collapse: collapse; font-size: 15px; color: #1E3348; }
+.at-ledger caption { caption-side: bottom; padding-top: 16px; text-align: left; font-size: 13px; line-height: 1.6; color: rgba(13, 59, 102, 0.72); }
+.at-ledger thead th {
+  padding: 0 12px 12px; text-align: left; white-space: nowrap;
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, monospace; font-size: 10.5px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(13, 59, 102, 0.72); border-bottom: 3px double rgba(13, 59, 102, 0.55);
+}
+.at-ledger thead th:first-child, .at-ledger tbody td:first-child { padding-left: 0; }
+.at-ledger thead th.at-r { text-align: right; }
+.at-ledger tbody td { padding: 14px 12px; border-bottom: 1px solid rgba(13, 59, 102, 0.2); vertical-align: baseline; }
+.at-ledger tbody tr { transition: background-color 0.3s; }
+.at-ledger tbody tr:hover { background: rgba(13, 59, 102, 0.04); }
+.at-l-label { font-weight: 600; color: #0D3B66; }
+.at-l-range { text-align: right; white-space: nowrap; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 14.5px; font-weight: 600; font-variant-numeric: tabular-nums; color: #0D3B66; }
+.at-l-src { text-align: right; white-space: nowrap; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 12px; color: rgba(13, 59, 102, 0.62); }
+@media (max-width: 639px) {
+  .at-ledger, .at-ledger tbody, .at-ledger tr, .at-ledger td, .at-ledger caption { display: block; }
+  .at-ledger thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .at-ledger tbody { border-top: 3px double rgba(13, 59, 102, 0.55); }
+  .at-ledger tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid rgba(13, 59, 102, 0.2); }
+  .at-ledger tbody td { padding: 0; border: 0; }
+  .at-l-label { grid-row: 1; grid-column: 1 / -1; }
+  .at-l-tier { grid-row: 2; grid-column: 1; font-size: 14px; }
+  .at-l-src { grid-row: 2; grid-column: 2; align-self: baseline; }
+  .at-l-range { grid-row: 3; grid-column: 1 / -1; text-align: left; white-space: normal; font-size: 16px; }
+}
+
+/* Soumission : bordereau en cinq cases, sur la planche */
+.at-route { display: grid; margin: 0; padding: 0; list-style: none; border-top: 3px double rgba(255, 255, 255, 0.72); }
+.at-route > li { position: relative; padding: 22px 0 24px; border-bottom: 1px solid rgba(169, 198, 232, 0.24); }
+@media (min-width: 1024px) {
+  .at-route { grid-template-columns: repeat(var(--n, 5), minmax(0, 1fr)); }
+  .at-route > li { padding: 26px 22px 30px 0; border-bottom: 0; }
+  .at-route > li + li { padding-left: 22px; border-left: 1px solid rgba(169, 198, 232, 0.24); }
+}
+
+/* LogisVert : répartition des montants, barres cotées */
+.at-bars { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.at-bar-row { display: grid; grid-template-columns: minmax(0, 132px) minmax(0, 1fr) 46px; align-items: center; gap: 14px; font-size: 14px; }
+.at-bar-track { position: relative; display: block; height: 9px; background: rgba(13, 59, 102, 0.1); }
+.at-bar-fill { position: absolute; left: 0; top: 0; bottom: 0; display: block; background: #0D3B66; transform-origin: left; }
+.at-bar-pct { text-align: right; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 13px; font-variant-numeric: tabular-nums; color: #0D3B66; }
+.at-lvfig { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(13, 59, 102, 0.28); border-bottom: 1px solid rgba(13, 59, 102, 0.28); }
+.at-lvfig > div { min-width: 0; padding: 14px 12px 14px 0; }
+.at-lvfig > div + div { padding-left: 12px; border-left: 1px solid rgba(13, 59, 102, 0.2); }
+.at-lvfig b { display: block; margin-top: 4px; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: clamp(16px, 1.5vw, 20px); font-weight: 600; color: #0D3B66; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+
+/* Index des villes, groupées par région */
+.at-cities { margin: 0; padding: 0; list-style: none; columns: 1; column-gap: 40px; }
+@media (min-width: 640px) { .at-cities { columns: 2; } }
+@media (min-width: 1024px) { .at-cities { columns: 4; } }
+.at-cities > li { break-inside: avoid; padding: 14px 0 16px; border-top: 1px solid rgba(169, 198, 232, 0.24); }
+.at-city { color: #fff; font-size: 15px; transition: color 0.3s; }
+.at-city:hover { color: #A9C6E8; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
 /* ---------- Questions dépliables (les deux familles) ---------- */
 .at-note summary, .ap-note summary { list-style: none; cursor: pointer; }
 .at-note summary::-webkit-details-marker, .ap-note summary::-webkit-details-marker { display: none; }
