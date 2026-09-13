@@ -1,8 +1,10 @@
 "use client";
 
 /* ==================================================================
-   Bandeau de consentement à la mesure d'audience (Loi 25).
-   Affiché seulement si la mesure est configurée (NEXT_PUBLIC_GA_ID) et
+   Bandeau de consentement à la mesure d'audience et à la mesure
+   publicitaire Google et Meta (Loi 25). Texte à faire relire par l'avocat.
+   Affiché seulement si une mesure est configurée (GA4, Google Ads ou
+   pixel Meta : voir MEASUREMENT_ON) et
    qu'aucun choix n'a encore été fait. Le lien « Témoins » du pied de
    page rouvre le bandeau (événement tpv-consent-open) pour changer d'avis.
 
@@ -17,20 +19,23 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { CONSENT_KEY, GA_ID, applyConsent, readConsent } from "./Analytics";
+import { AD_CONSENT_VERSION } from "@/lib/ads/config";
+import { CONSENT_META_KEY } from "@/lib/ads/consent";
+import { CONSENT_KEY, MEASUREMENT_ON, applyConsent, readConsent } from "./Analytics";
 
 export const CONSENT_OPEN_EVENT = "tpv-consent-open";
 
 /** Montre le bandeau (élément qui précède le script : déjà lu par le navigateur quand le script s'exécute)
- *  si aucun choix valide n'est mémorisé ; stockage indisponible = pas de choix, comme readConsent(). */
-const SHOW_IF_NO_CHOICE = `(function(s){var v=null;try{v=localStorage.getItem(${JSON.stringify(CONSENT_KEY)})}catch(e){}if(s&&v!=="granted"&&v!=="denied")s.style.display="flex"})(document.currentScript&&document.currentScript.previousElementSibling)`;
+ *  si aucun choix valide n'est mémorisé ; stockage indisponible = pas de choix, comme readConsent().
+ *  Pilote publicitaire : un choix fait avec une autre version du texte ne vaut plus (même règle que readConsentRecord). */
+const SHOW_IF_NO_CHOICE = `(function(s){var v=null,m=null;try{v=localStorage.getItem(${JSON.stringify(CONSENT_KEY)});m=JSON.parse(localStorage.getItem(${JSON.stringify(CONSENT_META_KEY)})||"null")}catch(e){}var ok=(v==="granted"||v==="denied")&&m&&m.v===${JSON.stringify(AD_CONSENT_VERSION)};if(s&&!ok)s.style.display="flex"})(document.currentScript&&document.currentScript.previousElementSibling)`;
 
 export function ConsentBanner() {
   // null : rendu serveur et hydratation (le script en ligne a décidé) ; ensuite, l'état React.
   const [visible, setVisible] = useState<boolean | null>(null);
 
   useEffect(() => {
-    if (!GA_ID) return;
+    if (!MEASUREMENT_ON) return;
     // Une image après l'hydratation : le script en ligne a déjà montré (ou non) le bandeau, React reprend ensuite.
     const frame = requestAnimationFrame(() => setVisible(readConsent() === null));
     const open = () => setVisible(true);
@@ -41,7 +46,7 @@ export function ConsentBanner() {
     };
   }, []);
 
-  if (!GA_ID || visible === false) return null;
+  if (!MEASUREMENT_ON || visible === false) return null;
 
   const choose = (choice: "granted" | "denied") => {
     applyConsent(choice);
@@ -75,8 +80,9 @@ export function ConsentBanner() {
         }}
       >
         <p style={{ margin: 0, flex: "1 1 320px", fontSize: 14, lineHeight: 1.5, color: "rgba(255,255,255,0.85)" }}>
-          Nous mesurons la fréquentation du site de façon anonyme pour l&apos;améliorer. Aucun témoin de mesure n&apos;est déposé sans votre
-          accord, et rien n&apos;est vendu à des tiers.{" "}
+          Avec votre accord, nous mesurons la fréquentation du site (Google Analytics) et l&apos;efficacité de nos publicités Google et Meta
+          (Facebook, Instagram) : témoins de ces services, et identifiant du clic publicitaire gardé 90 jours dans votre navigateur puis
+          joint à votre demande. Rien de cela sans votre accord, et rien n&apos;est vendu à des tiers.{" "}
           <Link href="/confidentialite" style={{ color: "#fff", textDecoration: "underline" }}>
             Politique de confidentialité
           </Link>
@@ -110,7 +116,7 @@ export function ConsentBanner() {
 
 /** Lien « Témoins » du pied de page : rouvre le bandeau. N'apparaît que si la mesure est configurée. */
 export function ConsentLink({ style }: { style?: React.CSSProperties }) {
-  if (!GA_ID) return null;
+  if (!MEASUREMENT_ON) return null;
   return (
     <button type="button" onClick={() => window.dispatchEvent(new Event(CONSENT_OPEN_EVENT))} style={{ background: "none", border: "none", padding: 0, cursor: "pointer", font: "inherit", ...style }}>
       Témoins

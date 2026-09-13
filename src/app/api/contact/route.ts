@@ -9,7 +9,8 @@ import { z } from "zod";
 import { sendInternalMessage } from "@/lib/crm/email";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { journalLead } from "@/lib/crm/lead-journal";
-import { attributionFromBody, attributionLines } from "@/lib/attribution/core";
+import { attributionLines } from "@/lib/attribution/core";
+import { attributionWithAds } from "@/lib/ads/server-attribution"; // pilote publicitaire : attribution + consentement et clic
 
 const schema = z.object({
   firstName: z.string().trim().min(1, "Le prénom est requis.").max(80),
@@ -32,7 +33,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: first?.message ?? "Données invalides." }, { status: 400 });
   }
   const d = parsed.data;
-  const attribution = attributionFromBody(body);
+  const attribution = attributionWithAds(body);
   // Filet de sécurité, comme les autres demandes : le message existe sur le serveur même si le courriel tombe.
   const { entry } = await journalLead("contact", { firstName: d.firstName, lastName: d.lastName || undefined, email: d.email, phone: d.phone || undefined, subject: d.subject || undefined, message: d.message }, attribution);
   const sent = await sendInternalMessage({

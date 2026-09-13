@@ -19,7 +19,10 @@ import { getTerritoryFromPostalCode } from "@/lib/crm/territory";
 import { sendClientWelcomeEmail, sendInternalLeadAlert } from "@/lib/crm/email";
 import { resolveRecommendedModel, brochureAttachment } from "@/lib/crm/recommended-model";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
-import { attributionFromBody, attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
+import { attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
+// Pilote publicitaire : consentement et identifiants de clic joints à la demande ; « Lead » Meta (inerte sans clés).
+import { attributionWithAds } from "@/lib/ads/server-attribution";
+import { sendMetaLead } from "@/lib/ads/meta-lead";
 import { leadSchema, CONSENT_VERSION } from "@/lib/validation/lead";
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests, clientIp } from "@/lib/security/rate-limit";
@@ -46,7 +49,7 @@ export async function POST(req: NextRequest) {
   }
   const lead = parsed.data;
   // Arrivée du visiteur (page, domaine référent, utm), nettoyée et classée ici : jamais d'adresse complète.
-  const attribution = attributionFromBody(json);
+  const attribution = attributionWithAds(json);
 
   const territory = lead.postalCode ? getTerritoryFromPostalCode(lead.postalCode) : "Autre";
   const consentAt = new Date().toISOString();
@@ -60,6 +63,8 @@ export async function POST(req: NextRequest) {
   delete journalable.website; // pot de miel, toujours vide ici
   delete journalable.draft; // réponses brutes non validées : pas de renseignement personnel à conserver
   const { entry, written } = await journalLead("soumission", { ...journalable, territory, consentAt, consentVersion: CONSENT_VERSION, ipHash }, attribution);
+  // Meta : seulement en production, avec clés et consentement ; même event_id que le pixel. Jamais bloquant.
+  void sendMetaLead(entry, { userAgent: req.headers.get("user-agent") }).catch((e) => console.error("[/api/leads] Meta :", e));
 
   // 3. Pipedrive, non bloquant.
   const row = (label: string, value: unknown) => `<li><b>${label} :</b> ${escapeHtml(value ?? "Non spécifié")}</li>`;

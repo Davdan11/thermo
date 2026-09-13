@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
   robots: { index: true, follow: true },
 });
 
-const UPDATED = "12 septembre 2026";
+const UPDATED = "13 septembre 2026";
 
 /** Sommaire : repris par le héros et par le sommaire collant du corps. */
 const TOC = [
@@ -63,7 +63,7 @@ export default function ConfidentialitePage() {
             <li><strong>Appels téléphoniques</strong> : numéro de l'appelant, messages vocaux et leur transcription, lorsque vous appelez notre ligne.</li>
             <li><strong>Soumissions que nous vous envoyons</strong> : lorsque vous consultez une soumission, la date, l'heure et le type de navigateur de chaque consultation, pour suivre votre dossier ; si vous l'acceptez en ligne, votre nom tapé, votre adresse IP, votre navigateur et une empreinte numérique du document accepté, comme preuve de votre consentement.</li>
             <li><strong>Textos</strong> : si vous nous écrivez par texto au 438-900-3224, nous conservons votre numéro, vos messages et les photos jointes afin de vous répondre et de préparer votre soumission ; répondez ARRÊT (ou STOP) en tout temps pour ne plus recevoir de textos de notre part.</li>
-            <li><strong>Données techniques</strong> : adresse IP, type de navigateur, pages consultées et paramètres de provenance (utm), utilisés pour la sécurité et la mesure d'audience.</li>
+            <li><strong>Données techniques</strong> : adresse IP, type de navigateur, pages consultées et paramètres de provenance (utm), utilisés pour la sécurité et la mesure d'audience ; avec votre accord seulement, l'identifiant du clic publicitaire qui vous a amené sur le site (voir la section 7).</li>
           </ul>
         </DocArticle>
 
@@ -72,7 +72,7 @@ export default function ConfidentialitePage() {
             <li>Produire votre recommandation ThermoMatch et votre estimation de subvention.</li>
             <li>Vous rappeler et préparer une soumission, puis coordonner l'installation avec un installateur partenaire.</li>
             <li>Répondre à vos questions et assurer le suivi de votre dossier.</li>
-            <li>Améliorer le site et mesurer son audience de façon agrégée.</li>
+            <li>Améliorer le site et mesurer son audience de façon agrégée ; avec votre accord seulement, mesurer quelles publicités Google et Meta mènent à une demande ou à une vente (voir la section 7).</li>
           </ul>
         </DocArticle>
 
@@ -81,7 +81,7 @@ export default function ConfidentialitePage() {
             Nous ne vendons pas vos renseignements. Ils sont communiqués uniquement aux fournisseurs nécessaires à l'exploitation du service :
             notre outil de gestion de la relation client (pour le suivi de votre demande), notre service d'envoi de courriels, notre fournisseur de
             téléphonie, le service d'analyse d'image utilisé par ThermoScan, et l'installateur partenaire chargé de votre projet, lorsque vous avez
-            demandé une soumission. Certains de ces fournisseurs sont situés hors du Québec ; nous les choisissons pour leurs garanties de sécurité.
+            demandé une soumission. Avec votre accord seulement (bandeau « Témoins »), Google (Google Analytics, Google Ads) et Meta (Facebook, Instagram) reçoivent les données de mesure publicitaire décrites à la section 7. Certains de ces fournisseurs sont situés hors du Québec ; nous les choisissons pour leurs garanties de sécurité.
           </p>
         </DocArticle>
 
@@ -89,7 +89,7 @@ export default function ConfidentialitePage() {
           <p>
             Les réponses au questionnaire restent dans votre navigateur et peuvent être effacées à tout moment via « Recommencer ». Les demandes de
             soumission sont conservées le temps nécessaire au suivi du projet, puis archivées ou supprimées. Les photos ThermoScan ne sont pas conservées.
-            Une alerte LogisVert jamais confirmée est effacée après 30 jours, et une alerte est effacée dès que vous vous désabonnez, en un clic depuis chaque courriel.
+            Une alerte LogisVert jamais confirmée est effacée après 30 jours, et une alerte est effacée dès que vous vous désabonnez, en un clic depuis chaque courriel. L'identifiant du clic publicitaire gardé dans votre navigateur (avec votre accord) est effacé après 90 jours ; joint à une demande, il est conservé avec elle.
           </p>
         </DocArticle>
 
@@ -104,15 +104,15 @@ export default function ConfidentialitePage() {
         <DocArticle id="temoins" n={7} title="7. Témoins (cookies) et stockage local">
           <p>
             Le site utilise le stockage local de votre navigateur pour mémoriser vos réponses au questionnaire et votre brouillon de projet. Aucun témoin
-            publicitaire n'est déposé. Pour mesurer la fréquentation du site, nous pouvons utiliser Google Analytics 4 en mode consentement : tant que vous
-            n'avez pas accepté dans le bandeau prévu à cet effet, Google Analytics n'est pas chargé : aucun témoin de mesure n'est déposé et rien n'est
-            transmis à Google. Vous pouvez accepter, refuser ou changer d'avis à tout moment par le lien « Témoins » au bas de chaque page, et effacer ces données
+            publicitaire n'est déposé sans votre accord. Pour mesurer la fréquentation du site et l'efficacité de nos publicités, nous pouvons utiliser Google Analytics 4, Google Ads et le pixel de Meta en mode consentement : tant que vous
+            n'avez pas accepté dans le bandeau prévu à cet effet, aucune de ces balises n'est chargée : aucun témoin de mesure ni identifiant publicitaire n'est déposé et rien n'est
+            transmis à Google ni à Meta. Vous pouvez accepter, refuser ou changer d'avis à tout moment par le lien « Témoins » au bas de chaque page, et effacer ces données
             depuis les paramètres de votre navigateur.
           </p>
           <p>
             Pour savoir quelles pages et quelles sources nous amènent des demandes, notre site garde dans votre navigateur, le temps de votre visite
             seulement (sans témoin ni service tiers), la première page consultée, le nom du site d'où vous arrivez et les paramètres de campagne de
-            l'adresse ; ces renseignements ne nous sont transmis qu'avec un formulaire que vous envoyez et sont conservés avec votre demande.
+            l'adresse ; ces renseignements ne nous sont transmis qu'avec un formulaire que vous envoyez et sont conservés avec votre demande.</p><p><strong>Mesure publicitaire, seulement si vous cliquez sur « Accepter ».</strong> La balise de Google (Google Analytics et Google Ads) et, s'il est en place, le pixel de Meta (Facebook, Instagram) sont alors chargés et déposent leurs propres témoins. Si vous êtes arrivé par une publicité, l'identifiant du clic publicitaire contenu dans l'adresse (gclid, gbraid, wbraid, fbclid ou msclkid) et les paramètres de campagne (utm) sont gardés 90 jours dans votre navigateur, puis effacés. Si vous envoyez une demande, ils y sont joints avec la date de votre accord et la version du texte accepté. Lorsqu'une soumission est acceptée, nous transmettons à Google l'identifiant du clic, le nom de la conversion, sa date et la valeur de notre commission, sans votre nom, votre courriel ni votre téléphone. À Meta, nous pouvons transmettre la demande de soumission et la vente, avec votre courriel et votre téléphone transformés par hachage (SHA-256) avant l'envoi, l'identifiant du clic Meta et le type de navigateur, pour qu'il puisse les rapprocher de ses comptes. Si vous refusez, rien de cela n'a lieu et seule votre réponse (refus, date, version du texte) est jointe à une demande que vous envoyez. Si vous retirez votre accord (lien « Témoins »), les identifiants gardés dans votre navigateur et les témoins de mesure du site sont effacés, et plus rien n'est transmis.
           </p>
         </DocArticle>
 
