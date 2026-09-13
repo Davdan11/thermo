@@ -14,6 +14,7 @@
 import { SYSTEM_TYPE_LABELS } from "@/lib/data/types/enums";
 import { brandLabel } from "../catalog";
 import { audit } from "../offers";
+import { ensureDossier } from "../automatisations/store"; // Chantier P : lien du portail dans le texto « en route »
 import { FileError, parseSignaturePng, processPhoto, readPrivateFile, rid, sha256Hex, writePrivateFile } from "../partenaires/files";
 import { clock } from "../partenaires/format";
 import * as msg from "../partenaires/messages";
@@ -261,7 +262,9 @@ export async function applyFieldOps(token: string, ops: FieldOp[], ctx: { ip: st
   // « En route » : texto au client (une fois par tranche de 6 h, seulement si c'est récent).
   const er = step1.record.enRoute;
   if (step1.enRoute && er && now.getTime() - Date.parse(er.at) < 2 * HOUR && !(er.sms && now.getTime() - Date.parse(er.sms.at) < 6 * HOUR)) {
-    const status = await sendSmsSafe(job.client.phone, msg.clientEnRouteSms({ company: installer.company, eta: er.etaAt ? clock(er.etaAt) : null }));
+    // Chantier P : le texto « en route » mène au portail du client (heure estimée, suivi en direct).
+    const portal = await ensureDossier(job.maintenance?.originJobId ?? job.id, now).then((d) => `${ctx.baseUrl}/projet/${d.token}`).catch(() => null);
+    const status = await sendSmsSafe(job.client.phone, msg.clientEnRouteSms({ company: installer.company, eta: er.etaAt ? clock(er.etaAt) : null, link: portal }));
     await mutateTerrain((t) => {
       const r = recordOf(t, job.id, installer.id, now);
       if (r.enRoute) r.enRoute.sms = { at: now.toISOString(), status };

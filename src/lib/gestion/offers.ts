@@ -208,6 +208,10 @@ export function applyStatusAction(job: Job, action: StatusAction, by: string, no
   if (action === "desattribuer" || action === "rouvrir") {
     job.assignedInstallerId = null;
     job.scheduledFor = null;
+    // Chantier P : l'heure et le créneau choisis par le client partent avec la date (le créneau redevient libre).
+    delete job.scheduledTime;
+    delete job.scheduledWindow;
+    delete job.slotId;
   }
   if (action === "planifier") job.scheduledFor = opts.scheduledFor ?? job.scheduledFor ?? null;
   job.status = def.to;

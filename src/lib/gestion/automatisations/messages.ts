@@ -21,8 +21,11 @@ export interface SuiviLinks {
   token: string;
 }
 
+/* Chantier P : les liens des messages mènent au portail « Mon projet » (/projet/<jeton>, même jeton, mêmes
+   paramètres q, note et r). Les anciens liens /suivi/<jeton> déjà envoyés restent valides, tout comme la cible
+   du désabonnement en un clic (oneClickUrl, ci-dessous). */
 export const suiviUrl = (l: SuiviLinks, q?: string, extra: Record<string, string> = {}) => {
-  const u = new URL(`/suivi/${encodeURIComponent(l.token)}`, l.base);
+  const u = new URL(`/projet/${encodeURIComponent(l.token)}`, l.base);
   if (q) u.searchParams.set("q", q);
   for (const [k, v] of Object.entries(extra)) u.searchParams.set(k, v);
   return u.toString();

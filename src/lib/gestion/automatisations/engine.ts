@@ -33,6 +33,7 @@ import { blocksOffers, invoiceState } from "../commissions/calc";
 import { invoiceReminderEmail, invoiceReminderSms } from "../commissions/emails";
 import { acceptedQuoteForJob, installedEquipment, jobCompletion, type AcceptedQuote } from "../commissions/link";
 import { getCompletion } from "../terrain/completion";
+import { hasActiveMembership } from "../portail/store"; // Chantier P
 import { invoiceLink, issueInvoiceForJob, recordInvoiceSend } from "../commissions/service";
 import { readCommissions } from "../commissions/store";
 import { stripeConfigured } from "../commissions/stripe";
@@ -211,7 +212,8 @@ function planJob(ctx: Ctx, job: Job): PlannedAction[] {
         const dossier = await ensureDossier(job.id, ctx.now);
         const c = clientCommon(ctx, dossier.token);
         const s = aq?.version.content.schedule;
-        const m = eveReminder({ ...c, firstName, day, arrival: s?.arrival?.trim() || job.desiredWindow.trim(), address: [job.client.address, job.client.city].filter(Boolean).join(", "), prep: s?.prep ?? [] });
+        // Chantier P : la fenêtre du créneau choisi par le client passe avant celle de la soumission.
+        const m = eveReminder({ ...c, firstName, day, arrival: job.scheduledWindow?.trim() || s?.arrival?.trim() || job.desiredWindow.trim(), address: [job.client.address, job.client.city].filter(Boolean).join(", "), prep: s?.prep ?? [] });
         return result(`${label} · installation du ${formatDay(day)}`, await sendClient(ctx, job, "rappel la veille", m, c.links), ref);
       },
     });
@@ -375,6 +377,8 @@ function planJob(ctx: Ctx, job: Job): PlannedAction[] {
     ref,
     client: true,
     run: async () => {
+      // Chantier P : adhérent d'un plan d'entretien : sa visite est créée et offerte par le plan, pas de rappel générique.
+      if (await hasActiveMembership(job.maintenance?.originJobId ?? job.id)) return { status: "ignore", detail: `${label} · adhérent d’un plan d’entretien : visite prévue par le plan`, ref };
       const dossier = await ensureDossier(job.id, ctx.now);
       const c = clientCommon(ctx, dossier.token);
       const chs = await sendClient(ctx, job, "entretien", maintenanceReminder({ ...c, firstName, brand: aq?.version.content.machine?.brand ?? "" }), c.links);

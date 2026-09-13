@@ -50,15 +50,20 @@ export async function issueInvoiceForJob(jobId: string, by: string, o: { now?: D
   const installer = gestion.installers.find((i) => i.id === job.assignedInstallerId);
   if (!installer) return { ok: false, code: "sans-installateur", message: `Le job n° ${job.number} n’a pas d’installateur attribué.` };
   const invoiced = new Set(comm.invoices.filter((i) => i.status !== "annulee" && i.jobId !== jobId).map((i) => i.quoteId));
-  const aq = acceptedQuoteForJob(job, soum.quotes, { linkedQuoteId: comm.jobLinks[jobId], invoicedQuoteIds: invoiced, completedAt: done.completedAt });
-  if (!aq) return { ok: false, code: "sans-soumission", message: `Aucune soumission acceptée n’est liée au job n° ${job.number} : choisissez-la dans Paiements.` };
-  const totals = aq.acceptance.snapshot?.totals;
-  if (!totals || !Number.isFinite(totals.taxableCents)) return { ok: false, code: "sans-montant", message: `La soumission ${aq.quote.number} n’a pas de montant accepté lisible.` };
+  // Chantier P : visite d'un plan d'entretien : base = prix annuel du plan, pourcentage du plan (montants figés à l'adhésion, sur le job).
+  const plan = job.kind === "entretien" && job.maintenance && job.maintenance.priceCents > 0 ? job.maintenance : null;
+  const aq = plan ? null : acceptedQuoteForJob(job, soum.quotes, { linkedQuoteId: comm.jobLinks[jobId], invoicedQuoteIds: invoiced, completedAt: done.completedAt });
+  if (!plan && !aq) return { ok: false, code: "sans-soumission", message: `Aucune soumission acceptée n’est liée au job n° ${job.number} : choisissez-la dans Paiements.` };
+  const totals = aq?.acceptance.snapshot?.totals;
+  if (aq && (!totals || !Number.isFinite(totals.taxableCents))) return { ok: false, code: "sans-montant", message: `La soumission ${aq.quote.number} n’a pas de montant accepté lisible.` };
+  const billing = plan
+    ? { baseCents: plan.priceCents, percent: plan.commissionPercent as number | null, quoteId: `plan:${plan.membershipId}:${plan.visit}`, quoteNumber: `Plan « ${plan.planName} »`, acceptedAt: plan.joinedAt, detail: `plan d’entretien « ${plan.planName} », visite ${plan.visit}` }
+    : { baseCents: commissionBase(totals!), percent: null, quoteId: aq!.quote.id, quoteNumber: aq!.quote.number, acceptedAt: aq!.acceptance.at, detail: `soumission ${aq!.quote.number} (${aq!.via})` };
 
   const out = await mutateCommissions<{ invoice: CommissionInvoice; created: boolean }>((data) => {
     const existing = activeFor(data.invoices, jobId);
     if (existing) return { result: { invoice: structuredClone(existing), created: false }, changed: false };
-    const amounts = computeCommission(commissionBase(totals), data.settings.percent, settings.company);
+    const amounts = computeCommission(billing.baseCents, billing.percent ?? data.settings.percent, settings.company);
     const iso = now.toISOString();
     const inv: CommissionInvoice = {
       id: newInvoiceId(),
@@ -67,9 +72,9 @@ export async function issueInvoiceForJob(jobId: string, by: string, o: { now?: D
       jobNumber: job.number,
       installerId: installer.id,
       installer: { company: installer.company, contactName: installer.contactName, email: installer.email, rbq: installer.rbq },
-      quoteId: aq.quote.id,
-      quoteNumber: aq.quote.number,
-      acceptedAt: aq.acceptance.at,
+      quoteId: billing.quoteId,
+      quoteNumber: billing.quoteNumber,
+      acceptedAt: billing.acceptedAt,
       completedAt: done.completedAt,
       issuedAt: iso,
       dueAt: dueAtFor(now, data.settings.dueDays).toISOString(),
@@ -86,7 +91,7 @@ export async function issueInvoiceForJob(jobId: string, by: string, o: { now?: D
       token: newToken(),
       status: "emise",
       sends: [],
-      events: [{ at: iso, by, action: "facture émise", detail: `soumission ${aq.quote.number} (${aq.via})` }],
+      events: [{ at: iso, by, action: "facture émise", detail: billing.detail }],
     };
     data.invoices.push(inv);
     return { result: { invoice: structuredClone(inv), created: true }, changed: true };
@@ -328,7 +333,8 @@ export async function paymentsView(now = new Date()): Promise<PaymentsView> {
       installer: installer?.company ?? "",
       dueAt: issueDueAt(done.completedAt).toISOString(),
       auto: autoFrom !== null && Date.parse(done.completedAt) >= autoFrom && auto.settings.enabled["facture-commission"] !== false,
-      problem: !installer ? "Aucun installateur attribué." : !aq ? "Aucune soumission acceptée liée : choisissez-la." : null,
+      // Chantier P : une visite d'un plan d'entretien se facture sans soumission (prix et pourcentage du plan).
+      problem: !installer ? "Aucun installateur attribué." : !aq && !(job.kind === "entretien" && job.maintenance) ? "Aucune soumission acceptée liée : choisissez-la." : null,
       quote: aq ? { id: aq.quote.id, number: aq.quote.number, via: aq.via } : null,
     });
   }
