@@ -27,7 +27,7 @@ export async function POST(req: Request) {
   return twiml(`
   <Gather action="${base}/api/phone/ivr/route" method="POST" numDigits="1" timeout="12">
     <Say language="fr-CA" voice="Polly.Gabrielle-Neural">
-      <prosody rate="88%" pitch="-2st">
+      <prosody rate="88%">
         Bonjour et bienvenue chez Thermopompes À Vendre.
         <break time="500ms"/>
         Votre appel peut être enregistré pour la qualité du service.
