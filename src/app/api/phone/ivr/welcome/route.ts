@@ -13,7 +13,7 @@ export async function POST(req: Request) {
   const base = xml(SITE_URL);
   const audioBase = `${base}/api/phone/audio`;
 
-  if (process.env.ELEVENLABS_API_KEY) {
+  if (process.env.ELEVENLABS_API_KEY?.trim()) {
     return twiml(`
   <Gather action="${base}/api/phone/ivr/route" method="POST" numDigits="1" timeout="10">
     <Play>${audioBase}/welcome</Play>
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
   return twiml(`
   <Gather action="${base}/api/phone/ivr/route" method="POST" numDigits="1" timeout="12">
-    <Say language="fr-FR" voice="Polly.Lea-Neural">
+    <Say language="fr-CA" voice="Polly.Gabrielle-Neural">
       <prosody rate="88%" pitch="-2st">
         Bonjour et bienvenue chez Thermopompes À Vendre.
         <break time="500ms"/>

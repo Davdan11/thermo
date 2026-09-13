@@ -70,13 +70,31 @@ export function isBusinessHours(now: Date = new Date()): boolean {
   return weekday !== "Sat" && weekday !== "Sun" && hour >= 8 && hour < 18;
 }
 
+/** Messages de transfert (mêmes textes que les fichiers ElevenLabs de /api/phone/audio). */
+const TRANSFER_TEXT: Record<Dept, string> = {
+  ventes: "Parfait, je vous transfère à notre équipe des ventes. Un instant s'il vous plaît.",
+  service: "Je vous transfère au service après-vente. Un instant s'il vous plaît.",
+  technique: "Je vous transfère à un conseiller technique. Un instant.",
+};
+
+/** Voix ElevenLabs seulement si la clé est définie ; sinon la voix Polly québécoise de Twilio (jamais un fichier en erreur). */
+export function useRecordedVoice(env: Env = process.env): boolean {
+  return Boolean((env.ELEVENLABS_API_KEY ?? "").trim());
+}
+
+export function transferPrompt(base: string, dept: Dept, audio: string, recorded: boolean): string {
+  return recorded
+    ? `<Play>${base}/api/phone/audio/${audio}</Play>`
+    : `<Say language="fr-CA" voice="Polly.Gabrielle-Neural">${xml(TRANSFER_TEXT[dept])}</Say>`;
+}
+
 const record = (base: string) => `record="record-from-answer" recordingStatusCallback="${base}/api/phone/recording"`;
 
 /** Fait sonner le bureau ; sans réponse, Twilio rappelle no-answer à l'étape « bureau ». `base` est déjà échappé. */
-export function officeDialTwiml(base: string, dept: Dept, target: OfficeTarget, audio: string): string {
+export function officeDialTwiml(base: string, dept: Dept, target: OfficeTarget, audio: string, recorded = useRecordedVoice()): string {
   const endpoint = target.kind === "sip" ? `<Sip>${xml(target.uri)}</Sip>` : `<Number>${xml(target.number)}</Number>`;
   return `
-  <Play>${base}/api/phone/audio/${audio}</Play>
+  ${transferPrompt(base, dept, audio, recorded)}
   <Dial action="${base}/api/phone/ivr/no-answer?dept=${dept}&amp;etape=bureau" timeout="18" ${record(base)}>
     ${endpoint}
   </Dial>`;

@@ -45,8 +45,14 @@ describe("heures d'ouverture (Montréal)", () => {
 describe("TwiML", () => {
   const base = "https://exemple.ca";
 
+  it("sans clé ElevenLabs : message de transfert lu par la voix Polly québécoise, jamais un fichier audio", () => {
+    const x = officeDialTwiml(base, "service", { kind: "sip", uri: "sip:poste@exemple.sip.twilio.com" }, "transfert-sav", false);
+    expect(x).not.toContain("<Play>");
+    expect(x).toContain('<Say language="fr-CA" voice="Polly.Gabrielle-Neural">Je vous transfère au service après-vente.');
+  });
+
   it("bureau : fait sonner le téléphone SIP, puis l'étape « bureau » sans réponse", () => {
-    const x = officeDialTwiml(base, "ventes", { kind: "sip", uri: "sip:poste@exemple.sip.twilio.com" }, "transfert-ventes");
+    const x = officeDialTwiml(base, "ventes", { kind: "sip", uri: "sip:poste@exemple.sip.twilio.com" }, "transfert-ventes", true);
     expect(x).toContain("<Play>https://exemple.ca/api/phone/audio/transfert-ventes</Play>");
     expect(x).toContain("<Sip>sip:poste@exemple.sip.twilio.com</Sip>");
     expect(x).toContain("no-answer?dept=ventes&amp;etape=bureau");

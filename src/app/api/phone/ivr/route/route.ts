@@ -5,7 +5,7 @@
 
 import { SITE_URL } from "@/lib/seo";
 import { twiml, twilioForbidden, verifyTwilioRequest, xml } from "@/lib/security/twilio";
-import { cellDialTwiml, isBusinessHours, officeDialTwiml, officeTarget, phoneConfig, type Dept } from "@/lib/phone/ivr-flow";
+import { cellDialTwiml, isBusinessHours, officeDialTwiml, officeTarget, phoneConfig, transferPrompt, useRecordedVoice, type Dept } from "@/lib/phone/ivr-flow";
 
 const ROUTES: Record<string, { dept: Dept; audio: string }> = {
   "1": { dept: "ventes", audio: "transfert-ventes" },
@@ -30,7 +30,7 @@ export async function POST(req: Request) {
 
   // Aucun téléphone de bureau : le cellulaire en heures d'ouverture, sinon la boîte vocale.
   if (cfg.cellNumber && isBusinessHours()) {
-    return twiml(`<Play>${base}/api/phone/audio/${route.audio}</Play>${cellDialTwiml(base, route.dept, cfg.cellNumber)}`);
+    return twiml(`${transferPrompt(base, route.dept, route.audio, useRecordedVoice())}${cellDialTwiml(base, route.dept, cfg.cellNumber)}`);
   }
   console.error("[IVR] Aucun téléphone configuré (TWILIO_SIP_URI, TWILIO_FORWARD_CELL) : boîte vocale.");
   return twiml(`<Redirect>${base}/api/phone/ivr/no-answer?dept=${route.dept}&amp;etape=cellulaire</Redirect>`);
