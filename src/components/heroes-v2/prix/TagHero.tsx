@@ -9,6 +9,7 @@ import { DISPLAY, MONO, SERIF, plexMono } from "./fonts";
 import { EASE, fr } from "./shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { fp, fpLine } from "@/components/hero/first-paint";
+import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 
 /* ==================================================================
    /prix/[slug] — « L'étiquette ».
@@ -298,6 +299,13 @@ function HangingTag({ rows, footnote, root }: { rows: RangeRow[]; footnote: stri
                 </li>
               ))}
             </ul>
+            {/* Conformité : garantie légale de bon fonctionnement, sous les fourchettes de l'étiquette. */}
+            <MentionGarantieLegale
+              cible="murale"
+              className="text-[10.5px] font-medium uppercase leading-[1.5]"
+              style={{ fontFamily: MONO, letterSpacing: "0.12em", color: BROWN, margin: "10px 0 0" }}
+              lienStyle={{ textDecorationColor: STRING }}
+            />
             <p className="text-[13.5px] leading-[1.45]" style={{ margin: "14px 0 0" }}>
               Votre prix se situe quelque part dans ces fourchettes, et seule une soumission écrite le fixe.
             </p>

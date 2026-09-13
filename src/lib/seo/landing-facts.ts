@@ -70,7 +70,7 @@ function cellLabel(c: PriceCell): string {
   return `Murale ${fr(c.btu ?? 0)} BTU`;
 }
 
-export type PriceRow = { key: string; label: string; tier: string; range: string; sources: string };
+export type PriceRow = { key: string; kind: PriceKind; label: string; tier: string; range: string; sources: string };
 
 /** Lignes du tableau des prix d'une page : cases publiées seulement, dans l'ordre demandé. */
 export function priceRows(selectors: PriceSelector[]): PriceRow[] {
@@ -80,6 +80,7 @@ export function priceRows(selectors: PriceSelector[]): PriceRow[] {
     const tier = TIER_LABEL[c.tier];
     return {
       key: `${c.kind}-${c.btu ?? c.zones}-${c.tier}`,
+      kind: c.kind,
       label: cellLabel(c),
       tier: tier.charAt(0).toUpperCase() + tier.slice(1),
       range: `${price(c.min)} à ${price(c.max)}`,

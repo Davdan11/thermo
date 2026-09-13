@@ -1055,3 +1055,12 @@ input[type="radio"]:disabled {
 [data-anim-off~="after"]::after {
   animation-play-state: paused !important;
 }
+
+/* ---- Conformité : garantie légale de bon fonctionnement ----
+   Une mention rendue avant la date d'entrée en vigueur (page statique ou en cache) porte
+   data-garantie-legale-attente : masquée tant que le script en ligne du layout n'a pas posé
+   data-garantie-legale sur <html>, dès la date et avant le premier affichage.
+   Hors couche : l'emporte sur les utilitaires d'affichage (flex, block). Voir src/lib/garantie-legale. */
+html:not([data-garantie-legale]) [data-garantie-legale-attente] {
+  display: none !important;
+}

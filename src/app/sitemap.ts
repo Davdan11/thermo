@@ -69,6 +69,7 @@ export default async function sitemap(props: { id: Promise<string> }): Promise<M
       entry("/soumission", undefined, "yearly", 0.5),
       entry("/confidentialite", undefined, "yearly", 0.2),
       entry("/conditions", undefined, "yearly", 0.2),
+      entry("/garantie-legale", undefined, "yearly", 0.3),
       entry("/accessibilite", undefined, "yearly", 0.2),
     ];
   }

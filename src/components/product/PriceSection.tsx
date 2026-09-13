@@ -16,6 +16,7 @@ import { QuoteForModelLink } from "./QuoteForModelLink";
 import { PriceRanges } from "@/components/sections-v2/produit/charts";
 import { Arrow, Reveal, SheetHead } from "@/components/sections-v2/produit/motion";
 import { GREEN, INK, LABEL, LINE, MUTE, ORANGE } from "@/components/sections-v2/produit/tokens";
+import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 
 export function PriceSection({ detail, logisVertDollars }: { detail: ProductDetail; logisVertDollars: number }) {
   const { model, brand } = detail;
@@ -101,6 +102,15 @@ export function PriceSection({ detail, logisVertDollars }: { detail: ProductDeta
               <p className="sv2f-mono m-0 text-[20px] sm:text-[24px]" style={{ color: r.tone === "lv" ? GREEN : INK, fontWeight: 500, letterSpacing: "-0.045em", lineHeight: 1.2 }}>
                 {r.value}
               </p>
+              {/* Conformité : durée de la garantie légale de bon fonctionnement, sous le premier prix de la fiche. */}
+              {i === 0 && (
+                <MentionGarantieLegale
+                  cible={{ systemType: model.systemType, zones: model.zones }}
+                  className="sv2f-mono m-0 mt-1.5 text-[11px] uppercase"
+                  style={{ letterSpacing: "0.08em", color: INK }}
+                  lienStyle={{ color: INK, textDecorationColor: ORANGE }}
+                />
+              )}
               {r.note && (
                 <p className="m-0 mt-1.5 max-w-[640px] text-[13.5px] leading-[1.55]" style={{ color: MUTE }}>
                   {r.note}

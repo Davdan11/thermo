@@ -13,6 +13,8 @@ import { SavingsBand } from "./SavingsBand";
 import { ExistingUnitCompare } from "./ExistingUnitCompare";
 import { EmailMyChoices } from "./EmailMyChoices";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
+import { categorieDe, type CategorieThermopompe } from "@/lib/garantie-legale/config";
 
 /* ==================================================================
    ThermoMatch — écran des trois recommandations (version premium).
@@ -109,6 +111,8 @@ type Card = {
   /** Température extérieure minimale de chauffage (fabricant), si connue. */
   minTemp: number | null;
   price: { min: number; max: number; basis: string; sources: number; tierLabel: string; matchLabel: string } | null;
+  /** Type de thermopompe (mention de la garantie légale de bon fonctionnement près du prix). */
+  categorie: CategorieThermopompe | null;
   reasons: string[];
   warnings: string[];
   architectureNote: string | null;
@@ -151,6 +155,8 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     retention: h5 && num(p.nominalBtu) ? h5 / (p.nominalBtu as number) : null,
     minTemp: num(p.minOperatingTempC),
     price: r?.priceRange && num(r.priceRange.min) != null && num(r.priceRange.max) != null ? r.priceRange : null,
+    // Toutes les recommandations sont des thermopompes neuves : murale par défaut si le type manque.
+    categorie: categorieDe(p.systemType, ctx?.isMultiZone ? ctx.requestedZones : 1) ?? (ctx?.isMultiZone ? "multizone" : "murale"),
     reasons: r?.clientReasons ?? r?.reasons ?? [],
     warnings: r?.warnings ?? [],
     architectureNote: r?.architectureNote ?? null,
@@ -522,6 +528,8 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
               ≈ {money(Math.max(0, card.price.min - card.subsidy))} – {money(Math.max(0, card.price.max - card.subsidy))} après LogisVert
             </p>
           )}
+          {/* Conformité : garantie légale de bon fonctionnement, sous le prix. */}
+          {card.categorie && <MentionGarantieLegale cible={card.categorie} className="text-[12px] font-semibold" style={{ color: C.ink, margin: "6px 0 0" }} />}
           <p className="text-[11.5px] leading-snug" style={{ color: C.inkMute, margin: "6px 0 0" }}>
             Fourchette publiée au Québec pour ce type ({card.price.matchLabel}, {card.price.tierLabel}
             {card.price.basis === "derive" ? ", case interpolée" : ""}), avant subvention. Le prix exact vient de la soumission.

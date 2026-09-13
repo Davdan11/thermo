@@ -13,6 +13,7 @@ import { isAssistantEnabled } from "@/lib/assistant/config";
 import { PauseOffscreenAnimations } from "@/components/providers/PauseOffscreenAnimations";
 import { Suspense } from "react";
 import { displayFont, serifFont } from "@/lib/fonts";
+import { scriptGarantieLegale } from "@/lib/garantie-legale/config";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
@@ -55,8 +56,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr-CA" data-scroll-behavior="smooth" className={cn(inter.variable, outfit.variable, "font-sans", geist.variable, displayFont.variable, serifFont.variable)}>
+    // suppressHydrationWarning : le script de garantie légale peut poser data-garantie-legale sur <html> avant l'hydratation.
+    <html lang="fr-CA" data-scroll-behavior="smooth" suppressHydrationWarning className={cn(inter.variable, outfit.variable, "font-sans", geist.variable, displayFont.variable, serifFont.variable)}>
       <body className="flex flex-col min-h-screen">
+        {/* Conformité : garantie légale de bon fonctionnement. Premier élément du corps : marque <html> dès la date
+            d'entrée en vigueur, avant le premier affichage (voir src/lib/garantie-legale). */}
+        <script dangerouslySetInnerHTML={{ __html: scriptGarantieLegale() }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString(getOrganizationSchema()) }}
