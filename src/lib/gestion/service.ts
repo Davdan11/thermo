@@ -8,6 +8,8 @@
 
 import { randomBytes } from "node:crypto";
 import { brandLabel, modelBySlug } from "./catalog";
+// Volet B : pause des offres aux installateurs en retard de paiement (calculée depuis les factures de commission).
+import { loadPaymentBlockers, type PaymentBlock } from "./commissions/blocker";
 import { setCandidatureStatus } from "./candidatures";
 import { distanceKm, resolvePostal } from "./geo";
 import { hashToken, newToken, TOKEN_RE } from "./auth/magic-link";
@@ -38,7 +40,8 @@ import type { Candidature, GeoPoint, Installer, Job, JobClient, Offer } from "./
 export const ID_RE = /^[a-z]_[A-Za-z0-9_-]{8,16}$/;
 const newId = (prefix: string) => `${prefix}_${randomBytes(8).toString("base64url")}`;
 
-const matchOpts = (now: Date) => ({ now, brandLabel });
+/* Volet B : `blocks` (installateur → paiement en retard) devient un critère qui bloque, avec sa raison. */
+const matchOpts = (now: Date, blocks?: Map<string, PaymentBlock>) => ({ now, brandLabel, blockers: (id: string) => blocks?.get(id)?.reason ?? null });
 
 /* ---------------- Lecture ---------------- */
 
@@ -85,11 +88,13 @@ export async function loadJobPage(id: string, now = new Date()): Promise<JobPage
   const raw = data.jobs.find((j) => j.id === id);
   if (!raw) return null;
   const job = viewJob(raw, now);
+  const open = OPEN_FOR_OFFERS.includes(job.status);
+  const blocks = open ? await loadPaymentBlockers(now) : undefined; // volet B
   return {
     job,
     installers: data.installers,
     assigned: data.installers.find((i) => i.id === job.assignedInstallerId) ?? null,
-    match: OPEN_FOR_OFFERS.includes(job.status) ? matchInstallers(job, data.installers, data.jobs, matchOpts(now)) : null,
+    match: open ? matchInstallers(job, data.installers, data.jobs, matchOpts(now, blocks)) : null,
   };
 }
 
@@ -194,6 +199,8 @@ export function saveInternalNotes(jobId: string, notes: string, by: string, now 
 export async function sendOffers(jobId: string, installerIds: string[], hours: number, by: string, baseUrl: string, now = new Date()): Promise<{ sent: number; errors: string[] }> {
   const h = (OFFER_HOURS_CHOICES as readonly number[]).includes(hours) ? hours : DEFAULT_OFFER_HOURS;
   const errors: string[] = [];
+  // Volet B : aucune offre à un installateur en retard de paiement, même choisi à la main (levée dès le paiement).
+  const blocks = await loadPaymentBlockers(now);
   const prepared = await mutateGestion((data) => {
     const job = data.jobs.find((j) => j.id === jobId);
     if (!job) return { result: [], changed: false };
@@ -202,6 +209,11 @@ export async function sendOffers(jobId: string, installerIds: string[], hours: n
       const installer = data.installers.find((i) => i.id === iid);
       if (!installer) {
         errors.push("Installateur introuvable.");
+        continue;
+      }
+      const block = blocks.get(iid); // volet B
+      if (block) {
+        errors.push(`${installer.company} : offres en pause, ${block.reason}.`);
         continue;
       }
       const token = newToken();
@@ -351,7 +363,7 @@ export async function respondToOffer(token: string, decision: "accepter" | "refu
     ]);
     return { state: "accepte" };
   }
-  const next = matchInstallers(job, installers, jobs, matchOpts(now)).ranked.slice(0, 3).map((c) => c.installer.company);
+  const next = matchInstallers(job, installers, jobs, matchOpts(now, await loadPaymentBlockers(now))).ranked.slice(0, 3).map((c) => c.installer.company);
   await notifyOwner({
     jobNumber: job.number,
     headline: summaryHeadline(summary),
