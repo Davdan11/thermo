@@ -11,21 +11,39 @@
 import { cache } from "react";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { isAdminEmail } from "./admins";
 import { getSessionSecret } from "./secret";
 import { createSessionToken, SESSION_COOKIE, SESSION_COOKIE_PATH, SESSION_TTL_SECONDS, signSessionPayload, verifySessionToken, type SessionPayload } from "./session-token";
 // Chantier S : révocation, 2e étape, appareils de confiance.
 import { ipFromHeaders } from "../rate-limit";
 import { checkSession, checkTrustedDevice, DEVICE_COOKIE, MFA_PATH, recordSession, revokeSession, type RequestMeta } from "../securite/sessions";
+// Chantier V : rôles (propriétaire = ADMIN_EMAILS, adjoint, vendeur) résolus à chaque requête.
+import { resolveMember } from "../equipe/roles";
+import type { Role } from "../equipe/types";
 
 export interface AdminSession {
   email: string;
 }
 
-export const LOGIN_PATH = "/gestion/connexion";
+/* Chantier V : session d'un membre de l'équipe (le propriétaire compris). */
+export interface UserSession extends AdminSession {
+  role: Role;
+  /** « proprietaire » pour ADMIN_EMAILS, sinon « u_… ». */
+  userId: string;
+  name: string;
+}
 
-/* Chantier S : état complet de la session. « mfa » : jeton valide, mais 2e étape exigée et pas encore faite. */
-export type SessionState = { status: "none" } | { status: "mfa"; email: string; payload: SessionPayload } | { status: "ok"; session: AdminSession; payload: SessionPayload };
+export const LOGIN_PATH = "/gestion/connexion";
+/* Chantier V : 2e étape à activer (obligatoire pour ce rôle) et section refusée à ce rôle. */
+export const MFA_SETUP_PATH = "/gestion/connexion/activer-deux-etapes";
+export const REFUSED_PATH = "/gestion?acces=refuse";
+
+/* Chantier S : état complet de la session. « mfa » : jeton valide, mais 2e étape exigée et pas encore faite.
+   Chantier V : « mfa-setup » : 2e étape obligatoire pour ce rôle, pas encore activée ; rien n'est ouvert avant. */
+export type SessionState =
+  | { status: "none" }
+  | { status: "mfa"; email: string; payload: SessionPayload }
+  | { status: "mfa-setup"; email: string; payload: SessionPayload; session: UserSession }
+  | { status: "ok"; session: UserSession; payload: SessionPayload };
 
 async function requestMeta(): Promise<RequestMeta> {
   try {
@@ -41,24 +59,50 @@ export const getSessionState = cache(async (): Promise<SessionState> => {
   const token = (await cookies()).get(SESSION_COOKIE)?.value;
   if (!token) return { status: "none" };
   const payload = verifySessionToken(token, await getSessionSecret());
-  if (!payload || !isAdminEmail(payload.email)) return { status: "none" };
+  if (!payload) return { status: "none" };
+  // Chantier V : ADMIN_EMAILS (propriétaire) ou membre ACTIF de l'équipe ; désactivé ou supprimé : plus rien.
+  const member = await resolveMember(payload.email);
+  if (!member) return { status: "none" };
   const check = await checkSession(payload, await requestMeta());
   if (check === "revoked") return { status: "none" };
   if (check === "mfa-required") return { status: "mfa", email: payload.email, payload };
-  return { status: "ok", session: { email: payload.email }, payload };
+  const session: UserSession = { email: payload.email, role: member.role, userId: member.userId, name: member.name };
+  if (member.require2fa && typeof payload.mfa !== "number") return { status: "mfa-setup", email: payload.email, payload, session };
+  return { status: "ok", session, payload };
 });
 
-/** Session valide ou null. Mémorisée le temps d'un rendu. (Chantier S : null aussi tant que la 2e étape exigée n'est pas faite.) */
+/** Session valide ou null. Mémorisée le temps d'un rendu. (Chantier S : null aussi tant que la 2e étape exigée n'est pas faite.)
+    Chantier V : PROPRIÉTAIRE seulement (routes /gestion/api) ; getUserSession pour un membre de l'équipe. */
 export const getAdminSession = cache(async (): Promise<AdminSession | null> => {
   const state = await getSessionState();
-  return state.status === "ok" ? state.session : null;
+  return state.status === "ok" && state.session.role === "proprietaire" ? { email: state.session.email } : null;
 });
 
-/** Pages et Server Actions : redirige vers la connexion sans session valide (Chantier S : vers la 2e étape si elle manque). */
+/* Chantier V : session valide d'un membre (tout rôle, ou les rôles demandés), sinon null. */
+export async function getUserSession(roles?: readonly Role[]): Promise<UserSession | null> {
+  const state = await getSessionState();
+  if (state.status !== "ok") return null;
+  return !roles || roles.includes(state.session.role) ? state.session : null;
+}
+
+/** Pages et Server Actions : redirige vers la connexion sans session valide (Chantier S : vers la 2e étape si elle manque).
+    Chantier V : garde son sens, PROPRIÉTAIRE SEULEMENT ; un adjoint ou un vendeur est renvoyé à l'accueil. */
 export async function requireAdmin(): Promise<AdminSession> {
   const state = await getSessionState();
   if (state.status === "mfa") redirect(MFA_PATH);
+  if (state.status === "mfa-setup") redirect(MFA_SETUP_PATH); // Chantier V
   if (state.status !== "ok") redirect(LOGIN_PATH);
+  if (state.session.role !== "proprietaire") redirect(REFUSED_PATH); // Chantier V
+  return { email: state.session.email }; // même valeur qu'avant le chantier V
+}
+
+/* Chantier V : pages et actions ouvertes explicitement à d'autres rôles. Sans `roles` : tout membre connecté. */
+export async function requireUser(opts: { roles?: readonly Role[] } = {}): Promise<UserSession> {
+  const state = await getSessionState();
+  if (state.status === "mfa") redirect(MFA_PATH);
+  if (state.status === "mfa-setup") redirect(MFA_SETUP_PATH);
+  if (state.status !== "ok") redirect(LOGIN_PATH);
+  if (opts.roles && !opts.roles.includes(state.session.role)) redirect(REFUSED_PATH);
   return state.session;
 }
 

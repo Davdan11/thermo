@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CircleDollarSign, Eye, FileText, Plus, Send } from "lucide-react";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { quotesFor } from "@/lib/gestion/equipe/garde"; // Chantier V : un vendeur ne voit que ses soumissions
 import { settingsChecks } from "@/lib/soumissions/checklist";
 import { formatShort } from "@/lib/soumissions/dates";
 import { money } from "@/lib/soumissions/money";
@@ -34,11 +35,13 @@ function tracking(r: ToolRow): string {
 }
 
 export default async function SoumissionsPage({ searchParams }: { searchParams: Promise<{ statut?: string; supprime?: string }> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
+  const owner = session.role === "proprietaire";
   const { statut = "", supprime } = await searchParams;
-  const [rows, settings] = await Promise.all([listQuotes(), readSettings()]);
-  const open = settingsChecks(settings).filter((i) => !i.ok && i.severity === "bloquant");
-  const unpriced = settings.extras.filter((x) => x.unitPriceCents <= 0).length;
+  const [all, settings] = await Promise.all([listQuotes(), readSettings()]);
+  const rows = await quotesFor(session, all);
+  const open = owner ? settingsChecks(settings).filter((i) => !i.ok && i.severity === "bloquant") : [];
+  const unpriced = owner ? settings.extras.filter((x) => x.unitPriceCents <= 0).length : 0;
   const tab = TABS.find((t) => t.key === statut) ?? TABS[0];
   const shown = rows.filter(tab.test);
   const accepted = rows.filter((r) => r.status === "acceptee");

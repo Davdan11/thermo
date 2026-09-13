@@ -1,8 +1,9 @@
 /* À faire : tâches automatiques (demandes sans réponse, soumissions sans suite, jobs sans preneur, textos non lus,
    soumissions qui expirent) et tâches ajoutées à la main. En retard, aujourd'hui, à venir. */
 import type { Metadata } from "next";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
-import { loadCrmIndex, tasksView } from "@/lib/gestion/crm/service";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { tasksView } from "@/lib/gestion/crm/service";
+import { scopedIndex } from "@/lib/gestion/equipe/scope"; // Chantier V : un vendeur ne voit que ses tâches
 import { CLIENT_ID_RE } from "@/lib/gestion/crm/types";
 import { Card, SectionHeader } from "@/components/gestion/kit/Card";
 import { EmptyState } from "@/components/gestion/kit/EmptyState";
@@ -15,11 +16,12 @@ import { ComplexTasksSection } from "@/components/gestion/ventes/ComplexTasks";
 export const metadata: Metadata = { title: "À faire" };
 
 export default async function TachesPage({ searchParams }: { searchParams: Promise<{ nouvelle?: string; client?: string }> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
+  const index = await scopedIndex(session);
   const sp = await searchParams;
-  const v = await tasksView();
+  const v = await tasksView(index);
   const clientId = sp.client && CLIENT_ID_RE.test(sp.client) ? sp.client : null;
-  const c = clientId ? (await loadCrmIndex()).byId.get(clientId) : undefined;
+  const c = clientId ? index.byId.get(clientId) : undefined;
   const who = c ? `${c.b.firstName || "Sans nom"}${c.b.city ? ` · ${c.b.city}` : ""}` : null;
   const today = v.overdue.length + v.today.length;
 
@@ -51,8 +53,9 @@ export default async function TachesPage({ searchParams }: { searchParams: Promi
       <SectionHeader n="03" title="À venir" />
       <TaskList tasks={v.upcoming} empty={<EmptyState compact title="Rien de prévu" body="Ajoutez une tâche ci-dessus, ou reportez-en une pour la retrouver ici." />} />
 
-      {/* Volet C : tâches à étapes (listes de contrôle, modèles) et création rapide. */}
-      <ComplexTasksSection n="04" />
+      {/* Volet C : tâches à étapes (listes de contrôle, modèles) et création rapide. Chantier V : pas pour les vendeurs
+          (liste de toute l'entreprise, actions réservées). */}
+      {session.role !== "vendeur" ? <ComplexTasksSection n="04" /> : null}
     </>
   );
 }

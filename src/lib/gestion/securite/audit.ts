@@ -42,6 +42,18 @@ export const AUDIT_ACTIONS = {
   "cle.retiree": "Clé retirée",
   export: "Export de données",
   "sauvegarde.echec": "Sauvegarde en échec",
+  // Chantier V : équipe (invitations, rôles, statuts), attribution des clients, relevés des vendeurs.
+  "equipe.invitation": "Membre invité",
+  "equipe.acceptee": "Invitation acceptée",
+  "equipe.role": "Rôle changé",
+  "equipe.desactive": "Membre désactivé",
+  "equipe.reactive": "Membre réactivé",
+  "equipe.supprime": "Membre supprimé",
+  "equipe.modifie": "Fiche d’un membre modifiée",
+  "equipe.reglages": "Réglages de l’équipe modifiés",
+  "crm.attribution": "Client attribué",
+  "crm.reattribution": "Client réattribué",
+  "vendeurs.releve": "Relevé de commission payé",
 } as const;
 
 export type AuditAction = keyof typeof AUDIT_ACTIONS;
@@ -52,6 +64,7 @@ export const AUDIT_FAMILIES: Record<string, { label: string; match: (a: string) 
   "2fa": { label: "2e étape", match: (a) => a.startsWith("2fa.") },
   cles: { label: "Clés", match: (a) => a.startsWith("cle.") },
   ventes: { label: "Ventes et paiements", match: (a) => a.startsWith("soumission.") || a.startsWith("crm.") || a.startsWith("paiement.") || a.startsWith("campagne.") },
+  equipe: { label: "Équipe et attributions", match: (a) => a.startsWith("equipe.") || a.startsWith("crm.attribution") || a.startsWith("crm.reattribution") || a.startsWith("vendeurs.") }, // Chantier V
   export: { label: "Exports", match: (a) => a === "export" },
   echecs: { label: "Échecs seulement", match: (a) => /echec|bloquee/.test(a) },
 };

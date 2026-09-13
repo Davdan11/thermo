@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal"; // Chantier V : un vendeur peut créer son client (il lui revient)
 import { Card } from "@/components/gestion/kit/Card";
 import { ClientForm } from "@/components/gestion/crm/forms";
 import { Reveal } from "@/components/gestion/Reveal";
@@ -11,7 +11,7 @@ import { Reveal } from "@/components/gestion/Reveal";
 export const metadata: Metadata = { title: "Nouveau client" };
 
 export default async function NewClientPage() {
-  await requireAdmin();
+  await requireUser();
   return (
     <div className="g-main--narrow" style={{ margin: "0 auto" }}>
       <Reveal className="k-pagehead">

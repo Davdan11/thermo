@@ -7,7 +7,9 @@
 
 import { createHash, randomBytes } from "node:crypto";
 import { mutateAuth, readAuth, type AuthData } from "../store";
-import { isAdminEmail, normalizeEmail } from "./admins";
+import { normalizeEmail } from "./admins";
+// Chantier V : propriétaire (ADMIN_EMAILS) ou membre actif de l'équipe, revérifié à l'ouverture du lien.
+import { canSignIn } from "../equipe/roles";
 
 export const MAGIC_LINK_TTL_MS = 15 * 60 * 1000;
 /** Les entrées plus vieilles qu'un jour sont effacées du fichier. */
@@ -49,7 +51,7 @@ export type MagicLinkState = "valide" | "expire" | "utilise" | "invalide";
 export async function peekMagicLink(token: string, now = new Date()): Promise<MagicLinkState> {
   if (!TOKEN_RE.test(token)) return "invalide";
   const rec = (await readAuth()).links.find((l) => l.hash === hashToken(token));
-  if (!rec || !isAdminEmail(rec.email)) return "invalide";
+  if (!rec || !(await canSignIn(rec.email))) return "invalide"; // Chantier V
   if (rec.usedAt) return "utilise";
   if (Date.parse(rec.expiresAt) <= now.getTime()) return "expire";
   return "valide";
@@ -59,9 +61,12 @@ export async function peekMagicLink(token: string, now = new Date()): Promise<Ma
 export async function consumeMagicLink(token: string, now = new Date()): Promise<{ email: string } | { error: Exclude<MagicLinkState, "valide"> }> {
   if (!TOKEN_RE.test(token)) return { error: "invalide" };
   const hash = hashToken(token);
+  // Chantier V : l'adresse doit toujours pouvoir se connecter (lue avant le verrou, recomparée dessous).
+  const pre = (await readAuth()).links.find((l) => l.hash === hash);
+  const allowed = pre ? await canSignIn(pre.email) : false;
   return mutateAuth<{ email: string } | { error: Exclude<MagicLinkState, "valide"> }>((data) => {
     const rec = data.links.find((l) => l.hash === hash);
-    if (!rec || !isAdminEmail(rec.email)) return { result: { error: "invalide" as const }, changed: false };
+    if (!rec || !allowed || rec.email !== pre?.email) return { result: { error: "invalide" as const }, changed: false };
     if (rec.usedAt) return { result: { error: "utilise" as const }, changed: false };
     if (Date.parse(rec.expiresAt) <= now.getTime()) return { result: { error: "expire" as const }, changed: false };
     rec.usedAt = now.toISOString();

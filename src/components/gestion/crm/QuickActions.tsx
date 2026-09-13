@@ -10,7 +10,8 @@ import { Sheet } from "../kit/Sheet";
 
 export const openQuickActions = () => window.dispatchEvent(new Event("gestion:quick"));
 
-export function QuickActions() {
+/* Chantier V : `canJob` faux (vendeur) → pas de raccourci « Job » (la page lui est fermée). */
+export function QuickActions({ canJob = true }: { canJob?: boolean } = {}) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   useEffect(() => {
@@ -21,7 +22,7 @@ export function QuickActions() {
   const clientId = /^\/gestion\/clients\/(c_[0-9a-f]{12})/.exec(pathname)?.[1];
   const q = clientId ? `?client=${clientId}` : "";
   const items = [
-    { href: `/gestion/jobs/nouveau${q}`, icon: Wrench, title: "Job", text: "Envoyer une installation aux installateurs", ink: true },
+    ...(canJob ? [{ href: `/gestion/jobs/nouveau${q}`, icon: Wrench, title: "Job", text: "Envoyer une installation aux installateurs", ink: true }] : []),
     { href: `/gestion/soumissions/nouvelle${q}`, icon: FileText, title: "Soumission", text: "Préparer et envoyer une soumission formelle" },
     ...(clientId ? [] : [{ href: "/gestion/clients/nouveau", icon: UserPlus, title: "Client", text: "Une personne qui a appelé ou écrit ailleurs" }]),
     { href: clientId ? `/gestion/taches?nouvelle=1&client=${clientId}` : "/gestion/taches?nouvelle=1", icon: CalendarPlus, title: "Tâche", text: "Un rappel, un suivi, une chose à ne pas oublier" },

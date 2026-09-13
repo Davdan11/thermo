@@ -11,8 +11,14 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireAdmin, requireUser } from "@/lib/gestion/auth/dal";
 import { CLIENT_ID_RE } from "@/lib/gestion/crm/types";
+/* Chantier V : créer, envoyer et relancer SES soumissions est ouvert aux vendeurs ; chaque identifiant est revérifié
+   (garde.ts). Réglages, prix : propriétaire ; modèles et Pipedrive : propriétaire et adjoints. */
+import { freshIndex } from "@/lib/gestion/crm/service";
+import { mayClient, mayQuote, STAFF, TAKEN_ERROR, takenByOther } from "@/lib/gestion/equipe/garde";
+import { claimForCreator } from "@/lib/gestion/equipe/repartition";
+import { scopedIndex } from "@/lib/gestion/equipe/scope";
 import { publicBaseUrl } from "@/lib/gestion/request";
 import { machineBase, pairingsFor } from "@/lib/soumissions/catalog";
 import { quoteClientPrefill, quoteClientSearchLimiter, searchQuoteClients, type QuoteClientHit, type QuoteClientPrefill } from "@/lib/soumissions/clients";
@@ -41,12 +47,20 @@ const ROOT = "/gestion/soumissions";
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,159}$/;
 
 export async function saveQuoteAction(id: string | null, payload: unknown): Promise<ActionResult> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V
   if (id !== null && !QUOTE_ID_RE.test(id)) return { ok: false, error: "Soumission introuvable." };
+  if (id !== null && !(await mayQuote(session, id))) return { ok: false, error: "Soumission introuvable." };
   const parsed = parseQuoteInput(payload);
   if (!parsed.ok) return { ok: false, error: parsed.error };
+  if (parsed.data.clientId && !(await mayClient(session, parsed.data.clientId))) return { ok: false, error: "Fiche client introuvable." };
+  if (await takenByOther(session, { phone: parsed.data.content.client.phone, email: parsed.data.content.client.email })) return { ok: false, error: TAKEN_ERROR };
   const r = await saveQuote(id, parsed.data, session.email);
   if (!r.ok) return r;
+  // Chantier V : la soumission d'un vendeur rattache son client (encore à personne) à ce vendeur.
+  if (session.role === "vendeur") {
+    const cid = (await freshIndex()).byQuote.get(r.id);
+    if (cid) await claimForCreator(cid, session.userId, session.email);
+  }
   revalidatePath(ROOT, "layout");
   return { ok: true, id: r.id, message: "Brouillon enregistré." };
 }
@@ -55,7 +69,7 @@ export type MachineOptions = { ok: true; machine: NonNullable<ReturnType<typeof 
 
 /** Données du modèle et jumelages officiels LogisVert (constructeur). */
 export async function machineAction(slug: string): Promise<MachineOptions> {
-  await requireAdmin();
+  await requireUser(); // Chantier V : catalogue, sans donnée de client
   if (typeof slug !== "string" || !SLUG_RE.test(slug)) return { ok: false, error: "Modèle introuvable." };
   const machine = machineBase(slug);
   if (!machine) return { ok: false, error: "Modèle introuvable dans le catalogue." };
@@ -63,8 +77,8 @@ export async function machineAction(slug: string): Promise<MachineOptions> {
 }
 
 export async function sendQuoteAction(id: string, fd: FormData): Promise<void> {
-  const session = await requireAdmin();
-  if (!QUOTE_ID_RE.test(id)) redirect(ROOT);
+  const session = await requireUser(); // Chantier V
+  if (!QUOTE_ID_RE.test(id) || !(await mayQuote(session, id))) redirect(ROOT);
   const r = await sendQuoteService(id, session.email, await publicBaseUrl(), { sms: fd.get("sms") === "oui" });
   revalidatePath(ROOT, "layout");
   if (!r.ok) redirect(`${ROOT}/${id}?envoi=bloque&msg=${encodeURIComponent(r.error)}`);
@@ -72,8 +86,8 @@ export async function sendQuoteAction(id: string, fd: FormData): Promise<void> {
 }
 
 export async function remindAction(id: string, fd: FormData): Promise<void> {
-  const session = await requireAdmin();
-  if (!QUOTE_ID_RE.test(id)) redirect(ROOT);
+  const session = await requireUser(); // Chantier V
+  if (!QUOTE_ID_RE.test(id) || !(await mayQuote(session, id))) redirect(ROOT);
   const r = await remindService(id, session.email, await publicBaseUrl(), { sms: fd.get("sms") === "oui" });
   revalidatePath(ROOT, "layout");
   if (!r.ok) redirect(`${ROOT}/${id}?relance=non&msg=${encodeURIComponent(r.error)}`);
@@ -81,8 +95,8 @@ export async function remindAction(id: string, fd: FormData): Promise<void> {
 }
 
 export async function reviseAction(id: string): Promise<void> {
-  const session = await requireAdmin();
-  if (!QUOTE_ID_RE.test(id)) redirect(ROOT);
+  const session = await requireUser(); // Chantier V
+  if (!QUOTE_ID_RE.test(id) || !(await mayQuote(session, id))) redirect(ROOT);
   const r = await reviseService(id, session.email);
   revalidatePath(ROOT, "layout");
   if (!r.ok) redirect(`${ROOT}/${id}?msg=${encodeURIComponent(r.error)}`);
@@ -90,8 +104,8 @@ export async function reviseAction(id: string): Promise<void> {
 }
 
 export async function duplicateAction(id: string): Promise<void> {
-  const session = await requireAdmin();
-  if (!QUOTE_ID_RE.test(id)) redirect(ROOT);
+  const session = await requireUser(); // Chantier V
+  if (!QUOTE_ID_RE.test(id) || !(await mayQuote(session, id))) redirect(ROOT);
   const r = await duplicateService(id, session.email);
   revalidatePath(ROOT, "layout");
   if (!r.ok) redirect(`${ROOT}/${id}?msg=${encodeURIComponent(r.error)}`);
@@ -100,8 +114,8 @@ export async function duplicateAction(id: string): Promise<void> {
 
 /** « Dupliquer pour un autre client » : même machine, plan, prix et entrepreneur ; coordonnées et chantier à choisir. */
 export async function duplicateForClientAction(id: string): Promise<void> {
-  const session = await requireAdmin();
-  if (!QUOTE_ID_RE.test(id)) redirect(ROOT);
+  const session = await requireUser(); // Chantier V
+  if (!QUOTE_ID_RE.test(id) || !(await mayQuote(session, id))) redirect(ROOT);
   const r = await duplicateService(id, session.email, { forOtherClient: true });
   revalidatePath(ROOT, "layout");
   if (!r.ok) redirect(`${ROOT}/${id}?msg=${encodeURIComponent(r.error)}`);
@@ -109,8 +123,8 @@ export async function duplicateForClientAction(id: string): Promise<void> {
 }
 
 export async function deleteDraftAction(id: string): Promise<void> {
-  const session = await requireAdmin();
-  if (!QUOTE_ID_RE.test(id)) redirect(ROOT);
+  const session = await requireUser(); // Chantier V
+  if (!QUOTE_ID_RE.test(id) || !(await mayQuote(session, id))) redirect(ROOT);
   const r = await deleteDraftService(id, session.email);
   revalidatePath(ROOT, "layout");
   if (!r.ok) redirect(`${ROOT}/${id}?msg=${encodeURIComponent(r.error)}`);
@@ -118,7 +132,7 @@ export async function deleteDraftAction(id: string): Promise<void> {
 }
 
 export async function linkDealAction(id: string, fd: FormData): Promise<void> {
-  const session = await requireAdmin();
+  const session = await requireUser({ roles: STAFF }); // Chantier V : propriétaire et adjoints
   if (!QUOTE_ID_RE.test(id)) redirect(ROOT);
   const raw = String(fd.get("dealId") ?? "").trim();
   const dealId = /^\d{1,12}$/.test(raw) ? Number(raw) : null;
@@ -150,18 +164,19 @@ export async function savePricesAction(payload: unknown): Promise<ActionResult> 
 
 /** Recherche instantanée : 10 résultats au plus, nom, ville, étape et 4 derniers chiffres (jamais le courriel ni le numéro complet). */
 export async function searchClientsAction(q: unknown): Promise<QuoteClientHit[]> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V : un vendeur ne trouve que ses clients
   const parsed = z.string().max(80).safeParse(q);
   if (!parsed.success || parsed.data.trim().length < 2) return [];
   if (!quoteClientSearchLimiter.hit(session.email)) return [];
-  return searchQuoteClients(parsed.data);
+  return searchQuoteClients(parsed.data, session.role === "vendeur" ? await scopedIndex(session) : undefined);
 }
 
 /** Coordonnées du client cliqué, pour pré-remplir la soumission. */
 export async function pickClientAction(id: unknown): Promise<{ ok: true; client: QuoteClientPrefill } | { ok: false; error: string }> {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const parsed = z.string().regex(CLIENT_ID_RE).safeParse(id);
   if (!parsed.success) return { ok: false, error: "Client introuvable." };
+  if (!(await mayClient(session, parsed.data))) return { ok: false, error: "Client introuvable." };
   const client = await quoteClientPrefill(parsed.data);
   return client ? { ok: true, client } : { ok: false, error: "Client introuvable." };
 }
@@ -169,7 +184,7 @@ export async function pickClientAction(id: unknown): Promise<{ ok: true; client:
 /* ---------------- Modèles de soumission ---------------- */
 
 export async function saveTemplateAction(payload: unknown): Promise<ActionResult> {
-  const session = await requireAdmin();
+  const session = await requireUser({ roles: STAFF }); // Chantier V : modèles communs à l'entreprise
   const parsed = parseTemplateInput(payload);
   if (!parsed.ok) return { ok: false, error: parsed.error };
   const r = await saveTemplateService(parsed.data, session.email);
@@ -182,7 +197,7 @@ export type TemplateLoad = { ok: true; name: string; content: QuoteContent; cont
 
 /** « Partir d'un modèle » : contenu du modèle (sans client ni chantier), posé dans le créateur. */
 export async function loadTemplateAction(id: unknown): Promise<TemplateLoad> {
-  await requireAdmin();
+  await requireUser(); // Chantier V : un modèle ne contient ni client ni chantier
   const parsed = z.string().regex(TEMPLATE_ID_RE).safeParse(id);
   if (!parsed.success) return { ok: false, error: "Modèle introuvable." };
   const t = await templateById(parsed.data);
@@ -190,7 +205,7 @@ export async function loadTemplateAction(id: unknown): Promise<TemplateLoad> {
 }
 
 export async function deleteTemplateAction(id: unknown): Promise<ActionResult> {
-  await requireAdmin();
+  await requireUser({ roles: STAFF }); // Chantier V
   const parsed = z.string().regex(TEMPLATE_ID_RE).safeParse(id);
   if (!parsed.success) return { ok: false, error: "Modèle introuvable." };
   const done = await deleteTemplateService(parsed.data);

@@ -2,7 +2,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MessageSquare, Settings } from "lucide-react";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { textosFor } from "@/lib/gestion/equipe/garde"; // Chantier V : un vendeur ne voit que ses conversations
 import { smsConfigured } from "@/lib/gestion/sms";
 import { formatPhone } from "@/lib/textos/phone";
 import { readTextos } from "@/lib/textos/store";
@@ -14,10 +15,11 @@ import { AutoRefresh } from "@/components/gestion/textos/client-bits";
 export const metadata: Metadata = { title: "Textos" };
 
 export default async function TextosPage({ searchParams }: { searchParams: Promise<{ vue?: string | string[] }> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
+  const owner = session.role === "proprietaire";
   const archived = (await searchParams).vue === "archives";
   const now = new Date();
-  const data = await readTextos();
+  const data = await textosFor(session, await readTextos());
   const rows = conversationRows(data, { archived }, now);
   const all = Object.values(data.conversations).filter((c) => c.messages.length);
   const inbox = all.filter((c) => !c.archived).length;
@@ -43,9 +45,11 @@ export default async function TextosPage({ searchParams }: { searchParams: Promi
               Archivées ({all.length - inbox})
             </Link>
           </nav>
-          <Link href="/gestion/textos/reglages" className="g-btn g-btn--ghost">
-            <Settings size={16} aria-hidden /> Réglages
-          </Link>
+          {owner ? (
+            <Link href="/gestion/textos/reglages" className="g-btn g-btn--ghost">
+              <Settings size={16} aria-hidden /> Réglages
+            </Link>
+          ) : null}
         </div>
       </Reveal>
 
@@ -68,7 +72,7 @@ export default async function TextosPage({ searchParams }: { searchParams: Promi
           </h2>
           <p>
             Accusé de réception automatique : <strong>{data.settings.autoReply ? "activé" : "désactivé"}</strong>.{" "}
-            <Link href="/gestion/textos/reglages">Modifier</Link>
+            {owner ? <Link href="/gestion/textos/reglages">Modifier</Link> : null}
           </p>
           {!smsConfigured() ? <p className="g-alert">Twilio n’est pas configuré sur ce serveur : les réponses ne peuvent pas partir.</p> : null}
         </Reveal>

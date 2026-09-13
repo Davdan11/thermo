@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { STAFF } from "@/lib/gestion/equipe/garde"; // Chantier V : propriétaire et adjoints
 import { brandOptions } from "@/lib/gestion/catalog";
 import { jobPrefill } from "@/lib/gestion/crm/service";
 import { JobForm } from "@/components/gestion/JobForm";
@@ -9,7 +10,7 @@ export const metadata: Metadata = { title: "Nouveau job" };
 
 /* ?client=<id> (fiche client) ou ?soumission=<id> (soumission acceptée) : formulaire pré-rempli au serveur. */
 export default async function NewJobPage({ searchParams }: { searchParams: Promise<{ client?: string; soumission?: string }> }) {
-  await requireAdmin();
+  await requireUser({ roles: STAFF }); // Chantier V
   const sp = await searchParams;
   const pre = await jobPrefill({ clientId: sp.client, quoteId: sp.soumission });
   return (

@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, Mail, MessageSquare, Pencil, Phone, UserRound } from "lucide-react";
 import { clientIdForJob } from "@/lib/gestion/crm/service";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { STAFF } from "@/lib/gestion/equipe/garde"; // Chantier V : propriétaire et adjoints
 import { brandLabel, brandOptions } from "@/lib/gestion/catalog";
 import { availableActions, offerState, STATUS_ACTIONS } from "@/lib/gestion/offers";
 import { regionName } from "@/lib/gestion/regions";
@@ -61,7 +62,7 @@ function toDTO(c: Candidate): CandidateDTO {
 }
 
 export default async function JobPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ envoye?: string; echecs?: string; cree?: string }> }) {
-  await requireAdmin();
+  await requireUser({ roles: STAFF }); // Chantier V
   const { id } = await params;
   const sp = await searchParams;
   const now = new Date();

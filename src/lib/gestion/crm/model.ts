@@ -41,6 +41,9 @@ export function mergeRecords(recs: CrmClientRecord[], id: string): CrmClientReco
     valueCents: base.valueCents ?? sorted.find((r) => r.valueCents !== undefined)?.valueCents,
     createdAt: sorted[0].createdAt,
     updatedAt: maxIso(sorted.map((r) => r.updatedAt)),
+    // Chantier V : l'attribution la plus récente l'emporte ; historiques réunis.
+    assignedTo: latest(sorted.map((r) => r.assignedTo)),
+    assignLog: sorted.flatMap((r) => r.assignLog ?? []).sort((a, b) => a.at.localeCompare(b.at)),
   };
 }
 

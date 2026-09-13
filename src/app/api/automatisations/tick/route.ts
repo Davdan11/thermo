@@ -16,6 +16,7 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import { runTick } from "@/lib/gestion/automatisations/engine";
 import { runPortalTick } from "@/lib/gestion/portail/tick"; // Chantier P
+import { runRepartition } from "@/lib/gestion/equipe/repartition"; // Chantier V
 
 export const dynamic = "force-dynamic";
 
@@ -43,7 +44,9 @@ export async function POST(req: Request) {
     const r = await runTick({ log: (line) => console.log(`[automatisations] ${line}`) });
     // Chantier P : visites d'entretien annuelles et invitations « choisissez votre date » (portail client).
     const p = await runPortalTick({ log: (line) => console.log(`[portail] ${line}`) }).catch((e) => (console.error("[portail] passage interrompu :", e), null));
-    return json({ ok: true, at: r.at, ms: r.ms, fait: r.done, echecs: r.failed, ignores: r.ignored, reportes: r.deferred, enAttente: r.waiting, portail: p ? { visites: p.visits, invitations: p.invites, adhesions: p.attached } : { erreur: true } });
+    // Chantier V : répartition des nouvelles demandes aux vendeurs (aussi au tick de la téléphonie, toutes les 5 minutes).
+    const v = await runRepartition().catch((e) => (console.error("[équipe] répartition interrompue :", e), null));
+    return json({ ok: true, at: r.at, ms: r.ms, fait: r.done, echecs: r.failed, ignores: r.ignored, reportes: r.deferred, enAttente: r.waiting, portail: p ? { visites: p.visits, invitations: p.invites, adhesions: p.attached } : { erreur: true }, repartition: v ? { attribuees: v.assigned } : { erreur: true } });
   } catch (e) {
     console.error("[automatisations] passage interrompu :", e);
     return json({ error: "Passage interrompu : voir le journal du serveur." }, 500);

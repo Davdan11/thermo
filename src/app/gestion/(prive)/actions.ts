@@ -9,7 +9,9 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireAdmin, requireUser } from "@/lib/gestion/auth/dal";
+// Chantier V : les jobs (création, offres, statut, notes) sont ouverts aux adjoints ; installateurs et candidatures : propriétaire.
+import { STAFF } from "@/lib/gestion/equipe/garde";
 import { setCandidatureStatus } from "@/lib/gestion/candidatures";
 import { parseInstallerForm, parseJobForm, type FieldErrors } from "@/lib/gestion/forms";
 import { isStatusAction } from "@/lib/gestion/offers";
@@ -48,7 +50,7 @@ export async function toggleInstallerAction(id: string, active: boolean): Promis
 }
 
 export async function saveJobAction(_prev: FormState, fd: FormData): Promise<FormState> {
-  const session = await requireAdmin();
+  const session = await requireUser({ roles: STAFF }); // Chantier V
   const id = String(fd.get("id") ?? "");
   if (id && !ID_RE.test(id)) return { message: "Job introuvable." };
   const parsed = parseJobForm(fd);
@@ -60,7 +62,7 @@ export async function saveJobAction(_prev: FormState, fd: FormData): Promise<For
 }
 
 export async function sendOffersAction(jobId: string, fd: FormData): Promise<void> {
-  const session = await requireAdmin();
+  const session = await requireUser({ roles: STAFF }); // Chantier V
   if (!ID_RE.test(jobId)) return;
   const only = String(fd.get("only") ?? "");
   const ids = (only ? [only] : fd.getAll("installerIds").map(String)).filter((v) => ID_RE.test(v));
@@ -72,14 +74,14 @@ export async function sendOffersAction(jobId: string, fd: FormData): Promise<voi
 }
 
 export async function withdrawOfferAction(jobId: string, offerId: string): Promise<void> {
-  const session = await requireAdmin();
+  const session = await requireUser({ roles: STAFF }); // Chantier V
   if (!ID_RE.test(jobId) || !ID_RE.test(offerId)) return;
   await ownerWithdrawOffer(jobId, offerId, session.email);
   revalidatePath(`/gestion/jobs/${jobId}`);
 }
 
 export async function statusAction(jobId: string, fd: FormData): Promise<void> {
-  const session = await requireAdmin();
+  const session = await requireUser({ roles: STAFF }); // Chantier V
   const action = fd.get("action");
   if (!ID_RE.test(jobId) || !isStatusAction(action)) return;
   const day = String(fd.get("scheduledFor") ?? "");
@@ -89,7 +91,7 @@ export async function statusAction(jobId: string, fd: FormData): Promise<void> {
 }
 
 export async function notesAction(jobId: string, _prev: FormState, fd: FormData): Promise<FormState> {
-  const session = await requireAdmin();
+  const session = await requireUser({ roles: STAFF }); // Chantier V
   if (!ID_RE.test(jobId)) return { message: "Job introuvable." };
   const ok = await saveInternalNotes(jobId, String(fd.get("internalNotes") ?? ""), session.email);
   revalidatePath(`/gestion/jobs/${jobId}`);

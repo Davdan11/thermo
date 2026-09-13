@@ -3,7 +3,7 @@
 import "@/components/gestion/securite/securite.css";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { getSessionState, LOGIN_PATH } from "@/lib/gestion/auth/dal";
+import { getSessionState, LOGIN_PATH, MFA_SETUP_PATH } from "@/lib/gestion/auth/dal";
 import { twoFactorStatus } from "@/lib/gestion/securite/deux-etapes";
 import { trustDays } from "@/lib/gestion/securite/sessions";
 import { logout } from "../actions";
@@ -17,6 +17,7 @@ export default async function DeuxEtapesConnexionPage() {
   const state = await getSessionState();
   if (state.status === "none") redirect(LOGIN_PATH);
   if (state.status === "ok") redirect("/gestion");
+  if (state.status === "mfa-setup") redirect(MFA_SETUP_PATH); // Chantier V : 2e étape à activer d'abord
   const [st, days] = await Promise.all([twoFactorStatus(state.email), trustDays()]);
   return (
     <main className="g-app g-center">

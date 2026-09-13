@@ -11,7 +11,10 @@
 
 import { after } from "next/server";
 import { redirect } from "next/navigation";
-import { isAdminEmail, isEmail, normalizeEmail } from "@/lib/gestion/auth/admins";
+import { isEmail, normalizeEmail } from "@/lib/gestion/auth/admins";
+// Chantier V : membres de l'équipe (vendeurs, adjoints) aussi, s'ils sont actifs ; dernière connexion notée.
+import { canSignIn } from "@/lib/gestion/equipe/roles";
+import { noteLogin } from "@/lib/gestion/equipe/members";
 import { consumeMagicLink, createMagicLink, MAGIC_LINK_TTL_MS } from "@/lib/gestion/auth/magic-link";
 import { endAdminSession, startAdminSession } from "@/lib/gestion/auth/dal";
 import { limiters } from "@/lib/gestion/rate-limit";
@@ -27,13 +30,14 @@ export async function requestLoginLink(_prev: LoginState, formData: FormData): P
   if (!isEmail(email)) return { sent: false, error: "Entrez une adresse courriel valide." };
   const ip = await requestIp();
   const allowed = limiters.loginIp.hit(ip) && limiters.loginEmail.hit(email);
-  if (allowed && isAdminEmail(email)) {
+  const known = await canSignIn(email); // Chantier V
+  if (allowed && known) {
     const token = await createMagicLink(email);
     const link = `${await publicBaseUrl()}/gestion/connexion/verifier?jeton=${token}`;
     after(() => sendMagicLink(email, link, Math.round(MAGIC_LINK_TTL_MS / 60000)).then(() => undefined));
   }
   // Chantier S : noté après la réponse (même durée, adresse autorisée ou non) ; l'adresse n'est notée que si elle est autorisée.
-  after(() => audit("connexion.lien", { autorisee: isAdminEmail(email), limitee: !allowed }, { qui: isAdminEmail(email) ? email : null, ip }));
+  after(() => audit("connexion.lien", { autorisee: known, limitee: !allowed }, { qui: known ? email : null, ip }));
   return { sent: true, email };
 }
 
@@ -51,6 +55,7 @@ export async function confirmLogin(formData: FormData): Promise<void> {
   }
   await startAdminSession(result.email);
   await audit("connexion.reussie", { methode: "lien" }, { qui: result.email, ip }); // Chantier S
+  await noteLogin(result.email); // Chantier V
   redirect("/gestion");
 }
 
