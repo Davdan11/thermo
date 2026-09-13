@@ -183,7 +183,7 @@ export async function ParcoursPanel({ quoteId, staff }: { quoteId: string; staff
                     <small className="g-hint" style={{ margin: 0 }}>{r.reasons.join(" · ")}</small>
                     {r.approvalIssues.length ? <small style={{ color: "var(--ct-bad)" }}>Ne pourra pas approuver : {r.approvalIssues.join(" ; ")}</small> : null}
                     <ActionForm action={proposeAction.bind(null, quoteId, r.installerId)} submit="Choisir cet installateur" submitClass="k-btn k-btn--ink" pending="Envoi…" className="g-form">
-                      {!find.consent ? <input name="consent" className="g-input" placeholder="Consentement au transfert : comment le client l’a donné" maxLength={300} /> : null}
+                      {!find.consent ? <input name="consent" className="g-input" aria-label="Consentement au transfert" placeholder="Consentement au transfert : comment le client l’a donné" maxLength={300} /> : null}
                     </ActionForm>
                   </span>
                 </li>
@@ -199,7 +199,7 @@ export async function ParcoursPanel({ quoteId, staff }: { quoteId: string; staff
           ) : null}
           <ActionForm action={offerAction.bind(null, quoteId)} submit="Offrir aux installateurs admissibles" submitClass="k-btn k-btn--primary" pending="Envoi…" className="g-form">
             <p className="g-hint" style={{ margin: 0 }}>Offre anonymisée par le moteur d’offres ; le premier admissible qui accepte obtient la priorité, puis approuve le contrat. Période fixée : seulement aux disponibles et aux disponibilités inconnues.</p>
-            {!find.consent ? <input name="consent" className="g-input" placeholder="Consentement au transfert : comment le client l’a donné" maxLength={300} /> : null}
+            {!find.consent ? <input name="consent" className="g-input" aria-label="Consentement au transfert" placeholder="Consentement au transfert : comment le client l’a donné" maxLength={300} /> : null}
           </ActionForm>
         </details>
       ) : null}
@@ -213,7 +213,7 @@ export async function ParcoursPanel({ quoteId, staff }: { quoteId: string; staff
               <option value="desistement">L’installateur se désiste (compté dans sa performance)</option>
               <option value="commun-accord">Autre raison, d’un commun accord</option>
             </select>
-            <textarea name="reason" className="g-textarea" required minLength={3} maxLength={600} placeholder="Raison (transmise au client)" />
+            <textarea name="reason" className="g-textarea" required minLength={3} maxLength={600} aria-label="Raison, transmise au client" placeholder="Raison (transmise au client)" />
           </ActionForm>
         </details>
       ) : null}
@@ -223,21 +223,21 @@ export async function ParcoursPanel({ quoteId, staff }: { quoteId: string; staff
           <summary>Préparer un avenant</summary>
           <ActionForm action={createAvenantAction.bind(null, quoteId)} submit="Préparer l’avenant" submitClass="k-btn k-btn--primary" pending="…" className="g-form">
             <p className="g-hint" style={{ margin: 0 }}>Aucun extra sans avenant : l’installateur l’approuve, puis le client le signe, AVANT l’exécution.</p>
-            <input name="reason" className="g-input" required maxLength={600} placeholder="Condition imprévue ou raison" />
-            <textarea name="added" className="g-textarea" maxLength={1000} placeholder="Travail ajouté" />
-            <textarea name="removed" className="g-textarea" maxLength={1000} placeholder="Travail retranché" />
+            <input name="reason" className="g-input" required maxLength={600} aria-label="Condition imprévue ou raison" placeholder="Condition imprévue ou raison" />
+            <textarea name="added" className="g-textarea" maxLength={1000} aria-label="Travail ajouté" placeholder="Travail ajouté" />
+            <textarea name="removed" className="g-textarea" maxLength={1000} aria-label="Travail retranché" placeholder="Travail retranché" />
             {[1, 2, 3].map((i) => (
               <div key={i} className="g-row g-row--2">
-                <input name={`l${i}_label`} className="g-input" maxLength={160} placeholder={`Ligne ${i} : description`} />
+                <input name={`l${i}_label`} className="g-input" maxLength={160} aria-label={`Ligne ${i} : description`} placeholder={`Ligne ${i} : description`} />
                 <span style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                  <input name={`l${i}_amount`} className="g-input" inputMode="decimal" placeholder="Prix avant taxes" />
+                  <input name={`l${i}_amount`} className="g-input" inputMode="decimal" aria-label={`Ligne ${i} : prix avant taxes`} placeholder="Prix avant taxes" />
                   <label className="sq-inline-check">
                     <input type="checkbox" name={`l${i}_minus`} value="1" /> retrait
                   </label>
                 </span>
               </div>
             ))}
-            <input name="schedule" className="g-input" required maxLength={300} placeholder="Effet sur l’échéancier (« aucun » au besoin)" />
+            <input name="schedule" className="g-input" required maxLength={300} aria-label="Effet sur l’échéancier" placeholder="Effet sur l’échéancier (« aucun » au besoin)" />
           </ActionForm>
         </details>
       ) : null}

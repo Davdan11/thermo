@@ -170,7 +170,7 @@ export function CancelMembershipForm({ id }: { id: string }) {
     <details className="ar-void">
       <summary>Annuler…</summary>
       <form action={action} className="ar-form">
-        <input name="reason" className="g-input" required minLength={3} maxLength={300} placeholder="Raison (gardée avec l’adhésion)" />
+        <input name="reason" className="g-input" required minLength={3} maxLength={300} aria-label="Raison de l’annulation" placeholder="Raison (gardée avec l’adhésion)" />
         <button type="submit" className="k-btn ar-danger" disabled={pending}>
           {pending ? "…" : "Annuler l’adhésion"}
         </button>

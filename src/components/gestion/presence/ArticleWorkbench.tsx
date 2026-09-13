@@ -247,7 +247,7 @@ export function ArticleWorkbench({ article, initialHtml, photos, assistant, publ
               </label>
             </div>
           ) : null}
-          <textarea ref={area} className="g-textarea ar-body" value={f.body} onChange={(e) => set("body", e.target.value)} disabled={locked} spellCheck lang="fr-CA" />
+          <textarea ref={area} className="g-textarea ar-body" aria-label="Texte de l’article" value={f.body} onChange={(e) => set("body", e.target.value)} disabled={locked} spellCheck lang="fr-CA" />
           <p className="g-hint">{checks.words} mots</p>
         </div>
 
@@ -283,8 +283,8 @@ export function ArticleWorkbench({ article, initialHtml, photos, assistant, publ
             {f.references.map((r, i) => (
               <div key={i} className="ar-rowedit">
                 <div className="ar-rowedit__fields ar-rowedit__fields--2">
-                  <input className="g-input" placeholder="Libellé de la source" value={r.label} onChange={(e) => set("references", f.references.map((x, j) => (j === i ? { ...x, label: e.target.value } : x)))} disabled={locked} />
-                  <input className="g-input" placeholder="https://… ou /page-du-site" value={r.url} onChange={(e) => set("references", f.references.map((x, j) => (j === i ? { ...x, url: e.target.value } : x)))} disabled={locked} />
+                  <input className="g-input" aria-label={`Source ${i + 1} : libellé`} placeholder="Libellé de la source" value={r.label} onChange={(e) => set("references", f.references.map((x, j) => (j === i ? { ...x, label: e.target.value } : x)))} disabled={locked} />
+                  <input className="g-input" aria-label={`Source ${i + 1} : adresse`} placeholder="https://… ou /page-du-site" value={r.url} onChange={(e) => set("references", f.references.map((x, j) => (j === i ? { ...x, url: e.target.value } : x)))} disabled={locked} />
                 </div>
                 <button type="button" className="k-btn k-btn--icon" aria-label="Retirer cette source" onClick={() => set("references", f.references.filter((_, j) => j !== i))} disabled={locked}>
                   <X size={15} aria-hidden />
@@ -304,9 +304,9 @@ export function ArticleWorkbench({ article, initialHtml, photos, assistant, publ
             {f.figures.map((x, i) => (
               <div key={i} className="ar-rowedit">
                 <div className="ar-rowedit__fields ar-rowedit__fields--3">
-                  <input className="g-input" placeholder="Ce que c’est" value={x.label} onChange={(e) => set("figures", f.figures.map((y, j) => (j === i ? { ...y, label: e.target.value } : y)))} disabled={locked} />
-                  <input className="g-input" placeholder="Valeur (ex. 30 cm)" value={x.value} onChange={(e) => set("figures", f.figures.map((y, j) => (j === i ? { ...y, value: e.target.value } : y)))} disabled={locked} />
-                  <input className="g-input" placeholder="Adresse de la source" value={x.url} onChange={(e) => set("figures", f.figures.map((y, j) => (j === i ? { ...y, url: e.target.value } : y)))} disabled={locked} />
+                  <input className="g-input" aria-label={`Chiffre ${i + 1} : ce que c’est`} placeholder="Ce que c’est" value={x.label} onChange={(e) => set("figures", f.figures.map((y, j) => (j === i ? { ...y, label: e.target.value } : y)))} disabled={locked} />
+                  <input className="g-input" aria-label={`Chiffre ${i + 1} : valeur`} placeholder="Valeur (ex. 30 cm)" value={x.value} onChange={(e) => set("figures", f.figures.map((y, j) => (j === i ? { ...y, value: e.target.value } : y)))} disabled={locked} />
+                  <input className="g-input" aria-label={`Chiffre ${i + 1} : adresse de la source`} placeholder="Adresse de la source" value={x.url} onChange={(e) => set("figures", f.figures.map((y, j) => (j === i ? { ...y, url: e.target.value } : y)))} disabled={locked} />
                 </div>
                 <button type="button" className="k-btn k-btn--icon" aria-label="Retirer ce chiffre" onClick={() => set("figures", f.figures.filter((_, j) => j !== i))} disabled={locked}>
                   <X size={15} aria-hidden />
