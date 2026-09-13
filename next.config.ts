@@ -22,6 +22,12 @@ const privateHeaders = [
 const nextConfig: NextConfig = {
   staticPageGenerationTimeout: 1000,
   poweredByHeader: false,
+  /* Conformité (garantie légale de bon fonctionnement) : surcharges inscrites au build et lues par
+     src/lib/garantie-legale, au serveur comme au client. Vides : valeurs par défaut du module. */
+  env: {
+    GARANTIE_LEGALE_DEBUT: process.env.GARANTIE_LEGALE_DEBUT ?? "",
+    GARANTIE_LEGALE_ANS: process.env.GARANTIE_LEGALE_ANS ?? "",
+  },
   async redirects() {
     // Adresse conventionnelle du plan de site : renvoie vers l'index des sitemaps segmentés.
     return [
