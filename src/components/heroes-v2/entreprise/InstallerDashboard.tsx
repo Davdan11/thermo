@@ -3,6 +3,7 @@
 import "./entreprise.css";
 import { useEffect, type CSSProperties, type ReactNode } from "react";
 import { animate, motion, useMotionValue, useTransform, type MotionValue, MotionConfig } from "motion/react";
+import { fp, type FpEase } from "@/components/hero/first-paint";
 import { xeMono } from "./fonts";
 import { Arrow, EASE, HEADER_PAD, UNDER_HEADER, XLink, useReducedSafe } from "./shared";
 
@@ -48,28 +49,26 @@ const FROM = {
 const panelStyle: CSSProperties = { background: C.panel, border: `1px solid ${C.line}`, borderRadius: 18, boxShadow: "0 1px 0 rgba(17,24,28,0.03), 0 24px 40px -32px rgba(17,24,28,0.28)" };
 const label: CSSProperties = { fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: C.faint };
 
+/** Ressort d'assemblage des panneaux (raideur 70, amortissement 16, masse 1), échantillonné par motion-dom
+ *  sur 1 s : la même courbe que motion jouait, en CSS dès le premier rendu (first-paint.ts). */
+const PANEL_SPRING: FpEase =
+  "linear(0, 0.0034, 0.0128, 0.0274, 0.0462, 0.0684, 0.0935, 0.1208, 0.1499, 0.1802, 0.2114, 0.2431, 0.2751, 0.3071, 0.3388, 0.3702, 0.4011, 0.4313, 0.4607, 0.4893, 0.517, 0.5438, 0.5696, 0.5943, 0.6181, 0.6408, 0.6625, 0.6831, 0.7028, 0.7215, 0.7393, 0.7561, 0.772, 0.787, 0.8012, 0.8146, 0.8273, 0.8391, 0.8503, 0.8608, 0.8706, 0.8798, 0.8885, 0.8965, 0.9041, 0.9112, 0.9178, 0.9239, 0.9296, 0.935, 0.94, 0.9446, 0.9489, 0.9529, 0.9566, 0.96, 0.9632, 0.9662, 0.9689, 0.9715, 0.9738, 0.976, 0.978, 0.9798, 0.9815, 0.9831, 0.9846, 0.9859, 0.9871, 0.9883, 0.9893, 0.9903, 0.9911, 0.9919, 0.9927, 0.9933, 0.994, 0.9945, 0.995, 0.9955, 0.996, 0.9963, 0.9967, 0.997, 0.9973, 0.9976, 0.9978, 0.9981, 0.9983, 0.9985, 0.9986, 0.9988, 0.9989, 0.999, 0.9991, 1, 1, 1, 1, 1)";
+
 function Panel({ from, order, className = "", children, style }: { from: { x: number; y: number; rotate: number }; order: number; className?: string; children: ReactNode; style?: CSSProperties }) {
-  const reduce = useReducedSafe();
-  return (
-    <motion.div
-      className={`relative min-w-0 ${className}`}
-      style={{ ...panelStyle, ...style }}
-      initial={reduce ? false : { opacity: 0, x: from.x, y: from.y, rotate: from.rotate, scale: 0.94 }}
-      animate={{ opacity: 1, x: 0, y: 0, rotate: 0, scale: 1 }}
-      transition={{ type: "spring", stiffness: 70, damping: 16, mass: 1, delay: 0.45 + order * 0.14, opacity: { duration: 0.35, delay: 0.45 + order * 0.14 } }}
-    >
-      {children}
-    </motion.div>
+  const delay = 0.45 + order * 0.14;
+  // Opacité : fondu de 0,35 s ; position, échelle et rotation : le ressort. Mêmes départs et délais qu'avant.
+  const enter = fp(
+    [
+      { opacity: 0, duration: 0.35, delay },
+      { x: from.x, y: from.y, scale: 0.94, rotate: from.rotate, duration: 1, ease: PANEL_SPRING, delay },
+    ],
+    { className: `relative min-w-0 ${className}`, style: { ...panelStyle, ...style } },
   );
+  return <div {...enter}>{children}</div>;
 }
 
 function Inner({ order, children, className }: { order: number; children: ReactNode; className?: string }) {
-  const reduce = useReducedSafe();
-  return (
-    <motion.div className={className} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.1 + order * 0.14 }}>
-      {children}
-    </motion.div>
-  );
+  return <div {...fp({ opacity: 0, duration: 0.6, delay: 1.1 + order * 0.14 }, { className })}>{children}</div>;
 }
 
 function Waiting({ rows, widths }: { rows: number; widths: number[] }) {
@@ -89,7 +88,6 @@ function Waiting({ rows, widths }: { rows: number; widths: number[] }) {
 }
 
 export function InstallerDashboard() {
-  const reduce = useReducedSafe();
   return (
     <MotionConfig reducedMotion="user">
     <section aria-labelledby="espace-titre" className={`xe-root ${xeMono.variable} relative ${UNDER_HEADER}`} style={{ background: C.bg, color: C.ink }}>
@@ -97,32 +95,29 @@ export function InstallerDashboard() {
         {/* En-tête du tableau de bord */}
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:items-end lg:gap-12">
           <div>
-            <motion.p className="xe-mono flex items-center gap-2.5 text-[12px] uppercase" style={{ letterSpacing: "0.18em", color: C.mute, margin: 0 }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.1 }}>
+            <p {...fp({ opacity: 0, duration: 0.7, delay: 0.1 }, { className: "xe-mono flex items-center gap-2.5 text-[12px] uppercase", style: { letterSpacing: "0.18em", color: C.mute, margin: 0 } })}>
               Espace installateur
               <span aria-hidden="true" style={{ color: C.line }}>
                 /
               </span>
               <span style={{ color: C.ink }}>Tableau de bord</span>
-            </motion.p>
-            <motion.h1
+            </p>
+            <h1
               id="espace-titre"
-              style={{ fontSize: "clamp(46px, 6.4vw, 112px)", lineHeight: 0.92, letterSpacing: "-0.055em", fontWeight: 700, margin: "18px 0 0" }}
-              initial={reduce ? false : { opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: EASE, delay: 0.15 }}
+              {...fp({ opacity: 0, y: 24, duration: 1, ease: EASE, delay: 0.15 }, { style: { fontSize: "clamp(46px, 6.4vw, 112px)", lineHeight: 0.92, letterSpacing: "-0.055em", fontWeight: 700, margin: "18px 0 0" } })}
             >
               Espace{" "}
               <span className="relative inline-block">
                 Partenaire
-                <motion.span aria-hidden="true" className="absolute -bottom-[0.04em] left-[0.04em] right-0 block h-[0.08em] origin-left" style={{ background: C.orange }} initial={reduce ? false : { scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1, ease: EASE, delay: 1.9 }} />
+                <span aria-hidden="true" {...fp({ scaleX: 0, duration: 1, ease: EASE, delay: 1.9 }, { className: "absolute -bottom-[0.04em] left-[0.04em] right-0 block h-[0.08em] origin-left", style: { background: C.orange } })} />
               </span>
-            </motion.h1>
+            </h1>
           </div>
-          <motion.div initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}>
+          <div {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.35 })}>
             <p className="text-[17px] leading-[1.6]" style={{ color: C.mute, margin: 0 }}>
               Un espace pour gérer vos rendez-vous et vos soumissions est en préparation.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Les panneaux qui s'assemblent */}

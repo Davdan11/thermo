@@ -1,9 +1,10 @@
 "use client";
 
 import "./heroes-v2.css";
-import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { MotionConfig, motion, useAnimationControls } from "motion/react";
+import { fp } from "@/components/hero/first-paint";
 import { posterFont } from "./fonts-poster";
 import { Tick, useLater, useReducedSafe } from "./Tick";
 
@@ -42,17 +43,20 @@ export function AfficheCombat({ a, b, rows, shared, eyebrow, intro, crumbs }: { 
   const shake = useAnimationControls();
   const [locked, setLocked] = useState(false);
   const play = useLater(1.55, reduce);
+  const topRef = useRef<HTMLDivElement>(null);
 
   // Verrouillage : quand les deux moitiés se rejoignent, l'affiche encaisse le choc.
+  // Les moitiés entrent en CSS dès le premier rendu : le choc se cale sur leur horloge, pas sur l'hydratation.
   useEffect(() => {
     if (reduce) {
       setLocked(true);
       return;
     }
+    const ran = topRef.current?.getAnimations()[0]?.currentTime;
     const t = window.setTimeout(() => {
       setLocked(true);
       shake.start({ x: [0, -11, 9, -6, 3, 0], transition: { duration: 0.42, ease: "easeOut" } });
-    }, 1080);
+    }, Math.max(0, 1080 - (typeof ran === "number" ? ran : 0)));
     return () => window.clearTimeout(t);
   }, [reduce, shake]);
 
@@ -82,7 +86,7 @@ export function AfficheCombat({ a, b, rows, shared, eyebrow, intro, crumbs }: { 
     <MotionConfig reducedMotion="user">
     <section aria-labelledby="ac-titre" className={`ac-root pv2-root ${posterFont.variable} relative -mt-[93px] overflow-hidden min-[1700px]:-mt-[105px]`} style={{ background: "#000", color: "#fff", fontFamily: DISPLAY }}>
       <div className="mx-auto max-w-[1440px] px-5 pt-[128px] sm:px-8 lg:px-12 min-[1700px]:pt-[146px]">
-        <motion.div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+        <div {...fp({ opacity: 0, duration: 0.8 }, { className: "flex flex-wrap items-center justify-between gap-x-6 gap-y-2" })}>
           <nav aria-label="Fil d’Ariane" className="ac-crumbs text-[12.5px] font-medium">
             <ol className="m-0 flex list-none flex-wrap items-center gap-x-2 gap-y-1 p-0">
               <li><Link href="/">Accueil</Link></li>
@@ -101,19 +105,19 @@ export function AfficheCombat({ a, b, rows, shared, eyebrow, intro, crumbs }: { 
           <p className="text-[11.5px] font-bold uppercase" style={{ letterSpacing: "0.3em", color: ORANGE, margin: 0 }}>
             {eyebrow}
           </p>
-        </motion.div>
+        </div>
       </div>
 
       {/* ── L'affiche : deux moitiés tranchées par la diagonale ── */}
       <motion.div className="ac-poster relative mt-5 select-none lg:mt-3" animate={shake}>
-        <motion.div className="relative" style={{ background: "#000", color: "#fff", clipPath: TOP }} initial={reduce ? false : { x: "-104%" }} animate={{ x: "0%" }} transition={{ duration: 0.95, ease: SLAM, delay: 0.15 }}>
+        <div ref={topRef} {...fp({ x: "-104%", duration: 0.95, ease: SLAM, delay: 0.15 }, { className: "relative", style: { background: "#000", color: "#fff", clipPath: TOP } })}>
           <h1 id="ac-titre" className="ac-poster mx-auto max-w-[1440px] px-5 py-5 sm:px-8 lg:px-12 lg:py-6" style={{ margin: 0, fontWeight: 400, letterSpacing: 0 }}>
             {lines("top")}
           </h1>
-        </motion.div>
-        <motion.div aria-hidden="true" className="absolute inset-0" style={{ background: ORANGE, color: "#000", clipPath: BOTTOM }} initial={reduce ? false : { x: "104%" }} animate={{ x: "0%" }} transition={{ duration: 0.95, ease: SLAM, delay: 0.15 }}>
+        </div>
+        <div aria-hidden="true" {...fp({ x: "104%", duration: 0.95, ease: SLAM, delay: 0.15 }, { className: "absolute inset-0", style: { background: ORANGE, color: "#000", clipPath: BOTTOM } })}>
           <div className="ac-poster mx-auto max-w-[1440px] px-5 py-5 sm:px-8 lg:px-12 lg:py-6">{lines("bottom")}</div>
-        </motion.div>
+        </div>
         {/* Trait de coupe : s'allume au verrouillage */}
         <svg aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <motion.line x1="0" y1="26" x2="100" y2="74" stroke="#FFFFFF" strokeWidth={1.5} vectorEffect="non-scaling-stroke" initial={{ opacity: 0 }} animate={{ opacity: locked ? [0, 1, 0.55] : 0 }} transition={{ duration: 0.7, times: [0, 0.2, 1] }} />
@@ -122,7 +126,7 @@ export function AfficheCombat({ a, b, rows, shared, eyebrow, intro, crumbs }: { 
 
       {/* ── Présentation + fiche du combat ── */}
       <div className="mx-auto grid max-w-[1440px] gap-10 px-5 pb-14 pt-9 sm:px-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16 lg:px-12 lg:pb-16">
-        <motion.div initial={reduce ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 1.3 }}>
+        <div {...fp({ opacity: 0, y: 14, duration: 0.9, ease: EASE, delay: 1.3 })}>
           <p className="max-w-[560px] text-[16.5px] leading-[1.6] sm:text-[17.5px]" style={{ color: "rgba(255,255,255,0.74)", margin: 0 }}>
             {typo(intro)}
           </p>
@@ -141,7 +145,7 @@ export function AfficheCombat({ a, b, rows, shared, eyebrow, intro, crumbs }: { 
           <p className="text-[13px]" style={{ color: "rgba(255,255,255,0.45)", margin: "14px 0 0" }}>
             Gratuit, sans engagement. Un installateur licencié RBQ vous rappelle.
           </p>
-        </motion.div>
+        </div>
 
         <div className="min-w-0">
           <table className="w-full border-collapse" style={{ tableLayout: "fixed" }}>
@@ -151,13 +155,13 @@ export function AfficheCombat({ a, b, rows, shared, eyebrow, intro, crumbs }: { 
             <thead>
               <tr>
                 <th scope="col" className="w-[34%] pb-3 text-left align-bottom">
-                  <BrandHead c={a} align="left" delay={1.35} reduce={reduce} />
+                  <BrandHead c={a} align="left" delay={1.35} />
                 </th>
                 <th scope="col" className="pb-3 text-center align-bottom text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.26em", color: ORANGE }}>
                   Fiche du combat
                 </th>
                 <th scope="col" className="w-[34%] pb-3 text-right align-bottom">
-                  <BrandHead c={b} align="right" delay={1.35} reduce={reduce} />
+                  <BrandHead c={b} align="right" delay={1.35} />
                 </th>
               </tr>
             </thead>
@@ -173,20 +177,20 @@ export function AfficheCombat({ a, b, rows, shared, eyebrow, intro, crumbs }: { 
                   </span>
                 );
                 return (
-                  <motion.tr key={r.label} style={{ borderTop: "1px solid rgba(255,255,255,0.16)" }} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE, delay: 1.45 + i * 0.08 }}>
+                  <tr key={r.label} {...fp({ opacity: 0, y: 10, duration: 0.6, ease: EASE, delay: 1.45 + i * 0.08 }, { style: { borderTop: "1px solid rgba(255,255,255,0.16)" } })}>
                     <td className="py-2.5 text-left sm:py-3">{cell(av, "a")}</td>
                     <th scope="row" className="px-2 py-2.5 text-center text-[10px] font-medium uppercase sm:py-3 sm:text-[11px]" style={{ letterSpacing: "0.16em", color: "rgba(255,255,255,0.58)" }}>
                       {r.label}
                     </th>
                     <td className="py-2.5 text-right sm:py-3">{cell(bv, "b")}</td>
-                  </motion.tr>
+                  </tr>
                 );
               })}
             </tbody>
           </table>
-          <motion.p className="text-[12px]" style={{ color: "rgba(255,255,255,0.5)", margin: "10px 0 0", borderTop: "1px solid rgba(255,255,255,0.16)", paddingTop: 10 }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.9 }}>
+          <p {...fp({ opacity: 0, duration: 0.6, delay: 1.9 }, { className: "text-[12px]", style: { color: "rgba(255,255,255,0.5)", margin: "10px 0 0", borderTop: "1px solid rgba(255,255,255,0.16)", paddingTop: 10 } })}>
             {shared ? `${shared} machines identiques chez les deux marques · ` : ""}En orange&nbsp;: l’avantage sur le critère
-          </motion.p>
+          </p>
         </div>
       </div>
     </section>
@@ -194,9 +198,9 @@ export function AfficheCombat({ a, b, rows, shared, eyebrow, intro, crumbs }: { 
   );
 }
 
-function BrandHead({ c, align, delay, reduce }: { c: Corner; align: "left" | "right"; delay: number; reduce: boolean }) {
+function BrandHead({ c, align, delay }: { c: Corner; align: "left" | "right"; delay: number }) {
   return (
-    <motion.span className="block" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay }}>
+    <span {...fp({ opacity: 0, duration: 0.6, delay }, { className: "block" })}>
       <Link href={c.href} className={`ac-brand inline-flex flex-col gap-2 ${align === "right" ? "items-end" : "items-start"}`}>
         {c.logo ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -208,6 +212,6 @@ function BrandHead({ c, align, delay, reduce }: { c: Corner; align: "left" | "ri
           Voir la marque →
         </span>
       </Link>
-    </motion.span>
+    </span>
   );
 }

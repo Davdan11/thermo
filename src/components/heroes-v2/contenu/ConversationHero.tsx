@@ -1,8 +1,9 @@
 "use client";
 
 import "./contenu.css";
-import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import { AnimatePresence, motion, useInView, MotionConfig } from "motion/react";
+import { fp, type FpEase } from "@/components/hero/first-paint";
 import { excerpt, fold, typo } from "@/components/content-hero/typo";
 import { DISPLAY, EASE, UNDER_HEADER, useReducedSafe } from "./shared";
 
@@ -77,7 +78,8 @@ export function ConversationHero({ items, themes, onOpen }: Props) {
     if (results[0]) onOpen(results[0]);
   }
 
-  // Les deux premiers messages du site : points de saisie, puis la bulle.
+  /* Les deux premiers messages du site : points de saisie, puis la bulle ; joués en CSS dès le premier rendu
+     (TypingIntro, fp) aux mêmes instants qu'avant. L'état « intro » ne sert plus qu'au départ du fil de droite. */
   const [intro, setIntro] = useState(0);
   useEffect(() => {
     if (reduce) {
@@ -103,16 +105,19 @@ export function ConversationHero({ items, themes, onOpen }: Props) {
       >
         <div className="relative mx-auto max-w-[1320px] px-4 pb-14 pt-[122px] sm:px-8 lg:px-12 lg:pb-16 min-[1700px]:pt-[140px]">
           {/* En-tête de fil, comme la date d'une conversation */}
-          <motion.p
-            className="mx-auto flex w-fit flex-wrap items-center justify-center gap-x-2 rounded-full px-4 py-1.5 text-center text-[12px] font-medium"
-            style={{
-              background: "rgba(255,255,255,0.55)",
-              color: P.mute,
-              margin: "0 auto",
-            }}
-            initial={reduce ? false : { opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: EASE }}
+          <p
+            {...fp(
+              { opacity: 0, y: -6, duration: 0.7, ease: EASE },
+              {
+                className:
+                  "mx-auto flex w-fit flex-wrap items-center justify-center gap-x-2 rounded-full px-4 py-1.5 text-center text-[12px] font-medium",
+                style: {
+                  background: "rgba(255,255,255,0.55)",
+                  color: P.mute,
+                  margin: "0 auto",
+                },
+              },
+            )}
           >
             <span style={{ color: P.ink, fontWeight: 600 }}>
               Base de connaissances
@@ -123,7 +128,7 @@ export function ConversationHero({ items, themes, onOpen }: Props) {
             </span>
             <span aria-hidden="true">·</span>
             <span className="tabular-nums">{themes} thèmes</span>
-          </motion.p>
+          </p>
 
           <div className="mt-8 grid gap-6 lg:mt-10 lg:grid-cols-[minmax(0,1.22fr)_minmax(0,1fr)] lg:gap-12">
             {/* Messages du site : le titre, puis le chapeau */}
@@ -135,27 +140,21 @@ export function ConversationHero({ items, themes, onOpen }: Props) {
                 Thermopompes À Vendre.ca
               </p>
               <div className="relative">
-                <AnimatePresence initial={false}>
-                  {intro < 2 && intro > 0 ? (
-                    <Typing key="t1" side="left" />
-                  ) : null}
-                </AnimatePresence>
-                <motion.div
-                  className="w-fit max-w-full origin-bottom-left px-6 py-6 sm:px-9 sm:py-8"
-                  style={{
-                    background: P.white,
-                    borderRadius: "34px 34px 34px 10px",
-                    boxShadow:
-                      "0 1px 0 rgba(23,21,43,0.04), 0 24px 50px -36px rgba(23,21,43,0.45)",
-                    visibility: intro >= 2 || reduce ? "visible" : "hidden",
-                  }}
-                  initial={false}
-                  animate={
-                    intro >= 2 || reduce
-                      ? { scale: 1, opacity: 1 }
-                      : { scale: 0.6, opacity: 0 }
-                  }
-                  transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                <TypingIntro enter={0.15} leave={0.85} />
+                <div
+                  {...fp(
+                    // Opacité de départ nulle : le titre compte pour le LCP à la fin de son entrée, à sa taille finale.
+                    { opacity: 0, lcpAtEnd: true, scale: 0.6, duration: 0.7, ease: BUBBLE_SPRING, delay: 0.85 },
+                    {
+                      className: "w-fit max-w-full origin-bottom-left px-6 py-6 sm:px-9 sm:py-8",
+                      style: {
+                        background: P.white,
+                        borderRadius: "34px 34px 34px 10px",
+                        boxShadow:
+                          "0 1px 0 rgba(23,21,43,0.04), 0 24px 50px -36px rgba(23,21,43,0.45)",
+                      },
+                    },
+                  )}
                 >
                   <h1
                     id="fq-titre"
@@ -170,34 +169,29 @@ export function ConversationHero({ items, themes, onOpen }: Props) {
                   >
                     La référence québécoise de la thermopompe.
                   </h1>
-                </motion.div>
+                </div>
               </div>
               <div className="relative mt-3">
-                <AnimatePresence initial={false}>
-                  {intro === 3 ? <Typing key="t2" side="left" /> : null}
-                </AnimatePresence>
-                <motion.p
-                  className="w-fit max-w-[600px] origin-bottom-left px-6 py-4 text-[16px] leading-[1.55] sm:text-[17px]"
-                  style={{
-                    background: P.white,
-                    borderRadius: "26px 26px 26px 8px",
-                    color: "rgba(23,21,43,0.8)",
-                    margin: 0,
-                    fontFamily: "var(--font-sans)",
-                    visibility: intro >= 4 || reduce ? "visible" : "hidden",
-                  }}
-                  initial={false}
-                  animate={
-                    intro >= 4 || reduce
-                      ? { scale: 1, opacity: 1 }
-                      : { scale: 0.6, opacity: 0 }
-                  }
-                  transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                <TypingIntro enter={1.25} leave={1.85} />
+                <p
+                  {...fp(
+                    { opacity: 0, scale: 0.6, duration: 0.7, ease: BUBBLE_SPRING, delay: 1.85 },
+                    {
+                      className: "w-fit max-w-[600px] origin-bottom-left px-6 py-4 text-[16px] leading-[1.55] sm:text-[17px]",
+                      style: {
+                        background: P.white,
+                        borderRadius: "26px 26px 26px 8px",
+                        color: "rgba(23,21,43,0.8)",
+                        margin: 0,
+                        fontFamily: "var(--font-sans)",
+                      },
+                    },
+                  )}
                 >
                   Des réponses exhaustives et transparentes, rédigées par des
                   experts de l’industrie du CVAC au Québec, pour vous
                   accompagner dans votre réflexion.
-                </motion.p>
+                </p>
               </div>
             </div>
 
@@ -206,12 +200,7 @@ export function ConversationHero({ items, themes, onOpen }: Props) {
           </div>
 
           {/* Barre de rédaction = recherche */}
-          <motion.div
-            className="mx-auto mt-8 max-w-[980px] lg:mt-6"
-            initial={reduce ? false : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: EASE, delay: 1.2 }}
-          >
+          <div {...fp({ opacity: 0, y: 16, duration: 0.9, ease: EASE, delay: 1.2 }, { className: "mx-auto mt-8 max-w-[980px] lg:mt-6" })}>
             <form role="search" onSubmit={submit}>
               <label htmlFor="faq-recherche" className="sr-only">
                 Rechercher une question
@@ -317,7 +306,7 @@ export function ConversationHero({ items, themes, onOpen }: Props) {
                 )}
               </div>
             )}
-          </motion.div>
+          </div>
         </div>
       </section>
     </MotionConfig>
@@ -519,17 +508,16 @@ function Dots({ dark }: { dark: boolean }) {
   );
 }
 
-function Typing({ side }: { side: "left" | "right" }) {
+/** Ressort des bulles d'introduction (raideur 260, amortissement 22), échantillonné par motion-dom sur 700 ms. */
+const BUBBLE_SPRING: FpEase =
+  "linear(0, 0.0124, 0.046, 0.0956, 0.157, 0.2263, 0.3002, 0.3761, 0.4518, 0.5254, 0.5956, 0.6615, 0.7223, 0.7776, 0.8271, 0.8709, 0.909, 0.9417, 0.9692, 0.992, 1.0104, 1.0248, 1.0358, 1.0437, 1.049, 1.0521, 1.0533, 1.053, 1.0515, 1.049, 1.0459, 1.0423, 1.0384, 1.0344, 1.0303, 1.0263, 1.0225, 1.019, 1.0156, 1.0126, 1.0099, 1.0075, 1.0054, 1.0035, 1.002, 1.0007, 0.9997, 0.9989, 0.9982, 0.9978, 0.9974, 0.9973, 1, 1, 1, 0.9973, 0.9975, 0.9977, 0.9979, 0.9981, 0.9983, 0.9985, 0.9987, 0.9989, 0.9991, 0.9993, 0.9994, 0.9996, 0.9997, 1)";
+
+/** Points de saisie de l'introduction, joués en CSS dès le premier rendu (.fq-typing, contenu.css) : entrée en
+ *  ressort à `enter` s, sortie à `leave` s, comme l'ancienne entrée / sortie motion ; cachés ensuite. */
+function TypingIntro({ enter, leave }: { enter: number; leave: number }) {
   return (
-    <motion.div
-      className={`absolute bottom-0 ${side === "left" ? "left-0" : "right-0"}`}
-      initial={{ opacity: 0, scale: 0.6 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.7, transition: { duration: 0.15 } }}
-      transition={{ type: "spring", stiffness: 320, damping: 24 }}
-      style={{ transformOrigin: "0% 100%" }}
-    >
+    <div className="fq-typing absolute bottom-0 left-0" style={{ transformOrigin: "0% 100%", ["--fq-in" as string]: `${enter}s`, ["--fq-out" as string]: `${leave}s` } as CSSProperties}>
       <Dots dark={false} />
-    </motion.div>
+    </div>
   );
 }

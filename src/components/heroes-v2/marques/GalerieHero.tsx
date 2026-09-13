@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, MotionConfig } from "motion/react";
 import { DISPLAY, EASE, fr, type Placard, calmNow, CALM } from "./shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { fp } from "@/components/hero/first-paint";
 
 /* ==================================================================
    « Galerie » : héros de l’annuaire des marques (/marques).
@@ -87,52 +88,33 @@ export function GalerieHero({ placards, totals, search, onSearch, resultCount, r
         <div className="grid gap-9 lg:grid-cols-[1.32fr_0.68fr] lg:items-end lg:gap-16">
           {/* Lettrage d’exposition */}
           <div>
-            <motion.p
-              className="flex items-center gap-4 text-[11.5px] font-semibold uppercase"
-              style={{ letterSpacing: "0.24em", margin: 0 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: 0.05 }}
-            >
+            <p {...fp({ opacity: 0, duration: 1, ease: EASE, delay: 0.05 }, { className: "flex items-center gap-4 text-[11.5px] font-semibold uppercase", style: { letterSpacing: "0.24em", margin: 0 } })}>
               <span>Annuaire des fabricants</span>
-              <motion.span
-                aria-hidden="true"
-                className="inline-block h-px w-12 origin-left"
-                style={{ background: C.ink }}
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: 0.3 }}
-              />
+              <span aria-hidden="true" {...fp({ scaleX: 0, duration: 1, ease: EASE, delay: 0.3 }, { className: "inline-block h-px w-12 origin-left", style: { background: C.ink } })} />
               <span style={{ color: C.faint }}>Québec</span>
-            </motion.p>
+            </p>
             <h1
               id="galerie-titre"
               style={{ fontSize: "clamp(40px, 5.5vw, 94px)", fontWeight: 500, letterSpacing: "-0.052em", lineHeight: 0.94, margin: "26px 0 0" }}
             >
               {lines.map((l, i) => (
                 // Lettrage posé sur le mur de gauche à droite, comme un vinyle qu’on applique.
-                <motion.span
+                <span
                   key={l}
-                  className="block"
-                  style={{ paddingBottom: "0.1em", marginBottom: "-0.1em" }}
-                  initial={{ clipPath: "inset(0 100% 0 0)" }}
-                  animate={{ clipPath: "inset(0 0% 0 0)" }}
-                  transition={calmNow() ? CALM : { duration: 1.25, ease: EASE, delay: 0.15 + i * 0.2 }}
+                  {...fp(
+                    { clipPath: "inset(0 100% 0 0)", duration: 1.25, ease: EASE, delay: 0.15 + i * 0.2 },
+                    { className: "block", style: { paddingBottom: "0.1em", marginBottom: "-0.1em", clipPath: "inset(0 0% 0 0)" } },
+                  )}
                 >
                   {l}
                   {i < lines.length - 1 ? " " : null}
-                </motion.span>
+                </span>
               ))}
             </h1>
           </div>
 
           {/* Texte mural et recherche */}
-          <motion.div
-            className="lg:pb-2"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: 0.75 }}
-          >
+          <div {...fp({ opacity: 0, y: 14, duration: 1, ease: EASE, delay: 0.75 }, { className: "lg:pb-2" })}>
             <p className="max-w-[440px] text-[16.5px] leading-[1.65]" style={{ color: C.mute, margin: 0, fontFamily: "var(--font-sans)" }}>
               Explorez les fabricants, les séries et les configurations documentées pour le marché québécois.
             </p>
@@ -176,7 +158,7 @@ export function GalerieHero({ placards, totals, search, onSearch, resultCount, r
                   : "La liste se filtre pendant que vous tapez."}
               </p>
             </form>
-          </motion.div>
+          </div>
         </div>
 
         {/* Le mur */}
@@ -185,13 +167,12 @@ export function GalerieHero({ placards, totals, search, onSearch, resultCount, r
             {hung.length === HANG.length ? (
               <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 -top-16 bottom-0 hidden lg:block">
                 {CENTERS.map((c, k) => (
-                  <motion.span
+                  <span
                     key={k}
-                    className="absolute top-0 h-full w-[24%] -translate-x-1/2"
-                    style={{ left: `${c}%`, background: "radial-gradient(ellipse 50% 48% at 50% 42%, rgba(255,253,246,0.9), rgba(255,253,246,0) 72%)" }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={calmNow() ? CALM : { duration: 1.4, ease: EASE, delay: Math.max(0, dropDelay(k) - 0.4) }}
+                    {...fp(
+                      { opacity: 0, duration: 1.4, ease: EASE, delay: Math.max(0, dropDelay(k) - 0.4) },
+                      { className: "absolute top-0 h-full w-[24%] -translate-x-1/2", style: { left: `${c}%`, background: "radial-gradient(ellipse 50% 48% at 50% 42%, rgba(255,253,246,0.9), rgba(255,253,246,0) 72%)" } },
+                    )}
                   />
                 ))}
               </div>
@@ -209,12 +190,11 @@ export function GalerieHero({ placards, totals, search, onSearch, resultCount, r
         ) : null}
 
         {/* Chiffres du catalogue, comme la ligne de texte d’une salle */}
-        <motion.div
-          className="relative mt-10 flex flex-wrap items-baseline gap-x-10 gap-y-3 py-5 lg:mt-12"
-          style={{ borderTop: `1px solid ${C.line}` }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: 1.7 }}
+        <div
+          {...fp(
+            { opacity: 0, duration: 1, ease: EASE, delay: 1.7 },
+            { className: "relative mt-10 flex flex-wrap items-baseline gap-x-10 gap-y-3 py-5 lg:mt-12", style: { borderTop: `1px solid ${C.line}` } },
+          )}
         >
           <p className="text-[11px] font-semibold uppercase" style={{ letterSpacing: "0.22em", color: C.faint, margin: 0 }}>
             Au catalogue
@@ -231,7 +211,7 @@ export function GalerieHero({ placards, totals, search, onSearch, resultCount, r
               </div>
             ))}
           </dl>
-        </motion.div>
+        </div>
       </div>
 
       {/* Plinthe */}
@@ -288,7 +268,7 @@ function Frame({ p, w, ratio, rank, delay, tilt, wideOnly }: { p: Placard; w: nu
             </div>
           </div>
         </motion.div>
-        {/* Cartel : hors du flux, pour que les centres des cadres restent alignés. */}
+        {/* Cartel : hors du flux, pour que les centres des cadres restent alignés. Il reste sur motion, à l’horloge de son cadre (ressorts). */}
         <motion.span
           className="absolute left-0 top-full mt-4 flex w-max max-w-[calc(100%+28px)] flex-col px-2.5 py-2"
           style={{ background: C.card, boxShadow: "0 1px 2px rgba(34,33,31,0.08), 0 0 0 1px rgba(34,33,31,0.05)" }}

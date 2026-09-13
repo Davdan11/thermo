@@ -3,6 +3,7 @@
 import "./contenu.css";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView, MotionConfig } from "motion/react";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { fraunces, FRAUNCES } from "./fonts";
 import { DISPLAY, EASE, UNDER_HEADER, useReducedSafe } from "./shared";
 
@@ -118,12 +119,15 @@ export function DictionaryHero({
       >
         <div className="relative mx-auto max-w-[1440px] px-5 pb-10 pt-[124px] sm:px-8 lg:px-12 min-[1700px]:pt-[140px]">
           {/* Titre courant du dictionnaire */}
-          <motion.div
-            className="grid grid-cols-[1fr_auto] items-end gap-4 pb-2 sm:grid-cols-[1fr_auto_1fr]"
-            style={{ borderBottom: `4px double ${P.ink}` }}
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+          <div
+            {...fp(
+              { opacity: 0, duration: 0.8 },
+              {
+                className:
+                  "grid grid-cols-[1fr_auto] items-end gap-4 pb-2 sm:grid-cols-[1fr_auto_1fr]",
+                style: { borderBottom: `4px double ${P.ink}` },
+              },
+            )}
           >
             <span
               className="text-[11px] font-semibold uppercase"
@@ -150,7 +154,7 @@ export function DictionaryHero({
             >
               {termCount} termes · {letters.length} lettres
             </span>
-          </motion.div>
+          </div>
 
           <div className="mt-8 grid gap-10 lg:mt-12 lg:grid-cols-12 lg:gap-14">
             {/* Titre et chapeau */}
@@ -170,41 +174,50 @@ export function DictionaryHero({
                 <span
                   style={{
                     display: "block",
-                    overflow: "hidden",
                     paddingBottom: "0.08em",
                   }}
                 >
-                  <motion.span
-                    style={{ display: "inline-block" }}
-                    initial={reduce ? false : { y: "100%" }}
-                    animate={{ y: "0%" }}
-                    transition={{ duration: 1.1, ease: EASE, delay: 0.15 }}
+                  {/* Masque en clip-path (fpLine). Retrait droit 0,25em : le parent (bloc) dépassait
+                      la ligne à droite, l'encre du point final n'y était jamais coupée. */}
+                  <span
+                    {...fpLine(
+                      {
+                        y: "100%",
+                        pad: ["0px", "0.25em", "0.08em", "0px"],
+                        duration: 1.1,
+                        ease: EASE,
+                        delay: 0.15,
+                      },
+                      { style: { display: "inline-block" } },
+                    )}
                   >
                     Glossaire<span style={{ color: P.ox }}>.</span>
-                  </motion.span>
+                  </span>
                 </span>
               </h1>
-              <motion.p
-                className="text-[17px] leading-[1.65]"
-                style={{
-                  color: P.mute,
-                  maxWidth: 470,
-                  margin: "22px 0 0",
-                  fontFamily: "var(--font-sans)",
-                }}
-                initial={reduce ? false : { opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: EASE, delay: 0.45 }}
+              <p
+                {...fp(
+                  { opacity: 0, y: 10, duration: 1, ease: EASE, delay: 0.45 },
+                  {
+                    className: "text-[17px] leading-[1.65]",
+                    style: {
+                      color: P.mute,
+                      maxWidth: 470,
+                      margin: "22px 0 0",
+                      fontFamily: "var(--font-sans)",
+                    },
+                  },
+                )}
               >
                 Décodez le jargon de l’industrie. Des définitions claires et
                 exhaustives pour maîtriser les termes techniques, de l’achat à
                 l’entretien.
-              </motion.p>
-              <motion.div
-                initial={reduce ? false : { opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: EASE, delay: 0.6 }}
-                className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4"
+              </p>
+              <div
+                {...fp(
+                  { opacity: 0, y: 10, duration: 1, ease: EASE, delay: 0.6 },
+                  { className: "mt-8 flex flex-wrap items-center gap-x-8 gap-y-4" },
+                )}
               >
                 <a
                   href="#lexique"
@@ -262,7 +275,7 @@ export function DictionaryHero({
                     </span>
                   </span>
                 </p>
-              </motion.div>
+              </div>
             </div>
 
             {/* L'entrée qui tourne comme une page */}
@@ -278,10 +291,14 @@ export function DictionaryHero({
                     setHold(false);
                 }}
               >
-                <motion.div
-                  initial={reduce ? false : { opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.1, ease: EASE, delay: 0.35 }}
+                <div
+                  {...fp({
+                    opacity: 0,
+                    y: 24,
+                    duration: 1.1,
+                    ease: EASE,
+                    delay: 0.35,
+                  })}
                 >
                   <div
                     className="relative h-[500px] sm:h-[440px] lg:h-[430px]"
@@ -399,7 +416,7 @@ export function DictionaryHero({
                       Entrée suivante →
                     </button>
                   </div>
-                </motion.div>
+                </div>
               </div>
             ) : null}
           </div>
@@ -421,16 +438,18 @@ export function DictionaryHero({
                 const e = byLetter.get(L);
                 const on = L === curLetter;
                 return (
-                  <motion.li
+                  <li
                     key={L}
-                    className="relative flex-1"
-                    initial={reduce ? false : { opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.6,
-                      ease: EASE,
-                      delay: 0.8 + k * 0.025,
-                    }}
+                    {...fp(
+                      {
+                        opacity: 0,
+                        y: 8,
+                        duration: 0.6,
+                        ease: EASE,
+                        delay: 0.8 + k * 0.025,
+                      },
+                      { className: "relative flex-1" },
+                    )}
                   >
                     {e ? (
                       <a
@@ -471,7 +490,7 @@ export function DictionaryHero({
                         {L}
                       </span>
                     )}
-                  </motion.li>
+                  </li>
                 );
               })}
             </ul>

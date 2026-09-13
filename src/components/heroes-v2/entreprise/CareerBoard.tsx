@@ -2,7 +2,7 @@
 
 import "./entreprise.css";
 import { useEffect, useState } from "react";
-import { motion, MotionConfig } from "motion/react";
+import { fp } from "@/components/hero/first-paint";
 import { xeMono } from "./fonts";
 import { Arrow, EASE, HEADER_PAD, UNDER_HEADER, XLink, useReducedSafe } from "./shared";
 
@@ -135,30 +135,22 @@ export function CareerBoard({ postes }: { postes: Poste[] }) {
   ];
 
   return (
-    <MotionConfig reducedMotion="user">
     <section aria-labelledby="carriere-titre" className={`xe-root ${xeMono.variable} relative overflow-hidden ${UNDER_HEADER}`} style={{ background: C.orange, color: C.cream }}>
       <div className={`relative mx-auto max-w-[1440px] px-5 pb-12 sm:px-8 lg:px-12 lg:pb-16 ${HEADER_PAD}`}>
-        <motion.p className="xe-mono flex items-center gap-3 text-[12px] uppercase" style={{ letterSpacing: "0.2em", color: C.mute, margin: 0 }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.1 }}>
+        <p {...fp({ opacity: 0, duration: 0.8, delay: 0.1 }, { className: "xe-mono flex items-center gap-3 text-[12px] uppercase", style: { letterSpacing: "0.2em", color: C.mute, margin: 0 } })}>
           <span aria-hidden="true" className="inline-block h-[9px] w-[9px]" style={{ background: C.ink }} />
           Carrières
-        </motion.p>
+        </p>
 
         <h1 id="carriere-titre" className="mt-5" style={{ fontSize: "clamp(46px, 7.2vw, 128px)", lineHeight: 0.9, letterSpacing: "-0.055em", fontWeight: 800, margin: "20px 0 0", perspective: 900 }}>
           {lines.map((l, i) => (
-            <motion.span
-              key={l.text}
-              className="block origin-top"
-              style={{ color: l.color, paddingBottom: "0.06em" }}
-              initial={reduce ? false : { rotateX: -90, opacity: 0 }}
-              animate={{ rotateX: 0, opacity: 1 }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.2 + i * 0.16 }}
-            >
+            <span key={l.text} {...fp({ rotateX: -90, opacity: 0, duration: 0.9, ease: EASE, delay: 0.2 + i * 0.16 }, { className: "block origin-top", style: { color: l.color, paddingBottom: "0.06em" } })}>
               {l.text}
-            </motion.span>
+            </span>
           ))}
         </h1>
 
-        <motion.div className="mt-8 grid items-end gap-6 lg:mt-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-12" initial={reduce ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.6 }}>
+        <div {...fp({ opacity: 0, y: 14, duration: 0.9, ease: EASE, delay: 0.6 }, { className: "mt-8 grid items-end gap-6 lg:mt-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-12" })}>
           <p className="max-w-[560px] text-[17px] leading-[1.6] sm:text-[18px]" style={{ color: C.mute, margin: 0 }}>
             Nous sommes toujours à la recherche de talents passionnés pour simplifier l’achat et l’installation de thermopompes au Québec.
           </p>
@@ -170,7 +162,7 @@ export function CareerBoard({ postes }: { postes: Poste[] }) {
               Nous écrire
             </XLink>
           </div>
-        </motion.div>
+        </div>
 
         {/* Tableau des départs */}
         {postes.length > 0 && (
@@ -189,7 +181,7 @@ export function CareerBoard({ postes }: { postes: Poste[] }) {
             </p>
             <ul style={{ listStyle: "none", margin: 0, padding: 0, borderBottom: `1px solid ${C.line}` }}>
               {postes.map((p, i) => (
-                <motion.li key={p.title} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.9 + i * 0.2 }} style={{ borderTop: `1px solid ${C.line}` }}>
+                <li key={p.title} {...fp({ opacity: 0, duration: 0.4, delay: 0.9 + i * 0.2 }, { style: { borderTop: `1px solid ${C.line}` } })}>
                   <XLink href="#postes" className="xe-board-row grid grid-cols-[34px_minmax(0,1fr)_24px] items-center gap-x-3 gap-y-1.5 py-4 lg:grid-cols-[80px_minmax(0,1fr)_170px_220px_40px] lg:gap-x-6 lg:py-5" style={{ color: C.cream }}>
                     <span className="xe-mono text-[13px] lg:text-[15px]" style={{ color: C.ink, fontWeight: 600 }}>
                       {String(i + 1).padStart(2, "0")}
@@ -212,13 +204,12 @@ export function CareerBoard({ postes }: { postes: Poste[] }) {
                       <Arrow size={22} />
                     </span>
                   </XLink>
-                </motion.li>
+                </li>
               ))}
             </ul>
           </div>
         )}
       </div>
     </section>
-    </MotionConfig>
   );
 }

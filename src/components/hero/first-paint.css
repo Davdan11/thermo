@@ -1,0 +1,22 @@
+/* ==================================================================
+   Entrées des héros jouées par le navigateur dès le premier rendu
+   (préfixe fp-), sans attendre le JavaScript : le titre et le texte
+   du héros comptent pour le LCP dès le premier affichage.
+   Chaque élément reçoit, par fp() / fpLine() (first-paint.ts), la même
+   courbe, la même durée et le même délai que son ancienne entrée motion.
+   Les images clés ne décrivent que le départ : l'arrivée est l'état
+   naturel de l'élément (celui que motion laissait à la fin).
+   - Opacité de départ 0,001 au lieu de 0 (invisible) : Chrome ne compte
+     jamais dans le LCP un texte qui part d'une opacité nulle en CSS.
+   - Ligne de titre qui monte derrière un masque : le masque est un
+     clip-path animé avec la ligne (un overflow:hidden sur le parent
+     exclurait aussi le titre du LCP). Rendu identique au pixel près.
+   ================================================================== */
+@keyframes fp-o { from { opacity: var(--fp-o); } }
+@keyframes fp-t { from { transform: var(--fp-t); } }
+@keyframes fp-c { from { clip-path: var(--fp-c); } }
+
+/* « Réduire les animations » : état final d'emblée, comme useReduced(). */
+@media (prefers-reduced-motion: reduce) {
+  .fp { animation: none !important; }
+}

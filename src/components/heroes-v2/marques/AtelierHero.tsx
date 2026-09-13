@@ -7,6 +7,7 @@ import { motion, MotionConfig } from "motion/react";
 import { Crumbs } from "./Crumbs";
 import { PLATES, type Callout, type Fan } from "./atelier-plates";
 import { DISPLAY, EASE, MONO, PHONE, REASSURANCE, type AtelierVariant, type Crumb, calmNow, CALM } from "./shared";
+import { fp } from "@/components/hero/first-paint";
 
 /* ==================================================================
    « Plan d’atelier » : héros des guides (/thermopompes/[slug]).
@@ -167,21 +168,20 @@ export function AtelierHero({ eyebrow, title, intro, crumbs, variant }: { eyebro
       style={{ background: `radial-gradient(ellipse 85% 75% at 32% 30%, #124677 0%, ${B.blue} 55%, ${B.deep} 100%)`, color: "#FFFFFF", fontFamily: DISPLAY }}
     >
       {/* Cadre de la feuille, double filet */}
-      <motion.div
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-3 bottom-3 top-[100px] sm:inset-x-5 sm:bottom-5 min-[1700px]:top-[112px]"
-        style={{ border: `1px solid ${B.hair}` }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={calmNow() ? CALM : { duration: 1.2, delay: 0.1 }}
+        {...fp(
+          { opacity: 0, duration: 1.2, delay: 0.1 },
+          { className: "pointer-events-none absolute inset-x-3 bottom-3 top-[100px] sm:inset-x-5 sm:bottom-5 min-[1700px]:top-[112px]", style: { border: `1px solid ${B.hair}` } },
+        )}
       >
         <span className="absolute inset-[6px]" style={{ border: "1px solid rgba(169,198,232,0.16)" }} />
-      </motion.div>
+      </div>
 
       <div className="relative mx-auto max-w-[1440px] px-7 pb-14 pt-[128px] sm:px-12 lg:px-14 min-[1700px]:pt-[146px]">
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={calmNow() ? CALM : { duration: 1, delay: 0.15 }}>
+        <div {...fp({ opacity: 0, duration: 1, delay: 0.15 })}>
           <Crumbs items={crumbs} className="text-[11px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.14em", color: B.pale }} />
-        </motion.div>
+        </div>
 
         <div className="mt-7 grid gap-9 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-8">
           {/* Planche */}
@@ -198,12 +198,7 @@ export function AtelierHero({ eyebrow, title, intro, crumbs, variant }: { eyebro
           </div>
 
           {/* Notes : texte d’intro et appels à l’action */}
-          <motion.div
-            className="order-3 min-w-0 lg:order-none lg:col-span-5 lg:pt-6 xl:pl-8"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: 0.9 }}
-          >
+          <div {...fp({ opacity: 0, y: 14, duration: 1, ease: EASE, delay: 0.9 }, { className: "order-3 min-w-0 lg:order-none lg:col-span-5 lg:pt-6 xl:pl-8" })}>
             <p className="text-[11px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.24em", color: B.pale, margin: 0 }}>
               Notes
             </p>
@@ -242,15 +237,10 @@ export function AtelierHero({ eyebrow, title, intro, crumbs, variant }: { eyebro
                 </p>
               </li>
             </ol>
-          </motion.div>
+          </div>
 
           {/* Légende des traits */}
-          <motion.div
-            className="order-4 hidden lg:order-none lg:col-span-5 lg:flex lg:items-end"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={calmNow() ? CALM : { duration: 1, delay: 1.6 }}
-          >
+          <div {...fp({ opacity: 0, duration: 1, delay: 1.6 }, { className: "order-4 hidden lg:order-none lg:col-span-5 lg:flex lg:items-end" })}>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pb-1 text-[10px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.1em", color: B.faint }}>
               <span style={{ color: B.pale }}>Légende</span>
               {[
@@ -267,15 +257,14 @@ export function AtelierHero({ eyebrow, title, intro, crumbs, variant }: { eyebro
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Cartouche : le titre du guide */}
-          <motion.div
-            className="order-1 min-w-0 lg:order-none lg:col-span-7"
-            style={{ border: "1.5px solid rgba(255,255,255,0.88)" }}
-            initial={{ clipPath: "inset(0 100% 0 0)" }}
-            animate={{ clipPath: "inset(0 0% 0 0)" }}
-            transition={calmNow() ? CALM : { duration: 1.3, ease: EASE, delay: 0.25 }}
+          <div
+            {...fp(
+              { clipPath: "inset(0 100% 0 0)", duration: 1.3, ease: EASE, delay: 0.25 },
+              { className: "order-1 min-w-0 lg:order-none lg:col-span-7", style: { border: "1.5px solid rgba(255,255,255,0.88)", clipPath: "inset(0 0% 0 0)" } },
+            )}
           >
             <div className="px-5 py-4 sm:px-6 sm:py-5" style={{ borderBottom: `1px solid ${B.hair}` }}>
               <p className="text-[10px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.24em", color: B.pale, margin: 0 }}>
@@ -300,7 +289,7 @@ export function AtelierHero({ eyebrow, title, intro, crumbs, variant }: { eyebro
                 </div>
               ))}
             </dl>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

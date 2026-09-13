@@ -3,6 +3,7 @@
 import "./entreprise.css";
 import { useEffect, useState, type CSSProperties } from "react";
 import { motion, MotionConfig } from "motion/react";
+import { fp } from "@/components/hero/first-paint";
 import { ADVISORS, MODES, MODE_IDS, SLOTS, addDays, formatDateFr, hourLabel, isClosedDay, isTooSoon, todayInMontreal, weekdayOf, type ModeId } from "@/lib/rdv/booking";
 import { xeMono } from "./fonts";
 import { Arrow, EASE, HEADER_PAD, PHONE, PHONE_HREF, UNDER_HEADER, XLink, useReducedSafe } from "./shared";
@@ -68,34 +69,33 @@ function buildWeek(nowDate: Date): Week {
 }
 
 export function BookingHero({ mode }: { mode: ModeId }) {
-  const reduce = useReducedSafe();
   return (
     <MotionConfig reducedMotion="user">
     <section aria-labelledby="rv-titre" className={`xe-root ${xeMono.variable} relative overflow-hidden ${UNDER_HEADER}`} style={{ background: C.peach, color: C.ink }}>
       <div className={`relative mx-auto grid max-w-[1440px] gap-12 px-5 pb-16 sm:px-8 lg:min-h-[min(92svh,860px)] lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center lg:gap-14 lg:px-12 lg:pb-20 ${HEADER_PAD}`}>
         <div className="min-w-0">
-          <motion.p className="xe-mono text-[12px] uppercase" style={{ letterSpacing: "0.18em", color: C.mute, margin: 0 }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.1 }}>
+          <p {...fp({ opacity: 0, duration: 0.7, delay: 0.1 }, { className: "xe-mono text-[12px] uppercase", style: { letterSpacing: "0.18em", color: C.mute, margin: 0 } })}>
             Rendez-vous avec un conseiller
-          </motion.p>
+          </p>
           <h1 id="rv-titre" style={{ fontSize: "clamp(40px, 4.9vw, 88px)", lineHeight: 0.98, letterSpacing: "-0.05em", margin: "22px 0 0" }}>
-            <motion.span className="block" style={{ fontWeight: 700 }} initial={reduce ? false : { opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay: 0.2 }}>
+            <span {...fp({ opacity: 0, y: 20, duration: 1, ease: EASE, delay: 0.2 }, { className: "block", style: { fontWeight: 700 } })}>
               Choisissez le moment.
-            </motion.span>
-            <motion.span className="block" style={{ fontWeight: 300, color: C.mute }} initial={reduce ? false : { opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay: 0.32 }}>
+            </span>
+            <span {...fp({ opacity: 0, y: 20, duration: 1, ease: EASE, delay: 0.32 }, { className: "block", style: { fontWeight: 300, color: C.mute } })}>
               On s’occupe du reste.
-            </motion.span>
+            </span>
           </h1>
-          <motion.p className="max-w-[540px] text-[17px] leading-[1.65] sm:text-[18px]" style={{ color: C.mute, margin: "24px 0 0" }} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.5 }}>
+          <p {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE, delay: 0.5 }, { className: "max-w-[540px] text-[17px] leading-[1.65] sm:text-[18px]", style: { color: C.mute, margin: "24px 0 0" } })}>
             Un appel, une rencontre en ligne sur Google Meet ou une visite à domicile, gratuitement et sans engagement. Confirmation immédiate. Nous sommes ouverts du lundi au vendredi de 8&nbsp;h à 18&nbsp;h ; les rendez-vous se prennent de 8&nbsp;h à 17&nbsp;h.
-          </motion.p>
-          <motion.div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4" initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.65 }}>
+          </p>
+          <div {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE, delay: 0.65 }, { className: "mt-9 flex flex-wrap items-center gap-x-7 gap-y-4" })}>
             <XLink href="#reservation" className="inline-flex items-center gap-3 rounded-[10px] px-6 py-4 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#1B1512]" style={{ background: C.orange }}>
               Réserver mon moment <Arrow />
             </XLink>
             <XLink href={PHONE_HREF} className="xe-under pb-1 text-[15px] font-semibold" style={{ color: C.ink }}>
               {`Appeler le ${PHONE}`}
             </XLink>
-          </motion.div>
+          </div>
         </div>
 
         <WallCalendar mode={mode} />
@@ -140,8 +140,9 @@ function WallCalendar({ mode }: { mode: ModeId }) {
     };
   }, [reduce]);
 
+  // Entrée en CSS dès le premier rendu ; l'arrivée garde l'inclinaison de -1,2° (transformation de style, vers laquelle l'entrée interpole).
   return (
-    <motion.div className="relative mx-auto w-full max-w-[680px] lg:mr-0" initial={reduce ? false : { opacity: 0, y: 30, rotate: -3 }} animate={{ opacity: 1, y: 0, rotate: -1.2 }} transition={{ duration: 1.1, ease: EASE, delay: 0.3 }}>
+    <div {...fp({ opacity: 0, y: 30, rotate: -3, duration: 1.1, ease: EASE, delay: 0.3 }, { className: "relative mx-auto w-full max-w-[680px] lg:mr-0", style: { transform: "translateY(0px) rotate(-1.2deg)" } })}>
       {/* Pages du bloc, dessous */}
       <div aria-hidden="true" className="absolute inset-0 translate-x-[7px] translate-y-[9px] rotate-[1.6deg]" style={{ ...paper, background: "#F6E2D5" }} />
       <div aria-hidden="true" className="absolute inset-0 translate-x-[3px] translate-y-[4px] rotate-[0.7deg]" style={{ ...paper, background: "#FBEEE5" }} />
@@ -186,7 +187,7 @@ function WallCalendar({ mode }: { mode: ModeId }) {
           </p>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

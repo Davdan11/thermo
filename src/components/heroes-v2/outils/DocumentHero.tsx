@@ -6,6 +6,7 @@ import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { HERO_EASE } from "@/components/hero/HeroKit";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { DISPLAY, MONO, SERIF, outilsMono } from "./fonts";
 
 /* ==================================================================
@@ -108,9 +109,9 @@ export function DocumentHero({
 
         {/* Filet orange */}
         <div className="relative mt-4" aria-hidden="true" style={{ height: variant === "conditions" ? 4 : ruleH }}>
-          <motion.span className="absolute inset-x-0 top-0 block origin-left" style={{ height: ruleH, background: D.orange }} initial={reduce ? false : { scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.3, ease: HERO_EASE, delay: 0.15 }} />
+          <span {...fp({ scaleX: 0, duration: 1.3, ease: HERO_EASE, delay: 0.15 }, { className: "absolute inset-x-0 top-0 block origin-left", style: { height: ruleH, background: D.orange } })} />
           {variant === "conditions" && (
-            <motion.span className="absolute inset-x-0 bottom-0 block h-px origin-left" style={{ background: D.orange }} initial={reduce ? false : { scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.3, ease: HERO_EASE, delay: 0.3 }} />
+            <span {...fp({ scaleX: 0, duration: 1.3, ease: HERO_EASE, delay: 0.3 }, { className: "absolute inset-x-0 bottom-0 block h-px origin-left", style: { background: D.orange } })} />
           )}
         </div>
 
@@ -118,11 +119,11 @@ export function DocumentHero({
           <div className="min-w-0">
             <h1 id="doc-titre" style={{ fontSize: "clamp(42px, min(5.4vw, 10vh), 84px)", fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 0.98, margin: 0, textWrap: "balance" }}>
               {titleLines.map((l, i) => (
-                <span key={i} className="block overflow-hidden pb-[0.08em]">
-                  <motion.span className="block" initial={reduce ? false : { y: "105%" }} animate={{ y: "0%" }} transition={{ duration: 1, ease: HERO_EASE, delay: 0.25 + i * 0.1 }}>
+                <span key={i} className="block pb-[0.08em]">
+                  <span {...fpLine({ y: "105%", pad: ["0px", "0px", "0.08em", "0px"], duration: 1, ease: HERO_EASE, delay: 0.25 + i * 0.1 }, { className: "block" })}>
                     {typo(l)}
                     {i < titleLines.length - 1 ? " " : null}
-                  </motion.span>
+                  </span>
                 </span>
               ))}
             </h1>
@@ -177,7 +178,7 @@ function Toc({ variant, toc, reduce }: { variant: DocumentVariant; toc: { headin
   return (
     <nav aria-label={typo(toc.heading)} className="relative min-w-0 lg:pt-3">
       {variant === "conditions" && (
-        <motion.span aria-hidden="true" className="absolute -left-6 bottom-0 top-3 hidden w-px origin-top lg:block" style={{ background: D.orange }} initial={reduce ? false : { scaleY: 0 }} animate={{ scaleY: 1 }} transition={{ duration: 1.4, ease: HERO_EASE, delay: 0.5 }} />
+        <span aria-hidden="true" {...fp({ scaleY: 0, duration: 1.4, ease: HERO_EASE, delay: 0.5 }, { className: "absolute -left-6 bottom-0 top-3 hidden w-px origin-top lg:block", style: { background: D.orange } })} />
       )}
       <Fade delay={0.55} className="flex items-baseline justify-between gap-4 pb-3" style={{ borderBottom: `1px solid ${D.ink}` }}>
         <p className="text-[11px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.18em", color: D.ink, margin: 0 }}>
@@ -193,7 +194,7 @@ function Toc({ variant, toc, reduce }: { variant: DocumentVariant; toc: { headin
         {toc.items.map((it, i) => {
           const d = base + i * 0.09;
           return (
-            <motion.li key={it.id} className="relative" style={{ borderBottom: `1px solid ${D.hair}` }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: d }}>
+            <li key={it.id} {...fp({ opacity: 0, duration: 0.5, delay: d }, { className: "relative", style: { borderBottom: `1px solid ${D.hair}` } })}>
               {variant === "accessibilite" && (
                 <motion.span
                   aria-hidden="true"
@@ -214,7 +215,7 @@ function Toc({ variant, toc, reduce }: { variant: DocumentVariant; toc: { headin
                 </span>
                 {variant === "conditions" ? (
                   <>
-                    <motion.span aria-hidden="true" className="mb-[5px] hidden min-w-6 flex-1 origin-left self-end sm:block" style={{ borderBottom: "1px dotted rgba(17,20,24,0.4)" }} initial={reduce ? false : { scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.6, ease: HERO_EASE, delay: d + 0.2 }} />
+                    <span aria-hidden="true" {...fp({ scaleX: 0, duration: 0.6, ease: HERO_EASE, delay: d + 0.2 }, { className: "mb-[5px] hidden min-w-6 flex-1 origin-left self-end sm:block", style: { borderBottom: "1px dotted rgba(17,20,24,0.4)" } })} />
                     <span className="ml-auto shrink-0 text-[11px] sm:ml-0" style={{ fontFamily: MONO, color: D.soft }}>
                       art.&nbsp;{i + 1}
                     </span>
@@ -225,7 +226,7 @@ function Toc({ variant, toc, reduce }: { variant: DocumentVariant; toc: { headin
                   </span>
                 )}
               </a>
-            </motion.li>
+            </li>
           );
         })}
       </ol>
@@ -236,23 +237,19 @@ function Toc({ variant, toc, reduce }: { variant: DocumentVariant; toc: { headin
 /** Bande d'encre qui recouvre l'intitulé, puis se retire (caviardage levé). */
 function Redaction({ delay, reduce }: { delay: number; reduce: boolean }) {
   if (reduce) return null;
+  // Arrivée (bande retirée, scaleX 0) posée en style : fp() ne décrit que le départ.
   return (
-    <motion.span
+    <span
       aria-hidden="true"
-      className="pointer-events-none absolute -inset-x-0.5 inset-y-[3px] origin-right"
-      style={{ background: D.ink }}
-      initial={{ scaleX: 1 }}
-      animate={{ scaleX: 0 }}
-      transition={{ duration: 0.55, ease: [0.65, 0, 0.35, 1], delay: delay + 0.5 }}
+      {...fp({ scaleX: 1, duration: 0.55, ease: [0.65, 0, 0.35, 1], delay: delay + 0.5 }, { className: "pointer-events-none absolute -inset-x-0.5 inset-y-[3px] origin-right", style: { background: D.ink, transform: "scaleX(0)" } })}
     />
   );
 }
 
 function Fade({ children, delay, className, style }: { children: ReactNode; delay: number; className?: string; style?: CSSProperties }) {
-  const reduce = useReduced();
   return (
-    <motion.div className={className} style={style} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: HERO_EASE, delay }}>
+    <div {...fp({ opacity: 0, y: 10, duration: 0.9, ease: HERO_EASE, delay }, { className, style })}>
       {children}
-    </motion.div>
+    </div>
   );
 }

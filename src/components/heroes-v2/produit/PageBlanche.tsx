@@ -5,6 +5,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MotionConfig, motion } from "motion/react";
+import { fp } from "@/components/hero/first-paint";
 import { Tick, fmtNum, useReducedSafe } from "./Tick";
 
 /* ==================================================================
@@ -105,9 +106,9 @@ export function PageBlanche({ q, total, counts, thumbs, crumbs }: { q: string; t
     <MotionConfig reducedMotion="user">
     <section aria-labelledby="pb-titre" className="pb-root pv2-root relative -mt-[93px] overflow-hidden min-[1700px]:-mt-[105px]" style={{ background: PAPER, color: INK, fontFamily: DISPLAY }}>
       <div className="relative mx-auto max-w-[1280px] px-5 pb-14 pt-[132px] text-center sm:px-8 lg:pb-16 min-[1700px]:pt-[150px]">
-        <motion.div className="pb-crumbs flex justify-center" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+        <div {...fp({ opacity: 0, duration: 0.8 }, { className: "pb-crumbs flex justify-center" })}>
           {crumbs}
-        </motion.div>
+        </div>
 
         <h1 id="pb-titre" className="mx-auto" style={{ margin: "34px 0 0", fontSize: 12, fontWeight: 600, letterSpacing: "0.3em", textTransform: "uppercase", color: MUTE }}>
           {q ? "Résultats pour" : "Recherche"}
@@ -158,14 +159,11 @@ export function PageBlanche({ q, total, counts, thumbs, crumbs }: { q: string; t
         )}
 
         {/* Champ : un simple trait qui se dessine */}
-        <motion.form
+        <form
           action="/recherche"
           method="get"
           role="search"
-          className="pb-field mx-auto mt-10 flex max-w-[640px] items-center gap-4"
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: reduce ? 0 : 0.4 }}
+          {...fp({ opacity: 0, duration: 0.8, delay: 0.4 }, { className: "pb-field mx-auto mt-10 flex max-w-[640px] items-center gap-4" })}
         >
           <input
             type="search"
@@ -182,15 +180,11 @@ export function PageBlanche({ q, total, counts, thumbs, crumbs }: { q: string; t
               <path d="M5 12h14M13 5l7 7-7 7" />
             </svg>
           </button>
-          <motion.span
+          <span
             aria-hidden="true"
-            className="pb-rule pointer-events-none absolute inset-x-0 bottom-0 block h-px origin-center"
-            style={{ background: INK }}
-            initial={reduce ? false : { scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1.1, ease: EASE, delay: reduce ? 0 : 0.5 }}
+            {...fp({ scaleX: 0, duration: 1.1, ease: EASE, delay: 0.5 }, { className: "pb-rule pointer-events-none absolute inset-x-0 bottom-0 block h-px origin-center", style: { background: INK } })}
           />
-        </motion.form>
+        </form>
 
         {(!q || total === 0) && (
           <div className="mt-6 flex flex-wrap justify-center gap-2">

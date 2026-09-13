@@ -1,14 +1,15 @@
 "use client";
 
 import "./catalogue-hero.css";
-import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties, type FocusEvent, type KeyboardEvent, type MouseEvent, type PointerEvent, type ReactNode, type SyntheticEvent } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties, type FocusEvent, type KeyboardEvent, type MouseEvent, type PointerEvent, type ReactNode, type RefObject, type SyntheticEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { AnimatePresence, MotionConfig, animate, motion, useAnimationFrame, useMotionValue, useMotionValueEvent, useTransform, type MotionValue } from "motion/react";
+import { AnimatePresence, MotionConfig, animate, motion, useMotionValue, useMotionValueEvent, useTransform, type MotionValue } from "motion/react";
 import { CountUp } from "@/components/home/premium/shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { fmtNum } from "@/components/heroes-v2/produit/Tick";
+import { fp, fpLine, type FpEase } from "@/components/hero/first-paint";
 
 /* ==================================================================
    Héros du catalogue (/thermopompes) : « Le showroom ».
@@ -25,7 +26,11 @@ import { fmtNum } from "@/components/heroes-v2/produit/Tick";
    - Glisser (souris ou doigt), flèches du clavier, pause au survol et au
      focus clavier ; clic sur l’appareil de devant : sa fiche. La légende
      sous le plateau nomme la marque et la capacité, et mène à la fiche.
+   - Au repos, la rotation est jouée par le compositeur (WAAPI) : le fil
+     principal reste libre ; motion reprend la main au premier geste.
    - Animations réduites : arrangement fixe, l’appareil de devant éclairé.
+   - Entrées du titre, du texte et des chiffres en CSS dès le premier rendu
+     (first-paint.ts) : le titre compte pour le LCP sans attendre le JS.
    ================================================================== */
 
 export type WallItem = { slug: string; brand: string; btu: number | null; img: string };
@@ -40,6 +45,10 @@ const C = {
   line: "rgba(18,20,23,0.14)",
 };
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+/** Ressort des raccourcis (raideur 420, amortissement 22), échantillonné par motion-dom en 550 ms :
+ *  la même courbe que motion jouait, mais en CSS dès le premier rendu. */
+const CHIP_SPRING: FpEase =
+  "linear(0, 0.0202, 0.0744, 0.1537, 0.2501, 0.3562, 0.4661, 0.5747, 0.678, 0.7731, 0.858, 0.9313, 0.9926, 1.0419, 1.0796, 1.1067, 1.1242, 1.1333, 1.1355, 1.1319, 1.1239, 1.1127, 1.0994, 1.0849, 1.0699, 1.0553, 1.0415, 1.0288, 1.0175, 1.0079, 0.9998, 0.9934, 0.9885, 0.9851, 0.9829, 0.9818, 0.9817, 0.9823, 0.9834, 0.985, 0.9868, 0.9888, 0.9908, 0.9928, 0.9947, 0.9964, 0.9979, 0.9991, 1.0002, 1.001, 1.0016, 1.0021, 1.0024, 1, 1)";
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
 
 const CHIPS = [
@@ -130,23 +139,17 @@ export function CatalogueHero({ stats, wall, search }: { stats: { models: number
             </Fade>
             <div className="mt-4 flex flex-wrap items-center gap-2.5">
               {CHIPS.map((c, i) => (
-                <motion.span
-                  key={c.href}
-                  className="inline-flex"
-                  initial={{ opacity: 0, scale: 0.8, y: 6 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ type: "spring", stiffness: 420, damping: 22, delay: 1 + i * 0.08 }}
-                >
+                <span key={c.href} {...fp({ opacity: 0, y: 6, scale: 0.8, duration: 0.55, ease: CHIP_SPRING, delay: 1 + i * 0.08 }, { className: "inline-flex" })}>
                   <Link href={c.href} className="ch-chip inline-flex rounded-full px-4 py-2 text-[13.5px] font-medium">
                     {c.label}
                   </Link>
-                </motion.span>
+                </span>
               ))}
-              <motion.span className="inline-flex" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: EASE, delay: 1.28 }}>
+              <span {...fp({ opacity: 0, y: 8, duration: 0.7, ease: EASE, delay: 1.28 }, { className: "inline-flex" })}>
                 <Link href="/trouver-ma-thermopompe" className="ch-match inline-flex items-center gap-1.5 px-2 py-2 text-[13.5px] font-semibold" style={{ color: C.orangeText }}>
                   {"Pas sûr ? ThermoMatch choisit pour vous →"}
                 </Link>
-              </motion.span>
+              </span>
             </div>
           </div>
 
@@ -207,6 +210,143 @@ function pose(i: number, n: number, a: number) {
   };
 }
 
+/* ------------------------------------------------------------------
+   Rotation au repos jouée par le compositeur
+   ------------------------------------------------------------------
+   Au repos, le plateau ne demande plus d’image au fil principal : chaque appareil reçoit une animation
+   WAAPI (transform + opacity, composées hors du fil principal) qui décrit un tour complet, échantillonné
+   48 fois par pas sur la même courbe (lent devant, rapide entre deux, jamais d’arrêt). Tous les appareils
+   suivent la même piste, décalée d’un pas. Restent en JS : la profondeur (z-index, 10 fois par seconde,
+   pour que le clic tombe sur l’appareil de devant ; invisible à l’œil, les appareils se fondent en
+   multiply) et la légende (à mi-pas). Au premier geste, la pose affichée passe à motion sans saut. */
+
+const SAMPLES = 48;
+
+/** Position (en pas) → angle : vitesse minimale quand un appareil est devant, maximale entre deux. */
+function spinAngle(x: number, step: number) {
+  const whole = Math.floor(x);
+  const frac = x - whole;
+  return step * (whole + frac - (0.8 / TAU) * Math.sin(TAU * frac));
+}
+
+/** Styles d’un appareil pour un angle : mêmes chaînes que les useTransform de RingItem. */
+function ringStyle(i: number, n: number, a: number) {
+  const p = pose(i, n, a);
+  return {
+    transform: `translate3d(calc(var(--rx) * ${p.s.toFixed(4)}), calc(var(--ry) * ${p.c.toFixed(4)}), 0) scale(${p.k.toFixed(4)})`,
+    opacity: String(Number(p.o.toFixed(3))),
+    zIndex: String(p.z),
+  };
+}
+
+type Spin = { sync: () => void; takeOver: () => void; rebuild: () => void; stop: () => void };
+
+function createSpin(o: { rig: RefObject<HTMLDivElement | null>; n: number; step: number; u: RefObject<number>; angle: MotionValue<number>; free: () => boolean; onFront: (f: number) => void }): Spin {
+  const { n, step } = o;
+  let anims: Animation[] | null = null;
+  let playing = false;
+  let frontTimer = 0;
+  let depthTimer = 0;
+  const els = () => Array.from(o.rig.current?.children ?? []) as HTMLElement[];
+  const mod = (x: number) => ((x % n) + n) % n;
+  /** Position (en pas) du plateau : piste de l’appareil 0, à un tour près. */
+  const now = () => (anims ? Number(anims[0].currentTime ?? 0) / PERIOD : o.u.current);
+  const depth = () => {
+    const a = spinAngle(now(), step);
+    els().forEach((el, i) => {
+      const z = String(pose(i, n, a).z);
+      if (el.style.zIndex !== z) el.style.zIndex = z;
+    });
+  };
+  const clear = () => {
+    window.clearTimeout(frontTimer);
+    window.clearInterval(depthTimer);
+  };
+  // L’appareil de devant change à mi-pas.
+  const scheduleFront = () => {
+    const x = now();
+    const next = Math.floor(x - 0.5) + 1.5;
+    frontTimer = window.setTimeout(() => {
+      o.onFront(mod(Math.round(spinAngle(now(), step) / step)));
+      scheduleFront();
+    }, (next - x) * PERIOD + 2);
+  };
+  const build = (x: number) => {
+    const rig = o.rig.current;
+    const list = els();
+    if (!rig || !list.length || typeof rig.animate !== "function") return null;
+    const cs = getComputedStyle(rig);
+    const rx = parseFloat(cs.getPropertyValue("--rx")) || 200;
+    const ry = parseFloat(cs.getPropertyValue("--ry")) || 60;
+    const total = n * SAMPLES;
+    const frames: Keyframe[] = [];
+    for (let j = 0; j <= total; j++) {
+      const p = pose(0, n, spinAngle(j / SAMPLES, step));
+      frames.push({ offset: j / total, transform: `translate3d(${(rx * p.s).toFixed(3)}px, ${(ry * p.c).toFixed(3)}px, 0px) scale(${p.k.toFixed(4)})`, opacity: p.o.toFixed(3) });
+    }
+    // L’appareil i à la position x a la pose de l’appareil 0 à la position x − i.
+    return list.map((el, i) => {
+      const an = el.animate(frames, { duration: n * PERIOD, iterations: Infinity, easing: "linear" });
+      an.currentTime = mod(x - i) * PERIOD;
+      return an;
+    });
+  };
+  const sync = () => {
+    if (o.free()) {
+      if (playing) return;
+      if (!anims) anims = build(o.u.current);
+      if (!anims) return;
+      anims.forEach((an) => an.play());
+      playing = true;
+      depth();
+      scheduleFront();
+      depthTimer = window.setInterval(depth, 100);
+    } else if (playing && anims) {
+      const x = now();
+      anims.forEach((an, i) => {
+        an.pause();
+        an.currentTime = mod(x - i) * PERIOD;
+      });
+      playing = false;
+      clear();
+      o.u.current = mod(x);
+      depth();
+    }
+  };
+  /** Geste, flèche ou clic : la pose affichée devient l’angle de motion, puis les animations WAAPI s’effacent. */
+  const takeOver = () => {
+    if (!anims) return;
+    const x = now();
+    const a = spinAngle(x, step);
+    clear();
+    els().forEach((el, i) => Object.assign(el.style, ringStyle(i, n, a)));
+    anims.forEach((an) => an.cancel());
+    anims = null;
+    playing = false;
+    o.u.current = x;
+    o.angle.set(a);
+  };
+  /** Changement de taille (demi-axes --rx / --ry) : même position, nouvelle piste. */
+  const rebuild = () => {
+    if (!anims) return;
+    const x = now();
+    const was = playing;
+    anims.forEach((an) => an.cancel());
+    anims = build(x);
+    if (!anims) {
+      playing = false;
+      clear();
+    } else if (!was) anims.forEach((an) => an.pause());
+  };
+  const stop = () => {
+    clear();
+    anims?.forEach((an) => an.cancel());
+    anims = null;
+    playing = false;
+  };
+  return { sync, takeOver, rebuild, stop };
+}
+
 function Turntable({ items }: { items: WallItem[] }) {
   const reduce = useReduced();
   const router = useRouter();
@@ -221,6 +361,8 @@ function Turntable({ items }: { items: WallItem[] }) {
   const kbFocus = useRef(false);
   const busy = useRef(false);
   const inView = useRef(true);
+  const started = useRef(false);
+  const reduced = useRef(false);
   const anim = useRef<ReturnType<typeof animate> | null>(null);
   const drag = useRef<{ x: number; a: number; lx: number; lt: number; vx: number; moved: boolean } | null>(null);
   const suppress = useRef(false);
@@ -231,25 +373,52 @@ function Turntable({ items }: { items: WallItem[] }) {
     setFront((p) => (p === f ? p : f));
   });
 
-  // Hors de l’écran : le plateau ne tourne pas.
+  // Présentation au repos (voir createSpin) : tourne sauf survol, focus clavier, geste, ressort, hors écran ou onglet caché.
+  const spin = useRef<Spin | null>(null);
+  if (spin.current === null) {
+    spin.current = createSpin({
+      rig: rigRef,
+      n,
+      step,
+      u,
+      angle,
+      free: () => started.current && !reduced.current && !hover.current && !kbFocus.current && !busy.current && !drag.current && inView.current && !document.hidden,
+      onFront: (f) => setFront((p) => (p === f ? p : f)),
+    });
+  }
+
   useEffect(() => {
+    reduced.current = reduce;
+    if (reduce) spin.current?.takeOver();
+    spin.current?.sync();
+  }, [reduce]);
+
+  // Départ 1,8 s après l’arrivée ; hors de l’écran ou onglet caché : le plateau ne tourne pas.
+  useEffect(() => {
+    const sp = spin.current;
     const el = rigRef.current;
-    if (!el) return;
+    if (!sp || !el) return;
+    const t = window.setTimeout(() => {
+      started.current = true;
+      sp.sync();
+    }, 1800);
     const io = new IntersectionObserver(([e]) => {
       inView.current = e.isIntersecting;
+      sp.sync();
     }, { threshold: 0.1 });
     io.observe(el);
-    return () => io.disconnect();
+    const onVisibility = () => sp.sync();
+    const onResize = () => sp.rebuild();
+    document.addEventListener("visibilitychange", onVisibility);
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.clearTimeout(t);
+      io.disconnect();
+      document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("resize", onResize);
+      sp.stop();
+    };
   }, []);
-
-  // Présentation : vitesse minimale quand un appareil est devant, maximale entre deux (jamais d’arrêt).
-  useAnimationFrame((t, delta) => {
-    if (reduce || t < 1800 || hover.current || kbFocus.current || busy.current || drag.current || !inView.current || document.hidden) return;
-    u.current += Math.min(delta, 64) / PERIOD;
-    const whole = Math.floor(u.current);
-    const frac = u.current - whole;
-    angle.set(step * (whole + frac - (0.8 / TAU) * Math.sin(TAU * frac)));
-  });
 
   /** Amène la position entière « target » devant (ressort ; instantané avec animations réduites). */
   const settle = (target: number) => {
@@ -260,11 +429,16 @@ function Turntable({ items }: { items: WallItem[] }) {
       ...(reduce ? { duration: 0 } : { type: "spring" as const, stiffness: 110, damping: 21 }),
       onComplete: () => {
         busy.current = false;
+        spin.current?.sync();
       },
     });
   };
-  const go = (dir: number) => settle(Math.round(angle.get() / step) + dir);
+  const go = (dir: number) => {
+    spin.current?.takeOver();
+    settle(Math.round(angle.get() / step) + dir);
+  };
   const pick = (i: number) => {
+    spin.current?.takeOver();
     const cur = angle.get() / step;
     settle(i + Math.round((cur - i) / n) * n);
   };
@@ -273,6 +447,7 @@ function Turntable({ items }: { items: WallItem[] }) {
 
   const onPointerDown = (e: PointerEvent<HTMLDivElement>) => {
     if (e.pointerType === "mouse" && e.button !== 0) return;
+    spin.current?.takeOver();
     anim.current?.stop();
     busy.current = false;
     drag.current = { x: e.clientX, a: angle.get(), lx: e.clientX, lt: e.timeStamp, vx: 0, moved: false };
@@ -295,7 +470,10 @@ function Turntable({ items }: { items: WallItem[] }) {
   const endDrag = (cancel: boolean) => {
     const d = drag.current;
     drag.current = null;
-    if (!d || !d.moved) return;
+    if (!d || !d.moved) {
+      spin.current?.sync();
+      return;
+    }
     if (!cancel) {
       // Le clic qui suit un glissement n’ouvre pas de fiche.
       suppress.current = true;
@@ -311,6 +489,7 @@ function Turntable({ items }: { items: WallItem[] }) {
       e.preventDefault();
       return;
     }
+    spin.current?.takeOver();
     // Un appareil du fond : on le fait venir devant ; celui de devant ouvre sa fiche.
     if (frontOf(angle.get()) !== i) {
       e.preventDefault();
@@ -327,6 +506,7 @@ function Turntable({ items }: { items: WallItem[] }) {
       go(-1);
     } else if (e.key === "Enter" && e.target === e.currentTarget) {
       e.preventDefault();
+      spin.current?.takeOver();
       router.push(`/produit/${items[frontOf(angle.get())].slug}`);
     }
   };
@@ -339,11 +519,13 @@ function Turntable({ items }: { items: WallItem[] }) {
     }
     kbFocus.current = visible;
     setLive(visible);
+    spin.current?.sync();
   };
   const onBlur = (e: FocusEvent<HTMLDivElement>) => {
     if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
       kbFocus.current = false;
       setLive(false);
+      spin.current?.sync();
     }
   };
 
@@ -361,10 +543,14 @@ function Turntable({ items }: { items: WallItem[] }) {
       onFocus={onFocus}
       onBlur={onBlur}
       onPointerEnter={(e) => {
-        if (e.pointerType === "mouse") hover.current = true;
+        if (e.pointerType !== "mouse") return;
+        hover.current = true;
+        spin.current?.sync();
       }}
       onPointerLeave={(e) => {
-        if (e.pointerType === "mouse") hover.current = false;
+        if (e.pointerType !== "mouse") return;
+        hover.current = false;
+        spin.current?.sync();
       }}
     >
       <div aria-hidden="true" className="ch-floor" />
@@ -597,23 +783,15 @@ function measure(img: HTMLImageElement): Stance {
    Petits outils de mouvement
    ------------------------------------------------------------------ */
 
-/** Ligne du titre révélée derrière un masque. */
+/** Ligne du titre révélée derrière un masque (clip-path de la ligne, voir fpLine ; retraits de .ch-line). */
 function Line({ i, children }: { i: number; children: ReactNode }) {
-  const reduce = useReduced();
   return (
     <span className="ch-line">
-      <motion.span className="block" initial={reduce ? false : { y: "112%" }} animate={{ y: "0%" }} transition={{ duration: 1.15, ease: EASE, delay: 0.25 + i * 0.12 }}>
-        {children}
-      </motion.span>
+      <span {...fpLine({ y: "112%", pad: ["0px", "0.12em", "0.14em", "0px"], duration: 1.15, ease: EASE, delay: 0.25 + i * 0.12 }, { className: "block" })}>{children}</span>
     </span>
   );
 }
 
 function Fade({ delay, className, style, children }: { delay: number; className?: string; style?: CSSProperties; children: ReactNode }) {
-  const reduce = useReduced();
-  return (
-    <motion.div className={className} style={style} initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay }}>
-      {children}
-    </motion.div>
-  );
+  return <div {...fp({ opacity: 0, y: 16, duration: 1, ease: EASE, delay }, { className, style })}>{children}</div>;
 }

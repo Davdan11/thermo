@@ -34,8 +34,9 @@ html:has(.ch-root), body:has(.ch-root) { overflow-x: clip; }
   font-weight: 600;
   margin: 22px 0 0;
 }
-/* Masque de révélation : un peu d'air à droite et en bas pour l'italique et les jambages. */
-.ch-line { display: block; overflow: hidden; padding: 0 0.12em 0.14em 0; margin: 0 -0.12em -0.14em 0; }
+/* Masque de révélation : un peu d'air à droite et en bas pour l'italique et les jambages.
+   Pas d'overflow ici : la ligne porte le masque (clip-path de fpLine, mêmes retraits). */
+.ch-line { display: block; padding: 0 0.12em 0.14em 0; margin: 0 -0.12em -0.14em 0; }
 .ch-serif {
   font-family: var(--font-serif), "Times New Roman", serif;
   font-style: italic;

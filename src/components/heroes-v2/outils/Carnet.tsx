@@ -6,6 +6,7 @@ import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { HERO_EASE } from "@/components/hero/HeroKit";
+import { fp } from "@/components/hero/first-paint";
 import { CountUp } from "@/components/home/premium/shared";
 import { CARNET as P, FlowBar, splitQuestion } from "./FlowBar";
 import { DISPLAY, SERIF } from "./font-stacks";
@@ -31,16 +32,9 @@ export const nbspMark = (s: string) => s.replace(/\s*([?!])$/, " $1");
 
 /** Double filet de marge du carnet, tracé de haut en bas. */
 export function MarginRule({ className = "", delay = 0.1, fade = false }: { className?: string; delay?: number; /** Bas du filet fondu (quand il s'arrête avant le bas de la page). */ fade?: boolean }) {
-  const reduce = useReduced();
   const mask = fade ? "linear-gradient(180deg, #000 0%, #000 78%, transparent 100%)" : undefined;
   const line = (d: number, opacity: number, left: number) => (
-    <motion.span
-      className="absolute inset-y-0 w-px origin-top"
-      style={{ left, background: P.orange, opacity }}
-      initial={reduce ? false : { scaleY: 0 }}
-      animate={{ scaleY: 1 }}
-      transition={{ duration: 1.6, ease: HERO_EASE, delay: d }}
-    />
+    <span {...fp({ scaleY: 0, duration: 1.6, ease: HERO_EASE, delay: d }, { className: "absolute inset-y-0 w-px origin-top", style: { left, background: P.orange, opacity } })} />
   );
   return (
     <div aria-hidden="true" className={`pointer-events-none absolute w-[5px] ${className}`} style={mask ? { maskImage: mask, WebkitMaskImage: mask } : undefined}>
@@ -57,16 +51,15 @@ export function PenLine({ children, delay, duration = 1.1 }: { children: ReactNo
   return (
     <span className="block">
       <span className="relative inline-block">
-        <motion.span className="inline-block" initial={{ clipPath: "inset(-12% 100% -28% 0)" }} animate={{ clipPath: "inset(-12% 0% -28% 0)" }} transition={{ duration, ease: EASE_PEN, delay }}>
+        {/* Arrivée du clip-path (texte entier) en style : fp() ne décrit que le départ. */}
+        <span {...fp({ clipPath: "inset(-12% 100% -28% 0)", duration, ease: EASE_PEN, delay }, { className: "inline-block", style: { clipPath: "inset(-12% 0% -28% 0)" } })}>
           {children}
-        </motion.span>
-        <motion.span
+        </span>
+        {/* Pointe : trajet et fondu en CSS (.ou-pen-tip, outils.css), même horloge que le texte ; arrivée (à droite, invisible) en style. */}
+        <span
           aria-hidden="true"
-          className="absolute top-[14%] h-[72%] w-[2px] rounded-full"
-          style={{ background: P.orange }}
-          initial={{ left: "0%", opacity: 0 }}
-          animate={{ left: "100%", opacity: [0, 1, 1, 0] }}
-          transition={{ left: { duration, ease: EASE_PEN, delay }, opacity: { duration: duration + 0.35, times: [0, 0.06, 0.8, 1], delay } }}
+          className="ou-pen-tip absolute top-[14%] h-[72%] w-[2px] rounded-full"
+          style={{ background: P.orange, left: "100%", opacity: 0, "--pen-dur": `${duration}s`, "--pen-delay": `${delay}s` } as CSSProperties}
         />
       </span>
     </span>
@@ -74,11 +67,10 @@ export function PenLine({ children, delay, duration = 1.1 }: { children: ReactNo
 }
 
 export function Fade({ children, delay, className, style }: { children: ReactNode; delay: number; className?: string; style?: CSSProperties }) {
-  const reduce = useReduced();
   return (
-    <motion.div className={className} style={style} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: HERO_EASE, delay }}>
+    <div {...fp({ opacity: 0, y: 10, duration: 0.9, ease: HERO_EASE, delay }, { className, style })}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -160,9 +152,9 @@ export function CarnetWelcome({
             ) : null}
 
             {/* Ligne de réponse : elle se trace après la question */}
-            <motion.div className="max-w-[680px]" initial={reduce ? false : { clipPath: "inset(-40% 100% -200% 0)" }} animate={{ clipPath: "inset(-40% 0% -200% 0)" }} transition={{ duration: 1.1, ease: EASE_PEN, delay: 1.75 }}>
+            <div {...fp({ clipPath: "inset(-40% 100% -200% 0)", duration: 1.1, ease: EASE_PEN, delay: 1.75 }, { className: "max-w-[680px]", style: { clipPath: "inset(-40% 0% -200% 0)" } })}>
               {children}
-            </motion.div>
+            </div>
 
             <Fade delay={2.1}>
               <p className="flex items-center gap-2 text-[13px]" style={{ color: P.faint, margin: "18px 0 0" }}>
@@ -213,13 +205,9 @@ export function CarnetWelcome({
             </Fade>
             <ol style={{ listStyle: "none", margin: 0, padding: 0 }}>
               {questions.map((q, i) => (
-                <motion.li
+                <li
                   key={q}
-                  className="flex items-baseline gap-3 py-[7px] text-[13px] leading-snug"
-                  style={{ borderBottom: `1px solid ${P.line}`, color: i === 0 ? P.ink : P.faint }}
-                  initial={reduce ? false : { opacity: 0, x: -6 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, ease: HERO_EASE, delay: 1 + i * 0.07 }}
+                  {...fp({ opacity: 0, x: -6, duration: 0.6, ease: HERO_EASE, delay: 1 + i * 0.07 }, { className: "flex items-baseline gap-3 py-[7px] text-[13px] leading-snug", style: { borderBottom: `1px solid ${P.line}`, color: i === 0 ? P.ink : P.faint } })}
                 >
                   <span className="w-5 shrink-0 text-[14px]" style={{ fontFamily: SERIF, fontStyle: "italic", color: i === 0 ? P.orange : P.faint }}>
                     {i + 1}
@@ -232,7 +220,7 @@ export function CarnetWelcome({
                       En cours
                     </span>
                   )}
-                </motion.li>
+                </li>
               ))}
             </ol>
           </aside>
@@ -260,14 +248,7 @@ export function SoumissionBar() {
           <p className="text-[12px]" style={{ margin: "2px 0 0", color: P.soft }}>
             Dernière étape
           </p>
-          <motion.span
-            aria-hidden="true"
-            className="absolute bottom-0 left-0 h-[2px] w-full origin-left"
-            style={{ background: P.orange }}
-            initial={reduce ? false : { scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1.2, ease: HERO_EASE, delay: 0.4 }}
-          />
+          <span aria-hidden="true" {...fp({ scaleX: 0, duration: 1.2, ease: HERO_EASE, delay: 0.4 }, { className: "absolute bottom-0 left-0 h-[2px] w-full origin-left", style: { background: P.orange } })} />
         </div>
       }
       right={
@@ -338,7 +319,7 @@ export function SoumissionHero({ hasDraft }: { hasDraft: boolean }) {
       {/* Engagements : trois cases cochées à la main, l'une après l'autre */}
       <ul className="mt-9 grid max-w-[600px] grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-5" style={{ listStyle: "none", padding: 0 }}>
         {FACTS.map((f, i) => (
-          <motion.li key={f} className="flex items-start gap-3 text-[13.5px] font-medium leading-[1.4]" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.5 + i * 0.25 }}>
+          <li key={f} {...fp({ opacity: 0, duration: 0.5, delay: 1.5 + i * 0.25 }, { className: "flex items-start gap-3 text-[13.5px] font-medium leading-[1.4]" })}>
             <span aria-hidden="true" className="relative mt-[1px] block h-[18px] w-[18px] shrink-0" style={{ border: `1.2px solid ${P.ink}`, borderRadius: 2 }}>
               <svg className="absolute -right-[5px] -top-[7px] overflow-visible" width="24" height="22" viewBox="0 0 24 22" fill="none">
                 <motion.path
@@ -354,7 +335,7 @@ export function SoumissionHero({ hasDraft }: { hasDraft: boolean }) {
               </svg>
             </span>
             <span style={{ color: P.ink }}>{f}</span>
-          </motion.li>
+          </li>
         ))}
       </ul>
     </div>

@@ -1,9 +1,10 @@
 "use client";
 
 import { MotionConfig, motion } from "motion/react";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { C, DISPLAY, EASE } from "@/components/home/premium/shared";
-import { Eyebrow, Lines, PillLink, VIEW } from "@/components/home/premium/suite-shared";
+import { Eyebrow, PillLink, VIEW } from "@/components/home/premium/suite-shared";
 
 /* ==================================================================
    /avis sans lien Google configuré : merci, et un chemin vers /contact.
@@ -38,22 +39,17 @@ export function AvisFallback() {
             ))}
           </div>
           <Eyebrow style={{ marginTop: 40 }}>Votre avis</Eyebrow>
-          <Lines
-            as="h1"
-            id="avis-titre"
-            lines={["Merci de", <span key="s" style={SERIF}>votre confiance.</span>]}
-            style={{ fontSize: "clamp(46px, 7vw, 120px)", lineHeight: 0.95, letterSpacing: "-0.05em", fontWeight: 600, margin: "22px 0 0" }}
-          />
-          <motion.p
-            className="max-w-[560px] text-[17px] leading-relaxed sm:text-[18px]"
-            style={{ color: C.mute, margin: "28px 0 0" }}
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={VIEW}
-            transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}
-          >
+          {/* Titre et texte, dans le premier écran : entrée CSS dès le premier rendu (au lieu de <Lines> et de whileInView), mêmes masques, courbes et délais. */}
+          <h1 id="avis-titre" style={{ fontSize: "clamp(46px, 7vw, 120px)", lineHeight: 0.95, letterSpacing: "-0.05em", fontWeight: 600, margin: "22px 0 0" }}>
+            {["Merci de", <span key="s" style={SERIF}>votre confiance.</span>].map((line, i) => (
+              <span key={i} style={{ display: "block", paddingTop: "0.14em", marginTop: "-0.14em", paddingBottom: "0.14em", marginBottom: "-0.14em" }}>
+                <span {...fpLine({ y: "115%", pad: ["0.14em", "0px", "0.14em", "0px"], duration: 1.15, ease: EASE, delay: i * 0.08 }, { style: { display: "block" } })}>{line}</span>
+              </span>
+            ))}
+          </h1>
+          <p {...fp({ opacity: 0, y: 18, duration: 0.9, ease: EASE, delay: 0.35 }, { className: "max-w-[560px] text-[17px] leading-relaxed sm:text-[18px]", style: { color: C.mute, margin: "28px 0 0" } })}>
             Notre page d’avis Google n’est pas encore en ligne. En attendant, dites-nous comment ça s’est passé : par écrit ou au téléphone, votre commentaire nous aide.
-          </motion.p>
+          </p>
           <motion.div
             className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5"
             initial={{ opacity: 0, y: 18 }}

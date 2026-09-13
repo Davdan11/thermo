@@ -3,6 +3,7 @@
 import "./entreprise.css";
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, MotionConfig } from "motion/react";
+import { fp } from "@/components/hero/first-paint";
 import { xeMono } from "./fonts";
 import { Arrow, EASE, HEADER_PAD, UNDER_HEADER, XLink, useReducedSafe } from "./shared";
 
@@ -34,7 +35,6 @@ const TICK_START = 2100;
 const TICK_GAP = 340;
 
 export function PartnersDossier() {
-  const reduce = useReducedSafe();
   const lines = ["Rejoignez le réseau", "d’installateurs", "d’élite."];
   return (
     <MotionConfig reducedMotion="user">
@@ -43,30 +43,31 @@ export function PartnersDossier() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(90% 70% at 85% 10%, rgba(238,243,248,0.09) 0%, rgba(238,243,248,0) 60%)" }} />
       <div className={`relative mx-auto grid max-w-[1440px] gap-14 px-5 pb-16 sm:px-8 lg:min-h-[min(88svh,820px)] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center lg:gap-10 lg:px-12 lg:pb-20 ${HEADER_PAD}`}>
         <div className="min-w-0">
-          <motion.p className="xe-mono flex items-center gap-3 text-[12px] uppercase" style={{ letterSpacing: "0.18em", color: C.mute, margin: 0 }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.1 }}>
+          <p {...fp({ opacity: 0, duration: 0.8, delay: 0.1 }, { className: "xe-mono flex items-center gap-3 text-[12px] uppercase", style: { letterSpacing: "0.18em", color: C.mute, margin: 0 } })}>
             <span aria-hidden="true" className="inline-block h-[2px] w-8" style={{ background: C.orange }} />
             Pour les professionnels certifiés
-          </motion.p>
+          </p>
           <h1 id="partenaires-titre" style={{ fontSize: "clamp(42px, 5.2vw, 90px)", lineHeight: 0.98, letterSpacing: "-0.045em", fontWeight: 500, margin: "26px 0 0" }}>
+            {/* Masque de chaque ligne : un clip-path porté par la ligne, qui recule avec elle (au lieu d'un overflow sur le parent) ; même rendu, et le titre compte pour le LCP. */}
             {lines.map((l, i) => (
-              <span key={l} className="block overflow-hidden" style={{ paddingBottom: "0.08em", marginBottom: "-0.08em" }}>
-                <motion.span className="block" style={{ color: i === 2 ? C.orange : C.ice }} initial={reduce ? false : { x: "-18%", opacity: 0 }} animate={{ x: "0%", opacity: 1 }} transition={{ duration: 1.1, ease: EASE, delay: 0.2 + i * 0.1 }}>
+              <span key={l} className="block" style={{ paddingBottom: "0.08em", marginBottom: "-0.08em" }}>
+                <span {...fp({ x: "-18%", opacity: 0, clipPath: "inset(0px -18% -0.08em 18%)", duration: 1.1, ease: EASE, delay: 0.2 + i * 0.1 }, { className: "block", style: { color: i === 2 ? C.orange : C.ice, clipPath: "inset(0px 0% -0.08em 0%)" } })}>
                   {l}
-                </motion.span>
+                </span>
               </span>
             ))}
           </h1>
-          <motion.p className="max-w-[560px] text-[17px] leading-[1.65] sm:text-[18px]" style={{ color: C.mute, margin: "26px 0 0" }} initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.55 }}>
+          <p {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.55 }, { className: "max-w-[560px] text-[17px] leading-[1.65] sm:text-[18px]", style: { color: C.mute, margin: "26px 0 0" } })}>
             Nous ne vendons pas de «&nbsp;leads&nbsp;» ou de listes de contacts froids. Nous formons des partenariats stratégiques pour connecter votre expertise avec une clientèle déjà éduquée par ThermoMatch.
-          </motion.p>
-          <motion.div className="mt-9 flex flex-wrap items-center gap-3" initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.7 }}>
+          </p>
+          <div {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.7 }, { className: "mt-9 flex flex-wrap items-center gap-3" })}>
             <XLink href="#candidature" className="inline-flex items-center gap-3 px-6 py-4 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#C93F10]" style={{ background: C.orange, borderRadius: 6 }}>
               Soumettre une candidature <Arrow />
             </XLink>
             <XLink href="/trouver-ma-thermopompe" className="inline-flex items-center px-6 py-4 text-[15px] font-semibold transition-colors duration-300 hover:bg-[rgba(238,243,248,0.08)]" style={{ border: `1px solid ${C.line}`, color: C.ice, borderRadius: 6 }}>
               Découvrir ThermoMatch
             </XLink>
-          </motion.div>
+          </div>
         </div>
 
         <Folder />
@@ -95,7 +96,7 @@ function Folder() {
   const complete = ticks === FIELDS.length;
 
   return (
-    <motion.div ref={ref} className="relative mx-auto h-[500px] w-full max-w-[540px] sm:h-[580px] lg:mr-0" initial={reduce ? false : { opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay: 0.35 }}>
+    <div ref={ref} {...fp({ opacity: 0, y: 40, duration: 1, ease: EASE, delay: 0.35 }, { className: "relative mx-auto h-[500px] w-full max-w-[540px] sm:h-[580px] lg:mr-0" })}>
       {/* Dos de la chemise, avec son onglet */}
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 top-[64px] rounded-[16px] rounded-tr-none" style={{ background: C.back, boxShadow: "0 50px 90px -50px rgba(5,14,26,0.9)" }}>
         <div className="absolute -top-[30px] right-0 h-[32px] w-[34%] rounded-t-[12px]" style={{ background: C.back }} />
@@ -103,12 +104,12 @@ function Folder() {
 
       {/* La fiche qui sort du dossier */}
       <motion.div className="absolute inset-x-[5%] top-[18px] z-[2] h-[410px] sm:inset-x-[7%] sm:h-[460px]" style={reduce ? undefined : { y: lift }}>
-        <motion.div
-          className="relative h-full rounded-[4px] px-5 pb-6 pt-5 sm:px-7 sm:pt-6"
-          style={{ background: C.ice, color: C.paperInk, boxShadow: "0 30px 60px -30px rgba(5,14,26,0.75), 0 2px 0 rgba(255,255,255,0.6) inset" }}
-          initial={reduce ? false : { y: 250, rotate: -4 }}
-          animate={{ y: 0, rotate: 1.2 }}
-          transition={{ duration: 1.4, ease: EASE, delay: 0.9 }}
+        {/* Arrivée penchée de 1,2° : c'est la transformation de style, vers laquelle l'entrée interpole. */}
+        <div
+          {...fp(
+            { y: 250, rotate: -4, duration: 1.4, ease: EASE, delay: 0.9 },
+            { className: "relative h-full rounded-[4px] px-5 pb-6 pt-5 sm:px-7 sm:pt-6", style: { background: C.ice, color: C.paperInk, boxShadow: "0 30px 60px -30px rgba(5,14,26,0.75), 0 2px 0 rgba(255,255,255,0.6) inset", transform: "translateY(0px) rotate(1.2deg)" } },
+          )}
         >
           {/* Trombone */}
           <svg aria-hidden="true" viewBox="0 0 24 64" className="absolute -top-[18px] left-[63%] h-[58px] w-[22px]" fill="none" stroke="#9FB0C4" strokeWidth={2.2} strokeLinecap="round">
@@ -165,7 +166,7 @@ function Folder() {
           >
             Dossier complet
           </motion.span>
-        </motion.div>
+        </div>
       </motion.div>
 
       {/* Devant de la chemise */}
@@ -181,6 +182,6 @@ function Folder() {
           Vous validez le calcul de charge et réalisez l’installation.
         </p>
       </div>
-    </motion.div>
+    </div>
   );
 }

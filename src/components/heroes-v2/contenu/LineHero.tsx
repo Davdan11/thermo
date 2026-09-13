@@ -11,6 +11,7 @@ import {
   type MotionValue,
   MotionConfig,
 } from "motion/react";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { typo } from "@/components/content-hero/typo";
 import {
   Arrow,
@@ -82,24 +83,23 @@ export function LineHero({
       >
         {/* Partie haute : titre et promesse */}
         <div className="relative mx-auto max-w-[1440px] px-5 pt-[122px] sm:px-8 lg:px-12 min-[1700px]:pt-[140px]">
-          <motion.div
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div {...fp({ opacity: 0, duration: 0.8 })}>
             <Crumbs items={breadcrumbs} color={T.faint} strong={T.cream} />
-          </motion.div>
+          </div>
           <div className="mt-6 grid gap-8 lg:mt-8 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-7">
-              <motion.p
-                className="flex items-center gap-3 text-[12px] font-semibold uppercase"
-                style={{ letterSpacing: "0.24em", color: T.orange, margin: 0 }}
-                initial={reduce ? false : { opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
+              <p
+                {...fp(
+                  { opacity: 0, x: -10, duration: 0.8, ease: EASE, delay: 0.1 },
+                  {
+                    className:
+                      "flex items-center gap-3 text-[12px] font-semibold uppercase",
+                    style: { letterSpacing: "0.24em", color: T.orange, margin: 0 },
+                  },
+                )}
               >
                 {typo(eyebrow)}
-              </motion.p>
+              </p>
               <h1
                 id="ln-titre"
                 style={{
@@ -114,44 +114,52 @@ export function LineHero({
                     key={i}
                     style={{
                       display: "block",
-                      overflow: "hidden",
                       paddingBottom: "0.12em",
                       marginBottom: "-0.06em",
                     }}
                   >
-                    <motion.span
-                      className="relative inline-block"
-                      style={{ fontWeight: i === 2 ? 600 : 300 }}
-                      initial={reduce ? false : { y: "110%" }}
-                      animate={{ y: "0%" }}
-                      transition={{
-                        duration: 1.1,
-                        ease: EASE,
-                        delay: 0.2 + i * 0.1,
-                      }}
+                    {/* Masque en clip-path (fpLine). Retrait droit 0,25em : le parent (bloc) dépassait
+                        la ligne à droite, l'encre du dernier glyphe n'y était jamais coupée. */}
+                    <span
+                      {...fpLine(
+                        {
+                          y: "110%",
+                          pad: ["0px", "0.25em", "0.12em", "0px"],
+                          duration: 1.1,
+                          ease: EASE,
+                          delay: 0.2 + i * 0.1,
+                        },
+                        {
+                          className: "relative inline-block",
+                          style: { fontWeight: i === 2 ? 600 : 300 },
+                        },
+                      )}
                     >
                       {typo(l)}
                       {i < 2 ? " " : null}
                       {i === 2 ? (
-                        <motion.span
+                        <span
                           aria-hidden="true"
-                          className="absolute -bottom-[0.04em] left-0 h-[0.07em] w-full origin-left"
-                          style={{ background: T.orange }}
-                          initial={reduce ? false : { scaleX: 0 }}
-                          animate={{ scaleX: 1 }}
-                          transition={{ duration: 1.3, ease: EASE, delay: 1 }}
+                          {...fp(
+                            { scaleX: 0, duration: 1.3, ease: EASE, delay: 1 },
+                            {
+                              className:
+                                "absolute -bottom-[0.04em] left-0 h-[0.07em] w-full origin-left",
+                              style: { background: T.orange },
+                            },
+                          )}
                         />
                       ) : null}
-                    </motion.span>
+                    </span>
                   </span>
                 ))}
               </h1>
             </div>
-            <motion.div
-              className="lg:col-span-5 lg:pt-12"
-              initial={reduce ? false : { opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: EASE, delay: 0.55 }}
+            <div
+              {...fp(
+                { opacity: 0, y: 14, duration: 1, ease: EASE, delay: 0.55 },
+                { className: "lg:col-span-5 lg:pt-12" },
+              )}
             >
               <p
                 className="text-[16.5px] leading-[1.65] sm:text-[17px]"
@@ -197,7 +205,7 @@ export function LineHero({
                 Gratuit, sans engagement. Un installateur licencié RBQ vous
                 rappelle.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
 

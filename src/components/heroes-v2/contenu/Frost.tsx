@@ -18,6 +18,7 @@ import {
   type MotionValue,
   MotionConfig,
 } from "motion/react";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { typo } from "@/components/content-hero/typo";
 import {
   Arrow,
@@ -160,15 +161,17 @@ function FrostEdges() {
       className="pointer-events-none absolute inset-0 overflow-hidden"
     >
       {/* Voile de givre qui gagne les bords */}
-      <motion.div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(120% 80% at 0% 55%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 32%), radial-gradient(90% 70% at 100% 30%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 30%)",
-        }}
-        initial={reduce ? false : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 3.5, ease: "easeOut" }}
+      <div
+        {...fp(
+          { opacity: 0, duration: 3.5, ease: "easeOut" },
+          {
+            className: "absolute inset-0",
+            style: {
+              background:
+                "radial-gradient(120% 80% at 0% 55%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 32%), radial-gradient(90% 70% at 100% 30%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 30%)",
+            },
+          },
+        )}
       />
       <svg
         className="absolute left-0 top-[60px] h-[600px] w-[160px] origin-top-left scale-[0.5] sm:top-0 sm:scale-[0.8] lg:scale-100"
@@ -193,13 +196,8 @@ function FrostEdges() {
 /* ---------- Commun : boutons ---------- */
 
 function Actions({ delay = 0.6 }: { delay?: number }) {
-  const reduce = useReducedSafe();
   return (
-    <motion.div
-      initial={reduce ? false : { opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: EASE, delay }}
-    >
+    <div {...fp({ opacity: 0, y: 12, duration: 1, ease: EASE, delay })}>
       <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4">
         <Link
           href="/trouver-ma-thermopompe"
@@ -227,7 +225,7 @@ function Actions({ delay = 0.6 }: { delay?: number }) {
       <p className="text-[13px]" style={{ color: F.faint, margin: "14px 0 0" }}>
         Gratuit, sans engagement. Un installateur licencié RBQ vous rappelle.
       </p>
-    </motion.div>
+    </div>
   );
 }
 
@@ -272,7 +270,6 @@ export function FrostIndexHero({
   stats: Array<{ label: string; value: string }>;
   groups: FrostGroup[];
 }) {
-  const reduce = useReducedSafe();
   const total = groups.reduce((a, g) => a + g.cities.length, 0);
   return (
     <MotionConfig reducedMotion="user">
@@ -283,26 +280,24 @@ export function FrostIndexHero({
       >
         <FrostEdges />
         <div className="relative mx-auto max-w-[1440px] px-5 pb-16 pt-[124px] sm:px-8 lg:px-12 min-[1700px]:pt-[140px]">
-          <motion.div
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div {...fp({ opacity: 0, duration: 0.8 })}>
             <Crumbs items={breadcrumbs} color={F.faint} strong={F.navy} />
-          </motion.div>
-          <motion.p
-            className="mt-7 text-[12px] font-semibold uppercase"
-            style={{
-              letterSpacing: "0.26em",
-              color: F.mute,
-              margin: "28px 0 0",
-            }}
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+          </div>
+          <p
+            {...fp(
+              { opacity: 0, duration: 0.8, delay: 0.1 },
+              {
+                className: "mt-7 text-[12px] font-semibold uppercase",
+                style: {
+                  letterSpacing: "0.26em",
+                  color: F.mute,
+                  margin: "28px 0 0",
+                },
+              },
+            )}
           >
             {typo(eyebrow)} · Carte des froids
-          </motion.p>
+          </p>
           <h1
             id="fr-titre"
             className="uppercase"
@@ -319,49 +314,56 @@ export function FrostIndexHero({
                 key={i}
                 style={{
                   display: "block",
-                  overflow: "hidden",
                   paddingBottom: "0.06em",
                 }}
               >
-                <motion.span
-                  style={{ display: "inline-block", fontWeight: i ? 300 : 650 }}
-                  initial={reduce ? false : { y: "105%" }}
-                  animate={{ y: "0%" }}
-                  transition={{
-                    duration: 1.1,
-                    ease: EASE,
-                    delay: 0.15 + i * 0.1,
-                  }}
+                {/* Masque en clip-path (fpLine). Retrait droit 0,25em : le parent (bloc) dépassait
+                    la ligne à droite, l'encre du dernier glyphe n'y était jamais coupée. */}
+                <span
+                  {...fpLine(
+                    {
+                      y: "105%",
+                      pad: ["0px", "0.25em", "0.06em", "0px"],
+                      duration: 1.1,
+                      ease: EASE,
+                      delay: 0.15 + i * 0.1,
+                    },
+                    { style: { display: "inline-block", fontWeight: i ? 300 : 650 } },
+                  )}
                 >
                   {typo(l)}
                   {i === 0 ? " " : null}
-                </motion.span>
+                </span>
               </span>
             ))}
           </h1>
 
           <div className="mt-10 grid gap-12 lg:mt-12 lg:grid-cols-12 lg:gap-14">
             <div className="lg:col-span-4">
-              <motion.p
-                className="text-[16.5px] leading-[1.65]"
-                style={{
-                  color: F.mute,
-                  margin: 0,
-                  fontFamily: "var(--font-sans)",
-                }}
-                initial={reduce ? false : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: EASE, delay: 0.45 }}
+              <p
+                {...fp(
+                  { opacity: 0, y: 12, duration: 1, ease: EASE, delay: 0.45 },
+                  {
+                    className: "text-[16.5px] leading-[1.65]",
+                    style: {
+                      color: F.mute,
+                      margin: 0,
+                      fontFamily: "var(--font-sans)",
+                    },
+                  },
+                )}
               >
                 {typo(intro)}
-              </motion.p>
+              </p>
               <Actions delay={0.6} />
-              <motion.dl
-                className="mt-9 grid grid-cols-2"
-                style={{ margin: "36px 0 0", borderTop: `1px solid ${F.navy}` }}
-                initial={reduce ? false : { opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.8 }}
+              <dl
+                {...fp(
+                  { opacity: 0, duration: 1, delay: 0.8 },
+                  {
+                    className: "mt-9 grid grid-cols-2",
+                    style: { margin: "36px 0 0", borderTop: `1px solid ${F.navy}` },
+                  },
+                )}
               >
                 {stats.map((s, i) => (
                   <div
@@ -384,7 +386,7 @@ export function FrostIndexHero({
                     </dd>
                   </div>
                 ))}
-              </motion.dl>
+              </dl>
             </div>
 
             {groups.length > 0 ? (
@@ -588,7 +590,6 @@ type CityProps = {
 };
 
 export function FrostCityHero(p: CityProps) {
-  const reduce = useReducedSafe();
   const len = p.city.length;
   // Noms composés très longs : ils passent sur deux lignes (coupure après un trait d'union).
   const fit = len > 14 && p.city.includes("-") ? Math.ceil(len * 0.58) : len;
@@ -603,65 +604,77 @@ export function FrostCityHero(p: CityProps) {
         <div className="relative mx-auto max-w-[1440px] px-5 pb-12 pt-[124px] sm:px-8 lg:px-12 min-[1700px]:pt-[140px]">
           <div className="fr-grid">
             <div style={{ gridArea: "head" }} className="min-w-0">
-              <motion.div
-                initial={reduce ? false : { opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8 }}
-              >
+              <div {...fp({ opacity: 0, duration: 0.8 })}>
                 <Crumbs items={p.breadcrumbs} color={F.faint} strong={F.navy} />
-              </motion.div>
-              <motion.p
-                className="text-[12px] font-semibold uppercase"
-                style={{
-                  letterSpacing: "0.26em",
-                  color: F.mute,
-                  margin: "28px 0 0",
-                }}
-                initial={reduce ? false : { opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+              </div>
+              <p
+                {...fp(
+                  { opacity: 0, duration: 0.8, delay: 0.1 },
+                  {
+                    className: "text-[12px] font-semibold uppercase",
+                    style: {
+                      letterSpacing: "0.26em",
+                      color: F.mute,
+                      margin: "28px 0 0",
+                    },
+                  },
+                )}
               >
                 {typo(p.region)}
-              </motion.p>
+              </p>
               <h1 id="fr-titre" style={{ margin: "10px 0 0" }}>
-                <span style={{ display: "block", overflow: "hidden" }}>
-                  <motion.span
-                    className="block text-[22px] font-normal sm:text-[28px]"
-                    style={{ letterSpacing: "-0.02em", color: F.mute }}
-                    initial={reduce ? false : { y: "100%" }}
-                    animate={{ y: "0%" }}
-                    transition={{ duration: 0.9, ease: EASE, delay: 0.15 }}
+                {/* Masques en clip-path (fpLine) : les parents gardent leurs retraits, sans overflow. */}
+                <span style={{ display: "block" }}>
+                  <span
+                    {...fpLine(
+                      { y: "100%", duration: 0.9, ease: EASE, delay: 0.15 },
+                      {
+                        className: "block text-[22px] font-normal sm:text-[28px]",
+                        style: { letterSpacing: "-0.02em", color: F.mute },
+                      },
+                    )}
                   >
                     Thermopompe à{" "}
-                  </motion.span>
+                  </span>
                 </span>
                 <span
                   style={{
                     display: "block",
-                    overflow: "hidden",
                     padding: "0.16em 0 0.04em",
                     marginTop: "-0.14em",
                   }}
                 >
-                  <motion.span
-                    className="fr-name block uppercase"
-                    style={
+                  {/* Retraits du parent en em du h1 (--text-h1), le nom ayant sa propre taille. */}
+                  <span
+                    {...fpLine(
                       {
-                        ["--fr-len" as string]: fit,
-                        ["--fr-max" as string]: "208px",
-                        fontWeight: 650,
-                        lineHeight: 0.9,
-                        letterSpacing: "-0.045em",
-                        hyphens: "manual",
-                        overflowWrap: "normal",
-                      } as CSSProperties
-                    }
-                    initial={reduce ? false : { y: "100%" }}
-                    animate={{ y: "0%" }}
-                    transition={{ duration: 1.2, ease: EASE, delay: 0.25 }}
+                        y: "100%",
+                        pad: [
+                          "calc(0.16 * var(--text-h1))",
+                          "0px",
+                          "calc(0.04 * var(--text-h1))",
+                          "0px",
+                        ],
+                        duration: 1.2,
+                        ease: EASE,
+                        delay: 0.25,
+                      },
+                      {
+                        className: "fr-name block uppercase",
+                        style: {
+                          ["--fr-len" as string]: fit,
+                          ["--fr-max" as string]: "208px",
+                          fontWeight: 650,
+                          lineHeight: 0.9,
+                          letterSpacing: "-0.045em",
+                          hyphens: "manual",
+                          overflowWrap: "normal",
+                        } as CSSProperties,
+                      },
+                    )}
                   >
                     {p.city}
-                  </motion.span>
+                  </span>
                 </span>
               </h1>
             </div>
@@ -671,28 +684,32 @@ export function FrostCityHero(p: CityProps) {
             </div>
 
             <div style={{ gridArea: "body" }} className="min-w-0 lg:pt-8">
-              <motion.p
-                className="max-w-[640px] text-[16.5px] leading-[1.65]"
-                style={{
-                  color: F.mute,
-                  margin: 0,
-                  fontFamily: "var(--font-sans)",
-                }}
-                initial={reduce ? false : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: EASE, delay: 0.5 }}
+              <p
+                {...fp(
+                  { opacity: 0, y: 12, duration: 1, ease: EASE, delay: 0.5 },
+                  {
+                    className: "max-w-[640px] text-[16.5px] leading-[1.65]",
+                    style: {
+                      color: F.mute,
+                      margin: 0,
+                      fontFamily: "var(--font-sans)",
+                    },
+                  },
+                )}
               >
                 {typo(p.intro)}
-              </motion.p>
+              </p>
               {p.answer ? (
-                <motion.div
+                <div
                   role="note"
                   aria-label="En bref"
-                  className="mt-6 max-w-[640px] py-1 pl-5"
-                  style={{ borderLeft: `3px solid ${F.frost}` }}
-                  initial={reduce ? false : { opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, ease: EASE, delay: 0.62 }}
+                  {...fp(
+                    { opacity: 0, y: 12, duration: 1, ease: EASE, delay: 0.62 },
+                    {
+                      className: "mt-6 max-w-[640px] py-1 pl-5",
+                      style: { borderLeft: `3px solid ${F.frost}` },
+                    },
+                  )}
                 >
                   <Label style={{ color: F.navy }}>En bref</Label>
                   <p
@@ -701,7 +718,7 @@ export function FrostCityHero(p: CityProps) {
                   >
                     {typo(p.answer)}
                   </p>
-                </motion.div>
+                </div>
               ) : null}
               <Actions delay={0.75} />
             </div>
@@ -709,12 +726,14 @@ export function FrostCityHero(p: CityProps) {
 
           {/* Bulletin : les chiffres de la ville */}
           {p.stats.length > 0 ? (
-            <motion.dl
-              className="mt-12 grid grid-cols-2 lg:grid-cols-4"
-              style={{ margin: "48px 0 0", borderTop: `1px solid ${F.navy}` }}
-              initial={reduce ? false : { opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: EASE, delay: 0.9 }}
+            <dl
+              {...fp(
+                { opacity: 0, y: 12, duration: 1, ease: EASE, delay: 0.9 },
+                {
+                  className: "mt-12 grid grid-cols-2 lg:grid-cols-4",
+                  style: { margin: "48px 0 0", borderTop: `1px solid ${F.navy}` },
+                },
+              )}
             >
               {p.stats.map((s, i) => (
                 <div
@@ -744,7 +763,7 @@ export function FrostCityHero(p: CityProps) {
                   </dd>
                 </div>
               ))}
-            </motion.dl>
+            </dl>
           ) : null}
         </div>
       </section>

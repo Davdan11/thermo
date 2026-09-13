@@ -9,6 +9,7 @@ import type { LogisVertSample } from "@/components/tools-hero/types";
 import { DISPLAY, MONO, SERIF, plexMono } from "./fonts";
 import { CountTo, EASE, fr, useAfter } from "./shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { fp, fpLine } from "@/components/hero/first-paint";
 
 /* ==================================================================
    /subventions — « Le chèque ».
@@ -116,47 +117,24 @@ export function ChequeHero({ samples }: { samples: LogisVertSample[] }) {
 
       <div className="relative mx-auto grid max-w-[1440px] items-center gap-14 px-5 pb-20 pt-[140px] sm:px-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-10 lg:px-12 lg:pb-24 min-[1700px]:pt-[156px]">
         <div className="min-w-0">
-          <motion.p
-            className="flex items-center gap-3 text-[11.5px] font-medium uppercase"
-            style={{ fontFamily: MONO, letterSpacing: "0.2em", color: MINT, margin: 0 }}
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7 }}
-          >
+          <p {...fp({ opacity: 0, duration: 0.7 }, { className: "flex items-center gap-3 text-[11.5px] font-medium uppercase", style: { fontFamily: MONO, letterSpacing: "0.2em", color: MINT, margin: 0 } })}>
             <span aria-hidden="true" className="inline-block h-px w-10" style={{ background: MINT }} />
             Aides financières · Québec
-          </motion.p>
+          </p>
           <h1 id="ch-titre" style={{ fontFamily: SERIF, fontWeight: 400, fontSize: "clamp(48px, 5.6vw, 100px)", lineHeight: 0.98, letterSpacing: "-0.015em", margin: "26px 0 0", textWrap: "balance" }}>
             {["Vérifiez les aides", "disponibles pour", "votre thermopompe."].map((l, k) => (
-              <span key={k} className="block overflow-hidden" style={{ paddingBottom: "0.1em", marginBottom: "-0.1em" }}>
-                <motion.span
-                  className="block"
-                  style={k === 2 ? { fontStyle: "italic", color: MINT } : undefined}
-                  initial={reduce ? false : { y: "105%" }}
-                  animate={{ y: "0%" }}
-                  transition={{ duration: 1.1, ease: EASE, delay: 0.15 + k * 0.1 }}
-                >
+              <span key={k} className="block" style={{ paddingBottom: "0.1em", marginBottom: "-0.1em" }}>
+                <span {...fpLine({ y: "105%", pad: ["0px", "0px", "0.1em", "0px"], duration: 1.1, ease: EASE, delay: 0.15 + k * 0.1 }, { className: "block", style: k === 2 ? { fontStyle: "italic", color: MINT } : undefined })}>
                   {l}
                   {k < 2 ? " " : null}
-                </motion.span>
+                </span>
               </span>
             ))}
           </h1>
-          <motion.p
-            className="max-w-[540px] text-[17px] leading-[1.65] sm:text-[18px]"
-            style={{ color: MUTE, margin: "26px 0 0" }}
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: EASE, delay: 0.55 }}
-          >
+          <p {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.55 }, { className: "max-w-[540px] text-[17px] leading-[1.65] sm:text-[18px]", style: { color: MUTE, margin: "26px 0 0" } })}>
             Sélectionnez une configuration exacte pour consulter les programmes et les conditions documentées.
-          </motion.p>
-          <motion.div
-            className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4"
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: EASE, delay: 0.7 }}
-          >
+          </p>
+          <div {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.7 }, { className: "mt-9 flex flex-wrap items-center gap-x-7 gap-y-4" })}>
             <Link href="#verification" className="pv2-btn-mint inline-flex items-center gap-3 rounded-full py-4 pl-7 pr-6 text-[15px] font-semibold" style={{ background: MINT, color: EMERALD }}>
               Vérifier ma configuration
               <span aria-hidden="true">↓</span>
@@ -164,14 +142,8 @@ export function ChequeHero({ samples }: { samples: LogisVertSample[] }) {
             <Link href="#ce-que-nous-verifions" className="pv2-uline text-[15px] font-semibold" style={{ color: CREAM }}>
               Ce que nous vérifions
             </Link>
-          </motion.div>
-          <motion.dl
-            className="mt-12 flex flex-wrap gap-x-10 gap-y-6"
-            style={{ margin: "48px 0 0" }}
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.9, delay: 0.95 }}
-          >
+          </div>
+          <dl {...fp({ opacity: 0, duration: 0.9, delay: 0.95 }, { className: "mt-12 flex flex-wrap gap-x-10 gap-y-6", style: { margin: "48px 0 0" } })}>
             {[
               { value: count, label: "jumelages admissibles" },
               { value: 3, label: "vérifications par configuration" },
@@ -185,7 +157,7 @@ export function ChequeHero({ samples }: { samples: LogisVertSample[] }) {
                 </dd>
               </div>
             ))}
-          </motion.dl>
+          </dl>
         </div>
 
         {samples.length > 0 && (
@@ -246,15 +218,12 @@ function Cheque({ samples, count }: { samples: LogisVertSample[]; count: number 
   const checked = checkedDate(logisvertMetadata.updatedAt);
 
   return (
-    <motion.div
+    <div
       ref={ref}
       aria-hidden="true"
-      className="relative mx-auto w-full max-w-[720px] lg:mr-[-8px]"
+      {...fp({ opacity: 0, y: 60, rotate: 3, duration: 1.3, ease: EASE, delay: 0.35 }, { className: "relative mx-auto w-full max-w-[720px] lg:mr-[-8px]" })}
       onPointerEnter={() => setHover(true)}
       onPointerLeave={() => setHover(false)}
-      initial={reduce ? false : { opacity: 0, y: 60, rotate: 3 }}
-      animate={{ opacity: 1, y: 0, rotate: 0 }}
-      transition={{ duration: 1.3, ease: EASE, delay: 0.35 }}
     >
       <motion.div animate={thud} initial={{ rotate: -2.2 }} style={{ rotate: -2.2 }} className="relative">
         <div className="relative flex overflow-hidden rounded-[6px]" style={{ background: PAPER, color: INKG, boxShadow: "0 50px 80px -40px rgba(0,0,0,0.65), 0 2px 0 rgba(255,255,255,0.4) inset" }}>
@@ -376,7 +345,7 @@ function Cheque({ samples, count }: { samples: LogisVertSample[]; count: number 
           </div>
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }
 

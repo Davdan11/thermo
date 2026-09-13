@@ -8,6 +8,7 @@ import { Breadcrumbs, type BreadcrumbItem } from "@/components/seo/Breadcrumbs";
 import { DISPLAY, MONO, plexMono } from "./fonts";
 import { CountTo, EASE, fr, typo, useAfter } from "./shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { fp, fpLine } from "@/components/hero/first-paint";
 
 /* ==================================================================
    /subventions/logisvert et /subventions/logisvert/[marque] — « Baromètre ».
@@ -37,9 +38,8 @@ function Shell({ children, labelledBy }: { children: ReactNode; labelledBy: stri
 }
 
 function Top({ breadcrumbs, eyebrow }: { breadcrumbs: BreadcrumbItem[]; eyebrow: string }) {
-  const reduce = !!useReduced();
   return (
-    <motion.div initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
+    <div {...fp({ opacity: 0, duration: 0.6 })}>
       <div className="pv2-crumbs -mt-1" style={{ "--c-link": MUTE, "--c-cur": FOREST, "--c-sep": "rgba(15,61,43,0.35)" } as CSSProperties}>
         <Breadcrumbs items={breadcrumbs} />
       </div>
@@ -51,25 +51,24 @@ function Top({ breadcrumbs, eyebrow }: { breadcrumbs: BreadcrumbItem[]; eyebrow:
         </span>
         {typo(eyebrow)}
       </p>
-    </motion.div>
+    </div>
   );
 }
 
 /** Titre : linéale légère, un segment en gras (et en vert si demandé). */
 function Title({ id, lines, size }: { id: string; lines: Array<Array<{ t: string; bold?: boolean; green?: boolean }>>; size: string }) {
-  const reduce = !!useReduced();
   return (
     <h1 id={id} style={{ fontSize: size, lineHeight: 0.98, letterSpacing: "-0.045em", fontWeight: 300, margin: "18px 0 0" }}>
       {lines.map((segs, k) => (
-        <span key={k} className="block overflow-hidden" style={{ paddingBottom: "0.1em", marginBottom: "-0.1em" }}>
-          <motion.span className="block" initial={reduce ? false : { y: "105%" }} animate={{ y: "0%" }} transition={{ duration: 1.05, ease: EASE, delay: 0.12 + k * 0.1 }}>
+        <span key={k} className="block" style={{ paddingBottom: "0.1em", marginBottom: "-0.1em" }}>
+          <span {...fpLine({ y: "105%", pad: ["0px", "0px", "0.1em", "0px"], duration: 1.05, ease: EASE, delay: 0.12 + k * 0.1 }, { className: "block" })}>
             {segs.map((s, j) => (
               <span key={j} style={{ fontWeight: s.bold ? 700 : 300, color: s.green ? GREEN : undefined }}>
                 {typo(s.t)}
               </span>
             ))}
             {k < lines.length - 1 ? " " : null}
-          </motion.span>
+          </span>
         </span>
       ))}
     </h1>
@@ -77,9 +76,8 @@ function Title({ id, lines, size }: { id: string; lines: Array<Array<{ t: string
 }
 
 function Actions({ delay = 0.7 }: { delay?: number }) {
-  const reduce = !!useReduced();
   return (
-    <motion.div initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay }}>
+    <div {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay })}>
       <div className="mt-8 flex flex-wrap items-center gap-3">
         <Link href="/trouver-ma-thermopompe" className="pv2-btn-forest inline-flex items-center gap-3 rounded-[10px] px-6 py-4 text-[15px] font-semibold" style={{ background: FOREST, color: BG }}>
           Trouver ma thermopompe en 2 min
@@ -97,15 +95,14 @@ function Actions({ delay = 0.7 }: { delay?: number }) {
       <p className="text-[13px]" style={{ color: MUTE, margin: "12px 0 0" }}>
         Gratuit, sans engagement. Un installateur licencié RBQ vous rappelle.
       </p>
-    </motion.div>
+    </div>
   );
 }
 
 function Readouts({ items, cols, delay }: { items: BaroStat[]; cols: string; delay: number }) {
-  const reduce = !!useReduced();
   if (!items.length) return null;
   return (
-    <motion.dl className={`m-0 grid ${cols}`} style={{ borderTop: `1.5px solid ${FOREST}` }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay }}>
+    <dl {...fp({ opacity: 0, duration: 0.8, delay }, { className: `m-0 grid ${cols}`, style: { borderTop: `1.5px solid ${FOREST}` } })}>
       {items.map((s) => (
         <div key={s.label} className="flex flex-col gap-1 py-3 pr-4" style={{ borderBottom: `1px solid ${LINE}` }}>
           <dt className="order-2 text-[10.5px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.12em", color: MUTE }}>
@@ -116,17 +113,12 @@ function Readouts({ items, cols, delay }: { items: BaroStat[]; cols: string; del
           </dd>
         </div>
       ))}
-    </motion.dl>
+    </dl>
   );
 }
 
 function Fade({ children, delay, className }: { children: ReactNode; delay: number; className?: string }) {
-  const reduce = !!useReduced();
-  return (
-    <motion.div className={className} initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay }}>
-      {children}
-    </motion.div>
-  );
+  return <div {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay }, { className })}>{children}</div>;
 }
 
 /** Pas d'axe « rond » : 500, 1 000 ou 2 000 $. */

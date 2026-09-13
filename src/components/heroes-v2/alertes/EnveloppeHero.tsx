@@ -1,8 +1,10 @@
 "use client";
 
 import "./alertes.css";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { useReduced } from "../outils/motion";
 import { DISPLAY, MONO, SERIF, outilsMono } from "../outils/fonts";
 
@@ -62,25 +64,14 @@ export function EnveloppeHero({ title, lead, actions, rows, postmark }: Envelopp
       <Waves className="right-0 top-[64%] w-[42%]" flip />
 
       <div className="relative mx-auto flex max-w-[1100px] flex-col items-center px-4 pb-16 pt-[128px] sm:px-8 sm:pb-24 min-[1700px]:pt-[144px]">
-        <motion.p
-          className="flex items-center gap-3 text-[11.5px] uppercase"
-          style={{ fontFamily: MONO, letterSpacing: "0.24em", color: F.mint, margin: 0 }}
-          initial={reduce ? false : { opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: EASE }}
-        >
+        <p {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE }, { className: "flex items-center gap-3 text-[11.5px] uppercase", style: { fontFamily: MONO, letterSpacing: "0.24em", color: F.mint, margin: 0 } })}>
           <WaveMark />
           Alerte LogisVert
           <WaveMark />
-        </motion.p>
+        </p>
 
         {/* ── La scène : enveloppe (fond, rabat, poche) et lettre ── */}
-        <motion.div
-          className="al-scene relative mt-7 w-full max-w-[820px] sm:mt-9"
-          initial={reduce ? false : { opacity: 0, y: 70 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.05, ease: EASE, delay: T.env }}
-        >
+        <div {...fp({ opacity: 0, y: 70, duration: 1.05, ease: EASE, delay: T.env }, { className: "al-scene relative mt-7 w-full max-w-[820px] sm:mt-9" })}>
           <div aria-hidden="true" className="al-back al-liner" />
 
           <motion.div
@@ -110,15 +101,16 @@ export function EnveloppeHero({ title, lead, actions, rows, postmark }: Envelopp
             </svg>
           </motion.div>
 
+          {/* La lettre monte de la poche. Son masque (le bas de .al-letter-clip) est un clip-path porté par la lettre, qui monte avec elle (fpLine) : même rendu, et le titre compte pour le LCP. */}
           <div className="al-letter-clip">
-            <motion.article className="al-letter" initial={reduce ? false : { y: "104%" }} animate={{ y: "0%" }} transition={{ duration: 1.15, ease: [0.3, 0.72, 0.2, 1], delay: T.letter }}>
+            <article {...fpLine({ y: "104%", pad: ["1600px", "160px", "0px", "160px"], duration: 1.15, ease: [0.3, 0.72, 0.2, 1], delay: T.letter }, { className: "al-letter" })}>
               <motion.div
                 className="relative px-[22px] pt-[22px] sm:px-12 sm:pt-9"
                 initial={false}
                 animate={reduce ? { y: 0 } : { y: [0, 3, 0] }}
                 transition={reduce ? { duration: 0 } : { duration: 0.28, delay: T.stamp + 0.2, ease: "easeOut" }}
               >
-                <Postmark lines={postmark} reduce={reduce} />
+                <Postmark lines={postmark} />
                 <p className="text-[10.5px] uppercase sm:text-[11px]" style={{ fontFamily: MONO, letterSpacing: "0.2em", color: F.inkFaint, margin: 0 }}>
                   ThermopompesÀVendre.ca
                 </p>
@@ -188,7 +180,7 @@ export function EnveloppeHero({ title, lead, actions, rows, postmark }: Envelopp
                   )}
                 </div>
               </motion.div>
-            </motion.article>
+            </article>
           </div>
 
           {/* Poche avant : bord supérieur en V léger, plis du fond */}
@@ -208,24 +200,23 @@ export function EnveloppeHero({ title, lead, actions, rows, postmark }: Envelopp
               </svg>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 }
 
 /* Cachet d'oblitération : cercle double, texte en couronne, statut au centre ; encre irrégulière. */
-function Postmark({ lines, reduce }: { lines: string[]; reduce: boolean }) {
+function Postmark({ lines }: { lines: string[] }) {
   const size = lines.length > 1 ? 16.5 : 18.5;
   const y0 = 100 - ((lines.length - 1) * 21) / 2;
   const yEnd = y0 + (lines.length - 1) * 21;
   return (
-    <motion.div
+    // Frappe du cachet en CSS dès le premier rendu (.al-postmark, alertes.css) : arrivée en style fixe.
+    <div
       aria-hidden="true"
-      className="absolute right-[10px] top-[8px] w-[104px] sm:right-[26px] sm:top-[18px] sm:w-[150px]"
-      initial={reduce ? false : { opacity: 0, scale: 1.9, rotate: -34 }}
-      animate={reduce ? { opacity: 0.94, scale: 1, rotate: -12 } : { opacity: [0, 1, 0.94], scale: [1.9, 0.93, 1], rotate: -12 }}
-      transition={reduce ? { duration: 0 } : { duration: 0.36, times: [0, 0.68, 1], ease: "easeIn", delay: T.stamp, rotate: { duration: 0.3, ease: "easeOut", delay: T.stamp } }}
+      className="al-postmark absolute right-[10px] top-[8px] w-[104px] sm:right-[26px] sm:top-[18px] sm:w-[150px]"
+      style={{ opacity: 0.94, rotate: "-12deg", ["--al-stamp" as string]: `${T.stamp}s` } as CSSProperties}
     >
       <svg viewBox="0 0 200 200" className="block h-auto w-full overflow-visible">
         <defs>
@@ -255,7 +246,7 @@ function Postmark({ lines, reduce }: { lines: string[]; reduce: boolean }) {
           <line x1="62" y1={yEnd + 20} x2="138" y2={yEnd + 20} stroke="currentColor" strokeWidth="1.6" />
         </g>
       </svg>
-    </motion.div>
+    </div>
   );
 }
 

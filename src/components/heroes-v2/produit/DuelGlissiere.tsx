@@ -5,6 +5,7 @@ import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, 
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, MotionConfig, animate, motion, useMotionValue, useMotionValueEvent, useTransform, type AnimationPlaybackControls, type MotionValue } from "motion/react";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { Tick, fmtNum, useLater, useReducedSafe } from "./Tick";
 
 /* ==================================================================
@@ -135,7 +136,7 @@ export function DuelGlissiere({ models, mode, extra, hasComparison }: { models: 
 
       {/* ── Titre centré ── */}
       <div className="relative z-10 mx-auto max-w-[1180px] px-5 pt-[132px] text-center sm:px-8 min-[1700px]:pt-[150px]">
-        <motion.nav aria-label="Fil d’Ariane" className="text-[12.5px] font-medium" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+        <nav aria-label="Fil d’Ariane" {...fp({ opacity: 0, duration: 0.8 }, { className: "text-[12.5px] font-medium" })}>
           <ol className="m-0 flex list-none flex-wrap items-center justify-center gap-x-2 gap-y-1 p-0" style={{ color: MUTE }}>
             <li><Link href="/" className="hover:underline">Accueil</Link></li>
             <li aria-hidden="true" style={{ color: FAINT }}>/</li>
@@ -143,31 +144,26 @@ export function DuelGlissiere({ models, mode, extra, hasComparison }: { models: 
             <li aria-hidden="true" style={{ color: FAINT }}>/</li>
             <li style={{ color: INK }}><span aria-current="page">Comparer</span></li>
           </ol>
-        </motion.nav>
-        <motion.p
-          className="mx-auto mt-6 flex items-center justify-center gap-3 text-[11.5px] font-semibold uppercase"
-          style={{ letterSpacing: "0.26em", color: MUTE, margin: "24px 0 0" }}
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-        >
+        </nav>
+        <p {...fp({ opacity: 0, duration: 0.8, delay: 0.1 }, { className: "mx-auto mt-6 flex items-center justify-center gap-3 text-[11.5px] font-semibold uppercase", style: { letterSpacing: "0.26em", color: MUTE, margin: "24px 0 0" } })}>
           <span aria-hidden="true" className="h-px w-8" style={{ background: INK }} />
           Comparateur
           <span aria-hidden="true" className="h-px w-8" style={{ background: INK }} />
-        </motion.p>
+        </p>
         <h1 id="dg-titre" className="mx-auto" style={{ margin: "14px 0 0", fontSize: "clamp(38px, 4.6vw, 74px)", lineHeight: 1, letterSpacing: "-0.045em", fontWeight: 500, textWrap: "balance" }}>
           {["Comparez", "ce", "qui", "compte", "vraiment."].map((w, i) => (
-            <span key={w} className="inline-block overflow-hidden align-bottom" style={{ paddingBottom: "0.1em", marginBottom: "-0.1em" }}>
-              <motion.span className="inline-block" initial={reduce ? false : { y: "110%" }} animate={{ y: "0%" }} transition={{ duration: 1, ease: EASE, delay: 0.15 + i * 0.06 }}>
+            // Masque sans overflow : fpLine() rogne le mot ; à droite, la marge couvre l'espace qui suit le mot dans l'ancien masque.
+            <span key={w} className="inline-block align-bottom" style={{ paddingBottom: "0.1em", marginBottom: "-0.1em" }}>
+              <span {...fpLine({ y: "110%", pad: ["0px", i < 4 ? "0.2em" : "0px", "0.1em", "0px"], duration: 1, ease: EASE, delay: 0.15 + i * 0.06 }, { className: "inline-block" })}>
                 {w}
-              </motion.span>
+              </span>
               {i < 4 ? " " : ""}
             </span>
           ))}
         </h1>
-        <motion.p className="mx-auto text-[16.5px] sm:text-[18px]" style={{ color: MUTE, margin: "14px 0 0", lineHeight: 1.5 }} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.5 }}>
+        <p {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE, delay: 0.5 }, { className: "mx-auto text-[16.5px] sm:text-[18px]", style: { color: MUTE, margin: "14px 0 0", lineHeight: 1.5 } })}>
           Performance hivernale, efficacité, silence et garantie.
-        </motion.p>
+        </p>
       </div>
 
       {/* ── Scène : deux moitiés, un séparateur ── */}
@@ -224,11 +220,11 @@ export function DuelGlissiere({ models, mode, extra, hasComparison }: { models: 
       {/* ── Actions ── */}
       <div className="relative z-10 mx-auto max-w-[1180px] px-5 pb-14 pt-7 text-center sm:px-8 lg:pb-16">
         {a && (
-          <motion.p className="text-[12.5px]" style={{ color: MUTE, margin: 0 }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1.2 }}>
+          <p {...fp({ opacity: 0, duration: 0.8, delay: 1.2 }, { className: "text-[12.5px]", style: { color: MUTE, margin: 0 } })}>
             {caption}
-          </motion.p>
+          </p>
         )}
-        <motion.div className="mt-6 flex flex-wrap items-center justify-center gap-3" initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.8 }}>
+        <div {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE, delay: 0.8 }, { className: "mt-6 flex flex-wrap items-center justify-center gap-3" })}>
           <Link href="#comparateur" className="dg-btn inline-flex items-center gap-3 rounded-full py-3.5 pl-6 pr-5 text-[15px] font-semibold text-white" style={{ background: INK }}>
             {hasComparison ? "Voir la comparaison" : "Choisir mes modèles"}
             <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -238,9 +234,9 @@ export function DuelGlissiere({ models, mode, extra, hasComparison }: { models: 
           <Link href="/thermopompes" className="dg-btn dg-ghost inline-flex items-center rounded-full px-6 py-3.5 text-[15px] font-semibold" style={{ border: `1px solid ${INK}` }}>
             Parcourir le catalogue
           </Link>
-        </motion.div>
+        </div>
         {/* ThermoScan : comparer avec l'appareil actuel, directement dans le héros */}
-        <motion.div initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1 }}>
+        <div {...fp({ opacity: 0, duration: 0.8, delay: 1 })}>
           <Link href="/thermoscan" className="group mx-auto mt-7 inline-flex max-w-full flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full px-5 py-2.5" style={{ border: `1px solid ${LINE}`, background: "rgba(255,255,255,0.35)" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/thermoscan-logo.webp" alt="ThermoScan" width={83} height={30} style={{ height: 26, width: 72, maxWidth: "none", objectFit: "contain" }} />
@@ -251,7 +247,7 @@ export function DuelGlissiere({ models, mode, extra, hasComparison }: { models: 
               En savoir plus →
             </span>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
     </MotionConfig>
@@ -268,7 +264,7 @@ function Half({ side, m, other, clip, bg, reduce }: { side: "a" | "b"; m: VsMode
   return (
     <motion.div className="absolute inset-0" style={{ background: bg, clipPath: clip }}>
       {/* Photo, face à l'adversaire */}
-      <motion.div className={`dg-${side}-photo absolute`} style={{ mixBlendMode: "multiply" }} initial={reduce ? false : { opacity: 0, x: from }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.3, ease: EASE, delay: 0.35 }}>
+      <div {...fp({ opacity: 0, x: from, duration: 1.3, ease: EASE, delay: 0.35 }, { className: `dg-${side}-photo absolute`, style: { mixBlendMode: "multiply" } })}>
         {m ? (
           <Link href={`/produit/${m.slug}`} aria-label={`${m.brand} ${m.name} : voir la fiche`} className="group absolute inset-0 block" draggable={false}>
             {m.img ? (
@@ -297,12 +293,12 @@ function Half({ side, m, other, clip, bg, reduce }: { side: "a" | "b"; m: VsMode
             <span aria-hidden="true">→</span>
           </Link>
         )}
-      </motion.div>
+      </div>
 
       {/* Identité + chiffres */}
       {m && (
         <div className={`dg-${side}-figs absolute`}>
-        <motion.div initial={reduce ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay: 0.6 }}>
+        <div {...fp({ opacity: 0, y: 14, duration: 1, ease: EASE, delay: 0.6 })}>
           <p className="truncate text-[10.5px] font-semibold uppercase sm:text-[11px]" style={{ letterSpacing: "0.2em", color: MUTE, margin: 0 }}>
             {m.brand}
           </p>
@@ -331,7 +327,7 @@ function Half({ side, m, other, clip, bg, reduce }: { side: "a" | "b"; m: VsMode
               );
             })}
           </dl>
-        </motion.div>
+        </div>
         </div>
       )}
 

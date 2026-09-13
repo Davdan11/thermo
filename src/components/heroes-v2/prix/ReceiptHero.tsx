@@ -3,11 +3,12 @@
 import "./prix-v2.css";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
-import { animate, motion, steps, useInView, useMotionValue } from "motion/react";
+import { animate, motion, useInView, useMotionValue } from "motion/react";
 import type { RangeSet } from "@/components/product/hero/prix-sets";
 import { DISPLAY, MONO, plexMono } from "./fonts";
 import { CountTo, EASE, fr, useAfter } from "./shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { fp } from "@/components/hero/first-paint";
 
 /* ==================================================================
    /prix — « Le reçu ».
@@ -26,18 +27,15 @@ const RULE = "rgba(27,27,27,0.16)";
 
 type Stat = { value: number; label: string };
 
+/** Le titre s'imprime lui aussi : révélé de gauche à droite, par à-coups de tête d'impression (11 pas). */
+function printIn(delay: number) {
+  const p = fp({ clipPath: "inset(-10% 100% -20% 0)", duration: 0.75, delay, ease: "linear" }, { className: "block", style: { clipPath: "inset(-10% 0% -20% 0)" } });
+  // fp() ne décrit que des courbes continues : même minutage, courbe remplacée par l'escalier steps(11) (celui de motion).
+  return { ...p, style: { ...p.style, animation: String(p.style.animation).replace("linear", "steps(11)") } };
+}
+
 export function ReceiptHero({ crumbs, sets, stats, consulted, footnote }: { crumbs: ReactNode; sets: RangeSet[]; stats: Stat[]; consulted: string; footnote: string }) {
-  const reduce = !!useReduced();
   const play = useAfter(1250);
-  // Le titre s'imprime lui aussi : révélé de gauche à droite, par à-coups de tête d'impression.
-  const printIn = (delay: number) =>
-    reduce
-      ? {}
-      : {
-          initial: { clipPath: "inset(-10% 100% -20% 0)" },
-          animate: { clipPath: "inset(-10% 0% -20% 0)" },
-          transition: { duration: 0.75, ease: steps(11), delay },
-        };
 
   return (
     <section
@@ -48,15 +46,9 @@ export function ReceiptHero({ crumbs, sets, stats, consulted, footnote }: { crum
       <div className="relative mx-auto grid max-w-[1440px] gap-14 px-5 pb-16 pt-[136px] sm:px-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-10 lg:px-12 lg:pb-16 min-[1700px]:pt-[152px]">
         {/* ---------- Texte ---------- */}
         <div className="min-w-0 lg:pt-2">
-          <motion.div
-            className="pv2-crumbs text-[13px]"
-            style={{ "--c-link": MUTE, "--c-cur": INK, "--c-sep": "rgba(27,27,27,0.28)" } as CSSProperties}
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div {...fp({ opacity: 0, duration: 0.6 }, { className: "pv2-crumbs text-[13px]", style: { "--c-link": MUTE, "--c-cur": INK, "--c-sep": "rgba(27,27,27,0.28)" } as CSSProperties })}>
             {crumbs}
-          </motion.div>
+          </div>
 
           <p className="flex items-center gap-3 text-[11.5px] font-medium uppercase" style={{ fontFamily: MONO, letterSpacing: "0.2em", margin: "36px 0 0" }}>
             <span aria-hidden="true" className="inline-block h-[9px] w-[9px]" style={{ background: INK }} />
@@ -64,13 +56,13 @@ export function ReceiptHero({ crumbs, sets, stats, consulted, footnote }: { crum
           </p>
 
           <h1 id="rc-titre" style={{ margin: "20px 0 0", fontSize: "clamp(50px, 6.8vw, 112px)", lineHeight: 0.9, letterSpacing: "-0.055em", fontWeight: 700 }}>
-            <motion.span className="block" {...printIn(0.15)}>
+            <span {...printIn(0.15)}>
               Prix d’une
-            </motion.span>{" "}
-            <motion.span className="block" {...printIn(0.3)}>
+            </span>{" "}
+            <span {...printIn(0.3)}>
               thermopompe
-            </motion.span>{" "}
-            <motion.span className="block" {...printIn(0.45)}>
+            </span>{" "}
+            <span {...printIn(0.45)}>
               au Québec{" "}
               <span
                 className="relative -top-[0.12em] inline-block align-middle"
@@ -78,25 +70,14 @@ export function ReceiptHero({ crumbs, sets, stats, consulted, footnote }: { crum
               >
                 en 2026
               </span>
-            </motion.span>
+            </span>
           </h1>
 
-          <motion.p
-            className="max-w-[560px] text-[17px] leading-[1.65] sm:text-[18px]"
-            style={{ color: "rgba(27,27,27,0.74)", margin: "30px 0 0" }}
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: EASE, delay: 0.7 }}
-          >
+          <p {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.7 }, { className: "max-w-[560px] text-[17px] leading-[1.65] sm:text-[18px]", style: { color: "rgba(27,27,27,0.74)", margin: "30px 0 0" } })}>
             Les fourchettes ci-dessous sont celles que le marché québécois publie, relevées page par page et regroupées par type, calibre et gamme de marque. Elles servent à situer une soumission, pas à la remplacer&nbsp;: le prix exact dépend de votre maison.
-          </motion.p>
+          </p>
 
-          <motion.div
-            className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4"
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: EASE, delay: 0.85 }}
-          >
+          <div {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.85 }, { className: "mt-9 flex flex-wrap items-center gap-x-7 gap-y-4" })}>
             <Link
               href="/trouver-ma-thermopompe"
               className="pv2-btn-ink inline-flex items-center gap-3 px-6 py-4 text-[13.5px] font-medium uppercase"
@@ -110,16 +91,10 @@ export function ReceiptHero({ crumbs, sets, stats, consulted, footnote }: { crum
             <Link href="/soumission" className="pv2-uline text-[15px] font-semibold" style={{ color: INK }}>
               Demander une soumission
             </Link>
-          </motion.div>
+          </div>
 
           {stats.length > 0 && (
-            <motion.dl
-              className={`grid max-w-[600px] ${stats.length >= 3 ? "grid-cols-3" : "grid-cols-2"}`}
-              style={{ margin: "48px 0 0", borderTop: `1.5px solid ${INK}` }}
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
+            <dl {...fp({ opacity: 0, duration: 0.8, delay: 1 }, { className: `grid max-w-[600px] ${stats.length >= 3 ? "grid-cols-3" : "grid-cols-2"}`, style: { margin: "48px 0 0", borderTop: `1.5px solid ${INK}` } })}>
               {stats.map((s, i) => (
                 <div key={s.label} className="flex flex-col gap-2 pr-3 pt-4" style={{ borderLeft: i ? `1px dashed ${RULE}` : "none", paddingLeft: i ? 16 : 0 }}>
                   <dt className="order-2 text-[10.5px] uppercase leading-snug sm:text-[11px]" style={{ fontFamily: MONO, letterSpacing: "0.1em", color: MUTE }}>
@@ -130,7 +105,7 @@ export function ReceiptHero({ crumbs, sets, stats, consulted, footnote }: { crum
                   </dd>
                 </div>
               ))}
-            </motion.dl>
+            </dl>
           )}
         </div>
 

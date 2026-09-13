@@ -8,6 +8,7 @@ import { motion, MotionConfig } from "motion/react";
 import { Crumbs } from "./Crumbs";
 import { palmaresSerif } from "./fonts";
 import { DISPLAY, EASE, PHONE, REASSURANCE, type Crumb, type PodiumEntry, type ProgrammeRow, type Stat, calmNow, CALM } from "./shared";
+import { fp } from "@/components/hero/first-paint";
 
 /* ==================================================================
    « Palmarès » : héros des classements.
@@ -43,28 +44,24 @@ function Shell({ id, children }: { id: string; children: ReactNode }) {
       style={{ background: `radial-gradient(ellipse 90% 70% at 50% 26%, #16392F 0%, ${P.green} 52%, ${P.deep} 100%)`, color: P.cream, fontFamily: DISPLAY }}
     >
       {/* Filet double du programme imprimé */}
-      <motion.div
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-3 bottom-3 top-[100px] sm:inset-x-5 sm:bottom-5 min-[1700px]:top-[112px]"
-        style={{ border: `1px solid ${P.line}` }}
-        initial={{ opacity: 0, scale: 1.01 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={calmNow() ? CALM : { duration: 1.8, ease: EASE, delay: 0.1 }}
+        {...fp(
+          { opacity: 0, scale: 1.01, duration: 1.8, ease: EASE, delay: 0.1 },
+          { className: "pointer-events-none absolute inset-x-3 bottom-3 top-[100px] sm:inset-x-5 sm:bottom-5 min-[1700px]:top-[112px]", style: { border: `1px solid ${P.line}` } },
+        )}
       >
         <span className="absolute inset-[5px]" style={{ border: "1px solid rgba(201,162,75,0.16)" }} />
-      </motion.div>
+      </div>
       <div className="relative mx-auto max-w-[1240px] px-7 pb-16 pt-[132px] text-center sm:px-12 min-[1700px]:pt-[150px]">{children}</div>
     </section>
     </MotionConfig>
   );
 }
 
+/** Entrée en fondu, jouée en CSS dès le premier rendu (sans déplacement quand `y` vaut 0). */
 function Fade({ children, delay = 0, className, y = 14 }: { children: ReactNode; delay?: number; className?: string; y?: number }) {
-  return (
-    <motion.div className={className} initial={{ opacity: 0, y }} animate={{ opacity: 1, y: 0 }} transition={calmNow() ? CALM : { duration: 1.1, ease: EASE, delay }}>
-      {children}
-    </motion.div>
-  );
+  return <div {...fp({ opacity: 0, ...(y ? { y } : {}), duration: 1.1, ease: EASE, delay }, { className })}>{children}</div>;
 }
 
 function Eyebrow({ children, delay = 0.12 }: { children: ReactNode; delay?: number }) {
@@ -83,9 +80,9 @@ function Eyebrow({ children, delay = 0.12 }: { children: ReactNode; delay?: numb
 function Rule({ delay }: { delay: number }) {
   return (
     <div aria-hidden="true" className="mx-auto flex max-w-[560px] items-center gap-3">
-      <motion.span className="h-px flex-1 origin-right" style={{ background: P.gold, opacity: 0.7 }} initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={calmNow() ? CALM : { duration: 1.4, ease: EASE, delay }} />
-      <motion.span className="inline-block h-[7px] w-[7px] rotate-45" style={{ border: `1px solid ${P.gold}` }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={calmNow() ? CALM : { duration: 0.6, delay: delay + 0.2 }} />
-      <motion.span className="h-px flex-1 origin-left" style={{ background: P.gold, opacity: 0.7 }} initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={calmNow() ? CALM : { duration: 1.4, ease: EASE, delay }} />
+      <span {...fp({ scaleX: 0, duration: 1.4, ease: EASE, delay }, { className: "h-px flex-1 origin-right", style: { background: P.gold, opacity: 0.7 } })} />
+      <span {...fp({ opacity: 0, duration: 0.6, delay: delay + 0.2 }, { className: "inline-block h-[7px] w-[7px] rotate-45", style: { border: `1px solid ${P.gold}` } })} />
+      <span {...fp({ scaleX: 0, duration: 1.4, ease: EASE, delay }, { className: "h-px flex-1 origin-left", style: { background: P.gold, opacity: 0.7 } })} />
     </div>
   );
 }
@@ -131,7 +128,7 @@ export function PalmaresIndexHero({ lines, year, intro, crumbs, rows }: { lines:
         {lines.map((l, i) => {
           const at = l.indexOf(y);
           return (
-            <motion.span key={l} className="block" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={calmNow() ? CALM : { duration: 1.3, ease: EASE, delay: 0.25 + i * 0.16 }}>
+            <span key={l} {...fp({ opacity: 0, y: 28, duration: 1.3, ease: EASE, delay: 0.25 + i * 0.16 }, { className: "block" })}>
               {at < 0 ? (
                 l
               ) : (
@@ -144,7 +141,7 @@ export function PalmaresIndexHero({ lines, year, intro, crumbs, rows }: { lines:
                 </>
               )}
               {i < lines.length - 1 ? " " : null}
-            </motion.span>
+            </span>
           );
         })}
       </h1>
@@ -167,13 +164,7 @@ export function PalmaresIndexHero({ lines, year, intro, crumbs, rows }: { lines:
         {rows.map((r, i) => {
           const d = announce + i * 0.2;
           return (
-            <motion.li
-              key={r.href}
-              style={{ borderTop: `1px solid ${P.line}` }}
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: d }}
-            >
+            <li key={r.href} {...fp({ opacity: 0, y: 18, duration: 1, ease: EASE, delay: d }, { style: { borderTop: `1px solid ${P.line}` } })}>
               <Link href={r.href} className="grid grid-cols-[56px_minmax(0,1fr)] items-center gap-4 py-4 sm:grid-cols-[88px_minmax(0,1fr)] sm:gap-5" style={{ color: P.cream }}>
                 <span
                   aria-hidden="true"
@@ -187,14 +178,7 @@ export function PalmaresIndexHero({ lines, year, intro, crumbs, rows }: { lines:
                     <span className="shrink-0 text-[11px] font-semibold uppercase" style={{ letterSpacing: "0.2em", color: P.gold }}>
                       {r.label}
                     </span>
-                    <motion.span
-                      aria-hidden="true"
-                      className="h-0 flex-1 origin-left"
-                      style={{ borderTop: `1px dotted ${P.line}` }}
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={calmNow() ? CALM : { duration: 1.1, ease: EASE, delay: d + 0.3 }}
-                    />
+                    <span aria-hidden="true" {...fp({ scaleX: 0, duration: 1.1, ease: EASE, delay: d + 0.3 }, { className: "h-0 flex-1 origin-left", style: { borderTop: `1px dotted ${P.line}` } })} />
                   </span>
                   <span className="mq-prog-name mt-1.5 block truncate" style={{ fontFamily: SERIF, fontSize: "clamp(19px, 1.65vw, 24px)", fontWeight: 400, letterSpacing: "-0.01em", lineHeight: 1.2 }}>
                     {r.leader}
@@ -204,7 +188,7 @@ export function PalmaresIndexHero({ lines, year, intro, crumbs, rows }: { lines:
                   </span>
                 </span>
               </Link>
-            </motion.li>
+            </li>
           );
         })}
       </ol>
@@ -256,7 +240,7 @@ export function PalmaresPodiumHero({
         id="palmares-titre"
         style={{ fontFamily: SERIF, fontWeight: 350, fontSize: "clamp(34px, 4.3vw, 70px)", lineHeight: 1.04, letterSpacing: "-0.02em", margin: "20px auto 0", maxWidth: 1080, textWrap: "balance" }}
       >
-        <motion.span className="block" initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={calmNow() ? CALM : { duration: 1.3, ease: EASE, delay: 0.25 }}>
+        <span {...fp({ opacity: 0, y: 26, duration: 1.3, ease: EASE, delay: 0.25 }, { className: "block" })}>
           {at < 0 || !accent ? (
             title
           ) : (
@@ -266,7 +250,7 @@ export function PalmaresPodiumHero({
               {title.slice(at + accent.length)}
             </>
           )}
-        </motion.span>
+        </span>
       </h1>
       <Fade delay={0.55}>
         <p className="mx-auto max-w-[760px] text-[16px] leading-[1.6]" style={{ color: P.mute, margin: "18px auto 0" }}>
@@ -309,36 +293,32 @@ export function PalmaresPodiumHero({
                         )}
                       </div>
                     </motion.div>
-                    <motion.div
-                      className="relative mt-3 overflow-hidden"
-                      style={{
-                        height: h,
-                        background: "linear-gradient(180deg, #17463A 0%, #0D2A22 100%)",
-                        borderTop: `2px solid ${first ? P.gold : "rgba(243,235,221,0.32)"}`,
-                        borderBottom: `1px solid ${P.line}`,
-                        transformOrigin: "50% 100%",
-                      }}
-                      initial={{ scaleY: 0 }}
-                      animate={{ scaleY: 1 }}
-                      transition={calmNow() ? CALM : { duration: 1.1, ease: EASE, delay: d }}
+                    <div
+                      {...fp(
+                        { scaleY: 0, duration: 1.1, ease: EASE, delay: d },
+                        {
+                          className: "relative mt-3 overflow-hidden",
+                          style: {
+                            height: h,
+                            background: "linear-gradient(180deg, #17463A 0%, #0D2A22 100%)",
+                            borderTop: `2px solid ${first ? P.gold : "rgba(243,235,221,0.32)"}`,
+                            borderBottom: `1px solid ${P.line}`,
+                            transformOrigin: "50% 100%",
+                          },
+                        },
+                      )}
                     >
-                      <motion.span
-                        aria-hidden="true"
-                        className="absolute inset-0 flex items-center justify-center"
-                        initial={{ y: "90%" }}
-                        animate={{ y: "0%" }}
-                        transition={calmNow() ? CALM : { duration: 1.2, ease: EASE, delay: d + 0.45 }}
-                      >
+                      <span aria-hidden="true" {...fp({ y: "90%", duration: 1.2, ease: EASE, delay: d + 0.45 }, { className: "absolute inset-0 flex items-center justify-center" })}>
                         <span
                           className={first ? "mq-foil" : undefined}
                           style={{ fontFamily: SERIF, fontWeight: 300, fontSize: `calc(${h} * 0.84)`, lineHeight: 1, color: first ? undefined : "rgba(243,235,221,0.86)", fontVariationSettings: '"SOFT" 60', "--mq-delay": "2.8s" } as CSSProperties}
                         >
                           {it.rank}
                         </span>
-                      </motion.span>
-                    </motion.div>
+                      </span>
+                    </div>
                   </Link>
-                  <motion.div className="mt-4 px-0.5" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={calmNow() ? CALM : { duration: 1, delay: d + 1.2 }}>
+                  <div {...fp({ opacity: 0, duration: 1, delay: d + 1.2 }, { className: "mt-4 px-0.5" })}>
                     <p className="truncate text-[10px] font-semibold uppercase sm:text-[11px]" style={{ letterSpacing: "0.18em", color: P.gold, margin: 0 }}>
                       {it.brand}
                     </p>
@@ -348,7 +328,7 @@ export function PalmaresPodiumHero({
                     <p className="text-[11px] leading-snug tabular-nums sm:text-[12.5px]" style={{ color: P.mute, margin: "6px 0 0" }}>
                       {it.value}
                     </p>
-                  </motion.div>
+                  </div>
                 </li>
               );
             })}

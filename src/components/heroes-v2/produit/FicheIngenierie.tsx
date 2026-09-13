@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, 
 import Image from "next/image";
 import Link from "next/link";
 import { MotionConfig, motion, useMotionValue, useSpring, useTransform, type MotionValue } from "motion/react";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { techMono } from "./fonts-mono";
 import { Tick, fmtNum, useLater, useReducedSafe } from "./Tick";
 
@@ -217,13 +218,7 @@ export function FicheIngenierie(d: FicheData) {
     >
       <div className="relative mx-auto max-w-[1440px] px-5 pb-12 pt-[128px] sm:px-8 lg:px-12 lg:pb-14 min-[1700px]:pt-[146px]">
         {/* ── Fil d'Ariane + logo de la marque ── */}
-        <motion.div
-          className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 pb-3"
-          style={{ borderBottom: `1px solid ${LINE}` }}
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.05 }}
-        >
+        <div {...fp({ opacity: 0, duration: 0.8, delay: 0.05 }, { className: "flex flex-wrap items-center justify-between gap-x-6 gap-y-3 pb-3", style: { borderBottom: `1px solid ${LINE}` } })}>
           <nav aria-label="Fil d’Ariane" className="fi-crumbs fi-mono min-w-0 text-[11.5px]" style={{ letterSpacing: "0.04em" }}>
             <ol className="m-0 flex list-none flex-wrap items-center gap-x-2 gap-y-1 p-0">
               <li><Link href="/">Accueil</Link></li>
@@ -247,7 +242,7 @@ export function FicheIngenierie(d: FicheData) {
               {d.imageUrl ? `Photo officielle · ${d.brandName}` : "Photo du fabricant non disponible"}
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* ── Scène : photo, cotes, chiffres ── */}
         <div ref={stageRef} className="fi-stage mt-7 lg:mt-4">
@@ -268,12 +263,7 @@ export function FicheIngenierie(d: FicheData) {
             <div aria-hidden="true" className="absolute inset-x-[14%] bottom-[34px] h-[26px]" style={{ background: "radial-gradient(closest-side, rgba(18,20,23,0.16), rgba(18,20,23,0))" }} />
             <div ref={photoRef} className="absolute inset-x-0 top-0 bottom-[48px]">
               <motion.div className="absolute inset-0" style={reduce ? undefined : { x: px, y: py }}>
-                <motion.div
-                  className="absolute inset-0"
-                  initial={reduce ? false : { opacity: 0, y: 28, clipPath: "inset(100% 0% 0% 0%)" }}
-                  animate={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
-                  transition={{ duration: 1.3, ease: EASE, delay: 0.2 }}
-                >
+                <div {...fp({ opacity: 0, y: 28, clipPath: "inset(100% 0% 0% 0%)", duration: 1.3, ease: EASE, delay: 0.2 }, { className: "absolute inset-0", style: { clipPath: "inset(0% 0% 0% 0%)" } })}>
                   {d.imageUrl ? (
                     <Image
                       src={d.imageUrl}
@@ -292,7 +282,7 @@ export function FicheIngenierie(d: FicheData) {
                       </span>
                     </div>
                   )}
-                </motion.div>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -305,51 +295,33 @@ export function FicheIngenierie(d: FicheData) {
           )}
           {geo && capacity && (
             <motion.div aria-hidden="true" className="pointer-events-none absolute z-10" style={{ left: geo.img.x + geo.img.w / 2, top: geo.img.y + geo.img.h + 24, ...(reduce ? {} : { x: px, y: py }) }}>
-              <motion.span
-                className="fi-mono block -translate-x-1/2 -translate-y-1/2 whitespace-nowrap bg-white px-2.5 text-[11px]"
-                style={{ color: INK, letterSpacing: "0.02em" }}
-                initial={reduce ? false : { opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.95 }}
-              >
+              <span {...fp({ opacity: 0, duration: 0.6, delay: 0.95 }, { className: "fi-mono block -translate-x-1/2 -translate-y-1/2 whitespace-nowrap bg-white px-2.5 text-[11px]", style: { color: INK, letterSpacing: "0.02em" } })}>
                 {capacity} · nominal
-              </motion.span>
+              </span>
             </motion.div>
           )}
         </div>
 
         {/* ── Titre : le nom du modèle traverse la page ── */}
         <h1 id="fi-titre" style={{ margin: "22px 0 0", fontWeight: 600 }}>
-          <motion.span
-            className="fi-mono block text-[11.5px] uppercase sm:text-[12.5px]"
-            style={{ letterSpacing: "0.2em", color: MUTE, fontWeight: 500 }}
-            initial={reduce ? false : { opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.3 }}
-          >
+          <span {...fp({ opacity: 0, y: 8, duration: 0.8, ease: EASE, delay: 0.3 }, { className: "fi-mono block text-[11.5px] uppercase sm:text-[12.5px]", style: { letterSpacing: "0.2em", color: MUTE, fontWeight: 500 } })}>
             Thermopompe {d.brandName}
-          </motion.span>{" "}
-          <span className="block overflow-hidden" style={{ paddingBottom: "0.08em", marginTop: 6 }}>
-            <motion.span
-              className="fi-name block"
-              style={{ lineHeight: 0.88, letterSpacing: "-0.055em", overflowWrap: "anywhere", ["--fi-kd" as string]: kd, ["--fi-km" as string]: km } as CSSProperties}
-              initial={reduce ? false : { y: "104%" }}
-              animate={{ y: "0%" }}
-              transition={{ duration: 1.25, ease: EASE, delay: 0.38 }}
+          </span>{" "}
+          {/* Masque de la ligne : son retrait bas (0,08em) est à la taille du h1, d’où var(--text-h1) dans fpLine. */}
+          <span className="block" style={{ paddingBottom: "0.08em", marginTop: 6 }}>
+            <span
+              {...fpLine(
+                { y: "104%", pad: ["0px", "0px", "calc(0.08 * var(--text-h1))", "0px"], duration: 1.25, ease: EASE, delay: 0.38 },
+                { className: "fi-name block", style: { lineHeight: 0.88, letterSpacing: "-0.055em", overflowWrap: "anywhere", ["--fi-kd" as string]: kd, ["--fi-km" as string]: km } as CSSProperties },
+              )}
             >
               {d.modelName}
-            </motion.span>
+            </span>
           </span>
         </h1>
 
         {/* ── Cartouche ── */}
-        <motion.dl
-          className="m-0 mt-4 grid grid-cols-2 sm:flex sm:flex-wrap"
-          style={{ borderTop: `1px solid ${INK}`, borderBottom: `1px solid ${LINE}` }}
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.9, delay: 0.75 }}
-        >
+        <dl {...fp({ opacity: 0, duration: 0.9, delay: 0.75 }, { className: "m-0 mt-4 grid grid-cols-2 sm:flex sm:flex-wrap", style: { borderTop: `1px solid ${INK}`, borderBottom: `1px solid ${LINE}` } })}>
           {cells.map((c, i) => (
             <div key={c.k} className="min-w-0 py-3 pr-5 sm:pl-5 sm:first:pl-0" style={{ borderLeft: i ? `1px solid ${LINE}` : "none" }}>
               <dt className="fi-mono text-[10px] uppercase" style={{ letterSpacing: "0.14em", color: MUTE }}>
@@ -360,11 +332,11 @@ export function FicheIngenierie(d: FicheData) {
               </dd>
             </div>
           ))}
-        </motion.dl>
+        </dl>
 
         {/* ── Actions + autres capacités ── */}
         <div className="mt-5 grid gap-7 lg:grid-cols-[auto_minmax(0,1fr)] lg:items-start lg:gap-14">
-          <motion.div initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.85 }}>
+          <div {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE, delay: 0.85 })}>
             <div className="flex flex-wrap items-center gap-3">
               <Link href="/trouver-ma-thermopompe" className="fi-btn inline-flex items-center gap-3 rounded-[3px] px-5 py-3.5 text-[15px] font-semibold text-white" style={{ background: INK }}>
                 Vérifier si ce modèle me convient
@@ -378,10 +350,10 @@ export function FicheIngenierie(d: FicheData) {
               <span className="fi-lnk-t">Comparer ce modèle avec un autre</span>
               <Arrow size={14} />
             </Link>
-          </motion.div>
+          </div>
 
           {d.chips.length > 0 && (
-            <motion.div className="min-w-0 lg:justify-self-end lg:text-right" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.9, delay: 1 }}>
+            <div {...fp({ opacity: 0, duration: 0.9, delay: 1 }, { className: "min-w-0 lg:justify-self-end lg:text-right" })}>
               <p className="fi-mono text-[10.5px] uppercase" style={{ letterSpacing: "0.14em", color: MUTE, margin: "0 0 10px" }}>
                 Autres capacités{d.seriesLabel ? ` — ${d.seriesLabel}` : ""}
                 {d.siblings > d.chips.length ? ` · ${d.siblings + 1} modèles` : ""}
@@ -405,7 +377,7 @@ export function FicheIngenierie(d: FicheData) {
                   </Link>
                 )}
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
       </div>
@@ -423,7 +395,7 @@ function Callout({ item, n, delay, reduce }: { item: Item; n: number; delay: num
   const idx = String(n + 1).padStart(2, "0");
   const fig: CSSProperties = { margin: "8px 0 0", fontSize: "clamp(30px, 3.2vw, 52px)", lineHeight: 1, fontWeight: 500, letterSpacing: "-0.05em" };
   return (
-    <motion.div className="fi-cell" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: Math.max(0, delay - 0.3) }}>
+    <div {...fp({ opacity: 0, duration: 0.5, delay: Math.max(0, delay - 0.3) }, { className: "fi-cell" })}>
       {item.kind === "fig" ? (
         <>
           <p className="fi-mono m-0 text-[11px]" style={{ color: MUTE, letterSpacing: "0.02em" }}>
@@ -453,7 +425,7 @@ function Callout({ item, n, delay, reduce }: { item: Item; n: number; delay: num
           </span>
         </Link>
       )}
-    </motion.div>
+    </div>
   );
 }
 
@@ -474,11 +446,11 @@ function LeaderLine({ ln, px, py, delay, reduce }: { ln: Leader; px: MotionValue
   }, [ln, px, py, reduce, d]);
   return (
     <g>
-      <motion.circle cx={ln.P.x} cy={ln.P.y} r={2} fill={INK} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2, delay }} />
+      <circle cx={ln.P.x} cy={ln.P.y} r={2} fill={INK} {...fp({ opacity: 0, duration: 0.2, delay })} />
       <motion.path d={d} fill="none" stroke={INK} strokeWidth={1} initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.75, ease: [0.65, 0, 0.35, 1], delay }} />
       <motion.g style={reduce ? undefined : { x: px, y: py }}>
-        <motion.circle cx={ln.T.x} cy={ln.T.y} r={4} fill="#FFFFFF" stroke={INK} strokeWidth={1.25} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: delay + 0.7 }} />
-        <motion.circle cx={ln.T.x} cy={ln.T.y} r={1.4} fill={INK} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: delay + 0.7 }} />
+        <circle cx={ln.T.x} cy={ln.T.y} r={4} fill="#FFFFFF" stroke={INK} strokeWidth={1.25} {...fp({ opacity: 0, duration: 0.3, delay: delay + 0.7 })} />
+        <circle cx={ln.T.x} cy={ln.T.y} r={1.4} fill={INK} {...fp({ opacity: 0, duration: 0.3, delay: delay + 0.7 })} />
       </motion.g>
     </g>
   );
@@ -498,7 +470,7 @@ function Dimension({ geo, px, py, reduce }: { geo: Geo; px: MotionValue<number>;
       <motion.path d={`M${x2} ${iy + h + 8} V${y + 7}`} {...draw(0.55)} />
       <motion.path d={`M${cx} ${y} H${x1}`} {...draw(0.7)} />
       <motion.path d={`M${cx} ${y} H${x2}`} {...draw(0.7)} />
-      <motion.path d={`M${x1 + 8} ${y - 4} L${x1} ${y} L${x1 + 8} ${y + 4} M${x2 - 8} ${y - 4} L${x2} ${y} L${x2 - 8} ${y + 4}`} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: 1.35 }} />
+      <path d={`M${x1 + 8} ${y - 4} L${x1} ${y} L${x1 + 8} ${y + 4} M${x2 - 8} ${y - 4} L${x2} ${y} L${x2 - 8} ${y + 4}`} {...fp({ opacity: 0, duration: 0.3, delay: 1.35 })} />
     </motion.g>
   );
 }

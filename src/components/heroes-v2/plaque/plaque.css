@@ -88,7 +88,31 @@ html:has(.pl-root), body:has(.pl-root) { overflow-x: clip; }
 .pl-bar { background: linear-gradient(180deg, #2C3134, #101314); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2); }
 
 /* Impact du poinçon : ombre brève sous la valeur frappée. */
-.pl-dent { position: absolute; inset: -22% -12%; border-radius: 50%; pointer-events: none; background: radial-gradient(closest-side, rgba(22, 25, 27, 0.2), rgba(22, 25, 27, 0)); }
+.pl-dent { position: absolute; inset: -22% -12%; border-radius: 50%; pointer-events: none; opacity: 0; background: radial-gradient(closest-side, rgba(22, 25, 27, 0.2), rgba(22, 25, 27, 0)); }
+
+/* ---------- Chronologie de la plaque, jouée dès le premier rendu ----------
+   Comme les entrées fp() (components/hero/first-paint), mais en suites d'images
+   clés : mêmes instants (times), même durée et même courbe par segment que les
+   anciennes animations motion. Durées, délais et courbes sont posés en ligne
+   par PlaqueHero.tsx (chronologie T). */
+/* Valeur poinçonnée : tombe plus grande, frappe (0,95), se pose. Arrivée : état naturel. */
+@keyframes pl-hit { 0% { opacity: 0.001; transform: scale(var(--pl-from)); } 62% { opacity: 1; transform: scale(0.95); } }
+@keyframes pl-dent { 0% { opacity: 0; transform: scale(0.4); } 18% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.35); } }
+/* Stylet du graveur et aiguille de la jauge : invisibles avant et après leur passage. */
+.pl-stylus { left: 0%; opacity: 0; }
+@keyframes pl-stylus { 0% { left: 0%; opacity: 1; } 78% { left: 100%; opacity: 1; } 100% { left: 100%; opacity: 0; } }
+.pl-needle { left: var(--pl-a); opacity: 0; }
+@keyframes pl-needle { 0% { left: var(--pl-a); opacity: 1; } 63% { left: var(--pl-b); opacity: 1; } 100% { left: var(--pl-b); opacity: 0; } }
+/* Petits chocs de la plaque à chaque frappe, en px : T.nominal 2,6 ; T.min et T.max 1 ; les six cases (T.fields + 0,12 s) 0,8.
+   Chaque choc : 0 à l'instant t, amplitude à t + 0,03 s, 0 à t + 0,11 s ; durée totale 2,69 s, linéaire.
+   Sans remplissage : la frappe de l'étiquette (T.sticker) reste à motion, calée sur son ressort. */
+.pl-shake { animation: pl-shake 2.69s linear; }
+@keyframes pl-shake {
+  0%, 48.327%, 52.416%, 58.736%, 62.825%, 63.941%, 68.03%, 73.606%, 77.695%, 78.067%, 82.156%, 82.528%, 86.617%, 86.989%, 91.078%, 91.45%, 95.539%, 95.911%, 100% { transform: translateY(0px); }
+  49.442% { transform: translateY(2.6px); }
+  59.851%, 65.056% { transform: translateY(1px); }
+  74.721%, 79.182%, 83.643%, 88.104%, 92.565%, 97.026% { transform: translateY(0.8px); }
+}
 
 /* Calibres poinçonnés (liens). */
 .pl-cal { display: inline-block; padding: 5px 8px; border: 1.5px solid transparent; border-radius: 3px; color: rgba(22, 25, 27, 0.74); transition: color 0.25s, background-color 0.25s, border-color 0.25s; }
@@ -117,5 +141,6 @@ html:has(.pl-root), body:has(.pl-root) { overflow-x: clip; }
 
 @media (prefers-reduced-motion: reduce) {
   .pl-sheen { animation: none; opacity: 0; }
+  .pl-hit, .pl-dent, .pl-stylus, .pl-needle, .pl-shake { animation: none !important; }
   .pl-btn, .pl-btn .pl-arrow { transition: none; }
 }

@@ -6,6 +6,7 @@ import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { HERO_EASE } from "@/components/hero/HeroKit";
+import { fp } from "@/components/hero/first-paint";
 import { CountUp } from "@/components/home/premium/shared";
 import { DISPLAY, MONO, outilsMono } from "./fonts";
 import { ThermoMatchWordmark } from "./FlowBar";
@@ -231,6 +232,9 @@ export function MecanismeHero({ modelCount }: { modelCount: number }) {
   );
 }
 
+/* Origine que motion donnait aux éléments SVG transformés (centre de leur propre boîte). */
+const SVG_ORIGIN: CSSProperties = { transformBox: "fill-box", transformOrigin: "50% 50%" };
+
 function Diagram({ g, dots, pulses, moving, reduce, modelCount, play, vertical = false }: { g: Geo; dots: Dot[]; pulses: { path: string; dur: number; begin: number }[]; moving: boolean; reduce: boolean; modelCount: number; play: boolean; vertical?: boolean }) {
   const draw = (delay: number, duration = 1.4) => ({
     initial: reduce ? false : { pathLength: 0, opacity: 0 },
@@ -249,14 +253,14 @@ function Diagram({ g, dots, pulses, moving, reduce, modelCount, play, vertical =
         {g.drops.map((d, i) => (
           <motion.path key={d} d={d} stroke={M.orange} strokeWidth={1.2} strokeDasharray="3 5" {...draw(1.3 + i * 0.08, 0.6)} />
         ))}
-        <motion.circle cx={cx} cy={cy} r={3.5} fill={M.orange} initial={reduce ? false : { scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.95, duration: 0.4 }} />
+        <circle cx={cx} cy={cy} r={3.5} fill={M.orange} {...fp({ scale: 0, duration: 0.4, delay: 0.95 }, { style: SVG_ORIGIN })} />
 
         {/* Bus du catalogue et branches de rejet */}
         <motion.path d={`M${bx} ${by} L ${g.busEnd[0]} ${g.busEnd[1]}`} stroke={M.ink} strokeWidth={1.4} {...draw(0.9, 1.6)} />
         {g.gates.map((gt, i) => (
           <motion.path key={`r${i}`} d={g.reject(gt)} stroke={M.ink} strokeOpacity={0.32} strokeWidth={1.1} {...draw(1.6 + i * 0.1, 0.7)} />
         ))}
-        <motion.circle cx={bx} cy={by} r={4} fill={M.ink} initial={reduce ? false : { scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.85, duration: 0.4 }} />
+        <circle cx={bx} cy={by} r={4} fill={M.ink} {...fp({ scale: 0, duration: 0.4, delay: 0.85 }, { style: SVG_ORIGIN })} />
 
         {/* Sorties */}
         {g.outputs.map((o, i) => (
@@ -283,10 +287,10 @@ function Diagram({ g, dots, pulses, moving, reduce, modelCount, play, vertical =
 
         {/* Filtres (vannes) et nœuds de sortie, par-dessus les traits */}
         {g.gates.map((gt, i) => (
-          <motion.path key={`v${i}`} d={g.valve(gt)} fill={M.paper} stroke={M.ink} strokeWidth={1.3} strokeLinejoin="round" initial={reduce ? false : { opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} style={{ transformOrigin: `${gt[0]}px ${gt[1]}px`, transformBox: "view-box" }} transition={{ delay: 1.5 + i * 0.1, duration: 0.5, ease: HERO_EASE }} />
+          <path key={`v${i}`} d={g.valve(gt)} fill={M.paper} stroke={M.ink} strokeWidth={1.3} strokeLinejoin="round" {...fp({ opacity: 0, scale: 0.4, duration: 0.5, ease: HERO_EASE, delay: 1.5 + i * 0.1 }, { style: { transformOrigin: `${gt[0]}px ${gt[1]}px`, transformBox: "view-box" } })} />
         ))}
         {g.outputs.map(([x, y], i) => (
-          <motion.rect key={`n${i}`} x={x - 8} y={y - 8} width={16} height={16} fill={M.paper} stroke={M.orange} strokeWidth={1.5} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.4 + i * 0.1, duration: 0.5 }} />
+          <rect key={`n${i}`} x={x - 8} y={y - 8} width={16} height={16} fill={M.paper} stroke={M.orange} strokeWidth={1.5} {...fp({ opacity: 0, duration: 0.5, delay: 2.4 + i * 0.1 })} />
         ))}
       </svg>
 
@@ -360,20 +364,18 @@ function Tag({ children }: { children: ReactNode }) {
 }
 
 function Label({ children, style, delay }: { children: ReactNode; style: CSSProperties; delay: number }) {
-  const reduce = useReduced();
   return (
-    <motion.div className="absolute" style={style} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay }}>
+    <div {...fp({ opacity: 0, duration: 0.8, delay }, { className: "absolute", style })}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
 function Phrase({ children, delay }: { children: ReactNode; delay: number }) {
-  const reduce = useReduced();
   return (
-    <motion.span className="block sm:inline sm:whitespace-nowrap" initial={reduce ? false : { opacity: 0, y: "0.3em" }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: HERO_EASE, delay }} style={{ display: undefined }}>
+    <span {...fp({ opacity: 0, y: "0.3em", duration: 1, ease: HERO_EASE, delay }, { className: "block sm:inline sm:whitespace-nowrap", style: { display: undefined } })}>
       {children}
-    </motion.span>
+    </span>
   );
 }
 
@@ -388,10 +390,9 @@ function Link2({ delay }: { delay: number }) {
 }
 
 function Fade({ children, delay, className }: { children: ReactNode; delay: number; className?: string }) {
-  const reduce = useReduced();
   return (
-    <motion.div className={className} initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: HERO_EASE, delay }}>
+    <div {...fp({ opacity: 0, y: 12, duration: 1, ease: HERO_EASE, delay }, { className })}>
       {children}
-    </motion.div>
+    </div>
   );
 }

@@ -9,12 +9,15 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { Snowfall } from "./Snowfall";
 import { CountUp } from "./premium/shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { fp, fpLine } from "@/components/hero/first-paint";
 
 /* ==================================================================
    Héros de l'accueil : photo plein écran qui recule au chargement puis
    part en parallaxe au défilement ; titre révélé ligne par ligne ;
    code postal vers ThermoMatch. Chiffres fournis par la page (catalogue).
    Pas de fondu de la photo : elle s'affiche tout de suite (LCP).
+   Entrées (recul de la photo, lignes du titre, marqueur, texte) en CSS
+   dès le premier rendu (first-paint.ts) : rien n'attend le JavaScript.
    ================================================================== */
 
 const C = {
@@ -59,7 +62,7 @@ export function HeroPremium({ eligible, brands, coldClimate }: { eligible: numbe
       aria-labelledby="hp-titre"
     >
       <motion.div className="absolute inset-0" style={reduce ? undefined : { scale: imgScale, y: imgY }}>
-        <motion.div className="absolute inset-0" initial={reduce ? false : { scale: 1.12 }} animate={{ scale: 1 }} transition={{ duration: 2.4, ease: EASE }}>
+        <div {...fp({ scale: 1.12, duration: 2.4, ease: EASE }, { className: "absolute inset-0" })}>
           <Image
             src="/images/thermomatch/thermomatch-hero-winter-home.png"
             alt="Maison contemporaine un soir d'hiver, thermopompe extérieure près de l'entrée"
@@ -69,7 +72,7 @@ export function HeroPremium({ eligible, brands, coldClimate }: { eligible: numbe
             sizes="100vw"
             style={{ objectFit: "cover", objectPosition: "72% 50%" }}
           />
-        </motion.div>
+        </div>
       </motion.div>
       <div aria-hidden="true" className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(10,20,25,0.94) 0%, rgba(10,20,25,0.72) 34%, rgba(10,20,25,0.16) 66%, rgba(10,20,25,0) 100%)" }} />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[55%]" style={{ background: "linear-gradient(0deg, #0A1419 6%, rgba(10,20,25,0) 100%)" }} />
@@ -97,13 +100,9 @@ export function HeroPremium({ eligible, brands, coldClimate }: { eligible: numbe
           <Line i={2}>
             {/* Coup de marqueur orange qui se trace derrière les mots, juste après leur apparition. */}
             <span className="relative inline-block px-[0.14em]">
-              <motion.span
+              <span
                 aria-hidden="true"
-                className="absolute inset-x-0 bottom-[0.06em] top-[0.22em] origin-left"
-                style={{ background: C.orange, skewX: -8 }}
-                initial={reduce ? false : { scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.9, ease: EASE, delay: 1.05 }}
+                {...fp({ scaleX: 0, rest: "skewX(-8deg)", duration: 0.9, ease: EASE, delay: 1.05 }, { className: "absolute inset-x-0 bottom-[0.06em] top-[0.22em] origin-left", style: { background: C.orange } })}
               />
               <span className="hp-serif relative">le mauvais choix.</span>
             </span>
@@ -124,14 +123,7 @@ export function HeroPremium({ eligible, brands, coldClimate }: { eligible: numbe
               className="relative flex overflow-hidden rounded-[22px]"
               style={{ margin: 0, background: "rgba(10,20,25,0.38)", border: `1px solid ${C.line}`, backdropFilter: "blur(16px) saturate(130%)", WebkitBackdropFilter: "blur(16px) saturate(130%)" }}
             >
-              <motion.span
-                aria-hidden="true"
-                className="absolute left-0 top-0 h-[2px] w-full origin-left"
-                style={{ background: C.orange }}
-                initial={reduce ? false : { scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 1.4, ease: EASE, delay: 1.2 }}
-              />
+              <span aria-hidden="true" {...fp({ scaleX: 0, duration: 1.4, ease: EASE, delay: 1.2 }, { className: "absolute left-0 top-0 h-[2px] w-full origin-left", style: { background: C.orange } })} />
               {facts.map((f, i) => (
                 <div key={f.label} className="flex flex-col gap-2 px-7 py-5" style={{ borderLeft: i ? `1px solid ${C.line}` : "none" }}>
                   <dt className="order-2 text-[12px] font-medium uppercase" style={{ color: C.faint, letterSpacing: "0.14em" }}>
@@ -158,30 +150,17 @@ export function HeroPremium({ eligible, brands, coldClimate }: { eligible: numbe
   );
 }
 
-/* Une ligne de titre qui monte derrière un masque. */
+/* Une ligne de titre qui monte derrière un masque (clip-path de la ligne, voir fpLine). */
 function Line({ i, children }: { i: number; children: ReactNode }) {
-  const reduce = useReduced();
   return (
-    <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.14em", marginBottom: "-0.14em" }}>
-      <motion.span
-        style={{ display: "block", willChange: "transform" }}
-        initial={reduce ? false : { y: "115%" }}
-        animate={{ y: "0%" }}
-        transition={{ duration: 1.15, ease: EASE, delay: 0.2 + i * 0.09 }}
-      >
-        {children}
-      </motion.span>
+    <span style={{ display: "block", paddingBottom: "0.14em", marginBottom: "-0.14em" }}>
+      <span {...fpLine({ y: "115%", pad: ["0px", "0px", "0.14em", "0px"], duration: 1.15, ease: EASE, delay: 0.2 + i * 0.09 }, { style: { display: "block", willChange: "transform" } })}>{children}</span>
     </span>
   );
 }
 
 function Appear({ delay, className, style, children }: { delay: number; className?: string; style?: React.CSSProperties; children: ReactNode }) {
-  const reduce = useReduced();
-  return (
-    <motion.div className={className} style={style} initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, ease: EASE, delay }}>
-      {children}
-    </motion.div>
-  );
+  return <div {...fp({ opacity: 0, y: 16, duration: 1.1, ease: EASE, delay }, { className, style })}>{children}</div>;
 }
 
 /* Entrée de ThermoMatch : même adresse que l'ancien héros (/trouver-ma-thermopompe?pc=…). */

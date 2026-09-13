@@ -10,6 +10,7 @@ import {
   guideCategoryLabel,
 } from "@/components/content-hero/guideCategories";
 import { typo } from "@/components/content-hero/typo";
+import { fp } from "@/components/hero/first-paint";
 import { fraunces, FRAUNCES } from "./fonts";
 import { Arrow, DISPLAY, EASE, UNDER_HEADER, useReducedSafe } from "./shared";
 
@@ -91,15 +92,18 @@ export function GuidesCover({ guides, onPick }: Props) {
 
         <div className="relative mx-auto max-w-[1440px] px-5 pb-16 pt-[122px] sm:px-8 lg:px-12 lg:pb-20 min-[1700px]:pt-[138px]">
           {/* Ligne de parution */}
-          <motion.div
-            className="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 pb-2 text-[11px] font-semibold uppercase sm:text-[11.5px]"
-            style={{
-              letterSpacing: "0.2em",
-              borderBottom: `1px solid ${P.ink}`,
-            }}
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.05 }}
+          <div
+            {...fp(
+              { opacity: 0, duration: 0.8, delay: 0.05 },
+              {
+                className:
+                  "flex flex-wrap items-center justify-between gap-x-6 gap-y-1 pb-2 text-[11px] font-semibold uppercase sm:text-[11.5px]",
+                style: {
+                  letterSpacing: "0.2em",
+                  borderBottom: `1px solid ${P.ink}`,
+                },
+              },
+            )}
           >
             <span>Guides &amp; Conseils</span>
             {latestLabel ? (
@@ -110,7 +114,7 @@ export function GuidesCover({ guides, onPick }: Props) {
             <span style={{ color: P.mute }}>
               {guides.length} guides · {rubriques} rubriques
             </span>
-          </motion.div>
+          </div>
 
           {/* Titre de revue : lettres qui se posent une à une */}
           <motion.p
@@ -150,13 +154,15 @@ export function GuidesCover({ guides, onPick }: Props) {
               </motion.span>
             ))}
           </motion.p>
-          <motion.div
+          <div
             aria-hidden="true"
-            className="mt-3 h-[3px] origin-left"
-            style={{ background: P.ink }}
-            initial={reduce ? false : { scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1.2, ease: EASE, delay: 0.75 }}
+            {...fp(
+              { scaleX: 0, duration: 1.2, ease: EASE, delay: 0.75 },
+              {
+                className: "mt-3 h-[3px] origin-left",
+                style: { background: P.ink },
+              },
+            )}
           />
           {latestLabel ? (
             <p
@@ -174,20 +180,22 @@ export function GuidesCover({ guides, onPick }: Props) {
           <div className="gv-grid mt-8 lg:mt-10">
             {/* Titre principal + chapeau */}
             <div style={{ gridArea: "head" }}>
-              <motion.h1
+              <h1
                 id="gv-titre"
-                style={{
-                  fontFamily: FRAUNCES,
-                  fontWeight: 560,
-                  fontSize: "clamp(40px, 3.9vw, 62px)",
-                  lineHeight: 0.98,
-                  letterSpacing: "-0.03em",
-                  fontVariationSettings: '"opsz" 96, "SOFT" 50',
-                  margin: 0,
-                }}
-                initial={reduce ? false : { opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: EASE, delay: 0.95 }}
+                {...fp(
+                  { opacity: 0, y: 18, duration: 1, ease: EASE, delay: 0.95 },
+                  {
+                    style: {
+                      fontFamily: FRAUNCES,
+                      fontWeight: 560,
+                      fontSize: "clamp(40px, 3.9vw, 62px)",
+                      lineHeight: 0.98,
+                      letterSpacing: "-0.03em",
+                      fontVariationSettings: '"opsz" 96, "SOFT" 50',
+                      margin: 0,
+                    },
+                  },
+                )}
               >
                 Mieux comprendre avant de{" "}
                 <em
@@ -200,22 +208,24 @@ export function GuidesCover({ guides, onPick }: Props) {
                 >
                   choisir.
                 </em>
-              </motion.h1>
-              <motion.p
-                className="text-[16.5px] leading-[1.6] sm:text-[17px]"
-                style={{
-                  color: P.mute,
-                  margin: "18px 0 0",
-                  maxWidth: 440,
-                  fontFamily: "var(--font-sans)",
-                }}
-                initial={reduce ? false : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: EASE, delay: 1.1 }}
+              </h1>
+              <p
+                {...fp(
+                  { opacity: 0, y: 12, duration: 1, ease: EASE, delay: 1.1 },
+                  {
+                    className: "text-[16.5px] leading-[1.6] sm:text-[17px]",
+                    style: {
+                      color: P.mute,
+                      margin: "18px 0 0",
+                      maxWidth: 440,
+                      fontFamily: "var(--font-sans)",
+                    },
+                  },
+                )}
               >
                 Des explications claires sur les modèles, les BTU, les prix, les
                 aides et l’installation.
-              </motion.p>
+              </p>
             </div>
 
             {/* Photo détourée devant le titre de revue + sujet à la une */}
@@ -225,12 +235,15 @@ export function GuidesCover({ guides, onPick }: Props) {
                 className="relative lg:-mt-[11vw] min-[1440px]:-mt-[158px]"
               >
                 <motion.div style={reduce ? undefined : { y: photoY }}>
-                  <motion.div
-                    initial={
-                      reduce ? false : { opacity: 0, y: 60, scale: 0.96 }
-                    }
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ duration: 1.5, ease: EASE, delay: 0.7 }}
+                  <div
+                    {...fp({
+                      opacity: 0,
+                      y: 60,
+                      scale: 0.96,
+                      duration: 1.5,
+                      ease: EASE,
+                      delay: 0.7,
+                    })}
                   >
                     <Image
                       src="/images/thermomatch/thermomatch-cta-unit-transparent.png"
@@ -248,14 +261,16 @@ export function GuidesCover({ guides, onPick }: Props) {
                         filter: "drop-shadow(0 30px 30px rgba(27,26,23,0.18))",
                       }}
                     />
-                  </motion.div>
+                  </div>
                 </motion.div>
-                <motion.div
-                  className="relative -mt-2 pt-4 lg:mx-4"
-                  style={{ borderTop: `1px solid ${P.ink}` }}
-                  initial={reduce ? false : { opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, ease: EASE, delay: 1.25 }}
+                <div
+                  {...fp(
+                    { opacity: 0, y: 14, duration: 1, ease: EASE, delay: 1.25 },
+                    {
+                      className: "relative -mt-2 pt-4 lg:mx-4",
+                      style: { borderTop: `1px solid ${P.ink}` },
+                    },
+                  )}
                 >
                   <p
                     className="flex items-center gap-3 text-[11px] font-semibold uppercase"
@@ -306,7 +321,7 @@ export function GuidesCover({ guides, onPick }: Props) {
                       {featured.readTime}
                     </span>
                   </div>
-                </motion.div>
+                </div>
               </div>
             ) : null}
 
@@ -324,28 +339,33 @@ export function GuidesCover({ guides, onPick }: Props) {
                   style={{ margin: 0, padding: 0, listStyle: "none" }}
                 >
                   {lines.map((g, i) => (
-                    <motion.li
+                    <li
                       key={g.slug}
-                      className="relative py-4"
-                      initial={reduce ? false : { opacity: 0, x: -48 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{
-                        duration: 1.1,
-                        ease: EASE,
-                        delay: 1.05 + i * 0.13,
-                      }}
-                    >
-                      <motion.span
-                        aria-hidden="true"
-                        className="absolute left-0 right-0 top-0 h-px origin-left"
-                        style={{ background: P.line }}
-                        initial={reduce ? false : { scaleX: 0 }}
-                        animate={{ scaleX: 1 }}
-                        transition={{
-                          duration: 1.2,
+                      {...fp(
+                        {
+                          opacity: 0,
+                          x: -48,
+                          duration: 1.1,
                           ease: EASE,
-                          delay: 1.1 + i * 0.13,
-                        }}
+                          delay: 1.05 + i * 0.13,
+                        },
+                        { className: "relative py-4" },
+                      )}
+                    >
+                      <span
+                        aria-hidden="true"
+                        {...fp(
+                          {
+                            scaleX: 0,
+                            duration: 1.2,
+                            ease: EASE,
+                            delay: 1.1 + i * 0.13,
+                          },
+                          {
+                            className: "absolute left-0 right-0 top-0 h-px origin-left",
+                            style: { background: P.line },
+                          },
+                        )}
                       />
                       <Link
                         href={`/guides/${g.slug}`}
@@ -387,19 +407,18 @@ export function GuidesCover({ guides, onPick }: Props) {
                           </span>
                         </span>
                       </Link>
-                    </motion.li>
+                    </li>
                   ))}
                 </ol>
               </div>
             ) : null}
 
             {/* Sommaire des rubriques : un clic filtre la liste plus bas */}
-            <motion.div
-              style={{ gridArea: "index" }}
-              className="lg:mt-9"
-              initial={reduce ? false : { opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: EASE, delay: 1.3 }}
+            <div
+              {...fp(
+                { opacity: 0, y: 16, duration: 1, ease: EASE, delay: 1.3 },
+                { className: "lg:mt-9", style: { gridArea: "index" } },
+              )}
             >
               <p
                 className="flex items-baseline justify-between pb-2 text-[11px] font-semibold uppercase"
@@ -457,7 +476,7 @@ export function GuidesCover({ guides, onPick }: Props) {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

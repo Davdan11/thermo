@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "motion/react";
 import { HERO_EASE } from "@/components/hero/HeroKit";
+import { fp } from "@/components/hero/first-paint";
 import { DISPLAY, MONO, outilsMono } from "./fonts";
 
 /* ==================================================================
@@ -357,19 +358,13 @@ function Readouts({ step, cycle, compact = false }: { step: number; cycle: numbe
   );
 }
 
-/** Apparition « mise au point » : l'élément passe du flou au net. */
+/**
+ * Apparition « mise au point » : l'élément passe du flou au net, en CSS dès le premier rendu.
+ * fp() ne connaît pas le filtre : le flou de départ passe par l'image clé ou-v-rack (outils.css),
+ * même durée, même courbe et même délai ; l'arrivée « blur(0px) » reste en style, comme motion la laissait.
+ */
 function Rise({ children, delay = 0, className, style, as = "div", rack = true }: { children: ReactNode; delay?: number; className?: string; style?: CSSProperties; as?: "div" | "span"; rack?: boolean }) {
-  const reduce = useReduced();
-  const M = as === "span" ? motion.span : motion.div;
-  return (
-    <M
-      className={className}
-      style={style}
-      initial={reduce ? false : { opacity: 0, filter: rack ? "blur(14px)" : "blur(0px)", y: rack ? 0 : -6 }}
-      animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-      transition={{ duration: 1.1, ease: HERO_EASE, delay }}
-    >
-      {children}
-    </M>
-  );
+  const f = fp({ opacity: 0, ...(rack ? {} : { y: -6 }), duration: 1.1, ease: HERO_EASE, delay }, { className, style: { ...style, filter: "blur(0px)" } });
+  const props = rack ? { className: f.className, style: { ...f.style, animation: `${f.style.animation}, ou-v-rack 1.1s cubic-bezier(${HERO_EASE.join(", ")}) ${delay}s both` } } : f;
+  return as === "span" ? <span {...props}>{children}</span> : <div {...props}>{children}</div>;
 }

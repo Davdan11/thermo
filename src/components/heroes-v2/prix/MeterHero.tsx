@@ -7,6 +7,7 @@ import { animate, motion, useAnimationFrame, useInView, useMotionValue } from "m
 import { DISPLAY, MONO, plexMono } from "./fonts";
 import { EASE } from "./shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { fp, fpLine, type FpEase } from "@/components/hero/first-paint";
 
 /* ==================================================================
    /calculateur-economies — « Le compteur ».
@@ -50,23 +51,17 @@ export function MeterHero({ calculatorId }: { calculatorId: string }) {
       style={{ background: SUN, color: INK, fontFamily: DISPLAY }}
     >
       <div className="relative mx-auto max-w-[1440px] px-5 pb-24 pt-[134px] sm:px-8 lg:px-12 lg:pb-28 min-[1700px]:pt-[150px]">
-        <motion.p
-          className="flex items-center justify-center gap-3 text-[11.5px] font-semibold uppercase"
-          style={{ fontFamily: MONO, letterSpacing: "0.22em", margin: 0 }}
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
+        <p {...fp({ opacity: 0, duration: 0.6 }, { className: "flex items-center justify-center gap-3 text-[11.5px] font-semibold uppercase", style: { fontFamily: MONO, letterSpacing: "0.22em", margin: 0 } })}>
           <span aria-hidden="true" className="inline-block h-[7px] w-[7px] rounded-full" style={{ background: INK }} />
           Calculateur d’économies
           <span aria-hidden="true" className="inline-block h-[7px] w-[7px] rounded-full" style={{ background: INK }} />
-        </motion.p>
+        </p>
 
         <RollTitle id="ct-titre" lines={["Combien allez-vous", "économiser ?"]} />
 
         <div className="mt-10 grid items-end gap-10 lg:mt-[-6px] lg:grid-cols-[minmax(0,1fr)_minmax(0,430px)_minmax(0,1fr)] lg:gap-10 xl:gap-14">
           {/* Texte et boutons */}
-          <motion.div className="min-w-0 lg:pb-6" initial={reduce ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.8 }}>
+          <div {...fp({ opacity: 0, y: 14, duration: 0.9, ease: EASE, delay: 0.8 }, { className: "min-w-0 lg:pb-6" })}>
             <p className="max-w-[440px] text-[17px] leading-[1.6] sm:text-[18px]" style={{ margin: 0 }}>
               L’installation d’une thermopompe est l’un des investissements les plus rentables pour une maison au Québec. Utilisez notre outil pour estimer vos économies annuelles.
             </p>
@@ -79,15 +74,15 @@ export function MeterHero({ calculatorId }: { calculatorId: string }) {
                 Demander une soumission
               </Link>
             </div>
-          </motion.div>
+          </div>
 
           {/* Compteur */}
-          <motion.div className="min-w-0" initial={reduce ? false : { opacity: 0, scale: 0.94, y: 24 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 1.1, ease: EASE, delay: 0.45 }}>
+          <div {...fp({ opacity: 0, scale: 0.94, y: 24, duration: 1.1, ease: EASE, delay: 0.45 }, { className: "min-w-0" })}>
             <Meter phase={phase} />
-          </motion.div>
+          </div>
 
           {/* Panneau blanc : ce que montre le compteur */}
-          <motion.div className="min-w-0 lg:pb-6" initial={reduce ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 1 }}>
+          <div {...fp({ opacity: 0, y: 14, duration: 0.9, ease: EASE, delay: 1 }, { className: "min-w-0 lg:pb-6" })}>
             <div className="ml-auto max-w-[400px] rounded-[16px] bg-white px-6 py-5" style={{ border: `2px solid ${INK}`, boxShadow: `6px 6px 0 ${INK}` }}>
               <p className="text-[10.5px] font-semibold uppercase" style={{ fontFamily: MONO, letterSpacing: "0.16em", margin: 0 }}>
                 Rendement en chauffage (COP)
@@ -112,7 +107,7 @@ export function MeterHero({ calculatorId }: { calculatorId: string }) {
                 Ordre de grandeur expliqué plus bas&nbsp;: même électricité consommée, trois à quatre fois plus de chaleur. Vos économies dépendent de votre maison&nbsp;: le calculateur les estime juste en dessous.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -122,8 +117,12 @@ export function MeterHero({ calculatorId }: { calculatorId: string }) {
 /* ------------------------------------------------------------------
    Titre dont chaque lettre roule en place, comme une roue de compteur.
    ------------------------------------------------------------------ */
+/** Ressort des lettres du titre (raideur 230, amortissement 17, masse 0,9), échantillonné par motion-dom
+ *  sur 700 ms : la même courbe que motion jouait, en CSS dès le premier rendu. */
+const ROLL_SPRING: FpEase =
+  "linear(0, 0.0123, 0.0461, 0.0967, 0.1601, 0.2325, 0.3106, 0.3916, 0.4729, 0.5527, 0.6292, 0.7013, 0.7679, 0.8284, 0.8825, 0.93, 0.9708, 1.0053, 1.0335, 1.0561, 1.0734, 1.0859, 1.0942, 1.0988, 1.1002, 1.099, 1.0956, 1.0906, 1.0842, 1.077, 1.0692, 1.0611, 1.0529, 1.0449, 1.0372, 1.03, 1.0233, 1.0172, 1.0118, 1.0071, 1.003, 0.9995, 0.9967, 0.9944, 0.9927, 0.9914, 0.9906, 0.9901, 0.99, 0.9901, 0.9904, 0.9909, 0.9916, 0.9923, 0.9931, 0.9939, 0.9947, 0.9955, 0.9963, 0.997, 0.9977, 0.9983, 0.9988, 0.9993, 0.9997, 1, 1.0003, 1.0006, 1, 1)";
+
 function RollTitle({ id, lines }: { id: string; lines: string[] }) {
-  const reduce = !!useReduced();
   let n = 0;
   return (
     <h1 id={id} className="text-center" style={{ fontSize: "clamp(52px, 9.4vw, 172px)", lineHeight: 0.88, letterSpacing: "-0.06em", fontWeight: 800, margin: "20px 0 0" }}>
@@ -135,15 +134,9 @@ function RollTitle({ id, lines }: { id: string; lines: string[] }) {
                 {Array.from(word).map((ch, ci) => {
                   const k = n++;
                   return (
-                    <span key={ci} className="inline-block overflow-hidden align-bottom" style={{ padding: "0.1em 0.08em 0.14em 0.02em", margin: "-0.1em -0.08em -0.14em -0.02em" }}>
-                      <motion.span
-                        className="inline-block"
-                        initial={reduce ? false : { y: "-115%" }}
-                        animate={{ y: "0%" }}
-                        transition={{ type: "spring", stiffness: 230, damping: 17, mass: 0.9, delay: 0.12 + k * 0.028 }}
-                      >
-                        {ch}
-                      </motion.span>
+                    // Masque de la lettre porté par la lettre elle-même (fpLine) : mêmes retraits que l'ancien overflow:hidden.
+                    <span key={ci} className="inline-block align-bottom" style={{ padding: "0.1em 0.08em 0.14em 0.02em", margin: "-0.1em -0.08em -0.14em -0.02em" }}>
+                      <span {...fpLine({ y: "-115%", pad: ["0.1em", "0.08em", "0.14em", "0.02em"], duration: 0.7, ease: ROLL_SPRING, delay: 0.12 + k * 0.028 }, { className: "inline-block" })}>{ch}</span>
                     </span>
                   );
                 })}

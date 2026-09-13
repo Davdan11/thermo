@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import { motion } from "motion/react";
 import { useReduced } from "../outils/motion";
+import { fp } from "@/components/hero/first-paint";
 import { DISPLAY, MONO, outilsMono } from "../outils/fonts";
 import type { PlaqueData } from "./data";
 
@@ -27,6 +28,10 @@ const P = {
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const SWEEP: [number, number, number, number] = [0.65, 0, 0.35, 1];
+/* Mêmes courbes en CSS, pour les suites d'images clés de plaque.css jouées dès le premier rendu. */
+const SWEEP_CSS = "cubic-bezier(0.65, 0, 0.35, 1)";
+const EASE_OUT_CSS = "cubic-bezier(0, 0, 0.58, 1)"; // « easeOut » de motion
+const sec = (n: number) => `${Math.round(n * 10000) / 10000}s`;
 
 /* Chronologie (secondes depuis l'arrivée de la page). */
 const T = {
@@ -41,7 +46,7 @@ const T = {
   sticker: 3.2,
 };
 
-/** Petits chocs de la plaque à chaque frappe : [instant, amplitude en px]. */
+/** Petits chocs de la plaque à chaque frappe : [instant, amplitude en px]. Ceux des poinçons (T.nominal à T.fields) sont l'animation CSS pl-shake de plaque.css, dès le premier rendu. */
 function shakeFrames(hits: Array<[number, number]>) {
   const y = [0];
   const at = [0];
@@ -52,13 +57,8 @@ function shakeFrames(hits: Array<[number, number]>) {
   const duration = at[at.length - 1];
   return { y, times: at.map((t) => t / duration), duration };
 }
-const SHAKE = shakeFrames([
-  [T.nominal, 2.6],
-  [T.min, 1],
-  [T.max, 1],
-  ...Array.from({ length: 6 }, (_, i) => [T.fields + i * 0.12, 0.8] as [number, number]),
-  [T.sticker + 0.05, 1.6],
-]);
+/* Ici, seulement la frappe de l'étiquette : elle reste à motion, calée sur le ressort de l'étiquette. */
+const SHAKE = shakeFrames([[T.sticker + 0.05, 1.6]]);
 
 export function PlaqueHero({ d }: { d: PlaqueData }) {
   const reduce = useReduced();
@@ -78,26 +78,20 @@ export function PlaqueHero({ d }: { d: PlaqueData }) {
 
       <div className="relative mx-auto max-w-[1360px] px-5 pb-16 pt-[128px] sm:px-8 lg:px-12 lg:pb-20 min-[1700px]:pt-[146px]">
         {/* ── Fil d'Ariane et numéro de calibre ── */}
-        <motion.div className="flex items-center justify-between gap-4" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.9, ease: EASE }}>
+        <div {...fp({ opacity: 0, duration: 0.9, ease: EASE }, { className: "flex items-center justify-between gap-4" })}>
           <Crumbs items={d.crumbs} />
           <p className="pl-engrave hidden text-[11px] uppercase sm:block" style={{ fontFamily: MONO, letterSpacing: "0.2em", margin: 0 }}>
             {d.serial}
           </p>
-        </motion.div>
+        </div>
 
         {/* ── Titre gravé + texte et boutons ── */}
         <div className="mt-8 grid gap-7 lg:mt-10 lg:grid-cols-12 lg:items-end lg:gap-10">
           <div className="lg:col-span-7">
-            <motion.p
-              className="pl-engrave flex items-center gap-3 text-[11.5px] uppercase"
-              style={{ fontFamily: MONO, letterSpacing: "0.22em", margin: 0 }}
-              initial={reduce ? false : { opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: EASE, delay: 0.05 }}
-            >
+            <p {...fp({ opacity: 0, y: 8, duration: 0.8, ease: EASE, delay: 0.05 }, { className: "pl-engrave flex items-center gap-3 text-[11.5px] uppercase", style: { fontFamily: MONO, letterSpacing: "0.22em", margin: 0 } })}>
               <span aria-hidden="true" className="inline-block h-[2px] w-6" style={{ background: P.orange }} />
               {d.eyebrow}
-            </motion.p>
+            </p>
             <h1 id="plaque-titre" className="pl-engrave" style={{ margin: "16px 0 0", fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 0.95, fontSize: "clamp(46px, 5.5vw, 90px)" }}>
               <Engraved delay={0.12} reduce={reduce}>
                 {d.titleLines[0]}
@@ -107,7 +101,7 @@ export function PlaqueHero({ d }: { d: PlaqueData }) {
               </Engraved>
             </h1>
           </div>
-          <motion.div className="lg:col-span-5 lg:pb-2" initial={reduce ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay: 0.45 }}>
+          <div {...fp({ opacity: 0, y: 14, duration: 1, ease: EASE, delay: 0.45 }, { className: "lg:col-span-5 lg:pb-2" })}>
             <p className="text-[16px] leading-[1.62] sm:text-[16.5px]" style={{ color: P.mute, margin: 0, maxWidth: 520 }}>
               {d.intro}
             </p>
@@ -126,7 +120,7 @@ export function PlaqueHero({ d }: { d: PlaqueData }) {
             <p className="text-[13px]" style={{ color: P.faint, margin: "12px 0 0" }}>
               Gratuit, sans engagement. Un installateur licencié RBQ vous rappelle.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* ── La plaque ── */}
@@ -135,14 +129,7 @@ export function PlaqueHero({ d }: { d: PlaqueData }) {
         </div>
 
         {/* ── En bref ── */}
-        <motion.div
-          role="note"
-          aria-label="En bref"
-          className="mt-[128px] grid gap-3 lg:mt-14 lg:grid-cols-12 lg:gap-10"
-          initial={reduce ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: EASE, delay: 1.2 }}
-        >
+        <div role="note" aria-label="En bref" {...fp({ opacity: 0, y: 12, duration: 1, ease: EASE, delay: 1.2 }, { className: "mt-[128px] grid gap-3 lg:mt-14 lg:grid-cols-12 lg:gap-10" })}>
           <p className="pl-engrave flex items-center gap-3 text-[11.5px] uppercase lg:col-span-2 lg:pt-1" style={{ fontFamily: MONO, letterSpacing: "0.22em", margin: 0 }}>
             <span aria-hidden="true" className="inline-block h-[2px] w-6" style={{ background: P.ink }} />
             En bref
@@ -150,7 +137,7 @@ export function PlaqueHero({ d }: { d: PlaqueData }) {
           <p className="text-[16px] leading-[1.7] lg:col-span-9 lg:text-[17px]" style={{ color: P.ink, margin: 0, maxWidth: 900 }}>
             {d.answer}
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -167,9 +154,9 @@ const RIVETS = [
 
 function Plate({ d, reduce }: { d: PlaqueData; reduce: boolean }) {
   return (
-    <motion.div className="relative" initial={reduce ? false : { opacity: 0, x: 140, rotate: 1.4 }} animate={{ opacity: 1, x: 0, rotate: 0 }} transition={{ duration: 1, ease: EASE, delay: T.plate }}>
+    <div {...fp({ opacity: 0, x: 140, rotate: 1.4, duration: 1, ease: EASE, delay: T.plate }, { className: "relative" })}>
       <motion.div
-        className="pl-plate relative overflow-hidden"
+        className="pl-plate pl-shake relative overflow-hidden"
         initial={false}
         animate={reduce ? { y: 0 } : { y: SHAKE.y }}
         transition={reduce ? { duration: 0 } : { duration: SHAKE.duration, times: SHAKE.times, ease: "linear" }}
@@ -177,14 +164,7 @@ function Plate({ d, reduce }: { d: PlaqueData; reduce: boolean }) {
         <span aria-hidden="true" className="pl-frame" />
         <span aria-hidden="true" className="pl-sheen" />
         {RIVETS.map((pos, i) => (
-          <motion.span
-            key={pos}
-            aria-hidden="true"
-            className={`pl-rivet ${pos}`}
-            initial={reduce ? false : { opacity: 0, scale: 1.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.22, ease: "easeIn", delay: T.rivets + i * 0.07 }}
-          />
+          <span key={pos} aria-hidden="true" {...fp({ opacity: 0, scale: 1.8, duration: 0.22, ease: "easeIn", delay: T.rivets + i * 0.07 }, { className: `pl-rivet ${pos}` })} />
         ))}
 
         <div className="relative px-[18px] pb-[42px] pt-[16px] sm:px-[22px] sm:pb-[40px] sm:pt-[18px]">
@@ -320,7 +300,7 @@ function Plate({ d, reduce }: { d: PlaqueData; reduce: boolean }) {
         </div>
         <span aria-hidden="true" className="pl-curl" />
       </motion.div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -339,22 +319,11 @@ function Gauge({ d, reduce }: { d: PlaqueData; reduce: boolean }) {
         </svg>
       </span>
       <span className="pl-channel absolute inset-x-0 top-[22px] h-[14px] rounded-[3px]" />
-      {r ? (
-        <motion.span
-          className="pl-bar absolute top-[24px] h-[10px] origin-left rounded-[2px]"
-          style={{ left: `${r.minPct}%`, width: `${r.maxPct - r.minPct}%` }}
-          initial={reduce ? false : { scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 0.95, ease: SWEEP, delay: T.sweep }}
-        />
-      ) : null}
+      {r ? <span {...fp({ scaleX: 0, duration: 0.95, ease: SWEEP, delay: T.sweep }, { className: "pl-bar absolute top-[24px] h-[10px] origin-left rounded-[2px]", style: { left: `${r.minPct}%`, width: `${r.maxPct - r.minPct}%` } })} /> : null}
       {r && !reduce ? (
-        <motion.span
-          className="absolute top-[15px] -ml-px h-[28px] w-[2px] rounded-full"
-          style={{ background: P.orange }}
-          initial={{ left: `${r.minPct}%`, opacity: 0 }}
-          animate={{ left: [`${r.minPct}%`, `${r.maxPct}%`, `${r.maxPct}%`], opacity: [1, 1, 0] }}
-          transition={{ duration: 1.5, times: [0, 0.63, 1], ease: SWEEP, delay: T.sweep }}
+        <span
+          className="pl-needle absolute top-[15px] -ml-px h-[28px] w-[2px] rounded-full"
+          style={{ background: P.orange, "--pl-a": `${r.minPct}%`, "--pl-b": `${r.maxPct}%`, animation: `pl-needle 1.5s ${SWEEP_CSS} ${sec(T.sweep)}` } as CSSProperties}
         />
       ) : null}
       {d.ticks.map((t) => (
@@ -382,23 +351,10 @@ function Stamp({ at, children, big = false, light = false, reduce }: { at: numbe
   const from = big ? 1.75 : light ? 1.3 : 1.45;
   return (
     <span className="relative inline-block">
-      {!reduce && !light ? (
-        <motion.span
-          aria-hidden="true"
-          className="pl-dent"
-          initial={{ opacity: 0, scale: 0.4 }}
-          animate={{ opacity: [0, 1, 0], scale: [0.4, 1, 1.35] }}
-          transition={{ duration: 0.6, times: [0, 0.18, 1], delay: at, ease: "easeOut" }}
-        />
-      ) : null}
-      <motion.span
-        className="relative inline-block"
-        initial={reduce ? false : { opacity: 0, scale: from }}
-        animate={reduce ? { opacity: 1, scale: 1 } : { opacity: [0, 1, 1], scale: [from, 0.95, 1] }}
-        transition={{ duration: 0.24, times: [0, 0.62, 1], delay: at, ease: "easeOut" }}
-      >
+      {!reduce && !light ? <span aria-hidden="true" className="pl-dent" style={{ animation: `pl-dent 0.6s ${EASE_OUT_CSS} ${sec(at)} both` }} /> : null}
+      <span className="pl-hit relative inline-block" style={{ "--pl-from": from, animation: `pl-hit 0.24s ${EASE_OUT_CSS} ${sec(at)} both` } as CSSProperties}>
         {children}
-      </motion.span>
+      </span>
     </span>
   );
 }
@@ -408,24 +364,10 @@ function Engraved({ children, delay, style, reduce }: { children: ReactNode; del
   return (
     <span className="block">
       <span className="relative inline-block" style={style}>
-        <motion.span
-          className="inline-block"
-          initial={reduce ? false : { clipPath: "inset(-12% 100% -18% 0%)" }}
-          animate={{ clipPath: "inset(-12% 0% -18% 0%)" }}
-          transition={{ duration: 1.05, ease: SWEEP, delay }}
-        >
+        <span {...fp({ clipPath: "inset(-12% 100% -18% 0%)", duration: 1.05, ease: SWEEP, delay }, { className: "inline-block", style: { clipPath: "inset(-12% 0% -18% 0%)" } })}>
           {children}
-        </motion.span>
-        {!reduce ? (
-          <motion.span
-            aria-hidden="true"
-            className="absolute bottom-[6%] top-[8%] w-[2px]"
-            style={{ background: P.orange }}
-            initial={{ left: "0%", opacity: 0 }}
-            animate={{ left: ["0%", "100%", "100%"], opacity: [1, 1, 0] }}
-            transition={{ duration: 1.35, times: [0, 0.78, 1], ease: SWEEP, delay }}
-          />
-        ) : null}
+        </span>
+        {!reduce ? <span aria-hidden="true" className="pl-stylus absolute bottom-[6%] top-[8%] w-[2px]" style={{ background: P.orange, animation: `pl-stylus 1.35s ${SWEEP_CSS} ${sec(delay)}` }} /> : null}
       </span>
     </span>
   );

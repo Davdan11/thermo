@@ -9,6 +9,7 @@ import {
   useTransform,
   MotionConfig,
 } from "motion/react";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { typo } from "@/components/content-hero/typo";
 import {
   Arrow,
@@ -112,11 +113,11 @@ export function ArticleOpening({
           style={{ background: "#FFFFFF", color: INK, fontFamily: DISPLAY }}
         >
           <div className="mx-auto max-w-[1120px] px-5 pt-[128px] text-center sm:px-8 min-[1700px]:pt-[146px]">
-            <motion.div
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="flex justify-center"
+            <div
+              {...fp(
+                { opacity: 0, duration: 0.8 },
+                { className: "flex justify-center" },
+              )}
             >
               <Crumbs
                 items={[
@@ -128,34 +129,41 @@ export function ArticleOpening({
                 nowrap
                 className="max-w-full [&_ol]:justify-center [&_[aria-current]]:max-w-[40ch]"
               />
-            </motion.div>
+            </div>
 
             {/* Surtitre : la rubrique, dans sa teinte */}
-            <motion.p
-              className="mt-10 inline-flex items-center gap-4 text-[12px] font-semibold uppercase sm:mt-14"
-              style={{ letterSpacing: "0.26em", color: accent, margin: 0 }}
-              initial={reduce ? false : { opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
+            <p
+              {...fp(
+                { opacity: 0, y: 8, duration: 0.8, ease: EASE, delay: 0.1 },
+                {
+                  className:
+                    "mt-10 inline-flex items-center gap-4 text-[12px] font-semibold uppercase sm:mt-14",
+                  style: { letterSpacing: "0.26em", color: accent, margin: 0 },
+                },
+              )}
             >
-              <motion.span
+              <span
                 aria-hidden="true"
-                className="inline-block h-px w-8 origin-right"
-                style={{ background: accent }}
-                initial={reduce ? false : { scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.9, ease: EASE, delay: 0.25 }}
+                {...fp(
+                  { scaleX: 0, duration: 0.9, ease: EASE, delay: 0.25 },
+                  {
+                    className: "inline-block h-px w-8 origin-right",
+                    style: { background: accent },
+                  },
+                )}
               />
               {category}
-              <motion.span
+              <span
                 aria-hidden="true"
-                className="inline-block h-px w-8 origin-left"
-                style={{ background: accent }}
-                initial={reduce ? false : { scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.9, ease: EASE, delay: 0.25 }}
+                {...fp(
+                  { scaleX: 0, duration: 0.9, ease: EASE, delay: 0.25 },
+                  {
+                    className: "inline-block h-px w-8 origin-left",
+                    style: { background: accent },
+                  },
+                )}
               />
-            </motion.p>
+            </p>
 
             {/* Titre : les mots montent un à un */}
             <h1
@@ -177,60 +185,70 @@ export function ArticleOpening({
                   <span
                     style={{
                       display: "inline-block",
-                      overflow: "hidden",
                       verticalAlign: "top",
                       padding: "0 0.06em 0.16em",
                       margin: "0 -0.06em -0.16em",
                     }}
                   >
-                    <motion.span
-                      style={{
-                        display: "inline-block",
-                        fontStyle: t.italic ? "italic" : "normal",
-                        color: t.italic ? accent : INK,
-                      }}
-                      initial={reduce ? false : { y: "110%" }}
-                      animate={{ y: "0%" }}
-                      transition={{
-                        duration: 1,
-                        ease: EASE,
-                        delay: 0.3 + i * 0.055,
-                      }}
+                    <span
+                      {...fpLine(
+                        {
+                          y: "110%",
+                          pad: ["0px", "0.06em", "0.16em", "0.06em"],
+                          duration: 1,
+                          ease: EASE,
+                          delay: 0.3 + i * 0.055,
+                        },
+                        {
+                          style: {
+                            display: "inline-block",
+                            fontStyle: t.italic ? "italic" : "normal",
+                            color: t.italic ? accent : INK,
+                          },
+                        },
+                      )}
                     >
                       {t.w}
-                    </motion.span>
+                    </span>
                   </span>
                   {i < words.length - 1 ? " " : null}
                 </span>
               ))}
             </h1>
 
-            <motion.p
-              className="mx-auto text-[17.5px] leading-[1.6] sm:text-[20px]"
-              style={{
-                color: MUTE,
-                maxWidth: 680,
-                margin: "26px auto 0",
-                fontFamily: "var(--font-sans)",
-              }}
-              initial={reduce ? false : { opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 1,
-                ease: EASE,
-                delay: 0.55 + words.length * 0.04,
-              }}
+            <p
+              {...fp(
+                {
+                  opacity: 0,
+                  y: 12,
+                  duration: 1,
+                  ease: EASE,
+                  delay: 0.55 + words.length * 0.04,
+                },
+                {
+                  className: "mx-auto text-[17.5px] leading-[1.6] sm:text-[20px]",
+                  style: {
+                    color: MUTE,
+                    maxWidth: 680,
+                    margin: "26px auto 0",
+                    fontFamily: "var(--font-sans)",
+                  },
+                },
+              )}
             >
               {typo(description)}
-            </motion.p>
+            </p>
 
             {/* Signature */}
-            <motion.p
-              className="mt-7 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[13.5px]"
-              style={{ color: MUTE, margin: "28px 0 0" }}
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.75 + words.length * 0.04 }}
+            <p
+              {...fp(
+                { opacity: 0, duration: 1, delay: 0.75 + words.length * 0.04 },
+                {
+                  className:
+                    "mt-7 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[13.5px]",
+                  style: { color: MUTE, margin: "28px 0 0" },
+                },
+              )}
             >
               <span>
                 Par{" "}
@@ -246,7 +264,7 @@ export function ArticleOpening({
                 ·
               </span>
               <span className="tabular-nums">{minutes} min de lecture</span>
-            </motion.p>
+            </p>
           </div>
 
           {/* Photo pleine largeur : ouverture depuis le centre */}
@@ -255,26 +273,32 @@ export function ArticleOpening({
             style={{ margin: "56px 0 0" }}
           >
             <div className="relative h-[clamp(300px,62vh,700px)] w-full">
-              <motion.div
-                className="absolute inset-0 overflow-hidden"
-                style={{ background: "#E9ECEE" }}
-                initial={reduce ? false : { clipPath: "inset(0% 50% 0% 50%)" }}
-                animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
-                transition={{
-                  duration: 1.6,
-                  ease: [0.76, 0, 0.24, 1],
-                  delay: 0.9,
-                }}
+              <div
+                {...fp(
+                  {
+                    clipPath: "inset(0% 50% 0% 50%)",
+                    duration: 1.6,
+                    ease: [0.76, 0, 0.24, 1],
+                    delay: 0.9,
+                  },
+                  {
+                    className: "absolute inset-0 overflow-hidden",
+                    style: {
+                      background: "#E9ECEE",
+                      clipPath: "inset(0% 0% 0% 0%)",
+                    },
+                  },
+                )}
               >
                 <motion.div
                   className="absolute inset-x-0 -top-[6%] h-[112%]"
                   style={reduce ? undefined : { y: photoY }}
                 >
-                  <motion.div
-                    className="absolute inset-0"
-                    initial={reduce ? false : { scale: 1.16 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 2.6, ease: EASE, delay: 0.9 }}
+                  <div
+                    {...fp(
+                      { scale: 1.16, duration: 2.6, ease: EASE, delay: 0.9 },
+                      { className: "absolute inset-0" },
+                    )}
                   >
                     <Image
                       src={coverImage}
@@ -285,59 +309,31 @@ export function ArticleOpening({
                       sizes="100vw"
                       style={{ objectFit: "cover" }}
                     />
-                  </motion.div>
+                  </div>
                 </motion.div>
-              </motion.div>
-              {/* Deux filets de la couleur de la rubrique suivent les bords de l'ouverture. */}
-              {!reduce && (
-                <>
-                  <motion.span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-y-0 w-[2px]"
-                    style={{ background: accent }}
-                    initial={{ left: "50%", opacity: 1 }}
-                    animate={{ left: "0%", opacity: [1, 1, 0] }}
-                    transition={{
-                      left: {
-                        duration: 1.6,
-                        ease: [0.76, 0, 0.24, 1],
-                        delay: 0.9,
-                      },
-                      opacity: {
-                        duration: 1.9,
-                        times: [0, 0.8, 1],
-                        delay: 0.9,
-                      },
-                    }}
-                  />
-                  <motion.span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-y-0 w-[2px]"
-                    style={{ background: accent }}
-                    initial={{ left: "50%", opacity: 1 }}
-                    animate={{ left: "calc(100% - 2px)", opacity: [1, 1, 0] }}
-                    transition={{
-                      left: {
-                        duration: 1.6,
-                        ease: [0.76, 0, 0.24, 1],
-                        delay: 0.9,
-                      },
-                      opacity: {
-                        duration: 1.9,
-                        times: [0, 0.8, 1],
-                        delay: 0.9,
-                      },
-                    }}
-                  />
-                </>
-              )}
+              </div>
+              {/* Deux filets de la couleur de la rubrique suivent les bords de l'ouverture
+                  (animation CSS dès le premier rendu, même horloge que l'ouverture : .ga-edge dans contenu.css). */}
+              <span
+                aria-hidden="true"
+                className="ga-edge pointer-events-none absolute inset-y-0 w-[2px]"
+                style={{ background: accent }}
+              />
+              <span
+                aria-hidden="true"
+                className="ga-edge ga-edge-r pointer-events-none absolute inset-y-0 w-[2px]"
+                style={{ background: accent }}
+              />
             </div>
-            <motion.figcaption
-              className="mx-auto flex max-w-[1120px] flex-wrap items-baseline justify-between gap-x-6 gap-y-2 px-5 pt-4 text-[13px] sm:px-8"
-              style={{ color: MUTE }}
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.9 }}
+            <figcaption
+              {...fp(
+                { opacity: 0, duration: 1, delay: 1.9 },
+                {
+                  className:
+                    "mx-auto flex max-w-[1120px] flex-wrap items-baseline justify-between gap-x-6 gap-y-2 px-5 pt-4 text-[13px] sm:px-8",
+                  style: { color: MUTE },
+                },
+              )}
             >
               <span>
                 <span
@@ -365,7 +361,7 @@ export function ArticleOpening({
                   <Arrow size={14} down />
                 </span>
               </a>
-            </motion.figcaption>
+            </figcaption>
           </figure>
           <div className="h-10 sm:h-14" />
         </section>

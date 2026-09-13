@@ -6,9 +6,16 @@ import { useEffect, useRef } from "react";
    Neige qui tombe (canvas 2D) pour le héros de l'accueil.
    Trois plans de profondeur : les flocons proches sont plus gros, plus
    rapides et plus lumineux. Dérive lente au vent + balancement.
-   Économe : pause hors écran et quand l'onglet est caché ; rien
-   d'animé si le visiteur demande moins d'animations.
+   Économe : ~30 images/s (la chute est lente, l'œil ne voit pas de
+   saccade), une seule couleur avec globalAlpha au lieu d'une chaîne
+   rgba par flocon, démarrage quand le navigateur est libre (après le
+   premier rendu et l'hydratation : jamais en concurrence avec le LCP),
+   pause hors écran et quand l'onglet est caché ; rien d'animé si le
+   visiteur demande moins d'animations.
    ================================================================== */
+
+/** Intervalle entre deux images (~30 images/s), avec une marge pour les écrans à 60 Hz irréguliers. */
+const FRAME_MS = 1000 / 30 - 4;
 
 type Flake = { x: number; y: number; r: number; vy: number; phase: number; sway: number; a: number };
 
@@ -27,6 +34,7 @@ export function Snowfall({ className, density = 1 }: { className?: string; densi
     let raf = 0;
     let running = false;
     let inView = true;
+    let ready = false;
     let last = 0;
 
     const make = (anywhere: boolean): Flake => {
@@ -45,6 +53,7 @@ export function Snowfall({ className, density = 1 }: { className?: string; densi
     const draw = (dt: number, t: number) => {
       ctx.clearRect(0, 0, w, h);
       const wind = Math.sin(t / 5200) * 14 + 6;
+      ctx.fillStyle = "rgb(244,239,231)";
       for (const f of flakes) {
         if (dt > 0) {
           f.phase += dt * 0.8;
@@ -54,11 +63,12 @@ export function Snowfall({ className, density = 1 }: { className?: string; densi
           if (f.x > w + 8) f.x = -8;
           else if (f.x < -8) f.x = w + 8;
         }
+        ctx.globalAlpha = f.a;
         ctx.beginPath();
-        ctx.fillStyle = `rgba(244,239,231,${f.a})`;
         ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
         ctx.fill();
       }
+      ctx.globalAlpha = 1;
     };
 
     const resize = () => {
@@ -75,13 +85,14 @@ export function Snowfall({ className, density = 1 }: { className?: string; densi
     };
 
     const loop = (t: number) => {
+      raf = requestAnimationFrame(loop);
+      if (last && t - last < FRAME_MS) return;
       const dt = last ? Math.min((t - last) / 1000, 0.05) : 0;
       last = t;
       draw(dt, t);
-      raf = requestAnimationFrame(loop);
     };
     const start = () => {
-      if (running || reduce || !inView || document.hidden) return;
+      if (running || reduce || !ready || !inView || document.hidden) return;
       running = true;
       last = 0;
       raf = requestAnimationFrame(loop);
@@ -102,9 +113,16 @@ export function Snowfall({ className, density = 1 }: { className?: string; densi
     io.observe(canvas);
     const onVisibility = () => (document.hidden ? stop() : start());
     document.addEventListener("visibilitychange", onVisibility);
-    start();
+    // Premier flocon quand le navigateur est libre (au plus tard 1,2 s après l'hydratation).
+    const kick = () => {
+      ready = true;
+      start();
+    };
+    const idle = typeof window.requestIdleCallback === "function" ? window.requestIdleCallback(kick, { timeout: 1200 }) : window.setTimeout(kick, 200);
 
     return () => {
+      if (typeof window.cancelIdleCallback === "function") window.cancelIdleCallback(idle);
+      window.clearTimeout(idle);
       stop();
       ro.disconnect();
       io.disconnect();

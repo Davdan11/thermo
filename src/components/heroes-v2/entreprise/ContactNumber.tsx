@@ -2,9 +2,9 @@
 
 import "./entreprise.css";
 import { useEffect, useState } from "react";
-import { motion, MotionConfig } from "motion/react";
+import { fp, fpLine } from "@/components/hero/first-paint";
 import { xeMono } from "./fonts";
-import { Arrow, EASE, EMAIL, HEADER_PAD, PHONE, PHONE_HREF, UNDER_HEADER, XLink, useReducedSafe } from "./shared";
+import { Arrow, EASE, EMAIL, HEADER_PAD, PHONE, PHONE_HREF, UNDER_HEADER, XLink } from "./shared";
 
 /* ==================================================================
    /contact — « Le numéro ».
@@ -54,40 +54,40 @@ function useMontreal() {
 }
 
 export function ContactNumber() {
-  const reduce = useReducedSafe();
   const mtl = useMontreal();
   const [first, rest] = [PHONE.slice(0, 3), PHONE.slice(4)];
   const rowCls = "grid grid-cols-[120px_minmax(0,1fr)] gap-4 py-4 sm:grid-cols-[150px_minmax(0,1fr)]";
   const dtCls = "xe-mono pt-1 text-[11px] uppercase";
 
   return (
-    <MotionConfig reducedMotion="user">
     <section aria-labelledby="contact-titre" className={`xe-root ${xeMono.variable} relative ${UNDER_HEADER}`} style={{ background: C.white, color: C.ink }}>
       {/* Pas de « relative » ici : sur ordinateur, le pan orange se cale sur la section, jusqu'au bord droit. */}
       <div className={`mx-auto flex max-w-[1440px] flex-col px-5 sm:px-8 lg:block lg:min-h-[min(100svh,880px)] lg:px-12 ${HEADER_PAD}`}>
         {/* Blanc, en haut : rubrique et titre */}
         <div className="relative z-[1] lg:w-[42%]">
-          <motion.p className="xe-mono text-[12px] uppercase" style={{ letterSpacing: "0.18em", color: C.mute, margin: 0 }} initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.1 }}>
+          <p {...fp({ opacity: 0, duration: 0.7, delay: 0.1 }, { className: "xe-mono text-[12px] uppercase", style: { letterSpacing: "0.18em", color: C.mute, margin: 0 } })}>
             Contact et support
-          </motion.p>
+          </p>
           <h1 id="contact-titre" style={{ fontSize: "clamp(40px, 4.4vw, 78px)", lineHeight: 0.98, letterSpacing: "-0.045em", fontWeight: 600, margin: "22px 0 0" }}>
             {["Nous sommes là", "pour vous aider."].map((l, i) => (
-              <span key={l} className="block overflow-hidden" style={{ paddingBottom: "0.08em", marginBottom: "-0.08em" }}>
-                <motion.span className="block" initial={reduce ? false : { y: "105%" }} animate={{ y: "0%" }} transition={{ duration: 1, ease: EASE, delay: 0.2 + i * 0.1 }}>
+              <span key={l} className="block" style={{ paddingBottom: "0.08em", marginBottom: "-0.08em" }}>
+                <span {...fpLine({ y: "105%", pad: ["0px", "0px", "0.08em", "0px"], duration: 1, ease: EASE, delay: 0.2 + i * 0.1 }, { className: "block" })}>
                   {l}
-                </motion.span>
+                </span>
               </span>
             ))}
           </h1>
         </div>
 
         {/* Le pan orange et le numéro (entre le titre et les coordonnées sur mobile) */}
-        <motion.div
-          className="relative -mx-5 mt-9 flex flex-col justify-between gap-9 px-5 pb-9 pt-7 sm:-mx-8 sm:px-8 lg:absolute lg:bottom-0 lg:right-0 lg:top-[112px] lg:mx-0 lg:mt-0 lg:w-[53%] lg:gap-8 lg:rounded-tl-[36px] lg:px-14 lg:pb-14 lg:pt-12 min-[1700px]:top-[124px]"
-          style={{ background: C.orange, color: C.cream }}
-          initial={reduce ? false : { clipPath: "inset(0% 0% 0% 100%)" }}
-          animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
-          transition={{ duration: 1.1, ease: EASE, delay: 0.15 }}
+        <div
+          {...fp(
+            { clipPath: "inset(0% 0% 0% 100%)", duration: 1.1, ease: EASE, delay: 0.15 },
+            {
+              className: "relative -mx-5 mt-9 flex flex-col justify-between gap-9 px-5 pb-9 pt-7 sm:-mx-8 sm:px-8 lg:absolute lg:bottom-0 lg:right-0 lg:top-[112px] lg:mx-0 lg:mt-0 lg:w-[53%] lg:gap-8 lg:rounded-tl-[36px] lg:px-14 lg:pb-14 lg:pt-12 min-[1700px]:top-[124px]",
+              style: { background: C.orange, color: C.cream, clipPath: "inset(0% 0% 0% 0%)" },
+            },
+          )}
         >
           <p className="xe-mono text-[11.5px] uppercase" style={{ letterSpacing: "0.18em", margin: 0 }}>
             Téléphone
@@ -130,15 +130,15 @@ export function ContactNumber() {
               )}
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Blanc, en bas : message, heures, courriel */}
         <div className="relative z-[1] pb-12 pt-8 lg:w-[42%] lg:pb-20 lg:pt-0">
-          <motion.p className="max-w-[480px] text-[16.5px] leading-[1.65]" style={{ color: C.mute, margin: "22px 0 0" }} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.5 }}>
+          <p {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE, delay: 0.5 }, { className: "max-w-[480px] text-[16.5px] leading-[1.65]", style: { color: C.mute, margin: "22px 0 0" } })}>
             Avez-vous des questions sur un modèle, besoin d’assistance avec une soumission ou d’informations sur les subventions gouvernementales&nbsp;? Notre équipe d’experts québécois est prête à vous accompagner.
-          </motion.p>
+          </p>
 
-          <motion.dl className="max-w-[480px]" style={{ margin: "36px 0 0" }} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.7 }}>
+          <dl {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE, delay: 0.7 }, { className: "max-w-[480px]", style: { margin: "36px 0 0" } })}>
             <div className={rowCls} style={{ borderTop: `1px solid ${C.line}` }}>
               <dt className={dtCls} style={{ letterSpacing: "0.14em", color: C.faint }}>
                 Courriel
@@ -174,42 +174,41 @@ export function ContactNumber() {
                 </span>
               </dd>
             </div>
-          </motion.dl>
+          </dl>
 
-          <motion.div className="mt-8" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.9 }}>
+          <div {...fp({ opacity: 0, duration: 0.8, delay: 0.9 }, { className: "mt-8" })}>
             <XLink href="#message" className="inline-flex items-center gap-3 px-6 py-3.5 text-[15px] font-semibold transition-colors duration-300 hover:bg-[#0E1417] hover:text-white" style={{ border: `1.5px solid ${C.ink}`, color: C.ink, borderRadius: 4 }}>
               Écrire un message <Arrow />
             </XLink>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
-    </MotionConfig>
   );
 }
 
 /* Un chiffre sur son rouleau : deux tours de 0 à 9, puis il se pose sur le bon. */
 const ROLL = Array.from({ length: 30 }, (_, k) => k % 10);
 function Digit({ d, i }: { d: number; i: number }) {
-  const reduce = useReducedSafe();
   const stop = 20 + d;
   return (
     <span
       className="relative inline-block overflow-hidden align-top"
       style={{ height: "1em", lineHeight: 1, width: "0.6em", maskImage: "linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%)", WebkitMaskImage: "linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%)" }}
     >
-      <motion.span
-        className="absolute inset-x-0 top-0 flex flex-col items-center"
-        initial={reduce ? false : { y: "0em" }}
-        animate={{ y: `-${stop}em` }}
-        transition={{ duration: 1.9 + i * 0.07, ease: [0.16, 1, 0.3, 1], delay: 0.55 + i * 0.07 }}
+      {/* Départ sur le premier 0 ; l'arrivée (le rouleau posé sur son chiffre) est la transformation de style. */}
+      <span
+        {...fp(
+          { y: "0em", duration: 1.9 + i * 0.07, ease: [0.16, 1, 0.3, 1], delay: 0.55 + i * 0.07 },
+          { className: "absolute inset-x-0 top-0 flex flex-col items-center", style: { transform: `translateY(-${stop}em)` } },
+        )}
       >
         {ROLL.map((n, k) => (
           <span key={k} className="block" style={{ height: "1em", lineHeight: 1 }}>
             {n}
           </span>
         ))}
-      </motion.span>
+      </span>
     </span>
   );
 }

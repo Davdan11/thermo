@@ -4,9 +4,9 @@ import "./marques.css";
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, MotionConfig } from "motion/react";
 import { Crumbs } from "./Crumbs";
-import { DISPLAY, EASE, MONO, PHONE, REASSURANCE, fr, type Crumb, type Stat, calmNow, CALM } from "./shared";
+import { DISPLAY, EASE, MONO, PHONE, REASSURANCE, fr, type Crumb, type Stat } from "./shared";
+import { fp } from "@/components/hero/first-paint";
 
 /* ==================================================================
    « Règle des calibres » : héros marque × type (/marques/[slug]/[type]).
@@ -69,57 +69,36 @@ export function CalibresHero({ brand, logo, lines, accent, intro, answer, crumbs
   const k = accent ? lines[1].indexOf(accent) : -1;
 
   return (
-    <MotionConfig reducedMotion="user">
     <section aria-labelledby="calibres-titre" className="relative -mt-[93px] overflow-hidden min-[1700px]:-mt-[105px]" style={{ background: C.bg, color: C.navy, fontFamily: DISPLAY }}>
       <div className="relative mx-auto max-w-[1440px] px-5 pt-[130px] sm:px-8 lg:px-12 min-[1700px]:pt-[148px]">
-        <motion.div
-          className="flex flex-wrap items-center justify-between gap-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: 0.05 }}
-        >
+        <div {...fp({ opacity: 0, duration: 1, ease: EASE, delay: 0.05 }, { className: "flex flex-wrap items-center justify-between gap-4" })}>
           <Crumbs items={crumbs} className="text-[11.5px] font-medium uppercase" style={{ letterSpacing: "0.14em", color: C.navy }} />
           {logo ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={logo} alt={brand} className="hidden h-[26px] sm:block" style={{ width: "auto", maxWidth: "none", filter: "brightness(0)", opacity: 0.82 }} />
           ) : null}
-        </motion.div>
+        </div>
 
         <div className="mt-10 grid gap-10 lg:mt-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <div className="min-w-0">
-            <motion.p
-              className="flex items-center gap-3 text-[12px] font-semibold uppercase"
-              style={{ letterSpacing: "0.24em", margin: 0 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={calmNow() ? CALM : { duration: 1, delay: 0.15 }}
-            >
+            <p {...fp({ opacity: 0, duration: 1, delay: 0.15 }, { className: "flex items-center gap-3 text-[12px] font-semibold uppercase", style: { letterSpacing: "0.24em", margin: 0 } })}>
               <span aria-hidden="true" className="inline-block h-[14px] w-[2px]" style={{ background: C.orange }} />
               {brand}
-            </motion.p>
+            </p>
             <h1 id="calibres-titre" style={{ fontSize: size, fontWeight: 600, letterSpacing: "-0.05em", lineHeight: 0.98, margin: "18px 0 0" }}>
               {lines.map((l, i) => (
-                <motion.span
-                  key={i}
-                  className="block"
-                  initial={{ opacity: 0, x: -40 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={calmNow() ? CALM : { duration: 1.2, ease: EASE, delay: 0.25 + i * 0.14 }}
-                >
+                <span key={i} {...fp({ opacity: 0, x: -40, duration: 1.2, ease: EASE, delay: 0.25 + i * 0.14 }, { className: "block" })}>
                   {i === 1 && k >= 0 ? (
                     <>
                       {l.slice(0, k)}
                       <span className="relative inline-block" style={{ color: C.orange }}>
                         {accent}
                         {/* Petite règle graduée sous le mot */}
-                        <motion.svg
+                        <svg
                           aria-hidden="true"
-                          className="absolute left-0 top-[98%] h-[0.15em] w-full overflow-visible"
                           viewBox="0 0 100 12"
                           preserveAspectRatio="none"
-                          initial={{ clipPath: "inset(0 100% 0 0)" }}
-                          animate={{ clipPath: "inset(0 0% 0 0)" }}
-                          transition={calmNow() ? CALM : { duration: 1.6, ease: EASE, delay: 1 }}
+                          {...fp({ clipPath: "inset(0 100% 0 0)", duration: 1.6, ease: EASE, delay: 1 }, { className: "absolute left-0 top-[98%] h-[0.15em] w-full overflow-visible", style: { clipPath: "inset(0 0% 0 0)" } })}
                         >
                           <path
                             d={`M0 1H100${Array.from({ length: 21 }, (_, t) => `M${t * 5} 1V${t % 5 === 0 ? 12 : 6}`).join("")}`}
@@ -128,7 +107,7 @@ export function CalibresHero({ brand, logo, lines, accent, intro, answer, crumbs
                             strokeWidth={1.5}
                             vectorEffect="non-scaling-stroke"
                           />
-                        </motion.svg>
+                        </svg>
                       </span>
                       {l.slice(k + accent.length)}
                     </>
@@ -136,17 +115,11 @@ export function CalibresHero({ brand, logo, lines, accent, intro, answer, crumbs
                     l
                   )}
                   {i === 0 ? " " : null}
-                </motion.span>
+                </span>
               ))}
             </h1>
             {shown.length ? (
-              <motion.dl
-                className="grid grid-cols-2 gap-y-6 sm:grid-cols-4"
-                style={{ margin: "44px 0 0" }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={calmNow() ? CALM : { duration: 1, delay: 0.8 }}
-              >
+              <dl {...fp({ opacity: 0, duration: 1, delay: 0.8 }, { className: "grid grid-cols-2 gap-y-6 sm:grid-cols-4", style: { margin: "44px 0 0" } })}>
                 {shown.map((s, i) => (
                   <div key={s.label} className="relative pl-4 pr-3">
                     <span aria-hidden="true" className="absolute left-0 top-0 h-full w-px" style={{ background: i === 0 ? C.orange : C.line }} />
@@ -158,11 +131,11 @@ export function CalibresHero({ brand, logo, lines, accent, intro, answer, crumbs
                     </dd>
                   </div>
                 ))}
-              </motion.dl>
+              </dl>
             ) : null}
           </div>
 
-          <motion.div className="min-w-0 lg:pt-8" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: 0.6 }}>
+          <div {...fp({ opacity: 0, y: 16, duration: 1, ease: EASE, delay: 0.6 }, { className: "min-w-0 lg:pt-8" })}>
             <p className="text-[16.5px] leading-[1.65]" style={{ color: C.mute, margin: 0, fontFamily: "var(--font-sans)" }}>
               {intro}
             </p>
@@ -188,13 +161,12 @@ export function CalibresHero({ brand, logo, lines, accent, intro, answer, crumbs
             <p className="text-[13px]" style={{ color: C.faint, margin: "12px 0 0" }}>
               {REASSURANCE}
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       <Ruler offered={offered} photo={photo} brand={brand} />
     </section>
-    </MotionConfig>
   );
 }
 
@@ -223,25 +195,23 @@ function Ruler({ offered, photo, brand }: { offered: CalibresProps["offered"]; p
       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
         <div className="relative h-[176px] sm:h-[214px]">
           {distinct > 0 && first !== undefined && last !== undefined ? (
-            <motion.p
-              className={`absolute bottom-4 hidden max-w-[300px] text-[11px] uppercase leading-relaxed sm:block ${photoX !== null && photoX > 55 ? "left-0" : "right-0 text-right"}`}
-              style={{ fontFamily: MONO, letterSpacing: "0.1em", color: C.mute, margin: 0 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={calmNow() ? CALM : { duration: 1, delay: photoDelay }}
+            <p
+              {...fp(
+                { opacity: 0, duration: 1, delay: photoDelay },
+                {
+                  className: `absolute bottom-4 hidden max-w-[300px] text-[11px] uppercase leading-relaxed sm:block ${photoX !== null && photoX > 55 ? "left-0" : "right-0 text-right"}`,
+                  style: { fontFamily: MONO, letterSpacing: "0.1em", color: C.mute, margin: 0 },
+                },
+              )}
             >
               <span style={{ color: C.orange }}>{fr(distinct)}</span> calibre{distinct > 1 ? "s" : ""} nominaux
               <br />
               de {fr(first)} à {fr(last)} BTU
-            </motion.p>
+            </p>
           ) : null}
           {photo && photoX !== null ? (
-            <motion.figure
-              className="absolute bottom-0 m-0 w-[128px] -translate-x-1/2 sm:w-[220px]"
-              style={{ left: `${photoX}%`, mixBlendMode: "multiply" }}
-              initial={{ opacity: 0, y: -28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={calmNow() ? CALM : { duration: 1, ease: EASE, delay: photoDelay }}
+            <figure
+              {...fp({ opacity: 0, y: -28, duration: 1, ease: EASE, delay: photoDelay }, { className: "absolute bottom-0 m-0 w-[128px] -translate-x-1/2 sm:w-[220px]", style: { left: `${photoX}%`, mixBlendMode: "multiply" } })}
             >
               <div className="relative aspect-[4/3]">
                 <Image src={photo.src} alt={photo.alt} fill sizes="220px" style={{ objectFit: "contain" }} />
@@ -250,7 +220,7 @@ function Ruler({ offered, photo, brand }: { offered: CalibresProps["offered"]; p
                 {caption}
               </figcaption>
               <span aria-hidden="true" className="mx-auto mt-1.5 block h-[16px] w-px" style={{ background: C.orange }} />
-            </motion.figure>
+            </figure>
           ) : null}
           {g ? (
             <div
@@ -264,12 +234,11 @@ function Ruler({ offered, photo, brand }: { offered: CalibresProps["offered"]; p
       </div>
 
       {/* La règle : bande pleine largeur qui glisse en place */}
-      <motion.div
-        className="relative"
-        style={{ background: C.strip, borderTop: "1px solid rgba(15,34,51,0.28)", borderBottom: `1px solid ${C.line}`, boxShadow: "0 14px 30px -24px rgba(15,34,51,0.45)" }}
-        initial={{ x: "24%", opacity: 0 }}
-        animate={{ x: "0%", opacity: 1 }}
-        transition={calmNow() ? CALM : { duration: 1.3, ease: EASE, delay: 0.45 }}
+      <div
+        {...fp(
+          { x: "24%", opacity: 0, duration: 1.3, ease: EASE, delay: 0.45 },
+          { className: "relative", style: { background: C.strip, borderTop: "1px solid rgba(15,34,51,0.28)", borderBottom: `1px solid ${C.line}`, boxShadow: "0 14px 30px -24px rgba(15,34,51,0.45)" } },
+        )}
       >
         <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
           <div className="relative h-[80px]" onPointerLeave={() => setActive(null)}>
@@ -300,14 +269,16 @@ function Ruler({ offered, photo, brand }: { offered: CalibresProps["offered"]; p
             {/* Un trait orange par calibre réellement offert, allumé groupe par groupe */}
             {groups.map((gr, i) =>
               gr.values.map((v) => (
-                <motion.span
+                <span
                   key={`t${v}`}
                   aria-hidden="true"
-                  className="pointer-events-none absolute top-0 block w-[2px] -translate-x-1/2"
-                  style={{ left: `${pos(v)}%`, height: active === i ? 46 : 36, background: active === i ? C.navy : C.orange, transformOrigin: "50% 0%", transition: "height 0.3s, background-color 0.3s" }}
-                  initial={{ scaleY: 0 }}
-                  animate={{ scaleY: 1 }}
-                  transition={calmNow() ? CALM : { duration: 0.5, ease: EASE, delay: litStart + i * step }}
+                  {...fp(
+                    { scaleY: 0, duration: 0.5, ease: EASE, delay: litStart + i * step },
+                    {
+                      className: "pointer-events-none absolute top-0 block w-[2px] -translate-x-1/2",
+                      style: { left: `${pos(v)}%`, height: active === i ? 46 : 36, background: active === i ? C.navy : C.orange, transformOrigin: "50% 0%", transition: "height 0.3s, background-color 0.3s" },
+                    },
+                  )}
                 />
               )),
             )}
@@ -331,16 +302,15 @@ function Ruler({ offered, photo, brand }: { offered: CalibresProps["offered"]; p
             })}
           </div>
         </div>
-      </motion.div>
-      <motion.p
-        className="mx-auto max-w-[1440px] px-5 pb-8 pt-3 text-[11px] uppercase sm:px-8 lg:px-12"
-        style={{ fontFamily: MONO, letterSpacing: "0.12em", color: C.faint, margin: "0 auto" }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={calmNow() ? CALM : { duration: 1, delay: photoDelay + 0.2 }}
+      </div>
+      <p
+        {...fp(
+          { opacity: 0, duration: 1, delay: photoDelay + 0.2 },
+          { className: "mx-auto max-w-[1440px] px-5 pb-8 pt-3 text-[11px] uppercase sm:px-8 lg:px-12", style: { fontFamily: MONO, letterSpacing: "0.12em", color: C.faint, margin: "0 auto" } },
+        )}
       >
         Calibres nominaux offerts par {brand}, en BTU. Survolez ou touchez un repère.
-      </motion.p>
+      </p>
     </div>
   );
 }

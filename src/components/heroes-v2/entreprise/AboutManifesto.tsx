@@ -4,6 +4,7 @@ import "./entreprise.css";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { animate, motion, useMotionValue, useScroll, useTransform, MotionConfig } from "motion/react";
+import { fp } from "@/components/hero/first-paint";
 import { xeMono } from "./fonts";
 import { Arrow, EASE, HEADER_PAD, UNDER_HEADER, XLink, fmtInt, useReducedSafe } from "./shared";
 
@@ -73,18 +74,17 @@ export function AboutManifesto({ stats }: { stats: { eligible: number; brands: n
           <span>À propos</span>
           <span>Manifeste · N°&nbsp;01</span>
         </div>
-        <motion.span aria-hidden="true" className="mt-3 block h-px origin-left" style={{ background: C.brown }} initial={reduce ? false : { scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.4, ease: EASE, delay: 0.15 }} />
+        <span aria-hidden="true" {...fp({ scaleX: 0, duration: 1.4, ease: EASE, delay: 0.15 }, { className: "mt-3 block h-px origin-left", style: { background: C.brown } })} />
 
-        <motion.h1
+        <h1
           id="apropos-titre"
-          className="mt-8 lg:mt-10"
-          style={{ fontSize: "clamp(34px, 3.4vw, 58px)", lineHeight: 1.02, letterSpacing: "-0.04em", fontWeight: 600, margin: 0 }}
-          initial={reduce ? false : { clipPath: "inset(0 100% 0 0)" }}
-          animate={{ clipPath: "inset(0 0% 0 0)" }}
-          transition={{ duration: 1.3, ease: EASE, delay: 0.3 }}
+          {...fp(
+            { clipPath: "inset(0 100% 0 0)", duration: 1.3, ease: EASE, delay: 0.3 },
+            { className: "mt-8 lg:mt-10", style: { fontSize: "clamp(34px, 3.4vw, 58px)", lineHeight: 1.02, letterSpacing: "-0.04em", fontWeight: 600, margin: 0, clipPath: "inset(0 0% 0 0)" } },
+          )}
         >
           Rendre l’achat d’une thermopompe <span style={{ color: C.terra }}>plus clair.</span>
-        </motion.h1>
+        </h1>
 
         <div className="mt-8 grid gap-10 lg:mt-12 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-16">
           {/* La mission, lue à voix haute */}
@@ -117,25 +117,21 @@ export function AboutManifesto({ stats }: { stats: { eligible: number; brands: n
 
           {/* Actions et chiffres du catalogue */}
           <div className="flex flex-col gap-9 lg:order-1 lg:pt-3">
-            <motion.div className="flex flex-wrap items-center gap-x-7 gap-y-4" initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE, delay: 0.7 }}>
+            <div {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.7 }, { className: "flex flex-wrap items-center gap-x-7 gap-y-4" })}>
               <XLink href="/thermopompes" className="inline-flex items-center gap-3 px-6 py-4 text-[15px] font-semibold transition-colors duration-300 hover:bg-[#B5523B]" style={{ background: C.brown, color: C.sand, borderRadius: 2 }}>
                 Comparer les modèles <Arrow />
               </XLink>
               <XLink href="/comment-ca-marche" className="xe-under pb-1 text-[15px] font-semibold" style={{ color: C.brown }}>
                 Comment ça marche
               </XLink>
-            </motion.div>
+            </div>
 
             {items.length > 0 && (
               <dl style={{ margin: 0 }}>
                 {items.map((s, i) => (
-                  <motion.div
+                  <div
                     key={s.label}
-                    className="grid grid-cols-[44px_minmax(0,1fr)] items-baseline gap-3 py-3.5"
-                    style={{ borderTop: `1px solid ${C.line}` }}
-                    initial={reduce ? false : { opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: EASE, delay: 0.9 + i * 0.12 }}
+                    {...fp({ opacity: 0, y: 10, duration: 0.8, ease: EASE, delay: 0.9 + i * 0.12 }, { className: "grid grid-cols-[44px_minmax(0,1fr)] items-baseline gap-3 py-3.5", style: { borderTop: `1px solid ${C.line}` } })}
                   >
                     <span aria-hidden="true" className="xe-mono text-[11.5px]" style={{ color: C.terra, letterSpacing: "0.1em" }}>
                       {String(i + 4).padStart(2, "0")}
@@ -148,7 +144,7 @@ export function AboutManifesto({ stats }: { stats: { eligible: number; brands: n
                         {s.label}
                       </dt>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </dl>
             )}
@@ -190,13 +186,12 @@ function PhotoStrip({ read }: { read: number }) {
       {CHAPTERS.map((c, i) => {
         const lit = read >= c.word;
         return (
-          <motion.figure
+          <figure
             key={c.n}
-            className="relative h-[150px] overflow-hidden sm:h-[200px] lg:h-[clamp(190px,25vh,260px)]"
-            style={{ margin: 0, background: "#d8c6ae" }}
-            initial={reduce ? false : { clipPath: "inset(100% 0% 0% 0%)" }}
-            animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
-            transition={{ duration: 1.2, ease: EASE, delay: 0.45 + i * 0.14 }}
+            {...fp(
+              { clipPath: "inset(100% 0% 0% 0%)", duration: 1.2, ease: EASE, delay: 0.45 + i * 0.14 },
+              { className: "relative h-[150px] overflow-hidden sm:h-[200px] lg:h-[clamp(190px,25vh,260px)]", style: { margin: 0, background: "#d8c6ae", clipPath: "inset(0% 0% 0% 0%)" } },
+            )}
           >
             <motion.div className="absolute inset-x-0 -bottom-[12%] -top-[12%]" style={reduce ? undefined : { y }}>
               <Image
@@ -216,7 +211,7 @@ function PhotoStrip({ read }: { read: number }) {
               </span>
               <span>{c.label}</span>
             </figcaption>
-          </motion.figure>
+          </figure>
         );
       })}
     </div>

@@ -8,6 +8,7 @@ import type { RangeRow } from "@/components/product/hero/prix-sets";
 import { DISPLAY, MONO, SERIF, plexMono } from "./fonts";
 import { EASE, fr } from "./shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { fp, fpLine } from "@/components/hero/first-paint";
 
 /* ==================================================================
    /prix/[slug] — « L'étiquette ».
@@ -54,15 +55,9 @@ export function TagHero({ crumbs, title, lead, rows, footnote }: { crumbs: React
       style={{ color: BROWN, fontFamily: DISPLAY }}
     >
       <div className="relative mx-auto max-w-[1440px] px-5 pb-16 pt-[136px] sm:px-8 lg:px-12 lg:pb-20 min-[1700px]:pt-[152px]">
-        <motion.div
-          className="pv2-crumbs"
-          style={{ "--c-link": MUTE, "--c-cur": BROWN, "--c-sep": "rgba(42,30,20,0.35)" } as CSSProperties}
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div {...fp({ opacity: 0, duration: 0.6 }, { className: "pv2-crumbs", style: { "--c-link": MUTE, "--c-cur": BROWN, "--c-sep": "rgba(42,30,20,0.35)" } as CSSProperties })}>
           {crumbs}
-        </motion.div>
+        </div>
 
         <p className="flex items-center gap-3 text-[11.5px] font-medium uppercase" style={{ fontFamily: MONO, letterSpacing: "0.2em", color: RUST, margin: "34px 0 0" }}>
           <span aria-hidden="true" className="inline-block h-[2px] w-9 rounded-full" style={{ background: STRING }} />
@@ -71,58 +66,44 @@ export function TagHero({ crumbs, title, lead, rows, footnote }: { crumbs: React
 
         <h1 id="tg-titre" style={{ fontFamily: SERIF, fontWeight: 400, fontSize: "clamp(50px, 7vw, 116px)", lineHeight: 0.94, letterSpacing: "-0.02em", margin: "18px 0 0", textWrap: "balance" }}>
           {lines.map((l, k) => (
-            <span key={k} className="block overflow-hidden" style={{ paddingBottom: "0.2em", marginBottom: "-0.2em" }}>
-              <motion.span
-                className="block"
-                style={k === 1 ? { color: RUST } : undefined}
-                initial={reduce ? false : { y: "108%", rotate: 1.5 }}
-                animate={{ y: "0%", rotate: 0 }}
-                transition={{ duration: 1.15, ease: EASE, delay: 0.15 + k * 0.13 }}
-              >
-                {k === 1 ? (
-                  <span className="relative inline-block">
-                    {l}
-                    {/* Ficelle soulignée qui se tend sous la question */}
-                    <svg aria-hidden="true" className="absolute left-0 w-full" style={{ bottom: "-0.12em", height: "0.16em" }} viewBox="0 0 400 20" preserveAspectRatio="none" fill="none">
-                      <motion.path
-                        d="M2 12 C 60 4, 110 18, 170 11 S 290 4, 398 10"
-                        stroke={STRING}
-                        strokeWidth="3.2"
-                        strokeLinecap="round"
-                        vectorEffect="non-scaling-stroke"
-                        initial={reduce ? false : { pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
-                        transition={{ duration: 1.2, ease: EASE, delay: 1.05 }}
-                      />
-                    </svg>
-                  </span>
-                ) : (
-                  l
-                )}
-                {k < lines.length - 1 ? " " : null}
-              </motion.span>
+            <span key={k} className="block" style={{ paddingBottom: "0.2em", marginBottom: "-0.2em" }}>
+              {/* La ligne monte derrière le masque ; sa légère rotation est portée par une enveloppe de même boîte, pour que le masque reste droit. */}
+              <span {...fpLine({ y: "108%", pad: ["0px", "0px", "0.2em", "0px"], duration: 1.15, ease: EASE, delay: 0.15 + k * 0.13 }, { className: "block" })}>
+                <span {...fp({ rotate: 1.5, duration: 1.15, ease: EASE, delay: 0.15 + k * 0.13 }, { className: "block", style: k === 1 ? { color: RUST } : undefined })}>
+                  {k === 1 ? (
+                    <span className="relative inline-block">
+                      {l}
+                      {/* Ficelle soulignée qui se tend sous la question */}
+                      <svg aria-hidden="true" className="absolute left-0 w-full" style={{ bottom: "-0.12em", height: "0.16em" }} viewBox="0 0 400 20" preserveAspectRatio="none" fill="none">
+                        <motion.path
+                          d="M2 12 C 60 4, 110 18, 170 11 S 290 4, 398 10"
+                          stroke={STRING}
+                          strokeWidth="3.2"
+                          strokeLinecap="round"
+                          vectorEffect="non-scaling-stroke"
+                          initial={reduce ? false : { pathLength: 0 }}
+                          animate={{ pathLength: 1 }}
+                          transition={{ duration: 1.2, ease: EASE, delay: 1.05 }}
+                        />
+                      </svg>
+                    </span>
+                  ) : (
+                    l
+                  )}
+                  {k < lines.length - 1 ? " " : null}
+                </span>
+              </span>
             </span>
           ))}
         </h1>
 
         <div className="mt-10 grid gap-14 xl:mt-8 xl:grid-cols-[minmax(0,1fr)_400px] xl:gap-20">
           <div className="min-w-0 xl:pt-4">
-            <motion.p
-              className="max-w-[620px] text-[17px] leading-[1.68] sm:text-[18px]"
-              style={{ color: "rgba(42,30,20,0.82)", margin: 0 }}
-              initial={reduce ? false : { opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.6 }}
-            >
+            <p {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.6 }, { className: "max-w-[620px] text-[17px] leading-[1.68] sm:text-[18px]", style: { color: "rgba(42,30,20,0.82)", margin: 0 } })}>
               {lead}
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4"
-              initial={reduce ? false : { opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.75 }}
-            >
+            <div {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.75 }, { className: "mt-8 flex flex-wrap items-center gap-x-7 gap-y-4" })}>
               <Link href="/soumission" className="pv2-btn-brown inline-flex items-center gap-3 rounded-full py-4 pl-7 pr-6 text-[15px] font-semibold" style={{ background: BROWN, color: "#F6EBD6" }}>
                 Recevoir un prix écrit
                 <span aria-hidden="true" style={{ color: STRING }}>
@@ -132,15 +113,9 @@ export function TagHero({ crumbs, title, lead, rows, footnote }: { crumbs: React
               <Link href="/prix" className="pv2-uline text-[15px] font-semibold" style={{ color: BROWN }}>
                 Voir les fourchettes publiées
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="mt-12 max-w-[640px] pt-6"
-              style={{ borderTop: `1px solid rgba(42,30,20,0.22)` }}
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.9, delay: 0.95 }}
-            >
+            <div {...fp({ opacity: 0, duration: 0.9, delay: 0.95 }, { className: "mt-12 max-w-[640px] pt-6", style: { borderTop: `1px solid rgba(42,30,20,0.22)` } })}>
               <p className="text-[11px] font-medium uppercase" style={{ fontFamily: MONO, letterSpacing: "0.18em", color: MUTE, margin: 0 }}>
                 Ce qui vous place dans la fourchette
               </p>
@@ -154,7 +129,7 @@ export function TagHero({ crumbs, title, lead, rows, footnote }: { crumbs: React
                   </li>
                 ))}
               </ol>
-            </motion.div>
+            </div>
           </div>
 
           {rows.length > 0 && (
@@ -277,14 +252,7 @@ function HangingTag({ rows, footnote, root }: { rows: RangeRow[]; footnote: stri
   }, [reduce, inView, kick]);
 
   return (
-    <motion.div
-      ref={wrap}
-      className="relative mx-auto"
-      style={{ width: `calc(${TAG_W} + 60px)`, maxWidth: "100%", height: STRING_LEN + 480 }}
-      initial={reduce ? false : { y: -36, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1, ease: EASE, delay: 0.45 }}
-    >
+    <div ref={wrap} {...fp({ y: -36, opacity: 0, duration: 1, ease: EASE, delay: 0.45 }, { className: "relative mx-auto", style: { width: `calc(${TAG_W} + 60px)`, maxWidth: "100%", height: STRING_LEN + 480 } })}>
       {/* Clou */}
       <span
         aria-hidden="true"
@@ -345,6 +313,6 @@ function HangingTag({ rows, footnote, root }: { rows: RangeRow[]; footnote: stri
           />
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }
