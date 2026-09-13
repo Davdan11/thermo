@@ -122,6 +122,29 @@ export function maskedOwnerPhone(): string | null {
   return `••• ••• ••${e164.slice(-2)}`;
 }
 
+/** Destinataire d'un code par texto : un vendeur ou une adjointe à SON cellulaire (fiche Équipe), sinon le propriétaire (ALERT_SMS_TO). */
+export interface SmsTarget {
+  e164: string;
+  masked: string;
+  owner: boolean;
+}
+
+const maskE164 = (e164: string) => `••• ••• ••${e164.slice(-2)}`;
+const twilioReady = () => Boolean(process.env.TWILIO_ACCOUNT_SID && process.env.TWILIO_AUTH_TOKEN && process.env.TWILIO_PHONE_NUMBER);
+
+export async function smsTargetFor(email: string): Promise<SmsTarget | null> {
+  const k = email.trim().toLowerCase();
+  const team = await import("../equipe/store").then((s) => s.readTeam()).catch(() => null);
+  const member = team?.members.find((m) => m.email.trim().toLowerCase() === k && String(m.role) !== "proprietaire");
+  if (member) {
+    // Jamais de repli sur le cellulaire du propriétaire : sans numéro, le membre utilise l'application ou un code de secours.
+    const e164 = member.phone ? toE164(member.phone) : null;
+    return e164 ? { e164, masked: maskE164(e164), owner: false } : null;
+  }
+  const owner = process.env.ALERT_SMS_TO ? toE164(process.env.ALERT_SMS_TO) : null;
+  return owner ? { e164: owner, masked: maskE164(owner), owner: true } : null;
+}
+
 export function smsFallbackAvailable(): boolean {
   return Boolean(maskedOwnerPhone() && process.env.TWILIO_ACCOUNT_SID && process.env.TWILIO_AUTH_TOKEN && process.env.TWILIO_PHONE_NUMBER);
 }
@@ -129,13 +152,14 @@ export function smsFallbackAvailable(): boolean {
 export async function twoFactorStatus(email: string, now = Date.now()): Promise<TwoFactorStatus> {
   const d = await readSecurity();
   const u = d.users[key(email)] ?? {};
+  const target = await smsTargetFor(email);
   return {
     enabled: twoFactorEnabledIn(d, email),
     suspended: process.env.GESTION_2FA_DESACTIVEE === "1",
     enabledAt: u.totp?.enabledAt ?? null,
     backupRemaining: backupRemaining(u.backup),
-    smsAvailable: smsFallbackAvailable(),
-    smsMasked: maskedOwnerPhone(),
+    smsAvailable: Boolean(target && twilioReady()),
+    smsMasked: target?.masked ?? null,
     pending: Boolean(u.pending && now - Date.parse(u.pending.createdAt) < ENROLL_TTL_MS),
   };
 }
@@ -281,14 +305,25 @@ export async function verifySecondFactor(email: string, method: VerifyMethod, co
 
 /* ---------------- Code par texto ---------------- */
 
-export type SmsSender = (body: string) => Promise<string>;
+export type SmsSender = (body: string, to: SmsTarget) => Promise<string>;
 
-/** Envoi réel : texto au propriétaire (simulé hors production, voir liveSendsAllowed). */
-const defaultSender: SmsSender = async (body) => (await import("../automatisations/send")).sendOwnerSms(body, "code de connexion");
+/** Envoi réel (simulé hors production) : au propriétaire par ALERT_SMS_TO, à un membre par son cellulaire. Le code n'est jamais noté dans Textos. */
+const defaultSender: SmsSender = async (body, to) => {
+  if (to.owner) return (await import("../automatisations/send")).sendOwnerSms(body, "code de connexion");
+  const { liveSendsAllowed, twilioSendSms } = await import("@/lib/textos/twilio-send");
+  if (!liveSendsAllowed()) {
+    console.log(`[deux-etapes] code par texto simulé (développement) → ${to.masked}`);
+    return "simule";
+  }
+  const r = await twilioSendSms(to.e164, body);
+  return r.ok ? "envoye" : "echec";
+};
 
 export async function requestSmsCode(email: string, now = new Date(), send: SmsSender = defaultSender): Promise<{ ok: true; masked: string; simulated: boolean } | { ok: false; error: string }> {
-  const masked = maskedOwnerPhone();
-  if (!masked || !smsFallbackAvailable()) return { ok: false, error: "Le code par texto n’est pas configuré (ALERT_SMS_TO et Twilio)." };
+  const target = await smsTargetFor(email);
+  if (!target) return { ok: false, error: "Aucun cellulaire pour recevoir le code : ALERT_SMS_TO pour le propriétaire, la fiche Équipe pour un membre. Utilisez l’application ou un code de secours." };
+  if (!twilioReady()) return { ok: false, error: "Le code par texto n’est pas configuré (Twilio)." };
+  const masked = target.masked;
   const code = String(randomInt(0, 1_000_000)).padStart(6, "0");
   const reserved = await mutateSecurity<{ ok: true } | { ok: false; error: string }>((d) => {
     const t = now.getTime();
@@ -304,7 +339,7 @@ export async function requestSmsCode(email: string, now = new Date(), send: SmsS
     return { result: { ok: true }, changed: true };
   });
   if (!reserved.ok) return reserved;
-  const outcome = await send(`TAV gestion : votre code de connexion est ${code}. Il expire dans 10 minutes. Ne le donnez à personne.`);
+  const outcome = await send(`TAV gestion : votre code de connexion est ${code}. Il expire dans 10 minutes. Ne le donnez à personne.`, target);
   if (outcome !== "envoye" && outcome !== "simule") return { ok: false, error: "Le texto n’est pas parti. Utilisez l’application ou un code de secours." };
   return { ok: true, masked, simulated: outcome === "simule" };
 }

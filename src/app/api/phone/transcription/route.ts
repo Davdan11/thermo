@@ -48,18 +48,8 @@ export async function POST(req: Request) {
 }
 
 async function sendConfirmationSMS(to: string): Promise<void> {
-  const SID = process.env.TWILIO_ACCOUNT_SID;
-  const TOKEN = process.env.TWILIO_AUTH_TOKEN;
-  const FROM = process.env.TWILIO_PHONE_NUMBER;
-  if (!SID || !TOKEN || !FROM) return;
-
-  const body = "Bonjour! Nous avons bien reçu votre message vocal. Un conseiller de Thermopompes À Vendre.ca vous rappelle dans les 24 h.";
-  await fetch(`https://api.twilio.com/2010-04-01/Accounts/${SID}/Messages.json`, {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${Buffer.from(`${SID}:${TOKEN}`).toString("base64")}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({ To: to, From: FROM, Body: body }).toString(),
-  }).catch((e) => console.error("[SMS confirmation]", e));
+  // Même envoi que les automatisations : numéro désabonné (ARRÊT) respecté, simulé hors production, trace dans Textos.
+  const { sendClientSms } = await import("@/lib/gestion/automatisations/send");
+  const body = "Bonjour! Nous avons bien reçu votre message vocal. Un conseiller de Thermopompes À Vendre.ca vous rappelle dans les 24 h. Répondez ARRÊT pour ne plus recevoir de textos.";
+  await sendClientSms(to, body, { suppressed: new Set(), label: "message vocal", category: "operationnel" }).catch((e) => console.error("[SMS confirmation]", e));
 }

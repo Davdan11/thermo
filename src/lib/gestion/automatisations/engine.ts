@@ -51,7 +51,7 @@ import { readConsents } from "@/lib/consentements/store";
 import { expressFor } from "@/lib/telephonie/consent";
 import { readTelephonie } from "@/lib/telephonie/store";
 import { oneClickPageUrl, referralOffer, type ReferralOffer } from "@/lib/reference/programme";
-import { ensureDossier, ensureDossierIn, mutateAfterSale, mutateAutomations, newReferralCode, readAfterSale, readAutomations } from "./store";
+import { contactKeys, ensureDossier, ensureDossierIn, mutateAfterSale, mutateAutomations, newReferralCode, readAfterSale, readAutomations, suppressionHash } from "./store";
 import { addMonthsYmd, atLocal, dayAfterAt, eveWindow, isoWeekKey, mondayOf, MORNING_HOUR, surveyDueAt, WEEKLY_HOUR, WEEKLY_MINUTE } from "./time";
 import { AUTOMATION_IDS, OUTCOME_LABELS, type AfterSaleData, type AutomationId, type AutomationsData, type ChannelOutcome, type LogEntry, type TickSummary } from "./types";
 // Refonte R2 : alertes de délais par étape du pipeline (escalade par texto au propriétaire).
@@ -337,6 +337,8 @@ function planJob(ctx: Ctx, job: Job): PlannedAction[] {
     run: async () => {
       const email = job.client.email?.trim().toLowerCase();
       if (!email || !email.includes("@")) return { status: "ignore", detail: `${label} · sans courriel`, ref };
+      // Client désabonné des suivis (lien en un clic) : aucune demande d'avis non plus.
+      if (contactKeys(job.client).map(suppressionHash).some((h) => ctx.suppressed.has(h))) return { status: "ignore", detail: `${label} · client désabonné des suivis : aucune demande`, channels: { file: "desabonne" }, ref };
       const r = await ctx.enqueueReview({ email, firstName }, ctx.now);
       if (r.status === "suppressed") return { status: "ignore", detail: `${label} · adresse désabonnée : aucune demande`, channels: { file: "desabonne" }, ref };
       if (r.status === "doublon") return { status: "fait", detail: `${label} · demande d’avis déjà en file pour cette adresse`, channels: { file: "fait" }, ref };

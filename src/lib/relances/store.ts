@@ -231,3 +231,24 @@ export function forgetEmails(emails: string[], opts: { dryRun?: boolean } = {}):
 export async function isSuppressed(email: string): Promise<boolean> {
   return (await readRelances()).suppressed.includes(emailHash(email));
 }
+
+/**
+ * Désabonnement venu d'ailleurs (lien en un clic des suivis après-vente) : même effet qu'un clic dans un courriel
+ * de relance ou d'avis. Les messages encore en attente pour cette adresse sont annulés. Idempotent.
+ */
+export function suppressEmail(email: string, now = new Date()): Promise<{ added: boolean; cancelled: number }> {
+  const clean = normalizeEmail(email);
+  return mutate<{ added: boolean; cancelled: number }>((data) => {
+    const hash = emailHash(clean);
+    const added = !data.suppressed.includes(hash);
+    if (added) data.suppressed.push(hash);
+    let cancelled = 0;
+    for (const m of data.messages) {
+      if (m.email === clean && isOpen(m)) {
+        cancel(m, "desabonnement", now);
+        cancelled++;
+      }
+    }
+    return { result: { added, cancelled }, changed: added || cancelled > 0 };
+  });
+}

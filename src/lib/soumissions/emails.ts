@@ -129,7 +129,7 @@ export function quoteSentEmail(d: { doc: QuoteDocument; totals: Totals; link: st
 
 export function quoteSms(doc: QuoteDocument, link: string, reminder: boolean): string {
   const who = doc.contractor !== undefined ? presenterName(doc) : doc.company.tradeName || doc.company.legalName || BRAND.name;
-  return `${who} : ${reminder ? "rappel, " : ""}votre soumission ${doc.number} ${reminder ? "vous attend" : "est prête"}. Consultez-la et acceptez-la en ligne : ${link}`;
+  return `${who} : ${reminder ? "rappel, " : ""}votre soumission ${doc.number} ${reminder ? "vous attend" : "est prête"}. Consultez-la en ligne : ${link} Répondez ARRÊT pour ne plus recevoir de textos.`;
 }
 
 /* ---------------- Confirmation d'acceptation (client) ---------------- */

@@ -45,7 +45,7 @@ export function readyToSignMessage(d: { firstName: string; installer: string; li
     reason: CLIENT_REASON,
     optOutText: SERVICE,
   });
-  return { mail: { subject, html, text: [`Bonjour ${d.firstName},`, "", lead, extra, "", d.link, ...sign].join("\n") }, sms: `Thermopompes À Vendre : votre contrat avec ${d.installer} est prêt à signer. ${d.link}` };
+  return { mail: { subject, html, text: [`Bonjour ${d.firstName},`, "", lead, extra, "", d.link, ...sign].join("\n") }, sms: `Thermopompes À Vendre : votre contrat avec ${d.installer} est prêt à signer. ${d.link} Répondez ARRÊT pour ne plus recevoir de textos.` };
 }
 
 export function ownerMessage(d: { title: string; lead: string; rows: Array<[string, string]>; link: string }): Rendered {
@@ -78,12 +78,12 @@ export function cancellationMessage(d: { firstName: string; oldInstaller: string
   const subject = `Votre contrat avec ${d.oldInstaller} est annulé d’un commun accord`;
   const lead = `${d.oldInstaller} ne peut finalement pas réaliser vos travaux. Le contrat est annulé d’un commun accord, sans frais pour vous. Nous confions votre projet à un autre entrepreneur licencié : vous recevrez son contrat à signer, avec les mêmes travaux, et tout changement sera indiqué clairement.`;
   const html = brandedEmail({ title: subject, preheader: "Un autre entrepreneur licencié prend le relais.", firstName: d.firstName || undefined, body: [p(t(lead)), d.reason ? p(`Raison : ${escapeHtml(d.reason)}`, { muted: true }) : "", p(`Une question ? ${strong(BRAND.phone)}`)].join(""), cta: { label: "Voir mon projet", href: escapeHtml(d.link) }, reason: CLIENT_REASON, optOutText: SERVICE });
-  return { mail: { subject, html, text: [`Bonjour ${d.firstName},`, "", lead, d.reason ? `Raison : ${d.reason}` : "", "", d.link, ...sign].join("\n") }, sms: `Thermopompes À Vendre : ${d.oldInstaller} ne peut finalement pas faire vos travaux. Le contrat est annulé sans frais ; un autre entrepreneur licencié vous enverra son contrat. ${d.link}` };
+  return { mail: { subject, html, text: [`Bonjour ${d.firstName},`, "", lead, d.reason ? `Raison : ${d.reason}` : "", "", d.link, ...sign].join("\n") }, sms: `Thermopompes À Vendre : ${d.oldInstaller} ne peut finalement pas faire vos travaux. Le contrat est annulé sans frais ; un autre entrepreneur licencié vous enverra son contrat. ${d.link} Répondez ARRÊT pour ne plus recevoir de textos.` };
 }
 
 export function avenantMessage(d: { to: "client" | "installateur"; name: string; number: number; contractNumber: string; deltaTotalCents: number; link: string }): { mail: Rendered; sms: string } {
   const subject = d.to === "client" ? `Avenant n° ${d.number} à signer (contrat ${d.contractNumber})` : `Avenant n° ${d.number} à approuver (contrat ${d.contractNumber})`;
   const lead = d.to === "client" ? `Un changement aux travaux est proposé (${moneyFr(d.deltaTotalCents)} taxes comprises). Rien ne sera fait ni facturé avant votre signature : relisez l’avenant, puis signez-le ou refusez-le.` : `Un avenant a été préparé pour le contrat ${d.contractNumber} (${moneyFr(d.deltaTotalCents)} taxes comprises). Approuvez-le à votre nom ou refusez-le ; le client le signera ensuite, avant l’exécution.`;
   const html = brandedEmail({ title: subject, preheader: lead, firstName: first(d.name) || undefined, body: p(t(lead)), cta: { label: d.to === "client" ? "Voir et signer l’avenant" : "Voir et approuver l’avenant", href: escapeHtml(d.link) }, reason: d.to === "client" ? CLIENT_REASON : INSTALLER_REASON, optOutText: d.to === "client" ? SERVICE : "" });
-  return { mail: { subject, html, text: [subject, "", lead, "", d.link, ...sign].join("\n") }, sms: `Thermopompes À Vendre : ${subject.toLowerCase()}. ${d.link}` };
+  return { mail: { subject, html, text: [subject, "", lead, "", d.link, ...sign].join("\n") }, sms: `Thermopompes À Vendre : ${subject.toLowerCase()}. ${d.link}${d.to === "client" ? " Répondez ARRÊT pour ne plus recevoir de textos." : ""}` };
 }
