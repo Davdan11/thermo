@@ -32,6 +32,9 @@ export interface JobInitial {
   installerNotes: string;
   internalNotes: string;
   resolvedCity: string | null;
+  /** Entrepreneur de la soumission acceptée : proposé pour l'offre (coché d'office à l'étape suivante). */
+  proposedInstallerId?: string | null;
+  proposedInstallerName?: string;
 }
 
 function Err({ id, msg }: { id: string; msg?: string }) {
@@ -81,6 +84,16 @@ export function JobForm({ brands, initial }: { brands: BrandOption[]; initial?: 
   return (
     <form ref={formRef} onSubmit={onSubmit} className="g-form" noValidate>
       {initial?.id ? <input type="hidden" name="id" value={initial.id} /> : null}
+      {initial?.proposedInstallerId ? (
+        <Reveal className="g-card g-card__pad" delay={0.02}>
+          <input type="hidden" name="proposedInstallerId" value={initial.proposedInstallerId} />
+          <p className="g-eyebrow">Installateur proposé pour l’offre</p>
+          <p style={{ margin: 0, fontWeight: 650 }}>{initial.proposedInstallerName || "Entrepreneur de la soumission"}</p>
+          <p className="g-hint" style={{ margin: "4px 0 0" }}>
+            C’est l’entrepreneur choisi dans la soumission. Il sera coché d’office à l’étape suivante ; vous pourrez en choisir un autre. Les offres vérifient toujours l’entente, la licence RBQ et l’assurance.
+          </p>
+        </Reveal>
+      ) : null}
 
       <Reveal className="g-card g-card__pad" delay={0.04}>
         <fieldset className="g-fieldset">

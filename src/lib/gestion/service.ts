@@ -160,6 +160,8 @@ export async function saveJob(input: JobInput, by: string, existingId?: string, 
     desiredWindow: input.desiredWindow,
     installerNotes: input.installerNotes,
     internalNotes: input.internalNotes,
+    // Entrepreneur de la soumission : proposé pour l'offre ; une modification du job sans ce champ ne l'efface pas.
+    ...(input.proposedInstallerId ? { proposedInstallerId: input.proposedInstallerId } : {}),
   };
   return mutateGestion((data) => {
     const stamp = now.toISOString();

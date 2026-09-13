@@ -101,7 +101,7 @@ export async function syncSent(input: {
         input.reminder ? `Relance : soumission ${doc.number} (version ${doc.version})` : `Soumission ${doc.number} envoyée (version ${doc.version})`,
         [
           ["Total, taxes comprises", money(totals.totalCents)],
-          ["Aide LogisVert", totals.logisvertCents ? `${money(totals.logisvertCents)} (${totals.logisvertMode === "cession" ? "versée à l’entreprise" : "versée au client"})` : "aucune"],
+          ["Aide LogisVert", totals.logisvertCents ? `${money(totals.logisvertCents)} (${totals.logisvertMode === "cession" ? "versée à l’entreprise, ancien mode" : "information : versée au client par Hydro-Québec, non garantie"})` : "aucune"],
           ["Valide jusqu’au", formatDay(doc.validUntil)],
         ],
         input.link,

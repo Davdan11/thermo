@@ -4,6 +4,8 @@
    AAAA-MM-JJ (heure de Montréal), horodatages en ISO 8601.
    ================================================================== */
 
+import type { ChoiceLists } from "./choices";
+
 export type QuoteStatus = "brouillon" | "envoyee" | "ouverte" | "acceptee" | "refusee" | "remplacee";
 /** Statut affiché : « expirée » est calculé à partir de la date de validité, jamais écrit. */
 export type EffectiveStatus = QuoteStatus | "expiree";
@@ -18,6 +20,9 @@ export const STATUS_LABELS: Record<EffectiveStatus, string> = {
   remplacee: "Remplacée",
 };
 
+/** « client » : aide versée au client par Hydro-Québec, montrée à titre d'information, jamais soustraite du total dû.
+    « cession » : ANCIEN mode (aide déduite du prix), gardé seulement pour afficher les soumissions déjà envoyées ;
+    une nouvelle soumission ne peut plus l'utiliser (le mode est recalculé à l'enregistrement : logisvertModeFor). */
 export type LogisVertMode = "cession" | "client" | "aucune";
 export type LineKind = "forfait" | "equipement" | "extra" | "main-oeuvre" | "autre";
 export type LineUnit = "unite" | "pied" | "metre" | "forfait" | "heure";
@@ -91,7 +96,8 @@ export interface SiteInfo {
   address: string;
   city: string;
   postalCode: string;
-  propertyType: PropertyType;
+  /** Texte choisi ou écrit (choices.ts) ; les anciennes clés (PROPERTY_LABELS) restent valides. */
+  propertyType: string;
   /** Année de construction si connue (texte libre court : « 1987 », « vers 1960 »). */
   yearBuilt: string;
   /** Étages hors sol (1 = plain-pied). */
@@ -161,11 +167,14 @@ export const DRAIN_LABELS: Record<DrainMethod, string> = {
 
 export type LengthUnit = "pi" | "m";
 
+/* Les champs « choix » (type, parcours, finition, matériau, drain, support, circuit, sectionneur) sont du texte :
+   pastille de la liste des réglages ou « Autre… ». Les anciennes clés (MOUNTING_LABELS…) restent valides et
+   s'affichent avec leur libellé d'origine (choiceText). */
 export interface IndoorPlacement {
   id: string;
   /** « Unité 1 », « Chambre principale »… */
   label: string;
-  type: IndoorType | "";
+  type: string;
   /** Numéro de modèle de l'unité intérieure. */
   model: string;
   capacityBtu: number | null;
@@ -178,18 +187,18 @@ export interface IndoorPlacement {
   lineLength: number | null;
   /** Longueur de ligne comprise dans le prix, pour cette unité. */
   lineIncluded: number | null;
-  lineRoute: LineRoute | "";
-  lineFinish: LineFinish | "";
+  lineRoute: string;
+  lineFinish: string;
   penetrations: number | null;
-  wallMaterial: WallMaterial | "";
-  drain: DrainMethod | "";
+  wallMaterial: string;
+  drain: string;
   notes: string;
   photos: string[];
 }
 
 export interface OutdoorPlacement {
   location: string;
-  mounting: Mounting | "";
+  mounting: string;
   clearance: string;
   snow: string;
   notes: string;
@@ -220,10 +229,10 @@ export const ELECTRICIAN_LABELS: Record<ElectricianState, string> = {
 export interface ElectricalInfo {
   /** Capacité du panneau si connue (« 200 A »). */
   panelCapacity: string;
-  circuit: CircuitState | "";
+  circuit: string;
   /** Calibre du disjoncteur (« 2 × 20 A »). */
   breaker: string;
-  disconnect: DisconnectState | "";
+  disconnect: string;
   /** Distance du panneau à l'unité extérieure (dans l'unité de longueur de la soumission). */
   panelDistance: number | null;
   electrician: ElectricianState | "";
@@ -363,6 +372,21 @@ export interface CompanyIdentity {
   logoId: string | null;
 }
 
+/** Identité légale de l'entrepreneur qui réalise les travaux (l'installateur partenaire), copiée à l'envoi. */
+export interface ContractorIdentity {
+  legalName: string;
+  tradeName: string;
+  neq: string;
+  rbq: string;
+  address: string;
+  city: string;
+  postalCode: string;
+  phone: string;
+  email: string;
+  tps: string;
+  tvq: string;
+}
+
 export interface DocumentTexts {
   paymentTerms: string;
   depositRule: string;
@@ -424,6 +448,7 @@ export interface DiscountPreset {
 
 export interface Settings {
   version: 1;
+  /** Thermopompes À Vendre : la marque qui présente la soumission (sans licence RBQ). L'entrepreneur est choisi dans chaque soumission. */
   company: CompanyIdentity;
   texts: DocumentTexts;
   defaults: {
@@ -431,7 +456,12 @@ export interface Settings {
     deposit: DepositRule;
     lengthUnit: LengthUnit;
     includedLineLength: number | null;
+    /** Champs qui changent rarement : repris dans chaque nouvelle soumission, puis modifiables. */
+    site: { access: string; presence: string };
+    schedule: { duration: string; arrival: string; windowText: string };
   };
+  /** Listes des choix en un clic (choices.ts). */
+  choices: ChoiceLists;
   templates: {
     inclusions: string[];
     exclusions: string[];
@@ -455,6 +485,8 @@ export interface FrozenDocument {
   taxes: { tpsPer100k: number; tvqPer100k: number };
   /** Empreinte des photos jointes (SHA-256), pour que l'empreinte du document couvre les images. */
   photos: Record<string, PhotoRef>;
+  /** Instantané de l'identité de l'entrepreneur choisi, à l'envoi. Absent des soumissions envoyées avant ce modèle. */
+  contractor?: ContractorIdentity;
 }
 
 export interface PhotoRef {
@@ -486,6 +518,14 @@ export interface QuoteDocument {
   links: { logisvert: string; opcGaranties: string; opcAnnulation: string; opcDistance: string };
   photos: Record<string, PhotoRef>;
   content: QuoteContent;
+  /**
+   * Entrepreneur qui réalise les travaux :
+   * - objet : soumission du modèle actuel (figé à l'envoi) ;
+   * - null : brouillon dont l'entrepreneur n'est pas encore choisi (aperçu) ;
+   * - absent : soumission envoyée avant ce modèle ; l'entreprise était alors celle des réglages (`company`).
+   * Absent, la clé n'entre pas dans l'empreinte : les anciennes empreintes restent valides.
+   */
+  contractor?: ContractorIdentity | null;
 }
 
 export type ChannelStatus = "envoye" | "echec" | "non-configure" | "sans-numero";
@@ -599,6 +639,8 @@ export interface QuoteVersion {
   questions: Array<{ at: string; message: string; ip: string; userAgent: string }>;
   replacedAt: string | null;
   replacedBy: number | null;
+  /** Installateur partenaire qui réalise les travaux (identifiant i_…). Absent des anciennes versions. */
+  contractorId?: string | null;
 }
 
 export interface PipedriveLogEntry {
@@ -621,6 +663,8 @@ export interface Quote {
   createdAt: string;
   createdBy: string;
   duplicatedFrom: string | null;
+  /** Fiche client du CRM (c_…) choisie dans le créateur. Le CRM rapproche aussi par téléphone et courriel. */
+  clientId?: string | null;
   internalNotes: string;
   versions: QuoteVersion[];
   pipedrive: { personId: number | null; dealId: number | null; log: PipedriveLogEntry[] };
@@ -629,9 +673,22 @@ export interface Quote {
   seed?: boolean;
 }
 
+/** Modèle de soumission (« Murale standard », « Multizone 2 têtes ») : contenu sans client ni chantier (templates.ts). */
+export interface QuoteTemplate {
+  id: string;
+  name: string;
+  createdAt: string;
+  createdBy: string;
+  updatedAt: string;
+  content: QuoteContent;
+  contractorId: string | null;
+}
+
 export interface SoumissionsData {
   version: 1;
   counters: Record<string, number>;
   quotes: Quote[];
   photos: PhotoMeta[];
+  /** Modèles de soumission (absent des fichiers écrits avant leur ajout). */
+  templates?: QuoteTemplate[];
 }

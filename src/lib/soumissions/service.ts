@@ -8,11 +8,13 @@
    autorisées par leur jeton seulement.
    ================================================================== */
 
+import { randomBytes } from "node:crypto";
 import { TAXES } from "./config";
 import { todayIn } from "./dates";
 import { acceptedClientEmail, ownerEventEmail, quoteSentEmail, quoteSms } from "./emails";
 import { sendBlockers, type CheckItem } from "./checklist";
 import { resolveMachine } from "./catalog";
+import { loadContractor } from "./contractors";
 import { money } from "./money";
 import { emailOwners, emailTo, smsTo } from "./notify";
 import { readPhotoFile } from "./photos";
@@ -38,10 +40,11 @@ import {
   updateDraft,
 } from "./quote";
 import { appendView, mutateSettings, mutateSoumissions, readSettings, readSoumissions, readViews, type ViewEntry } from "./store";
+import { TEMPLATE_ID_RE, TEMPLATE_LIMIT, templateContentOf, templateSummary } from "./templates";
 import { findByToken } from "./tokens";
-import { computeTotals, defaultSelection, type TaxRates } from "./totals";
-import type { ChannelStatus, EffectiveStatus, PhotoMeta, PipedriveLogEntry, Quote, QuoteContent, QuoteDocument, QuoteVersion, Settings, SoumissionsData } from "./types";
-import type { PricesInput, QuoteInput, SettingsInput } from "./validate";
+import { computeTotals, defaultSelection, logisvertModeFor, withLogisvertMode, type TaxRates } from "./totals";
+import type { ChannelStatus, EffectiveStatus, PhotoMeta, PipedriveLogEntry, Quote, QuoteContent, QuoteDocument, QuoteTemplate, QuoteVersion, Settings, SoumissionsData } from "./types";
+import type { PricesInput, QuoteInput, SettingsInput, TemplateInput } from "./validate";
 
 export const CURRENT_RATES: TaxRates = { tpsPer100k: TAXES.tps.ratePer100k, tvqPer100k: TAXES.tvq.ratePer100k };
 export const ratesOf = (v: QuoteVersion): TaxRates => v.frozen?.taxes ?? CURRENT_RATES;
@@ -145,12 +148,15 @@ export async function saveQuote(id: string | null, input: QuoteInput, by: string
     if (!r.ok) return r;
     machine = r.machine;
   }
-  const content: QuoteContent = { ...input.content, machine };
+  // LogisVert : plus de choix de mode ; « client » si le jumelage officiel a un montant, sinon « aucune ». Jamais « cession ».
+  const content: QuoteContent = { ...input.content, machine, logisvert: { mode: logisvertModeFor(machine) } };
+  const contractorId = input.contractorId ?? null;
+  const clientId = input.clientId ?? null;
   try {
     return await mutateSoumissions<SaveResult>((data) => {
       scrubPhotos(content, new Set(data.photos.map((p) => p.id)));
       if (!id) {
-        const q = createQuote(data, content, by, now, { internalNotes: input.internalNotes });
+        const q = createQuote(data, content, by, now, { internalNotes: input.internalNotes, clientId, contractorId });
         claimPhotos(data, q.id, content);
         return { result: { ok: true, id: q.id }, changed: true };
       }
@@ -159,6 +165,8 @@ export async function saveQuote(id: string | null, input: QuoteInput, by: string
       const draft = draftOf(q);
       if (!draft) return { result: { ok: false, error: "Aucune version en brouillon : créez une nouvelle version pour modifier cette soumission." }, changed: false };
       updateDraft(q, draft, content, now);
+      draft.contractorId = contractorId;
+      q.clientId = clientId;
       q.internalNotes = input.internalNotes;
       claimPhotos(data, q.id, content);
       return { result: { ok: true, id: q.id }, changed: true };
@@ -185,12 +193,13 @@ export async function reviseService(id: string, by: string, now = new Date()): P
   }
 }
 
-export async function duplicateService(id: string, by: string, now = new Date()): Promise<{ ok: true; id: string } | { ok: false; error: string }> {
+/** Copie d'une soumission ; « pour un autre client » : sans coordonnées ni chantier, mêmes machine, plan, prix et entrepreneur. */
+export async function duplicateService(id: string, by: string, opts: { forOtherClient?: boolean } = {}, now = new Date()): Promise<{ ok: true; id: string } | { ok: false; error: string }> {
   const settings = await readSettings();
   return mutateSoumissions<{ ok: true; id: string } | { ok: false; error: string }>((data) => {
     const q = findQuote(data, id);
     if (!q) return { result: { ok: false as const, error: "Soumission introuvable." }, changed: false };
-    const copy = duplicateQuote(data, q, currentVersion(q).v, by, now, settings.defaults.validityDays);
+    const copy = duplicateQuote(data, q, currentVersion(q).v, by, now, settings.defaults.validityDays, opts);
     return { result: { ok: true as const, id: copy.id }, changed: true };
   });
 }
@@ -209,6 +218,64 @@ export async function deleteDraftService(id: string, by: string, now = new Date(
     q.versions = q.versions.filter((v) => v !== draft);
     q.events.push({ at: now.toISOString(), type: "brouillon-supprime", detail: `Brouillon de la version ${draft.v} supprimé`, by });
     return { result: { ok: true as const, removedQuote: false }, changed: true };
+  });
+}
+
+/* ---------------- Modèles de soumission ---------------- */
+
+export interface TemplateRow {
+  id: string;
+  name: string;
+  updatedAt: string;
+  summary: string;
+}
+
+export async function listTemplates(): Promise<TemplateRow[]> {
+  const data = await readSoumissions();
+  return (data.templates ?? [])
+    .map((t) => ({ id: t.id, name: t.name, updatedAt: t.updatedAt, summary: templateSummary(t.content) }))
+    .sort((a, b) => a.name.localeCompare(b.name, "fr-CA"));
+}
+
+export async function templateById(id: string): Promise<QuoteTemplate | null> {
+  if (!TEMPLATE_ID_RE.test(id)) return null;
+  return (await readSoumissions()).templates?.find((t) => t.id === id) ?? null;
+}
+
+export type TemplateSaveResult = { ok: true; id: string; replaced: boolean } | { ok: false; error: string };
+
+/** « Enregistrer comme modèle » : sans client, chantier, photos ni dates ; un modèle du même nom est remplacé. */
+export async function saveTemplateService(input: TemplateInput, by: string, now = new Date()): Promise<TemplateSaveResult> {
+  let machine: QuoteContent["machine"] = null;
+  if (input.content.machine) {
+    const r = await resolveMachine(input.content.machine);
+    if (!r.ok) return r;
+    machine = r.machine;
+  }
+  const content = templateContentOf({ ...input.content, machine, logisvert: { mode: logisvertModeFor(machine) } });
+  const name = input.name.trim();
+  const contractorId = input.contractorId ?? null;
+  return mutateSoumissions<TemplateSaveResult>((data) => {
+    const list = (data.templates ??= []);
+    const at = now.toISOString();
+    const same = list.find((t) => t.name.localeCompare(name, "fr-CA", { sensitivity: "base" }) === 0);
+    if (same) {
+      Object.assign(same, { content, contractorId, updatedAt: at });
+      return { result: { ok: true, id: same.id, replaced: true }, changed: true };
+    }
+    if (list.length >= TEMPLATE_LIMIT) return { result: { ok: false, error: `${TEMPLATE_LIMIT} modèles au plus : supprimez-en un dans les réglages.` }, changed: false };
+    const t: QuoteTemplate = { id: `tm_${randomBytes(8).toString("base64url")}`, name, createdAt: at, createdBy: by, updatedAt: at, content, contractorId };
+    list.push(t);
+    return { result: { ok: true, id: t.id, replaced: false }, changed: true };
+  });
+}
+
+export async function deleteTemplateService(id: string): Promise<boolean> {
+  if (!TEMPLATE_ID_RE.test(id)) return false;
+  return mutateSoumissions<boolean>((data) => {
+    const before = data.templates?.length ?? 0;
+    data.templates = (data.templates ?? []).filter((t) => t.id !== id);
+    return { result: data.templates.length < before, changed: data.templates.length < before };
   });
 }
 
@@ -231,14 +298,25 @@ export type SendResult =
 export async function sendQuoteService(id: string, by: string, baseUrl: string, opts: { sms: boolean }, now = new Date()): Promise<SendResult> {
   const settings = await readSettings();
   const today = todayIn(now);
+  // Entrepreneur du brouillon : état (licence, assurance, identité) et identité complète, lus hors verrou.
+  const pre = findQuote(await readSoumissions(), id);
+  const wanted = (pre ? draftOf(pre)?.contractorId : null) ?? null;
+  const contractor = await loadContractor(wanted, now);
   const phase = await mutateSoumissions<{ ok: false; error: string; blockers?: CheckItem[] } | { ok: true; quote: Quote; version: QuoteVersion }>((data) => {
     const q = findQuote(data, id);
     if (!q) return { result: { ok: false, error: "Soumission introuvable." }, changed: false };
     const v = draftOf(q);
     if (!v) return { result: { ok: false, error: "Aucune version en brouillon à envoyer. Pour renvoyer le lien, utilisez « Relancer le client »." }, changed: false };
-    const blockers = sendBlockers(v.content, settings, today, CURRENT_RATES);
-    if (blockers.length) return { result: { ok: false, error: `Envoi bloqué : ${blockers.length} élément${blockers.length > 1 ? "s" : ""} à compléter.`, blockers }, changed: false };
-    freezeForSend(q, v, settings, data.photos, now);
+    if ((v.contractorId ?? null) !== wanted) return { result: { ok: false, error: "La soumission vient d’être modifiée : réessayez l’envoi." }, changed: false };
+    // Ancien brouillon « cession » : le mode est recalculé (l'aide n'est jamais déduite du total dû).
+    v.content = withLogisvertMode(v.content);
+    const blockers = sendBlockers(v.content, settings, today, CURRENT_RATES, { id: wanted, status: contractor?.status ?? null });
+    if (blockers.length) {
+      const first = blockers.slice(0, 3).map((b) => (b.hint ? `${b.label} (${b.hint.replace(/\.$/, "")})` : b.label));
+      return { result: { ok: false, error: `Envoi bloqué : ${first.join(" ; ")}${blockers.length > 3 ? ` ; et ${blockers.length - 3} autre${blockers.length - 3 > 1 ? "s" : ""}` : ""}.`, blockers }, changed: false };
+    }
+    // Instantané : l'identité de l'entrepreneur est copiée dans la version ; un changement ultérieur ne la touche plus.
+    freezeForSend(q, v, settings, data.photos, now, contractor?.identity ?? null);
     q.events.push({ at: now.toISOString(), type: "envoi", detail: `Version ${v.v} envoyée au client`, by });
     return { result: { ok: true, quote: clone(q), version: clone(v) }, changed: true };
   });
@@ -483,7 +561,9 @@ export async function saveSettingsService(input: SettingsInput, by: string, now 
   await mutateSettings((s) => {
     s.company = { ...input.company };
     s.texts = { ...input.texts };
-    s.defaults = { ...input.defaults, deposit: { ...input.defaults.deposit } };
+    s.defaults = { ...input.defaults, deposit: { ...input.defaults.deposit }, site: { ...input.defaults.site }, schedule: { ...input.defaults.schedule } };
+    // Listes des choix en un clic (ajoutées, retirées, réordonnées dans les réglages).
+    s.choices = input.choices;
     s.templates = { ...input.templates };
     s.pipedriveStages = { ...input.pipedriveStages };
     s.updatedAt = now.toISOString();

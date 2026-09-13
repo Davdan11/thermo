@@ -22,7 +22,7 @@ export interface CandidateDTO {
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-function Row({ c, index, variant, onToggle }: { c: CandidateDTO; index: number; variant: "ranked" | "offered" | "near"; onToggle: (id: string, on: boolean) => void }) {
+function Row({ c, index, variant, onToggle, proposed = false }: { c: CandidateDTO; index: number; variant: "ranked" | "offered" | "near"; onToggle: (id: string, on: boolean) => void; proposed?: boolean }) {
   const reduced = useReduced();
   const muted = variant !== "ranked";
   const body = (
@@ -35,6 +35,7 @@ function Row({ c, index, variant, onToggle }: { c: CandidateDTO; index: number; 
           <div style={{ minWidth: 0 }}>
             <div className="g-cand__name">
               {variant === "ranked" && index === 0 ? <span className="g-pill g-pill--nouveau" style={{ marginRight: 8, height: 22 }}>1er choix</span> : null}
+              {proposed ? <span className="g-pill g-pill--planifie" style={{ marginRight: 8, height: 22 }}>Entrepreneur de la soumission</span> : null}
               {c.company}
             </div>
             <div className="g-cand__sub">{c.contactName} · {c.city}</div>
@@ -44,7 +45,7 @@ function Row({ c, index, variant, onToggle }: { c: CandidateDTO; index: number; 
           ) : (
             <div className="g-cand__act">
               <label className="g-cand__pickwrap">
-                <input type="checkbox" name="installerIds" value={c.id} className="g-cand__pick" onChange={(e) => onToggle(c.id, e.target.checked)} />
+                <input type="checkbox" name="installerIds" value={c.id} className="g-cand__pick" defaultChecked={proposed} onChange={(e) => onToggle(c.id, e.target.checked)} />
                 Choisir
               </label>
               <SubmitButton name="only" value={c.id} className={`g-btn ${muted ? "g-btn--ghost" : "g-btn--primary"}`} pendingLabel="Envoi…">
@@ -72,8 +73,11 @@ function Row({ c, index, variant, onToggle }: { c: CandidateDTO; index: number; 
   );
 }
 
-export function CandidateList({ action, ranked, offered, nearMisses, declinedNote }: { action: (fd: FormData) => Promise<void>; ranked: CandidateDTO[]; offered: CandidateDTO[]; nearMisses: CandidateDTO[]; declinedNote: boolean }) {
-  const [picked, setPicked] = useState<Set<string>>(new Set());
+/* `proposedId` : l'entrepreneur choisi dans la soumission acceptée, coché d'office (le propriétaire peut le décocher). */
+export function CandidateList({ action, ranked, offered, nearMisses, declinedNote, proposedId = null }: { action: (fd: FormData) => Promise<void>; ranked: CandidateDTO[]; offered: CandidateDTO[]; nearMisses: CandidateDTO[]; declinedNote: boolean; proposedId?: string | null }) {
+  const proposable = proposedId && [...ranked, ...nearMisses].some((c) => c.id === proposedId) ? proposedId : null;
+  const nearProposed = Boolean(proposable && nearMisses.some((c) => c.id === proposable));
+  const [picked, setPicked] = useState<Set<string>>(() => new Set(proposable ? [proposable] : []));
   const toggle = (id: string, on: boolean) =>
     setPicked((prev) => {
       const next = new Set(prev);
@@ -92,18 +96,18 @@ export function CandidateList({ action, ranked, offered, nearMisses, declinedNot
       ) : null}
       {ranked.length ? (
         <ul className="g-cands">
-          {ranked.map((c, i) => <Row key={c.id} c={c} index={i} variant="ranked" onToggle={toggle} />)}
+          {ranked.map((c, i) => <Row key={c.id} c={c} index={i} variant="ranked" onToggle={toggle} proposed={c.id === proposable} />)}
         </ul>
       ) : (
         <p className="g-empty">Aucun installateur admissible. Regardez les « presque » ci-dessous ou ajoutez un installateur.</p>
       )}
 
       {nearMisses.length ? (
-        <details className="g-details" style={{ marginTop: 14 }}>
+        <details className="g-details" style={{ marginTop: 14 }} open={nearProposed || undefined}>
           <summary><ChevronRight size={16} aria-hidden /> Presque admissibles ({nearMisses.length})</summary>
           <p className="g-hint" style={{ margin: "0 0 10px" }}>Il leur manque un ou deux critères (en rouge). Vous pouvez leur envoyer l’offre en connaissance de cause.</p>
           <ul className="g-cands">
-            {nearMisses.map((c, i) => <Row key={c.id} c={c} index={i} variant="near" onToggle={toggle} />)}
+            {nearMisses.map((c, i) => <Row key={c.id} c={c} index={i} variant="near" onToggle={toggle} proposed={c.id === proposable} />)}
           </ul>
         </details>
       ) : null}

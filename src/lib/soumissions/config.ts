@@ -40,6 +40,16 @@ export const PLACEHOLDER_RE = /\[\s*À\s/i;
 
 export const TIMEZONE = "America/Toronto";
 
+/** Nom montré quand les réglages ne donnent pas encore le nom de la marque qui présente la soumission. */
+export const PRESENTER_FALLBACK = "Thermopompes À Vendre";
+
+/**
+ * Mention LogisVert, texte demandé par le propriétaire (septembre 2026). Montrée à titre d'INFORMATION seulement :
+ * le montant de l'aide n'est jamais soustrait du total dû. À faire valider par l'avocat avec les autres textes.
+ */
+export const LOGISVERT_NOTICE =
+  "Aide LogisVert prévue, versée au client par Hydro-Québec après l’installation, sous réserve d’admissibilité : non garantie par l’entrepreneur ni par Thermopompes À Vendre.";
+
 export const LIMITS = {
   lines: 80,
   listItems: 40,

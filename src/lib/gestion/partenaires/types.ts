@@ -172,9 +172,48 @@ export interface Citation {
   channels: { email: SendStatus; sms: SendStatus };
 }
 
+/** Identité légale du partenaire : l'entreprise qui réalise les travaux dans les soumissions (identity.ts). */
+export interface PartnerIdentity {
+  legalName: string;
+  tradeName: string;
+  neq: string;
+  address: string;
+  city: string;
+  postalCode: string;
+  phone: string;
+  email: string;
+  tps: string;
+  tvq: string;
+  /** Licence RBQ déclarée par le partenaire dans son formulaire (le numéro qui fait foi reste celui de la conformité). */
+  rbqDeclared: string;
+  source: "proprietaire" | "partenaire";
+  updatedAt: string;
+  updatedBy: string;
+  /** Formulaire envoyé par le partenaire. */
+  submittedAt?: string;
+  /** Vérifiée par le propriétaire (saisie par lui, ou confirmée après l'envoi du partenaire). */
+  verifiedAt?: string;
+  verifiedBy?: string;
+}
+
+/** Lien sécurisé pour que le partenaire remplisse lui-même son identité légale. */
+export interface IdentityLink {
+  /** SHA-256 du jeton : le jeton n'est jamais conservé. */
+  tokenHash: string;
+  createdAt: string;
+  createdBy: string;
+  expiresAt: string;
+  /** Formulaire envoyé (un seul envoi par lien). */
+  usedAt?: string;
+  sends: Array<{ at: string; email: SendStatus; sms: SendStatus }>;
+}
+
 export interface PartnerRecord {
   installerId: string;
   compliance: { rbq: ComplianceDoc; assurance: ComplianceDoc };
+  /** Identité légale (absente des fiches créées avant son ajout). */
+  identity?: PartnerIdentity | null;
+  identityLink?: IdentityLink | null;
   /** Niveau imposé par le propriétaire (remplace le niveau automatique). */
   tierOverride: { tier: Tier; reason: string; at: string; by: string } | null;
   /** Fin de partenariat décidée par le propriétaire (null : partenaire actif). */

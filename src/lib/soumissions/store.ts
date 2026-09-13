@@ -67,12 +67,13 @@ async function mutateJson<D, T>(file: string, empty: () => D, normalize: (d: D) 
 
 /* ---------------- soumissions.json ---------------- */
 
-const emptyData = (): SoumissionsData => ({ version: 1, counters: {}, quotes: [], photos: [] });
+const emptyData = (): SoumissionsData => ({ version: 1, counters: {}, quotes: [], photos: [], templates: [] });
 const normalizeData = (d: Partial<SoumissionsData>): SoumissionsData => ({
   version: 1,
   counters: d?.counters && typeof d.counters === "object" ? d.counters : {},
   quotes: Array.isArray(d?.quotes) ? d.quotes : [],
   photos: Array.isArray(d?.photos) ? d.photos : [],
+  templates: Array.isArray(d?.templates) ? d.templates : [],
 });
 
 export async function readSoumissions(): Promise<SoumissionsData> {

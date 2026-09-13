@@ -22,7 +22,7 @@ import {
 import { findByToken, newToken, TOKEN_RE } from "../tokens";
 import { computeTotals } from "../totals";
 import type { SoumissionsData } from "../types";
-import { fullSettings, line, machine, NOW, RATES, readyContent, TODAY } from "./fixtures";
+import { fullSettings, INSTALLER_ID, line, machine, NO_CONTRACTOR, NOW, pick, RATES, readyContent, TODAY } from "./fixtures";
 
 const empty = (): SoumissionsData => ({ version: 1, counters: {}, quotes: [], photos: [] });
 
@@ -237,16 +237,27 @@ describe("jetons", () => {
 });
 
 describe("envoi bloqué tant que tout n'est pas rempli", () => {
-  it("identité légale manquante : envoi bloqué, avec la liste des champs", () => {
-    const blockers = sendBlockers(readyContent(), defaultSettings(), TODAY, RATES).map((b) => b.id);
-    expect(blockers).toEqual(expect.arrayContaining(["legalName", "neq", "rbq", "address", "phone", "email", "tps", "tvq"]));
+  it("entrepreneur absent ou identité légale incomplète : envoi bloqué, avec les champs et l'endroit où les remplir", () => {
+    const s = fullSettings();
+    const none = sendBlockers(readyContent(s), s, TODAY, RATES, NO_CONTRACTOR);
+    expect(none.map((b) => b.id)).toEqual(["entrepreneur"]);
+    expect(none[0].href).toBe("#entrepreneur");
+    const incomplete = sendBlockers(readyContent(s), s, TODAY, RATES, pick({ missing: ["NEQ", "TPS", "TVQ"] }));
+    expect(incomplete.map((b) => b.id)).toEqual(["entrepreneur-identite"]);
+    expect(incomplete[0].hint).toContain("NEQ, TPS, TVQ");
+    expect(incomplete[0].hint).toContain("Identité légale");
+    expect(incomplete[0].href).toBe(`/gestion/partenaires/${INSTALLER_ID}#identite`);
+    // L'identité de Thermopompes À Vendre (réglages) n'est plus exigée : sans licence RBQ ni NEQ, rien ne bloque.
+    const bare = fullSettings();
+    bare.company = defaultSettings().company;
+    expect(sendBlockers(readyContent(bare), bare, TODAY, RATES, pick())).toEqual([]);
   });
 
   it("textes de l'avocat encore à compléter : simple avertissement, l'envoi n'est pas bloqué", () => {
     const s = fullSettings();
     s.texts.terms = "[À COMPLÉTER PAR L’AVOCAT OU LE NOTAIRE]";
     s.texts.cancellation = "";
-    const ids = sendBlockers(readyContent(s), s, TODAY, RATES).map((b) => b.id);
+    const ids = sendBlockers(readyContent(s), s, TODAY, RATES, pick()).map((b) => b.id);
     expect(ids).not.toContain("texte-cancellation");
     expect(ids).not.toContain("texte-terms");
   });
@@ -256,7 +267,7 @@ describe("envoi bloqué tant que tout n'est pas rempli", () => {
     const ids = (mut: (c: ReturnType<typeof readyContent>) => void) => {
       const c = readyContent(s);
       mut(c);
-      return sendBlockers(c, s, TODAY, RATES).map((b) => b.id);
+      return sendBlockers(c, s, TODAY, RATES, pick()).map((b) => b.id);
     };
     expect(ids((c) => (c.placement.indoor[0].room = ""))).toEqual([expect.stringMatching(/^unite-/)]);
     expect(ids((c) => (c.placement.indoor[0].drain = ""))).toHaveLength(1);
@@ -276,8 +287,10 @@ describe("envoi bloqué tant que tout n'est pas rempli", () => {
 
   it("soumission et réglages complets : rien ne bloque ; contrat à distance au complet", () => {
     const s = fullSettings();
-    expect(sendBlockers(readyContent(s), s, TODAY, RATES)).toEqual([]);
-    expect(distanceContractChecks(readyContent(s), s, TODAY, RATES).every((i) => i.ok)).toBe(true);
-    expect(distanceContractChecks(readyContent(s), defaultSettings(), TODAY, RATES).filter((i) => !i.ok).map((i) => i.id)).toEqual(["lpc-identite", "lpc-paiement", "lpc-annulation", "lpc-garanties"]);
+    expect(sendBlockers(readyContent(s), s, TODAY, RATES, pick())).toEqual([]);
+    expect(distanceContractChecks(readyContent(s), s, TODAY, RATES, pick()).every((i) => i.ok)).toBe(true);
+    expect(distanceContractChecks(readyContent(s), defaultSettings(), TODAY, RATES, pick()).filter((i) => !i.ok).map((i) => i.id)).toEqual(["lpc-paiement", "lpc-annulation", "lpc-garanties"]);
+    // L'identité exigée au contrat à distance est celle de l'entrepreneur qui réalise les travaux.
+    expect(distanceContractChecks(readyContent(s), s, TODAY, RATES, NO_CONTRACTOR).filter((i) => !i.ok).map((i) => i.id)).toEqual(["lpc-identite"]);
   });
 });

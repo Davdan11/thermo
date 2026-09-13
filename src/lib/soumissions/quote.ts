@@ -19,12 +19,14 @@ import { randomBytes } from "node:crypto";
 import { LINKS, TAXES } from "./config";
 import { addDays, todayIn } from "./dates";
 import { hashOf } from "./hash";
+import { emptyClient, emptySite } from "./defaults";
 import { newToken } from "./tokens";
-import { cleanSelection, computeTotals } from "./totals";
+import { cleanSelection, computeTotals, withLogisvertMode } from "./totals";
 import type {
   Acceptance,
   AcceptedSnapshot,
   CompanyIdentity,
+  ContractorIdentity,
   EffectiveStatus,
   PhotoMeta,
   PhotoRef,
@@ -102,7 +104,7 @@ export function canRespond(v: QuoteVersion, today: string): boolean {
   return s === "envoyee" || s === "ouverte";
 }
 
-function makeVersion(o: { v: number; kind: VersionKind; basedOn: number | null; content: QuoteContent; by: string; now: Date }): QuoteVersion {
+function makeVersion(o: { v: number; kind: VersionKind; basedOn: number | null; content: QuoteContent; by: string; now: Date; contractorId?: string | null }): QuoteVersion {
   const at = o.now.toISOString();
   return {
     id: newVersionId(),
@@ -125,20 +127,34 @@ function makeVersion(o: { v: number; kind: VersionKind; basedOn: number | null; 
     questions: [],
     replacedAt: null,
     replacedBy: null,
+    contractorId: o.contractorId ?? null,
   };
 }
 
-export function createQuote(data: SoumissionsData, content: QuoteContent, by: string, now: Date, opts: { internalNotes?: string; duplicatedFrom?: string | null; seed?: boolean } = {}): Quote {
+export interface CreateOptions {
+  internalNotes?: string;
+  duplicatedFrom?: string | null;
+  /** Précision du journal pour une copie (« pour un autre client »). */
+  copyDetail?: string;
+  seed?: boolean;
+  /** Fiche client du CRM (c_…). */
+  clientId?: string | null;
+  /** Installateur partenaire qui réalise les travaux (i_…). */
+  contractorId?: string | null;
+}
+
+export function createQuote(data: SoumissionsData, content: QuoteContent, by: string, now: Date, opts: CreateOptions = {}): Quote {
   const q: Quote = {
     id: newQuoteId(),
     number: nextNumber(data.counters, now),
     createdAt: now.toISOString(),
     createdBy: by,
     duplicatedFrom: opts.duplicatedFrom ?? null,
+    clientId: opts.clientId ?? null,
     internalNotes: opts.internalNotes ?? "",
-    versions: [makeVersion({ v: 1, kind: "initiale", basedOn: null, content, by, now })],
+    versions: [makeVersion({ v: 1, kind: "initiale", basedOn: null, content, by, now, contractorId: opts.contractorId ?? null })],
     pipedrive: { personId: null, dealId: null, log: [] },
-    events: [{ at: now.toISOString(), type: "creation", detail: opts.duplicatedFrom ? `Copie de ${opts.duplicatedFrom}` : "Soumission créée", by }],
+    events: [{ at: now.toISOString(), type: "creation", detail: opts.duplicatedFrom ? `Copie de ${opts.duplicatedFrom}${opts.copyDetail ? ` ${opts.copyDetail}` : ""}` : "Soumission créée", by }],
     ...(opts.seed ? { seed: true } : {}),
   };
   data.quotes.push(q);
@@ -161,20 +177,36 @@ export function reviseQuote(q: Quote, fromV: number, by: string, now: Date, vali
   const content = clone(from.content);
   const minValid = addDays(todayIn(now), Math.max(1, validityDays || 30));
   if (content.validUntil < minValid) content.validUntil = minValid;
-  const next = makeVersion({ v: Math.max(...q.versions.map((x) => x.v)) + 1, kind, basedOn: from.v, content, by, now });
+  const next = makeVersion({ v: Math.max(...q.versions.map((x) => x.v)) + 1, kind, basedOn: from.v, content, by, now, contractorId: from.contractorId ?? null });
   q.versions.push(next);
   q.events.push({ at: now.toISOString(), type: kind, detail: `Version ${next.v} (${kind === "avenant" ? "avenant" : "révision"} de la version ${from.v})`, by });
   return next;
 }
 
-/** Copie vers une nouvelle soumission (nouveau numéro) : sans photos ni lien Pipedrive. */
-export function duplicateQuote(data: SoumissionsData, q: Quote, fromV: number, by: string, now: Date, validityDays: number): Quote {
+/**
+ * Copie vers une nouvelle soumission (nouveau numéro) : sans photos ni lien Pipedrive, même entrepreneur.
+ * « Pour un autre client » : coordonnées, chantier et mot d'introduction vidés, fiche client déliée ; machine, plan,
+ * prix, inclus, exclus, hypothèses et déroulement gardés.
+ */
+export function duplicateQuote(data: SoumissionsData, q: Quote, fromV: number, by: string, now: Date, validityDays: number, opts: { forOtherClient?: boolean } = {}): Quote {
   const from = versionNumber(q, fromV) ?? currentVersion(q);
   const content = clone(from.content);
   content.placement.outdoor.photos = [];
   for (const u of content.placement.indoor) u.photos = [];
   content.validUntil = addDays(todayIn(now), Math.max(1, validityDays || 30));
-  return createQuote(data, content, by, now, { duplicatedFrom: q.number, internalNotes: "" });
+  if (opts.forOtherClient) {
+    content.client = emptyClient();
+    content.site = { ...emptySite(), access: content.site.access, presence: content.site.presence };
+    content.schedule = { ...content.schedule, mode: "", date: "", windowStart: "", windowEnd: "" };
+    content.projectSummary = "";
+  }
+  return createQuote(data, content, by, now, {
+    duplicatedFrom: q.number,
+    copyDetail: opts.forOtherClient ? "pour un autre client" : undefined,
+    internalNotes: "",
+    clientId: opts.forOtherClient ? null : (q.clientId ?? null),
+    contractorId: from.contractorId ?? null,
+  });
 }
 
 export function photoIdsOf(content: QuoteContent, company?: CompanyIdentity | null): string[] {
@@ -192,13 +224,18 @@ function photoRefs(ids: string[], photos: PhotoMeta[]): Record<string, PhotoRef>
   return out;
 }
 
-/** Document présenté au client. Version acceptée : l'instantané, tel quel. Envoyée : le document figé. Brouillon : les réglages actuels (aperçu). */
-export function buildDocument(q: Quote, v: QuoteVersion, settings: Settings | null, photos: PhotoMeta[], now = new Date()): QuoteDocument {
+/**
+ * Document présenté au client. Version acceptée : l'instantané, tel quel. Envoyée : le document figé (avec l'identité
+ * de l'entrepreneur copiée à l'envoi, si la version en a une). Brouillon : les réglages actuels et l'identité actuelle
+ * de l'entrepreneur choisi (`contractor`, aperçu), mode LogisVert recalculé.
+ * Une version envoyée avant le modèle « entrepreneur » n'a pas de clé `contractor` : son empreinte ne change pas.
+ */
+export function buildDocument(q: Quote, v: QuoteVersion, settings: Settings | null, photos: PhotoMeta[], now = new Date(), contractor?: ContractorIdentity | null): QuoteDocument {
   if (v.acceptance) return v.acceptance.snapshot.document;
   const frozen = v.frozen;
   if (!frozen && !settings) throw new QuoteError("introuvable", "Réglages requis pour l’aperçu d’un brouillon.");
   const company = clone(frozen ? frozen.company : settings!.company);
-  return {
+  const doc: QuoteDocument = {
     number: q.number,
     version: v.v,
     kind: v.kind,
@@ -210,12 +247,22 @@ export function buildDocument(q: Quote, v: QuoteVersion, settings: Settings | nu
     taxes: frozen ? { ...frozen.taxes } : { tpsPer100k: TAXES.tps.ratePer100k, tvqPer100k: TAXES.tvq.ratePer100k },
     links: { logisvert: LINKS.logisvert, opcGaranties: LINKS.opcGaranties, opcAnnulation: LINKS.opcAnnulation, opcDistance: LINKS.opcDistance },
     photos: frozen ? { ...frozen.photos } : photoRefs(photoIdsOf(v.content, company), photos),
-    content: clone(v.content),
+    content: frozen ? clone(v.content) : withLogisvertMode(clone(v.content)),
   };
+  if (frozen) {
+    if (frozen.contractor) doc.contractor = clone(frozen.contractor);
+  } else {
+    doc.contractor = contractor ? clone(contractor) : null;
+  }
+  return doc;
 }
 
-/** Envoi : fige le document et remplace les versions précédentes encore en attente. Les vérifications (sendBlockers) sont faites par l'appelant. */
-export function freezeForSend(q: Quote, v: QuoteVersion, settings: Settings, photos: PhotoMeta[], now: Date): void {
+/**
+ * Envoi : fige le document (entreprise qui présente, textes, taux, photos et INSTANTANÉ de l'identité de l'entrepreneur
+ * choisi) et remplace les versions précédentes encore en attente. Les vérifications (sendBlockers) sont faites par
+ * l'appelant. Un changement ultérieur de la fiche du partenaire ne touche plus ce document.
+ */
+export function freezeForSend(q: Quote, v: QuoteVersion, settings: Settings, photos: PhotoMeta[], now: Date, contractor?: ContractorIdentity | null): void {
   if (v.status !== "brouillon") throw new QuoteError("non-modifiable", "Cette version a déjà été envoyée.");
   const at = now.toISOString();
   v.frozen = {
@@ -224,6 +271,7 @@ export function freezeForSend(q: Quote, v: QuoteVersion, settings: Settings, pho
     texts: clone(settings.texts),
     taxes: { tpsPer100k: TAXES.tps.ratePer100k, tvqPer100k: TAXES.tvq.ratePer100k },
     photos: photoRefs(photoIdsOf(v.content, settings.company), photos),
+    ...(contractor ? { contractor: clone(contractor) } : {}),
   };
   v.status = "envoyee";
   v.sentAt = at;

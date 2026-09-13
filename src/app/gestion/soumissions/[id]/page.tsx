@@ -3,8 +3,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Copy, Eye, FilePlus2, Pencil, RefreshCw, Send, ShieldCheck, ShieldX, Trash2, UserRound, Wrench } from "lucide-react";
+import { Copy, Eye, FilePlus2, Pencil, RefreshCw, Send, ShieldCheck, ShieldX, Trash2, UserPlus, UserRound, Wrench } from "lucide-react";
 import { clientIdForQuote } from "@/lib/gestion/crm/service";
+import { CLIENT_ID_RE } from "@/lib/gestion/crm/types";
+import { statusFromIdentity, type ContractorPick } from "@/lib/soumissions/contractor";
+import { loadContractor } from "@/lib/soumissions/contractors";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { publicBaseUrl } from "@/lib/gestion/request";
 import { smsConfigured } from "@/lib/gestion/sms";
@@ -20,7 +23,7 @@ import { Reveal } from "@/components/gestion/Reveal";
 import { SubmitButton } from "@/components/gestion/SubmitButton";
 import { CopyLink } from "@/components/gestion/soumissions/CopyLink";
 import { Checklist, QuoteStatus } from "@/components/gestion/soumissions/ui";
-import { deleteDraftAction, duplicateAction, linkDealAction, remindAction, reviseAction, sendQuoteAction } from "../actions";
+import { deleteDraftAction, duplicateAction, duplicateForClientAction, linkDealAction, remindAction, reviseAction, sendQuoteAction } from "../actions";
 
 export const metadata: Metadata = { title: "Soumission" };
 export const dynamic = "force-dynamic";
@@ -47,15 +50,22 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
   const cur = currentVersion(q);
   const shown = sent ?? cur;
   const c = (draft ?? shown).content;
-  const blockers = draft ? sendBlockers(draft.content, settings, today, CURRENT_RATES) : [];
-  const warnings = draft ? [...settingsChecks(settings), ...quoteChecks(draft.content, settings, today, CURRENT_RATES)].filter((i) => !i.ok && i.severity === "avertissement") : [];
-  const legal = distanceContractChecks(c, settings, today, draft ? CURRENT_RATES : ratesOf(shown));
+  // Entrepreneur : état actuel pour un brouillon ; identité figée à l'envoi pour une version envoyée (ou, pour une
+  // ancienne soumission, l'entreprise des réglages copiée à l'envoi).
+  const draftContractor = draft ? await loadContractor(draft.contractorId ?? null) : null;
+  const draftPick: ContractorPick = { id: draft?.contractorId ?? null, status: draftContractor?.status ?? null };
+  const frozenIdentity = shown.frozen?.contractor ?? shown.frozen?.company ?? null;
+  const legalPick: ContractorPick = draft ? draftPick : frozenIdentity ? { id: "fige", status: statusFromIdentity(frozenIdentity) } : draftPick;
+  const blockers = draft ? sendBlockers(draft.content, settings, today, CURRENT_RATES, draftPick) : [];
+  const warnings = draft ? [...settingsChecks(settings), ...quoteChecks(draft.content, settings, today, CURRENT_RATES, draftPick)].filter((i) => !i.ok && i.severity === "avertissement") : [];
+  const legal = distanceContractChecks(c, settings, today, draft ? CURRENT_RATES : ratesOf(shown), legalPick);
+  const contractorName = draft ? (draftContractor?.status.legalName || draftContractor?.status.company || "") : (shown.frozen?.contractor?.legalName ?? "");
   const base = await publicBaseUrl();
   const sms = smsConfigured() && Boolean(c.client.phone);
   const a = shown.acceptance;
   const status = effectiveStatus(shown, today);
   const name = `${c.client.firstName} ${c.client.lastName}`.trim() || c.client.email || "Client à préciser";
-  const clientId = await clientIdForQuote(q.id);
+  const clientId = (await clientIdForQuote(q.id)) ?? (q.clientId && CLIENT_ID_RE.test(q.clientId) ? q.clientId : null);
 
   const flash =
     sp.envoi === "ok"
@@ -77,12 +87,18 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
           <p className="g-hint" style={{ margin: "4px 0 0" }}>
             {[c.machine ? `${c.machine.brand} ${c.machine.name}` : null, c.client.city, `${money(totalOf(shown, today))} taxes comprises`].filter(Boolean).join(" · ")}
           </p>
+          <p className="g-hint" style={{ margin: "2px 0 0" }}>
+            {contractorName ? `Entrepreneur qui réalise les travaux : ${contractorName}` : draft ? "Entrepreneur qui réalise les travaux : à choisir" : null}
+          </p>
         </div>
         <div className="sq-actions">
           <QuoteStatus status={status} />
           {clientId ? <Link href={`/gestion/clients/${clientId}`} className="g-btn g-btn--ghost"><UserRound size={16} aria-hidden /> Fiche client</Link> : null}
           <form action={duplicateAction.bind(null, q.id)}>
             <SubmitButton className="g-btn g-btn--ghost" pendingLabel="Copie…"><Copy size={16} aria-hidden /> Dupliquer</SubmitButton>
+          </form>
+          <form action={duplicateForClientAction.bind(null, q.id)}>
+            <SubmitButton className="g-btn g-btn--ghost" pendingLabel="Copie…"><UserPlus size={16} aria-hidden /> Pour un autre client</SubmitButton>
           </form>
         </div>
       </Reveal>

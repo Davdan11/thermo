@@ -89,7 +89,11 @@ export interface JobInput {
   desiredWindow: string;
   installerNotes: string;
   internalNotes: string;
+  /** Entrepreneur de la soumission acceptée, proposé pour l'offre (i_…). */
+  proposedInstallerId?: string | null;
 }
+
+const INSTALLER_REF_RE = /^i_[A-Za-z0-9_-]{8,16}$/;
 
 export function parseJobForm(fd: FormData): ParseResult<JobInput> {
   const errors: FieldErrors = {};
@@ -133,6 +137,7 @@ export function parseJobForm(fd: FormData): ParseResult<JobInput> {
       desiredWindow: str(fd, "desiredWindow", 120),
       installerNotes: str(fd, "installerNotes", 1500),
       internalNotes: str(fd, "internalNotes", 3000),
+      proposedInstallerId: INSTALLER_REF_RE.test(str(fd, "proposedInstallerId", 40)) ? str(fd, "proposedInstallerId", 40) : null,
     },
   };
 }

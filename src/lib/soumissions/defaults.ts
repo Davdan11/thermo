@@ -9,6 +9,7 @@
    Ce module est pur : utilisable dans le navigateur (constructeur).
    ================================================================== */
 
+import { normalizeChoices } from "./choices";
 import { LAWYER_PLACEHOLDER } from "./config";
 import { addDays } from "./dates";
 import type {
@@ -112,7 +113,15 @@ export function defaultSettings(): Settings {
     version: 1,
     company: emptyCompany(),
     texts: defaultTexts(),
-    defaults: { validityDays: 30, deposit: { kind: "aucun", value: 0 }, lengthUnit: "pi", includedLineLength: null },
+    defaults: {
+      validityDays: 30,
+      deposit: { kind: "aucun", value: 0 },
+      lengthUnit: "pi",
+      includedLineLength: null,
+      site: { access: "", presence: "" },
+      schedule: { duration: "", arrival: "", windowText: "" },
+    },
+    choices: normalizeChoices(null),
     templates: { inclusions: [...SEED_INCLUSIONS], exclusions: [...SEED_EXCLUSIONS], assumptions: [...SEED_ASSUMPTIONS], prep: [...SEED_PREP] },
     packages: [],
     extras: seedExtras(),
@@ -132,7 +141,14 @@ export function normalizeSettings(raw: Partial<Settings> | null | undefined): Se
     version: 1,
     company: { ...d.company, ...(raw.company ?? {}) },
     texts: { ...d.texts, ...(raw.texts ?? {}) },
-    defaults: { ...d.defaults, ...(raw.defaults ?? {}), deposit: { ...d.defaults.deposit, ...(raw.defaults?.deposit ?? {}) } },
+    defaults: {
+      ...d.defaults,
+      ...(raw.defaults ?? {}),
+      deposit: { ...d.defaults.deposit, ...(raw.defaults?.deposit ?? {}) },
+      site: { ...d.defaults.site, ...(raw.defaults?.site ?? {}) },
+      schedule: { ...d.defaults.schedule, ...(raw.defaults?.schedule ?? {}) },
+    },
+    choices: normalizeChoices(raw.choices),
     templates: { ...d.templates, ...(raw.templates ?? {}) },
     packages: Array.isArray(raw.packages) ? raw.packages : d.packages,
     extras: Array.isArray(raw.extras) ? raw.extras : d.extras,
@@ -148,8 +164,8 @@ export function emptyClient(): ClientInfo {
   return { firstName: "", lastName: "", email: "", phone: "", address: "", city: "", postalCode: "" };
 }
 
-export function emptySite(): SiteInfo {
-  return { sameAsBilling: true, address: "", city: "", postalCode: "", propertyType: "", yearBuilt: "", floors: null, basement: false, access: "", constraints: "", presence: "" };
+export function emptySite(defaults?: Settings["defaults"]["site"]): SiteInfo {
+  return { sameAsBilling: true, address: "", city: "", postalCode: "", propertyType: "", yearBuilt: "", floors: null, basement: false, access: defaults?.access ?? "", constraints: "", presence: defaults?.presence ?? "" };
 }
 
 export function newIndoor(n: number, included: number | null = null): IndoorPlacement {
@@ -185,8 +201,8 @@ export function emptyPlacement(unit: LengthUnit, included: number | null): Place
   };
 }
 
-export function emptySchedule(prep: string[]): ScheduleInfo {
-  return { mode: "", date: "", windowStart: "", windowEnd: "", windowText: "", duration: "", arrival: "", prep: [...prep], notes: "" };
+export function emptySchedule(prep: string[], defaults?: Settings["defaults"]["schedule"]): ScheduleInfo {
+  return { mode: "", date: "", windowStart: "", windowEnd: "", windowText: defaults?.windowText ?? "", duration: defaults?.duration ?? "", arrival: defaults?.arrival ?? "", prep: [...prep], notes: "" };
 }
 
 export const toItems = (labels: string[]): ListItem[] => labels.filter((l) => l.trim()).map((label) => ({ id: rid("i"), label, detail: "" }));
@@ -194,10 +210,10 @@ export const toItems = (labels: string[]): ListItem[] => labels.filter((l) => l.
 export function emptyContent(settings: Settings, today: string): QuoteContent {
   return {
     client: emptyClient(),
-    site: emptySite(),
+    site: emptySite(settings.defaults.site),
     machine: null,
     placement: emptyPlacement(settings.defaults.lengthUnit, settings.defaults.includedLineLength),
-    schedule: emptySchedule(settings.templates.prep),
+    schedule: emptySchedule(settings.templates.prep, settings.defaults.schedule),
     lines: [],
     discounts: [],
     inclusions: toItems(settings.templates.inclusions),
