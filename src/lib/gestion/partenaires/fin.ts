@@ -12,9 +12,9 @@
    L'avis est réputé reçu le jour ouvrable de l'envoi s'il part avant
    17 h, sinon le jour ouvrable suivant.
 
-   Non-contournement : rappel en information seulement (24 mois après
-   la plus tardive de l'introduction du client et de la fin du
-   projet). Aucune automatisation punitive.
+   Non-contournement : rappel en information seulement : 24 mois à
+   compter de la dernière des deux dates (présentation du client ou
+   fin du projet). Aucune automatisation punitive.
 
    Les numéros d'articles servent seulement à retrouver le texte dans
    la version signée ou en vigueur (données) ; aucun texte ici.
@@ -112,7 +112,7 @@ export interface NonCircumvention {
   until: string | null;
 }
 
-/** Période de non-contournement : pour chaque projet accepté, 24 mois après la plus tardive de l'introduction et de la fin. */
+/** Période de non-contournement : pour chaque projet accepté, 24 mois à compter de la dernière date entre la présentation et la fin. */
 export function nonCircumvention(jobs: Job[], installerId: string): NonCircumvention {
   let until: string | null = null;
   let ongoing = 0;

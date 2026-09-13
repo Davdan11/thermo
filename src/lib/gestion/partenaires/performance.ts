@@ -99,6 +99,8 @@ export interface PartnerPerformance {
   tier: Tier;
   reasons: string[];
   override: PartnerRecord["tierOverride"];
+  /** Conformité C1 : désistements après acceptation et dates confirmées ratées (comptés dans la ponctualité). */
+  commitments: { withdrawals: number; missedDates: number } | null;
 }
 
 export interface PerformanceInput {
@@ -110,6 +112,8 @@ export interface PerformanceInput {
   now: Date;
   payment?: PaymentStats | null;
   satisfaction?: SatisfactionStats | null;
+  /** Conformité C1 (contrats/regles.ts, commitmentStats) : chaque désistement ou date ratée compte comme un retard. */
+  commitments?: { withdrawals: number; missedDates: number } | null;
 }
 
 const MIN = 60_000;
@@ -141,6 +145,8 @@ export function computePerformance(installerId: string, input: PerformanceInput)
     measured++;
     if (Date.parse(r.arrivedAt) <= Date.parse(ref) + settings.punctualityMinutes * MIN) onTime++;
   }
+  // Conformité C1 : un désistement après acceptation ou une date confirmée ratée compte comme un rendez-vous manqué.
+  if (input.commitments) measured += input.commitments.withdrawals + input.commitments.missedDates;
 
   // Photos : seulement les chantiers fermés depuis l'outil terrain (ou marqués avec completedAt) : les anciens jobs ne comptent pas.
   const closed = done.filter((j) => records[j.id] || j.completedAt);
@@ -158,6 +164,7 @@ export function computePerformance(installerId: string, input: PerformanceInput)
     photos: { ...rate(compliant, closed.length), flagged },
     acceptance: rate(st.accepted, st.answered),
     service: serviceMeasures(myTickets, settings, now),
+    commitments: input.commitments ?? null, // Conformité C1
     payment: input.payment ?? null,
     satisfaction: input.satisfaction ?? null,
   };

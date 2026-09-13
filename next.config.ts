@@ -53,6 +53,8 @@ const nextConfig: NextConfig = {
       { source: "/disponibilites/:path*", headers: privateHeaders },
       // Chantier D : visite photo à distance (lien à jeton).
       { source: "/visite/:path*", headers: privateHeaders },
+      // Conformité C1 : approbation du contrat final par l'installateur (lien à jeton).
+      { source: "/approbation/:path*", headers: privateHeaders },
       // Fichiers statiques versionnés par leur nom : cache long chez le visiteur et les proxys.
       { source: "/images/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
       { source: "/brochures/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=2592000" }, { key: "X-Robots-Tag", value: "noindex" }] },

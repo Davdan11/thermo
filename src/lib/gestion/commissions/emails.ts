@@ -11,6 +11,8 @@ import { money } from "@/lib/soumissions/money";
 import { localYmd } from "../crm/time";
 import type { Mail } from "../automatisations/send";
 import type { CommissionInvoice } from "./types";
+// Conformité C1 : intérêts de retard affichés dans les relances.
+import { INTEREST_TERMS, interestInfo } from "./interets";
 
 const REASON = "Vous recevez ce courriel parce que votre entreprise est partenaire installateur de Thermopompes À Vendre (commission sur les jobs reçus).";
 const OPT_OUT = "Message de service lié à votre partenariat.";
@@ -70,6 +72,8 @@ export function invoiceIssuedEmail(inv: CommissionInvoice, link: string, stripe:
 
 export function invoiceReminderEmail(inv: CommissionInvoice, link: string, stripe: boolean, o: { overdue: boolean; paused: boolean }): Mail {
   const subject = o.overdue ? `En retard : facture ${inv.number} (${money(inv.totalCents)})${o.paused ? " · offres de jobs en pause" : ""}` : `Rappel : facture ${inv.number} due le ${dueDay(inv)}`;
+  const interest = o.overdue ? interestInfo(inv, new Date()) : null; // Conformité C1
+  const interestLine = interest ? `Intérêts courus à ce jour : ${money(interest.cents)} (${INTEREST_TERMS} ; ${interest.days} jour${interest.days > 1 ? "s" : ""} de retard). Total avec les intérêts : ${money(interest.totalWithInterestCents)}.` : "";
   const intro = o.overdue
     ? `La facture ${inv.number} (job n° ${inv.jobNumber}) était due le ${dueDay(inv)} et n’est pas encore réglée.${o.paused ? " Comme prévu à l’entente, les nouvelles offres de jobs sont en pause jusqu’au paiement ; elles reprennent dès qu’il est reçu." : ""}`
     : `Petit rappel : la facture ${inv.number} (job n° ${inv.jobNumber}) arrive à échéance le ${dueDay(inv)}.`;
@@ -77,7 +81,7 @@ export function invoiceReminderEmail(inv: CommissionInvoice, link: string, strip
     title: subject,
     preheader: o.overdue ? "Facture de commission à régler." : "Rappel d’échéance.",
     firstName: inv.installer.contactName.split(" ")[0] || undefined,
-    body: p(t(intro)) + box("Facture", rows(inv)) + howToPay(inv, stripe) + p(t("Déjà payé ? Merci ! Ignorez ce message : le paiement sera noté sous peu."), { muted: true, small: true }),
+    body: p(t(intro)) + box("Facture", rows(inv)) + (interestLine ? p(t(interestLine)) : "") + howToPay(inv, stripe) + p(t("Déjà payé ? Merci ! Ignorez ce message : le paiement sera noté sous peu."), { muted: true, small: true }),
     cta: { label: "Voir la facture", href: link },
     reason: REASON,
     optOutText: OPT_OUT,

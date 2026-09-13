@@ -497,6 +497,28 @@ export interface Settings {
   updatedBy: string | null;
 }
 
+/** Conformité C1 : avis de jumelage (trousse 3.1) rempli et figé à l'envoi. Aucun texte de la trousse dans le code. */
+export interface EstimationNotice {
+  paragraphs: string[];
+  /** Case obligatoire « Je veux aller de l'avant » (texte de la trousse, rempli). */
+  checkbox: string;
+  trousse: { version: string; sha256: string; sourceDate: string | null };
+}
+
+/** Conformité C1 : « Je veux aller de l'avant » (demande de jumelage). Ce n'est JAMAIS une acceptation de contrat. */
+export interface JumelageRequest {
+  at: string;
+  v: number;
+  selection: string[];
+  totalCents: number;
+  /** Texte exact de la case cochée. */
+  checkbox: string;
+  noticeSha256: string;
+  contentHash: string;
+  ip: string;
+  userAgent: string;
+}
+
 /** Document figé à l'envoi : entreprise, textes et taux de ce moment-là. */
 export interface FrozenDocument {
   issuedAt: string;
@@ -507,6 +529,9 @@ export interface FrozenDocument {
   photos: Record<string, PhotoRef>;
   /** Instantané de l'identité de l'entrepreneur choisi, à l'envoi. Absent des soumissions envoyées avant ce modèle. */
   contractor?: ContractorIdentity;
+  /** Conformité C1 : parcours de la trousse (estimation sans acceptation ; contrat final au nom de l'installateur). Absent des anciennes soumissions. */
+  parcours?: "trousse";
+  notice?: EstimationNotice;
 }
 
 export interface PhotoRef {
@@ -546,6 +571,9 @@ export interface QuoteDocument {
    * Absent, la clé n'entre pas dans l'empreinte : les anciennes empreintes restent valides.
    */
   contractor?: ContractorIdentity | null;
+  /** Conformité C1 : parcours de la trousse et avis de jumelage (absents des anciennes soumissions : empreintes inchangées). */
+  parcours?: "trousse";
+  notice?: EstimationNotice;
 }
 
 export type ChannelStatus = "envoye" | "echec" | "non-configure" | "sans-numero";
@@ -634,6 +662,9 @@ export interface Acceptance {
   /** Empreinte SHA-256 de l'instantané accepté (document, choix, totaux, signature). */
   snapshotHash: string;
   snapshot: AcceptedSnapshot;
+  /** Conformité C1 : numéro du contrat signé qui a produit cette acceptation, et statut de la version juste avant. */
+  contractNumber?: string;
+  statusBefore?: QuoteStatus;
 }
 
 export type VersionKind = "initiale" | "revision" | "avenant";
@@ -661,6 +692,8 @@ export interface QuoteVersion {
   replacedBy: number | null;
   /** Installateur partenaire qui réalise les travaux (identifiant i_…). Absent des anciennes versions. */
   contractorId?: string | null;
+  /** Conformité C1 : le client est allé de l'avant (demande de jumelage, jamais une acceptation). */
+  jumelage?: JumelageRequest | null;
 }
 
 export interface PipedriveLogEntry {

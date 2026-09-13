@@ -118,3 +118,14 @@ public/images/products/_official-sources/**
 /data/conformite.json.lock
 /data/references.json.lock
 /data/*.tmp
+# Conformité C1 : trousse contractuelle (texte CONFIDENTIEL), identité de la plateforme et contrats signés
+# (le texte rempli de la trousse est figé dans chaque contrat) : shared/data sur le VPS, JAMAIS dans le dépôt public
+/data/trousse*.json
+/data/plateforme*.json
+/data/contrats*.json
+/data/trousse*.json.lock
+/data/plateforme*.json.lock
+/data/contrats*.json.lock
+/data/trousse*.tmp
+/data/plateforme*.tmp
+/data/contrats*.tmp

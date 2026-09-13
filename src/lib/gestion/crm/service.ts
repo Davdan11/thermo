@@ -51,6 +51,9 @@ import { partenairesFile } from "../partenaires/store";
 import { savFile } from "../sav/store";
 // Chantier R : licences RBQ, zones à recruter, stock sous le seuil.
 import { readReseauTaskInput, reseauFiles } from "../reseau/crm-tasks";
+// Conformité C1 : tâches du parcours du contrat.
+import { readContratTaskInput } from "@/lib/contrats/crm-tasks";
+import { contratsFile } from "@/lib/contrats/store";
 import { missingTextoRecords } from "./textos-adapter";
 import { buildTimeline, type TimelineItem } from "./timeline";
 import { ago, dateLong, daysBetweenYmd, localYmd, stamp } from "./time";
@@ -79,7 +82,7 @@ async function signature(): Promise<string> {
     /* dossier absent */
   }
   // Volet A : partenaires.json et sav.json ajoutés (leurs tâches automatiques).
-  const parts = await Promise.all([...files.map((f) => stamp1(path.join(dir, f))), stamp1(soumissionsFile()), stamp1(gestionFile()), stamp1(relancesFile()), stamp1(textosFile()), stamp1(crmFile()), stamp1(settingsFile()), stamp1(partenairesFile()), stamp1(savFile()), ...reseauFiles().map(stamp1)]); // Chantier R : reseau.json, inventaire.json
+  const parts = await Promise.all([...files.map((f) => stamp1(path.join(dir, f))), stamp1(soumissionsFile()), stamp1(gestionFile()), stamp1(relancesFile()), stamp1(textosFile()), stamp1(crmFile()), stamp1(settingsFile()), stamp1(partenairesFile()), stamp1(savFile()), ...reseauFiles().map(stamp1), stamp1(contratsFile())]); // Chantier R : reseau.json, inventaire.json ; Conformité C1 : contrats.json
   return [dir, soumissionsFile(), process.env.NODE_ENV, ...files, ...parts].join("|");
 }
 
@@ -99,6 +102,7 @@ export async function loadSources(): Promise<SourceData> {
   ]);
   const jobs = demo || !gestion.seed ? gestion.jobs : [];
   const reseau = demo || !gestion.seed ? await readReseauTaskInput({ journal, includeDemo: demo }).catch(() => undefined) : undefined; // Chantier R
+  const contrats = await readContratTaskInput().catch(() => undefined); // Conformité C1
   return {
     journal,
     outcomes,
@@ -111,6 +115,7 @@ export async function loadSources(): Promise<SourceData> {
     generic: [settings.company.phone, settings.company.email, process.env.TWILIO_PHONE_NUMBER, process.env.TWILIO_FORWARD_VENTES, process.env.TWILIO_FORWARD_SAV, process.env.NOTIFICATION_EMAIL, ...adminEmails()].filter((x): x is string => Boolean(x)),
     ...(partenaires && (demo || !gestion.seed) ? { partenaires } : {}), // volet A
     ...(reseau ? { reseau } : {}), // Chantier R
+    ...(contrats ? { contrats } : {}), // Conformité C1
   };
 }
 

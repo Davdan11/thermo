@@ -9,6 +9,13 @@
    ================================================================== */
 
 import { randomBytes } from "node:crypto";
+// Conformité C1 : avis de jumelage (trousse 3.1), proposition à l'installateur (parcours A), « aller de l'avant ».
+import { onJumelage, proposeToInstaller, type ContratChannels } from "@/lib/contrats/service";
+import { acceptanceFromContract, revokeContractAcceptance, type ContractAcceptanceInput } from "./quote"; // Conformité C1 : contrat signé = acceptation
+import { buildNotice } from "@/lib/contrats/rendu";
+import { readPlatformIdentity } from "@/lib/plateforme/identite";
+import { readTrousse } from "@/lib/plateforme/trousse";
+import { CONTRACTOR_GROUP } from "./checklist";
 import { TAXES } from "./config";
 import { todayIn } from "./dates";
 import { acceptedClientEmail, ownerEventEmail, quoteSentEmail, quoteSms } from "./emails";
@@ -33,10 +40,12 @@ import {
   effectiveStatus,
   freezeForSend,
   latestSent,
+  NO_DIRECT_ACCEPT,
   QuoteError,
   QUOTE_ID_RE,
   recordView,
   refuseVersion,
+  requestJumelage,
   reviseQuote,
   updateDraft,
 } from "./quote";
@@ -296,16 +305,27 @@ export async function linkDealService(id: string, dealId: number | null, by: str
 /* ---------------- Envoi et relance ---------------- */
 
 export type SendResult =
-  | { ok: true; email: ChannelStatus; sms: ChannelStatus | null; pipedrive: PipedriveLogEntry }
+  | { ok: true; email: ChannelStatus; sms: ChannelStatus | null; pipedrive: PipedriveLogEntry; installer?: { email: string; sms: string } | { error: string } }
   | { ok: false; error: string; blockers?: CheckItem[] };
 
-export async function sendQuoteService(id: string, by: string, baseUrl: string, opts: { sms: boolean }, now = new Date()): Promise<SendResult> {
+/** Conformité C1 : groupe des textes des réglages ; au parcours de la trousse, le contrat vient de la trousse (3.2), pas d'eux. */
+const TEXTS_GROUP = "Textes du contrat";
+
+/**
+ * Conformité C1 — « Envoyer » : le client reçoit sa soumission complète avec l'avis de jumelage (3.1), SANS signature
+ * possible. Parcours A (installateur choisi) : sa demande d'approbation part EN MÊME TEMPS, si le consentement au
+ * transfert du dossier est confirmé (`transferConsent`). Parcours B : aucun installateur ; le client peut aller de l'avant.
+ */
+export async function sendQuoteService(id: string, by: string, baseUrl: string, opts: { sms: boolean; transferConsent?: string | null; contratChannels?: ContratChannels }, now = new Date()): Promise<SendResult> {
   const settings = await readSettings();
   const today = todayIn(now);
   // Entrepreneur du brouillon : état (licence, assurance, identité) et identité complète, lus hors verrou.
   const pre = findQuote(await readSoumissions(), id);
   const wanted = (pre ? draftOf(pre)?.contractorId : null) ?? null;
   const contractor = await loadContractor(wanted, now);
+  // Conformité C1 : trousse importée, identité de la plateforme complète, aucun champ entre crochets vide.
+  const [trousse, platform] = await Promise.all([readTrousse(), readPlatformIdentity()]);
+  const built = buildNotice(trousse, platform);
   const phase = await mutateSoumissions<{ ok: false; error: string; blockers?: CheckItem[] } | { ok: true; quote: Quote; version: QuoteVersion }>((data) => {
     const q = findQuote(data, id);
     if (!q) return { result: { ok: false, error: "Soumission introuvable." }, changed: false };
@@ -314,13 +334,17 @@ export async function sendQuoteService(id: string, by: string, baseUrl: string, 
     if ((v.contractorId ?? null) !== wanted) return { result: { ok: false, error: "La soumission vient d’être modifiée : réessayez l’envoi." }, changed: false };
     // Ancien brouillon « cession » : le mode est recalculé (l'aide n'est jamais déduite du total dû).
     v.content = withLogisvertMode(v.content);
-    const blockers = sendBlockers(v.content, settings, today, CURRENT_RATES, { id: wanted, status: contractor?.status ?? null });
+    const blockers = [
+      ...sendBlockers(v.content, settings, today, CURRENT_RATES, { id: wanted, status: contractor?.status ?? null }).filter((b) => b.group !== TEXTS_GROUP && (wanted !== null || b.group !== CONTRACTOR_GROUP)),
+      ...built.problems.map((label, i): CheckItem => ({ id: `trousse-${i}`, group: "Trousse contractuelle", label, ok: false, severity: "bloquant", href: "/gestion/reglages/identite" })),
+    ];
     if (blockers.length) {
       const first = blockers.slice(0, 3).map((b) => (b.hint ? `${b.label} (${b.hint.replace(/\.$/, "")})` : b.label));
       return { result: { ok: false, error: `Envoi bloqué : ${first.join(" ; ")}${blockers.length > 3 ? ` ; et ${blockers.length - 3} autre${blockers.length - 3 > 1 ? "s" : ""}` : ""}.`, blockers }, changed: false };
     }
     // Instantané : l'identité de l'entrepreneur est copiée dans la version ; un changement ultérieur ne la touche plus.
-    freezeForSend(q, v, settings, data.photos, now, contractor?.identity ?? null);
+    // Conformité C1 : avis de jumelage figé ; le document n'est jamais acceptable tel quel.
+    freezeForSend(q, v, settings, data.photos, now, contractor?.identity ?? null, built.notice);
     q.events.push({ at: now.toISOString(), type: "envoi", detail: `Version ${v.v} envoyée au client`, by });
     return { result: { ok: true, quote: clone(q), version: clone(v) }, changed: true };
   });
@@ -342,6 +366,11 @@ export async function sendQuoteService(id: string, by: string, baseUrl: string, 
     logPipedrive(q, pd);
     return { result: null, changed: true };
   });
+  // Conformité C1, parcours A : la demande d'approbation part en même temps vers l'installateur choisi.
+  if (wanted) {
+    const r = await proposeToInstaller({ quoteId: id, installerId: wanted, by, consentNote: opts.transferConsent ?? null }, { now, baseUrl, ...(opts.contratChannels ? { channels: opts.contratChannels } : {}) });
+    return { ok: true, email, sms, pipedrive: pd.entry, installer: r.ok ? { email: r.email, sms: r.sms } : { error: r.error } };
+  }
   return { ok: true, email, sms, pipedrive: pd.entry };
 }
 
@@ -392,6 +421,10 @@ export type ClientView =
       refusal: { at: string } | null;
       questions: number;
       replacedBy: { v: number; token: string } | null;
+      /** Conformité C1 : parcours de la trousse et « Je veux aller de l'avant ». */
+      quoteId: string;
+      versionId: string;
+      jumelage: { at: string; selection: string[] } | null;
     };
 
 /** Lecture seule : aucun changement d'état, aucune écriture (les consultations passent par recordClientView, en POST). */
@@ -420,6 +453,9 @@ export async function getClientView(token: string, now = new Date()): Promise<Cl
     refusal: v.refusal ? { at: v.refusal.at } : null,
     questions: v.questions.length,
     replacedBy,
+    quoteId: q.id,
+    versionId: v.id,
+    jumelage: v.jumelage ? { at: v.jumelage.at, selection: v.jumelage.selection } : null,
   };
 }
 
@@ -457,7 +493,9 @@ async function recordPipedrive(quoteId: string, o: SyncOutcome, event?: { type: 
   });
 }
 
-export type RespondAction = "accepter" | "refuser" | "question";
+/* Conformité C1 : « jumelage » = « Je veux aller de l'avant » (case 3.1 obligatoire). « accepter » est toujours refusé :
+   le client signe le contrat final de l'installateur, après son approbation. */
+export type RespondAction = "accepter" | "refuser" | "question" | "jumelage";
 
 export interface RespondInput {
   selection: string[];
@@ -469,9 +507,47 @@ export interface RespondInput {
   postedHash: string | null;
   ip: string;
   userAgent: string;
+  /** Conformité C1 : case 3.1 cochée. */
+  jumelageChecked?: boolean;
 }
 
-export type RespondResult = { ok: true; state: "acceptee" | "refusee" | "question" } | { ok: false; code: string; message: string };
+export type RespondResult = { ok: true; state: "acceptee" | "refusee" | "question" | "jumelage" } | { ok: false; code: string; message: string };
+
+/** Conformité C1 — un contrat signé compte comme l'acceptation de la soumission : statut, événement et Pipedrive.
+    Les courriels sont déjà partis avec les trois copies du contrat. Idempotent. */
+export async function recordContractAcceptance(quoteId: string, versionId: string, input: ContractAcceptanceInput, baseUrl: string): Promise<boolean> {
+  const r = await mutateSoumissions<{ quote: Quote; version: QuoteVersion } | null>((data) => {
+    const q = data.quotes.find((x) => x.id === quoteId);
+    const v = q?.versions.find((x) => x.id === versionId);
+    if (!q || !v) return { result: null, changed: false };
+    return acceptanceFromContract(q, v, input) ? { result: { quote: clone(q), version: clone(v) }, changed: true } : { result: null, changed: false };
+  });
+  if (!r) return false;
+  const { quote: q, version: v } = r;
+  const a = v.acceptance!;
+  const settings = await readSettings();
+  const doc = buildDocument(q, v, null, []);
+  const rows: Array<[string, string]> = [
+    ["Contrat signé", input.contractNumber],
+    ["Total signé", money(a.totalCents)],
+    ["Nom tapé (signature)", a.typedName],
+    ["Empreinte SHA-256", a.snapshotHash],
+  ];
+  const pd = await syncEvent({ event: "acceptation", doc, dealId: q.pipedrive.dealId, stages: settings.pipedriveStages, rows, link: clientLink(baseUrl, v.token), acceptedTotalCents: a.totalCents });
+  await recordPipedrive(q.id, pd);
+  return true;
+}
+
+/** Conformité C1 : retire l'acceptation produite par un contrat annulé (changement d'installateur). Idempotent. */
+export async function revokeContractAcceptanceFor(quoteId: string, versionId: string, contractNumber: string, now = new Date()): Promise<boolean> {
+  return mutateSoumissions<boolean>((data) => {
+    const q = data.quotes.find((x) => x.id === quoteId);
+    const v = q?.versions.find((x) => x.id === versionId);
+    if (!q || !v) return { result: false, changed: false };
+    const done = revokeContractAcceptance(q, v, contractNumber, now.toISOString());
+    return { result: done, changed: done };
+  });
+}
 
 export async function respondToQuote(token: string, action: RespondAction, input: RespondInput, baseUrl: string, now = new Date()): Promise<RespondResult> {
   const r = await mutateSoumissions<{ ok: false; code: string; message: string } | { ok: true; quote: Quote; version: QuoteVersion }>((data) => {
@@ -480,8 +556,11 @@ export async function respondToQuote(token: string, action: RespondAction, input
     const { quote: q, version: v } = f;
     try {
       if (action === "accepter") {
-        const a = acceptVersion(q, v, { selection: input.selection, typedName: input.typedName, termsAccepted: input.termsAccepted, ip: input.ip, userAgent: input.userAgent, postedTotalCents: input.postedTotalCents, postedHash: input.postedHash, now });
-        q.events.push({ at: a.at, type: "acceptation", detail: `Version ${v.v} acceptée par « ${a.typedName} » : ${money(a.totalCents)} (empreinte ${a.snapshotHash.slice(0, 12)}…)` });
+        // Conformité C1 (trousse 1.5, 8.4) : aucune acceptation par le client avant l'approbation d'un installateur identifié.
+        return { result: { ok: false, code: "jumelage", message: NO_DIRECT_ACCEPT }, changed: false };
+      } else if (action === "jumelage") {
+        const j = requestJumelage(q, v, { selection: input.selection, checked: Boolean(input.jumelageChecked), ip: input.ip, userAgent: input.userAgent, postedTotalCents: input.postedTotalCents, postedHash: input.postedHash, now });
+        q.events.push({ at: j.at, type: "jumelage", detail: `Version ${v.v} : le client va de l’avant (demande de jumelage, ${money(j.totalCents)}) ; ce n’est pas une acceptation` });
       } else if (action === "refuser") {
         refuseVersion(v, input.reason, input.ip, input.userAgent, now);
         q.events.push({ at: now.toISOString(), type: "refus", detail: `Version ${v.v} refusée${input.reason.trim() ? ` : ${input.reason.trim().slice(0, 200)}` : ""}` });
@@ -497,6 +576,11 @@ export async function respondToQuote(token: string, action: RespondAction, input
   });
   if (!r.ok) return r;
   const { quote: q, version: v } = r;
+  // Conformité C1 : demande de jumelage enregistrée ; consentement, avis au propriétaire, offre automatique si réglée.
+  if (action === "jumelage") {
+    await onJumelage(q.id, v.id, { now, baseUrl }).catch((e) => console.error("[soumissions] suite du jumelage :", e));
+    return { ok: true, state: "jumelage" };
+  }
   const settings = await readSettings();
   const doc = buildDocument(q, v, null, []);
   const link = clientLink(baseUrl, v.token);

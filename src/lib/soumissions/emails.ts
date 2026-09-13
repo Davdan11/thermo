@@ -58,7 +58,8 @@ export function quoteSentEmail(d: { doc: QuoteDocument; totals: Totals; link: st
   const c = doc.content.client;
   const modern = doc.contractor !== undefined;
   const who = modern ? presenterName(doc) : doc.company.legalName || BRAND.name;
-  const by = contractorLine(doc);
+  // Conformité C1 : au parcours de la trousse, l'entrepreneur n'est nommé qu'au contrat final (après son approbation).
+  const by = doc.parcours ? "" : contractorLine(doc);
   const label = doc.kind === "avenant" ? `avenant (version ${doc.version})` : doc.version > 1 ? `version ${doc.version}` : "";
   const subject = d.reminder
     ? `Rappel : votre soumission ${doc.number} est valide jusqu’au ${formatDay(doc.validUntil)}`
@@ -94,7 +95,11 @@ export function quoteSentEmail(d: { doc: QuoteDocument; totals: Totals; link: st
     body: [
       p(t(intro)),
       box("Votre soumission", rows),
-      p("Vous pouvez y cocher les options qui vous intéressent, voir le total se mettre à jour, puis l’accepter en ligne. Une question ? Utilisez le bouton « J’ai une question » ou répondez à ce courriel."),
+      p(
+        doc.parcours
+          ? "Vous pouvez y cocher les options qui vous intéressent et voir le total se mettre à jour. Si elle vous convient, cliquez « Je veux aller de l’avant » : votre entrepreneur licencié confirme votre projet, puis vous signez son contrat final. Une question ? Utilisez le bouton « J’ai une question » ou répondez à ce courriel."
+          : "Vous pouvez y cocher les options qui vous intéressent, voir le total se mettre à jour, puis l’accepter en ligne. Une question ? Utilisez le bouton « J’ai une question » ou répondez à ce courriel.",
+      ),
       ...(totals.logisvertCents > 0 && modern && totals.logisvertMode === "client" ? [p(t(LOGISVERT_NOTICE), { muted: true, small: true })] : []),
       p(modern ? `Soumission préparée par ${strong(who)}${by ? `. Travaux réalisés par ${strong(by)}` : ""}.` : `De la part de ${strong(who)}.`, { muted: true, small: true }),
     ].join(""),
@@ -110,7 +115,7 @@ export function quoteSentEmail(d: { doc: QuoteDocument; totals: Totals; link: st
     "",
     ...rows.map(([k, v]) => `- ${k} : ${v}`),
     "",
-    "Voir la soumission, choisir les options et l’accepter en ligne :",
+    doc.parcours ? "Voir la soumission, choisir les options et aller de l’avant :" : "Voir la soumission, choisir les options et l’accepter en ligne :",
     d.link,
     "",
     ...(totals.logisvertCents > 0 && modern && totals.logisvertMode === "client" ? [LOGISVERT_NOTICE, ""] : []),

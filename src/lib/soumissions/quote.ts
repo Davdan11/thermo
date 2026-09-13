@@ -28,6 +28,8 @@ import type {
   CompanyIdentity,
   ContractorIdentity,
   EffectiveStatus,
+  EstimationNotice,
+  JumelageRequest,
   PhotoMeta,
   PhotoRef,
   Quote,
@@ -57,7 +59,10 @@ export type QuoteErrorCode =
   | "total-change"
   | "document-change"
   | "integrite"
-  | "message";
+  | "message"
+  // Conformité C1 : aucune acceptation directe (contrat final au nom de l'installateur) ; case 3.1 non cochée.
+  | "jumelage"
+  | "case";
 
 export class QuoteError extends Error {
   constructor(public code: QuoteErrorCode, message: string) {
@@ -95,11 +100,13 @@ export function latestSent(q: Quote): QuoteVersion | undefined {
 
 /** « Expirée » se calcule : date de validité dépassée pour une version encore en attente de réponse. */
 export function effectiveStatus(v: QuoteVersion, today: string): EffectiveStatus {
-  if ((v.status === "envoyee" || v.status === "ouverte") && v.content.validUntil < today) return "expiree";
+  // Conformité C1 : une fois le client allé de l'avant, la suite passe par le contrat de l'installateur : plus d'expiration.
+  if ((v.status === "envoyee" || v.status === "ouverte") && v.content.validUntil < today && !v.jumelage) return "expiree";
   return v.status;
 }
 
 export function canRespond(v: QuoteVersion, today: string): boolean {
+  if (v.jumelage) return false; // Conformité C1 : réponse déjà donnée (« Je veux aller de l'avant »)
   const s = effectiveStatus(v, today);
   return s === "envoyee" || s === "ouverte";
 }
@@ -251,6 +258,9 @@ export function buildDocument(q: Quote, v: QuoteVersion, settings: Settings | nu
   };
   if (frozen) {
     if (frozen.contractor) doc.contractor = clone(frozen.contractor);
+    // Conformité C1 : parcours de la trousse (clés absentes des anciennes soumissions : empreintes inchangées).
+    if (frozen.parcours) doc.parcours = frozen.parcours;
+    if (frozen.notice) doc.notice = clone(frozen.notice);
   } else {
     doc.contractor = contractor ? clone(contractor) : null;
   }
@@ -262,7 +272,7 @@ export function buildDocument(q: Quote, v: QuoteVersion, settings: Settings | nu
  * choisi) et remplace les versions précédentes encore en attente. Les vérifications (sendBlockers) sont faites par
  * l'appelant. Un changement ultérieur de la fiche du partenaire ne touche plus ce document.
  */
-export function freezeForSend(q: Quote, v: QuoteVersion, settings: Settings, photos: PhotoMeta[], now: Date, contractor?: ContractorIdentity | null): void {
+export function freezeForSend(q: Quote, v: QuoteVersion, settings: Settings, photos: PhotoMeta[], now: Date, contractor?: ContractorIdentity | null, notice?: EstimationNotice | null): void {
   if (v.status !== "brouillon") throw new QuoteError("non-modifiable", "Cette version a déjà été envoyée.");
   const at = now.toISOString();
   v.frozen = {
@@ -272,6 +282,8 @@ export function freezeForSend(q: Quote, v: QuoteVersion, settings: Settings, pho
     taxes: { tpsPer100k: TAXES.tps.ratePer100k, tvqPer100k: TAXES.tvq.ratePer100k },
     photos: photoRefs(photoIdsOf(v.content, settings.company), photos),
     ...(contractor ? { contractor: clone(contractor) } : {}),
+    // Conformité C1 : avis de jumelage figé ; le document n'est jamais acceptable tel quel.
+    ...(notice ? { parcours: "trousse" as const, notice: clone(notice) } : {}),
   };
   v.status = "envoyee";
   v.sentAt = at;
@@ -325,8 +337,12 @@ export interface AcceptInput {
   now: Date;
 }
 
+/** Conformité C1 : message du refus d'acceptation directe (le contrat final vient de l'installateur, après son approbation). */
+export const NO_DIRECT_ACCEPT = "La signature se fait sur le contrat final de votre entrepreneur licencié, dès son approbation. Utilisez « Je veux aller de l’avant ».";
+
 export function acceptVersion(q: Quote, v: QuoteVersion, input: AcceptInput): Acceptance {
   const today = todayIn(input.now);
+  if (v.frozen?.parcours) throw new QuoteError("jumelage", NO_DIRECT_ACCEPT); // Conformité C1
   if (!canRespond(v, today)) throw respondError(v, today);
   if (!input.termsAccepted) throw new QuoteError("conditions", "Cochez « J’ai lu et j’accepte les conditions » pour accepter.");
   const typedName = normalizeName(input.typedName);
@@ -366,6 +382,107 @@ export function acceptVersion(q: Quote, v: QuoteVersion, input: AcceptInput): Ac
   v.status = "acceptee";
   v.updatedAt = at;
   return acceptance;
+}
+
+/** Conformité C1 — contrat signé au nom de l'installateur : il vaut acceptation de la soumission pour le reste de
+    l'outil (commission, argent, pipeline, Pipedrive, publicité, portail). */
+export interface ContractAcceptanceInput {
+  at: string;
+  typedName: string;
+  ip: string;
+  userAgent: string;
+  selection: string[];
+  totals: AcceptedSnapshot["totals"];
+  contractNumber: string;
+}
+
+/** Idempotent : ne remplace jamais une acceptation existante (renvoie null dans ce cas). */
+export function acceptanceFromContract(q: Quote, v: QuoteVersion, input: ContractAcceptanceInput): Acceptance | null {
+  if (v.acceptance) return null;
+  const doc = buildDocument(q, v, null, [], new Date(input.at));
+  const selection = cleanSelection(doc.content.lines, input.selection);
+  const byId = new Map(input.totals.lines.map((l) => [l.id, l]));
+  const snapshot: AcceptedSnapshot = { document: doc, selection, totals: input.totals, acceptedAt: input.at, typedName: input.typedName, termsAccepted: true, ip: input.ip, userAgent: input.userAgent };
+  const acceptance: Acceptance = {
+    at: input.at,
+    version: v.v,
+    versionId: v.id,
+    quoteNumber: q.number,
+    typedName: input.typedName,
+    termsAccepted: true,
+    selectedOptionIds: selection,
+    selectedOptions: doc.content.lines.filter((l) => selection.includes(l.id)).map((l) => ({ id: l.id, label: l.label, netCents: byId.get(l.id)?.netCents ?? 0 })),
+    totalCents: input.totals.totalCents,
+    clientPaysCents: input.totals.clientPaysCents,
+    ip: input.ip,
+    userAgent: input.userAgent,
+    contentHash: v.contentHash ?? hashOf(doc),
+    snapshotHash: hashOf(snapshot),
+    snapshot,
+    contractNumber: input.contractNumber,
+    statusBefore: v.status,
+  };
+  v.acceptance = acceptance;
+  v.status = "acceptee";
+  v.updatedAt = input.at;
+  q.events.push({ at: input.at, type: "acceptation", detail: `Contrat ${input.contractNumber} signé par « ${input.typedName} » : acceptation de la version ${v.v}` });
+  return acceptance;
+}
+
+/** Conformité C1 : le contrat qui avait produit l'acceptation est annulé (changement d'installateur). L'acceptation
+    tombe et la version retrouve son statut d'avant ; la signature du nouveau contrat en créera une nouvelle. */
+export function revokeContractAcceptance(q: Quote, v: QuoteVersion, contractNumber: string, at: string): boolean {
+  const a = v.acceptance;
+  if (!a || a.contractNumber !== contractNumber) return false;
+  v.acceptance = null;
+  v.status = a.statusBefore && a.statusBefore !== "acceptee" ? a.statusBefore : "envoyee";
+  v.updatedAt = at;
+  q.events.push({ at, type: "acceptation", detail: `Acceptation retirée : contrat ${contractNumber} annulé (changement d'installateur)` });
+  return true;
+}
+
+export interface JumelageInput {
+  selection: string[];
+  /** Case obligatoire 3.1 cochée. */
+  checked: boolean;
+  ip: string;
+  userAgent: string;
+  postedTotalCents?: number | null;
+  postedHash?: string | null;
+  now: Date;
+}
+
+/**
+ * Conformité C1 — « Je veux aller de l'avant » : demande de jumelage et consentement à transmettre le dossier au
+ * partenaire. Preuve : texte de la case, version, options, total, empreintes, horodatage, IP. JAMAIS une acceptation.
+ */
+export function requestJumelage(q: Quote, v: QuoteVersion, input: JumelageInput): JumelageRequest {
+  const today = todayIn(input.now);
+  if (!v.frozen?.parcours || !v.frozen.notice) throw new QuoteError("introuvable", "Cette soumission ne permet pas cette réponse : appelez-nous.");
+  if (!canRespond(v, today)) throw respondError(v, today);
+  if (!input.checked) throw new QuoteError("case", "Cochez la case avant d’aller de l’avant.");
+  const doc = buildDocument(q, v, null, [], input.now);
+  const contentHash = hashOf(doc);
+  if (v.contentHash && contentHash !== v.contentHash) throw new QuoteError("integrite", "Le document ne correspond plus à celui qui a été envoyé. Communiquez avec nous.");
+  if (input.postedHash && input.postedHash !== contentHash) throw new QuoteError("document-change", "La soumission a changé depuis l’ouverture de la page. Rechargez-la.");
+  const selection = cleanSelection(doc.content.lines, input.selection);
+  const totals = computeTotals(doc.content, selection, doc.taxes, today);
+  if (input.postedTotalCents !== undefined && input.postedTotalCents !== null && input.postedTotalCents !== totals.totalCents) throw new QuoteError("total-change", "Le total a changé depuis l’ouverture de la page. Rechargez-la.");
+  const at = input.now.toISOString();
+  const request: JumelageRequest = {
+    at,
+    v: v.v,
+    selection,
+    totalCents: totals.totalCents,
+    checkbox: v.frozen.notice.checkbox,
+    noticeSha256: hashOf(v.frozen.notice),
+    contentHash,
+    ip: String(input.ip || "inconnue").slice(0, 64),
+    userAgent: String(input.userAgent || "").slice(0, 400),
+  };
+  v.jumelage = request;
+  v.updatedAt = at;
+  return request;
 }
 
 /** L'instantané et le document n'ont pas été modifiés depuis l'acceptation. */

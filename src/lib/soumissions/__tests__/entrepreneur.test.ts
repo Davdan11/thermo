@@ -20,6 +20,8 @@ import { mutateSettings, mutateSoumissions, readSoumissions } from "../store";
 import { computeTotals } from "../totals";
 import { contractorIdentity, fullSettings, INSTALLER_ID, NO_CONTRACTOR, pick, RATES, readyContent, TODAY } from "./fixtures";
 import { seedPartner } from "./partner-fixtures";
+// Conformité C1 : trousse fictive et identité de la plateforme, préalables de tout envoi.
+import { seedPlateforme } from "@/lib/contrats/__tests__/trousse-fictive";
 
 const env = process.env;
 let dir: string;
@@ -37,6 +39,7 @@ beforeEach(async () => {
     Object.assign(s, fullSettings());
     return { result: null, changed: true };
   });
+  await seedPlateforme(); // Conformité C1
 });
 
 afterEach(async () => {
@@ -103,16 +106,18 @@ describe("état calculé depuis la fiche du partenaire", () => {
 });
 
 describe("envoi", () => {
-  it("sans installateur choisi : rien ne part", async () => {
+  // Conformité C1, parcours B : sans installateur, la soumission part (estimation non contraignante, aucun entrepreneur nommé).
+  it("sans installateur choisi : la soumission part au client, avec l'avis de jumelage et sans entrepreneur", async () => {
     const id = await draft(null);
     const r = await sendQuoteService(id, BY, BASE, { sms: false }, NOW);
-    expect(r.ok).toBe(false);
-    if (!r.ok) {
-      expect(r.blockers?.map((b) => b.id)).toEqual(["entrepreneur"]);
-      expect(r.error).toContain("Entrepreneur qui réalise les travaux choisi");
-    }
-    expect(mail.sendClientEmail).not.toHaveBeenCalled();
-    expect((await readSoumissions()).quotes[0].versions[0].status).toBe("brouillon");
+    expect(r.ok).toBe(true);
+    if (r.ok) expect(r.installer).toBeUndefined();
+    const v = (await readSoumissions()).quotes[0].versions[0];
+    expect(v.status).toBe("envoyee");
+    expect(v.frozen?.parcours).toBe("trousse");
+    expect(v.frozen?.contractor).toBeUndefined();
+    expect(v.frozen?.notice?.checkbox).toContain("jumelage fictif");
+    expect(mail.sendClientEmail).toHaveBeenCalledTimes(1);
   });
 
   it("licence RBQ expirée : bloqué, le message dit quoi compléter et où", async () => {
@@ -149,9 +154,9 @@ describe("instantané de l'identité de l'entrepreneur", () => {
     expect(v.frozen?.contractor).toEqual(contractorIdentity());
     expect(v.contractorId).toBe(INSTALLER_ID);
 
-    // Le courriel présente l'entrepreneur et la marque qui prépare la soumission.
+    // Conformité C1 : le courriel présente la marque qui prépare la soumission ; l'entrepreneur n'est nommé qu'au contrat final.
     const html = String(mail.sendClientEmail.mock.calls[0][2]);
-    expect(html).toContain("Installations Exemple inc.");
+    expect(html).not.toContain("Installations Exemple inc.");
     expect(html).toContain("préparée par");
 
     await mutatePartenaires((d) => {
@@ -167,9 +172,9 @@ describe("instantané de l'identité de l'entrepreneur", () => {
 
     const total = computeTotals(view.doc.content, ["l_opt"], view.doc.taxes, TODAY).totalCents;
     const input: RespondInput = { selection: ["l_opt"], typedName: "Camille Exemple", termsAccepted: true, reason: "", message: "", postedTotalCents: total, postedHash: view.contentHash, ip: "203.0.113.7", userAgent: "Vitest" };
-    expect(await respondToQuote(v.token, "accepter", input, BASE, NOW)).toEqual({ ok: true, state: "acceptee" });
-    const accepted = (await readSoumissions()).quotes[0].versions[0].acceptance!;
-    expect(accepted.snapshot.document.contractor?.legalName).toBe("Installations Exemple inc.");
-    expect(verifyAcceptance(accepted)).toBe(true);
+    // Conformité C1 : aucune acceptation directe (le client signe le contrat de l'installateur, après son approbation).
+    expect(await respondToQuote(v.token, "accepter", input, BASE, NOW)).toMatchObject({ ok: false, code: "jumelage" });
+    expect((await readSoumissions()).quotes[0].versions[0].acceptance).toBeNull();
+    void verifyAcceptance;
   });
 });

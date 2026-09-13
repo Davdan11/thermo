@@ -19,6 +19,9 @@ import { computeTotals } from "../totals";
 import type { Settings } from "../types";
 import { fullSettings, INSTALLER_ID, readyContent, TODAY } from "./fixtures";
 import { seedPartner } from "./partner-fixtures";
+// Conformité C1 : trousse fictive et identité de la plateforme, préalables de tout envoi.
+import { seedPlateforme } from "@/lib/contrats/__tests__/trousse-fictive";
+import { readContrats } from "@/lib/contrats/store";
 
 const env = process.env;
 let dir: string;
@@ -76,6 +79,7 @@ beforeEach(async () => {
   mail.sendClientEmail.mockClear();
   // Par défaut : Pipedrive en panne (500) — le parcours de la soumission ne doit jamais en dépendre.
   mockFetch(() => ({ status: 500 }));
+  await seedPlateforme(); // Conformité C1
 });
 
 afterEach(async () => {
@@ -85,12 +89,16 @@ afterEach(async () => {
 });
 
 describe("envoi", () => {
-  it("bloqué tant que l'entrepreneur manque et que les textes sont à compléter : rien ne part, la version reste en brouillon", async () => {
+  // Conformité C1 : les textes des réglages ne bloquent plus (le contrat vient de la trousse, 3.2) ; l'entrepreneur choisi, oui.
+  it("bloqué tant que l'entrepreneur choisi est introuvable : rien ne part, la version reste en brouillon", async () => {
     await writeSettings(defaultSettings());
     const id = await newDraft(); // entrepreneur choisi, mais absent des installateurs
     const r = await sendQuoteService(id, "proprio@exemple.ca", BASE, { sms: true }, NOW);
     expect(r.ok).toBe(false);
-    if (!r.ok) expect(r.blockers?.map((b) => b.id)).toEqual(expect.arrayContaining(["entrepreneur", "texte-paymentTerms", "texte-warranty"]));
+    if (!r.ok) {
+      expect(r.blockers?.map((b) => b.id)).toEqual(expect.arrayContaining(["entrepreneur"]));
+      expect(r.blockers?.map((b) => b.id)).not.toContain("texte-paymentTerms");
+    }
     expect(mail.sendClientEmail).not.toHaveBeenCalled();
     expect(calls).toHaveLength(0);
     expect((await readSoumissions()).quotes[0].versions[0].status).toBe("brouillon");
@@ -164,33 +172,26 @@ describe("lien du client", () => {
 });
 
 describe("acceptation", () => {
-  it("piste d'audit complète, instantané vérifiable, confirmation au client avec le contenu accepté", async () => {
+  /* Conformité C1 (trousse 1.5, 8.4) : le client n'accepte jamais la soumission ; il va de l'avant (case 3.1), puis signe
+     le contrat final de l'installateur après son approbation (src/lib/contrats/__tests__). */
+  it("aucune acceptation directe ; « Je veux aller de l'avant » exige la case 3.1 et garde la preuve, sans acceptation", async () => {
     const { id, token } = await sentQuote();
     mail.sendClientEmail.mockClear();
-    const r = await respondToQuote(token, "accepter", await accInput(token, ["l_opt"]), BASE, NOW);
-    expect(r).toEqual({ ok: true, state: "acceptee" });
+    expect(await respondToQuote(token, "accepter", await accInput(token, ["l_opt"]), BASE, NOW)).toMatchObject({ ok: false, code: "jumelage" });
+    expect(await respondToQuote(token, "jumelage", { ...(await accInput(token, ["l_opt"])), jumelageChecked: false }, BASE, NOW)).toMatchObject({ ok: false, code: "case" });
+    expect(await respondToQuote(token, "jumelage", { ...(await accInput(token, ["l_opt"])), jumelageChecked: true }, BASE, NOW)).toEqual({ ok: true, state: "jumelage" });
     const q = (await readSoumissions()).quotes.find((x) => x.id === id)!;
-    const a = q.versions[0].acceptance!;
-    expect(a).toMatchObject({ version: 1, typedName: "Camille Exemple", ip: "203.0.113.7", userAgent: "Mozilla/5.0 (Test)", selectedOptionIds: ["l_opt"], termsAccepted: true });
-    expect(a.totalCents).toBe(a.snapshot.totals.totalCents);
-    expect(verifyAcceptance(a)).toBe(true);
-    expect(hashOf(a.snapshot)).toBe(a.snapshotHash);
-    expect(q.pipedrive.log.at(-1)).toMatchObject({ event: "acceptation", ok: false });
-
-    const client = mail.sendClientEmail.mock.calls.find((c) => c[0] === "camille@exemple.ca")!;
-    const text = (client[3] as { text: string }).text;
-    expect(String(client[1])).toContain("accepté");
-    for (const expected of ["PREUVE D’ACCEPTATION", a.snapshotHash, "Camille Exemple", "Déneigement", "Mur arrière", "123456789", "Texte validé (test).", `/devis/${token}`]) expect(text).toContain(expected);
-    expect(mail.sendClientEmail.mock.calls.some((c) => c[0] === "proprio@exemple.ca" && String(c[1]).includes("ACCEPTÉE"))).toBe(true);
-
-    // Lien de la version acceptée : l'instantané, tel quel.
-    const view = await getClientView(token, new Date("2031-01-01T12:00:00Z"));
-    expect(view.state === "ok" && view.status).toBe("acceptee");
-    if (view.state === "ok") {
-      expect(view.doc).toEqual(a.snapshot.document);
-      expect(view.selection).toEqual(["l_opt"]);
-    }
-    expect((await respondToQuote(token, "accepter", await accInput(token, []), BASE, NOW)).ok).toBe(false);
+    const v = q.versions[0];
+    expect(v.acceptance).toBeNull();
+    expect(v.status).toBe("envoyee");
+    expect(v.jumelage).toMatchObject({ v: 1, selection: ["l_opt"], ip: "203.0.113.7", userAgent: "Mozilla/5.0 (Test)", checkbox: expect.stringContaining("jumelage fictif") });
+    expect(v.jumelage?.noticeSha256).toBe(hashOf(v.frozen!.notice));
+    // Plus aucune réponse sur cette version : la suite passe par le contrat de l'installateur.
+    const view = await getClientView(token, NOW);
+    expect(view.state === "ok" && view.canRespond).toBe(false);
+    // Consentement au transfert du dossier noté (case 3.1 du client) ; l'avis au propriétaire est simulé hors production.
+    expect((await readContrats()).dossiers[0].consent).toMatchObject({ source: "client", v: 1 });
+    void verifyAcceptance;
   });
 
   it("refus et question : notés, propriétaire avisé", async () => {
@@ -204,11 +205,11 @@ describe("acceptation", () => {
     expect((await respondToQuote(token, "accepter", await accInput(token, []), BASE, NOW)).ok).toBe(false);
   });
 
-  it("expirée ou remplacée : l'acceptation est bloquée et la page le dit", async () => {
+  it("expirée ou remplacée : « aller de l'avant » est bloqué et la page le dit", async () => {
     const { id, token } = await sentQuote();
-    const input = await accInput(token, []);
+    const input = { ...(await accInput(token, [])), jumelageChecked: true }; // Conformité C1 : plus d'acceptation directe
     const after = new Date("2026-12-31T15:00:00Z");
-    expect(await respondToQuote(token, "accepter", input, BASE, after)).toMatchObject({ ok: false, code: "expiree" });
+    expect(await respondToQuote(token, "jumelage", input, BASE, after)).toMatchObject({ ok: false, code: "expiree" });
     const expired = await getClientView(token, after);
     expect(expired.state === "ok" && [expired.status, expired.canRespond]).toEqual(["expiree", false]);
 
@@ -218,7 +219,7 @@ describe("acceptation", () => {
       freezeForSend(q, v2, fullSettings(), [], NOW);
       return { result: null, changed: true };
     });
-    expect(await respondToQuote(token, "accepter", input, BASE, NOW)).toMatchObject({ ok: false, code: "remplacee" });
+    expect(await respondToQuote(token, "jumelage", input, BASE, NOW)).toMatchObject({ ok: false, code: "remplacee" });
     const view = await getClientView(token, NOW);
     expect(view.state === "ok" && view.status).toBe("remplacee");
     expect(view.state === "ok" && view.replacedBy?.v).toBe(2);
@@ -253,16 +254,11 @@ describe("Pipedrive configuré", () => {
     const q = (await readSoumissions()).quotes.find((x) => x.id === id)!;
     expect(q.pipedrive).toMatchObject({ personId: 7, dealId: 99 });
 
-    // Acceptation : valeur = total accepté ; l'étape 8 est dans un autre pipeline, donc l'affaire n'est pas déplacée.
+    // Conformité C1 : aucune acceptation directe, donc aucune mise à jour « acceptation » de l'affaire.
     calls.length = 0;
     const token = q.versions[0].token;
-    await respondToQuote(token, "accepter", await accInput(token, []), BASE, NOW);
-    const a = (await readSoumissions()).quotes.find((x) => x.id === id)!.versions[0].acceptance!;
-    const put = calls.find((c) => c.method === "PUT")!.body as Record<string, unknown>;
-    expect(put.value).toBe(a.totalCents / 100);
-    expect(put).not.toHaveProperty("stage_id");
-    const log = (await readSoumissions()).quotes.find((x) => x.id === id)!.pipedrive.log.at(-1)!;
-    expect(log).toMatchObject({ event: "acceptation", ok: true });
-    expect(log.detail).toContain("introuvable");
+    expect((await respondToQuote(token, "accepter", await accInput(token, []), BASE, NOW)).ok).toBe(false);
+    expect(calls.filter((c) => c.method === "PUT")).toHaveLength(0);
+    expect((await readSoumissions()).quotes.find((x) => x.id === id)!.versions[0].acceptance).toBeNull();
   });
 });

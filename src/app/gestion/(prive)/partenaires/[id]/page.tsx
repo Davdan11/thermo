@@ -39,6 +39,8 @@ import { AgreementChip, DocChip, HeroArcs, TierChip } from "@/components/partena
 import { CitationForm } from "@/components/partenaires/admin/CitationForm";
 // Chantier R : vérification automatique au fichier ouvert de la RBQ et lien vers le registre public.
 import { RbqRegistryCard } from "@/components/gestion/reseau/RbqRegistryCard";
+// Conformité C1 : paiement du client (bénéficiaire, modes, échéancier) et sous-catégories RBQ connues.
+import { PartnerContractCard } from "@/components/contrats/PartnerContractCard";
 import "@/components/partenaires/admin/partenaires.css";
 import "@/components/partenaires/admin/conformite.css";
 
@@ -545,6 +547,8 @@ export default async function PartnerPage({ params, searchParams }: { params: Pr
           </Card>
           {/* Chantier R : licence RBQ au fichier ouvert (verdict, levée manuelle, registre public). */}
           <RbqRegistryCard installerId={id} number={record.compliance.rbq.number || installer.rbq} check={record.rbqVerification ?? null} />
+          {/* Conformité C1 : paiement du client et sous-catégories RBQ, exigés pour approuver un contrat. */}
+          <PartnerContractCard installerId={id} verification={record.rbqVerification ?? null} />
 
           <Card title="Performance" sub={`Niveau ${TIER_LABELS[perf.tier]}${perf.override ? " (imposé)" : " (automatique)"} · points au classement : ${settings.tierPoints[perf.tier] > 0 ? "+" : ""}${settings.tierPoints[perf.tier]}`} action={<TierChip tier={perf.tier} imposed={Boolean(perf.override)} />}>
             <div className="pa-perf">

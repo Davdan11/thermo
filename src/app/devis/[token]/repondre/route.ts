@@ -16,7 +16,8 @@ import { TOKEN_RE } from "@/lib/soumissions/tokens";
 export const dynamic = "force-dynamic";
 
 const text = (body: string, status: number) => new NextResponse(body, { status, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
-const ACTIONS: RespondAction[] = ["accepter", "refuser", "question"];
+// Conformité C1 : « jumelage » (Je veux aller de l'avant, case 3.1) ; « accepter » est refusé par le service.
+const ACTIONS: RespondAction[] = ["accepter", "refuser", "question", "jumelage"];
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ token: string }> }) {
   const { token } = await params;
@@ -43,6 +44,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ tok
       postedHash: /^[0-9a-f]{64}$/.test(hash) ? hash : null,
       ip,
       userAgent: (req.headers.get("user-agent") ?? "").slice(0, 400),
+      jumelageChecked: form.get("jumelage") === "oui", // Conformité C1
     },
     base,
   );

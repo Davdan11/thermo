@@ -12,6 +12,8 @@ import { brandOptions } from "@/lib/gestion/catalog";
 import { ipFromHeaders, limiters } from "@/lib/gestion/rate-limit";
 import { getOfferView, type OfferView } from "@/lib/gestion/service";
 import { logClientAccess } from "@/lib/gestion/partenaires/acces";
+// Conformité C1 : offre acceptée d'un projet de la trousse : le contrat final est à approuver par ce même lien.
+import { approvalForOfferToken } from "@/lib/contrats/service";
 import { formatDateTime, formatDay, kmText, summaryHeadline, summaryRows } from "@/lib/gestion/summary";
 import { Reveal } from "@/components/gestion/Reveal";
 import { Mark } from "@/components/gestion/ui";
@@ -59,6 +61,7 @@ export default async function JobOfferPage({ params, searchParams }: { params: P
     );
   }
   const view: OfferView = await getOfferView(token);
+  const approval = view.state === "accepte" ? await approvalForOfferToken(token) : false; // Conformité C1
   if (view.state === "invalide") {
     return (
       <Shell>
@@ -162,6 +165,10 @@ export default async function JobOfferPage({ params, searchParams }: { params: P
                 {view.scheduledFor ? (<><dt>Installation</dt><dd>{formatDay(view.scheduledFor)}</dd></>) : null}
               </dl>
             </div>
+            {/* Conformité C1 : priorité obtenue ; le dossier complet et le contrat final sont à approuver avant tout. */}
+            {approval ? (
+              <a href={`/approbation/${encodeURIComponent(token)}`} className="g-btn g-btn--primary g-btn--lg g-btn--block" style={{ marginTop: 14 }}>Voir le dossier complet et approuver le contrat</a>
+            ) : null}
             {/* Volet A : page de chantier (en route, photos obligatoires, numéros de série, signature du client). */}
             <a href={`/chantier/${encodeURIComponent(token)}`} className="g-btn g-btn--primary g-btn--lg g-btn--block" style={{ marginTop: 14 }}>Ouvrir la page du chantier</a>
             {/* Chantier P : l'installateur publie ses disponibilités ; ses clients y choisissent leur date. */}
