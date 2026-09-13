@@ -13,6 +13,7 @@
 
 import { createHash, timingSafeEqual } from "node:crypto";
 import { runTelephonieTick } from "@/lib/telephonie/tick";
+import { runRepartition } from "@/lib/gestion/equipe/repartition"; // Chantier V
 
 export const dynamic = "force-dynamic";
 
@@ -33,7 +34,10 @@ export async function POST(req: Request) {
   if (auth === "absent") return json({ error: "TELEPHONIE_CRON_SECRET (ou AUTOMATISATIONS_CRON_SECRET) absent : passage refusé." }, 503);
   if (auth === "refuse") return json({ error: "Non autorisé." }, 401);
   try {
-    return json({ ok: true, ...(await runTelephonieTick()) });
+    const t = await runTelephonieTick();
+    // Chantier V : nouvelles demandes réparties aux vendeurs toutes les 5 minutes (le premier qui rappelle signe).
+    const v = await runRepartition().catch((e) => (console.error("[équipe] répartition interrompue :", e), null));
+    return json({ ok: true, ...t, repartition: v ? { attribuees: v.assigned } : { erreur: true } });
   } catch (e) {
     console.error("[telephonie] passage interrompu :", e);
     return json({ error: "Passage interrompu : voir le journal du serveur." }, 500);

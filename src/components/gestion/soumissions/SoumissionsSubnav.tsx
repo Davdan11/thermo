@@ -13,12 +13,15 @@ const ITEMS = [
   { href: "/gestion/soumissions/reglages", label: "Réglages", icon: Settings2, match: (p: string) => p.startsWith("/gestion/soumissions/reglages") },
 ];
 
-export function SoumissionsSubnav() {
+/* Chantier V : `full` faux (adjoint, vendeur) → sans « Liste de prix » ni « Réglages » (réservés au propriétaire). */
+const OWNER_ONLY = new Set(["/gestion/soumissions/prix", "/gestion/soumissions/reglages"]);
+
+export function SoumissionsSubnav({ full = true }: { full?: boolean } = {}) {
   const pathname = usePathname();
   return (
     <nav className="sq-subnav" aria-label="Soumissions">
       <div className="sq-subnav__in">
-        {ITEMS.map(({ href, label, icon: Icon, match }) => (
+        {ITEMS.filter((i) => full || !OWNER_ONLY.has(i.href)).map(({ href, label, icon: Icon, match }) => (
           <Link key={href} href={href} aria-current={match(pathname) ? "page" : undefined}>
             <Icon size={16} aria-hidden />
             <span>{label}</span>

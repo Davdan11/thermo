@@ -9,8 +9,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { ArrowUpRight, ChevronLeft, FileText, Mail, MapPin, MessageSquare, Phone, Wrench } from "lucide-react";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
 import { clientPage } from "@/lib/gestion/crm/service";
+// Chantier V : fiche ouverte à tous les rôles ; un vendeur n'ouvre que SES clients (index restreint : 404 sinon).
+import { scopedIndex } from "@/lib/gestion/equipe/scope";
+import { AssignCard } from "@/components/gestion/equipe/AssignCard";
 import { addNoteAction } from "../../crm-actions";
 import { Avatar } from "@/components/gestion/kit/Avatar";
 import { Card } from "@/components/gestion/kit/Card";
@@ -45,10 +48,13 @@ export const metadata: Metadata = { title: "Client" };
 const FLASH: Record<string, string> = { cree: "Fiche créée.", fusion: "Fiches fusionnées : tout est réuni ici.", separe: "Nouvelle fiche créée pour l’autre personne." };
 
 export default async function ClientPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<Record<string, string | undefined>> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
+  const owner = session.role === "proprietaire";
+  const staff = session.role !== "vendeur";
+  const index = await scopedIndex(session);
   const { id } = await params;
   const sp = await searchParams;
-  const r = await clientPage(id);
+  const r = await clientPage(id, index);
   if (!r) notFound();
   if ("redirect" in r) redirect(`/gestion/clients/${r.redirect}`);
   const c = r.client;
@@ -123,7 +129,7 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
         </div>
         {/* Chantier A : résumé de la fiche par l'assistant IA. */}
         <div className="as-summarize-row">
-          <AssistantSummarizeButton clientId={c.id} />
+          {owner ? <AssistantSummarizeButton clientId={c.id} /> : null}
         </div>
         <div className="cr-facts">
           <div className="is-money">
@@ -154,7 +160,7 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
             </div>
           </Card>
 
-          <ComplexTasksCard clientId={c.id} />
+          {staff ? <ComplexTasksCard clientId={c.id} /> : null}
 
           <Card title="Note ou appel" sub="Un appel noté compte comme « contacté ».">
             <NoteForm action={addNoteAction.bind(null, c.id)} />
@@ -191,11 +197,14 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
             </ol>
           </Card>
 
+          {/* Chantier V : vendeur attribué (réattribution par le propriétaire, historique). */}
+          <AssignCard clientId={c.id} session={session} index={index} />
+
           <ThermoMatchPanel clientId={c.id} />
 
-          <AdsClientPanel clientId={c.id} />
-          {/* Chantier A : coût d'acquisition, ou « non calculable ». */}
-          <AcquisitionCard clientId={c.id} />
+          {owner ? <AdsClientPanel clientId={c.id} /> : null}
+          {/* Chantier A : coût d'acquisition, ou « non calculable » (argent de l'entreprise : propriétaire seulement, chantier V). */}
+          {owner ? <AcquisitionCard clientId={c.id} /> : null}
 
           <Card
             title="Soumissions"
@@ -217,7 +226,7 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
                         <span className="k-money">{dollars(q.totalCents)}</span>
                       </span>
                     </Link>
-                    {q.canCreateJob ? (
+                    {q.canCreateJob && staff ? (
                       <Link href={`/gestion/jobs/nouveau?soumission=${q.id}`} className="k-btn k-btn--primary" style={{ margin: "0 0 10px" }}>
                         <Wrench size={15} aria-hidden /> Créer le job depuis la soumission acceptée
                       </Link>
@@ -235,16 +244,18 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
           <Card
             title="Jobs"
             action={
-              <Link href={`/gestion/jobs/nouveau?client=${c.id}`} className="k-btn">
-                <Wrench size={15} aria-hidden /> Nouveau
-              </Link>
+              staff ? (
+                <Link href={`/gestion/jobs/nouveau?client=${c.id}`} className="k-btn">
+                  <Wrench size={15} aria-hidden /> Nouveau
+                </Link>
+              ) : undefined
             }
           >
             {c.jobs.length ? (
               <ul className="cr-linked">
                 {c.jobs.map((j) => (
                   <li key={j.id}>
-                    <Link href={`/gestion/jobs/${j.id}`} className="cr-linked__row">
+                    <Link href={staff ? `/gestion/jobs/${j.id}` : "/gestion/agenda"} className="cr-linked__row">
                       <strong>Job n° {j.number}</strong>
                       <small>{[j.installer, j.when ? `prévu le ${j.when}` : null].filter(Boolean).join(" · ") || "Pas encore attribué"}</small>
                       <span className="cr-linked__end">
@@ -261,14 +272,16 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
             )}
           </Card>
 
-          <SeasonConsentCard clientId={c.id} />
+          {/* Chantier V : consentements, téléphonie (réglages, enregistrements) et après-vente (commissions de l'entreprise)
+              restent au propriétaire ; le dossier photo des chantiers aux adjoints aussi. */}
+          {owner ? <SeasonConsentCard clientId={c.id} /> : null}
           {/* Chantier T : appels masqués, transcriptions et résumés, consentement aux textos (LCAP). */}
-          <ClientTelephonieCard clientId={c.id} />
+          {owner ? <ClientTelephonieCard clientId={c.id} /> : null}
           {/* Volet B : sondage, statut LogisVert, facture de commission et référence, par job. */}
-          <ApresVentePanel jobIds={c.jobs.map((j) => j.id)} />
+          {owner ? <ApresVentePanel jobIds={c.jobs.map((j) => j.id)} /> : null}
           {/* Volet A : dossier photo des chantiers du client (retrouvable « s'il y a de quoi »). */}
-          <ClientPhotoDossier jobIds={c.jobs.map((j) => j.id)} />
-          {/* Chantier D : visites photo à distance (demander, voir les photos reçues). */}
+          {staff ? <ClientPhotoDossier jobIds={c.jobs.map((j) => j.id)} /> : null}
+          {/* Chantier D : visites photo à distance (demander, voir les photos reçues) ; ce client est déjà dans la portée de l'utilisateur. */}
           <ClientVisitsCard clientId={c.id} phones={c.phones.map((p) => p.e164)} emails={c.emails} phone={phone?.e164 ?? ""} email={c.emails[0] ?? ""} />
 
           <Card title="Coordonnées">
@@ -310,8 +323,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
               </p>
             ) : null}
             <div className="g-actions" style={{ marginTop: 12 }}>
-              <MergeSheet clientId={c.id} name={c.name} />
-              {c.pieces.length > 1 ? <SplitSheet clientId={c.id} identities={c.identities} pieces={c.pieces} /> : null}
+              {staff ? <MergeSheet clientId={c.id} name={c.name} /> : null}
+              {staff && c.pieces.length > 1 ? <SplitSheet clientId={c.id} identities={c.identities} pieces={c.pieces} /> : null}
             </div>
           </Card>
         </aside>

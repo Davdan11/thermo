@@ -3,7 +3,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CalendarDays, Clock, Plus, Send, Wrench } from "lucide-react";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { STAFF } from "@/lib/gestion/equipe/garde"; // Chantier V : propriétaire et adjoints
 import { brandLabel } from "@/lib/gestion/catalog";
 import { localYmd } from "@/lib/gestion/crm/time";
 import { pendingOffers } from "@/lib/gestion/offers";
@@ -31,7 +32,7 @@ const TABS: Array<{ key: string; label: string; test: (j: Job) => boolean }> = [
 const day = (ymd: string | null) => (ymd ? formatShortDate(`${ymd}T12:00:00Z`) : null);
 
 export default async function JobsPage({ searchParams }: { searchParams: Promise<{ statut?: string }> }) {
-  await requireAdmin();
+  await requireUser({ roles: STAFF }); // Chantier V
   const { statut = "" } = await searchParams;
   const now = new Date();
   const d = await loadDashboard(now);

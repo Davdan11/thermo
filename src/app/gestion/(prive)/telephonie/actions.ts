@@ -11,7 +11,9 @@
 import { refresh } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireAdmin, requireUser } from "@/lib/gestion/auth/dal";
+// Chantier V : appel masqué ouvert aux vendeurs, pour LEURS clients seulement.
+import { mayCall, mayCallTarget } from "@/lib/gestion/equipe/garde";
 import { createLimiter } from "@/lib/gestion/rate-limit";
 import { CLIENT_ID_RE } from "@/lib/gestion/crm/types";
 import { CONVERSATION_ID_RE } from "@/lib/textos/store";
@@ -41,17 +43,19 @@ const targetSchema = z.discriminatedUnion("kind", [
 ]);
 
 export async function startMaskedCallAction(target: unknown): Promise<{ ok: true; view: CallView } | { ok: false; error: string }> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const p = targetSchema.safeParse(target);
   if (!p.success) return INVALID;
+  if (!(await mayCallTarget(session, p.data))) return INVALID;
   if (!callLimiter.hit(session.email)) return { ok: false, error: "Trop d’appels lancés en peu de temps. Réessayez dans quelques minutes." };
   return startMaskedCall(p.data, session.email);
 }
 
 export async function maskedCallStatusAction(id: unknown): Promise<{ ok: true; view: CallView } | { ok: false; error: string }> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const p = z.string().regex(CALL_ID_RE).safeParse(id);
   if (!p.success) return INVALID;
+  if (!(await mayCall(session, p.data))) return { ok: false, error: "Appel introuvable." };
   if (!pollLimiter.hit(session.email)) return { ok: false, error: "Trop de demandes." };
   const view = await getCallView(p.data);
   return view ? { ok: true, view } : { ok: false, error: "Appel introuvable." };

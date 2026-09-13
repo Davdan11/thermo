@@ -13,7 +13,7 @@
    ================================================================== */
 
 import { last4 } from "@/lib/gestion/crm/identity";
-import { displayName } from "@/lib/gestion/crm/model";
+import { displayName, type CrmIndex } from "@/lib/gestion/crm/model";
 import { clientPrefill, loadCrmIndex, matchesClient } from "@/lib/gestion/crm/service";
 import { STAGE_SHORT } from "@/lib/gestion/crm/types";
 import { createLimiter } from "@/lib/gestion/rate-limit";
@@ -43,10 +43,11 @@ export interface QuoteClientPrefill {
   postalCode: string;
 }
 
-export async function searchQuoteClients(q: string): Promise<QuoteClientHit[]> {
+/* Chantier V : `scoped` (index restreint d'un vendeur, equipe/scope.ts) → seulement ses clients. */
+export async function searchQuoteClients(q: string, scoped?: CrmIndex): Promise<QuoteClientHit[]> {
   const s = q.trim().slice(0, 80);
   if (s.length < 2) return [];
-  const index = await loadCrmIndex();
+  const index = scoped ?? (await loadCrmIndex());
   return index.clients
     .filter((c) => matchesClient(c, s))
     .sort((a, b) => b.b.lastAt.localeCompare(a.b.lastAt))
@@ -55,8 +56,8 @@ export async function searchQuoteClients(q: string): Promise<QuoteClientHit[]> {
 }
 
 /** Coordonnées d'UN client, pour le formulaire de la soumission. */
-export async function quoteClientPrefill(id: string): Promise<QuoteClientPrefill | null> {
-  const p = await clientPrefill(id);
+export async function quoteClientPrefill(id: string, scoped?: CrmIndex): Promise<QuoteClientPrefill | null> {
+  const p = await clientPrefill(id, scoped); // Chantier V
   if (!p) return null;
   return { id: p.id, firstName: p.firstName, lastName: p.lastName, email: p.email, phone: p.phone, address: p.address, city: p.city, postalCode: p.postalCode };
 }

@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Ban, ChevronLeft, FileText, Plus } from "lucide-react";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { textosFor } from "@/lib/gestion/equipe/garde"; // Chantier V : conversation d'un autre vendeur → 404
 import { smsConfigured } from "@/lib/gestion/sms";
 import { OPTED_OUT_ERROR } from "@/lib/textos/service";
 import { CONVERSATION_ID_RE, findConversation, readTextos } from "@/lib/textos/store";
@@ -21,10 +22,10 @@ import { archiveAction, markReadAction, markUnreadAction, sendTextoAction } from
 export const metadata: Metadata = { title: "Conversation" };
 
 export default async function ConversationPage({ params }: { params: Promise<{ id: string }> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const { id } = await params;
   if (!CONVERSATION_ID_RE.test(id)) notFound();
-  const data = await readTextos();
+  const data = await textosFor(session, await readTextos());
   const conv = findConversation(data, id);
   if (!conv) notFound();
 
@@ -54,9 +55,11 @@ export default async function ConversationPage({ params }: { params: Promise<{ i
             <p className="t-who__sub">{[t.place, `premier texto le ${t.since}`, t.archived ? "archivée" : null].filter(Boolean).join(" · ")}</p>
           </div>
           <div className="t-tools">
-            <Link href="/gestion/jobs/nouveau" className="g-btn g-btn--ghost t-btn-sm">
-              <Plus size={15} aria-hidden /> Créer un job
-            </Link>
+            {session.role !== "vendeur" ? (
+              <Link href="/gestion/jobs/nouveau" className="g-btn g-btn--ghost t-btn-sm">
+                <Plus size={15} aria-hidden /> Créer un job
+              </Link>
+            ) : null}
             <Link href="/gestion/soumissions/nouvelle" className="g-btn g-btn--ghost t-btn-sm">
               <FileText size={15} aria-hidden /> Créer une soumission
             </Link>

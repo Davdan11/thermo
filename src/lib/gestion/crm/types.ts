@@ -134,6 +134,23 @@ export interface CrmClientRecord {
   valueCents?: number;
   createdAt: string;
   updatedAt: string;
+  /* Chantier V : vendeur attribué et historique. Champs facultatifs : un crm.json plus ancien reste valide (aucune
+     migration) ; absent = client non attribué (le propriétaire et les adjoints le voient, aucun vendeur). */
+  assignedTo?: { userId: string; at: string; by: string; how: AssignHow };
+  assignLog?: AssignChange[];
+}
+
+/* Chantier V : comment un client a été attribué. « creation » : client ou soumission créé par le vendeur lui-même. */
+export type AssignHow = "tour" | "territoire" | "charge" | "manuel" | "creation" | "retrait";
+
+export interface AssignChange {
+  at: string;
+  by: string;
+  /** Identifiants des membres (u_…) ; null = personne. */
+  from: string | null;
+  to: string | null;
+  how: AssignHow;
+  reason?: string;
 }
 
 export interface CrmTask {

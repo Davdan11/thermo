@@ -12,7 +12,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Banknote, Boxes, CalendarClock, PhoneCall, Send, ShieldCheck, Sparkles, TrendingUp, Repeat, MapPinned, Megaphone, Target, UserPlus, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
+import { Banknote, Boxes, CalendarClock, PhoneCall, Send, ShieldCheck, Sparkles, TrendingUp, Repeat, MapPinned, Megaphone, Target, UserPlus, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench, Trophy, UsersRound } from "lucide-react";
 import { openSearch } from "./crm/CommandSearch";
 import { openQuickActions } from "./crm/QuickActions";
 import { Sheet } from "./kit/Sheet";
@@ -73,6 +73,9 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
       { href: "/gestion/statistiques", label: "Statistiques", icon: ChartColumn, match: starts("/gestion/statistiques") },
       { href: "/gestion/rentabilite", label: "Rentabilité", icon: TrendingUp, match: starts("/gestion/rentabilite") },
       { href: "/gestion/assistant", label: "Assistant IA", icon: Sparkles, match: starts("/gestion/assistant") },
+      // Chantier V : classement des vendeurs (chacun voit sa carte) et équipe (propriétaire).
+      { href: "/gestion/classement", label: "Classement", icon: Trophy, match: starts("/gestion/classement") },
+      { href: "/gestion/equipe", label: "Équipe", icon: UsersRound, match: starts("/gestion/equipe") },
       { href: "/gestion/presence", label: "Présence", icon: Megaphone, match: starts("/gestion/presence") },
       { href: "/gestion/publicite", label: "Publicité", icon: Target, match: starts("/gestion/publicite") },
       { href: "/gestion/reglages", label: "Réglages", icon: Settings2, match: starts("/gestion/reglages") },
@@ -82,7 +85,7 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
 ];
 
 const BAR_HREFS = new Set(["/gestion", "/gestion/taches", "/gestion/textos"]);
-const MORE = GROUPS.flatMap((g) => g.items).filter((i) => !BAR_HREFS.has(i.href));
+const ALL_GROUPS = GROUPS; // Chantier V : filtré selon le rôle dans GestionNav
 const item = (href: string) => GROUPS.flatMap((g) => g.items).find((i) => i.href === href)!;
 
 function Count({ n, label, quiet }: { n: number; label: string; quiet?: boolean }) {
@@ -94,9 +97,13 @@ function Count({ n, label, quiet }: { n: number; label: string; quiet?: boolean 
   );
 }
 
-export function GestionNav({ badges, email, logoutAction }: { badges: { tasks: number; overdue: number; textos: number; candidatures: number }; email: string; logoutAction: () => Promise<void> }) {
+/* Chantier V : `allowed` (liens permis au rôle, calculés au serveur) filtre le menu ; null ou absent = tout (propriétaire :
+   aucune entrée retirée). Le filtre n'est qu'un confort : chaque page et chaque action revérifie le rôle. */
+export function GestionNav({ badges, email, logoutAction, allowed, who }: { badges: { tasks: number; overdue: number; textos: number; candidatures: number }; email: string; logoutAction: () => Promise<void>; allowed?: string[] | null; who?: string }) {
   const pathname = usePathname();
   const [more, setMore] = useState(false);
+  const GROUPS = allowed ? ALL_GROUPS.map((g) => ({ ...g, items: g.items.filter((i) => allowed.includes(i.href)) })).filter((g) => g.items.length) : ALL_GROUPS;
+  const MORE = GROUPS.flatMap((g) => g.items).filter((i) => !BAR_HREFS.has(i.href));
   const badgeOf = (b?: Badge) => (b === "tasks" ? badges.tasks : b === "textos" ? badges.textos : b === "candidatures" ? badges.candidatures : 0);
   const badgeLabel = (b?: Badge) => (b === "tasks" ? "tâches à faire aujourd’hui" : b === "textos" ? "conversations non lues" : "nouvelles candidatures");
   const moreCurrent = MORE.some((i) => i.match(pathname));

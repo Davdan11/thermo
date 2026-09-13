@@ -3,7 +3,8 @@
    des totaux et, pour les dernières demandes, le prénom, la ville et le type. Sans témoin ni tiers.
    Même calcul que l'accueil (journal des demandes + conversations textos absentes du journal). */
 import type { Metadata } from "next";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { STAFF } from "@/lib/gestion/equipe/garde"; // Chantier V : propriétaire et adjoints
 import { loadDemandStats } from "@/lib/gestion/crm/service";
 import { parsePeriod, PERIODS } from "@/lib/gestion/statistiques";
 import { loadSiteHealth } from "@/lib/gestion/surveillance";
@@ -29,7 +30,7 @@ function delta(n: number, prev: number | null, short: string) {
 }
 
 export default async function StatistiquesPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
-  await requireAdmin();
+  await requireUser({ roles: STAFF }); // Chantier V
   const period = parsePeriod((await searchParams).periode);
   const now = new Date();
   const [s, health] = await Promise.all([loadDemandStats(period, now), loadSiteHealth(now)]);

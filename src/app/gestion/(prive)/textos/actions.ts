@@ -8,7 +8,9 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireAdmin, requireUser } from "@/lib/gestion/auth/dal";
+// Chantier V : un vendeur n'agit que sur les conversations de SES clients.
+import { mayConversation } from "@/lib/gestion/equipe/garde";
 import { markRead, markUnread, saveSettings, sendReply, setArchived } from "@/lib/textos/service";
 import { CONVERSATION_ID_RE } from "@/lib/textos/store";
 import { STATUS_LABELS } from "@/lib/textos/view";
@@ -18,30 +20,30 @@ export type TextoActionState = { ok: boolean; message: string; at: number } | un
 const done = (ok: boolean, message: string): TextoActionState => ({ ok, message, at: Date.now() });
 
 export async function sendTextoAction(conversationId: string, _prev: TextoActionState, fd: FormData): Promise<TextoActionState> {
-  const session = await requireAdmin();
-  if (!CONVERSATION_ID_RE.test(conversationId)) return done(false, "Conversation introuvable.");
+  const session = await requireUser(); // Chantier V
+  if (!CONVERSATION_ID_RE.test(conversationId) || !(await mayConversation(session, conversationId))) return done(false, "Conversation introuvable.");
   const r = await sendReply(conversationId, String(fd.get("body") ?? ""), session.email);
   revalidatePath("/gestion/textos", "layout");
   return r.ok ? done(true, r.status === "simule" ? "Envoi simulé (développement)" : `Envoyé · ${STATUS_LABELS[r.status]}`) : done(false, r.error);
 }
 
 export async function markReadAction(conversationId: string): Promise<void> {
-  await requireAdmin();
-  if (!CONVERSATION_ID_RE.test(conversationId)) return;
+  const session = await requireUser(); // Chantier V
+  if (!CONVERSATION_ID_RE.test(conversationId) || !(await mayConversation(session, conversationId))) return;
   if (await markRead(conversationId)) revalidatePath("/gestion/textos", "layout");
 }
 
 export async function markUnreadAction(conversationId: string): Promise<void> {
-  await requireAdmin();
-  if (!CONVERSATION_ID_RE.test(conversationId)) return;
+  const session = await requireUser(); // Chantier V
+  if (!CONVERSATION_ID_RE.test(conversationId) || !(await mayConversation(session, conversationId))) return;
   await markUnread(conversationId);
   revalidatePath("/gestion/textos", "layout");
   redirect("/gestion/textos");
 }
 
 export async function archiveAction(conversationId: string, archived: boolean): Promise<void> {
-  await requireAdmin();
-  if (!CONVERSATION_ID_RE.test(conversationId)) return;
+  const session = await requireUser(); // Chantier V
+  if (!CONVERSATION_ID_RE.test(conversationId) || !(await mayConversation(session, conversationId))) return;
   const on = archived === true;
   await setArchived(conversationId, on);
   revalidatePath("/gestion/textos", "layout");

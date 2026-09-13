@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { STAFF } from "@/lib/gestion/equipe/garde"; // Chantier V : propriétaire et adjoints
 import { brandOptions, modelBySlug } from "@/lib/gestion/catalog";
 import { loadJobPage } from "@/lib/gestion/service";
 import { JobForm } from "@/components/gestion/JobForm";
@@ -9,7 +10,7 @@ import { Reveal } from "@/components/gestion/Reveal";
 export const metadata: Metadata = { title: "Modifier le job" };
 
 export default async function EditJobPage({ params }: { params: Promise<{ id: string }> }) {
-  await requireAdmin();
+  await requireUser({ roles: STAFF }); // Chantier V
   const { id } = await params;
   const data = await loadJobPage(id);
   if (!data) notFound();

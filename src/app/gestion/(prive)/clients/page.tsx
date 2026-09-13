@@ -4,8 +4,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Search, UserPlus } from "lucide-react";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
 import { clientsList } from "@/lib/gestion/crm/service";
+import { scopedIndex } from "@/lib/gestion/equipe/scope"; // Chantier V : un vendeur ne voit que ses clients
 import { isStage, STAGE_SHORT, STAGES } from "@/lib/gestion/crm/types";
 import { Avatar } from "@/components/gestion/kit/Avatar";
 import { StageChip } from "@/components/gestion/kit/Chip";
@@ -18,11 +19,11 @@ import { Reveal } from "@/components/gestion/Reveal";
 export const metadata: Metadata = { title: "Clients" };
 
 export default async function ClientsPage({ searchParams }: { searchParams: Promise<{ q?: string; etape?: string }> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const sp = await searchParams;
   const q = (sp.q ?? "").slice(0, 80);
   const etape = isStage(sp.etape) ? sp.etape : undefined;
-  const { rows, counts, total } = await clientsList({ q, etape });
+  const { rows, counts, total } = await clientsList({ q, etape }, session.role === "vendeur" ? await scopedIndex(session) : undefined);
   const href = (e?: string) => {
     const p = new URLSearchParams();
     if (q) p.set("q", q);

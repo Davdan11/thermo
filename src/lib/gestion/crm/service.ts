@@ -164,10 +164,11 @@ export interface SearchResult {
   last4: string;
 }
 
-export async function searchClients(q: string): Promise<SearchResult[]> {
+/* Chantier V : `scoped` (index restreint à un vendeur, equipe/scope.ts) remplace l'index complet ; absent = tout. */
+export async function searchClients(q: string, scoped?: CrmIndex): Promise<SearchResult[]> {
   const s = q.trim().slice(0, 80);
   if (s.length < 2) return [];
-  const index = await loadCrmIndex();
+  const index = scoped ?? (await loadCrmIndex());
   return index.clients
     .filter((c) => matchesClient(c, s))
     .sort((a, b) => b.b.lastAt.localeCompare(a.b.lastAt))
@@ -183,15 +184,16 @@ export async function loadDemandStats(period: PeriodId, now = new Date()): Promi
   return aggregateStats([...toRecords(src.journal), ...missingTextoRecords(src.textos, src.journal)], { period, now });
 }
 
-export async function homeView(period: PeriodId): Promise<HomeView> {
-  const index = await loadCrmIndex();
-  const stats = await loadDemandStats(period, index.now);
+export async function homeView(period: PeriodId, scoped?: CrmIndex): Promise<HomeView> {
+  const index = scoped ?? (await loadCrmIndex());
+  // Chantier V : index restreint → demandes de ce vendeur seulement (même calcul que loadDemandStats).
+  const stats = scoped ? aggregateStats([...toRecords(scoped.src.journal), ...missingTextoRecords(scoped.src.textos, scoped.src.journal)], { period, now: scoped.now }) : await loadDemandStats(period, index.now);
   return buildHome(index, stats, period, index.now);
 }
 
 /** Pastilles de la navigation : tâches dues aujourd'hui, conversations non lues. */
-export async function navBadges(): Promise<{ tasks: number; overdue: number; textos: number }> {
-  const index = await loadCrmIndex();
+export async function navBadges(scoped?: CrmIndex): Promise<{ tasks: number; overdue: number; textos: number }> {
+  const index = scoped ?? (await loadCrmIndex()); // Chantier V
   const due = dueToday(index.tasks, index.now);
   return {
     tasks: due.length,
@@ -250,8 +252,8 @@ export function clientRow(c: ClientComputed, now: Date): ClientRow {
   };
 }
 
-export async function clientsList(filter: { q?: string; etape?: string }): Promise<{ rows: ClientRow[]; counts: Record<string, number>; total: number }> {
-  const index = await loadCrmIndex();
+export async function clientsList(filter: { q?: string; etape?: string }, scoped?: CrmIndex): Promise<{ rows: ClientRow[]; counts: Record<string, number>; total: number }> {
+  const index = scoped ?? (await loadCrmIndex()); // Chantier V
   const counts: Record<string, number> = Object.fromEntries(STAGES.map((s) => [s, 0]));
   for (const c of index.clients) counts[c.stage.stage]++;
   const rows = index.clients
@@ -300,9 +302,9 @@ export interface ClientPageDTO {
   pipedriveEnabled: boolean;
 }
 
-export async function clientPage(id: string): Promise<{ client: ClientPageDTO } | { redirect: string } | null> {
+export async function clientPage(id: string, scoped?: CrmIndex): Promise<{ client: ClientPageDTO } | { redirect: string } | null> {
   if (!CLIENT_ID_RE.test(id)) return null;
-  const index = await loadCrmIndex();
+  const index = scoped ?? (await loadCrmIndex()); // Chantier V : un client hors de l'index restreint → introuvable
   const c = index.byId.get(id);
   if (!c) return null;
   if (c.b.id !== id) return { redirect: c.b.id };
@@ -391,8 +393,8 @@ export interface BoardView {
 
 const CLOSED_WINDOW_DAYS = 90;
 
-export async function boardView(): Promise<BoardView> {
-  const index = await loadCrmIndex();
+export async function boardView(scoped?: CrmIndex): Promise<BoardView> {
+  const index = scoped ?? (await loadCrmIndex()); // Chantier V
   const now = index.now;
   const today = localYmd(now);
   const columns = STAGES.map((stage) => {
@@ -423,8 +425,8 @@ export async function boardView(): Promise<BoardView> {
 
 /* ---------------- Tâches ---------------- */
 
-export async function tasksView(): Promise<{ overdue: TaskDTO[]; today: TaskDTO[]; upcoming: TaskDTO[]; total: number }> {
-  const index = await loadCrmIndex();
+export async function tasksView(scoped?: CrmIndex): Promise<{ overdue: TaskDTO[]; today: TaskDTO[]; upcoming: TaskDTO[]; total: number }> {
+  const index = scoped ?? (await loadCrmIndex()); // Chantier V
   const b = bucketTasks(index.tasks, index.now);
   const dto = (ts: typeof index.tasks) => ts.map((t) => taskDTO(t, index, index.now));
   return { overdue: dto(b.overdue), today: dto(b.today), upcoming: dto(b.upcoming), total: index.tasks.length };
@@ -444,9 +446,9 @@ export interface ClientPrefill {
 }
 
 /** Valeurs initiales d'un formulaire (job, soumission) : rendues au serveur, dans le formulaire du propriétaire. */
-export async function clientPrefill(id: string): Promise<ClientPrefill | null> {
+export async function clientPrefill(id: string, scoped?: CrmIndex): Promise<ClientPrefill | null> {
   if (!CLIENT_ID_RE.test(id)) return null;
-  const c = (await loadCrmIndex()).byId.get(id);
+  const c = (scoped ?? (await loadCrmIndex())).byId.get(id); // Chantier V
   if (!c) return null;
   const b = c.b;
   return { id: b.id, firstName: b.firstName, lastName: b.lastName, phone: b.phones[0] ? formatPhone(b.phones[0]) : "", email: b.emails[0] ?? "", address: b.address, city: b.city, postalCode: b.postalCode };
@@ -514,7 +516,8 @@ export async function clientIdForJob(jobId: string): Promise<string | null> {
 export type CrmResult = { ok: true; id?: string } | { ok: false; error: string };
 
 /** Enregistrement du client dans crm.json (créé au besoin), anciens enregistrements du même client réunis. */
-function ensureRecord(data: CrmData, c: ClientComputed, at: string): CrmClientRecord {
+/* Chantier V : exportée pour l'attribution des clients (equipe/repartition.ts). */
+export function ensureRecord(data: CrmData, c: ClientComputed, at: string): CrmClientRecord {
   let r = data.clients[c.b.id];
   if (!r) {
     r = { id: c.b.id, keys: [...c.b.keys], stageLog: [], tags: [], notes: [], createdAt: at, updatedAt: at };
@@ -531,6 +534,9 @@ function ensureRecord(data: CrmData, c: ClientComputed, at: string): CrmClientRe
     if (o.lost && (!r.lost || o.lost.at > r.lost.at)) r.lost = o.lost;
     if (o.createdAt < r.createdAt) r.createdAt = o.createdAt;
     r.valueCents ??= o.valueCents;
+    // Chantier V : attribution la plus récente et historique réuni.
+    if (o.assignedTo && (!r.assignedTo || o.assignedTo.at > r.assignedTo.at)) r.assignedTo = o.assignedTo;
+    if (o.assignLog?.length) r.assignLog = [...(r.assignLog ?? []), ...o.assignLog].sort((a, b) => a.at.localeCompare(b.at));
     delete data.clients[old];
     data.aliases[old] = r.id;
   }
@@ -684,6 +690,9 @@ export async function mergeClients(a: string, b: string, by: string, now = new D
     r.keys = uniq([...r.keys, ...o.keys]);
     if (o.stageOverride && (!r.stageOverride || o.stageOverride.at > r.stageOverride.at)) r.stageOverride = o.stageOverride;
     if (o.lost && (!r.lost || o.lost.at > r.lost.at)) r.lost = o.lost;
+    // Chantier V : le gagnant garde son vendeur ; sinon il prend celui de l'autre fiche. Historiques réunis.
+    if (!r.assignedTo && o.assignedTo) r.assignedTo = o.assignedTo;
+    if (o.assignLog?.length) r.assignLog = [...(r.assignLog ?? []), ...o.assignLog].sort((x, y) => x.at.localeCompare(y.at));
     r.notes.push({ id: newCrmId("n"), at, by, text: `Fiche fusionnée avec ${displayName(lose.b)}.`, kind: "note" });
     delete d.clients[o.id];
     d.aliases[o.id] = r.id;

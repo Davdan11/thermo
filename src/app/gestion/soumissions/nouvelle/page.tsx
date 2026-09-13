@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
 import { clientPrefill } from "@/lib/gestion/crm/service";
+import { scopedIndex } from "@/lib/gestion/equipe/scope"; // Chantier V : pré-remplissage seulement pour SES clients
 import { thermoMatchQuotePrefill } from "@/lib/gestion/ventes/service";
 import { applyMachinePrefill } from "@/lib/gestion/ventes/thermomatch";
 import { lastContractorId, loadContractorOptions } from "@/lib/soumissions/contractors";
@@ -26,13 +27,16 @@ export const dynamic = "force-dynamic";
    change.
    Entrepreneur : le dernier choisi dans une soumission, s'il est encore un partenaire actif. */
 export default async function NouvellePage({ searchParams }: { searchParams: Promise<{ client?: string; thermomatch?: string; choix?: string }> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
+  const index = await scopedIndex(session);
   const { client, thermomatch, choix } = await searchParams;
-  const tm = thermomatch ? await thermoMatchQuotePrefill(thermomatch, choix) : null;
+  const tm0 = thermomatch ? await thermoMatchQuotePrefill(thermomatch, choix) : null;
+  // Chantier V : une demande ThermoMatch d'un client qui n'est pas celui du vendeur est ignorée.
+  const tm = tm0 && (session.role !== "vendeur" || (tm0.clientId && index.byId.has(tm0.clientId))) ? tm0 : null;
   const clientId = client ?? tm?.clientId ?? undefined;
   const [settings, pre, data, contractors, templates, memory] = await Promise.all([
     readSettings(),
-    clientId ? clientPrefill(clientId) : Promise.resolve(null),
+    clientId ? clientPrefill(clientId, index) : Promise.resolve(null),
     readSoumissions(),
     loadContractorOptions(),
     listTemplates(),

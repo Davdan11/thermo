@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { getAdminSession } from "@/lib/gestion/auth/dal";
+import { getUserSession } from "@/lib/gestion/auth/dal"; // Chantier V : tout membre connecté
 import { LoginForm } from "@/components/gestion/LoginForm";
 import { Mark } from "@/components/gestion/ui";
 
 export const metadata: Metadata = { title: "Connexion" };
 
 export default async function ConnexionPage({ searchParams }: { searchParams: Promise<{ sortie?: string }> }) {
-  if (await getAdminSession()) redirect("/gestion");
+  if (await getUserSession()) redirect("/gestion");
   const { sortie } = await searchParams;
   return (
     <main className="g-app g-center">

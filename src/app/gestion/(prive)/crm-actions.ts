@@ -13,7 +13,11 @@ import { refresh } from "next/cache";
 import { redirect } from "next/navigation";
 import { after } from "next/server";
 import { z } from "zod";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireAdmin, requireUser } from "@/lib/gestion/auth/dal";
+// Chantier V : actions ouvertes aux vendeurs, identifiant revérifié contre la personne connectée (garde.ts).
+import { mayClient, mayTask, STAFF, TAKEN_ERROR, takenByOther } from "@/lib/gestion/equipe/garde";
+import { claimForCreator } from "@/lib/gestion/equipe/repartition";
+import { scopedIndex } from "@/lib/gestion/equipe/scope";
 import { emailOf, phoneOf } from "@/lib/gestion/crm/identity";
 import * as crm from "@/lib/gestion/crm/service";
 import { isSnoozeOption, snoozeUntil } from "@/lib/gestion/crm/time";
@@ -35,18 +39,19 @@ const str = (fd: FormData, k: string) => String(fd.get(k) ?? "").trim();
 /* ---------------- Recherche (limitée : 30 par minute et par session) ---------------- */
 
 export async function searchClientsAction(q: unknown): Promise<crm.SearchResult[]> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V : un vendeur ne trouve que ses clients
   const parsed = z.string().max(80).safeParse(q);
   if (!parsed.success || parsed.data.trim().length < 2) return [];
   if (!crm.searchLimiter.hit(session.email)) return [];
-  return crm.searchClients(parsed.data);
+  return crm.searchClients(parsed.data, session.role === "vendeur" ? await scopedIndex(session) : undefined);
 }
 
 /** Numéro à composer, donné seulement au clic (jamais dans la page). */
 export async function dialAction(id: unknown): Promise<{ ok: true; href: string } | { ok: false; error: string }> {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const parsed = clientId.safeParse(id);
   if (!parsed.success) return INVALID;
+  if (!(await mayClient(session, parsed.data))) return { ok: false, error: "Aucun numéro pour ce client." };
   const href = await crm.dialHref(parsed.data);
   return href ? { ok: true, href } : { ok: false, error: "Aucun numéro pour ce client." };
 }
@@ -54,9 +59,10 @@ export async function dialAction(id: unknown): Promise<{ ok: true; href: string 
 /* ---------------- Étapes ---------------- */
 
 export async function setStageAction(id: unknown, stage: unknown, reason: unknown = ""): Promise<ActionResult> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const p = z.object({ id: clientId, stage: z.enum(STAGES), reason: z.string().max(200) }).safeParse({ id, stage, reason });
   if (!p.success) return INVALID;
+  if (!(await mayClient(session, p.data.id))) return { ok: false, error: "Client introuvable." };
   const r = await crm.setStage(p.data.id, p.data.stage as Stage, p.data.reason, session.email);
   if (!r.ok) return r;
   await audit("crm.etape", { client: p.data.id, etape: p.data.stage }, { qui: session.email }); // Chantier S
@@ -74,9 +80,10 @@ export async function setStageAction(id: unknown, stage: unknown, reason: unknow
 /* ---------------- Notes et étiquettes ---------------- */
 
 export async function addNoteAction(id: string, _prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const p = z.object({ id: clientId, text: z.string().min(1, "La note est vide.").max(4000), kind: z.enum(["note", "appel"]) }).safeParse({ id, text: str(fd, "text"), kind: str(fd, "kind") || "note" });
   if (!p.success) return { ok: false, error: p.error.issues[0]?.message ?? "Demande invalide." };
+  if (!(await mayClient(session, p.data.id))) return { ok: false, error: "Client introuvable." };
   const r = await crm.addNote(p.data.id, p.data.text, p.data.kind, session.email);
   if (!r.ok) return r;
   refresh();
@@ -84,9 +91,10 @@ export async function addNoteAction(id: string, _prev: ActionResult, fd: FormDat
 }
 
 export async function setTagsAction(id: unknown, tags: unknown): Promise<ActionResult> {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const p = z.object({ id: clientId, tags: z.array(z.string().max(30)).max(12) }).safeParse({ id, tags });
   if (!p.success) return INVALID;
+  if (!(await mayClient(session, p.data.id))) return { ok: false, error: "Client introuvable." };
   const r = await crm.setTags(p.data.id, p.data.tags);
   if (!r.ok) return r;
   refresh();
@@ -96,13 +104,14 @@ export async function setTagsAction(id: unknown, tags: unknown): Promise<ActionR
 /* ---------------- Tâches ---------------- */
 
 export async function addTaskAction(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V : tâche générale (la sienne) ou tâche d'un de ses clients
   const raw = { clientId: str(fd, "clientId") || null, title: str(fd, "title"), when: str(fd, "when") || "demain", date: str(fd, "date"), time: str(fd, "time") };
   const p = z
     .object({ clientId: clientId.nullable(), title: z.string().min(1, "Donnez un titre à la tâche.").max(160), when: z.string(), date: z.string().max(10), time: z.string().max(5) })
     .safeParse(raw);
   if (!p.success) return { ok: false, error: p.error.issues[0]?.message ?? "Demande invalide." };
   if (!isSnoozeOption(p.data.when)) return INVALID;
+  if (p.data.clientId && !(await mayClient(session, p.data.clientId))) return { ok: false, error: "Client introuvable." }; // Chantier V
   const now = new Date();
   const due = snoozeUntil(p.data.when, now, p.data.date, p.data.time);
   if (!due) return { ok: false, error: "Choisissez une date à venir." };
@@ -113,9 +122,10 @@ export async function addTaskAction(_prev: ActionResult, fd: FormData): Promise<
 }
 
 export async function completeTaskAction(key: unknown): Promise<ActionResult> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const p = taskKey.safeParse(key);
   if (!p.success) return INVALID;
+  if (!(await mayTask(session, p.data))) return { ok: false, error: "Tâche introuvable." };
   const r = await crm.completeTask(p.data, session.email);
   if (!r.ok) return r;
   refresh();
@@ -123,9 +133,10 @@ export async function completeTaskAction(key: unknown): Promise<ActionResult> {
 }
 
 export async function snoozeTaskAction(key: unknown, option: unknown, date: unknown = "", time: unknown = ""): Promise<ActionResult> {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const p = z.object({ key: taskKey, option: z.string(), date: z.string().max(10), time: z.string().max(5) }).safeParse({ key, option, date, time });
   if (!p.success || !isSnoozeOption(p.data.option)) return INVALID;
+  if (!(await mayTask(session, p.data.key))) return { ok: false, error: "Tâche introuvable." };
   const now = new Date();
   const until = snoozeUntil(p.data.option, now, p.data.date, p.data.time);
   if (!until) return { ok: false, error: "Choisissez un moment à venir." };
@@ -138,19 +149,21 @@ export async function snoozeTaskAction(key: unknown, option: unknown, date: unkn
 /* ---------------- Clients ---------------- */
 
 export async function createClientAction(_prev: ActionResult, fd: FormData): Promise<ActionResult> {
-  const session = await requireAdmin();
+  const session = await requireUser(); // Chantier V : le client créé par un vendeur lui revient
   const input = { firstName: str(fd, "firstName").slice(0, 60), lastName: str(fd, "lastName").slice(0, 60), phone: str(fd, "phone").slice(0, 30), email: str(fd, "email").slice(0, 200), city: str(fd, "city").slice(0, 60) };
   if (!input.firstName && !input.lastName) return { ok: false, error: "Indiquez au moins un prénom ou un nom." };
   if (!input.phone && !input.email) return { ok: false, error: "Indiquez un téléphone ou un courriel : c’est ce qui relie la fiche aux demandes, soumissions et textos." };
   if (input.phone && !phoneOf(input.phone)) return { ok: false, error: "Ce numéro de téléphone n’est pas valide (10 chiffres)." };
   if (input.email && !emailOf(input.email)) return { ok: false, error: "Ce courriel n’est pas valide." };
+  if (await takenByOther(session, input)) return { ok: false, error: TAKEN_ERROR }; // Chantier V
   const r = await crm.createManualContact(input, session.email);
   if (!r.ok) return r;
+  if (session.role === "vendeur" && r.id) await claimForCreator(r.id, session.userId, session.email); // Chantier V
   redirect(`/gestion/clients/${r.id}?cree=1`);
 }
 
 export async function mergeClientsAction(a: unknown, b: unknown): Promise<ActionResult> {
-  const session = await requireAdmin();
+  const session = await requireUser({ roles: STAFF }); // Chantier V : propriétaire et adjoints
   const p = z.object({ a: clientId, b: clientId }).safeParse({ a, b });
   if (!p.success) return INVALID;
   const r = await crm.mergeClients(p.data.a, p.data.b, session.email);
@@ -159,7 +172,7 @@ export async function mergeClientsAction(a: unknown, b: unknown): Promise<Action
 }
 
 export async function splitClientAction(id: unknown, selectors: unknown): Promise<ActionResult> {
-  const session = await requireAdmin();
+  const session = await requireUser({ roles: STAFF }); // Chantier V : propriétaire et adjoints
   const p = z
     .object({ id: clientId, selectors: z.array(z.string().regex(/^(k:[0-9a-f]{64}|t:[a-z]{1,3}:[A-Za-z0-9_:.-]{1,120})$/)).min(1).max(40) })
     .safeParse({ id, selectors });

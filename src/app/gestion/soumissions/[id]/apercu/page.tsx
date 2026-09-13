@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { mayQuote } from "@/lib/gestion/equipe/garde"; // Chantier V
 import { loadContractor } from "@/lib/soumissions/contractors";
 import { todayIn } from "@/lib/soumissions/dates";
 import { buildDocument, currentVersion, draftOf, effectiveStatus, latestSent, QUOTE_ID_RE, versionNumber } from "@/lib/soumissions/quote";
@@ -15,10 +16,11 @@ export const metadata: Metadata = { title: "Aperçu de la soumission" };
 export const dynamic = "force-dynamic";
 
 export default async function ApercuPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ v?: string }> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const { id } = await params;
   const { v } = await searchParams;
   if (!QUOTE_ID_RE.test(id)) notFound();
+  if (!(await mayQuote(session, id))) notFound();
   const data = await loadQuote(id);
   if (!data) notFound();
   const q = data.quote;

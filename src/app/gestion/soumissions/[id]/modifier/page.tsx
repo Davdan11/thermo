@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { mayQuote } from "@/lib/gestion/equipe/garde"; // Chantier V
 import { loadContractorOptions } from "@/lib/soumissions/contractors";
 import { todayIn } from "@/lib/soumissions/dates";
 import { readMemory } from "@/lib/soumissions/memory-store"; // Chantier D
@@ -12,10 +13,11 @@ export const metadata: Metadata = { title: "Modifier la soumission" };
 export const dynamic = "force-dynamic";
 
 export default async function ModifierPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ copie?: string }> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
   const { id } = await params;
   const { copie } = await searchParams;
   if (!QUOTE_ID_RE.test(id)) notFound();
+  if (!(await mayQuote(session, id))) notFound();
   const data = await loadQuote(id);
   if (!data) notFound();
   const draft = draftOf(data.quote);

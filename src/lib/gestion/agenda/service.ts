@@ -9,9 +9,11 @@ import { brandLabel } from "../catalog";
 import { loadCrmIndex } from "../crm/service";
 import { localYmd } from "../crm/time";
 import { buildAgenda, parseAgendaQuery, type AgendaData } from "./agenda";
+import type { CrmIndex } from "../crm/model";
 
-export async function agendaView(sp: Record<string, string | string[] | undefined>): Promise<AgendaData> {
-  const index = await loadCrmIndex();
+/* Chantier V : `scoped` (index restreint d'un vendeur) → seulement les installations de ses clients. */
+export async function agendaView(sp: Record<string, string | string[] | undefined>, scoped?: CrmIndex): Promise<AgendaData> {
+  const index = scoped ?? (await loadCrmIndex());
   const today = localYmd(index.now);
   return buildAgenda({
     jobs: index.src.jobs,

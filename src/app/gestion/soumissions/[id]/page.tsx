@@ -8,7 +8,8 @@ import { clientIdForQuote } from "@/lib/gestion/crm/service";
 import { CLIENT_ID_RE } from "@/lib/gestion/crm/types";
 import { statusFromIdentity, type ContractorPick } from "@/lib/soumissions/contractor";
 import { loadContractor } from "@/lib/soumissions/contractors";
-import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { requireUser } from "@/lib/gestion/auth/dal";
+import { mayQuote } from "@/lib/gestion/equipe/garde"; // Chantier V : soumission d'un autre vendeur → 404
 import { publicBaseUrl } from "@/lib/gestion/request";
 import { smsConfigured } from "@/lib/gestion/sms";
 import { distanceContractChecks, quoteChecks, sendBlockers, settingsChecks } from "@/lib/soumissions/checklist";
@@ -37,10 +38,12 @@ function totalOf(v: QuoteVersion, today: string) {
 }
 
 export default async function QuotePage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<Record<string, string | undefined>> }) {
-  await requireAdmin();
+  const session = await requireUser(); // Chantier V
+  const staff = session.role !== "vendeur";
   const { id } = await params;
   const sp = await searchParams;
   if (!QUOTE_ID_RE.test(id)) notFound();
+  if (!(await mayQuote(session, id))) notFound();
   const data = await loadQuote(id);
   if (!data) notFound();
   const { quote: q, settings, views } = data;
@@ -176,7 +179,7 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
               </dl>
               <div style={{ marginTop: 12 }}><CopyLink url={clientLink(base, sent.token)} /></div>
               <div className="sq-actions" style={{ marginTop: 12 }} id="relance">
-                {sent.acceptance ? (
+                {sent.acceptance && staff ? (
                   <Link href={`/gestion/jobs/nouveau?soumission=${q.id}`} className="g-btn g-btn--primary"><Wrench size={16} aria-hidden /> Créer le job depuis la soumission acceptée</Link>
                 ) : null}
                 {canRespond(sent, today) ? (
@@ -265,6 +268,8 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
             <p className="g-hint" style={{ marginBottom: 0 }}><a href={LINKS.opcDistance} target="_blank" rel="noreferrer">Office de la protection du consommateur : achats à distance</a></p>
           </Reveal>
 
+          {/* Chantier V : Pipedrive (lier une affaire) pour le propriétaire et les adjoints. */}
+          {staff ? (
           <Reveal className="sq-card" delay={0.1}>
             <h2 className="g-h2" id="pipedrive" style={{ marginBottom: 6 }}>Pipedrive</h2>
             <dl className="sq-kv">
@@ -286,6 +291,7 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
               </div>
             </form>
           </Reveal>
+          ) : null}
 
           {q.internalNotes ? (
             <Reveal className="sq-card" delay={0.12}>
