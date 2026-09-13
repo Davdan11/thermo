@@ -12,7 +12,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { ChartColumn, Columns3, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
+import { CalendarDays, ChartColumn, Columns3, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
 import { openSearch } from "./crm/CommandSearch";
 import { openQuickActions } from "./crm/QuickActions";
 import { Sheet } from "./kit/Sheet";
@@ -44,6 +44,7 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
     items: [
       { href: "/gestion/soumissions", label: "Soumissions", icon: FileText, match: starts("/gestion/soumissions") },
       { href: "/gestion/jobs", label: "Jobs", icon: Wrench, match: starts("/gestion/jobs") },
+      { href: "/gestion/agenda", label: "Agenda", icon: CalendarDays, match: starts("/gestion/agenda") },
     ],
   },
   {
