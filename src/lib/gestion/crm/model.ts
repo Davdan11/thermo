@@ -13,6 +13,7 @@ import { jobTouchpoints, journalTouchpoints, manualTouchpoints, quoteTouchpoints
 import { inferStage, type StageInfo } from "./stage";
 import { applyTaskState, autoTasks, byUrgency, manualTask, type Task } from "./tasks";
 import { textoTouchpoints } from "./textos-adapter";
+import { radarContext } from "../radar/radar";
 import { localYmd } from "./time";
 import { DEFAULT_CRM_SETTINGS, type ClientBundle, type CrmClientRecord, type CrmSettings, type SourceData, type Touchpoint } from "./types";
 
@@ -158,9 +159,10 @@ export function computeIndex(bundles: ClientBundle[], src: SourceData, now: Date
   const settings = { ...DEFAULT_CRM_SETTINGS, ...src.crm.settings };
   const today = localYmd(now);
   const byId = new Map<string, ClientComputed>();
+  const radar = radarContext(src.crm); // Volet C : réglages du radar et consentements de relance de saison.
   const clients: ClientComputed[] = bundles.map((b) => {
     const stage = inferStage(b, now);
-    const c: ClientComputed = { b, stage, tasks: applyTaskState(autoTasks(b, stage, settings, now), src.crm.taskState), valueCents: valueOf(b, today) };
+    const c: ClientComputed = { b, stage, tasks: applyTaskState(autoTasks(b, stage, settings, now, radar), src.crm.taskState), valueCents: valueOf(b, today) };
     byId.set(b.id, c);
     for (const a of b.aliases) if (!byId.has(a)) byId.set(a, c);
     return c;

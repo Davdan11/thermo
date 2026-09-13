@@ -15,6 +15,7 @@ import type { ScheduledMessage } from "@/lib/relances/core";
 import type { Quote } from "@/lib/soumissions/types";
 import type { Conversation } from "@/lib/textos/types";
 import type { Job } from "../types";
+import type { CrmExtensions } from "./extensions";
 
 /* ---------------- Étapes ---------------- */
 
@@ -174,7 +175,8 @@ export const DEFAULT_CRM_SETTINGS: CrmSettings = {
   pipedriveStageMap: {},
 };
 
-export interface CrmData {
+/* Volet C (phase 2) : CrmExtensions ajoute complexTasks, taskTemplates, salesSettings et seasonConsents (extensions.ts). */
+export interface CrmData extends CrmExtensions {
   version: 1;
   clients: Record<string, CrmClientRecord>;
   /** Ancien identifiant → identifiant retenu (fusions). */

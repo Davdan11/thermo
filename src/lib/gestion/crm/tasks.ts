@@ -23,6 +23,7 @@
 import { money } from "@/lib/soumissions/money";
 import { effectiveStatus, latestSent } from "@/lib/soumissions/quote";
 import { offerState, pendingOffers } from "../offers";
+import { radarTasks, type RadarContext, type RadarRule } from "../radar/radar";
 import { CALLBACK_KINDS, isDemand, KIND_LABELS } from "./sources";
 import { contactEvents, type StageInfo } from "./stage";
 import { inboundMessages } from "./textos-adapter";
@@ -39,7 +40,9 @@ export type TaskRule =
   | "soumission-expire"
   | "job-sans-reponse"
   | "job-a-planifier"
-  | "manuelle";
+  | "manuelle"
+  /* Radar à occasions (volet C, radar/radar.ts) : client-chaud, thermomatch-sans-soumission, relance-saison. */
+  | RadarRule;
 
 export type TaskFamily = "rappels" | "ouvertes" | "jobs" | "textos" | "expire" | "suivis";
 
@@ -63,6 +66,10 @@ const FAMILY_OF: Record<TaskRule, TaskFamily> = {
   "job-sans-reponse": "jobs",
   "job-a-planifier": "jobs",
   manuelle: "suivis",
+  // Volet C (le radar fixe lui-même la famille de ses tâches ; entrées requises par le type).
+  "client-chaud": "ouvertes",
+  "thermomatch-sans-soumission": "suivis",
+  "relance-saison": "suivis",
 };
 
 export interface Task {
@@ -79,6 +86,8 @@ export interface Task {
   jobId?: string;
   manual: boolean;
   snoozed: boolean;
+  /** Volet C : priorité d'affichage (client chaud en tête de liste) ; absente = 0. */
+  priority?: number;
 }
 
 const DAY = 86_400_000;
@@ -100,7 +109,7 @@ export function lastOwnerAction(b: ClientBundle): string | null {
   ]);
 }
 
-export function autoTasks(b: ClientBundle, stage: StageInfo, settings: CrmSettings, now: Date): Task[] {
+export function autoTasks(b: ClientBundle, stage: StageInfo, settings: CrmSettings, now: Date, radar?: RadarContext): Task[] {
   const out: Task[] = [];
   const who = b.firstName || "ce client";
   const today = localYmd(now);
@@ -194,6 +203,8 @@ export function autoTasks(b: ClientBundle, stage: StageInfo, settings: CrmSettin
       out.push(task("job-a-planifier", `${j.id}:${j.assignedInstallerId ?? "x"}`, b.id, { title: `Planifier le job n° ${n}`, detail: "Attribué, sans date d’installation", dueAt: iso(Date.parse(since) + 3 * DAY), href, jobId: j.id }));
     }
   }
+  // Radar à occasions (volet C) : client chaud, ThermoMatch sans soumission, relance de saison des clients perdus.
+  out.push(...radarTasks(b, stage, settings, now, radar));
   return out;
 }
 
@@ -223,7 +234,8 @@ export function applyTaskState(tasks: Task[], state: Record<string, TaskStateEnt
   });
 }
 
-export const byUrgency = (a: Task, b: Task) => a.dueAt.localeCompare(b.dueAt) || a.key.localeCompare(b.key);
+// Volet C : la priorité (client chaud) passe d'abord ; sans priorité, l'ordre de la phase 1 est inchangé.
+export const byUrgency = (a: Task, b: Task) => (b.priority ?? 0) - (a.priority ?? 0) || a.dueAt.localeCompare(b.dueAt) || a.key.localeCompare(b.key);
 
 /** En retard (échéance passée depuis plus d'une heure, ou un autre jour) / Aujourd'hui / À venir. */
 export function bucketTasks(tasks: Task[], now: Date): { overdue: Task[]; today: Task[]; upcoming: Task[] } {

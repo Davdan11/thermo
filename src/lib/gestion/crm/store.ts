@@ -12,6 +12,7 @@
 import path from "node:path";
 import { randomBytes } from "node:crypto";
 import { gestionDataDir, mutateJson, readJson } from "../store";
+import { emptyExtensions, normalizeExtensions } from "./extensions";
 import { DEFAULT_CRM_SETTINGS, isStage, type CrmData, type CrmSettings } from "./types";
 
 export const crmFile = () => path.join(gestionDataDir(), "crm.json");
@@ -26,6 +27,8 @@ export const emptyCrm = (): CrmData => ({
   tasks: [],
   taskState: {},
   settings: { ...DEFAULT_CRM_SETTINGS, pipedriveStageMap: {} },
+  // Volet C : tâches à étapes, modèles, réglages des ventes, consentements de relance de saison.
+  ...emptyExtensions(),
 });
 
 const num = (v: unknown, def: number, min: number, max: number) => (typeof v === "number" && Number.isFinite(v) ? Math.min(max, Math.max(min, v)) : def);
@@ -64,6 +67,8 @@ export function normalizeCrm(d: Partial<CrmData> | null | undefined): CrmData {
     tasks: arr(d?.tasks),
     taskState: obj(d?.taskState),
     settings: normalizeSettings(d?.settings),
+    // Volet C : clés absentes d'un crm.json de la phase 1 → valeurs vides (rétrocompatible, sans migration).
+    ...normalizeExtensions(d),
     ...(d?.seed ? { seed: true as const } : {}),
   };
 }

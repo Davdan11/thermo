@@ -31,6 +31,8 @@ function primaryLink(t: TaskDTO): { href: string; label: string; icon: typeof Fi
   if (t.rule === "relance-ouverte" || t.rule === "envoyee-non-ouverte" || t.rule === "soumission-expire") return { href: `${t.href}#relance`, label: "Relancer", icon: FileText };
   if (t.rule === "question-client") return { href: t.href, label: "Répondre", icon: FileText };
   if (t.rule === "job-sans-reponse" || t.rule === "job-a-planifier") return { href: t.href, label: "Ouvrir le job", icon: Wrench };
+  // Volet C : soumission pré-remplie avec la machine choisie dans ThermoMatch.
+  if (t.rule === "thermomatch-sans-soumission") return { href: t.href, label: "Créer la soumission", icon: FileText };
   return null;
 }
 
