@@ -22,6 +22,10 @@ import { NoteForm, TaskForm } from "@/components/gestion/crm/forms";
 import { TaskList } from "@/components/gestion/crm/TaskList";
 import { Timeline } from "@/components/gestion/crm/Timeline";
 import { StatusPill } from "@/components/gestion/ui";
+// Volet C : tâches à étapes, ThermoMatch → soumission, consentement à la relance de saison.
+import { ComplexTasksCard } from "@/components/gestion/ventes/ComplexTasks";
+import { SeasonConsentCard } from "@/components/gestion/ventes/SeasonConsent";
+import { ThermoMatchPanel } from "@/components/gestion/ventes/ThermoMatch";
 import { QuoteStatus } from "@/components/gestion/soumissions/ui";
 
 export const metadata: Metadata = { title: "Client" };
@@ -131,6 +135,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
             </div>
           </Card>
 
+          <ComplexTasksCard clientId={c.id} />
+
           <Card title="Note ou appel" sub="Un appel noté compte comme « contacté ».">
             <NoteForm action={addNoteAction.bind(null, c.id)} />
           </Card>
@@ -165,6 +171,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
               ))}
             </ol>
           </Card>
+
+          <ThermoMatchPanel clientId={c.id} />
 
           <Card
             title="Soumissions"
@@ -229,6 +237,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
               </p>
             )}
           </Card>
+
+          <SeasonConsentCard clientId={c.id} />
 
           <Card title="Coordonnées">
             <ul className="cr-ident">

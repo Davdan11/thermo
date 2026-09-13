@@ -8,6 +8,7 @@ import { salesStages } from "@/lib/soumissions/pipedrive-sync";
 import { Card } from "@/components/gestion/kit/Card";
 import { SettingsForm } from "@/components/gestion/crm/forms";
 import { Reveal } from "@/components/gestion/Reveal";
+import { VentesReglages } from "@/components/gestion/ventes/VentesReglages";
 
 export const metadata: Metadata = { title: "Réglages" };
 
@@ -34,6 +35,8 @@ export default async function ReglagesPage() {
           {settings.updatedBy ? ` par ${settings.updatedBy}` : ""}.
         </p>
       ) : null}
+      {/* Volet C : radar à occasions, probabilités de la prévision, modèles de tâches. */}
+      <VentesReglages />
     </div>
   );
 }
