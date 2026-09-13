@@ -140,12 +140,16 @@ export function createMetadata(overrides: MetadataOverrides = {}): Metadata {
    ------------------------------------------------------------------ */
 
 /** Organization schema for the site */
+/** Autres noms du site : l'écriture du logo et le singulier « thermopompe à vendre », pour que Google les relie au site. */
+const SITE_ALTERNATE_NAMES = ["Thermopompes A Vendre", "Thermopompe à vendre", "TAV.ca"];
+
 export function getOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
+    alternateName: SITE_ALTERNATE_NAMES,
     url: SITE_URL,
     logo: `${SITE_URL}/images/headerlogo-720.webp`,
     telephone: "+1-438-900-3224",
@@ -170,6 +174,7 @@ export function getWebSiteSchema() {
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
+    alternateName: SITE_ALTERNATE_NAMES,
     url: SITE_URL,
     inLanguage: "fr-CA",
     publisher: { "@id": `${SITE_URL}/#organization` },

@@ -26,9 +26,9 @@ const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["nor
 
 export const metadata = createMetadata({
   // ≈ 60 caractères : le nom du site est aussi fourni à Google par le JSON-LD WebSite (layout).
-  title: { absolute: "Thermopompe au Québec : comparez toutes les marques | TAV.ca" },
+  title: { absolute: "Thermopompe à vendre au Québec : toutes les marques | TAV.ca" },
   description:
-    "Toutes les thermopompes vendues au Québec, comparées avec les données certifiées d'Hydro-Québec : capacité à -15 °C, HSPF2, subvention LogisVert. Trois bons choix en 2 minutes.",
+    "Thermopompe à vendre au Québec : toutes les marques comparées sur données certifiées (capacité à -15 °C, LogisVert). Trois bons choix en 2 minutes.",
   canonicalPath: "/",
 });
 

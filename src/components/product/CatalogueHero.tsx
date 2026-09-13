@@ -122,7 +122,7 @@ export function CatalogueHero({ stats, wall, search }: { stats: { models: number
           <div className="ch-a-copy relative z-[150] mt-8 lg:mt-10">
             <Fade delay={0.6}>
               <p className="max-w-[520px] text-[17px] leading-[1.6] sm:text-[18.5px]" style={{ color: C.mute, margin: 0 }}>
-                Comparez les marques, les capacités et les performances selon vos besoins.
+                Toutes les thermopompes à vendre au Québec, comparées selon vos besoins.
               </p>
             </Fade>
             <Fade delay={0.75} className="mt-7 max-w-[600px]">

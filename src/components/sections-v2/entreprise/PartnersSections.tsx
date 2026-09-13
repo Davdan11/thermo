@@ -117,7 +117,7 @@ function PieceA() {
                   </span>
                 </h2>
                 <p className="text-[17px] leading-[1.65]" style={{ color: C.paperInk, margin: "26px 0 0" }}>
-                  Notre mission chez Thermopompe A Vendre est d&apos;accompagner le consommateur à travers le processus de sélection complexe d&apos;une thermopompe. Lorsqu&apos;ils arrivent à vous, le travail d&apos;éducation est déjà fait.
+                  Notre mission chez Thermopompes À Vendre est d&apos;accompagner le consommateur à travers le processus de sélection complexe d&apos;une thermopompe. Lorsqu&apos;ils arrivent à vous, le travail d&apos;éducation est déjà fait.
                 </p>
                 <p ref={pRef} className="text-[16px] leading-[1.75]" style={{ color: C.paperMute, margin: "16px 0 0" }}>
                   Chaque projet qui vous est confié arrive avec les réponses du questionnaire ThermoMatch :{" "}

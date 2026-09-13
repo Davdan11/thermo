@@ -172,7 +172,7 @@ function WhyJoin() {
 
           <Reveal delay={0.2} className="mt-10 max-w-[640px]">
             <p className="text-[18px] leading-[1.65] sm:text-[19px]" style={{ margin: 0 }}>
-              Chez Thermopompe A Vendre, nous ne vendons pas seulement du matériel : nous développons des technologies propriétaires comme <strong style={tag}>ThermoMatch</strong> et <strong style={tag}>ThermoScan</strong> pour guider nos utilisateurs.
+              Chez Thermopompes À Vendre, nous ne vendons pas seulement du matériel : nous développons des technologies propriétaires comme <strong style={tag}>ThermoMatch</strong> et <strong style={tag}>ThermoScan</strong> pour guider nos utilisateurs.
             </p>
             <p className="text-[17px] leading-[1.65]" style={{ color: C.mute, margin: "18px 0 0" }}>
               Vous évoluerez dans un environnement dynamique, innovant et au cœur d&apos;une transition énergétique majeure pour les ménages québécois.

@@ -71,9 +71,9 @@ function stripBrands(list: { name: string; slug: string }[]): StripBrand[] {
    - paramètres de suivi (utm_*, gclid…) : ignorés, canonique vers l’URL propre.
    ------------------------------------------------------------------ */
 
-const CATALOGUE_TITLE = "Thermopompes au Québec : explorez tous les modèles";
+const CATALOGUE_TITLE = "Thermopompe à vendre au Québec : tous les modèles";
 const CATALOGUE_DESCRIPTION =
-  "Comparez les modèles de thermopompes, les capacités et les performances pour trouver un système adapté à votre habitation au Québec.";
+  "Toutes les thermopompes à vendre au Québec, comparées par marque, capacité et performance, pour trouver le bon système pour votre habitation.";
 const FACET_KEYS = ["search", "type", "brand", "series", "capacity", "coldClimate", "sort"] as const;
 
 export async function generateMetadata({
