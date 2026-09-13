@@ -117,6 +117,19 @@ export const SERIES_INFO: Record<SeriesId, SeriesInfo> = {
     defaultTime: "11:30",
     defaultStory: false,
   },
+  blogue: {
+    id: "blogue",
+    label: "Nouvel article du blogue",
+    short: "Blogue",
+    day: null,
+    dayLabel: "À la publication",
+    description: "Créée à la publication d’un article du blogue : titre, chapeau et lien vers l’article. Les chiffres viennent de la source de l’article.",
+    sourceLabel: "Article du blogue et ses sources",
+    autoAllowed: true,
+    available: true,
+    defaultTime: "12:30",
+    defaultStory: false,
+  },
 };
 
 export const TIME_RE = /^([01]\d|2[0-3]):([0-5]\d)$/;

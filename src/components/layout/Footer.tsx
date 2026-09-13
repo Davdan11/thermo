@@ -37,6 +37,7 @@ const NAV = [
     links: [
       { href: "/thermoscan", label: "ThermoScan : identifier mon appareil" },
       { href: "/guides", label: "Guides et conseils" },
+      { href: "/blogue", label: "Blogue" },
       { href: "/subventions", label: "Aides financières" },
       { href: "/subventions/logisvert", label: "LogisVert par marque" },
       { href: "/prix", label: "Prix : notre approche" },

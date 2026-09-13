@@ -25,7 +25,7 @@ export function productSitemapCount(): number {
 
 export function sitemapIds(): string[] {
   // « villes-quebec » : Google refusait de lire « villes » (URL neuve = nouvelle évaluation) ; « classements » est lu correctement.
-  const ids = ["pages", "guides", "marques", "villes-quebec", "classements"];
+  const ids = ["pages", "guides", "marques", "villes-quebec", "classements", "blogue"];
   for (let i = 0; i < productSitemapCount(); i++) ids.push(`produits-${i}`);
   return ids;
 }
@@ -41,6 +41,11 @@ export async function sitemapLastmod(id: string): Promise<string> {
     // Pages locales : liste LogisVert et données municipales (date de construction du jeu).
     const { municipalDataDate } = await import("@/lib/seo/municipalites");
     return latestDay(DATA_DATE, municipalDataDate());
+  }
+  if (id === "blogue") {
+    // Blogue : article publié le plus récent (données, jamais la date du build), sinon les données du palmarès.
+    const [{ readBlogue }, { blogSitemapLastmod }, { municipalDataDate }] = await Promise.all([import("@/lib/blogue/store"), import("@/lib/blogue/feed"), import("@/lib/seo/municipalites")]);
+    return blogSitemapLastmod((await readBlogue()).articles, latestDay(DATA_DATE, municipalDataDate()));
   }
   if (id !== "guides") return DATA_DATE;
   const { getAllGuides } = await import("@/lib/markdown");

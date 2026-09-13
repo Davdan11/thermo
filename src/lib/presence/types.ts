@@ -3,7 +3,7 @@
    Aucune dépendance serveur : importable par les composants client.
    ================================================================== */
 
-export const SERIES = ["modele", "question", "froid", "logisvert", "comparatif", "glossaire", "chantier"] as const;
+export const SERIES = ["modele", "question", "froid", "logisvert", "comparatif", "glossaire", "chantier", "blogue"] as const;
 export type SeriesId = (typeof SERIES)[number];
 
 export const STATUSES = ["brouillon", "a_approuver", "planifiee", "publiee", "echec", "rejetee"] as const;

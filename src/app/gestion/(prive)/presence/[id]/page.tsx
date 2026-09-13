@@ -93,7 +93,7 @@ export default async function PresencePostPage({ params }: { params: Promise<{ i
 
         <div className="pr-fiche__side">
           <Card title="Décision" sub={mode.real ? "Publication réelle : « Publier maintenant » envoie tout de suite." : "Mode essai : rien ne part vers Meta."}>
-            <PostActions id={post.id} status={post.status} date={montrealDate(scheduled)} time={montrealTime(scheduled)} real={mode.real} locked={locked} canRegenerate={post.series !== "question" && post.series !== "chantier"} />
+            <PostActions id={post.id} status={post.status} date={montrealDate(scheduled)} time={montrealTime(scheduled)} real={mode.real} locked={locked} canRegenerate={post.series !== "question" && post.series !== "chantier" && post.series !== "blogue"} />
             <dl className="pr-facts">
               {post.approvedBy ? (
                 <div>

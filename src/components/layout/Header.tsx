@@ -21,6 +21,7 @@ const NAV_LINKS: NavLink[] = [
   { href: "/comparer", label: "Comparer" },
   { href: "/subventions", label: "Subventions" },
   { href: "/guides", label: "Guides" },
+  { href: "/blogue", label: "Blogue", wide: true },
   // Le logo ThermoScan (blanc + orange) sur une pastille marine, à la place du texte.
   // Version recadrée (862 × 191) : sans les marges du fichier original, le mot reste lisible à petite taille.
   { href: "/thermoscan", label: "ThermoScan", logo: "/images/thermoscan-logo-nav.webp" },

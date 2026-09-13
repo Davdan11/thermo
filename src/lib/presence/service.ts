@@ -153,6 +153,7 @@ export async function regeneratePost(id: string, mode: "tournure" | "sujet", by:
     if (!p) return { result: fail("Publication introuvable."), changed: false };
     if (p.status === "publiee" || partlyPublished(p)) return { result: fail("Déjà envoyée à Meta : impossible de la régénérer."), changed: false };
     if (p.series === "question" || p.series === "chantier") return { result: fail("Cette série s’écrit à la main."), changed: false };
+    if (p.series === "blogue") return { result: fail("Cette publication vient d’un article du blogue : modifiez le texte ici, ou l’article dans l’onglet Articles."), changed: false };
     const variant = mode === "tournure" ? (p.variant + 1) % 3 : variantFor(p.date, p.rev);
     const gen = generate(p.series, {
       catalog: cat,

@@ -336,6 +336,9 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
           <p className="mt-4 text-sm">
             <Link href={`/meilleures-thermopompes/${rankingSlug}`} className="font-semibold underline decoration-1 underline-offset-4" style={{ color: "#1F5F8B" }}>Voir le classement complet →</Link>
           </p>
+          <p className="mt-2 text-sm">
+            <Link href="/palmares-du-froid" className="font-semibold underline decoration-1 underline-offset-4" style={{ color: "#1F5F8B" }}>{`Où se classe ${city.name} : le Palmarès du froid →`}</Link>
+          </p>
         </div>
       </section>
 
