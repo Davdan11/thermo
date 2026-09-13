@@ -26,6 +26,8 @@ import { ELECTRICIAN_LABELS, STATUS_LABELS, type EffectiveStatus, type QuoteDocu
 import { Rise, RollingMoney } from "./motion";
 import { Schematic } from "./Schematic";
 import { LOGISVERT_NOTICE, PLACEHOLDER_RE, PRESENTER_FALLBACK } from "@/lib/soumissions/config";
+// Conformité : garantie légale de bon fonctionnement, près du prix (src/lib/garantie-legale).
+import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 
 /** Texte prêt à montrer au client : rempli et sans marqueur « [À COMPLÉTER…] ». */
 const ready = (t: string | null | undefined): t is string => Boolean(t && t.trim()) && !PLACEHOLDER_RE.test(t as string);
@@ -491,6 +493,10 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                       );
                     })}
                   </Rise>
+
+                  {/* Conformité : durée de la garantie légale de bon fonctionnement près du prix d'une thermopompe neuve visée.
+                      Soumission acceptée : la date d'acceptation (conclusion du contrat) tranche. */}
+                  {m ? <MentionGarantieLegale cible={{ systemType: m.systemType }} concluLe={props.acceptance?.at ?? null} className="dv-soft" style={{ margin: "12px 0 0" }} /> : null}
 
                   <Rise className="dv-totals">
                     <div className="dv-trow"><span>Sous-total</span><span>{money(totals.subtotalCents)}</span></div>

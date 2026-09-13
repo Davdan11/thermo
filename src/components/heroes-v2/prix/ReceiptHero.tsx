@@ -9,6 +9,8 @@ import { DISPLAY, MONO, plexMono } from "./fonts";
 import { CountTo, EASE, fr, useAfter } from "./shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { fp } from "@/components/hero/first-paint";
+import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
+import { CATEGORIES_GRILLE_PRIX } from "@/lib/garantie-legale/config";
 
 /* ==================================================================
    /prix — « Le reçu ».
@@ -238,6 +240,14 @@ function Printer({ sets, stats, consulted, footnote }: { sets: RangeSet[]; stats
 
             <div data-l="rule" data-on={on()} className="pv2-rl mb-2.5 mt-4" style={{ borderTop: `1.5px dashed ${INK}` }} />
             <div data-l="note" data-on={on()} className="pv2-rl text-[10.5px] leading-[1.5] sm:text-[11px]" style={{ color: MUTE }}>
+              {/* Conformité : garantie légale de bon fonctionnement, première ligne sous les fourchettes. Dans une ligne
+                  existante du reçu : masquée avant la date, elle ne crée pas de pas d'impression vide. */}
+              <MentionGarantieLegale
+                as="span"
+                cible={CATEGORIES_GRILLE_PRIX}
+                className="mb-1.5 block font-semibold uppercase"
+                style={{ color: INK, letterSpacing: "0.06em" }}
+              />
               {footnote} Src&nbsp;: nombre de pages sources de la case.
             </div>
             <div data-l="note" data-on={on()} className="pv2-rl mt-2.5 text-center font-semibold uppercase" style={{ letterSpacing: "0.08em" }}>

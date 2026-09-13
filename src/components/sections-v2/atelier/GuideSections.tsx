@@ -9,6 +9,7 @@ import { DISPLAY, EASE } from "@/components/heroes-v2/marques/shared";
 import { Counter } from "./Counter";
 import { PartsTable } from "./PartsTable";
 import { CTA_TEXT, CTA_TITLE, SOUMISSION_STEPS, TRUST, type GuideData, type GuideLogisVert, type GuidePrices } from "./data";
+import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 
 /* ==================================================================
    Suite du héros « Plan d’atelier » (guides /thermopompes/[slug]).
@@ -402,6 +403,10 @@ function Devis({ p, doc, no, total }: { p: GuidePrices; doc: string; no: number;
                 ))}
               </tbody>
             </table>
+          </motion.div>
+          {/* Conformité : garantie légale de bon fonctionnement, sous le tableau des prix. */}
+          <motion.div {...up(0.08)}>
+            <MentionGarantieLegale cible={p.rows.map((r) => r.kind)} className="mt-4 text-[13.5px] font-semibold" style={{ color: INK }} lienClassName="at-link" />
           </motion.div>
           <motion.p {...up(0.1)} className="mt-5 text-[13.5px] leading-[1.65]" style={{ color: INK_MUTE }}>
             Médiane des fourchettes publiées pour chaque case, installation standard, avant LogisVert ; les sources précisent rarement les taxes. Consultées le {p.consulted}.{" "}

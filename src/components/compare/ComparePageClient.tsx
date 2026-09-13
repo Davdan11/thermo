@@ -3,6 +3,7 @@
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import { brandTier } from "@/lib/thermomatch/tiers";
 import { installedPriceRange, money as moneyRange } from "@/lib/prices/grille-installee";
+import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
@@ -308,6 +309,8 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     note?: (p: CompareProduct) => string | null;
     /** Ligne mise en évidence (montant LogisVert). */
     emphasis?: boolean;
+    /** Ligne de prix : mention de la garantie légale de bon fonctionnement sous chaque prix affiché. */
+    garantieLegale?: boolean;
   };
   const range = (min: number | null | undefined, max: number | null | undefined, cfg?: number | null, unit = "") => {
     if (cfg) return `${cfg}${unit}`;
@@ -346,6 +349,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       specs: [
         {
           label: "Fourchette publiée",
+          garantieLegale: true,
           getter: (p) => { const r = installedPriceRange({ systemType: p.detail.model.systemType, nominalBtu: p.detail.model.nominalCapacityBtu, zones: p.detail.model.zones, brandTier: brandTier(p.detail.brand.name) }); return r ? `${moneyRange(r.min)} – ${moneyRange(r.max)}` : "—"; },
           note: (p) => { const r = installedPriceRange({ systemType: p.detail.model.systemType, nominalBtu: p.detail.model.nominalCapacityBtu, zones: p.detail.model.zones, brandTier: brandTier(p.detail.brand.name) }); return r ? `${r.matchLabel}, ${r.tierLabel}, avant LogisVert${r.basis === "publie" ? ` · ${r.sources} source${r.sources > 1 ? "s" : ""}` : " · valeur dérivée"}` : null; },
         },
@@ -705,6 +709,15 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
                               <>
                                 <span className={`inline-flex flex-wrap items-center gap-2 ${s === "a" ? "justify-end" : ""}`}>{s === "a" ? [tag, val] : [val, tag]}</span>
                                 {note && <span className="mt-1 block text-[12px] leading-snug" style={{ color: D.mute }}>{note}</span>}
+                                {/* Conformité : garantie légale de bon fonctionnement, sous chaque prix affiché. */}
+                                {spec.garantieLegale && spec.getter(p) !== "—" && (
+                                  <MentionGarantieLegale
+                                    as="span"
+                                    cible={{ systemType: p.detail.model.systemType, zones: p.detail.model.zones }}
+                                    className="mt-1 block text-[12px] font-semibold leading-snug"
+                                    style={{ color: D.ink }}
+                                  />
+                                )}
                               </>,
                               isBest,
                               !!spec.emphasis,

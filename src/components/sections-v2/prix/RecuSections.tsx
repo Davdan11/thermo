@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import { DISPLAY, MONO, RECU, barcode } from "./tokens";
 import { Feed, Print, Reveal, Stamp } from "./kit";
+import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
+import { CATEGORIES_GRILLE_PRIX, type CategorieThermopompe } from "@/lib/garantie-legale/config";
 
 /* ==================================================================
    /prix — sections sous le héros « Le reçu ».
@@ -80,6 +82,12 @@ export function RecuBrief({ text }: { text: string }) {
                   <br />
                   Avant LogisVert
                 </p>
+                {/* Conformité : garantie légale de bon fonctionnement, à côté des montants du ticket. */}
+                <MentionGarantieLegale
+                  cible={CATEGORIES_GRILLE_PRIX}
+                  className="m-0 mt-3 text-[11px] font-semibold uppercase leading-[1.6]"
+                  style={{ fontFamily: MONO, letterSpacing: "0.08em", color: INK }}
+                />
               </div>
               <p className="m-0 max-w-[980px]" style={{ fontFamily: DISPLAY, fontSize: "clamp(19px, 1.75vw, 26px)", lineHeight: 1.5, letterSpacing: "-0.012em", color: INK, fontWeight: 500 }}>
                 {parts.map((p, i) =>
@@ -221,6 +229,16 @@ function LedgerSheet({ ledger, index, total }: { ledger: Ledger; index: number; 
           </div>
         </div>
       </Reveal>
+      {/* Conformité : garantie légale de bon fonctionnement, sous le listing des prix. */}
+      {CATEGORIES_GRILLE_PRIX.includes(ledger.key as CategorieThermopompe) && (
+        <Reveal delay={0.1}>
+          <MentionGarantieLegale
+            cible={ledger.key as CategorieThermopompe}
+            className="m-0 mt-4 text-[11px] font-semibold uppercase"
+            style={{ fontFamily: MONO, letterSpacing: "0.12em", color: INK }}
+          />
+        </Reveal>
+      )}
     </article>
   );
 }

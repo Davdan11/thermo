@@ -86,7 +86,8 @@ export type FaqItem = { question: string; answer: string };
 export type GuidePrices = {
   title: string;
   intro: string;
-  rows: Array<{ key: string; label: string; tier: string; range: string; sources: string }>;
+  /** kind : type de thermopompe de la case (mention de la garantie légale de bon fonctionnement). */
+  rows: Array<{ key: string; kind: "murale" | "multizone" | "centrale"; label: string; tier: string; range: string; sources: string }>;
   consulted: string;
   factors: Array<{ title: string; desc: string }>;
 };
