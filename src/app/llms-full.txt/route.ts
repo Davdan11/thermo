@@ -2,12 +2,13 @@ import { SITE_URL } from "@/lib/seo";
 import { getAllGuides } from "@/lib/markdown";
 import { RANKINGS } from "@/lib/seo/programmatic";
 import { FAQ_ITEMS } from "@/app/faq/faqData";
+import { GLOSSARY_TERMS } from "@/lib/glossary";
 
 export const dynamic = "force-static";
 
 /* ==================================================================
    llms-full.txt — version détaillée de llms.txt pour les assistants IA :
-   les réponses de la FAQ, les classements et les guides, en texte brut.
+   les réponses de la FAQ, le glossaire, les classements et les guides, en texte brut.
    Mêmes sources que les pages : rien n'est écrit ici en double.
    ================================================================== */
 
@@ -27,6 +28,10 @@ export async function GET() {
     lines.push(`### ${group.category}`, "");
     for (const item of group.questions) lines.push(`Q : ${item.q}`, `R : ${item.a}`, "");
   }
+
+  lines.push("## Glossaire", `Source : ${SITE_URL}/glossaire`, "");
+  for (const t of [...GLOSSARY_TERMS].sort((a, b) => a.term.localeCompare(b.term))) lines.push(`- ${t.term} : ${t.definition}`);
+  lines.push("");
 
   lines.push("## Classements", "");
   for (const r of RANKINGS) lines.push(`- ${r.title} : ${SITE_URL}/meilleures-thermopompes/${r.slug}`, `  ${r.description}`);

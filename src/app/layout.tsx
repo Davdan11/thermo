@@ -8,6 +8,8 @@ import { getOrganizationSchema, getWebSiteSchema, jsonLdString, SITE_URL } from 
 import { UTMProvider } from "@/components/providers/UTMProvider";
 import { Analytics } from "@/components/analytics/Analytics";
 import { ConsentBanner } from "@/components/analytics/ConsentBanner";
+import { AssistantLauncher } from "@/components/assistant/AssistantLauncher";
+import { isAssistantEnabled } from "@/lib/assistant/config";
 import { PauseOffscreenAnimations } from "@/components/providers/PauseOffscreenAnimations";
 import { Suspense } from "react";
 import { displayFont, serifFont } from "@/lib/fonts";
@@ -69,6 +71,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Suspense>
         <Analytics />
         <ConsentBanner />
+        {/* Assistant : seulement si l’assistant a un fournisseur (clé Claude, ou Gemini activé exprès) ; le panneau se charge au premier clic. */}
+        {isAssistantEnabled() && <AssistantLauncher />}
         <PauseOffscreenAnimations />
       </body>
     </html>

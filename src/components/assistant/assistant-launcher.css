@@ -1,0 +1,121 @@
+/* Bouton de l'assistant : pilule encre, point orange, police des titres. */
+.tav-launcher {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: calc(16px + var(--mobile-bar-offset, 0px));
+  z-index: 55;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 20px 0 17px;
+  border: 1px solid rgba(244, 239, 231, 0.14);
+  border-radius: 999px;
+  background: #0c1821;
+  color: #f4efe7;
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  box-shadow: 0 14px 34px -14px rgba(12, 24, 33, 0.6), 0 2px 6px rgba(12, 24, 33, 0.16);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease,
+    translate 0.3s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+  /* Entrée : propriétés translate/opacity (le décalage du bandeau passe par transform). */
+  animation: tav-launcher-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.8s backwards;
+}
+.tav-launcher:hover {
+  background: #142633;
+  box-shadow: 0 18px 40px -14px rgba(12, 24, 33, 0.7), 0 2px 8px rgba(12, 24, 33, 0.2);
+}
+.tav-launcher:focus-visible {
+  outline: 2px solid #e54b17;
+  outline-offset: 3px;
+}
+.tav-launcher[data-open] {
+  opacity: 0;
+  translate: 0 10px;
+  pointer-events: none;
+}
+.tav-launcher-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e54b17;
+  transition: scale 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tav-launcher:hover .tav-launcher-dot {
+  scale: 1.3;
+}
+.tav-launcher-dot::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 1.5px solid #e54b17;
+  border-radius: 50%;
+  opacity: 0;
+  animation: tav-launcher-ring 2.6s cubic-bezier(0.22, 1, 0.36, 1) 1.8s 3;
+}
+.tav-launcher-loading {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: calc(16px + var(--mobile-bar-offset, 0px));
+  z-index: 56;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(229, 75, 23, 0.25);
+  border-top-color: #e54b17;
+  animation: tav-launcher-spin 0.8s linear infinite;
+}
+@keyframes tav-launcher-in {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+}
+@keyframes tav-launcher-ring {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.9;
+  }
+  70%,
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+@keyframes tav-launcher-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+@media (max-width: 639px) {
+  .tav-launcher {
+    min-height: 46px;
+    padding: 0 18px 0 15px;
+    font-size: 14.5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tav-launcher,
+  .tav-launcher-dot::after,
+  .tav-launcher-loading {
+    animation: none;
+  }
+  .tav-launcher {
+    transition: opacity 0.2s ease;
+  }
+}
+@media print {
+  .tav-launcher {
+    display: none;
+  }
+}
