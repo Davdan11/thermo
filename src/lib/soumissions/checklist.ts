@@ -64,9 +64,9 @@ export function textChecks(t: DocumentTexts): CheckItem[] {
   return [
     item("paymentTerms", "Modalités de paiement", "bloquant"),
     item("warranty", "Garantie de main-d’œuvre de l’entreprise", "bloquant"),
-    item("legalWarranty", "Mention de la garantie légale (texte de l’avocat)", "bloquant"),
-    item("cancellation", "Conditions d’annulation (texte de l’avocat)", "bloquant"),
-    item("terms", "Conditions générales (texte de l’avocat)", "bloquant"),
+    item("legalWarranty", "Mention de la garantie légale (texte de l’avocat)", "avertissement"),
+    item("cancellation", "Conditions d’annulation (texte de l’avocat)", "avertissement"),
+    item("terms", "Conditions générales (texte de l’avocat)", "avertissement"),
     item("depositRule", "Règle de l’acompte", "avertissement"),
     item("weatherClause", "Clause météo", "avertissement"),
     item("changeOrder", "Avenants (changements en cours de travaux)", "avertissement"),

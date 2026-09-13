@@ -38,6 +38,10 @@ import {
 } from "@/lib/soumissions/types";
 import { Rise, RollingMoney } from "./motion";
 import { Schematic } from "./Schematic";
+import { PLACEHOLDER_RE } from "@/lib/soumissions/config";
+
+/** Texte prêt à montrer au client : rempli et sans marqueur « [À COMPLÉTER…] ». */
+const ready = (t: string | null | undefined): t is string => Boolean(t && t.trim()) && !PLACEHOLDER_RE.test(t as string);
 
 export interface DocumentViewProps {
   doc: QuoteDocument;
@@ -552,7 +556,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     </Rise>
                     <Rise className="dv-warr__card">
                       <h3>Garantie légale</h3>
-                      <Prose text={doc.texts.legalWarranty} />
+                      {ready(doc.texts.legalWarranty) ? <Prose text={doc.texts.legalWarranty} /> : null}
                       <p className="dv-link"><a href={doc.links.opcGaranties} target="_blank" rel="noreferrer">Garanties prévues par la loi · Office de la protection du consommateur <ArrowUpRight size={12} aria-hidden /></a></p>
                     </Rise>
                   </div>
@@ -564,10 +568,9 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     <h3>Validité</h3>
                     <p>Cette soumission est valide jusqu’au {formatDay(doc.validUntil)} inclusivement. Après cette date, elle ne peut plus être acceptée en ligne.</p>
                     <h3>Annulation</h3>
-                    <Prose text={doc.texts.cancellation} />
+                    {ready(doc.texts.cancellation) ? <Prose text={doc.texts.cancellation} /> : null}
                     <p className="dv-link"><a href={doc.links.opcAnnulation} target="_blank" rel="noreferrer">Annuler un achat conclu à distance · Office de la protection du consommateur <ArrowUpRight size={12} aria-hidden /></a></p>
-                    <h3>Conditions générales</h3>
-                    <Prose text={doc.texts.terms} />
+                    {ready(doc.texts.terms) ? (<><h3>Conditions générales</h3><Prose text={doc.texts.terms} /></>) : null}
                     {c.notes ? (<><h3>Remarques</h3><Prose text={c.notes} /></>) : null}
                     <p className="dv-soft">Document rédigé en français. Contrat conclu à distance : <a href={doc.links.opcDistance} target="_blank" rel="noreferrer">vos droits, selon l’Office de la protection du consommateur</a>.</p>
                   </Rise>

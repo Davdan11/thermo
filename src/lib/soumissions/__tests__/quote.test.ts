@@ -242,11 +242,13 @@ describe("envoi bloqué tant que tout n'est pas rempli", () => {
     expect(blockers).toEqual(expect.arrayContaining(["legalName", "neq", "rbq", "address", "phone", "email", "tps", "tvq"]));
   });
 
-  it("textes de l'avocat encore à compléter : bloqués", () => {
+  it("textes de l'avocat encore à compléter : simple avertissement, l'envoi n'est pas bloqué", () => {
     const s = fullSettings();
     s.texts.terms = "[À COMPLÉTER PAR L’AVOCAT OU LE NOTAIRE]";
     s.texts.cancellation = "";
-    expect(sendBlockers(readyContent(s), s, TODAY, RATES).map((b) => b.id)).toEqual(["texte-cancellation", "texte-terms"]);
+    const ids = sendBlockers(readyContent(s), s, TODAY, RATES).map((b) => b.id);
+    expect(ids).not.toContain("texte-cancellation");
+    expect(ids).not.toContain("texte-terms");
   });
 
   it("champs requis : emplacement de chaque unité, date, inclus, exclus, machine, raison des rabais, LogisVert", () => {
