@@ -245,8 +245,10 @@ function Body({ slide, photos, story }: { slide: Slide; photos: Record<string, s
             <div style={{ display: "flex", position: "absolute", left: 20, top: 0, width: 4, height: H, borderRadius: 2, background: C.onDarkLine }} />
             {sorted.map((m, i) => {
               const main = m.t === slide.value && m.label === "Conception";
+              // Points secondaires plus petits : deux valeurs proches (ex. −15 et −16,3 °C) ne se chevauchent plus, à leur vraie place.
+              const size = main ? 44 : 20;
               return (
-                <div key={`d${i}`} style={{ display: "flex", position: "absolute", left: 0, top: y(m.t) - 22, width: 44, height: 44, borderRadius: 22, background: main ? C.copper : C.petrolDeep, border: `4px solid ${main ? C.copper : C.onDarkMuted}` }} />
+                <div key={`d${i}`} style={{ display: "flex", position: "absolute", left: 22 - size / 2, top: y(m.t) - size / 2, width: size, height: size, borderRadius: size / 2, background: main ? C.copper : C.petrolDeep, border: `${main ? 4 : 3}px solid ${main ? C.copper : C.onDarkMuted}` }} />
               );
             })}
             {sorted.map((m, i) => (
