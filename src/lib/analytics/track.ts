@@ -6,7 +6,12 @@
      (NEXT_PUBLIC_GA_ID) ; GA4 respecte le mode de consentement
      (voir src/components/analytics/Analytics.tsx).
    Aucun renseignement personnel ne doit être passé en paramètre.
+   Pilote publicitaire : gtag et les conversions (Google Ads, pixel
+   Meta) seulement après « Accepter » (src/lib/ads/browser.ts).
    ================================================================== */
+
+import { conversionForEvent, fireConversion, newEventId, takeLastEventId } from "@/lib/ads/browser";
+import { readConsentRecord } from "@/lib/ads/consent";
 
 export type EventName =
   | "thermomatch_started"
@@ -22,7 +27,8 @@ export type EventName =
   | "thermoscan_fiche"
   | "logisvert_alert_requested"
   | "subsidy_checked"
-  | "phone_click";
+  | "phone_click"
+  | "sms_click";
 
 type Params = Record<string, string | number | boolean>;
 
@@ -38,7 +44,12 @@ export function track(name: EventName, params: Params = {}): void {
   try {
     window.dataLayer = window.dataLayer ?? [];
     window.dataLayer.push({ event: name, ...params });
+    // Pilote publicitaire : rien n'est remis à gtag avant « Accepter » (sinon la file partirait au chargement de gtag.js).
+    if (readConsentRecord()?.choice !== "granted") return;
     if (typeof window.gtag === "function") window.gtag("event", name, params);
+    // Conversion Google Ads / pixel Meta ; soumission et rendez-vous reprennent l'event_id joint au formulaire.
+    const conversion = conversionForEvent(name);
+    if (conversion) fireConversion(conversion, conversion === "soumission" || conversion === "rendez-vous" ? takeLastEventId() : newEventId());
   } catch {
     /* la mesure ne doit jamais casser l'interface */
   }

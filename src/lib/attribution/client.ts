@@ -6,6 +6,8 @@
    ================================================================== */
 
 import { sanitizeHost, sanitizeLandingPath, sanitizeUtmValue, UTM_KEYS, type AttributionPayload, type UtmValues } from "./core";
+import { adsFormPayload } from "@/lib/ads/browser";
+import type { AdsFormPayload } from "@/lib/ads/types";
 
 export const ATTRIBUTION_KEY = "tav-arrivee";
 /** Ancienne clé (localStorage, valeur gclid complète) : retirée par minimisation. */
@@ -40,11 +42,16 @@ export function captureFirstVisit(): void {
   }
 }
 
-/** Arrivée de la session, à joindre au corps d'un formulaire (champ « attribution »). */
-export function readAttribution(): AttributionPayload | undefined {
+/** Arrivée de la session, à joindre au corps d'un formulaire (champ « attribution »).
+ *  Pilote publicitaire : `ads` = choix du bandeau (daté, versionné) et, avec accord seulement,
+ *  identifiants de clic et event_id (src/lib/ads/browser.ts). Sans choix : absent, comme avant. */
+export function readAttribution(): (AttributionPayload & { ads?: AdsFormPayload }) | undefined {
   try {
     const raw = window.sessionStorage.getItem(ATTRIBUTION_KEY);
-    return raw ? (JSON.parse(raw) as AttributionPayload) : undefined;
+    if (!raw) return undefined;
+    const payload = JSON.parse(raw) as AttributionPayload;
+    const ads = adsFormPayload();
+    return ads ? { ...payload, ads } : payload;
   } catch {
     return undefined;
   }

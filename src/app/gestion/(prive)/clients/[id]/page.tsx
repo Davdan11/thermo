@@ -29,6 +29,7 @@ import { ThermoMatchPanel } from "@/components/gestion/ventes/ThermoMatch";
 import { QuoteStatus } from "@/components/gestion/soumissions/ui";
 import { ApresVentePanel } from "@/components/gestion/argent/ApresVentePanel";
 import { ClientPhotoDossier } from "@/components/partenaires/admin/ClientPhotoDossier"; // volet A
+import { AdsClientPanel } from "@/components/gestion/publicite/AdsClientPanel"; // pilote publicitaire : consentement, clic, ventes renvoyées
 
 export const metadata: Metadata = { title: "Client" };
 
@@ -175,6 +176,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
           </Card>
 
           <ThermoMatchPanel clientId={c.id} />
+
+          <AdsClientPanel clientId={c.id} />
 
           <Card
             title="Soumissions"

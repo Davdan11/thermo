@@ -1,0 +1,152 @@
+/* Page Publicité et carte de la fiche client (pilote publicitaire). Préfixe pb-. */
+
+.pb-status {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.pb-status li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(12, 24, 33, 0.08);
+  animation: pb-rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.pb-status li:nth-child(2) { animation-delay: 0.04s; }
+.pb-status li:nth-child(3) { animation-delay: 0.08s; }
+.pb-status li:nth-child(4) { animation-delay: 0.12s; }
+.pb-status li:nth-child(5) { animation-delay: 0.16s; }
+.pb-status li:nth-child(n + 6) { animation-delay: 0.2s; }
+.pb-status li:last-child { border-bottom: none; }
+.pb-status strong { display: block; font-size: 14px; }
+.pb-status small { display: block; font-size: 12px; opacity: 0.72; margin-top: 2px; }
+.pb-status code,
+.pb-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  background: rgba(12, 24, 33, 0.06);
+  border-radius: 4px;
+  padding: 1px 5px;
+  word-break: break-all;
+}
+.pb-url {
+  display: block;
+  margin: 8px 0 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: var(--g-ink, #0c1821);
+  color: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  word-break: break-all;
+}
+.pb-facts {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+.pb-facts li { display: flex; justify-content: space-between; gap: 12px; }
+.pb-facts li span:first-child { opacity: 0.72; }
+.pb-steps {
+  counter-reset: pb-step;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+.pb-steps > li {
+  counter-increment: pb-step;
+  position: relative;
+  padding-left: 46px;
+  animation: pb-rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.pb-steps > li::before {
+  content: counter(pb-step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--g-orange, #e54b17);
+}
+.pb-steps > li:nth-child(2) { animation-delay: 0.05s; }
+.pb-steps > li:nth-child(3) { animation-delay: 0.1s; }
+.pb-steps > li:nth-child(4) { animation-delay: 0.15s; }
+.pb-steps > li:nth-child(n + 5) { animation-delay: 0.2s; }
+.pb-steps h4 { margin: 4px 0 6px; font-size: 15px; }
+.pb-steps p,
+.pb-steps ul { margin: 0 0 6px; font-size: 14px; line-height: 1.55; }
+.pb-steps ul { padding-left: 18px; }
+.pb-names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 8px;
+}
+.pb-name {
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--g-orange, #e54b17);
+  color: var(--g-orange, #e54b17);
+  font-size: 13px;
+}
+.pb-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 4px 0 12px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.pb-toggle input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--g-orange, #e54b17); }
+.pb-brain {
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.pb-brain ul { margin: 0; padding-left: 18px; }
+.pb-sends {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+}
+.pb-sends li { display: flex; justify-content: space-between; gap: 10px; }
+.pb-demand {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  font-size: 13px;
+}
+.pb-demand li { padding: 10px 12px; border-radius: 6px; background: rgba(12, 24, 33, 0.04); animation: pb-rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.pb-demand strong { display: block; font-size: 14px; margin-bottom: 2px; }
+
+@keyframes pb-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pb-status li,
+  .pb-steps > li,
+  .pb-demand li { animation: none; }
+}

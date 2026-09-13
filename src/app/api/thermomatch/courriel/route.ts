@@ -17,7 +17,8 @@ import { sendClientEmail, sendInternalMessage } from "@/lib/crm/email";
 import { getThermoMatchEmailHTML, thermoMatchEmailSubject, type ThermoMatchEmailChoice } from "@/lib/crm/templates/thermomatch-email";
 import { SITE_URL } from "@/lib/crm/templates/layout";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
-import { attributionFromBody, attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
+import { attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
+import { attributionWithAds } from "@/lib/ads/server-attribution"; // pilote publicitaire : attribution + consentement et clic
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { decodeShareCode, shareUrlFor } from "@/lib/thermomatch/share-code";
@@ -98,7 +99,7 @@ export async function POST(req: NextRequest) {
         }
       : null;
 
-  const attribution = attributionFromBody(json);
+  const attribution = attributionWithAds(json);
   const { entry } = await journalLead("thermomatch", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode, choices: labels, code: d.code, relances: relancesConsent ?? false }, attribution);
 
   const e = escapeHtml;
