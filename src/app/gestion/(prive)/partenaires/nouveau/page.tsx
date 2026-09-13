@@ -1,4 +1,9 @@
+/* Refonte R1 — nouvel installateur (déplacé de /gestion/installateurs/nouveau, redirigé en permanence ; ?candidature=
+   conservé). Pré-rempli d'après une candidature ; à l'enregistrement, arrivée sur la fiche du partenaire pour
+   « Envoyer l'entente ». Propriétaire seulement. */
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { brandHints, regionHints } from "@/lib/gestion/candidatures";
 import { brandOptions } from "@/lib/gestion/catalog";
@@ -41,7 +46,9 @@ export default async function NewInstallerPage({ searchParams }: { searchParams:
     <div className="g-main--narrow" style={{ margin: "0 auto" }}>
       <Reveal className="g-head">
         <div>
-          <p className="g-eyebrow">Réseau</p>
+          <Link href="/gestion/partenaires" className="k-link">
+            <ChevronLeft size={15} aria-hidden /> Installateurs
+          </Link>
           <h1 className="g-h1">Nouvel installateur</h1>
           <p className="g-lead">Rayon de {DEFAULT_RADIUS_KM} km par défaut autour du code postal de base, plus les régions que vous cochez.</p>
         </div>

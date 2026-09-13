@@ -34,7 +34,7 @@ export function ContractorPicker({ options, value, onChange }: { options: Contra
   if (!options.length) {
     return (
       <p className="sq-note">
-        Aucun installateur partenaire actif. <Link href="/gestion/installateurs/nouveau">Ajoutez un installateur</Link>, puis remplissez son identité légale dans sa fiche partenaire.
+        Aucun installateur partenaire actif. <Link href="/gestion/partenaires/nouveau">Ajoutez un installateur</Link>, puis remplissez son identité légale dans sa fiche partenaire.
       </p>
     );
   }

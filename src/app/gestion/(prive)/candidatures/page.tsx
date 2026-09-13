@@ -85,10 +85,10 @@ export default async function CandidaturesPage() {
                 ) : null}
                 <div className="g-actions" style={{ marginTop: "auto" }}>
                   {c.status === "ajoutee" && c.installerId ? (
-                    <Link href={`/gestion/installateurs/${c.installerId}`} className="k-btn">Voir la fiche</Link>
+                    <Link href={`/gestion/partenaires/${c.installerId}`} className="k-btn">Voir la fiche</Link>
                   ) : (
                     <>
-                      <Link href={`/gestion/installateurs/nouveau?candidature=${c.id}`} className="k-btn k-btn--primary"><UserPlus size={16} aria-hidden /> Ajouter comme installateur</Link>
+                      <Link href={`/gestion/partenaires/nouveau?candidature=${c.id}`} className="k-btn k-btn--primary"><UserPlus size={16} aria-hidden /> Ajouter comme installateur</Link>
                       <form action={candidatureStatusAction.bind(null, c.id, c.status === "ecartee" ? "nouvelle" : "ecartee")}>
                         <SubmitButton className="k-btn k-btn--ghost" pendingLabel="…">{c.status === "ecartee" ? "Remettre" : "Écarter"}</SubmitButton>
                       </form>

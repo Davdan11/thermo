@@ -35,6 +35,10 @@ const nextConfig: NextConfig = {
       // Anciennes adresses de sitemaps : redirigées plutôt que 404, pour Google et Bing.
       { source: "/sitemap/villes.xml", destination: "/sitemap/villes-quebec.xml", permanent: true },
       { source: "/sitemap/palmares.xml", destination: "/sitemap/classements.xml", permanent: true },
+      // Refonte R1 du CRM : Installateurs et Partenaires fusionnés (une liste, une fiche) ; anciennes adresses conservées.
+      { source: "/gestion/installateurs", destination: "/gestion/partenaires?vue=cartes", permanent: true },
+      { source: "/gestion/installateurs/nouveau", destination: "/gestion/partenaires/nouveau", permanent: true },
+      { source: "/gestion/installateurs/:id", destination: "/gestion/partenaires/:id?onglet=identite", permanent: true },
     ];
   },
   async rewrites() {

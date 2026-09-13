@@ -1,17 +1,18 @@
 "use client";
 
-/* Feuille « Créer » (bouton « + ») : job, soumission, client, tâche. Dans une fiche client, les formulaires s'ouvrent
-   pré-remplis pour ce client (valeurs rendues au serveur). Ouverte par l'événement « gestion:quick ». */
+/* Feuille « Créer » (bouton « + ») : job, soumission, client, tâche ; pour le propriétaire, installateur et billet de
+   service. Dans une fiche client, les formulaires s'ouvrent pré-remplis pour ce client (valeurs rendues au serveur).
+   Ouverte par l'événement « gestion:quick ». Liste : CREATE (nav/sections.ts), filtrée selon le rôle. */
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { CalendarPlus, FileText, UserPlus, Wrench } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { navFor } from "@/lib/gestion/nav/sections";
 import { Sheet } from "../kit/Sheet";
 
 export const openQuickActions = () => window.dispatchEvent(new Event("gestion:quick"));
 
-/* Chantier V : `canJob` faux (vendeur) → pas de raccourci « Job » (la page lui est fermée). */
-export function QuickActions({ canJob = true }: { canJob?: boolean } = {}) {
+/* Chantier V : `allowed` (liste blanche du rôle) → un vendeur n'a pas « Job » (la page lui est fermée) ; null : tout. */
+export function QuickActions({ allowed = null, available = [] }: { allowed?: string[] | null; available?: string[] } = {}) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   useEffect(() => {
@@ -19,24 +20,21 @@ export function QuickActions({ canJob = true }: { canJob?: boolean } = {}) {
     window.addEventListener("gestion:quick", on);
     return () => window.removeEventListener("gestion:quick", on);
   }, []);
+  const create = useMemo(() => navFor(allowed, available).create, [allowed, available]);
   const clientId = /^\/gestion\/clients\/(c_[0-9a-f]{12})/.exec(pathname)?.[1];
-  const q = clientId ? `?client=${clientId}` : "";
-  const items = [
-    ...(canJob ? [{ href: `/gestion/jobs/nouveau${q}`, icon: Wrench, title: "Job", text: "Envoyer une installation aux installateurs", ink: true }] : []),
-    { href: `/gestion/soumissions/nouvelle${q}`, icon: FileText, title: "Soumission", text: "Préparer et envoyer une soumission formelle" },
-    ...(clientId ? [] : [{ href: "/gestion/clients/nouveau", icon: UserPlus, title: "Client", text: "Une personne qui a appelé ou écrit ailleurs" }]),
-    { href: clientId ? `/gestion/taches?nouvelle=1&client=${clientId}` : "/gestion/taches?nouvelle=1", icon: CalendarPlus, title: "Tâche", text: "Un rappel, un suivi, une chose à ne pas oublier" },
-  ];
+  const items = create
+    .filter((c) => !(clientId && c.href === "/gestion/clients/nouveau"))
+    .map((c, i) => ({ ...c, href: clientId && c.prefill === "client" ? `${c.href}${c.href.includes("?") ? "&" : "?"}client=${clientId}` : c.href, ink: i === 0 && c.href.startsWith("/gestion/jobs") }));
   return (
     <Sheet open={open} onOpenChange={setOpen} title="Créer" description={clientId ? "Pré-rempli pour ce client." : "Choisissez ce que vous voulez ajouter."}>
       <div className="sh-quick">
-        {items.map(({ href, icon: Icon, title, text, ink }) => (
-          <Link key={title} href={href} className={`sh-quick__item${ink ? " sh-quick__item--ink" : ""}`} onClick={() => setOpen(false)}>
+        {items.map(({ href, icon: Icon, label, hint, ink }) => (
+          <Link key={label} href={href} className={`sh-quick__item${ink ? " sh-quick__item--ink" : ""}`} onClick={() => setOpen(false)}>
             <span className="sh-quick__icon" aria-hidden>
               <Icon size={20} />
             </span>
-            <strong>{title}</strong>
-            <small>{text}</small>
+            <strong>{label}</strong>
+            <small>{hint}</small>
           </Link>
         ))}
       </div>

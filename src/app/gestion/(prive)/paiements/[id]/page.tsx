@@ -87,7 +87,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
                 </Link>
               </li>
               <li>
-                <Link href={`/gestion/installateurs/${inv.installerId}`} className="k-link">
+                <Link href={`/gestion/partenaires/${inv.installerId}?onglet=paiements`} className="k-link">
                   {inv.installer.company}
                 </Link>
               </li>

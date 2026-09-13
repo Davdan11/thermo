@@ -39,7 +39,8 @@ export async function saveInstallerAction(_prev: FormState, fd: FormData): Promi
   if (!saved) return { message: "Installateur introuvable." };
   revalidatePath("/gestion", "layout");
   // Volet A : un nouveau partenaire (ou une candidature convertie) arrive sur sa fiche partenaire pour « Envoyer l'entente ».
-  redirect(id ? "/gestion/installateurs?ok=modifie" : `/gestion/partenaires/${saved.id}?nouveau=1`);
+  // Refonte R1 : fiche unique (Installateurs et Partenaires fusionnés) ; une modification revient à l'onglet Identité.
+  redirect(id ? `/gestion/partenaires/${saved.id}?onglet=identite&ok=${encodeURIComponent("Fiche enregistrée.")}` : `/gestion/partenaires/${saved.id}?nouveau=1`);
 }
 
 export async function toggleInstallerAction(id: string, active: boolean): Promise<void> {
