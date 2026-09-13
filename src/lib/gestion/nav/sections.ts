@@ -203,7 +203,7 @@ export const SETTINGS: NavSection = {
     { href: "/gestion/reglages", label: "Réglages généraux", icon: Settings2, keywords: "crm relances pipedrive délais" },
     { href: "/gestion/reglages/etapes", label: "Étapes du pipeline", icon: ListOrdered, keywords: "12 étapes délais alertes escalade probabilités qui doit agir" },
     { href: "/gestion/reglages/identite", label: "Identité de l’entreprise", icon: Building2, keywords: "raison sociale neq adresse plateforme" },
-    { href: "/gestion/reglages/rbq", label: "Vérification RBQ", icon: BadgeCheck, keywords: "licences registre rbq" },
+    { href: "/gestion/reglages/rbq", label: "Vérification RBQ", icon: BadgeCheck, keywords: "licences registre rbq offre automatique répartition" },
     { href: "/gestion/soumissions/reglages", label: "Soumissions", icon: FileText, keywords: "réglages soumissions modèle texte" },
     { href: "/gestion/soumissions/prix", label: "Liste de prix", icon: Tags, keywords: "prix produits catalogue" },
     { href: "/gestion/automatisations", label: "Automatisations", icon: Workflow, keywords: "moteur relances courriels textos après-vente" },

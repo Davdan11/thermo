@@ -25,13 +25,13 @@ export default async function TextosReglagesPage() {
   const site = formatPhone(process.env.TWILIO_PHONE_NUMBER || "+14389003224");
   return (
     <>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div>
-          <Link href="/gestion/textos" className="t-back" style={{ display: "inline-flex" }}>
-            <ChevronLeft size={18} aria-hidden /> Textos
+          <Link href="/gestion/textos" className="k-link">
+            <ChevronLeft size={15} aria-hidden /> Textos
           </Link>
-          <h1 className="g-h1">Réglages des textos</h1>
-          <p className="g-lead">Ce que reçoit un client qui écrit au {site}. Les accents et l’apostrophe typographique limitent un texto à 70 caractères : un message plus long part en plusieurs textos.</p>
+          <h1 className="k-h1" style={{ marginTop: 8 }}>Réglages des textos</h1>
+          <p className="k-lead">Ce que reçoit un client qui écrit au {site}. Les accents et l’apostrophe typographique limitent un texto à 70 caractères : un message plus long part en plusieurs textos.</p>
         </div>
       </Reveal>
 

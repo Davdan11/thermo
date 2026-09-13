@@ -98,9 +98,9 @@ export default async function RbqRulesPage() {
                   </option>
                 ))}
               </select>
-              <input name="new_label" className="g-input" placeholder="Libellé" maxLength={120} />
+              <input name="new_label" className="g-input" aria-label="Libellé de l’exigence" placeholder="Libellé" maxLength={120} />
             </div>
-            <input name="new_codes" className="g-input" placeholder="Sous-catégories (ex. 15.7, 15.8)" maxLength={120} />
+            <input name="new_codes" className="g-input" aria-label="Sous-catégories RBQ exigées" placeholder="Sous-catégories (ex. 15.7, 15.8)" maxLength={120} />
           </fieldset>
         </ActionForm>
       </Card>

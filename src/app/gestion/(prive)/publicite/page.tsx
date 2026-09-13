@@ -14,6 +14,7 @@ import { adsOverview, type StatusRow } from "@/lib/ads/service";
 import { Card, SectionHeader } from "@/components/gestion/kit/Card";
 import { Chip } from "@/components/gestion/kit/Chip";
 import { DataTable } from "@/components/gestion/kit/DataTable";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import { KpiTile } from "@/components/gestion/kit/KpiTile";
 import { dollars, pct, plural } from "@/components/gestion/kit/format";
 import { Reveal } from "@/components/gestion/Reveal";
@@ -136,7 +137,7 @@ export default async function PublicitePage() {
                 meta: s.meta,
               },
             }))}
-            empty={<p className="g-empty" style={{ padding: 20 }}>Aucune soumission acceptée depuis 90 jours.</p>}
+            empty={<EmptyState compact title="Aucune soumission acceptée depuis 90 jours." />}
           />
         </Card>
       </Reveal>
@@ -193,7 +194,7 @@ export default async function PublicitePage() {
               ))}
             </ul>
           ) : (
-            <p className="g-empty">Aucun envoi pour l’instant.</p>
+            <EmptyState compact title="Aucun envoi pour l’instant." />
           )}
         </Card>
       </Reveal>

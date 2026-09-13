@@ -685,3 +685,12 @@
   quotes: "« " " »";
   font-size: 14px;
 }
+
+/* Mouvement réduit : bordures et bouton d'envoi changent sans glissement. */
+@media (prefers-reduced-motion: reduce) {
+  .t-row,
+  .t-compose__input,
+  .t-send {
+    transition: none;
+  }
+}

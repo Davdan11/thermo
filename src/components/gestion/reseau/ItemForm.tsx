@@ -49,9 +49,9 @@ export function ItemForm({ action, initial = EMPTY_ITEM, withQuantity = false, s
         </div>
       </div>
       <div className="g-field">
-        <span className="g-label">
+        <label className="g-label" htmlFor="model-search">
           Modèle du catalogue <small>{kind === "accessoire" ? "(facultatif)" : "(réservé automatiquement pour les jobs et soumissions acceptées de ce modèle)"}</small>
-        </span>
+        </label>
         <ModelSearch brand="" value={model} onChange={onPick} />
         <input type="hidden" name="modelSlug" value={model?.slug ?? ""} />
       </div>

@@ -139,7 +139,7 @@
   font-variant-numeric: tabular-nums;
 }
 .eq-stat--hot .eq-stat__v {
-  color: var(--g-orange);
+  color: var(--g-orange-2); /* R3 : orange foncé, lisible en texte (4,5:1) */
 }
 
 /* ---------- Membres ---------- */

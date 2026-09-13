@@ -5,6 +5,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { ChevronRight, Send } from "lucide-react";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { SubmitButton } from "./SubmitButton";
 
@@ -99,7 +100,7 @@ export function CandidateList({ action, ranked, offered, nearMisses, declinedNot
           {ranked.map((c, i) => <Row key={c.id} c={c} index={i} variant="ranked" onToggle={toggle} proposed={c.id === proposable} />)}
         </ul>
       ) : (
-        <p className="g-empty">Aucun installateur admissible. Regardez les « presque » ci-dessous ou ajoutez un installateur.</p>
+        <EmptyState compact title="Aucun installateur admissible." body="Regardez les « presque » ci-dessous ou ajoutez un installateur." />
       )}
 
       {nearMisses.length ? (

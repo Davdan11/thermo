@@ -110,10 +110,10 @@ export function SettingsForm({ initial, stages, stagesError, templates }: { init
 
   return (
     <div>
-      <div className="g-head">
+      <div className="k-pagehead">
         <div>
-          <p className="g-eyebrow">Créateur de soumissions</p>
-          <h1 className="g-h1">Réglages</h1>
+          <p className="k-eyebrow">Créateur de soumissions</p>
+          <h1 className="k-h1">Réglages</h1>
         </div>
       </div>
       <nav className="sq-toc" aria-label="Sections">

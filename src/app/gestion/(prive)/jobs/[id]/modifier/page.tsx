@@ -18,11 +18,11 @@ export default async function EditJobPage({ params }: { params: Promise<{ id: st
   const model = job.modelSlug ? modelBySlug(job.modelSlug) : null;
   return (
     <div className="g-main--narrow" style={{ margin: "0 auto" }}>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div>
-          <p className="g-eyebrow">Job n° {job.number}</p>
-          <h1 className="g-h1">Modifier le job</h1>
-          <p className="g-lead">Les offres déjà envoyées gardent le résumé du moment de l’envoi ; les nouvelles offres prendront ces changements.</p>
+          <p className="k-eyebrow">Job n° {job.number}</p>
+          <h1 className="k-h1">Modifier le job</h1>
+          <p className="k-lead">Les offres déjà envoyées gardent le résumé du moment de l’envoi ; les nouvelles offres prendront ces changements.</p>
         </div>
       </Reveal>
       <JobForm

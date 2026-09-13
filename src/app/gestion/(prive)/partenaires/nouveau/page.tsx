@@ -44,13 +44,13 @@ export default async function NewInstallerPage({ searchParams }: { searchParams:
 
   return (
     <div className="g-main--narrow" style={{ margin: "0 auto" }}>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div>
           <Link href="/gestion/partenaires" className="k-link">
             <ChevronLeft size={15} aria-hidden /> Installateurs
           </Link>
-          <h1 className="g-h1">Nouvel installateur</h1>
-          <p className="g-lead">Rayon de {DEFAULT_RADIUS_KM} km par défaut autour du code postal de base, plus les régions que vous cochez.</p>
+          <h1 className="k-h1" style={{ marginTop: 8 }}>Nouvel installateur</h1>
+          <p className="k-lead">Rayon de {DEFAULT_RADIUS_KM} km par défaut autour du code postal de base, plus les régions que vous cochez.</p>
         </div>
       </Reveal>
       {cand ? (

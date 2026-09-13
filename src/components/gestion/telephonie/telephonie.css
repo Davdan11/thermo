@@ -445,7 +445,8 @@
 }
 .tp-textarea:focus {
   outline: none;
-  border-color: var(--g-ink);
+  border-color: var(--g-orange);
+  box-shadow: 0 0 0 4px rgba(229, 75, 23, 0.14); /* R3 : halo de focus, comme les champs g-input */
 }
 .tp-meter {
   display: flex;

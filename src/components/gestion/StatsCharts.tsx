@@ -5,6 +5,7 @@
    Animation discrète à l'entrée dans l'écran ; « réduire les animations » respecté (useReduced). */
 import { motion } from "motion/react";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 
 /* Graphiques du CRM (accueil, statistiques), en SVG maison : réexportés ici. */
 export { Donut } from "./charts/Donut";
@@ -102,7 +103,7 @@ export interface BarRow {
 
 export function BarList({ rows, empty }: { rows: BarRow[]; empty: string }) {
   const reduced = useReduced();
-  if (!rows.length) return <p className="g-empty">{empty}</p>;
+  if (!rows.length) return <EmptyState compact title={empty} />;
   const top = Math.max(1, ...rows.map((r) => r.n));
   return (
     <ul className="g-bars">

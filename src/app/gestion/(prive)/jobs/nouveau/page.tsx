@@ -15,11 +15,11 @@ export default async function NewJobPage({ searchParams }: { searchParams: Promi
   const pre = await jobPrefill({ clientId: sp.client, quoteId: sp.soumission });
   return (
     <div className="g-main--narrow" style={{ margin: "0 auto" }}>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div>
-          <p className="g-eyebrow">{pre ? `Pré-rempli depuis ${pre.from}` : "Saisie"}</p>
-          <h1 className="g-h1">Nouveau job</h1>
-          <p className="g-lead">Le code postal place le job sur la carte et devine la région. L’installateur ne voit le nom, le téléphone et l’adresse du client qu’après avoir accepté.</p>
+          <p className="k-eyebrow">{pre ? `Pré-rempli depuis ${pre.from}` : "Saisie"}</p>
+          <h1 className="k-h1">Nouveau job</h1>
+          <p className="k-lead">Le code postal place le job sur la carte et devine la région. L’installateur ne voit le nom, le téléphone et l’adresse du client qu’après avoir accepté.</p>
         </div>
       </Reveal>
       <JobForm brands={brandOptions()} initial={pre?.initial} />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, Mail, MessageSquare, Pencil, Phone, UserRound } from "lucide-react";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import { clientIdForJob } from "@/lib/gestion/crm/service";
 import { requireUser } from "@/lib/gestion/auth/dal";
 import { STAFF } from "@/lib/gestion/equipe/garde"; // Chantier V : propriétaire et adjoints
@@ -79,10 +80,10 @@ export default async function JobPage({ params, searchParams }: { params: Promis
 
   return (
     <>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div style={{ minWidth: 0 }}>
-          <p className="g-eyebrow">Job n° {job.number} · créé le {formatDateTime(job.createdAt)}</p>
-          <h1 className="g-h1">{`${c.firstName} ${c.lastName}`.trim()}</h1>
+          <p className="k-eyebrow">Job n° {job.number} · créé le {formatDateTime(job.createdAt)}</p>
+          <h1 className="k-h1">{`${c.firstName} ${c.lastName}`.trim()}</h1>
           <div className="g-tags" style={{ marginTop: 12, alignItems: "center" }}>
             <StatusPill status={job.status} />
             <span className="g-tag">{c.city || job.geo?.city || c.postalCode}</span>
@@ -91,8 +92,8 @@ export default async function JobPage({ params, searchParams }: { params: Promis
           </div>
         </div>
         <div className="g-actions">
-          {clientId ? <Link href={`/gestion/clients/${clientId}`} className="g-btn g-btn--ghost"><UserRound size={16} aria-hidden /> Fiche client</Link> : null}
-          <Link href={`/gestion/jobs/${job.id}/modifier`} className="g-btn g-btn--ghost"><Pencil size={16} aria-hidden /> Modifier</Link>
+          {clientId ? <Link href={`/gestion/clients/${clientId}`} className="k-btn"><UserRound size={16} aria-hidden /> Fiche client</Link> : null}
+          <Link href={`/gestion/jobs/${job.id}/modifier`} className="k-btn"><Pencil size={16} aria-hidden /> Modifier</Link>
         </div>
       </Reveal>
 
@@ -182,7 +183,7 @@ export default async function JobPage({ params, searchParams }: { params: Promis
                 })}
               </ol>
             ) : (
-              <p className="g-empty">Aucune offre envoyée pour l’instant.</p>
+              <EmptyState compact title="Aucune offre envoyée pour l’instant." />
             )}
           </Reveal>
         </div>

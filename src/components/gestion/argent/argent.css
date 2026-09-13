@@ -1409,6 +1409,7 @@
 .sv-field textarea:focus {
   outline: none;
   border-color: var(--orange);
+  box-shadow: 0 0 0 4px rgba(229, 75, 23, 0.14); /* R3 : halo de focus, comme les champs g-input */
 }
 .sv-btn {
   display: inline-flex;

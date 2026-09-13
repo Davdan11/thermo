@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MessageSquare, Settings } from "lucide-react";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import { requireUser } from "@/lib/gestion/auth/dal";
 import { textosFor } from "@/lib/gestion/equipe/garde"; // Chantier V : un vendeur ne voit que ses conversations
 import { smsConfigured } from "@/lib/gestion/sms";
@@ -28,11 +29,11 @@ export default async function TextosPage({ searchParams }: { searchParams: Promi
 
   return (
     <>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div>
-          <p className="g-eyebrow">Numéro du site · {site}</p>
-          <h1 className="g-h1">Textos</h1>
-          <p className="g-lead">
+          <p className="k-eyebrow">Numéro du site · {site}</p>
+          <h1 className="k-h1">Textos</h1>
+          <p className="k-lead">
             {unread ? `${unread} conversation${unread > 1 ? "s" : ""} à lire. ` : ""}Les textos envoyés au {site} arrivent ici ; votre réponse part du même numéro.
           </p>
         </div>
@@ -46,7 +47,7 @@ export default async function TextosPage({ searchParams }: { searchParams: Promi
             </Link>
           </nav>
           {owner ? (
-            <Link href="/gestion/textos/reglages" className="g-btn g-btn--ghost">
+            <Link href="/gestion/textos/reglages" className="k-btn">
               <Settings size={16} aria-hidden /> Réglages
             </Link>
           ) : null}
@@ -59,7 +60,7 @@ export default async function TextosPage({ searchParams }: { searchParams: Promi
             <ConversationList rows={rows} />
           ) : (
             <Reveal delay={0.05}>
-              <p className="g-empty">{archived ? "Aucune conversation archivée." : `Aucun texto pour l’instant. Ils arriveront ici dès qu’un client écrira au ${site}.`}</p>
+              <EmptyState icon={<MessageSquare size={20} />} title={archived ? "Aucune conversation archivée." : "Aucun texto pour l’instant."} body={archived ? undefined : `Ils arriveront ici dès qu’un client écrira au ${site}.`} />
             </Reveal>
           )}
         </section>

@@ -168,7 +168,7 @@
   font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   font-weight: 650;
   font-size: 13px;
-  color: var(--g-orange);
+  color: var(--g-orange-2); /* R3 : orange foncé, lisible en texte (4,5:1) */
   letter-spacing: 0.02em;
 }
 .sq-row__who {
