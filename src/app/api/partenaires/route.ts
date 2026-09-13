@@ -1,12 +1,14 @@
 /* ==================================================================
    POST /api/partenaires — candidature d'installateur partenaire
-   Validation, pot de miel, limite de débit, courriel interne (Resend).
+   Validation, pot de miel, limite de débit, courriel interne, et
+   candidature conservée pour l'outil de gestion (/gestion/candidatures).
    ================================================================== */
 
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { sendInternalMessage } from "@/lib/crm/email";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
+import { storeCandidature } from "@/lib/gestion/candidatures";
 
 const schema = z.object({
   company: z.string().trim().min(2, "Le nom de l'entreprise est requis.").max(120),
@@ -29,6 +31,14 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: first?.message ?? "Données invalides." }, { status: 400 });
   }
   const d = parsed.data;
+  // Conservée pour le bouton « Ajouter comme installateur » de l'outil de gestion, en plus du courriel.
+  const stored = await storeCandidature({ company: d.company, rbq: d.rbq, contact: d.contact, phone: d.phone, email: d.email, brands: d.brands || "", region: d.region || "", volume: d.volume || "" }).then(
+    () => true,
+    (error) => {
+      console.error("[partenaires] candidature non conservée :", error);
+      return false;
+    },
+  );
   const sent = await sendInternalMessage({
     kind: "partenaire",
     subject: `Candidature installateur : ${d.company} (RBQ ${d.rbq})`,
@@ -44,7 +54,7 @@ export async function POST(req: Request) {
       ["Volume annuel", d.volume || "—"],
     ],
   });
-  if (!sent) {
+  if (!sent && !stored) {
     return NextResponse.json({ error: "L'envoi est indisponible pour le moment. Écrivez-nous directement ou appelez au 438-900-3224." }, { status: 503 });
   }
   return NextResponse.json({ success: true });

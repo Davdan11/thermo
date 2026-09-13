@@ -65,14 +65,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdString(getWebSiteSchema()) }}
         />
-        <SiteChrome footer={<Footer />}>{children}</SiteChrome>
+        {/* Mesure d'audience, consentement et assistant : rendus par SiteChrome, sauf sur l'outil de gestion privé (/gestion, /job). */}
+        <SiteChrome
+          footer={<Footer />}
+          extras={
+            <>
+              <Analytics />
+              <ConsentBanner />
+              {/* Assistant : seulement si l’assistant a un fournisseur (clé Claude, ou Gemini activé exprès) ; le panneau se charge au premier clic. */}
+              {isAssistantEnabled() && <AssistantLauncher />}
+            </>
+          }
+        >
+          {children}
+        </SiteChrome>
         <Suspense fallback={null}>
           <UTMProvider />
         </Suspense>
-        <Analytics />
-        <ConsentBanner />
-        {/* Assistant : seulement si l’assistant a un fournisseur (clé Claude, ou Gemini activé exprès) ; le panneau se charge au premier clic. */}
-        {isAssistantEnabled() && <AssistantLauncher />}
         <PauseOffscreenAnimations />
       </body>
     </html>

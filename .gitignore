@@ -68,3 +68,10 @@ public/images/products/_official-sources/**
 # file des relances et demandes d'avis (courriels ; shared/data sur le VPS, jamais dans le dépôt)
 /data/relances.json
 /data/relances.json.lock
+
+# outil de gestion privé : installateurs, jobs, candidatures, liens de connexion et clé des sessions
+# (shared/data sur le VPS, jamais dans le dépôt)
+/data/gestion*.json
+/data/gestion*.json.lock
+/data/gestion*.tmp
+/data/gestion-secret.key
