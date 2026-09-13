@@ -37,6 +37,16 @@ const nextConfig: NextConfig = {
       { source: "/sitemap/palmares.xml", destination: "/sitemap/classements.xml", permanent: true },
     ];
   },
+  async rewrites() {
+    return {
+      beforeFiles: [],
+      afterFiles: [],
+      // IndexNow : /<INDEXNOW_KEY>.txt, servi par src/app/api/indexnow/cle/[cle]/route.ts (clé lue dans l'environnement,
+      // jamais dans le dépôt). « fallback » : après les fichiers de public/, les pages et les routes dynamiques ; la route
+      // répond 404 si ce n'est pas la clé.
+      fallback: [{ source: "/:cle([A-Za-z0-9-]{8,128})\\.txt", destination: "/api/indexnow/cle/:cle" }],
+    };
+  },
   async headers() {
     return [
       { source: "/(.*)", headers: securityHeaders },
