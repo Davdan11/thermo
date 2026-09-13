@@ -4,14 +4,18 @@
 import { z } from "zod";
 import { getAdminSession, unauthorizedJson } from "@/lib/gestion/auth/dal";
 import { invoicesCsv } from "@/lib/gestion/commissions/service";
+// Chantier S : journal d'audit (export).
+import { audit } from "@/lib/gestion/securite/audit";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(req: Request) {
-  if (!(await getAdminSession())) return unauthorizedJson();
+  const session = await getAdminSession(); // Chantier S : la session sert aussi au journal
+  if (!session) return unauthorizedJson();
   const raw = new URL(req.url).searchParams.get("annee") ?? "";
   const year = z.string().regex(/^\d{4}$/).safeParse(raw);
   const csv = await invoicesCsv(year.success ? year.data : undefined);
+  await audit("export", { quoi: "commissions CSV", annee: year.success ? year.data : "toutes" }, { qui: session.email }); // Chantier S
   const name = `commissions-${year.success ? year.data : "toutes"}.csv`;
   return new Response(csv, {
     headers: {

@@ -20,6 +20,9 @@ export interface SessionPayload {
   iat: number;
   exp: number;
   sid: string;
+  /* Chantier S : 2e étape faite (secondes) et méthode. Absents = 2e étape pas faite. */
+  mfa?: number;
+  mm?: "totp" | "secours" | "texto" | "appareil";
 }
 
 const b64 = (buf: Buffer | string) => Buffer.from(buf).toString("base64url");
@@ -28,11 +31,16 @@ function sign(data: string, secret: Buffer | string): string {
   return createHmac("sha256", secret).update(data).digest("base64url");
 }
 
+/** Chantier S : signe une charge utile complète (re-signature après la 2e étape). */
+export function signSessionPayload(payload: SessionPayload, secret: Buffer | string): string {
+  const body = `v1.${b64(JSON.stringify(payload))}`;
+  return `${body}.${sign(body, secret)}`;
+}
+
 export function createSessionToken(email: string, secret: Buffer | string, now = Date.now()): { token: string; payload: SessionPayload } {
   const iat = Math.floor(now / 1000);
   const payload: SessionPayload = { email, iat, exp: iat + SESSION_TTL_SECONDS, sid: randomBytes(9).toString("base64url") };
-  const body = `v1.${b64(JSON.stringify(payload))}`;
-  return { token: `${body}.${sign(body, secret)}`, payload };
+  return { token: signSessionPayload(payload, secret), payload };
 }
 
 function parse(token: string | undefined | null): { body: string; sig: string; payload: SessionPayload } | null {

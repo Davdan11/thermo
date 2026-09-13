@@ -17,6 +17,8 @@ import { endAdminSession, startAdminSession } from "@/lib/gestion/auth/dal";
 import { limiters } from "@/lib/gestion/rate-limit";
 import { publicBaseUrl, requestIp } from "@/lib/gestion/request";
 import { sendMagicLink } from "@/lib/gestion/notify";
+// Chantier S : journal d'audit des connexions (réussies et refusées).
+import { audit } from "@/lib/gestion/securite/audit";
 
 export type LoginState = { sent: true; email: string } | { sent: false; error: string } | undefined;
 
@@ -30,19 +32,30 @@ export async function requestLoginLink(_prev: LoginState, formData: FormData): P
     const link = `${await publicBaseUrl()}/gestion/connexion/verifier?jeton=${token}`;
     after(() => sendMagicLink(email, link, Math.round(MAGIC_LINK_TTL_MS / 60000)).then(() => undefined));
   }
+  // Chantier S : noté après la réponse (même durée, adresse autorisée ou non) ; l'adresse n'est notée que si elle est autorisée.
+  after(() => audit("connexion.lien", { autorisee: isAdminEmail(email), limitee: !allowed }, { qui: isAdminEmail(email) ? email : null, ip }));
   return { sent: true, email };
 }
 
 export async function confirmLogin(formData: FormData): Promise<void> {
   const token = String(formData.get("jeton") ?? "");
-  if (!limiters.loginVerify.hit(await requestIp())) redirect("/gestion/connexion/verifier?erreur=trop");
+  const ip = await requestIp();
+  if (!limiters.loginVerify.hit(ip)) {
+    await audit("connexion.echec", { raison: "trop-d-essais" }, { qui: null, ip }); // Chantier S
+    redirect("/gestion/connexion/verifier?erreur=trop");
+  }
   const result = await consumeMagicLink(token);
-  if ("error" in result) redirect(`/gestion/connexion/verifier?erreur=${result.error}`);
+  if ("error" in result) {
+    await audit("connexion.echec", { raison: result.error }, { qui: null, ip }); // Chantier S
+    redirect(`/gestion/connexion/verifier?erreur=${result.error}`);
+  }
   await startAdminSession(result.email);
+  await audit("connexion.reussie", { methode: "lien" }, { qui: result.email, ip }); // Chantier S
   redirect("/gestion");
 }
 
 export async function logout(): Promise<void> {
+  await audit("deconnexion"); // Chantier S : qui et IP lus de la requête
   await endAdminSession();
   redirect("/gestion/connexion?sortie=1");
 }

@@ -19,6 +19,8 @@ import * as crm from "@/lib/gestion/crm/service";
 import { isSnoozeOption, snoozeUntil } from "@/lib/gestion/crm/time";
 import { AUTO_TASK_RE, CLIENT_ID_RE, STAGES, TASK_ID_RE, type Stage } from "@/lib/gestion/crm/types";
 import { moveDealToStage } from "@/lib/soumissions/pipedrive-sync";
+// Chantier S : journal d'audit (changement d'étape).
+import { audit } from "@/lib/gestion/securite/audit";
 
 export type ActionResult = { ok: true; message?: string } | { ok: false; error: string } | undefined;
 
@@ -57,6 +59,7 @@ export async function setStageAction(id: unknown, stage: unknown, reason: unknow
   if (!p.success) return INVALID;
   const r = await crm.setStage(p.data.id, p.data.stage as Stage, p.data.reason, session.email);
   if (!r.ok) return r;
+  await audit("crm.etape", { client: p.data.id, etape: p.data.stage }, { qui: session.email }); // Chantier S
   if ("pipedrive" in r && r.pipedrive) {
     const pd = r.pipedrive;
     after(async () => {

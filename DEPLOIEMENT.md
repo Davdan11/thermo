@@ -119,3 +119,31 @@ d'application), `invalid_grant` (clé ou horloge), `403 Calendar API has not bee
   Le script ne fait rien s'il n'est pas 9 h à Montréal : les deux heures couvrent l'heure d'été et l'heure normale. Essai à blanc : `npx tsx scripts/send-relances.ts --dry-run`.
 - **Obligatoire** : `BUSINESS_MAILING_ADDRESS` (adresse postale exigée par la LCAP). Sans elle, rien ne part : les messages restent en file et le journal du robot l'indique.
 - **Avis sur le site** : `GOOGLE_PLACES_API_KEY` et `GOOGLE_PLACE_ID` (Places API (New)). Sans eux, en cas d'erreur ou sans avis, la section ne s'affiche pas. `/avis` redirige vers `GOOGLE_REVIEW_URL`.
+
+## Sécurité de /gestion (chantier S)
+
+### Connexion à deux étapes
+- Activation par le propriétaire : /gestion/securite → « Activer maintenant ». Quatre étapes : application d'authentification, clé (lien otpauth:// ou clé à la main), code de vérification, 10 codes de secours à ranger. Rien n'est exigé avant la dernière étape : impossible de se bloquer dehors en cours de route.
+- Ensuite : lien par courriel, puis code de l'application (ou texto à ALERT_SMS_TO, ou code de secours). « Faire confiance à cet appareil » : 30 jours par défaut, réglable de 0 à 90 dans /gestion/securite/deux-etapes.
+- 5 codes faux en 15 minutes bloquent la 2e étape de l'adresse pendant 15 minutes (limite gardée dans le fichier, donc aussi après un redémarrage).
+- Données : shared/data/gestion-securite.json (droits 600), dans les sauvegardes chiffrées.
+
+### Récupération (téléphone et codes perdus)
+1. Code de secours, ou texto si ALERT_SMS_TO et Twilio sont configurés.
+2. Depuis le serveur, sans redémarrage : `cd /var/www/thermopompesavendre.ca/current && npx --no-install tsx scripts/securite-2fa.ts desactiver <adresse>`. Se reconnecter par lien, puis réactiver la 2e étape.
+3. Urgence : ajouter `GESTION_2FA_DESACTIVEE=1` dans shared/.env, puis `pm2 reload thermo --update-env`. Retirer la ligne dès que l'accès est rétabli.
+4. `scripts/securite-2fa.ts etat` affiche l'état ; `scripts/securite-2fa.ts deconnecter-partout` ferme toutes les sessions.
+
+### Sauvegardes hors serveur
+- Crontab (root), après la copie locale de 3 h 30 :
+  `45 3 * * * /bin/bash /var/www/thermopompesavendre.ca/current/scripts/sauvegarde-cron.sh >> /var/log/thermo-sauvegarde.log 2>&1`
+- Contenu : tout shared/data (sauf .env*, verrous et fichiers temporaires), en tar.gz chiffré AES-256-GCM, vérifié avant l'envoi. Rotation : 30 quotidiennes, 12 mensuelles.
+- Variables : BACKUP_ENCRYPTION_KEY, BACKUP_S3_ENDPOINT, BACKUP_S3_BUCKET, BACKUP_S3_KEY_ID, BACKUP_S3_SECRET, BACKUP_S3_REGION (collables dans /gestion/securite/cles). Sans elles : inactif.
+- En cas d'échec : courriel aux ADMIN_EMAILS et texto à ALERT_SMS_TO ; état visible dans /gestion/securite.
+- **shared/.env n'est pas dans les sauvegardes** (secrets) : en garder une copie à part, dans un gestionnaire de mots de passe, avec BACKUP_ENCRYPTION_KEY.
+- Vérifier ou restaurer (depuis current) : `npx --no-install tsx scripts/restaurer-sauvegarde.ts --liste`, `--derniere` (vérifie la plus récente), `--s3 <clé> --vers /root/restauration`. Puis `pm2 stop thermo`, `mv shared/data shared/data.avant-restauration`, `mv /root/restauration shared/data`, `pm2 start thermo`.
+- La copie locale de 3 h 30 peut rester : elle ne protège pas d'une perte du serveur.
+
+### Clés et connexions
+- /gestion/securite/cles : liste blanche (Meta, Google Ads, Anthropic, Stripe, Gemini, ElevenLabs, GOOGLE_REVIEW_URL, sauvegardes), format vérifié. Exige la 2e étape et un code de moins de 10 minutes. Une valeur enregistrée n'est jamais réaffichée.
+- Écriture dans shared/.env sous verrou (copie `shared/.env.sauvegarde-<date>`, 10 dernières, droits 600), puis `pm2 reload thermo --update-env` lancé en processus détaché. Chaque modification est au journal d'audit, sans la valeur.
