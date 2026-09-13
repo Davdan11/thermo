@@ -259,6 +259,57 @@
   color: #fff;
 }
 
+/* Refonte R2 : « Votre projet : étape 7 sur 12 », la même progression que le pipeline, en version simple. */
+.pj-prog {
+  margin: 22px 0 0;
+}
+.pj-prog__label {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(244, 239, 231, 0.88);
+}
+.pj-prog__label b {
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+.pj-prog__bar {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pj-prog__bar li {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(244, 239, 231, 0.14);
+  overflow: hidden;
+}
+.pj-prog__bar li.is-done::after,
+.pj-prog__bar li.is-now::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #8fd4b0;
+  transform-origin: left;
+  animation: pj-prog-grow 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.pj-prog__bar li.is-now::after {
+  background: var(--orange);
+}
+@keyframes pj-prog-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 /* ---------------- Contenu ---------------- */
 .pj-main {
   max-width: 760px;

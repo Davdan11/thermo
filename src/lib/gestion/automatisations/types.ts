@@ -22,6 +22,8 @@ export const AUTOMATION_IDS = [
   "reference",
   "resume-matin",
   "rapport-hebdo",
+  // Refonte R2 : escalade par texto d'un délai d'étape du pipeline dépassé (crm/alertes-etapes.ts).
+  "alerte-etape",
 ] as const;
 export type AutomationId = (typeof AUTOMATION_IDS)[number];
 

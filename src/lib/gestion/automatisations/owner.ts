@@ -10,6 +10,7 @@ import { box, brandedEmail, p, strong, t, ul } from "@/lib/crm/templates/layout"
 import { escapeHtml } from "@/lib/security/escape";
 import { money } from "@/lib/soumissions/money";
 import type { Mail } from "./send";
+import type { Bilan } from "../crm/bilan"; // Refonte R2 : bilan de la semaine
 
 const REASON = "Vous recevez ce courriel parce que vous êtes administrateur de l’outil de gestion.";
 const OPT_OUT = "Interrupteurs : /gestion/automatisations.";
@@ -117,6 +118,23 @@ export interface WeeklyData {
   logisvert: { aFaire: number; faite: number; recue: number; aide: number };
   referralDemands: number;
   href: string;
+  /** Refonte R2 : ce qui a marché, ce qui bloque, quoi faire (absent : rapport d'origine seulement). */
+  bilan?: Bilan;
+}
+
+const BILAN_SECTIONS: Array<[keyof Pick<Bilan, "wins" | "blocks" | "todo">, string]> = [
+  ["wins", "Ce qui a marché"],
+  ["blocks", "Ce qui bloque"],
+  ["todo", "Quoi faire"],
+];
+
+function bilanHtml(b: Bilan): string {
+  const note = b.source === "ia" ? "Bilan rédigé par l’assistant IA à partir de ces chiffres (aucun chiffre ajouté)." : "Bilan construit par règles à partir de ces chiffres.";
+  return BILAN_SECTIONS.map(([k, title]) => (b[k].length ? p(strong(title)) + ul(b[k].map((x) => escapeHtml(x))) : "")).join("") + p(t(note), { muted: true, small: true });
+}
+
+function bilanText(b: Bilan): string[] {
+  return BILAN_SECTIONS.flatMap(([k, title]) => (b[k].length ? ["", `${title} :`, ...b[k].map((x) => `  - ${x}`)] : []));
 }
 
 export function weeklyReport(d: WeeklyData): { mail: Mail; sms: string } {
@@ -133,8 +151,8 @@ export function weeklyReport(d: WeeklyData): { mail: Mail; sms: string } {
     ["LogisVert (clients)", `${d.logisvert.aFaire} à faire · ${d.logisvert.faite} faites · ${d.logisvert.recue} reçues${d.logisvert.aide ? ` · ${d.logisvert.aide} besoin d’aide` : ""}`],
     ["Demandes venues d’une référence", String(d.referralDemands)],
   ];
-  const body = p(t("Les sept derniers jours en un coup d’œil. L’aide LogisVert est versée aux clients : elle n’est jamais comptée comme un revenu.")) + box("La semaine", rows);
-  const text = [subject, "", ...rows.map(([k, v]) => `${k} : ${v.replace(/ | /g, " ")}`), "", d.href].join("\n");
+  const body = p(t("Les sept derniers jours en un coup d’œil. L’aide LogisVert est versée aux clients : elle n’est jamais comptée comme un revenu.")) + box("La semaine", rows) + (d.bilan ? bilanHtml(d.bilan) : "");
+  const text = [subject, "", ...rows.map(([k, v]) => `${k} : ${v.replace(/ | /g, " ")}`), ...(d.bilan ? bilanText(d.bilan) : []), "", d.href].join("\n");
   const sms = `TAV · semaine : ${d.demands} demandes, ${d.installsDone} installations, ${money(d.receivedCents)} reçus, ${d.overdueCount} factures en retard, satisfaction ${d.avgRating !== null ? d.avgRating.toFixed(1).replace(".", ",") : "—"}. ${d.href}`;
   return { mail: ownerMail({ subject, preheader: sms.slice(6, 140), body, cta: { label: "Ouvrir /gestion", href: d.href } }, text), sms };
 }

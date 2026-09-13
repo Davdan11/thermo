@@ -140,7 +140,17 @@ export const AUTOMATIONS: AutomationDef[] = [
     audience: "Propriétaire",
     channels: "Courriel et texto",
     when: "Le lundi, 7 h 30",
-    description: "Demandes, installations, factures, paiements reçus et en retard, satisfaction, LogisVert, références.",
+    description: "Demandes, installations, factures, paiements reçus et en retard, satisfaction, LogisVert, références ; bilan : ce qui a marché, ce qui bloque, quoi faire (rédigé par l’assistant IA quand la clé Anthropic existe, sinon par règles).",
+  },
+  // Refonte R2.
+  {
+    id: "alerte-etape",
+    group: "proprietaire",
+    label: "Alertes de délais du pipeline",
+    audience: "Propriétaire",
+    channels: "Texto",
+    when: "Délai d’alerte de l’étape dépassé, tâche restée ouverte (1 h par défaut) ; jamais pendant les heures silencieuses",
+    description: "« Client prêt depuis 6 h, aucun installateur », « Contrat prêt à signer depuis 48 h »… Une tâche apparaît d’abord dans À faire ; le texto ne part que si elle reste ouverte. Un seul avis par dossier et par étape, trois au plus par passage. Délais et étapes réglables dans Réglages → Étapes du parcours.",
   },
 ];
 

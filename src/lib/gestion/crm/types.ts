@@ -21,6 +21,8 @@ import type { PartnerTaskInput } from "../partenaires/crm-tasks";
 import type { ReseauTaskInput } from "../reseau/tasks";
 // Conformité C1 : entrées des tâches du parcours du contrat.
 import type { ContratTaskInput } from "@/lib/contrats/crm-tasks";
+// Refonte R2 : parcours en 12 étapes (réglages, raison structurée de perte, factures et suivis).
+import type { LossCause, ParcoursInput, ParcoursSettings } from "./parcours";
 
 /* ---------------- Étapes ---------------- */
 
@@ -120,6 +122,8 @@ export interface StageChange {
   from: Stage | null;
   to: Stage;
   reason?: string;
+  /** Refonte R2 : raison structurée d'une perte (prix, délai…). Absente des anciens changements. */
+  cause?: LossCause;
   /** Résultat du déplacement de l'affaire Pipedrive (si une étape est associée dans Réglages). */
   pipedrive?: { ok: boolean; detail: string };
 }
@@ -130,7 +134,8 @@ export interface CrmClientRecord {
   keys: string[];
   stageOverride?: { stage: Stage; at: string; by: string };
   stageLog: StageChange[];
-  lost?: { reason: string; at: string };
+  /** Refonte R2 : `cause` (raison structurée) facultative ; absente d'un crm.json plus ancien. */
+  lost?: { reason: string; at: string; cause?: LossCause };
   tags: string[];
   notes: CrmNote[];
   valueCents?: number;
@@ -213,6 +218,8 @@ export interface CrmData extends CrmExtensions {
   settings: CrmSettings;
   /** Données de démonstration (scripts/crm-seed.ts), jamais lues en production. */
   seed?: true;
+  /** Refonte R2 : réglages des étapes du parcours (noms, délais d'alerte, probabilités). Absent : défauts. */
+  parcours?: ParcoursSettings;
 }
 
 /* ---------------- Données sources ---------------- */
@@ -239,6 +246,8 @@ export interface SourceData {
   reseau?: ReseauTaskInput;
   /** Conformité C1 : dossiers du contrat (installateur à trouver, réponses, date à réserver). */
   contrats?: ContratTaskInput;
+  /** Refonte R2 : factures de commission, suivis après-vente, plans d'entretien (étapes Payé et Suivi). */
+  parcours?: ParcoursInput;
 }
 
 /** Un client : ses traces réunies, dans tous les magasins. */

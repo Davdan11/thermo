@@ -691,6 +691,21 @@ export default async function ProjetPage({ params, searchParams }: { params: Pro
           </h1>
           <span className="pj-rule" aria-hidden />
           <p className="pj-sub">{sub}</p>
+          {/* Refonte R2 : la même progression que le pipeline, en version simple (aucune donnée interne). */}
+          {v.progress ? (
+            <div className="pj-prog">
+              <p className="pj-prog__label">
+                Votre projet : étape <b>{v.progress.n}</b> sur {v.progress.total} · {v.progress.label}
+              </p>
+              <ol className="pj-prog__bar" aria-label={`Étape ${v.progress.n} sur ${v.progress.total} : ${v.progress.label}`}>
+                {v.progress.steps.map((label, i) => (
+                  <li key={label} className={i < v.progress!.n - 1 ? "is-done" : i === v.progress!.n - 1 ? "is-now" : ""} title={label} aria-current={i === v.progress!.n - 1 ? "step" : undefined}>
+                    <span className="pj-sr">{label}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          ) : null}
           <ol className="pj-rail" aria-label="Où en est votre projet">
             {v.steps.map((st) => (
               <li key={st.id} className={st.done ? "is-done" : st.id === current ? "is-now" : ""} aria-current={st.id === current ? "step" : undefined}>

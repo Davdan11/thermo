@@ -55,6 +55,10 @@ import { readReseauTaskInput, reseauFiles } from "../reseau/crm-tasks";
 import { readContratTaskInput } from "@/lib/contrats/crm-tasks";
 import { contratsFile } from "@/lib/contrats/store";
 import { missingTextoRecords } from "./textos-adapter";
+// Refonte R2 : factures, après-vente et plans d'entretien (étapes Payé et Suivi), tri par priorité, raison de perte.
+import { parcoursFiles, readParcoursInput } from "./parcours-sources";
+import type { LossCause } from "./parcours";
+import { sortTasksByPriority } from "./priorite";
 import { buildTimeline, type TimelineItem } from "./timeline";
 import { ago, dateLong, daysBetweenYmd, localYmd, stamp } from "./time";
 import { AUTO_TASK_RE, CLIENT_ID_RE, PIPELINE_STAGES, STAGE_LABELS, STAGES, TASK_ID_RE, type ClientBundle, type CrmClientRecord, type CrmData, type CrmSettings, type SourceData, type Stage } from "./types";
@@ -82,7 +86,7 @@ async function signature(): Promise<string> {
     /* dossier absent */
   }
   // Volet A : partenaires.json et sav.json ajoutés (leurs tâches automatiques).
-  const parts = await Promise.all([...files.map((f) => stamp1(path.join(dir, f))), stamp1(soumissionsFile()), stamp1(gestionFile()), stamp1(relancesFile()), stamp1(textosFile()), stamp1(crmFile()), stamp1(settingsFile()), stamp1(partenairesFile()), stamp1(savFile()), ...reseauFiles().map(stamp1), stamp1(contratsFile())]); // Chantier R : reseau.json, inventaire.json ; Conformité C1 : contrats.json
+  const parts = await Promise.all([...files.map((f) => stamp1(path.join(dir, f))), stamp1(soumissionsFile()), stamp1(gestionFile()), stamp1(relancesFile()), stamp1(textosFile()), stamp1(crmFile()), stamp1(settingsFile()), stamp1(partenairesFile()), stamp1(savFile()), ...reseauFiles().map(stamp1), stamp1(contratsFile()), ...parcoursFiles().map(stamp1)]); // Chantier R : reseau.json, inventaire.json ; Conformité C1 : contrats.json ; Refonte R2 : commissions, après-vente, portail, terrain
   return [dir, soumissionsFile(), process.env.NODE_ENV, ...files, ...parts].join("|");
 }
 
@@ -103,6 +107,7 @@ export async function loadSources(): Promise<SourceData> {
   const jobs = demo || !gestion.seed ? gestion.jobs : [];
   const reseau = demo || !gestion.seed ? await readReseauTaskInput({ journal, includeDemo: demo }).catch(() => undefined) : undefined; // Chantier R
   const contrats = await readContratTaskInput().catch(() => undefined); // Conformité C1
+  const parcours = await readParcoursInput().catch(() => undefined); // Refonte R2
   return {
     journal,
     outcomes,
@@ -116,6 +121,7 @@ export async function loadSources(): Promise<SourceData> {
     ...(partenaires && (demo || !gestion.seed) ? { partenaires } : {}), // volet A
     ...(reseau ? { reseau } : {}), // Chantier R
     ...(contrats ? { contrats } : {}), // Conformité C1
+    ...(parcours ? { parcours } : {}), // Refonte R2
   };
 }
 
@@ -433,7 +439,8 @@ export async function boardView(scoped?: CrmIndex): Promise<BoardView> {
 export async function tasksView(scoped?: CrmIndex): Promise<{ overdue: TaskDTO[]; today: TaskDTO[]; upcoming: TaskDTO[]; total: number }> {
   const index = scoped ?? (await loadCrmIndex()); // Chantier V
   const b = bucketTasks(index.tasks, index.now);
-  const dto = (ts: typeof index.tasks) => ts.map((t) => taskDTO(t, index, index.now));
+  // Refonte R2 : dans chaque groupe, le client chaud d'abord (comme avant), puis la note de priorité du client.
+  const dto = (ts: typeof index.tasks) => sortTasksByPriority(ts, index).map((t) => taskDTO(t, index, index.now));
   return { overdue: dto(b.overdue), today: dto(b.today), upcoming: dto(b.upcoming), total: index.tasks.length };
 }
 
@@ -570,16 +577,18 @@ export async function addNote(clientId: string, text: string, kind: "note" | "ap
 }
 
 /** Étape choisie à la main. Renvoie ce qu'il faut pousser à Pipedrive (si une étape est associée) : l'appelant le fait dans after(). */
-export async function setStage(clientId: string, stage: Stage, reason: string, by: string, now = new Date()): Promise<CrmResult & { pipedrive?: { dealId: number; stageId: number; at: string; clientId: string } }> {
+/* Refonte R2 : `opts.cause`, raison structurée d'une perte (prix, délai…), gardée avec la raison écrite. */
+export async function setStage(clientId: string, stage: Stage, reason: string, by: string, now = new Date(), opts: { cause?: LossCause } = {}): Promise<CrmResult & { pipedrive?: { dealId: number; stageId: number; at: string; clientId: string } }> {
   const c = await clientOrNull(clientId);
   if (!c) return { ok: false, error: "Client introuvable." };
   if (stage === "perdue" && !reason.trim()) return { ok: false, error: "Indiquez la raison de la perte." };
   const at = now.toISOString();
   const settings = await mutateCrm((d) => {
     const r = ensureRecord(d, c, at);
-    r.stageLog.push({ at, by, from: c.stage.stage, to: stage, ...(reason.trim() ? { reason: reason.trim().slice(0, 200) } : {}) });
+    const cause = stage === "perdue" && opts.cause ? { cause: opts.cause } : {};
+    r.stageLog.push({ at, by, from: c.stage.stage, to: stage, ...(reason.trim() ? { reason: reason.trim().slice(0, 200) } : {}), ...cause });
     r.stageOverride = { stage, at, by };
-    if (stage === "perdue") r.lost = { reason: reason.trim().slice(0, 200), at };
+    if (stage === "perdue") r.lost = { reason: reason.trim().slice(0, 200), at, ...cause };
     return { result: d.settings, changed: true };
   });
   const stageId = settings.pipedriveStageMap[stage];
