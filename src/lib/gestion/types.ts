@@ -114,6 +114,8 @@ export interface Job {
   internalNotes: string;
   status: JobStatus;
   assignedInstallerId: string | null;
+  /** Installateur proposé pour l'offre : l'entrepreneur choisi dans la soumission acceptée (coché d'office, jamais imposé). */
+  proposedInstallerId?: string | null;
   scheduledFor: string | null;
   /** Volet A — fin de chantier (ISO 8601, UTC) : posée au passage à « terminé », retirée à la réouverture.
       Signal du volet B (facture, sondage) ; détail dans src/lib/gestion/terrain/completion.ts. */

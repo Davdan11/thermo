@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { loadContractor } from "@/lib/soumissions/contractors";
 import { todayIn } from "@/lib/soumissions/dates";
 import { buildDocument, currentVersion, draftOf, effectiveStatus, latestSent, QUOTE_ID_RE, versionNumber } from "@/lib/soumissions/quote";
 import { loadQuote } from "@/lib/soumissions/service";
@@ -23,13 +24,15 @@ export default async function ApercuPage({ params, searchParams }: { params: Pro
   const q = data.quote;
   const version = (v ? versionNumber(q, Number(v)) : undefined) ?? draftOf(q) ?? latestSent(q) ?? currentVersion(q);
   const today = todayIn();
-  const doc = buildDocument(q, version, data.settings, data.photos);
+  // Brouillon : identité actuelle de l'entrepreneur choisi (figée à l'envoi) ; version envoyée : le document figé.
+  const contractor = version.status === "brouillon" ? await loadContractor(version.contractorId ?? null) : null;
+  const doc = buildDocument(q, version, data.settings, data.photos, new Date(), contractor?.identity ?? null);
   const a = version.acceptance;
   return (
     <div className="sq-doc">
       <div className="sq-preview-bar">
         <span>
-          <strong>Aperçu, version {version.v}</strong> · {version.status === "brouillon" ? "brouillon : l’identité et les textes viennent des réglages actuels, figés à l’envoi." : a ? "version acceptée : instantané figé." : "document figé à l’envoi."}
+          <strong>Aperçu, version {version.v}</strong> · {version.status === "brouillon" ? "brouillon : l’identité de l’entrepreneur vient de sa fiche actuelle, les textes des réglages ; tout est figé à l’envoi." : a ? "version acceptée : instantané figé." : "document figé à l’envoi."}
         </span>
         <Link href={`/gestion/soumissions/${q.id}`} className="g-btn g-btn--quiet"><ArrowLeft size={16} aria-hidden /> Retour à la fiche</Link>
       </div>

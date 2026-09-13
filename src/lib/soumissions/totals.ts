@@ -9,14 +9,17 @@
      4. TPS et TVQ, chacune sur la base après TOUS les rabais,
         arrondies au cent (demi vers le haut) ;
      5. aide LogisVert, APRÈS le total taxes comprises :
-        - « cession » : déduite de ce que le client paie à l'entreprise ;
-        - « client » : versée plus tard au client, montrée à titre
-          d'information (coût net après l'aide) ;
+        - « client » (seul mode des nouvelles soumissions) : versée plus
+          tard au client par Hydro-Québec, montrée à titre
+          d'INFORMATION ; le total dû reste le prix complet (l'estimation
+          après l'aide est marquée « estimation, non garantie ») ;
+        - « cession » : ANCIEN mode, gardé seulement pour afficher les
+          soumissions déjà envoyées telles qu'elles l'ont été ;
      6. acompte et solde, sur ce que le client paie à l'entreprise.
    ================================================================== */
 
 import { lineAmount, percentOf, taxOf } from "./money";
-import type { Discount, DiscountTotal, LineTotal, QuoteContent, QuoteLine, Totals } from "./types";
+import type { Discount, DiscountTotal, LineTotal, LogisVertMode, MachineInfo, QuoteContent, QuoteLine, Totals } from "./types";
 
 export interface TaxRates {
   tpsPer100k: number;
@@ -53,6 +56,19 @@ export function logisvertAmount(content: Pick<QuoteContent, "machine" | "logisve
   const m = content.machine;
   if (content.logisvert.mode === "aucune" || !m || m.offList || !m.pairing) return 0;
   return Math.max(0, Math.round(m.pairing.logisVertCents));
+}
+
+/**
+ * Mode LogisVert d'une nouvelle soumission : plus de choix. Jumelage de la liste officielle avec un montant → « client »
+ * (versée au client, information seulement) ; sinon « aucune ». Jamais « cession ».
+ */
+export function logisvertModeFor(machine: MachineInfo | null | undefined): Exclude<LogisVertMode, "cession"> {
+  return machine && !machine.offList && machine.pairing && machine.pairing.logisVertCents > 0 ? "client" : "aucune";
+}
+
+/** Contenu d'un brouillon avec son mode LogisVert recalculé (un ancien brouillon « cession » devient « client »). */
+export function withLogisvertMode<T extends Pick<QuoteContent, "machine" | "logisvert">>(content: T): T {
+  return { ...content, logisvert: { mode: logisvertModeFor(content.machine) } };
 }
 
 export function computeTotals(content: QuoteContent, selection: Iterable<string>, rates: TaxRates, asOf: string): Totals {

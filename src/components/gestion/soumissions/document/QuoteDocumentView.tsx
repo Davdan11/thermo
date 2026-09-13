@@ -21,24 +21,11 @@ import { formatDateTime, formatDay } from "@/lib/soumissions/dates";
 import { formatNumber, money } from "@/lib/soumissions/money";
 import { extraLength, floorLabel, lengthText, qtyText, whenText } from "@/lib/soumissions/present";
 import { computeTotals } from "@/lib/soumissions/totals";
-import {
-  CIRCUIT_LABELS,
-  DISCONNECT_LABELS,
-  DRAIN_LABELS,
-  ELECTRICIAN_LABELS,
-  FINISH_LABELS,
-  INDOOR_LABELS,
-  MOUNTING_LABELS,
-  PROPERTY_LABELS,
-  ROUTE_LABELS,
-  STATUS_LABELS,
-  WALL_LABELS,
-  type EffectiveStatus,
-  type QuoteDocument,
-} from "@/lib/soumissions/types";
+import { choiceText } from "@/lib/soumissions/choices";
+import { ELECTRICIAN_LABELS, STATUS_LABELS, type EffectiveStatus, type QuoteDocument } from "@/lib/soumissions/types";
 import { Rise, RollingMoney } from "./motion";
 import { Schematic } from "./Schematic";
-import { PLACEHOLDER_RE } from "@/lib/soumissions/config";
+import { LOGISVERT_NOTICE, PLACEHOLDER_RE, PRESENTER_FALLBACK } from "@/lib/soumissions/config";
 
 /** Texte prêt à montrer au client : rempli et sans marqueur « [À COMPLÉTER…] ». */
 const ready = (t: string | null | undefined): t is string => Boolean(t && t.trim()) && !PLACEHOLDER_RE.test(t as string);
@@ -69,9 +56,9 @@ const beaconSent = new Set<string>();
 /** Texte sûr pour une chaîne CSS (marges de page imprimées). */
 const cssText = (s: string) => s.replace(/[\\"<>\r\n]/g, " ").replace(/\s+/g, " ").trim();
 
-/** Pied de chaque page imprimée : identité de l'entreprise à gauche, numéro de soumission et de page à droite. */
+/** Pied de chaque page imprimée : identité de l'entrepreneur (ou, pour une ancienne soumission, de l'entreprise) à gauche, numéro de soumission et de page à droite. */
 function pageCss(doc: QuoteDocument): string {
-  const co = doc.company;
+  const co = doc.contractor ?? doc.company;
   const left = cssText([co.legalName, co.neq ? `NEQ ${co.neq}` : "", co.rbq ? `RBQ ${co.rbq}` : "", co.tps ? `TPS ${co.tps}` : "", co.tvq ? `TVQ ${co.tvq}` : "", co.phone].filter(Boolean).join(" · "));
   const right = cssText(`${doc.number} · v${doc.version} · page `);
   return `@page { @bottom-left { content: "${left}"; font: 7.5pt system-ui, sans-serif; color: #5b6770; } @bottom-right { content: "${right}" counter(page) " de " counter(pages); font: 7.5pt system-ui, sans-serif; color: #5b6770; } }`;
@@ -159,11 +146,18 @@ export function QuoteDocumentView(props: DocumentViewProps) {
 
   const clientName = `${c.client.firstName} ${c.client.lastName}`.trim();
   const work = c.site.sameAsBilling ? { address: c.client.address, city: c.client.city, postalCode: c.client.postalCode } : { address: c.site.address, city: c.site.city, postalCode: c.site.postalCode };
-  const company = co.tradeName || co.legalName;
+  /* Modèle actuel (doc.contractor présent, même null en aperçu) : l'entrepreneur est l'installateur partenaire,
+     Thermopompes À Vendre présente la soumission. Ancienne soumission (clé absente) : affichée comme à son envoi. */
+  const modern = doc.contractor !== undefined;
+  const k = doc.contractor ?? null;
+  const presenter = co.tradeName || co.legalName || PRESENTER_FALLBACK;
+  const company = modern ? presenter : co.tradeName || co.legalName;
+  const taxCo = k ?? co;
   const unitWord = c.placement.indoor.length > 1 ? `${c.placement.indoor.length} unités intérieures` : "une unité intérieure";
   const p = m?.pairing ?? null;
-  const lvLabel = totals.logisvertMode === "cession" ? "Aide LogisVert, versée par Hydro-Québec à l’entreprise" : "Aide LogisVert, versée par Hydro-Québec au client après l’installation";
+  const lvLabel = totals.logisvertMode === "cession" ? "Aide LogisVert, versée par Hydro-Québec à l’entreprise" : modern ? "Aide LogisVert prévue, versée au client par Hydro-Québec après l’installation" : "Aide LogisVert, versée par Hydro-Québec au client après l’installation";
   const lvText = totals.logisvertMode === "cession" ? doc.texts.logisvertCession : totals.logisvertMode === "client" ? doc.texts.logisvertClient : "";
+  const lvModern = modern && totals.logisvertMode === "client" && totals.logisvertCents > 0;
   const expiredOn = status === "expiree";
   const statusTone = status === "acceptee" ? "ok" : status === "refusee" || status === "expiree" || status === "remplacee" ? "bad" : "info";
 
@@ -214,6 +208,13 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     <p className="dv-cover__addr dv-enter" style={{ animationDelay: "0.2s" }}>
                       {[work.address, work.city, work.postalCode].filter(Boolean).join(", ")}
                     </p>
+                    {modern ? (
+                      <p className="dv-cover__by dv-enter" style={{ animationDelay: "0.24s" }}>
+                        <span>Travaux réalisés par</span>
+                        <strong>{k?.legalName || <Missing what="Entrepreneur" show />}</strong>
+                        {k?.rbq ? <em>Licence RBQ {k.rbq}</em> : null}
+                      </p>
+                    ) : null}
                   </div>
 
                   <div className="dv-cover__meta dv-enter" style={{ animationDelay: "0.28s" }}>
@@ -223,7 +224,11 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     <div className="dv-cover__total">
                       <span>Total, taxes comprises</span>
                       <strong><RollingMoney cents={totals.totalCents} /></strong>
-                      {totals.logisvertCents ? <small>{totals.logisvertMode === "cession" ? "À payer après l’aide LogisVert" : "Coût net estimé après l’aide"} : <RollingMoney cents={totals.netAfterAidCents} /></small> : null}
+                      {lvModern ? (
+                        <small>Aide LogisVert prévue : {money(totals.logisvertCents)}, versée au client par Hydro-Québec, non garantie</small>
+                      ) : totals.logisvertCents ? (
+                        <small>{totals.logisvertMode === "cession" ? "À payer après l’aide LogisVert" : "Coût net estimé après l’aide"} : <RollingMoney cents={totals.netAfterAidCents} /></small>
+                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -253,9 +258,10 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     <Facts
                       rows={[
                         ["Client", clientName],
+                        ["Entrepreneur qui réalise les travaux", k ? `${k.legalName}${k.rbq ? `, licence RBQ ${k.rbq}` : ""}` : ""],
                         ["Adresse des travaux", [work.address, work.city, work.postalCode].filter(Boolean).join(", ")],
                         ["Adresse de facturation", c.site.sameAsBilling ? "La même" : [c.client.address, c.client.city, c.client.postalCode].filter(Boolean).join(", ")],
-                        ["Propriété", [c.site.propertyType ? PROPERTY_LABELS[c.site.propertyType] : "", c.site.yearBuilt ? `construite en ${c.site.yearBuilt}` : ""].filter(Boolean).join(", ")],
+                        ["Propriété", [choiceText("propertyType", c.site.propertyType), c.site.yearBuilt ? `construite en ${c.site.yearBuilt}` : ""].filter(Boolean).join(", ")],
                         ["Niveaux", c.site.floors ? `${c.site.floors} niveau${c.site.floors > 1 ? "x" : ""} hors sol${c.site.basement ? ", plus un sous-sol" : ""}` : c.site.basement ? "Avec sous-sol" : ""],
                         ["Accès et stationnement", c.site.access],
                         ["Contraintes des occupants", c.site.constraints],
@@ -277,7 +283,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                       <Facts
                         rows={[
                           ["Modèle", m?.outdoorModel],
-                          ["Support", c.placement.outdoor.mounting ? MOUNTING_LABELS[c.placement.outdoor.mounting] : ""],
+                          ["Support", choiceText("mounting", c.placement.outdoor.mounting)],
                           ["Dégagement", c.placement.outdoor.clearance],
                           ["Neige et glace", c.placement.outdoor.snow],
                           ["Remarques", c.placement.outdoor.notes],
@@ -289,7 +295,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                       const extra = extraLength(u);
                       return (
                         <Rise key={u.id} className="dv-unit" delay={Math.min(i, 4) * 0.05}>
-                          <p className="dv-unit__k">{u.label || `Unité ${i + 1}`}{u.type ? ` · ${INDOOR_LABELS[u.type]}` : ""}</p>
+                          <p className="dv-unit__k">{u.label || `Unité ${i + 1}`}{u.type ? ` · ${choiceText("indoorType", u.type)}` : ""}</p>
                           <h3 className="dv-unit__t">{u.room || <Missing what="Pièce" show={preview} />}</h3>
                           <Facts
                             rows={[
@@ -309,10 +315,10 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                                   ""
                                 ),
                               ],
-                              ["Parcours", u.lineRoute ? ROUTE_LABELS[u.lineRoute] : ""],
-                              ["Finition", u.lineFinish ? FINISH_LABELS[u.lineFinish] : ""],
-                              ["Percements", u.penetrations !== null ? `${u.penetrations}${u.wallMaterial ? `, dans un mur en ${WALL_LABELS[u.wallMaterial].toLowerCase()}` : ""}` : ""],
-                              ["Drain", u.drain ? DRAIN_LABELS[u.drain] : ""],
+                              ["Parcours", choiceText("route", u.lineRoute)],
+                              ["Finition", choiceText("finish", u.lineFinish)],
+                              ["Percements", u.penetrations !== null ? `${u.penetrations}${u.wallMaterial ? `, dans un mur en ${choiceText("wallMaterial", u.wallMaterial).toLowerCase()}` : ""}` : ""],
+                              ["Drain", choiceText("drain", u.drain)],
                               ["Remarques", u.notes],
                             ]}
                           />
@@ -322,12 +328,12 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     })}
                     <Rise className="dv-unit dv-unit--wide">
                       <p className="dv-unit__k">Électricité</p>
-                      <h3 className="dv-unit__t">{c.placement.electrical.circuit ? CIRCUIT_LABELS[c.placement.electrical.circuit] : "Raccordement électrique"}</h3>
+                      <h3 className="dv-unit__t">{choiceText("circuit", c.placement.electrical.circuit) || "Raccordement électrique"}</h3>
                       <Facts
                         rows={[
                           ["Panneau", c.placement.electrical.panelCapacity],
                           ["Disjoncteur", c.placement.electrical.breaker],
-                          ["Sectionneur", c.placement.electrical.disconnect ? DISCONNECT_LABELS[c.placement.electrical.disconnect] : ""],
+                          ["Sectionneur", choiceText("disconnect", c.placement.electrical.disconnect)],
                           ["Distance du panneau à l’unité extérieure", c.placement.electrical.panelDistance !== null ? lengthText(c.placement.electrical.panelDistance, c.placement.lengthUnit) : ""],
                           ["Maître électricien", c.placement.electrical.electrician ? ELECTRICIAN_LABELS[c.placement.electrical.electrician] : ""],
                           ["Remarques", c.placement.electrical.notes],
@@ -499,12 +505,28 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                       </div>
                     ))}
                     {totals.quoteDiscountsCents ? <div className="dv-trow"><span>Montant avant taxes</span><span>{money(totals.taxableCents)}</span></div> : null}
-                    <div className="dv-trow dv-trow--tax"><span>TPS (5 %){co.tps ? <small>n° {co.tps}</small> : null}</span><span>{money(totals.tpsCents)}</span></div>
-                    <div className="dv-trow dv-trow--tax"><span>TVQ (9,975 %){co.tvq ? <small>n° {co.tvq}</small> : null}</span><span>{money(totals.tvqCents)}</span></div>
+                    <div className="dv-trow dv-trow--tax"><span>TPS (5 %){taxCo.tps ? <small>n° {taxCo.tps}</small> : null}</span><span>{money(totals.tpsCents)}</span></div>
+                    <div className="dv-trow dv-trow--tax"><span>TVQ (9,975 %){taxCo.tvq ? <small>n° {taxCo.tvq}</small> : null}</span><span>{money(totals.tvqCents)}</span></div>
                     <div className="dv-trow dv-trow--total"><span>Total, taxes comprises</span><RollingMoney cents={totals.totalCents} /></div>
                   </Rise>
 
-                  {totals.logisvertCents ? (
+                  {lvModern ? (
+                    <Rise className="dv-aid dv-aid--info">
+                      <p className="dv-aid__k">Aide LogisVert · Hydro-Québec · information</p>
+                      <div className="dv-trow"><span>{lvLabel}</span><RollingMoney cents={totals.logisvertCents} /></div>
+                      <div className="dv-trow dv-trow--net">
+                        <span>Estimation après l’aide<small>estimation, non garantie</small></span>
+                        <RollingMoney cents={totals.netAfterAidCents} />
+                      </div>
+                      <p className="dv-aid__notice">{LOGISVERT_NOTICE}</p>
+                      <p className="dv-aid__small">Le montant à payer reste le total, taxes comprises ({money(totals.totalCents)}) : l’aide n’en est jamais soustraite.</p>
+                      {ready(lvText) ? <p className="dv-aid__small">{lvText}</p> : null}
+                      <p className="dv-aid__small">
+                        Jumelage AHRI {p?.ahri}{m?.listDate ? `, liste officielle du ${m.listDate}` : ""}. Conditions du programme :{" "}
+                        <a href={doc.links.logisvert} target="_blank" rel="noreferrer">hydroquebec.com, LogisVert <ArrowUpRight size={12} aria-hidden /></a>
+                      </p>
+                    </Rise>
+                  ) : totals.logisvertCents ? (
                     <Rise className="dv-aid">
                       <p className="dv-aid__k">Aide LogisVert · Hydro-Québec</p>
                       <div className="dv-trow"><span>{lvLabel}</span><RollingMoney cents={totals.logisvertCents} sign={totals.logisvertMode === "cession" ? "− " : ""} /></div>
@@ -551,7 +573,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                       </Rise>
                     ) : null}
                     <Rise className="dv-warr__card">
-                      <h3>Main-d’œuvre ({company || "l’entreprise"})</h3>
+                      <h3>{modern ? "Main-d’œuvre" : `Main-d’œuvre (${company || "l’entreprise"})`}</h3>
                       <Prose text={doc.texts.warranty} />
                     </Rise>
                     <Rise className="dv-warr__card">
@@ -649,7 +671,28 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                   </button>
                 </p>
 
-                {/* Identité de l'entreprise */}
+                {/* Identité : l'entrepreneur qui réalise les travaux, puis la marque qui présente la soumission. */}
+                {modern ? (
+                  <footer className="dv-identity dv-identity--duo" aria-label="Entrepreneur et présentation de la soumission">
+                    <div className="dv-identity__main">
+                      <p className="dv-identity__role">Entrepreneur qui réalise les travaux</p>
+                      <p className="dv-identity__name">{k?.legalName || <Missing what="Entrepreneur" show />}{k?.tradeName && k.tradeName !== k.legalName ? <span> · {k.tradeName}</span> : null}</p>
+                      {k ? <p>{[k.address, k.city, k.postalCode].filter(Boolean).join(", ") || <Missing what="Adresse" show />}</p> : null}
+                      {k ? <p>{[k.phone, k.email].filter(Boolean).join(" · ")}</p> : null}
+                      <dl>
+                        <div><dt>NEQ</dt><dd>{k?.neq || <Missing what="NEQ" show />}</dd></div>
+                        <div><dt>Licence RBQ</dt><dd>{k?.rbq || <Missing what="RBQ" show />}</dd></div>
+                        <div><dt>TPS</dt><dd>{k?.tps || <Missing what="TPS" show />}</dd></div>
+                        <div><dt>TVQ</dt><dd>{k?.tvq || <Missing what="TVQ" show />}</dd></div>
+                      </dl>
+                    </div>
+                    <div className="dv-identity__by">
+                      <p className="dv-identity__role">Soumission préparée par</p>
+                      <p className="dv-identity__presenter">{presenter}</p>
+                      <p>{[co.phone, co.email, co.website].filter(Boolean).join(" · ")}</p>
+                    </div>
+                  </footer>
+                ) : (
                 <footer className="dv-identity" aria-label="L’entreprise">
                   <div>
                     <p className="dv-identity__name">{co.legalName || <Missing what="Raison sociale" show />}{co.tradeName && co.tradeName !== co.legalName ? <span> · {co.tradeName}</span> : null}</p>
@@ -663,6 +706,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     <div><dt>TVQ</dt><dd>{co.tvq || <Missing what="TVQ" show />}</dd></div>
                   </dl>
                 </footer>
+                )}
               </div>
             </div>
           </div>

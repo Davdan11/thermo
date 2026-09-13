@@ -13,6 +13,7 @@ import {
   TIERS,
   type ComplianceDoc,
   type PartenairesData,
+  type PartnerIdentity,
   type PartnerRecord,
   type PartnerSettings,
   type Tier,
@@ -88,6 +89,32 @@ function normalizePartner(id: string, r: Partial<PartnerRecord> | undefined): Pa
     ended: r?.ended ?? null,
     history: arr(r?.history),
     citations: arr(r?.citations),
+    identity: normalizeIdentity(r?.identity),
+    identityLink: r?.identityLink && typeof r.identityLink === "object" ? { ...r.identityLink, sends: arr(r.identityLink.sends) } : null,
+  };
+}
+
+/** Identité légale lue sur le disque : champs manquants à vide (fiches écrites avant son ajout : null). */
+function normalizeIdentity(v: unknown): PartnerIdentity | null {
+  if (!v || typeof v !== "object") return null;
+  const o = v as Partial<PartnerIdentity>;
+  const s = (x: unknown) => (typeof x === "string" ? x : "");
+  return {
+    ...o,
+    legalName: s(o.legalName),
+    tradeName: s(o.tradeName),
+    neq: s(o.neq),
+    address: s(o.address),
+    city: s(o.city),
+    postalCode: s(o.postalCode),
+    phone: s(o.phone),
+    email: s(o.email),
+    tps: s(o.tps),
+    tvq: s(o.tvq),
+    rbqDeclared: s(o.rbqDeclared),
+    source: o.source === "partenaire" ? "partenaire" : "proprietaire",
+    updatedAt: s(o.updatedAt),
+    updatedBy: s(o.updatedBy),
   };
 }
 

@@ -17,6 +17,10 @@ import { partnerDocuments } from "@/lib/gestion/partenaires/service";
 import { emptyPartner } from "@/lib/gestion/partenaires/store";
 import { INSTALLER_ID_RE, SEND_LABELS, TIER_LABELS, TIERS, type ComplianceKind } from "@/lib/gestion/partenaires/types";
 import { citationPreviewAction, citationSendAction, complianceAction, endPartnershipAction, reinstateAction, sendAgreementAction, tierAction } from "../../partenaires-actions";
+// Identité légale : l'entreprise qui réalise les travaux dans les soumissions.
+import { saveIdentityAction, sendIdentityLinkAction, verifyIdentityAction } from "../../identite-actions";
+import { identityProblems } from "@/lib/soumissions/contractor";
+import { contractorIdentityOf } from "@/lib/soumissions/contractors";
 import { Card } from "@/components/gestion/kit/Card";
 import { Chip } from "@/components/gestion/kit/Chip";
 import { Reveal } from "@/components/gestion/Reveal";
@@ -46,6 +50,22 @@ export default async function PartnerPage({ params, searchParams }: { params: Pr
   const req = a.request;
   const lastSend = req?.sends.at(-1);
   const ended = record.ended;
+  const ident = record.identity ?? null;
+  const idProblems = identityProblems(contractorIdentityOf(installer, record));
+  const idToVerify = Boolean(ident && ident.source === "partenaire" && !ident.verifiedAt);
+  const idTone = idProblems.missing.length ? "bad" : idToVerify ? "warn" : "ok";
+  const idLabel = idProblems.missing.length ? `${idProblems.missing.length} champ${idProblems.missing.length > 1 ? "s" : ""} à compléter` : idToVerify ? "À vérifier" : "Complète";
+  const rbqShown = record.compliance.rbq.number || installer.rbq;
+  const idLink = record.identityLink ?? null;
+  const idLastSend = idLink?.sends.at(-1);
+  const idField = (name: "legalName" | "tradeName" | "neq" | "address" | "city" | "postalCode" | "phone" | "email" | "tps" | "tvq", label: string, max: number, extra?: { placeholder?: string; type?: string }) => (
+    <div className="g-field">
+      <label className="g-label" htmlFor={`id-${name}`}>
+        {label}
+      </label>
+      <input id={`id-${name}`} name={name} type={extra?.type ?? "text"} className="g-input" defaultValue={ident?.[name] ?? ""} maxLength={max} placeholder={extra?.placeholder} autoComplete="off" />
+    </div>
+  );
 
   return (
     <>
@@ -260,6 +280,69 @@ export default async function PartnerPage({ params, searchParams }: { params: Pr
                 );
               })}
             </div>
+          </Card>
+
+          <Card id="identite" title="Identité légale" sub="L’entreprise qui réalise les travaux dans les soumissions : copiée dans chaque soumission à l’envoi." action={<Chip tone={idTone} dot>{idLabel}</Chip>}>
+            {idToVerify && ident ? (
+              <div className="pa-banner" style={{ marginBottom: 14 }}>
+                <ShieldAlert size={20} aria-hidden />
+                <div>
+                  <b>Transmise par le partenaire{ident.submittedAt ? ` le ${longDateTime(ident.submittedAt)}` : ""} : à vérifier.</b>
+                  <p>Relisez-la, corrigez au besoin et enregistrez, ou confirmez-la telle quelle.{ident.rbqDeclared ? ` Licence RBQ déclarée : ${ident.rbqDeclared}${rbqShown && rbqShown !== ident.rbqDeclared ? ` (conformité : ${rbqShown})` : ""}.` : ""}</p>
+                  <div style={{ marginTop: 8 }}>
+                    <ActionButton action={verifyIdentityAction.bind(null, id)} pending="…">
+                      Confirmer l’identité transmise
+                    </ActionButton>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+            {idProblems.missing.length ? (
+              <p className="g-hint" style={{ marginTop: 0 }}>
+                À compléter avant d’envoyer une soumission avec ce partenaire : {idProblems.missing.join(", ")}.
+              </p>
+            ) : null}
+            <ActionForm action={saveIdentityAction.bind(null, id)} submit="Enregistrer (vérifiée par vous)" pending="Enregistrement…">
+              <div className="g-row g-row--2">
+                {idField("legalName", "Raison sociale (nom légal)", 200, { placeholder: installer.company })}
+                {idField("tradeName", "Nom commercial (facultatif)", 200)}
+              </div>
+              <div className="g-row g-row--2">
+                {idField("neq", "NEQ", 20, { placeholder: "10 chiffres" })}
+                <div className="g-field">
+                  <span className="g-label">Licence RBQ</span>
+                  <p className="g-input" style={{ display: "flex", alignItems: "center", margin: 0, background: "var(--g-cream)" }}>
+                    {rbqShown || "À saisir"} · <a href="#conformite" style={{ marginLeft: 6 }}>section Conformité</a>
+                  </p>
+                </div>
+              </div>
+              {idField("address", "Adresse", 200)}
+              <div className="g-row g-row--2">
+                {idField("city", "Ville", 100)}
+                {idField("postalCode", "Code postal", 10)}
+              </div>
+              <div className="g-row g-row--2">
+                {idField("phone", "Téléphone de l’entreprise", 40, { type: "tel" })}
+                {idField("email", "Courriel de l’entreprise", 200, { type: "email" })}
+              </div>
+              <div className="g-row g-row--2">
+                {idField("tps", "Numéro de TPS", 30, { placeholder: "123456789 RT0001" })}
+                {idField("tvq", "Numéro de TVQ", 30, { placeholder: "1234567890 TQ0001" })}
+              </div>
+              {idProblems.formatIssues.length ? <p className="g-hint" style={{ margin: 0 }}>À vérifier : {idProblems.formatIssues.join(" ; ")}.</p> : null}
+              {ident?.verifiedAt ? <p className="g-hint" style={{ margin: 0 }}>Vérifiée le {longDateTime(ident.verifiedAt)}{ident.verifiedBy ? ` par ${ident.verifiedBy}` : ""}.</p> : null}
+            </ActionForm>
+            {!ended ? (
+              <div style={{ marginTop: 14 }}>
+                <ActionButton action={sendIdentityLinkAction.bind(null, id)} className="k-btn" pending="Envoi…">
+                  {idLink ? "Envoyer un nouveau lien au partenaire" : "Faire remplir par le partenaire (lien sécurisé)"}
+                </ActionButton>
+                <p className="g-hint">
+                  Le partenaire remplit lui-même le formulaire : lien personnel, valable 14 jours, un seul envoi. Vous vérifiez ensuite.
+                  {idLink ? ` Dernier lien : ${idLink.usedAt ? `rempli le ${longDateTime(idLink.usedAt)}` : `expire le ${longDate(idLink.expiresAt)}`}${idLastSend ? ` · courriel ${SEND_LABELS[idLastSend.email]} · texto ${SEND_LABELS[idLastSend.sms]}` : ""}.` : ""}
+                </p>
+              </div>
+            ) : null}
           </Card>
 
           <Card title="Performance" sub={`Niveau ${TIER_LABELS[perf.tier]}${perf.override ? " (imposé)" : " (automatique)"} · points au classement : ${snap.partners.settings.tierPoints[perf.tier] > 0 ? "+" : ""}${snap.partners.settings.tierPoints[perf.tier]}`} action={<TierChip tier={perf.tier} imposed={Boolean(perf.override)} />}>

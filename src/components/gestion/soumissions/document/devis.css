@@ -1447,6 +1447,104 @@
   }
 }
 
+/* ---------------- Entrepreneur et présentation (modèle actuel) ---------------- */
+.dv-cover__by {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: rgba(244, 239, 231, 0.72);
+}
+.dv-cover__by strong {
+  color: var(--cream);
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.dv-cover__by em {
+  padding: 2px 9px;
+  border: 1px solid rgba(244, 239, 231, 0.26);
+  border-radius: 999px;
+  font-style: normal;
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.dv-identity__role {
+  font-size: 11px !important;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 231, 0.55);
+}
+.dv-identity--duo {
+  gap: 20px;
+}
+.dv-identity__main {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.dv-identity__by {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(244, 239, 231, 0.14);
+}
+.dv-identity__presenter {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 650;
+  font-size: 16px;
+  color: var(--cream);
+}
+@media (min-width: 760px) {
+  .dv-identity--duo {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    align-items: start;
+  }
+  .dv-identity--duo dl {
+    grid-template-columns: repeat(2, auto);
+  }
+  .dv-identity--duo .dv-identity__by {
+    padding: 0 0 0 20px;
+    border-top: 0;
+    border-left: 1px solid rgba(244, 239, 231, 0.14);
+  }
+}
+.dv-aid__notice {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--orange);
+  border-radius: 10px;
+  background: rgba(244, 239, 231, 0.07);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--cream);
+}
+.dv-aid .dv-trow--net small {
+  display: block;
+  margin-top: 2px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 231, 0.6);
+}
+@media print {
+  .dv .dv-identity--duo {
+    grid-template-columns: 1.5fr 1fr;
+    align-items: start;
+  }
+  .dv .dv-identity--duo .dv-identity__by {
+    padding: 0 0 0 5mm;
+    border-top: 0;
+    border-left: 1px solid rgba(244, 239, 231, 0.2);
+  }
+}
+
 /* ---------------- Barre du total (téléphone) ---------------- */
 .dv-sticky {
   position: fixed;

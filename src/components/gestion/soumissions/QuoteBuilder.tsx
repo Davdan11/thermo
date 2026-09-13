@@ -2,9 +2,17 @@
 
 /* ==================================================================
    Constructeur de soumission : tout ce qui doit correspondre aux
-   travaux réels (client, chantier, machine et jumelage AHRI officiel,
-   emplacement de chaque unité avec photos, date, inclus / non inclus,
-   hypothèses, prix, options, rabais, LogisVert, paiement, validité).
+   travaux réels (client, entrepreneur, chantier, machine et jumelage
+   AHRI officiel, emplacement de chaque unité avec photos, date,
+   inclus / non inclus, hypothèses, prix, options, rabais, LogisVert,
+   paiement, validité).
+   - « Trouver un client » : recherche dans les clients du CRM, un clic
+     remplit le client et relie la soumission à sa fiche ;
+   - « Entrepreneur qui réalise les travaux » : l'installateur
+     partenaire choisi (conformité affichée), copié à l'envoi ;
+   - choix en un clic (listes des réglages) et « Autre… » pour écrire ;
+   - modèles : partir d'un modèle, enregistrer comme modèle ;
+   - LogisVert : information seulement, jamais soustraite du total dû.
    Totaux et liste de vérification en direct ; enregistrement par une
    Server Action (validée côté serveur, machine recalculée depuis le
    catalogue).
@@ -13,28 +21,23 @@
 import { useEffect, useMemo, useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { AlertTriangle, CheckCircle2, Eye, ImagePlus, Plus, RefreshCw, Save, Sparkles, Trash2, X, XCircle } from "lucide-react";
-import { machineAction, saveQuoteAction } from "@/app/gestion/soumissions/actions";
+import { AlertTriangle, CheckCircle2, Eye, ImagePlus, Info, Plus, RefreshCw, Save, Sparkles, Trash2, X, XCircle } from "lucide-react";
+import { loadTemplateAction, machineAction, saveQuoteAction, saveTemplateAction } from "@/app/gestion/soumissions/actions";
 import { ModelSearch, type ModelPick } from "@/components/gestion/ModelSearch";
-import { LINKS } from "@/lib/soumissions/config";
-import { quoteChecks, settingsChecks, type CheckItem } from "@/lib/soumissions/checklist";
+import { circuitToInstall, isPumpDrain, LEGACY_LABELS, mountingKind } from "@/lib/soumissions/choices";
+import { LINKS, LOGISVERT_NOTICE } from "@/lib/soumissions/config";
+import { CONTRACTOR_GROUP, quoteChecks, settingsChecks, type CheckItem } from "@/lib/soumissions/checklist";
+import type { QuoteClientPrefill } from "@/lib/soumissions/clients";
+import type { ContractorStatus } from "@/lib/soumissions/contractor";
 import { formatDay } from "@/lib/soumissions/dates";
-import { newIndoor, rid, toItems } from "@/lib/soumissions/defaults";
+import { emptyClient, newIndoor, rid, toItems } from "@/lib/soumissions/defaults";
 import { formatNumber, money } from "@/lib/soumissions/money";
 import { explanationDraft, extraLength } from "@/lib/soumissions/present";
-import { computeTotals, defaultSelection, logisvertAmount, type TaxRates } from "@/lib/soumissions/totals";
+import { applyTemplate } from "@/lib/soumissions/templates";
+import { computeTotals, defaultSelection, logisvertAmount, logisvertModeFor, withLogisvertMode, type TaxRates } from "@/lib/soumissions/totals";
 import {
-  CIRCUIT_LABELS,
-  DISCONNECT_LABELS,
-  DRAIN_LABELS,
   ELECTRICIAN_LABELS,
-  FINISH_LABELS,
-  INDOOR_LABELS,
-  MOUNTING_LABELS,
-  PROPERTY_LABELS,
-  ROUTE_LABELS,
   UNIT_LABELS,
-  WALL_LABELS,
   type CatalogItem,
   type CatalogRole,
   type Discount,
@@ -46,12 +49,16 @@ import {
   type QuoteLine,
   type Settings,
 } from "@/lib/soumissions/types";
+import { Choice, ChoiceNum } from "./choice";
+import { ClientFinder } from "./ClientFinder";
 import { uploadPhoto } from "./compress";
+import { ContractorPicker } from "./ContractorPicker";
 import { Area, Check, ItemList, Money, move, Num, Select, Seg, StringList, Text } from "./fields";
+import { TemplateBar, type TemplateOption } from "./TemplateBar";
 
 type Opts<T extends string> = Array<[T, string]>;
 const entries = <T extends string>(o: Record<T, string>) => Object.entries(o) as Opts<T>;
-const FLOORS: Opts<string> = [["0", "Sous-sol"], ["1", "Rez-de-chaussée"], ["2", "1er étage au-dessus du rez-de-chaussée"], ["3", "2e étage au-dessus du rez-de-chaussée"], ["4", "3e étage au-dessus du rez-de-chaussée"]];
+const FLOORS: Array<[number, string]> = [[0, "Sous-sol"], [1, "Rez-de-chaussée"], [2, "1er étage"], [3, "2e étage"]];
 const WARRANTY_TYPE: Record<string, string> = { parts: "Pièces", compressor: "Compresseur", labor: "Main-d’œuvre", replacement: "Remplacement" };
 const CONFIDENCE: Record<string, string> = { verified: "vérifiée", manufacturer_claim: "selon le fabricant", estimated: "estimée", placeholder: "provisoire", needs_review: "à revoir", deprecated: "périmée" };
 
@@ -64,6 +71,14 @@ export interface BuilderProps {
   settings: Settings;
   today: string;
   rates: TaxRates;
+  /** Partenaires proposés (actifs, plus celui déjà choisi) : résumés sans adresse ni numéros. */
+  contractors: ContractorStatus[];
+  contractorId: string | null;
+  /** Fiche client du CRM reliée (c_…). */
+  clientId: string | null;
+  templates: TemplateOption[];
+  /** Soumission copiée : « autre » quand c'est pour un autre client. */
+  copy?: "meme" | "autre" | null;
 }
 
 function Step({ id, n, title, hint, children }: { id: string; n: string; title: string; hint?: string; children: React.ReactNode }) {
@@ -128,12 +143,17 @@ function PhotoPicker({ ids, onChange, quoteId }: { ids: string[]; onChange: (ids
 
 export function QuoteBuilder(props: BuilderProps) {
   const { settings, today, rates } = props;
+  const ch = settings.choices;
   const router = useRouter();
-  const [c, setC] = useState<QuoteContent>(props.initial);
+  // Ancien brouillon « cession » ou « aucune » malgré un montant : le mode suit le jumelage.
+  const [c, setC] = useState<QuoteContent>(() => withLogisvertMode(props.initial));
   const [notes, setNotes] = useState(props.internalNotes);
+  const [contractorId, setContractorId] = useState<string | null>(props.contractorId);
+  const [clientId, setClientId] = useState<string | null>(props.clientId);
   const [pairings, setPairings] = useState<PairingInfo[] | null>(null);
   const [loadingMachine, startMachine] = useTransition();
   const [saving, startSave] = useTransition();
+  const [tplBusy, startTpl] = useTransition();
   const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
   const [dirty, setDirty] = useState(false);
   const [pkgHint, setPkgHint] = useState<string | null>(null);
@@ -160,8 +180,10 @@ export function QuoteBuilder(props: BuilderProps) {
     return () => window.removeEventListener("beforeunload", onLeave);
   }, [dirty]);
 
+  const contractorStatus = props.contractors.find((s) => s.installerId === contractorId) ?? null;
+  const pick = useMemo(() => ({ id: contractorId, status: contractorStatus }), [contractorId, contractorStatus]);
   const totals = useMemo(() => computeTotals(c, defaultSelection(c.lines), rates, today), [c, rates, today]);
-  const checks = useMemo(() => [...settingsChecks(settings).filter((i) => i.severity === "bloquant"), ...quoteChecks(c, settings, today, rates)], [c, settings, today, rates]);
+  const checks = useMemo(() => [...settingsChecks(settings).filter((i) => i.severity === "bloquant"), ...quoteChecks(c, settings, today, rates, pick)], [c, settings, today, rates, pick]);
   const blockers = checks.filter((i) => !i.ok && i.severity === "bloquant");
   const warnings = checks.filter((i) => !i.ok && i.severity === "avertissement");
   const catalog = useMemo(() => [...settings.extras, ...settings.labour], [settings]);
@@ -169,9 +191,10 @@ export function QuoteBuilder(props: BuilderProps) {
   const m = c.machine;
   const lvAmount = logisvertAmount({ machine: m, logisvert: { mode: "client" } });
   const unit = c.placement.lengthUnit;
+  const mounting = mountingKind(c.placement.outdoor.mounting);
 
-  const pickModel = (pick: ModelPick | null) => {
-    if (!pick) {
+  const pickModel = (p: ModelPick | null) => {
+    if (!p) {
       up((d) => {
         d.machine = null;
         d.logisvert.mode = "aucune";
@@ -180,7 +203,7 @@ export function QuoteBuilder(props: BuilderProps) {
       return;
     }
     startMachine(async () => {
-      const r = await machineAction(pick.slug);
+      const r = await machineAction(p.slug);
       if (!r.ok) {
         setMsg({ ok: false, text: r.error });
         return;
@@ -188,7 +211,7 @@ export function QuoteBuilder(props: BuilderProps) {
       setPairings(r.pairings);
       up((d) => {
         d.machine = { ...r.machine, pairing: r.pairings[0] ?? null, offList: r.pairings.length === 0, offListIndoor: "", showCatalogWarranties: false, warrantyText: "", explanation: "" };
-        if (!r.pairings.length) d.logisvert.mode = "aucune";
+        d.logisvert.mode = logisvertModeFor(d.machine);
       });
     });
   };
@@ -197,7 +220,7 @@ export function QuoteBuilder(props: BuilderProps) {
     up((d) => {
       if (!d.machine) return;
       Object.assign(d.machine, patch);
-      if (logisvertAmount({ machine: d.machine, logisvert: { mode: "client" } }) === 0) d.logisvert.mode = "aucune";
+      d.logisvert.mode = logisvertModeFor(d.machine);
     });
 
   const setUnit = (id: string, patch: Partial<IndoorPlacement>) =>
@@ -242,13 +265,11 @@ export function QuoteBuilder(props: BuilderProps) {
     return typeOk && capOk;
   });
 
-  const payload = () => ({
-    content: {
-      ...c,
-      machine: c.machine ? { modelSlug: c.machine.modelSlug, ahri: c.machine.offList ? null : (c.machine.pairing?.ahri ?? null), offList: c.machine.offList, offListIndoor: c.machine.offListIndoor, showCatalogWarranties: c.machine.showCatalogWarranties, warrantyText: c.machine.warrantyText, explanation: c.machine.explanation } : null,
-    },
-    internalNotes: notes,
+  const contentPayload = () => ({
+    ...c,
+    machine: c.machine ? { modelSlug: c.machine.modelSlug, ahri: c.machine.offList ? null : (c.machine.pairing?.ahri ?? null), offList: c.machine.offList, offListIndoor: c.machine.offListIndoor, showCatalogWarranties: c.machine.showCatalogWarranties, warrantyText: c.machine.warrantyText, explanation: c.machine.explanation } : null,
   });
+  const payload = () => ({ content: contentPayload(), internalNotes: notes, contractorId, clientId });
 
   const save = (then?: "apercu" | "fiche") =>
     startSave(async () => {
@@ -266,18 +287,69 @@ export function QuoteBuilder(props: BuilderProps) {
       else router.refresh();
     });
 
-  const badSteps = new Set(blockers.map((b) => ({ Client: "client", Chantier: "client", Machine: "machine", "Plan d’installation": "plan", Date: "date", Contenu: "contenu", Prix: "prix", Validité: "conditions" })[b.group] ?? ""));
-  const TOC: Array<[string, string]> = [["client", "Client"], ["machine", "Machine"], ["plan", "Plan"], ["date", "Date"], ["contenu", "Inclus / exclus"], ["prix", "Prix"], ["conditions", "Conditions"], ["notes", "Notes"]];
+  /* ---------------- Client (CRM) ---------------- */
+
+  const onPickClient = (p: QuoteClientPrefill) => {
+    up((d) => void (d.client = { firstName: p.firstName, lastName: p.lastName, email: p.email, phone: p.phone, address: p.address, city: p.city, postalCode: p.postalCode }));
+    setClientId(p.id);
+    setMsg({ ok: true, text: `Client repris de sa fiche : ${[p.firstName, p.lastName].filter(Boolean).join(" ") || "coordonnées"}.` });
+  };
+  const onNewClient = () => {
+    const typed = Object.values(c.client).some((v) => v.trim());
+    if (typed && !window.confirm("Vider les coordonnées du client pour en saisir un nouveau ?")) return;
+    if (typed) up((d) => void (d.client = emptyClient()));
+    setClientId(null);
+  };
+
+  /* ---------------- Modèles ---------------- */
+
+  const applyTemplateId = (id: string) =>
+    startTpl(async () => {
+      if ((c.machine || c.lines.length) && !window.confirm("Partir de ce modèle remplace la machine, le plan, les prix, les listes et le déroulement. Le client, le chantier et les dates restent. Continuer ?")) return;
+      const r = await loadTemplateAction(id);
+      if (!r.ok) {
+        setMsg({ ok: false, text: r.error });
+        return;
+      }
+      setC((prev) => withLogisvertMode(applyTemplate(prev, r.content)));
+      setDirty(true);
+      if (!contractorId && r.contractorId && props.contractors.some((s) => s.installerId === r.contractorId)) setContractorId(r.contractorId);
+      setPairings(null);
+      const slug = r.content.machine?.modelSlug;
+      if (slug) {
+        const mm = await machineAction(slug);
+        if (mm.ok) setPairings(mm.pairings);
+      }
+      setMsg({ ok: true, text: `Modèle « ${r.name} » appliqué : vérifiez le plan et les prix.` });
+    });
+
+  const saveTemplate = async (name: string): Promise<{ ok: boolean; text: string }> => {
+    const r = await saveTemplateAction({ name, content: contentPayload(), contractorId });
+    if (!r.ok) return { ok: false, text: r.error };
+    router.refresh();
+    return { ok: true, text: r.message ?? "Modèle enregistré." };
+  };
+
+  const STEP_OF: Record<string, string> = { Client: "client", Chantier: "client", [CONTRACTOR_GROUP]: "entrepreneur", Machine: "machine", "Plan d’installation": "plan", Date: "date", Contenu: "contenu", Prix: "prix", Validité: "conditions" };
+  const badSteps = new Set(blockers.map((b) => STEP_OF[b.group] ?? ""));
+  const TOC: Array<[string, string]> = [["client", "Client"], ["entrepreneur", "Entrepreneur"], ["machine", "Machine"], ["plan", "Plan"], ["date", "Date"], ["contenu", "Inclus / exclus"], ["prix", "Prix"], ["conditions", "Conditions"], ["notes", "Notes"]];
+  const clientName = `${c.client.firstName} ${c.client.lastName}`.trim();
 
   return (
     <div>
       <div className="g-head" style={{ marginBottom: 12 }}>
         <div>
           <p className="g-eyebrow">{props.number ? `Soumission ${props.number} · version ${props.version} (brouillon)` : "Nouvelle soumission"}</p>
-          <h1 className="g-h1">{`${c.client.firstName} ${c.client.lastName}`.trim() || "Nouvelle soumission"}</h1>
+          <h1 className="g-h1">{clientName || "Nouvelle soumission"}</h1>
         </div>
         {props.quoteId ? <Link href={`/gestion/soumissions/${props.quoteId}`} className="g-btn g-btn--ghost">Fiche de la soumission</Link> : null}
       </div>
+      {props.copy === "autre" ? (
+        <p className="g-alert g-alert--info" role="status" style={{ marginBottom: 12 }}>
+          Copie pour un autre client : cherchez le client ou saisissez-le. La machine, le plan, les prix et l’entrepreneur sont repris.
+        </p>
+      ) : null}
+      <TemplateBar templates={props.templates} onApply={applyTemplateId} onSave={saveTemplate} busy={tplBusy} />
       <nav className="sq-toc" aria-label="Sections">
         {TOC.map(([id, l]) => <a key={id} href={`#${id}`} className={badSteps.has(id) ? "is-bad" : ""}>{l}</a>)}
       </nav>
@@ -285,7 +357,8 @@ export function QuoteBuilder(props: BuilderProps) {
       <div className="sq-builder">
         <div>
           {/* 1. Client et chantier */}
-          <Step id="client" n="01" title="Client et chantier" hint="Adresse de facturation, puis l’endroit exact des travaux.">
+          <Step id="client" n="01" title="Client et chantier" hint="Trouvez un client existant ou saisissez-en un nouveau, puis l’endroit exact des travaux.">
+            <ClientFinder clientId={clientId} clientName={clientName} onPick={onPickClient} onNew={onNewClient} />
             <div className="g-row g-row--2">
               <Text label="Prénom" value={c.client.firstName} onChange={(v) => up((d) => void (d.client.firstName = v))} autoComplete="off" />
               <Text label="Nom" value={c.client.lastName} onChange={(v) => up((d) => void (d.client.lastName = v))} />
@@ -310,19 +383,24 @@ export function QuoteBuilder(props: BuilderProps) {
                 </div>
               </>
             ) : null}
-            <div className="g-row g-row--3">
-              <Select label="Type de propriété" value={c.site.propertyType} options={entries(PROPERTY_LABELS)} onChange={(v) => up((d) => void (d.site.propertyType = v))} />
+            <Choice label="Type de propriété" value={c.site.propertyType} options={ch.propertyType} legacy={LEGACY_LABELS.propertyType} maxLength={80} onChange={(v) => up((d) => void (d.site.propertyType = v))} />
+            <div className="g-row g-row--2">
               <Text label="Année de construction" hint="si connue" value={c.site.yearBuilt} onChange={(v) => up((d) => void (d.site.yearBuilt = v))} maxLength={20} />
-              <Num label="Niveaux hors sol" integer value={c.site.floors} onChange={(v) => up((d) => void (d.site.floors = v === null ? null : Math.min(10, Math.max(1, v))))} />
+              <ChoiceNum label="Niveaux hors sol" value={c.site.floors} options={ch.floors} integer min={1} max={10} onChange={(v) => up((d) => void (d.site.floors = v))} />
             </div>
             <Check label="Il y a un sous-sol" checked={c.site.basement} onChange={(v) => up((d) => void (d.site.basement = v))} />
-            <Area label="Accès et stationnement" rows={2} value={c.site.access} onChange={(v) => up((d) => void (d.site.access = v))} placeholder="Entrée par la ruelle, stationnement dans l’entrée…" />
+            <Choice label="Accès et stationnement" value={c.site.access} options={ch.access} multiline maxLength={1000} placeholder="Entrée par la ruelle, stationnement dans l’entrée…" onChange={(v) => up((d) => void (d.site.access = v))} />
             <Area label="Contraintes des occupants" rows={2} value={c.site.constraints} onChange={(v) => up((d) => void (d.site.constraints = v))} placeholder="Télétravail, jeune enfant, horaires…" />
             <Text label="Qui doit être présent pendant les travaux" value={c.site.presence} onChange={(v) => up((d) => void (d.site.presence = v))} placeholder="Un adulte, de l’arrivée de l’équipe à la mise en service" />
           </Step>
 
-          {/* 2. Machine */}
-          <Step id="machine" n="02" title="Machine" hint="Modèle du catalogue, puis le jumelage exact de la liste officielle LogisVert.">
+          {/* 2. Entrepreneur */}
+          <Step id="entrepreneur" n="02" title="Entrepreneur qui réalise les travaux" hint="L’installateur partenaire choisi : sa raison sociale, sa licence RBQ, son NEQ et ses taxes figurent au document. Thermopompes À Vendre présente la soumission.">
+            <ContractorPicker options={props.contractors} value={contractorId} onChange={(id) => { setContractorId(id); setDirty(true); }} />
+          </Step>
+
+          {/* 3. Machine */}
+          <Step id="machine" n="03" title="Machine" hint="Modèle du catalogue, puis le jumelage exact de la liste officielle LogisVert.">
             {m ? (
               <div className="sq-machine">
                 {m.imageUrl ? (
@@ -367,7 +445,7 @@ export function QuoteBuilder(props: BuilderProps) {
                 </div>
                 {m.offList ? <Text label="Unités intérieures du jumelage" value={m.offListIndoor} onChange={(v) => setMachine({ offListIndoor: v })} placeholder="Modèles des unités intérieures" /> : null}
                 <p className={`sq-lv ${lvAmount ? "" : "sq-lv--no"}`} style={{ marginTop: 10 }}>
-                  {lvAmount ? <>Montant officiel de ce jumelage : <strong>{money(lvAmount)}</strong> (liste LogisVert{m.listDate ? ` du ${m.listDate}` : ""}).</> : <>Jumelage absent de la liste ou sans montant : aucune aide LogisVert.</>}
+                  {lvAmount ? <>Montant officiel de ce jumelage : <strong>{money(lvAmount)}</strong> (liste LogisVert{m.listDate ? ` du ${m.listDate}` : ""}), montré au client à titre d’information.</> : <>Jumelage absent de la liste ou sans montant : aucune aide LogisVert.</>}
                 </p>
 
                 <p className="sq-sub">Garantie du fabricant</p>
@@ -388,22 +466,20 @@ export function QuoteBuilder(props: BuilderProps) {
             ) : null}
           </Step>
 
-          {/* 3. Plan d'installation */}
-          <Step id="plan" n="03" title="Plan d’installation" hint="Où va chaque appareil, par où passent les lignes, ce que ça demande. Tout apparaît au client.">
+          {/* 4. Plan d'installation */}
+          <Step id="plan" n="04" title="Plan d’installation" hint="Un clic par choix ; « Autre… » pour écrire. Tout apparaît au client.">
             <Seg label="Unité de longueur" value={unit} options={[["pi", "Pieds"], ["m", "Mètres"]]} onChange={(v) => up((d) => void (d.placement.lengthUnit = v))} />
             <div className="sq-unit">
               <div className="sq-unit__head"><strong>Unité extérieure</strong></div>
-              <div className="g-row g-row--2">
-                <Text label="Emplacement" value={c.placement.outdoor.location} onChange={(v) => up((d) => void (d.placement.outdoor.location = v))} placeholder="Mur arrière, à gauche de la porte-patio" />
-                <Select label="Support" value={c.placement.outdoor.mounting} options={entries(MOUNTING_LABELS)} onChange={(v) => up((d) => void (d.placement.outdoor.mounting = v))} />
-              </div>
-              <div className="g-row g-row--2">
-                <Text label="Dégagement" value={c.placement.outdoor.clearance} onChange={(v) => up((d) => void (d.placement.outdoor.clearance = v))} placeholder="30 cm du mur, 60 cm devant" />
-                <Text label="Neige et glace" value={c.placement.outdoor.snow} onChange={(v) => up((d) => void (d.placement.outdoor.snow = v))} placeholder="Hors de la chute de neige du toit" />
+              <div className="sq-choices">
+                <Choice label="Emplacement" value={c.placement.outdoor.location} options={ch.outdoorLocation} maxLength={200} placeholder="Mur arrière, à gauche de la porte-patio" onChange={(v) => up((d) => void (d.placement.outdoor.location = v))} />
+                <Choice label="Support" value={c.placement.outdoor.mounting} options={ch.mounting} legacy={LEGACY_LABELS.mounting} onChange={(v) => up((d) => void (d.placement.outdoor.mounting = v))} />
+                <Choice label="Dégagement" value={c.placement.outdoor.clearance} options={ch.clearance} maxLength={400} placeholder="30 cm du mur, 60 cm devant" onChange={(v) => up((d) => void (d.placement.outdoor.clearance = v))} />
+                <Choice label="Neige et glace" value={c.placement.outdoor.snow} options={ch.snow} maxLength={400} placeholder="Hors de la chute de neige du toit" onChange={(v) => up((d) => void (d.placement.outdoor.snow = v))} />
               </div>
               <Text label="Remarques" value={c.placement.outdoor.notes} onChange={(v) => up((d) => void (d.placement.outdoor.notes = v))} />
-              {c.placement.outdoor.mounting === "support-mural" && !hasLinked("support-mural", null) ? <button type="button" className="g-btn g-btn--quiet" onClick={() => linkLine("support-mural", 1, null, "Support mural")}><Plus size={15} aria-hidden /> Ajouter le support mural aux prix</button> : null}
-              {c.placement.outdoor.mounting === "support-sol" && !hasLinked("support-sol", null) ? <button type="button" className="g-btn g-btn--quiet" onClick={() => linkLine("support-sol", 1, null, "Support au sol")}><Plus size={15} aria-hidden /> Ajouter le support au sol aux prix</button> : null}
+              {mounting === "support-mural" && !hasLinked("support-mural", null) ? <button type="button" className="g-btn g-btn--quiet" onClick={() => linkLine("support-mural", 1, null, "Support mural")}><Plus size={15} aria-hidden /> Ajouter le support mural aux prix</button> : null}
+              {mounting === "support-sol" && !hasLinked("support-sol", null) ? <button type="button" className="g-btn g-btn--quiet" onClick={() => linkLine("support-sol", 1, null, "Support au sol")}><Plus size={15} aria-hidden /> Ajouter le support au sol aux prix</button> : null}
               <PhotoPicker ids={c.placement.outdoor.photos} quoteId={props.quoteId} onChange={(ids) => up((d) => void (d.placement.outdoor.photos = ids))} />
             </div>
 
@@ -418,28 +494,24 @@ export function QuoteBuilder(props: BuilderProps) {
                       <button type="button" className="sq-icon sq-icon--bad" onClick={() => up((d) => { d.placement.indoor = d.placement.indoor.filter((x) => x.id !== u.id); d.lines = d.lines.filter((l) => l.unitRef !== u.id); })} aria-label="Retirer l’unité"><Trash2 size={16} aria-hidden /></button>
                     </span>
                   </div>
-                  <div className="g-row g-row--3">
-                    <Select label="Type" value={u.type} options={entries(INDOOR_LABELS)} onChange={(v) => setUnit(u.id, { type: v })} />
+                  <Choice label="Type" value={u.type} options={ch.indoorType} legacy={LEGACY_LABELS.indoorType} onChange={(v) => setUnit(u.id, { type: v })} />
+                  <div className="g-row g-row--2">
                     <Text label="Modèle de l’unité intérieure" value={u.model} onChange={(v) => setUnit(u.id, { model: v })} />
                     <Num label="Capacité" suffix="BTU/h" integer value={u.capacityBtu} onChange={(v) => setUnit(u.id, { capacityBtu: v })} />
                   </div>
-                  <div className="g-row g-row--3">
-                    <Select label="Niveau" value={u.floor === null ? "" : String(u.floor)} options={FLOORS} onChange={(v) => setUnit(u.id, { floor: v === "" ? null : Number(v) })} />
-                    <Text label="Pièce" value={u.room} onChange={(v) => setUnit(u.id, { room: v })} placeholder="Salon" />
-                    <Text label="Mur" value={u.wall} onChange={(v) => setUnit(u.id, { wall: v })} placeholder="Mur extérieur arrière, au-dessus de la fenêtre" />
+                  <div className="sq-choices">
+                    <ChoiceNum label="Niveau" hint="autre : 0 sous-sol, 1 rez-de-chaussée, 2 premier étage…" value={u.floor} presets={FLOORS} integer min={0} max={10} onChange={(v) => setUnit(u.id, { floor: v })} />
+                    <Choice label="Pièce" value={u.room} options={ch.room} placeholder="Salon" onChange={(v) => setUnit(u.id, { room: v })} />
+                    <Choice label="Mur" value={u.wall} options={ch.wall} maxLength={160} placeholder="Mur extérieur arrière, au-dessus de la fenêtre" onChange={(v) => setUnit(u.id, { wall: v })} />
+                    <Choice label="Hauteur approximative" value={u.height} options={ch.height} placeholder="Environ 2,1 m du plancher" onChange={(v) => setUnit(u.id, { height: v })} />
+                    <ChoiceNum label="Longueur de ligne" value={u.lineLength} options={ch.lineLength} suffix={unit} max={1000} onChange={(v) => setUnit(u.id, { lineLength: v })} />
+                    <ChoiceNum label="Longueur incluse" value={u.lineIncluded} options={ch.lineLength} suffix={unit} max={1000} onChange={(v) => setUnit(u.id, { lineIncluded: v })} />
+                    <Choice label="Parcours" value={u.lineRoute} options={ch.route} legacy={LEGACY_LABELS.route} onChange={(v) => setUnit(u.id, { lineRoute: v })} />
+                    <Choice label="Finition" value={u.lineFinish} options={ch.finish} legacy={LEGACY_LABELS.finish} onChange={(v) => setUnit(u.id, { lineFinish: v })} />
+                    <ChoiceNum label="Percements" value={u.penetrations} options={ch.penetrations} integer max={20} onChange={(v) => setUnit(u.id, { penetrations: v })} />
+                    <Choice label="Matériau du mur" value={u.wallMaterial} options={ch.wallMaterial} legacy={LEGACY_LABELS.wallMaterial} onChange={(v) => setUnit(u.id, { wallMaterial: v })} />
+                    <Choice label="Drain" value={u.drain} options={ch.drain} legacy={LEGACY_LABELS.drain} onChange={(v) => setUnit(u.id, { drain: v })} />
                   </div>
-                  <Text label="Hauteur approximative" value={u.height} onChange={(v) => setUnit(u.id, { height: v })} placeholder="Environ 2,1 m du plancher" />
-                  <div className="g-row g-row--3">
-                    <Num label="Longueur de ligne" suffix={unit} value={u.lineLength} onChange={(v) => setUnit(u.id, { lineLength: v })} />
-                    <Num label="Longueur incluse" suffix={unit} value={u.lineIncluded} onChange={(v) => setUnit(u.id, { lineIncluded: v })} />
-                    <Select label="Parcours" value={u.lineRoute} options={entries(ROUTE_LABELS)} onChange={(v) => setUnit(u.id, { lineRoute: v })} />
-                  </div>
-                  <div className="g-row g-row--3">
-                    <Select label="Finition" value={u.lineFinish} options={entries(FINISH_LABELS)} onChange={(v) => setUnit(u.id, { lineFinish: v })} />
-                    <Num label="Percements" integer value={u.penetrations} onChange={(v) => setUnit(u.id, { penetrations: v })} />
-                    <Select label="Matériau du mur" value={u.wallMaterial} options={entries(WALL_LABELS)} onChange={(v) => setUnit(u.id, { wallMaterial: v })} />
-                  </div>
-                  <Seg label="Drain" value={u.drain} options={entries(DRAIN_LABELS)} onChange={(v) => setUnit(u.id, { drain: v })} />
                   {extra > 0 ? (
                     <p className="sq-note" style={{ marginTop: 8 }}>
                       {formatNumber(extra, 1)} {unit} au-delà de la longueur incluse.{" "}
@@ -448,7 +520,7 @@ export function QuoteBuilder(props: BuilderProps) {
                       </button>
                     </p>
                   ) : null}
-                  {u.drain === "pompe" && !hasLinked("pompe-drain", u.id) ? <button type="button" className="g-btn g-btn--quiet" onClick={() => linkLine("pompe-drain", 1, u.id, "Pompe à condensat (pompe à drain)")}><Plus size={15} aria-hidden /> Ajouter la pompe à condensat aux prix</button> : null}
+                  {isPumpDrain(u.drain) && !hasLinked("pompe-drain", u.id) ? <button type="button" className="g-btn g-btn--quiet" onClick={() => linkLine("pompe-drain", 1, u.id, "Pompe à condensat (pompe à drain)")}><Plus size={15} aria-hidden /> Ajouter la pompe à condensat aux prix</button> : null}
                   <Text label="Remarques" value={u.notes} onChange={(v) => setUnit(u.id, { notes: v })} />
                   <PhotoPicker ids={u.photos} quoteId={props.quoteId} onChange={(ids) => setUnit(u.id, { photos: ids })} />
                 </div>
@@ -459,31 +531,30 @@ export function QuoteBuilder(props: BuilderProps) {
             </div>
 
             <p className="sq-sub">Électricité</p>
-            <div className="g-row g-row--3">
-              <Text label="Capacité du panneau" hint="si connue" value={c.placement.electrical.panelCapacity} onChange={(v) => up((d) => void (d.placement.electrical.panelCapacity = v))} placeholder="200 A" />
-              <Select label="Circuit dédié" value={c.placement.electrical.circuit} options={entries(CIRCUIT_LABELS)} onChange={(v) => up((d) => void (d.placement.electrical.circuit = v))} />
-              <Text label="Disjoncteur" value={c.placement.electrical.breaker} onChange={(v) => up((d) => void (d.placement.electrical.breaker = v))} placeholder="2 × 20 A" />
+            <p className="g-hint" style={{ marginTop: -4 }}>De simples choix : aucune valeur électrique n’est imposée.</p>
+            <div className="sq-choices">
+              <Choice label="Capacité du panneau" hint="si connue" value={c.placement.electrical.panelCapacity} options={ch.panelCapacity} maxLength={40} placeholder="200 A" onChange={(v) => up((d) => void (d.placement.electrical.panelCapacity = v))} />
+              <Choice label="Circuit dédié" value={c.placement.electrical.circuit} options={ch.circuit} legacy={LEGACY_LABELS.circuit} onChange={(v) => up((d) => void (d.placement.electrical.circuit = v))} />
+              <Choice label="Disjoncteur" value={c.placement.electrical.breaker} options={ch.breaker} maxLength={40} placeholder="2 × 20 A" onChange={(v) => up((d) => void (d.placement.electrical.breaker = v))} />
+              <Choice label="Sectionneur" value={c.placement.electrical.disconnect} options={ch.disconnect} legacy={LEGACY_LABELS.disconnect} onChange={(v) => up((d) => void (d.placement.electrical.disconnect = v))} />
+              <ChoiceNum label="Distance panneau → unité extérieure" value={c.placement.electrical.panelDistance} options={ch.panelDistance} suffix={unit} max={1000} onChange={(v) => up((d) => void (d.placement.electrical.panelDistance = v))} />
             </div>
-            <div className="g-row g-row--3">
-              <Select label="Sectionneur" value={c.placement.electrical.disconnect} options={entries(DISCONNECT_LABELS)} onChange={(v) => up((d) => void (d.placement.electrical.disconnect = v))} />
-              <Num label="Distance panneau → unité extérieure" suffix={unit} value={c.placement.electrical.panelDistance} onChange={(v) => up((d) => void (d.placement.electrical.panelDistance = v))} />
-              <Select label="Maître électricien" value={c.placement.electrical.electrician} options={entries(ELECTRICIAN_LABELS)} onChange={(v) => up((d) => void (d.placement.electrical.electrician = v))} />
-            </div>
+            <Select label="Maître électricien" value={c.placement.electrical.electrician} options={entries(ELECTRICIAN_LABELS)} onChange={(v) => up((d) => void (d.placement.electrical.electrician = v))} />
             <Text label="Remarques sur l’électricité" value={c.placement.electrical.notes} onChange={(v) => up((d) => void (d.placement.electrical.notes = v))} />
-            {c.placement.electrical.circuit === "a-installer" && !hasLinked("circuit", null) ? <button type="button" className="g-btn g-btn--quiet" onClick={() => linkLine("circuit", 1, null, "Circuit électrique dédié")}><Plus size={15} aria-hidden /> Ajouter le circuit dédié aux prix</button> : null}
+            {circuitToInstall(c.placement.electrical.circuit) && !hasLinked("circuit", null) ? <button type="button" className="g-btn g-btn--quiet" onClick={() => linkLine("circuit", 1, null, "Circuit électrique dédié")}><Plus size={15} aria-hidden /> Ajouter le circuit dédié aux prix</button> : null}
 
             <p className="sq-sub">Ancien système</p>
             <Check label="Retrait de l’ancien système" checked={c.placement.removal.remove} onChange={(v) => up((d) => void (d.placement.removal.remove = v))} />
             {c.placement.removal.remove ? (
               <>
-                <Text label="Ce qui est retiré" value={c.placement.removal.description} onChange={(v) => up((d) => void (d.placement.removal.description = v))} placeholder="Climatiseur de fenêtre du salon, disposé de façon responsable" />
+                <Choice label="Ce qui est retiré" value={c.placement.removal.description} options={ch.removal} multiline maxLength={600} placeholder="Climatiseur de fenêtre du salon, disposé de façon responsable" onChange={(v) => up((d) => void (d.placement.removal.description = v))} />
                 {!hasLinked("retrait", null) ? <button type="button" className="g-btn g-btn--quiet" onClick={() => linkLine("retrait", 1, null, "Retrait de l’ancien appareil")}><Plus size={15} aria-hidden /> Ajouter le retrait aux prix</button> : null}
               </>
             ) : null}
           </Step>
 
-          {/* 4. Date */}
-          <Step id="date" n="04" title="Date et déroulement">
+          {/* 5. Date */}
+          <Step id="date" n="05" title="Date et déroulement">
             <Seg label="Planification" value={c.schedule.mode} options={[["date", "Date prévue"], ["fenetre", "Fenêtre de dates"]]} onChange={(v) => up((d) => void (d.schedule.mode = v))} />
             {c.schedule.mode === "date" ? (
               <Text label="Date prévue" type="date" value={c.schedule.date} onChange={(v) => up((d) => void (d.schedule.date = v))} />
@@ -501,11 +572,11 @@ export function QuoteBuilder(props: BuilderProps) {
             <p className="sq-sub">À préparer par le client</p>
             <StringList values={c.schedule.prep} onChange={(v) => up((d) => void (d.schedule.prep = v))} addLabel="Ajouter une consigne" />
             <Text label="Remarques" value={c.schedule.notes} onChange={(v) => up((d) => void (d.schedule.notes = v))} />
-            <p className="g-hint">La clause météo vient des <Link href="/gestion/soumissions/reglages#textes">réglages</Link>.</p>
+            <p className="g-hint">La clause météo vient des <Link href="/gestion/soumissions/reglages#textes">réglages</Link>. Les valeurs par défaut (accès, présence, durée, arrivée) aussi.</p>
           </Step>
 
-          {/* 5. Inclus / exclus / hypothèses */}
-          <Step id="contenu" n="05" title="Ce qui est inclus, ce qui ne l’est pas, et les hypothèses" hint="Chaque ligne apparaît telle quelle. Retirez ce qui ne s’applique pas à ce chantier.">
+          {/* 6. Inclus / exclus / hypothèses */}
+          <Step id="contenu" n="06" title="Ce qui est inclus, ce qui ne l’est pas, et les hypothèses" hint="Chaque ligne apparaît telle quelle. Retirez ce qui ne s’applique pas à ce chantier.">
             <p className="sq-sub">Ce qui est inclus</p>
             {pkgHint ? (
               <p className="sq-note sq-note--info">
@@ -523,8 +594,8 @@ export function QuoteBuilder(props: BuilderProps) {
             </button>
           </Step>
 
-          {/* 6. Prix */}
-          <Step id="prix" n="06" title="Prix, options et rabais" hint="Lignes obligatoires ou facultatives (le client coche). Rabais : raison obligatoire.">
+          {/* 7. Prix */}
+          <Step id="prix" n="07" title="Prix, options et rabais" hint="Lignes obligatoires ou facultatives (le client coche). Rabais : raison obligatoire.">
             <div className="sq-lines">
               {c.lines.map((l, i) => {
                 const t = totals.lines.find((x) => x.id === l.id);
@@ -586,17 +657,25 @@ export function QuoteBuilder(props: BuilderProps) {
             <p className="g-hint">Aucun « prix barré » inventé : seul le prix saisi de la ligne apparaît barré, et seulement quand un rabais s’y applique. L’aide LogisVert est présentée à part, jamais comme un rabais.</p>
           </Step>
 
-          {/* 7. Conditions */}
-          <Step id="conditions" n="07" title="LogisVert, paiement et validité">
+          {/* 8. Conditions */}
+          <Step id="conditions" n="08" title="LogisVert, paiement et validité">
             <p className="sq-sub">Aide LogisVert</p>
-            <Seg
-              value={c.logisvert.mode}
-              options={[["client", "Versée au client par Hydro-Québec après l’installation"], ["aucune", "Aucune aide LogisVert"]]}
-              onChange={(v) => up((d) => void (d.logisvert.mode = lvAmount || v === "aucune" ? v : "aucune"))}
-            />
-            {!lvAmount ? <p className="g-hint">Choisissez d’abord un jumelage de la liste officielle avec un montant.</p> : null}
+            {lvAmount ? (
+              <div className="sq-lvinfo">
+                <Info size={18} aria-hidden />
+                <div>
+                  <p style={{ margin: 0 }}>
+                    <strong>{money(lvAmount)}</strong> : montant officiel de ce jumelage{m?.listDate ? ` (liste du ${m.listDate})` : ""}, montré au client à titre d’information.
+                  </p>
+                  <p className="sq-lvinfo__quote">{LOGISVERT_NOTICE}</p>
+                  <p className="g-hint" style={{ margin: 0 }}>Le total dû reste le prix complet : l’aide n’en est jamais soustraite. L’estimation après l’aide est marquée « estimation, non garantie ».</p>
+                </div>
+              </div>
+            ) : (
+              <p className="g-hint">Jumelage absent de la liste officielle ou sans montant : aucune aide LogisVert n’est mentionnée au client.</p>
+            )}
             <p className="sq-note" style={{ marginTop: 10 }}>
-              L’aide LogisVert est versée au client par Hydro-Québec, jamais à l’entreprise. Admissibilité, délais et pièces exigées : à confirmer avec Hydro-Québec. Le texte montré au client se modifie dans les <Link href="/gestion/soumissions/reglages#logisvert">réglages</Link>.{" "}
+              Admissibilité, délais et pièces exigées : à confirmer avec Hydro-Québec. Une précision facultative se modifie dans les <Link href="/gestion/soumissions/reglages#logisvert">réglages</Link>.{" "}
               <a href={LINKS.logisvert} target="_blank" rel="noreferrer">Page officielle du programme</a>
             </p>
             <p className="sq-sub">Acompte</p>
@@ -609,8 +688,8 @@ export function QuoteBuilder(props: BuilderProps) {
             <Text label="Valide jusqu’au (inclusivement)" type="date" value={c.validUntil} onChange={(v) => up((d) => void (d.validUntil = v))} />
           </Step>
 
-          {/* 8. Notes */}
-          <Step id="notes" n="08" title="Résumé et notes">
+          {/* 9. Notes */}
+          <Step id="notes" n="09" title="Résumé et notes">
             <Area label="Votre projet : mot d’introduction" hint="visible par le client" rows={3} value={c.projectSummary} onChange={(v) => up((d) => void (d.projectSummary = v))} placeholder="Laissé vide : une phrase est composée à partir de la machine et de l’adresse." />
             <Area label="Remarques pour le client" rows={3} value={c.notes} onChange={(v) => up((d) => void (d.notes = v))} />
             <Area label="Notes internes" hint="jamais montrées au client" rows={3} value={notes} onChange={(v) => { setNotes(v); setDirty(true); }} />
@@ -635,9 +714,9 @@ export function QuoteBuilder(props: BuilderProps) {
               {totals.quoteDiscountsCents ? <div className="is-disc"><span>Rabais</span><span>− {money(totals.quoteDiscountsCents)}</span></div> : null}
               <div><span>TPS</span><span>{money(totals.tpsCents)}</span></div>
               <div><span>TVQ</span><span>{money(totals.tvqCents)}</span></div>
-              <div className="is-total"><span>Total</span><span>{money(totals.totalCents)}</span></div>
-              {totals.logisvertCents ? <div className="is-aid"><span>LogisVert ({totals.logisvertMode === "cession" ? "à l’entreprise" : "au client"})</span><span>{money(totals.logisvertCents)}</span></div> : null}
-              {totals.logisvertCents ? <div><span>{totals.logisvertMode === "cession" ? "Payable par le client" : "Net après l’aide"}</span><span>{money(totals.netAfterAidCents)}</span></div> : null}
+              <div className="is-total"><span>Total dû, taxes comprises</span><span>{money(totals.totalCents)}</span></div>
+              {totals.logisvertCents ? <div className="is-aid"><span>Aide LogisVert prévue (information)</span><span>{money(totals.logisvertCents)}</span></div> : null}
+              {totals.logisvertCents ? <div className="is-est"><span>Estimation après l’aide, non garantie</span><span>{money(totals.netAfterAidCents)}</span></div> : null}
               {totals.depositCents ? <div><span>Acompte</span><span>{money(totals.depositCents)}</span></div> : null}
               <div><span>Valide jusqu’au</span><span>{formatDay(c.validUntil)}</span></div>
             </div>
@@ -673,7 +752,7 @@ function LiveChecks({ items }: { items: CheckItem[] }) {
         <li key={`${i.group}-${i.id}`}>
           {i.severity === "bloquant" ? <XCircle size={17} className="is-bad" aria-label="Bloquant" /> : i.ok ? <CheckCircle2 size={17} className="is-ok" aria-hidden /> : <AlertTriangle size={17} className="is-warn" aria-label="À vérifier" />}
           <span>
-            {i.href ? <Link href={i.href}>{i.label}</Link> : i.label}
+            {i.href ? (i.href.startsWith("#") ? <a href={i.href}>{i.label}</a> : <Link href={i.href}>{i.label}</Link>) : i.label}
             {i.hint ? <small>{i.hint}</small> : null}
           </span>
         </li>

@@ -5,8 +5,8 @@ import { Header } from "@/components/layout/Header";
 
 /* Outil de gestion privé, pages de réponse des installateurs et soumissions envoyées aux clients (/devis) :
    aucun élément du site public (en-tête, pied de page, mesure d'audience, bannière de consentement, assistant). */
-// Volet B : /facture et /suivi ; volet A : /entente, /chantier et /service (« Un problème ? »).
-const PRIVATE_ROUTES: string[] = ["/gestion", "/job", "/devis", "/facture", "/suivi", "/entente", "/chantier", "/service"];
+// Volet B : /facture et /suivi ; volet A : /entente, /chantier et /service (« Un problème ? ») ; /identite (identité légale du partenaire).
+const PRIVATE_ROUTES: string[] = ["/gestion", "/job", "/devis", "/facture", "/suivi", "/entente", "/chantier", "/service", "/identite"];
 
 const ROUTES_WITHOUT_CHROME: string[] = [
   "/trouver-ma-thermopompe",

@@ -12,10 +12,25 @@
 
 import { box, brandedEmail, p, strong, t, ul, BRAND, SITE_URL } from "@/lib/crm/templates/layout";
 import { escapeHtml } from "@/lib/security/escape";
+import { LOGISVERT_NOTICE, PLACEHOLDER_RE, PRESENTER_FALLBACK } from "./config";
 import { formatDateTime, formatDay } from "./dates";
 import { money } from "./money";
 import { describeUnit, documentLines, scheduleText } from "./present";
 import type { Acceptance, QuoteDocument, Totals } from "./types";
+
+/** Nom de la marque qui présente la soumission (réglages), sinon Thermopompes À Vendre. */
+export function presenterName(doc: Pick<QuoteDocument, "company">): string {
+  return doc.company.tradeName || doc.company.legalName || PRESENTER_FALLBACK;
+}
+
+/** « Travaux réalisés par … (licence RBQ …) » : modèle actuel seulement. */
+function contractorLine(doc: Pick<QuoteDocument, "contractor">): string {
+  const k = doc.contractor;
+  if (!k) return "";
+  return `${k.legalName}${k.rbq ? ` (licence RBQ ${k.rbq})` : ""}`;
+}
+
+const ready = (s: string | null | undefined) => Boolean(s && s.trim()) && !PLACEHOLDER_RE.test(s as string);
 
 export interface RenderedMessage {
   subject: string;
@@ -33,7 +48,7 @@ function companyLine(doc: Pick<QuoteDocument, "company">): string {
 
 function textFooter(doc: Pick<QuoteDocument, "company">): string {
   const c = doc.company;
-  return ["", "--", c.legalName || BRAND.name, [c.phone || BRAND.phone, c.email || BRAND.email].join(" · "), SITE_URL].join("\n");
+  return ["", "--", c.legalName || c.tradeName || BRAND.name, [c.phone || BRAND.phone, c.email || BRAND.email].join(" · "), SITE_URL].join("\n");
 }
 
 /* ---------------- Envoi et relance ---------------- */
@@ -41,7 +56,9 @@ function textFooter(doc: Pick<QuoteDocument, "company">): string {
 export function quoteSentEmail(d: { doc: QuoteDocument; totals: Totals; link: string; reminder: boolean }): RenderedMessage {
   const { doc, totals } = d;
   const c = doc.content.client;
-  const who = doc.company.legalName || BRAND.name;
+  const modern = doc.contractor !== undefined;
+  const who = modern ? presenterName(doc) : doc.company.legalName || BRAND.name;
+  const by = contractorLine(doc);
   const label = doc.kind === "avenant" ? `avenant (version ${doc.version})` : doc.version > 1 ? `version ${doc.version}` : "";
   const subject = d.reminder
     ? `Rappel : votre soumission ${doc.number} est valide jusqu’au ${formatDay(doc.validUntil)}`
@@ -51,10 +68,20 @@ export function quoteSentEmail(d: { doc: QuoteDocument; totals: Totals; link: st
   const rows: Array<[string, string]> = [
     ["Numéro", `${doc.number}${label ? ` · ${label}` : ""}`],
     ["Machine", doc.content.machine ? `${doc.content.machine.brand} ${doc.content.machine.name}` : "Selon la soumission"],
+    ...(by ? ([["Entrepreneur qui réalise les travaux", by]] as Array<[string, string]>) : []),
     ["Total, taxes comprises", money(totals.totalCents)],
-    ...(totals.logisvertCents > 0 ? ([[totals.logisvertMode === "cession" ? "À payer après l’aide LogisVert" : "Coût net estimé après l’aide LogisVert", money(totals.netAfterAidCents)]] as Array<[string, string]>) : []),
+    ...(totals.logisvertCents > 0
+      ? ([
+          totals.logisvertMode === "cession"
+            ? ["À payer après l’aide LogisVert", money(totals.netAfterAidCents)]
+            : modern
+              ? ["Aide LogisVert prévue (information, non garantie)", money(totals.logisvertCents)]
+              : ["Coût net estimé après l’aide LogisVert", money(totals.netAfterAidCents)],
+        ] as Array<[string, string]>)
+      : []),
     ["Valide jusqu’au", formatDay(doc.validUntil)],
   ];
+  const signature = modern ? `Soumission préparée par ${who}${by ? `. Travaux réalisés par ${by}` : ""}.` : `De la part de ${who}.`;
   const intro = d.reminder
     ? "Petit rappel : votre soumission vous attend. Elle décrit exactement les travaux prévus chez vous, ce qui est inclus et ce qui ne l’est pas."
     : doc.kind === "avenant"
@@ -68,7 +95,8 @@ export function quoteSentEmail(d: { doc: QuoteDocument; totals: Totals; link: st
       p(t(intro)),
       box("Votre soumission", rows),
       p("Vous pouvez y cocher les options qui vous intéressent, voir le total se mettre à jour, puis l’accepter en ligne. Une question ? Utilisez le bouton « J’ai une question » ou répondez à ce courriel."),
-      p(`De la part de ${strong(who)}.`, { muted: true, small: true }),
+      ...(totals.logisvertCents > 0 && modern && totals.logisvertMode === "client" ? [p(t(LOGISVERT_NOTICE), { muted: true, small: true })] : []),
+      p(modern ? `Soumission préparée par ${strong(who)}${by ? `. Travaux réalisés par ${strong(by)}` : ""}.` : `De la part de ${strong(who)}.`, { muted: true, small: true }),
     ].join(""),
     cta: { label: "Voir ma soumission", href: escapeHtml(d.link) },
     reason: SERVICE_REASON,
@@ -85,7 +113,8 @@ export function quoteSentEmail(d: { doc: QuoteDocument; totals: Totals; link: st
     "Voir la soumission, choisir les options et l’accepter en ligne :",
     d.link,
     "",
-    `De la part de ${who}.`,
+    ...(totals.logisvertCents > 0 && modern && totals.logisvertMode === "client" ? [LOGISVERT_NOTICE, ""] : []),
+    signature,
     textFooter(doc),
     "",
     SERVICE_REASON,
@@ -94,7 +123,7 @@ export function quoteSentEmail(d: { doc: QuoteDocument; totals: Totals; link: st
 }
 
 export function quoteSms(doc: QuoteDocument, link: string, reminder: boolean): string {
-  const who = doc.company.tradeName || doc.company.legalName || BRAND.name;
+  const who = doc.contractor !== undefined ? presenterName(doc) : doc.company.tradeName || doc.company.legalName || BRAND.name;
   return `${who} : ${reminder ? "rappel, " : ""}votre soumission ${doc.number} ${reminder ? "vous attend" : "est prête"}. Consultez-la et acceptez-la en ligne : ${link}`;
 }
 
@@ -136,7 +165,15 @@ export function snapshotSections(a: Acceptance): Array<{ title: string; rows?: A
   if (c.assumptions.length) out.push({ title: "Hypothèses et imprévus", list: c.assumptions.map((i) => i.label), text: doc.texts.changeOrder });
   out.push({ title: "Date et déroulement", rows: scheduleText(c.schedule) });
   out.push({ title: "Prix accepté", rows: documentLines(doc, s.totals, s.selection) });
-  const lvText = s.totals.logisvertMode === "cession" ? doc.texts.logisvertCession : s.totals.logisvertMode === "client" ? doc.texts.logisvertClient : "";
+  const modern = doc.contractor !== undefined;
+  const lvText =
+    s.totals.logisvertMode === "cession"
+      ? doc.texts.logisvertCession
+      : s.totals.logisvertMode === "client"
+        ? modern
+          ? [LOGISVERT_NOTICE, ready(doc.texts.logisvertClient) ? doc.texts.logisvertClient : ""].filter(Boolean).join("\n")
+          : doc.texts.logisvertClient
+        : "";
   if (lvText) out.push({ title: "Aide LogisVert", text: `${lvText}\nConditions du programme : ${doc.links.logisvert}` });
   out.push({ title: "Paiement", text: [doc.texts.paymentTerms, doc.texts.depositRule].filter(Boolean).join("\n\n") });
   out.push({ title: "Garanties", text: [m?.warrantyText, doc.texts.warranty, doc.texts.legalWarranty, `Renseignements officiels : ${doc.links.opcGaranties}`].filter(Boolean).join("\n\n") });
@@ -144,7 +181,13 @@ export function snapshotSections(a: Acceptance): Array<{ title: string; rows?: A
   if (doc.texts.weatherClause) out.push({ title: "Météo", text: doc.texts.weatherClause });
   out.push({ title: "Conditions générales", text: doc.texts.terms });
   const co = doc.company;
-  out.push({ title: "Entreprise", rows: [["Raison sociale", co.legalName], ["NEQ", co.neq], ["Licence RBQ", co.rbq], ["TPS", co.tps], ["TVQ", co.tvq], ["Adresse", [co.address, co.city, co.postalCode].filter(Boolean).join(", ")], ["Téléphone", co.phone], ["Courriel", co.email]] });
+  const k = doc.contractor;
+  if (k) {
+    out.push({ title: "Entrepreneur qui réalise les travaux", rows: [["Raison sociale", k.legalName], ["Nom commercial", k.tradeName], ["NEQ", k.neq], ["Licence RBQ", k.rbq], ["TPS", k.tps], ["TVQ", k.tvq], ["Adresse", [k.address, k.city, k.postalCode].filter(Boolean).join(", ")], ["Téléphone", k.phone], ["Courriel", k.email]] });
+    out.push({ title: "Soumission préparée par", rows: [["Nom", presenterName(doc)], ["Téléphone", co.phone], ["Courriel", co.email], ["Site web", co.website]] });
+  } else {
+    out.push({ title: "Entreprise", rows: [["Raison sociale", co.legalName], ["NEQ", co.neq], ["Licence RBQ", co.rbq], ["TPS", co.tps], ["TVQ", co.tvq], ["Adresse", [co.address, co.city, co.postalCode].filter(Boolean).join(", ")], ["Téléphone", co.phone], ["Courriel", co.email]] });
+  }
   return out;
 }
 

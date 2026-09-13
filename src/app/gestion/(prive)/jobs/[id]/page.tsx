@@ -119,6 +119,7 @@ export default async function JobPage({ params, searchParams }: { params: Promis
                 offered={match.offered.map(toDTO)}
                 nearMisses={match.nearMisses.map(toDTO)}
                 declinedNote={job.offers.some((o) => o.response === "refuse")}
+                proposedId={job.proposedInstallerId ?? null}
               />
             </Reveal>
           ) : null}

@@ -1,14 +1,9 @@
 /* Textes en français simple, partagés par le document client, l'outil et les courriels (pur). */
+import { choiceText } from "./choices";
 import { formatDay } from "./dates";
 import { formatNumber, money } from "./money";
 import {
-  DRAIN_LABELS,
-  FINISH_LABELS,
-  INDOOR_LABELS,
-  MOUNTING_LABELS,
-  ROUTE_LABELS,
   UNIT_LABELS,
-  WALL_LABELS,
   type IndoorPlacement,
   type LengthUnit,
   type MachineInfo,
@@ -51,7 +46,7 @@ export function describeUnit(label: string, p: Placement, u: IndoorPlacement | n
   if (!u) {
     const o = p.outdoor;
     return [
-      `${label} : ${o.location || "emplacement à préciser"}${o.mounting ? `, sur ${lc(MOUNTING_LABELS[o.mounting])}` : ""}`,
+      `${label} : ${o.location || "emplacement à préciser"}${o.mounting ? `, sur ${lc(choiceText("mounting", o.mounting))}` : ""}`,
       o.clearance ? `dégagement : ${o.clearance}` : "",
       o.snow ? `neige : ${o.snow}` : "",
     ]
@@ -59,15 +54,15 @@ export function describeUnit(label: string, p: Placement, u: IndoorPlacement | n
       .join(" ; ");
   }
   const bits = [
-    `${label} : ${u.type ? INDOOR_LABELS[u.type] : "unité"}${u.model ? ` ${u.model}` : ""}`,
+    `${label} : ${choiceText("indoorType", u.type) || "unité"}${u.model ? ` ${u.model}` : ""}`,
     [u.room, floorLabel(u.floor).toLowerCase()].filter(Boolean).join(", "),
     u.wall ? `mur : ${u.wall}` : "",
     u.height ? `hauteur : ${u.height}` : "",
     u.lineLength !== null ? `ligne de ${lengthText(u.lineLength, p.lengthUnit)}${u.lineIncluded !== null ? ` (${lengthText(u.lineIncluded, p.lengthUnit)} inclus)` : ""}` : "",
-    u.lineRoute ? lc(ROUTE_LABELS[u.lineRoute]) : "",
-    u.lineFinish ? `finition : ${lc(FINISH_LABELS[u.lineFinish])}` : "",
-    u.penetrations !== null ? `${u.penetrations} percement${u.penetrations > 1 ? "s" : ""}${u.wallMaterial ? ` (${lc(WALL_LABELS[u.wallMaterial])})` : ""}` : "",
-    u.drain ? `drain : ${lc(DRAIN_LABELS[u.drain])}` : "",
+    u.lineRoute ? lc(choiceText("route", u.lineRoute)) : "",
+    u.lineFinish ? `finition : ${lc(choiceText("finish", u.lineFinish))}` : "",
+    u.penetrations !== null ? `${u.penetrations} percement${u.penetrations > 1 ? "s" : ""}${u.wallMaterial ? ` (${lc(choiceText("wallMaterial", u.wallMaterial))})` : ""}` : "",
+    u.drain ? `drain : ${lc(choiceText("drain", u.drain))}` : "",
   ];
   return bits.filter(Boolean).join(" ; ");
 }
@@ -117,6 +112,10 @@ export function documentLines(doc: QuoteDocument, totals: Totals, selection: str
     if (totals.logisvertMode === "cession") {
       rows.push(["Aide LogisVert, versée par Hydro-Québec à l’entreprise", `− ${money(totals.logisvertCents)}`]);
       rows.push(["À payer à l’entreprise", money(totals.clientPaysCents)]);
+    } else if (doc.contractor !== undefined) {
+      // Modèle actuel : l'aide est une information, jamais soustraite du montant payable.
+      rows.push(["Aide LogisVert prévue (information : versée au client par Hydro-Québec, non garantie)", money(totals.logisvertCents)]);
+      rows.push(["Estimation après l’aide (estimation, non garantie)", money(totals.netAfterAidCents)]);
     } else {
       rows.push(["Aide LogisVert, versée par Hydro-Québec au client après l’installation", money(totals.logisvertCents)]);
       rows.push(["Coût net estimé après l’aide", money(totals.netAfterAidCents)]);

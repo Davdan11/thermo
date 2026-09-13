@@ -471,6 +471,14 @@ export async function jobPrefill(opts: { clientId?: string; quoteId?: string }):
       const btu = m.pairing?.nominalBtu ?? null;
       initial.capacity = btu ? `${btu.toLocaleString("fr-CA")} BTU` : "";
     }
+    // Entrepreneur choisi dans la soumission : proposé pour l'offre (le moteur d'offres garde ses vérifications).
+    if (v.contractorId && /^i_[A-Za-z0-9_-]{8,16}$/.test(v.contractorId)) {
+      const inst = (await readGestion()).installers.find((i) => i.id === v.contractorId);
+      if (inst) {
+        initial.proposedInstallerId = inst.id;
+        initial.proposedInstallerName = inst.company;
+      }
+    }
     const s = c.schedule;
     if (s.mode === "date" && isDay(s.date)) initial.desiredDate = s.date;
     else if (s.mode === "fenetre") {

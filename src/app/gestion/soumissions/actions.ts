@@ -10,12 +10,16 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { z } from "zod";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { CLIENT_ID_RE } from "@/lib/gestion/crm/types";
 import { publicBaseUrl } from "@/lib/gestion/request";
 import { machineBase, pairingsFor } from "@/lib/soumissions/catalog";
+import { quoteClientPrefill, quoteClientSearchLimiter, searchQuoteClients, type QuoteClientHit, type QuoteClientPrefill } from "@/lib/soumissions/clients";
 import { QUOTE_ID_RE } from "@/lib/soumissions/quote";
 import {
   deleteDraftService,
+  deleteTemplateService,
   duplicateService,
   linkDealService,
   remindService,
@@ -23,10 +27,13 @@ import {
   savePricesService,
   saveQuote,
   saveSettingsService,
+  saveTemplateService,
   sendQuoteService,
+  templateById,
 } from "@/lib/soumissions/service";
-import type { PairingInfo } from "@/lib/soumissions/types";
-import { parsePricesInput, parseQuoteInput, parseSettingsInput } from "@/lib/soumissions/validate";
+import { TEMPLATE_ID_RE } from "@/lib/soumissions/templates";
+import type { PairingInfo, QuoteContent } from "@/lib/soumissions/types";
+import { parsePricesInput, parseQuoteInput, parseSettingsInput, parseTemplateInput } from "@/lib/soumissions/validate";
 
 export type ActionResult = { ok: true; id?: string; message?: string } | { ok: false; error: string };
 
@@ -91,6 +98,16 @@ export async function duplicateAction(id: string): Promise<void> {
   redirect(`${ROOT}/${r.id}/modifier?copie=1`);
 }
 
+/** « Dupliquer pour un autre client » : même machine, plan, prix et entrepreneur ; coordonnées et chantier à choisir. */
+export async function duplicateForClientAction(id: string): Promise<void> {
+  const session = await requireAdmin();
+  if (!QUOTE_ID_RE.test(id)) redirect(ROOT);
+  const r = await duplicateService(id, session.email, { forOtherClient: true });
+  revalidatePath(ROOT, "layout");
+  if (!r.ok) redirect(`${ROOT}/${id}?msg=${encodeURIComponent(r.error)}`);
+  redirect(`${ROOT}/${r.id}/modifier?copie=autre`);
+}
+
 export async function deleteDraftAction(id: string): Promise<void> {
   const session = await requireAdmin();
   if (!QUOTE_ID_RE.test(id)) redirect(ROOT);
@@ -127,4 +144,56 @@ export async function savePricesAction(payload: unknown): Promise<ActionResult> 
   await savePricesService(parsed.data, session.email);
   revalidatePath(ROOT, "layout");
   return { ok: true, message: "Liste de prix enregistrée." };
+}
+
+/* ---------------- Trouver un client (CRM) ---------------- */
+
+/** Recherche instantanée : 10 résultats au plus, nom, ville, étape et 4 derniers chiffres (jamais le courriel ni le numéro complet). */
+export async function searchClientsAction(q: unknown): Promise<QuoteClientHit[]> {
+  const session = await requireAdmin();
+  const parsed = z.string().max(80).safeParse(q);
+  if (!parsed.success || parsed.data.trim().length < 2) return [];
+  if (!quoteClientSearchLimiter.hit(session.email)) return [];
+  return searchQuoteClients(parsed.data);
+}
+
+/** Coordonnées du client cliqué, pour pré-remplir la soumission. */
+export async function pickClientAction(id: unknown): Promise<{ ok: true; client: QuoteClientPrefill } | { ok: false; error: string }> {
+  await requireAdmin();
+  const parsed = z.string().regex(CLIENT_ID_RE).safeParse(id);
+  if (!parsed.success) return { ok: false, error: "Client introuvable." };
+  const client = await quoteClientPrefill(parsed.data);
+  return client ? { ok: true, client } : { ok: false, error: "Client introuvable." };
+}
+
+/* ---------------- Modèles de soumission ---------------- */
+
+export async function saveTemplateAction(payload: unknown): Promise<ActionResult> {
+  const session = await requireAdmin();
+  const parsed = parseTemplateInput(payload);
+  if (!parsed.ok) return { ok: false, error: parsed.error };
+  const r = await saveTemplateService(parsed.data, session.email);
+  if (!r.ok) return r;
+  revalidatePath(ROOT, "layout");
+  return { ok: true, id: r.id, message: r.replaced ? `Modèle « ${parsed.data.name.trim()} » mis à jour.` : `Modèle « ${parsed.data.name.trim()} » enregistré.` };
+}
+
+export type TemplateLoad = { ok: true; name: string; content: QuoteContent; contractorId: string | null } | { ok: false; error: string };
+
+/** « Partir d'un modèle » : contenu du modèle (sans client ni chantier), posé dans le créateur. */
+export async function loadTemplateAction(id: unknown): Promise<TemplateLoad> {
+  await requireAdmin();
+  const parsed = z.string().regex(TEMPLATE_ID_RE).safeParse(id);
+  if (!parsed.success) return { ok: false, error: "Modèle introuvable." };
+  const t = await templateById(parsed.data);
+  return t ? { ok: true, name: t.name, content: t.content, contractorId: t.contractorId } : { ok: false, error: "Modèle introuvable." };
+}
+
+export async function deleteTemplateAction(id: unknown): Promise<ActionResult> {
+  await requireAdmin();
+  const parsed = z.string().regex(TEMPLATE_ID_RE).safeParse(id);
+  if (!parsed.success) return { ok: false, error: "Modèle introuvable." };
+  const done = await deleteTemplateService(parsed.data);
+  revalidatePath(ROOT, "layout");
+  return done ? { ok: true, message: "Modèle supprimé." } : { ok: false, error: "Modèle introuvable." };
 }

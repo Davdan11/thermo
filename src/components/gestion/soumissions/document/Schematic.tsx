@@ -6,7 +6,8 @@
    percements et drains. Tracé dessiné au défilement (CSS).
    ================================================================== */
 import { floorShort, lengthText } from "@/lib/soumissions/present";
-import { INDOOR_LABELS, MOUNTING_LABELS, type IndoorPlacement, type Placement, type SiteInfo } from "@/lib/soumissions/types";
+import { choiceText, indoorKind, isPumpDrain, mountingKind, routeOutside } from "@/lib/soumissions/choices";
+import type { IndoorPlacement, Placement, SiteInfo } from "@/lib/soumissions/types";
 
 const X0 = 120;
 const X1 = 470;
@@ -24,7 +25,8 @@ export function Schematic({ placement, site }: { placement: Placement; site: Sit
   const top = 20 + ROOF_H;
   const ground = top + above * FLOOR_H;
   const height = ground + (basement ? BASE_H : 0) + 64;
-  const mounting = placement.outdoor.mounting || "socle-sol";
+  // Choix libre ou ancienne clé : la forme du support est déduite du texte (choices.ts).
+  const mounting = mountingKind(placement.outdoor.mounting) || "socle-sol";
 
   // Niveau → rectangle (y du plafond, y du plancher).
   const level = (f: number) => (f === 0 ? { ceil: ground, floor: ground + BASE_H } : { ceil: ground - (f - 0) * FLOOR_H, floor: ground - (f - 1) * FLOOR_H });
@@ -45,7 +47,7 @@ export function Schematic({ placement, site }: { placement: Placement; site: Sit
       const lv = level(f === 0 && !basement ? 1 : f);
       const slot = (X1 - X0) / (list.length + 1);
       const cx = X1 - slot * (i + 1);
-      const t = u.type || "murale";
+      const t = indoorKind(u.type) || "murale";
       const shape =
         t === "console"
           ? { w: 58, h: 28, y: lv.floor - 34 }
@@ -61,7 +63,7 @@ export function Schematic({ placement, site }: { placement: Placement; site: Sit
   const floors = [...(basement ? [0] : []), ...Array.from({ length: above }, (_, i) => i + 1)];
   const outX = mounting === "toit" ? ou.x + OU_W / 2 : ou.x;
   const outY = ou.y + OU_H / 2;
-  const summary = `Schéma : unité extérieure (${placement.outdoor.mounting ? MOUNTING_LABELS[placement.outdoor.mounting] : "support à préciser"}${placement.outdoor.location ? `, ${placement.outdoor.location}` : ""}) reliée à ${units.length} unité${units.length > 1 ? "s" : ""} intérieure${units.length > 1 ? "s" : ""}.`;
+  const summary = `Schéma : unité extérieure (${placement.outdoor.mounting ? choiceText("mounting", placement.outdoor.mounting) : "support à préciser"}${placement.outdoor.location ? `, ${placement.outdoor.location}` : ""}) reliée à ${units.length} unité${units.length > 1 ? "s" : ""} intérieure${units.length > 1 ? "s" : ""}.`;
 
   return (
     <figure className="dv-schema">
@@ -92,7 +94,7 @@ export function Schematic({ placement, site }: { placement: Placement; site: Sit
         {/* Lignes de réfrigérant */}
         {placed.map(({ u, cx, w, y, h }) => {
           const uy = y + h / 2;
-          const outside = u.lineRoute === "exterieur" || u.lineRoute === "mixte";
+          const outside = routeOutside(u.lineRoute);
           const railX = outside ? X1 + 18 : X1 - 14;
           const d = mounting === "toit" ? `M${outX} ${ou.y + OU_H} L${outX} ${top + 6} L${railX} ${top + 6} L${railX} ${uy} L${cx + w / 2} ${uy}` : `M${outX} ${outY} L${railX} ${outY} L${railX} ${uy} L${cx + w / 2} ${uy}`;
           const pen = outside ? { x: X1, y: uy } : { x: X1, y: outY };
@@ -113,10 +115,10 @@ export function Schematic({ placement, site }: { placement: Placement; site: Sit
           <g key={`u-${u.id}`} className="dv-s-unit">
             <rect x={cx - w / 2} y={y} width={w} height={h} rx="5" className="dv-s-indoor" />
             <text x={cx} y={y + h / 2 + 4} textAnchor="middle" className="dv-s-unit-n">{cut(u.label || "Unité", 12)}</text>
-            <text x={cx} y={Math.min(lv.floor - 8, y + h + 16)} textAnchor="middle" className="dv-s-room">{cut(u.room || (u.type ? INDOOR_LABELS[u.type] : ""), 18)}</text>
+            <text x={cx} y={Math.min(lv.floor - 8, y + h + 16)} textAnchor="middle" className="dv-s-room">{cut(u.room || choiceText("indoorType", u.type), 18)}</text>
             {u.drain ? (
               <g transform={`translate(${cx - w / 2 - 12} ${y + h})`}>
-                <path d="M0 -8 C 3 -3, 5 0, 5 2.5 A5 5 0 0 1 -5 2.5 C -5 0, -3 -3, 0 -8 Z" className={u.drain === "pompe" ? "dv-s-drop dv-s-drop--pump" : "dv-s-drop"} />
+                <path d="M0 -8 C 3 -3, 5 0, 5 2.5 A5 5 0 0 1 -5 2.5 C -5 0, -3 -3, 0 -8 Z" className={isPumpDrain(u.drain) ? "dv-s-drop dv-s-drop--pump" : "dv-s-drop"} />
               </g>
             ) : null}
           </g>
@@ -131,7 +133,7 @@ export function Schematic({ placement, site }: { placement: Placement; site: Sit
           <circle cx={ou.x + OU_W - 26} cy={ou.y + OU_H / 2} r="14" className="dv-s-fan" />
           <path d={`M${ou.x + OU_W - 26} ${ou.y + OU_H / 2 - 10} v20 M${ou.x + OU_W - 36} ${ou.y + OU_H / 2} h20`} className="dv-s-fan-x" />
           <text x={ou.x + OU_W / 2} y={Math.min(height - 30, (mounting === "toit" ? ou.y - 10 : ground + 22))} textAnchor="middle" className="dv-s-out-l">{cut(placement.outdoor.location || "Unité extérieure", 26)}</text>
-          {placement.outdoor.mounting ? <text x={ou.x + OU_W / 2} y={Math.min(height - 14, mounting === "toit" ? ou.y - 26 + 32 : ground + 38)} textAnchor="middle" className="dv-s-out-m">{MOUNTING_LABELS[placement.outdoor.mounting]}</text> : null}
+          {placement.outdoor.mounting ? <text x={ou.x + OU_W / 2} y={Math.min(height - 14, mounting === "toit" ? ou.y - 26 + 32 : ground + 38)} textAnchor="middle" className="dv-s-out-m">{cut(choiceText("mounting", placement.outdoor.mounting), 30)}</text> : null}
         </g>
       </svg>
       <figcaption className="dv-schema__legend">

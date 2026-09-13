@@ -8,11 +8,16 @@
    ================================================================== */
 
 import { z } from "zod";
+import { CLIENT_ID_RE } from "@/lib/gestion/crm/types";
+import { INSTALLER_ID_RE } from "@/lib/gestion/partenaires/types";
+import { normalizeChoices } from "./choices";
 import { LIMITS } from "./config";
 import type { MachineChoice } from "./catalog";
 import type { CatalogItem, DiscountPreset, PricePackage, QuoteContent, Settings } from "./types";
 
 const S = (max = 300) => z.string().trim().max(max);
+/** Longueur d'un choix en un clic ou d'un texte « Autre… ». */
+const CHOICE_TEXT = 120;
 const day = z.string().regex(/^(\d{4}-\d{2}-\d{2})?$/, "Date invalide.");
 const cents = z.number().int().min(0).max(100_000_000);
 const qty = z.number().min(0).max(100_000);
@@ -56,7 +61,8 @@ const site = z.object({
   address: S(200),
   city: S(100),
   postalCode: S(10),
-  propertyType: z.enum(["unifamiliale", "jumelee", "en-rangee", "duplex", "triplex", "condo", "chalet", "commerce", "autre", ""]),
+  // Choix en un clic ou « Autre… » : texte borné (les anciennes clés restent acceptées telles quelles).
+  propertyType: S(80),
   yearBuilt: S(20),
   floors: z.number().int().min(1).max(10).nullable(),
   basement: z.boolean(),
@@ -68,7 +74,7 @@ const site = z.object({
 const indoor = z.object({
   id: localId,
   label: S(80),
-  type: z.enum(["murale", "cassette", "gainable", "console", "plafonnier", "centrale", "autre", ""]),
+  type: S(CHOICE_TEXT),
   model: S(80),
   capacityBtu: nullableNum(200_000),
   floor: z.number().int().min(0).max(10).nullable(),
@@ -77,11 +83,11 @@ const indoor = z.object({
   height: S(120),
   lineLength: nullableNum(1000),
   lineIncluded: nullableNum(1000),
-  lineRoute: z.enum(["interieur", "exterieur", "mixte", ""]),
-  lineFinish: z.enum(["cache-ligne", "goulotte", "dans-le-mur", "aucune", "autre", ""]),
+  lineRoute: S(CHOICE_TEXT),
+  lineFinish: S(CHOICE_TEXT),
   penetrations: z.number().int().min(0).max(20).nullable(),
-  wallMaterial: z.enum(["bois", "vinyle", "brique", "beton", "pierre", "aluminium", "inconnu", "autre", ""]),
-  drain: z.enum(["gravite", "pompe", ""]),
+  wallMaterial: S(CHOICE_TEXT),
+  drain: S(CHOICE_TEXT),
   notes: S(1000),
   photos: photoIds,
 });
@@ -90,7 +96,7 @@ const placement = z.object({
   lengthUnit: z.enum(["pi", "m"]),
   outdoor: z.object({
     location: S(200),
-    mounting: z.enum(["support-mural", "socle-sol", "support-sol", "toit", "autre", ""]),
+    mounting: S(CHOICE_TEXT),
     clearance: S(400),
     snow: S(400),
     notes: S(1000),
@@ -99,9 +105,9 @@ const placement = z.object({
   indoor: z.array(indoor).max(LIMITS.indoorUnits),
   electrical: z.object({
     panelCapacity: S(40),
-    circuit: z.enum(["existant", "a-installer", "inconnu", ""]),
+    circuit: S(CHOICE_TEXT),
     breaker: S(40),
-    disconnect: z.enum(["inclus", "existant", "non-requis", "a-confirmer", ""]),
+    disconnect: S(CHOICE_TEXT),
     panelDistance: nullableNum(1000),
     electrician: z.enum(["requis-inclus", "requis-non-inclus", "non-requis", "a-confirmer", ""]),
     notes: S(1000),
@@ -131,8 +137,7 @@ const machineChoice = z.object({
   explanation: S(3000),
 });
 
-export const quoteInputSchema = z.object({
-  content: z.object({
+const contentSchema = z.object({
     client,
     site,
     machine: machineChoice.nullable(),
@@ -143,18 +148,42 @@ export const quoteInputSchema = z.object({
     inclusions: items,
     exclusions: items,
     assumptions: items,
-    logisvert: z.object({ mode: z.enum(["client", "aucune"]) }),
+    // Plus de choix de mode : le serveur le recalcule depuis le jumelage (logisvertModeFor). Accepté pour les anciens brouillons.
+    logisvert: z.object({ mode: z.enum(["cession", "client", "aucune"]) }).optional(),
     deposit: z
       .object({ kind: z.enum(["pourcentage", "montant", "aucun"]), value: z.number().min(0).max(100_000_000) })
       .refine((d) => d.kind !== "pourcentage" || d.value <= 100, "L’acompte en pourcentage ne dépasse pas 100 %."),
     validUntil: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Date de validité requise."),
     projectSummary: S(2000),
     notes: S(LIMITS.text),
-  }),
+});
+
+const installerRef = z.string().regex(INSTALLER_ID_RE, "Entrepreneur introuvable.").nullable().optional();
+
+export const quoteInputSchema = z.object({
+  content: contentSchema,
   internalNotes: S(LIMITS.text),
+  /** Installateur partenaire qui réalise les travaux (i_…). */
+  contractorId: installerRef,
+  /** Fiche client du CRM choisie dans le créateur (c_…). */
+  clientId: z.string().regex(CLIENT_ID_RE, "Fiche client introuvable.").nullable().optional(),
 });
 
 export type QuoteInput = z.infer<typeof quoteInputSchema>;
+
+/** « Enregistrer comme modèle » : un nom et le contenu du créateur (le client et le chantier sont retirés au serveur). */
+export const templateInputSchema = z.object({
+  name: S(80).min(1, "Donnez un nom au modèle (ex. « Murale standard »)."),
+  content: contentSchema,
+  contractorId: installerRef,
+});
+
+export type TemplateInput = z.infer<typeof templateInputSchema>;
+
+export function parseTemplateInput(raw: unknown): { ok: true; data: TemplateInput } | { ok: false; error: string } {
+  const r = templateInputSchema.safeParse(raw);
+  return r.success ? { ok: true, data: r.data } : { ok: false, error: firstIssue(r.error) };
+}
 export type ContentInput = Omit<QuoteContent, "machine"> & { machine: MachineChoice | null };
 
 function firstIssue(err: z.ZodError): string {
@@ -208,7 +237,11 @@ export const settingsInputSchema = z.object({
     deposit: z.object({ kind: z.enum(["pourcentage", "montant", "aucun"]), value: z.number().min(0).max(100_000_000) }).refine((d) => d.kind !== "pourcentage" || d.value <= 100, "Acompte : 100 % au plus."),
     lengthUnit: z.enum(["pi", "m"]),
     includedLineLength: nullableNum(1000),
+    site: z.object({ access: S(1000), presence: S(300) }),
+    schedule: z.object({ duration: S(120), arrival: S(120), windowText: S(200) }),
   }),
+  // Listes des choix en un clic : nettoyées (doublons, vides, longueur, nombres) par normalizeChoices.
+  choices: z.record(z.string().max(40), z.array(z.string().max(200)).max(60)).transform((r) => normalizeChoices(r)),
   templates: z.object({
     inclusions: z.array(S(240)).max(LIMITS.listItems).transform((l) => l.filter(Boolean)),
     exclusions: z.array(S(240)).max(LIMITS.listItems).transform((l) => l.filter(Boolean)),
