@@ -151,7 +151,7 @@ export default async function RecrutementPage() {
                       RBQ : {RBQ_OUTCOME_LABELS[e.rbq.outcome]}
                     </Chip>
                   ) : null}
-                  <Link href={`/gestion/installateurs/nouveau?candidature=${e.candidature.id}`} className="k-btn k-btn--primary">
+                  <Link href={`/gestion/partenaires/nouveau?candidature=${e.candidature.id}`} className="k-btn k-btn--primary">
                     <UserPlus size={16} aria-hidden /> Ajouter comme installateur
                   </Link>
                 </div>

@@ -89,7 +89,7 @@ export default async function PaiementsPage({ searchParams }: { searchParams: Pr
   ];
   const instRows: Row[] = v.installers.map((i) => ({
     key: i.id,
-    href: `/gestion/installateurs/${i.id}`,
+    href: `/gestion/partenaires/${i.id}?onglet=paiements`,
     tone: i.paused ? "hot" : undefined,
     cells: {
       who: <strong>{i.company}</strong>,
