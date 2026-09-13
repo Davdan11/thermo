@@ -4,6 +4,9 @@
 import { rm } from "node:fs/promises";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
+// Écritures réelles sous verrou : lent quand la machine est chargée (d’autres suites en parallèle).
+vi.setConfig({ testTimeout: 20_000 });
+
 const alerts = vi.hoisted(() => ({ calls: [] as unknown[] }));
 vi.mock("next/server", async (orig) => ({ ...(await orig<typeof import("next/server")>()), after: (fn: () => unknown) => void fn() }));
 vi.mock("@/lib/gestion/automatisations/followup", async (orig) => {
