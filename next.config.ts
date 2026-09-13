@@ -42,6 +42,8 @@ const nextConfig: NextConfig = {
       { source: "/entente/:path*", headers: privateHeaders },
       { source: "/chantier/:path*", headers: privateHeaders },
       { source: "/service/:path*", headers: privateHeaders },
+      // Chantier D : visite photo à distance (lien à jeton).
+      { source: "/visite/:path*", headers: privateHeaders },
       // Fichiers statiques versionnés par leur nom : cache long chez le visiteur et les proxys.
       { source: "/images/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
       { source: "/brochures/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=2592000" }, { key: "X-Robots-Tag", value: "noindex" }] },

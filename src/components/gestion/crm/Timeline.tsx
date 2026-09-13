@@ -1,7 +1,7 @@
 /* Chronologie d'un client (serveur) : icône par type d'événement, ton (accepté, refusé, à surveiller), heure de Montréal.
    Entrée en CSS (léger glissement, jamais d'opacité nulle) : lisible dès le premier affichage. */
 import Link from "next/link";
-import { ArrowUpRight, CalendarCheck, Check, Eye, FileText, Handshake, HelpCircle, Mail, MessageSquare, MoveRight, Phone, PhoneMissed, Send, StickyNote, Voicemail, Wrench, X } from "lucide-react";
+import { ArrowUpRight, CalendarCheck, Camera, Check, Eye, FileText, Handshake, HelpCircle, Mail, MessageSquare, MoveRight, Phone, PhoneMissed, Send, StickyNote, Voicemail, Wrench, X } from "lucide-react";
 import type { TimelineItem, TimelineKind } from "@/lib/gestion/crm/timeline";
 
 const ICONS: Record<TimelineKind, typeof Phone> = {
@@ -23,6 +23,7 @@ const ICONS: Record<TimelineKind, typeof Phone> = {
   etape: MoveRight,
   tache: Check,
   pipedrive: ArrowUpRight,
+  photos: Camera, // Chantier D : photos reçues de la visite à distance
 };
 
 export function Timeline({ items, limit }: { items: Array<TimelineItem & { when: string }>; limit?: number }) {

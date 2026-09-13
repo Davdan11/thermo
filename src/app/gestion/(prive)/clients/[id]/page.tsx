@@ -30,6 +30,9 @@ import { QuoteStatus } from "@/components/gestion/soumissions/ui";
 import { ApresVentePanel } from "@/components/gestion/argent/ApresVentePanel";
 import { ClientPhotoDossier } from "@/components/partenaires/admin/ClientPhotoDossier"; // volet A
 import { AdsClientPanel } from "@/components/gestion/publicite/AdsClientPanel"; // pilote publicitaire : consentement, clic, ventes renvoyées
+// Chantier D : visite photo à distance (carte « Photos du client » et « Photos reçues » dans la chronologie).
+import { ClientVisitsCard } from "@/components/gestion/visites/ClientVisitsCard";
+import { withVisitItems } from "@/lib/visites/timeline";
 
 export const metadata: Metadata = { title: "Client" };
 
@@ -46,6 +49,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
   const flash = Object.keys(FLASH).find((k) => sp[k]);
   const phone = c.phones[0];
   const conv = c.conversations[0];
+  // Chantier D : « Photos demandées » et « Photos reçues » des visites à distance, dans la chronologie.
+  const timeline = await withVisitItems(c.timeline, { clientIds: [c.id], phones: c.phones.map((p) => p.e164), emails: c.emails });
 
   return (
     <>
@@ -145,7 +150,7 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
           </Card>
 
           <Card title="Chronologie" sub="Tout ce qui s’est passé, du plus récent au plus ancien.">
-            {c.timeline.length ? <Timeline items={c.timeline} /> : <EmptyState compact title="Aucun événement" />}
+            {timeline.length ? <Timeline items={timeline} /> : <EmptyState compact title="Aucun événement" />}
           </Card>
         </div>
 
@@ -248,6 +253,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
           <ApresVentePanel jobIds={c.jobs.map((j) => j.id)} />
           {/* Volet A : dossier photo des chantiers du client (retrouvable « s'il y a de quoi »). */}
           <ClientPhotoDossier jobIds={c.jobs.map((j) => j.id)} />
+          {/* Chantier D : visites photo à distance (demander, voir les photos reçues). */}
+          <ClientVisitsCard clientId={c.id} phones={c.phones.map((p) => p.e164)} emails={c.emails} phone={phone?.e164 ?? ""} email={c.emails[0] ?? ""} />
 
           <Card title="Coordonnées">
             <ul className="cr-ident">
