@@ -23,9 +23,9 @@ import { resolveIn } from "../terrain/access";
 import { readTerrain } from "../terrain/store";
 import { issueFieldLink } from "../terrain/service";
 import type { Job } from "../types";
-import { assign, classify, closeByOwner, log, newTicketDue, planVisit, recordSatisfaction, resolve, TicketError } from "./rules";
+import { acknowledge, assign, classify, closeByOwner, log, newTicketDue, planVisit, recordSatisfaction, resolve, setPriority, TicketError } from "./rules";
 import { mutateSav, readSav, savPhotosDir } from "./store";
-import { MAX_TICKET_PHOTOS, TICKET_STATUS_LABELS, type SavData, type ServiceTicket, type TicketCause, type TicketPhoto } from "./types";
+import { MAX_TICKET_PHOTOS, TICKET_STATUS_LABELS, type SavData, type ServiceTicket, type TicketCause, type TicketPhoto, type TicketPriority } from "./types";
 
 type Result<T extends object = object> = ({ ok: true } & T) | { ok: false; error: string };
 const fail = (error: string): { ok: false; error: string } => ({ ok: false, error });
@@ -64,6 +64,8 @@ export interface NewTicketInput {
   contactPreference?: string;
   source: "proprietaire" | "client";
   by: string;
+  /** Conformité C3 : urgence (délais de l'annexe E). */
+  priority?: TicketPriority;
 }
 
 export async function createTicket(input: NewTicketInput, photos: Buffer[], baseUrl: string, now = new Date()): Promise<Result<{ id: string; number: number }>> {
@@ -98,6 +100,7 @@ export async function createTicket(input: NewTicketInput, photos: Buffer[], base
       causeNote: "",
       status: "nouveau",
       dueAt: newTicketDue(now, p.settings.serviceHours),
+      ...(input.priority === "urgent" ? { priority: "urgent" as const } : {}),
       events: [],
       updatedAt: now.toISOString(),
     };
@@ -191,11 +194,12 @@ export function classifyTicket(id: string, cause: TicketCause, note: string, by:
 
 /** Assigne à l'installateur d'origine et lui envoie le lien de chantier du job (section « Appel de service »). */
 export async function assignTicket(id: string, by: string, baseUrl: string, now = new Date()): Promise<Result<{ email: string; sms: string }>> {
-  const d = await readSav();
+  const [d, p] = await Promise.all([readSav(), readPartenaires()]);
   const t = d.tickets.find((x) => x.id === id);
   if (!t) return fail("Billet introuvable.");
   if (!t.jobId || !t.installerId) return fail("Aucun installateur d’origine : le billet n’est lié à aucun job attribué.");
-  const r = await withTicket(id, (tk) => assign(tk, by, now));
+  // Conformité C3 : échéances d'accusé de réception et de visite fixées à l'assignation (réglages du service).
+  const r = await withTicket(id, (tk) => assign(tk, by, now, p.settings.sla));
   if (!r.ok) return r;
   const link = await issueFieldLink(t.jobId, by, baseUrl, now, { ticketNumber: t.number });
   const notice = link.ok ? { email: link.email, sms: link.sms } : { email: "echec", sms: "echec" };
@@ -208,6 +212,17 @@ export async function assignTicket(id: string, by: string, baseUrl: string, now 
 
 export function planTicketVisit(id: string, visitAt: string, by: string, now = new Date()): Promise<Result> {
   return withTicket(id, (t) => planVisit(t, visitAt, by, now));
+}
+
+/** Conformité C3 : accusé de réception du partenaire (noté par lui, ou par le propriétaire après un appel). */
+export function acknowledgeTicket(id: string, by: string, now = new Date()): Promise<Result> {
+  return withTicket(id, (t) => acknowledge(t, by, now));
+}
+
+/** Conformité C3 : cas normal ou urgence (échéances recalculées si le billet est déjà assigné). */
+export async function setTicketPriority(id: string, priority: TicketPriority, by: string, now = new Date()): Promise<Result> {
+  const p = await readPartenaires();
+  return withTicket(id, (t) => setPriority(t, priority, by, now, p.settings.sla));
 }
 
 async function askClientSatisfaction(t: ServiceTicket, baseUrl: string, now: Date): Promise<void> {
@@ -281,10 +296,12 @@ async function ticketForField(token: string, ticketId: string): Promise<{ ticket
   return ticket ? { ticket, installerId: res.access.installer.id } : null;
 }
 
-export async function installerTicketAction(token: string, ticketId: string, action: { type: "visite"; visitAt: string } | { type: "resolu"; note: string }, baseUrl: string, now = new Date()): Promise<Result> {
+export async function installerTicketAction(token: string, ticketId: string, action: { type: "visite"; visitAt: string } | { type: "resolu"; note: string } | { type: "accuse" }, baseUrl: string, now = new Date()): Promise<Result> {
   const found = await ticketForField(token, ticketId);
   if (!found) return fail("Appel de service introuvable.");
   const by = `installateur:${found.installerId}`;
+  // Conformité C3 : « J'ai pris connaissance de l'appel » (accusé de réception dans le délai de service).
+  if (action.type === "accuse") return acknowledgeTicket(ticketId, by, now);
   if (action.type === "visite") return planTicketVisit(ticketId, action.visitAt, by, now);
   return resolveTicket(ticketId, action.note, by, baseUrl, now);
 }

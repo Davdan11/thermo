@@ -3,16 +3,19 @@
    représentant du partenaire, sans compte. GET en lecture seule :
    l'ouverture est notée par un signal POST de la page (les robots des
    messageries ne comptent pas). Signature : POST /entente/[jeton]/signer.
+   Conformité C3 : entente maître (parties, articles de l'avocat,
+   annexes, signatures) rendue depuis la version résolue ; le nom et le
+   titre du signataire complètent le texte à la signature.
    ================================================================== */
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Check, Clock, FileText, Link2Off, ShieldCheck } from "lucide-react";
-import { clauseRef } from "@/lib/gestion/partenaires/agreement";
 import { longDate, longDateTime } from "@/lib/gestion/partenaires/format";
 import { voletLimits } from "@/lib/gestion/partenaires/limits";
 import { getSigningView, SIGN_ERRORS } from "@/lib/gestion/partenaires/service";
 import { ipFromHeaders } from "@/lib/gestion/rate-limit";
 import { AgreementSignForm, OpenBeacon, ReadingProgress } from "@/components/partenaires/AgreementSignForm";
+import { AgreementText, AgreementToc } from "@/components/partenaires/AgreementText";
 import { Arcs, Foot, Mark, Plain } from "@/components/partenaires/PublicBits";
 
 export const dynamic = "force-dynamic";
@@ -33,8 +36,10 @@ export default async function EntentePage({ params, searchParams }: { params: Pr
   }
 
   const v = view.version;
+  const res = view.resolved;
   const base = `/entente/${encodeURIComponent(token)}`;
   const signed = view.state === "signee" && view.signature;
+  const signerCompletes = res.missing.signing.length > 0 || Boolean(res.signature);
 
   return (
     <main className="pp">
@@ -45,7 +50,7 @@ export default async function EntentePage({ params, searchParams }: { params: Pr
           <Mark sub="Partenaires installateurs" />
           <p className="pp-eyebrow pp-rise">Entente de partenariat · version {v.number}</p>
           <h1 className="pp-title pp-rise pp-rise--2">
-            {v.title}
+            {res.title || v.title}
             <em>entre Thermopompes À Vendre et {view.company}</em>
           </h1>
           <div className="pp-meta pp-rise pp-rise--3">
@@ -53,34 +58,18 @@ export default async function EntentePage({ params, searchParams }: { params: Pr
               Pour <b>{view.contactName}</b>
             </span>
             {v.publishedAt ? <span>En vigueur depuis le {longDate(v.publishedAt)}</span> : null}
-            <span>{v.articles.length} articles</span>
+            <span>
+              {res.articles.length} articles{res.annexes.length ? ` · ${res.annexes.length} annexes` : ""}
+            </span>
           </div>
         </div>
       </header>
 
       <div className="pp-wrap">
         <div className="pp-sheet pp-rise pp-rise--2">
-          <nav className="pp-toc" aria-label="Articles de l’entente">
-            {v.articles.map((a, i) => (
-              <a key={i} href={`#article-${i + 1}`}>
-                <b>{i + 1}</b> {a.title}
-              </a>
-            ))}
-          </nav>
+          <AgreementToc r={res} className="pp-toc" />
           <article className="pp-pad">
-            {v.preamble.trim() ? <p className="pp-preamble">{v.preamble}</p> : null}
-            {v.articles.map((a, i) => (
-              <section key={i} id={`article-${i + 1}`} className="pp-art">
-                <p className="pp-art__n">Article {i + 1}</p>
-                <h2>{a.title}</h2>
-                {a.paragraphs.map((p, j) => (
-                  <p key={j} className="pp-para">
-                    <b>{clauseRef(i, j)}</b>
-                    <span>{p}</span>
-                  </p>
-                ))}
-              </section>
-            ))}
+            <AgreementText r={res} />
           </article>
         </div>
 
@@ -123,7 +112,10 @@ export default async function EntentePage({ params, searchParams }: { params: Pr
               <h2 id="signer" className="pp-section-title">
                 Signer <em>l’entente</em>
               </h2>
-              <p className="pp-lead">Par une personne autorisée à engager {view.company}. Relisez chaque article : le texte signé est exactement celui affiché ci-dessus.</p>
+              <p className="pp-lead">
+                Par une personne autorisée à engager {view.company}. Relisez chaque article{res.annexes.length ? " et chaque annexe" : ""} : le texte signé est exactement celui affiché ci-dessus
+                {signerCompletes ? ", complété par votre nom et votre titre inscrits ci-dessous" : ""}.
+              </p>
               <AgreementSignForm action={`${base}/signer`} textSha256={view.textSha256} company={view.company} error={e ? SIGN_ERRORS[e] ?? "Une erreur est survenue. Réessayez." : null} />
             </>
           )}

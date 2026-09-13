@@ -9,9 +9,15 @@ import path from "node:path";
 import { gestionDataDir, mutateJson, readJson } from "../store";
 import {
   DEFAULT_PARTNER_SETTINGS,
+  DEFAULT_REQUIREMENTS,
+  DEFAULT_SERVICE_LEVELS,
   DEFAULT_THRESHOLDS,
   TIERS,
+  type AdditionalInsured,
   type ComplianceDoc,
+  type ComplianceKind,
+  type HalocarbonCert,
+  type Termination,
   type PartenairesData,
   type PartnerIdentity,
   type PartnerRecord,
@@ -61,6 +67,9 @@ export function normalizePartnerSettings(s: Partial<PartnerSettings> | undefined
       probationPhotoRate: num(th.probationPhotoRate, DEFAULT_THRESHOLDS.probationPhotoRate, 0, 1),
       probationPunctuality: num(th.probationPunctuality, DEFAULT_THRESHOLDS.probationPunctuality, 0, 1),
     },
+    // Conformité C3 : exigences d'assurance et délais du service après-vente (valeurs par défaut si absentes).
+    requirements: normalizeRequirements(s?.requirements),
+    sla: normalizeServiceLevels(s?.sla),
     ...(s?.updatedAt ? { updatedAt: s.updatedAt } : {}),
     ...(s?.updatedBy ? { updatedBy: s.updatedBy } : {}),
   };
@@ -68,29 +77,80 @@ export function normalizePartnerSettings(s: Partial<PartnerSettings> | undefined
 
 export const emptyDoc = (): ComplianceDoc => ({ number: "", issuer: "", expiresOn: null, coverage: "" });
 
+/* Conformité C3 : lecture tolérante des exigences et des délais (fichiers écrits avant : valeurs par défaut). */
+const bool = (v: unknown, def: boolean) => (typeof v === "boolean" ? v : def);
+
+export function normalizeRequirements(v: unknown): PartnerSettings["requirements"] {
+  const o = obj<unknown>(v);
+  const d = DEFAULT_REQUIREMENTS;
+  return {
+    minLiability: num(o.minLiability, d.minLiability, 0, 100_000_000),
+    minAuto: num(o.minAuto, d.minAuto, 0, 100_000_000),
+    requireEndorsement: bool(o.requireEndorsement, d.requireEndorsement),
+    requireAuto: bool(o.requireAuto, d.requireAuto),
+    requireHalocarbon: bool(o.requireHalocarbon, d.requireHalocarbon),
+  };
+}
+
+export function normalizeServiceLevels(v: unknown): PartnerSettings["sla"] {
+  const o = obj<unknown>(v);
+  const d = DEFAULT_SERVICE_LEVELS;
+  return {
+    ackBusinessDays: num(o.ackBusinessDays, d.ackBusinessDays, 0, 30),
+    visitBusinessDays: num(o.visitBusinessDays, d.visitBusinessDays, 0, 60),
+    urgentAckBusinessHours: num(o.urgentAckBusinessHours, d.urgentAckBusinessHours, 0, 72),
+    urgentVisitHours: num(o.urgentVisitHours, d.urgentVisitHours, 1, 240),
+  };
+}
+
 export const emptyPartner = (installerId: string): PartnerRecord => ({
   installerId,
-  compliance: { rbq: emptyDoc(), assurance: emptyDoc() },
+  compliance: { rbq: emptyDoc(), assurance: emptyDoc(), automobile: emptyDoc() },
   tierOverride: null,
   ended: null,
   history: [],
   citations: [],
 });
 
+const normDoc = (v: unknown): ComplianceDoc => {
+  const d = { ...emptyDoc(), ...obj<unknown>(v) } as ComplianceDoc;
+  // Conformité C3 : montant et sous-catégories (absents des fiches écrites avant).
+  if (d.amount !== undefined) d.amount = typeof d.amount === "number" && Number.isFinite(d.amount) ? d.amount : null;
+  if (d.subcategories !== undefined) d.subcategories = arr<unknown>(d.subcategories).filter((x): x is string => typeof x === "string");
+  return d;
+};
+
+function normalizeAdditionalInsured(v: unknown): AdditionalInsured | null {
+  if (!v || typeof v !== "object") return null;
+  const o = v as Partial<AdditionalInsured>;
+  return { ...o, confirmed: o.confirmed === true, date: typeof o.date === "string" ? o.date : null };
+}
+
+function normalizeTermination(v: unknown): Termination | null {
+  if (!v || typeof v !== "object") return null;
+  const o = v as Partial<Termination>;
+  if (!o.mode || !o.noticeAt || !o.effectiveOn) return null;
+  return { ...o, initiatedBy: o.initiatedBy === "partenaire" ? "partenaire" : "plateforme", receivedOn: o.receivedOn ?? o.noticeAt.slice(0, 10), reason: o.reason ?? "", by: o.by ?? "" } as Termination;
+}
+
 function normalizePartner(id: string, r: Partial<PartnerRecord> | undefined): PartnerRecord {
   const base = emptyPartner(id);
-  const c = obj<Partial<ComplianceDoc>>(r?.compliance);
+  const c = obj<unknown>(r?.compliance);
   return {
     ...base,
     ...r,
     installerId: id,
-    compliance: { rbq: { ...emptyDoc(), ...c.rbq }, assurance: { ...emptyDoc(), ...c.assurance } },
+    compliance: { rbq: normDoc(c.rbq), assurance: normDoc(c.assurance), automobile: normDoc(c.automobile) },
     tierOverride: r?.tierOverride ?? null,
     ended: r?.ended ?? null,
     history: arr(r?.history),
     citations: arr(r?.citations),
     identity: normalizeIdentity(r?.identity),
     identityLink: r?.identityLink && typeof r.identityLink === "object" ? { ...r.identityLink, sends: arr(r.identityLink.sends) } : null,
+    // Conformité C3 : avenant, qualifications environnementales, forme juridique, fin avec préavis.
+    additionalInsured: normalizeAdditionalInsured(r?.additionalInsured),
+    halocarbons: arr<HalocarbonCert>(r?.halocarbons).filter((h) => h && typeof h.id === "string"),
+    termination: normalizeTermination(r?.termination),
   };
 }
 
@@ -138,6 +198,12 @@ export async function readPartenaires(): Promise<PartenairesData> {
 
 export function mutatePartenaires<T>(fn: (data: PartenairesData) => { result: T; changed: boolean } | Promise<{ result: T; changed: boolean }>): Promise<T> {
   return mutateJson<PartenairesData, T>(partenairesFile(), emptyPartenaires, normalizePartenaires, fn);
+}
+
+/** Conformité C3 : document de conformité d'une fiche (l'assurance automobile est créée au besoin). */
+export function compliantDoc(p: PartnerRecord, kind: ComplianceKind): ComplianceDoc {
+  if (kind === "automobile") return (p.compliance.automobile ??= emptyDoc());
+  return p.compliance[kind];
 }
 
 /** Fiche du partenaire (créée au besoin, dans une écriture). */

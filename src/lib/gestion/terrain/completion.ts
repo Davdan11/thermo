@@ -18,6 +18,7 @@
 
 import { readGestion } from "../store";
 import type { Job } from "../types";
+import { checklistSpecOf } from "./checklist";
 import { missingForClose } from "./rules";
 import { readTerrain } from "./store";
 import type { ChecklistValue, FieldRecord, PhotoStep } from "./types";
@@ -51,7 +52,8 @@ export function completionOf(job: Job, record: FieldRecord | undefined): JobComp
     photos: (record?.photos ?? []).map((p) => ({ id: p.id, step: p.step, at: p.at })),
     checklist: Object.fromEntries(Object.entries(record?.checklist ?? {}).map(([k, v]) => [k, v?.value])),
     clientSignature: record?.clientSignature ? { name: record.clientSignature.name, at: record.clientSignature.at } : null,
-    missing: record ? missingForClose(record).map((m) => m.label) : ["Aucun dossier de chantier"],
+    // Conformité C3 : liste de contrôle figée du dossier (annexe C ou ancienne liste).
+    missing: record ? missingForClose(record, checklistSpecOf(record, null)).map((m) => m.label) : ["Aucun dossier de chantier"],
   };
 }
 

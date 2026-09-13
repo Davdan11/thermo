@@ -11,7 +11,9 @@
    ================================================================== */
 
 import { z } from "zod";
-import { CHECKLIST, OP_ID_RE, PHOTO_STEPS, type ChecklistId, type FieldRecord } from "./types";
+// Conformité C3 : liste de contrôle du dossier (annexe C ou ancienne liste).
+import { checklistItemLabel, LEGACY_SPEC } from "./checklist";
+import { OP_ID_RE, PHOTO_STEPS, type ChecklistSpec, type FieldRecord } from "./types";
 
 const MIN = 60_000;
 const DAY = 86_400_000;
@@ -33,14 +35,14 @@ export interface MissingItem {
   label: string;
 }
 
-export function missingForClose(r: Pick<FieldRecord, "photos" | "serials" | "checklist" | "clientSignature">): MissingItem[] {
+export function missingForClose(r: Pick<FieldRecord, "photos" | "serials" | "checklist" | "clientSignature">, spec: ChecklistSpec = LEGACY_SPEC): MissingItem[] {
   const out: MissingItem[] = [];
   for (const s of PHOTO_STEPS) if (!r.photos.some((p) => p.step === s.id)) out.push({ code: `photo:${s.id}`, label: `Photo : ${s.label.toLowerCase()}` });
   if (!r.serials.outdoor.some(isSerial)) out.push({ code: "serie:exterieur", label: "Numéro de série de l’unité extérieure" });
   if (!r.serials.indoor.some(isSerial)) out.push({ code: "serie:interieur", label: "Numéro de série de l’unité intérieure" });
-  for (const c of CHECKLIST) {
+  for (const c of spec.items) {
     const v = r.checklist[c.id];
-    if (!v || (v.value === "sans-objet" && !c.naAllowed)) out.push({ code: `controle:${c.id}`, label: `Liste de contrôle : ${c.label.toLowerCase()}` });
+    if (!v || (v.value === "sans-objet" && !c.naAllowed)) out.push({ code: `controle:${c.id}`, label: `Liste de contrôle : ${checklistItemLabel(spec, c.id)}` });
   }
   if (!r.clientSignature) out.push({ code: "signature", label: "Signature du client" });
   return out;
@@ -78,7 +80,7 @@ export type OpOutcome =
  * Applique une opération simple (tout sauf la signature et la fermeture, qui passent par le service : fichier
  * de la signature, écriture du job). Renvoie une erreur lisible sans rien changer si l'opération est refusée.
  */
-export function applySimpleOp(r: FieldRecord, op: Exclude<FieldOp, { type: "signature" } | { type: "fermer" }>, by: string, now: Date): OpOutcome {
+export function applySimpleOp(r: FieldRecord, op: Exclude<FieldOp, { type: "signature" } | { type: "fermer" }>, by: string, now: Date, spec: ChecklistSpec = LEGACY_SPEC): OpOutcome {
   const at = clampAt(op.at, now);
   switch (op.type) {
     case "en-route": {
@@ -99,11 +101,11 @@ export function applySimpleOp(r: FieldRecord, op: Exclude<FieldOp, { type: "sign
       }
       return { ok: true };
     case "checklist": {
-      const item = CHECKLIST.find((c) => c.id === op.item);
+      const item = spec.items.find((c) => c.id === op.item);
       if (!item) return { ok: false, error: "Point de contrôle inconnu." };
       if (op.value === "sans-objet" && !item.naAllowed) return { ok: false, error: `« ${item.label} » ne peut pas être sans objet.` };
-      if (op.value === null) delete r.checklist[item.id as ChecklistId];
-      else r.checklist[item.id as ChecklistId] = { value: op.value, at };
+      if (op.value === null) delete r.checklist[item.id];
+      else r.checklist[item.id] = { value: op.value, at };
       return { ok: true };
     }
     case "serials": {
@@ -125,7 +127,7 @@ export function markApplied(r: FieldRecord, opId: string): void {
 }
 
 /** Étapes franchies, pour la jauge de progression (photos par étape + séries + contrôle + signature). */
-export function progressOf(r: Pick<FieldRecord, "photos" | "serials" | "checklist" | "clientSignature">): { done: number; total: number } {
-  const total = PHOTO_STEPS.length + 2 + CHECKLIST.length + 1;
-  return { done: total - missingForClose(r).length, total };
+export function progressOf(r: Pick<FieldRecord, "photos" | "serials" | "checklist" | "clientSignature">, spec: ChecklistSpec = LEGACY_SPEC): { done: number; total: number } {
+  const total = PHOTO_STEPS.length + 2 + spec.items.length + 1;
+  return { done: total - missingForClose(r, spec).length, total };
 }

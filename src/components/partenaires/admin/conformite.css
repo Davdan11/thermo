@@ -1,0 +1,233 @@
+/* Conformité C3 — éléments de /gestion ajoutés au volet A : entente maître (champs, renvois, aperçu), conformité
+   (montants, avenant, automobile, halocarbures), fin du partenariat, annexe D, délais de service. Téléphone d'abord. */
+
+.pa-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.pa-article__num {
+  width: 5.2em;
+  min-width: 0;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+.pa-preview-all {
+  border: 1px solid var(--g-line);
+  border-radius: 18px;
+  padding: 4px 16px 10px;
+  background: var(--g-paper, #fffdf9);
+}
+.pa-preview-all > summary {
+  padding: 12px 0;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+/* Conformité : sous-blocs (avenant, automobile, halocarbures) et montants. */
+.pa-sub {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--g-line);
+  border-radius: 16px;
+  animation: pa-c3-rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.pa-sub__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.pa-sub__head b {
+  font-size: 14.5px;
+}
+.pa-min {
+  font-size: 12px;
+  color: var(--g-muted);
+}
+.pa-certs {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pa-cert {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--g-cream, #f4efe7);
+}
+.pa-cert__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.pa-fields {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pa-fields li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: var(--g-cream, #f4efe7);
+  font-size: 13px;
+}
+.pa-fields code {
+  font-size: 11.5px;
+  word-break: break-word;
+}
+.pa-fields small {
+  display: block;
+  color: var(--g-muted);
+}
+
+/* Fin du partenariat : minuterie du préavis. */
+.pa-notice {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(229, 75, 23, 0.1), rgba(229, 75, 23, 0.02));
+  border: 1px solid rgba(229, 75, 23, 0.25);
+}
+.pa-notice__count {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.pa-notice__count b {
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+.pa-notice__bar {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(12, 24, 33, 0.08);
+  overflow: hidden;
+}
+.pa-notice__bar i {
+  display: block;
+  height: 100%;
+  width: calc(var(--p, 0) * 100%);
+  border-radius: inherit;
+  background: var(--g-orange, #e54b17);
+  transform-origin: left;
+  animation: pa-c3-grow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.pa-modes {
+  display: grid;
+  gap: 8px;
+}
+.pa-mode {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid var(--g-line);
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+.pa-mode:has(input:checked) {
+  border-color: var(--g-orange, #e54b17);
+  background: rgba(229, 75, 23, 0.05);
+}
+.pa-mode small {
+  display: block;
+  color: var(--g-muted);
+}
+.pa-info {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(12, 24, 33, 0.04);
+  font-size: 13px;
+}
+
+/* Annexe D : obligations et journal des accès. */
+.pa-annex dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+.pa-annex dt {
+  font-weight: 650;
+  font-size: 13px;
+}
+.pa-annex dd {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--g-muted);
+}
+
+/* Délais de service. */
+.pa-sla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.pa-sla__item {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--g-line);
+}
+.pa-sla__item span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--g-muted);
+}
+.pa-sla__item b {
+  font-size: 15px;
+}
+@media (min-width: 560px) {
+  .pa-sla {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes pa-c3-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pa-c3-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pa-sub,
+  .pa-notice__bar i {
+    animation: none;
+  }
+}

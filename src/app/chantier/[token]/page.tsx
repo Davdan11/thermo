@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Clock, Link2Off, UserX } from "lucide-react";
 import { voletLimits } from "@/lib/gestion/partenaires/limits";
+import { logClientAccess } from "@/lib/gestion/partenaires/acces";
 import { ipFromHeaders } from "@/lib/gestion/rate-limit";
 import { getFieldView } from "@/lib/gestion/terrain/service";
 import { FieldApp } from "@/components/partenaires/FieldApp";
@@ -18,8 +19,11 @@ export const metadata: Metadata = { title: "Chantier" };
 
 export default async function ChantierPage({ params }: { params: Promise<{ token: string }> }) {
   const { token } = await params;
-  if (!voletLimits.chantierView.hit(ipFromHeaders(await headers()))) return <Plain icon={<Clock size={26} />} title="Trop de visites" text="Réessayez dans quelques minutes." />;
+  const ip = ipFromHeaders(await headers());
+  if (!voletLimits.chantierView.hit(ip)) return <Plain icon={<Clock size={26} />} title="Trop de visites" text="Réessayez dans quelques minutes." />;
   const res = await getFieldView(token);
+  // Conformité C3 (annexe D) : accès du partenaire au dossier du client, journalisé (identifiants seulement).
+  if (res.state === "ok") await logClientAccess({ ...res.access, via: "chantier", ip });
   if (res.state !== "ok") {
     return res.state === "plus-attribue" ? (
       <Plain icon={<UserX size={26} />} title="Ce job ne vous est plus attribué" text="Communiquez avec nous pour en savoir plus." />

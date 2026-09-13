@@ -20,7 +20,10 @@ import { clock } from "../partenaires/format";
 import * as msg from "../partenaires/messages";
 import { sendEmailSafe, sendOwnerSafe, sendSmsSafe } from "../partenaires/send";
 import { readPartenaires } from "../partenaires/store";
-import type { PartnerSettings } from "../partenaires/types";
+import type { PartenairesData, PartnerSettings } from "../partenaires/types";
+// Conformité C3 : liste de contrôle de l'annexe C de l'entente en vigueur (ancienne liste pour un chantier commencé avec elle).
+import { publishedVersion } from "../partenaires/agreement";
+import { annexChecklistSpec, checklistSpecOf, LEGACY_SPEC } from "./checklist";
 import { readSav, savPhotosDir } from "../sav/store";
 import { TICKET_STATUS_LABELS } from "../sav/types";
 import { mutateGestion, readGestion } from "../store";
@@ -29,13 +32,20 @@ import { addFieldToken, resolveIn, type FieldAccess } from "./access";
 import { readPlate, visionConfigured } from "./plate";
 import { applySimpleOp, clampAt, markApplied, missingForClose, progressOf, type FieldOp, type MissingItem } from "./rules";
 import { mutateTerrain, readTerrain, recordOf, terrainPhotosDir } from "./store";
-import { CHECKLIST, MAX_PHOTOS_PER_JOB, MAX_PHOTOS_PER_STEP, PHOTO_STEPS, stepLabel, type FieldEvent, type FieldPhoto, type FieldRecord, type PhotoReview, type PhotoStep } from "./types";
+import { MAX_PHOTOS_PER_JOB, MAX_PHOTOS_PER_STEP, PHOTO_STEPS, stepLabel, type ChecklistSpec, type FieldEvent, type FieldPhoto, type FieldRecord, type PhotoReview, type PhotoStep } from "./types";
 import { createHash } from "node:crypto";
 
 type Result<T extends object = object> = ({ ok: true } & T) | { ok: false; error: string };
 const fail = (error: string): { ok: false; error: string } => ({ ok: false, error });
 const HOUR = 3_600_000;
 const OPEN = ["attribue", "planifie"];
+
+/** Conformité C3 : points de l'annexe C de la version en vigueur (lus dans les données), s'il y en a. */
+export function annexSpecOf(d: Pick<PartenairesData, "agreements">): ChecklistSpec | null {
+  const v = publishedVersion(d);
+  const annex = v?.annexes?.find((a) => a.checklist.length && a.letter === "C") ?? v?.annexes?.find((a) => a.checklist.length);
+  return v && annex ? annexChecklistSpec(annex.checklist, `Entente version ${v.number}, annexe ${annex.letter}`) : null;
+}
 
 /* ---------------- Vue de l'installateur ---------------- */
 
@@ -57,6 +67,11 @@ export interface FieldTicketDTO {
   visitAt: string | null;
   photos: string[];
   resolution: string | null;
+  /** Conformité C3 : priorité, échéances de réponse et accusé de réception. */
+  priority: "normal" | "urgent";
+  ackDueAt: string | null;
+  visitDueAt: string | null;
+  acknowledgedAt: string | null;
 }
 
 export interface FieldViewDTO {
@@ -73,6 +88,8 @@ export interface FieldViewDTO {
   enRoute: { at: string; etaAt: string | null; smsSent: boolean } | null;
   arrivedAt: string | null;
   checklist: Record<string, "fait" | "sans-objet">;
+  /** Conformité C3 : points de la liste de contrôle de ce chantier (annexe C, ou ancienne liste). */
+  checklistSpec: ChecklistSpec;
   photos: FieldPhotoDTO[];
   serials: { outdoor: string[]; indoor: string[] };
   signature: { name: string; at: string } | null;
@@ -83,13 +100,15 @@ export interface FieldViewDTO {
   serverNow: string;
 }
 
-export type FieldViewResult = { state: "invalide" | "plus-attribue" } | { state: "ok"; view: FieldViewDTO };
+// Conformité C3 : « access » sert au journal des accès aux dossiers clients (jamais envoyé au téléphone).
+export type FieldViewResult = { state: "invalide" | "plus-attribue" } | { state: "ok"; view: FieldViewDTO; access: { installerId: string; jobId: string; jobNumber: number } };
 
 const emptyRecord = (job: Job, installerId: string): FieldRecord => ({ jobId: job.id, installerId, tokens: [], checklist: {}, photos: [], serials: { outdoor: [], indoor: [] }, events: [], appliedOps: [], updatedAt: job.updatedAt });
 
-function buildView(access: FieldAccess, record: FieldRecord | undefined, sav: Awaited<ReturnType<typeof readSav>>, token: string, now: Date): FieldViewDTO {
+function buildView(access: FieldAccess, record: FieldRecord | undefined, sav: Awaited<ReturnType<typeof readSav>>, token: string, now: Date, annex: ChecklistSpec | null): FieldViewDTO {
   const { job, installer } = access;
   const r = record ?? emptyRecord(job, installer.id);
+  const spec = checklistSpecOf(r, annex);
   const base = `/chantier/${encodeURIComponent(token)}`;
   const c = job.client;
   const equipment: Array<[string, string]> = [
@@ -112,10 +131,11 @@ function buildView(access: FieldAccess, record: FieldRecord | undefined, sav: Aw
     enRoute: r.enRoute ? { at: r.enRoute.at, etaAt: r.enRoute.etaAt, smsSent: r.enRoute.sms?.status === "envoye" || r.enRoute.sms?.status === "simule" } : null,
     arrivedAt: r.arrivedAt ?? null,
     checklist: Object.fromEntries(Object.entries(r.checklist).map(([k, v]) => [k, v!.value])),
+    checklistSpec: spec,
     photos: r.photos.map((p) => ({ id: p.id, step: p.step, url: `${base}/photo/${p.id}`, at: p.at })),
     serials: { outdoor: r.serials.outdoor, indoor: r.serials.indoor },
     signature: r.clientSignature ? { name: r.clientSignature.name, at: r.clientSignature.at } : null,
-    missing: missingForClose(r),
+    missing: missingForClose(r, spec),
     vision: visionConfigured(),
     tickets: sav.tickets
       .filter((t) => t.jobId === job.id && t.installerId === installer.id && t.status !== "ferme" && t.status !== "nouveau")
@@ -130,6 +150,10 @@ function buildView(access: FieldAccess, record: FieldRecord | undefined, sav: Aw
         visitAt: t.visitAt ?? null,
         photos: t.photos.map((p) => `${base}/photo/${p.id}`),
         resolution: t.resolution?.note ?? null,
+        priority: t.priority ?? "normal",
+        ackDueAt: t.ackDueAt ?? null,
+        visitDueAt: t.visitDueAt ?? null,
+        acknowledgedAt: t.acknowledgedAt ?? null,
       })),
     appliedOps: r.appliedOps.slice(-200),
     serverNow: now.toISOString(),
@@ -137,10 +161,11 @@ function buildView(access: FieldAccess, record: FieldRecord | undefined, sav: Aw
 }
 
 export async function getFieldView(token: string, now = new Date()): Promise<FieldViewResult> {
-  const [g, t, sav] = await Promise.all([readGestion(), readTerrain(), readSav()]);
+  const [g, t, sav, p] = await Promise.all([readGestion(), readTerrain(), readSav(), readPartenaires()]);
   const res = resolveIn(g, t, token);
   if (!res.ok) return { state: res.state };
-  return { state: "ok", view: buildView(res.access, res.access.record, sav, token, now) };
+  const { job, installer } = res.access;
+  return { state: "ok", view: buildView(res.access, res.access.record, sav, token, now, annexSpecOf(p)), access: { installerId: installer.id, jobId: job.id, jobNumber: job.number } };
 }
 
 /* ---------------- Opérations (file hors ligne) ---------------- */
@@ -159,9 +184,10 @@ export interface ApplyOutcome {
 }
 
 export async function applyFieldOps(token: string, ops: FieldOp[], ctx: { ip: string; userAgent: string; baseUrl: string }, now = new Date()): Promise<ApplyOutcome> {
-  const [g0, t0] = await Promise.all([readGestion(), readTerrain()]);
+  const [g0, t0, p0] = await Promise.all([readGestion(), readTerrain(), readPartenaires()]);
   const res0 = resolveIn(g0, t0, token);
   if (!res0.ok) return { state: res0.state, results: [] };
+  const annex = annexSpecOf(p0);
   const { job, installer } = res0.access;
   const by = `installateur:${installer.id}`;
   const already = new Set(res0.access.record?.appliedOps ?? []);
@@ -182,6 +208,13 @@ export async function applyFieldOps(token: string, ops: FieldOp[], ctx: { ip: st
 
   const step1 = await mutateTerrain((t) => {
     const r = recordOf(t, job.id, installer.id, now);
+    // Conformité C3 : liste figée au premier geste ; l'ancienne si le téléphone envoie un de ses points (file hors ligne).
+    let spec = checklistSpecOf(r, annex);
+    if (!r.checklistSpec) {
+      const legacyOp = spec.kind === "annexe-c" && ops.some((o) => o.type === "checklist" && !spec.items.some((c) => c.id === o.item) && LEGACY_SPEC.items.some((c) => c.id === o.item));
+      if (legacyOp) spec = LEGACY_SPEC;
+      r.checklistSpec = structuredClone(spec);
+    }
     const results: OpResult[] = [];
     let enRoute = false;
     let closeOp: { id: string; at: string } | null = null;
@@ -208,7 +241,7 @@ export async function applyFieldOps(token: string, ops: FieldOp[], ctx: { ip: st
         continue;
       }
       if (op.type === "fermer") {
-        const missing = missingForClose(r);
+        const missing = missingForClose(r, spec);
         if (missing.length) {
           results.push({ id: op.id, ok: false, error: "Il manque des éléments pour fermer la job.", missing });
           continue;
@@ -216,7 +249,7 @@ export async function applyFieldOps(token: string, ops: FieldOp[], ctx: { ip: st
         closeOp = { id: op.id, at: clampAt(op.at, now) };
         continue;
       }
-      const out = applySimpleOp(r, op, by, now);
+      const out = applySimpleOp(r, op, by, now, spec);
       if (out.ok) {
         markApplied(r, op.id);
         if (out.effect === "en-route") enRoute = true;
@@ -280,7 +313,7 @@ export async function applyFieldOps(token: string, ops: FieldOp[], ctx: { ip: st
 /* ---------------- Photos ---------------- */
 
 export async function uploadFieldPhoto(token: string, meta: { step: PhotoStep; clientId?: string; takenAt?: string }, buf: Buffer, now = new Date()): Promise<Result<{ photo: FieldPhotoDTO }>> {
-  const [g, t] = await Promise.all([readGestion(), readTerrain()]);
+  const [g, t, p] = await Promise.all([readGestion(), readTerrain(), readPartenaires()]);
   const res = resolveIn(g, t, token);
   if (!res.ok) return fail("Lien invalide ou job plus attribué.");
   const { job, installer, record } = res.access;
@@ -303,6 +336,8 @@ export async function uploadFieldPhoto(token: string, meta: { step: PhotoStep; c
     if (again) return { result: { ok: true, photo: { id: again.id, step: again.step, url: url(again.id), at: again.at } }, changed: false };
     if (r.photos.length >= MAX_PHOTOS_PER_JOB) return { result: fail("Nombre maximal de photos atteint pour ce job."), changed: false };
     if (r.photos.filter((p) => p.step === meta.step).length >= MAX_PHOTOS_PER_STEP) return { result: fail("Nombre maximal de photos atteint pour cette étape."), changed: false };
+    // Conformité C3 : la liste de contrôle du chantier est figée dès le premier geste.
+    r.checklistSpec ??= structuredClone(checklistSpecOf(r, annexSpecOf(p)));
     const photo: FieldPhoto = { id, step: meta.step, at: now.toISOString(), takenAt: clampAt(meta.takenAt, now), bytes: img.data.length, width: img.width, height: img.height, ext: img.ext, sha256: sha256Hex(img.data), by: `installateur:${installer.id}`, ...(meta.clientId ? { clientId: meta.clientId } : {}) };
     r.photos.push(photo);
     r.updatedAt = now.toISOString();
@@ -401,13 +436,14 @@ export async function setPlannedArrival(jobId: string, iso: string | null, by: s
 
 /** Fin de chantier déclarée par le propriétaire. Sans « force », refusée tant qu'il manque quelque chose. */
 export async function declareCompletion(jobId: string, by: string, note: string, force: boolean, now = new Date()): Promise<Result<{ missing: string[] }>> {
-  const [g, t] = await Promise.all([readGestion(), readTerrain()]);
+  const [g, t, p] = await Promise.all([readGestion(), readTerrain(), readPartenaires()]);
   const job = g.jobs.find((j) => j.id === jobId);
   if (!job) return fail("Job introuvable.");
   if (job.status === "termine") return fail("Ce job est déjà terminé.");
   if (!OPEN.includes(job.status) || !job.assignedInstallerId) return fail("Seul un job attribué ou planifié peut être terminé.");
   const rec = t.records[job.id];
-  const missing = (rec ? missingForClose(rec) : missingForClose({ photos: [], serials: { outdoor: [], indoor: [] }, checklist: {}, clientSignature: undefined })).map((m) => m.label);
+  const spec = checklistSpecOf(rec, annexSpecOf(p));
+  const missing = (rec ? missingForClose(rec, spec) : missingForClose({ photos: [], serials: { outdoor: [], indoor: [] }, checklist: {}, clientSignature: undefined }, spec)).map((m) => m.label);
   if (missing.length && !force) return fail(`Il manque : ${missing.join(" ; ")}. Cochez « Déclarer la fin malgré tout » pour passer outre.`);
   const ok = await mutateGestion((d) => {
     const j = d.jobs.find((x) => x.id === jobId);
@@ -489,6 +525,7 @@ export async function loadFieldPanel(jobId: string): Promise<FieldPanelDTO | nul
   if (!job) return null;
   const inst = job.assignedInstallerId ? g.installers.find((i) => i.id === job.assignedInstallerId) ?? null : null;
   const r = t.records[job.id] ?? emptyRecord(job, job.assignedInstallerId ?? "");
+  const spec = checklistSpecOf(r, annexSpecOf(p));
   const closer = r.closedBy?.startsWith("installateur:") ? g.installers.find((i) => `installateur:${i.id}` === r.closedBy)?.company ?? "l’installateur" : r.closedBy ?? null;
   return {
     jobId: job.id,
@@ -501,13 +538,13 @@ export async function loadFieldPanel(jobId: string): Promise<FieldPanelDTO | nul
     closedAt: r.closedAt ?? job.completedAt ?? null,
     closedBy: closer,
     ownerDeclaration: r.ownerDeclaration ?? null,
-    checklist: CHECKLIST.map((c) => ({ id: c.id, label: c.label, value: r.checklist[c.id]?.value ?? null })),
+    checklist: spec.items.map((c) => ({ id: c.id, label: c.label, value: r.checklist[c.id]?.value ?? null })),
     photos: r.photos.map(adminPhoto),
     steps: PHOTO_STEPS.map((s) => ({ id: s.id, label: s.label, count: r.photos.filter((x) => x.step === s.id).length })),
     serials: { outdoor: r.serials.outdoor, indoor: r.serials.indoor, readByVision: Boolean(r.serials.readByVision) },
     signature: r.clientSignature ? { name: r.clientSignature.name, at: r.clientSignature.at, url: `/gestion/api/terrain/photo/${r.clientSignature.fileId}` } : null,
-    missing: missingForClose(r),
-    progress: progressOf(r),
+    missing: missingForClose(r, spec),
+    progress: progressOf(r, spec),
     events: [...r.events].reverse().slice(0, 14),
     review: inReview(job.id, p.settings),
   };
