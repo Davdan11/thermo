@@ -54,6 +54,14 @@ export const AUDIT_ACTIONS = {
   "crm.attribution": "Client attribué",
   "crm.reattribution": "Client réattribué",
   "vendeurs.releve": "Relevé de commission payé",
+  // Conformité C1 : identité de l'entreprise, sous-catégories RBQ, parcours du contrat.
+  "plateforme.identite": "Identité de l’entreprise modifiée",
+  "plateforme.rbq": "Sous-catégories RBQ exigées modifiées",
+  "plateforme.paiement": "Paiement d’un installateur modifié",
+  "soumission.proposition": "Soumission proposée à un installateur",
+  "soumission.offre": "Soumission offerte aux installateurs admissibles",
+  "soumission.avenant": "Avenant préparé",
+  "soumission.changement-installateur": "Changement d’installateur",
 } as const;
 
 export type AuditAction = keyof typeof AUDIT_ACTIONS;

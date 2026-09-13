@@ -14,6 +14,7 @@ import { inferStage, type StageInfo } from "./stage";
 import { applyTaskState, autoTasks, byUrgency, manualTask, type Task } from "./tasks";
 import { partnerAutoTasks } from "../partenaires/crm-tasks";
 import { reseauAutoTasks } from "../reseau/tasks"; // Chantier R
+import { contratAutoTasks } from "@/lib/contrats/crm-tasks"; // Conformité C1
 import { textoTouchpoints } from "./textos-adapter";
 import { radarContext } from "../radar/radar";
 import { localYmd } from "./time";
@@ -200,6 +201,14 @@ export function computeIndex(bundles: ClientBundle[], src: SourceData, now: Date
   }
   // Chantier R : licences RBQ (fichier ouvert), zones à recruter, stock sous le seuil : tâches générales.
   for (const t of applyTaskState(reseauAutoTasks(src.reseau, now), src.crm.taskState)) general.push(t);
+  // Conformité C1 : tâches du parcours du contrat, rattachées au client de la soumission (ou du job).
+  for (const t of applyTaskState(contratAutoTasks(src.contrats, src.quotes, src.jobs, now), src.crm.taskState)) {
+    const c = byId.get((t.quoteId && byQuote.get(t.quoteId)) || (t.jobId && byJob.get(t.jobId)) || "");
+    if (c) {
+      c.tasks.push({ ...t, clientId: c.b.id });
+      c.tasks.sort(byUrgency);
+    } else general.push(t);
+  }
   return { clients, byId, byQuote, byJob, byConversation, tasks: [...clients.flatMap((c) => c.tasks), ...general].sort(byUrgency), settings, now, src };
 }
 

@@ -22,6 +22,8 @@ import { blockersFrom, computePaymentStats, type PaymentBlock } from "./blocker"
 import { computeCommission, commissionBase, daysOverdue, dueAtFor, invoiceState, issueDueAt, nextInvoiceNumber } from "./calc";
 import { invoiceIssuedEmail, invoiceReminderEmail, receiptEmail } from "./emails";
 import { acceptedQuoteForJob, jobCompletion } from "./link";
+// Conformité C1 : base de commission tirée du contrat signé (parcours de la trousse).
+import { signedContractForJob } from "@/lib/contrats/service";
 import { mutateCommissions, newInvoiceId, normalizeCommissionSettings, readCommissions } from "./store";
 import { stripeConfigured, type StripePaid } from "./stripe";
 import { INVOICE_ID_RE, PAYMENT_METHOD_LABELS, type CommissionInvoice, type CommissionSettings, type InvoiceSend, type InvoiceState, type PaymentMethod } from "./types";
@@ -52,13 +54,18 @@ export async function issueInvoiceForJob(jobId: string, by: string, o: { now?: D
   const invoiced = new Set(comm.invoices.filter((i) => i.status !== "annulee" && i.jobId !== jobId).map((i) => i.quoteId));
   // Chantier P : visite d'un plan d'entretien : base = prix annuel du plan, pourcentage du plan (montants figés à l'adhésion, sur le job).
   const plan = job.kind === "entretien" && job.maintenance && job.maintenance.priceCents > 0 ? job.maintenance : null;
-  const aq = plan ? null : acceptedQuoteForJob(job, soum.quotes, { linkedQuoteId: comm.jobLinks[jobId], invoicedQuoteIds: invoiced, completedAt: done.completedAt });
-  if (!plan && !aq) return { ok: false, code: "sans-soumission", message: `Aucune soumission acceptée n’est liée au job n° ${job.number} : choisissez-la dans Paiements.` };
+  // Conformité C1 : contrat signé (parcours de la trousse) : prix net final avec avenants signés, sans taxes ni LogisVert ;
+  // seulement l'installateur du contrat actif (un contrat annulé au changement d'installateur n'est jamais facturé).
+  const contract = plan ? null : await signedContractForJob(jobId, installer.id);
+  const aq = plan || contract ? null : acceptedQuoteForJob(job, soum.quotes, { linkedQuoteId: comm.jobLinks[jobId], invoicedQuoteIds: invoiced, completedAt: done.completedAt });
+  if (!plan && !contract && !aq) return { ok: false, code: "sans-soumission", message: `Aucune soumission acceptée n’est liée au job n° ${job.number} : choisissez-la dans Paiements.` };
   const totals = aq?.acceptance.snapshot?.totals;
   if (aq && (!totals || !Number.isFinite(totals.taxableCents))) return { ok: false, code: "sans-montant", message: `La soumission ${aq.quote.number} n’a pas de montant accepté lisible.` };
   const billing = plan
     ? { baseCents: plan.priceCents, percent: plan.commissionPercent as number | null, quoteId: `plan:${plan.membershipId}:${plan.visit}`, quoteNumber: `Plan « ${plan.planName} »`, acceptedAt: plan.joinedAt, detail: `plan d’entretien « ${plan.planName} », visite ${plan.visit}` }
-    : { baseCents: commissionBase(totals!), percent: null, quoteId: aq!.quote.id, quoteNumber: aq!.quote.number, acceptedAt: aq!.acceptance.at, detail: `soumission ${aq!.quote.number} (${aq!.via})` };
+    : contract
+      ? { baseCents: contract.baseCents, percent: null, quoteId: contract.quoteId, quoteNumber: contract.number, acceptedAt: contract.signedAt, detail: `contrat ${contract.number} signé (avenants signés compris)` }
+      : { baseCents: commissionBase(totals!), percent: null, quoteId: aq!.quote.id, quoteNumber: aq!.quote.number, acceptedAt: aq!.acceptance.at, detail: `soumission ${aq!.quote.number} (${aq!.via})` };
 
   const out = await mutateCommissions<{ invoice: CommissionInvoice; created: boolean }>((data) => {
     const existing = activeFor(data.invoices, jobId);
@@ -334,7 +341,8 @@ export async function paymentsView(now = new Date()): Promise<PaymentsView> {
       dueAt: issueDueAt(done.completedAt).toISOString(),
       auto: autoFrom !== null && Date.parse(done.completedAt) >= autoFrom && auto.settings.enabled["facture-commission"] !== false,
       // Chantier P : une visite d'un plan d'entretien se facture sans soumission (prix et pourcentage du plan).
-      problem: !installer ? "Aucun installateur attribué." : !aq && !(job.kind === "entretien" && job.maintenance) ? "Aucune soumission acceptée liée : choisissez-la." : null,
+      // Conformité C1 : un contrat signé suffit (sa base est lue à l'émission).
+      problem: !installer ? "Aucun installateur attribué." : !aq && !(job.kind === "entretien" && job.maintenance) && !(await signedContractForJob(job.id, installer.id)) ? "Aucune soumission acceptée ni contrat signé lié : choisissez-la." : null,
       quote: aq ? { id: aq.quote.id, number: aq.quote.number, via: aq.via } : null,
     });
   }

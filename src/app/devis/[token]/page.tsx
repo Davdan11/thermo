@@ -14,6 +14,11 @@ import { devisLimiters } from "@/lib/soumissions/rate-limit";
 import { getClientView } from "@/lib/soumissions/service";
 import { TOKEN_RE } from "@/lib/soumissions/tokens";
 import { QuoteDocumentView } from "@/components/gestion/soumissions/document/QuoteDocumentView";
+// Conformité C1 : après l'approbation de l'installateur, le document devient le contrat final à signer.
+import { SIGN_ERRORS } from "@/lib/contrats/regles";
+import { clientParcours } from "@/lib/contrats/service";
+import { todayIn } from "@/lib/soumissions/dates";
+import { ContractClientView, type ContractFlash } from "@/components/contrats/ContractClientView";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Votre soumission" };
@@ -27,6 +32,9 @@ const ERRORS: Record<string, string> = {
   remplacee: "Cette soumission a été remplacée par une version plus récente.",
   acceptee: "Cette soumission a déjà été acceptée.",
   refusee: "Cette soumission a été refusée.",
+  // Conformité C1.
+  case: "Cochez la case avant d’aller de l’avant.",
+  jumelage: "La signature se fait sur le contrat final de votre entrepreneur licencié, dès son approbation.",
   message: "Écrivez votre question avant de l’envoyer.",
   integrite: "Le document ne correspond plus à celui qui vous a été envoyé. Communiquez avec nous.",
 };
@@ -42,16 +50,29 @@ function Plain({ title, text }: { title: string; text: string }) {
   );
 }
 
-export default async function DevisPage({ params, searchParams }: { params: Promise<{ token: string }>; searchParams: Promise<{ r?: string; c?: string }> }) {
+export default async function DevisPage({ params, searchParams }: { params: Promise<{ token: string }>; searchParams: Promise<{ r?: string; c?: string; e?: string }> }) {
   const { token } = await params;
-  const { r, c } = await searchParams;
+  const { r, c, e } = await searchParams;
   if (!devisLimiters.view.hit(ipFromHeaders(await headers()))) return <Plain title="Trop de visites" text="Réessayez dans quelques minutes." />;
   if (!TOKEN_RE.test(token)) return <Plain title="Ce lien n’est pas valide" text="Vérifiez qu’il est complet, ou répondez au courriel qui vous l’a envoyé." />;
   const view = await getClientView(token);
   if (view.state === "invalide") return <Plain title="Ce lien n’est pas valide" text="Vérifiez qu’il est complet, ou répondez au courriel qui vous l’a envoyé." />;
 
+  // Conformité C1 : contrat final (après l'approbation de l'installateur) : un seul document, le contrat à signer.
+  const parcours = view.doc.parcours ? await clientParcours(token) : null;
+  if (parcours?.contract && (parcours.stage === "contrat" || parcours.stage === "signe")) {
+    const cflash: ContractFlash | null = r === "signe" ? { tone: "ok", text: "Merci ! Votre contrat est signé. Une copie intégrale vous a été envoyée par courriel." } : r === "avenant" ? { tone: "ok", text: "Votre réponse à l’avenant est enregistrée." } : null;
+    return <ContractClientView token={token} view={parcours} flash={cflash} asOf={todayIn()} error={e ? SIGN_ERRORS[e] ?? "Rien n’a été enregistré. Réessayez." : null} />;
+  }
+
   const flash =
-    r === "acceptee"
+    r === "jumelage"
+      ? { tone: "ok" as const, title: "Merci, c’est noté : vous allez de l’avant.", text: " Votre entrepreneur licencié confirme votre projet ; vous recevrez son contrat final à signer, par courriel et par texto." }
+      : r === "refuse" || r === "autre"
+        ? { tone: "info" as const, title: r === "refuse" ? "Votre refus est noté." : "Demande notée : nous choisissons un autre installateur.", text: " Nous vous revenons rapidement." }
+        : e
+          ? { tone: "bad" as const, title: "Rien n’a été enregistré.", text: ` ${SIGN_ERRORS[e] ?? "Réessayez."}` }
+          : r === "acceptee"
       ? { tone: "ok" as const, title: "Merci ! Votre acceptation est enregistrée.", text: "Une copie du document accepté vous a été envoyée par courriel. Nous vous appelons pour confirmer la date." }
       : r === "refusee"
         ? { tone: "info" as const, title: "C’est noté.", text: "Votre refus a été transmis. Merci d’avoir pris le temps de lire la soumission." }
@@ -82,6 +103,8 @@ export default async function DevisPage({ params, searchParams }: { params: Prom
         refusal={view.refusal}
         replacedBy={view.replacedBy ? { v: view.replacedBy.v, href: `/devis/${view.replacedBy.token}` } : null}
         flash={flash}
+        stage={parcours?.stage ?? null}
+        jumelage={view.jumelage}
       />
     </>
   );

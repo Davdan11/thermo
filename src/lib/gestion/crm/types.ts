@@ -19,6 +19,8 @@ import type { CrmExtensions } from "./extensions";
 import type { PartnerTaskInput } from "../partenaires/crm-tasks";
 // Chantier R : entrées des tâches du réseau (licences RBQ, recrutement, stock).
 import type { ReseauTaskInput } from "../reseau/tasks";
+// Conformité C1 : entrées des tâches du parcours du contrat.
+import type { ContratTaskInput } from "@/lib/contrats/crm-tasks";
 
 /* ---------------- Étapes ---------------- */
 
@@ -235,6 +237,8 @@ export interface SourceData {
   partenaires?: PartnerTaskInput;
   /** Chantier R : licences RBQ, zones à recruter, stock sous le seuil (reseau/tasks.ts). */
   reseau?: ReseauTaskInput;
+  /** Conformité C1 : dossiers du contrat (installateur à trouver, réponses, date à réserver). */
+  contrats?: ContratTaskInput;
 }
 
 /** Un client : ses traces réunies, dans tous les magasins. */

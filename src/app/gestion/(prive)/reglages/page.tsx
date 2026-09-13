@@ -37,6 +37,12 @@ export default async function ReglagesPage() {
       ) : null}
       {/* Volet C : radar à occasions, probabilités de la prévision, modèles de tâches. */}
       <VentesReglages />
+      {/* Conformité C1 : identité de l'entreprise (champs de la trousse), sous-catégories RBQ exigées, offre automatique. */}
+      <Card title="Contrat et conformité" sub="Identité de l’entreprise, trousse contractuelle, sous-catégories RBQ, offre automatique." className="as-reglages">
+        <p className="g-hint" style={{ margin: 0 }}>
+          <Link href="/gestion/reglages/identite">Identité de l’entreprise et trousse</Link> · <Link href="/gestion/reglages/rbq">Sous-catégories RBQ exigées et offre automatique</Link>
+        </p>
+      </Card>
       {/* Chantier A : tarifs de l'assistant IA et dépenses publicitaires, réglés dans leurs pages. */}
       <Card title="Assistant IA et rentabilité" sub="Réglés dans leurs pages." className="as-reglages">
         <p className="g-hint" style={{ margin: 0 }}>

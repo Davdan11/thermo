@@ -28,6 +28,20 @@ import { Schematic } from "./Schematic";
 import { LOGISVERT_NOTICE, PLACEHOLDER_RE, PRESENTER_FALLBACK } from "@/lib/soumissions/config";
 // Conformité : garantie légale de bon fonctionnement, près du prix (src/lib/garantie-legale).
 import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
+// Conformité C1 : parcours de la trousse (étapes, avis de jumelage, « Je veux aller de l'avant », signature verrouillée).
+import { Stepper } from "@/components/contrats/Stepper";
+import type { ClientStage } from "@/lib/contrats/regles";
+import "@/components/contrats/contrat.css";
+
+/* Conformité C1 : état affiché au client tant qu'aucun installateur n'a approuvé (aucune signature possible). */
+const TROUSSE_BANNER: Record<string, { title: string; text: string }> = {
+  estimation: { title: "Estimation détaillée, non contraignante", text: "Si elle vous convient, cliquez « Je veux aller de l’avant ». Nous choisissons votre entrepreneur licencié, il confirme votre projet, puis vous signez son contrat final à l’étape 3." },
+  recherche: { title: "Demande reçue : nous choisissons votre entrepreneur licencié.", text: "La signature sera disponible dès sa confirmation. Vous recevrez un courriel et un texto." },
+  confirmation: { title: "Votre entrepreneur licencié confirme votre projet.", text: "La signature sera disponible dès sa confirmation." },
+  finalisation: { title: "Nous finalisons le choix de votre entrepreneur.", text: "Nous vous écrivons dès qu’il est confirmé." },
+  refuse: { title: "Vous avez refusé le contrat final.", text: "Si vous changez d’idée, écrivez-nous ou appelez-nous." },
+};
+const TROUSSE_CHIP: Record<string, string> = { estimation: "Estimation", recherche: "Demande reçue", confirmation: "En confirmation", finalisation: "En cours", refuse: "Refusé", contrat: "Prêt à signer", signe: "Signé" };
 
 /** Texte prêt à montrer au client : rempli et sans marqueur « [À COMPLÉTER…] ». */
 const ready = (t: string | null | undefined): t is string => Boolean(t && t.trim()) && !PLACEHOLDER_RE.test(t as string);
@@ -50,6 +64,9 @@ export interface DocumentViewProps {
   refusal: { at: string } | null;
   replacedBy: { v: number; href: string } | null;
   flash: { tone: "ok" | "bad" | "info"; title: string; text: string } | null;
+  /** Conformité C1 : étape du parcours de la trousse (null : ancienne soumission) et demande de jumelage déjà faite. */
+  stage?: ClientStage | null;
+  jumelage?: { at: string } | null;
 }
 
 const WARRANTY_TYPE: Record<string, string> = { parts: "Pièces", compressor: "Compresseur", labor: "Main-d’œuvre (fabricant)", replacement: "Remplacement de l’appareil" };
@@ -150,8 +167,12 @@ export function QuoteDocumentView(props: DocumentViewProps) {
   const work = c.site.sameAsBilling ? { address: c.client.address, city: c.client.city, postalCode: c.client.postalCode } : { address: c.site.address, city: c.site.city, postalCode: c.site.postalCode };
   /* Modèle actuel (doc.contractor présent, même null en aperçu) : l'entrepreneur est l'installateur partenaire,
      Thermopompes À Vendre présente la soumission. Ancienne soumission (clé absente) : affichée comme à son envoi. */
-  const modern = doc.contractor !== undefined;
-  const k = doc.contractor ?? null;
+  // Conformité C1 : au parcours de la trousse, aucun entrepreneur n'est présenté avant son approbation (contrat final).
+  const trousse = Boolean(doc.parcours) || (preview && status === "brouillon");
+  const stage = props.stage ?? (trousse ? "estimation" : null);
+  const goAhead = trousse && !preview && props.canRespond && (stage === "estimation" || stage === "confirmation");
+  const modern = trousse || doc.contractor !== undefined;
+  const k = trousse ? null : (doc.contractor ?? null);
   const presenter = co.tradeName || co.legalName || PRESENTER_FALLBACK;
   const company = modern ? presenter : co.tradeName || co.legalName;
   const taxCo = k ?? co;
@@ -166,7 +187,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
   return (
     <div className={`dv ${preview ? "dv--apercu" : ""}`} data-status={status}>
       <div className="dv-toolbar" role="toolbar" aria-label="Outils du document">
-        <span className={`dv-chip dv-chip--${statusTone}`}>{preview ? "Aperçu" : STATUS_LABELS[status]}</span>
+        <span className={`dv-chip dv-chip--${statusTone}`}>{preview ? "Aperçu" : trousse && stage ? TROUSSE_CHIP[stage] ?? STATUS_LABELS[status] : STATUS_LABELS[status]}</span>
         <button type="button" className="dv-tool" onClick={() => window.print()}>
           <Printer size={16} aria-hidden /> Télécharger / Imprimer en PDF
         </button>
@@ -201,7 +222,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                   </div>
 
                   <div className="dv-cover__main">
-                    <p className="dv-cover__kicker dv-enter" style={{ animationDelay: "0.05s" }}>{doc.kind === "avenant" ? `Avenant à la version ${doc.basedOn}` : "Soumission d’installation"}</p>
+                    <p className="dv-cover__kicker dv-enter" style={{ animationDelay: "0.05s" }}>{doc.kind === "avenant" ? `Avenant à la version ${doc.basedOn}` : trousse ? "Estimation détaillée et demande de jumelage" : "Soumission d’installation"}</p>
                     <h1 className="dv-cover__title dv-enter" style={{ animationDelay: "0.1s" }}>
                       <span>{m ? `${m.brand} ${m.name}` : "Votre thermopompe"}</span>
                       <em>chez {clientName || "vous"}</em>
@@ -210,7 +231,12 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     <p className="dv-cover__addr dv-enter" style={{ animationDelay: "0.2s" }}>
                       {[work.address, work.city, work.postalCode].filter(Boolean).join(", ")}
                     </p>
-                    {modern ? (
+                    {trousse ? (
+                      <p className="dv-cover__by dv-enter" style={{ animationDelay: "0.24s" }}>
+                        <span>Votre entrepreneur licencié</span>
+                        <strong>Confirmé à l’étape 2, nommé au contrat final</strong>
+                      </p>
+                    ) : modern ? (
                       <p className="dv-cover__by dv-enter" style={{ animationDelay: "0.24s" }}>
                         <span>Travaux réalisés par</span>
                         <strong>{k?.legalName || <Missing what="Entrepreneur" show />}</strong>
@@ -247,10 +273,27 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                 <div className="dv-flash dv-flash--bad" role="alert">
                   <strong>{status === "expiree" ? `Cette soumission est expirée depuis le ${formatDay(doc.validUntil)}.` : "Cette soumission a été remplacée."}</strong>
                   <span>
-                    {status === "expiree" ? "Elle ne peut plus être acceptée en ligne. Demandez-nous une version à jour." : "Elle ne peut plus être acceptée : une version plus récente vous a été envoyée."}
+                    {trousse ? (status === "expiree" ? "Demandez-nous une version à jour." : "Une version plus récente vous a été envoyée.") : status === "expiree" ? "Elle ne peut plus être acceptée en ligne. Demandez-nous une version à jour." : "Elle ne peut plus être acceptée : une version plus récente vous a été envoyée."}
                     {props.replacedBy ? <> <a href={props.replacedBy.href}>Voir la version {props.replacedBy.v}</a></> : null}
                   </span>
                 </div>
+              ) : null}
+
+              {/* Conformité C1 : les étapes, l'état et l'avis de jumelage (trousse 3.1), tant qu'aucun installateur n'a approuvé. */}
+              {trousse ? (
+                <section className="ct-scope" aria-label="Étapes de votre projet" style={{ padding: "18px 16px 4px" }}>
+                  <Stepper current={stage === "estimation" ? 1 : stage === "refuse" ? 3 : 2} />
+                  <div className={`ct-banner${stage === "refuse" ? " is-bad" : ""}`} role="status">
+                    <span className="ct-banner__dot" aria-hidden />
+                    <div>
+                      <strong>{TROUSSE_BANNER[stage ?? "estimation"]?.title}</strong>
+                      <p>{TROUSSE_BANNER[stage ?? "estimation"]?.text}</p>
+                    </div>
+                  </div>
+                  <div className="ct-notice">
+                    {doc.notice ? doc.notice.paragraphs.map((x, i) => <p key={i}>{x}</p>) : <p>L’avis de jumelage de la trousse contractuelle (3.1) est inséré à l’envoi.</p>}
+                  </div>
+                </section>
               ) : null}
 
               <div className="dv-body">
@@ -431,7 +474,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                         ))}
                       </ol>
                     ) : null}
-                    <p className="dv-callout">{doc.texts.changeOrder}</p>
+                    <p className="dv-callout">{trousse ? "Tout changement de travaux ou de prix passera par un avenant écrit, signé avant l’exécution." : doc.texts.changeOrder}</p>
                   </Rise>
                 </Section>
 
@@ -452,7 +495,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                         <ul>{c.schedule.prep.map((x, i) => <li key={i}>{x}</li>)}</ul>
                       </div>
                     ) : null}
-                    {doc.texts.weatherClause ? <p className="dv-note"><strong>Météo :</strong> {doc.texts.weatherClause}</p> : null}
+                    {doc.texts.weatherClause && !trousse ? <p className="dv-note"><strong>Météo :</strong> {doc.texts.weatherClause}</p> : null}
                   </Rise>
                 </Section>
 
@@ -552,6 +595,12 @@ export function QuoteDocumentView(props: DocumentViewProps) {
 
                 {/* 8. Paiement */}
                 <Section id="paiement" n="08" title="Paiement">
+                  {/* Conformité C1 : le client paie son entrepreneur, selon l'échéancier de son contrat final ; rien à cette étape. */}
+                  {trousse ? (
+                    <Rise className="dv-pay">
+                      <p className="dv-note">Aucun paiement n’est demandé à cette étape. Vous paierez directement votre entrepreneur licencié, selon l’échéancier et les modes de paiement de son contrat final (étape 3). Tout acompte avant les travaux se paie par carte de crédit.</p>
+                    </Rise>
+                  ) : (
                   <Rise className="dv-pay">
                     <div className="dv-pay__steps">
                       {totals.depositCents ? (
@@ -565,6 +614,7 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     <Prose text={doc.texts.paymentTerms} />
                     <Prose text={doc.texts.depositRule} />
                   </Rise>
+                  )}
                 </Section>
 
                 {/* 9. Garanties */}
@@ -580,11 +630,11 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     ) : null}
                     <Rise className="dv-warr__card">
                       <h3>{modern ? "Main-d’œuvre" : `Main-d’œuvre (${company || "l’entreprise"})`}</h3>
-                      <Prose text={doc.texts.warranty} />
+                      <Prose text={trousse ? "Au moins 2 ans, garantie par votre entrepreneur licencié à compter de la fin des travaux ; précisée à son contrat final." : doc.texts.warranty} />
                     </Rise>
                     <Rise className="dv-warr__card">
                       <h3>Garantie légale</h3>
-                      {ready(doc.texts.legalWarranty) ? <Prose text={doc.texts.legalWarranty} /> : null}
+                      {!trousse && ready(doc.texts.legalWarranty) ? <Prose text={doc.texts.legalWarranty} /> : null}
                       <p className="dv-link"><a href={doc.links.opcGaranties} target="_blank" rel="noreferrer">Garanties prévues par la loi · Office de la protection du consommateur <ArrowUpRight size={12} aria-hidden /></a></p>
                     </Rise>
                   </div>
@@ -592,6 +642,15 @@ export function QuoteDocumentView(props: DocumentViewProps) {
 
                 {/* 10. Conditions */}
                 <Section id="conditions" n="10" title="Conditions">
+                  {/* Conformité C1 : les conditions, l'annulation et vos droits viennent du contrat final de l'entrepreneur (trousse 3.2). */}
+                  {trousse ? (
+                    <Rise className="dv-terms">
+                      <h3>Validité</h3>
+                      <p>Cette estimation est valide jusqu’au {formatDay(doc.validUntil)} inclusivement. Les conditions, l’annulation et vos droits figureront au contrat final de votre entrepreneur licencié, que vous pourrez relire avant de signer.</p>
+                      {c.notes ? (<><h3>Remarques</h3><Prose text={c.notes} /></>) : null}
+                      <p className="dv-soft">Document rédigé en français.</p>
+                    </Rise>
+                  ) : (
                   <Rise className="dv-terms">
                     <h3>Validité</h3>
                     <p>Cette soumission est valide jusqu’au {formatDay(doc.validUntil)} inclusivement. Après cette date, elle ne peut plus être acceptée en ligne.</p>
@@ -602,11 +661,71 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                     {c.notes ? (<><h3>Remarques</h3><Prose text={c.notes} /></>) : null}
                     <p className="dv-soft">Document rédigé en français. Contrat conclu à distance : <a href={doc.links.opcDistance} target="_blank" rel="noreferrer">vos droits, selon l’Office de la protection du consommateur</a>.</p>
                   </Rise>
+                  )}
                 </Section>
 
                 {/* 11. Acceptation */}
-                <Section id="acceptation" n="11" title="Acceptation">
-                  {props.acceptance ? (
+                <Section id="acceptation" n="11" title={trousse ? "Aller de l’avant" : "Acceptation"}>
+                  {/* Conformité C1 : « Je veux aller de l'avant » (case 3.1 obligatoire) ; « Signer » reste verrouillé. */}
+                  {trousse ? (
+                    <Rise className="dv-accept-wrap ct-scope">
+                      <div className="dv-accept-sum">
+                        <p>Total, taxes comprises</p>
+                        <strong><RollingMoney cents={totals.totalCents} /></strong>
+                        <small>Options choisies : {chosen.length ? chosen.map((l) => l.label).join(", ") : "aucune"}</small>
+                      </div>
+                      {props.jumelage ? (
+                        <div className="dv-cert">
+                          <span className="dv-cert__seal" aria-hidden><Check size={26} /></span>
+                          <h3>Demande de jumelage reçue</h3>
+                          <p>Le {formatDateTime(props.jumelage.at)}. {stage === "confirmation" ? "Votre entrepreneur licencié confirme votre projet." : stage === "finalisation" ? "Nous finalisons le choix de votre entrepreneur." : "Nous choisissons votre entrepreneur licencié."} Vous recevrez son contrat final à signer, par courriel et par texto : il ne vous restera qu’à cocher les confirmations et à signer.</p>
+                        </div>
+                      ) : goAhead || preview ? (
+                        <form id="dv-accept" action={props.action ?? undefined} method="post" className="dv-accept" onSubmit={preview ? (e) => e.preventDefault() : undefined}>
+                          <input type="hidden" name="decision" value="jumelage" />
+                          <input type="hidden" name="hash" value={props.contentHash} />
+                          {mounted ? <input type="hidden" name="total" value={totals.totalCents} /> : null}
+                          <label className="dv-consent">
+                            <input type="checkbox" name="jumelage" value="oui" required disabled={preview} />
+                            <span>{doc.notice?.checkbox || "Case obligatoire de l’avis de jumelage (trousse 3.1), insérée à l’envoi."}</span>
+                          </label>
+                          <p className="dv-fine">Ce clic ne vous engage à rien : aucuns travaux ni frais. Nous notons votre demande (texte de la case, version, options, date et heure, adresse IP) et transmettons votre dossier à l’entrepreneur licencié choisi.</p>
+                          <button type="submit" className="dv-btn dv-btn--go" disabled={preview}>Je veux aller de l’avant</button>
+                          {preview ? <p className="dv-fine">Aperçu : le client verra ce formulaire actif.</p> : null}
+                        </form>
+                      ) : stage === "finalisation" ? (
+                        <p className="dv-callout">Nous finalisons le choix de votre entrepreneur.</p>
+                      ) : (
+                        <p className="dv-callout dv-callout--bad">{expiredOn ? "Cette estimation est expirée : demandez-nous une version à jour." : "Cette estimation n’attend plus de réponse."}</p>
+                      )}
+                      <div className="ct-locked">
+                        <button type="button" className="ct-btn" disabled>Signer</button>
+                        <span>La signature sera disponible dès la confirmation de votre entrepreneur licencié, sur son contrat final (étape 3).</span>
+                      </div>
+                      {!preview && props.action && status !== "remplacee" ? (
+                        <div className="dv-other">
+                          {props.canRespond ? (
+                            <details className="dv-details">
+                              <summary>Refuser</summary>
+                              <form action={props.action} method="post" className="dv-mini">
+                                <input type="hidden" name="decision" value="refuser" />
+                                <label>Raison <small>(facultatif)</small><textarea name="raison" maxLength={1000} rows={3} /></label>
+                                <button type="submit" className="dv-btn dv-btn--ghost">Confirmer le refus</button>
+                              </form>
+                            </details>
+                          ) : null}
+                          <details className="dv-details">
+                            <summary><CircleHelp size={16} aria-hidden /> J’ai une question</summary>
+                            <form action={props.action} method="post" className="dv-mini">
+                              <input type="hidden" name="decision" value="question" />
+                              <label>Votre question<textarea name="message" required minLength={3} maxLength={2000} rows={4} /></label>
+                              <button type="submit" className="dv-btn dv-btn--ink">Envoyer ma question</button>
+                            </form>
+                          </details>
+                        </div>
+                      ) : null}
+                    </Rise>
+                  ) : props.acceptance ? (
                     <Rise className="dv-cert">
                       <span className="dv-cert__seal" aria-hidden><Check size={26} /></span>
                       <h3>Soumission acceptée</h3>
@@ -678,7 +797,20 @@ export function QuoteDocumentView(props: DocumentViewProps) {
                 </p>
 
                 {/* Identité : l'entrepreneur qui réalise les travaux, puis la marque qui présente la soumission. */}
-                {modern ? (
+                {trousse ? (
+                  <footer className="dv-identity dv-identity--duo" aria-label="Présentation de la soumission">
+                    <div className="dv-identity__main">
+                      <p className="dv-identity__role">Votre entrepreneur licencié</p>
+                      <p className="dv-identity__name">Choisi à l’étape 2</p>
+                      <p>Son identité complète, sa licence RBQ et ses sous-catégories figureront au contrat final, avant toute signature.</p>
+                    </div>
+                    <div className="dv-identity__by">
+                      <p className="dv-identity__role">Soumission préparée par</p>
+                      <p className="dv-identity__presenter">{presenter}</p>
+                      <p>{[co.phone, co.email, co.website].filter(Boolean).join(" · ")}</p>
+                    </div>
+                  </footer>
+                ) : modern ? (
                   <footer className="dv-identity dv-identity--duo" aria-label="Entrepreneur et présentation de la soumission">
                     <div className="dv-identity__main">
                       <p className="dv-identity__role">Entrepreneur qui réalise les travaux</p>
@@ -718,10 +850,10 @@ export function QuoteDocumentView(props: DocumentViewProps) {
           </div>
       </div>
 
-      {interactive && !preview ? (
+      {interactive && !preview && (!trousse || goAhead) ? (
         <a href="#acceptation" className="dv-sticky">
           <span>Total <RollingMoney cents={totals.totalCents} /></span>
-          <strong>Accepter</strong>
+          <strong>{trousse ? "Aller de l’avant" : "Accepter"}</strong>
         </a>
       ) : null}
     </div>

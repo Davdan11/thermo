@@ -7,7 +7,7 @@ import { Header } from "@/components/layout/Header";
    aucun élément du site public (en-tête, pied de page, mesure d'audience, bannière de consentement, assistant). */
 // Volet B : /facture et /suivi ; volet A : /entente, /chantier et /service (« Un problème ? ») ; /identite (identité légale du partenaire).
 // Chantier P : /projet et /disponibilites ; chantier T : /appel (alerte au propriétaire) et /rappel (le client choisit son moment de rappel) ; chantier D : /visite (visite photo à distance).
-const PRIVATE_ROUTES: string[] = ["/gestion", "/job", "/devis", "/facture", "/suivi", "/entente", "/chantier", "/service", "/identite", "/projet", "/disponibilites", "/appel", "/rappel", "/visite"];
+const PRIVATE_ROUTES: string[] = ["/gestion", "/job", "/devis", "/facture", "/suivi", "/entente", "/chantier", "/service", "/identite", "/projet", "/disponibilites", "/appel", "/rappel", "/visite", "/approbation"]; // Conformité C1 : /approbation (contrat à approuver par l'installateur)
 
 const ROUTES_WITHOUT_CHROME: string[] = [
   "/trouver-ma-thermopompe",

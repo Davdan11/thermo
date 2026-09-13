@@ -18,6 +18,8 @@ import { parseQuoteInput } from "../validate";
 import { fullSettings, INSTALLER_ID, line, machine, RATES, readyContent, TODAY } from "./fixtures";
 import { seedPartner } from "./partner-fixtures";
 import { renderDoc } from "./render-doc";
+// Conformité C1 : trousse fictive et identité de la plateforme, préalables de tout envoi.
+import { seedPlateforme } from "@/lib/contrats/__tests__/trousse-fictive";
 
 const env = process.env;
 let dir: string;
@@ -80,6 +82,7 @@ describe("montant de l'aide : information seulement", () => {
       return { result: null, changed: true };
     });
     await seedPartner();
+    await seedPlateforme(); // Conformité C1
     const c = readyContent();
     c.logisvert = { mode: "cession" };
     const id = await mutateSoumissions((d) => ({ result: createQuote(d, c, BY, NOW, { contractorId: INSTALLER_ID }).id, changed: true }));

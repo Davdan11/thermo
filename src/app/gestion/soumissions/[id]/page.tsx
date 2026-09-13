@@ -25,6 +25,10 @@ import { SubmitButton } from "@/components/gestion/SubmitButton";
 import { CopyLink } from "@/components/gestion/soumissions/CopyLink";
 import { Checklist, QuoteStatus } from "@/components/gestion/soumissions/ui";
 import { deleteDraftAction, duplicateAction, duplicateForClientAction, linkDealAction, remindAction, reviseAction, sendQuoteAction } from "../actions";
+// Conformité C1 : parcours du contrat (avancement, installateur, contrat, avenants) et préalables de l'envoi.
+import { ParcoursPanel } from "@/components/contrats/ParcoursPanel";
+import { readinessProblems } from "@/lib/contrats/service";
+import { CONTRACTOR_GROUP } from "@/lib/soumissions/checklist";
 
 export const metadata: Metadata = { title: "Soumission" };
 export const dynamic = "force-dynamic";
@@ -59,7 +63,14 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
   const draftPick: ContractorPick = { id: draft?.contractorId ?? null, status: draftContractor?.status ?? null };
   const frozenIdentity = shown.frozen?.contractor ?? shown.frozen?.company ?? null;
   const legalPick: ContractorPick = draft ? draftPick : frozenIdentity ? { id: "fige", status: statusFromIdentity(frozenIdentity) } : draftPick;
-  const blockers = draft ? sendBlockers(draft.content, settings, today, CURRENT_RATES, draftPick) : [];
+  // Conformité C1 : mêmes blocages que l'envoi (sans les textes des réglages ; sans entrepreneur au parcours B), plus la trousse et l'identité.
+  const readiness = draft ? await readinessProblems() : [];
+  const blockers = draft
+    ? [
+        ...sendBlockers(draft.content, settings, today, CURRENT_RATES, draftPick).filter((b) => b.group !== "Textes du contrat" && (draft.contractorId || b.group !== CONTRACTOR_GROUP)),
+        ...readiness.map((label, i) => ({ id: `trousse-${i}`, group: "Trousse contractuelle", label, ok: false, severity: "bloquant" as const, href: "/gestion/reglages/identite" })),
+      ]
+    : [];
   const warnings = draft ? [...settingsChecks(settings), ...quoteChecks(draft.content, settings, today, CURRENT_RATES, draftPick)].filter((i) => !i.ok && i.severity === "avertissement") : [];
   const legal = distanceContractChecks(c, settings, today, draft ? CURRENT_RATES : ratesOf(shown), legalPick);
   const contractorName = draft ? (draftContractor?.status.legalName || draftContractor?.status.company || "") : (shown.frozen?.contractor?.legalName ?? "");
@@ -72,7 +83,7 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
 
   const flash =
     sp.envoi === "ok"
-      ? { ok: true, text: `Soumission envoyée. Courriel : ${ch(sp.courriel)} · texto : ${ch(sp.texto)} · Pipedrive : ${sp.pd === "ok" ? "à jour" : "erreur (voir plus bas)"}.` }
+      ? { ok: true, text: `Soumission envoyée. Courriel : ${ch(sp.courriel)} · texto : ${ch(sp.texto)} · Pipedrive : ${sp.pd === "ok" ? "à jour" : "erreur (voir plus bas)"}${sp.inst ? ` · installateur : ${sp.inst}` : ""}.` }
       : sp.envoi === "bloque"
         ? { ok: false, text: sp.msg ?? "Envoi bloqué." }
         : sp.relance === "ok"
@@ -129,6 +140,15 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
                   <p className="g-hint" style={{ margin: 0 }}>
                     Le client reçoit un courriel avec un bouton vers sa soumission ({c.client.email}). Le document est figé à l’envoi : toute modification passera par une nouvelle version.
                   </p>
+                  {/* Conformité C1 : parcours A (installateur choisi : sa demande d'approbation part en même temps) ou B. */}
+                  <p className="g-hint" style={{ margin: 0 }}>
+                    {draft.contractorId
+                      ? `Parcours A : ${contractorName || "l’installateur choisi"} reçoit en même temps sa demande d’approbation du contrat (texto et courriel). Le client ne peut signer qu’après son approbation.`
+                      : "Parcours B : aucun installateur choisi. Le client peut « aller de l’avant » ; vous trouvez ensuite l’installateur (tâche automatique)."}
+                  </p>
+                  {draft.contractorId ? (
+                    <label className="sq-inline-check"><input type="checkbox" name="consent" value="oui" required /> Le client a consenti à la transmission de son dossier à cet installateur (case 3.1 du formulaire de demande, ou consentement verbal)</label>
+                  ) : null}
                   {sms ? (
                     <label className="sq-inline-check"><input type="checkbox" name="sms" value="oui" /> Aussi par texto au {c.client.phone}</label>
                   ) : null}
@@ -148,6 +168,9 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
               </form>
             </Reveal>
           ) : null}
+
+          {/* Conformité C1 : avancement du parcours (Envoyée → va de l'avant → installateur → approuvée → signée). */}
+          <ParcoursPanel quoteId={q.id} staff={staff} />
 
           {sent ? (
             <Reveal as="section" className="sq-card" delay={0.04}>
@@ -261,12 +284,15 @@ export default async function QuotePage({ params, searchParams }: { params: Prom
         </div>
 
         <aside className="sq-stack" style={{ alignContent: "start" }}>
+          {/* Conformité C1 : liste des anciennes soumissions ; au parcours de la trousse, le contrat vient de la trousse (3.2). */}
+          {shown.frozen && !shown.frozen.parcours ? (
           <Reveal className="sq-card" delay={0.08}>
             <h2 className="g-h2" style={{ marginBottom: 6 }}>Contrat conclu à distance</h2>
             <p className="g-hint" style={{ marginTop: 0 }}>Éléments attendus dans le document. Les textes juridiques restent à faire valider par un avocat ou un notaire du Québec.</p>
             <Checklist items={legal} />
             <p className="g-hint" style={{ marginBottom: 0 }}><a href={LINKS.opcDistance} target="_blank" rel="noreferrer">Office de la protection du consommateur : achats à distance</a></p>
           </Reveal>
+          ) : null}
 
           {/* Chantier V : Pipedrive (lier une affaire) pour le propriétaire et les adjoints. */}
           {staff ? (

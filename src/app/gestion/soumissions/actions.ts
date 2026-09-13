@@ -80,11 +80,13 @@ export async function machineAction(slug: string): Promise<MachineOptions> {
 export async function sendQuoteAction(id: string, fd: FormData): Promise<void> {
   const session = await requireUser(); // Chantier V
   if (!QUOTE_ID_RE.test(id) || !(await mayQuote(session, id))) redirect(ROOT);
-  const r = await sendQuoteService(id, session.email, await publicBaseUrl(), { sms: fd.get("sms") === "oui" });
+  // Conformité C1 : parcours A, consentement au transfert du dossier confirmé à l'envoi (case du formulaire).
+  const r = await sendQuoteService(id, session.email, await publicBaseUrl(), { sms: fd.get("sms") === "oui", transferConsent: fd.get("consent") === "oui" ? `Confirmé par ${session.email} à l’envoi (parcours A)` : null });
   revalidatePath(ROOT, "layout");
   if (!r.ok) redirect(`${ROOT}/${id}?envoi=bloque&msg=${encodeURIComponent(r.error)}`);
   await audit("soumission.envoyee", { soumission: id }, { qui: session.email });
-  redirect(`${ROOT}/${id}?envoi=ok&courriel=${r.email}&texto=${r.sms ?? "non"}&pd=${r.pipedrive.ok ? "ok" : "erreur"}`);
+  const inst = r.installer ? ("error" in r.installer ? `demande non envoyée (${r.installer.error})` : `demande d’approbation, courriel ${r.installer.email}, texto ${r.installer.sms}`) : "";
+  redirect(`${ROOT}/${id}?envoi=ok&courriel=${r.email}&texto=${r.sms ?? "non"}&pd=${r.pipedrive.ok ? "ok" : "erreur"}${inst ? `&inst=${encodeURIComponent(inst)}` : ""}`);
 }
 
 export async function remindAction(id: string, fd: FormData): Promise<void> {

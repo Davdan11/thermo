@@ -12,6 +12,8 @@ import { money } from "@/lib/soumissions/money";
 import { localYmd } from "@/lib/gestion/crm/time";
 import { invoiceState } from "@/lib/gestion/commissions/calc";
 import { PAYMENT_METHOD_LABELS, type CommissionInvoice } from "@/lib/gestion/commissions/types";
+// Conformité C1 : intérêts de retard (18 % par an, simples, au jour), affichés sur la facture.
+import { INTEREST_TERMS, interestInfo } from "@/lib/gestion/commissions/interets";
 import { PrintButton } from "./ClientBits";
 import { pctFr } from "./labels";
 
@@ -30,6 +32,7 @@ export function InvoiceDocument({ inv, mode, payAction, flash, now }: { inv: Com
   const place = [co.address, [co.city, co.postalCode].filter(Boolean).join(" ")].filter(Boolean).join(", ");
   const ids = [co.neq ? `NEQ ${co.neq}` : "", co.rbq ? `RBQ ${co.rbq}` : "", inv.taxes.tpsNumber ? `TPS ${inv.taxes.tpsNumber}` : "", inv.taxes.tvqNumber ? `TVQ ${inv.taxes.tvqNumber}` : ""].filter(Boolean);
   const open = state === "a-recevoir" || state === "en-retard";
+  const interest = interestInfo(inv, new Date(now)); // Conformité C1 : null si la facture n'est pas en retard
 
   return (
     <article className="fa-doc" aria-labelledby="fa-title">
@@ -159,6 +162,12 @@ export function InvoiceDocument({ inv, mode, payAction, flash, now }: { inv: Com
           <span>{state === "payee" ? "Total payé" : "Total à payer"}</span>
           <strong>{money(inv.totalCents)}</strong>
         </div>
+        {/* Conformité C1 : intérêts courus, affichés (jamais ajoutés au paiement en ligne). */}
+        {interest ? (
+          <p className="fa-note">
+            <strong>Intérêts courus au {day(now)} : {money(interest.cents)}</strong> ({INTEREST_TERMS} ; {interest.days} jour{interest.days > 1 ? "s" : ""} de retard). Total avec les intérêts : {money(interest.totalWithInterestCents)}.
+          </p>
+        ) : null}
         <p className="fa-note">
           L’aide LogisVert, versée au client par Hydro-Québec, n’entre jamais dans le calcul.
           {!inv.tpsCents && !inv.tvqCents ? " Aucune taxe : l’entreprise n’avait pas de numéros de TPS et de TVQ inscrits à l’émission." : ""}

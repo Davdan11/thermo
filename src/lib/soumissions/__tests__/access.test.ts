@@ -173,7 +173,8 @@ describe("routes du client", () => {
     await expect(stat(viewsFile())).rejects.toThrow();
   });
 
-  it("acceptation par le formulaire : IP et navigateur notés, retour 303 vers la soumission", async () => {
+  // Conformité C1 (trousse 1.5, 8.4) : aucune acceptation directe, même d'une ancienne soumission ; rien n'est enregistré.
+  it("acceptation par le formulaire : refusée, retour 303 avec le motif, rien d'enregistré", async () => {
     const token = await sentToken();
     const fd = new FormData();
     fd.set("decision", "accepter");
@@ -182,8 +183,8 @@ describe("routes du client", () => {
     fd.append("options", "l_opt");
     const res = await respondPOST(new NextRequest(`${ORIGIN}/devis/${token}/repondre`, { method: "POST", body: fd, headers: { origin: ORIGIN, host: "localhost:3001", "x-forwarded-for": "203.0.113.4", "user-agent": "Test/2.0" } }), params({ token }));
     expect(res.status).toBe(303);
-    expect(res.headers.get("location")).toContain(`/devis/${token}?r=acceptee`);
+    expect(res.headers.get("location")).toContain(`/devis/${token}?r=erreur&c=jumelage`);
     const saved = JSON.parse(await readFile(soumissionsFile(), "utf8"));
-    expect(saved.quotes[0].versions[0].acceptance).toMatchObject({ ip: "203.0.113.4", userAgent: "Test/2.0", typedName: "Camille Exemple", selectedOptionIds: ["l_opt"] });
+    expect(saved.quotes[0].versions[0].acceptance).toBeNull();
   });
 });
