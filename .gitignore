@@ -80,3 +80,11 @@ public/images/products/_official-sources/**
 /data/surveillance*.json
 /data/surveillance*.jsonl
 /data/surveillance*.tmp
+
+# créateur de soumissions : soumissions, acceptations, réglages, consultations et photos des clients
+# (shared/data sur le VPS, jamais dans le dépôt)
+/data/soumissions*.json
+/data/soumissions*.json.lock
+/data/soumissions*.tmp
+/data/soumissions-vues.jsonl
+/data/soumissions-photos/

@@ -61,6 +61,7 @@ export default function ConfidentialitePage() {
             <li><strong>Alerte LogisVert</strong> : courriel, prénom s'il est donné, et le modèle ou la marque que vous suivez. Il sert à vous prévenir quand le montant officiel change ; notre équipe est avisée de votre inscription.</li>
             <li><strong>ThermoScan</strong> : la photo de la plaque signalétique de votre appareil actuel, transmise à un service d'analyse d'image pour en lire le texte. Nous ne conservons pas la photo après l'analyse. Évitez de photographier des éléments personnels autour de l'étiquette.</li>
             <li><strong>Appels téléphoniques</strong> : numéro de l'appelant, messages vocaux et leur transcription, lorsque vous appelez notre ligne.</li>
+            <li><strong>Soumissions que nous vous envoyons</strong> : lorsque vous consultez une soumission, la date, l'heure et le type de navigateur de chaque consultation, pour suivre votre dossier ; si vous l'acceptez en ligne, votre nom tapé, votre adresse IP, votre navigateur et une empreinte numérique du document accepté, comme preuve de votre consentement.</li>
             <li><strong>Données techniques</strong> : adresse IP, type de navigateur, pages consultées et paramètres de provenance (utm), utilisés pour la sécurité et la mesure d'audience.</li>
           </ul>
         </DocArticle>
