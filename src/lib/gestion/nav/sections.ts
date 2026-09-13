@@ -40,6 +40,7 @@ import {
   LifeBuoy,
   Link2,
   ListChecks,
+  ListOrdered,
   MapPinned,
   Megaphone,
   MessageSquare,
@@ -58,6 +59,7 @@ import {
   Sun,
   Tags,
   Target,
+  TrendingDown,
   TrendingUp,
   Trophy,
   UserPlus,
@@ -130,6 +132,7 @@ export const SECTIONS: NavSection[] = [
       { href: "/gestion/pipeline", label: "Pipeline", icon: Columns3, keywords: "étapes affaires prévision" },
       { href: "/gestion/clients/nouveau", label: "Nouveau client", icon: UserRoundPlus, perm: "/gestion/clients", keywords: "ajouter créer fiche" },
       { href: "/gestion/classement", label: "Classement", icon: Trophy, keywords: "vendeurs ma carte" },
+      { href: "/gestion/pertes", label: "Pertes", icon: TrendingDown, keywords: "pourquoi on perd perdus raisons prix délai concurrent" },
     ],
   },
   {
@@ -198,6 +201,7 @@ export const SETTINGS: NavSection = {
   icon: Settings2,
   tabs: [
     { href: "/gestion/reglages", label: "Réglages généraux", icon: Settings2, keywords: "crm relances pipedrive délais" },
+    { href: "/gestion/reglages/etapes", label: "Étapes du pipeline", icon: ListOrdered, keywords: "12 étapes délais alertes escalade probabilités qui doit agir" },
     { href: "/gestion/reglages/identite", label: "Identité de l’entreprise", icon: Building2, keywords: "raison sociale neq adresse plateforme" },
     { href: "/gestion/reglages/rbq", label: "Vérification RBQ", icon: BadgeCheck, keywords: "licences registre rbq" },
     { href: "/gestion/soumissions/reglages", label: "Soumissions", icon: FileText, keywords: "réglages soumissions modèle texte" },

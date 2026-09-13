@@ -22,6 +22,7 @@ import { emailOf, phoneOf } from "@/lib/gestion/crm/identity";
 import * as crm from "@/lib/gestion/crm/service";
 import { isSnoozeOption, snoozeUntil } from "@/lib/gestion/crm/time";
 import { AUTO_TASK_RE, CLIENT_ID_RE, STAGES, TASK_ID_RE, type Stage } from "@/lib/gestion/crm/types";
+import { LOSS_CAUSES } from "@/lib/gestion/crm/parcours"; // Refonte R2
 import { moveDealToStage } from "@/lib/soumissions/pipedrive-sync";
 // Chantier S : journal d'audit (changement d'étape).
 import { audit } from "@/lib/gestion/securite/audit";
@@ -58,12 +59,13 @@ export async function dialAction(id: unknown): Promise<{ ok: true; href: string 
 
 /* ---------------- Étapes ---------------- */
 
-export async function setStageAction(id: unknown, stage: unknown, reason: unknown = ""): Promise<ActionResult> {
+/* Refonte R2 : `cause` facultative (raison structurée d'une perte : prix, délai, installateur, concurrent, reporté, autre). */
+export async function setStageAction(id: unknown, stage: unknown, reason: unknown = "", cause: unknown = undefined): Promise<ActionResult> {
   const session = await requireUser(); // Chantier V
-  const p = z.object({ id: clientId, stage: z.enum(STAGES), reason: z.string().max(200) }).safeParse({ id, stage, reason });
+  const p = z.object({ id: clientId, stage: z.enum(STAGES), reason: z.string().max(200), cause: z.enum(LOSS_CAUSES).optional() }).safeParse({ id, stage, reason, cause: cause || undefined });
   if (!p.success) return INVALID;
   if (!(await mayClient(session, p.data.id))) return { ok: false, error: "Client introuvable." };
-  const r = await crm.setStage(p.data.id, p.data.stage as Stage, p.data.reason, session.email);
+  const r = await crm.setStage(p.data.id, p.data.stage as Stage, p.data.reason, session.email, undefined, p.data.cause ? { cause: p.data.cause } : {});
   if (!r.ok) return r;
   await audit("crm.etape", { client: p.data.id, etape: p.data.stage }, { qui: session.email }); // Chantier S
   if ("pipedrive" in r && r.pipedrive) {

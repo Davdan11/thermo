@@ -1,0 +1,658 @@
+/* ==================================================================
+   Refonte R2 — page Pipeline du parcours (12 étapes) et page
+   « Pourquoi on perd ». Téléphone (390 px) d'abord ; animations
+   discrètes, coupées si l'utilisateur réduit les animations.
+   Les colonnes réutilisent .cr-board et .cr-col (crm.css).
+   ================================================================== */
+
+.pc-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px 12px;
+  margin: 0 0 14px;
+}
+.pc-seg {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 99px;
+  background: var(--g-cream);
+  border: 1px solid var(--g-line);
+}
+.pc-seg button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 99px;
+  background: transparent;
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 640;
+  color: var(--g-ink-2, var(--g-ink));
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.pc-seg button[aria-selected="true"] {
+  background: var(--g-ink);
+  color: var(--g-cream);
+}
+.pc-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+}
+.pc-filter {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  font-size: 11.5px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--g-muted);
+}
+.pc-filter input,
+.pc-filter select {
+  min-height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 12px;
+  border: 1px solid var(--g-line);
+  background: var(--g-paper);
+  font: inherit;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--g-ink);
+}
+.pc-filter--wide {
+  grid-column: 1 / -1;
+}
+.pc-count {
+  margin: 0;
+  font-size: 13px;
+  color: var(--g-muted);
+  font-variant-numeric: tabular-nums;
+}
+@media (min-width: 760px) {
+  .pc-filters {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .pc-filter {
+    width: 180px;
+  }
+  .pc-filter--wide {
+    width: 220px;
+  }
+}
+
+/* Carte */
+.pc-card {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  padding: 12px 12px 10px;
+  border-radius: 16px;
+  border: 1px solid var(--g-line);
+  background: var(--g-paper-warm);
+  box-shadow: 0 1px 2px rgba(12, 24, 33, 0.04);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 190px;
+  animation: pc-in 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(min(var(--i, 0), 10) * 30ms);
+  transition: box-shadow 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s;
+}
+.pc-card[draggable="true"] {
+  cursor: grab;
+}
+.pc-card:hover {
+  border-color: var(--g-line-2, var(--g-line));
+  box-shadow: var(--g-shadow);
+}
+.pc-card.is-drag {
+  opacity: 0.45;
+}
+.pc-card.is-blocked {
+  border-color: rgba(180, 35, 24, 0.35);
+  box-shadow: inset 3px 0 0 #b42318;
+}
+.pc-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.pc-card__name {
+  display: block;
+  font-weight: 680;
+  color: inherit;
+  text-decoration: none;
+  line-height: 1.25;
+}
+.pc-card__name:hover {
+  text-decoration: underline;
+}
+.pc-card__city {
+  display: block;
+  font-size: 12.5px;
+  color: var(--g-muted);
+}
+.pc-card__money {
+  font-weight: 700;
+  font-size: 13.5px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.pc-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 8px;
+  font-size: 12px;
+  color: var(--g-muted);
+}
+.pc-card__step {
+  font-weight: 650;
+  color: var(--g-ink);
+}
+.pc-card__meta .is-late {
+  color: #b42318;
+  font-weight: 650;
+}
+.pc-card__next {
+  display: grid;
+  gap: 1px;
+  padding: 7px 9px;
+  border-radius: 10px;
+  background: var(--g-cream);
+  font-size: 12px;
+  line-height: 1.3;
+  color: inherit;
+  text-decoration: none;
+}
+.pc-card__next:hover {
+  background: var(--g-cream-2, var(--g-cream));
+}
+.pc-card__next.is-over {
+  background: var(--g-orange-soft);
+  color: var(--g-orange-2);
+}
+.pc-card__next b {
+  font-weight: 650;
+}
+.pc-card__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.pc-card__move {
+  margin-left: auto;
+  min-height: 32px;
+  padding: 0 10px;
+  border-radius: 99px;
+  border: 1px solid var(--g-line);
+  background: var(--g-paper);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 620;
+  color: var(--g-ink);
+  cursor: pointer;
+}
+.pc-card__move:hover,
+.pc-card__move:focus-visible {
+  border-color: var(--g-ink);
+}
+
+/* Barre de progression des 12 étapes */
+.pc-prog {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3px;
+}
+.pc-prog i {
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(12, 24, 33, 0.09);
+  overflow: hidden;
+  position: relative;
+}
+.pc-prog i.is-done::after,
+.pc-prog i.is-now::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--tone, #d64109);
+  transform-origin: left;
+  animation: pc-grow 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.pc-prog i.is-now::after {
+  background: var(--g-orange, #e54b17);
+  box-shadow: 0 0 0 2px rgba(229, 75, 23, 0.18);
+}
+.pc-prog.is-lost i {
+  background: rgba(184, 176, 162, 0.35);
+}
+
+/* Qui doit agir */
+.pc-who {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.3;
+}
+.pc-who i {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 99px;
+  background: currentColor;
+}
+.pc-who--proprietaire {
+  color: #c2410c;
+}
+.pc-who--client {
+  color: #1d4ed8;
+}
+.pc-who--installateur {
+  color: #15803d;
+}
+.pc-who--none {
+  color: var(--g-muted);
+}
+.pc-who b {
+  color: var(--g-ink);
+}
+
+.pc-score {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 8px;
+  border-radius: 99px;
+  background: var(--g-ink);
+  color: var(--g-cream);
+  font-size: 11.5px;
+  font-weight: 680;
+  font-variant-numeric: tabular-nums;
+}
+.pc-score.is-unknown {
+  background: transparent;
+  color: var(--g-muted);
+  border: 1px dashed var(--g-line);
+}
+.pc-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 8px;
+  border-radius: 99px;
+  background: var(--g-cream);
+  font-size: 11.5px;
+  font-weight: 640;
+}
+.pc-chip--bad {
+  background: #fde8e6;
+  color: #b42318;
+}
+
+/* Colonnes « qui doit agir » */
+.cr-col.pc-col--proprietaire .cr-col__title i {
+  background: #c2410c;
+}
+.cr-col.pc-col--client .cr-col__title i {
+  background: #1d4ed8;
+}
+.cr-col.pc-col--installateur .cr-col__title i {
+  background: #15803d;
+}
+.pc-more {
+  margin: 0 8px 12px;
+  min-height: 38px;
+  border-radius: 12px;
+  border: 1px dashed var(--g-line);
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 620;
+  color: var(--g-ink);
+  cursor: pointer;
+}
+.pc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--g-muted);
+}
+
+/* Feuille de perte */
+.pc-causes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.pc-causes label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid var(--g-line);
+  background: var(--g-paper);
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pc-causes label:has(input:checked) {
+  border-color: var(--g-ink);
+  background: var(--g-cream-2, var(--g-cream));
+}
+
+/* Page « Pourquoi on perd » */
+.pl-kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+@media (min-width: 900px) {
+  .pl-kpis {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.pl-bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.pl-bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 10px;
+  font-size: 14px;
+}
+.pl-bar b {
+  font-variant-numeric: tabular-nums;
+}
+.pl-bar small {
+  color: var(--g-muted);
+  font-size: 12px;
+}
+.pl-bar__track {
+  grid-column: 1 / -1;
+  height: 8px;
+  border-radius: 99px;
+  background: rgba(12, 24, 33, 0.07);
+  overflow: hidden;
+}
+.pl-bar__track span {
+  display: block;
+  height: 100%;
+  width: var(--w, 0%);
+  border-radius: inherit;
+  background: var(--tone, #d64109);
+  transform-origin: left;
+  animation: pc-grow 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+.pl-grid {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 900px) {
+  .pl-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.pl-table-wrap {
+  overflow-x: auto;
+  margin: 0 -4px;
+}
+.pl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  font-variant-numeric: tabular-nums;
+}
+.pl-table th,
+.pl-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--g-line);
+  text-align: right;
+  white-space: nowrap;
+}
+.pl-table th:first-child,
+.pl-table td:first-child {
+  text-align: left;
+}
+.pl-table thead th {
+  font-size: 11.5px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--g-muted);
+}
+.pl-table td.is-hot {
+  font-weight: 700;
+  color: #b42318;
+}
+.pl-recent {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.pl-recent li {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--g-line);
+  background: var(--g-paper-warm);
+  font-size: 13.5px;
+}
+.pl-recent a {
+  font-weight: 680;
+  color: inherit;
+}
+.pl-recent small {
+  color: var(--g-muted);
+}
+
+/* Réglages des étapes */
+.ps-rows {
+  display: grid;
+  gap: 10px;
+}
+.ps-row {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid var(--g-line);
+  background: var(--g-paper);
+  animation: pc-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(min(var(--i, 0), 12) * 35ms);
+}
+.ps-row__head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.ps-row__n {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 99px;
+  background: var(--g-ink);
+  color: var(--g-cream);
+  font-size: 12px;
+  font-weight: 700;
+}
+.ps-row__hint {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--g-muted);
+}
+.ps-row__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.ps-row__fields .pc-filter--wide {
+  grid-column: 1 / -1;
+}
+.ps-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--g-ink);
+}
+@media (min-width: 900px) {
+  .ps-row__fields {
+    grid-template-columns: 1.3fr 0.8fr 0.7fr 1.4fr;
+    align-items: end;
+  }
+  .ps-row__fields .pc-filter--wide {
+    grid-column: auto;
+  }
+}
+
+@keyframes pc-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pc-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pc-card,
+  .ps-row,
+  .pc-prog i::after,
+  .pl-bar__track span {
+    animation: none !important;
+  }
+  .pc-card,
+  .pc-seg button {
+    transition: none;
+  }
+}
+
+/* Fiche client (fusion R1 + R2) : progression des 12 étapes dans l'Aperçu. */
+.cj-steps {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  margin: 2px 0 14px;
+  padding: 0;
+  list-style: none;
+}
+.cj-steps li {
+  height: 6px;
+  border-radius: 99px;
+  background: var(--g-line);
+  transform-origin: left center;
+  animation: cj-fill 0.5s var(--g-ease, ease-out) both;
+}
+.cj-steps li.is-done {
+  background: var(--g-ink);
+}
+.cj-steps li.is-now {
+  background: var(--g-orange);
+}
+.cj-steps--lost li {
+  background: var(--g-line);
+}
+.cj-block {
+  display: grid;
+  gap: 10px;
+}
+.cj-blockers {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cj-blockers li {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--g-orange-soft);
+  color: var(--g-ink);
+  font-size: 13px;
+}
+.cj-note {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--g-line);
+  font-size: 13px;
+  color: var(--g-muted);
+}
+.cj-note strong {
+  color: var(--g-ink);
+  font-variant-numeric: tabular-nums;
+}
+@keyframes cj-fill {
+  from {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cj-steps li {
+    animation: none;
+  }
+}
+
+/* Case « Escalade par texto » : une vraie case, pas un champ pleine largeur (.pc-filter input). */
+.pc-filter .ps-check input[type="checkbox"] {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  min-height: 0;
+  padding: 0;
+  border-radius: 5px;
+  accent-color: var(--g-orange);
+  cursor: pointer;
+}

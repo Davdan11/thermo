@@ -24,6 +24,7 @@ import type { ChannelOutcome } from "../automatisations/types";
 import { acceptedQuoteForJob, jobCompletion } from "../commissions/link";
 import { readCommissions } from "../commissions/store";
 import { localYmd } from "../crm/time";
+import type { ClientProgress } from "../crm/parcours"; // Refonte R2 : progression du projet
 import { audit } from "../offers";
 import { readPrivateFile } from "../partenaires/files";
 import { issueServiceLink } from "../sav/service";
@@ -134,6 +135,8 @@ export interface PortalView {
   unsubscribed: boolean;
   canChangeRequest: boolean;
   openTickets: number;
+  /** Refonte R2 : « Votre projet : étape 7 sur 12 », libellés du client, sans aucune donnée interne ; null si inconnue. */
+  progress: ClientProgress | null;
 }
 
 const WARRANTY_LABELS: Record<string, string> = { parts: "Pièces", compressor: "Compresseur", labor: "Main-d’œuvre", replacement: "Remplacement" };
@@ -221,6 +224,10 @@ export async function getPortalView(token: string, now = new Date()): Promise<Po
     ...(suivi?.logisvert ? [{ id: "logisvert", label: "Aide LogisVert", done: suivi.logisvert.status === "recue", detail: suivi.logisvert.status === "recue" ? "Reçue" : null }] : []),
     { id: "entretien", label: "Entretien annuel", done: Boolean(membership), detail: membership ? membership.plan.name : null },
   ];
+  // Refonte R2 : même progression que le pipeline (12 étapes), en version simple ; jamais bloquant pour le portail.
+  const progress = await import("../crm/parcours-service")
+    .then((m) => m.clientProgressForJob(project.id, now))
+    .catch(() => null);
 
   return {
     firstName: project.client.firstName,
@@ -248,6 +255,7 @@ export async function getPortalView(token: string, now = new Date()): Promise<Po
     unsubscribed: suivi?.unsubscribed ?? false,
     canChangeRequest: project.status !== "termine" && project.status !== "annule",
     openTickets: sav.tickets.filter((tk) => (tk.jobId === project.id || visits.some((v) => v.id === tk.jobId)) && tk.status !== "ferme").length,
+    progress,
   };
 }
 

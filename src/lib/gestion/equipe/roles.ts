@@ -74,6 +74,8 @@ export const SECTION_ROLES: Readonly<Record<string, readonly Role[]>> = {
   "/gestion/soumissions": ALL,
   "/gestion/agenda": ALL,
   "/gestion/classement": ALL,
+  // Refonte R2 : « Pourquoi on perd » ; un vendeur n'y voit que ses dossiers (index restreint).
+  "/gestion/pertes": ALL,
   "/gestion/jobs": STAFF,
   "/gestion/statistiques": STAFF,
 };

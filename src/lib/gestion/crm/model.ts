@@ -15,6 +15,7 @@ import { applyTaskState, autoTasks, byUrgency, manualTask, type Task } from "./t
 import { partnerAutoTasks } from "../partenaires/crm-tasks";
 import { reseauAutoTasks } from "../reseau/tasks"; // Chantier R
 import { contratAutoTasks } from "@/lib/contrats/crm-tasks"; // Conformité C1
+import { computeJourney, delayTask, doneIndex, journeyContext, parcoursSettingsOf, type Journey } from "./parcours"; // Refonte R2
 import { textoTouchpoints } from "./textos-adapter";
 import { radarContext } from "../radar/radar";
 import { localYmd } from "./time";
@@ -145,6 +146,8 @@ export interface ClientComputed {
   stage: StageInfo;
   tasks: Task[];
   valueCents: number | null;
+  /** Refonte R2 : étape du parcours (12 étapes), qui doit agir, blocages. Calculé par computeIndex. */
+  journey?: Journey;
 }
 
 export interface CrmIndex {
@@ -208,6 +211,22 @@ export function computeIndex(bundles: ClientBundle[], src: SourceData, now: Date
       c.tasks.push({ ...t, clientId: c.b.id });
       c.tasks.sort(byUrgency);
     } else general.push(t);
+  }
+  // Refonte R2 : parcours en 12 étapes, une fois toutes les tâches connues ; tâche de délai d'étape (sans doublon), puis
+  // blocages et « qui doit agir ».
+  const jctx = journeyContext(src, now);
+  const ps = parcoursSettingsOf(src.crm);
+  const done = doneIndex(src.crm.taskState);
+  for (const c of clients) {
+    c.journey = computeJourney(c.b, c.stage, jctx, (f) => {
+      const dt = delayTask(c.b, f, ps, settings, now, c.tasks, done);
+      const [t] = dt ? applyTaskState([dt], src.crm.taskState) : [];
+      if (t) {
+        c.tasks.push(t);
+        c.tasks.sort(byUrgency);
+      }
+      return c.tasks;
+    });
   }
   return { clients, byId, byQuote, byJob, byConversation, tasks: [...clients.flatMap((c) => c.tasks), ...general].sort(byUrgency), settings, now, src };
 }

@@ -52,6 +52,9 @@ export type TaskRule =
   | "contrat-installateur"
   | "contrat-reponse"
   | "contrat-date"
+  // Refonte R2 (parcours.ts) : délai d'alerte d'une étape dépassé (vente ; chantier, réservé au propriétaire).
+  | "delai-etape"
+  | "delai-chantier"
   | "manuelle"
   /* Radar à occasions (volet C, radar/radar.ts) : client-chaud, thermomatch-sans-soumission, relance-saison. */
   | RadarRule;
@@ -88,6 +91,9 @@ const FAMILY_OF: Record<TaskRule, TaskFamily> = {
   "contrat-installateur": "jobs",
   "contrat-reponse": "jobs",
   "contrat-date": "jobs",
+  // Refonte R2 (la famille réelle est fixée par étape dans parcours.ts ; entrées requises par le type).
+  "delai-etape": "suivis",
+  "delai-chantier": "jobs",
   manuelle: "suivis",
   // Volet C (le radar fixe lui-même la famille de ses tâches ; entrées requises par le type).
   "client-chaud": "ouvertes",

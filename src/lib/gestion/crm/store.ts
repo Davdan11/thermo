@@ -13,6 +13,7 @@ import path from "node:path";
 import { randomBytes } from "node:crypto";
 import { gestionDataDir, mutateJson, readJson } from "../store";
 import { emptyExtensions, normalizeExtensions } from "./extensions";
+import { normalizeParcoursSettings } from "./parcours"; // Refonte R2
 import { DEFAULT_CRM_SETTINGS, isStage, type CrmData, type CrmSettings } from "./types";
 
 export const crmFile = () => path.join(gestionDataDir(), "crm.json");
@@ -70,6 +71,8 @@ export function normalizeCrm(d: Partial<CrmData> | null | undefined): CrmData {
     // Volet C : clés absentes d'un crm.json de la phase 1 → valeurs vides (rétrocompatible, sans migration).
     ...normalizeExtensions(d),
     ...(d?.seed ? { seed: true as const } : {}),
+    // Refonte R2 : réglages des étapes, seulement s'ils existent (un crm.json plus ancien reste identique).
+    ...(d?.parcours !== undefined && d?.parcours !== null ? { parcours: normalizeParcoursSettings(d.parcours) } : {}),
   };
 }
 

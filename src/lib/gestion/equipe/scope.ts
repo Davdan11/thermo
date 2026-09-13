@@ -33,7 +33,8 @@ export const assigneeOf = (c: Pick<ClientComputed, "b">): string | null => c.b.r
  * Tâches jamais montrées à un vendeur, même sur ses clients : répartition des jobs aux installateurs, partenaires,
  * service après-vente, réseau, inventaire (le travail du propriétaire).
  */
-const VENDOR_HIDDEN_RULES: ReadonlySet<TaskRule> = new Set<TaskRule>(["job-sans-reponse", "job-a-planifier", "partenaire-entente", "partenaire-conformite", "sav-billet", "reseau-rbq", "reseau-recrutement", "inventaire-seuil"]);
+// Refonte R2 : « delai-chantier » (délai des étapes Signé à Suivi) est le travail du propriétaire, comme les jobs.
+const VENDOR_HIDDEN_RULES: ReadonlySet<TaskRule> = new Set<TaskRule>(["job-sans-reponse", "job-a-planifier", "partenaire-entente", "partenaire-conformite", "sav-billet", "reseau-rbq", "reseau-recrutement", "inventaire-seuil", "delai-chantier"]);
 
 /** Index du CRM réduit à la portée. Pour le propriétaire et les adjoints : l'index tel quel. */
 export function restrictIndex(index: CrmIndex, scope: Scope): CrmIndex {

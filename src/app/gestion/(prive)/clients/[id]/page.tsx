@@ -18,6 +18,9 @@ import { notFound, redirect } from "next/navigation";
 import { ArrowUpRight, ChevronLeft, FileText, LifeBuoy, Mail, MapPin, MessageSquare, Phone, Scale, Wrench } from "lucide-react";
 import { requireUser } from "@/lib/gestion/auth/dal";
 import { clientPage } from "@/lib/gestion/crm/service";
+import { ACTOR_LABELS, JOURNEY_STEPS, STEP_LABELS, STEP_RANK, STEP_TOTAL, stepNumber } from "@/lib/gestion/crm/parcours-base";
+import { elapsedFr } from "@/lib/gestion/crm/parcours";
+import { priorityOf } from "@/lib/gestion/crm/priorite";
 import { paymentsView } from "@/lib/gestion/commissions/service";
 import { INVOICE_STATE_LABELS } from "@/lib/gestion/commissions/types";
 // Chantier V : fiche ouverte à tous les rôles ; un vendeur n'ouvre que SES clients (index restreint : 404 sinon).
@@ -57,6 +60,7 @@ import { withVisitItems } from "@/lib/visites/timeline";
 import { ParcoursPanel } from "@/components/contrats/ParcoursPanel";
 import "@/components/gestion/soumissions/soumissions.css";
 import "@/components/gestion/argent/argent.css";
+import "@/components/gestion/crm/parcours.css";
 
 export const metadata: Metadata = { title: "Client" };
 
@@ -115,6 +119,10 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
   const unread = c.conversations.reduce((s, t) => s + t.unread, 0);
   // Conformité C1 : parcours du contrat de la soumission envoyée la plus récente (les autres : leur propre page).
   const contractQuote = [...c.quotes].reverse().find((q) => q.sent) ?? null;
+  // Refonte R2 : parcours en 12 étapes, qui doit agir, blocages et note de priorité (même calcul que le pipeline).
+  const journey = index.byId.get(c.id)?.journey ?? null;
+  const prio = journey ? priorityOf(index, c.id) : null;
+  const nowRank = journey && journey.state !== "perdu" ? STEP_RANK[journey.state] : -1;
 
   const tabs: TabDef[] = [
     { id: "apercu", label: "Aperçu", count: c.tasks.length || undefined, hot: c.tasks.some((t) => t.overdue) },
@@ -129,7 +137,43 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
   const apercu = (
     <div className="kt-cols">
       <div className="cr-stack">
-        {/* R2 : progression des 12 étapes, « qui doit agir » et note de priorité se branchent ici (voir crm/today.ts, priorityOf). */}
+        {journey ? (
+          <Card
+            title={journey.state === "perdu" ? "Parcours : perdu" : `Étape ${stepNumber(journey.state)} sur ${STEP_TOTAL} : ${STEP_LABELS[journey.state]}`}
+            sub={`Temps dans l’étape : ${elapsedFr(journey.since, index.now)}`}
+          >
+            <div className="cj-block">
+              <ol className={`cj-steps${journey.state === "perdu" ? " cj-steps--lost" : ""}`} aria-label={journey.state === "perdu" ? "Parcours arrêté" : `Étape ${stepNumber(journey.state)} sur ${STEP_TOTAL}`}>
+                {JOURNEY_STEPS.map((step, i) => (
+                  <li key={step} title={STEP_LABELS[step]} className={i < nowRank ? "is-done" : i === nowRank ? "is-now" : undefined} style={{ animationDelay: `${i * 30}ms` }} />
+                ))}
+              </ol>
+              <p className={`pc-who pc-who--${journey.actor ?? "none"}`}>
+                <i aria-hidden="true" />
+                {journey.actor ? (
+                  <span>
+                    <b>{ACTOR_LABELS[journey.actor]}</b> · {journey.actorWhy}
+                  </span>
+                ) : (
+                  <span>{journey.actorWhy}</span>
+                )}
+              </p>
+              {journey.blockers.length ? (
+                <ul className="cj-blockers">
+                  {journey.blockers.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              ) : null}
+              {prio ? (
+                <p className="cj-note">
+                  <span>Note de priorité (montant en jeu × probabilité × urgence)</span>
+                  <strong>{prio.label}</strong>
+                </p>
+              ) : null}
+            </div>
+          </Card>
+        ) : null}
         <Card title="À faire" sub={c.tasks.length ? `${plural(c.tasks.length, "tâche ouverte", "tâches ouvertes")} · la prochaine action en premier` : "Aucune tâche ouverte"}>
           <TaskList tasks={c.tasks} showWho={false} />
           <div style={{ marginTop: c.tasks.length ? 14 : 0 }}>

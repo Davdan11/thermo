@@ -16,7 +16,8 @@ import { invoiceState, daysOverdue } from "../commissions/calc";
 import { jobCompletion } from "../commissions/link";
 import { readCommissions } from "../commissions/store";
 import type { MorningData, WeeklyData } from "./owner";
-import { readAfterSale } from "./store";
+import { readAfterSale, readAutomations } from "./store";
+import { buildWeeklyBilan } from "./bilan-ia"; // Refonte R2 : bilan de la semaine
 
 const H = 3_600_000;
 const D = 86_400_000;
@@ -80,7 +81,16 @@ export async function loadWeeklyData(now: Date, base: string): Promise<WeeklyDat
     else if (s === "recue") lv.recue++;
     else if (s === "besoin-aide") lv.aide++;
   }
+  // Refonte R2 : bilan (règles, ou assistant IA en production avec une clé) ; jamais bloquant pour le rapport.
+  const alertsSent = await readAutomations()
+    .then((a) => Object.values(a.log).filter((e) => e.automation === "alerte-etape" && e.status === "fait" && inRange(e.doneAt)).length)
+    .catch(() => 0);
+  const bilan = await buildWeeklyBilan(index, now, alertsSent).catch((e) => {
+    console.error("[automatisations] bilan de la semaine :", e);
+    return undefined;
+  });
   return {
+    ...(bilan ? { bilan } : {}),
     weekLabel: `du ${formatDay(localYmd(new Date(from)))} au ${formatDay(localYmd(now))}`,
     demands: journal.filter(isDemand).length,
     installsDone: gestion.jobs.filter((j) => inRange(jobCompletion(j)?.completedAt)).length,

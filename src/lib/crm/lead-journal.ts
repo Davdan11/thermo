@@ -51,9 +51,11 @@ function fileFor(date: Date): string {
 /** Écrit une ligne. Renvoie false si l'écriture échoue ; ne lance jamais. */
 async function append(entry: JournalEntry): Promise<boolean> {
   try {
-    const dir = journalDir();
-    await mkdir(dir, { recursive: true });
-    await appendFile(fileFor(new Date(entry.at)), JSON.stringify(entry) + "\n", "utf8");
+    // Fichier choisi dès l'appel, avant toute attente : un changement de LEAD_JOURNAL_DIR pendant l'écriture
+    // (un test qui remet l'environnement d'origine, par exemple) n'envoie jamais la ligne ailleurs.
+    const file = fileFor(new Date(entry.at));
+    await mkdir(path.dirname(file), { recursive: true });
+    await appendFile(file, JSON.stringify(entry) + "\n", "utf8");
     return true;
   } catch (e) {
     console.error("[lead-journal] écriture impossible :", e);

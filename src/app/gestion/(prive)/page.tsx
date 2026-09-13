@@ -5,12 +5,14 @@
    Chantier V : ouverte à tous les membres. Un vendeur voit SA version (index restreint) et sa carte du classement ; le
    paiement en retard des partenaires (l'argent de l'entreprise) reste au propriétaire. ?acces=refuse : une section
    fermée à ce rôle a renvoyé ici. ?periode= (anciens liens de l'accueil) : renvoyé au tableau de bord.
-   R2 : la note de priorité se branche par `priorityOf` (voir crm/today.ts). */
+   R2 : les actions sont triées par la note de priorité (montant en jeu × probabilité × urgence) ; une note nulle ou
+   « à définir » laisse l'ordre d'urgence des tâches décider. */
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { requireUser } from "@/lib/gestion/auth/dal";
 import { homeAfterSale } from "@/lib/gestion/automatisations/views";
 import { loadCrmIndex } from "@/lib/gestion/crm/service";
+import { priorityIndex } from "@/lib/gestion/crm/priorite";
 import { buildToday } from "@/lib/gestion/crm/today";
 import { scopedIndex } from "@/lib/gestion/equipe/scope";
 import { TodayView } from "@/components/gestion/crm/TodayView";
@@ -26,7 +28,13 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
   const owner = session.role === "proprietaire";
   const index = vendeur ? await scopedIndex(session) : await loadCrmIndex();
   const after = owner ? await homeAfterSale(index.now).catch(() => null) : null;
-  const t = buildToday(index, index.now, { staff: !vendeur, overdueInvoices: after ? { n: after.overdueCount, cents: after.overdueCents } : null });
+  const notes = priorityIndex(index);
+  const priorityOf = (clientId: string): number | null => {
+    const c = index.byId.get(clientId);
+    const s = c ? notes.get(c.b.id)?.score : null;
+    return s && s > 0 ? s : null;
+  };
+  const t = buildToday(index, index.now, { staff: !vendeur, priorityOf, overdueInvoices: after ? { n: after.overdueCount, cents: after.overdueCents } : null });
   return (
     <>
       {sp.acces === "refuse" ? <AccessNotice /> : null}

@@ -179,14 +179,14 @@ describe("6 sections, onglets et Réglages", () => {
   it("onglets de la spécification", () => {
     const tabs = (id: string) => SECTIONS.find((s) => s.id === id)!.tabs.map((t) => t.href);
     expect(tabs("aujourdhui")).toEqual(["/gestion", "/gestion/tableau-de-bord", "/gestion/taches", "/gestion/textos", "/gestion/telephonie"]);
-    expect(tabs("clients")).toEqual(["/gestion/clients", "/gestion/pipeline", "/gestion/clients/nouveau", "/gestion/classement"]);
+    expect(tabs("clients")).toEqual(["/gestion/clients", "/gestion/pipeline", "/gestion/clients/nouveau", "/gestion/classement", "/gestion/pertes"]);
     expect(tabs("ventes")).toEqual(["/gestion/soumissions", "/gestion/jobs", "/gestion/agenda", "/gestion/creneaux", "/gestion/sav", "/gestion/entretien"]);
     expect(tabs("partenaires")).toEqual(expect.arrayContaining(["/gestion/partenaires", "/gestion/entente", "/gestion/photos", "/gestion/recrutement", "/gestion/candidatures", "/gestion/carte", "/gestion/inventaire"]));
     expect(tabs("argent")).toEqual(["/gestion/paiements", "/gestion/equipe/releves", "/gestion/rentabilite", "/gestion/statistiques"]);
     expect(tabs("marketing")).toEqual(["/gestion/presence", "/gestion/publicite", "/gestion/telephonie/campagnes", "/gestion/referencement"]);
     // Une seule entrée pour les installateurs (fusion avec les partenaires).
     expect(allLinks(OWNER).filter((l) => l.href.startsWith("/gestion/installateurs"))).toEqual([]);
-    for (const h of ["/gestion/reglages", "/gestion/reglages/identite", "/gestion/soumissions/reglages", "/gestion/soumissions/prix", "/gestion/automatisations", "/gestion/telephonie/reglages", "/gestion/textos/reglages", "/gestion/presence/reglages", "/gestion/presence/connecter", "/gestion/partenaires/reglages", "/gestion/equipe", "/gestion/securite", "/gestion/securite/cles", "/gestion/assistant"])
+    for (const h of ["/gestion/reglages", "/gestion/reglages/etapes", "/gestion/reglages/identite", "/gestion/soumissions/reglages", "/gestion/soumissions/prix", "/gestion/automatisations", "/gestion/telephonie/reglages", "/gestion/textos/reglages", "/gestion/presence/reglages", "/gestion/presence/connecter", "/gestion/partenaires/reglages", "/gestion/equipe", "/gestion/securite", "/gestion/securite/cles", "/gestion/assistant"])
       expect(SETTINGS.tabs.map((t) => t.href), h).toContain(h);
   });
 

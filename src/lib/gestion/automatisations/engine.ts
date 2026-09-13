@@ -54,6 +54,9 @@ import { oneClickPageUrl, referralOffer, type ReferralOffer } from "@/lib/refere
 import { ensureDossier, ensureDossierIn, mutateAfterSale, mutateAutomations, newReferralCode, readAfterSale, readAutomations } from "./store";
 import { addMonthsYmd, atLocal, dayAfterAt, eveWindow, isoWeekKey, mondayOf, MORNING_HOUR, surveyDueAt, WEEKLY_HOUR, WEEKLY_MINUTE } from "./time";
 import { AUTOMATION_IDS, OUTCOME_LABELS, type AfterSaleData, type AutomationId, type AutomationsData, type ChannelOutcome, type LogEntry, type TickSummary } from "./types";
+// Refonte R2 : alertes de délais par étape du pipeline (escalade par texto au propriétaire).
+import { selectStageAlerts, stageAlertSms, STAGE_ALERT_EXPIRES_HOURS, type StageAlert } from "../crm/alertes-etapes";
+import { STEP_LABELS } from "../crm/parcours";
 
 export const MAX_ATTEMPTS = 3;
 const D = 86_400_000;
@@ -71,6 +74,8 @@ export interface TickOptions {
   /** Premier passage (tests) : sinon, le moment du premier passage réel. */
   startedAt?: string;
   log?: (line: string) => void;
+  /** Refonte R2 : alertes de délais d'étape (tests) ; sinon lues dans l'index du CRM. */
+  stageAlerts?: (now: Date) => Promise<StageAlert[]>;
 }
 
 type ChannelsMap = NonNullable<LogEntry["channels"]>;
@@ -114,6 +119,14 @@ interface Ctx {
   since: number;
   /** Conformité C2 : programme de recommandation en vigueur (règles de la trousse quand elle est en vigueur). */
   referral: ReferralOffer;
+  /** Refonte R2 : alertes de délais d'étape (vide si l'automatisation est éteinte). */
+  stageAlerts: StageAlert[];
+}
+
+/** Refonte R2 : alertes calculées sur l'index du CRM (import à la demande, comme le résumé du matin). */
+async function loadStageAlerts(now: Date): Promise<StageAlert[]> {
+  const [crm, al] = await Promise.all([import("../crm/service"), import("../crm/alertes-etapes")]);
+  return al.stageAlertsFrom(await crm.freshIndex(now), now);
 }
 
 const CHANNEL_WORDS: Record<string, string> = { email: "courriel", sms: "texto", owner: "courriel au propriétaire", installer: "courriel à l’installateur", crm: "tâche", file: "file des avis" };
@@ -179,6 +192,14 @@ async function loadContext(o: TickOptions, now: Date, persist = true): Promise<C
     since: Date.parse(startedAt),
     // Conformité C2 : programme de recommandation en vigueur (règles de la trousse, réglages de la récompense).
     referral: await referralOffer(auto.settings, now, (o.baseUrl ?? SITE_URL).replace(/\/$/, "")),
+    // Refonte R2 : jamais bloquant ; une erreur de lecture du CRM ne retient aucun autre envoi.
+    stageAlerts:
+      auto.settings.enabled["alerte-etape"] === false
+        ? []
+        : await (o.stageAlerts ?? loadStageAlerts)(now).catch((e) => {
+            console.error("[automatisations] alertes d’étape :", e);
+            return [];
+          }),
   };
 }
 
@@ -543,8 +564,30 @@ function planOwner(ctx: Ctx): PlannedAction[] {
   return out;
 }
 
+/* Refonte R2 : texto au propriétaire quand le délai d'une étape est dépassé et que la tâche reste ouverte. La clé
+   (alerte-etape:<client>:<étape>:<cycle>) garantit un seul avis par dossier et par étape ; les heures silencieuses
+   sont déjà appliquées au moment dû (crm/alertes-etapes.ts) ; au plus 3 par passage. */
+function planStageAlerts(ctx: Ctx): PlannedAction[] {
+  const handled = (key: string) => {
+    const prev = ctx.auto.log[key];
+    return Boolean(prev && (prev.status !== "echec" || prev.attempts >= MAX_ATTEMPTS));
+  };
+  return selectStageAlerts(ctx.stageAlerts, handled, ctx.now).map((a) => {
+    const dueAt = new Date(a.dueAt);
+    const label = `Alerte de délai · ${STEP_LABELS[a.step]}`;
+    return {
+      key: a.key,
+      automation: "alerte-etape" as const,
+      dueAt,
+      expiresAt: new Date(dueAt.getTime() + STAGE_ALERT_EXPIRES_HOURS * 3_600_000),
+      label,
+      run: async () => result(label, { sms: await ctx.channels.ownerSms(stageAlertSms(a, ctx.base), "alerte de délai") }),
+    };
+  });
+}
+
 export function planActions(ctx: Ctx): PlannedAction[] {
-  return [...ctx.jobs.flatMap((j) => planJob(ctx, j)), ...planInvoices(ctx), ...planOwner(ctx)].sort((a, b) => a.dueAt.getTime() - b.dueAt.getTime() || a.key.localeCompare(b.key));
+  return [...ctx.jobs.flatMap((j) => planJob(ctx, j)), ...planInvoices(ctx), ...planOwner(ctx), ...planStageAlerts(ctx)].sort((a, b) => a.dueAt.getTime() - b.dueAt.getTime() || a.key.localeCompare(b.key));
 }
 
 /* ---------------- Exécution ---------------- */
