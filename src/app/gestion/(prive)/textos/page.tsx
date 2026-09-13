@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MessageSquare, Settings } from "lucide-react";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import { requireUser } from "@/lib/gestion/auth/dal";
 import { textosFor } from "@/lib/gestion/equipe/garde"; // Chantier V : un vendeur ne voit que ses conversations
 import { smsConfigured } from "@/lib/gestion/sms";
@@ -59,7 +60,7 @@ export default async function TextosPage({ searchParams }: { searchParams: Promi
             <ConversationList rows={rows} />
           ) : (
             <Reveal delay={0.05}>
-              <p className="g-empty">{archived ? "Aucune conversation archivée." : `Aucun texto pour l’instant. Ils arriveront ici dès qu’un client écrira au ${site}.`}</p>
+              <EmptyState icon={<MessageSquare size={20} />} title={archived ? "Aucune conversation archivée." : "Aucun texto pour l’instant."} body={archived ? undefined : `Ils arriveront ici dès qu’un client écrira au ${site}.`} />
             </Reveal>
           )}
         </section>

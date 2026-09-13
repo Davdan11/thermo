@@ -9,6 +9,7 @@ import { loadDemandStats } from "@/lib/gestion/crm/service";
 import { parsePeriod, PERIODS } from "@/lib/gestion/statistiques";
 import { loadSiteHealth } from "@/lib/gestion/surveillance";
 import { Card, SectionHeader } from "@/components/gestion/kit/Card";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import { KpiTile } from "@/components/gestion/kit/KpiTile";
 import { PeriodTabs } from "@/components/gestion/kit/PeriodTabs";
 import { Reveal, StaggerList } from "@/components/gestion/Reveal";
@@ -155,7 +156,7 @@ export default async function StatistiquesPage({ searchParams }: { searchParams:
           ))}
         </StaggerList>
       ) : (
-        <p className="g-empty">Aucune demande sur la période.</p>
+        <EmptyState compact title="Aucune demande sur la période." />
       )}
 
       <Reveal as="section" className="g-section" delay={0.1}>

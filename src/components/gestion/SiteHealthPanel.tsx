@@ -1,6 +1,7 @@
 /* Panneau « État du site » (serveur) : dernier passage de la surveillance, 24 dernières heures,
    certificat, disque, pm2 et derniers incidents. Données : src/lib/gestion/surveillance.ts. */
 import { Check, ChevronRight, Minus, TriangleAlert, X } from "lucide-react";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import type { SiteHealthView } from "@/lib/gestion/surveillance";
 
 export function healthSummary(h: SiteHealthView): { tone: "ok" | "warn" | "bad" | "muted"; title: string } {
@@ -48,9 +49,9 @@ export function SiteHealthPanel({ h }: { h: SiteHealthView }) {
       </div>
 
       {!h.installed ? (
-        <p className="g-empty" style={{ marginTop: 16 }}>
-          Aucune vérification enregistrée. Le panneau se remplit dès que la surveillance (tâche cron aux 5 minutes) tourne sur le serveur.
-        </p>
+        <div style={{ marginTop: 16 }}>
+          <EmptyState compact title="Aucune vérification enregistrée." body="Le panneau se remplit dès que la surveillance (tâche cron aux 5 minutes) tourne sur le serveur." />
+        </div>
       ) : (
         <>
           {h.stale ? <p className="g-note g-note--warn">La dernière vérification date de plus de 15 minutes : la tâche cron de surveillance ne tourne peut-être plus.</p> : null}

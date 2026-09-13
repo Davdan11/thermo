@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, Mail, MessageSquare, Pencil, Phone, UserRound } from "lucide-react";
+import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import { clientIdForJob } from "@/lib/gestion/crm/service";
 import { requireUser } from "@/lib/gestion/auth/dal";
 import { STAFF } from "@/lib/gestion/equipe/garde"; // Chantier V : propriétaire et adjoints
@@ -182,7 +183,7 @@ export default async function JobPage({ params, searchParams }: { params: Promis
                 })}
               </ol>
             ) : (
-              <p className="g-empty">Aucune offre envoyée pour l’instant.</p>
+              <EmptyState compact title="Aucune offre envoyée pour l’instant." />
             )}
           </Reveal>
         </div>
