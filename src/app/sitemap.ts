@@ -6,6 +6,8 @@
    - marques      : marques actives + pages marque × type + LogisVert par marque
    - villes-quebec : pages locales
    - classements  : palmarès et comparatifs de marques
+   - blogue       : /blogue, le palmarès du froid et les articles PUBLIÉS
+                    (revalidé à la demande à chaque publication)
    - produits-N   : fiches produit indexables (une par marque et par machine,
                     marques actives au Québec ; les variantes internes d'une même
                     marque renvoient à leur représentant)
@@ -112,6 +114,12 @@ export default async function sitemap(props: { id: Promise<string> }): Promise<M
       ...RANKINGS.map((r) => entry(`/meilleures-thermopompes/${r.slug}`, DATA_DATE, "weekly", 0.8)),
       ...getBrandPairs().map((p) => entry(`/comparer/${p.slug}`, DATA_DATE, "monthly", 0.6)),
     ];
+  }
+
+  if (id === "blogue") {
+    // Articles lus dans les données (jamais un brouillon) ; revalidé par src/lib/blogue/revalidate.ts.
+    const [{ readBlogue }, { blogSitemapRows }] = await Promise.all([import("@/lib/blogue/store"), import("@/lib/blogue/feed")]);
+    return blogSitemapRows((await readBlogue()).articles, SITE_URL, latestDay(DATA_DATE, municipalDataDate()));
   }
 
   const match = /^produits-(\d+)$/.exec(id);

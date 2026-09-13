@@ -17,6 +17,8 @@ const LIGHT_HEROES: Array<{ path: string; exact?: boolean }> = [
   { path: "/subventions/logisvert" },
   { path: "/calculateur-economies" },
   { path: "/guides" },
+  // Blogue : « Le carnet », papier clair ; articles sur page blanche.
+  { path: "/blogue" },
   { path: "/glossaire" },
   { path: "/faq" },
   { path: "/thermopompe" },

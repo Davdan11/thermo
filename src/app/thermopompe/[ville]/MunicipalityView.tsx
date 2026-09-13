@@ -76,6 +76,11 @@ export function MunicipalityView({ p }: { p: MunicipalPage }) {
               Voir le classement complet →
             </Link>
           </p>
+          <p className="mt-2 text-sm">
+            <Link href={`/palmares-du-froid#m-${p.m.code}`} className="font-semibold underline decoration-1 underline-offset-4" style={{ color: "#1F5F8B" }}>
+              {`Où se classe ${p.name} : le Palmarès du froid →`}
+            </Link>
+          </p>
         </div>
       </section>
 

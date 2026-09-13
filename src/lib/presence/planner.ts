@@ -104,6 +104,9 @@ export function generate(series: SeriesId, ctx: GenerateContext): Generated | nu
     case "chantier":
       // Réservée (phase 2) : voir chantier.ts.
       return null;
+    case "blogue":
+      // Hors grille : créée à la publication d'un article (src/lib/blogue/presence-bridge.ts).
+      return null;
   }
 }
 

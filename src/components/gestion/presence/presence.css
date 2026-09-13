@@ -14,6 +14,7 @@
   --pr-comparatif: #c66e42;
   --pr-glossaire: #5d6b74;
   --pr-chantier: #b8b0a2;
+  --pr-blogue: #7a3e5c;
   --pr-c: var(--g-ink);
   display: grid;
   gap: 18px;
@@ -63,6 +64,11 @@
 .pr-slot--chantier,
 .pr-bg--chantier {
   --pr-c: var(--pr-chantier);
+}
+.pr-dot--blogue,
+.pr-slot--blogue,
+.pr-bg--blogue {
+  --pr-c: var(--pr-blogue);
 }
 
 .pr-dot {
