@@ -17,6 +17,7 @@ import { sendClientEmail, sendInternalMessage } from "@/lib/crm/email";
 import { getThermoMatchEmailHTML, thermoMatchEmailSubject, type ThermoMatchEmailChoice } from "@/lib/crm/templates/thermomatch-email";
 import { SITE_URL } from "@/lib/crm/templates/layout";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
+import { attributionFromBody, attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { decodeShareCode, shareUrlFor } from "@/lib/thermomatch/share-code";
@@ -97,7 +98,8 @@ export async function POST(req: NextRequest) {
         }
       : null;
 
-  const { entry } = await journalLead("thermomatch", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode, choices: labels, code: d.code, relances: relancesConsent ?? false });
+  const attribution = attributionFromBody(json);
+  const { entry } = await journalLead("thermomatch", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode, choices: labels, code: d.code, relances: relancesConsent ?? false }, attribution);
 
   const e = escapeHtml;
   const rows: Array<[string, string]> = [
@@ -107,6 +109,7 @@ export async function POST(req: NextRequest) {
     ["Téléphone", d.phone ?? "—"],
     ["Courriel", d.email],
     ["Rappels J+2 et J+7", relancesConsent ? "acceptés" : "non"],
+    ...attributionLines(attribution),
     ["Journal", entry.id],
   ];
 
@@ -116,7 +119,7 @@ export async function POST(req: NextRequest) {
     phone: d.phone,
     title: `ThermoMatch — 3 choix (${choices[0].brand} ${choices[0].series})`.trim(),
     customFields: {
-      [PIPEDRIVE_FIELDS.SOURCE]: PIPEDRIVE_OPTIONS.SOURCE["SEO"],
+      [PIPEDRIVE_FIELDS.SOURCE]: optionId("SOURCE", pipedriveSourceLabel(attribution)) ?? PIPEDRIVE_OPTIONS.SOURCE["SEO"],
       [PIPEDRIVE_FIELDS.REGION]: optionId("REGION", territory),
     },
     noteHtml: `<p><b>Recommandations ThermoMatch envoyées par courriel</b></p><p>${rows.map(([k, v]) => `<b>${e(k)}</b> : ${e(v)}`).join("<br>")}</p><p><a href="${e(shareUrl)}">Ouvrir ses recommandations</a></p>`,

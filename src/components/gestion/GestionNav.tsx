@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Inbox, LayoutGrid, Plus, Users } from "lucide-react";
+import { ChartColumn, Inbox, LayoutGrid, Plus, Users } from "lucide-react";
 
 const ITEMS = [
   { href: "/gestion", label: "Tableau", icon: LayoutGrid, exact: true },
   { href: "/gestion/jobs/nouveau", label: "Nouveau job", icon: Plus, exact: false },
   { href: "/gestion/installateurs", label: "Installateurs", icon: Users, exact: false },
   { href: "/gestion/candidatures", label: "Candidatures", icon: Inbox, exact: false },
+  { href: "/gestion/statistiques", label: "Statistiques", icon: ChartColumn, exact: false },
 ] as const;
 
 export function GestionNav({ candidatures }: { candidatures: number }) {

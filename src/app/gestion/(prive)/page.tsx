@@ -5,11 +5,14 @@ import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { brandLabel } from "@/lib/gestion/catalog";
 import { pendingOffers } from "@/lib/gestion/offers";
 import { loadDashboard } from "@/lib/gestion/service";
+import { loadStats } from "@/lib/gestion/statistiques";
+import { loadSiteHealth } from "@/lib/gestion/surveillance";
 import { formatShortDate } from "@/lib/gestion/summary";
 import { JOB_STATUS_LABELS, type Job, type JobStatus } from "@/lib/gestion/types";
 import { SYSTEM_TYPE_LABELS } from "@/lib/data/types/enums";
 import { Reveal, StaggerList } from "@/components/gestion/Reveal";
 import { StatusPill } from "@/components/gestion/ui";
+import { healthSummary } from "@/components/gestion/SiteHealthPanel";
 
 export const metadata: Metadata = { title: "Tableau de bord" };
 
@@ -44,7 +47,10 @@ function JobRow({ job, now, installer }: { job: Job; now: Date; installer?: stri
 export default async function DashboardPage() {
   await requireAdmin();
   const now = new Date();
-  const d = await loadDashboard(now);
+  const [d, stats, health] = await Promise.all([loadDashboard(now), loadStats("30", now), loadSiteHealth(now)]);
+  const topChannel = stats.channels.find((c) => c.id !== "inconnu" && c.id !== "non-transmis");
+  const subs30 = stats.byKind.find((k) => k.id === "soumission")?.n ?? 0;
+  const site = healthSummary(health);
   const byStatus = (s: JobStatus) => d.jobs.filter((j) => j.status === s);
   const company = (id: string | null) => d.installers.find((i) => i.id === id)?.company;
   const closed = d.jobs.filter((j) => j.status === "termine" || j.status === "annule");
@@ -127,6 +133,26 @@ export default async function DashboardPage() {
               <span className="g-eyebrow" style={{ margin: 0 }}>Candidatures</span>
               <span className="g-h2">{d.newCandidatures} nouvelle{d.newCandidatures > 1 ? "s" : ""}</span>
               <span className="g-count">Reçues par la page Partenaires</span>
+            </Link>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <Link href="/gestion/statistiques" className="g-inst">
+              <span className="g-eyebrow" style={{ margin: 0 }}>Demandes · 30 jours</span>
+              <span className="g-h2">{stats.total} demande{stats.total > 1 ? "s" : ""}</span>
+              <span className="g-count">
+                {subs30} soumission{subs30 > 1 ? "s" : ""}
+                {topChannel ? ` · 1er canal : ${topChannel.label}` : ""}
+              </span>
+            </Link>
+          </Reveal>
+          <Reveal delay={0.24}>
+            <Link href="/gestion/statistiques#etat-du-site" className="g-inst">
+              <span className="g-eyebrow" style={{ margin: 0 }}>État du site</span>
+              <span className="g-h2 g-health-mini">
+                <span className={`g-dot g-dot--${site.tone}`} aria-hidden />
+                {site.title}
+              </span>
+              <span className="g-count">{health.lastAgo ? `Dernière vérification ${health.lastAgo}` : "Aucune vérification enregistrée"}</span>
             </Link>
           </Reveal>
         </aside>

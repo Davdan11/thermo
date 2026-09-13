@@ -11,6 +11,7 @@ import { getTerritoryFromPostalCode } from "@/lib/crm/territory";
 import { sendClientEmail, sendInternalMessage } from "@/lib/crm/email";
 import { getThermoScanEmailHTML, thermoScanEmailSubject } from "@/lib/crm/templates/thermoscan-email";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
+import { attributionFromBody, attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 
@@ -55,7 +56,8 @@ export async function POST(req: NextRequest) {
   const label = `${dev.brand} ${dev.model}`.trim() || "appareil non identifié";
   const territory = d.postalCode ? getTerritoryFromPostalCode(d.postalCode) : undefined;
 
-  const { entry } = await journalLead("thermoscan", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode: d.postalCode, device: dev, sessionId: d.sessionId });
+  const attribution = attributionFromBody(json);
+  const { entry } = await journalLead("thermoscan", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode: d.postalCode, device: dev, sessionId: d.sessionId }, attribution);
 
   const e = escapeHtml;
   const rows: Array<[string, string]> = [
@@ -69,6 +71,7 @@ export async function POST(req: NextRequest) {
     ["Code postal", d.postalCode ?? "—"],
     ["Téléphone", d.phone ?? "—"],
     ["Courriel", d.email],
+    ...attributionLines(attribution),
     ["Journal", entry.id],
   ];
 
@@ -78,7 +81,7 @@ export async function POST(req: NextRequest) {
     phone: d.phone,
     title: `ThermoScan — ${label}`,
     customFields: {
-      [PIPEDRIVE_FIELDS.SOURCE]: PIPEDRIVE_OPTIONS.SOURCE["SEO"],
+      [PIPEDRIVE_FIELDS.SOURCE]: optionId("SOURCE", pipedriveSourceLabel(attribution)) ?? PIPEDRIVE_OPTIONS.SOURCE["SEO"],
       [PIPEDRIVE_FIELDS.REGION]: optionId("REGION", territory),
     },
     noteHtml: `<p><b>Fiche ThermoScan demandée par courriel</b></p><p>${rows.map(([k, v]) => `<b>${e(k)}</b> : ${e(v)}`).join("<br>")}</p>`,

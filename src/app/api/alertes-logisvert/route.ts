@@ -16,6 +16,7 @@ import { resolveTarget, snapshotFor } from "@/lib/alerts/logisvert-alerts-data";
 import { markConfirmationSent, requestSubscription, type RequestOutcome } from "@/lib/alerts/logisvert-alerts-store";
 import { sendClientEmail } from "@/lib/crm/email";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
+import { attributionFromBody } from "@/lib/attribution/core";
 import { alertConfirmationEmail } from "@/lib/crm/templates/logisvert-alert-email";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 
@@ -41,7 +42,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "Ce modèle ou cette marque n’est pas suivi par l’alerte LogisVert.", field: "target" }, { status: 404 });
   }
 
-  const { entry } = await journalLead("alerte-logisvert", { email: d.email, firstName: d.firstName, target: resolved.target, label: resolved.label });
+  const { entry } = await journalLead("alerte-logisvert", { email: d.email, firstName: d.firstName, target: resolved.target, label: resolved.label }, attributionFromBody(json));
 
   let outcome: RequestOutcome;
   try {

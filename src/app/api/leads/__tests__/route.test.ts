@@ -69,7 +69,8 @@ describe("POST /api/leads", () => {
     expect(res.status).toBe(200);
     await expect(res.json()).resolves.toMatchObject({ success: true, emailSent: true });
 
-    expect(journal.journalLead).toHaveBeenCalledWith("soumission", expect.objectContaining({ firstName: "Jean", postalCode: "H2X1Y4", territory: "Montréal" }));
+    // Formulaire envoyé sans arrivée (sessionStorage vide) : « non transmis », rien n'est deviné.
+    expect(journal.journalLead).toHaveBeenCalledWith("soumission", expect.objectContaining({ firstName: "Jean", postalCode: "H2X1Y4", territory: "Montréal" }), { channel: "non-transmis" });
     expect(pipedrive.captureWebLead).toHaveBeenCalledWith(expect.objectContaining({ firstName: "Jean", email: "jean@exemple.com", title: "Jean Tremblay - Thermopompe" }));
     expect(email.sendInternalLeadAlert).toHaveBeenCalledWith(expect.objectContaining({ dealId: 42, crmStatus: "ok", journalId: entry.id }));
     expect(journal.journalOutcome).toHaveBeenCalledWith(entry, expect.objectContaining({ pipedrive: "ok", dealId: 42 }));

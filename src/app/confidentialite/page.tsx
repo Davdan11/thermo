@@ -103,9 +103,14 @@ export default function ConfidentialitePage() {
           <p>
             Le site utilise le stockage local de votre navigateur pour mémoriser vos réponses au questionnaire et votre brouillon de projet. Aucun témoin
             publicitaire n'est déposé. Pour mesurer la fréquentation du site, nous pouvons utiliser Google Analytics 4 en mode consentement : tant que vous
-            n'avez pas accepté dans le bandeau prévu à cet effet, aucun témoin de mesure n'est déposé et seuls des signaux anonymes, sans identifiant, sont
-            transmis. Vous pouvez accepter, refuser ou changer d'avis à tout moment par le lien « Témoins » au bas de chaque page, et effacer ces données
+            n'avez pas accepté dans le bandeau prévu à cet effet, Google Analytics n'est pas chargé : aucun témoin de mesure n'est déposé et rien n'est
+            transmis à Google. Vous pouvez accepter, refuser ou changer d'avis à tout moment par le lien « Témoins » au bas de chaque page, et effacer ces données
             depuis les paramètres de votre navigateur.
+          </p>
+          <p>
+            Pour savoir quelles pages et quelles sources nous amènent des demandes, notre site garde dans votre navigateur, le temps de votre visite
+            seulement (sans témoin ni service tiers), la première page consultée, le nom du site d'où vous arrivez et les paramètres de campagne de
+            l'adresse ; ces renseignements ne nous sont transmis qu'avec un formulaire que vous envoyez et sont conservés avec votre demande.
           </p>
         </DocArticle>
 

@@ -12,6 +12,7 @@ import { z } from "zod";
 import { scheduleCall } from "@/lib/crm/pipedrive";
 import { sendClientRdvEmail, sendInternalMessage } from "@/lib/crm/email";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
+import { attributionFromBody } from "@/lib/attribution/core";
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { CALL_WINDOWS, formatWhen, isBookableDate } from "@/lib/crm/rdv";
@@ -56,7 +57,7 @@ export async function POST(req: NextRequest) {
     date: rdv.date,
     window: rdv.window,
     when,
-  });
+  }, attributionFromBody(json));
 
   let crm: "ok" | "non-configure" | "erreur" | "sans-affaire" = "sans-affaire";
   if (rdv.dealId) {

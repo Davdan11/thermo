@@ -23,6 +23,7 @@ import { pushBookingToPipedrive } from "@/lib/rdv/pipedrive";
 import { calendarEnabled, createCalendarEvent, organizerFor } from "@/lib/rdv/google-calendar";
 import { sendClientBookingEmail, sendInternalMessage } from "@/lib/crm/email";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
+import { attributionFromBody } from "@/lib/attribution/core";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { BRAND, SITE_URL } from "@/lib/crm/templates/layout";
 
@@ -140,7 +141,7 @@ export async function POST(req: NextRequest) {
   const address = mode.id === "domicile" ? `${booking.address}, ${booking.city} ${booking.postalCode}`.trim() : "";
 
   // 3. Journal local.
-  const { entry } = await journalLead("rendez-vous", { ...booking });
+  const { entry } = await journalLead("rendez-vous", { ...booking }, attributionFromBody(json));
 
   // 4. Agenda Google (+ Meet en ligne).
   let agenda: { ok: boolean; error?: string } = { ok: false, error: "non-configure" };

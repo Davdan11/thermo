@@ -3,6 +3,7 @@
 import { useState, type CSSProperties, type ReactNode } from "react";
 import { motion } from "motion/react";
 import { track } from "@/lib/analytics/track";
+import { readAttribution } from "@/lib/attribution/client";
 
 /* Présentation « dossier » (sections v2 entreprise) : feuille glacier, rubriques à onglets,
    lignes tapées à la machine. Champs, noms, validation, pot de miel et envoi inchangés. */
@@ -52,7 +53,7 @@ export function PartnerForm() {
     e.preventDefault();
     setStatus("sending"); setError("");
     try {
-      const res = await fetch("/api/partenaires", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
+      const res = await fetch("/api/partenaires", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, attribution: readAttribution() }) });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Envoi impossible.");
       track("partner_submitted", { volume: form.volume });

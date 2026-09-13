@@ -14,6 +14,7 @@
 import { useId, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { track } from "@/lib/analytics/track";
+import { readAttribution } from "@/lib/attribution/client";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 export type LogisVertAlertTarget = { kind: "model"; modelId: string } | { kind: "brand"; brandSlug: string };
@@ -113,7 +114,7 @@ export function LogisVertAlertForm({ target, label, tone = "dark", amount, amoun
       const res = await fetch("/api/alertes-logisvert", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: value, firstName, target, consent: true, website }),
+        body: JSON.stringify({ email: value, firstName, target, consent: true, website, attribution: readAttribution() }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) throw new Error(data.error || "");

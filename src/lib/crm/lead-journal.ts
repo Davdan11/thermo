@@ -13,12 +13,17 @@
 import { appendFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { randomUUID } from "node:crypto";
+import type { Attribution } from "@/lib/attribution/core";
+
+export type JournalKind = "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre" | "rendez-vous" | "thermoscan" | "alerte-logisvert" | "thermomatch" | "relances" | "contact" | "partenaire";
 
 export interface JournalEntry {
   id: string;
   at: string;
-  kind: "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre" | "rendez-vous" | "thermoscan" | "alerte-logisvert" | "thermomatch" | "relances";
+  kind: JournalKind;
   lead: Record<string, unknown>;
+  /** Arrivée du visiteur (formulaires du site) : page, domaine référent, utm, canal. Absente des entrées d'avant le suivi. */
+  attribution?: Attribution;
   /** Consigné après les appels externes. */
   outcome?: {
     pipedrive: "ok" | "non-configure" | "erreur" | "sans-affaire";
@@ -57,8 +62,8 @@ async function append(entry: JournalEntry): Promise<boolean> {
 }
 
 /** Enregistre la réception d'un lead. Renvoie l'entrée créée et si l'écriture a réussi. */
-export async function journalLead(kind: JournalEntry["kind"], lead: Record<string, unknown>): Promise<{ entry: JournalEntry; written: boolean }> {
-  const entry: JournalEntry = { id: randomUUID(), at: new Date().toISOString(), kind, lead };
+export async function journalLead(kind: JournalKind, lead: Record<string, unknown>, attribution?: Attribution): Promise<{ entry: JournalEntry; written: boolean }> {
+  const entry: JournalEntry = { id: randomUUID(), at: new Date().toISOString(), kind, lead, ...(attribution ? { attribution } : {}) };
   const written = await append(entry);
   return { entry, written };
 }

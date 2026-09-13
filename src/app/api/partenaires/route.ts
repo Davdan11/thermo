@@ -9,6 +9,8 @@ import { z } from "zod";
 import { sendInternalMessage } from "@/lib/crm/email";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { storeCandidature } from "@/lib/gestion/candidatures";
+import { journalLead } from "@/lib/crm/lead-journal";
+import { attributionFromBody, attributionLines } from "@/lib/attribution/core";
 
 const schema = z.object({
   company: z.string().trim().min(2, "Le nom de l'entreprise est requis.").max(120),
@@ -24,13 +26,17 @@ const schema = z.object({
 
 export async function POST(req: Request) {
   if (!rateLimit(req, { name: "partenaires", limit: 3, windowMs: 10 * 60 * 1000 })) return tooManyRequests();
-  const parsed = schema.safeParse(await req.json().catch(() => null));
+  const body: unknown = await req.json().catch(() => null);
+  const parsed = schema.safeParse(body);
   if (!parsed.success) {
     const first = parsed.error.issues[0];
     if (first?.path?.[0] === "website") return NextResponse.json({ success: true });
     return NextResponse.json({ error: first?.message ?? "Données invalides." }, { status: 400 });
   }
   const d = parsed.data;
+  const attribution = attributionFromBody(body);
+  // Pour les statistiques seulement : l'entreprise et sa région, sans les coordonnées (déjà dans la candidature).
+  await journalLead("partenaire", { company: d.company, region: d.region || undefined }, attribution);
   // Conservée pour le bouton « Ajouter comme installateur » de l'outil de gestion, en plus du courriel.
   const stored = await storeCandidature({ company: d.company, rbq: d.rbq, contact: d.contact, phone: d.phone, email: d.email, brands: d.brands || "", region: d.region || "", volume: d.volume || "" }).then(
     () => true,
@@ -52,6 +58,7 @@ export async function POST(req: Request) {
       ["Région desservie", d.region || "—"],
       ["Marques installées", d.brands || "—"],
       ["Volume annuel", d.volume || "—"],
+      ...attributionLines(attribution),
     ],
   });
   if (!sent && !stored) {

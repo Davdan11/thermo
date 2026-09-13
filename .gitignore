@@ -75,3 +75,8 @@ public/images/products/_official-sources/**
 /data/gestion*.json.lock
 /data/gestion*.tmp
 /data/gestion-secret.key
+
+# surveillance du site : état et historique des vérifications (shared/data sur le VPS)
+/data/surveillance*.json
+/data/surveillance*.jsonl
+/data/surveillance*.tmp

@@ -4,6 +4,7 @@ import React, { useRef, useState, type CSSProperties } from "react";
 import { ContactNumber } from "@/components/heroes-v2/entreprise/ContactNumber";
 import { motion, useInView } from "motion/react";
 import { track } from "@/lib/analytics/track";
+import { readAttribution } from "@/lib/attribution/client";
 import { Arrow } from "@/components/heroes-v2/entreprise/shared";
 import { ClipReveal, EASE, MaskLines, Reveal, Shell } from "@/components/sections-v2/entreprise/kit";
 
@@ -59,7 +60,7 @@ export default function ContactPageClient() {
     e.preventDefault();
     setIsSubmitting(true); setError("");
     try {
-      const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
+      const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, attribution: readAttribution() }) });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Envoi impossible.");
       track("contact_submitted", { subject: form.subject });

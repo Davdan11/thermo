@@ -33,7 +33,8 @@ describe("POST /api/partenaires", () => {
   let dir: string;
   beforeEach(async () => {
     dir = await mkdtemp(path.join(tmpdir(), "thermo-cand-"));
-    process.env = { ...env, GESTION_DATA_DIR: dir, NODE_ENV: "test" };
+    // Journal des leads isolé aussi : la route l'alimente (statistiques), jamais data/leads du dépôt.
+    process.env = { ...env, GESTION_DATA_DIR: dir, LEAD_JOURNAL_DIR: path.join(dir, "leads"), NODE_ENV: "test" };
     vi.clearAllMocks();
     email.sendInternalMessage.mockResolvedValue(true);
   });

@@ -17,6 +17,7 @@ import { bookableDates, CALL_WINDOWS, formatDay, type CallWindow } from "@/lib/c
 import { loadProjectDraft, getProjectSummary, existingUnitSummary } from "@/lib/project/project-draft";
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { track } from "@/lib/analytics/track";
+import { readAttribution } from "@/lib/attribution/client";
 import { SoumissionBar, SoumissionHero } from "@/components/heroes-v2/outils/Carnet";
 import { DISPLAY, SERIF } from "@/components/heroes-v2/outils/font-stacks";
 import { Reveal, Rise } from "@/components/sections-v2/outils/kit";
@@ -208,6 +209,7 @@ export default function SoumissionPage() {
           consentProcessing: consent1,
           consentMarketing: consent2,
           website: honeypot,
+          attribution: readAttribution(),
           draft: typeof window !== "undefined" ? JSON.parse(sessionStorage.getItem("thermomatch-answers") || "{}") : {}
         }),
       });
@@ -243,6 +245,7 @@ export default function SoumissionPage() {
           date: rdv.date,
           window: rdv.window,
           website: honeypot,
+          attribution: readAttribution(),
         }),
       });
       const data = await res.json().catch(() => ({}));

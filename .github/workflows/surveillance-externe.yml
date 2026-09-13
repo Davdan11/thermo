@@ -1,0 +1,51 @@
+# Surveillance externe de ThermopompesÀVendre.ca, depuis les serveurs de GitHub :
+# fonctionne même si tout le VPS est tombé (la surveillance interne, elle, tourne sur le VPS).
+#
+# Aux 15 minutes (GitHub peut retarder ou sauter des passages planifiés aux heures chargées).
+# Le travail ÉCHOUE si l'accueil ou /soumission ne répond pas 200 avec le texte attendu,
+# après un nouvel essai 30 s plus tard. GitHub envoie alors un courriel au compte qui a
+# créé (ou modifié en dernier) la planification de ce fichier : aucun secret nécessaire.
+# Dépôt public : GitHub désactive les workflows planifiés après 60 jours sans activité
+# dans le dépôt (le réactiver dans l'onglet Actions).
+name: Surveillance externe
+
+on:
+  schedule:
+    - cron: "4,19,34,49 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: surveillance-externe
+  cancel-in-progress: true
+
+jobs:
+  site:
+    name: Le site répond de l'extérieur
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Accueil et /soumission (200 + texte attendu)
+        env:
+          SITE: https://thermopompesavendre.ca
+        run: |
+          verifier() {
+            local chemin="$1" motif="$2" code essai
+            for essai in 1 2; do
+              code=$(curl -sS -o page.html -w '%{http_code}' --max-time 25 --connect-timeout 10 \
+                -A "TAV-surveillance-externe (GitHub Actions)" "$SITE$chemin" || true)
+              if [ "$code" = "200" ] && grep -qiE "$motif" page.html; then
+                echo "OK  $SITE$chemin (HTTP $code, essai $essai)"
+                return 0
+              fi
+              echo "Essai $essai : $SITE$chemin → HTTP ${code:-000}"
+              if [ "$essai" = "1" ]; then sleep 30; fi
+            done
+            echo "::error title=Site en panne::$SITE$chemin ne répond pas correctement (HTTP ${code:-000} ou texte attendu absent)"
+            return 1
+          }
+          echec=0
+          verifier "/" "<title>[^<]*TAV\.ca" || echec=1
+          verifier "/soumission" "<title>[^<]*soumission" || echec=1
+          exit $echec

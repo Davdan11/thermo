@@ -13,6 +13,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { MODES, MODE_IDS, DEFAULT_MODE, NEEDS, areaFromPostalCode, isPostalCode, hourLabel, type ModeId, type DayAvailability } from "@/lib/rdv/booking";
 import { track } from "@/lib/analytics/track";
+import { readAttribution } from "@/lib/attribution/client";
 import { BookingHero, BookingConfirmedHero } from "@/components/heroes-v2/entreprise/BookingCalendar";
 import { Arrow } from "@/components/heroes-v2/entreprise/shared";
 import { EASE, Reveal, Shell } from "@/components/sections-v2/entreprise/kit";
@@ -252,7 +253,7 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
       const res = await fetch("/api/rendez-vous", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, mode, postalCode, date, slot, source: bookingSource, page: typeof window !== "undefined" ? window.location.pathname : "" }),
+        body: JSON.stringify({ ...values, mode, postalCode, date, slot, source: bookingSource, page: typeof window !== "undefined" ? window.location.pathname : "", attribution: readAttribution() }),
       });
       const data = await res.json().catch(() => ({}));
       if (res.status === 409) {

@@ -8,6 +8,7 @@ import {
 import { motion } from "motion/react";
 import type { ScanResult, CatalogMatch, WarrantyEntry } from "@/lib/thermoscan/types";
 import { track } from "@/lib/analytics/track";
+import { readAttribution } from "@/lib/attribution/client";
 import { saveExistingUnit } from "@/lib/project/project-draft";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { MONO } from "@/components/heroes-v2/outils/font-stacks";
@@ -398,7 +399,7 @@ function FicheForm({ device, sessionId }: {
     try {
       const res = await fetch("/api/thermoscan/fiche", {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ firstName: firstName.trim(), email: email.trim(), phone: phone.trim(), consent, website, device, sessionId }),
+        body: JSON.stringify({ firstName: firstName.trim(), email: email.trim(), phone: phone.trim(), consent, website, device, sessionId, attribution: readAttribution() }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) throw new Error(data.error || "");

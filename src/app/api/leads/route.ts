@@ -19,6 +19,7 @@ import { getTerritoryFromPostalCode } from "@/lib/crm/territory";
 import { sendClientWelcomeEmail, sendInternalLeadAlert } from "@/lib/crm/email";
 import { resolveRecommendedModel, brochureAttachment } from "@/lib/crm/recommended-model";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
+import { attributionFromBody, attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
 import { leadSchema, CONSENT_VERSION } from "@/lib/validation/lead";
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests, clientIp } from "@/lib/security/rate-limit";
@@ -44,6 +45,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: first?.message ?? "Données invalides.", field: first?.path?.[0] ?? null }, { status: 400 });
   }
   const lead = parsed.data;
+  // Arrivée du visiteur (page, domaine référent, utm), nettoyée et classée ici : jamais d'adresse complète.
+  const attribution = attributionFromBody(json);
 
   const territory = lead.postalCode ? getTerritoryFromPostalCode(lead.postalCode) : "Autre";
   const consentAt = new Date().toISOString();
@@ -56,7 +59,7 @@ export async function POST(req: NextRequest) {
   const journalable: Record<string, unknown> = { ...lead };
   delete journalable.website; // pot de miel, toujours vide ici
   delete journalable.draft; // réponses brutes non validées : pas de renseignement personnel à conserver
-  const { entry, written } = await journalLead("soumission", { ...journalable, territory, consentAt, consentVersion: CONSENT_VERSION, ipHash });
+  const { entry, written } = await journalLead("soumission", { ...journalable, territory, consentAt, consentVersion: CONSENT_VERSION, ipHash }, attribution);
 
   // 3. Pipedrive, non bloquant.
   const row = (label: string, value: unknown) => `<li><b>${label} :</b> ${escapeHtml(value ?? "Non spécifié")}</li>`;
@@ -73,6 +76,7 @@ export async function POST(req: NextRequest) {
       ${row("Modèle sélectionné (ThermoMatch)", marque)}
       ${lead.appareilActuel ? row("Appareil actuel (ThermoScan)", lead.appareilActuel) : ""}
       ${row("Page d'origine", lead.source ?? "soumission-page")}
+      ${attributionLines(attribution).map(([k, v]) => row(k, v)).join("")}
       ${lead.notes ? row("Notes", lead.notes) : ""}
     </ul>
     <h3>Consentement (Loi 25)</h3>
@@ -92,9 +96,9 @@ export async function POST(req: NextRequest) {
     title: `${lead.firstName} ${lead.lastName ?? ""} - Thermopompe`.trim(),
     customFields: {
       [PIPEDRIVE_FIELDS.REGION]: optionId("REGION", territory),
-      // Le canal d'acquisition n'est connu que s'il correspond à une option Pipedrive
-      // (SEO, Google Ads…) ; la page d'origine est toujours dans la note.
-      [PIPEDRIVE_FIELDS.SOURCE]: optionId("SOURCE", lead.source),
+      // Canal d'acquisition : option Pipedrive existante (SEO, Google Ads…) déduite de l'arrivée ;
+      // la page d'origine et l'arrivée sont toujours dans la note.
+      [PIPEDRIVE_FIELDS.SOURCE]: optionId("SOURCE", lead.source) ?? optionId("SOURCE", pipedriveSourceLabel(attribution)),
       [PIPEDRIVE_FIELDS.TYPE_PROJET]: typeProjetOptionId(lead.typeThermopompe),
       [PIPEDRIVE_FIELDS.SQFT]: lead.superficie,
       [PIPEDRIVE_FIELDS.BTU_TOTAL]: btu,

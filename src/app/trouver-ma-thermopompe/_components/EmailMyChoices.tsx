@@ -5,6 +5,7 @@ import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { encodeShareCode } from "@/lib/thermomatch/share-code";
 import { RELANCES_CONSENT_TEXT } from "@/lib/relances/consent";
+import { readAttribution } from "@/lib/attribution/client";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* « Envoyez-moi mes trois choix » : le visiteur reçoit ses recommandations par
@@ -81,7 +82,7 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
     setStatus("sending");
     setError(null);
     try {
-      const res = await fetch("/api/thermomatch/courriel", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...v, followUps: offer && v.followUps, code, page: window.location.pathname }) });
+      const res = await fetch("/api/thermomatch/courriel", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...v, followUps: offer && v.followUps, code, page: window.location.pathname, attribution: readAttribution() }) });
       const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; relances?: boolean };
       if (!res.ok || !data.ok) {
         setStatus("error");
