@@ -34,8 +34,9 @@ export function resolveRelanceModels(slugs: readonly string[]): RelanceModel[] {
 }
 
 /** null : plus rien à dire (aucun des modèles n'est encore au catalogue) → le message est annulé. */
-export function renderRelance(m: ScheduledMessage, opts: { mailingAddress: string }): RenderedRelance | null {
-  const common = { firstName: m.firstName, token: m.token, mailingAddress: opts.mailingAddress };
+export function renderRelance(m: ScheduledMessage, opts: { mailingAddress: string; footer?: string | null }): RenderedRelance | null {
+  // Conformité C2 : pied de message commercial (5.5) pour les rappels seulement ; la demande d'avis garde le sien.
+  const common = { firstName: m.firstName, token: m.token, mailingAddress: opts.mailingAddress, footer: m.kind === "avis" ? null : (opts.footer ?? null) };
   switch (m.kind) {
     case "thermomatch-j2": {
       const models = resolveRelanceModels(m.payload.slugs ?? []);

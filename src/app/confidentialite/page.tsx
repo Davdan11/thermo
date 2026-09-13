@@ -5,6 +5,10 @@ import { createMetadata, getBreadcrumbSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { DocArticle, DocSources, DocumentBody } from "@/components/sections-v2/outils/document/DocumentBody";
 import { DocumentHero } from "@/components/heroes-v2/outils/DocumentHero";
+// Conformité C2 : politique tirée de la trousse (section 4), remplie avec l'identité ; sinon, la politique actuelle ci-dessous.
+import { currentPolicy } from "@/lib/consentements/serveur";
+import { dateLongue } from "@/lib/consentements/textes";
+import { DocumentTrousse } from "@/components/confidentialite/DocumentTrousse";
 
 export const metadata: Metadata = createMetadata({
   title: "Politique de confidentialité",
@@ -12,6 +16,9 @@ export const metadata: Metadata = createMetadata({
   canonicalPath: "/confidentialite",
   robots: { index: true, follow: true },
 });
+
+/* Conformité C2 : page relue toutes les 5 minutes (trousse, identité et date d'entrée en vigueur lues dans les données, sans rebuild). */
+export const revalidate = 300;
 
 const UPDATED = "13 septembre 2026";
 
@@ -28,7 +35,28 @@ const TOC = [
   { id: "modifications", label: "Modifications" },
 ];
 
-export default function ConfidentialitePage() {
+export default async function ConfidentialitePage() {
+  // Conformité C2 : trousse importée, identité complète et date d'entrée en vigueur réglée → texte de la section 4 (4.1 à 4.14).
+  const policy = await currentPolicy();
+  if (policy) {
+    const date = dateLongue(policy.effectiveDate);
+    return (
+      <DocumentTrousse
+        doc={policy.doc}
+        variant="confidentialite"
+        eyebrow="Loi 25"
+        titleLines={["Politique de", "confidentialité"]}
+        intro={policy.doc.intro.join(" ")}
+        note={date ? `En vigueur : ${date}` : undefined}
+        crumb={{ name: "Politique de confidentialité", url: "/confidentialite" }}
+      />
+    );
+  }
+  return <PolitiqueActuelle />;
+}
+
+/** Politique actuelle : repli tant que la trousse, l'identité ou la date d'entrée en vigueur manque. */
+function PolitiqueActuelle() {
   return (
     <main className="bg-white text-[#071d2b]">
       <JsonLd data={getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Politique de confidentialité", url: "/confidentialite" }])} />

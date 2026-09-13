@@ -31,6 +31,10 @@ export async function POST(req: Request) {
     note: `Appel enregistré le ${dateStr} — durée ${duration} s\nEnregistrement : ${recordingUrl}.mp3`,
     source: "appel-enregistre",
   }).catch((e) => console.error("[Recording] CRM :", e));
+  // Conformité C2 : le lien de l'enregistrement part dans la note Pipedrive : exportation notée au journal d'audit.
+  await import("@/lib/gestion/securite/audit")
+    .then((a) => a.audit("enregistrement.export", { vers: "Pipedrive (note de l’affaire)", enregistrement: p.get("RecordingSid") ?? "" }, { qui: "téléphonie (automatique)", ip: null }))
+    .catch(() => undefined);
 
   return new Response("OK");
 }

@@ -36,6 +36,8 @@ interface Common {
   token: string;
   /** Adresse postale de l'entreprise (obligatoire : sans elle, rien n'est envoyé). */
   mailingAddress: string;
+  /** Conformité C2 : pied de message commercial de la trousse (5.5), rempli ; absent : pied actuel. */
+  footer?: string | null;
 }
 
 /** Modèle recommandé, chiffres du catalogue au moment de l'envoi. */
@@ -66,8 +68,8 @@ function textFooter(d: Common, reason: string): string {
     SITE_URL,
     `Adresse postale : ${d.mailingAddress}`,
     "",
-    reason,
-    `Se désabonner en un clic : ${relanceLinks.unsubscribe(d.token)}`,
+    // Conformité C2 : pied de message commercial de la trousse (5.5), qui contient le lien de désabonnement.
+    ...(d.footer ? [d.footer] : [reason, `Se désabonner en un clic : ${relanceLinks.unsubscribe(d.token)}`]),
   ].join("\n");
 }
 
@@ -110,6 +112,7 @@ export function choixEmail(d: Common & { models: RelanceModel[] }): RenderedRela
     unsubscribeUrl: relanceLinks.unsubscribe(d.token),
     unsubscribeWhat: "ces rappels",
     mailingAddress: d.mailingAddress,
+    ...(d.footer ? { commercialFooter: d.footer } : {}), // Conformité C2 : pied 5.5
   });
 
   const text = [
@@ -173,6 +176,7 @@ export function logisVertEmail(d: Common & { models: LogisVertRelanceModel[]; li
     unsubscribeUrl: relanceLinks.unsubscribe(d.token),
     unsubscribeWhat: "ces rappels",
     mailingAddress: d.mailingAddress,
+    ...(d.footer ? { commercialFooter: d.footer } : {}), // Conformité C2 : pied 5.5
   });
 
   const text = [

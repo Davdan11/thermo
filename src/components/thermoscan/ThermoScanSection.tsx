@@ -14,6 +14,7 @@ import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { MONO } from "@/components/heroes-v2/outils/font-stacks";
 import { Corners } from "@/components/sections-v2/outils/kit";
 import "@/components/sections-v2/outils/viseur/viseur.css";
+import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
 
 /* ==================================================================
    Outil ThermoScan (page /thermoscan). Présentation « viseur » : graphite,
@@ -387,6 +388,9 @@ function FicheForm({ device, sessionId }: {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [consent, setConsent] = useState(false);
+  // Conformité C2 : cases 5.2 et 5.3 de la trousse, facultatives et jamais cochées d'avance.
+  const consents = useConsentTexts();
+  const [opt, setOpt] = useState({ rappels: false, promotions: false });
   const [website, setWebsite] = useState("");
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -399,7 +403,7 @@ function FicheForm({ device, sessionId }: {
     try {
       const res = await fetch("/api/thermoscan/fiche", {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ firstName: firstName.trim(), email: email.trim(), phone: phone.trim(), consent, website, device, sessionId, attribution: readAttribution() }),
+        body: JSON.stringify({ firstName: firstName.trim(), email: email.trim(), phone: phone.trim(), consent, website, device, sessionId, attribution: readAttribution(), consentements: consentAnswers(consents, opt), page: window.location.pathname }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) throw new Error(data.error || "");
@@ -446,10 +450,29 @@ function FicheForm({ device, sessionId }: {
         </span>
         <span>J&apos;accepte que Thermopompes À Vendre conserve ces renseignements pour m&apos;envoyer la fiche et me proposer un suivi. <a href="/confidentialite" className="vz-link">Politique de confidentialité</a>.</span>
       </label>
+      {/* Conformité C2 : cases facultatives 5.2 et 5.3 de la trousse, distinctes et jamais cochées d'avance. */}
+      {consents.status === "pret" &&
+        (["rappels", "promotions"] as const).map((k) => (
+          <label key={k} className="flex items-start gap-3 text-[12.5px] leading-relaxed mb-4 cursor-pointer" style={{ color: MUTE }}>
+            <span className="vz-check">
+              <input type="checkbox" checked={opt[k]} onChange={(e) => setOpt((o) => ({ ...o, [k]: e.target.checked }))} />
+              <svg aria-hidden="true" width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.4l2.8 2.6L12.5 4.8" stroke="#141414" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </span>
+            <span>
+              <ConsentCopy text={consents.texts[k]} linkClassName="vz-link" />
+            </span>
+          </label>
+        ))}
       {message && <p role="alert" className="text-[13px] mb-3" style={{ color: TONE.danger, margin: "0 0 12px" }}>{message}</p>}
       <button type="submit" disabled={state === "sending"} className="vz-btn vz-primary w-full px-4 py-3 text-[14.5px]" style={{ opacity: state === "sending" ? 0.7 : 1 }}>
         {state === "sending" ? "Envoi…" : "Recevoir ma fiche"} <ArrowRight size={16} className="vz-arrow" />
       </button>
+      {/* Conformité C2 : texte 5.1 sous le formulaire. */}
+      {consents.status === "pret" && (
+        <p className="text-[12px] leading-relaxed" style={{ color: FAINT, margin: "12px 0 0" }}>
+          <ConsentCopy text={consents.texts.communications} linkClassName="vz-link" />
+        </p>
+      )}
     </form>
   );
 }

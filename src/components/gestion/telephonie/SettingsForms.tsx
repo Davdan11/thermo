@@ -77,7 +77,8 @@ export function CallSettingsForm({ record }: { record: boolean }) {
           Enregistrer les appels masqués
         </Switch>
         <p className="cr-setting__hint">
-          Désactivé par défaut. Le client entend toujours « Votre appel peut être enregistré pour la qualité du service » avant d’être relié. Enregistré, l’appel est transcrit et résumé dans sa fiche (si la transcription est active), puis l’audio est supprimé selon la conservation choisie plus bas.
+          {/* Conformité C2 : avec la trousse en vigueur, avis 6.3 et touche 1 exigée. */}
+          Désactivé par défaut. Avant d’être relié, le client entend l’avis d’enregistrement : quand la trousse est en vigueur, celui de la trousse (6.3), et l’appel n’est enregistré que s’il fait le 1 ; sinon, « Votre appel peut être enregistré pour la qualité du service ». Enregistré, l’appel est transcrit et résumé dans sa fiche (si la transcription est active), puis l’audio est supprimé selon la conservation choisie plus bas.
         </p>
       </div>
       <Msg state={state} />

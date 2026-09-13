@@ -90,20 +90,28 @@ export function transferPrompt(base: string, dept: Dept, audio: string, recorded
 
 const record = (base: string) => `record="record-from-answer" recordingStatusCallback="${base}/api/phone/recording"`;
 
+/** Conformité C2 : suite d'un appel qui a refusé l'enregistrement (touche 9) : aucun attribut record, « enr=non » propagé. */
+export interface DialOptions {
+  /** false : l'appelant a fait le 9 : aucun enregistrement ni transcription. */
+  record?: boolean;
+}
+const recAttr = (base: string, o: DialOptions) => (o.record === false ? "" : ` ${record(base)}`);
+const enrParam = (o: DialOptions) => (o.record === false ? "&amp;enr=non" : "");
+
 /** Fait sonner le bureau ; sans réponse, Twilio rappelle no-answer à l'étape « bureau ». `base` est déjà échappé. */
-export function officeDialTwiml(base: string, dept: Dept, target: OfficeTarget, audio: string, recorded = useRecordedVoice()): string {
+export function officeDialTwiml(base: string, dept: Dept, target: OfficeTarget, audio: string, recorded = useRecordedVoice(), o: DialOptions = {}): string {
   const endpoint = target.kind === "sip" ? `<Sip>${xml(target.uri)}</Sip>` : `<Number>${xml(target.number)}</Number>`;
   return `
   ${transferPrompt(base, dept, audio, recorded)}
-  <Dial action="${base}/api/phone/ivr/no-answer?dept=${dept}&amp;etape=bureau" timeout="18" ${record(base)}>
+  <Dial action="${base}/api/phone/ivr/no-answer?dept=${dept}&amp;etape=bureau${enrParam(o)}" timeout="18"${recAttr(base, o)}>
     ${endpoint}
   </Dial>`;
 }
 
 /** Fait sonner le cellulaire, avec le chuchotement joué au propriétaire avant de joindre le client. */
-export function cellDialTwiml(base: string, dept: Dept, cell: string): string {
+export function cellDialTwiml(base: string, dept: Dept, cell: string, o: DialOptions = {}): string {
   return `
-  <Dial action="${base}/api/phone/ivr/no-answer?dept=${dept}&amp;etape=cellulaire" timeout="20" ${record(base)}>
+  <Dial action="${base}/api/phone/ivr/no-answer?dept=${dept}&amp;etape=cellulaire${enrParam(o)}" timeout="20"${recAttr(base, o)}>
     <Number url="${base}/api/phone/ivr/chuchotement?dept=${dept}">${xml(cell)}</Number>
   </Dial>`;
 }

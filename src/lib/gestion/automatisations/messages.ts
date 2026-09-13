@@ -46,6 +46,8 @@ interface Common {
   firstName?: string;
   links: SuiviLinks;
   mailingAddress: string;
+  /** Conformité C2 : pied de message commercial de la trousse (5.5), rempli (messages commerciaux) ; absent : pied actuel. */
+  footer?: string | null;
 }
 
 function footerText(c: Common): string {
@@ -57,8 +59,7 @@ function footerText(c: Common): string {
     c.links.base.replace(/\/$/, ""),
     `Adresse postale : ${c.mailingAddress}`,
     "",
-    REASON,
-    `Ne plus recevoir ces suivis : ${suiviUrl(c.links, "desabonnement")}`,
+    ...(c.footer ? [c.footer] : [REASON, `Ne plus recevoir ces suivis : ${suiviUrl(c.links, "desabonnement")}`]),
   ].join("\n");
 }
 
@@ -74,6 +75,7 @@ function wrap(c: Common, o: { title: string; preheader: string; body: string; ct
     unsubscribeUrl: suiviUrl(c.links, "desabonnement"),
     unsubscribeWhat: "ces suivis",
     mailingAddress: c.mailingAddress,
+    ...(c.footer ? { commercialFooter: c.footer } : {}), // Conformité C2 : pied 5.5 des messages commerciaux
   });
 }
 

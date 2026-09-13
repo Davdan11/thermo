@@ -293,8 +293,9 @@ export async function sendToClient(projectId: string, label: string, build: (c: 
   const suppressed = new Set((await readAfterSale()).suppressed);
   const m = build({ firstName: job.client.firstName || undefined, links, mailingAddress: businessMailingAddress() ?? "" });
   const [email, sms] = await Promise.all([
-    m.mail ? channels.clientMail(job.client.email, m.mail, { suppressed, label, headers: unsubscribeHeaders(links) }) : Promise.resolve(undefined),
-    m.sms ? channels.clientSms(job.client.phone, m.sms, { suppressed, label }) : Promise.resolve(undefined),
+    // Conformité C2 : visites d'entretien du plan et choix de la date sont des messages de service (jamais bloqués par un désabonnement commercial).
+    m.mail ? channels.clientMail(job.client.email, m.mail, { suppressed, label, headers: unsubscribeHeaders(links), category: "operationnel" }) : Promise.resolve(undefined),
+    m.sms ? channels.clientSms(job.client.phone, m.sms, { suppressed, label, category: "operationnel" }) : Promise.resolve(undefined),
   ]);
   return { ...(email ? { email } : {}), ...(sms ? { sms } : {}) };
 }

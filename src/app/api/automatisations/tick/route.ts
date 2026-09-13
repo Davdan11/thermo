@@ -46,7 +46,9 @@ export async function POST(req: Request) {
     const p = await runPortalTick({ log: (line) => console.log(`[portail] ${line}`) }).catch((e) => (console.error("[portail] passage interrompu :", e), null));
     // Chantier V : répartition des nouvelles demandes aux vendeurs (aussi au tick de la téléphonie, toutes les 5 minutes).
     const v = await runRepartition().catch((e) => (console.error("[équipe] répartition interrompue :", e), null));
-    return json({ ok: true, at: r.at, ms: r.ms, fait: r.done, echecs: r.failed, ignores: r.ignored, reportes: r.deferred, enAttente: r.waiting, portail: p ? { visites: p.visits, invitations: p.invites, adhesions: p.attached } : { erreur: true }, repartition: v ? { attribuees: v.assigned } : { erreur: true } });
+    // Conformité C2 : une fois par jour, prospects inactifs (24 mois, essai par défaut), conservation des preuves, programme de recommandation.
+    const c2 = await import("@/lib/consentements/quotidien").then((m) => m.runConformiteDaily()).catch((e) => (console.error("[conformité] passage interrompu :", e), null));
+    return json({ ok: true, at: r.at, ms: r.ms, fait: r.done, echecs: r.failed, ignores: r.ignored, reportes: r.deferred, enAttente: r.waiting, portail: p ? { visites: p.visits, invitations: p.invites, adhesions: p.attached } : { erreur: true }, repartition: v ? { attribuees: v.assigned } : { erreur: true }, conformite: c2 ? { passage: c2.fait } : { erreur: true } });
   } catch (e) {
     console.error("[automatisations] passage interrompu :", e);
     return json({ error: "Passage interrompu : voir le journal du serveur." }, 500);

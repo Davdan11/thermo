@@ -25,13 +25,23 @@ import type { ExpressConsent } from "./types";
 export const PURCHASE_MONTHS = 24;
 export const INQUIRY_MONTHS = 6;
 
-export type ConsentBasis = "expres" | "achat" | "demande";
+/* Conformité C2 : « formulaire » = case 5.3 de la trousse cochée (preuve dans le magasin des consentements). */
+export type ConsentBasis = "formulaire" | "expres" | "achat" | "demande";
 
 export const BASIS_LABELS: Record<ConsentBasis, string> = {
+  formulaire: "Case « conseils et promotions » cochée (formulaire)",
   expres: "Consentement exprès",
   achat: "Achat (relation d’affaires, 2 ans)",
   demande: "Demande (relation d’affaires, 6 mois)",
 };
+
+/** Conformité C2 : case 5.3 (consentement exprès par formulaire) et son retrait (désabonnement en un clic). */
+export interface FormConsent {
+  /** Dernière case 5.3 cochée ; null : aucune. */
+  at: string | null;
+  /** Retrait en vigueur après cette case (ou sans case) : bloque aussi les bases tacites. */
+  withdrawnAt: string | null;
+}
 
 export interface ConsentInputs {
   express: ExpressConsent | null;
@@ -40,6 +50,8 @@ export interface ConsentInputs {
   /** Dernière demande du client : formulaire, appel, texto. */
   inquiryAt: string | null;
   optedOut: boolean;
+  /** Conformité C2 : case 5.3 des formulaires. */
+  form?: FormConsent | null;
 }
 
 export interface ConsentState {
@@ -63,7 +75,11 @@ export function addMonths(iso: string, months: number): Date {
 
 export function smsConsent(i: ConsentInputs, now: Date): ConsentState {
   if (i.optedOut) return { ok: false, basis: null, since: null, expiresAt: null, reason: "Désabonné des textos (STOP ou ARRÊT)" };
-  if (i.express && !i.express.withdrawnAt) return { ok: true, basis: "expres", since: i.express.at, expiresAt: null, reason: BASIS_LABELS.expres };
+  // Conformité C2 : case 5.3 cochée (exprès, sans échéance). Un retrait en un clic arrête aussi l'exprès plus ancien et les bases tacites.
+  if (i.form?.at && !i.form.withdrawnAt) return { ok: true, basis: "formulaire", since: i.form.at, expiresAt: null, reason: BASIS_LABELS.formulaire };
+  const unsubscribedAt = i.form?.withdrawnAt ?? null;
+  if (i.express && !i.express.withdrawnAt && (!unsubscribedAt || i.express.at > unsubscribedAt)) return { ok: true, basis: "expres", since: i.express.at, expiresAt: null, reason: BASIS_LABELS.expres };
+  if (unsubscribedAt) return { ok: false, basis: null, since: null, expiresAt: null, reason: "Désabonné des messages commerciaux (lien en un clic)" };
 
   const implied: Array<{ basis: ConsentBasis; since: string; expiresAt: Date }> = [];
   if (i.purchaseAt) implied.push({ basis: "achat", since: i.purchaseAt, expiresAt: addMonths(i.purchaseAt, PURCHASE_MONTHS) });
@@ -101,6 +117,7 @@ export function expressFor(consents: Record<string, ExpressConsent>, ids: string
   return found.find((c) => !c.withdrawnAt) ?? found[0] ?? null;
 }
 
-export function consentOf(b: ClientBundle, consents: Record<string, ExpressConsent>, optedOut: boolean, now: Date): ConsentState {
-  return smsConsent({ express: expressFor(consents, [b.id, ...b.aliases]), purchaseAt: purchaseAtOf(b), inquiryAt: inquiryAtOf(b), optedOut }, now);
+/** `form` : Conformité C2, case 5.3 des formulaires et son retrait (magasin des consentements). */
+export function consentOf(b: ClientBundle, consents: Record<string, ExpressConsent>, optedOut: boolean, now: Date, form: FormConsent | null = null): ConsentState {
+  return smsConsent({ express: expressFor(consents, [b.id, ...b.aliases]), purchaseAt: purchaseAtOf(b), inquiryAt: inquiryAtOf(b), optedOut, form }, now);
 }

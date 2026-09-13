@@ -29,6 +29,7 @@ import { RELANCES_CONSENT_TEXT, RELANCES_CONSENT_VERSION } from "@/lib/relances/
 import { enqueueThermoMatch } from "@/lib/relances/store";
 import { businessMailingAddress } from "@/lib/relances/config";
 import type { RelanceConsent } from "@/lib/relances/core";
+import { consentSummary, gateFormConsents, relanceConsentOf, safePath, saveFormConsents } from "@/lib/consentements/formulaires"; // Conformité C2 : cases 5.2 et 5.3, preuve (5.4)
 
 const schema = z.object({
   firstName: z.string().trim().min(1, "Le prénom est requis.").max(80),
@@ -88,20 +89,32 @@ export async function POST(req: NextRequest) {
   const territory = postalCode ? getTerritoryFromPostalCode(postalCode) : undefined;
   const labels = choices.map((c, i) => `${i + 1}. ${c.brand} ${c.series} (${c.outdoorModel})`.trim());
   const slugs = top.map((r) => registry.modelById.get(r.product.id)?.slug).filter((s): s is string => Boolean(s));
+  // Conformité C2 : textes de la trousse affichés → version connue, cases 5.2 et 5.3 et preuve (5.4) ; sinon, comportement actuel.
+  const gate = await gateFormConsents(json, { jumelage: false });
+  if (gate.mode === "refus") return NextResponse.json({ ok: false, error: gate.error, field: gate.field ?? null }, { status: gate.status });
+  const proof = await saveFormConsents(gate, { req, form: "thermomatch", source: safePath(d.page, "/trouver-ma-thermopompe"), email: d.email, phone: d.phone });
+
   // Preuve du consentement aux relances : moment, page et texte exact de la case.
   const relancesConsent: RelanceConsent | null =
     // Sans adresse postale (LCAP), aucune relance ne peut partir : la case n’est pas proposée et rien n’est planifié.
-    d.followUps === true && businessMailingAddress() !== null
-      ? {
-          at: new Date().toISOString(),
-          page: d.page && /^\/[A-Za-z0-9/_-]{0,190}$/.test(d.page) ? d.page : "/trouver-ma-thermopompe",
-          text: RELANCES_CONSENT_TEXT,
-          version: RELANCES_CONSENT_VERSION,
-        }
-      : null;
+    businessMailingAddress() === null
+      ? null
+      : gate.mode === "c2"
+        ? // Case 5.2 de la trousse : texte exact de la version affichée, lien vers la preuve.
+          gate.answers.rappels
+          ? await relanceConsentOf(proof)
+          : null
+        : d.followUps === true
+          ? {
+              at: new Date().toISOString(),
+              page: d.page && /^\/[A-Za-z0-9/_-]{0,190}$/.test(d.page) ? d.page : "/trouver-ma-thermopompe",
+              text: RELANCES_CONSENT_TEXT,
+              version: RELANCES_CONSENT_VERSION,
+            }
+          : null;
 
   const attribution = attributionWithAds(json);
-  const { entry } = await journalLead("thermomatch", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode, choices: labels, code: d.code, relances: relancesConsent ?? false }, attribution);
+  const { entry } = await journalLead("thermomatch", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode, choices: labels, code: d.code, relances: relancesConsent ?? false, ...(gate.mode === "c2" ? { consentements: proof?.id ?? "non-gardee" } : {}) }, attribution);
 
   // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
   speedToLeadAfter({ kind: "thermomatch", journalId: entry.id, phone: d.phone, firstName: d.firstName });
@@ -114,6 +127,7 @@ export async function POST(req: NextRequest) {
     ["Téléphone", d.phone ?? "—"],
     ["Courriel", d.email],
     ["Rappels J+2 et J+7", relancesConsent ? "acceptés" : "non"],
+    ...consentSummary(proof), // Conformité C2
     ...attributionLines(attribution),
     ["Journal", entry.id],
   ];

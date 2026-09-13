@@ -25,6 +25,7 @@ import { attributionWithAds } from "@/lib/ads/server-attribution";
 import { sendMetaLead } from "@/lib/ads/meta-lead";
 import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : réponse en 60 secondes
 import { leadSchema, CONSENT_VERSION } from "@/lib/validation/lead";
+import { consentSummary, gateFormConsents, safePath, saveFormConsents } from "@/lib/consentements/formulaires"; // Conformité C2 : cases 3.1, 5.2, 5.3 et preuve (5.4)
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests, clientIp } from "@/lib/security/rate-limit";
 import { createHash } from "node:crypto";
@@ -49,6 +50,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: first?.message ?? "Données invalides.", field: first?.path?.[0] ?? null }, { status: 400 });
   }
   const lead = parsed.data;
+  // Conformité C2 : textes de la trousse affichés → case de jumelage (3.1) exigée et version connue ; sinon, comportement actuel.
+  const gate = await gateFormConsents(json, { jumelage: true });
+  if (gate.mode === "refus") return NextResponse.json({ error: gate.error, field: gate.field ?? null }, { status: gate.status });
+  const consentMarketing = gate.mode === "c2" ? gate.answers.promotions : lead.consentMarketing;
+  // Preuve du consentement (5.4) : textes exacts, cases, courriel ou téléphone, date, IP, page.
+  const proof = await saveFormConsents(gate, { req, form: "soumission", source: safePath((json as Record<string, unknown>).page, "/soumission"), email: lead.email, phone: lead.phone });
   // Arrivée du visiteur (page, domaine référent, utm), nettoyée et classée ici : jamais d'adresse complète.
   const attribution = attributionWithAds(json);
 
@@ -63,7 +70,7 @@ export async function POST(req: NextRequest) {
   const journalable: Record<string, unknown> = { ...lead };
   delete journalable.website; // pot de miel, toujours vide ici
   delete journalable.draft; // réponses brutes non validées : pas de renseignement personnel à conserver
-  const { entry, written } = await journalLead("soumission", { ...journalable, territory, consentAt, consentVersion: CONSENT_VERSION, ipHash }, attribution);
+  const { entry, written } = await journalLead("soumission", { ...journalable, territory, consentAt, consentVersion: CONSENT_VERSION, ipHash, ...(gate.mode === "c2" ? { consentMarketing, consentements: proof?.id ?? "non-gardee" } : {}) }, attribution);
   // Meta : seulement en production, avec clés et consentement ; même event_id que le pixel. Jamais bloquant.
   void sendMetaLead(entry, { userAgent: req.headers.get("user-agent") }).catch((e) => console.error("[/api/leads] Meta :", e));
   // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
@@ -90,7 +97,8 @@ export async function POST(req: NextRequest) {
     <h3>Consentement (Loi 25)</h3>
     <ul>
       ${row("Traitement des renseignements", `oui, ${consentAt}, version ${CONSENT_VERSION}`)}
-      ${row("Communications marketing", lead.consentMarketing ? "oui" : "non")}
+      ${row("Communications marketing", consentMarketing ? "oui" : "non")}
+      ${consentSummary(proof).map(([k, v]) => row(k, v)).join("")}
       ${row("Empreinte de session", ipHash)}
       ${row("Référence journal", entry.id)}
     </ul>

@@ -7,6 +7,7 @@ import { track } from "@/lib/analytics/track";
 import { readAttribution } from "@/lib/attribution/client";
 import { Arrow } from "@/components/heroes-v2/entreprise/shared";
 import { ClipReveal, EASE, MaskLines, Reveal, Shell } from "@/components/sections-v2/entreprise/kit";
+import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
 
 /* Présentation « Le numéro » (sections v2 entreprise) : blanc, grand pan orange, chiffres qui
    roulent, champs à bord noir qui poussent un bloc orange au focus. Formulaire, validation,
@@ -51,6 +52,9 @@ export default function ContactPageClient() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", subject: "question", message: "", consent: false, website: "" });
+  // Conformité C2 : cases 5.2 et 5.3 de la trousse, facultatives et jamais cochées d'avance.
+  const consents = useConsentTexts();
+  const [opt, setOpt] = useState({ rappels: false, promotions: false });
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => setForm({ ...form, [k]: e.target.value });
   // Les rouleaux du numéro partent quand la colonne (jamais découpée) entre dans l'écran.
   const colRef = useRef<HTMLDivElement>(null);
@@ -60,7 +64,7 @@ export default function ContactPageClient() {
     e.preventDefault();
     setIsSubmitting(true); setError("");
     try {
-      const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, attribution: readAttribution() }) });
+      const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, attribution: readAttribution(), consentements: consentAnswers(consents, opt), page: window.location.pathname }) });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Envoi impossible.");
       track("contact_submitted", { subject: form.subject });
@@ -246,6 +250,23 @@ export default function ContactPageClient() {
                         <a href="/confidentialite" target="_blank" rel="noopener" className="font-semibold underline" style={{ color: C.ink }}>politique de confidentialité</a>. Rien n&apos;est vendu à des tiers.
                       </span>
                     </label>
+                    {/* Conformité C2 : cases facultatives 5.2 et 5.3 de la trousse, distinctes et jamais cochées d'avance. */}
+                    {consents.status === "pret" && (
+                      <>
+                        <label className="flex cursor-pointer items-start gap-3.5 text-[14.5px] font-medium leading-relaxed" style={{ color: C.mute }}>
+                          <input type="checkbox" checked={opt.rappels} onChange={(e) => setOpt((o) => ({ ...o, rappels: e.target.checked }))} className="xs-check-orange mt-0.5 shrink-0" />
+                          <span>
+                            <ConsentCopy text={consents.texts.rappels} linkClassName="font-semibold underline" linkStyle={{ color: C.ink }} />
+                          </span>
+                        </label>
+                        <label className="flex cursor-pointer items-start gap-3.5 text-[14.5px] font-medium leading-relaxed" style={{ color: C.mute }}>
+                          <input type="checkbox" checked={opt.promotions} onChange={(e) => setOpt((o) => ({ ...o, promotions: e.target.checked }))} className="xs-check-orange mt-0.5 shrink-0" />
+                          <span>
+                            <ConsentCopy text={consents.texts.promotions} linkClassName="font-semibold underline" linkStyle={{ color: C.ink }} />
+                          </span>
+                        </label>
+                      </>
+                    )}
                     {error && <p role="alert" className="text-[15px] font-semibold" style={{ color: C.error, margin: 0, padding: "12px 16px", background: "#FDF1EF", borderLeft: `4px solid ${C.error}` }}>{error}</p>}
                     <button
                       type="submit"
@@ -266,6 +287,12 @@ export default function ContactPageClient() {
                     <p className="text-[14px] font-medium" style={{ color: C.mute, margin: "18px 0 0" }}>
                       Réponse en moins de 24 h ouvrables. Pour un projet précis, <a href="/soumission" className="font-semibold underline" style={{ color: C.ink }}>demandez plutôt une soumission</a>.
                     </p>
+                    {/* Conformité C2 : texte 5.1 sous le formulaire. */}
+                    {consents.status === "pret" && (
+                      <p className="text-[13px] leading-relaxed" style={{ color: C.mute, margin: "12px 0 0" }}>
+                        <ConsentCopy text={consents.texts.communications} linkClassName="font-semibold underline" linkStyle={{ color: C.ink }} />
+                      </p>
+                    )}
                   </motion.form>
                 </>
               )}

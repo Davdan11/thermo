@@ -184,7 +184,18 @@ export function markFailed(id: string, error: string, now = new Date()): Promise
  * Désabonnement en un clic : l'adresse du jeton ne reçoit plus rien (relances et demandes d'avis),
  * y compris ce qui serait planifié plus tard. Idempotent. null si le jeton est inconnu.
  */
-export function unsubscribeByToken(token: string, now = new Date()): Promise<{ email: string; cancelled: number; already: boolean } | null> {
+export async function unsubscribeByToken(token: string, now = new Date()): Promise<{ email: string; cancelled: number; already: boolean } | null> {
+  const r = await unsubscribeInFile(token, now);
+  // Conformité C2 : retrait immédiat des consentements commerciaux (5.2 et 5.3), consigné comme preuve (date, méthode, prise d'effet).
+  if (r && !r.already) {
+    await import("@/lib/consentements/store")
+      .then((s) => s.recordWithdrawal({ email: r.email, purposes: ["rappels", "promotions"], method: "lien-un-clic" }, now))
+      .catch((e) => console.error("[relances] retrait non consigné :", (e as Error)?.message ?? e));
+  }
+  return r;
+}
+
+function unsubscribeInFile(token: string, now: Date): Promise<{ email: string; cancelled: number; already: boolean } | null> {
   return mutate<{ email: string; cancelled: number; already: boolean } | null>((data) => {
     const found = data.messages.find((m) => m.token === token);
     if (!found) return { result: null, changed: false };
@@ -199,6 +210,21 @@ export function unsubscribeByToken(token: string, now = new Date()): Promise<{ e
       }
     }
     return { result: { email: found.email, cancelled, already }, changed: !already || cancelled > 0 };
+  });
+}
+
+/**
+ * Conformité C2 — prospects inactifs anonymisés : leurs messages sont retirés de la file. La liste de désabonnement
+ * (empreintes seulement) reste : elle doit être respectée aussi longtemps que nécessaire. Renvoie le nombre de messages.
+ */
+export function forgetEmails(emails: string[], opts: { dryRun?: boolean } = {}): Promise<number> {
+  const set = new Set(emails.map(normalizeEmail));
+  if (!set.size) return Promise.resolve(0);
+  return mutate<number>((data) => {
+    const n = data.messages.filter((m) => set.has(m.email)).length;
+    if (opts.dryRun || !n) return { result: n, changed: false };
+    data.messages = data.messages.filter((m) => !set.has(m.email));
+    return { result: n, changed: true };
   });
 }
 

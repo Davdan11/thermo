@@ -35,7 +35,9 @@ export type ChannelOutcome =
   | "desabonne"
   | "sans-destinataire"
   | "non-configure"
-  | "sans-adresse-postale";
+  | "sans-adresse-postale"
+  /** Conformité C2 : message commercial sans consentement valide (case 5.3, exprès ou tacite encore en vigueur). */
+  | "sans-consentement";
 
 export const OUTCOME_LABELS: Record<ChannelOutcome, string> = {
   envoye: "envoyé",
@@ -45,6 +47,7 @@ export const OUTCOME_LABELS: Record<ChannelOutcome, string> = {
   "sans-destinataire": "sans destinataire",
   "non-configure": "non configuré",
   "sans-adresse-postale": "adresse postale absente",
+  "sans-consentement": "sans consentement : rien envoyé",
 };
 
 export type LogStatus = "en-cours" | "fait" | "echec" | "ignore";
@@ -63,11 +66,30 @@ export interface LogEntry {
   ref?: { jobId?: string; invoiceId?: string };
 }
 
+/**
+ * Conformité C2 — programme de recommandation (trousse 7) : récompense FIXE, aucun hasard.
+ * Sans montant (ou sans forme, ou avant la date de lancement), le programme n'est pas offert.
+ */
+export interface ReferralProgram {
+  /** Montant fixe de la récompense, en cents. */
+  rewardCents: number | null;
+  /** Forme : « carte-cadeau », « virement Interac »… */
+  form: string;
+  /** Plafond par personne et par année : nombre de récompenses ou montant (cents). */
+  annualCap: { kind: "nombre" | "montant"; value: number } | null;
+  /** Date de lancement (AAAA-MM-JJ). */
+  launchDate: string | null;
+  /** Délai d'annulation applicable au contrat client, en jours : la récompense n'est due qu'après. */
+  cancellationDays: number | null;
+}
+
 export interface AutomationSettings {
   /** Interrupteur par automatisation (absent = actif). */
   enabled: Partial<Record<AutomationId, boolean>>;
   /** Récompense du programme de référence, en texte libre (vide : aucune récompense mentionnée). */
   referralReward: string;
+  /** Conformité C2 : réglages structurés du programme (remplacent le texte libre quand la trousse est en vigueur). */
+  referralProgram?: ReferralProgram;
   updatedAt?: string;
   updatedBy?: string;
 }

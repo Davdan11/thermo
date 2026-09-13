@@ -14,7 +14,9 @@ export async function POST(req: Request) {
   const duration = check.params.get("RecordingDuration") ?? "0";
   console.log(`[Voicemail] ${check.params.get("From") ?? "?"} — ${duration} s`);
   // Chantier T : transcription en français et résumé du message vocal (Gemini), puis conservation de l'audio (Loi 25).
-  recordingAfter({ recordingSid: check.params.get("RecordingSid") ?? "", callSid: check.params.get("CallSid"), source: "message-vocal", phone: check.params.get("From"), durationSec: Number(duration) });
+  // Conformité C2 : appelant qui a refusé l'enregistrement (touche 9) : aucune transcription ; l'audio suit la conservation.
+  const noRec = new URL(req.url).searchParams.get("enr") === "non";
+  recordingAfter({ recordingSid: check.params.get("RecordingSid") ?? "", callSid: check.params.get("CallSid"), source: "message-vocal", phone: check.params.get("From"), durationSec: Number(duration), ...(noRec ? { noTranscription: true } : {}) });
 
   return twiml(`
   <Say language="fr-CA" voice="Polly.Gabrielle-Neural">Votre message a bien été enregistré. Merci et bonne journée.</Say>

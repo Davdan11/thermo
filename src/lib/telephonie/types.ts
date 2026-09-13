@@ -136,6 +136,12 @@ export interface MaskedCall {
   noted?: boolean;
   error?: string;
   updatedAt: string;
+  /** Conformité C2 : enregistrement activé et avis 6.3 en vigueur : le client fait le 1 pour accepter (sinon, aucun enregistrement). */
+  consentMode?: boolean;
+  /** Avis 6.3 joué au client (texte rempli, empreinte, version de la trousse). */
+  consentNotice?: { text: string; sha: string; trousseVersion: string };
+  /** Réponse du client à l'avis. */
+  recordingConsent?: { decision: "accepte" | "refus" | "sans-reponse"; at: string };
 }
 
 /* ---------------- Réponse en 60 secondes ---------------- */
@@ -189,6 +195,8 @@ export interface RecordingJob {
   transcribedAt?: string;
   audio: "twilio" | "supprime";
   audioDeletedAt?: string;
+  /** Conformité C2 : l'appelant a refusé l'enregistrement (touche 9) : jamais transcrit ; l'audio suit la conservation. */
+  noTranscription?: true;
 }
 
 /* ---------------- Campagnes ---------------- */
