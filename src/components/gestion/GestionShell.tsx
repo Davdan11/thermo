@@ -15,6 +15,8 @@ import { GestionNav } from "./GestionNav";
 import { CommandSearch } from "./crm/CommandSearch";
 import { QuickActions } from "./crm/QuickActions";
 import { cx } from "./kit/format";
+// Chantier A : panneau « Demande à Claude » (Ctrl/⌘ J), partout dans /gestion.
+import { AssistantMount } from "./assistant/AssistantMount";
 
 export async function GestionShell({ children, sub, mainClassName }: { children: React.ReactNode; sub?: React.ReactNode; mainClassName?: string }) {
   const session = await requireAdmin();
@@ -29,6 +31,8 @@ export async function GestionShell({ children, sub, mainClassName }: { children:
       </div>
       <QuickActions />
       <CommandSearch />
+      {/* Chantier A : assistant IA en lecture seule. */}
+      <AssistantMount />
       <div id="g-portal" />
     </div>
   );

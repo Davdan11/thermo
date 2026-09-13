@@ -30,6 +30,9 @@ import { QuoteStatus } from "@/components/gestion/soumissions/ui";
 import { ApresVentePanel } from "@/components/gestion/argent/ApresVentePanel";
 import { ClientPhotoDossier } from "@/components/partenaires/admin/ClientPhotoDossier"; // volet A
 import { AdsClientPanel } from "@/components/gestion/publicite/AdsClientPanel"; // pilote publicitaire : consentement, clic, ventes renvoyées
+// Chantier A : bouton « Résumer » (assistant IA) et coût d'acquisition (rentabilité réelle).
+import { AssistantSummarizeButton } from "@/components/gestion/assistant/SummarizeButton";
+import { AcquisitionCard } from "@/components/gestion/rentabilite/AcquisitionCard";
 
 export const metadata: Metadata = { title: "Client" };
 
@@ -109,6 +112,10 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
             </span>
           )}
         </div>
+        {/* Chantier A : résumé de la fiche par l'assistant IA. */}
+        <div className="as-summarize-row">
+          <AssistantSummarizeButton clientId={c.id} />
+        </div>
         <div className="cr-facts">
           <div className="is-money">
             <span>Montant</span>
@@ -178,6 +185,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
           <ThermoMatchPanel clientId={c.id} />
 
           <AdsClientPanel clientId={c.id} />
+          {/* Chantier A : coût d'acquisition, ou « non calculable ». */}
+          <AcquisitionCard clientId={c.id} />
 
           <Card
             title="Soumissions"

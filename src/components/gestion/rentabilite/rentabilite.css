@@ -1,0 +1,92 @@
+/* ==================================================================
+   Chantier A — Rentabilité réelle : cellules du tableau, saisie des
+   dépenses, carte « Coût d'acquisition » de la fiche client.
+   ================================================================== */
+
+.rt-canal {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.rt-num {
+  font-variant-numeric: tabular-nums;
+  font-weight: 680;
+}
+.rt-dim {
+  color: var(--g-faint);
+  font-size: 12.5px;
+}
+.rt-insuf {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 9px;
+  border-radius: 99px;
+  border: 1px dashed var(--g-line-2);
+  color: var(--g-muted);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: help;
+}
+
+.rt-form {
+  display: grid;
+  gap: 14px;
+}
+@media (min-width: 640px) {
+  .rt-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rt-form__foot {
+    grid-column: 1 / -1;
+  }
+}
+.rt-form__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+.rt-cac {
+  display: grid;
+  gap: 8px;
+}
+.rt-cac__value {
+  margin: 0;
+  font-family: var(--g-font-display);
+  font-size: 34px;
+  font-weight: 660;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  animation: rt-rise 0.5s var(--g-ease) both;
+}
+.rt-cac__value--none {
+  font-size: 22px;
+  color: var(--g-muted);
+}
+.rt-cac__how {
+  margin: 0;
+  color: var(--g-muted);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+.rt-cac__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+@keyframes rt-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rt-cac__value {
+    animation: none;
+  }
+}
