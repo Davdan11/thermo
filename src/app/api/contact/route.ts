@@ -11,6 +11,7 @@ import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { journalLead } from "@/lib/crm/lead-journal";
 import { attributionLines } from "@/lib/attribution/core";
 import { attributionWithAds } from "@/lib/ads/server-attribution"; // pilote publicitaire : attribution + consentement et clic
+import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : réponse en 60 secondes
 
 const schema = z.object({
   firstName: z.string().trim().min(1, "Le prénom est requis.").max(80),
@@ -36,6 +37,8 @@ export async function POST(req: Request) {
   const attribution = attributionWithAds(body);
   // Filet de sécurité, comme les autres demandes : le message existe sur le serveur même si le courriel tombe.
   const { entry } = await journalLead("contact", { firstName: d.firstName, lastName: d.lastName || undefined, email: d.email, phone: d.phone || undefined, subject: d.subject || undefined, message: d.message }, attribution);
+  // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
+  speedToLeadAfter({ kind: "contact", journalId: entry.id, phone: d.phone || null, firstName: d.firstName, lastName: d.lastName || "" });
   const sent = await sendInternalMessage({
     kind: "contact",
     subject: `Contact : ${d.subject || "question"} — ${d.firstName} ${d.lastName ?? ""}`.trim(),

@@ -6,6 +6,7 @@
 import { capturePhoneLead } from "@/lib/crm/pipedrive";
 import { journalLead } from "@/lib/crm/lead-journal";
 import { twilioForbidden, verifyTwilioRequest } from "@/lib/security/twilio";
+import { recordingAfter } from "@/lib/telephonie/hooks"; // Chantier T : transcription et conservation
 
 export async function POST(req: Request) {
   const check = await verifyTwilioRequest(req);
@@ -15,6 +16,10 @@ export async function POST(req: Request) {
   const recordingUrl = p.get("RecordingUrl") ?? "";
   const duration = p.get("RecordingDuration") ?? "0";
   const caller = p.get("From") ?? "";
+
+  // Chantier T : transcription en français et résumé (Gemini), puis suppression de l'audio selon la conservation (Loi 25).
+  // Le rappel d'enregistrement de <Dial> ne donne pas « From » : l'appelant est retrouvé par le CallSid.
+  if ((p.get("RecordingStatus") ?? "completed") === "completed") recordingAfter({ recordingSid: p.get("RecordingSid") ?? "", callSid: p.get("CallSid"), source: "appel-entrant", phone: caller && caller !== "anonymous" ? caller : null, durationSec: Number(duration) });
 
   if (!recordingUrl || !caller || caller === "anonymous") return new Response("OK");
 

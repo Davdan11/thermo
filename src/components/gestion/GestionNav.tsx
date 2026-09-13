@@ -12,7 +12,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Banknote, Boxes, CalendarClock, Repeat, MapPinned, Megaphone, Target, UserPlus, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
+import { Banknote, Boxes, CalendarClock, PhoneCall, Send, Repeat, MapPinned, Megaphone, Target, UserPlus, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
 import { openSearch } from "./crm/CommandSearch";
 import { openQuickActions } from "./crm/QuickActions";
 import { Sheet } from "./kit/Sheet";
@@ -37,6 +37,7 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
       { href: "/gestion/pipeline", label: "Pipeline", icon: Columns3, match: starts("/gestion/pipeline") },
       { href: "/gestion/clients", label: "Clients", icon: Users, match: starts("/gestion/clients") },
       { href: "/gestion/textos", label: "Textos", icon: MessageSquare, match: starts("/gestion/textos"), badge: "textos" },
+      { href: "/gestion/telephonie", label: "Téléphonie", icon: PhoneCall, match: (p) => p.startsWith("/gestion/telephonie") && !p.startsWith("/gestion/telephonie/campagnes") },
       { href: "/gestion/automatisations", label: "Automatisations", icon: Workflow, match: starts("/gestion/automatisations") },
     ],
   },
@@ -47,6 +48,7 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
       { href: "/gestion/jobs", label: "Jobs", icon: Wrench, match: starts("/gestion/jobs") },
       { href: "/gestion/agenda", label: "Agenda", icon: CalendarDays, match: starts("/gestion/agenda") },
       { href: "/gestion/paiements", label: "Paiements", icon: Banknote, match: starts("/gestion/paiements") },
+      { href: "/gestion/telephonie/campagnes", label: "Campagnes", icon: Send, match: starts("/gestion/telephonie/campagnes") },
       { href: "/gestion/entretien", label: "Plans d’entretien", icon: Repeat, match: starts("/gestion/entretien") },
       { href: "/gestion/creneaux", label: "Créneaux", icon: CalendarClock, match: starts("/gestion/creneaux") },
       { href: "/gestion/sav", label: "Service après-vente", icon: LifeBuoy, match: starts("/gestion/sav") },

@@ -23,6 +23,7 @@ import { attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
 // Pilote publicitaire : consentement et identifiants de clic joints à la demande ; « Lead » Meta (inerte sans clés).
 import { attributionWithAds } from "@/lib/ads/server-attribution";
 import { sendMetaLead } from "@/lib/ads/meta-lead";
+import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : réponse en 60 secondes
 import { leadSchema, CONSENT_VERSION } from "@/lib/validation/lead";
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests, clientIp } from "@/lib/security/rate-limit";
@@ -65,6 +66,8 @@ export async function POST(req: NextRequest) {
   const { entry, written } = await journalLead("soumission", { ...journalable, territory, consentAt, consentVersion: CONSENT_VERSION, ipHash }, attribution);
   // Meta : seulement en production, avec clés et consentement ; même event_id que le pixel. Jamais bloquant.
   void sendMetaLead(entry, { userAgent: req.headers.get("user-agent") }).catch((e) => console.error("[/api/leads] Meta :", e));
+  // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
+  speedToLeadAfter({ kind: "soumission", journalId: entry.id, phone: lead.phone, firstName: lead.firstName, lastName: lead.lastName, city: lead.municipality });
 
   // 3. Pipedrive, non bloquant.
   const row = (label: string, value: unknown) => `<li><b>${label} :</b> ${escapeHtml(value ?? "Non spécifié")}</li>`;

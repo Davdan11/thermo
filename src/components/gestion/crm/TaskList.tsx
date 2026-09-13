@@ -3,8 +3,8 @@
 /* ==================================================================
    Liste de tâches (accueil, À faire, fiche client) : une carte par
    tâche, les plus urgentes d'abord, actions d'un seul geste :
-     Appeler   le numéro est demandé au serveur au moment du clic
-               (jamais envoyé avec la page)
+     Appeler   Chantier T : appel masqué par le numéro du site, statut
+               en direct (le numéro reste sur le serveur)
      Texto     la conversation du client
      Relancer  la soumission (bouton « Renvoyer le lien »)
      Reporter  1 h, ce soir 18 h, demain 9 h, lundi 9 h, date
@@ -15,9 +15,10 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { useOptimistic, useState, useTransition } from "react";
 import { ArrowRight, Check, Clock, FileText, MessageSquare, Phone, Wrench } from "lucide-react";
-import { completeTaskAction, dialAction, snoozeTaskAction } from "@/app/gestion/(prive)/crm-actions";
+import { completeTaskAction, snoozeTaskAction } from "@/app/gestion/(prive)/crm-actions";
 import type { TaskDTO } from "@/lib/gestion/crm/dashboard";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { CallDockPortal, useMaskedCall } from "@/components/gestion/telephonie/CallButton"; // Chantier T : appel masqué
 import { EASE } from "../charts/palette";
 
 const SNOOZES = [
@@ -127,14 +128,17 @@ export function TaskList({ tasks, empty, showWho = true }: { tasks: TaskDTO[]; e
       const r = await fn();
       if (r && !r.ok) setError(r.error ?? "Action impossible.");
     });
-  const call = (clientId: string) =>
-    start(async () => {
-      const r = await dialAction(clientId);
-      if (r.ok) window.location.href = r.href;
-      else setError(r.error);
-    });
+  // Chantier T : « Appeler » lance un appel masqué (le client voit le numéro du site), au lieu de tel:.
+  const masked = useMaskedCall();
+  const call = (clientId: string) => void masked.call({ kind: "client", id: clientId });
 
-  if (!visible.length) return <>{empty ?? null}</>;
+  if (!visible.length)
+    return (
+      <>
+        {empty ?? null}
+        <CallDockPortal state={masked} />
+      </>
+    );
   return (
     <>
       {error ? (
@@ -164,6 +168,7 @@ export function TaskList({ tasks, empty, showWho = true }: { tasks: TaskDTO[]; e
           ))}
         </AnimatePresence>
       </ul>
+      <CallDockPortal state={masked} />
     </>
   );
 }

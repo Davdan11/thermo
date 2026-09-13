@@ -24,6 +24,7 @@ import { calendarEnabled, createCalendarEvent, organizerFor } from "@/lib/rdv/go
 import { sendClientBookingEmail, sendInternalMessage } from "@/lib/crm/email";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
 import { attributionWithAds } from "@/lib/ads/server-attribution"; // pilote publicitaire : attribution + consentement et clic
+import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : réponse en 60 secondes
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { BRAND, SITE_URL } from "@/lib/crm/templates/layout";
 
@@ -142,6 +143,8 @@ export async function POST(req: NextRequest) {
 
   // 3. Journal local.
   const { entry } = await journalLead("rendez-vous", { ...booking }, attributionWithAds(json));
+  // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
+  speedToLeadAfter({ kind: "rendez-vous", journalId: entry.id, phone: booking.phone, firstName: booking.firstName, lastName: booking.lastName, city: booking.city || area.label });
 
   // 4. Agenda Google (+ Meet en ligne).
   let agenda: { ok: boolean; error?: string } = { ok: false, error: "non-configure" };

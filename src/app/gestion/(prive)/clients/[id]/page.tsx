@@ -30,6 +30,9 @@ import { QuoteStatus } from "@/components/gestion/soumissions/ui";
 import { ApresVentePanel } from "@/components/gestion/argent/ApresVentePanel";
 import { ClientPhotoDossier } from "@/components/partenaires/admin/ClientPhotoDossier"; // volet A
 import { AdsClientPanel } from "@/components/gestion/publicite/AdsClientPanel"; // pilote publicitaire : consentement, clic, ventes renvoyées
+// Chantier T : appel masqué (numéro du site) et carte « Appels et textos ».
+import { MaskedCallButton } from "@/components/gestion/telephonie/CallButton";
+import { ClientTelephonieCard } from "@/components/gestion/telephonie/ClientTelephonieCard";
 
 export const metadata: Metadata = { title: "Client" };
 
@@ -78,9 +81,10 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
         </div>
         <div className="cr-contact">
           {phone ? (
-            <a href={`tel:${phone.e164}`} className="is-primary">
+            // Chantier T : appel masqué au lieu de tel: (qui montrait le cellulaire du propriétaire au client).
+            <MaskedCallButton target={{ kind: "client", id: c.id }} className="is-primary">
               <Phone size={19} aria-hidden /> Appeler
-            </a>
+            </MaskedCallButton>
           ) : (
             <span aria-disabled="true" className="cr-contact__off">
               <Phone size={19} aria-hidden /> Appeler
@@ -244,6 +248,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
           </Card>
 
           <SeasonConsentCard clientId={c.id} />
+          {/* Chantier T : appels masqués, transcriptions et résumés, consentement aux textos (LCAP). */}
+          <ClientTelephonieCard clientId={c.id} />
           {/* Volet B : sondage, statut LogisVert, facture de commission et référence, par job. */}
           <ApresVentePanel jobIds={c.jobs.map((j) => j.id)} />
           {/* Volet A : dossier photo des chantiers du client (retrouvable « s'il y a de quoi »). */}
@@ -254,7 +260,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
               {c.phones.map((p) => (
                 <li key={p.e164}>
                   <Phone size={16} aria-hidden />
-                  <a href={`tel:${p.e164}`}>{p.display}</a>
+                  {/* Chantier T : plus de lien tel: ici (il afficherait le cellulaire du propriétaire) ; « Appeler » passe par le numéro du site. */}
+                  <span>{p.display}</span>
                 </li>
               ))}
               {c.emails.map((e) => (

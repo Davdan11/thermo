@@ -19,6 +19,7 @@ import { SITE_URL } from "@/lib/crm/templates/layout";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
 import { attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
 import { attributionWithAds } from "@/lib/ads/server-attribution"; // pilote publicitaire : attribution + consentement et clic
+import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : réponse en 60 secondes
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { decodeShareCode, shareUrlFor } from "@/lib/thermomatch/share-code";
@@ -101,6 +102,9 @@ export async function POST(req: NextRequest) {
 
   const attribution = attributionWithAds(json);
   const { entry } = await journalLead("thermomatch", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode, choices: labels, code: d.code, relances: relancesConsent ?? false }, attribution);
+
+  // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
+  speedToLeadAfter({ kind: "thermomatch", journalId: entry.id, phone: d.phone, firstName: d.firstName });
 
   const e = escapeHtml;
   const rows: Array<[string, string]> = [

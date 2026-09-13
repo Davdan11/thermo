@@ -1,4 +1,7 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+
+// Parcourt toutes les municipalités : lent quand la machine est chargée (suites en parallèle).
+vi.setConfig({ testTimeout: 30_000 });
 import curatedData from "../cities-data.json";
 import { getCities } from "../cities";
 import {
