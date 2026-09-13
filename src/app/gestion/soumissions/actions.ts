@@ -12,6 +12,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
+import { audit } from "@/lib/gestion/securite/audit"; // Chantier S : journal d’audit
 import { CLIENT_ID_RE } from "@/lib/gestion/crm/types";
 import { publicBaseUrl } from "@/lib/gestion/request";
 import { machineBase, pairingsFor } from "@/lib/soumissions/catalog";
@@ -68,6 +69,7 @@ export async function sendQuoteAction(id: string, fd: FormData): Promise<void> {
   const r = await sendQuoteService(id, session.email, await publicBaseUrl(), { sms: fd.get("sms") === "oui" });
   revalidatePath(ROOT, "layout");
   if (!r.ok) redirect(`${ROOT}/${id}?envoi=bloque&msg=${encodeURIComponent(r.error)}`);
+  await audit("soumission.envoyee", { soumission: id }, { qui: session.email });
   redirect(`${ROOT}/${id}?envoi=ok&courriel=${r.email}&texto=${r.sms ?? "non"}&pd=${r.pipedrive.ok ? "ok" : "erreur"}`);
 }
 
