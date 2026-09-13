@@ -32,6 +32,7 @@ import { localYmd } from "../crm/time";
 import { blocksOffers, invoiceState } from "../commissions/calc";
 import { invoiceReminderEmail, invoiceReminderSms } from "../commissions/emails";
 import { acceptedQuoteForJob, installedEquipment, jobCompletion, type AcceptedQuote } from "../commissions/link";
+import { getCompletion } from "../terrain/completion";
 import { invoiceLink, issueInvoiceForJob, recordInvoiceSend } from "../commissions/service";
 import { readCommissions } from "../commissions/store";
 import { stripeConfigured } from "../commissions/stripe";
@@ -295,7 +296,7 @@ function planJob(ctx: Ctx, job: Job): PlannedAction[] {
           return { result: structuredClone(d), changed: true };
         });
         const m = aq.version.content.machine!;
-        const eq = installedEquipment(job);
+        const eq = installedEquipment(job, (await getCompletion(job.id))?.serials); // volet A : numéros de la fin de chantier
         const c = clientCommon(ctx, dossier.token);
         const msg = logisvertDossier({
           ...c,
@@ -355,7 +356,7 @@ function planJob(ctx: Ctx, job: Job): PlannedAction[] {
       run: async () => {
         const dossier = await ensureDossier(job.id, ctx.now);
         const m = aq.version.content.machine!;
-        const eq = installedEquipment(job);
+        const eq = installedEquipment(job, (await getCompletion(job.id))?.serials); // volet A : numéros de la fin de chantier
         const c = clientCommon(ctx, dossier.token);
         const msg = warrantyReminder({ ...c, firstName, brand: m.brand, model: [m.name, m.outdoorModel].filter(Boolean).join(" · "), outdoorSerial: eq.outdoorSerial, indoorSerials: eq.indoorSerials, installedOn: localYmd(completedAt) });
         return result(label, await sendClient(ctx, job, "garantie", msg, c.links), ref);

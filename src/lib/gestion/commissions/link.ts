@@ -32,7 +32,11 @@ export function jobCompletion(job: Job): { completedAt: string; source: "complet
 }
 
 /** Numéros de série saisis à la fin du chantier (volet A). Formes acceptées, à ajuster à la fusion. */
-export function installedEquipment(job: Job): { outdoorSerial: string | null; indoorSerials: string[] } {
+export function installedEquipment(job: Job, field?: { outdoor: string[]; indoor: string[] } | null): { outdoorSerial: string | null; indoorSerials: string[] } {
+  // Fusion du volet A : numéros saisis à la fermeture du chantier (terrain.json, via getCompletion) en priorité.
+  const fo = (field?.outdoor ?? []).map((s) => s.trim()).filter(Boolean);
+  const fi = (field?.indoor ?? []).map((s) => s.trim()).filter(Boolean);
+  if (fo.length || fi.length) return { outdoorSerial: fo.length ? fo.join(", ").slice(0, 120) : null, indoorSerials: fi.map((s) => s.slice(0, 60)) };
   const j = job as Job & Record<string, unknown>;
   const pick = (v: unknown): string | null => (typeof v === "string" && v.trim() ? v.trim().slice(0, 60) : null);
   const bags = [j.completion, j.closeout, j.fieldwork, j.terrain, j].filter((x): x is Record<string, unknown> => Boolean(x) && typeof x === "object");
