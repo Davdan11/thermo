@@ -113,6 +113,8 @@ const placement = z.object({
     notes: S(1000),
   }),
   removal: z.object({ remove: z.boolean(), description: S(600) }),
+  // Chantier D : couleur du cache-ligne (absente des anciens brouillons).
+  coverColor: S(80).optional(),
 });
 
 const schedule = z.object({
@@ -237,9 +239,21 @@ export const settingsInputSchema = z.object({
     deposit: z.object({ kind: z.enum(["pourcentage", "montant", "aucun"]), value: z.number().min(0).max(100_000_000) }).refine((d) => d.kind !== "pourcentage" || d.value <= 100, "Acompte : 100 % au plus."),
     lengthUnit: z.enum(["pi", "m"]),
     includedLineLength: nullableNum(1000),
-    site: z.object({ access: S(1000), presence: S(300) }),
+    // Chantier D : contraintes des occupants par défaut (facultatif, anciens formulaires sans ce champ).
+    site: z.object({ access: S(1000), presence: S(300), constraints: S(1000).optional() }),
     schedule: z.object({ duration: S(120), arrival: S(120), windowText: S(200) }),
   }),
+  // Chantier D : « Inclusions standard » (absentes d'un ancien formulaire : valeurs gardées).
+  standard: z
+    .object({
+      enabled: z.boolean(),
+      lineIncludedFt: z.number().min(0).max(1000).nullable(),
+      lineCover: z.boolean(),
+      mounting: z.boolean(),
+      gravityDrain: z.boolean(),
+      electricalToPanel: z.boolean(),
+    })
+    .optional(),
   // Listes des choix en un clic : nettoyées (doublons, vides, longueur, nombres) par normalizeChoices.
   choices: z.record(z.string().max(40), z.array(z.string().max(200)).max(60)).transform((r) => normalizeChoices(r)),
   templates: z.object({

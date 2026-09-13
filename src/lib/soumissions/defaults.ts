@@ -12,6 +12,8 @@
 import { normalizeChoices } from "./choices";
 import { LAWYER_PLACEHOLDER } from "./config";
 import { addDays } from "./dates";
+// Chantier D : installation standard (réglage « Inclusions standard »).
+import { DEFAULT_STANDARD, normalizeStandard } from "./standard";
 import type {
   CatalogItem,
   ClientInfo,
@@ -94,6 +96,9 @@ export const SEED_PREP = [
   "Donner accès au panneau électrique",
 ];
 
+/** Chantier D : « Qui doit être présent » par défaut (réglable ; jamais bloquant). */
+export const DEFAULT_PRESENCE = "Un adulte de 18 ans ou plus doit être présent pendant les travaux.";
+
 /** Extras demandés par le propriétaire : noms seulement, prix à 0 $ (à compléter). */
 export function seedExtras(): CatalogItem[] {
   const x = (id: string, name: string, unit: CatalogItem["unit"], role: CatalogItem["role"], optional = false): CatalogItem => ({ id, kind: "extra", name, description: "", unit, unitPriceCents: 0, defaultQuantity: 1, optional, role });
@@ -121,6 +126,8 @@ export function defaultSettings(): Settings {
       site: { access: "", presence: "" },
       schedule: { duration: "", arrival: "", windowText: "" },
     },
+    // Chantier D : installation standard (50 pi de ligne, cache-ligne, base ou support, drain par gravité, électricité).
+    standard: { ...DEFAULT_STANDARD },
     choices: normalizeChoices(null),
     templates: { inclusions: [...SEED_INCLUSIONS], exclusions: [...SEED_EXCLUSIONS], assumptions: [...SEED_ASSUMPTIONS], prep: [...SEED_PREP] },
     packages: [],
@@ -155,6 +162,8 @@ export function normalizeSettings(raw: Partial<Settings> | null | undefined): Se
     labour: Array.isArray(raw.labour) ? raw.labour : d.labour,
     discounts: Array.isArray(raw.discounts) ? raw.discounts : d.discounts,
     pipedriveStages: { ...d.pipedriveStages, ...(raw.pipedriveStages ?? {}) },
+    // Chantier D : absent des anciens fichiers → installation standard de départ.
+    standard: normalizeStandard(raw.standard),
     updatedAt: raw.updatedAt ?? null,
     updatedBy: raw.updatedBy ?? null,
   };
@@ -171,7 +180,8 @@ export function emptySite(defaults?: Settings["defaults"]["site"]): SiteInfo {
 export function newIndoor(n: number, included: number | null = null): IndoorPlacement {
   return {
     id: rid("u"),
-    label: `Unité ${n}`,
+    // Chantier D : nom clair (« Tête 1 », puis « Tête 1 · Salon » quand la pièce est choisie ; voir plan.ts).
+    label: `Tête ${n}`,
     type: "",
     model: "",
     capacityBtu: null,

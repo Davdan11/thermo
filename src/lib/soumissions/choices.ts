@@ -53,6 +53,8 @@ export const CHOICE_KEYS = [
   "disconnect",
   "panelDistance",
   "removal",
+  // Chantier D : couleur du cache-ligne (inclus dans l'installation standard).
+  "coverColor",
 ] as const;
 
 export type ChoiceKey = (typeof CHOICE_KEYS)[number];
@@ -90,6 +92,8 @@ export const CHOICE_META: ChoiceMeta[] = [
   { key: "disconnect", label: "Sectionneur", group: "Électricité" },
   { key: "panelDistance", label: "Distance panneau → unité extérieure", group: "Électricité", numeric: true },
   { key: "removal", label: "Retrait de l’ancien système", group: "Ancien système" },
+  // Chantier D.
+  { key: "coverColor", label: "Couleur du cache-ligne", group: "Ligne de réfrigérant" },
 ];
 
 /** Valeurs de départ : de simples choix, dans le vocabulaire des installateurs au Québec. Le propriétaire les modifie. */
@@ -117,6 +121,8 @@ export const DEFAULT_CHOICES: ChoiceLists = {
   disconnect: ["Sectionneur fourni et installé", "Sectionneur existant", "Non requis", "À confirmer"],
   panelDistance: ["10", "25", "50", "75"],
   removal: ["Climatiseur de fenêtre", "Climatiseur mural", "Ancienne thermopompe murale", "Thermopompe centrale existante"],
+  // Chantier D : teintes du cache-ligne demandées par le propriétaire (brique comprise), modifiables dans les réglages.
+  coverColor: ["Blanc", "Ivoire", "Beige", "Brun", "Brique", "Noir", "Gris"],
 };
 
 export const CHOICE_LIMITS = { items: 30, length: 80 } as const;
