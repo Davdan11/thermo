@@ -11,7 +11,7 @@
 
 .ar-kpis {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 12px;
   margin: 16px 0 26px;
 }
@@ -130,11 +130,18 @@
 .ar-engine .cr-msg {
   color: rgba(244, 239, 231, 0.85);
 }
+/* Flex qui passe à la ligne : la largeur utile dépend de la barre latérale, pas de l’écran. */
 @media (min-width: 900px) {
   .ar-engine {
-    grid-template-columns: minmax(0, 1.4fr) auto auto;
-    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px 28px;
     padding: 26px 30px;
+  }
+  .ar-engine__status {
+    flex: 1 1 320px;
+    min-width: 0;
   }
 }
 
@@ -429,10 +436,20 @@
   min-width: 220px;
   max-width: 100%;
 }
+/* Même principe : les colonnes passent à la ligne au lieu de s’écraser. */
 @media (min-width: 900px) {
   .ar-row {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 10px 18px;
+  }
+  .ar-row > * {
+    flex: 1 1 220px;
+    min-width: 0;
+  }
+  .ar-row > .ar-row__actions {
+    flex: 0 1 auto;
   }
 }
 
