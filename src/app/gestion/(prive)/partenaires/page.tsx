@@ -9,6 +9,7 @@ import { FileSignature, HardHat, Images, Settings2, ShieldAlert, ShieldCheck } f
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { publishedVersion } from "@/lib/gestion/partenaires/agreement";
 import { readNetwork, summarizeAll } from "@/lib/gestion/partenaires/network";
+import { settleTerminations } from "@/lib/gestion/partenaires/service";
 import { sendAgreementToAllAction } from "../partenaires-actions";
 import { Chip } from "@/components/gestion/kit/Chip";
 import { DataTable } from "@/components/gestion/kit/DataTable";
@@ -23,6 +24,8 @@ export const metadata: Metadata = { title: "Partenaires" };
 
 export default async function PartenairesPage() {
   await requireAdmin();
+  // Conformité C3 : préavis de fin arrivés à terme inscrits aux fiches avant l'affichage.
+  await settleTerminations();
   const snap = await readNetwork();
   const all = await summarizeAll(snap);
   const version = publishedVersion(snap.partners);

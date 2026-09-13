@@ -14,7 +14,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CalendarClock, Camera, Check, CheckCircle2, CloudOff, Flag, Loader2, Lock, MapPin, Navigation, Phone, Plus, RefreshCw, ScanLine, Timer, Trash2, Wrench, X } from "lucide-react";
 import { compressImage } from "@/components/gestion/soumissions/compress";
 import { missingForClose, normalizeSerial, SERIAL_RE, type FieldOp } from "@/lib/gestion/terrain/rules";
-import { CHECKLIST, PHOTO_STEPS, type FieldRecord, type PhotoStep } from "@/lib/gestion/terrain/types";
+// Conformité C3 : la liste de contrôle vient du serveur (annexe C de l'entente en vigueur, ou l'ancienne liste).
+import { PHOTO_STEPS, type FieldRecord, type PhotoStep } from "@/lib/gestion/terrain/types";
 import type { FieldViewDTO } from "@/lib/gestion/terrain/service";
 import { SignaturePad } from "./SignaturePad";
 import * as q from "./offline-queue";
@@ -29,6 +30,8 @@ const tf = new Intl.DateTimeFormat("fr-CA", { hour: "numeric", minute: "2-digit"
 const df = new Intl.DateTimeFormat("fr-CA", { weekday: "long", day: "numeric", month: "long", timeZone: TZ });
 const clock = (iso: string) => tf.format(new Date(iso));
 const dayOf = (ymd: string) => df.format(new Date(`${ymd}T12:00:00Z`));
+// Conformité C3 : échéances de réponse d'un appel de service (heure de Montréal).
+const when = (iso: string) => new Intl.DateTimeFormat("fr-CA", { weekday: "short", day: "numeric", month: "short", hour: "numeric", minute: "2-digit", timeZone: TZ }).format(new Date(iso));
 
 /** Vue affichée = dernière vue du serveur + opérations encore dans la file. */
 function applyLocal(v: FieldViewDTO, ops: FieldOp[]): FieldViewDTO {
@@ -270,10 +273,11 @@ export function FieldApp({ token, initial }: { token: string; initial: FieldView
         serials: eff.serials,
         checklist: Object.fromEntries(Object.entries(eff.checklist).map(([k, v]) => [k, { value: v, at: "" }])) as FieldRecord["checklist"],
         clientSignature: eff.signature ? ({} as FieldRecord["clientSignature"]) : undefined,
-      }),
+      }, eff.checklistSpec),
     [eff, pending],
   );
-  const total = PHOTO_STEPS.length + 2 + CHECKLIST.length + 1;
+  const checklistItems = eff.checklistSpec.items;
+  const total = PHOTO_STEPS.length + 2 + checklistItems.length + 1;
   const queued = ops.length + pending.length;
 
   /* ---------------- Trajet ---------------- */
@@ -571,9 +575,9 @@ export function FieldApp({ token, initial }: { token: string; initial: FieldView
               </button>
             </Section>
 
-            <Section n="04" title="Liste de contrôle" done={CHECKLIST.every((c) => eff.checklist[c.id] === "fait" || (c.naAllowed && eff.checklist[c.id] === "sans-objet"))}>
+            <Section n="04" title="Liste de contrôle" sub={eff.checklistSpec.kind === "annexe-c" ? "Les points de l’annexe C de l’entente, dans l’ordre du chantier." : undefined} done={checklistItems.every((c) => eff.checklist[c.id] === "fait" || (c.naAllowed && eff.checklist[c.id] === "sans-objet"))}>
               <ul className="ft-checks">
-                {CHECKLIST.map((c) => {
+                {checklistItems.map((c) => {
                   const v = eff.checklist[c.id];
                   const set = (value: "fait" | "sans-objet") => void enqueue({ type: "checklist", item: c.id, value: v === value ? null : value });
                   return (
@@ -699,7 +703,9 @@ export function FieldApp({ token, initial }: { token: string; initial: FieldView
                 <div style={{ minWidth: 0 }}>
                   <h2 className="ft-card__title">Appel de service n° {t.number}</h2>
                   <p className="ft-card__sub">
-                    {t.statusLabel} · prise en charge attendue avant le {dayOf(t.dueAt.slice(0, 10))} à {clock(t.dueAt)}
+                    {t.ackDueAt && t.visitDueAt
+                      ? `${t.statusLabel}${t.priority === "urgent" ? " · URGENCE" : ""} · réponse avant ${when(t.ackDueAt)} · ${t.priority === "urgent" ? "sur place" : "visite"} avant ${when(t.visitDueAt)}`
+                      : `${t.statusLabel} · prise en charge attendue avant le ${dayOf(t.dueAt.slice(0, 10))} à ${clock(t.dueAt)}`}
                   </p>
                 </div>
               </header>
@@ -728,6 +734,16 @@ export function FieldApp({ token, initial }: { token: string; initial: FieldView
                 </p>
               ) : (
                 <div className="ft-stack">
+                  {/* Conformité C3 : accusé de réception de l'appel, dans le délai de service de l'entente. */}
+                  {t.acknowledgedAt ? (
+                    <p className="ft-state ft-state--ok">
+                      <Check size={16} aria-hidden /> Accusé de réception envoyé ({when(t.acknowledgedAt)})
+                    </p>
+                  ) : (
+                    <button type="button" className="pp-btn pp-btn--ink pp-btn--block" disabled={busy === t.id} onClick={() => void ticketAction(t.id, { type: "accuse" })}>
+                      <Check size={17} aria-hidden /> J’ai pris connaissance de l’appel
+                    </button>
+                  )}
                   <div className="pp-field">
                     <label className="pp-label" htmlFor={`v-${t.id}`}>
                       <CalendarClock size={14} aria-hidden style={{ verticalAlign: -2 }} /> Visite prévue{t.visitAt ? ` (actuellement ${dayOf(t.visitAt.slice(0, 10))} à ${clock(t.visitAt)})` : ""}

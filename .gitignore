@@ -97,3 +97,15 @@ public/images/products/_official-sources/**
 /data/gestion-journal/
 /data/gestion-env-essai/
 /data/sauvegardes-etat.json
+
+# Conformité C3 : trousse contractuelle (texte CONFIDENTIEL), identité de la plateforme, partenaires (entente,
+# signatures, conformité, fichiers privés) et journal des accès aux dossiers clients : jamais dans le dépôt public
+/data/trousse.json
+/data/trousse.json.lock
+/data/plateforme.json
+/data/plateforme.json.lock
+/data/partenaires*.json
+/data/partenaires*.json.lock
+/data/partenaires*.tmp
+/data/partenaires-fichiers/
+/data/partenaires-acces/

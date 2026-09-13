@@ -15,6 +15,8 @@ export const dynamic = "force-dynamic";
 const schema = z.discriminatedUnion("type", [
   z.object({ ticketId: z.string().regex(TICKET_ID_RE), type: z.literal("visite"), visitAt: z.string().max(40) }),
   z.object({ ticketId: z.string().regex(TICKET_ID_RE), type: z.literal("resolu"), note: z.string().trim().min(3).max(2000) }),
+  // Conformité C3 : accusé de réception de l'appel de service (délai de l'annexe E).
+  z.object({ ticketId: z.string().regex(TICKET_ID_RE), type: z.literal("accuse") }),
 ]);
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ token: string }> }) {
@@ -25,6 +27,6 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ tok
   const p = schema.safeParse(await req.json().catch(() => null));
   if (!p.success) return json({ ok: false, error: "Demande invalide." }, 400);
   const d = p.data;
-  const r = await installerTicketAction(token, d.ticketId, d.type === "visite" ? { type: "visite", visitAt: d.visitAt } : { type: "resolu", note: d.note }, baseUrlFromHeaders(req.headers));
+  const r = await installerTicketAction(token, d.ticketId, d.type === "visite" ? { type: "visite", visitAt: d.visitAt } : d.type === "resolu" ? { type: "resolu", note: d.note } : { type: "accuse" }, baseUrlFromHeaders(req.headers));
   return json(r, r.ok ? 200 : 400);
 }

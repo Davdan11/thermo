@@ -5,7 +5,8 @@ import { getAdminSession, unauthorizedJson } from "@/lib/gestion/auth/dal";
 import { isSameOrigin } from "@/lib/gestion/origin";
 import { MAX_IMAGE_BYTES } from "@/lib/gestion/partenaires/files";
 import { attachComplianceFile } from "@/lib/gestion/partenaires/service";
-import { INSTALLER_ID_RE } from "@/lib/gestion/partenaires/types";
+import { HALOCARBON_ID_RE, INSTALLER_ID_RE } from "@/lib/gestion/partenaires/types";
+import { audit } from "@/lib/gestion/securite/audit";
 import { baseUrlFromHeaders } from "@/lib/gestion/request";
 
 export const dynamic = "force-dynamic";
@@ -18,14 +19,19 @@ export async function POST(req: NextRequest) {
   const installerId = String(form?.get("installerId") ?? "");
   const kind = String(form?.get("kind") ?? "");
   const file = form?.get("file");
-  if (!INSTALLER_ID_RE.test(installerId) || (kind !== "rbq" && kind !== "assurance")) return new NextResponse("Demande invalide.", { status: 400 });
+  // Conformité C3 : assurance automobile, avenant d'assuré additionnel, attestation environnementale (halocarbures).
+  const halocarbonId = String(form?.get("halocarbonId") ?? "");
+  const KINDS = ["rbq", "assurance", "automobile", "avenant", "halocarbure"] as const;
+  if (!INSTALLER_ID_RE.test(installerId) || !(KINDS as readonly string[]).includes(kind) || (kind === "halocarbure" && !HALOCARBON_ID_RE.test(halocarbonId))) return new NextResponse("Demande invalide.", { status: 400 });
   const url = new URL(`/gestion/partenaires/${installerId}`, baseUrlFromHeaders(req.headers));
   url.hash = "conformite";
   if (!(file instanceof File) || file.size === 0 || file.size > MAX_IMAGE_BYTES) {
     url.searchParams.set("erreur", "Fichier manquant ou trop lourd (12 Mo au plus).");
     return NextResponse.redirect(url, 303);
   }
-  const r = await attachComplianceFile(installerId, kind, Buffer.from(await file.arrayBuffer()), file.name, session.email);
+  const r = await attachComplianceFile(installerId, kind as (typeof KINDS)[number], Buffer.from(await file.arrayBuffer()), file.name, session.email, new Date(), kind === "halocarbure" ? { halocarbonId } : {});
+  // Chantier S : journal d'audit.
+  if (r.ok) await audit("partenaire.conformite", { partenaire: installerId, document: kind, fichier: r.fileId }, { qui: session.email });
   url.searchParams.set(r.ok ? "ok" : "erreur", r.ok ? "Document ajouté." : r.error);
   return NextResponse.redirect(url, 303);
 }

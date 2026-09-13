@@ -34,6 +34,21 @@ export type ChecklistId = (typeof CHECKLIST)[number]["id"];
 export const isChecklistId = (v: unknown): v is ChecklistId => typeof v === "string" && CHECKLIST.some((c) => c.id === v);
 export type ChecklistValue = "fait" | "sans-objet";
 
+/* Conformité C3 : liste de contrôle d'un dossier. Celle de l'annexe C de l'entente en vigueur (points lus dans les
+   données, identifiants c1, c2…), ou l'ancienne (CHECKLIST ci-dessus) pour un chantier commencé avec elle. */
+export interface ChecklistItem {
+  id: string;
+  label: string;
+  naAllowed: boolean;
+}
+
+export interface ChecklistSpec {
+  kind: "annexe-c" | "ancienne";
+  /** « Entente version 3, annexe C » */
+  source?: string;
+  items: ChecklistItem[];
+}
+
 export interface PhotoReview {
   status: "approuvee" | "signalee";
   at: string;
@@ -83,7 +98,10 @@ export interface FieldRecord {
   plannedAt?: string;
   enRoute?: { at: string; etaAt: string | null; sms?: { at: string; status: string } };
   arrivedAt?: string;
-  checklist: Partial<Record<ChecklistId, { value: ChecklistValue; at: string }>>;
+  // Conformité C3 : clés de l'ancienne liste ou de l'annexe C (c1, c2…).
+  checklist: Partial<Record<string, { value: ChecklistValue; at: string }>>;
+  /** Conformité C3 : liste figée au premier geste du chantier (absente : ancienne liste, ou annexe C en vigueur). */
+  checklistSpec?: ChecklistSpec;
   photos: FieldPhoto[];
   serials: { outdoor: string[]; indoor: string[]; updatedAt?: string; readByVision?: boolean };
   clientSignature?: { name: string; at: string; fileId: string; sha256: string; ip: string; userAgent: string };

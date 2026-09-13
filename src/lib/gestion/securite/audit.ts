@@ -54,6 +54,14 @@ export const AUDIT_ACTIONS = {
   "crm.attribution": "Client attribué",
   "crm.reattribution": "Client réattribué",
   "vendeurs.releve": "Relevé de commission payé",
+  // Conformité C3 : entente maître, conformité des partenaires, fin de partenariat, service après-vente.
+  "entente.version": "Entente : version modifiée",
+  "entente.envoi": "Entente envoyée",
+  "entente.signature": "Entente signée",
+  "partenaire.conformite": "Conformité d’un partenaire modifiée",
+  "partenaire.fin": "Fin de partenariat",
+  "partenaire.reglages": "Réglages des partenaires modifiés",
+  "sav.delais": "Service après-vente : priorité ou accusé",
 } as const;
 
 export type AuditAction = keyof typeof AUDIT_ACTIONS;
@@ -65,6 +73,7 @@ export const AUDIT_FAMILIES: Record<string, { label: string; match: (a: string) 
   cles: { label: "Clés", match: (a) => a.startsWith("cle.") },
   ventes: { label: "Ventes et paiements", match: (a) => a.startsWith("soumission.") || a.startsWith("crm.") || a.startsWith("paiement.") || a.startsWith("campagne.") },
   equipe: { label: "Équipe et attributions", match: (a) => a.startsWith("equipe.") || a.startsWith("crm.attribution") || a.startsWith("crm.reattribution") || a.startsWith("vendeurs.") }, // Chantier V
+  partenaires: { label: "Partenaires et entente", match: (a) => a.startsWith("entente.") || a.startsWith("partenaire.") || a.startsWith("sav.") }, // Conformité C3
   export: { label: "Exports", match: (a) => a === "export" },
   echecs: { label: "Échecs seulement", match: (a) => /echec|bloquee/.test(a) },
 };

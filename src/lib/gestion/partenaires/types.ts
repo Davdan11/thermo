@@ -33,6 +33,60 @@ export interface AgreementArticle {
   title: string;
   /** Paragraphes numérotés à l'affichage : article 6, paragraphe 2 → « 6.2 ». */
   paragraphs: string[];
+  /**
+   * Conformité C3 : numéro donné par l'avocat (« 2.24 »). Ses alinéas ne sont pas renumérotés (le texte renvoie à
+   * « l'article 2.24 », au « premier alinéa »). Absent : numérotation automatique 1, 2, 3… comme avant.
+   */
+  number?: string;
+}
+
+/* ---------------- Conformité C3 : entente maître tirée de la trousse ---------------- */
+
+/** Partie visée par un paragraphe « Entre les parties » : ses champs entre crochets sont remplis avec SES valeurs. */
+export type PartyScope = "plateforme" | "partenaire";
+
+export interface AgreementParty {
+  text: string;
+  party: PartyScope | null;
+}
+
+export interface AgreementAnnex {
+  /** « A » */
+  letter: string;
+  title: string;
+  /** Tableau : première ligne = en-têtes ; vide si l'annexe n'en a pas. */
+  table: string[][];
+  /** Liste à cocher : un point par élément. */
+  checklist: string[];
+  /** Paragraphes après le tableau ou la liste. */
+  paragraphs: string[];
+  /** Sous-sections titrées de l'annexe. */
+  sections: Array<{ title: string; paragraphs: string[] }>;
+  /** Gabarit rempli pour chaque projet : ses champs entre crochets restent à consigner et ne bloquent rien. */
+  form?: boolean;
+}
+
+export interface AgreementSignatureBlock {
+  /** Libellés des deux blocs de signature, tels que dans la trousse. */
+  platformLabel: string;
+  partnerLabel: string;
+  /** Autres paragraphes de la section (hors lignes à remplir à la main). */
+  notes: string[];
+}
+
+export interface AgreementSource {
+  kind: "trousse";
+  /** Version de la trousse (« 1.0 ») et empreinte du texte importé. */
+  version: string;
+  sha256: string | null;
+  importedAt: string | null;
+}
+
+/** Titres des sections sans numéro, lus dans la trousse. */
+export interface AgreementHeadings {
+  parties: string;
+  preamble: string;
+  signatures: string;
 }
 
 export const AGREEMENT_STATUSES = ["brouillon", "validee", "publiee", "remplacee"] as const;
@@ -67,6 +121,18 @@ export interface AgreementVersion {
   /** Délai de grâce (jours) accordé à la publication aux partenaires déjà en place. */
   graceDays?: number;
   replacedAt?: string;
+  /* Conformité C3 : entente maître (absents des versions écrites avant : elles restent lisibles telles quelles). */
+  source?: AgreementSource;
+  headings?: AgreementHeadings;
+  /** Mention d'en-tête de la trousse (projet à compléter) : affichée au brouillon, jamais dans le texte signé. */
+  headerNote?: string;
+  parties?: AgreementParty[];
+  annexes?: AgreementAnnex[];
+  signatureBlock?: AgreementSignatureBlock;
+  /** Valeurs des champs propres à l'entente (ni la plateforme ni l'installateur : district judiciaire…). */
+  fields?: Record<string, string>;
+  /** Valeurs de la plateforme figées à la validation (identité légale) : le texte validé ne change plus. */
+  platformFill?: Record<string, string>;
 }
 
 export interface SendRecord {
@@ -94,6 +160,8 @@ export interface SignatureRequest {
   openCount: number;
   signatureId?: string;
   cancelledAt?: string;
+  /** Conformité C3 : valeurs de l'installateur (fiche) figées à l'envoi, insérées dans « Entre les parties ». */
+  partnerFill?: Record<string, string>;
 }
 
 export interface SignatureProof {
@@ -103,6 +171,8 @@ export interface SignatureProof {
   textSha256: string;
   /** SHA-256 de l'image PNG de la signature tracée. */
   imageSha256?: string;
+  /** Conformité C3 : SHA-256 du texte présenté avant la signature (sans le nom du signataire). */
+  presentedSha256?: string;
 }
 
 export interface SignedAgreement {
@@ -127,6 +197,8 @@ export interface SignedAgreement {
   /** Texte exact signé, conservé tel quel. */
   signedText: string;
   copies: { partner: SendStatus; owner: SendStatus[] };
+  /** Conformité C3 : valeurs de l'installateur insérées dans le texte signé (reconstruction et vérification). */
+  partnerFill?: Record<string, string>;
 }
 
 /* ---------------- Conformité ---------------- */
@@ -143,9 +215,63 @@ export interface ComplianceDoc {
   fileName?: string;
   updatedAt?: string;
   updatedBy?: string;
+  /** Conformité C3 : montant de la couverture par sinistre, en dollars (assurances responsabilité et automobile). */
+  amount?: number | null;
+  /** Conformité C3 : sous-catégories RBQ détenues, saisies par le propriétaire (licence RBQ). */
+  subcategories?: string[];
 }
 
-export type ComplianceKind = "rbq" | "assurance";
+// Conformité C3 : « automobile » ajouté (assurance automobile, annexe B).
+export type ComplianceKind = "rbq" | "assurance" | "automobile";
+
+/** Conformité C3 : avenant désignant la plateforme comme assurée additionnelle (annexe B). */
+export interface AdditionalInsured {
+  /** Case « Avenant reçu, la plateforme y est désignée assurée additionnelle ». */
+  confirmed: boolean;
+  /** AAAA-MM-JJ : date de l'avenant. */
+  date: string | null;
+  fileId?: string;
+  fileName?: string;
+  updatedAt?: string;
+  updatedBy?: string;
+}
+
+/** Conformité C3 : attestation de qualification environnementale (halocarbures) d'une personne. */
+export interface HalocarbonCert {
+  id: string;
+  holder: string;
+  number: string;
+  /** AAAA-MM-JJ */
+  issuedOn: string | null;
+  /** AAAA-MM-JJ, si l'attestation en porte une. */
+  expiresOn: string | null;
+  fileId?: string;
+  fileName?: string;
+  updatedAt: string;
+  updatedBy: string;
+}
+
+/** Conformité C3 : fin du partenariat (article de durée, suspension et résiliation de l'entente). */
+export const TERMINATION_MODES = ["sans-motif", "motif-defaut", "motif-immediat"] as const;
+export type TerminationMode = (typeof TERMINATION_MODES)[number];
+
+export interface Termination {
+  mode: TerminationMode;
+  /** Qui a donné l'avis : la plateforme, ou le partenaire (avis reçu et consigné). */
+  initiatedBy: "plateforme" | "partenaire";
+  noticeAt: string;
+  /** AAAA-MM-JJ : avis réputé reçu (jour ouvrable de l'envoi avant 17 h, sinon le suivant). */
+  receivedOn: string;
+  /** AAAA-MM-JJ : date où la fin prend effet (préavis de 30 jours, délai de correction de 10 jours, ou le jour même). */
+  effectiveOn: string;
+  reason: string;
+  by: string;
+  /** Envoi de l'avis au partenaire (courriel), si demandé. */
+  notice?: { email: SendStatus; owner: SendStatus[] };
+  cancelledAt?: string;
+  cancelledBy?: string;
+  cancelReason?: string;
+}
 
 /* ---------------- Niveaux ---------------- */
 
@@ -213,7 +339,16 @@ export interface IdentityLink {
 
 export interface PartnerRecord {
   installerId: string;
-  compliance: { rbq: ComplianceDoc; assurance: ComplianceDoc };
+  // Conformité C3 : assurance automobile (toujours présente après lecture du magasin).
+  compliance: { rbq: ComplianceDoc; assurance: ComplianceDoc; automobile?: ComplianceDoc };
+  /** Conformité C3 : avenant d'assuré additionnel. */
+  additionalInsured?: AdditionalInsured | null;
+  /** Conformité C3 : qualifications environnementales (halocarbures). */
+  halocarbons?: HalocarbonCert[];
+  /** Conformité C3 : forme juridique de l'installateur (entente, « Entre les parties »). */
+  legalForm?: string;
+  /** Conformité C3 : avis de fin en cours ou passé (le partenariat reste actif pendant le préavis). */
+  termination?: Termination | null;
   /** Identité légale (absente des fiches créées avant son ajout). */
   identity?: PartnerIdentity | null;
   identityLink?: IdentityLink | null;
@@ -230,7 +365,8 @@ export interface PartnerRecord {
 export interface StoredFile {
   id: string;
   installerId: string;
-  kind: "signature" | ComplianceKind;
+  // Conformité C3 : avenant d'assuré additionnel et attestation environnementale.
+  kind: "signature" | ComplianceKind | "avenant" | "halocarbure";
   mime: string;
   ext: string;
   bytes: number;
@@ -275,20 +411,58 @@ export interface PartnerSettings {
   /** Points ajoutés au classement des jobs selon le niveau. */
   tierPoints: Record<Tier, number>;
   thresholds: TierThresholds;
+  /** Conformité C3 : exigences d'assurance et de qualification (annexe B, décisions du propriétaire). */
+  requirements: ComplianceRequirements;
+  /** Conformité C3 : délais du service après-vente (annexe E, décisions du propriétaire). */
+  sla: ServiceLevels;
   updatedAt?: string;
   updatedBy?: string;
 }
 
+/** Conformité C3 : minimums réglables ; « require… » : l'absence du document bloque les offres sous l'entente maître. */
+export interface ComplianceRequirements {
+  /** Assurance responsabilité civile, par sinistre ($). */
+  minLiability: number;
+  /** Assurance automobile ($). */
+  minAuto: number;
+  requireEndorsement: boolean;
+  requireAuto: boolean;
+  requireHalocarbon: boolean;
+}
+
+/** Conformité C3 : délais de réponse du partenaire à un appel de service. */
+export interface ServiceLevels {
+  /** Cas normal : accusé de réception (jours ouvrables). */
+  ackBusinessDays: number;
+  /** Cas normal : visite offerte (jours ouvrables). */
+  visitBusinessDays: number;
+  /** Urgence : accusé de réception (heures ouvrables). */
+  urgentAckBusinessHours: number;
+  /** Urgence : intervention sur place (heures). */
+  urgentVisitHours: number;
+}
+
+export const DEFAULT_REQUIREMENTS: ComplianceRequirements = {
+  minLiability: 2_000_000,
+  minAuto: 2_000_000,
+  requireEndorsement: true,
+  requireAuto: true,
+  requireHalocarbon: true,
+};
+
+export const DEFAULT_SERVICE_LEVELS: ServiceLevels = { ackBusinessDays: 1, visitBusinessDays: 3, urgentAckBusinessHours: 2, urgentVisitHours: 24 };
+
+// Conformité C3 : seuils de départ de l'annexe E (photos, ponctualité, retours attribuables à l'installation).
 export const DEFAULT_THRESHOLDS: TierThresholds = {
   orMinInstalls: 10,
-  orMaxLaborPer100: 3,
-  orMinPhotoRate: 0.95,
-  orMinPunctuality: 0.9,
+  orMaxLaborPer100: 2,
+  orMinPhotoRate: 0.98,
+  orMinPunctuality: 0.95,
   orMinAcceptance: 0.5,
   probationMinInstalls: 5,
-  probationLaborPer100: 10,
-  probationPhotoRate: 0.7,
-  probationPunctuality: 0.6,
+  probationLaborPer100: 3,
+  probationPhotoRate: 0.95,
+  probationPunctuality: 0.9,
 };
 
 export const DEFAULT_PARTNER_SETTINGS: PartnerSettings = {
@@ -301,6 +475,8 @@ export const DEFAULT_PARTNER_SETTINGS: PartnerSettings = {
   photoSampleRate: 0.25,
   tierPoints: { or: 6, standard: 0, probation: -10 },
   thresholds: DEFAULT_THRESHOLDS,
+  requirements: DEFAULT_REQUIREMENTS,
+  sla: DEFAULT_SERVICE_LEVELS,
 };
 
 export interface PartenairesData {
@@ -320,4 +496,6 @@ export const REQUEST_ID_RE = /^r_[A-Za-z0-9_-]{8,16}$/;
 export const SIGNATURE_ID_RE = /^s_[A-Za-z0-9_-]{8,16}$/;
 export const FILE_ID_RE = /^d_[A-Za-z0-9_-]{8,16}$/;
 export const INSTALLER_ID_RE = /^i_[A-Za-z0-9_-]{8,16}$/;
-export const CLAUSE_REF_RE = /^\d{1,2}\.\d{1,2}$/;
+// Conformité C3 : « 2.24.2 » (article 2.24 de l'avocat, 2e alinéa) et « C.3 » (annexe C, 3e point) acceptés.
+export const CLAUSE_REF_RE = /^(\d{1,2}\.\d{1,2}(\.\d{1,2})?|[A-Z]\.\d{1,2})$/;
+export const HALOCARBON_ID_RE = /^h_[A-Za-z0-9_-]{8,16}$/;

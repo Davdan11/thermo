@@ -1,0 +1,286 @@
+/* Conformité C3 — texte de l'entente (AgreementText) : page de signature, aperçu et versions dans /gestion.
+   Téléphone d'abord (390 px), tableaux des annexes en cartes sous 560 px, apparition douce (mouvement réduit respecté). */
+
+.ag {
+  --ag-ink: var(--ink, #0c1821);
+  --ag-accent: var(--orange, #e54b17);
+  --ag-muted: #5b6770;
+  --ag-line: rgba(12, 24, 33, 0.12);
+  --ag-soft: rgba(229, 75, 23, 0.07);
+  color: var(--ag-ink);
+  font-size: 15px;
+  line-height: 1.62;
+}
+.ag--admin {
+  --ag-ink: var(--g-ink, #0c1821);
+  --ag-muted: var(--g-muted, #5b6770);
+  --ag-line: var(--g-line, rgba(12, 24, 33, 0.12));
+  font-size: 14px;
+}
+
+.ag-sec,
+.ag-art {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--ag-line);
+  animation: ag-rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.ag-art:last-child,
+.ag-sec:last-child {
+  border-bottom: 0;
+}
+.ag-sec--plain {
+  padding-top: 8px;
+}
+.ag-h {
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ag-accent);
+}
+.ag-party {
+  margin: 0 0 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--ag-soft);
+  border-left: 3px solid var(--ag-accent);
+}
+.ag-party.is-neutral {
+  background: none;
+  border-left-color: transparent;
+  padding: 4px 14px;
+  color: var(--ag-muted);
+  font-style: italic;
+}
+.ag-party.is-partenaire {
+  background: rgba(12, 24, 33, 0.05);
+  border-left-color: var(--ag-ink);
+}
+.ag-pre {
+  margin: 0 0 10px;
+  color: var(--ag-muted);
+  max-width: 68ch;
+}
+
+.ag-art__n {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ag-accent);
+}
+.ag-art h2 {
+  margin: 0 0 12px;
+  font-size: 19px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.ag--admin .ag-art h2 {
+  font-size: 16px;
+}
+.ag-art h3 {
+  margin: 16px 0 6px;
+  font-size: 14px;
+}
+.ag-para {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 6px;
+  margin: 0 0 10px;
+  max-width: 72ch;
+}
+.ag-para b {
+  color: var(--ag-muted);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.ag-para--plain {
+  grid-template-columns: 1fr;
+}
+.ag-field {
+  padding: 0 4px;
+  border-radius: 6px;
+  background: #fff1c2;
+  color: #6b4a00;
+  font-weight: 600;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.ag-tag {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(12, 24, 33, 0.07);
+  color: var(--ag-muted);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-weight: 600;
+}
+.ag-muted {
+  color: var(--ag-muted);
+}
+
+.ag-tablewrap {
+  overflow-x: auto;
+  margin: 6px 0 12px;
+  border: 1px solid var(--ag-line);
+  border-radius: 14px;
+}
+.ag-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+.ag-table th,
+.ag-table td {
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--ag-line);
+}
+.ag-table thead th {
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ag-muted);
+  background: rgba(12, 24, 33, 0.03);
+}
+.ag-table tbody tr:last-child th,
+.ag-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.ag-table tbody th {
+  font-weight: 650;
+}
+
+.ag-checks {
+  margin: 6px 0 12px;
+  padding: 0;
+  list-style: none;
+  counter-reset: ag-c;
+}
+.ag-checks li {
+  position: relative;
+  padding: 10px 0 10px 40px;
+  border-bottom: 1px dashed var(--ag-line);
+  counter-increment: ag-c;
+}
+.ag-checks li::before {
+  content: counter(ag-c);
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  border: 1.5px solid var(--ag-ink);
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.ag-sub {
+  margin-top: 8px;
+}
+
+.ag-sign__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.ag-sign__box {
+  display: grid;
+  gap: 2px;
+  padding: 14px 16px;
+  border: 1px solid var(--ag-line);
+  border-radius: 16px;
+}
+.ag-sign__box small {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ag-accent);
+}
+.ag-sign__box b {
+  font-size: 16px;
+}
+.ag-note {
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  color: var(--ag-muted);
+}
+
+@media (min-width: 640px) {
+  .ag-sign__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Tableaux des annexes en cartes sur téléphone. */
+@media (max-width: 560px) {
+  .ag-para {
+    grid-template-columns: 36px 1fr;
+  }
+  .ag-para--plain {
+    grid-template-columns: 1fr;
+  }
+  .ag-table thead {
+    display: none;
+  }
+  .ag-table,
+  .ag-table tbody,
+  .ag-table tr,
+  .ag-table th,
+  .ag-table td {
+    display: block;
+    width: 100%;
+  }
+  .ag-table tr {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--ag-line);
+  }
+  .ag-table tbody tr:last-child {
+    border-bottom: 0;
+  }
+  .ag-table th,
+  .ag-table td {
+    padding: 2px 0;
+    border: 0;
+  }
+  .ag-table td[data-col]:not([data-col=""])::before {
+    content: attr(data-col) " : ";
+    color: var(--ag-muted);
+    font-size: 12px;
+  }
+}
+
+@keyframes ag-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ag-sec,
+  .ag-art {
+    animation: none;
+  }
+}
+@media print {
+  .ag-sec,
+  .ag-art {
+    animation: none;
+    break-inside: avoid;
+  }
+}

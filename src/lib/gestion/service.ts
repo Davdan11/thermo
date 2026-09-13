@@ -314,6 +314,10 @@ export type OfferView =
       scheduledFor: string | null;
       /** Coordonnées du client : seulement pour l'installateur à qui le job est attribué. */
       client?: JobClient;
+      /** Conformité C3 (annexe D) : offre refusée, expirée, retirée ou plus attribuée : aucun détail du projet n'est montré. */
+      redacted?: boolean;
+      /** Conformité C3 : pour le journal des accès aux dossiers clients (jamais affiché). */
+      access?: { installerId: string; jobId: string; jobNumber: number };
     };
 
 function findByToken(jobs: Job[], token: string): { job: Job; offer: Offer } | null {
@@ -336,19 +340,27 @@ export async function getOfferView(token: string, now = new Date()): Promise<Off
   let state: OfferViewState = offerState(offer, now);
   const assignedToHim = job.assignedInstallerId === offer.installerId && ["attribue", "planifie", "termine"].includes(job.status);
   if (state === "accepte" && !assignedToHim) state = "plus-attribue";
+  // Conformité C3 (annexe D) : les données d'une offre refusée (ou qui n'est plus la sienne) ne restent pas chez le partenaire.
+  const redacted = state !== "en-attente" && state !== "accepte";
   return {
     state,
     withdrawnBecause: offer.withdrawnBecause,
-    summary: buildOfferSummary(job, offer.distanceKm, brandLabel),
-    brandId: job.brand,
+    summary: redacted ? redactedSummary(job.number) : buildOfferSummary(job, offer.distanceKm, brandLabel),
+    brandId: redacted ? null : job.brand,
     contactName: installer?.contactName ?? "",
     company: installer?.company ?? "",
     expiresAt: offer.expiresAt,
     respondedAt: offer.respondedAt,
     reason: offer.reason,
-    scheduledFor: job.scheduledFor,
-    ...(state === "accepte" ? { client: job.client } : {}),
+    scheduledFor: redacted ? null : job.scheduledFor,
+    ...(state === "accepte" ? { client: job.client, access: { installerId: offer.installerId, jobId: job.id, jobNumber: job.number } } : {}),
+    ...(redacted ? { redacted: true } : {}),
   };
+}
+
+/** Conformité C3 : résumé sans aucun détail du projet (numéro du job seulement). */
+function redactedSummary(jobNumber: number): OfferSummary {
+  return { jobNumber, city: "", region: "", distanceKm: null, brand: null, model: null, systemType: null, capacity: null, desiredDate: null, desiredWindow: null, notes: null };
 }
 
 export async function respondToOffer(token: string, decision: "accepter" | "refuser", reason: string, baseUrl: string, now = new Date()): Promise<{ state: OfferViewState | "invalide" }> {

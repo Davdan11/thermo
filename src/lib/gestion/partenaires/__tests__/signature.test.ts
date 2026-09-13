@@ -16,6 +16,9 @@ vi.mock("@/lib/gestion/sms", async (orig) => ({ ...(await orig<typeof import("@/
 
 import { mutateGestion } from "../../store";
 import type { Installer } from "../../types";
+// Conformité C3 : l'envoi exige l'identité complète de la plateforme.
+import { savePlatformIdentity } from "@/lib/plateforme/identite";
+import { PLATFORM } from "./fixtures-c3";
 import { agreementState, canonicalText, sha256Text } from "../agreement";
 import { partnerBlockers } from "../blockers";
 import { createDraft, getSigningView, markOpened, publishVersion, saveDraft, sendAgreement, signAgreement, signedDocumentForToken, validateVersion } from "../service";
@@ -65,6 +68,7 @@ beforeEach(async () => {
     g.installers.push(installer("i_climaaa0001", "Climatisation A", new Date(T0.getTime() + DAY)), installer("i_climbbb0001", "Climatisation B", new Date(T0.getTime() + DAY)));
     return { result: null, changed: true };
   });
+  await savePlatformIdentity(PLATFORM, BY, T0);
 });
 afterEach(async () => {
   process.env = env;

@@ -56,6 +56,10 @@ export default async function NewTicketPage({ searchParams }: { searchParams: Pr
             </label>
             <input id="contactPreference" name="contactPreference" className="g-input" maxLength={200} />
           </div>
+          {/* Conformité C3 : urgence (délais courts de l'annexe E : accusé en heures ouvrables, intervention le jour même). */}
+          <label className="g-check">
+            <input type="checkbox" name="urgent" value="1" /> Urgence : risque pour la sécurité, fuite active, dommages imminents ou perte de chauffage dangereuse
+          </label>
         </ActionForm>
       </Card>
     </div>

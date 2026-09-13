@@ -6,7 +6,9 @@
    Seule la cause « main-d'œuvre » compte contre l'installateur.
    ================================================================== */
 
-import type { ServiceTicket, TicketCause } from "./types";
+import type { ServiceLevels } from "../partenaires/types";
+import { acknowledgedAt, slaDeadlines } from "./sla";
+import { PRIORITY_LABELS, type ServiceTicket, type TicketCause, type TicketPriority } from "./types";
 
 const HOUR = 3_600_000;
 
@@ -30,13 +32,40 @@ export function classify(t: ServiceTicket, cause: TicketCause, note: string, by:
   log(t, by, "cause classée", now, cause);
 }
 
-/** Assignation à l'installateur d'origine (garantie de main-d'œuvre). */
-export function assign(t: ServiceTicket, by: string, now: Date): void {
+/** Assignation à l'installateur d'origine (garantie de main-d'œuvre). Conformité C3 : échéances de réponse fixées ici. */
+export function assign(t: ServiceTicket, by: string, now: Date, sla?: ServiceLevels): void {
   if (t.status === "ferme") throw new TicketError("Ce billet est fermé.");
   if (!t.installerId) throw new TicketError("Aucun installateur d’origine pour ce billet.");
   if (t.status === "nouveau") t.status = "assigne";
   t.assignedAt = now.toISOString();
+  if (sla) {
+    const d = slaDeadlines(t.priority ?? "normal", t.assignedAt, sla);
+    t.ackDueAt = d.ackDueAt;
+    t.visitDueAt = d.visitDueAt;
+  }
   log(t, by, "assigné à l’installateur d’origine", now);
+}
+
+/** Conformité C3 : accusé de réception du partenaire (une seule fois). */
+export function acknowledge(t: ServiceTicket, by: string, now: Date): void {
+  if (t.status === "ferme") throw new TicketError("Ce billet est fermé.");
+  if (t.acknowledgedAt) return;
+  t.acknowledgedAt = now.toISOString();
+  t.acknowledgedBy = by;
+  log(t, by, "accusé de réception", now);
+}
+
+/** Conformité C3 : cas normal ou urgence ; les échéances d'un billet déjà assigné sont recalculées. */
+export function setPriority(t: ServiceTicket, priority: TicketPriority, by: string, now: Date, sla?: ServiceLevels): void {
+  if (t.status === "ferme") throw new TicketError("Ce billet est fermé.");
+  if ((t.priority ?? "normal") === priority) return;
+  t.priority = priority;
+  if (t.assignedAt && sla) {
+    const d = slaDeadlines(priority, t.assignedAt, sla);
+    t.ackDueAt = d.ackDueAt;
+    t.visitDueAt = d.visitDueAt;
+  }
+  log(t, by, "priorité", now, PRIORITY_LABELS[priority]);
 }
 
 export function planVisit(t: ServiceTicket, visitAt: string, by: string, now: Date): void {
@@ -79,8 +108,17 @@ export function closeByOwner(t: ServiceTicket, note: string, by: string, now: Da
   log(t, by, "fermé par le propriétaire", now, note.trim().slice(0, 500) || undefined);
 }
 
-/** Prise en charge en retard : ni visite prévue ni résolution à l'échéance. */
+/**
+ * Prise en charge en retard : ni visite prévue ni résolution à l'échéance.
+ * Conformité C3 : billet assigné avec échéances de service : accusé de réception ou visite pas faits à temps.
+ */
 export function isLate(t: ServiceTicket, now: Date): boolean {
+  if (t.ackDueAt && t.visitDueAt) {
+    if (t.status === "resolu" || t.status === "ferme") return false;
+    const ackLate = !acknowledgedAt(t) && Date.parse(t.ackDueAt) < now.getTime();
+    const visitLate = !t.visitAt && Date.parse(t.visitDueAt) < now.getTime();
+    return ackLate || visitLate;
+  }
   return (t.status === "nouveau" || t.status === "assigne") && Date.parse(t.dueAt) < now.getTime();
 }
 

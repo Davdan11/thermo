@@ -9,11 +9,15 @@
    Le texte affiché est reconstruit de la version, puis comparé à
    l'empreinte signée : en cas d'écart, le texte conservé tel quel à
    la signature est affiché, avec un avertissement.
+
+   Conformité C3 : entente maître (parties, articles numérotés par
+   l'avocat, annexes, deux blocs de signature) ; les valeurs de
+   l'installateur et du signataire viennent de la signature.
    ================================================================== */
 
 import { escapeHtml as e } from "@/lib/security/escape";
 import type { CompanyIdentity } from "@/lib/soumissions/types";
-import { agreementHash, clauseRef } from "./agreement";
+import { resolveVersion, signatureHash, type ResolvedAgreement } from "./agreement";
 import { longDateTime } from "./format";
 import type { AgreementVersion, SignedAgreement } from "./types";
 
@@ -21,23 +25,53 @@ const FALLBACK = { name: "Thermopompes À Vendre", phone: "438-900-3224", email:
 
 const para = (s: string) => e(s).replace(/\n/g, "<br>");
 
+/** Conformité C3 : annexes (tableaux, listes, sous-sections), telles que dans la version. */
+function annexesHtml(r: ResolvedAgreement): string {
+  return r.annexes
+    .map((an) => {
+      const table = an.table.length
+        ? `<div class="tw"><table>${an.table[0] ? `<thead><tr>${an.table[0].map((c) => `<th>${e(c)}</th>`).join("")}</tr></thead>` : ""}<tbody>${an.table
+            .slice(1)
+            .map((row) => `<tr>${row.map((c, i) => (i === 0 ? `<th scope="row">${para(c)}</th>` : `<td>${para(c)}</td>`)).join("")}</tr>`)
+            .join("")}</tbody></table></div>`
+        : "";
+      const checks = an.checklist.length ? `<ul class="checks">${an.checklist.map((c) => `<li>${para(c)}</li>`).join("")}</ul>` : "";
+      const paras = an.paragraphs.map((p) => `<p>${para(p)}</p>`).join("");
+      const subs = an.sections.map((s) => `<h3>${e(s.title)}</h3>${s.paragraphs.map((p) => `<p>${para(p)}</p>`).join("")}`).join("");
+      return `<section class="art annex"><h2><span>Annexe ${e(an.letter)}</span>${e(an.title)}</h2>${an.form ? `<p class="note">Gabarit rempli pour chaque projet.</p>` : ""}${table}${checks}${paras}${subs}</section>`;
+    })
+    .join("");
+}
+
 export function renderSignedDocument(d: { sig: SignedAgreement; version: AgreementVersion; company: CompanyIdentity | null; signatureDataUrl: string | null }): string {
   const { sig, version: v, company: c } = d;
-  const intact = agreementHash(v) === sig.proof.textSha256;
-  const us = c?.legalName || c?.tradeName || FALLBACK.name;
+  // Conformité C3 : empreinte du texte signé, valeurs de l'installateur et du signataire comprises (identique à l'ancien calcul sans parties).
+  const intact = signatureHash(v, sig) === sig.proof.textSha256;
+  const r = resolveVersion(v, { partner: sig.partnerFill ?? null, signer: { name: sig.signerName, title: sig.signerTitle, signedAt: sig.signedAt } });
+  const master = r.parties.length > 0 || Boolean(r.signature);
+  const us = (master && v.platformFill?.["RAISON SOCIALE DE LA PLATEFORME"]) || c?.legalName || c?.tradeName || FALLBACK.name;
   const usMeta = [c?.neq ? `NEQ ${c.neq}` : "", c?.rbq ? `RBQ ${c.rbq}` : "", [c?.address, c?.city, c?.postalCode].filter(Boolean).join(", ")].filter(Boolean).join(" · ");
   const contact = [c?.phone || FALLBACK.phone, c?.email || FALLBACK.email, c?.website || FALLBACK.web].join(" · ");
   const signed = longDateTime(sig.signedAt);
 
+  const partiesHtml = r.parties.length ? `<section class="art"><h2>${e(r.headings?.parties || "Parties")}</h2>${r.parties.map((p) => `<p class="party">${para(p.text)}</p>`).join("")}</section>` : "";
+  const preambleHtml = r.preamble.trim() ? (master ? `<section class="art"><h2>${e(r.headings?.preamble || "Préambule")}</h2>${r.preamble.split(/\n{2,}/).map((p) => `<p>${para(p)}</p>`).join("")}</section>` : `<p class="pre">${para(r.preamble)}</p>`) : "";
+  const articlesHtml = r.articles
+    .map((a) => `<section class="art"><h2><span>Article ${e(a.number)}</span>${e(a.title)}</h2>${a.paragraphs.map((p) => `<p>${p.ref ? `<b>${p.ref}</b>` : ""}${para(p.text)}</p>`).join("")}</section>`)
+    .join("");
+
   const body = intact
-    ? `${v.preamble.trim() ? `<p class="pre">${para(v.preamble)}</p>` : ""}${v.articles
-        .map(
-          (a, i) => `<section class="art"><h2><span>Article ${i + 1}</span>${e(a.title)}</h2>${a.paragraphs.map((p, j) => `<p><b>${clauseRef(i, j)}</b>${para(p)}</p>`).join("")}</section>`,
-        )
-        .join("")}`
+    ? `${partiesHtml}${preambleHtml}${articlesHtml}${annexesHtml(r)}`
     : `<p class="warn">Le texte de la version ne correspond plus à l’empreinte signée : voici le texte conservé tel quel au moment de la signature.</p><pre class="raw">${e(sig.signedText)}</pre>`;
 
   const mark = sig.method === "trace" && d.signatureDataUrl ? `<img src="${d.signatureDataUrl}" alt="Signature de ${e(sig.signerName)}">` : `<span class="typed">${e(sig.signerName)}</span>`;
+
+  // Conformité C3 : deux blocs de signature (plateforme et partenaire) avec les libellés de la trousse.
+  const sign = r.signature
+    ? `<section class="sign"><div><small class="lbl">${e(r.signature.platformLabel)}</small><div class="mark"><span class="typed typed--sm">${e(r.signature.platform.name)}</span></div><p class="cap">${e([r.signature.platform.name, r.signature.platform.title].filter(Boolean).join(", "))} · version ${v.number} publiée${v.publishedAt ? ` le ${e(longDateTime(v.publishedAt))}` : ""}</p></div>
+<div><small class="lbl">${e(r.signature.partnerLabel)}</small><div class="mark">${mark}</div><p class="cap">Signature électronique de ${e(sig.signerName)}, ${e(sig.signerTitle)}, le ${e(signed)}</p></div></section>${r.signature.notes.length ? `<div class="notes">${r.signature.notes.map((n) => `<p>${para(n)}</p>`).join("")}</div>` : ""}`
+    : `<section class="sign"><div><div class="mark">${mark}</div><p class="cap">Signature électronique de ${e(sig.signerName)}, ${e(sig.signerTitle)}</p></div>
+<dl><dt>Entreprise</dt><dd>${e(sig.company)}</dd><dt>Signataire</dt><dd>${e(sig.signerName)}</dd><dt>Titre</dt><dd>${e(sig.signerTitle)}</dd><dt>Date</dt><dd>${e(signed)}</dd><dt>Déclarations</dt><dd>Autorisé à signer pour l’entreprise ; a lu et accepte l’entente</dd></dl></section>`;
 
   return `<!doctype html>
 <html lang="fr-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
@@ -57,36 +91,45 @@ h1{margin:0;font-size:34px;line-height:1.05;letter-spacing:-.03em;font-weight:68
 .content{padding:10px 44px 20px}.pre{margin:20px 0 6px;color:var(--muted)}
 .art{padding:18px 0;border-bottom:1px solid var(--line);break-inside:avoid}
 .art h2{margin:0 0 10px;font-size:18px;letter-spacing:-.02em}.art h2 span{display:block;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:2px}
+.art h3{margin:14px 0 6px;font-size:14px}
 .art p{margin:0 0 8px;max-width:68ch}.art b{display:inline-block;min-width:38px;color:var(--muted);font-variant-numeric:tabular-nums}
+.art .party{padding-left:12px;border-left:2px solid var(--orange)}
+.annex{break-inside:auto}.note{font-size:12px;color:var(--muted)}
+.tw{overflow-x:auto;margin:6px 0 10px}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}thead th{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}tbody th{font-weight:600}
+.checks{margin:6px 0 10px;padding:0;list-style:none}.checks li{position:relative;padding:6px 0 6px 28px;border-bottom:1px dashed var(--line)}.checks li::before{content:"";position:absolute;left:2px;top:9px;width:14px;height:14px;border:1.5px solid var(--ink);border-radius:4px}
 .sign{margin:6px 44px 24px;padding:22px 24px;border:1px solid var(--line);border-radius:18px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px;break-inside:avoid}
+.sign .lbl{display:block;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
 .sign .mark{min-height:90px;display:flex;align-items:flex-end;border-bottom:1.5px solid var(--ink);padding-bottom:6px}
-.sign img{max-height:110px;max-width:100%}.typed{font:italic 400 34px/1.1 Georgia,"Times New Roman",serif}
+.sign .cap{margin:6px 0 0;font-size:12px;color:var(--muted)}
+.sign img{max-height:110px;max-width:100%}.typed{font:italic 400 34px/1.1 Georgia,"Times New Roman",serif}.typed--sm{font-size:26px}
 .sign dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px}.sign dt{color:var(--muted)}.sign dd{margin:0;font-weight:600}
+.notes{margin:-10px 44px 20px;font-size:12px;color:var(--muted)}
 .proof{margin:0 44px 30px;padding:18px 22px;background:var(--cream);border-radius:16px;font-size:12px;break-inside:avoid}
 .proof h3{margin:0 0 8px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
 .proof dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}.proof dt{color:var(--muted)}.proof dd{margin:0;word-break:break-all;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px}
 .foot{padding:16px 44px 30px;font-size:11.5px;color:var(--muted)}
 .warn{padding:12px 14px;border-radius:12px;background:#fbe9e7;color:#b42318}.raw{white-space:pre-wrap;font:13px/1.55 ui-monospace,Menlo,Consolas,monospace}
-@media (max-width:640px){.cover,.content,.parties,.foot{padding-left:22px;padding-right:22px}.sign,.proof{margin-left:16px;margin-right:16px}.parties,.sign{grid-template-columns:1fr}h1{font-size:28px}.sheet{margin:0;border-radius:0}}
+@media (max-width:640px){.cover,.content,.parties,.foot{padding-left:22px;padding-right:22px}.sign,.proof,.notes{margin-left:16px;margin-right:16px}.parties,.sign{grid-template-columns:1fr}h1{font-size:28px}.sheet{margin:0;border-radius:0}}
 @page{size:letter;margin:14mm}
 @media print{html,body{background:#fff}.sheet{margin:0;box-shadow:none;border-radius:0}.cover{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 </style></head>
 <body><main class="sheet">
 <header class="cover"><svg viewBox="0 0 300 300" aria-hidden="true"><circle cx="150" cy="150" r="146"/><circle cx="150" cy="150" r="110"/><circle cx="150" cy="150" r="74"/></svg>
 <p class="eyebrow">Entente de partenariat · version ${v.number} · signée</p>
-<h1>${e(v.title)}<em>entre ${e(us)} et ${e(sig.company)}</em></h1>
-<div class="meta"><span>Signée le ${e(signed)}</span><span>Texte final validé${v.validatedAt ? ` le ${e(longDateTime(v.validatedAt))}` : ""}</span></div>
+<h1>${e(r.title || v.title)}<em>entre ${e(us)} et ${e(sig.company)}</em></h1>
+<div class="meta"><span>Signée le ${e(signed)}</span><span>Texte final validé${v.validatedAt ? ` le ${e(longDateTime(v.validatedAt))}` : ""}</span>${r.annexes.length ? `<span>${r.articles.length} articles · ${r.annexes.length} annexes</span>` : ""}</div>
 </header>
-<div class="parties"><p><small>Entre</small><strong>${e(us)}</strong><span>${e(usMeta)}</span><span>${e(contact)}</span></p><p><small>Et le partenaire</small><strong>${e(sig.company)}</strong><span>Représenté par ${e(sig.signerName)}, ${e(sig.signerTitle)}</span></p></div>
+${master ? "" : `<div class="parties"><p><small>Entre</small><strong>${e(us)}</strong><span>${e(usMeta)}</span><span>${e(contact)}</span></p><p><small>Et le partenaire</small><strong>${e(sig.company)}</strong><span>Représenté par ${e(sig.signerName)}, ${e(sig.signerTitle)}</span></p></div>`}
 <div class="content">${body}</div>
-<section class="sign"><div><div class="mark">${mark}</div><p style="margin:6px 0 0;font-size:12px;color:var(--muted)">Signature électronique de ${e(sig.signerName)}, ${e(sig.signerTitle)}</p></div>
-<dl><dt>Entreprise</dt><dd>${e(sig.company)}</dd><dt>Signataire</dt><dd>${e(sig.signerName)}</dd><dt>Titre</dt><dd>${e(sig.signerTitle)}</dd><dt>Date</dt><dd>${e(signed)}</dd><dt>Déclarations</dt><dd>Autorisé à signer pour l’entreprise ; a lu et accepte l’entente</dd></dl></section>
+${sign}
 <section class="proof"><h3>Preuve de signature</h3><dl>
 <dt>Horodatage (UTC)</dt><dd>${e(sig.signedAt)}</dd>
 <dt>Version</dt><dd>${sig.versionNumber} (${e(sig.versionId)})</dd>
 <dt>Empreinte SHA-256 du texte signé</dt><dd>${e(sig.proof.textSha256)}</dd>
+${sig.proof.presentedSha256 ? `<dt>Empreinte du texte présenté avant la signature</dt><dd>${e(sig.proof.presentedSha256)}</dd>` : ""}
 ${sig.proof.imageSha256 ? `<dt>Empreinte de la signature tracée</dt><dd>${e(sig.proof.imageSha256)}</dd>` : ""}
 <dt>Méthode</dt><dd>${sig.method === "trace" ? "Signature tracée au doigt ou à la souris" : "Nom tapé"}</dd>
+${r.signature ? `<dt>Déclarations</dt><dd>Autorisé à signer pour l’entreprise ; a lu et accepte l’entente et ses annexes</dd>` : ""}
 <dt>Adresse IP</dt><dd>${e(sig.proof.ip)}</dd>
 <dt>Navigateur</dt><dd>${e(sig.proof.userAgent)}</dd>
 <dt>Référence</dt><dd>${e(sig.id)}</dd></dl></section>

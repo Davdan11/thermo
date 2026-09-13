@@ -11,6 +11,7 @@ import { CalendarDays, Check, Clock, MapPin, Phone, X } from "lucide-react";
 import { brandOptions } from "@/lib/gestion/catalog";
 import { ipFromHeaders, limiters } from "@/lib/gestion/rate-limit";
 import { getOfferView, type OfferView } from "@/lib/gestion/service";
+import { logClientAccess } from "@/lib/gestion/partenaires/acces";
 import { formatDateTime, formatDay, kmText, summaryHeadline, summaryRows } from "@/lib/gestion/summary";
 import { Reveal } from "@/components/gestion/Reveal";
 import { Mark } from "@/components/gestion/ui";
@@ -47,7 +48,8 @@ function Message({ icon, tone, title, children }: { icon: React.ReactNode; tone?
 export default async function JobOfferPage({ params, searchParams }: { params: Promise<{ token: string }>; searchParams: Promise<{ r?: string }> }) {
   const { token } = await params;
   const { r } = await searchParams;
-  if (!limiters.jobView.hit(ipFromHeaders(await headers()))) {
+  const ip = ipFromHeaders(await headers());
+  if (!limiters.jobView.hit(ip)) {
     return (
       <Shell>
         <Message icon={<Clock size={26} aria-hidden />} tone="muted" title="Trop de visites">
@@ -135,6 +137,8 @@ export default async function JobOfferPage({ params, searchParams }: { params: P
 
   if (view.state === "accepte" && view.client) {
     const c = view.client;
+    // Conformité C3 (annexe D) : accès du partenaire aux coordonnées du client, journalisé (identifiants seulement).
+    if (view.access) await logClientAccess({ ...view.access, via: "offre", ip });
     return (
       <Shell>
         <Reveal>
@@ -188,7 +192,9 @@ export default async function JobOfferPage({ params, searchParams }: { params: P
     <Shell>
       <Message icon={m.icon} tone={m.tone} title={m.title}>
         <p className="g-hint" style={{ fontSize: 14 }}>{m.text}</p>
-        <p className="g-count">Job n° {s.jobNumber} · {summaryHeadline(s)}</p>
+        {/* Conformité C3 (annexe D) : plus aucun détail du projet pour une offre qui n'est pas la sienne. */}
+        <p className="g-count">Job n° {s.jobNumber}{view.redacted ? "" : ` · ${summaryHeadline(s)}`}</p>
+        {view.redacted ? <p className="g-hint" style={{ fontSize: 12.5, marginTop: 6 }}>Pour protéger les renseignements du client, les détails de ce projet ne sont plus affichés.</p> : null}
       </Message>
     </Shell>
   );

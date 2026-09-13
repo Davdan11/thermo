@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { readPartnerSettings } from "@/lib/gestion/partenaires/service";
+import { money } from "@/lib/gestion/partenaires/compliance";
 import { partnerSettingsAction } from "../../partenaires-actions";
 import { Card } from "@/components/gestion/kit/Card";
 import { Reveal } from "@/components/gestion/Reveal";
@@ -51,6 +52,31 @@ export default async function PartnerSettingsPage() {
             <input type="checkbox" name="blockWhenMissing" value="1" defaultChecked={s.blockWhenMissing} /> Bloquer aussi les offres quand la date d’expiration n’est pas saisie
           </label>
         </Card>
+        {/* Conformité C3 : exigences de l'annexe B et décisions du propriétaire (assurances de 2 M$, avenant, halocarbures). */}
+        <Card title="Assurances et qualifications" sub="Une valeur insuffisante ou expirée bloque les offres ; un document absent les bloque dès que l’entente maître est en vigueur.">
+          <div className="g-row g-row--2">
+            <Num name="minLiability" label="Assurance responsabilité, minimum par sinistre" suffix="$" value={money(s.requirements.minLiability).replace(" $", "")} step="any" />
+            <Num name="minAuto" label="Assurance automobile, minimum" suffix="$" value={money(s.requirements.minAuto).replace(" $", "")} step="any" />
+          </div>
+          <label className="g-check" style={{ marginTop: 10 }}>
+            <input type="checkbox" name="requireEndorsement" value="1" defaultChecked={s.requirements.requireEndorsement} /> Exiger l’avenant d’assuré additionnel en faveur de la plateforme
+          </label>
+          <label className="g-check">
+            <input type="checkbox" name="requireAuto" value="1" defaultChecked={s.requirements.requireAuto} /> Exiger l’assurance automobile
+          </label>
+          <label className="g-check">
+            <input type="checkbox" name="requireHalocarbon" value="1" defaultChecked={s.requirements.requireHalocarbon} /> Exiger au moins une attestation de qualification environnementale (halocarbures) valide
+          </label>
+        </Card>
+        {/* Conformité C3 : délais du service après-vente (annexe E et décisions du propriétaire). */}
+        <Card title="Délais du service après-vente" sub="Comptés à partir de l’assignation au partenaire ; jours ouvrables du lundi au vendredi, 8 h à 18 h.">
+          <div className="g-row g-row--2">
+            <Num name="ackBusinessDays" label="Cas normal : accusé de réception" suffix="jours ouvrables" value={s.sla.ackBusinessDays} />
+            <Num name="visitBusinessDays" label="Cas normal : visite offerte" suffix="jours ouvrables" value={s.sla.visitBusinessDays} />
+            <Num name="urgentAckBusinessHours" label="Urgence : accusé de réception" suffix="heures ouvrables" value={s.sla.urgentAckBusinessHours} step="0.5" />
+            <Num name="urgentVisitHours" label="Urgence : intervention sur place" suffix="heures" value={s.sla.urgentVisitHours} />
+          </div>
+        </Card>
         <Card title="Terrain et service">
           <div className="g-row g-row--3">
             <Num name="serviceHours" label="Prise en charge d’un billet" suffix="heures" value={s.serviceHours} />
@@ -86,7 +112,7 @@ export default async function PartnerSettingsPage() {
         <Card title="Seuils de la probation automatique">
           <div className="g-row g-row--2">
             <Num name="probationMinInstalls" label="Installations mesurées au moins" value={t.probationMinInstalls} />
-            <Num name="probationLaborPer100" label="Appels main-d’œuvre dès" suffix="par 100" value={t.probationLaborPer100} step="0.1" />
+            <Num name="probationLaborPer100" label="Appels main-d’œuvre au-delà de" suffix="par 100" value={t.probationLaborPer100} step="0.1" />
             <Num name="probationPhotoRate" label="Photos conformes sous" suffix="%" value={pc(t.probationPhotoRate)} />
             <Num name="probationPunctuality" label="Ponctualité sous" suffix="%" value={pc(t.probationPunctuality)} />
           </div>

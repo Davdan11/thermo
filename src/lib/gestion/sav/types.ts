@@ -9,6 +9,11 @@ export const TICKET_CAUSES = ["main-oeuvre", "appareil", "autre"] as const;
 export type TicketCause = (typeof TICKET_CAUSES)[number];
 export const CAUSE_LABELS: Record<TicketCause, string> = { "main-oeuvre": "Main-d’œuvre (installation)", appareil: "Défaut de l’appareil", autre: "Autre" };
 
+// Conformité C3 : priorité du billet (délais de l'annexe E).
+export const TICKET_PRIORITIES = ["normal", "urgent"] as const;
+export type TicketPriority = (typeof TICKET_PRIORITIES)[number];
+export const PRIORITY_LABELS: Record<TicketPriority, string> = { normal: "Cas normal", urgent: "Urgence" };
+
 export const TICKET_STATUSES = ["nouveau", "assigne", "planifie", "resolu", "ferme"] as const;
 export type TicketStatus = (typeof TICKET_STATUSES)[number];
 export const TICKET_STATUS_LABELS: Record<TicketStatus, string> = {
@@ -60,6 +65,15 @@ export interface ServiceTicket {
   /** Prise en charge attendue avant (createdAt + délai réglé). */
   dueAt: string;
   visitAt?: string;
+  /* Conformité C3 : niveaux de service du partenaire (sla.ts). Absents des billets écrits avant. */
+  /** Urgence : sécurité, fuite active, dommages imminents, perte essentielle de chauffage. */
+  priority?: TicketPriority;
+  /** Échéances fixées à l'assignation au partenaire. */
+  ackDueAt?: string;
+  visitDueAt?: string;
+  /** Accusé de réception du partenaire (son bouton, ou noté par le propriétaire). */
+  acknowledgedAt?: string;
+  acknowledgedBy?: string;
   resolution?: { at: string; by: string; note: string };
   satisfaction?: { at: string; satisfied: boolean; note: string; via: "client" | "proprietaire" };
   closedAt?: string;

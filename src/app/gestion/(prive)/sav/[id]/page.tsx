@@ -11,11 +11,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { listClauses } from "@/lib/gestion/partenaires/agreement";
 import { longDate, longDateTime, relative } from "@/lib/gestion/partenaires/format";
-import { partnerDocuments } from "@/lib/gestion/partenaires/service";
+import { partnerDocuments, readPartnerSettings } from "@/lib/gestion/partenaires/service";
 import { isLate, responseHours } from "@/lib/gestion/sav/rules";
 import { loadTicket } from "@/lib/gestion/sav/service";
-import { CAUSE_LABELS, TICKET_CAUSES, TICKET_ID_RE, TICKET_STATUS_LABELS } from "@/lib/gestion/sav/types";
-import { assignTicketAction, citationPreviewAction, citationSendAction, classifyTicketAction, closeTicketAction, resolveTicketAction, sendServiceLinkAction, ticketSatisfactionAction, visitTicketAction } from "../../partenaires-actions";
+// Conformité C3 : délais de service du partenaire (annexe E).
+import { SLA_STATE_LABELS, ticketSla, type SlaState } from "@/lib/gestion/sav/sla";
+import { CAUSE_LABELS, PRIORITY_LABELS, TICKET_CAUSES, TICKET_ID_RE, TICKET_STATUS_LABELS } from "@/lib/gestion/sav/types";
+import { assignTicketAction, citationPreviewAction, citationSendAction, classifyTicketAction, closeTicketAction, resolveTicketAction, sendServiceLinkAction, ticketAckAction, ticketPriorityAction, ticketSatisfactionAction, visitTicketAction } from "../../partenaires-actions";
 import { Card } from "@/components/gestion/kit/Card";
 import { Chip } from "@/components/gestion/kit/Chip";
 import { Reveal } from "@/components/gestion/Reveal";
@@ -23,8 +25,11 @@ import { ActionButton, ActionForm, LocalDateTime } from "@/components/partenaire
 import { HeroArcs } from "@/components/partenaires/admin/bits";
 import { CitationForm } from "@/components/partenaires/admin/CitationForm";
 import "@/components/partenaires/admin/partenaires.css";
+import "@/components/partenaires/admin/conformite.css";
 
 export const metadata: Metadata = { title: "Billet de service" };
+
+const SLA_TONE: Record<SlaState, "ok" | "blue" | "bad" | "warn"> = { respecte: "ok", "en-attente": "blue", "en-retard": "bad", "hors-delai": "warn" };
 
 export default async function TicketPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ cree?: string; ok?: string; erreur?: string }> }) {
   await requireAdmin();
@@ -39,8 +44,12 @@ export default async function TicketPage({ params, searchParams }: { params: Pro
   const photo = (kind: "signalement" | "resolution") => t.photos.filter((p) => p.kind === kind);
   const docs = installer ? await partnerDocuments(installer.id) : null;
   const lastSig = docs?.signatures[0] ?? null;
-  const clauses = lastSig && docs ? listClauses(docs.versions[lastSig.versionId] ?? { articles: [] }).map((c) => ({ ref: c.ref, title: c.articleTitle, text: c.text })) : [];
+  // Conformité C3 : clauses telles que signées (numéros de l'avocat, valeurs de l'installateur).
+  const clauses = lastSig && docs ? listClauses(docs.versions[lastSig.versionId] ?? { articles: [] }, { partner: lastSig.partnerFill ?? null, signer: { name: lastSig.signerName, title: lastSig.signerTitle, signedAt: lastSig.signedAt } }).map((c) => ({ ref: c.ref, title: c.label === `article ${c.ref}` ? c.articleTitle : `${c.label} · ${c.articleTitle}`, text: c.text })) : [];
   const hours = responseHours(t);
+  const settings = await readPartnerSettings();
+  const sla = ticketSla(t, settings.sla, now);
+  const priority = t.priority ?? "normal";
 
   const photoGrid = (list: typeof t.photos) =>
     list.length ? (
@@ -87,6 +96,7 @@ export default async function TicketPage({ params, searchParams }: { params: Pro
               {TICKET_STATUS_LABELS[t.status]}
             </Chip>
             {t.cause ? <Chip tone={t.cause === "main-oeuvre" ? "bad" : "blue"}>{CAUSE_LABELS[t.cause]}</Chip> : <Chip tone="warn">Cause à classer</Chip>}
+            {priority === "urgent" ? <Chip tone="bad" dot>Urgence</Chip> : null}
             {late ? <Chip tone="bad">Prise en charge en retard</Chip> : null}
             {job ? (
               <Link href={`/gestion/jobs/${job.id}#chantier`} className="k-btn k-btn--ghost" style={{ color: "var(--g-cream)", minHeight: 30 }}>
@@ -195,6 +205,46 @@ export default async function TicketPage({ params, searchParams }: { params: Pro
                 <Link href={`/gestion/partenaires/${installer.id}`} className="k-link">
                   Fiche du partenaire
                 </Link>
+              </div>
+            ) : null}
+          </Card>
+
+          {/* Conformité C3 : délais de service du partenaire (accusé de réception, visite), fixés à l'assignation. */}
+          <Card title="Délais de service" sub={sla ? `${PRIORITY_LABELS[sla.priority]} · depuis l’assignation, ${relative(sla.from, now)}` : "Ils commencent à l’assignation au partenaire."}>
+            {sla ? (
+              <div className="pa-sla">
+                <div className="pa-sla__item">
+                  <span>Accusé de réception</span>
+                  <b>avant le {longDateTime(sla.ack.dueAt)}</b>
+                  <Chip tone={SLA_TONE[sla.ack.state]} dot>
+                    {SLA_STATE_LABELS[sla.ack.state]}
+                    {sla.ack.at ? ` · ${longDateTime(sla.ack.at)}` : ""}
+                  </Chip>
+                </div>
+                <div className="pa-sla__item">
+                  <span>{sla.priority === "urgent" ? "Intervention sur place" : "Visite offerte"}</span>
+                  <b>avant le {longDateTime(sla.visit.dueAt)}</b>
+                  <Chip tone={SLA_TONE[sla.visit.state]} dot>
+                    {SLA_STATE_LABELS[sla.visit.state]}
+                    {sla.visit.at ? ` · ${longDateTime(sla.visit.at)}` : ""}
+                  </Chip>
+                </div>
+              </div>
+            ) : (
+              <p className="g-hint" style={{ margin: 0 }}>
+                Cas normal : accusé de réception en {settings.sla.ackBusinessDays} jour{settings.sla.ackBusinessDays > 1 ? "s" : ""} ouvrable{settings.sla.ackBusinessDays > 1 ? "s" : ""}, visite dans les {settings.sla.visitBusinessDays} jours ouvrables. Urgence : {settings.sla.urgentAckBusinessHours} heures ouvrables, sur place dans les {settings.sla.urgentVisitHours} heures.
+              </p>
+            )}
+            {t.status !== "ferme" ? (
+              <div className="g-actions" style={{ marginTop: 12 }}>
+                {sla && !sla.ack.at ? (
+                  <ActionButton action={ticketAckAction.bind(null, t.id)} className="k-btn" pending="…">
+                    Noter l’accusé de réception
+                  </ActionButton>
+                ) : null}
+                <ActionButton action={ticketPriorityAction.bind(null, t.id, priority === "urgent" ? "normal" : "urgent")} className="k-btn k-btn--ghost" pending="…">
+                  {priority === "urgent" ? "Repasser en cas normal" : "Passer en urgence"}
+                </ActionButton>
               </div>
             ) : null}
           </Card>

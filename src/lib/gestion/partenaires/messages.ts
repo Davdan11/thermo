@@ -45,6 +45,57 @@ export function agreementInviteSms(d: { company: string; link: string; resign: b
   return `${BRAND.name} : ${d.resign ? "une nouvelle version de l’entente de partenariat est à signer" : "votre entente de partenariat est prête à signer"} pour ${d.company}. ${d.link}`;
 }
 
+/* ---------------- Conformité C3 : avis de fin du partenariat ---------------- */
+
+export interface TerminationNoticeData {
+  contactName: string;
+  company: string;
+  mode: "sans-motif" | "motif-defaut" | "motif-immediat";
+  /** Dates déjà mises en forme (« 13 octobre 2026 »). */
+  receivedOn: string;
+  effectiveOn: string;
+  /** Défaut à corriger ou motif (vide pour une fin sans motif). */
+  reason: string;
+  /** Numéro de l'article de l'entente signée (« 2.24 »), s'il existe. */
+  article: string | null;
+}
+
+export function terminationNotice(d: TerminationNoticeData): Rendered {
+  const ref = d.article ? ` (article ${d.article} de l’entente)` : "";
+  const subject = d.mode === "motif-defaut" ? `Avis de défaut : entente de partenariat avec ${d.company}` : `Avis de fin de l’entente de partenariat avec ${d.company}`;
+  const lead =
+    d.mode === "sans-motif"
+      ? `${BRAND.name} met fin à l’entente de partenariat avec ${d.company}, sans motif, sur préavis de 30 jours${ref}. Cet avis est réputé reçu le ${d.receivedOn} ; l’entente prend fin le ${d.effectiveOn}.`
+      : d.mode === "motif-defaut"
+        ? `Nous vous avisons d’un défaut à corriger${ref}. Sans correction d’ici le ${d.effectiveOn}, l’entente de partenariat pourra être résiliée.`
+        : `${BRAND.name} met fin à l’entente de partenariat avec ${d.company}, pour motif, à compter du ${d.effectiveOn}${ref}.`;
+  const after = "Aucune nouvelle offre de job ne vous est transmise pendant cette période. Les projets déjà acceptés se poursuivent jusqu’à leur fin.";
+  const rows: Array<[string, string]> = [
+    ["Partenaire", d.company],
+    ["Avis réputé reçu le", d.receivedOn],
+    [d.mode === "motif-defaut" ? "Correction attendue avant le" : "Fin de l’entente", d.effectiveOn],
+  ];
+  if (d.reason.trim()) rows.push([d.mode === "motif-defaut" ? "Défaut" : "Motif", d.reason.trim()]);
+  const html = brandedEmail({
+    title: subject,
+    preheader: d.mode === "motif-defaut" ? "Défaut à corriger." : `Fin de l’entente le ${d.effectiveOn}.`,
+    firstName: first(d.contactName),
+    body: [p(t(lead)), box("Avis", rows), p(t(after), { muted: true, small: true })].join(""),
+    reason: INSTALLER_REASON,
+    optOutText: "",
+  });
+  const text = [hello(first(d.contactName)), "", lead, "", ...rows.map(([k, v]) => `- ${k} : ${v}`), "", after, textFooter()].join("\n");
+  return { subject, html, text };
+}
+
+/** Copie de l'avis au propriétaire (courriel juridique de la plateforme). */
+export function terminationNoticeOwner(d: TerminationNoticeData & { link: string }): Rendered {
+  const inner = terminationNotice(d);
+  const subject = `Copie : ${inner.subject}`;
+  const html = brandedEmail({ title: subject, preheader: "Copie de l’avis transmis au partenaire.", body: [p("Copie de l’avis transmis au partenaire, conservée à son historique."), box("Avis", [["Partenaire", d.company], ["Réputé reçu le", d.receivedOn], ["Date", d.effectiveOn]])].join(""), cta: { label: "Fiche du partenaire", href: escapeHtml(d.link) }, reason: OWNER_REASON, optOutText: "" });
+  return { subject, html, text: [hello(), "", subject, "", inner.text, "", d.link].join("\n") };
+}
+
 export function agreementSignedPartner(d: { contactName: string; company: string; versionNumber: number; signedAt: string; signerName: string; textSha256: string; documentLink: string; articles: Array<{ ref: string; title: string; paragraphs: Array<[string, string]> }> }): Rendered {
   const subject = `Copie de votre entente de partenariat signée (version ${d.versionNumber})`;
   const clauses = d.articles
