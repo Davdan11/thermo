@@ -212,7 +212,10 @@ export async function clientTelephonieView(clientId: string, now = new Date()): 
   const ids = new Set([c.b.id, ...c.b.aliases]);
   const phones = new Set(c.b.phones);
   const optedOut = c.b.phones.some((p) => textos.conversations[p]?.optedOut);
-  const consent = consentOf(c.b, data.consents, optedOut, now);
+  // Conformité C2 : case 5.3 des formulaires (et son retrait) prise en compte, comme à l'envoi.
+  const [{ readConsents }, { promotionsConsent }] = await Promise.all([import("@/lib/consentements/store"), import("@/lib/consentements/commercial")]);
+  const cons = await readConsents().catch(() => null);
+  const consent = consentOf(c.b, data.consents, optedOut, now, cons ? promotionsConsent(cons, { emails: c.b.emails, phones: c.b.phones }, now) : null);
   const express = expressFor(data.consents, [...ids]);
   const calls = data.calls.filter((x) => (x.clientId && ids.has(x.clientId)) || phones.has(x.phone));
   const callIds = new Set(calls.map((x) => x.id));

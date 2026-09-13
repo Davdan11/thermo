@@ -43,7 +43,14 @@ import { loadMorningData, loadWeeklyData } from "./digest";
 import { referralLink } from "./followup";
 import { eveReminder, logisvertDossier, logisvertFollow, maintenanceReminder, referralMessage, surveyMessage, unsubscribeHeaders, warrantyReminder, type SuiviLinks } from "./messages";
 import { morningDigest, weeklyReport, type MorningData, type WeeklyData } from "./owner";
-import { reached, realChannels, type Channels } from "./send";
+import { reached, realChannels, type Channels, type MessageCategory } from "./send";
+// Conformité C2 : consentement commercial (case 5.3, exprès, tacite limité dans le temps), pied 5.5, programme de recommandation.
+import { commercialConsent, promotionsConsent } from "@/lib/consentements/commercial";
+import { commercialFooterFor } from "@/lib/consentements/serveur";
+import { readConsents } from "@/lib/consentements/store";
+import { expressFor } from "@/lib/telephonie/consent";
+import { readTelephonie } from "@/lib/telephonie/store";
+import { oneClickPageUrl, referralOffer, type ReferralOffer } from "@/lib/reference/programme";
 import { ensureDossier, ensureDossierIn, mutateAfterSale, mutateAutomations, newReferralCode, readAfterSale, readAutomations } from "./store";
 import { addMonthsYmd, atLocal, dayAfterAt, eveWindow, isoWeekKey, mondayOf, MORNING_HOUR, surveyDueAt, WEEKLY_HOUR, WEEKLY_MINUTE } from "./time";
 import { AUTOMATION_IDS, OUTCOME_LABELS, type AfterSaleData, type AutomationId, type AutomationsData, type ChannelOutcome, type LogEntry, type TickSummary } from "./types";
@@ -105,6 +112,8 @@ interface Ctx {
   auto: AutomationsData;
   suppressed: Set<string>;
   since: number;
+  /** Conformité C2 : programme de recommandation en vigueur (règles de la trousse quand elle est en vigueur). */
+  referral: ReferralOffer;
 }
 
 const CHANNEL_WORDS: Record<string, string> = { email: "courriel", sms: "texto", owner: "courriel au propriétaire", installer: "courriel à l’installateur", crm: "tâche", file: "file des avis" };
@@ -168,6 +177,8 @@ async function loadContext(o: TickOptions, now: Date, persist = true): Promise<C
     auto,
     suppressed: new Set(after.suppressed),
     since: Date.parse(startedAt),
+    // Conformité C2 : programme de recommandation en vigueur (règles de la trousse, réglages de la récompense).
+    referral: await referralOffer(auto.settings, now, (o.baseUrl ?? SITE_URL).replace(/\/$/, "")),
   };
 }
 
@@ -177,10 +188,43 @@ function clientCommon(ctx: Ctx, token: string): { links: SuiviLinks; mailingAddr
   return { links: { base: ctx.base, token }, mailingAddress: businessMailingAddress() ?? "" };
 }
 
+/* ---------------- Conformité C2 : messages commerciaux ---------------- */
+
+/**
+ * Consentement commercial du client d'un job (règle du chantier T + case 5.3) : null si l'envoi est permis,
+ * sinon le résultat à noter (« desabonne » après un retrait en un clic, « sans-consentement »).
+ */
+async function commercialGate(ctx: Ctx, job: Job, purchaseAt: string, clientId: string | null): Promise<ChannelOutcome | null> {
+  const [cons, tel] = await Promise.all([readConsents().catch(() => null), readTelephonie().catch(() => null)]);
+  const form = cons ? promotionsConsent(cons, { emails: [job.client.email], phones: [job.client.phone] }, ctx.now) : null;
+  const express = clientId && tel ? expressFor(tel.consents, [clientId]) : null;
+  const state = commercialConsent({ form, express, purchaseAt, inquiryAt: null }, ctx.now);
+  if (state.ok) return null;
+  return form?.withdrawnAt ? "desabonne" : "sans-consentement";
+}
+
+/** Pied de message commercial 5.5 (trousse en vigueur), avec le lien de désabonnement en un clic ; null : pied actuel. */
+async function footerFor(kind: "entretien" | "reference", links: SuiviLinks): Promise<string | null> {
+  return (await commercialFooterFor(kind, oneClickPageUrl(links)))?.text ?? null;
+}
+
+/* Conformité C2 : nature de chaque message au client (voir send.ts). Les messages de service ne sont jamais
+   bloqués par un désabonnement commercial ; les messages commerciaux passent en plus par commercialGate(). */
+export const MESSAGE_CATEGORY: Record<string, MessageCategory> = {
+  "rappel la veille": "operationnel",
+  "dossier LogisVert": "operationnel",
+  "suivi LogisVert": "operationnel",
+  garantie: "operationnel",
+  sondage: "suivi",
+  entretien: "commercial",
+  "référence": "commercial",
+};
+
 async function sendClient(ctx: Ctx, job: Job, label: string, m: { mail?: { subject: string; html: string; text: string }; sms?: string }, links: SuiviLinks): Promise<ChannelsMap> {
+  const category = MESSAGE_CATEGORY[label] ?? "suivi";
   const [email, sms] = await Promise.all([
-    m.mail ? ctx.channels.clientMail(job.client.email, m.mail, { suppressed: ctx.suppressed, label, headers: unsubscribeHeaders(links) }) : Promise.resolve(undefined),
-    m.sms ? ctx.channels.clientSms(job.client.phone, m.sms, { suppressed: ctx.suppressed, label }) : Promise.resolve(undefined),
+    m.mail ? ctx.channels.clientMail(job.client.email, m.mail, { suppressed: ctx.suppressed, label, headers: unsubscribeHeaders(links), category }) : Promise.resolve(undefined),
+    m.sms ? ctx.channels.clientSms(job.client.phone, m.sms, { suppressed: ctx.suppressed, label, category }) : Promise.resolve(undefined),
   ]);
   const out: ChannelsMap = {};
   if (email) out.email = email;
@@ -381,8 +425,11 @@ function planJob(ctx: Ctx, job: Job): PlannedAction[] {
       if (await hasActiveMembership(job.maintenance?.originJobId ?? job.id)) return { status: "ignore", detail: `${label} · adhérent d’un plan d’entretien : visite prévue par le plan`, ref };
       const dossier = await ensureDossier(job.id, ctx.now);
       const c = clientCommon(ctx, dossier.token);
-      const chs = await sendClient(ctx, job, "entretien", maintenanceReminder({ ...c, firstName, brand: aq?.version.content.machine?.brand ?? "" }), c.links);
       const clientId = await ctx.crm.clientIdForJob(job.id).catch(() => null);
+      // Conformité C2 : offre de service = message commercial : consentement exigé (case 5.3, exprès, ou tacite encore en vigueur) et pied 5.5.
+      // La tâche « proposer l'entretien » est créée dans tous les cas (le propriétaire peut appeler sur une base permise).
+      const gate = await commercialGate(ctx, job, completedAt, clientId);
+      const chs: ChannelsMap = gate ? { email: gate } : await sendClient(ctx, job, "entretien", maintenanceReminder({ ...c, firstName, brand: aq?.version.content.machine?.brand ?? "", footer: await footerFor("entretien", c.links) }), c.links);
       await ctx.crm.addTask({ clientId, title: `Entretien annuel : proposer à ${job.client.firstName || "ce client"} (job n° ${job.number})`, dueAt: ctx.now });
       return result(label, { ...chs, crm: "fait" }, ref);
     },
@@ -400,7 +447,12 @@ function planJob(ctx: Ctx, job: Job): PlannedAction[] {
       label,
       ref,
       client: true,
+      // Conformité C2 : trousse en vigueur et programme non offert (sans montant, forme, plafond, date ou délai) : rien ne part.
+      precondition: () => (ctx.referral.c2 && !ctx.referral.offered ? `programme de recommandation non offert (${ctx.referral.missing.join(", ")})` : null),
       run: async () => {
+        // Conformité C2 : message de référence = message commercial : consentement exigé et pied 5.5.
+        const gate = await commercialGate(ctx, job, completedAt, await ctx.crm.clientIdForJob(job.id).catch(() => null));
+        if (gate) return result(label, { email: gate }, ref);
         const d = await mutateAfterSale((data) => {
           const { dossier } = ensureDossierIn(data, job.id, ctx.now);
           if (!dossier.referral) {
@@ -412,7 +464,8 @@ function planJob(ctx: Ctx, job: Job): PlannedAction[] {
           return { result: structuredClone(dossier), changed: true };
         });
         const c = clientCommon(ctx, d.token);
-        const m = referralMessage({ ...c, firstName, link: referralLink(ctx.base, d.referral!.code), reward: ctx.auto.settings.referralReward });
+        // Conformité C2 : trousse en vigueur : récompense tirée des réglages structurés (montant fixe, forme) avec le lien des règles.
+        const m = referralMessage({ ...c, firstName, link: referralLink(ctx.base, d.referral!.code), reward: ctx.referral.c2 ? (ctx.referral.reward ?? "") : ctx.auto.settings.referralReward, footer: await footerFor("reference", c.links) });
         return result(label, await sendClient(ctx, job, "référence", m, c.links), ref);
       },
     });

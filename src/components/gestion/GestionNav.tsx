@@ -12,7 +12,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Banknote, Boxes, CalendarClock, PhoneCall, Send, ShieldCheck, Sparkles, TrendingUp, Repeat, MapPinned, Megaphone, Target, UserPlus, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench, Trophy, UsersRound } from "lucide-react";
+import { Banknote, Boxes, CalendarClock, PhoneCall, Send, ShieldCheck, Sparkles, TrendingUp, Repeat, MapPinned, Megaphone, Target, UserPlus, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench, Trophy, UsersRound, Scale } from "lucide-react";
 import { openSearch } from "./crm/CommandSearch";
 import { openQuickActions } from "./crm/QuickActions";
 import { Sheet } from "./kit/Sheet";
@@ -80,6 +80,7 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
       { href: "/gestion/publicite", label: "Publicité", icon: Target, match: starts("/gestion/publicite") },
       { href: "/gestion/reglages", label: "Réglages", icon: Settings2, match: starts("/gestion/reglages") },
       { href: "/gestion/securite", label: "Sécurité", icon: ShieldCheck, match: starts("/gestion/securite") },
+      { href: "/gestion/conformite", label: "Conformité", icon: Scale, match: starts("/gestion/conformite") }, // Conformité C2 : consentements, preuves, prospects inactifs, recommandation
     ],
   },
 ];

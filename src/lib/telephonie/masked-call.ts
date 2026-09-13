@@ -28,7 +28,11 @@ import { clientById, clientByPhone, contextOf, conversationPhone, labelOf, noteF
 import { shortLabel } from "./plan";
 import { CALL_ID_RE, CALL_SID_RE, LEAD_ID_RE, mutateTelephonie, newTelId, readTelephonie } from "./store";
 import { enqueueRecording } from "./transcription";
-import { cancelledTwiml, connectTwiml, noticeTwiml, ownerLegTwiml, unavailableTwiml, whisperText } from "./twiml";
+import { cancelledTwiml, connectTwiml, consentAnswerTwiml, consentTwiml, noticeTwiml, ownerLegTwiml, unavailableTwiml, whisperText } from "./twiml";
+// Conformité C2 : avis 6.3 (trousse, lu dans les données), touche 1 du client, décision consignée.
+import { currentOutboundNotice } from "@/lib/consentements/serveur";
+import { recordCallDecision } from "@/lib/consentements/store";
+import { speakable } from "@/lib/phone/avis-enregistrement";
 import type { CallPhase, CallResult, MaskedCall, SpeedKind } from "./types";
 
 export type StartTarget = { kind: "client" | "conversation" | "lead"; id: string };
@@ -159,6 +163,15 @@ export async function startMaskedCall(target: StartTarget, by: string, now = new
     record: settings.calls.record,
     phase: "initie",
   };
+  // Conformité C2 : enregistrement activé et avis 6.3 en vigueur : le client entendra l'avis et devra faire le 1 ; sinon, aucun enregistrement.
+  if (call.record) {
+    const { callerFirstName } = await import("./appelant");
+    const notice = await currentOutboundNotice(await callerFirstName(by));
+    if (notice) {
+      call.consentMode = true;
+      call.consentNotice = { text: notice.text.text, sha: notice.text.sha, trousseVersion: notice.trousseVersion };
+    }
+  }
   const live = liveSendsAllowed();
   if (!live) {
     call.phase = "termine";
@@ -258,17 +271,74 @@ export async function connectClient(id: string, digits: string): Promise<string>
   });
   if (!c) return unavailableTwiml();
   if (c.result) return cancelledTwiml();
-  return connectTwiml({ base: xml(SITE_URL), callId: c.id, siteNumber: site!, clientPhone: c.phone, record: c.record });
+  return connectTwiml({ base: xml(SITE_URL), callId: c.id, siteNumber: site!, clientPhone: c.phone, record: c.record, askConsent: c.consentMode === true });
 }
 
-/** Joué au client quand il décroche. */
+/** Joué au client quand il décroche. Conformité C2 : avis 6.3 et touche 1 quand l'enregistrement demande son accord. */
 export async function clientNotice(id: string): Promise<string> {
-  await update(id, (x) => {
+  const c = await update(id, (x) => {
     if (x.result) return;
     advance(x, "en-cours");
     x.clientAnsweredAt ??= new Date().toISOString();
   });
+  if (c?.consentMode && c.consentNotice && !c.result) return consentTwiml(xml(SITE_URL), c.id, speakable(c.consentNotice.text));
   return noticeTwiml();
+}
+
+/**
+ * Conformité C2 — réponse du client à l'avis 6.3 : 1 = oui, l'enregistrement commence (API Twilio, les deux voix) ;
+ * toute autre touche, ou aucune : l'appel se poursuit SANS enregistrement. Décision et empreinte de l'avis entendu : notées au magasin des consentements.
+ */
+export async function clientConsent(id: string, digits: string, fetchImpl: typeof fetch = fetch): Promise<string> {
+  const decision: "accepte" | "refus" | "sans-reponse" = digits === "1" ? "accepte" : digits ? "refus" : "sans-reponse";
+  const state = { first: false };
+  const c = await update(id, (x) => {
+    if (!x.consentMode || x.recordingConsent) return;
+    x.recordingConsent = { decision, at: new Date().toISOString() };
+    state.first = true;
+  });
+  if (!c?.consentMode) return "";
+  const accepted = c.recordingConsent?.decision === "accepte";
+  if (state.first) {
+    await recordCallDecision({
+      direction: "sortant",
+      decision: decision === "accepte" ? "accepte-touche-1" : decision,
+      phone: c.phone,
+      callSid: c.callSid ?? null,
+      callId: c.id,
+      noticeSha: c.consentNotice?.sha ?? null,
+      trousseVersion: c.consentNotice?.trousseVersion ?? null,
+    }).catch((e) => console.error("[telephonie] décision d’enregistrement non consignée :", e));
+    if (accepted) await startRecording(c, fetchImpl);
+  }
+  return consentAnswerTwiml(accepted);
+}
+
+/** Démarre l'enregistrement de l'appel (les deux voix) après le oui du client. Hors production : simulé. */
+async function startRecording(c: MaskedCall, fetchImpl: typeof fetch): Promise<void> {
+  if (!c.callSid || !CALL_SID_RE.test(c.callSid)) {
+    console.warn(`[telephonie] appel ${c.id} : identifiant Twilio absent, enregistrement non démarré.`);
+    return;
+  }
+  if (!liveSendsAllowed()) {
+    console.log(`[telephonie] enregistrement simulé (développement) : appel ${c.id}`);
+    return;
+  }
+  const creds = twilioCreds();
+  if (!creds) return;
+  const form = new URLSearchParams({ RecordingStatusCallback: `${SITE_URL}/api/phone/masque/enregistrement?a=${c.id}`, RecordingStatusCallbackMethod: "POST", RecordingChannels: "dual" });
+  form.append("RecordingStatusCallbackEvent", "completed");
+  try {
+    const res = await fetchImpl(`${twilioApi(creds.sid)}/Calls/${c.callSid}/Recordings.json`, {
+      method: "POST",
+      headers: { Authorization: basicAuth(creds), "Content-Type": "application/x-www-form-urlencoded" },
+      body: form.toString(),
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!res.ok) console.error(`[telephonie] enregistrement non démarré (${c.id}) : HTTP ${res.status}`);
+  } catch {
+    console.error(`[telephonie] enregistrement non démarré (${c.id}) : Twilio injoignable.`);
+  }
 }
 
 const OWNER_END = new Set(["completed", "busy", "no-answer", "failed", "canceled"]);
@@ -326,6 +396,8 @@ export async function dialEnded(id: string, p: URLSearchParams): Promise<void> {
 export async function callRecorded(id: string, p: URLSearchParams): Promise<void> {
   const c = CALL_ID_RE.test(id) ? (await readTelephonie()).calls.find((x) => x.id === id) : undefined;
   if (!c || !c.record) return;
+  // Conformité C2 : jamais d'enregistrement retenu sans le oui du client (touche 1) quand l'avis 6.3 le demandait.
+  if (c.consentMode && c.recordingConsent?.decision !== "accepte") return;
   await enqueueRecording({ recordingSid: p.get("RecordingSid") ?? "", callSid: p.get("CallSid"), source: "appel-masque", phone: c.phone, callId: c.id, durationSec: Number(p.get("RecordingDuration") ?? "0") });
 }
 

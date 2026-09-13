@@ -12,6 +12,7 @@ import { journalLead } from "@/lib/crm/lead-journal";
 import { attributionLines } from "@/lib/attribution/core";
 import { attributionWithAds } from "@/lib/ads/server-attribution"; // pilote publicitaire : attribution + consentement et clic
 import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : réponse en 60 secondes
+import { consentSummary, gateFormConsents, safePath, saveFormConsents } from "@/lib/consentements/formulaires"; // Conformité C2 : cases 5.2 et 5.3, preuve (5.4)
 
 const schema = z.object({
   firstName: z.string().trim().min(1, "Le prénom est requis.").max(80),
@@ -34,9 +35,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: first?.message ?? "Données invalides." }, { status: 400 });
   }
   const d = parsed.data;
+  // Conformité C2 : textes de la trousse affichés → version connue, cases 5.2 et 5.3 et preuve (5.4) ; sinon, comportement actuel.
+  const gate = await gateFormConsents(body, { jumelage: false });
+  if (gate.mode === "refus") return NextResponse.json({ error: gate.error }, { status: gate.status });
+  const proof = await saveFormConsents(gate, { req, form: "contact", source: safePath((body as Record<string, unknown>).page, "/contact"), email: d.email, phone: d.phone || null });
   const attribution = attributionWithAds(body);
   // Filet de sécurité, comme les autres demandes : le message existe sur le serveur même si le courriel tombe.
-  const { entry } = await journalLead("contact", { firstName: d.firstName, lastName: d.lastName || undefined, email: d.email, phone: d.phone || undefined, subject: d.subject || undefined, message: d.message }, attribution);
+  const { entry } = await journalLead("contact", { firstName: d.firstName, lastName: d.lastName || undefined, email: d.email, phone: d.phone || undefined, subject: d.subject || undefined, message: d.message, ...(gate.mode === "c2" ? { consentements: proof?.id ?? "non-gardee" } : {}) }, attribution);
   // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
   speedToLeadAfter({ kind: "contact", journalId: entry.id, phone: d.phone || null, firstName: d.firstName, lastName: d.lastName || "" });
   const sent = await sendInternalMessage({
@@ -49,6 +54,7 @@ export async function POST(req: Request) {
       ["Téléphone", d.phone || "—"],
       ["Sujet", d.subject || "—"],
       ["Consentement (Loi 25)", `oui, ${new Date().toISOString()}`],
+      ...consentSummary(proof), // Conformité C2
       ["Message", d.message],
       ...attributionLines(attribution),
       ["Journal", entry.id],

@@ -7,6 +7,7 @@ import { encodeShareCode } from "@/lib/thermomatch/share-code";
 import { RELANCES_CONSENT_TEXT } from "@/lib/relances/consent";
 import { readAttribution } from "@/lib/attribution/client";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
 
 /* « Envoyez-moi mes trois choix » : le visiteur reçoit ses recommandations par
    courriel (lead : Pipedrive, alerte à l'équipe). Le code de partage vient de
@@ -47,6 +48,9 @@ const input =
 
 export function EmailMyChoices({ topLabel }: { topLabel: string }) {
   const [v, setV] = useState({ firstName: "", email: "", phone: "", consent: false, followUps: false, website: "" });
+  // Conformité C2 : case 5.2 (rappels) et case distincte 5.3 de la trousse, jamais cochées d'avance.
+  const consents = useConsentTexts();
+  const [promotions, setPromotions] = useState(false);
   const [planned, setPlanned] = useState(false);
   // Case « rappels » proposée seulement si les envois sont possibles (adresse postale configurée côté serveur).
   const [offer, setOffer] = useState(false);
@@ -82,7 +86,7 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
     setStatus("sending");
     setError(null);
     try {
-      const res = await fetch("/api/thermomatch/courriel", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...v, followUps: offer && v.followUps, code, page: window.location.pathname, attribution: readAttribution() }) });
+      const res = await fetch("/api/thermomatch/courriel", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...v, followUps: offer && v.followUps, code, page: window.location.pathname, attribution: readAttribution(), consentements: consentAnswers(consents, { rappels: offer && v.followUps, promotions }) }) });
       const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; relances?: boolean };
       if (!res.ok || !data.ok) {
         setStatus("error");
@@ -162,7 +166,7 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
                 {offer && (
                   <label className="flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.mute }}>
                     <input type="checkbox" checked={v.followUps} onChange={update("followUps")} className="mt-1 h-4 w-4 shrink-0 accent-[#E54B17]" />
-                    <span>{RELANCES_CONSENT_TEXT}</span>
+                    <span>{consents.status === "pret" ? <ConsentCopy text={consents.texts.rappels} linkClassName="underline underline-offset-2" linkStyle={{ color: K.cream }} /> : RELANCES_CONSENT_TEXT}</span>
                   </label>
                 )}
                 <AnimatePresence initial={false}>
@@ -201,6 +205,15 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
                     </motion.div>
                   )}
                 </AnimatePresence>
+                {/* Conformité C2 : case distincte 5.3 de la trousse, facultative et jamais cochée d'avance. */}
+                {consents.status === "pret" && (
+                  <label className="flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.mute }}>
+                    <input type="checkbox" checked={promotions} onChange={(e) => setPromotions(e.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-[#E54B17]" />
+                    <span>
+                      <ConsentCopy text={consents.texts.promotions} linkClassName="underline underline-offset-2" linkStyle={{ color: K.cream }} />
+                    </span>
+                  </label>
+                )}
                 <div className="mt-3 flex flex-wrap items-center gap-4">
                   <button
                     type="submit"
@@ -217,6 +230,12 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
                     Gratuit, sans engagement.
                   </span>
                 </div>
+                {/* Conformité C2 : texte 5.1 sous le formulaire. */}
+                {consents.status === "pret" && (
+                  <p className="text-[12.5px] leading-relaxed" style={{ color: K.faint, margin: "4px 0 0" }}>
+                    <ConsentCopy text={consents.texts.communications} linkClassName="underline underline-offset-2" linkStyle={{ color: K.mute }} />
+                  </p>
+                )}
                 <AnimatePresence>
                   {error && (
                     <motion.p key="err" role="alert" initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="text-[13.5px]" style={{ color: "#FF9B7A", margin: "6px 0 0" }}>

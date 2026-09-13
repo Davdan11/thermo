@@ -11,7 +11,7 @@
    Le numéro du client vient du magasin (serveur), jamais de l'URL.
    ================================================================== */
 
-import { applyCallStatus, callRecorded, clientNotice, connectClient, dialEnded, ownerAnswered } from "@/lib/telephonie/masked-call";
+import { applyCallStatus, callRecorded, clientConsent, clientNotice, connectClient, dialEnded, ownerAnswered } from "@/lib/telephonie/masked-call";
 import { transcribeSoon } from "@/lib/telephonie/hooks";
 import { CALL_ID_RE } from "@/lib/telephonie/store";
 import { unavailableTwiml } from "@/lib/telephonie/twiml";
@@ -37,6 +37,9 @@ export async function POST(req: Request, { params }: { params: Promise<{ etape: 
       return twiml(valid ? await connectClient(id, (check.params.get("Digits") ?? "").trim()) : unavailableTwiml());
     case "avis":
       return twiml(valid ? await clientNotice(id) : unavailableTwiml());
+    case "consentement":
+      // Conformité C2 : réponse du client à l'avis 6.3 (1 = oui) ; l'enregistrement ne commence qu'après un oui.
+      return twiml(valid ? await clientConsent(id, (check.params.get("Digits") ?? "").trim()) : "");
     case "statut":
       if (valid) await applyCallStatus(id, url.searchParams.get("jambe") === "client" ? "client" : "proprio", check.params).catch((e) => console.error("[telephonie] statut non enregistré :", e));
       return noContent();

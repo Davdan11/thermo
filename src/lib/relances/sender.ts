@@ -11,7 +11,7 @@
         réservé sous verrou avant l'envoi : il ne part jamais deux fois.
    Le rendu et l'envoi sont injectés : testable sans catalogue ni SMTP.
    ================================================================== */
-import { dueMessages, isExpired, stopReason, type CancelReason, type Conversion, type ScheduledMessage } from "./core";
+import { consentStop, dueMessages, isExpired, isReminder, stopReason, type CancelReason, type Conversion, type ScheduledMessage } from "./core";
 import { cancelMessage, claimMessage, markFailed, markSent, readRelances } from "./store";
 import { relanceUnsubscribeHeaders, type RenderedRelance } from "@/lib/crm/templates/relances-email";
 
@@ -25,10 +25,21 @@ export interface RunOptions {
   reviewUrl: string | null;
   /** Transport de courriel actif (« smtp », « resend ») ou null. */
   transport: string | null;
-  render: (m: ScheduledMessage, opts: { mailingAddress: string }) => RenderedRelance | null | Promise<RenderedRelance | null>;
+  render: (m: ScheduledMessage, opts: { mailingAddress: string; footer?: string | null }) => RenderedRelance | null | Promise<RenderedRelance | null>;
   send: (m: ScheduledMessage, mail: RenderedRelance, headers: Record<string, string>) => Promise<boolean>;
   loadConversions: (since: Date) => Promise<Map<string, Conversion[]>>;
   log?: (line: string) => void;
+  /** Conformité C2 : case 5.2 retirée (désabonnement) depuis le consentement ? Par défaut : magasin des consentements. */
+  consentWithdrawn?: (m: ScheduledMessage) => Promise<boolean>;
+  /** Conformité C2 : pied de message commercial (5.5) d'un rappel, ou null (pied actuel). */
+  footer?: (m: ScheduledMessage) => Promise<string | null>;
+}
+
+/** Conformité C2 : retrait de la case 5.2 noté dans le magasin des consentements après le consentement du rappel. */
+async function withdrawnInStore(m: ScheduledMessage, now = new Date()): Promise<boolean> {
+  if (!isReminder(m) || !m.consent?.at) return false;
+  const { readConsents, withdrawnSince } = await import("@/lib/consentements/store");
+  return withdrawnSince(await readConsents(), { email: m.email }, "rappels", m.consent.at, now);
 }
 
 export interface RunReport {
@@ -74,8 +85,14 @@ export async function runRelances(o: RunOptions): Promise<RunReport> {
   const conversions = since ? await o.loadConversions(since) : new Map<string, Conversion[]>();
 
   const sendable: ScheduledMessage[] = [];
+  const withdrawn = o.consentWithdrawn ?? ((m: ScheduledMessage) => withdrawnInStore(m, now));
   for (const m of due) {
-    const reason = stopReason(m, { suppressed, conversions: conversions.get(m.email) }) ?? (isExpired(m, now) ? "expiree" : null);
+    // Conformité C2 : case 5.2 exigée pour un rappel, deux au plus par demande, retrait respecté aussitôt.
+    const reason =
+      stopReason(m, { suppressed, conversions: conversions.get(m.email) }) ??
+      consentStop(m, data.messages) ??
+      ((await withdrawn(m).catch(() => false)) ? "desabonnement" : null) ??
+      (isExpired(m, now) ? "expiree" : null);
     if (!reason) {
       sendable.push(m);
       continue;
@@ -110,7 +127,8 @@ export async function runRelances(o: RunOptions): Promise<RunReport> {
     }
     let mail: RenderedRelance | null;
     try {
-      mail = await o.render(m, { mailingAddress: o.mailingAddress });
+      // Conformité C2 : pied de message commercial de la trousse (5.5) pour les rappels.
+      mail = await o.render(m, { mailingAddress: o.mailingAddress, footer: o.footer && isReminder(m) ? await o.footer(m).catch(() => null) : null });
     } catch (err) {
       report.failed++;
       log(`  ✗ ${m.kind} → ${mask(m.email)} : rendu impossible (${(err as Error).message})`);
@@ -141,6 +159,8 @@ export async function runRelances(o: RunOptions): Promise<RunReport> {
     }
     if (ok) {
       await markSent(claimed.id, new Date());
+      // Conformité C2 : dernier message envoyé grâce à la case 5.2 (la preuve est gardée 3 ans après).
+      if (claimed.consent?.recordId) await import("@/lib/consentements/store").then((s) => s.markMessageSent(claimed.consent!.recordId!)).catch(() => undefined);
       report.sent++;
       log(`  ✓ ${m.kind} → ${mask(m.email)} · « ${mail.subject} »`);
     } else {

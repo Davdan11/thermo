@@ -25,6 +25,7 @@ import { sendClientBookingEmail, sendInternalMessage } from "@/lib/crm/email";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
 import { attributionWithAds } from "@/lib/ads/server-attribution"; // pilote publicitaire : attribution + consentement et clic
 import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : réponse en 60 secondes
+import { gateFormConsents, safePath, saveFormConsents } from "@/lib/consentements/formulaires"; // Conformité C2 : cases 5.2 et 5.3, preuve (5.4)
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { BRAND, SITE_URL } from "@/lib/crm/templates/layout";
 
@@ -76,6 +77,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "invalid_fields", field: first?.path?.[0] ?? null }, { status: 422 });
   }
   const d = parsed.data;
+  // Conformité C2 : textes de la trousse affichés → version connue (409 réservé au créneau pris : 422 ici).
+  const gate = await gateFormConsents(json, { jumelage: false });
+  if (gate.mode === "refus") return NextResponse.json({ ok: false, error: "consentements", message: gate.error }, { status: 422 });
   const mode = getMode(d.mode)!;
   const slot = getSlot(d.slot);
   if (!slot || !isYmd(d.date) || !NEEDS[d.need]) return NextResponse.json({ ok: false, error: "invalid_slot" }, { status: 422 });
@@ -142,7 +146,9 @@ export async function POST(req: NextRequest) {
   const address = mode.id === "domicile" ? `${booking.address}, ${booking.city} ${booking.postalCode}`.trim() : "";
 
   // 3. Journal local.
-  const { entry } = await journalLead("rendez-vous", { ...booking }, attributionWithAds(json));
+  // Conformité C2 : preuve du consentement (5.4), liée à la demande.
+  const proof = await saveFormConsents(gate, { req, form: "rendez-vous", source: safePath(d.page, "/rendez-vous"), email: booking.email, phone: booking.phone });
+  const { entry } = await journalLead("rendez-vous", { ...booking, ...(gate.mode === "c2" ? { consentements: proof?.id ?? "non-gardee" } : {}) }, attributionWithAds(json));
   // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
   speedToLeadAfter({ kind: "rendez-vous", journalId: entry.id, phone: booking.phone, firstName: booking.firstName, lastName: booking.lastName, city: booking.city || area.label });
 

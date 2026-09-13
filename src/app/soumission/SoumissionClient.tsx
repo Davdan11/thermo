@@ -22,6 +22,7 @@ import { SoumissionBar, SoumissionHero } from "@/components/heroes-v2/outils/Car
 import { DISPLAY, SERIF } from "@/components/heroes-v2/outils/font-stacks";
 import { Reveal, Rise } from "@/components/sections-v2/outils/kit";
 import { CarnetKicker, CarnetScanNote, HandCheckbox, MarginContinue, P, PenLoop, ProcessStrip } from "@/components/sections-v2/outils/carnet/CarnetParts";
+import { ConsentCopy, NoticeParagraph, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
 
 
 const CREAM = P.paper; // papier du « Carnet »
@@ -103,6 +104,12 @@ export default function SoumissionPage() {
   }>({});
   const [consent1, setConsent1] = useState(false);
   const [consent2, setConsent2] = useState(false);
+  // Conformité C2 : cases de la trousse (3.1 obligatoire, 5.2 et 5.3 facultatives), jamais cochées d'avance.
+  const consents = useConsentTexts();
+  const c2 = consents.status === "pret";
+  const [jumelage, setJumelage] = useState(false);
+  const [rappels, setRappels] = useState(false);
+  const [promotions, setPromotions] = useState(false);
   const [honeypot, setHoneypot] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -168,7 +175,7 @@ export default function SoumissionPage() {
   const missing = [
     !contact.prenom && "votre prénom",
     !(contact.telephone || contact.courriel) && "un téléphone ou un courriel",
-    !consent1 && "votre autorisation à vous contacter",
+    c2 ? !jumelage && "la case de demande de jumelage" : !consent1 && "votre autorisation à vous contacter",
   ].filter(Boolean) as string[];
   const canSubmit = missing.length === 0;
 
@@ -206,8 +213,11 @@ export default function SoumissionPage() {
           notes: `Emplacement: ${project.emplacement} | Contact préféré: ${contact.methode}${contact.moment ? " (" + contact.moment + ")" : ""}${draftNotes ? " | " + draftNotes : ""}`,
           momentContact: contact.moment,
           source: "soumission-page",
-          consentProcessing: consent1,
-          consentMarketing: consent2,
+          consentProcessing: c2 ? jumelage : consent1,
+          consentMarketing: c2 ? promotions : consent2,
+          // Conformité C2 : version des textes affichés et état des cases (preuve 5.4).
+          consentements: consentAnswers(consents, { rappels, promotions, jumelage }),
+          page: typeof window !== "undefined" ? window.location.pathname : "/soumission",
           website: honeypot,
           attribution: readAttribution(),
           draft: typeof window !== "undefined" ? JSON.parse(sessionStorage.getItem("thermomatch-answers") || "{}") : {}
@@ -605,12 +615,34 @@ export default function SoumissionPage() {
 
             {/* Cases du carnet */}
             <div style={{ display: "grid", gap: 14, marginBottom: 24, paddingTop: 18, borderTop: "1px dashed rgba(23,27,30,0.22)" }}>
-              <HandCheckbox checked={consent1} onChange={setConsent1}>
-                J&apos;autorise Thermopompes À Vendre.ca à traiter mes renseignements et à me contacter pour discuter de mon projet, conformément à la <a href="/confidentialite" target="_blank" rel="noopener" className="cn-link cn-link-on" style={{ color: P.ink }}>politique de confidentialité</a>.
-              </HandCheckbox>
-              <HandCheckbox checked={consent2} onChange={setConsent2}>
-                J&apos;accepte de recevoir des conseils, promotions et nouveautés par courriel (optionnel).
-              </HandCheckbox>
+              {c2 ? (
+                <>
+                  {/* Conformité C2 : avis de jumelage (3.1) avant la case obligatoire ; cases 5.2 et 5.3 facultatives et distinctes. */}
+                  <div style={{ fontSize: 12.5, lineHeight: 1.6, color: P.soft, padding: "2px 0 2px 14px", borderLeft: "2px solid rgba(23,27,30,0.18)" }}>
+                    {consents.texts.jumelage.notice.map((t, i) => (
+                      <NoticeParagraph key={i} text={t} style={{ margin: i ? "8px 0 0" : 0 }} linkStyle={{ color: P.ink }} linkClassName="cn-link" />
+                    ))}
+                  </div>
+                  <HandCheckbox checked={jumelage} onChange={setJumelage}>
+                    <ConsentCopy text={consents.texts.jumelage.box} linkStyle={{ color: P.ink }} linkClassName="cn-link" />
+                  </HandCheckbox>
+                  <HandCheckbox checked={rappels} onChange={setRappels}>
+                    <ConsentCopy text={consents.texts.rappels} linkStyle={{ color: P.ink }} linkClassName="cn-link" />
+                  </HandCheckbox>
+                  <HandCheckbox checked={promotions} onChange={setPromotions}>
+                    <ConsentCopy text={consents.texts.promotions} linkStyle={{ color: P.ink }} linkClassName="cn-link" />
+                  </HandCheckbox>
+                </>
+              ) : (
+                <>
+                  <HandCheckbox checked={consent1} onChange={setConsent1}>
+                    J&apos;autorise Thermopompes À Vendre.ca à traiter mes renseignements et à me contacter pour discuter de mon projet, conformément à la <a href="/confidentialite" target="_blank" rel="noopener" className="cn-link cn-link-on" style={{ color: P.ink }}>politique de confidentialité</a>.
+                  </HandCheckbox>
+                  <HandCheckbox checked={consent2} onChange={setConsent2}>
+                    J&apos;accepte de recevoir des conseils, promotions et nouveautés par courriel (optionnel).
+                  </HandCheckbox>
+                </>
+              )}
             </div>
 
             {error && <p role="alert" style={{ color: P.rust, fontSize: 13.5, marginBottom: 12 }}>{error}</p>}
@@ -632,6 +664,12 @@ export default function SoumissionPage() {
             {!canSubmit && !loading && (
               <p id="lead-missing" style={{ fontSize: 15, color: P.rust, margin: "12px 0 0", lineHeight: 1.45, fontFamily: SERIF, fontStyle: "italic" }}>
                 Il manque {missing.join(", ")}.
+              </p>
+            )}
+            {/* Conformité C2 : texte 5.1 sous le formulaire. */}
+            {c2 && (
+              <p style={{ fontSize: 12.5, color: P.soft, margin: "14px 0 0", lineHeight: 1.55 }}>
+                <ConsentCopy text={consents.texts.communications} linkStyle={{ color: P.ink }} linkClassName="cn-link" />
               </p>
             )}
 

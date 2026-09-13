@@ -15,6 +15,7 @@ import { attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
 import { attributionWithAds } from "@/lib/ads/server-attribution"; // pilote publicitaire : attribution + consentement et clic
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
+import { consentSummary, gateFormConsents, safePath, saveFormConsents } from "@/lib/consentements/formulaires"; // Conformité C2 : cases 5.2 et 5.3, preuve (5.4)
 
 const schema = z.object({
   firstName: z.string().trim().min(1, "Le prénom est requis.").max(80),
@@ -53,12 +54,16 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: first?.message ?? "Données invalides.", field: first?.path?.[0] ?? null }, { status: 400 });
   }
   const d = parsed.data;
+  // Conformité C2 : textes de la trousse affichés → version connue, cases 5.2 et 5.3 et preuve (5.4) ; sinon, comportement actuel.
+  const gate = await gateFormConsents(json, { jumelage: false });
+  if (gate.mode === "refus") return NextResponse.json({ ok: false, error: gate.error }, { status: gate.status });
+  const proof = await saveFormConsents(gate, { req, form: "thermoscan", source: safePath((json as Record<string, unknown>).page, "/thermoscan"), email: d.email, phone: d.phone });
   const dev = d.device;
   const label = `${dev.brand} ${dev.model}`.trim() || "appareil non identifié";
   const territory = d.postalCode ? getTerritoryFromPostalCode(d.postalCode) : undefined;
 
   const attribution = attributionWithAds(json);
-  const { entry } = await journalLead("thermoscan", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode: d.postalCode, device: dev, sessionId: d.sessionId }, attribution);
+  const { entry } = await journalLead("thermoscan", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode: d.postalCode, device: dev, sessionId: d.sessionId, ...(gate.mode === "c2" ? { consentements: proof?.id ?? "non-gardee" } : {}) }, attribution);
 
   const e = escapeHtml;
   const rows: Array<[string, string]> = [
@@ -72,6 +77,7 @@ export async function POST(req: NextRequest) {
     ["Code postal", d.postalCode ?? "—"],
     ["Téléphone", d.phone ?? "—"],
     ["Courriel", d.email],
+    ...consentSummary(proof), // Conformité C2
     ...attributionLines(attribution),
     ["Journal", entry.id],
   ];

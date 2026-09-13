@@ -62,6 +62,13 @@ export const AUDIT_ACTIONS = {
   "partenaire.fin": "Fin de partenariat",
   "partenaire.reglages": "Réglages des partenaires modifiés",
   "sav.delais": "Service après-vente : priorité ou accusé",
+  // Conformité C2 : enregistrements d'appels (écoute, exportation, suppression) et anonymisation des prospects inactifs.
+  "enregistrement.ecoute": "Enregistrement d’appel écouté",
+  "enregistrement.export": "Enregistrement d’appel exporté",
+  "enregistrement.suppression": "Enregistrement d’appel supprimé",
+  "prospects.essai": "Anonymisation des prospects inactifs (essai)",
+  "prospects.anonymisation": "Prospects inactifs anonymisés",
+  "conformite.reglages": "Réglages de conformité modifiés",
 } as const;
 
 export type AuditAction = keyof typeof AUDIT_ACTIONS;
@@ -75,6 +82,7 @@ export const AUDIT_FAMILIES: Record<string, { label: string; match: (a: string) 
   equipe: { label: "Équipe et attributions", match: (a) => a.startsWith("equipe.") || a.startsWith("crm.attribution") || a.startsWith("crm.reattribution") || a.startsWith("vendeurs.") }, // Chantier V
   partenaires: { label: "Partenaires et entente", match: (a) => a.startsWith("entente.") || a.startsWith("partenaire.") || a.startsWith("sav.") }, // Conformité C3
   export: { label: "Exports", match: (a) => a === "export" },
+  enregistrements: { label: "Enregistrements et conservation", match: (a) => a.startsWith("enregistrement.") || a.startsWith("prospects.") || a.startsWith("conformite.") }, // Conformité C2
   echecs: { label: "Échecs seulement", match: (a) => /echec|bloquee/.test(a) },
 };
 

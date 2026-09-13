@@ -62,11 +62,22 @@ async function smsOut(e164: string, body: string, label: string): Promise<Channe
   return status;
 }
 
+/**
+ * Conformité C2 — nature d'un message au client :
+ *   « operationnel » : demande, rendez-vous, chantier, paiement, sécurité, service, garantie ; JAMAIS bloqué
+ *                      par un désabonnement commercial (seul un STOP texto, bloqué par l'opérateur, l'arrête) ;
+ *   « suivi »        : suivi facultatif sans promotion (sondage) ; arrêté par le désabonnement ;
+ *   « commercial »   : offres, entretien, référence, promotions ; arrêté par le désabonnement ET soumis au
+ *                      consentement (vérifié par l'appelant) et au pied de message 5.5.
+ * Absent : « suivi » (comportement d'avant).
+ */
+export type MessageCategory = "operationnel" | "suivi" | "commercial";
+
 /** Texto à un client : désabonnements vérifiés AVANT tout. */
-export async function sendClientSms(phone: string | null | undefined, body: string, opts: { suppressed: ReadonlySet<string>; label: string }): Promise<ChannelOutcome> {
+export async function sendClientSms(phone: string | null | undefined, body: string, opts: { suppressed: ReadonlySet<string>; label: string; category?: MessageCategory }): Promise<ChannelOutcome> {
   const e164 = phone ? toE164(phone) : null;
   if (!e164) return "sans-destinataire";
-  if (opts.suppressed.has(suppressionHash(`p:${e164}`))) return "desabonne";
+  if (opts.category !== "operationnel" && opts.suppressed.has(suppressionHash(`p:${e164}`))) return "desabonne";
   if (await isOptedOutNumber(e164).catch(() => false)) return "desabonne";
   if (!smsConfigured()) return "non-configure";
   if (!liveSendsAllowed()) {
@@ -77,11 +88,14 @@ export async function sendClientSms(phone: string | null | undefined, body: stri
 }
 
 /** Courriel à un client : désabonnements (suivis, relances et avis) puis adresse postale (LCAP). */
-export async function sendClientMail(email: string | null | undefined, mail: Mail, opts: { suppressed: ReadonlySet<string>; label: string; headers?: Record<string, string> }): Promise<ChannelOutcome> {
+export async function sendClientMail(email: string | null | undefined, mail: Mail, opts: { suppressed: ReadonlySet<string>; label: string; headers?: Record<string, string>; category?: MessageCategory }): Promise<ChannelOutcome> {
   const to = email?.trim().toLowerCase() ?? "";
   if (!EMAIL_RE.test(to)) return "sans-destinataire";
-  if (opts.suppressed.has(suppressionHash(`e:${to}`))) return "desabonne";
-  if (await relancesSuppressed(to).catch(() => false)) return "desabonne";
+  // Conformité C2 : un désabonnement commercial n'arrête pas les messages de service.
+  if (opts.category !== "operationnel") {
+    if (opts.suppressed.has(suppressionHash(`e:${to}`))) return "desabonne";
+    if (await relancesSuppressed(to).catch(() => false)) return "desabonne";
+  }
   if (!businessMailingAddress()) return "sans-adresse-postale";
   if (!liveSendsAllowed()) {
     console.log(`[automatisations] courriel simulé (${opts.label}) → ${maskEmail(to)} : « ${mail.subject} »`);

@@ -21,6 +21,8 @@ import { readTextos } from "@/lib/textos/store";
 import type { Conversation } from "@/lib/textos/types";
 import { maskPhone } from "@/lib/textos/phone";
 import { consentOf, type ConsentState } from "./consent";
+import { readConsents } from "@/lib/consentements/store"; // Conformité C2 : case 5.3 des formulaires
+import { promotionsConsent } from "@/lib/consentements/commercial";
 import { MESSAGE_MAX, renderCampaignText } from "./plan";
 import { sendTrackedSms } from "./sms";
 import { CAMPAIGN_ID_RE, mutateTelephonie, newTelId, readTelephonie } from "./store";
@@ -73,7 +75,8 @@ export function inSegment(c: ClientComputed, seg: CampaignSegment, now: Date): b
   return true;
 }
 
-export function segmentRows(clients: ClientComputed[], conversations: Record<string, Conversation>, consents: Record<string, ExpressConsent>, seg: CampaignSegment, now: Date): { included: SegmentRow[]; excluded: SegmentRow[] } {
+/** `formOf` : Conformité C2, case 5.3 des formulaires (et son retrait) d'un client. */
+export function segmentRows(clients: ClientComputed[], conversations: Record<string, Conversation>, consents: Record<string, ExpressConsent>, seg: CampaignSegment, now: Date, formOf: (c: ClientComputed) => import("./consent").FormConsent | null = () => null): { included: SegmentRow[]; excluded: SegmentRow[] } {
   const included: SegmentRow[] = [];
   const excluded: SegmentRow[] = [];
   const seen = new Set<string>();
@@ -82,7 +85,7 @@ export function segmentRows(clients: ClientComputed[], conversations: Record<str
     const install = lastInstall(c);
     const phone = c.b.phones[0] ?? "";
     const optedOut = c.b.phones.some((p) => conversations[p]?.optedOut);
-    const consent = consentOf(c.b, consents, optedOut, now);
+    const consent = consentOf(c.b, consents, optedOut, now, formOf(c));
     const row: SegmentRow = { clientId: c.b.id, firstName: c.b.firstName || "Sans nom", city: c.b.city, phone, installedAt: install?.at ?? null, brand: install?.brand ?? null, consent };
     if (!phone) excluded.push({ ...row, reason: "Aucun numéro" });
     else if (seen.has(phone)) continue;
@@ -175,7 +178,9 @@ export async function previewCampaign(id: string, now = new Date()): Promise<{ c
   const [data, index, textos] = await Promise.all([readTelephonie(), freshIndex(now), readTextos()]);
   const campaign = data.campaigns.find((c) => c.id === id);
   if (!campaign) return null;
-  return { campaign, ...segmentRows(index.clients, textos.conversations, data.consents, campaign.segment, now) };
+  // Conformité C2 : l'aperçu applique la même règle que l'envoi (case 5.3 des formulaires comprise).
+  const cons = await readConsents().catch(() => null);
+  return { campaign, ...segmentRows(index.clients, textos.conversations, data.consents, campaign.segment, now, (c) => (cons ? promotionsConsent(cons, { emails: c.b.emails, phones: c.b.phones }, now) : null)) };
 }
 
 /** Envoi test au propriétaire (ALERT_SMS_TO) : le texte exact, avec « Prénom ». */
@@ -257,7 +262,9 @@ export async function processCampaigns(now = new Date(), opts: { gapMs?: number 
   if (!running.length) return { ...out, skipped: "aucune" };
   if (!inSendWindow(now, data.settings.campaigns)) return { ...out, skipped: "hors-heures" };
 
-  const [index, textos] = await Promise.all([freshIndex(now), readTextos()]);
+  // Conformité C2 : case 5.3 des formulaires (et son retrait) ajoutée aux règles de consentement, revérifiée juste avant chaque envoi.
+  const [index, textos, consentData] = await Promise.all([freshIndex(now), readTextos(), readConsents().catch(() => null)]);
+  const formOf = (c: ClientComputed) => (consentData ? promotionsConsent(consentData, { emails: c.b.emails, phones: c.b.phones }, now) : null);
   let budget = data.settings.campaigns.perTick;
   for (const camp of running) {
     for (const r of camp.recipients.filter((x) => x.status === "attente")) {
@@ -274,7 +281,7 @@ export async function processCampaigns(now = new Date(), opts: { gapMs?: number 
       if (!fresh) continue;
       const client = index.byId.get(r.clientId);
       const optedOut = Boolean(textos.conversations[r.phone]?.optedOut);
-      const consent = client ? consentOf(client.b, data.consents, optedOut, now) : null;
+      const consent = client ? consentOf(client.b, data.consents, optedOut, now, formOf(client)) : null;
       let status: Campaign["recipients"][number]["status"];
       let reason: string | undefined;
       let messageId: string | undefined;

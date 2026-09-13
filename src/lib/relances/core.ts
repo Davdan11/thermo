@@ -14,7 +14,8 @@ import { createHash, randomBytes, randomUUID } from "node:crypto";
 
 export type RelanceKind = "thermomatch-j2" | "thermomatch-j7" | "avis";
 export type RelanceStatus = "pending" | "sending" | "sent" | "failed" | "cancelled";
-export type CancelReason = "desabonnement" | "soumission" | "rendez-vous" | "remplacee" | "catalogue" | "expiree" | "echecs";
+/* Conformité C2 : « sans-consentement » (rappel sans case 5.2 cochée) et « plafond » (deux rappels déjà partis pour la demande). */
+export type CancelReason = "desabonnement" | "soumission" | "rendez-vous" | "remplacee" | "catalogue" | "expiree" | "echecs" | "sans-consentement" | "plafond";
 
 /** Preuve du consentement : moment, page et texte exact de la case cochée. */
 export interface RelanceConsent {
@@ -22,6 +23,8 @@ export interface RelanceConsent {
   page: string;
   text: string;
   version: string;
+  /** Conformité C2 : preuve 5.2 dans le magasin des consentements (texte de la trousse, version = empreinte). */
+  recordId?: string;
 }
 
 export type RelanceSource =
@@ -200,6 +203,26 @@ export function stopReason(m: ScheduledMessage, ctx: { suppressed: ReadonlySet<s
     if (after.length) return after[0].kind;
   }
   return null;
+}
+
+/* ---------------- Conformité C2 : case 5.2 et plafond de deux rappels ---------------- */
+
+/** Au plus deux rappels par demande (trousse 5.2). */
+export const MAX_REMINDERS = 2;
+export const isReminder = (m: ScheduledMessage) => m.kind === "thermomatch-j2" || m.kind === "thermomatch-j7";
+const demandKey = (m: ScheduledMessage) => (m.source.type === "thermomatch" ? (m.source.journalId ?? `${m.email}|${m.source.requestedAt}`) : m.id);
+
+/**
+ * Un rappel ne part qu'avec la case 5.2 cochée (preuve jointe), jamais plus de deux par demande ni par
+ * consentement. Les demandes d'avis ne sont pas des rappels : non visées.
+ */
+export function consentStop(m: ScheduledMessage, all: readonly ScheduledMessage[]): CancelReason | null {
+  if (!isReminder(m)) return null;
+  if (!m.consent || !m.consent.text || !m.consent.at) return "sans-consentement";
+  const key = demandKey(m);
+  const record = m.consent.recordId;
+  const sent = all.filter((x) => x.id !== m.id && isReminder(x) && (x.status === "sent" || x.status === "sending") && (demandKey(x) === key || (record && x.consent?.recordId === record))).length;
+  return sent >= MAX_REMINDERS ? "plafond" : null;
 }
 
 /** Soumissions et rendez-vous du journal des leads (lignes JSONL), par adresse en minuscules. */

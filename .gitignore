@@ -109,3 +109,12 @@ public/images/products/_official-sources/**
 /data/partenaires*.tmp
 /data/partenaires-fichiers/
 /data/partenaires-acces/
+# Conformité C2 : trousse contractuelle (CONFIDENTIELLE : texte de l'avocat), identité de la plateforme, preuves de
+# consentement (adresses IP), réglages de conformité et programme de recommandation (shared/data sur le VPS, jamais dans le dépôt)
+/data/consentements.json
+/data/conformite.json
+/data/references.json
+/data/consentements.json.lock
+/data/conformite.json.lock
+/data/references.json.lock
+/data/*.tmp

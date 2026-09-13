@@ -55,6 +55,11 @@ async function main() {
     },
     send: (m, mail, headers) => email.sendClientEmail(m.email, mail.subject, mail.html, { headers, text: mail.text, label: `relance ${m.kind}` }),
     loadConversions,
+    // Conformité C2 : pied de message commercial de la trousse (5.5), rempli avec l'identité ; null : pied actuel.
+    footer: async (m) => {
+      const [{ commercialFooterFor }, { relanceLinks }] = await Promise.all([import("../src/lib/consentements/serveur"), import("../src/lib/crm/templates/relances-email")]);
+      return (await commercialFooterFor("rappels", relanceLinks.unsubscribe(m.token)))?.text ?? null;
+    },
     log: (line) => console.log(line),
   });
 

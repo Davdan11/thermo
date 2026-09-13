@@ -241,10 +241,11 @@ function UnsubscribeCard({ action, done }: { action: string; done: boolean }) {
       <h2 className="sv-h2" id="sv-unsub">
         {done ? "Vous êtes désabonné" : "Ne plus recevoir ces suivis"}
       </h2>
+      {/* Conformité C2 : un désabonnement commercial n'arrête pas les messages de service. */}
       <p className="sv-lead">
         {done
-          ? "Vous ne recevrez plus de suivis automatiques (sondage, rappels LogisVert, entretien, référence) pour ce dossier."
-          : "Vous ne recevrez plus de suivis automatiques (sondage, rappels LogisVert, entretien, référence) à ce courriel ni à ce numéro."}
+          ? "Vous ne recevrez plus de sondages, d’offres d’entretien ni de messages de recommandation pour ce dossier. Les messages nécessaires à votre installation (rendez-vous, chantier, garantie, sécurité, aide LogisVert) continuent."
+          : "Vous ne recevrez plus de sondages, d’offres d’entretien ni de messages de recommandation à ce courriel ni à ce numéro. Les messages nécessaires à votre installation (rendez-vous, chantier, garantie, sécurité, aide LogisVert) continuent."}
       </p>
       {done ? null : (
         <form method="post" action={action} className="sv-form">

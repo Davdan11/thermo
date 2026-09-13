@@ -59,6 +59,8 @@ export interface RecordingInput {
   phone?: string | null;
   callId?: string;
   durationSec: number;
+  /** Conformité C2 : l'appelant a refusé l'enregistrement (touche 9) : aucune transcription ; l'audio suit la conservation. */
+  noTranscription?: boolean;
 }
 
 /** Ajoute un enregistrement (une seule fois par RecordingSid). Renvoie l'identifiant, ou null si refusé. */
@@ -71,7 +73,20 @@ export async function enqueueRecording(input: RecordingInput, now = new Date()):
     const existing = data.recordings.find((r) => r.recordingSid === input.recordingSid);
     if (existing) return { result: existing.id, changed: false };
     const state = transcriptionState(data, now);
-    const status: RecordingJob["status"] = duration < MIN_SECONDS ? "trop-court" : duration > MAX_SECONDS ? "trop-long" : state.active || state.reason === "quota" ? "attente" : "desactive";
+    const status: RecordingJob["status"] = input.noTranscription
+      ? "desactive"
+      : duration < MIN_SECONDS
+        ? "trop-court"
+        : duration > MAX_SECONDS
+          ? "trop-long"
+          : state.active || state.reason === "quota"
+            ? "attente"
+            : "desactive";
+    if (input.noTranscription) {
+      const job: RecordingJob = { id: newTelId("r"), recordingSid: input.recordingSid, ...(callSid ? { callSid } : {}), source: input.source, ...(phone ? { phone } : {}), durationSec: duration, createdAt: now.toISOString(), status, attempts: 0, audio: "twilio", noTranscription: true };
+      data.recordings.push(job);
+      return { result: job.id, changed: true };
+    }
     const job: RecordingJob = {
       id: newTelId("r"),
       recordingSid: input.recordingSid,
@@ -247,6 +262,10 @@ async function deleteAudioOf(id: string, now: Date, fetchImpl: typeof fetch): Pr
     x.audioDeletedAt = now.toISOString();
     return { result: undefined, changed: true };
   });
+  // Conformité C2 : chaque suppression est notée au journal d'audit (conservation de l'audio : 90 jours par défaut).
+  await import("@/lib/gestion/securite/audit")
+    .then((a) => a.audit("enregistrement.suppression", { enregistrement: id, raison: "conservation" }, { qui: "robot (conservation)", ip: null }))
+    .catch(() => undefined);
   return true;
 }
 

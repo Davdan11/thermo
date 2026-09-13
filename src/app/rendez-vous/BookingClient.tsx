@@ -17,6 +17,7 @@ import { readAttribution } from "@/lib/attribution/client";
 import { BookingHero, BookingConfirmedHero } from "@/components/heroes-v2/entreprise/BookingCalendar";
 import { Arrow } from "@/components/heroes-v2/entreprise/shared";
 import { EASE, Reveal, Shell } from "@/components/sections-v2/entreprise/kit";
+import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
 
 const ORANGE = "#e54b17";
 const ORANGE_TEXT = "#b93e12";
@@ -153,6 +154,10 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
   const [slot, setSlot] = useState("");
   const [bookingSource, setBookingSource] = useState("rendez-vous");
   const [values, setValues] = useState({ need: "installation", firstName: "", lastName: "", phone: "", email: "", address: "", city: "", notes: "", consent: false, website: "" });
+  // Conformité C2 : cases 5.2 et 5.3 de la trousse, facultatives et jamais cochées d'avance.
+  const consents = useConsentTexts();
+  const [opt, setOpt] = useState({ rappels: false, promotions: false });
+  const [consentError, setConsentError] = useState("");
   const [errors, setErrors] = useState<Record<string, string | undefined>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error" | "taken">("idle");
   const [result, setResult] = useState<Result | null>(null);
@@ -253,9 +258,16 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
       const res = await fetch("/api/rendez-vous", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, mode, postalCode, date, slot, source: bookingSource, page: typeof window !== "undefined" ? window.location.pathname : "", attribution: readAttribution() }),
+        body: JSON.stringify({ ...values, mode, postalCode, date, slot, source: bookingSource, page: typeof window !== "undefined" ? window.location.pathname : "", attribution: readAttribution(), consentements: consentAnswers(consents, opt) }),
       });
       const data = await res.json().catch(() => ({}));
+      // Conformité C2 : textes de consentement mis à jour entre l'affichage et l'envoi.
+      if (data?.error === "consentements") {
+        setConsentError(typeof data.message === "string" ? data.message : "Rechargez la page, puis renvoyez votre demande.");
+        setStatus("error");
+        return;
+      }
+      setConsentError("");
       if (res.status === 409) {
         setStatus("taken");
         setSlot("");
@@ -567,6 +579,23 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
                     <span>J&apos;accepte la <Link href="/confidentialite" style={{ color: ORANGE_TEXT, fontWeight: 600, textDecoration: "underline" }}>politique de confidentialité</Link>. <span style={{ color: ORANGE_TEXT }}>*</span></span>
                   </label>
                   {errors.consent && <span id="rv-consent-err" style={errorText}>{errors.consent}</span>}
+                  {/* Conformité C2 : cases facultatives 5.2 et 5.3 de la trousse, distinctes et jamais cochées d'avance. */}
+                  {consents.status === "pret" && (
+                    <>
+                      <label style={{ display: "flex", gap: 12, alignItems: "flex-start", fontSize: 14.5, color: MUTED, lineHeight: 1.5, margin: "12px 0 6px", cursor: "pointer" }}>
+                        <input type="checkbox" checked={opt.rappels} onChange={(e) => setOpt((o) => ({ ...o, rappels: e.target.checked }))} className="xs-check-rv" style={{ marginTop: 1 }} />
+                        <span>
+                          <ConsentCopy text={consents.texts.rappels} linkStyle={{ color: ORANGE_TEXT, fontWeight: 600, textDecoration: "underline" }} />
+                        </span>
+                      </label>
+                      <label style={{ display: "flex", gap: 12, alignItems: "flex-start", fontSize: 14.5, color: MUTED, lineHeight: 1.5, margin: "12px 0 6px", cursor: "pointer" }}>
+                        <input type="checkbox" checked={opt.promotions} onChange={(e) => setOpt((o) => ({ ...o, promotions: e.target.checked }))} className="xs-check-rv" style={{ marginTop: 1 }} />
+                        <span>
+                          <ConsentCopy text={consents.texts.promotions} linkStyle={{ color: ORANGE_TEXT, fontWeight: 600, textDecoration: "underline" }} />
+                        </span>
+                      </label>
+                    </>
+                  )}
 
                   <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginTop: 26, flexWrap: "wrap" }}>
                     <button type="button" onClick={() => setStep(1)} className="xs-ring-dark" style={secondaryBtn}>Retour</button>
@@ -574,8 +603,14 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
                       {status === "sending" ? "Réservation en cours…" : <>Confirmer le rendez-vous <Arrow className="xs-arrow" size={16} /></>}
                     </button>
                   </div>
-                  {status === "error" && <p role="alert" style={{ ...sub, color: ERROR, fontWeight: 600, margin: "16px 0 0", padding: "12px 14px", background: "#fff1ee", borderLeft: `3px solid ${ERROR}`, borderRadius: 4 }}>Une erreur est survenue. Réessayez ou appelez-nous au {PHONE}.</p>}
+                  {status === "error" && <p role="alert" style={{ ...sub, color: ERROR, fontWeight: 600, margin: "16px 0 0", padding: "12px 14px", background: "#fff1ee", borderLeft: `3px solid ${ERROR}`, borderRadius: 4 }}>{consentError || `Une erreur est survenue. Réessayez ou appelez-nous au ${PHONE}.`}</p>}
                   <p style={{ ...hint, marginTop: 16 }}><span style={{ color: ORANGE_TEXT }}>*</span> Champs obligatoires. Rendez-vous gratuit et sans engagement.</p>
+                  {/* Conformité C2 : texte 5.1 sous le formulaire. */}
+                  {consents.status === "pret" && (
+                    <p style={{ ...hint, marginTop: 10 }}>
+                      <ConsentCopy text={consents.texts.communications} linkStyle={{ color: ORANGE_TEXT, fontWeight: 600, textDecoration: "underline" }} />
+                    </p>
+                  )}
                 </div>
               )}
             </motion.div>

@@ -18,13 +18,15 @@ export async function POST(req: Request) {
   const dialCallStatus = check.params.get("DialCallStatus") ?? "";
   const caller = check.params.get("From") ?? "";
   const dept = (new URL(req.url).searchParams.get("dept") ?? "ventes").replace(/[^a-z]/g, "") || "ventes";
+  // Conformité C2 : l'appelant a fait le 9 : aucun enregistrement de la suite, ni transcription du message vocal.
+  const noRec = new URL(req.url).searchParams.get("enr") === "non";
 
   if (dialCallStatus === "completed") return twiml(`<Hangup/>`);
 
   // Bureau sans réponse : le cellulaire sonne ensuite (heures d'ouverture seulement), puis la boîte vocale.
   if (new URL(req.url).searchParams.get("etape") === "bureau") {
     const cfg = phoneConfig();
-    if (cfg.cellNumber && isBusinessHours()) return twiml(cellDialTwiml(base, toDept(dept), cfg.cellNumber));
+    if (cfg.cellNumber && isBusinessHours()) return twiml(cellDialTwiml(base, toDept(dept), cfg.cellNumber, { record: !noRec }));
   }
 
   if (caller && caller !== "anonymous") {
@@ -39,17 +41,19 @@ export async function POST(req: Request) {
   }
 
   const q = `?dept=${dept}&amp;caller=${xml(encodeURIComponent(caller))}`;
+  // Conformité C2 : après la touche 9, le message vocal n'est jamais transcrit (ni par Twilio ni par Gemini).
+  const transcription = noRec ? "" : `
+    transcribe="true"
+    transcribeCallback="${base}/api/phone/transcription${q}"`;
   return twiml(`
   <Say language="fr-CA" voice="Polly.Gabrielle-Neural">
     Nous sommes présentement dans l'impossibilité de prendre votre appel.
     Laissez votre message après le son et nous vous rappellerons dans les meilleurs délais.
   </Say>
   <Record
-    action="${base}/api/phone/voicemail${q}"
+    action="${base}/api/phone/voicemail${q}${noRec ? "&amp;enr=non" : ""}"
     maxLength="120"
-    playBeep="true"
-    transcribe="true"
-    transcribeCallback="${base}/api/phone/transcription${q}"
+    playBeep="true"${transcription}
   />
   <Say language="fr-CA" voice="Polly.Gabrielle-Neural">Merci. Au revoir.</Say>`);
 }

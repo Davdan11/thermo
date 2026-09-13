@@ -25,6 +25,7 @@ import { LOGISVERT_STATUSES, type LogisvertStatus } from "@/lib/gestion/automati
 import { portalLimits } from "@/lib/gestion/portail/limits";
 import { getPortalView, type PortalView, type ScheduleDTO } from "@/lib/gestion/portail/service";
 import { CopyLink, LiveRefresh } from "@/components/portail/ClientBits";
+import { referralCardState } from "@/lib/reference/portail"; // Conformité C2 : programme de recommandation (trousse 7)
 
 export const metadata: Metadata = { title: "Mon projet" };
 export const dynamic = "force-dynamic";
@@ -52,6 +53,7 @@ const ERRORS: Record<string, string> = {
   conditions: "Les conditions du plan ne sont pas encore prêtes.",
   deja: "Vous avez déjà un plan d’entretien pour ce projet.",
   formulaire: "Réponse incomplète : vérifiez le formulaire.",
+  declaration: "Cochez la case de déclaration (18 ans ou plus, résident du Canada) pour confirmer.", // Conformité C2
 };
 
 const dayTitle = (ymd: string) => {
@@ -455,6 +457,7 @@ export default async function ProjetPage({ params, searchParams }: { params: Pro
   if (!v) return <Plain title="Ce lien n’est pas valide" text={`Il a peut-être été coupé en le copiant. Appelez-nous au ${BRAND.phone} ou écrivez à ${BRAND.email}.`} />;
 
   const enc = encodeURIComponent(token);
+  const refCard = await referralCardState(token).catch(() => null); // Conformité C2
   const action = `/projet/${enc}/repondre`;
   const q = isFocus(one("q")) ? (one("q") as Focus) : null;
   const okRaw = one("ok");
@@ -618,7 +621,30 @@ export default async function ProjetPage({ params, searchParams }: { params: Pro
           </h2>
           <p className="pj-lead">Partagez votre lien personnel : il nous dit que la personne vient de votre part.</p>
           <CopyLink value={v.referral.link} />
-          {v.referral.reward ? <p style={{ margin: "14px 0 0" }}>{v.referral.reward}</p> : null}
+          {/* Conformité C2 : trousse en vigueur : récompense tirée des réglages, déclaration du recommandant, règles publiques. */}
+          {(refCard?.c2 ? refCard.reward : v.referral.reward) ? <p style={{ margin: "14px 0 0" }}>{refCard?.c2 ? refCard.reward : v.referral.reward}</p> : null}
+          {refCard?.c2 && refCard.offered ? (
+            refCard.declared ? (
+              <p className="pj-muted" style={{ margin: "12px 0 0", fontSize: 14 }}>
+                Déclaration reçue : 18 ans ou plus, résident du Canada.
+              </p>
+            ) : (
+              <form method="post" action={`/projet/${enc}/reference`} className="pj-row" style={{ marginTop: 14 }}>
+                <label style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 15 }}>
+                  <input type="checkbox" name="declaration" value="oui" required style={{ marginTop: 4 }} />
+                  <span>Je déclare avoir 18 ans ou plus et résider au Canada (condition pour recevoir la récompense).</span>
+                </label>
+                <button type="submit" className="pj-btn pj-btn--primary">
+                  Confirmer
+                </button>
+              </form>
+            )
+          ) : null}
+          {refCard?.c2 && refCard.offered ? (
+            <p style={{ margin: "12px 0 0", fontSize: 14 }}>
+              <a href={refCard.rulesUrl}>Règles du programme de recommandation</a>
+            </p>
+          ) : null}
         </>
       ),
     });
@@ -631,7 +657,8 @@ export default async function ProjetPage({ params, searchParams }: { params: Pro
       node: (
         <>
           <h2 className="pj-h2">{v.unsubscribed ? "Vous êtes désabonné" : "Ne plus recevoir ces suivis"}</h2>
-          <p className="pj-lead">Vous ne recevrez plus de suivis automatiques (rappels, sondage, LogisVert, entretien, référence) à ce courriel ni à ce numéro. Votre espace reste accessible.</p>
+          {/* Conformité C2 : un désabonnement commercial n'arrête pas les messages de service. */}
+          <p className="pj-lead">Vous ne recevrez plus de sondages, d’offres d’entretien ni de messages de recommandation à ce courriel ni à ce numéro. Les messages nécessaires à votre installation (rendez-vous, chantier, garantie, sécurité, aide LogisVert) continuent. Votre espace reste accessible.</p>
           {v.unsubscribed ? null : (
             <form method="post" action={action}>
               <input type="hidden" name="action" value="desabonnement" />
