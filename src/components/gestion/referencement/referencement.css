@@ -1,0 +1,296 @@
+/* ==================================================================
+   Page Référencement (/gestion/referencement). Téléphone d'abord
+   (390 px), mêmes jetons que le kit (--g-*). Entrées animées, coupées
+   avec « réduire les animations ».
+   ================================================================== */
+
+.rf-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--g-line);
+  background: var(--g-paper-warm);
+  animation: rf-rise 0.45s var(--g-ease) both;
+}
+.rf-banner > svg {
+  flex: none;
+  margin-top: 2px;
+}
+.rf-banner > div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.rf-banner b {
+  font-size: 14.5px;
+}
+.rf-banner span {
+  font-size: 13.5px;
+  color: var(--g-muted);
+  overflow-wrap: anywhere;
+}
+.rf-banner.is-warn {
+  background: var(--g-warn-soft);
+  border-color: rgba(154, 91, 11, 0.22);
+}
+.rf-banner.is-warn > svg {
+  color: var(--g-warn);
+}
+.rf-banner.is-info > svg {
+  color: var(--g-muted);
+}
+
+.rf-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.rf-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: var(--g-muted);
+}
+.rf-meta code,
+.rf-steps code,
+.g-hint code {
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+}
+
+.rf-flat {
+  margin: 0;
+}
+
+/* Écarts : vert si mieux, rouge si moins bien. */
+.rf-delta {
+  font-weight: 600;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+.rf-delta.is-up {
+  color: var(--g-ok);
+}
+.rf-delta.is-down {
+  color: var(--g-bad, #b3261e);
+}
+.rf-delta.is-flat {
+  color: var(--g-muted);
+}
+.rf-pos {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.rf-kw {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.rf-kw small {
+  font-size: 11.5px;
+  color: var(--g-muted);
+}
+.rf-url {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.rf-form {
+  display: grid;
+  gap: 12px;
+}
+.rf-textarea {
+  width: 100%;
+  min-height: 240px;
+  padding: 12px 14px;
+  border: 1px solid var(--g-line);
+  border-radius: 14px;
+  background: var(--g-paper, #fff);
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: vertical;
+}
+.rf-textarea:focus-visible {
+  outline: 2px solid var(--g-ink);
+  outline-offset: 2px;
+}
+
+.rf-moves,
+.rf-history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.rf-moves li,
+.rf-history li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--g-line);
+  animation: rf-rise 0.4s var(--g-ease) both;
+}
+.rf-moves li:first-child,
+.rf-history li:first-child {
+  border-top: 0;
+}
+.rf-moves li small,
+.rf-history li small {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  color: var(--g-muted);
+}
+.rf-moves li:nth-child(2),
+.rf-history li:nth-child(2) {
+  animation-delay: 0.04s;
+}
+.rf-moves li:nth-child(3),
+.rf-history li:nth-child(3) {
+  animation-delay: 0.08s;
+}
+.rf-moves li:nth-child(n + 4),
+.rf-history li:nth-child(n + 4) {
+  animation-delay: 0.12s;
+}
+
+.rf-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  margin: 0;
+}
+.rf-facts div {
+  min-width: 0;
+}
+.rf-facts dt {
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--g-muted);
+}
+.rf-facts dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+}
+
+.rf-code {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--g-ink);
+  color: var(--g-cream);
+  font-size: 12.5px;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre;
+}
+.rf-email {
+  font-size: 13.5px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.rf-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  counter-reset: rf-step;
+}
+.rf-steps > li {
+  position: relative;
+  min-width: 0;
+  padding: 16px 16px 16px 60px;
+  border-radius: 20px;
+  border: 1px solid var(--g-line);
+  background: var(--g-paper-warm);
+  counter-increment: rf-step;
+  animation: rf-rise 0.45s var(--g-ease) both;
+}
+.rf-steps > li:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.rf-steps > li:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.rf-steps > li:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.rf-steps > li:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.rf-steps > li::before {
+  content: counter(rf-step);
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--g-ink);
+  color: var(--g-cream);
+  font-weight: 700;
+  font-size: 14px;
+}
+.rf-steps h2 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.rf-steps p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--g-muted);
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 760px) {
+  .rf-steps > li {
+    padding: 20px 22px 20px 72px;
+  }
+  .rf-steps > li::before {
+    left: 22px;
+    top: 20px;
+    width: 34px;
+    height: 34px;
+  }
+  .rf-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@keyframes rf-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rf-banner,
+  .rf-steps > li,
+  .rf-moves li,
+  .rf-history li {
+    animation: none;
+  }
+}
