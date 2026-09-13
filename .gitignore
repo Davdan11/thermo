@@ -92,3 +92,8 @@ public/images/products/_official-sources/**
 # textos reçus au numéro du site (numéros et messages des clients ; shared/data sur le VPS)
 /data/textos.json
 /data/textos.json.lock
+
+# sécurité de /gestion (chantier S) : journal d'audit, fichier .env d'essai, état des sauvegardes
+/data/gestion-journal/
+/data/gestion-env-essai/
+/data/sauvegardes-etat.json

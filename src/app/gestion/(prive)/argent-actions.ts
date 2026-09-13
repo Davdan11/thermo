@@ -18,6 +18,8 @@ import { INVOICE_ID_RE, PAYMENT_METHODS } from "@/lib/gestion/commissions/types"
 import { runTick } from "@/lib/gestion/automatisations/engine";
 import { mutateAfterSale, mutateAutomations, normalizeAutomationSettings } from "@/lib/gestion/automatisations/store";
 import { AUTOMATION_IDS, LOGISVERT_STATUSES } from "@/lib/gestion/automatisations/types";
+// Chantier S : journal d'audit (paiement marqué).
+import { audit } from "@/lib/gestion/securite/audit";
 
 export type ArgentResult = { ok: true; message?: string } | { ok: false; error: string } | undefined;
 
@@ -42,6 +44,7 @@ export async function markPaidAction(id: string, _prev: ArgentResult, fd: FormDa
   if (!p.success) return { ok: false, error: firstIssue(p.error) };
   const r = await markInvoicePaid(p.data.id, { date: p.data.date, method: p.data.method, reference: p.data.reference }, session.email);
   if (!r.ok) return r;
+  await audit("paiement.marque", { facture: p.data.id, moyen: p.data.method, deja: Boolean(r.already) }, { qui: session.email }); // Chantier S
   refresh();
   return { ok: true, message: r.already ? "Déjà payée." : r.resumed ? "Payée. Les offres de jobs reprennent pour cet installateur." : "Payée." };
 }
