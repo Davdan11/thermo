@@ -15,6 +15,7 @@ import { acceptedClientEmail, ownerEventEmail, quoteSentEmail, quoteSms } from "
 import { sendBlockers, type CheckItem } from "./checklist";
 import { resolveMachine } from "./catalog";
 import { loadContractor } from "./contractors";
+import { rememberQuote } from "./memory-store"; // Chantier D : mémoire des derniers choix
 import { money } from "./money";
 import { emailOwners, emailTo, smsTo } from "./notify";
 import { readPhotoFile } from "./photos";
@@ -153,7 +154,7 @@ export async function saveQuote(id: string | null, input: QuoteInput, by: string
   const contractorId = input.contractorId ?? null;
   const clientId = input.clientId ?? null;
   try {
-    return await mutateSoumissions<SaveResult>((data) => {
+    const saved = await mutateSoumissions<SaveResult>((data) => {
       scrubPhotos(content, new Set(data.photos.map((p) => p.id)));
       if (!id) {
         const q = createQuote(data, content, by, now, { internalNotes: input.internalNotes, clientId, contractorId });
@@ -171,6 +172,9 @@ export async function saveQuote(id: string | null, input: QuoteInput, by: string
       claimPhotos(data, q.id, content);
       return { result: { ok: true, id: q.id }, changed: true };
     });
+    // Chantier D : le dernier choix de chaque champ du plan devient la valeur proposée de la prochaine soumission.
+    if (saved.ok) await rememberQuote(content, todayIn(now), now);
+    return saved;
   } catch (e) {
     if (e instanceof QuoteError) return { ok: false, error: e.message };
     throw e;
@@ -562,6 +566,8 @@ export async function saveSettingsService(input: SettingsInput, by: string, now 
     s.company = { ...input.company };
     s.texts = { ...input.texts };
     s.defaults = { ...input.defaults, deposit: { ...input.defaults.deposit }, site: { ...input.defaults.site }, schedule: { ...input.defaults.schedule } };
+    // Chantier D : inclusions standard (un ancien formulaire sans ce bloc garde la valeur enregistrée).
+    if (input.standard) s.standard = { ...input.standard };
     // Listes des choix en un clic (ajoutées, retirées, réordonnées dans les réglages).
     s.choices = input.choices;
     s.templates = { ...input.templates };

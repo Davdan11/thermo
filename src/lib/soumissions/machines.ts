@@ -1,0 +1,175 @@
+/* ==================================================================
+   Chantier D — « Trouver la machine » : recherche instantanée dans
+   les modèles du catalogue du site et leurs jumelages AHRI officiels
+   (liste LogisVert d'Hydro-Québec). Serveur seulement.
+
+   Cherche par marque, série, nom, numéro de modèle (extérieur ou
+   intérieur), numéro AHRI, type et capacité (« 12000 », « 12 000 »,
+   « 12k »). Filtres : type (murale, multizone, centrale, plafonnier,
+   console, cassette), capacité, aide LogisVert officielle, climat
+   froid. Index construit une fois (au premier appel), puis gardé.
+
+   Type : « centrale » et « multizone » viennent des données (type du
+   catalogue, classe multizone ou liste de têtes des jumelages
+   officiels) ; plafonnier, console et cassette sont reconnus aux mots
+   et aux préfixes de modèles intérieurs des fabricants (tableau
+   KIND_HINTS). Montant LogisVert : celui de la liste officielle, jamais
+   estimé.
+   ================================================================== */
+
+import { registry } from "@/lib/data/registry";
+import { brandLabel } from "@/lib/gestion/catalog";
+import { getLogisVertVariants, lookupByAHRI, type LogisVertOfficialEntry } from "@/lib/subsidies/logisvert-official";
+import { fold } from "./choices";
+import { CAPACITY_BANDS, KIND_LABELS, MACHINE_KINDS, type CapacityBand, type MachineHit, type MachineKind } from "./machine-kinds";
+import { multiClassOf } from "./plan";
+
+export { CAPACITY_BANDS, KIND_LABELS, MACHINE_KINDS, type CapacityBand, type MachineHit, type MachineKind };
+
+/** Mots et préfixes de modèles intérieurs (Mitsubishi, Daikin, Fujitsu) qui trahissent la forme de la tête. */
+const KIND_HINTS: Array<{ kind: MachineKind; re: RegExp }> = [
+  { kind: "console", re: /console|plancher|\bfloor\b|\bmfz|\bfvx|\bagu/ },
+  { kind: "cassette", re: /cassette|\bslz|\bmlz|\bffq|\bauu/ },
+  { kind: "plafonnier", re: /plafonnier|ceiling|suspendu|\bpca|\bfhq|\babu/ },
+];
+
+interface Indexed extends MachineHit {
+  active: boolean;
+  hay: string;
+  num: string;
+}
+
+let index: { rows: Indexed[]; byAhri: Map<string, string> } | null = null;
+
+/** Caractères de contrôle et de remplacement, construits par leur code : aucun caractère invisible dans le fichier. */
+const CONTROL = new RegExp(`[${String.fromCharCode(0)}-${String.fromCharCode(0x1f)}${String.fromCharCode(0x7f)}-${String.fromCharCode(0x9f)}${String.fromCharCode(0xfffd)}]`, "g");
+const clean = (s: string | undefined | null) => (s ?? "").replace(CONTROL, "").trim();
+const bad = (e: LogisVertOfficialEntry) => [e.brand, e.outdoorModel, e.indoorModel].some((t) => typeof t === "string" && t.includes('"'));
+
+function classify(systemType: string, text: string, entries: LogisVertOfficialEntry[]): MachineKind {
+  if (systemType === "central-ducted") return "centrale";
+  const multi = entries.some((e) => multiClassOf(e.indoorModel ?? "") !== null || /\+/.test(e.indoorModel ?? "")) || /multi/.test(text);
+  if (multi) return "multizone";
+  return KIND_HINTS.find((h) => h.re.test(text))?.kind ?? "murale";
+}
+
+function buildIndex(): { rows: Indexed[]; byAhri: Map<string, string> } {
+  const configsByModel = new Map<string, typeof registry.configurations>();
+  for (const c of registry.configurations) configsByModel.set(c.modelId, [...(configsByModel.get(c.modelId) ?? []), c]);
+  const indoorById = new Map(registry.indoorUnits.map((u) => [u.id, u]));
+  const seriesById = new Map(registry.series.map((s) => [s.id, s]));
+  const byAhri = new Map<string, string>();
+  const rows: Indexed[] = [];
+  for (const m of registry.models) {
+    const found = new Map<string, LogisVertOfficialEntry>();
+    for (const e of getLogisVertVariants(m.modelNumber)) found.set(e.ahri, e);
+    const configs = configsByModel.get(m.id) ?? [];
+    for (const c of configs) {
+      const k = c.id.match(/-cfg-(\d{5,})$/);
+      if (!k || found.has(k[1])) continue;
+      const e = lookupByAHRI(k[1]);
+      if (e) found.set(e.ahri, e);
+    }
+    const entries = [...found.values()].filter((e) => !bad(e));
+    for (const e of entries) if (!byAhri.has(e.ahri)) byAhri.set(e.ahri, m.slug);
+    const series = seriesById.get(m.seriesId);
+    const brand = brandLabel(m.brandId);
+    const indoorText = [...entries.slice(0, 8).map((e) => e.indoorModel ?? ""), ...configs.map((c) => indoorById.get(c.indoorUnitId ?? "")?.modelNumber ?? "")].join(" ");
+    const text = fold(`${brand} ${series?.name ?? ""} ${m.name} ${m.modelNumber} ${indoorText}`);
+    const kind = classify(m.systemType, text, entries);
+    const nominal = entries.map((e) => e.nominalBtu ?? 0).filter((n) => n > 0);
+    rows.push({
+      slug: m.slug,
+      brand,
+      name: m.name,
+      series: series?.name ?? "",
+      outdoorModel: clean(m.modelNumber),
+      kind,
+      kindLabel: KIND_LABELS[kind],
+      capacityBtu: m.nominalCapacityBtu ?? (nominal.length ? Math.max(...nominal) : null) ?? m.coolingCapacityMaxBtu ?? null,
+      maxLogisVertCents: Math.round(Math.max(0, ...entries.map((e) => e.logisVertDollars || 0)) * 100),
+      coldClimate: entries.some((e) => e.coldClimate),
+      pairings: entries.length,
+      imageUrl: m.imageUrl ?? series?.imageUrl ?? null,
+      active: m.isActive2026,
+      hay: text,
+      num: m.normalizedModelNumber.toLowerCase(),
+    });
+  }
+  return { rows, byAhri };
+}
+
+function getIndex() {
+  index ??= buildIndex();
+  return index;
+}
+
+/** Nombre de modèles cherchables (affiché dans le créateur). */
+export const catalogSize = (): number => registry.models.length;
+
+export interface MachineFilters {
+  kind?: MachineKind | null;
+  cap?: CapacityBand | null;
+  lv?: boolean;
+  cc?: boolean;
+}
+
+const strip = (r: Indexed): MachineHit => ({
+  slug: r.slug,
+  brand: r.brand,
+  name: r.name,
+  series: r.series,
+  outdoorModel: r.outdoorModel,
+  kind: r.kind,
+  kindLabel: r.kindLabel,
+  capacityBtu: r.capacityBtu,
+  maxLogisVertCents: r.maxLogisVertCents,
+  coldClimate: r.coldClimate,
+  pairings: r.pairings,
+  imageUrl: r.imageUrl,
+});
+
+/** Recherche : chaque mot doit se trouver dans la fiche ; un nombre de 5 000 et plus est une capacité (± 15 %). */
+export function searchMachines(query: string, filters: MachineFilters = {}, limit = 30): { hits: MachineHit[]; total: number } {
+  const { rows, byAhri } = getIndex();
+  const q = fold(query).replace(/(\d)\s(?=\d{3}\b)/g, "$1"); // \s couvre aussi les espaces insécables
+  const words = q.split(/\s+/).filter(Boolean);
+  // Numéro AHRI exact : le modèle et son jumelage.
+  if (words.length === 1 && /^\d{6,10}$/.test(words[0]) && byAhri.has(words[0])) {
+    const r = rows.find((x) => x.slug === byAhri.get(words[0]));
+    if (r) return { hits: [{ ...strip(r), ahri: words[0] }], total: 1 };
+  }
+  const caps: number[] = [];
+  const text: string[] = [];
+  for (const w of words) {
+    const k = /^(\d{1,2})k$/.exec(w);
+    const n = k ? Number(k[1]) * 1000 : /^\d{4,6}$/.test(w) ? Number(w) : NaN;
+    if (Number.isFinite(n) && n >= 5_000) caps.push(n);
+    else text.push(w);
+  }
+  const band = filters.cap ? CAPACITY_BANDS.find((b) => b.id === filters.cap) : undefined;
+  if (!text.length && !caps.length && !filters.kind && !band && !filters.lv && !filters.cc) return { hits: [], total: 0 };
+  const hits: Array<{ r: Indexed; rank: number }> = [];
+  for (const r of rows) {
+    if (filters.kind && r.kind !== filters.kind) continue;
+    if (band && (r.capacityBtu === null || r.capacityBtu < band.min || r.capacityBtu > band.max)) continue;
+    if (filters.lv && r.maxLogisVertCents <= 0) continue;
+    if (filters.cc && !r.coldClimate) continue;
+    if (caps.length && (r.capacityBtu === null || !caps.every((c) => r.capacityBtu! >= c * 0.85 && r.capacityBtu! <= c * 1.15))) continue;
+    let rank = 2;
+    let ok = true;
+    for (const w of text) {
+      const compact = w.replace(/[^a-z0-9]/g, "");
+      if (compact.length >= 2 && r.num.startsWith(compact)) rank = Math.min(rank, 0);
+      else if (r.hay.includes(w) || (compact.length >= 3 && r.hay.replace(/[^a-z0-9]/g, "").includes(compact))) rank = Math.min(rank, 1);
+      else {
+        ok = false;
+        break;
+      }
+    }
+    if (!ok) continue;
+    hits.push({ r, rank: rank + (r.active ? 0 : 3) + (r.pairings ? 0 : 1) });
+  }
+  hits.sort((a, b) => a.rank - b.rank || b.r.maxLogisVertCents - a.r.maxLogisVertCents || (a.r.capacityBtu ?? 0) - (b.r.capacityBtu ?? 0) || a.r.name.localeCompare(b.r.name, "fr-CA"));
+  return { hits: hits.slice(0, limit).map((h) => strip(h.r)), total: hits.length };
+}

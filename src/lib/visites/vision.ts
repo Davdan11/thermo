@@ -1,0 +1,304 @@
+/* ==================================================================
+   Chantier D — lecture des photos reçues par la vision de Gemini
+   (même fournisseur et même clé GEMINI_API_KEY que ThermoScan et la
+   lecture de plaque du volet A). Le quota gratuit est partagé : UNE
+   seule requête par visite (toutes les photos utiles ensemble,
+   réduites à 1024 px), une visite à la fois, au plus 20 requêtes par
+   heure, et une file avec de nouvelles tentatives espacées (2 min,
+   10 min, 30 min, 2 h) quand Gemini refuse ou ne répond pas.
+
+   Ce qui est proposé, TOUJOURS confirmé par le propriétaire (clic
+   « Appliquer » champ par champ dans le créateur) :
+     - capacité du panneau lue sur l'étiquette (panneau ouvert) ;
+     - matériau du mur extérieur (parmi les choix des réglages) ;
+     - emplacement plausible de l'unité (parmi les choix) ;
+     - marque et modèle de l'ancien système lus sur sa plaque.
+   Aucune mesure : ni distance, ni longueur, ni hauteur. Une valeur
+   illisible, hors des choix ou peu sûre n'est pas proposée ; toute
+   autre clé renvoyée est ignorée.
+   Sans clé : photos seules. Hors production : aucun appel réel sauf
+   VISITES_VISION_DEV=1 (le .env.local contient la vraie clé).
+   ================================================================== */
+
+import { readPrivateFile, rid } from "@/lib/gestion/partenaires/files";
+import { createLimiter } from "@/lib/gestion/rate-limit";
+import { visionConfigured } from "@/lib/gestion/terrain/plate";
+import { fold } from "@/lib/soumissions/choices";
+import { mutateVisites, readVisites, visitesPhotosDir } from "./store";
+import type { StepId, Suggestion, SuggestionField, VisitPhoto, VisitRequest } from "./types";
+
+const MODEL = "gemini-2.5-flash";
+
+export { visionConfigured };
+
+/** Appels réels : en production, ou en développement avec VISITES_VISION_DEV=1. */
+export function liveVisionAllowed(): boolean {
+  return process.env.NODE_ENV === "production" || process.env.VISITES_VISION_DEV === "1";
+}
+
+export type VisionPart = { text: string } | { inline_data: { mime_type: string; data: string } };
+export type VisionResult = { ok: true; text: string } | { ok: false; retry: boolean; error: string };
+export type VisionCaller = (parts: VisionPart[]) => Promise<VisionResult>;
+
+/** Appel réel à Gemini (jamais en test : voir liveVisionAllowed). */
+export const geminiCaller: VisionCaller = async (parts) => {
+  const key = process.env.GEMINI_API_KEY;
+  if (!key) return { ok: false, retry: false, error: "Clé absente." };
+  try {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-goog-api-key": key },
+      body: JSON.stringify({ contents: [{ parts }], generationConfig: { temperature: 0, responseMimeType: "application/json" } }),
+      signal: AbortSignal.timeout(40_000),
+    });
+    if (res.status === 429 || res.status >= 500) return { ok: false, retry: true, error: `Gemini ${res.status}` };
+    if (!res.ok) return { ok: false, retry: false, error: `Gemini ${res.status}` };
+    const json = (await res.json()) as { candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }> };
+    return { ok: true, text: json.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("") ?? "" };
+  } catch (e) {
+    return { ok: false, retry: true, error: e instanceof Error ? e.message.slice(0, 120) : "Réseau" };
+  }
+};
+
+/* ---------------- Photos envoyées et réponse ---------------- */
+
+/** Étapes d'où peut venir chaque champ : une valeur tirée d'une autre photo est écartée. */
+export const RELEVANT: Record<SuggestionField, StepId[]> = {
+  panelCapacity: ["panneau-ouvert", "panneau-ferme"],
+  wallMaterial: ["mur-exterieur"],
+  outdoorLocation: ["mur-exterieur", "acces"],
+  oldSystem: ["systeme-actuel"],
+};
+
+const PER_STEP: Partial<Record<StepId, number>> = { "panneau-ouvert": 2, "panneau-ferme": 1, "mur-exterieur": 2, "systeme-actuel": 3, acces: 1 };
+const STEP_TEXT: Partial<Record<StepId, string>> = {
+  "panneau-ouvert": "electrical panel, door open (look for the main breaker or rating label)",
+  "panneau-ferme": "electrical panel, door closed",
+  "mur-exterieur": "exterior wall where the outdoor unit would go, with the ground around",
+  "systeme-actuel": "current heating system (furnace, baseboards or old heat pump, maybe its nameplate)",
+  acces: "access and parking",
+};
+
+/** Photos utiles (8 au plus), numérotées à partir de 1. */
+export function selectPhotos(photos: VisitPhoto[]): Array<{ n: number; photo: VisitPhoto }> {
+  const out: Array<{ n: number; photo: VisitPhoto }> = [];
+  for (const [step, max] of Object.entries(PER_STEP) as Array<[StepId, number]>) {
+    for (const ph of photos.filter((p) => p.step === step).slice(0, max)) if (out.length < 8) out.push({ n: out.length + 1, photo: ph });
+  }
+  return out;
+}
+
+export interface VisionChoices {
+  wallMaterial: string[];
+  outdoorLocation: string[];
+}
+
+export function buildPrompt(selected: Array<{ n: number; photo: Pick<VisitPhoto, "step"> }>, choices: VisionChoices): string {
+  const list = selected.map((s) => `Photo ${s.n}: ${STEP_TEXT[s.photo.step] ?? s.photo.step}`).join("\n");
+  return `You help a heat pump installer in Quebec prepare a quote from photos sent by a homeowner. The photos follow, in order:
+${list}
+
+Return ONLY valid JSON, no prose:
+{"panelAmps":{"value":number|null,"photo":number|null,"confidence":number},
+ "wallMaterial":{"value":string|null,"photo":number|null,"confidence":number},
+ "outdoorLocation":{"value":string|null,"photo":number|null,"confidence":number},
+ "oldSystem":{"brand":string|null,"model":string|null,"photo":number|null,"confidence":number}}
+Rules:
+- panelAmps: the ampere rating PRINTED on the main breaker or the panel label (e.g. 100, 125, 200). Only if clearly readable. Never estimate.
+- wallMaterial: exterior cladding where the unit would go, ONLY one of: ${JSON.stringify(choices.wallMaterial)}.
+- outdoorLocation: the most plausible place for the outdoor unit, ONLY one of: ${JSON.stringify(choices.outdoorLocation)}.
+- oldSystem: brand and model number copied EXACTLY from a readable nameplate of an existing heat pump or air conditioner; null otherwise.
+- Never estimate distances, lengths, heights, sizes or quantities. Do not add other keys.
+- Use null when unsure or unreadable. confidence is between 0 and 1. photo is the photo number the value comes from.`;
+}
+
+export const MIN_CONFIDENCE = 0.5;
+
+const conf = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? Math.max(0, Math.min(1, Math.round(v * 100) / 100)) : 0);
+const clean = (v: unknown, max = 60) => {
+  if (typeof v !== "string") return null;
+  // Caractères de contrôle construits par leur code : aucun caractère invisible dans le fichier.
+  const s = v.replace(new RegExp(`[${String.fromCharCode(0)}-${String.fromCharCode(0x1f)}${String.fromCharCode(0x7f)}]`, "g"), "").trim();
+  return s && !/^(null|none|unknown|inconnu|n\/a|illisible)$/i.test(s) ? s.slice(0, max) : null;
+};
+
+/**
+ * Suggestions validées à partir de la réponse : valeur lisible, dans les choix permis, tirée d'une photo de la bonne
+ * étape, confiance suffisante. Tout le reste (dont une distance ou une longueur) est ignoré.
+ */
+export function parseSuggestions(text: string, selected: Array<{ n: number; photo: Pick<VisitPhoto, "id" | "step"> }>, choices: VisionChoices): Array<Omit<Suggestion, "id">> {
+  const m = /\{[\s\S]*\}/.exec(text ?? "");
+  if (!m) return [];
+  let raw: Record<string, unknown>;
+  try {
+    raw = JSON.parse(m[0]) as Record<string, unknown>;
+  } catch {
+    return [];
+  }
+  const out: Array<Omit<Suggestion, "id">> = [];
+  const source = (field: SuggestionField, o: Record<string, unknown>) => {
+    const n = typeof o.photo === "number" ? o.photo : Number(o.photo);
+    const s = selected.find((x) => x.n === n);
+    return s && RELEVANT[field].includes(s.photo.step) ? s.photo.id : null;
+  };
+  const field = (key: string) => (raw[key] && typeof raw[key] === "object" ? (raw[key] as Record<string, unknown>) : null);
+  const push = (f: SuggestionField, value: string | null, o: Record<string, unknown>) => {
+    const c = conf(o.confidence);
+    const photoId = source(f, o);
+    if (value && photoId && c >= MIN_CONFIDENCE) out.push({ field: f, value, confidence: c, photoId });
+  };
+
+  const amps = field("panelAmps");
+  if (amps) {
+    const n = typeof amps.value === "number" ? amps.value : Number(String(amps.value ?? "").replace(/[^\d]/g, ""));
+    push("panelCapacity", Number.isInteger(n) && n >= 30 && n <= 600 ? `${n} A` : null, amps);
+  }
+  const pickChoice = (v: unknown, list: string[]) => {
+    const s = clean(v, 80);
+    return s ? (list.find((c) => fold(c) === fold(s)) ?? null) : null;
+  };
+  const wall = field("wallMaterial");
+  if (wall) push("wallMaterial", pickChoice(wall.value, choices.wallMaterial), wall);
+  const loc = field("outdoorLocation");
+  if (loc) push("outdoorLocation", pickChoice(loc.value, choices.outdoorLocation), loc);
+  const old = field("oldSystem");
+  if (old) {
+    const model = clean(old.model, 40);
+    const brand = clean(old.brand, 40);
+    const okModel = model && model.length >= 3 && /\d/.test(model) ? model : null;
+    push("oldSystem", okModel ? `${brand ? `${brand} ` : ""}${okModel}` : null, old);
+  }
+  return out;
+}
+
+/* ---------------- File et nouvelles tentatives ---------------- */
+
+const BACKOFF_MIN = [2, 10, 30, 120];
+export const MAX_ATTEMPTS = BACKOFF_MIN.length + 1;
+const STALE_MS = 10 * 60_000;
+let budget = createLimiter({ limit: 20, windowMs: 3_600_000 });
+let running = false;
+let timer: ReturnType<typeof setTimeout> | null = null;
+
+/** Tests : remet le budget horaire et la file à zéro. */
+export function resetVisionState(): void {
+  budget = createLimiter({ limit: 20, windowMs: 3_600_000 });
+  running = false;
+  if (timer) clearTimeout(timer);
+  timer = null;
+}
+
+const testing = () => process.env.NODE_ENV === "test" || Boolean(process.env.VITEST);
+
+function scheduleAt(ms: number): void {
+  if (testing()) return;
+  if (timer) clearTimeout(timer);
+  timer = setTimeout(() => {
+    timer = null;
+    processVisionQueue().catch((e) => console.error("[visites] file de lecture :", e));
+  }, Math.max(5_000, ms));
+  (timer as { unref?: () => void }).unref?.();
+}
+
+/** Après l'envoi d'une visite : lecture lancée sans bloquer la réponse au client. */
+export function kickVisionQueue(): void {
+  if (testing()) return;
+  setTimeout(() => processVisionQueue().catch((e) => console.error("[visites] file de lecture :", e)), 500);
+}
+
+const due = (r: VisitRequest, now: Date) =>
+  !r.purgedAt && r.submittedAt && ((r.ai.state === "attente" && (!r.ai.nextAt || Date.parse(r.ai.nextAt) <= now.getTime())) || (r.ai.state === "en-cours" && (!r.ai.nextAt || Date.parse(r.ai.nextAt) <= now.getTime() - STALE_MS)));
+
+export interface QueueDeps {
+  /** Appel simulé (tests). Sans lui : Gemini, seulement si la clé existe et que l'appel réel est permis. */
+  call?: VisionCaller;
+  choices?: VisionChoices;
+}
+
+async function jpegFor(buf: Buffer): Promise<{ data: Buffer; mime: string }> {
+  try {
+    const sharp = (await import("sharp")).default;
+    return { data: await sharp(buf).resize({ width: 1024, height: 1024, fit: "inside", withoutEnlargement: true }).jpeg({ quality: 78 }).toBuffer(), mime: "image/jpeg" };
+  } catch {
+    return { data: buf, mime: "image/webp" };
+  }
+}
+
+async function loadChoices(): Promise<VisionChoices> {
+  const { readSettings } = await import("@/lib/soumissions/store");
+  const s = await readSettings();
+  return { wallMaterial: [...new Set([...s.choices.wallMaterial, "Aluminium"])], outdoorLocation: s.choices.outdoorLocation };
+}
+
+async function setAi(id: string, fn: (r: VisitRequest) => void): Promise<void> {
+  await mutateVisites((d) => {
+    const r = d.requests.find((x) => x.id === id);
+    if (!r) return { result: undefined, changed: false };
+    fn(r);
+    return { result: undefined, changed: true };
+  });
+}
+
+/** Traite les visites dues (3 au plus par passage), une à la fois. */
+export async function processVisionQueue(now = new Date(), deps: QueueDeps = {}): Promise<{ processed: number }> {
+  if (running) return { processed: 0 };
+  running = true;
+  let processed = 0;
+  try {
+    const data = await readVisites();
+    const list = data.requests.filter((r) => due(r, now)).sort((a, b) => (a.submittedAt ?? "").localeCompare(b.submittedAt ?? "")).slice(0, 3);
+    for (const r of list) {
+      if (!visionConfigured()) {
+        await setAi(r.id, (x) => void (x.ai = { state: "sans-cle", attempts: x.ai.attempts, nextAt: null }));
+        continue;
+      }
+      const call = deps.call ?? (liveVisionAllowed() ? geminiCaller : null);
+      if (!call) {
+        await setAi(r.id, (x) => void (x.ai = { state: "desactive", attempts: x.ai.attempts, nextAt: null }));
+        continue;
+      }
+      if (!budget.hit("gemini")) {
+        scheduleAt(15 * 60_000);
+        break;
+      }
+      const selected = selectPhotos(r.photos);
+      if (!selected.length) {
+        await setAi(r.id, (x) => void (x.ai = { state: "fait", attempts: x.ai.attempts, nextAt: null, doneAt: now.toISOString() }));
+        continue;
+      }
+      await setAi(r.id, (x) => void (x.ai = { ...x.ai, state: "en-cours", nextAt: now.toISOString() }));
+      const choices = deps.choices ?? (await loadChoices());
+      const parts: VisionPart[] = [{ text: buildPrompt(selected, choices) }];
+      for (const s of selected) {
+        const buf = await readPrivateFile(visitesPhotosDir(), s.photo.id, s.photo.ext);
+        if (!buf) continue;
+        const img = await jpegFor(buf);
+        parts.push({ inline_data: { mime_type: img.mime, data: img.data.toString("base64") } });
+      }
+      const res = await call(parts);
+      processed++;
+      if (res.ok) {
+        const found = parseSuggestions(res.text, selected, choices);
+        await setAi(r.id, (x) => {
+          x.suggestions = found.map((f) => ({ ...f, id: rid("s") }));
+          x.ai = { state: "fait", attempts: x.ai.attempts + 1, nextAt: null, doneAt: now.toISOString() };
+          x.events.push({ at: now.toISOString(), action: `photos lues : ${found.length} suggestion${found.length > 1 ? "s" : ""}` });
+        });
+      } else {
+        await setAi(r.id, (x) => {
+          const attempts = x.ai.attempts + 1;
+          if (res.retry && attempts < MAX_ATTEMPTS) {
+            const wait = BACKOFF_MIN[attempts - 1] * 60_000;
+            x.ai = { state: "attente", attempts, nextAt: new Date(now.getTime() + wait).toISOString(), lastError: res.error };
+          } else x.ai = { state: "echec", attempts, nextAt: null, lastError: res.error };
+        });
+      }
+    }
+    const after = await readVisites();
+    const next = after.requests.filter((r) => r.ai.state === "attente" && r.ai.nextAt && !r.purgedAt).map((r) => Date.parse(r.ai.nextAt!));
+    if (next.length) scheduleAt(Math.min(...next) - Date.now());
+  } finally {
+    running = false;
+  }
+  return { processed };
+}

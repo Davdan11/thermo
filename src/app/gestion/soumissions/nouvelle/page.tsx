@@ -5,7 +5,11 @@ import { thermoMatchQuotePrefill } from "@/lib/gestion/ventes/service";
 import { applyMachinePrefill } from "@/lib/gestion/ventes/thermomatch";
 import { lastContractorId, loadContractorOptions } from "@/lib/soumissions/contractors";
 import { todayIn } from "@/lib/soumissions/dates";
-import { emptyContent } from "@/lib/soumissions/defaults";
+import { DEFAULT_PRESENCE, emptyContent } from "@/lib/soumissions/defaults";
+// Chantier D : installation standard et derniers choix du propriétaire (nouvelle soumission seulement).
+import { applyMemory } from "@/lib/soumissions/memory";
+import { readMemory } from "@/lib/soumissions/memory-store";
+import { newQuoteDefaults } from "@/lib/soumissions/standard";
 import { CURRENT_RATES, listTemplates } from "@/lib/soumissions/service";
 import { readSettings, readSoumissions } from "@/lib/soumissions/store";
 import { QuoteBuilder } from "@/components/gestion/soumissions/QuoteBuilder";
@@ -26,15 +30,17 @@ export default async function NouvellePage({ searchParams }: { searchParams: Pro
   const { client, thermomatch, choix } = await searchParams;
   const tm = thermomatch ? await thermoMatchQuotePrefill(thermomatch, choix) : null;
   const clientId = client ?? tm?.clientId ?? undefined;
-  const [settings, pre, data, contractors, templates] = await Promise.all([
+  const [settings, pre, data, contractors, templates, memory] = await Promise.all([
     readSettings(),
     clientId ? clientPrefill(clientId) : Promise.resolve(null),
     readSoumissions(),
     loadContractorOptions(),
     listTemplates(),
+    readMemory(),
   ]);
   const today = todayIn();
-  const base = emptyContent(settings, today);
+  // Chantier D : installation standard (inclusions, 50 pi, cache-ligne, drain), textes par défaut, puis derniers choix.
+  const base = applyMemory(newQuoteDefaults(emptyContent(settings, today), settings, DEFAULT_PRESENCE), memory, today);
   if (pre) base.client = { ...base.client, firstName: pre.firstName, lastName: pre.lastName, email: pre.email, phone: pre.phone, address: pre.address, city: pre.city, postalCode: pre.postalCode };
   const initial = tm?.machine ? applyMachinePrefill(base, tm.machine) : base;
   const last = lastContractorId(data);
@@ -53,6 +59,7 @@ export default async function NouvellePage({ searchParams }: { searchParams: Pro
       contractorId={contractorId}
       clientId={pre?.id ?? null}
       templates={templates}
+      memory={memory}
     />
   );
   return tm ? (

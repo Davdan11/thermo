@@ -24,6 +24,8 @@ import { settingsChecks, type CheckItem } from "@/lib/soumissions/checklist";
 import type { DocumentTexts, PipedriveStages, Settings } from "@/lib/soumissions/types";
 import { uploadPhoto } from "./compress";
 import { Area, Money, Num, Seg, StringList, Text } from "./fields";
+import { StandardInclusionsEditor } from "./StandardInclusionsEditor"; // Chantier D
+import { DEFAULT_PRESENCE } from "@/lib/soumissions/defaults"; // Chantier D
 
 const TEXTS: Array<{ key: keyof DocumentTexts; label: string; hint: string; lawyer?: boolean; link?: [string, string]; rows?: number }> = [
   { key: "paymentTerms", label: "Modalités de paiement", hint: "Échéancier, modes de paiement acceptés, intérêts s’il y a lieu." },
@@ -79,7 +81,8 @@ export function SettingsForm({ initial, stages, stagesError, templates }: { init
 
   const save = () =>
     start(async () => {
-      const r = await saveSettingsAction({ company: s.company, texts: s.texts, defaults: s.defaults, choices: s.choices, templates: s.templates, pipedriveStages: s.pipedriveStages });
+      // Chantier D : « Inclusions standard » enregistrées avec le reste.
+      const r = await saveSettingsAction({ company: s.company, texts: s.texts, defaults: s.defaults, standard: s.standard, choices: s.choices, templates: s.templates, pipedriveStages: s.pipedriveStages });
       setMsg(r.ok ? { ok: true, text: r.message ?? "Enregistré." } : { ok: false, text: r.error });
     });
 
@@ -114,7 +117,7 @@ export function SettingsForm({ initial, stages, stagesError, templates }: { init
         </div>
       </div>
       <nav className="sq-toc" aria-label="Sections">
-        {[["entreprise", "Présentation"], ["textes", "Textes"], ["logisvert", "LogisVert"], ["defauts", "Par défaut"], ["choix", "Choix en un clic"], ["listes", "Listes"], ["modeles", "Modèles"], ["pipedrive", "Pipedrive"]].map(([id, l]) => (
+        {[["entreprise", "Présentation"], ["textes", "Textes"], ["logisvert", "LogisVert"], ["defauts", "Par défaut"], ["standard", "Inclusions standard"], ["choix", "Choix en un clic"], ["listes", "Listes"], ["modeles", "Modèles"], ["pipedrive", "Pipedrive"]].map(([id, l]) => (
           <a key={id} href={`#${id}`}>{l}</a>
         ))}
       </nav>
@@ -209,13 +212,21 @@ export function SettingsForm({ initial, stages, stagesError, templates }: { init
             </div>
             <p className="sq-sub">Chantier</p>
             <Area label="Accès et stationnement" rows={2} value={s.defaults.site.access} maxLength={1000} onChange={(v) => up((d) => void (d.defaults.site.access = v))} placeholder="Laissé vide : à remplir à chaque soumission." />
-            <Text label="Qui doit être présent pendant les travaux" value={s.defaults.site.presence} maxLength={300} onChange={(v) => up((d) => void (d.defaults.site.presence = v))} placeholder="Un adulte, de l’arrivée de l’équipe à la mise en service" />
+            {/* Chantier D : textes par défaut des « Détails facultatifs » (jamais bloquants ; le client peut les remplir dans la visite photo). */}
+            <Text label="Qui doit être présent pendant les travaux" hint={`laissé vide : « ${DEFAULT_PRESENCE} »`} value={s.defaults.site.presence} maxLength={300} onChange={(v) => up((d) => void (d.defaults.site.presence = v))} placeholder={DEFAULT_PRESENCE} />
+            <Area label="Contraintes des occupants" rows={2} value={s.defaults.site.constraints ?? ""} maxLength={1000} onChange={(v) => up((d) => void (d.defaults.site.constraints = v))} placeholder="Laissé vide : à remplir au besoin, ou par le client dans la visite photo." />
             <p className="sq-sub">Déroulement</p>
             <div className="g-row g-row--2">
               <Text label="Durée estimée des travaux" value={s.defaults.schedule.duration} maxLength={120} onChange={(v) => up((d) => void (d.defaults.schedule.duration = v))} placeholder="Une journée" />
               <Text label="Arrivée de l’équipe" value={s.defaults.schedule.arrival} maxLength={120} onChange={(v) => up((d) => void (d.defaults.schedule.arrival = v))} placeholder="Entre 7 h 30 et 9 h" />
             </div>
             <Text label="Précision sur la date" value={s.defaults.schedule.windowText} maxLength={200} onChange={(v) => up((d) => void (d.defaults.schedule.windowText = v))} placeholder="Date confirmée par téléphone à la réception de l’équipement" />
+          </section>
+
+          {/* Chantier D : ce que comprend l'installation standard (valeurs par défaut du plan et de « Ce qui est inclus »). */}
+          <section id="standard" className="sq-step">
+            <div className="sq-step__head"><span className="sq-step__n">04b</span><div><h2 className="sq-step__title">Inclusions standard</h2><p className="sq-step__hint">S’appliquent aux nouvelles soumissions quand rien d’autre n’est réglé ; n’écrasent jamais votre liste de prix.</p></div></div>
+            <StandardInclusionsEditor value={s.standard} unit={s.defaults.lengthUnit} onChange={(v) => up((d) => void (d.standard = v))} />
           </section>
 
           <section id="choix" className="sq-step">

@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { loadContractorOptions } from "@/lib/soumissions/contractors";
 import { todayIn } from "@/lib/soumissions/dates";
+import { readMemory } from "@/lib/soumissions/memory-store"; // Chantier D
 import { draftOf, QUOTE_ID_RE } from "@/lib/soumissions/quote";
 import { CURRENT_RATES, listTemplates, loadQuote } from "@/lib/soumissions/service";
 import { QuoteBuilder } from "@/components/gestion/soumissions/QuoteBuilder";
@@ -19,7 +20,8 @@ export default async function ModifierPage({ params, searchParams }: { params: P
   if (!data) notFound();
   const draft = draftOf(data.quote);
   if (!draft) redirect(`/gestion/soumissions/${id}?msg=${encodeURIComponent("Cette version a été envoyée : créez une nouvelle version pour la modifier.")}`);
-  const [contractors, templates] = await Promise.all([loadContractorOptions(new Date(), draft.contractorId ?? null), listTemplates()]);
+  // Chantier D : derniers choix du propriétaire, pour les têtes ajoutées au plan.
+  const [contractors, templates, memory] = await Promise.all([loadContractorOptions(new Date(), draft.contractorId ?? null), listTemplates(), readMemory()]);
   return (
     <QuoteBuilder
       quoteId={data.quote.id}
@@ -35,6 +37,7 @@ export default async function ModifierPage({ params, searchParams }: { params: P
       clientId={data.quote.clientId ?? null}
       templates={templates}
       copy={copie === "autre" ? "autre" : copie ? "meme" : null}
+      memory={memory}
     />
   );
 }

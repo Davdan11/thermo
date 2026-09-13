@@ -31,7 +31,9 @@ export type TimelineKind =
   | "note"
   | "etape"
   | "tache"
-  | "pipedrive";
+  | "pipedrive"
+  // Chantier D : visite photo à distance (« Photos reçues »).
+  | "photos";
 
 export interface TimelineItem {
   key: string;

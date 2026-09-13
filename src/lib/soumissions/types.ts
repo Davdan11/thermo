@@ -250,6 +250,23 @@ export interface Placement {
   indoor: IndoorPlacement[];
   electrical: ElectricalInfo;
   removal: RemovalInfo;
+  /** Chantier D : couleur du cache-ligne (pastilles des réglages), pour toutes les têtes. Absente des anciennes soumissions. */
+  coverColor?: string;
+}
+
+/** Chantier D : « Inclusions standard » de l'installation (réglages, standard.ts). Absent des anciens fichiers. */
+export interface StandardInclusions {
+  enabled: boolean;
+  /** Ligne frigorifique incluse par tête intérieure, en pieds (50 par défaut) ; null : aucune longueur incluse. */
+  lineIncludedFt: number | null;
+  /** Cache-ligne inclus : seule la couleur se choisit. */
+  lineCover: boolean;
+  /** Base au sol OU support mural inclus, au choix. */
+  mounting: boolean;
+  /** Drain par gravité inclus (la pompe de condensat reste un extra). */
+  gravityDrain: boolean;
+  /** Raccordement électrique jusqu'au panneau inclus, sans limite de distance. */
+  electricalToPanel: boolean;
 }
 
 export interface ScheduleInfo {
@@ -457,9 +474,12 @@ export interface Settings {
     lengthUnit: LengthUnit;
     includedLineLength: number | null;
     /** Champs qui changent rarement : repris dans chaque nouvelle soumission, puis modifiables. */
-    site: { access: string; presence: string };
+    /** Chantier D : `constraints` (contraintes des occupants), absent des anciens fichiers. */
+    site: { access: string; presence: string; constraints?: string };
     schedule: { duration: string; arrival: string; windowText: string };
   };
+  /** Chantier D : inclusions de l'installation standard (standard.ts). Absent des anciens fichiers : valeurs de départ. */
+  standard?: StandardInclusions;
   /** Listes des choix en un clic (choices.ts). */
   choices: ChoiceLists;
   templates: {

@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FileText, Plus, Settings2, Tags } from "lucide-react";
+import { Camera, FileText, Plus, Settings2, Tags } from "lucide-react";
 
 const ITEMS = [
   { href: "/gestion/soumissions", label: "Soumissions", icon: FileText, match: (p: string) => p === "/gestion/soumissions" || /^\/gestion\/soumissions\/q_/.test(p) },
   { href: "/gestion/soumissions/nouvelle", label: "Nouvelle", icon: Plus, match: (p: string) => p.startsWith("/gestion/soumissions/nouvelle") },
   { href: "/gestion/soumissions/prix", label: "Liste de prix", icon: Tags, match: (p: string) => p.startsWith("/gestion/soumissions/prix") },
+  // Chantier D : visites photo à distance (et durée de conservation).
+  { href: "/gestion/soumissions/visites", label: "Photos à distance", icon: Camera, match: (p: string) => p.startsWith("/gestion/soumissions/visites") },
   { href: "/gestion/soumissions/reglages", label: "Réglages", icon: Settings2, match: (p: string) => p.startsWith("/gestion/soumissions/reglages") },
 ];
 
