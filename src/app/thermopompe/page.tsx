@@ -2,25 +2,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getCollectionPageSchema, getItemListSchema } from "@/lib/seo";
-import { getCitiesByRegion, getCities } from "@/lib/seo/cities";
+import { getCities } from "@/lib/seo/cities";
 import { getCityData, fmtInt, fmtTemp } from "@/lib/seo/cities-data";
+import { getHubs, getPageMunicipalities, groupTitle } from "@/lib/seo/municipalites";
+import { atlasRegions } from "@/lib/seo/municipal-atlas";
 import { JsonLd } from "@/components/seo/SeoBlocks";
-import { FrostCityTable, FrostCta, FrostHead, FrostNote, FrostRegions, FrostTrust } from "@/components/sections-v2/contenu/FrostSections";
+import { FrostCityTable, FrostCta, FrostHead, FrostNote, FrostTrust } from "@/components/sections-v2/contenu/FrostSections";
+import { FrostAtlas } from "@/components/sections-v2/contenu/FrostMunicipal";
 import { FrostIndexHero, type FrostGroup } from "@/components/heroes-v2/contenu/Frost";
+
+const PAGES = getPageMunicipalities().length + getCities().length;
 
 export const metadata: Metadata = createMetadata({
   title: `Thermopompe par ville au Québec : climat et modèles`,
-  description:
-    `Choisissez votre ville : température de conception, subvention LogisVert d'Hydro-Québec et thermopompes certifiées climat froid pour chaque région du Québec.`,
+  description: `Votre municipalité parmi ${PAGES} au Québec : normales climatiques, recensement 2021, subvention LogisVert et thermopompes certifiées climat froid, par région et par MRC.`,
   canonicalPath: "/thermopompe",
   robots: { index: true, follow: true },
 });
 
 export default function CitiesIndexPage() {
-  const byRegion = getCitiesByRegion();
   const cities = getCities();
-  const regions = [...byRegion.keys()].sort((a, b) => a.localeCompare(b, "fr-CA"));
-  // Héros : villes regroupées par température de conception, de la plus douce à la plus froide
+  const regions = atlasRegions();
+  const hubs = getHubs();
+  const total = regions.reduce((a, r) => a + r.pages, 0);
+  // Héros : villes historiques regroupées par température de conception, de la plus douce à la plus froide
   const groups: FrostGroup[] = [...new Set(cities.map((c) => c.designTempC))]
     .sort((a, b) => b - a)
     .map((t) => ({ t, cities: cities.filter((c) => c.designTempC === t).map((c) => ({ name: c.name, slug: c.slug })).sort((a, b) => a.name.localeCompare(b.name, "fr-CA")) }));
@@ -36,26 +41,25 @@ export default function CitiesIndexPage() {
       <JsonLd
         data={[
           getBreadcrumbSchema([{ name: "Accueil", url: "/" }, { name: "Thermopompe par ville", url: "/thermopompe" }]),
-          getCollectionPageSchema({ name: "Thermopompe par ville au Québec", description: "Guides locaux par ville.", url: "/thermopompe" }),
-          getItemListSchema({ name: "Villes du Québec", items: cities.map((c) => ({ name: `Thermopompe à ${c.name}`, url: `/thermopompe/${c.slug}` })) }),
+          getCollectionPageSchema({ name: "Thermopompe par ville au Québec", description: "Guides locaux par région, MRC et municipalité.", url: "/thermopompe" }),
+          getItemListSchema({ name: "MRC et agglomérations du Québec", items: hubs.map((g) => ({ name: groupTitle(g), url: `/thermopompe/mrc/${g.slug}` })) }),
         ]}
       />
-      {/* Héros « Carte des froids » : chaque température de conception réelle et ses villes. */}
+      {/* Héros « Carte des froids » : chaque température de conception réelle et ses villes historiques. */}
       <FrostIndexHero
         eyebrow="Guides locaux"
         breadcrumbs={[{ label: "Thermopompe par ville", href: "/thermopompe" }]}
         lines={["Thermopompe", "par ville au Québec"]}
-        intro="La bonne machine dépend de votre maison, mais chaque ville a son hiver : température de conception, degrés-jours de chauffage, moyenne de janvier. Thermopompes À Vendre chiffre ce que ça change, ville par ville, avec les normales d'Environnement Canada et les données certifiées d'Hydro-Québec."
+        intro="La bonne machine dépend de votre maison, mais chaque municipalité a son hiver et ses logements : normales de la station météo la plus proche, degrés-jours de chauffage, âge des maisons au recensement de 2021. Thermopompes À Vendre chiffre ce que ça change, avec les données d'Environnement Canada, de Statistique Canada et d'Hydro-Québec."
         groups={groups}
         stats={[
-          { label: "Villes couvertes", value: String(cities.length) },
+          { label: "Municipalités avec page", value: fmtInt(total) },
+          { label: "MRC et agglomérations", value: String(hubs.length) },
           { label: "Régions", value: String(regions.length) },
-          { label: "Programme", value: "LogisVert" },
-          { label: "Données", value: "ENERGY STAR / AHRI" },
+          { label: "Données", value: "ECCC · StatCan" },
         ]}
       />
-      {/* Sous le héros, l'atlas continue : bande de preuve, journal comparatif des villes (barres de givre),
-          légende de carte par région, note de l'atlas et appel. */}
+      {/* Sous le héros : bande de preuve, journal comparatif des grandes villes, atlas région → MRC → municipalité, note et appel. */}
       <FrostTrust />
       <section style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #EEF5F9 100%)" }}>
         <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
@@ -64,7 +68,7 @@ export default function CitiesIndexPage() {
             title="Où l'hiver demande le plus d'une thermopompe"
             intro={
               hasHdd
-                ? "Les villes classées par degrés-jours de chauffage (normales d'Environnement Canada) : plus le chiffre est élevé, plus la machine travaille sur l'année. La température de conception fixe la pointe à couvrir."
+                ? "Les grandes villes classées par degrés-jours de chauffage (normales d'Environnement Canada) : plus le chiffre est élevé, plus la machine travaille sur l'année. La température de conception fixe la pointe à couvrir."
                 : "Les villes classées par température de conception, le froid de référence du calcul de charge de chauffage."
             }
           />
@@ -85,23 +89,17 @@ export default function CitiesIndexPage() {
           </div>
         </div>
       </section>
-      <section style={{ background: "#FFFFFF" }}>
-        <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
-          <FrostRegions
-            title="Par région"
-            regions={regions.map((r) => ({
-              name: r,
-              cities: byRegion.get(r)!.map((c) => ({ slug: c.slug, name: c.name, t: c.designTempC })),
-            }))}
-          />
-        </div>
-      </section>
+      <FrostAtlas regions={regions} total={total} />
       <FrostNote>
         <h2>Pourquoi la ville ne change pas la machine recommandée</h2>
         <p>
           Partout au Québec, on achète des thermopompes conçues pour -25 °C ou -30 °C. Ce qui distingue deux maisons, c'est leur superficie,
           leur âge, leur isolation et leur système de chauffage actuel. C'est pourquoi notre questionnaire <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> ne
           demande votre code postal que pour vous situer et trouver des installateurs près de chez vous.
+        </p>
+        <p>
+          Une municipalité a sa page quand elle a des données propres : son profil du recensement de 2021 et une station de normales climatiques
+          à 50 km ou moins. Les autres sont nommées, avec leurs chiffres, sur la page de leur MRC.
         </p>
       </FrostNote>
       <FrostCta />

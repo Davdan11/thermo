@@ -1,10 +1,18 @@
 /* ==================================================================
    Page locale « Thermopompe à [ville] »
 
-   Chaque page repose sur des chiffres propres à la ville : température de
-   conception (table des codes postaux), normales climatiques d'Environnement
-   Canada et recensement 2021 (src/lib/seo/cities-data.json). Une donnée
-   absente n'est jamais estimée : la ligne est simplement omise.
+   Deux gabarits sous la même route :
+   - les 53 villes historiques (cities.ts) : chiffres vérifiés de
+     src/lib/seo/cities-data.json, plus leurs municipalités voisines et
+     leur MRC ;
+   - les municipalités du Québec qui ont des données propres
+     (src/lib/seo/municipalites-data.json, règle « pas de donnée, pas de
+     page » et vérification d'unicité) : MunicipalityView.
+
+   Pré-rendu : les villes historiques et les municipalités de 8 000
+   habitants et plus. Les autres pages sont rendues à la première visite,
+   puis servies du cache (ISR). Un slug inconnu, ou une municipalité sans
+   page propre, renvoie une 404. Une donnée absente n'est jamais estimée.
    ================================================================== */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -13,13 +21,21 @@ import { createMetadata, fitTitle, getBreadcrumbSchema, getServiceSchema, SITE_U
 import { getCities, getCity } from "@/lib/seo/cities";
 import { getCityData, referenceHdd, fmtInt, fmtTemp } from "@/lib/seo/cities-data";
 import { getCanonicalModels, getRanking, getAllBrandStats, type SeoModel } from "@/lib/seo/programmatic";
+import { getMunicipalityForCity, getPageMunicipality, prerenderMunicipalSlugs } from "@/lib/seo/municipalites";
+import { NEIGHBOUR_COLUMNS, buildMunicipalPage, neighbourTable, placeBlock } from "@/lib/seo/municipal-content";
+import { catalogueFacts } from "@/lib/seo/municipal-catalogue";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { FrostCta, FrostHead, FrostNearby, FrostReadouts, FrostTrust, type ReadingRow } from "@/components/sections-v2/contenu/FrostSections";
+import { FrostPlace, FrostTable } from "@/components/sections-v2/contenu/FrostMunicipal";
 import { MT_FROST, ThemedModelTable } from "@/components/sections-v2/contenu/ThemedModelTable";
 import { ThemedFaq } from "@/components/sections-v2/contenu/ThemedFaq";
 import { FrostCityHero } from "@/components/heroes-v2/contenu/Frost";
+import { MunicipalityView } from "./MunicipalityView";
 
-export const dynamicParams = false;
+/** Slugs hors liste pré-rendue : rendus à la demande (404 s'ils n'ont pas de page), puis mis en cache. */
+export const dynamicParams = true;
+/** Les données changent au plus avec la liste LogisVert : une régénération par semaine suffit. */
+export const revalidate = 604800;
 
 /* ------------------------------------------------------------------
    Hypothèses de l'estimation des besoins de chauffage (affichées sur la page)
@@ -45,20 +61,30 @@ function heatingEstimate(hdd18: number) {
   };
 }
 
-const money = (n: number) => `${Math.round(n / 10) * 10}`.replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " $";
+const money = (n: number) => `${Math.round(n / 10) * 10}`.replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " $";
 const pct = (n: number) => `${Math.round(n)} %`;
 
 export async function generateStaticParams() {
-  return getCities().map((c) => ({ ville: c.slug }));
+  return [...getCities().map((c) => ({ ville: c.slug })), ...prerenderMunicipalSlugs().map((slug) => ({ ville: slug }))];
+}
+
+/** Page de gabarit « municipalité » pour ce slug, ou null (404). */
+function municipalPage(slug: string) {
+  const m = getPageMunicipality(slug);
+  return m ? buildMunicipalPage(m, catalogueFacts()) : null;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ ville: string }> }): Promise<Metadata> {
   const { ville } = await params;
   const city = getCity(ville);
-  if (!city) return createMetadata({ title: "Ville introuvable" });
+  if (!city) {
+    const p = municipalPage(ville);
+    if (!p) return createMetadata({ title: "Ville introuvable", robots: { index: false, follow: false } });
+    return createMetadata({ title: p.title, description: p.description, canonicalPath: p.path });
+  }
   const hdd = getCityData(ville)?.climate?.hdd18 ?? null;
   return createMetadata({
-    title: fitTitle(`Thermopompe à ${city.name} : hiver à ${city.designTempC} °C et LogisVert`, `Thermopompe à ${city.name} : modèles et LogisVert`, `Thermopompe à ${city.name} : modèles`, `Thermopompe à ${city.name}`),
+    title: fitTitle(`Installation de thermopompe à ${city.name} : climat local`, `Installation de thermopompe à ${city.name}`, `Thermopompe à ${city.name} : installation`, `Thermopompe à ${city.name}`),
     // ≤ 158 caractères sans troncature : on retire la région, puis les degrés-jours, si la ville a un long nom.
     description:
       [
@@ -73,7 +99,11 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
 export default async function CityPage({ params }: { params: Promise<{ ville: string }> }) {
   const { ville } = await params;
   const city = getCity(ville);
-  if (!city) notFound();
+  if (!city) {
+    const p = municipalPage(ville);
+    if (!p) notFound();
+    return <MunicipalityView p={p} />;
+  }
 
   const data = getCityData(ville);
   const cl = data?.climate ?? null;
@@ -103,6 +133,13 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
   const vsMontreal = hdd && refHdd && city.slug !== "montreal" ? ((hdd - refHdd) / refHdd) * 100 : null;
 
   const nearby = (city.near ?? []).map((s) => getCity(s)).filter((c): c is NonNullable<typeof c> => !!c);
+
+  // Municipalités voisines (jeu des municipalités) et MRC de la ville. Saint-Hubert et Jonquière,
+  // arrondissements, n'ont pas de fiche propre : on ne montre que la MRC de leur ville.
+  const muni = getMunicipalityForCity(city.slug);
+  const ownMuni = muni && muni.curated === city.slug ? muni : null;
+  const neighbourRows = ownMuni && ownMuni.lat !== null ? neighbourTable(ownMuni, 5) : [];
+  const place = muni ? placeBlock(muni) : null;
 
   /* ---- Profil climatique ---- */
   const climateRows: ReadingRow[] = [
@@ -200,7 +237,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
 
   const faq = [
     {
-      question: `Quelle capacité de thermopompe faut-il à ${city.name}?`,
+      question: `Quelle capacité faut-il pour une maison à ${city.name}?`,
       answer: `La capacité dépend de votre maison (superficie, isolation, année de construction, fenestration), pas de la ville. Ce que ${city.name} impose, c'est le froid de référence : ${city.designTempC} °C${hdd ? ` et ${fmtInt(hdd)} degrés-jours de chauffage par an` : ""}. Retenez la capacité certifiée à -15 °C de la machine, jamais sa capacité nominale, et faites valider le calcul de charge par l'installateur.`,
     },
     {
@@ -271,7 +308,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
         source={cl?.station ? `Normales climatiques${cl.normalsPeriod ? ` ${cl.normalsPeriod}` : ""} d’Environnement et Changement climatique Canada, station ${cl.station}.` : null}
       />
       {/* Sous le héros, l'atlas de la ville : relevés d'instruments (normales), journal de choix, estimation,
-          classement en journal de station, appel, villes voisines en légende de carte, questions. */}
+          classement en journal de station, appel, villes et municipalités voisines, MRC, questions. */}
       <FrostTrust />
 
       <FrostReadouts layout="instruments" id="climat" eyebrow="Profil climatique" title={`L'hiver de ${city.name} en chiffres`} intro="Les valeurs qui servent au calcul de charge d'une maison et au choix de la machine." rows={climateRows} />
@@ -312,10 +349,23 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
           title="Villes voisines"
           links={nearby.map((c) => {
             const h = getCityData(c.slug)?.climate?.hdd18 ?? null;
-            return { href: `/thermopompe/${c.slug}`, label: `Thermopompe à ${c.name}`, hint: `${c.designTempC} °C${h ? ` · ${fmtInt(h)} degrés-jours` : ` · ${c.region}`}`, t: c.designTempC };
+            return { href: `/thermopompe/${c.slug}`, label: c.name, hint: `${c.designTempC} °C${h ? ` · ${fmtInt(h)} degrés-jours` : ` · ${c.region}`}`, t: c.designTempC };
           })}
         />
       )}
+
+      {neighbourRows.length > 1 && (
+        <FrostTable
+          id="municipalites-voisines"
+          eyebrow="Comparatif"
+          title="Municipalités voisines"
+          intro="Les plus proches qui ont leur page : leur froid et leurs logements, côte à côte. Recensement 2021 et normales de la station de chaque municipalité."
+          caption={`${city.name} et les municipalités voisines qui ont leur page`}
+          columns={NEIGHBOUR_COLUMNS.map((c) => ({ key: c.key, label: c.label }))}
+          rows={neighbourRows}
+        />
+      )}
+      {place && <FrostPlace eyebrow={place.eyebrow} title={place.title} text={place.text} href={place.href} linkLabel={place.linkLabel} />}
 
       <ThemedFaq items={faq} title={`Questions fréquentes à ${city.name}`} variant="frost" />
     </main>

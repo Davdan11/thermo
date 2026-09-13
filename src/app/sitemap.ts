@@ -19,7 +19,8 @@ import { registry } from "@/lib/data/registry";
 import { getIndexableModels, getAllBrandStats, getCapacityClasses, getBrandPairs, RANKINGS } from "@/lib/seo/programmatic";
 import { getCities } from "@/lib/seo/cities";
 import { getLandingPages } from "@/lib/seo/landings";
-import { DATA_DATE, PRODUCTS_PER_SITEMAP, isoDay, sitemapIds } from "@/lib/seo/sitemaps";
+import { DATA_DATE, PRODUCTS_PER_SITEMAP, isoDay, latestDay, sitemapIds } from "@/lib/seo/sitemaps";
+import { getHubs, getPageMunicipalities, municipalDataDate } from "@/lib/seo/municipalites";
 
 /**
  * lastmod : uniquement quand la date de modification est connue et vérifiable — DATA_DATE (liste
@@ -94,7 +95,15 @@ export default async function sitemap(props: { id: Promise<string> }): Promise<M
   }
 
   if (id === "villes-quebec") {
-    return getCities().map((c) => entry(`/thermopompe/${c.slug}`, DATA_DATE, "monthly", 0.7));
+    // Seules les pages qui passent toutes les vérifications (données propres, unicité) sont listées :
+    // les municipalités sans page n'existent pas (404) et sont nommées sur la page de leur MRC.
+    const muniDate = municipalDataDate();
+    const localDate = latestDay(DATA_DATE, muniDate);
+    return [
+      ...getCities().map((c) => entry(`/thermopompe/${c.slug}`, localDate, "monthly", 0.7)),
+      ...getHubs().map((g) => entry(`/thermopompe/mrc/${g.slug}`, muniDate, "monthly", 0.6)),
+      ...getPageMunicipalities().map((m) => entry(`/thermopompe/${m.slug}`, localDate, "monthly", 0.5)),
+    ];
   }
 
   if (id === "classements") {

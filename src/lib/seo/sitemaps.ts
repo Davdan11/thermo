@@ -30,8 +30,18 @@ export function sitemapIds(): string[] {
   return ids;
 }
 
+/** La plus récente de deux dates AAAA-MM-JJ (la seconde peut manquer). */
+export function latestDay(a: string, b: string | undefined): string {
+  return b && b > a ? b : a;
+}
+
 /** Dernière modification réelle d'un sitemap : données officielles, ou guide le plus récent pour « guides ». */
 export async function sitemapLastmod(id: string): Promise<string> {
+  if (id === "villes-quebec") {
+    // Pages locales : liste LogisVert et données municipales (date de construction du jeu).
+    const { municipalDataDate } = await import("@/lib/seo/municipalites");
+    return latestDay(DATA_DATE, municipalDataDate());
+  }
   if (id !== "guides") return DATA_DATE;
   const { getAllGuides } = await import("@/lib/markdown");
   const latest = getAllGuides().reduce((acc, g) => {
