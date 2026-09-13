@@ -57,6 +57,8 @@ function InkLine({ text, index, count, empty, fit, last }: { text: string; index
 }
 
 export function MonogrammeHero({ name, slug, logo, stats, types, cold, capacity, photo, fit }: MonogrammeData) {
+  // Photo représentative de la marque (tirée d'une brochure du fabricant) : elle ne montre pas forcément ce modèle précis.
+  const representative = Boolean(photo?.src.includes("/representatives/"));
   const reduce = useReduced();
   const { scrollY } = useScroll();
   // 1 = lettres vides. À l’arrivée, l’encre monte un peu (0,8) ; le défilement la fait monter jusqu’en haut.
@@ -131,7 +133,7 @@ export function MonogrammeHero({ name, slug, logo, stats, types, cold, capacity,
                   className="mq-float relative"
                   style={{ aspectRatio: "4 / 3", isolation: "isolate", background: C.cream, boxShadow: "0 40px 60px -34px rgba(21,23,26,0.45), 0 2px 6px rgba(21,23,26,0.06)" }}
                 >
-                  <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 1024px) 36vw, 64vw" fetchPriority="high" style={{ objectFit: "contain", padding: "5% 6%", mixBlendMode: "multiply" }} />
+                  <Image src={photo.src} alt={representative ? `${name} : photo représentative de la marque` : photo.alt} fill sizes="(min-width: 1024px) 36vw, 64vw" fetchPriority="high" style={{ objectFit: "contain", padding: "5% 6%", mixBlendMode: "multiply" }} />
                 </div>
               </Link>
             </motion.div>
@@ -198,7 +200,7 @@ export function MonogrammeHero({ name, slug, logo, stats, types, cold, capacity,
             {photo ? (
               <p {...fp({ opacity: 0, duration: 1, delay: 1.6 }, { className: "py-5 text-[13px] leading-snug lg:max-w-[340px] lg:border-l lg:pl-10", style: { borderColor: C.line, color: C.mute, margin: 0 } })}>
                 <span className="block text-[11px] font-semibold uppercase" style={{ letterSpacing: "0.2em", color: C.faint }}>
-                  Sur la photo
+                  {representative ? "Photo représentative de la marque" : "Sur la photo"}
                 </span>
                 <Link href={photo.href} className="mq-u mt-2 inline-block font-semibold" style={{ color: C.ink }}>
                   {photo.title}

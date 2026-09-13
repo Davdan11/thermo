@@ -239,7 +239,7 @@ export function FicheIngenierie(d: FicheData) {
               </Link>
             )}
             <span className="fi-mono hidden text-[10.5px] uppercase sm:inline" style={{ letterSpacing: "0.14em", color: MUTE }}>
-              {d.imageUrl ? `Photo officielle · ${d.brandName}` : "Photo du fabricant non disponible"}
+              {d.imageUrl ? `${d.imageUrl.includes("/representatives/") ? "Photo représentative" : "Photo officielle"} · ${d.brandName}` : "Photo du fabricant non disponible"}
             </span>
           </div>
         </div>
