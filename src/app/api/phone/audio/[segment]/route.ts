@@ -17,7 +17,7 @@ import { generateSpeech } from "@/lib/elevenlabs/tts";
 
 // Textes de l'IVR en français québécois naturel
 const SCRIPTS: Record<string, string> = {
-  welcome: `Bonjour et bienvenue chez Thermopompes À Vendre point c a. Votre référence pour trouver la bonne thermopompe au Québec.`,
+  welcome: `Bonjour et bienvenue chez Thermopompes À Vendre point c a. Votre référence pour trouver la bonne thermopompe au Québec. Votre appel peut être enregistré pour la qualité du service.`,
 
   menu: `Pour les ventes et les soumissions, faites le 1. Pour le service après-vente et les réparations, faites le 2. Pour parler à un conseiller, faites le 3. Pour répéter ce menu, faites le 0.`,
 

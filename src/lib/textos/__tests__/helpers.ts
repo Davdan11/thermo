@@ -31,7 +31,10 @@ export function inboundParams(from: string, body: string, extra: Record<string, 
 
 /** Texte du <Message> de la réponse TwiML, ou null si <Response/> est vide. */
 export function replyOf(xmlText: string): string | null {
-  return xmlText.match(/<Message>([\s\S]*)<\/Message>/)?.[1] ?? null;
+  // Le TwiML est échappé une fois (xml()) ; Twilio le décode avant d'envoyer le texto : on fait pareil ici.
+  const raw = /<Message>([\s\S]*)<\/Message>/.exec(xmlText)?.[1];
+  if (raw === undefined) return null;
+  return raw.replace(/&apos;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
 }
 
 export async function tempDir(): Promise<string> {

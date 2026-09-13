@@ -1,12 +1,14 @@
 /* ==================================================================
    POST /api/phone/ivr/no-answer — transfert non répondu (webhook Twilio signé)
-   → boîte vocale, affaire Pipedrive « appel manqué »
+   → bureau sans réponse : cellulaire (heures d'ouverture) ; sinon boîte vocale,
+     affaire Pipedrive « appel manqué »
    ================================================================== */
 
 import { capturePhoneLead } from "@/lib/crm/pipedrive";
 import { journalLead } from "@/lib/crm/lead-journal";
 import { SITE_URL } from "@/lib/seo";
 import { twiml, twilioForbidden, verifyTwilioRequest, xml } from "@/lib/security/twilio";
+import { cellDialTwiml, isBusinessHours, phoneConfig, toDept } from "@/lib/phone/ivr-flow";
 
 export async function POST(req: Request) {
   const check = await verifyTwilioRequest(req);
@@ -18,6 +20,12 @@ export async function POST(req: Request) {
   const dept = (new URL(req.url).searchParams.get("dept") ?? "ventes").replace(/[^a-z]/g, "") || "ventes";
 
   if (dialCallStatus === "completed") return twiml(`<Hangup/>`);
+
+  // Bureau sans réponse : le cellulaire sonne ensuite (heures d'ouverture seulement), puis la boîte vocale.
+  if (new URL(req.url).searchParams.get("etape") === "bureau") {
+    const cfg = phoneConfig();
+    if (cfg.cellNumber && isBusinessHours()) return twiml(cellDialTwiml(base, toDept(dept), cfg.cellNumber));
+  }
 
   if (caller && caller !== "anonymous") {
     const when = new Date().toLocaleString("fr-CA", { timeZone: "America/Montreal" });

@@ -57,7 +57,8 @@ describe("smsSegments", () => {
   });
 
   it("texte proposé et confirmations : nombre de textos connu", () => {
-    expect(smsSegments(DEFAULT_AUTO_REPLY)).toMatchObject({ encoding: "UCS-2", units: DEFAULT_AUTO_REPLY.length, segments: 3 });
+    // Accusé par défaut : un seul texto, en GSM-7 (aucun « ’ » ni « À »).
+    expect(smsSegments(DEFAULT_AUTO_REPLY)).toMatchObject({ encoding: "GSM-7", units: DEFAULT_AUTO_REPLY.length, segments: 1 });
     for (const t of [STOP_CONFIRMATION, START_CONFIRMATION, HELP_REPLY]) expect(smsSegments(t).segments).toBe(2);
   });
 });

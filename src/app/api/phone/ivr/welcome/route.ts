@@ -29,6 +29,8 @@ export async function POST(req: Request) {
     <Say language="fr-FR" voice="Polly.Lea-Neural">
       <prosody rate="88%" pitch="-2st">
         Bonjour et bienvenue chez Thermopompes À Vendre.
+        <break time="500ms"/>
+        Votre appel peut être enregistré pour la qualité du service.
         <break time="700ms"/>
         Pour les ventes et les soumissions, faites le <say-as interpret-as="cardinal">1</say-as>.
         <break time="500ms"/>
