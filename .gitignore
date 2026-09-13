@@ -97,3 +97,17 @@ public/images/products/_official-sources/**
 /data/gestion-journal/
 /data/gestion-env-essai/
 /data/sauvegardes-etat.json
+
+# Conformité C2 : trousse contractuelle (CONFIDENTIELLE : texte de l'avocat), identité de la plateforme, preuves de
+# consentement (adresses IP), réglages de conformité et programme de recommandation (shared/data sur le VPS, jamais dans le dépôt)
+/data/trousse.json
+/data/plateforme.json
+/data/consentements.json
+/data/conformite.json
+/data/references.json
+/data/trousse.json.lock
+/data/plateforme.json.lock
+/data/consentements.json.lock
+/data/conformite.json.lock
+/data/references.json.lock
+/data/*.tmp
