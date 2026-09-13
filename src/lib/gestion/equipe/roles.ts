@@ -65,6 +65,8 @@ const STAFF: readonly Role[] = ["proprietaire", "adjoint"];
  */
 export const SECTION_ROLES: Readonly<Record<string, readonly Role[]>> = {
   "/gestion": ALL,
+  // Refonte R1 : l'ancien accueil (ouvert à tous, version restreinte d'un vendeur) devient l'onglet « Tableau de bord ».
+  "/gestion/tableau-de-bord": ALL,
   "/gestion/taches": ALL,
   "/gestion/pipeline": ALL,
   "/gestion/clients": ALL,

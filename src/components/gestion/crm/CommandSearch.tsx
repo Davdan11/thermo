@@ -1,13 +1,17 @@
 "use client";
 
-/* Recherche globale des clients : « / » ou ⌘K (Ctrl+K), icône sur le téléphone. Server Action dès 2 caractères,
-   8 résultats au plus : nom, ville, étape, 4 derniers chiffres (jamais le numéro complet ni le courriel).
-   Flèches pour choisir, Entrée pour ouvrir la fiche. */
+/* Recherche globale : « / » ou ⌘K (Ctrl+K), icône sur le téléphone.
+   - Pages (refonte R1) : « paiements », « réglages textos », « rbq »… trouvées aussitôt dans la carte de la navigation
+     du rôle (aucun appel au serveur).
+   - Clients : Server Action dès 2 caractères, 8 résultats au plus : nom, ville, étape, 4 derniers chiffres (jamais le
+     numéro complet ni le courriel).
+   Flèches pour choisir, Entrée pour ouvrir. */
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
-import { LoaderCircle, Search } from "lucide-react";
+import { CornerDownLeft, LoaderCircle, Search } from "lucide-react";
 import { searchClientsAction } from "@/app/gestion/(prive)/crm-actions";
 import type { SearchResult } from "@/lib/gestion/crm/service";
+import { searchPages, type PageHit } from "@/lib/gestion/nav/sections";
 import { StageChip } from "../kit/Chip";
 import { Sheet } from "../kit/Sheet";
 
@@ -18,7 +22,9 @@ function typing(t: EventTarget | null): boolean {
   return Boolean(el && (el.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(el.tagName)));
 }
 
-export function CommandSearch() {
+type Entry = { kind: "page"; id: string; href: string; page: PageHit } | { kind: "client"; id: string; href: string; client: SearchResult };
+
+export function CommandSearch({ pages = [] }: { pages?: PageHit[] } = {}) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
@@ -63,15 +69,56 @@ export function CommandSearch() {
   }, [q]);
 
   const term = q.trim();
-  const list = term.length >= 2 ? results.list : [];
-  const go = (id: string) => {
+  const pageHits = term.length >= 2 ? searchPages(pages, term, 5) : [];
+  const clients = term.length >= 2 ? results.list : [];
+  const entries: Entry[] = [
+    ...pageHits.map((p) => ({ kind: "page" as const, id: `p-${p.href.replace(/[^a-z0-9]+/gi, "-")}`, href: p.href, page: p })),
+    ...clients.map((c) => ({ kind: "client" as const, id: `c-${c.id}`, href: `/gestion/clients/${c.id}`, client: c })),
+  ];
+  const cur = Math.min(sel, Math.max(entries.length - 1, 0));
+  const go = (href: string) => {
     setOpen(false);
     setQ("");
-    router.push(`/gestion/clients/${id}`);
+    router.push(href);
   };
+  const row = (e: Entry, i: number) => (
+    <li key={e.id} id={`sh-cmd-${e.id}`} role="option" aria-selected={i === cur}>
+      <a
+        href={e.href}
+        className="sh-cmd__item"
+        data-selected={i === cur ? "true" : undefined}
+        onMouseEnter={() => setSel(i)}
+        onClick={(ev) => {
+          ev.preventDefault();
+          go(e.href);
+        }}
+      >
+        {e.kind === "page" ? (
+          <>
+            <span className="sh-cmd__page" aria-hidden>
+              <CornerDownLeft size={15} />
+            </span>
+            <span style={{ minWidth: 0 }}>
+              <span className="sh-cmd__name">{e.page.label}</span>
+              <span className="sh-cmd__meta">{e.page.section}</span>
+            </span>
+          </>
+        ) : (
+          <>
+            <StageChip stage={e.client.stage} size="sm" />
+            <span style={{ minWidth: 0 }}>
+              <span className="sh-cmd__name">{e.client.name}</span>
+              <span className="sh-cmd__meta">{[e.client.city, e.client.stageLabel].filter(Boolean).join(" · ")}</span>
+            </span>
+            {e.client.last4 ? <span className="sh-cmd__meta">••{e.client.last4}</span> : <span />}
+          </>
+        )}
+      </a>
+    </li>
+  );
 
   return (
-    <Sheet open={open} onOpenChange={setOpen} title="Rechercher un client" description="Nom, ville, 4 derniers chiffres du téléphone, courriel ou numéro de soumission.">
+    <Sheet open={open} onOpenChange={setOpen} title="Rechercher" description="Un client (nom, ville, 4 derniers chiffres, courriel, numéro de soumission) ou une page (paiements, réglages…).">
       <div className="sh-cmd">
         <label className="sh-cmd__field">
           {pending ? <LoaderCircle size={18} className="sh-spin" aria-hidden /> : <Search size={18} aria-hidden />}
@@ -81,54 +128,47 @@ export function CommandSearch() {
             autoFocus
             autoComplete="off"
             enterKeyHint="go"
-            placeholder="Ex. : Tremblay, Laval, 0142, S-2026-014"
+            placeholder="Ex. : Tremblay, Laval, 0142, paiements"
             value={q}
-            onChange={(e) => setQ(e.target.value)}
+            onChange={(e) => {
+              setQ(e.target.value);
+              setSel(0);
+            }}
             role="combobox"
-            aria-expanded={list.length > 0}
+            aria-expanded={entries.length > 0}
             aria-controls="sh-cmd-list"
-            aria-activedescendant={list[sel] ? `sh-cmd-${list[sel].id}` : undefined}
+            aria-activedescendant={entries[cur] ? `sh-cmd-${entries[cur].id}` : undefined}
             onKeyDown={(e) => {
               if (e.key === "ArrowDown") {
                 e.preventDefault();
-                setSel((s) => Math.min(s + 1, list.length - 1));
+                setSel(Math.min(cur + 1, entries.length - 1));
               } else if (e.key === "ArrowUp") {
                 e.preventDefault();
-                setSel((s) => Math.max(s - 1, 0));
-              } else if (e.key === "Enter" && list[sel]) {
+                setSel(Math.max(cur - 1, 0));
+              } else if (e.key === "Enter" && entries[cur]) {
                 e.preventDefault();
-                go(list[sel].id);
+                go(entries[cur].href);
               }
             }}
           />
         </label>
-        {list.length ? (
-          <ul className="sh-cmd__list" id="sh-cmd-list" role="listbox" aria-label="Clients trouvés">
-            {list.map((r, i) => (
-              <li key={r.id} id={`sh-cmd-${r.id}`} role="option" aria-selected={i === sel}>
-                <a
-                  href={`/gestion/clients/${r.id}`}
-                  className="sh-cmd__item"
-                  data-selected={i === sel ? "true" : undefined}
-                  onMouseEnter={() => setSel(i)}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    go(r.id);
-                  }}
-                >
-                  <StageChip stage={r.stage} size="sm" />
-                  <span style={{ minWidth: 0 }}>
-                    <span className="sh-cmd__name">{r.name}</span>
-                    <span className="sh-cmd__meta">{[r.city, r.stageLabel].filter(Boolean).join(" · ")}</span>
-                  </span>
-                  {r.last4 ? <span className="sh-cmd__meta">••{r.last4}</span> : null}
-                </a>
+        {entries.length ? (
+          <ul className="sh-cmd__list" id="sh-cmd-list" role="listbox" aria-label="Pages et clients trouvés">
+            {pageHits.length ? (
+              <li role="presentation" className="sh-cmd__group">
+                Pages
               </li>
-            ))}
+            ) : null}
+            {entries.map((e, i) => (e.kind === "page" ? row(e, i) : null))}
+            {clients.length ? (
+              <li role="presentation" className="sh-cmd__group">
+                Clients
+              </li>
+            ) : null}
+            {entries.map((e, i) => (e.kind === "client" ? row(e, i) : null))}
           </ul>
-        ) : (
-          <p className="sh-cmd__hint">{term.length < 2 ? "Tapez au moins deux caractères." : pending || results.q !== term ? "Recherche…" : "Aucun client ne correspond."}</p>
-        )}
+        ) : null}
+        {!clients.length ? <p className="sh-cmd__hint">{term.length < 2 ? "Tapez au moins deux caractères." : pending || results.q !== term ? "Recherche des clients…" : pageHits.length ? "Aucun client ne correspond." : "Aucun client ni page ne correspond."}</p> : null}
       </div>
     </Sheet>
   );

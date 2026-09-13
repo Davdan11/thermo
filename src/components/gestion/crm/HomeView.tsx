@@ -150,7 +150,7 @@ export function HomeView({ h }: { h: Home }) {
         eyebrow={`Soumissions · ${h.period.range}`}
         title="L’argent"
         lead="Montants taxes comprises, base avant taxes en dessous. L’aide LogisVert est versée au client par Hydro-Québec : jamais comptée ici."
-        action={<PeriodTabs base="/gestion" current={h.period.id} periods={h.periods} />}
+        action={<PeriodTabs base="/gestion/tableau-de-bord" current={h.period.id} periods={h.periods} />}
       />
       <div className="cr-grid2">
         <Card tone="ink" title="Acceptées" sub={h.period.label}>

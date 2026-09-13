@@ -1,0 +1,240 @@
+/* ==================================================================
+   Refonte R1 — page « Aujourd'hui » (préfixe td-). Cellulaire (390 px)
+   d'abord ; même famille que la couverture de l'accueil (cr-cover) :
+   encre, orange, crème, titres en police d'affichage, accent italique.
+   ================================================================== */
+
+.td {
+  display: grid;
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* En-tête : date, salutation, résumé, argent du mois en une ligne */
+.td-head {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 20px 18px;
+  border-radius: var(--g-radius-lg);
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(229, 75, 23, 0.26), transparent 60%),
+    var(--g-ink);
+  color: var(--g-cream);
+  box-shadow: var(--g-shadow-2);
+}
+.td-head__arcs {
+  position: absolute;
+  right: -90px;
+  top: -110px;
+  width: 300px;
+  height: 300px;
+  fill: none;
+  stroke: rgba(244, 239, 231, 0.09);
+  stroke-width: 1;
+  pointer-events: none;
+}
+.td-head__date {
+  position: relative;
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f6b89f;
+}
+.td-head__title {
+  position: relative;
+  margin: 0;
+  font-family: var(--g-font-display);
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 680;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+.td-head__title em {
+  display: block;
+  font-family: var(--g-font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #f6b89f;
+}
+.td-head__sum {
+  position: relative;
+  margin: 12px 0 0;
+  font-size: 15px;
+  color: rgba(244, 239, 231, 0.78);
+}
+.td-money {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(244, 239, 231, 0.12);
+  font-size: 13.5px;
+  color: rgba(244, 239, 231, 0.72);
+}
+.td-money b {
+  color: var(--g-cream);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.td-money__m {
+  font-weight: 700;
+  color: #f6b89f;
+}
+
+/* Blocages */
+.td-alerts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.td-alert {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  min-height: 60px;
+  padding: 10px 14px 10px 10px;
+  border-radius: 18px;
+  border: 1px solid rgba(180, 35, 24, 0.2);
+  background: var(--g-bad-soft);
+  color: var(--g-ink);
+  text-decoration: none;
+  transition: transform 0.2s var(--g-ease), box-shadow 0.2s;
+}
+.td-alert:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--g-shadow);
+}
+.td-alert--date {
+  border-color: rgba(154, 91, 11, 0.22);
+  background: var(--g-warn-soft);
+}
+.td-alert__icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--g-paper);
+  color: var(--g-bad);
+}
+.td-alert--date .td-alert__icon {
+  color: var(--g-warn);
+}
+.td-alert__txt strong {
+  display: block;
+  font-weight: 680;
+}
+.td-alert__txt small {
+  display: block;
+  font-size: 12.5px;
+  color: var(--g-muted);
+}
+.td-alert__n {
+  font-family: var(--g-font-display);
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+@media (min-width: 760px) {
+  .td-alerts {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* Les 5 actions, numérotées */
+.td-block {
+  display: grid;
+  gap: 12px;
+}
+.td-block__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+}
+.td-block__head .k-h2 {
+  margin: 0;
+}
+.td-block__more {
+  justify-self: start;
+}
+.td-rank .cr-tasks {
+  counter-reset: td;
+}
+.td-rank .cr-tasks > li {
+  counter-increment: td;
+}
+.td-rank .cr-task__top {
+  position: relative;
+  padding-left: 42px;
+}
+.td-rank .cr-task__top::before {
+  content: counter(td);
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--g-ink);
+  color: var(--g-cream);
+  font-family: var(--g-font-display);
+  font-size: 14px;
+  font-weight: 700;
+}
+.td-rank .cr-tasks > li:first-child .cr-task__top::before {
+  background: var(--g-orange);
+  color: #fff;
+}
+
+/* Vers le tableau de bord */
+.td-more {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px dashed var(--g-line-2);
+  color: var(--g-ink);
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.td-more:hover {
+  border-color: var(--g-ink);
+  background: var(--g-paper-warm);
+}
+.td-more svg:first-child {
+  color: var(--g-orange);
+}
+.td-more strong {
+  display: block;
+  font-weight: 680;
+}
+.td-more small {
+  display: block;
+  font-size: 12.5px;
+  color: var(--g-muted);
+}
+
+@media (min-width: 1024px) {
+  .td-head {
+    padding: 30px 32px 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .td-alert {
+    transition: none;
+  }
+}
