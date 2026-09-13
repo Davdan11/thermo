@@ -1,13 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { encodeShareCode } from "@/lib/thermomatch/share-code";
+import { RELANCES_CONSENT_TEXT } from "@/lib/relances/consent";
+import { useReduced } from "@/components/heroes-v2/outils/motion";
 
 /* « Envoyez-moi mes trois choix » : le visiteur reçoit ses recommandations par
    courriel (lead : Pipedrive, alerte à l'équipe). Le code de partage vient de
-   l'adresse (lien partagé) ou des réponses gardées dans la session. */
+   l'adresse (lien partagé) ou des réponses gardées dans la session.
+   Deuxième case, facultative et jamais cochée d'avance : deux rappels
+   (J+2, J+7), désabonnement en un clic. */
 
 const K = {
   cream: "#F4EFE7",
@@ -19,6 +23,11 @@ const K = {
 };
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const SERIF = { fontFamily: "var(--font-serif), Georgia, serif", fontStyle: "italic" as const, fontWeight: 400 };
+/* Ce que la case « rappels » déclenche, dit simplement. */
+const RELANCES_STEPS = [
+  { when: "Dans 2 jours", what: "vos trois choix, avec leurs chiffres à jour" },
+  { when: "Dans 7 jours", what: "un rappel sur la subvention LogisVert" },
+];
 
 function currentShareCode(): string | null {
   try {
@@ -36,7 +45,21 @@ const input =
   "h-[54px] w-full rounded-full border border-[rgba(244,239,231,0.18)] bg-[rgba(244,239,231,0.05)] px-5 text-[15px] text-[#F4EFE7] transition-colors placeholder:text-[rgba(244,239,231,0.4)] hover:border-[rgba(244,239,231,0.35)] focus-visible:border-[rgba(244,239,231,0.6)] focus-visible:shadow-[0_0_0_4px_rgba(229,75,23,0.22)]";
 
 export function EmailMyChoices({ topLabel }: { topLabel: string }) {
-  const [v, setV] = useState({ firstName: "", email: "", phone: "", consent: false, website: "" });
+  const [v, setV] = useState({ firstName: "", email: "", phone: "", consent: false, followUps: false, website: "" });
+  const [planned, setPlanned] = useState(false);
+  // Case « rappels » proposée seulement si les envois sont possibles (adresse postale configurée côté serveur).
+  const [offer, setOffer] = useState(false);
+  useEffect(() => {
+    let live = true;
+    fetch("/api/relances/etat")
+      .then((r) => r.json())
+      .then((d: { disponibles?: boolean }) => live && setOffer(d.disponibles === true))
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, []);
+  const reduce = useReduced();
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
 
@@ -58,13 +81,14 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
     setStatus("sending");
     setError(null);
     try {
-      const res = await fetch("/api/thermomatch/courriel", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...v, code }) });
-      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      const res = await fetch("/api/thermomatch/courriel", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...v, followUps: offer && v.followUps, code, page: window.location.pathname }) });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; relances?: boolean };
       if (!res.ok || !data.ok) {
         setStatus("error");
         setError(data.error ?? "Envoi impossible pour le moment. Réessayez ou appelez-nous au 438-900-3224.");
         return;
       }
+      setPlanned(v.followUps && data.relances === true);
       setStatus("sent");
     } catch {
       setStatus("error");
@@ -100,6 +124,11 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
                 <p className="mt-3 max-w-[440px] text-[15px] leading-relaxed" style={{ color: K.mute }}>
                   Vos trois choix arrivent dans votre boîte de réception. S’il n’y est pas dans quelques minutes, regardez dans les courriels indésirables.
                 </p>
+                {planned && (
+                  <p className="mt-2 max-w-[440px] text-[14px] leading-relaxed" style={{ color: K.faint }}>
+                    Vous recevrez aussi deux rappels : dans 2 jours, puis dans 7 jours. Chaque courriel a un lien pour vous désabonner.
+                  </p>
+                )}
               </motion.div>
             ) : (
               <motion.form key="form" onSubmit={submit} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.4 }} className="grid gap-3" noValidate>
@@ -129,6 +158,48 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
                     .
                   </span>
                 </label>
+                {offer && (
+                  <label className="flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.mute }}>
+                    <input type="checkbox" checked={v.followUps} onChange={update("followUps")} className="mt-1 h-4 w-4 shrink-0 accent-[#E54B17]" />
+                    <span>{RELANCES_CONSENT_TEXT}</span>
+                  </label>
+                )}
+                <AnimatePresence initial={false}>
+                  {offer && v.followUps && (
+                    <motion.div
+                      key="relances"
+                      initial={reduce ? { opacity: 0 } : { opacity: 0, height: 0 }}
+                      animate={reduce ? { opacity: 1 } : { opacity: 1, height: "auto" }}
+                      exit={reduce ? { opacity: 0 } : { opacity: 0, height: 0 }}
+                      transition={{ duration: reduce ? 0 : 0.45, ease: EASE }}
+                      className="overflow-hidden"
+                    >
+                      <ol className="relative grid gap-2 pb-1 pl-6 text-[12.5px] leading-snug" style={{ listStyle: "none", margin: "0 0 0 7px", color: K.mute }}>
+                        <motion.span
+                          aria-hidden="true"
+                          className="absolute bottom-[26px] left-0 top-[6px] w-px origin-top"
+                          style={{ background: K.orange }}
+                          initial={reduce ? false : { scaleY: 0 }}
+                          animate={{ scaleY: 1 }}
+                          transition={{ duration: 0.6, ease: EASE, delay: 0.15 }}
+                        />
+                        {RELANCES_STEPS.map((s, i) => (
+                          <motion.li
+                            key={s.when}
+                            className="relative"
+                            initial={reduce ? false : { opacity: 0, x: -8 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.45, ease: EASE, delay: 0.2 + i * 0.14 }}
+                          >
+                            <span aria-hidden="true" className="absolute left-[-27.5px] top-[4px] h-[7px] w-[7px] rounded-full" style={{ background: K.orange }} />
+                            <span style={{ color: K.cream }}>{s.when}</span> · {s.what}
+                          </motion.li>
+                        ))}
+                        <li style={{ color: K.faint }}>Rien d’autre. Un clic suffit pour vous désabonner.</li>
+                      </ol>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 <div className="mt-3 flex flex-wrap items-center gap-4">
                   <button
                     type="submit"

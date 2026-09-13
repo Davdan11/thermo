@@ -1,4 +1,5 @@
 /* Aperçu des courriels clients en développement : /api/dev/apercu-courriel?modele=<id>
+   Relances et demande d'avis : ?relance=j2|j7|avis[&slugs=a,b,c][&prenom=Marie][&format=texte]
    Désactivé en production (404). */
 import { NextResponse } from "next/server";
 import { getWelcomeEmailHTML } from "@/lib/crm/templates/welcome-email";
@@ -29,6 +30,20 @@ export async function GET(req: Request) {
     const parMarque: Record<string, number> = {};
     for (const r of avec) parMarque[r.brand ?? "?"] = (parMarque[r.brand ?? "?"] ?? 0) + 1;
     return NextResponse.json({ parMarque, exemples: Object.fromEntries(Object.keys(parMarque).map((b) => [b, avec.find((r) => r.brand === b)?.id])), nbAvecBrochure: avec.length, nbAdmissiblesAvecBrochure: avec.filter((r) => r.eligible).length, avecBrochure: avec.filter((r) => r.eligible).slice(0, 6), sansBrochure: rows.filter((r) => !r.brochure).slice(0, 3), total: rows.length });
+  }
+  const relance = url.searchParams.get("relance");
+  if (relance) {
+    const { renderRelance } = await import("@/lib/relances/render");
+    const { planThermoMatch, planReviewRequest } = await import("@/lib/relances/core");
+    const slugs = (url.searchParams.get("slugs") ?? "mitsubishi-electric-muz-fx12nlhz,daikin-rxt12avju,fujitsu-aouh12ktap1").split(",");
+    const firstName = url.searchParams.get("prenom") ?? "Marie";
+    const consent = { at: new Date().toISOString(), page: "/trouver-ma-thermopompe", text: "aperçu", version: "aperçu" };
+    const [j2, j7] = planThermoMatch({ email: "apercu@exemple.ca", firstName, slugs, consent });
+    const message = relance === "avis" ? planReviewRequest({ email: "apercu@exemple.ca", firstName, source: { type: "cli" } }) : relance === "j7" ? j7 : j2;
+    const mail = renderRelance(message, { mailingAddress: process.env.BUSINESS_MAILING_ADDRESS?.trim() || "[BUSINESS_MAILING_ADDRESS absente : aucun envoi réel]" });
+    if (!mail) return new NextResponse("Aucun des modèles demandés n'est au catalogue.", { status: 404 });
+    if (url.searchParams.get("format") === "texte") return new NextResponse(`Objet : ${mail.subject}\n\n${mail.text}`, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
+    return new NextResponse(mail.html, { headers: { "Content-Type": "text/html; charset=utf-8", "X-Subject": encodeURIComponent(mail.subject) } });
   }
   const model = resolveRecommendedModel(url.searchParams.get("modele"));
   const brochure = await brochureAttachment(model);

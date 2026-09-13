@@ -111,7 +111,7 @@ async function alreadySent(dealId: number, key: string): Promise<boolean> {
 }
 
 /* ---- Personne : courriel et prénom, depuis le webhook ou l'API ---- */
-async function resolvePerson(deal: WebhookDeal): Promise<{ email: string; firstName: string } | null> {
+export async function resolvePerson(deal: WebhookDeal): Promise<{ email: string; firstName: string } | null> {
   let email: string | undefined;
   let name: string | undefined = str(deal.person_name);
   const p = deal.person_id;

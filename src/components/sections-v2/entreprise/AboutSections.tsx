@@ -55,12 +55,14 @@ const PRINCIPLES = [
 const STEPS = ["Comprendre", "Comparer", "Planifier", "Installer"];
 const TRUST = ["Toutes les grandes marques", "Données techniques expliquées", "Aides vérifiées", "Installation prise en charge"];
 
-export function AboutSections() {
+/** `avis` : les avis Google (composant serveur), entre le chapitre III et la quatrième de couverture. Rien s'ils sont absents. */
+export function AboutSections({ avis }: { avis?: ReactNode } = {}) {
   return (
     <Shell>
       <Mission />
       <Brands />
       <Experience />
+      {avis}
       <BackCover />
       <Colophon />
     </Shell>

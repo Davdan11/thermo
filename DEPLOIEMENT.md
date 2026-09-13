@@ -108,3 +108,14 @@ Mise en place de Google Agenda, une seule fois (environ 15 minutes) :
 
 Erreurs fréquentes (`pm2 logs thermo`) : `unauthorized_client` (délégation absente ou mauvais champ
 d'application), `invalid_grant` (clé ou horloge), `403 Calendar API has not been used` (API non activée).
+
+## Rappels ThermoMatch et demandes d'avis Google
+
+- **Rappels** : si la case « M’envoyer aussi deux rappels… » est cochée dans « Envoyez-moi mes trois choix », deux courriels sont planifiés : J+2 (« Vos 3 choix vous attendent ») et J+7 (rappel LogisVert). Arrêt automatique au désabonnement, ou dès qu'une soumission ou un rendez-vous de la même adresse arrive au journal des leads.
+- **Demandes d'avis** : affaire Pipedrive [TAV] passée à « gagnée » : demande d'avis 5 jours plus tard (webhook, seulement si `GOOGLE_REVIEW_URL` est défini), jamais deux fois pour la même affaire ou la même adresse. Anciens clients : `npx tsx scripts/demande-avis.ts --email x@y.ca [--prenom Marie]`, lancé depuis `/var/www/thermopompesavendre.ca/current` (planifiée pour le prochain passage du robot).
+- **File** : `shared/data/relances.json`, à côté du journal des leads grâce à `LEAD_JOURNAL_DIR` (conservée d'un déploiement à l'autre, aucun lien à créer).
+- **Envoi** : `scripts/relances-cron.sh`, une fois par jour à 9 h 30, heure de Montréal. Crontab du VPS (horloge UTC) :
+  `30 13,14 * * * /bin/bash /var/www/thermopompesavendre.ca/current/scripts/relances-cron.sh >> /var/log/thermo-relances.log 2>&1`
+  Le script ne fait rien s'il n'est pas 9 h à Montréal : les deux heures couvrent l'heure d'été et l'heure normale. Essai à blanc : `npx tsx scripts/send-relances.ts --dry-run`.
+- **Obligatoire** : `BUSINESS_MAILING_ADDRESS` (adresse postale exigée par la LCAP). Sans elle, rien ne part : les messages restent en file et le journal du robot l'indique.
+- **Avis sur le site** : `GOOGLE_PLACES_API_KEY` et `GOOGLE_PLACE_ID` (Places API (New)). Sans eux, en cas d'erreur ou sans avis, la section ne s'affiche pas. `/avis` redirige vers `GOOGLE_REVIEW_URL`.

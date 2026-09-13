@@ -4,6 +4,9 @@
    local, affaire Pipedrive « ThermoMatch — 3 choix », alerte à l'équipe.
    Les recommandations sont recalculées sur le serveur à partir du code
    de partage (mêmes réponses = mêmes résultats que l'écran).
+   Case « relances » cochée (jamais d'avance) : consentement enregistré
+   (date, page, texte exact) et deux rappels planifiés, J+2 et J+7
+   (src/lib/relances, envoyés par scripts/send-relances.ts).
    ================================================================== */
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
@@ -19,6 +22,10 @@ import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
 import { decodeShareCode, shareUrlFor } from "@/lib/thermomatch/share-code";
 import { recommendFromAnswers } from "@/lib/thermomatch/recommend";
 import { registry } from "@/lib/data/registry";
+import { RELANCES_CONSENT_TEXT, RELANCES_CONSENT_VERSION } from "@/lib/relances/consent";
+import { enqueueThermoMatch } from "@/lib/relances/store";
+import { businessMailingAddress } from "@/lib/relances/config";
+import type { RelanceConsent } from "@/lib/relances/core";
 
 const schema = z.object({
   firstName: z.string().trim().min(1, "Le prénom est requis.").max(80),
@@ -27,6 +34,10 @@ const schema = z.object({
   consent: z.literal(true, { message: "Le consentement est requis." }),
   code: z.string().min(2).max(1200).regex(/^[A-Za-z0-9_-]+$/, "Lien de résultats invalide."),
   website: z.string().max(0).optional().or(z.literal("")),
+  /** Case « relances » : facultative, jamais cochée d'avance. */
+  followUps: z.boolean().optional(),
+  /** Page où la case a été cochée (preuve de consentement). */
+  page: z.string().max(200).optional(),
 });
 
 export async function POST(req: NextRequest) {
@@ -73,8 +84,20 @@ export async function POST(req: NextRequest) {
   const postalCode = typeof answers.postalCode === "string" ? answers.postalCode.toUpperCase() : undefined;
   const territory = postalCode ? getTerritoryFromPostalCode(postalCode) : undefined;
   const labels = choices.map((c, i) => `${i + 1}. ${c.brand} ${c.series} (${c.outdoorModel})`.trim());
+  const slugs = top.map((r) => registry.modelById.get(r.product.id)?.slug).filter((s): s is string => Boolean(s));
+  // Preuve du consentement aux relances : moment, page et texte exact de la case.
+  const relancesConsent: RelanceConsent | null =
+    // Sans adresse postale (LCAP), aucune relance ne peut partir : la case n’est pas proposée et rien n’est planifié.
+    d.followUps === true && businessMailingAddress() !== null
+      ? {
+          at: new Date().toISOString(),
+          page: d.page && /^\/[A-Za-z0-9/_-]{0,190}$/.test(d.page) ? d.page : "/trouver-ma-thermopompe",
+          text: RELANCES_CONSENT_TEXT,
+          version: RELANCES_CONSENT_VERSION,
+        }
+      : null;
 
-  const { entry } = await journalLead("thermomatch", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode, choices: labels, code: d.code });
+  const { entry } = await journalLead("thermomatch", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode, choices: labels, code: d.code, relances: relancesConsent ?? false });
 
   const e = escapeHtml;
   const rows: Array<[string, string]> = [
@@ -83,6 +106,7 @@ export async function POST(req: NextRequest) {
     ["Code postal", postalCode ?? "—"],
     ["Téléphone", d.phone ?? "—"],
     ["Courriel", d.email],
+    ["Rappels J+2 et J+7", relancesConsent ? "acceptés" : "non"],
     ["Journal", entry.id],
   ];
 
@@ -110,6 +134,18 @@ export async function POST(req: NextRequest) {
     sendClientEmail(d.email, thermoMatchEmailSubject({ choices }), getThermoMatchEmailHTML({ firstName: d.firstName, choices, shareUrl, savings })),
   ]);
 
-  await journalOutcome(entry, { pipedrive: crm.ok ? "ok" : crm.reason, dealId: crm.ok ? crm.dealId : undefined, alertEmail, clientEmail });
-  return NextResponse.json({ ok: true, emailed: clientEmail, crm: crm.ok });
+  // Rappels J+2 et J+7 : seulement si la case est cochée et que le premier courriel est bien parti.
+  let relances: "planifiees" | "desabonne" | "erreur" | undefined;
+  if (relancesConsent && clientEmail && slugs.length) {
+    try {
+      const r = await enqueueThermoMatch({ email: d.email, firstName: d.firstName, slugs, journalId: entry.id, consent: relancesConsent });
+      relances = r.status === "queued" ? "planifiees" : "desabonne";
+    } catch (err) {
+      console.error("[thermomatch] rappels non planifiés :", err);
+      relances = "erreur";
+    }
+  }
+
+  await journalOutcome(entry, { pipedrive: crm.ok ? "ok" : crm.reason, dealId: crm.ok ? crm.dealId : undefined, alertEmail, clientEmail, relances });
+  return NextResponse.json({ ok: true, emailed: clientEmail, crm: crm.ok, relances: relances === "planifiees" });
 }

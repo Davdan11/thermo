@@ -9,6 +9,7 @@ import { BrandsMarquee, type BrandLogo } from "@/components/home/premium/BrandsM
 import { AidesLedger } from "@/components/home/premium/AidesLedger";
 import { GuidesEditorial } from "@/components/home/premium/GuidesEditorial";
 import { FinalCta, ProcessRail } from "@/components/home/premium/JourneyFinale";
+import { GoogleReviews } from "@/components/avis/GoogleReviews";
 import { getRanking, getSeoModel } from "@/lib/seo/programmatic";
 import { getLogisVertStats } from "@/lib/subsidies/logisvert-official";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
@@ -124,6 +125,9 @@ export default function HomePage() {
 
       {/* Comprendre avant de choisir : trois guides. */}
       <GuidesEditorial />
+
+      {/* Les vrais avis Google (Places API) : rien si non configurés, en erreur ou sans avis. */}
+      <GoogleReviews variant="accueil" />
 
       {/* De la comparaison à l'installation, puis l'appel final. */}
       <ProcessRail />

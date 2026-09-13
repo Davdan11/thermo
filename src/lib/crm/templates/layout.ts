@@ -43,6 +43,10 @@ export interface BrandedEmailOptions {
   reason?: string;
   /** Lien de désabonnement en un clic (alertes) : remplace la mention « répondez STOP ». */
   unsubscribeUrl?: string;
+  /** Ce que le lien arrête (« ces alertes » par défaut, « ces rappels »…). */
+  unsubscribeWhat?: string;
+  /** Adresse postale de l'entreprise, affichée au pied (obligatoire dans les messages commerciaux, LCAP). */
+  mailingAddress?: string;
 }
 
 const FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
@@ -127,8 +131,9 @@ ${o.preheader ? `<div style="display:none;max-height:0;overflow:hidden;opacity:0
     <td style="padding:18px 36px 24px;background:${BRAND.sand};border-top:1px solid ${BRAND.line};">
       <p style="margin:0 0 6px;font-size:12px;line-height:1.55;color:${BRAND.muted};">
         ${escapeHtml(o.reason ?? "Vous recevez ce courriel parce que vous avez fait une demande sur thermopompesavendre.ca et que nous suivons votre dossier.")}
-        ${o.unsubscribeUrl ? `Pour ne plus recevoir ces alertes&nbsp;: <a href="${escapeHtml(o.unsubscribeUrl)}" style="color:${BRAND.muted};">se désabonner en un clic</a>.` : "Pour ne plus recevoir ces suivis, répondez « STOP » à ce courriel."}
+        ${o.unsubscribeUrl ? `Pour ne plus recevoir ${escapeHtml(o.unsubscribeWhat ?? "ces alertes")}&nbsp;: <a href="${escapeHtml(o.unsubscribeUrl)}" style="color:${BRAND.muted};">se désabonner en un clic</a>.` : "Pour ne plus recevoir ces suivis, répondez « STOP » à ce courriel."}
       </p>
+      ${o.mailingAddress ? `<p style="margin:0 0 6px;font-size:12px;line-height:1.55;color:${BRAND.muted};">${BRAND.name} · ${escapeHtml(o.mailingAddress)} · ${BRAND.phone} · <a href="${SITE_URL}" style="color:${BRAND.muted};">thermopompesavendre.ca</a></p>` : ""}
       <p style="margin:0;font-size:12px;line-height:1.55;color:${BRAND.muted};">
         © ${year} ${BRAND.name} · <a href="${SITE_URL}/confidentialite" style="color:${BRAND.muted};">Politique de confidentialité</a>
       </p>

@@ -64,3 +64,7 @@ public/images/products/_official-sources/**
 # abonnés aux alertes LogisVert (courriels ; shared/data sur le VPS, jamais dans le dépôt)
 /data/alertes-logisvert.json
 /data/alertes-logisvert.json.lock
+
+# file des relances et demandes d'avis (courriels ; shared/data sur le VPS, jamais dans le dépôt)
+/data/relances.json
+/data/relances.json.lock

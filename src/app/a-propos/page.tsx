@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata } from "@/lib/seo";
 import { AboutManifesto } from "@/components/heroes-v2/entreprise/AboutManifesto";
 import { AboutSections } from "@/components/sections-v2/entreprise/AboutSections";
+import { GoogleReviews } from "@/components/avis/GoogleReviews";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
 
@@ -28,8 +29,9 @@ export default function AProposPage() {
       {/* HÉROS « Manifeste » : src/components/heroes-v2/entreprise/AboutManifesto.tsx */}
       <AboutManifesto stats={heroStats} />
 
-      {/* Sections sous le héros, en livret : src/components/sections-v2/entreprise/AboutSections.tsx */}
-      <AboutSections />
+      {/* Sections sous le héros, en livret : src/components/sections-v2/entreprise/AboutSections.tsx.
+          Chapitre IV : les vrais avis Google (rien si non configurés ou sans avis). */}
+      <AboutSections avis={<GoogleReviews variant="a-propos" />} />
     </main>
   );
 }

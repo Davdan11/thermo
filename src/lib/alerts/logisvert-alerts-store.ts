@@ -49,7 +49,7 @@ async function writeAll(file: string, list: AlertSubscription[]): Promise<void> 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 /** Verrou entre processus : fichier créé en mode exclusif, repris s'il a plus de 30 s (processus tué). */
-async function withFileLock<T>(file: string, fn: () => Promise<T>): Promise<T> {
+export async function withFileLock<T>(file: string, fn: () => Promise<T>): Promise<T> {
   const lock = `${file}.lock`;
   await fs.mkdir(path.dirname(file), { recursive: true });
   const deadline = Date.now() + 10_000;

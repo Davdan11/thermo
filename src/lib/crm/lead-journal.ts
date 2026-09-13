@@ -17,7 +17,7 @@ import { randomUUID } from "node:crypto";
 export interface JournalEntry {
   id: string;
   at: string;
-  kind: "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre" | "rendez-vous" | "thermoscan" | "alerte-logisvert" | "thermomatch";
+  kind: "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre" | "rendez-vous" | "thermoscan" | "alerte-logisvert" | "thermomatch" | "relances";
   lead: Record<string, unknown>;
   /** Consigné après les appels externes. */
   outcome?: {
@@ -29,6 +29,8 @@ export interface JournalEntry {
     /** Rendez-vous : état de l'agenda Google et lien Meet obtenu. */
     agenda?: string;
     meetLink?: string | null;
+    /** ThermoMatch : relances J+2 et J+7 planifiées (case cochée). */
+    relances?: "planifiees" | "desabonne" | "erreur";
   };
 }
 

@@ -40,6 +40,8 @@ interface Mail {
   attachments?: MailAttachment[];
   /** En-têtes supplémentaires (ex. List-Unsubscribe pour le désabonnement en un clic). */
   headers?: Record<string, string>;
+  /** Version texte (relances, demandes d'avis). */
+  text?: string;
 }
 
 type Transport = { name: string; send: (m: Mail) => Promise<void> } | null;
@@ -64,7 +66,7 @@ function getTransport(): Transport {
       name: "smtp",
       send: async (m) => {
         await smtp.sendMail({
-          from: m.from, to: m.to, subject: m.subject, html: m.html, replyTo: m.replyTo, headers: m.headers,
+          from: m.from, to: m.to, subject: m.subject, html: m.html, text: m.text, replyTo: m.replyTo, headers: m.headers,
           attachments: m.attachments?.map((a) => (a.path ? { filename: a.filename, path: a.path, contentType: a.contentType } : { filename: a.filename, content: a.content ?? "", contentType: a.contentType })),
         });
       },
@@ -75,7 +77,7 @@ function getTransport(): Transport {
       name: "resend",
       send: async (m) => {
         const r = await resend.emails.send({
-          from: m.from, to: [m.to], subject: m.subject, html: m.html, replyTo: m.replyTo, headers: m.headers,
+          from: m.from, to: [m.to], subject: m.subject, html: m.html, ...(m.text ? { text: m.text } : {}), replyTo: m.replyTo, headers: m.headers,
           attachments: await Promise.all((m.attachments ?? []).map(async (a) => ({ filename: a.filename, content: a.path ? (await readFile(a.path)).toString("base64") : Buffer.from(a.content ?? "").toString("base64") }))),
         });
         if (r.error) throw new Error(r.error.message);
@@ -213,7 +215,7 @@ export async function sendClientBookingEmail(email: string, data: BookingEmailDa
   });
 }
 
-/** Courriel client déjà rendu (automatisations d'étape Pipedrive, alertes LogisVert). */
-export async function sendClientEmail(email: string, subject: string, html: string, opts: { headers?: Record<string, string>; label?: string } = {}): Promise<boolean> {
-  return deliver(opts.label ?? "courriel client (étape)", { from: FROM_TEAM, to: email, subject, html, headers: opts.headers });
+/** Courriel client déjà rendu (automatisations d'étape Pipedrive, alertes LogisVert, relances et demandes d'avis). */
+export async function sendClientEmail(email: string, subject: string, html: string, opts: { headers?: Record<string, string>; label?: string; text?: string } = {}): Promise<boolean> {
+  return deliver(opts.label ?? "courriel client (étape)", { from: FROM_TEAM, to: email, subject, html, text: opts.text, headers: opts.headers });
 }

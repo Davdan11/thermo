@@ -5,11 +5,14 @@
    Webhooks → HTTP Auth). Variables : PIPEDRIVE_WEBHOOK_USER / _PASSWORD.
    Sans ces variables en production, tout appel est refusé.
    La logique est dans src/lib/crm/stage-emails.ts.
+   Affaire passée à « gagnée » : demande d'avis Google dans 5 jours
+   (src/lib/relances/review-requests.ts, envoyée par le robot quotidien).
    ================================================================== */
 
 import { NextResponse } from "next/server";
 import { timingSafeEqual } from "node:crypto";
 import { handleDealChange, type WebhookDeal } from "@/lib/crm/stage-emails";
+import { handleDealWon } from "@/lib/relances/review-requests";
 
 function authorized(request: Request): boolean {
   const user = process.env.PIPEDRIVE_WEBHOOK_USER;
@@ -42,7 +45,13 @@ export async function POST(request: Request) {
     }
     const result = await handleDealChange(current, body.previous ?? null);
     if (result.action !== "ignore") console.log(`[webhook pipedrive] affaire ${current.id} : ${result.action}${result.key ? ` (${result.key})` : ""}${result.subject ? ` « ${result.subject} »` : ""}`);
-    return NextResponse.json({ success: true, ...result });
+    // Affaire gagnée : demande d'avis mise en file (jamais bloquant pour le reste).
+    const avis = await handleDealWon(current, body.previous ?? null).catch((err) => {
+      console.error("[webhook pipedrive] demande d'avis :", err);
+      return { action: "erreur" as const };
+    });
+    if (avis.action !== "ignore") console.log(`[webhook pipedrive] affaire ${current.id} : demande d'avis ${avis.action}`);
+    return NextResponse.json({ success: true, ...result, avis: avis.action });
   } catch (error) {
     console.error("[webhook pipedrive]", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
