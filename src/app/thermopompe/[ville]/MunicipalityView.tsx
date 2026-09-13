@@ -42,7 +42,7 @@ export function MunicipalityView({ p }: { p: MunicipalPage }) {
         answer={p.hero.answer}
         breadcrumbs={p.breadcrumbs}
         stats={p.hero.stats}
-        designTempC={p.design!.t}
+        designTempC={p.design && !p.design.generic ? p.design.t : null}
         janMeanC={s.janMeanC}
         janMinC={s.janMinC}
         extremeMinC={s.extremeMinC}

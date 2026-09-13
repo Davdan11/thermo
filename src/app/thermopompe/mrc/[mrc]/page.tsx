@@ -43,13 +43,14 @@ export default async function MrcPage({ params }: { params: Promise<{ mrc: strin
         ]}
       />
       <FrostCityHero
+        titlePrefix="Thermopompe dans"
         region={p.hero.region}
         city={p.hero.city}
         intro={p.hero.intro}
         answer={p.hero.answer}
         breadcrumbs={p.breadcrumbs}
         stats={p.hero.stats}
-        designTempC={p.hero.designTempC}
+        designTempC={null}
         janMeanC={p.hero.janMeanC}
         janMinC={p.hero.janMinC}
         extremeMinC={p.hero.extremeMinC}

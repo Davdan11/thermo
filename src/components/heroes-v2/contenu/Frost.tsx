@@ -581,7 +581,10 @@ type CityProps = {
   intro: string;
   answer: string;
   stats: Array<{ label: string; value: string }>;
-  designTempC: number;
+  /** Début du titre ; « Thermopompe dans » pour une MRC. */
+  titlePrefix?: string;
+  /** null : pas de valeur locale, le thermomètre repère alors les nuits de janvier de la station. */
+  designTempC: number | null;
   janMeanC: number | null;
   janMinC: number | null;
   extremeMinC: number | null;
@@ -634,7 +637,7 @@ export function FrostCityHero(p: CityProps) {
                       },
                     )}
                   >
-                    Thermopompe à{" "}
+                    {p.titlePrefix ?? "Thermopompe à"}{" "}
                   </span>
                 </span>
                 <span
@@ -785,14 +788,24 @@ function Thermometer({
   source,
 }: CityProps) {
   const reduce = useReducedSafe();
+  // Repère principal : la température de conception, sinon la vraie mesure de la station (jamais une valeur estimée).
+  const mainT = designTempC ?? janMinC ?? janMeanC ?? extremeMinC;
+  const mainLabel =
+    designTempC !== null
+      ? "Température de conception"
+      : janMinC !== null
+        ? "Nuits de janvier, en moyenne"
+        : janMeanC !== null
+          ? "Moyenne de janvier"
+          : "Record de froid";
   const marks: Mark[] = [
     ...(janMeanC !== null
-      ? [{ t: janMeanC, label: "Moyenne de janvier" }]
+      ? [{ t: janMeanC, label: "Moyenne de janvier", main: designTempC === null && janMinC === null }]
       : []),
     ...(janMinC !== null
-      ? [{ t: janMinC, label: "Nuits de janvier, en moyenne" }]
+      ? [{ t: janMinC, label: "Nuits de janvier, en moyenne", main: designTempC === null }]
       : []),
-    { t: designTempC, label: "Température de conception", main: true },
+    ...(designTempC !== null ? [{ t: designTempC, label: "Température de conception", main: true }] : []),
     ...(extremeMinC !== null
       ? [
           {
@@ -816,20 +829,21 @@ function Thermometer({
   );
 
   // Mercure : la vraie valeur au rendu serveur, puis il repart de 0 °C et descend.
-  const temp = useMotionValue(designTempC);
+  const mainValue = mainT ?? 0;
+  const temp = useMotionValue(mainValue);
   useIsoLayoutEffect(() => {
     if (reduce) {
-      temp.set(designTempC);
+      temp.set(mainValue);
       return;
     }
     temp.set(0);
-    const c = animate(temp, designTempC, {
+    const c = animate(temp, mainValue, {
       duration: 3.2,
       ease: [0.45, 0, 0.2, 1],
       delay: 0.7,
     });
     return () => c.stop();
-  }, [reduce, designTempC, temp]);
+  }, [reduce, mainValue, temp]);
   const headTop = useTransform(temp, (t) => `${pct(t)}%`);
   const readout = useTransform(temp, (t) => deg(Math.round(t)));
 
@@ -851,7 +865,7 @@ function Thermometer({
             letterSpacing: "-0.06em",
             lineHeight: 0.85,
           }}
-          aria-label={`Température de conception : ${deg(designTempC)}`}
+          aria-label={mainT === null ? mainLabel : `${mainLabel} : ${deg(mainT)}`}
         >
           <motion.span aria-hidden="true">{readout}</motion.span>
         </p>
@@ -859,7 +873,7 @@ function Thermometer({
           className="pb-2 text-[13px] leading-snug"
           style={{ color: F.mute, maxWidth: 150 }}
         >
-          Température de conception
+          {mainLabel}
         </span>
       </div>
 
