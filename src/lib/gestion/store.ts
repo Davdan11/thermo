@@ -32,7 +32,7 @@ export const candidaturesFile = () => path.join(gestionDataDir(), "gestion-candi
 export const authFile = () => path.join(gestionDataDir(), "gestion-connexion.json");
 export const secretFile = () => path.join(gestionDataDir(), "gestion-secret.key");
 
-async function readJson<T>(file: string, empty: () => T): Promise<T> {
+export async function readJson<T>(file: string, empty: () => T): Promise<T> {
   try {
     return JSON.parse(await fs.readFile(file, "utf8")) as T;
   } catch (err) {
@@ -59,7 +59,7 @@ function serialize<T>(key: string, fn: () => Promise<T>): Promise<T> {
 }
 
 /** Lecture, modification et réécriture sous verrou. `fn` renvoie le résultat et s'il faut écrire. */
-async function mutateJson<D, T>(file: string, empty: () => D, normalize: (d: D) => D, fn: (data: D) => { result: T; changed: boolean } | Promise<{ result: T; changed: boolean }>): Promise<T> {
+export async function mutateJson<D, T>(file: string, empty: () => D, normalize: (d: D) => D, fn: (data: D) => { result: T; changed: boolean } | Promise<{ result: T; changed: boolean }>): Promise<T> {
   return serialize(file, () =>
     withFileLock(file, async () => {
       const data = normalize(await readJson(file, empty));

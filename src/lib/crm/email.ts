@@ -160,7 +160,7 @@ export async function sendInternalLeadAlert(lead: InternalLeadAlert): Promise<bo
 }
 
 export interface InternalMessage {
-  kind: "contact" | "partenaire" | "rendez-vous" | "thermoscan" | "alerte-logisvert" | "thermomatch";
+  kind: "contact" | "partenaire" | "rendez-vous" | "thermoscan" | "alerte-logisvert" | "thermomatch" | "texto";
   subject: string;
   replyTo?: string;
   lines: Array<[string, string]>;

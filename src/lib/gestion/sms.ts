@@ -4,6 +4,7 @@
    numéro valide. Sinon le courriel suffit : l'état du canal est noté.
    ================================================================== */
 
+import { isOptedOutNumber } from "@/lib/textos/store";
 import type { ChannelStatus } from "./types";
 
 export function smsConfigured(): boolean {
@@ -22,6 +23,11 @@ export async function sendSms(to: string, body: string): Promise<ChannelStatus> 
   if (!smsConfigured()) return "non-configure";
   const number = toE164(to);
   if (!number) return "sans-numero";
+  // Numéro désabonné des textos du site (ARRÊT, STOP… au numéro Twilio) : l'outil ne lui écrit plus.
+  if (await isOptedOutNumber(number).catch(() => false)) {
+    console.warn("[gestion] texto non envoyé : numéro désabonné (ARRÊT ou STOP).");
+    return "echec";
+  }
   const sid = process.env.TWILIO_ACCOUNT_SID!;
   const token = process.env.TWILIO_AUTH_TOKEN!;
   try {

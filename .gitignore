@@ -88,3 +88,7 @@ public/images/products/_official-sources/**
 /data/soumissions*.tmp
 /data/soumissions-vues.jsonl
 /data/soumissions-photos/
+
+# textos reçus au numéro du site (numéros et messages des clients ; shared/data sur le VPS)
+/data/textos.json
+/data/textos.json.lock

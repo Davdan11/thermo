@@ -15,7 +15,7 @@ import path from "node:path";
 import { randomUUID } from "node:crypto";
 import type { Attribution } from "@/lib/attribution/core";
 
-export type JournalKind = "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre" | "rendez-vous" | "thermoscan" | "alerte-logisvert" | "thermomatch" | "relances" | "contact" | "partenaire";
+export type JournalKind = "soumission" | "appel-manque" | "message-vocal" | "appel-enregistre" | "rendez-vous" | "thermoscan" | "alerte-logisvert" | "thermomatch" | "relances" | "contact" | "partenaire" | "texto";
 
 export interface JournalEntry {
   id: string;

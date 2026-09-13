@@ -8,7 +8,8 @@
 
    Les entrées d'avant le suivi n'ont pas d'attribution : elles sont
    comptées « Inconnu (avant le suivi) », sans rien deviner. Les
-   appels (Twilio) sont du canal « Téléphone ».
+   appels (Twilio) sont du canal « Téléphone » ; le premier texto d'une
+   conversation au numéro du site, du canal « Texto ».
    ================================================================== */
 
 import { readdir, readFile } from "node:fs/promises";
@@ -36,13 +37,14 @@ export function parsePeriod(value: unknown): PeriodId {
   return PERIODS.some((p) => p.id === v) ? (v as PeriodId) : "30";
 }
 
-export type StatKind = "soumission" | "rendez-vous" | "thermomatch" | "appel" | "contact" | "thermoscan" | "alerte-logisvert" | "partenaire";
+export type StatKind = "soumission" | "rendez-vous" | "thermomatch" | "appel" | "texto" | "contact" | "thermoscan" | "alerte-logisvert" | "partenaire";
 
 export const STAT_KINDS: ReadonlyArray<{ id: StatKind; label: string; one: string }> = [
   { id: "soumission", label: "Soumissions", one: "Soumission" },
   { id: "rendez-vous", label: "Rendez-vous", one: "Rendez-vous" },
   { id: "thermomatch", label: "ThermoMatch", one: "ThermoMatch" },
   { id: "appel", label: "Appels", one: "Appel" },
+  { id: "texto", label: "Textos", one: "Texto" },
   { id: "contact", label: "Messages", one: "Message" },
   { id: "thermoscan", label: "ThermoScan", one: "ThermoScan" },
   { id: "alerte-logisvert", label: "Alertes LogisVert", one: "Alerte LogisVert" },
@@ -103,6 +105,7 @@ export async function readJournalEntries(dir = journalDir(), opts: { includeDemo
 function statKind(e: JournalEntry): StatKind | null {
   if (e.lead && typeof e.lead === "object" && "event" in e.lead) return null; // désabonnements, confirmations
   if (PHONE_KINDS.has(e.kind)) return "appel";
+  if (e.kind === "texto") return "texto";
   if (e.kind === "relances") return null;
   return STAT_KINDS.some((k) => k.id === e.kind) ? (e.kind as StatKind) : null;
 }
@@ -150,6 +153,11 @@ export function toRecords(entries: JournalEntry[]): LeadRecord[] {
       lastCall.set(phone, t);
       if (phone && prev !== undefined && t - prev < 30 * 60_000) continue;
       out.push({ at: e.at, kind, channel: "telephone" });
+      continue;
+    }
+    if (kind === "texto") {
+      // Une demande par conversation (premier texto). Pas de ville : le lieu donné par Twilio est celui du numéro.
+      out.push({ at: e.at, kind, channel: "texto" });
       continue;
     }
     const a = e.attribution;
@@ -208,7 +216,7 @@ export interface StatsView {
   campaigns: Array<{ label: string; n: number }>;
   regions: Array<{ name: string; n: number }>;
   cities: Array<{ name: string; n: number }>;
-  tracking: { tracked: number; unknown: number; notSent: number; phone: number; since: string | null };
+  tracking: { tracked: number; unknown: number; notSent: number; phone: number; texto: number; since: string | null };
   rdvFollowUp: { soumissions: number; withRdv: number };
   recent: Array<{ key: string; when: string; kind: string; firstName: string; city: string; channel: string }>;
 }
@@ -284,7 +292,7 @@ export function aggregateStats(records: LeadRecord[], opts: { period: PeriodId; 
     .slice(0, 8)
     .map(({ key, n }) => ({ path: key, n, share: subsWithLanding.length ? n / subsWithLanding.length : 0 }));
 
-  const tracked = records.filter((r) => r.channel !== "inconnu" && r.channel !== "telephone");
+  const tracked = records.filter((r) => r.channel !== "inconnu" && r.channel !== "telephone" && r.channel !== "texto");
   const since = tracked.reduce<string | null>((min, r) => (min === null || r.at < min ? r.at : min), null);
 
   const recent = [...inPeriod]
@@ -312,13 +320,14 @@ export function aggregateStats(records: LeadRecord[], opts: { period: PeriodId; 
     soumissionLandings,
     referrers: countBy(inPeriod, (r) => r.refHost).slice(0, 8).map(({ key, n }) => ({ host: key, n })),
     campaigns: countBy(inPeriod, (r) => r.campaign).slice(0, 6).map(({ key, n }) => ({ label: key, n })),
-    regions: countBy(inPeriod, (r) => r.region ?? (r.kind === "appel" ? undefined : "Non précisée")).slice(0, 10).map(({ key, n }) => ({ name: key, n })),
+    regions: countBy(inPeriod, (r) => r.region ?? (r.kind === "appel" || r.kind === "texto" ? undefined : "Non précisée")).slice(0, 10).map(({ key, n }) => ({ name: key, n })),
     cities: countBy(inPeriod, (r) => r.city).slice(0, 10).map(({ key, n }) => ({ name: key, n })),
     tracking: {
-      tracked: inPeriod.filter((r) => r.channel !== "inconnu" && r.channel !== "telephone" && r.channel !== "non-transmis").length,
+      tracked: inPeriod.filter((r) => r.channel !== "inconnu" && r.channel !== "telephone" && r.channel !== "texto" && r.channel !== "non-transmis").length,
       unknown: inPeriod.filter((r) => r.channel === "inconnu").length,
       notSent: inPeriod.filter((r) => r.channel === "non-transmis").length,
       phone: inPeriod.filter((r) => r.channel === "telephone").length,
+      texto: inPeriod.filter((r) => r.channel === "texto").length,
       since: since ? dayLabel.format(noon(localYmd(since))) : null,
     },
     rdvFollowUp: { soumissions: subs.length, withRdv: subs.filter((r) => r.withRdv).length },

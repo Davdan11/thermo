@@ -46,7 +46,7 @@ describe("agrégation", () => {
   it("période de 7 jours : totaux par type, appels regroupés, événements exclus", () => {
     const s = buildStats(sample(), { period: "7", now: NOW });
     const n = Object.fromEntries(s.byKind.map((k) => [k.id, k.n]));
-    expect(n).toEqual({ soumission: 2, "rendez-vous": 1, thermomatch: 1, appel: 2, contact: 1, thermoscan: 0, "alerte-logisvert": 1, partenaire: 0 });
+    expect(n).toEqual({ soumission: 2, "rendez-vous": 1, thermomatch: 1, appel: 2, texto: 0, contact: 1, thermoscan: 0, "alerte-logisvert": 1, partenaire: 0 });
     expect(s.total).toBe(8);
     expect(s.trend.unit).toBe("jour");
     expect(s.trend.points).toHaveLength(7);

@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChartColumn, FileText, Inbox, LayoutGrid, Plus, Users } from "lucide-react";
+import { ChartColumn, FileText, Inbox, LayoutGrid, MessageSquare, Plus, Users } from "lucide-react";
 
 const ITEMS = [
   { href: "/gestion", label: "Tableau", icon: LayoutGrid, exact: true },
   { href: "/gestion/jobs/nouveau", label: "Nouveau job", icon: Plus, exact: false },
   { href: "/gestion/soumissions", label: "Soumissions", icon: FileText, exact: false },
+  { href: "/gestion/textos", label: "Textos", icon: MessageSquare, exact: false },
   { href: "/gestion/installateurs", label: "Installateurs", icon: Users, exact: false },
   { href: "/gestion/candidatures", label: "Candidatures", icon: Inbox, exact: false },
   { href: "/gestion/statistiques", label: "Statistiques", icon: ChartColumn, exact: false },

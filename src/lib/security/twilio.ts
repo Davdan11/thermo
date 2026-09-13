@@ -60,3 +60,10 @@ export function twiml(body: string): Response {
     headers: { "Content-Type": "application/xml" },
   });
 }
+
+/** Réponse TwiML vide (<Response/>) : rien à répondre, Twilio n'envoie rien. */
+export function emptyTwiml(): Response {
+  return new Response(`<?xml version="1.0" encoding="UTF-8"?>\n<Response/>`, {
+    headers: { "Content-Type": "application/xml" },
+  });
+}

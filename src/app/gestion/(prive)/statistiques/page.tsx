@@ -42,7 +42,7 @@ export default async function StatistiquesPage({ searchParams }: { searchParams:
           <p className="g-eyebrow">Ce qui t’amène des clients</p>
           <h1 className="g-h1">Statistiques</h1>
           <p className="g-lead">
-            Demandes reçues du {s.range}, par le site et le téléphone. Lu dans le journal des demandes : aucun témoin, aucun outil externe.
+            Demandes reçues du {s.range}, par le site, le téléphone et les textos. Lu dans le journal des demandes : aucun témoin, aucun outil externe.
           </p>
         </div>
         <nav className="g-seg" aria-label="Période">
@@ -97,7 +97,7 @@ export default async function StatistiquesPage({ searchParams }: { searchParams:
                 label: c.label,
                 n: c.n,
                 note: `${pct(c.share)}${c.soumissions ? ` · ${c.soumissions} soum.` : ""}`,
-                tone: c.id === "inconnu" || c.id === "non-transmis" ? "muted" : c.id === "telephone" ? "ink" : "orange",
+                tone: c.id === "inconnu" || c.id === "non-transmis" ? "muted" : c.id === "telephone" || c.id === "texto" ? "ink" : "orange",
               }))}
               empty="Aucune demande sur la période."
             />
