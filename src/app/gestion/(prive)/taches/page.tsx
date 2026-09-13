@@ -10,6 +10,7 @@ import { plural } from "@/components/gestion/kit/format";
 import { TaskForm } from "@/components/gestion/crm/forms";
 import { TaskList } from "@/components/gestion/crm/TaskList";
 import { Reveal } from "@/components/gestion/Reveal";
+import { ComplexTasksSection } from "@/components/gestion/ventes/ComplexTasks";
 
 export const metadata: Metadata = { title: "À faire" };
 
@@ -49,6 +50,9 @@ export default async function TachesPage({ searchParams }: { searchParams: Promi
 
       <SectionHeader n="03" title="À venir" />
       <TaskList tasks={v.upcoming} empty={<EmptyState compact title="Rien de prévu" body="Ajoutez une tâche ci-dessus, ou reportez-en une pour la retrouver ici." />} />
+
+      {/* Volet C : tâches à étapes (listes de contrôle, modèles) et création rapide. */}
+      <ComplexTasksSection n="04" />
     </>
   );
 }

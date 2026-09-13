@@ -21,6 +21,7 @@ import { PeriodTabs } from "../kit/PeriodTabs";
 import { Reveal } from "../Reveal";
 import { BarList, Donut, Funnel, SeriesBars, StageBar } from "../StatsCharts";
 import { TaskList } from "./TaskList";
+import { ForecastTiles } from "../ventes/Forecast";
 
 function Delta({ n, prev, short }: { n: number; prev: number | null; short: string }) {
   if (prev === null) return null;
@@ -110,7 +111,18 @@ export function HomeView({ h }: { h: Home }) {
             </Link>
           ) : null}
         </div>
-        <Card tone="ink" id="installations" title="Installations aujourd’hui" sub={h.todo.installationsSoon ? `${plural(h.todo.installationsSoon, "autre prévue", "autres prévues")} d’ici 7 jours` : undefined}>
+        <Card
+          tone="ink"
+          id="installations"
+          title="Installations aujourd’hui"
+          sub={h.todo.installationsSoon ? `${plural(h.todo.installationsSoon, "autre prévue", "autres prévues")} d’ici 7 jours` : undefined}
+          // Volet C : l'agenda complet (jour, semaine, mois).
+          action={
+            <Link href="/gestion/agenda" className="k-link">
+              Agenda <ArrowRight size={14} aria-hidden />
+            </Link>
+          }
+        >
           {h.todo.installations.length ? (
             <ul className="cr-installs">
               {h.todo.installations.map((i) => (
@@ -289,6 +301,8 @@ export function HomeView({ h }: { h: Home }) {
           )}
         </Card>
       </div>
+      {/* Volet C : prévision pondérée et montant déjà signé (détail sur la page Pipeline). */}
+      <ForecastTiles />
       <Reveal delay={0.1}>
         <p className="g-hint" style={{ marginTop: 28, textAlign: "center" }}>
           Données lues à l’instant dans les demandes, soumissions, jobs et textos. Aucun chiffre estimé.

@@ -6,6 +6,7 @@ import { boardView } from "@/lib/gestion/crm/service";
 import { isStage } from "@/lib/gestion/crm/types";
 import { dollars, plural } from "@/components/gestion/kit/format";
 import { PipelineBoard } from "@/components/gestion/crm/PipelineBoard";
+import { ForecastPanel } from "@/components/gestion/ventes/Forecast";
 import { Reveal } from "@/components/gestion/Reveal";
 
 export const metadata: Metadata = { title: "Pipeline" };
@@ -32,6 +33,10 @@ export default async function PipelinePage({ searchParams }: { searchParams: Pro
         </div>
       </Reveal>
       <PipelineBoard columns={v.columns} focus={isStage(etape) ? etape : null} pipedriveEnabled={v.pipedriveEnabled} />
+      {/* Volet C : prévision pondérée par étape (probabilités réglables dans Réglages). */}
+      <div style={{ marginTop: 20 }}>
+        <ForecastPanel />
+      </div>
     </>
   );
 }

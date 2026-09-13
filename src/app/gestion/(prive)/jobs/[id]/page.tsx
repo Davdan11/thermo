@@ -18,6 +18,7 @@ import { NotesForm } from "@/components/gestion/NotesForm";
 import { Reveal } from "@/components/gestion/Reveal";
 import { SubmitButton } from "@/components/gestion/SubmitButton";
 import { BrandLogo, StatusPill } from "@/components/gestion/ui";
+import { ComplexTasksCard } from "@/components/gestion/ventes/ComplexTasks";
 
 export const metadata: Metadata = { title: "Job" };
 
@@ -242,6 +243,9 @@ export default async function JobPage({ params, searchParams }: { params: Promis
               </form>
             </Reveal>
           ) : null}
+
+          {/* Volet C : tâches à étapes rattachées au job (création rapide). */}
+          <ComplexTasksCard jobId={job.id} />
 
           <Reveal delay={0.16} className="g-card g-card__pad">
             <p className="g-eyebrow">Notes internes</p>
