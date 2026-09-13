@@ -23,6 +23,8 @@ import { Reveal } from "@/components/gestion/Reveal";
 import { ActionButton, ActionForm } from "@/components/partenaires/admin/AdminTools";
 import { AgreementChip, DocChip, HeroArcs, TierChip } from "@/components/partenaires/admin/bits";
 import { CitationForm } from "@/components/partenaires/admin/CitationForm";
+// Chantier R : vérification automatique au fichier ouvert de la RBQ et lien vers le registre public.
+import { RbqRegistryCard } from "@/components/gestion/reseau/RbqRegistryCard";
 import "@/components/partenaires/admin/partenaires.css";
 
 export const metadata: Metadata = { title: "Partenaire" };
@@ -261,6 +263,9 @@ export default async function PartnerPage({ params, searchParams }: { params: Pr
               })}
             </div>
           </Card>
+
+          {/* Chantier R : licence RBQ au fichier ouvert (verdict, levée manuelle, registre public). */}
+          <RbqRegistryCard installerId={id} number={record.compliance.rbq.number || installer.rbq} check={record.rbqVerification ?? null} />
 
           <Card title="Performance" sub={`Niveau ${TIER_LABELS[perf.tier]}${perf.override ? " (imposé)" : " (automatique)"} · points au classement : ${snap.partners.settings.tierPoints[perf.tier] > 0 ? "+" : ""}${snap.partners.settings.tierPoints[perf.tier]}`} action={<TierChip tier={perf.tier} imposed={Boolean(perf.override)} />}>
             <div className="pa-perf">

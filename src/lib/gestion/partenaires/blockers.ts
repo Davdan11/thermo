@@ -19,8 +19,11 @@ import { agreementState } from "./agreement";
 import { COMPLIANCE_LABELS, docState, ymdLong } from "./compliance";
 import { readPartenaires } from "./store";
 import type { ComplianceKind, PartenairesData } from "./types";
+// Chantier R : licence absente, suspendue ou annulée au fichier ouvert de la RBQ (reseau/rbq/verify.ts).
+import { registryBlockerLabel } from "../reseau/rbq/verify";
 
-export type BlockerCode = "entente" | "rbq" | "assurance" | "fin";
+// Chantier R : « rbq-registre » ajouté (verdict de la vérification automatique, levée manuelle possible).
+export type BlockerCode = "entente" | "rbq" | "assurance" | "fin" | "rbq-registre";
 
 export interface Blocker {
   code: BlockerCode;
@@ -51,6 +54,9 @@ export function partnerBlockers(installer: Pick<Installer, "id" | "createdAt">, 
     if (state === "expiree") out.push({ code: kind, label: `${COMPLIANCE_LABELS[kind]} expirée le ${ymdLong(doc!.expiresOn!)}` });
     else if (state === "manquante" && ctx.data.settings.blockWhenMissing) out.push({ code: kind, label: `${COMPLIANCE_LABELS[kind]} : date d’expiration à saisir` });
   }
+  // Chantier R : verdict du fichier des licences actives (aucun verdict sans vérification : rien n'est inventé).
+  const registry = registryBlockerLabel(partner?.rbqVerification, ctx.now);
+  if (registry) out.push({ code: "rbq-registre", label: registry });
   return out;
 }
 

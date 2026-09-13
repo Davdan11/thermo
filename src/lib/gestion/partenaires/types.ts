@@ -8,6 +8,9 @@
    documents de conformité), droits 600, jamais dans public/.
    ================================================================== */
 
+// Chantier R : type du verdict de la vérification automatique des licences RBQ.
+import type { RbqVerification } from "../reseau/rbq/types";
+
 /** État d'un envoi (courriel ou texto). « simule » : développement sans TEXTOS_ENVOIS_DEV=1 ; « desabonne » : numéro qui a répondu ARRÊT. */
 export type SendStatus = "envoye" | "echec" | "non-configure" | "sans-numero" | "simule" | "desabonne";
 
@@ -181,6 +184,8 @@ export interface PartnerRecord {
   ended: { at: string; by: string; reason: string } | null;
   history: PartnerEvent[];
   citations: Citation[];
+  /** Chantier R : dernière vérification au fichier ouvert des licences actives de la RBQ (reseau/rbq/verify.ts) ; absente tant qu'aucune vérification n'a eu lieu. */
+  rbqVerification?: RbqVerification;
 }
 
 export interface StoredFile {

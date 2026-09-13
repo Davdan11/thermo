@@ -44,6 +44,10 @@ export type TaskRule =
   | "partenaire-entente"
   | "partenaire-conformite"
   | "sav-billet"
+  // Chantier R (reseau/crm-tasks.ts) : licence RBQ au fichier ouvert, zones à recruter, stock sous le seuil.
+  | "reseau-rbq"
+  | "reseau-recrutement"
+  | "inventaire-seuil"
   | "manuelle"
   /* Radar à occasions (volet C, radar/radar.ts) : client-chaud, thermomatch-sans-soumission, relance-saison. */
   | RadarRule;
@@ -72,6 +76,10 @@ const FAMILY_OF: Record<TaskRule, TaskFamily> = {
   "partenaire-entente": "suivis",
   "partenaire-conformite": "suivis",
   "sav-billet": "suivis",
+  // Chantier R.
+  "reseau-rbq": "suivis",
+  "reseau-recrutement": "suivis",
+  "inventaire-seuil": "suivis",
   manuelle: "suivis",
   // Volet C (le radar fixe lui-même la famille de ses tâches ; entrées requises par le type).
   "client-chaud": "ouvertes",

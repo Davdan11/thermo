@@ -17,6 +17,8 @@ import type { Conversation } from "@/lib/textos/types";
 import type { Job } from "../types";
 import type { CrmExtensions } from "./extensions";
 import type { PartnerTaskInput } from "../partenaires/crm-tasks";
+// Chantier R : entrées des tâches du réseau (licences RBQ, recrutement, stock).
+import type { ReseauTaskInput } from "../reseau/tasks";
 
 /* ---------------- Étapes ---------------- */
 
@@ -214,6 +216,8 @@ export interface SourceData {
   generic: string[];
   /** Volet A : partenaires et billets de service, pour leurs tâches automatiques (partenaires/crm-tasks.ts). */
   partenaires?: PartnerTaskInput;
+  /** Chantier R : licences RBQ, zones à recruter, stock sous le seuil (reseau/tasks.ts). */
+  reseau?: ReseauTaskInput;
 }
 
 /** Un client : ses traces réunies, dans tous les magasins. */

@@ -13,6 +13,7 @@ import { jobTouchpoints, journalTouchpoints, manualTouchpoints, quoteTouchpoints
 import { inferStage, type StageInfo } from "./stage";
 import { applyTaskState, autoTasks, byUrgency, manualTask, type Task } from "./tasks";
 import { partnerAutoTasks } from "../partenaires/crm-tasks";
+import { reseauAutoTasks } from "../reseau/tasks"; // Chantier R
 import { textoTouchpoints } from "./textos-adapter";
 import { radarContext } from "../radar/radar";
 import { localYmd } from "./time";
@@ -194,6 +195,8 @@ export function computeIndex(bundles: ClientBundle[], src: SourceData, now: Date
       c.tasks.sort(byUrgency);
     } else general.push(t);
   }
+  // Chantier R : licences RBQ (fichier ouvert), zones à recruter, stock sous le seuil : tâches générales.
+  for (const t of applyTaskState(reseauAutoTasks(src.reseau, now), src.crm.taskState)) general.push(t);
   return { clients, byId, byQuote, byJob, byConversation, tasks: [...clients.flatMap((c) => c.tasks), ...general].sort(byUrgency), settings, now, src };
 }
 
