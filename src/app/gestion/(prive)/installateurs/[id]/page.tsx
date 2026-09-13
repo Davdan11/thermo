@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { brandOptions } from "@/lib/gestion/catalog";
@@ -23,7 +24,11 @@ export default async function InstallerPage({ params }: { params: Promise<{ id: 
           <p className="g-eyebrow">Installateur · ajouté le {formatDateTime(i.createdAt)}</p>
           <h1 className="g-h1">{i.company}</h1>
         </div>
-        <span className={`g-pill ${i.active ? "g-pill--termine" : "g-pill--muted"}`}>{i.active ? "Actif" : "En pause"}</span>
+        <div className="g-actions">
+          {/* Volet A : entente, conformité (RBQ, assurance), performance et blocages des offres. */}
+          <Link href={`/gestion/partenaires/${i.id}`} className="g-btn g-btn--ghost">Entente, conformité et performance</Link>
+          <span className={`g-pill ${i.active ? "g-pill--termine" : "g-pill--muted"}`}>{i.active ? "Actif" : "En pause"}</span>
+        </div>
       </Reveal>
       <InstallerForm
         brands={brandOptions()}

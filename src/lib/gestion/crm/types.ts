@@ -15,6 +15,7 @@ import type { ScheduledMessage } from "@/lib/relances/core";
 import type { Quote } from "@/lib/soumissions/types";
 import type { Conversation } from "@/lib/textos/types";
 import type { Job } from "../types";
+import type { PartnerTaskInput } from "../partenaires/crm-tasks";
 
 /* ---------------- Étapes ---------------- */
 
@@ -209,6 +210,8 @@ export interface SourceData {
   crm: CrmData;
   /** Numéros et adresses de l'entreprise : jamais utilisés pour rapprocher. */
   generic: string[];
+  /** Volet A : partenaires et billets de service, pour leurs tâches automatiques (partenaires/crm-tasks.ts). */
+  partenaires?: PartnerTaskInput;
 }
 
 /** Un client : ses traces réunies, dans tous les magasins. */

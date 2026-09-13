@@ -211,6 +211,9 @@ export function applyStatusAction(job: Job, action: StatusAction, by: string, no
   }
   if (action === "planifier") job.scheduledFor = opts.scheduledFor ?? job.scheduledFor ?? null;
   job.status = def.to;
+  // Volet A : horodatage de la fin de chantier (contrat du volet B, voir terrain/completion.ts).
+  if (def.to === "termine") job.completedAt = now.toISOString();
+  else delete job.completedAt;
   audit(job, by, def.label.toLowerCase(), now, action === "planifier" && job.scheduledFor ? `prévu le ${job.scheduledFor}` : undefined);
   return withdrawn;
 }

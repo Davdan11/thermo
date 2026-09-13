@@ -90,6 +90,9 @@ export interface MatchOptions {
   now: Date;
   /** Nom affiché d'une marque à partir de son identifiant. */
   brandLabel?: (id: string) => string;
+  /** Volet A (partenaires/network.ts) : blocages (entente, RBQ, assurance) comptés comme raisons d'exclusion,
+      points du niveau Or / Standard / Probation ajoutés au score. Facultatif. */
+  partner?: (installerId: string) => { blockers: string[]; tierPoints: number; tierLabel: string | null } | null;
 }
 
 const plural = (n: number, one: string, many: string) => (n <= 1 ? `${n} ${one}` : `${n} ${many}`);
@@ -140,13 +143,20 @@ export function evaluateInstaller(job: Job, installer: Installer, jobs: Job[], o
   // Historique
   reasons.push(stats.answered >= 3 ? `accepte ${Math.round((stats.accepted / stats.answered) * 100)} % des offres` : "peu d’historique");
 
+  // Volet A : blocages du partenaire et niveau (poids modéré, voir partenaires/performance.ts).
+  const partner = opts.partner?.(installer.id) ?? null;
+  if (partner) {
+    failures.push(...partner.blockers);
+    if (partner.tierLabel) reasons.push(partner.tierLabel);
+  }
+
   const points: ScorePoints = {
     marque: brandMatch ? 40 : 0,
     distance: km === null ? 0 : Math.max(0, Math.round(30 - km / 4)),
     charge: Math.max(0, 20 - 7 * stats.load),
     historique: Math.round(10 * stats.smoothedRate),
   };
-  const score = points.marque + points.distance + points.charge + points.historique;
+  const score = Math.max(0, points.marque + points.distance + points.charge + points.historique + (partner?.tierPoints ?? 0));
 
   return {
     installer,

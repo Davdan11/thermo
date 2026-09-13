@@ -12,6 +12,7 @@ import { quoteAmount, versionTotals } from "./money";
 import { jobTouchpoints, journalTouchpoints, manualTouchpoints, quoteTouchpoints, relanceTouchpoints } from "./sources";
 import { inferStage, type StageInfo } from "./stage";
 import { applyTaskState, autoTasks, byUrgency, manualTask, type Task } from "./tasks";
+import { partnerAutoTasks } from "../partenaires/crm-tasks";
 import { textoTouchpoints } from "./textos-adapter";
 import { localYmd } from "./time";
 import { DEFAULT_CRM_SETTINGS, type ClientBundle, type CrmClientRecord, type CrmSettings, type SourceData, type Touchpoint } from "./types";
@@ -182,6 +183,14 @@ export function computeIndex(bundles: ClientBundle[], src: SourceData, now: Date
     for (const q of c.b.quotes) byQuote.set(q.id, c.b.id);
     for (const j of c.b.jobs) byJob.set(j.id, c.b.id);
     for (const t of c.b.textos) byConversation.set(t.id, c.b.id);
+  }
+  // Volet A : tâches des partenaires (entente, conformité) et des billets de service, module séparé.
+  for (const t of applyTaskState(partnerAutoTasks(src.partenaires, now), src.crm.taskState)) {
+    const c = t.jobId ? byId.get(byJob.get(t.jobId) ?? "") : undefined;
+    if (c) {
+      c.tasks.push({ ...t, clientId: c.b.id });
+      c.tasks.sort(byUrgency);
+    } else general.push(t);
   }
   return { clients, byId, byQuote, byJob, byConversation, tasks: [...clients.flatMap((c) => c.tasks), ...general].sort(byUrgency), settings, now, src };
 }

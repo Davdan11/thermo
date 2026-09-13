@@ -36,7 +36,8 @@ export async function saveInstallerAction(_prev: FormState, fd: FormData): Promi
   const saved = await saveInstaller(parsed.data, session.email, id || undefined);
   if (!saved) return { message: "Installateur introuvable." };
   revalidatePath("/gestion", "layout");
-  redirect(`/gestion/installateurs?ok=${id ? "modifie" : "ajoute"}`);
+  // Volet A : un nouveau partenaire (ou une candidature convertie) arrive sur sa fiche partenaire pour « Envoyer l'entente ».
+  redirect(id ? "/gestion/installateurs?ok=modifie" : `/gestion/partenaires/${saved.id}?nouveau=1`);
 }
 
 export async function toggleInstallerAction(id: string, active: boolean): Promise<void> {

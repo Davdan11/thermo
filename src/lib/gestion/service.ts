@@ -31,6 +31,9 @@ import {
   type StatusAction,
 } from "./offers";
 import { mutateGestion, readCandidatures, readGestion } from "./store";
+// Volet A : blocages des offres (entente, RBQ, assurance, fin de partenariat) et niveaux dans le classement.
+import { loadBlockers } from "./partenaires/blockers";
+import { partnerMatchInfo } from "./partenaires/network";
 import { buildOfferSummary, summaryHeadline, type OfferSummary } from "./summary";
 import type { InstallerInput, JobInput } from "./forms";
 import type { Candidature, GeoPoint, Installer, Job, JobClient, Offer } from "./types";
@@ -89,7 +92,8 @@ export async function loadJobPage(id: string, now = new Date()): Promise<JobPage
     job,
     installers: data.installers,
     assigned: data.installers.find((i) => i.id === job.assignedInstallerId) ?? null,
-    match: OPEN_FOR_OFFERS.includes(job.status) ? matchInstallers(job, data.installers, data.jobs, matchOpts(now)) : null,
+    // Volet A : partenaires bloqués affichés avec la raison, points de niveau (Or / Standard / Probation).
+    match: OPEN_FOR_OFFERS.includes(job.status) ? matchInstallers(job, data.installers, data.jobs, { ...matchOpts(now), partner: await partnerMatchInfo(data.installers, data.jobs, now) }) : null,
   };
 }
 
@@ -194,6 +198,8 @@ export function saveInternalNotes(jobId: string, notes: string, by: string, now 
 export async function sendOffers(jobId: string, installerIds: string[], hours: number, by: string, baseUrl: string, now = new Date()): Promise<{ sent: number; errors: string[] }> {
   const h = (OFFER_HOURS_CHOICES as readonly number[]).includes(hours) ? hours : DEFAULT_OFFER_HOURS;
   const errors: string[] = [];
+  // Volet A : aucune offre sans entente signée, licence RBQ et assurance valides, partenariat actif.
+  const blockersOf = await loadBlockers(now);
   const prepared = await mutateGestion((data) => {
     const job = data.jobs.find((j) => j.id === jobId);
     if (!job) return { result: [], changed: false };
@@ -202,6 +208,11 @@ export async function sendOffers(jobId: string, installerIds: string[], hours: n
       const installer = data.installers.find((i) => i.id === iid);
       if (!installer) {
         errors.push("Installateur introuvable.");
+        continue;
+      }
+      const blocked = blockersOf(installer);
+      if (blocked.length) {
+        errors.push(`${installer.company} : ${blocked.map((b) => b.label).join(", ")}`);
         continue;
       }
       const token = newToken();

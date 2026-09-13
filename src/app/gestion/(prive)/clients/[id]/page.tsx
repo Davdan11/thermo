@@ -23,6 +23,7 @@ import { TaskList } from "@/components/gestion/crm/TaskList";
 import { Timeline } from "@/components/gestion/crm/Timeline";
 import { StatusPill } from "@/components/gestion/ui";
 import { QuoteStatus } from "@/components/gestion/soumissions/ui";
+import { ClientPhotoDossier } from "@/components/partenaires/admin/ClientPhotoDossier"; // volet A
 
 export const metadata: Metadata = { title: "Client" };
 
@@ -229,6 +230,9 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
               </p>
             )}
           </Card>
+
+          {/* Volet A : dossier photo des chantiers du client (retrouvable « s'il y a de quoi »). */}
+          <ClientPhotoDossier jobIds={c.jobs.map((j) => j.id)} />
 
           <Card title="Coordonnées">
             <ul className="cr-ident">

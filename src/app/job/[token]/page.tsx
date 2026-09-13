@@ -158,6 +158,8 @@ export default async function JobOfferPage({ params, searchParams }: { params: P
                 {view.scheduledFor ? (<><dt>Installation</dt><dd>{formatDay(view.scheduledFor)}</dd></>) : null}
               </dl>
             </div>
+            {/* Volet A : page de chantier (en route, photos obligatoires, numéros de série, signature du client). */}
+            <a href={`/chantier/${encodeURIComponent(token)}`} className="g-btn g-btn--primary g-btn--lg g-btn--block" style={{ marginTop: 14 }}>Ouvrir la page du chantier</a>
             <hr className="g-divider" />
             {details}
           </div>
