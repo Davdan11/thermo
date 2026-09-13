@@ -69,10 +69,10 @@ export function PriceListEditor({ initial, lengthUnit }: { initial: Prices; leng
 
   return (
     <div>
-      <div className="g-head">
+      <div className="k-pagehead">
         <div>
-          <p className="g-eyebrow">Créateur de soumissions</p>
-          <h1 className="g-h1">Liste de prix</h1>
+          <p className="k-eyebrow">Créateur de soumissions</p>
+          <h1 className="k-h1">Liste de prix</h1>
         </div>
       </div>
       <p className="sq-note">

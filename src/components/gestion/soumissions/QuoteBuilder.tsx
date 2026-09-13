@@ -570,12 +570,12 @@ export function QuoteBuilder(props: BuilderProps) {
 
   return (
     <div>
-      <div className="g-head" style={{ marginBottom: 12 }}>
+      <div className="k-pagehead" style={{ marginBottom: 12 }}>
         <div>
-          <p className="g-eyebrow">{props.number ? `Soumission ${props.number} · version ${props.version} (brouillon)` : quoteId ? "Brouillon enregistré" : "Nouvelle soumission"}</p>
-          <h1 className="g-h1">{clientName || "Nouvelle soumission"}</h1>
+          <p className="k-eyebrow">{props.number ? `Soumission ${props.number} · version ${props.version} (brouillon)` : quoteId ? "Brouillon enregistré" : "Nouvelle soumission"}</p>
+          <h1 className="k-h1">{clientName || "Nouvelle soumission"}</h1>
         </div>
-        {quoteId ? <Link href={`/gestion/soumissions/${quoteId}`} className="g-btn g-btn--ghost">Fiche de la soumission</Link> : null}
+        {quoteId ? <Link href={`/gestion/soumissions/${quoteId}`} className="k-btn">Fiche de la soumission</Link> : null}
       </div>
       {props.copy === "autre" ? (
         <p className="g-alert g-alert--info" role="status" style={{ marginBottom: 12 }}>

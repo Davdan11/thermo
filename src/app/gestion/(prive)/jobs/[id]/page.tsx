@@ -79,10 +79,10 @@ export default async function JobPage({ params, searchParams }: { params: Promis
 
   return (
     <>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div style={{ minWidth: 0 }}>
-          <p className="g-eyebrow">Job n° {job.number} · créé le {formatDateTime(job.createdAt)}</p>
-          <h1 className="g-h1">{`${c.firstName} ${c.lastName}`.trim()}</h1>
+          <p className="k-eyebrow">Job n° {job.number} · créé le {formatDateTime(job.createdAt)}</p>
+          <h1 className="k-h1">{`${c.firstName} ${c.lastName}`.trim()}</h1>
           <div className="g-tags" style={{ marginTop: 12, alignItems: "center" }}>
             <StatusPill status={job.status} />
             <span className="g-tag">{c.city || job.geo?.city || c.postalCode}</span>
@@ -91,8 +91,8 @@ export default async function JobPage({ params, searchParams }: { params: Promis
           </div>
         </div>
         <div className="g-actions">
-          {clientId ? <Link href={`/gestion/clients/${clientId}`} className="g-btn g-btn--ghost"><UserRound size={16} aria-hidden /> Fiche client</Link> : null}
-          <Link href={`/gestion/jobs/${job.id}/modifier`} className="g-btn g-btn--ghost"><Pencil size={16} aria-hidden /> Modifier</Link>
+          {clientId ? <Link href={`/gestion/clients/${clientId}`} className="k-btn"><UserRound size={16} aria-hidden /> Fiche client</Link> : null}
+          <Link href={`/gestion/jobs/${job.id}/modifier`} className="k-btn"><Pencil size={16} aria-hidden /> Modifier</Link>
         </div>
       </Reveal>
 

@@ -28,11 +28,11 @@ export default async function TextosPage({ searchParams }: { searchParams: Promi
 
   return (
     <>
-      <Reveal className="g-head">
+      <Reveal className="k-pagehead">
         <div>
-          <p className="g-eyebrow">Numéro du site · {site}</p>
-          <h1 className="g-h1">Textos</h1>
-          <p className="g-lead">
+          <p className="k-eyebrow">Numéro du site · {site}</p>
+          <h1 className="k-h1">Textos</h1>
+          <p className="k-lead">
             {unread ? `${unread} conversation${unread > 1 ? "s" : ""} à lire. ` : ""}Les textos envoyés au {site} arrivent ici ; votre réponse part du même numéro.
           </p>
         </div>
@@ -46,7 +46,7 @@ export default async function TextosPage({ searchParams }: { searchParams: Promi
             </Link>
           </nav>
           {owner ? (
-            <Link href="/gestion/textos/reglages" className="g-btn g-btn--ghost">
+            <Link href="/gestion/textos/reglages" className="k-btn">
               <Settings size={16} aria-hidden /> Réglages
             </Link>
           ) : null}
