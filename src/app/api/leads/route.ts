@@ -19,6 +19,7 @@ import { getTerritoryFromPostalCode } from "@/lib/crm/territory";
 import { sendClientWelcomeEmail, sendInternalLeadAlert } from "@/lib/crm/email";
 import { resolveRecommendedModel, brochureAttachment } from "@/lib/crm/recommended-model";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
+import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : réponse en 60 secondes
 import { attributionFromBody, attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
 import { leadSchema, CONSENT_VERSION } from "@/lib/validation/lead";
 import { escapeHtml } from "@/lib/security/escape";
@@ -60,6 +61,8 @@ export async function POST(req: NextRequest) {
   delete journalable.website; // pot de miel, toujours vide ici
   delete journalable.draft; // réponses brutes non validées : pas de renseignement personnel à conserver
   const { entry, written } = await journalLead("soumission", { ...journalable, territory, consentAt, consentVersion: CONSENT_VERSION, ipHash }, attribution);
+  // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
+  speedToLeadAfter({ kind: "soumission", journalId: entry.id, phone: lead.phone, firstName: lead.firstName, lastName: lead.lastName, city: lead.municipality });
 
   // 3. Pipedrive, non bloquant.
   const row = (label: string, value: unknown) => `<li><b>${label} :</b> ${escapeHtml(value ?? "Non spécifié")}</li>`;

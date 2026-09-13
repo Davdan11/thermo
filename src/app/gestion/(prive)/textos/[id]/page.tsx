@@ -15,6 +15,7 @@ import { Composer } from "@/components/gestion/textos/Composer";
 import { ConversationList } from "@/components/gestion/textos/ConversationList";
 import { Thread } from "@/components/gestion/textos/Thread";
 import { AutoRefresh, CopyNumber, MarkRead } from "@/components/gestion/textos/client-bits";
+import { MaskedCallButton } from "@/components/gestion/telephonie/CallButton"; // Chantier T : appel masqué
 import { archiveAction, markReadAction, markUnreadAction, sendTextoAction } from "../actions";
 
 export const metadata: Metadata = { title: "Conversation" };
@@ -45,9 +46,10 @@ export default async function ConversationPage({ params }: { params: Promise<{ i
           </Link>
           <div className="t-who">
             <h1 className="t-who__num">
-              <a href={`tel:${t.e164}`} title="Appeler">
+              {/* Chantier T : appel masqué (le client voit le numéro du site) au lieu de tel:. */}
+              <MaskedCallButton target={{ kind: "conversation", id: t.id }} className="t-who__call" title="Appeler (appel masqué par le numéro du site)">
                 {t.phone}
-              </a>
+              </MaskedCallButton>
             </h1>
             <p className="t-who__sub">{[t.place, `premier texto le ${t.since}`, t.archived ? "archivée" : null].filter(Boolean).join(" · ")}</p>
           </div>

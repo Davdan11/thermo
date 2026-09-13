@@ -17,6 +17,7 @@ import { sendClientEmail, sendInternalMessage } from "@/lib/crm/email";
 import { getThermoMatchEmailHTML, thermoMatchEmailSubject, type ThermoMatchEmailChoice } from "@/lib/crm/templates/thermomatch-email";
 import { SITE_URL } from "@/lib/crm/templates/layout";
 import { journalLead, journalOutcome } from "@/lib/crm/lead-journal";
+import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : réponse en 60 secondes
 import { attributionFromBody, attributionLines, pipedriveSourceLabel } from "@/lib/attribution/core";
 import { escapeHtml } from "@/lib/security/escape";
 import { rateLimit, tooManyRequests } from "@/lib/security/rate-limit";
@@ -100,6 +101,9 @@ export async function POST(req: NextRequest) {
 
   const attribution = attributionFromBody(json);
   const { entry } = await journalLead("thermomatch", { firstName: d.firstName, email: d.email, phone: d.phone, postalCode, choices: labels, code: d.code, relances: relancesConsent ?? false }, attribution);
+
+  // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
+  speedToLeadAfter({ kind: "thermomatch", journalId: entry.id, phone: d.phone, firstName: d.firstName });
 
   const e = escapeHtml;
   const rows: Array<[string, string]> = [
