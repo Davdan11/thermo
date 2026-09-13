@@ -28,6 +28,7 @@ import { SeasonConsentCard } from "@/components/gestion/ventes/SeasonConsent";
 import { ThermoMatchPanel } from "@/components/gestion/ventes/ThermoMatch";
 import { QuoteStatus } from "@/components/gestion/soumissions/ui";
 import { ApresVentePanel } from "@/components/gestion/argent/ApresVentePanel";
+import { ClientPhotoDossier } from "@/components/partenaires/admin/ClientPhotoDossier"; // volet A
 
 export const metadata: Metadata = { title: "Client" };
 
@@ -242,6 +243,8 @@ export default async function ClientPage({ params, searchParams }: { params: Pro
           <SeasonConsentCard clientId={c.id} />
           {/* Volet B : sondage, statut LogisVert, facture de commission et référence, par job. */}
           <ApresVentePanel jobIds={c.jobs.map((j) => j.id)} />
+          {/* Volet A : dossier photo des chantiers du client (retrouvable « s'il y a de quoi »). */}
+          <ClientPhotoDossier jobIds={c.jobs.map((j) => j.id)} />
 
           <Card title="Coordonnées">
             <ul className="cr-ident">

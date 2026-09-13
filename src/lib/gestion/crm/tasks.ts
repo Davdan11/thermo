@@ -40,6 +40,10 @@ export type TaskRule =
   | "soumission-expire"
   | "job-sans-reponse"
   | "job-a-planifier"
+  // Volet A (partenaires/crm-tasks.ts) : entente, conformité des partenaires, billets de service.
+  | "partenaire-entente"
+  | "partenaire-conformite"
+  | "sav-billet"
   | "manuelle"
   /* Radar à occasions (volet C, radar/radar.ts) : client-chaud, thermomatch-sans-soumission, relance-saison. */
   | RadarRule;
@@ -65,6 +69,9 @@ const FAMILY_OF: Record<TaskRule, TaskFamily> = {
   "soumission-expire": "expire",
   "job-sans-reponse": "jobs",
   "job-a-planifier": "jobs",
+  "partenaire-entente": "suivis",
+  "partenaire-conformite": "suivis",
+  "sav-billet": "suivis",
   manuelle: "suivis",
   // Volet C (le radar fixe lui-même la famille de ses tâches ; entrées requises par le type).
   "client-chaud": "ouvertes",

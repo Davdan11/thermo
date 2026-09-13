@@ -19,6 +19,7 @@ import { Reveal } from "@/components/gestion/Reveal";
 import { SubmitButton } from "@/components/gestion/SubmitButton";
 import { BrandLogo, StatusPill } from "@/components/gestion/ui";
 import { ComplexTasksCard } from "@/components/gestion/ventes/ComplexTasks";
+import { FieldPanel } from "@/components/partenaires/admin/FieldPanel"; // volet A
 
 export const metadata: Metadata = { title: "Job" };
 
@@ -99,7 +100,7 @@ export default async function JobPage({ params, searchParams }: { params: Promis
         <Reveal>
           <p className={`g-alert ${sent > 0 ? "g-alert--ok" : ""}`} role="status">
             {sent > 0 ? `Offre envoyée à ${sent} installateur${sent > 1 ? "s" : ""}.` : "Aucun installateur sélectionné."}
-            {sp.echecs ? ` ${sp.echecs} envoi(s) impossible(s) : une offre attendait déjà ou le job n’est plus ouvert.` : ""}
+            {sp.echecs ? ` ${sp.echecs} envoi(s) impossible(s) : une offre attendait déjà, le job n’est plus ouvert, ou le partenaire est bloqué (entente, licence RBQ, assurance).` : ""}
           </p>
         </Reveal>
       ) : null}
@@ -137,6 +138,9 @@ export default async function JobPage({ params, searchParams }: { params: Promis
               </dl>
             </Reveal>
           ) : null}
+
+          {/* Volet A : chantier (en route, photos, numéros de série, signature, fin de chantier, service après-vente). */}
+          <FieldPanel jobId={job.id} />
 
           <Reveal as="section" delay={0.1} className="g-card g-card__pad">
             <div className="g-section__head">

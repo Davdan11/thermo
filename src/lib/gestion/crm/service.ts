@@ -45,6 +45,10 @@ import { quoteAmount } from "./money";
 import { KIND_LABELS } from "./sources";
 import { crmFile, mutateCrm, newCrmId, normalizeSettings, readCrm } from "./store";
 import { bucketTasks, dueToday } from "./tasks";
+// Volet A : tâches des partenaires et des billets de service.
+import { readPartnerTaskInput } from "../partenaires/crm-tasks";
+import { partenairesFile } from "../partenaires/store";
+import { savFile } from "../sav/store";
 import { missingTextoRecords } from "./textos-adapter";
 import { buildTimeline, type TimelineItem } from "./timeline";
 import { ago, dateLong, daysBetweenYmd, localYmd, stamp } from "./time";
@@ -72,14 +76,15 @@ async function signature(): Promise<string> {
   } catch {
     /* dossier absent */
   }
-  const parts = await Promise.all([...files.map((f) => stamp1(path.join(dir, f))), stamp1(soumissionsFile()), stamp1(gestionFile()), stamp1(relancesFile()), stamp1(textosFile()), stamp1(crmFile()), stamp1(settingsFile())]);
+  // Volet A : partenaires.json et sav.json ajoutés (leurs tâches automatiques).
+  const parts = await Promise.all([...files.map((f) => stamp1(path.join(dir, f))), stamp1(soumissionsFile()), stamp1(gestionFile()), stamp1(relancesFile()), stamp1(textosFile()), stamp1(crmFile()), stamp1(settingsFile()), stamp1(partenairesFile()), stamp1(savFile())]);
   return [dir, soumissionsFile(), process.env.NODE_ENV, ...files, ...parts].join("|");
 }
 
 /** Lit tous les magasins. Hors production seulement : fichiers et enregistrements de démonstration. */
 export async function loadSources(): Promise<SourceData> {
   const demo = demoAllowed();
-  const [journal, outcomes, soum, gestion, relances, textos, crm, settings] = await Promise.all([
+  const [journal, outcomes, soum, gestion, relances, textos, crm, settings, partenaires] = await Promise.all([
     readJournalEntries(journalDir(), { includeDemo: demo }),
     readJournalOutcomes(journalDir(), { includeDemo: demo }),
     readSoumissions(),
@@ -88,6 +93,7 @@ export async function loadSources(): Promise<SourceData> {
     readTextos(),
     readCrm(),
     readSettings(),
+    readPartnerTaskInput().catch(() => undefined), // volet A
   ]);
   const jobs = demo || !gestion.seed ? gestion.jobs : [];
   return {
@@ -100,6 +106,7 @@ export async function loadSources(): Promise<SourceData> {
     textos: demo || !textos.seed ? Object.values(textos.conversations) : [],
     crm: demo || !crm.seed ? crm : { ...crm, clients: {}, tasks: [], manualContacts: [], taskState: {}, splits: [], merges: [], aliases: {} },
     generic: [settings.company.phone, settings.company.email, process.env.TWILIO_PHONE_NUMBER, process.env.TWILIO_FORWARD_VENTES, process.env.TWILIO_FORWARD_SAV, process.env.NOTIFICATION_EMAIL, ...adminEmails()].filter((x): x is string => Boolean(x)),
+    ...(partenaires && (demo || !gestion.seed) ? { partenaires } : {}), // volet A
   };
 }
 

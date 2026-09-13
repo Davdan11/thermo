@@ -1,0 +1,279 @@
+/* ==================================================================
+   Volet A — partenaires installateurs : entente signée
+   électroniquement, conformité (licence RBQ, assurance), niveaux,
+   fin de partenariat, citations de clauses.
+
+   Magasin : partenaires.json (store.ts), à côté de gestion.json.
+   Fichiers privés : partenaires-fichiers/ (signatures tracées,
+   documents de conformité), droits 600, jamais dans public/.
+   ================================================================== */
+
+/** État d'un envoi (courriel ou texto). « simule » : développement sans TEXTOS_ENVOIS_DEV=1 ; « desabonne » : numéro qui a répondu ARRÊT. */
+export type SendStatus = "envoye" | "echec" | "non-configure" | "sans-numero" | "simule" | "desabonne";
+
+export const SEND_LABELS: Record<SendStatus, string> = {
+  envoye: "envoyé",
+  echec: "échec",
+  "non-configure": "non configuré",
+  "sans-numero": "sans adresse",
+  simule: "simulé (développement)",
+  desabonne: "désabonné",
+};
+
+/* ---------------- Entente ---------------- */
+
+/** Marque des paragraphes à remplir : une version qui en contient ne peut pas être validée. */
+export const PLACEHOLDER = "[À rédiger par l’avocat]";
+export const PLACEHOLDER_RE = /\[\s*À\s+rédiger\s+par\s+l['’]avocat\s*\]/i;
+
+export interface AgreementArticle {
+  title: string;
+  /** Paragraphes numérotés à l'affichage : article 6, paragraphe 2 → « 6.2 ». */
+  paragraphs: string[];
+}
+
+export const AGREEMENT_STATUSES = ["brouillon", "validee", "publiee", "remplacee"] as const;
+export type AgreementStatus = (typeof AGREEMENT_STATUSES)[number];
+
+export const AGREEMENT_STATUS_LABELS: Record<AgreementStatus, string> = {
+  brouillon: "Brouillon",
+  validee: "Texte final validé",
+  publiee: "En vigueur",
+  remplacee: "Remplacée",
+};
+
+export interface AgreementVersion {
+  id: string;
+  /** Numéro lisible : 1, 2, 3… */
+  number: number;
+  title: string;
+  preamble: string;
+  articles: AgreementArticle[];
+  status: AgreementStatus;
+  createdAt: string;
+  createdBy: string;
+  updatedAt: string;
+  updatedBy: string;
+  /** « Texte final validé » par le propriétaire : le texte ne change plus. */
+  validatedAt?: string;
+  validatedBy?: string;
+  /** Empreinte SHA-256 du texte canonique, figée à la validation. */
+  textSha256?: string;
+  publishedAt?: string;
+  publishedBy?: string;
+  /** Délai de grâce (jours) accordé à la publication aux partenaires déjà en place. */
+  graceDays?: number;
+  replacedAt?: string;
+}
+
+export interface SendRecord {
+  at: string;
+  by: string;
+  kind: "envoi" | "relance";
+  email: SendStatus;
+  sms: SendStatus;
+}
+
+export interface SignatureRequest {
+  id: string;
+  installerId: string;
+  versionId: string;
+  /** SHA-256 du jeton du lien en vigueur : le jeton n'est jamais conservé. */
+  tokenHash: string;
+  /** Liens remplacés par une relance (affichés « remplacé par un lien plus récent »). */
+  previousHashes: string[];
+  createdAt: string;
+  createdBy: string;
+  sends: SendRecord[];
+  /** Première ouverture dans un vrai navigateur (signal POST de la page, pas les robots des messageries). */
+  openedAt?: string;
+  lastOpenedAt?: string;
+  openCount: number;
+  signatureId?: string;
+  cancelledAt?: string;
+}
+
+export interface SignatureProof {
+  ip: string;
+  userAgent: string;
+  /** SHA-256 du texte exact signé (texte canonique de la version). */
+  textSha256: string;
+  /** SHA-256 de l'image PNG de la signature tracée. */
+  imageSha256?: string;
+}
+
+export interface SignedAgreement {
+  id: string;
+  installerId: string;
+  requestId: string;
+  versionId: string;
+  versionNumber: number;
+  signedAt: string;
+  /** Nom de l'entreprise au moment de la signature. */
+  company: string;
+  signerName: string;
+  signerTitle: string;
+  /** Case « Je confirme être autorisé à signer pour l'entreprise ». */
+  authorized: true;
+  /** Case « J'ai lu et j'accepte ». */
+  accepted: true;
+  method: "trace" | "nom";
+  /** Image PNG de la signature tracée (partenaires-fichiers/). */
+  imageFileId?: string;
+  proof: SignatureProof;
+  /** Texte exact signé, conservé tel quel. */
+  signedText: string;
+  copies: { partner: SendStatus; owner: SendStatus[] };
+}
+
+/* ---------------- Conformité ---------------- */
+
+export interface ComplianceDoc {
+  number: string;
+  /** Assureur (assurance) ; vide pour la licence RBQ. */
+  issuer: string;
+  /** AAAA-MM-JJ : dernier jour de validité. */
+  expiresOn: string | null;
+  /** Couverture telle qu'écrite sur le certificat (texte libre). */
+  coverage: string;
+  fileId?: string;
+  fileName?: string;
+  updatedAt?: string;
+  updatedBy?: string;
+}
+
+export type ComplianceKind = "rbq" | "assurance";
+
+/* ---------------- Niveaux ---------------- */
+
+export const TIERS = ["or", "standard", "probation"] as const;
+export type Tier = (typeof TIERS)[number];
+export const TIER_LABELS: Record<Tier, string> = { or: "Or", standard: "Standard", probation: "Probation" };
+
+/* ---------------- Fiche partenaire ---------------- */
+
+export interface PartnerEvent {
+  at: string;
+  by: string;
+  action: string;
+  detail?: string;
+}
+
+export interface Citation {
+  id: string;
+  at: string;
+  by: string;
+  signatureId: string;
+  versionNumber: number;
+  /** « 6.2 » */
+  ref: string;
+  context: { jobId?: string; ticketId?: string };
+  message: string;
+  channels: { email: SendStatus; sms: SendStatus };
+}
+
+export interface PartnerRecord {
+  installerId: string;
+  compliance: { rbq: ComplianceDoc; assurance: ComplianceDoc };
+  /** Niveau imposé par le propriétaire (remplace le niveau automatique). */
+  tierOverride: { tier: Tier; reason: string; at: string; by: string } | null;
+  /** Fin de partenariat décidée par le propriétaire (null : partenaire actif). */
+  ended: { at: string; by: string; reason: string } | null;
+  history: PartnerEvent[];
+  citations: Citation[];
+}
+
+export interface StoredFile {
+  id: string;
+  installerId: string;
+  kind: "signature" | ComplianceKind;
+  mime: string;
+  ext: string;
+  bytes: number;
+  sha256: string;
+  name: string;
+  createdAt: string;
+  createdBy: string;
+}
+
+/* ---------------- Réglages ---------------- */
+
+/** Seuils des niveaux automatiques (réglages par défaut, modifiables dans /gestion/partenaires/reglages). */
+export interface TierThresholds {
+  /** Installations terminées avant de pouvoir être Or. */
+  orMinInstalls: number;
+  /** Appels de service dus à la main-d'œuvre, par 100 installations, au plus. */
+  orMaxLaborPer100: number;
+  orMinPhotoRate: number;
+  orMinPunctuality: number;
+  orMinAcceptance: number;
+  /** Installations mesurées avant qu'une probation automatique soit possible. */
+  probationMinInstalls: number;
+  probationLaborPer100: number;
+  probationPhotoRate: number;
+  probationPunctuality: number;
+}
+
+export interface PartnerSettings {
+  /** Délai de grâce (jours) pour signer une nouvelle version publiée. */
+  graceDays: number;
+  /** Alerte avant l'expiration de la licence RBQ ou de l'assurance (jours). */
+  alertDays: number;
+  /** Bloquer aussi les offres quand la date d'expiration n'est pas saisie. */
+  blockWhenMissing: boolean;
+  /** Délai de prise en charge d'un billet de service (heures). */
+  serviceHours: number;
+  /** Tolérance de ponctualité (minutes après l'heure prévue). */
+  punctualityMinutes: number;
+  /** Vérification des photos : chaque job, ou un échantillon au hasard. */
+  photoReview: "chaque" | "hasard";
+  photoSampleRate: number;
+  /** Points ajoutés au classement des jobs selon le niveau. */
+  tierPoints: Record<Tier, number>;
+  thresholds: TierThresholds;
+  updatedAt?: string;
+  updatedBy?: string;
+}
+
+export const DEFAULT_THRESHOLDS: TierThresholds = {
+  orMinInstalls: 10,
+  orMaxLaborPer100: 3,
+  orMinPhotoRate: 0.95,
+  orMinPunctuality: 0.9,
+  orMinAcceptance: 0.5,
+  probationMinInstalls: 5,
+  probationLaborPer100: 10,
+  probationPhotoRate: 0.7,
+  probationPunctuality: 0.6,
+};
+
+export const DEFAULT_PARTNER_SETTINGS: PartnerSettings = {
+  graceDays: 14,
+  alertDays: 30,
+  blockWhenMissing: false,
+  serviceHours: 48,
+  punctualityMinutes: 15,
+  photoReview: "chaque",
+  photoSampleRate: 0.25,
+  tierPoints: { or: 6, standard: 0, probation: -10 },
+  thresholds: DEFAULT_THRESHOLDS,
+};
+
+export interface PartenairesData {
+  version: 1;
+  agreements: AgreementVersion[];
+  requests: SignatureRequest[];
+  signatures: SignedAgreement[];
+  partners: Record<string, PartnerRecord>;
+  files: StoredFile[];
+  settings: PartnerSettings;
+}
+
+/* ---------------- Identifiants ---------------- */
+
+export const AGREEMENT_ID_RE = /^a_[A-Za-z0-9_-]{8,16}$/;
+export const REQUEST_ID_RE = /^r_[A-Za-z0-9_-]{8,16}$/;
+export const SIGNATURE_ID_RE = /^s_[A-Za-z0-9_-]{8,16}$/;
+export const FILE_ID_RE = /^d_[A-Za-z0-9_-]{8,16}$/;
+export const INSTALLER_ID_RE = /^i_[A-Za-z0-9_-]{8,16}$/;
+export const CLAUSE_REF_RE = /^\d{1,2}\.\d{1,2}$/;

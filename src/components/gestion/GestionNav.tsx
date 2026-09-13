@@ -12,7 +12,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Banknote, CalendarDays, ChartColumn, Columns3, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
+import { Banknote, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
 import { openSearch } from "./crm/CommandSearch";
 import { openQuickActions } from "./crm/QuickActions";
 import { Sheet } from "./kit/Sheet";
@@ -47,12 +47,16 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
       { href: "/gestion/jobs", label: "Jobs", icon: Wrench, match: starts("/gestion/jobs") },
       { href: "/gestion/agenda", label: "Agenda", icon: CalendarDays, match: starts("/gestion/agenda") },
       { href: "/gestion/paiements", label: "Paiements", icon: Banknote, match: starts("/gestion/paiements") },
+      { href: "/gestion/sav", label: "Service après-vente", icon: LifeBuoy, match: starts("/gestion/sav") },
     ],
   },
   {
     label: "Réseau",
     items: [
       { href: "/gestion/installateurs", label: "Installateurs", icon: HardHat, match: starts("/gestion/installateurs") },
+      { href: "/gestion/partenaires", label: "Partenaires", icon: Handshake, match: starts("/gestion/partenaires") },
+      { href: "/gestion/entente", label: "Entente", icon: FileSignature, match: starts("/gestion/entente") },
+      { href: "/gestion/photos", label: "Photos à vérifier", icon: Camera, match: starts("/gestion/photos") },
       { href: "/gestion/candidatures", label: "Candidatures", icon: Inbox, match: starts("/gestion/candidatures"), badge: "candidatures" },
     ],
   },

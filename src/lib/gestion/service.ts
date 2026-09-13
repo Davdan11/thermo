@@ -33,6 +33,9 @@ import {
   type StatusAction,
 } from "./offers";
 import { mutateGestion, readCandidatures, readGestion } from "./store";
+// Volet A : blocages des offres (entente, RBQ, assurance, fin de partenariat) et niveaux dans le classement.
+import { loadBlockers } from "./partenaires/blockers";
+import { partnerMatchInfo } from "./partenaires/network";
 import { buildOfferSummary, summaryHeadline, type OfferSummary } from "./summary";
 import type { InstallerInput, JobInput } from "./forms";
 import type { Candidature, GeoPoint, Installer, Job, JobClient, Offer } from "./types";
@@ -94,7 +97,8 @@ export async function loadJobPage(id: string, now = new Date()): Promise<JobPage
     job,
     installers: data.installers,
     assigned: data.installers.find((i) => i.id === job.assignedInstallerId) ?? null,
-    match: open ? matchInstallers(job, data.installers, data.jobs, matchOpts(now, blocks)) : null,
+    // Volets A et B : partenaires bloqués (entente, RBQ, assurance, paiement en retard) affichés avec la raison ; points de niveau.
+    match: open ? matchInstallers(job, data.installers, data.jobs, { ...matchOpts(now, blocks), partner: await partnerMatchInfo(data.installers, data.jobs, now) }) : null,
   };
 }
 
@@ -201,6 +205,8 @@ export async function sendOffers(jobId: string, installerIds: string[], hours: n
   const errors: string[] = [];
   // Volet B : aucune offre à un installateur en retard de paiement, même choisi à la main (levée dès le paiement).
   const blocks = await loadPaymentBlockers(now);
+  // Volet A : aucune offre sans entente signée, licence RBQ et assurance valides, partenariat actif.
+  const blockersOf = await loadBlockers(now);
   const prepared = await mutateGestion((data) => {
     const job = data.jobs.find((j) => j.id === jobId);
     if (!job) return { result: [], changed: false };
@@ -214,6 +220,11 @@ export async function sendOffers(jobId: string, installerIds: string[], hours: n
       const block = blocks.get(iid); // volet B
       if (block) {
         errors.push(`${installer.company} : offres en pause, ${block.reason}.`);
+        continue;
+      }
+      const blocked = blockersOf(installer); // volet A
+      if (blocked.length) {
+        errors.push(`${installer.company} : ${blocked.map((b) => b.label).join(", ")}`);
         continue;
       }
       const token = newToken();
@@ -363,7 +374,7 @@ export async function respondToOffer(token: string, decision: "accepter" | "refu
     ]);
     return { state: "accepte" };
   }
-  const next = matchInstallers(job, installers, jobs, matchOpts(now, await loadPaymentBlockers(now))).ranked.slice(0, 3).map((c) => c.installer.company);
+  const next = matchInstallers(job, installers, jobs, { ...matchOpts(now, await loadPaymentBlockers(now)), partner: await partnerMatchInfo(installers, jobs, now) }).ranked.slice(0, 3).map((c) => c.installer.company);
   await notifyOwner({
     jobNumber: job.number,
     headline: summaryHeadline(summary),
