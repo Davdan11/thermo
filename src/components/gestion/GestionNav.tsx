@@ -12,7 +12,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Banknote, Boxes, CalendarClock, PhoneCall, Send, ShieldCheck, Repeat, MapPinned, Megaphone, Target, UserPlus, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
+import { Banknote, Boxes, CalendarClock, PhoneCall, Send, ShieldCheck, Sparkles, TrendingUp, Repeat, MapPinned, Megaphone, Target, UserPlus, CalendarDays, Camera, ChartColumn, Columns3, FileSignature, Handshake, LifeBuoy, Workflow, Ellipsis, FileText, HardHat, House, Inbox, ListChecks, MessageSquare, Plus, Search, Settings2, Users, Wrench } from "lucide-react";
 import { openSearch } from "./crm/CommandSearch";
 import { openQuickActions } from "./crm/QuickActions";
 import { Sheet } from "./kit/Sheet";
@@ -71,6 +71,8 @@ const GROUPS: Array<{ label: string; items: Item[] }> = [
     label: "Analyse",
     items: [
       { href: "/gestion/statistiques", label: "Statistiques", icon: ChartColumn, match: starts("/gestion/statistiques") },
+      { href: "/gestion/rentabilite", label: "Rentabilité", icon: TrendingUp, match: starts("/gestion/rentabilite") },
+      { href: "/gestion/assistant", label: "Assistant IA", icon: Sparkles, match: starts("/gestion/assistant") },
       { href: "/gestion/presence", label: "Présence", icon: Megaphone, match: starts("/gestion/presence") },
       { href: "/gestion/publicite", label: "Publicité", icon: Target, match: starts("/gestion/publicite") },
       { href: "/gestion/reglages", label: "Réglages", icon: Settings2, match: starts("/gestion/reglages") },

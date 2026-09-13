@@ -37,6 +37,12 @@ export default async function ReglagesPage() {
       ) : null}
       {/* Volet C : radar à occasions, probabilités de la prévision, modèles de tâches. */}
       <VentesReglages />
+      {/* Chantier A : tarifs de l'assistant IA et dépenses publicitaires, réglés dans leurs pages. */}
+      <Card title="Assistant IA et rentabilité" sub="Réglés dans leurs pages." className="as-reglages">
+        <p className="g-hint" style={{ margin: 0 }}>
+          Tarifs et journal de l’assistant : <Link href="/gestion/assistant#tarifs">Assistant IA</Link>. Dépenses publicitaires par canal et par mois : <Link href="/gestion/rentabilite">Rentabilité</Link>.
+        </p>
+      </Card>
     </div>
   );
 }
