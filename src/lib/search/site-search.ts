@@ -76,13 +76,13 @@ function buildIndex(): Entry[] {
     const cap = p.model.nominalCapacityBtu ? `${p.model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU` : "";
     entries.push({
       kind: "modele",
-      title: `${p.brand.name} ${p.model.name}`,
+      title: p.names.full,
       subtitle: [p.systemTypeLabel, cap, p.outdoorModelNumber ?? p.model.modelNumber].filter(Boolean).join(" · "),
       href: `/produit/${p.model.slug}`,
       imageUrl: p.imageUrl,
-      key: normalizeQuery(`${p.brand.name} ${p.model.name}`),
+      key: normalizeQuery(p.names.full),
       // Capacité sous ses deux écritures (« 12000 » et « 12k ») pour les requêtes du type « tosot 12000 ».
-      alt: normalizeQuery(`${p.model.modelNumber} ${p.outdoorModelNumber ?? ""} ${p.systemTypeLabel} ${p.model.nominalCapacityBtu ?? ""} ${p.model.nominalCapacityBtu ? Math.round(p.model.nominalCapacityBtu / 1000) + "k" : ""}`),
+      alt: normalizeQuery(`${p.model.name} ${p.model.modelNumber} ${p.outdoorModelNumber ?? ""} ${p.systemTypeLabel} ${p.model.nominalCapacityBtu ?? ""} ${p.model.nominalCapacityBtu ? Math.round(p.model.nominalCapacityBtu / 1000) + "k" : ""}`),
       weight: 1,
     });
   }

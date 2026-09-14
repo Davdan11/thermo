@@ -38,7 +38,7 @@ export function SimilarModels({ models }: SimilarModelsProps) {
                   {product.imageUrl ? (
                     <Image
                       src={product.imageUrl}
-                      alt={`${product.brand.name} ${product.model.name}`}
+                      alt={product.names.full}
                       fill
                       sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 90vw"
                       className="sv2f-card-img object-contain"
@@ -63,16 +63,16 @@ export function SimilarModels({ models }: SimilarModelsProps) {
                   {product.brand.name}
                 </p>
                 <p className="sv2f-card-name m-0 mt-1 text-[17px] font-semibold leading-snug" style={{ letterSpacing: "-0.02em", overflowWrap: "anywhere" }}>
-                  {product.model.name}
+                  {product.names.short}
                 </p>
                 <p className="m-0 mt-1.5 flex flex-wrap items-center gap-1.5 text-[13px]" style={{ color: MUTE }}>
                   <span>{product.systemTypeLabel}</span>
-                  {capacityLabel && (
+                  {product.names.short !== product.model.modelNumber && (
                     <>
                       <span aria-hidden="true" style={{ color: LINE }}>
                         ·
                       </span>
-                      <span>{capacityLabel}</span>
+                      <span>{product.model.modelNumber}</span>
                     </>
                   )}
                 </p>

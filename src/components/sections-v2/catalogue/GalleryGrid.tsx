@@ -180,7 +180,7 @@ function GalleryCard({
           {product.imageUrl ? (
             <Image
               src={product.imageUrl}
-              alt={`${brand.name} ${model.name}`}
+              alt={product.names.full}
               width={480}
               height={360}
               sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 400px"
@@ -216,11 +216,11 @@ function GalleryCard({
           </span>
           <h3 className="m-0 mt-1.5 text-[19px] font-semibold leading-snug" style={{ letterSpacing: "-0.025em", color: INK }}>
             <Link href={`/produit/${model.slug}`} className="after:absolute after:inset-0 after:z-10 focus-visible:underline focus-visible:outline-none">
-              {brand.name} {model.name}
+              {product.names.full}
             </Link>
           </h3>
           <p className="m-0 mt-1 text-[12.5px] leading-snug" style={{ color: "rgba(10,20,25,0.55)" }}>
-            {model.nominalCapacityBtu ? `${Math.round(model.nominalCapacityBtu / 1000)} 000 BTU` : "Capacité non publiée"}
+            {product.names.short === model.modelNumber ? "Capacité non publiée" : model.modelNumber}
             {model.certifiedPairings ? ` · ${model.certifiedPairings} jumelage${model.certifiedPairings > 1 ? "s" : ""} certifié${model.certifiedPairings > 1 ? "s" : ""}` : ""}
             {product.refrigerant ? ` · ${product.refrigerant}` : ""}
           </p>

@@ -1,4 +1,5 @@
 import { seriesDisplayName } from "@/lib/data/series-label";
+import { productNames } from "@/lib/data/product-name";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import type { SeoModel } from "@/lib/seo/programmatic";
@@ -26,6 +27,8 @@ function decimalsOf(v: number): number {
 
 export function ProductHeader({ detail, seo = null }: ProductHeaderProps) {
   const { model, brand, series, configuration } = detail;
+  // Nom du titre : série commerciale et capacité ; le numéro de modèle reste dans la cellule « Modèle ».
+  const names = productNames({ brand: brand.name, seriesName: series.name, seriesSlug: series.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber });
 
   // Regroupe les fiches sœurs par capacité ; garde par capacité la fiche la mieux documentée (jamais une puce par machine).
   const chips: CapacityChip[] = (() => {
@@ -67,7 +70,7 @@ export function ProductHeader({ detail, seo = null }: ProductHeaderProps) {
       brandLogo={brandLogoPath(brand.slug)}
       seriesLabel={seriesDisplayName(series.name, series.slug)}
       seriesSlug={series.slug}
-      modelName={model.name}
+      modelName={names.short}
       modelNumber={model.modelNumber}
       typeLabel={detail.systemTypeLabel}
       capacityBtu={model.nominalCapacityBtu ?? null}
