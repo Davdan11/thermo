@@ -20,6 +20,7 @@ import { registry } from "../registry";
 import type { CatalogueProduct } from "./catalogue";
 import { getWarrantiesForModel } from "./products";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
+import { productNames } from "../product-name";
 import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
 import { resolveMinHeatingTemp } from "@/lib/thermomatch/min-temp-brochures";
@@ -217,6 +218,7 @@ export function getProductDetail(slug: string): ProductDetail | null {
         brand: b,
         configuration: cfg,
         systemTypeLabel: SYSTEM_TYPE_LABELS[m.systemType],
+        names: productNames({ brand: b.name, seriesName: ser?.name, seriesSlug: ser?.slug, capacityBtu: m.nominalCapacityBtu, modelNumber: m.modelNumber }),
         isColdClimate: m.categories.includes("cold-climate"),
         imageUrl: m.imageUrl ?? ser?.imageUrl ?? null,
         refrigerant,

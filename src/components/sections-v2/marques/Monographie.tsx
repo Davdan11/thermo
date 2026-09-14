@@ -300,7 +300,7 @@ function Fiche({ product, index }: { product: CatalogueProduct; index: number })
         {product.imageUrl ? (
           <Image
             src={product.imageUrl}
-            alt={`${brand.name} ${model.name}`}
+            alt={product.names.full}
             width={480}
             height={360}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -330,11 +330,11 @@ function Fiche({ product, index }: { product: CatalogueProduct; index: number })
         </p>
         <h3 style={{ fontFamily: DISPLAY, fontSize: 19, fontWeight: 600, letterSpacing: "-0.03em", lineHeight: 1.2, margin: "8px 0 0", color: C.ink }}>
           <Link href={`/produit/${model.slug}`} className="after:absolute after:inset-0" style={{ color: "inherit" }}>
-            {brand.name} {model.name}
+            {product.names.full}
           </Link>
         </h3>
         <p className="text-[12.5px] leading-snug" style={{ fontFamily: MONO, color: C.mute, margin: "8px 0 0" }}>
-          {model.nominalCapacityBtu ? `${Math.round(model.nominalCapacityBtu / 1000)} 000 BTU` : "Capacité non publiée"}
+          {product.names.short === model.modelNumber ? "Capacité non publiée" : model.modelNumber}
           {model.certifiedPairings ? ` · ${model.certifiedPairings} jumelage${model.certifiedPairings > 1 ? "s" : ""} certifié${model.certifiedPairings > 1 ? "s" : ""}` : ""}
           {product.refrigerant ? ` · ${product.refrigerant}` : ""}
         </p>

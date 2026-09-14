@@ -5,6 +5,7 @@ import { registry } from "@/lib/data/registry";
 import { SITE_URL, clampDescription, fitTitle, getBreadcrumbSchema, getProductSchema } from "@/lib/seo";
 import { getSeoModel, indexSlug } from "@/lib/seo/programmatic";
 import { seriesDisplayName } from "@/lib/data/series-label";
+import { productNames, productTitleCandidates } from "@/lib/data/product-name";
 import { ProductSeoLinks } from "@/components/seo/ProductSeoLinks";
 import { PriceSection } from "@/components/product/PriceSection";
 import { brochureForProduct } from "@/lib/data/brochures";
@@ -57,25 +58,22 @@ export async function generateMetadata({
   const detail = getProductDetail(slug);
   if (!detail) return {};
 
-  const { model, brand } = detail;
+  const { model, brand, series } = detail;
+  const nameInput = { brand: brand.name, seriesName: series.name, seriesSlug: series.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber };
+  const names = productNames(nameInput);
   const seo = getSeoModel(slug);
   const canonicalSlug = seo ? indexSlug(seo) : slug;
   const indexable = brand.activeInQuebec && model.status === "published";
 
   const facts: string[] = [];
-  if (model.nominalCapacityBtu) facts.push(`${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU nominal`);
+  // La capacité nominale est déjà dans le nom (« 12 000 BTU »).
   if (seo?.h5Btu) facts.push(`${seo.h5Btu.toLocaleString("fr-CA")} BTU/h à -15 °C`);
   if (seo && seo.logisVertDollars > 0) facts.push(`LogisVert ${seo.logisVertDollars.toLocaleString("fr-CA")} $`);
   if (seo?.hspf2) facts.push(`HSPF2 ${seo.hspf2.toLocaleString("fr-CA")}`);
   if (seo?.seer2) facts.push(`SEER2 ${seo.seer2.toLocaleString("fr-CA")}`);
-  // Titre ≤ ~60 caractères avec le gabarit : nom commercial complet si possible, sinon marque + numéro de modèle.
-  const title = fitTitle(
-    `Thermopompe ${brand.name} ${model.name}`,
-    `${brand.name} ${model.name}`,
-    `Thermopompe ${brand.name} ${model.modelNumber}`,
-    `${brand.name} ${model.modelNumber}`,
-  );
-  const fullName = `${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`}`;
+  // Titre ≤ ~60 caractères avec le gabarit : marque, nom commercial et capacité, puis le numéro (un titre par fiche).
+  const title = fitTitle(...productTitleCandidates(nameInput));
+  const fullName = names.withNumber;
   const kind = detail.systemTypeLabel.toLowerCase();
   // ≤ 158 caractères sans phrase coupée : on retire d'abord la mention ENERGY STAR, puis les indices
   // secondaires en fin de liste (SEER2, HSPF2…) ; la troncature « … » ne sert qu'en dernier recours.
@@ -103,15 +101,15 @@ export async function generateMetadata({
     alternates: { canonical: `${SITE_URL}/produit/${canonicalSlug}` },
     robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: {
-      title: `Thermopompe ${brand.name} ${model.name}`,
+      title: `Thermopompe ${names.full}`,
       description,
       url: `${SITE_URL}/produit/${canonicalSlug}`,
       siteName: "Thermopompes À Vendre.ca",
       locale: "fr_CA",
       type: "website",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: `${brand.name} ${model.name}` }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: names.full }],
     },
-    twitter: { card: "summary_large_image", title: `Thermopompe ${brand.name} ${model.name}`, description, images: [ogImage] },
+    twitter: { card: "summary_large_image", title: `Thermopompe ${names.full}`, description, images: [ogImage] },
   };
 }
 
@@ -127,6 +125,7 @@ export default async function ProductPage({
   if (!detail) notFound();
 
   const { brand, series, model, configuration, performanceProfile } = detail;
+  const names = productNames({ brand: brand.name, seriesName: series.name, seriesSlug: series.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber });
   // Brochure officielle : adresse du modèle ou de la série, sinon retrouvée par les tables d'enrichissement.
   const brochureUrl = brochureForProduct(detail);
   const imageUrl = model.imageUrl ?? series.imageUrl ?? null;
@@ -144,10 +143,10 @@ export default async function ProductPage({
   if (seoModel && seoModel.logisVertDollars > 0) additionalProperties.push({ name: "Subvention LogisVert", value: `${seoModel.logisVertDollars} $` });
 
   const productSchema = getProductSchema({
-    name: `${brand.name} ${model.name}`,
+    name: names.full,
     brand: brand.name,
     model: model.modelNumber,
-    description: `Thermopompe ${detail.systemTypeLabel.toLowerCase()} ${brand.name} ${model.name}${model.name.includes(model.modelNumber) ? "" : ` (${model.modelNumber})`}`.replace(/\s+/g, " "),
+    description: `Thermopompe ${detail.systemTypeLabel.toLowerCase()} ${names.withNumber}`,
     imageUrl,
     slug,
     category: "Thermopompe",
@@ -158,7 +157,7 @@ export default async function ProductPage({
     { name: "Accueil", url: SITE_URL },
     { name: "Marques", url: `${SITE_URL}/marques` },
     { name: brand.name, url: `${SITE_URL}/marques/${brand.slug}` },
-    { name: model.name, url: `${SITE_URL}/produit/${slug}` },
+    { name: names.short, url: `${SITE_URL}/produit/${slug}` },
   ]);
 
   /* Cartouche « Résumé rapide » : mêmes lignes qu'avant. */
@@ -210,7 +209,7 @@ export default async function ProductPage({
                 {/* Alerte LogisVert : prévenir le visiteur si le montant de ce modèle change */}
                 <LogisVertAlertForm
                   target={{ kind: "model", modelId: model.id }}
-                  label={model.name.toLowerCase().startsWith(brand.name.toLowerCase()) ? model.name : `${brand.name} ${model.name}`}
+                  label={names.full}
                   tone="dark"
                   className="-mt-6 rounded-[3px]! lg:-mt-10"
                 />
@@ -281,7 +280,7 @@ export default async function ProductPage({
             <SheetTrust />
           </div>
           <SheetCta
-            title={`Ce ${brand.name} ${model.name} convient-il à votre maison ?`}
+            title={`Ce ${names.full} convient-il à votre maison ?`}
             text="ThermoMatch vérifie la capacité certifiée à -15 °C par rapport à votre superficie, votre isolation et votre zone climatique, puis compare avec les autres marques. Trois machines vraiment adaptées, gratuitement, sans parti pris."
           />
         </div>

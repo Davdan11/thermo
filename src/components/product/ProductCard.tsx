@@ -50,7 +50,7 @@ export function ProductCard({
         {product.imageUrl ? (
           <Image
             src={product.imageUrl}
-            alt={`${brand.name} ${model.name}`}
+            alt={product.names.full}
             width={480}
             height={360}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -89,11 +89,11 @@ export function ProductCard({
             href={`/produit/${model.slug}`}
             className="after:absolute after:inset-0 focus-visible:outline-none focus-visible:underline"
           >
-            {brand.name} {model.name}
+            {product.names.full}
           </Link>
         </h3>
         <p className="text-[13px] text-[#6B7280] mb-3">
-          {model.nominalCapacityBtu ? `${Math.round(model.nominalCapacityBtu / 1000)}\u2009000 BTU` : "Capacité non publiée"}
+          {product.names.short === model.modelNumber ? "Capacité non publiée" : model.modelNumber}
           {model.certifiedPairings ? ` · ${model.certifiedPairings} jumelage${model.certifiedPairings > 1 ? "s" : ""} certifié${model.certifiedPairings > 1 ? "s" : ""}` : ""}
           {product.refrigerant ? ` · ${product.refrigerant}` : ""}
         </p>

@@ -12,6 +12,7 @@ import type {
 } from "../types";
 import type { SystemType } from "../types/enums";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
+import { productNames } from "../product-name";
 import { registry } from "../registry";
 import type { CatalogueProduct } from "./catalogue";
 import { getWarrantiesForModel } from "./products";
@@ -204,6 +205,7 @@ export function getBrandDetail(slug: string): BrandDetail | null {
         brand,
         configuration,
         systemTypeLabel: SYSTEM_TYPE_LABELS[model.systemType],
+        names: productNames({ brand: brand.name, seriesName: ser?.name, seriesSlug: ser?.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber }),
         isColdClimate: model.categories.includes("cold-climate"),
         imageUrl: model.imageUrl ?? ser?.imageUrl ?? null,
         refrigerant,

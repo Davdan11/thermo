@@ -8,6 +8,7 @@
 import type { ProductModel, SystemConfiguration, Brand, ProductSeries, OutdoorUnit } from "../types";
 import type { SystemType } from "../types/enums";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
+import { productNames, type ProductNames } from "../product-name";
 import { registry } from "../registry";
 import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
@@ -82,6 +83,8 @@ export interface CatalogueProduct {
   brand: Brand;
   configuration: SystemConfiguration | null;
   systemTypeLabel: string;
+  /** Nom tel qu'on le cherche : marque, série commerciale, capacité (voir product-name.ts). */
+  names: ProductNames;
   isColdClimate: boolean;
   /** Official manufacturer image URL (from model or series) */
   imageUrl: string | null;
@@ -372,6 +375,7 @@ export function getCatalogueModels(
       brand,
       configuration,
       systemTypeLabel: SYSTEM_TYPE_LABELS[model.systemType],
+      names: productNames({ brand: brand.name, seriesName: series?.name, seriesSlug: series?.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber }),
       isColdClimate: model.categories.includes("cold-climate"),
       imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
       refrigerant,
@@ -492,6 +496,7 @@ export function getAllCatalogueProducts(): CatalogueProduct[] {
       brand,
       configuration,
       systemTypeLabel: SYSTEM_TYPE_LABELS[model.systemType],
+      names: productNames({ brand: brand.name, seriesName: series?.name, seriesSlug: series?.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber }),
       isColdClimate: model.categories.includes("cold-climate"),
       imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
       refrigerant,

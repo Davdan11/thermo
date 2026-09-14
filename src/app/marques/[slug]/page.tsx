@@ -82,7 +82,7 @@ export default async function BrandPage({
         "@type": "ListItem",
         position: index + 1,
         url: `${SITE_URL}/produit/${model.model.slug}`,
-        name: `${brandName} ${model.model.name}`,
+        name: model.names.full,
       })).slice(0, 50) // Limit to 50 to avoid massive JSON-LD
     }
   };
