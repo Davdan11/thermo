@@ -144,6 +144,15 @@ const OFFICIAL_HOSTS = [
   "rheem.com", // Rheem Manufacturing (Rheem, Ruud)
   "myrheem.com", // dépôt de documents de Rheem (files.myrheem.com)
   "lennox.com", // Lennox International
+  "lg.com", // LG Electronics (media.us.lg.com, médiathèque de LG USA)
+  "geappliancesairandwater.com", // GE Appliances, division Air & Water
+  "hisense-canada.com", // Hisense Canada
+  "samsung-files.s3.us-east-1.amazonaws.com", // compartiment S3 de Samsung HVAC America (lié depuis samsunghvac.com)
+  "s3.amazonaws.com/samsung-files/", // même compartiment Samsung, autre forme d'adresse
+  "images.salsify.com/image/upload/s--vRgGO7NQ--/sgscvw3lyrbddnwvydow.pdf", // fiche GE Appliances liée depuis geappliancesairandwater.com (ce fichier seul)
+  "images.salsify.com/image/upload/s--tgur6-EC--/h3hrzzagfpq56kcd9hkb.pdf", // fiche GE Appliances liée depuis geappliancesairandwater.com (ce fichier seul)
+  "images.salsify.com/image/upload/s--BVWSPdWN--/a7mf9icabbwevmhea6r1.pdf", // fiche GE Appliances liée depuis geappliancesairandwater.com (ce fichier seul)
+  "images.salsify.com/image/upload/s--hCS4P9U7--/n1enfg18lnjavfx9nemv.pdf", // fiche GE Appliances liée depuis geappliancesairandwater.com (ce fichier seul)
   "cdn.shopify.com/s/files/1/0253/4775/2018/", // boutique Shopify de Gree Canada (gree.ca), et elle seule
 ];
 
