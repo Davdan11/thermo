@@ -3,7 +3,8 @@
    brochures et fiches techniques des fabricants (PDF du dépôt).
 
    Données : src/lib/data/min-heating-temps.json — une ligne par unité
-   extérieure, avec le fichier source, la page et la citation exacte.
+   extérieure, avec la source (PDF du dépôt, ou adresse https d'un document
+   ou d'une page officielle du fabricant), la page et la citation exacte.
    Aucune valeur n'est déduite : seuls les chiffres imprimés dans le
    document sont retenus (°F convertis en °C, arrondis à l'entier).
    ================================================================== */
@@ -17,6 +18,9 @@ export interface MinHeatingTempEntry {
   sourceFile: string;
   page?: number;
   quote: string;
+  /** Relevé web (2026-09-14) : « modele » si le document nomme ce numéro, « serie » s'il ne vise que la série. */
+  confidence?: "modele" | "serie";
+  note?: string;
 }
 
 const ENTRIES = rawEntries as MinHeatingTempEntry[];

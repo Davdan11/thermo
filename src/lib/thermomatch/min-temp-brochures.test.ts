@@ -77,6 +77,15 @@ describe("minHeatingTempFromBrochures", () => {
     expect(minHeatingTempFromBrochures({ outdoorModel: "OFLX1-H36A-O", brand: "Ouellet" })).toBe(-30);
   });
 
+  it("relevé web du 2026-09-14 : valeurs publiées pour des modèles que le moteur recommande", () => {
+    expect(minHeatingTempFromBrochures({ outdoorModel: "MHSZ124DA", brand: "Conforto" })).toBe(-30);
+    expect(minHeatingTempFromBrochures({ outdoorModel: "CU-2Z18ABUC", brand: "Panasonic" })).toBe(-26);
+    expect(minHeatingTempFromBrochures({ outdoorModel: "500004496", brand: "Convectair" })).toBe(-30);
+    expect(minHeatingTempFromBrochures({ outdoorModel: "SL25XPV-024-230A", brand: "Lennox" })).toBe(-20);
+    // Page Fujitsu J-7S incohérente (°F et °C ne concordent pas) : aucune valeur plutôt qu'une valeur douteuse.
+    expect(minHeatingTempFromBrochures({ outdoorModel: "AOUK024SSAN7", brand: "Fujitsu" })).toBeNull();
+  });
+
   it("expose la source et la citation", () => {
     const e = minHeatingTempEntryFromBrochures({ outdoorModel: "PUMY-P36NKMU4", brand: "Mitsubishi Electric" });
     expect(e?.minHeatingTempC).toBe(-25);
@@ -85,8 +94,22 @@ describe("minHeatingTempFromBrochures", () => {
   });
 });
 
+/** Sources web acceptées : documents et pages officiels des fabricants (ou de leur distributeur officiel), jamais un revendeur. */
+const OFFICIAL_HOSTS = [
+  "moovair.com",
+  "na.panasonic.ca",
+  "d36aiwq7h8e0h3.cloudfront.net", // documents Carrier (inRiver)
+  "dde2yk4t993pn.cloudfront.net", // documents Midea
+  "daikincomfort.com",
+  "tech.lennoxintl.com",
+  "carrier.com",
+  "keeprite.com",
+  "confortohvac.com",
+  "senville.com",
+];
+
 describe("min-heating-temps.json", () => {
-  it("chaque ligne est complète, plausible et pointe vers un PDF présent", () => {
+  it("chaque ligne est complète, plausible et pointe vers un PDF présent ou une source officielle", () => {
     expect(entries.length).toBeGreaterThan(0);
     for (const e of entries) {
       expect(e.outdoorModel.length).toBeGreaterThan(3);
@@ -96,7 +119,13 @@ describe("min-heating-temps.json", () => {
       expect(e.minHeatingTempC).toBeLessThanOrEqual(0);
       expect(e.quote.length).toBeGreaterThan(0);
       expect(e.quote.length).toBeLessThanOrEqual(160);
-      expect(existsSync(path.join(process.cwd(), e.sourceFile))).toBe(true);
+      if (/^https:\/\//.test(e.sourceFile)) {
+        const host = new URL(e.sourceFile).hostname;
+        expect(OFFICIAL_HOSTS.some((h) => host === h || host.endsWith(`.${h}`)), e.sourceFile).toBe(true);
+      } else {
+        expect(e.sourceFile).toMatch(/\.pdf$/i);
+        expect(existsSync(path.join(process.cwd(), e.sourceFile)), e.sourceFile).toBe(true);
+      }
     }
   });
 });

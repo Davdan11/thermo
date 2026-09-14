@@ -1555,5 +1555,162 @@
     "sourceFile": "public/brochures/trane/ODR-SVX024B-EN_04172026.pdf",
     "page": 6,
     "quote": "Table 1. Operating range — Heating 1.5 – 5 Ton 0°F – 66°F"
+  },
+  {
+    "outdoorModel": "500004496",
+    "brand": "Convectair",
+    "series": "Legato",
+    "minHeatingTempC": -30,
+    "sourceFile": "public/images/products/_official-sources/convectair/Legato_SellSheet_EN.pdf",
+    "page": 1,
+    "quote": "Performance up to … -30ºC -22ºF Heating",
+    "confidence": "modele",
+    "note": "Fiche de vente officielle (déjà dans le dépôt). Le chiffre est dans un bandeau « Performance up to » (p. 1), pas dans un tableau technique ; le n° 500004496 (24K BTU Outdoor Unit) est listé p. 2 du même document."
+  },
+  {
+    "outdoorModel": "MSHMA18R2AN1",
+    "brand": "Moovair",
+    "series": "Central-Moov",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://moovair.com/wp-content/uploads/SUB_M_SHMA18_0_OM1_EN_FR.pdf",
+    "page": 1,
+    "quote": "OUTDOOR TEMPERATURE OPERATING RANGE … Heating / Chauffage -30~24 (°C) -22~75 (°F)",
+    "confidence": "modele",
+    "note": "Submittal Moovair/Master Group qui nomme MSHMA18R2AN1. Colonnes °C puis °F ; le séparateur « ~ » est perdu à l'extraction du texte. Note 4 du document : « System has no low temperature cutout »."
+  },
+  {
+    "outdoorModel": "CU-2Z18ABUC",
+    "brand": "Panasonic",
+    "series": "Multizone",
+    "minHeatingTempC": -26,
+    "sourceFile": "https://na.panasonic.ca/indoor-air-quality/hvac/mini-split/multi-zone-outdoor-condenser-2-zone-cu-2z18abuc",
+    "quote": "-26 °C (-15 °F) Cold climate heating operation",
+    "confidence": "modele",
+    "note": "Page produit officielle Panasonic Canada propre à ce numéro (HTML, pas une fiche technique). Le submittal PDF lié est un scan en images, illisible sans téléchargement."
+  },
+  {
+    "outdoorModel": "37MUHAQ30AA3",
+    "brand": "Carrier",
+    "series": "45M",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://d36aiwq7h8e0h3.cloudfront.net/userfiles/inriver/documents/3u/ha/-o/37muhaq30_45muaaq30_xo-ahu3.pdf",
+    "page": 1,
+    "quote": "Operating Range … Heating Outdoor DB Min - Max °F(°C) -22~75(-30~24)",
+    "confidence": "modele",
+    "note": "Submittal Carrier pour le jumelage 37MUHAQ30AA3 / 45MUAAQ30XX3 (l'un des jumelages proposés par le moteur). Hébergé sur le CDN de documents Carrier (inRiver)."
+  },
+  {
+    "outdoorModel": "MO1HU-H36B-2A",
+    "brand": "Midea",
+    "series": "MAS",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://dde2yk4t993pn.cloudfront.net/downloadsv2/R454B-US/Single-zone%20Light%20commercial/Submittal/High%20Static%20Slim%20Duct/High%20Tier%20-%20Extreme%20Heat/MDHHS-H36B-2A%20&%20MO1HU-H36B-2A.pdf",
+    "page": 1,
+    "quote": "PERFORMANCE of Heating … Standard Operating Range(℉/℃) -22~75 (-30~24)",
+    "confidence": "modele",
+    "note": "Submittal Midea « Slim Duct Xtreme Heat » pour le jumelage MDHHS-H36B-2A / MO1HU-H36B-2A. Le moteur jumelle plutôt MCDHS-H36B-2A (cassette) : même unité extérieure, autre unité intérieure."
+  },
+  {
+    "outdoorModel": "DH9VSA361CA",
+    "brand": "Daikin",
+    "series": "DH9VSA",
+    "minHeatingTempC": -29,
+    "sourceFile": "https://daikincomfort.com/docs/default-source/fit-aurora-heat-pump-dh9vs/ss-dh9vs-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -20 to 70 (-28.9 to 21.1)",
+    "confidence": "modele",
+    "note": "SS-DH9VS-R32 (10/25). Les colonnes 241CA*, 361CA*, 4810A*, 6010A* partagent une seule valeur de chauffage (cellule fusionnée) ; c'est la seule plage de chauffage imprimée dans le document. Un extrait de moteur de recherche (autre révision ?) attribuait -10 °F au 361CA : vérifier visuellement la p. 3."
+  },
+  {
+    "outdoorModel": "DH9VSA241CA",
+    "brand": "Daikin",
+    "series": "DH9VSA",
+    "minHeatingTempC": -29,
+    "sourceFile": "https://daikincomfort.com/docs/default-source/fit-aurora-heat-pump-dh9vs/ss-dh9vs-r32.pdf",
+    "page": 3,
+    "quote": "Ambient Operation Range Heating (°FDB(°CDB)) -20 to 70 (-28.9 to 21.1)",
+    "confidence": "modele",
+    "note": "Même tableau que DH9VSA361CA (cellule fusionnée sur les 4 colonnes)."
+  },
+  {
+    "outdoorModel": "SL25XPV-024-230A",
+    "brand": "Lennox",
+    "series": "Dave Lennox Signature SL25XPV",
+    "minHeatingTempC": -20,
+    "sourceFile": "https://tech.lennoxintl.com/c03e7o14l/viu12ch2uv/ehb_sl25xpv_2109.pdf",
+    "page": 6,
+    "quote": "will not operate in the heating mode when … at or below –4°F",
+    "confidence": "modele",
+    "note": "AMBIGU. Section « Heating Mode (Low Temperature Protection) » : aucun démarrage à –4 °F (-20 °C) ou moins, mais une unité déjà en marche continue jusqu'à –15 °F (-26 °C). J'ai retenu -20 °C (démarrage garanti), pas -26 °C (arrêt). Le document liste SL25XPV-024."
+  },
+  {
+    "outdoorModel": "37MPRAQ18AA3",
+    "brand": "Carrier",
+    "series": "45M (Infinity 37MPRA)",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://www.carrier.com/us/en/residential/ductless-mini-splits/37mpra/",
+    "quote": "delivers reliable heating down to -22°F and consistent cooling up to 122°F",
+    "confidence": "serie",
+    "note": "Page produit officielle de la série 37MPRA ; la taille 18 n'y est pas nommée. La page Carrier Canada dit « running 100% to -22° F to 86° F temperature range »."
+  },
+  {
+    "outdoorModel": "D5CMHAH36EAK",
+    "brand": "Keeprite",
+    "series": "D5CMHA",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://www.keeprite.com/en/us/products/ductless-systems/d5cmha",
+    "quote": "Heating operating range -22°~75° F (-30°~24° C)",
+    "confidence": "serie",
+    "note": "Page produit officielle de la série D5CMHA (multizone) ; le numéro complet n'y est pas imprimé."
+  },
+  {
+    "outdoorModel": "D5CMHAH48FAK",
+    "brand": "Keeprite",
+    "series": "D5CMHA",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://www.keeprite.com/en/us/products/ductless-systems/d5cmha",
+    "quote": "Heating operating range -22°~75° F (-30°~24° C)",
+    "confidence": "serie",
+    "note": "Même page que D5CMHAH36EAK ; la taille 48 y est citée, pas le numéro complet."
+  },
+  {
+    "outdoorModel": "DLCSRBH24AAK",
+    "brand": "Keeprite",
+    "series": "DLCSRB",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://www.keeprite.com/en/us/products/ductless-systems/dlcsrb",
+    "quote": "Heating operating range -22° ~ 86° F (-30° ~ 30° C)",
+    "confidence": "serie",
+    "note": "Valeur donnée pour les tailles 9-24 en 208/230 V ; la même page donne -25 °C pour les 9-12 en 115 V et les 30-36. La taille 24 n'existe qu'en 208/230 V selon cette page."
+  },
+  {
+    "outdoorModel": "MHSZ124DA",
+    "brand": "Conforto",
+    "series": "MH (Maximum)",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://confortohvac.com/fr-ca/product/systemes-mini-splits-sans-conduits-maximum/",
+    "quote": "plage de fonctionnement du chauffage extérieur de -30°C (-22°F) à 30°C (86°F)",
+    "confidence": "serie",
+    "note": "Page officielle Conforto de la série Maximum (le numéro MHSZ124DA n'y figure pas). La page du fabricant EMI (ECR International), https://emiductless.com/ductless-mini-split-systems/maximum-heat-pump-series/, dit aussi « outdoor heating operation range of -22°F to 86°F » pour les MHSZ."
+  },
+  {
+    "outdoorModel": "SENA-36HF-MOB",
+    "brand": "Senville",
+    "series": "SENA (Aura multizone)",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://senville.com/36000-btu-quad-zone-mini-split-air-conditioner-sena-36hf-q/",
+    "quote": "Minimum Outdoor Heating Temperature: -22°F / -30°C",
+    "confidence": "serie",
+    "note": "Page officielle Senville du système SENA-36HF/Q ; l'unité extérieure n'y est pas nommée (Senville vend des pièces « SENA/36HF/MOB » pour ce système)."
+  },
+  {
+    "outdoorModel": "DLCPRBH18AAK",
+    "brand": "Keeprite",
+    "series": "DLCPRB",
+    "minHeatingTempC": -25,
+    "sourceFile": "https://www.keeprite.com/en/us/products/ductless-systems/dlcprb",
+    "quote": "Heating operating range -22° ~ 86° F (-25° ~ 30° C)",
+    "confidence": "serie",
+    "note": "Page officielle de la série DLCPRB (tailles 09 / 12 / 18, 208/230 V) ; le numéro complet n y est pas imprimé. La page se contredit (−22 °F correspondrait à −30 °C) : on retient la valeur en °C imprimée, la plus prudente."
   }
 ]
