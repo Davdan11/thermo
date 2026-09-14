@@ -46,6 +46,11 @@ html:has(.ou-root), body:has(.ou-root) { overflow-x: clip; }
 @keyframes ou-blink { 50% { opacity: 0.18; } }
 .ou-v-sweep { animation: ou-v-sweep 1.7s cubic-bezier(0.65, 0, 0.35, 1) infinite; }
 @keyframes ou-v-sweep { 0%, 100% { top: 5%; } 50% { top: 93%; } }
+/* Mise au point de la photo : transition CSS du flou seul (pas d'animation JS du filtre : Safari iOS perdait l'image),
+   assombrissement par un voile noir. */
+.ou-v-focus { transition-property: filter; transition-timing-function: ease-out; will-change: filter; }
+.ou-v-dim { background: #000; transition: opacity 0.4s ease-out; }
+@media (prefers-reduced-motion: reduce) { .ou-v-focus, .ou-v-dim { transition: none; } }
 /* Valeur lue qui s'écrit caractère par caractère (police mono). */
 .ou-type { display: inline-block; animation: ou-type var(--dur, 0.6s) steps(var(--n, 12), end) var(--delay, 0s) both; }
 @keyframes ou-type { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }

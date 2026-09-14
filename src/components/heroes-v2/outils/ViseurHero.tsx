@@ -115,14 +115,13 @@ export function ViseurHero() {
       {/* ── Écran du viseur : photo plein cadre (bandeau en haut sur mobile) ── */}
       <div className="ou-v-stage relative h-[520px] overflow-hidden sm:h-[600px] lg:absolute lg:inset-0 lg:h-auto" aria-hidden="true">
         <div className="ou-v-wrap">
-          <motion.div
-            className="absolute inset-0"
-            initial={false}
-            animate={{ filter: `blur(${blur}px) brightness(${locked ? 0.74 : 0.62}) contrast(1.06) saturate(${locked ? 0.82 : 0.6})` }}
-            transition={{ duration: locked ? 0.35 : 0.45, ease: "easeOut" }}
-          >
-            <Image src="/images/about-cta-product.jpg" alt="" fill priority sizes="(min-width: 1024px) 100vw, 160vw" style={{ objectFit: "cover" }} />
-          </motion.div>
+          {/* Mise au point : seul le flou change, en transition CSS, et « none » une fois l'image nette. Un filtre
+              combiné (flou, luminosité, saturation) animé en JavaScript faisait disparaître la photo sur iPhone
+              (Safari) à la fin du cycle ; l'assombrissement passe par un voile dont seule l'opacité change. */}
+          <div className="ou-v-focus absolute inset-0" style={{ filter: blur > 0 ? `blur(${blur}px)` : "none", transitionDuration: locked ? "0.35s" : "0.45s" }}>
+            <Image src="/images/about-cta-product.jpg" alt="" fill priority sizes="(min-width: 1024px) 100vw, 160vw" style={{ objectFit: "cover", filter: "contrast(1.06) saturate(0.74)" }} />
+          </div>
+          <div className="ou-v-dim pointer-events-none absolute inset-0" style={{ opacity: locked ? 0.26 : 0.38 }} />
 
           {/* Cadre de mise au point */}
           <motion.div
