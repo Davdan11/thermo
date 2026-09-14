@@ -14,6 +14,10 @@ const ROUTES_WITHOUT_CHROME: string[] = [
   "/soumission",
 ];
 
+/* Sous-pages de ces parcours qui restent des pages normales du site : le lien partagé des résultats ThermoMatch
+   (/trouver-ma-thermopompe/resultats) garde l'en-tête du site. */
+const ROUTES_WITH_CHROME: string[] = ["/trouver-ma-thermopompe/resultats"];
+
 /* Le pied de page arrive du layout racine (composant serveur) : passé en prop, il reste rendu au serveur.
    `extras` : mesure d'audience, bannière de consentement et assistant, absents des routes privées. */
 export function SiteChrome({ children, footer, extras }: { children: React.ReactNode; footer: React.ReactNode; extras?: React.ReactNode }) {
@@ -21,9 +25,9 @@ export function SiteChrome({ children, footer, extras }: { children: React.React
   if (PRIVATE_ROUTES.some((route) => pathname === route || pathname.startsWith(`${route}/`))) {
     return <div className="flex-1">{children}</div>;
   }
-  const hideChrome = ROUTES_WITHOUT_CHROME.some((route) =>
-    pathname.startsWith(route),
-  );
+  const hideChrome =
+    ROUTES_WITHOUT_CHROME.some((route) => pathname.startsWith(route)) &&
+    !ROUTES_WITH_CHROME.some((route) => pathname === route || pathname.startsWith(`${route}/`));
 
   if (hideChrome) {
     // Parcours plein écran : pas d'en-tête, mais le pied de page reste

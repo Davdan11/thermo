@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import type { ComponentProps } from "react";
 import { ThermoMatchResults } from "../_components/ThermoMatchResults";
+import { CorrigeStrip } from "../_components/Corrige";
 import { ShareResultsButton } from "@/components/thermomatch/ShareResultsButton";
 import { saveProjectDraft, thermoMatchAnswersToProjectDraft } from "@/lib/project/project-draft";
 import type { QuestionnaireAnswers } from "@/lib/thermomatch/answers";
@@ -42,9 +43,10 @@ export function SharedResults({ answers, results, summaryContext }: { answers: Q
   return (
     <div className="w-full">
       <ThermoMatchResults results={results} summaryContext={summary} onSelectResult={requestQuote} onRetry={retry} />
-      <div className="mt-10">
-        <ShareResultsButton answers={answers} />
-      </div>
+      {/* Dernière ligne du corrigé : le lien à partager (place gardée pour la barre fixe sur mobile). */}
+      <CorrigeStrip className="pb-28 pt-2 lg:pb-20">
+        <ShareResultsButton answers={answers} tone="light" />
+      </CorrigeStrip>
     </div>
   );
 }

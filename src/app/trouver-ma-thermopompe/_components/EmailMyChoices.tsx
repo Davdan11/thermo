@@ -1,30 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
+import { useEffect, useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { encodeShareCode } from "@/lib/thermomatch/share-code";
 import { RELANCES_CONSENT_TEXT } from "@/lib/relances/consent";
 import { readAttribution } from "@/lib/attribution/client";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { DISPLAY, SERIF } from "@/components/heroes-v2/outils/font-stacks";
 import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
+import { Arrow, HandCheck, MarginMark, WriteIn, useSeen } from "./Corrige";
+import { K } from "./results-model";
 
 /* « Envoyez-moi mes trois choix » : le visiteur reçoit ses recommandations par
    courriel (lead : Pipedrive, alerte à l'équipe). Le code de partage vient de
    l'adresse (lien partagé) ou des réponses gardées dans la session.
    Deuxième case, facultative et jamais cochée d'avance : deux rappels
-   (J+2, J+7), désabonnement en un clic. */
+   (J+2, J+7), désabonnement en un clic.
+   Présentation du corrigé : champs écrits sur les lignes du carnet, cases
+   natives (accessibles) teintées d'orange ; même envoi, mêmes textes. */
 
-const K = {
-  cream: "#F4EFE7",
-  mute: "rgba(244,239,231,0.66)",
-  faint: "rgba(244,239,231,0.42)",
-  line: "rgba(244,239,231,0.16)",
-  orange: "#E54B17",
-  green: "#5CCB8C",
-};
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
-const SERIF = { fontFamily: "var(--font-serif), Georgia, serif", fontStyle: "italic" as const, fontWeight: 400 };
 /* Ce que la case « rappels » déclenche, dit simplement. */
 const RELANCES_STEPS = [
   { when: "Dans 2 jours", what: "vos trois choix, avec leurs chiffres à jour" },
@@ -43,10 +39,12 @@ function currentShareCode(): string | null {
   }
 }
 
-const input =
-  "h-[54px] w-full rounded-full border border-[rgba(244,239,231,0.18)] bg-[rgba(244,239,231,0.05)] px-5 text-[15px] text-[#F4EFE7] transition-colors placeholder:text-[rgba(244,239,231,0.4)] hover:border-[rgba(244,239,231,0.35)] focus-visible:border-[rgba(244,239,231,0.6)] focus-visible:shadow-[0_0_0_4px_rgba(229,75,23,0.22)]";
+// 16 px : Safari iOS n'agrandit pas la page au focus.
+const input = "tm-field h-[48px] w-full px-0 text-[16px]";
+const labelCls = "grid gap-1 text-[12.5px] font-medium";
+const box = "mt-1 h-4 w-4 shrink-0 accent-[#C9400F]";
 
-export function EmailMyChoices({ topLabel }: { topLabel: string }) {
+export function EmailMyChoices({ topLabel, n }: { topLabel: string; /** Numéro de la réponse dans le corrigé. */ n?: number }) {
   const [v, setV] = useState({ firstName: "", email: "", phone: "", consent: false, followUps: false, website: "" });
   // Conformité C2 : case 5.2 (rappels) et case distincte 5.3 de la trousse, jamais cochées d'avance.
   const consents = useConsentTexts();
@@ -65,6 +63,8 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
     };
   }, []);
   const reduce = useReduced();
+  const ref = useRef<HTMLElement>(null);
+  const play = useSeen(ref);
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
 
@@ -102,71 +102,79 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
   }
 
   return (
-    <section aria-labelledby="tm-courriel" className="mx-auto mt-16 max-w-[1320px] overflow-hidden rounded-[28px] lg:mt-24" style={{ border: `1px solid ${K.line}`, color: K.cream, background: "rgba(244,239,231,0.03)" }}>
-      <div className="grid gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:px-14 lg:py-14">
-        <div>
-          <p className="flex items-center gap-3 text-[12px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: K.mute, margin: 0 }}>
-            <span aria-hidden="true" className="inline-block h-px w-10" style={{ background: K.orange }} />
-            Par courriel
+    <section ref={ref} aria-labelledby="tm-courriel" className="mt-20 lg:mt-28" style={{ color: K.ink }}>
+      <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+        <div className="relative min-w-0">
+          <MarginMark n={n} play={play} />
+          <p className="text-[20px] leading-none" style={{ fontFamily: SERIF, fontStyle: "italic", color: K.rust, margin: 0 }}>
+            <WriteIn play={play}>Par courriel</WriteIn>
           </p>
-          <h2 id="tm-courriel" style={{ fontSize: "clamp(32px, 3.8vw, 56px)", fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 1, margin: "18px 0 0" }}>
-            Gardez vos trois choix, <span style={SERIF}>pour y réfléchir.</span>
+          <h2 id="tm-courriel" style={{ fontFamily: SERIF, fontWeight: 400, fontSize: "clamp(36px, 4vw, 60px)", letterSpacing: "-0.02em", lineHeight: 1, margin: "18px 0 0" }}>
+            <WriteIn play={play} delay={0.15}>
+              Gardez vos trois choix,
+            </WriteIn>{" "}
+            <WriteIn play={play} delay={0.55}>
+              <em>pour y réfléchir.</em>
+            </WriteIn>
           </h2>
-          <ul className="mt-8 grid gap-3 text-[15px]" style={{ listStyle: "none", padding: 0, margin: "32px 0 0", color: K.mute }}>
+          <ul className="grid gap-3 text-[15px] leading-relaxed" style={{ listStyle: "none", padding: 0, margin: "30px 0 0", color: K.soft }}>
             <li>— {topLabel} et vos deux autres choix, avec leurs chiffres par grand froid.</li>
             <li>— Le montant LogisVert officiel et un prix approximatif installé pour chacun.</li>
             <li>— Un lien qui rouvre ces recommandations, même sur un autre appareil.</li>
           </ul>
         </div>
 
-        <div className="relative min-h-[320px]">
+        <div className="relative min-h-[320px] lg:border-l lg:pl-12" style={{ borderColor: K.line }}>
           <AnimatePresence mode="wait" initial={false}>
             {status === "sent" ? (
-              <motion.div key="ok" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.6, ease: EASE }} className="flex h-full flex-col justify-center" role="status">
-                <p style={{ fontSize: "clamp(30px, 3vw, 44px)", fontWeight: 600, letterSpacing: "-0.04em", margin: 0 }}>
-                  C’est envoyé<span style={{ color: K.green }}>.</span>
+              <motion.div key="ok" initial={reduce ? { opacity: 0 } : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: reduce ? 0 : 0.6, ease: EASE }} className="flex h-full flex-col justify-center" role="status">
+                <p className="flex items-center gap-3" style={{ fontFamily: SERIF, fontSize: "clamp(32px, 3vw, 46px)", letterSpacing: "-0.02em", lineHeight: 1, margin: 0 }}>
+                  <span>
+                    C’est envoyé<span style={{ color: K.orange }}>.</span>
+                  </span>
+                  <HandCheck play delay={0.2} size={30} />
                 </p>
-                <p className="mt-3 max-w-[440px] text-[15px] leading-relaxed" style={{ color: K.mute }}>
+                <p className="mt-4 max-w-[440px] text-[15px] leading-relaxed" style={{ color: K.soft }}>
                   Vos trois choix arrivent dans votre boîte de réception. S’il n’y est pas dans quelques minutes, regardez dans les courriels indésirables.
                 </p>
                 {planned && (
-                  <p className="mt-2 max-w-[440px] text-[14px] leading-relaxed" style={{ color: K.faint }}>
+                  <p className="mt-2 max-w-[440px] text-[14px] leading-relaxed" style={{ color: K.soft }}>
                     Vous recevrez aussi deux rappels : dans 2 jours, puis dans 7 jours. Chaque courriel a un lien pour vous désabonner.
                   </p>
                 )}
               </motion.div>
             ) : (
-              <motion.form key="form" onSubmit={submit} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.4 }} className="grid gap-3" noValidate>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <label className="grid gap-1.5 text-[12.5px]" style={{ color: K.faint }}>
+              <motion.form key="form" onSubmit={submit} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: reduce ? 0 : -12 }} transition={{ duration: reduce ? 0 : 0.4 }} className="grid gap-5" noValidate>
+                <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
+                  <label className={labelCls} style={{ color: K.soft }}>
                     Prénom
-                    <input className={input} style={{ outline: "none" }} value={v.firstName} onChange={update("firstName")} autoComplete="given-name" required maxLength={80} />
+                    <input className={input} value={v.firstName} onChange={update("firstName")} autoComplete="given-name" required maxLength={80} />
                   </label>
-                  <label className="grid gap-1.5 text-[12.5px]" style={{ color: K.faint }}>
+                  <label className={labelCls} style={{ color: K.soft }}>
                     Téléphone <span className="sr-only">(facultatif)</span>
-                    <input className={input} style={{ outline: "none" }} value={v.phone} onChange={update("phone")} autoComplete="tel" inputMode="tel" placeholder="Facultatif" maxLength={30} />
+                    <input className={input} value={v.phone} onChange={update("phone")} autoComplete="tel" inputMode="tel" placeholder="Facultatif" maxLength={30} />
                   </label>
                 </div>
-                <label className="grid gap-1.5 text-[12.5px]" style={{ color: K.faint }}>
+                <label className={labelCls} style={{ color: K.soft }}>
                   Courriel
-                  <input className={input} style={{ outline: "none" }} type="email" value={v.email} onChange={update("email")} autoComplete="email" required maxLength={160} />
+                  <input className={input} type="email" value={v.email} onChange={update("email")} autoComplete="email" required maxLength={160} />
                 </label>
                 {/* Pot de miel : invisible pour les humains. */}
                 <input tabIndex={-1} aria-hidden="true" autoComplete="off" value={v.website} onChange={update("website")} className="absolute left-[-9999px] h-px w-px opacity-0" />
-                <label className="mt-2 flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.mute }}>
-                  <input type="checkbox" checked={v.consent} onChange={update("consent")} className="mt-1 h-4 w-4 shrink-0 accent-[#E54B17]" />
+                <label className="mt-1 flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.soft }}>
+                  <input type="checkbox" checked={v.consent} onChange={update("consent")} className={box} />
                   <span>
                     J’accepte de recevoir ces recommandations par courriel et qu’un conseiller me contacte au sujet de mon projet. Voir la{" "}
-                    <Link href="/confidentialite" className="underline underline-offset-2" style={{ color: K.cream }}>
+                    <Link href="/confidentialite" className="underline underline-offset-2" style={{ color: K.ink }}>
                       politique de confidentialité
                     </Link>
                     .
                   </span>
                 </label>
                 {offer && (
-                  <label className="flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.mute }}>
-                    <input type="checkbox" checked={v.followUps} onChange={update("followUps")} className="mt-1 h-4 w-4 shrink-0 accent-[#E54B17]" />
-                    <span>{consents.status === "pret" ? <ConsentCopy text={consents.texts.rappels} linkClassName="underline underline-offset-2" linkStyle={{ color: K.cream }} /> : RELANCES_CONSENT_TEXT}</span>
+                  <label className="flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.soft }}>
+                    <input type="checkbox" checked={v.followUps} onChange={update("followUps")} className={box} />
+                    <span>{consents.status === "pret" ? <ConsentCopy text={consents.texts.rappels} linkClassName="underline underline-offset-2" linkStyle={{ color: K.ink }} /> : RELANCES_CONSENT_TEXT}</span>
                   </label>
                 )}
                 <AnimatePresence initial={false}>
@@ -179,7 +187,7 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
                       transition={{ duration: reduce ? 0 : 0.45, ease: EASE }}
                       className="overflow-hidden"
                     >
-                      <ol className="relative grid gap-2 pb-1 pl-6 text-[12.5px] leading-snug" style={{ listStyle: "none", margin: "0 0 0 7px", color: K.mute }}>
+                      <ol className="relative grid gap-2 pb-1 pl-6 text-[12.5px] leading-snug" style={{ listStyle: "none", margin: "0 0 0 7px", color: K.soft }}>
                         <motion.span
                           aria-hidden="true"
                           className="absolute bottom-[26px] left-0 top-[6px] w-px origin-top"
@@ -197,48 +205,46 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
                             transition={{ duration: 0.45, ease: EASE, delay: 0.2 + i * 0.14 }}
                           >
                             <span aria-hidden="true" className="absolute left-[-27.5px] top-[4px] h-[7px] w-[7px] rounded-full" style={{ background: K.orange }} />
-                            <span style={{ color: K.cream }}>{s.when}</span> · {s.what}
+                            <span style={{ color: K.ink, fontWeight: 600 }}>{s.when}</span> · {s.what}
                           </motion.li>
                         ))}
-                        <li style={{ color: K.faint }}>Rien d’autre. Un clic suffit pour vous désabonner.</li>
+                        <li style={{ color: K.soft }}>Rien d’autre. Un clic suffit pour vous désabonner.</li>
                       </ol>
                     </motion.div>
                   )}
                 </AnimatePresence>
                 {/* Conformité C2 : case distincte 5.3 de la trousse, facultative et jamais cochée d'avance. */}
                 {consents.status === "pret" && (
-                  <label className="flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.mute }}>
-                    <input type="checkbox" checked={promotions} onChange={(e) => setPromotions(e.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-[#E54B17]" />
+                  <label className="flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.soft }}>
+                    <input type="checkbox" checked={promotions} onChange={(e) => setPromotions(e.target.checked)} className={box} />
                     <span>
-                      <ConsentCopy text={consents.texts.promotions} linkClassName="underline underline-offset-2" linkStyle={{ color: K.cream }} />
+                      <ConsentCopy text={consents.texts.promotions} linkClassName="underline underline-offset-2" linkStyle={{ color: K.ink }} />
                     </span>
                   </label>
                 )}
-                <div className="mt-3 flex flex-wrap items-center gap-4">
+                <div className="mt-2 flex flex-wrap items-center gap-4">
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="inline-flex items-center gap-3 rounded-full py-2 pl-6 pr-2 text-[15px] font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 disabled:opacity-60"
-                    style={{ background: K.orange }}
+                    className="ou-btn tm-fire inline-flex min-h-[52px] items-center gap-4 rounded-full py-3 pl-6 pr-5 text-[15px] font-semibold disabled:opacity-60"
+                    style={{ fontFamily: DISPLAY }}
                   >
                     {status === "sending" ? "Envoi…" : "Envoyez-moi mes trois choix"}
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white" style={{ color: K.orange }} aria-hidden="true">
-                      →
-                    </span>
+                    <Arrow />
                   </button>
-                  <span className="text-[12.5px]" style={{ color: K.faint }}>
+                  <span className="text-[12.5px]" style={{ color: K.soft }}>
                     Gratuit, sans engagement.
                   </span>
                 </div>
                 {/* Conformité C2 : texte 5.1 sous le formulaire. */}
                 {consents.status === "pret" && (
-                  <p className="text-[12.5px] leading-relaxed" style={{ color: K.faint, margin: "4px 0 0" }}>
-                    <ConsentCopy text={consents.texts.communications} linkClassName="underline underline-offset-2" linkStyle={{ color: K.mute }} />
+                  <p className="text-[12.5px] leading-relaxed" style={{ color: K.soft, margin: "4px 0 0" }}>
+                    <ConsentCopy text={consents.texts.communications} linkClassName="underline underline-offset-2" linkStyle={{ color: K.ink }} />
                   </p>
                 )}
                 <AnimatePresence>
                   {error && (
-                    <motion.p key="err" role="alert" initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="text-[13.5px]" style={{ color: "#FF9B7A", margin: "6px 0 0" }}>
+                    <motion.p key="err" role="alert" initial={{ opacity: 0, y: reduce ? 0 : -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="text-[13.5px] font-medium" style={{ color: K.rust, margin: "6px 0 0" }}>
                       {error}
                     </motion.p>
                   )}

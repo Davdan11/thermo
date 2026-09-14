@@ -14,6 +14,7 @@ import {
   getProjectSummary,
 } from "@/lib/project/project-draft";
 import { ThermoMatchResults } from "./ThermoMatchResults";
+import { CorrigeStrip } from "./Corrige";
 import { ShareResultsButton } from "@/components/thermomatch/ShareResultsButton";
 import { track } from "@/lib/analytics/track";
 import { HC } from "@/components/hero/HeroKit";
@@ -406,10 +407,11 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   if (isComplete) {
     if (isLoadingResults || !hasFetched) {
       return (
-        <div className="min-h-screen bg-[#0D1117] flex flex-col items-center justify-center text-white">
-          <div className="w-12 h-12 border-4 border-white/20 border-t-[#C66E42] rounded-full animate-spin mb-6" />
-          <h2 className="text-2xl font-bold mb-2">Analyse en cours...</h2>
-          <p className="text-[#9CA3AF]">
+        // Papier du carnet, comme le corrigé qui suit : aucun écran sombre entre les questions et les résultats.
+        <div className="ou-root min-h-screen flex flex-col items-center justify-center px-6 text-center" style={{ background: CARNET.paper, color: CARNET.ink }}>
+          <div className="w-12 h-12 border-4 border-[rgba(23,27,30,0.12)] border-t-[#E54B17] rounded-full animate-spin motion-reduce:animate-none mb-6" />
+          <h2 className="text-[30px] mb-2" style={{ fontFamily: SERIF, fontStyle: "italic", fontWeight: 400 }}>Analyse en cours...</h2>
+          <p style={{ color: CARNET.soft }}>
             {catalogueCount ? `Analyse de ${catalogueCount.toLocaleString("fr-CA")} fiches certifiées` : "Analyse des fiches certifiées"}
           </p>
         </div>
@@ -423,10 +425,12 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     // If we have candidates, show the new ThermoMatchResults view instead of the default generic text
     if (candidates && candidates.length > 0) {
       return (
-        <div className="min-h-screen bg-[#0D1117] flex flex-col">
-          <ThermoMatchHeader currentStep={TOTAL_STEPS} totalSteps={TOTAL_STEPS} onQuit={() => setShowResetConfirm(true)} />
-          <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
-            <ThermoMatchResults 
+        // « Le corrigé » : même papier que le carnet, barre du parcours au ton clair.
+        <div className="ou-root min-h-screen flex flex-col" style={{ background: CARNET.paper }}>
+          <ThermoMatchHeader currentStep={TOTAL_STEPS} totalSteps={TOTAL_STEPS} onQuit={() => setShowResetConfirm(true)} tone="light" />
+          {showResetConfirm && <ResetConfirm onKeep={() => setShowResetConfirm(false)} onReset={handleReset} />}
+          <div className="flex-1">
+            <ThermoMatchResults
               results={candidates} 
               summaryContext={summaryContext}
               onSelectResult={(candidate) => handleRequestQuote(candidate)} 
@@ -438,10 +442,11 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
                 setCurrentStep(TOTAL_STEPS - 1);
               }}
             />
-            <div className="mt-10 w-full">
-              <ShareResultsButton answers={answers} />
-            </div>
           </div>
+          {/* Dernière ligne du corrigé : le lien à partager (place gardée pour la barre fixe sur mobile). */}
+          <CorrigeStrip className="pb-28 pt-2 lg:pb-20">
+            <ShareResultsButton answers={answers} tone="light" />
+          </CorrigeStrip>
         </div>
       );
     }
@@ -685,6 +690,41 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     >
       {inputs}
     </CarnetStepPage>
+  );
+}
+
+/* ----------------------------------------------------------
+   Confirmation « Recommencer » sur le corrigé (papier du carnet).
+   Mêmes textes et même action que la fenêtre de l'écran sans résultats.
+   ---------------------------------------------------------- */
+
+function ResetConfirm({ onKeep, onReset }: { onKeep: () => void; onReset: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onKeep();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onKeep]);
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[rgba(23,27,30,0.45)] px-4">
+      <div role="dialog" aria-modal="true" aria-labelledby="tm-reset-titre" className="w-full max-w-md p-8" style={{ background: CARNET.paper, color: CARNET.ink, borderRadius: 4, boxShadow: "0 30px 60px -30px rgba(23,27,30,0.6)" }}>
+        <h3 id="tm-reset-titre" className="text-[30px] leading-tight" style={{ fontFamily: SERIF, fontWeight: 400, margin: 0 }}>
+          Recommencer ThermoMatch<span style={{ color: CARNET.orange }}>{" ?"}</span>
+        </h3>
+        <p className="text-[15px] leading-relaxed" style={{ color: CARNET.soft, margin: "12px 0 28px" }}>
+          Toutes vos réponses actuelles seront supprimées. Cette action est irréversible.
+        </p>
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <button type="button" autoFocus onClick={onKeep} className="flex-1 rounded-full py-3 text-[15px] font-semibold text-white transition-colors hover:bg-black" style={{ background: CARNET.ink }}>
+            Garder mes réponses
+          </button>
+          <button type="button" onClick={onReset} className="flex-1 rounded-full py-3 text-[15px] font-semibold transition-colors hover:bg-[rgba(23,27,30,0.05)]" style={{ border: "1px solid rgba(23,27,30,0.3)", color: CARNET.ink }}>
+            Recommencer
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 

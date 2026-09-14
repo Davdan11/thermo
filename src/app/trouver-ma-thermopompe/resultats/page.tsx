@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { decodeShareCode } from "@/lib/thermomatch/share-code";
 import { recommendFromAnswers } from "@/lib/thermomatch/recommend";
 import { SharedResults } from "./SharedResults";
+import { LienIncomplet } from "./LienIncomplet";
+import { CorrigeStrip } from "../_components/Corrige";
+import { K } from "../_components/results-model";
+import { ThermoMatchWordmark } from "@/components/heroes-v2/outils/FlowBar";
+import { outilsMono } from "@/components/heroes-v2/outils/fonts";
 import { displayFont, serifFont } from "@/lib/fonts";
 
 /* ------------------------------------------------------------------
@@ -11,6 +15,9 @@ import { displayFont, serifFont } from "@/lib/fonts";
    Lien partageable : les réponses du questionnaire sont dans l'URL,
    les recommandations sont recalculées ici avec les mêmes données
    officielles que le parcours normal. Page non indexée.
+   Page normale du site (en-tête et pied de page : voir SiteChrome) :
+   un bandeau discret « Résultats partagés », puis le corrigé ThermoMatch.
+   Le papier remonte sous l'en-tête transparent (ton clair : hero/routes).
    ------------------------------------------------------------------ */
 
 export const metadata: Metadata = {
@@ -19,18 +26,19 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+/* Sous l'en-tête du site (93 px, 105 px dès 1700 px), comme les autres héros clairs. */
+const UNDER_HEADER = "-mt-[93px] pt-[93px] min-[1700px]:-mt-[105px] min-[1700px]:pt-[105px]";
+
 export default async function ResultatsPartagesPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   const code = typeof params.r === "string" ? params.r : null;
   const answers = decodeShareCode(code);
+  const fonts = `${displayFont.variable} ${serifFont.variable} ${outilsMono.variable}`;
 
   if (!answers) {
     return (
-      <main className="min-h-screen bg-[#0D1117] text-white flex flex-col items-center justify-center px-6 text-center">
-        <Image src="/images/logo-thermomatch-nav.webp" alt="ThermoMatch" width={147} height={20} className="mb-8" />
-        <h1 className="text-2xl font-bold mb-3">Ce lien de résultats est incomplet</h1>
-        <p className="text-[#9CA3AF] max-w-md mb-8">Il a peut-être été tronqué en le copiant. Demandez un nouveau lien à la personne qui vous l&apos;a envoyé, ou refaites le questionnaire : il prend trois minutes.</p>
-        <Link href="/trouver-ma-thermopompe" className="bg-[#e54b17] text-white px-6 py-3 rounded-md font-bold">Faire le questionnaire</Link>
+      <main className={`ou-root ${fonts} ${UNDER_HEADER}`} style={{ background: K.paper }}>
+        <LienIncomplet />
       </main>
     );
   }
@@ -38,22 +46,22 @@ export default async function ResultatsPartagesPage({ searchParams }: { searchPa
   const { results, summaryContext } = recommendFromAnswers(answers);
 
   return (
-    <main className={`min-h-screen bg-[#0D1117] text-white flex flex-col ${displayFont.variable} ${serifFont.variable}`}>
-      <header className="h-[64px] border-b border-white/10 flex items-center justify-between px-6 sm:px-10 shrink-0">
-        <Link href="/" className="text-white font-bold text-sm tracking-tight">
-          <span className="text-xs font-black uppercase">THERMOPOMPES</span>
-          <br />
-          <span className="text-xs font-black uppercase tracking-[0.2em]">À VENDRE</span>
-        </Link>
-        <div className="flex items-center gap-4">
-          <Image src="/images/logo-thermomatch-nav.webp" alt="ThermoMatch" width={118} height={16} />
-          <span className="hidden sm:inline text-white/50 text-sm">Résultats partagés</span>
+    <main className={`ou-root ${fonts} ${UNDER_HEADER}`} style={{ background: K.paper }}>
+      <CorrigeStrip className="pt-5 sm:pt-7">
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 pb-3 text-[13px]" style={{ borderBottom: `1px solid ${K.line}` }}>
+          <p className="flex items-center gap-3" style={{ margin: 0 }}>
+            <ThermoMatchWordmark size={11} />
+            <span aria-hidden="true" className="h-3.5 w-px" style={{ background: K.rule }} />
+            <span className="text-[11.5px] font-medium uppercase" style={{ letterSpacing: "0.18em", color: K.soft }}>
+              Résultats partagés
+            </span>
+          </p>
+          <Link href="/trouver-ma-thermopompe" className="ou-link font-semibold" style={{ color: K.ink, textDecoration: "none" }}>
+            Refaire le questionnaire <span style={{ color: K.orange }}>→</span>
+          </Link>
         </div>
-        <Link href="/trouver-ma-thermopompe" className="text-white/50 hover:text-white text-sm font-medium transition-colors">Refaire le test</Link>
-      </header>
-      <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
-        <SharedResults answers={answers} results={results} summaryContext={summaryContext} />
-      </div>
+      </CorrigeStrip>
+      <SharedResults answers={answers} results={results} summaryContext={summaryContext} />
     </main>
   );
 }
