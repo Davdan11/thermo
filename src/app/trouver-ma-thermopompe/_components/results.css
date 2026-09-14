@@ -1,64 +1,55 @@
 /* ==================================================================
-   ThermoMatch — « Le corrigé » (préfixe tm-) : écran des trois
-   recommandations, lien partagé et page « lien incomplet ».
-   Papier, encre et orange du carnet (heroes-v2/outils). Aucun filtre
-   CSS animé (Safari iOS) : seules la transformation et l'opacité
-   bougent. Tout s'arrête sous « réduire les animations ».
+   Écran des trois recommandations ThermoMatch (préfixe tm-).
    ================================================================== */
 
-/* Focus visible partout (orange assombri : contraste suffisant sur le papier). */
-.tm-root :is(a, button, summary, input, select, textarea):focus-visible { outline: 2px solid #b8360c; outline-offset: 3px; }
+/* Lien partagé (page du site) : le CSS global coupe le débord horizontal sur html et body, ce qui
+   décollerait l'en-tête sticky ; on le coupe sans créer de conteneur de défilement. */
+html:has(.tm-root), body:has(.tm-root) { overflow-x: clip; }
 
-/* Boutons : orange assombri pour l'action principale (texte blanc à 5:1), encre, contour. */
-.tm-fire { background-color: #c9400f; color: #fff; }
-.tm-fire:hover { background-color: #a9360b; }
-.tm-ink { background-color: #171b1e; color: #fff; }
-.tm-ink:hover { background-color: #000; }
-.tm-ghost { border: 1px solid rgba(23, 27, 30, 0.3); color: #171b1e; }
-.tm-ghost:hover { border-color: #171b1e; background-color: rgba(23, 27, 30, 0.04); }
-
-/* Feuille d'une recommandation : se soulève d'un rien au survol, l'ombre s'allonge. */
-.tm-sheet {
-  box-shadow: 0 1px 0 rgba(23, 27, 30, 0.05), 0 26px 40px -34px rgba(23, 27, 30, 0.5);
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+.tm-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-size: 1.06em;
 }
-.tm-sheet:hover { transform: translateY(-3px); box-shadow: 0 1px 0 rgba(23, 27, 30, 0.05), 0 36px 50px -34px rgba(23, 27, 30, 0.55); }
 
-/* Tirage de l'appareil collé au ruban : penché, il se redresse au survol de la feuille. */
-.tm-print { transform: rotate(var(--tilt, -1.4deg)); transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
-.tm-sheet:hover .tm-print { transform: rotate(0deg) translateY(-2px); }
+/* Libellé qui « roule » au survol. */
+.tm-roll { display: inline-grid; overflow: hidden; line-height: 1.25; height: 1.25em; }
+.tm-roll > span { grid-area: 1 / 1; transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.tm-roll > span + span { transform: translateY(100%); }
+:is(a, button):hover .tm-roll > span:first-child { transform: translateY(-100%); }
+:is(a, button):hover .tm-roll > span + span { transform: translateY(0); }
 
-/* Traits de mesure (règle du froid, couverture, distinctions, économies) : ils se tracent de gauche à droite. */
-.tm-bar { transform: scaleX(0); transform-origin: left center; transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0s); }
-.tm-bar[data-on] { transform: scaleX(1); }
-/* Repère posé au bout du trait, une fois tracé. */
-.tm-tick { opacity: 0; transition: opacity 0.4s ease var(--d, 0s); }
-.tm-tick[data-on] { opacity: 1; }
+/* Photo de l'appareil qui flotte doucement. */
+.tm-float { animation: tm-float 6s ease-in-out infinite; }
+@keyframes tm-float { 50% { transform: translateY(-7px); } }
 
-/* Champ du formulaire (courriel) : réponse écrite sur la ligne du carnet ; l'orange marque le focus. */
-.tm-field {
-  border: 0;
-  border-bottom: 1.5px solid rgba(23, 27, 30, 0.6);
-  border-radius: 0;
-  background: transparent;
-  color: #171b1e;
-  transition: border-color 0.3s, box-shadow 0.3s;
+/* Reflet qui balaie la carte « Meilleur choix ». */
+.tm-sheen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-120%) skewX(-12deg);
+  animation: tm-sheen 6.5s ease-in-out 1.8s infinite;
 }
-.tm-field:hover { border-color: #171b1e; }
-.tm-root .tm-field:focus-visible { outline: none; border-color: #e54b17; box-shadow: 0 1.5px 0 #e54b17; }
-.tm-field::placeholder { color: rgba(23, 27, 30, 0.66); }
+@keyframes tm-sheen {
+  0% { transform: translateX(-120%) skewX(-12deg); }
+  30%, 100% { transform: translateX(340%) skewX(-12deg); }
+}
 
-/* « Comment ThermoMatch a calculé » */
+/* Détails « Comment ThermoMatch a calculé ». */
 .tm-details > summary { list-style: none; cursor: pointer; }
 .tm-details > summary::-webkit-details-marker { display: none; }
-.tm-plus { display: inline-block; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s; }
-.tm-details > summary:hover .tm-plus { color: #e54b17; }
+.tm-plus { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
 .tm-details[open] .tm-plus { transform: rotate(45deg); }
 
 @media (prefers-reduced-motion: reduce) {
-  .tm-sheet, .tm-print, .tm-bar, .tm-tick, .tm-plus, .tm-field { transition: none; }
-  .tm-sheet:hover { transform: none; }
-  .tm-sheet:hover .tm-print { transform: rotate(var(--tilt, -1.4deg)); }
-  .tm-bar { transform: none; }
-  .tm-tick { opacity: 1; }
+  .tm-float, .tm-sheen { animation: none; }
+  .tm-sheen { display: none; }
 }

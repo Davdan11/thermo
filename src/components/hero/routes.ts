@@ -27,7 +27,8 @@ const LIGHT_HEROES: Array<{ path: string; exact?: boolean }> = [
   { path: "/contact" },
   { path: "/rendez-vous" },
   { path: "/technologie-thermomatch" },
-  { path: "/trouver-ma-thermopompe" },
+  // Questionnaire seulement (papier du carnet) : le lien partagé des résultats (/resultats) garde le ton sombre du tamis.
+  { path: "/trouver-ma-thermopompe", exact: true },
   { path: "/soumission" },
   { path: "/conditions" },
   { path: "/confidentialite" },
