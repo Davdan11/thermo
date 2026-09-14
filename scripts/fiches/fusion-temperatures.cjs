@@ -48,6 +48,10 @@ function check(e) {
   if (!(Number.isInteger(e.minHeatingTempC) && e.minHeatingTempC >= -40 && e.minHeatingTempC <= 0)) errs.push(`température impossible (${e.minHeatingTempC})`);
   if (!(typeof e.quote === "string" && e.quote.trim() && e.quote.length <= 160)) errs.push("citation absente ou de plus de 160 caractères");
   if (!["modele", "serie"].includes(e.confidence)) errs.push("confiance absente (modele|serie)");
+  // La citation contient le chiffre retenu : en °C, ou en °F qui s'y convertit (arrondi, ou ,5 vers le moins froid).
+  const nums = [...String(e.quote ?? "").replace(/[−–—]/g, "-").matchAll(/(-\s?)?\d+(?:[.,]\d+)?/g)].map((m) => parseFloat(m[0].replace(/\s/g, "").replace(",", ".")));
+  const v = e.minHeatingTempC;
+  if (Number.isInteger(v) && !nums.some((n) => n === v || Math.trunc(n) === v || Math.round(((n - 32) * 5) / 9) === v || Math.trunc(((n - 32) * 5) / 9) === v)) errs.push("citation qui ne contient pas la valeur retenue (ni en °C ni en °F converti)");
   const type = e.sourceType ?? "officiel";
   if (!["officiel", "secondaire"].includes(type)) errs.push(`type de source inconnu (${type})`);
   if (type === "secondaire" && !(typeof e.note === "string" && e.note.trim())) errs.push("source secondaire sans note");
