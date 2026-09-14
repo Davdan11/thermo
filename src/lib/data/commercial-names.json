@@ -1,6 +1,17 @@
 [
   {
     "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM018-1CSXHC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_18k_multi_zone_maxperformance_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans les données du système, p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
     "outdoorModel": "BMS500-AAM018-1CSXHD",
     "commercialName": "Climate 5000 Series Gen 4",
     "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/18k_multi_zone_maxperformance_ess_en_01.2026.pdf",
@@ -9,6 +20,28 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche technique officielle Bosch (Engineering Submittal Sheet), tableau « Operation Range / ODU »."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM018-1CSXRA",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/18k_multi_zone_regular_nonducted_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM018-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_18k_multi_zone_reg_heat_ess_03.2023-1.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans les données du système, p. 1, de ce même document."
   },
   {
     "brand": "Bosch",
@@ -23,6 +56,28 @@
   },
   {
     "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM027-1CSXHB",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/27k_multi_zone_max_performance_nonducted_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM027-1CSXHC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_27k_multi_zone_maxperformance_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans les données du système, p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
     "outdoorModel": "BMS500-AAM027-1CSXHD",
     "commercialName": "Climate 5000 Series Gen 4",
     "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/27k_multi_zone_maxperformance_ess_en_01.2026.pdf",
@@ -31,6 +86,28 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche technique officielle Bosch (Engineering Submittal Sheet), tableau « Operation Range / ODU »."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM027-1CSXRA",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/27k_multi_zone_regular_nonducted_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM027-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_27k_multi_zone_reg_heat_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans les données du système, p. 1, de ce même document."
   },
   {
     "brand": "Bosch",
@@ -45,6 +122,61 @@
   },
   {
     "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM036-1CSXHB",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/36k_multi_zone_max_performance_nonducted_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM036-1CSXHC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_36k_multi_zone_maxperformance_ess_03.2023-1.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans les données du système, p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM036-1CSXHD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://skipthewarehouse.com/product/bosch-bms500-aam036-1csxhd-3-ton-ductless-mini-split-outdoor-heat-pump-r454b/?attachment_id=1224179&download_file=ff28c1ad3091a",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "secondaire",
+    "note": "Reproduction par un détaillant (skipthewarehouse.com) de la fiche technique Bosch de ce numéro exact ; aucune copie trouvée sur bosch-homecomfort.com. Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans les données du système, p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM036-1CSXRA",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/36k_multi_zone_regular_nonducted_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM036-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_36k_multi_zone_reg_heat_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans les données du système, p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
     "outdoorModel": "BMS500-AAM036-1CSXRD",
     "commercialName": "Climate 5000 Series Gen 4",
     "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/36k_multi_zone_regular_ess_en_01.2026.pdf",
@@ -53,6 +185,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche technique officielle Bosch (Engineering Submittal Sheet), tableau « Operation Range / ODU »."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM048-1CSXHC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_48k_multi_zone_maxperformance_ess_07.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans les données du système, p. 1, de ce même document."
   },
   {
     "brand": "Bosch",
@@ -67,6 +210,28 @@
   },
   {
     "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM048-1CSXRA",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/48k_multi_zone_regular_nonducted_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAM048-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_48k_multi_zone_reg_heat_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans les données du système, p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
     "outdoorModel": "BMS500-AAM048-1CSXRD",
     "commercialName": "Climate 5000 Series Gen 4",
     "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/48k_multi_zone_regular_ess_en_01.2026.pdf",
@@ -75,6 +240,424 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche technique officielle Bosch (Engineering Submittal Sheet), tableau « Operation Range / ODU »."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS009-1CSXHB",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/9k_single_zone_max_performance_wall_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS009-1CSXHC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_9k_single_zone_maxperformance_wall_ess_03.2023-1.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS009-1CSXHD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/9k_single_zone_maxperformance_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS009-1CSXRA",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/9k_single_zone_regularheat_wall_ess_10.2019.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS009-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_9k_single_zone_regularheat_wall_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS009-1CSXRD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/9k_single_zone_regular_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS012-0CSXRB",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/115v-12k_single_zone_regular_wall_ess_10.2019.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS012-0CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_115v-12k_single_zone_regular_wall_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS012-0CSXRD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/12k_115v_single_zone_regular_wall__en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS012-1CSXHB",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/12k_single_zone_max_performance_wall_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS012-1CSXHC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_12k_single_zone_maxperformance_wall_ess_07.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS012-1CSXHD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/12k_single_zone_maxperformance_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS012-1CSXRA",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/12k_single_zone_regularheat_wall_ess_10.2019.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS012-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_12k_single_zone_regularheat_wall_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS012-1CSXRD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/12k_single_zone_regular_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS018-1CSXHC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_18k_single_zone_maxperformance_wall_ess_07.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS018-1CSXHD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/18k_single_zone_maxperformance_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS018-1CSXRA",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/18k_single_zone_regular_wall_ess_10.2019.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS018-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_18k_single_zone_regularheat_wall_ess_02.2024.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS018-1CSXRD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/18k_single_zone_regular_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS024-1CSXHB",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/24k_single_zone_max_performance_wall_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS024-1CSXHC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_24k_single_zone_maxperformance_wall_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS024-1CSXHD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/24k_single_zone_maxperformance_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS024-1CSXRA",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/24k_single_zone_regular_wall_ess_10.2019.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS024-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_24k_single_zone_regularheat_wall_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS024-1CSXRD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/24k_single_zone_regular_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS030-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_30k_single_zone_lightcommercial_wall_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS030-1CSXRD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/30k_single_zone_light-commercial_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS036-1CSXLB",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/36k_single_zone_lightcommercial_ducted_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS036-1CSXLC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_36k_single_zone_lghtcomm_ducted_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS036-1CSXLD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/36k_single_zone_regular_light_commercial_ducted_idu_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS036-1CSXRC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_36k_single_zone_lightcommercial_wall_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS036-1CSXRD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/36k_single_zone_light-commercial_wall_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS048-1CSXLB",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/48k_single_zone_lightcommercial_ducted_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS048-1CSXLC",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/climate5000_g3_48k_single_zone_lghtcomm_ducted_ess_03.2023.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS048-1CSXLD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/48k_single_zone_regular_light_commercial_ducted_idu_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS060-1CSXLB",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/downloads-for-bosch-products/engineering-submittal-sheets/climate-5000-ductless-(2.0)/60k_single_zone_lightcommercial_ducted_ess_11.2020.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model name », p. 1, de ce même document."
+  },
+  {
+    "brand": "Bosch",
+    "outdoorModel": "BMS500-AAS060-1CSXLD",
+    "commercialName": "Climate 5000",
+    "sourceFile": "https://www.bosch-homecomfort.com/us/media/country_pool/documents/engineering-submittal-sheets/ductless-minisplits/60k_single_zone_regular_light_commercial_ducted_idu_ess_en_01.2026.pdf",
+    "page": 1,
+    "quote": "Climate 5000 Series - Gen 4",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche technique Bosch (Engineering Submittal Sheet) dont l'en-tête est cité ; ce numéro exact figure dans le champ « Outdoor model number », p. 1, de ce même document."
   },
   {
     "brand": "Bosch",
@@ -2728,6 +3311,46 @@
   },
   {
     "brand": "Direct AIR",
+    "outdoorModel": "DIRM-06HXPRO28-1Z",
+    "commercialName": "Heat Xtreme Pro",
+    "sourceFile": "https://directairhvac.com/ductless-system/heatpump/heat-xtreme-pro-series/",
+    "quote": "Heat Xtreme Pro Series Heat Pumps - Direct Air | Comfort at its Best",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page officielle Direct Air dont le titre est cité ; ce numéro exact figure dans la liste « Outdoor Unit Model » de la section « Specifications and Models » de cette même page."
+  },
+  {
+    "brand": "Direct AIR",
+    "outdoorModel": "DIRM-09HXPRO28-1Z",
+    "commercialName": "Heat Xtreme Pro",
+    "sourceFile": "https://directairhvac.com/ductless-system/heatpump/heat-xtreme-pro-series/",
+    "quote": "Heat Xtreme Pro Series Heat Pumps - Direct Air | Comfort at its Best",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page officielle Direct Air dont le titre est cité ; ce numéro exact figure dans la liste « Outdoor Unit Model » de la section « Specifications and Models » de cette même page."
+  },
+  {
+    "brand": "Direct AIR",
+    "outdoorModel": "DIRM-12HXPRO28-1Z",
+    "commercialName": "Heat Xtreme Pro",
+    "sourceFile": "https://directairhvac.com/ductless-system/heatpump/heat-xtreme-pro-series/",
+    "quote": "Heat Xtreme Pro Series Heat Pumps - Direct Air | Comfort at its Best",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page officielle Direct Air dont le titre est cité ; ce numéro exact figure dans la liste « Outdoor Unit Model » de la section « Specifications and Models » de cette même page."
+  },
+  {
+    "brand": "Direct AIR",
+    "outdoorModel": "DIRM-18HXPRO28-1Z",
+    "commercialName": "Heat Xtreme Pro",
+    "sourceFile": "https://directairhvac.com/ductless-system/heatpump/heat-xtreme-pro-series/",
+    "quote": "Heat Xtreme Pro Series Heat Pumps - Direct Air | Comfort at its Best",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page officielle Direct Air dont le titre est cité ; ce numéro exact figure dans la liste « Outdoor Unit Model » de la section « Specifications and Models » de cette même page."
+  },
+  {
+    "brand": "Direct AIR",
     "outdoorModel": "DIRM-18HXPRO28-2Z",
     "commercialName": "Heat Xtreme Pro",
     "sourceFile": "https://directairhvac.com/ductless-system/heatpump/multi-zone-series/",
@@ -2745,6 +3368,16 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Page officielle Direct Air intitulée « Magic Pro System 20 SEER » ; sa liste « Outdoor Unit Model » donne ce numéro, qui contient lui-même « MAGICPRO »."
+  },
+  {
+    "brand": "Direct AIR",
+    "outdoorModel": "DIRM-24HXPRO28-1Z",
+    "commercialName": "Heat Xtreme Pro",
+    "sourceFile": "https://directairhvac.com/ductless-system/heatpump/heat-xtreme-pro-series/",
+    "quote": "Heat Xtreme Pro Series Heat Pumps - Direct Air | Comfort at its Best",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page officielle Direct Air dont le titre est cité ; ce numéro exact figure dans la liste « Outdoor Unit Model » de la section « Specifications and Models » de cette même page."
   },
   {
     "brand": "Direct AIR",
@@ -4503,6 +5136,94 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Page officielle Gree Comfort (greecomfort.com, Gree Amérique du Nord) « FLEXX - Central AC and Heating System » ; sa liste de documents par modèle donne ce numéro."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GUD24W2/D-D(U)",
+    "commercialName": "Unix ECO",
+    "sourceFile": "https://cdn.shopify.com/s/files/1/0253/4775/2018/files/GREE-BROCHURE-SYSTEME-CENTRAL-UNIX-ECO-EN.pdf?v=1787068661",
+    "page": 1,
+    "quote": "UNIX ECO",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure Gree Canada « UNIX ECO », liée par la page gree.ca/products/unix-eco ; ce numéro exact figure à la ligne « Outdoor Unit: » du tableau, p. 2."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GUD30W2/D-D(U)",
+    "commercialName": "Unix ECO",
+    "sourceFile": "https://cdn.shopify.com/s/files/1/0253/4775/2018/files/GREE-BROCHURE-SYSTEME-CENTRAL-UNIX-ECO-EN.pdf?v=1787068661",
+    "page": 1,
+    "quote": "UNIX ECO",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure Gree Canada « UNIX ECO », liée par la page gree.ca/products/unix-eco ; ce numéro exact figure à la ligne « Outdoor Unit: » du tableau, p. 2."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GUD36W/A-D(U)",
+    "commercialName": "Unix",
+    "sourceFile": "https://cdn.shopify.com/s/files/1/0253/4775/2018/files/GREE-BROCHURE-SYSTEME-CENTRAL-UNIX-EN-WEB.pdf?v=1728333963",
+    "page": 1,
+    "quote": "UNIX",
+    "confidence": "serie",
+    "sourceType": "secondaire",
+    "note": "Brochure Gree « UNIX » sur le CDN Shopify de la boutique gree.ca ; aucune page gree.ca trouvée qui renvoie vers ce fichier précis, d'où « secondaire ». Ce numéro exact figure à la ligne « Outdoor Unit: », p. 2."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GUD36W2/D-D(U)",
+    "commercialName": "Unix ECO",
+    "sourceFile": "https://cdn.shopify.com/s/files/1/0253/4775/2018/files/GREE-BROCHURE-SYSTEME-CENTRAL-UNIX-ECO-EN.pdf?v=1787068661",
+    "page": 1,
+    "quote": "UNIX ECO",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure Gree Canada « UNIX ECO », liée par la page gree.ca/products/unix-eco ; ce numéro exact figure à la ligne « Outdoor Unit: » du tableau, p. 2."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GUD42W2/D-D(U)",
+    "commercialName": "Unix ECO",
+    "sourceFile": "https://cdn.shopify.com/s/files/1/0253/4775/2018/files/GREE-BROCHURE-SYSTEME-CENTRAL-UNIX-ECO-EN.pdf?v=1787068661",
+    "page": 1,
+    "quote": "UNIX ECO",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure Gree Canada « UNIX ECO », liée par la page gree.ca/products/unix-eco ; ce numéro exact figure à la ligne « Outdoor Unit: » du tableau, p. 2."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GUD48W2/D-D(U)",
+    "commercialName": "Unix ECO",
+    "sourceFile": "https://cdn.shopify.com/s/files/1/0253/4775/2018/files/GREE-BROCHURE-SYSTEME-CENTRAL-UNIX-ECO-EN.pdf?v=1787068661",
+    "page": 1,
+    "quote": "UNIX ECO",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure Gree Canada « UNIX ECO », liée par la page gree.ca/products/unix-eco ; ce numéro exact figure à la ligne « Outdoor Unit: » du tableau, p. 2."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GUD60W/A-D(U)",
+    "commercialName": "Unix",
+    "sourceFile": "https://cdn.shopify.com/s/files/1/0253/4775/2018/files/GREE-BROCHURE-SYSTEME-CENTRAL-UNIX-EN-WEB.pdf?v=1728333963",
+    "page": 1,
+    "quote": "UNIX",
+    "confidence": "serie",
+    "sourceType": "secondaire",
+    "note": "Brochure Gree « UNIX » sur le CDN Shopify de la boutique gree.ca ; aucune page gree.ca trouvée qui renvoie vers ce fichier précis, d'où « secondaire ». Ce numéro exact figure à la ligne « Outdoor Unit: », p. 2."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GUD60W2/D-D(U)",
+    "commercialName": "Unix ECO",
+    "sourceFile": "https://cdn.shopify.com/s/files/1/0253/4775/2018/files/GREE-BROCHURE-SYSTEME-CENTRAL-UNIX-ECO-EN.pdf?v=1787068661",
+    "page": 1,
+    "quote": "UNIX ECO",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure Gree Canada « UNIX ECO », liée par la page gree.ca/products/unix-eco ; ce numéro exact figure à la ligne « Outdoor Unit: » du tableau, p. 2."
   },
   {
     "brand": "Gree",
@@ -7797,6 +8518,28 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "MSHEA09C2AN1",
+    "commercialName": "Mistral",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 10,
+    "quote": "Why choose Mistral?",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair « M-Series » (cdn.master.ca, Groupe Master) ; section de deux pages consacrée au seul modèle Mistral : en-tête cité p. 10, ce numéro exact figure dans le tableau « Technical specifications » (Outdoor model), p. 11."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHEA12C2AN1",
+    "commercialName": "Mistral",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 10,
+    "quote": "Why choose Mistral?",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair « M-Series » (cdn.master.ca, Groupe Master) ; section de deux pages consacrée au seul modèle Mistral : en-tête cité p. 10, ce numéro exact figure dans le tableau « Technical specifications » (Outdoor model), p. 11."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "MSHEA15C2AN",
     "commercialName": "Mistral",
     "sourceFile": "https://cdn.master.ca/documents/2026/moovair/PRL_M_R454BX_2_EN_FR.pdf",
@@ -7808,6 +8551,28 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "MSHEA15C2AN1",
+    "commercialName": "Mistral",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 10,
+    "quote": "Why choose Mistral?",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair « M-Series » (cdn.master.ca, Groupe Master) ; section de deux pages consacrée au seul modèle Mistral : en-tête cité p. 10, ce numéro exact figure dans le tableau « Technical specifications » (Outdoor model), p. 11."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHEA18C2AN1",
+    "commercialName": "Mistral",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 10,
+    "quote": "Why choose Mistral?",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair « M-Series » (cdn.master.ca, Groupe Master) ; section de deux pages consacrée au seul modèle Mistral : en-tête cité p. 10, ce numéro exact figure dans le tableau « Technical specifications » (Outdoor model), p. 11."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "MSHEA18R2AN1",
     "commercialName": "Central-Moov",
     "sourceFile": "https://www.moovair.com/product-registration/",
@@ -7815,6 +8580,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Page officielle moovair.com (enregistrement de produit) : la liste des modèles donne ce numéro suivi de « (Central-Moov Series …) ». Nom confirmé par les brochures Central-Moov de moovair.com."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHEA24C2AN1",
+    "commercialName": "Mistral",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 10,
+    "quote": "Why choose Mistral?",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair « M-Series » (cdn.master.ca, Groupe Master) ; section de deux pages consacrée au seul modèle Mistral : en-tête cité p. 10, ce numéro exact figure dans le tableau « Technical specifications » (Outdoor model), p. 11."
   },
   {
     "brand": "Moovair",
@@ -7865,6 +8641,28 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Page officielle moovair.com (enregistrement de produit) : la liste des modèles donne ce numéro suivi de « (Central-Moov Series …) ». Nom confirmé par les brochures Central-Moov de moovair.com."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHHA12C2AN1",
+    "commercialName": "Morelis",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 6,
+    "quote": "Why choose Morelis?",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair « M-Series » (cdn.master.ca, Groupe Master) ; section de deux pages consacrée au seul modèle Morelis : en-tête cité p. 6, ce numéro exact figure dans le tableau « Technical specifications » (Outdoor model), p. 7."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHHA18C2AN1",
+    "commercialName": "Morelis",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 6,
+    "quote": "Why choose Morelis?",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair « M-Series » (cdn.master.ca, Groupe Master) ; section de deux pages consacrée au seul modèle Morelis : en-tête cité p. 6, ce numéro exact figure dans le tableau « Technical specifications » (Outdoor model), p. 7."
   },
   {
     "brand": "Moovair",
