@@ -3,7 +3,6 @@ import { createMetadata } from "@/lib/seo";
 import { ThermoMatchLoader } from "./_components/ThermoMatchLoader";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
 import { displayFont, serifFont } from "@/lib/fonts";
-import { outilsMono } from "@/components/heroes-v2/outils/fonts";
 
 export const metadata: Metadata = createMetadata({
   title: `Trouver ma thermopompe — ThermoMatch`,
@@ -16,8 +15,7 @@ export const metadata: Metadata = createMetadata({
 export default function TrouverMaThermopompePage() {
   const catalogueCount = getEligibleModelCount();
   return (
-    // Mono du corrigé (chiffres des résultats) : sans préchargement, elle ne pèse rien sur le questionnaire.
-    <main className={`${displayFont.variable} ${serifFont.variable} ${outilsMono.variable}`}>
+    <main className={`${displayFont.variable} ${serifFont.variable}`}>
       <div className="sr-only">
         <h1>Trouver ma thermopompe avec ThermoMatch</h1>
         <p>

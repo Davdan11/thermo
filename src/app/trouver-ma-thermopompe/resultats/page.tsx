@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { decodeShareCode } from "@/lib/thermomatch/share-code";
 import { recommendFromAnswers } from "@/lib/thermomatch/recommend";
 import { SharedResults } from "./SharedResults";
 import { LienIncomplet } from "./LienIncomplet";
-import { CorrigeStrip } from "../_components/Corrige";
-import { K } from "../_components/results-model";
-import { ThermoMatchWordmark } from "@/components/heroes-v2/outils/FlowBar";
-import { outilsMono } from "@/components/heroes-v2/outils/fonts";
 import { displayFont, serifFont } from "@/lib/fonts";
 
 /* ------------------------------------------------------------------
@@ -15,9 +12,10 @@ import { displayFont, serifFont } from "@/lib/fonts";
    Lien partageable : les réponses du questionnaire sont dans l'URL,
    les recommandations sont recalculées ici avec les mêmes données
    officielles que le parcours normal. Page non indexée.
-   Page normale du site (en-tête et pied de page : voir SiteChrome) :
-   un bandeau discret « Résultats partagés », puis le corrigé ThermoMatch.
-   Le papier remonte sous l'en-tête transparent (ton clair : hero/routes).
+   Page normale du site (en-tête et pied de page : voir SiteChrome), sur
+   l'encre des cartes : l'en-tête transparent y prend le ton sombre
+   (hero/routes : /trouver-ma-thermopompe est « exact »). Un bandeau
+   discret « Résultats partagés », puis les résultats (haut « Le tamis »).
    ------------------------------------------------------------------ */
 
 export const metadata: Metadata = {
@@ -26,18 +24,19 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-/* Sous l'en-tête du site (93 px, 105 px dès 1700 px), comme les autres héros clairs. */
+const INK = "#0A1419";
+/* Sous l'en-tête du site (93 px, 105 px dès 1700 px), comme les autres héros. */
 const UNDER_HEADER = "-mt-[93px] pt-[93px] min-[1700px]:-mt-[105px] min-[1700px]:pt-[105px]";
 
 export default async function ResultatsPartagesPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   const code = typeof params.r === "string" ? params.r : null;
   const answers = decodeShareCode(code);
-  const fonts = `${displayFont.variable} ${serifFont.variable} ${outilsMono.variable}`;
+  const fonts = `${displayFont.variable} ${serifFont.variable}`;
 
   if (!answers) {
     return (
-      <main className={`ou-root ${fonts} ${UNDER_HEADER}`} style={{ background: K.paper }}>
+      <main className={`tm-root ${fonts} ${UNDER_HEADER}`} style={{ background: INK }}>
         <LienIncomplet />
       </main>
     );
@@ -46,22 +45,24 @@ export default async function ResultatsPartagesPage({ searchParams }: { searchPa
   const { results, summaryContext } = recommendFromAnswers(answers);
 
   return (
-    <main className={`ou-root ${fonts} ${UNDER_HEADER}`} style={{ background: K.paper }}>
-      <CorrigeStrip className="pt-5 sm:pt-7">
-        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 pb-3 text-[13px]" style={{ borderBottom: `1px solid ${K.line}` }}>
+    <main className={`tm-root flex flex-col text-white ${fonts} ${UNDER_HEADER}`} style={{ background: INK }}>
+      <div className="px-4 pt-5 md:px-8 md:pt-6">
+        <div className="mx-auto flex max-w-[1320px] flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[13px]">
           <p className="flex items-center gap-3" style={{ margin: 0 }}>
-            <ThermoMatchWordmark size={11} />
-            <span aria-hidden="true" className="h-3.5 w-px" style={{ background: K.rule }} />
-            <span className="text-[11.5px] font-medium uppercase" style={{ letterSpacing: "0.18em", color: K.soft }}>
+            <Image src="/images/logo-thermomatch-nav.webp" alt="ThermoMatch" width={118} height={16} style={{ width: 118, height: 16 }} />
+            <span className="text-[11.5px] font-medium uppercase" style={{ letterSpacing: "0.18em", color: "rgba(244,239,231,0.66)" }}>
               Résultats partagés
             </span>
           </p>
-          <Link href="/trouver-ma-thermopompe" className="ou-link font-semibold" style={{ color: K.ink, textDecoration: "none" }}>
-            Refaire le questionnaire <span style={{ color: K.orange }}>→</span>
+          <Link href="/trouver-ma-thermopompe" className="font-medium transition-colors hover:text-white" style={{ color: "rgba(244,239,231,0.75)" }}>
+            Refaire le questionnaire →
           </Link>
         </div>
-      </CorrigeStrip>
-      <SharedResults answers={answers} results={results} summaryContext={summaryContext} />
+      </div>
+      {/* Place gardée en bas pour la barre fixe de la soumission (mobile). */}
+      <div className="flex flex-1 flex-col items-center p-4 pb-28 md:p-8 lg:pb-16">
+        <SharedResults answers={answers} results={results} summaryContext={summaryContext} />
+      </div>
     </main>
   );
 }
