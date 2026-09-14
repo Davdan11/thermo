@@ -88,7 +88,8 @@ describe("ThermoMatch : même température minimale qu'avant le résolveur uniqu
       comparees++;
     }
     expect(comparees).toBeGreaterThan(100);
-  });
+    // Une fiche complète par modèle dont la température est connue : la durée croît avec la couverture.
+  }, 60_000);
 });
 
 describe("Courriel ThermoMatch : par grand froid", () => {

@@ -115,6 +115,11 @@ const OFFICIAL_HOSTS = [
   "heil-hvac.com", // Heil, marque ICP (Carrier)
   "tempstar.com", // Tempstar, marque ICP (Carrier)
   "comfortmaker.com", // Comfortmaker, marque ICP (Carrier)
+  "mitsubishitechinfo.ca", // Mitsubishi Electric Sales Canada (MESCA), distributeur officiel au Canada
+  "bosch-homecomfort.com", // Bosch Home Comfort
+  "samsunghvac.com", // Samsung HVAC America
+  "generalww.com", // Fujitsu General America (marque GENERAL)
+  "s3.amazonaws.com/enter.mehvac.com/", // compartiment S3 de Mitsubishi Electric HVAC (mehvac.com), et lui seul
   "cdn.shopify.com/s/files/1/0253/4775/2018/", // boutique Shopify de Gree Canada (gree.ca), et elle seule
 ];
 
