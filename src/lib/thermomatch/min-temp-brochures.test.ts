@@ -109,7 +109,19 @@ const OFFICIAL_HOSTS = [
   "senville.com",
   "shareddocs.com", // serveur de documents de Carrier (fiches de soumission, product data)
   "cdn.master.ca", // Groupe Master, distributeur officiel (Elios, Moovair, Zephyr)
+  "gree.ca", // Gree Canada, division canadienne de Gree
+  "tosotca.ca", // TOSOT Supplies Inc., distributeur principal autorisé de Tosot au Canada
+  "bryant.com", // Bryant, marque de Carrier
+  "heil-hvac.com", // Heil, marque ICP (Carrier)
+  "tempstar.com", // Tempstar, marque ICP (Carrier)
+  "comfortmaker.com", // Comfortmaker, marque ICP (Carrier)
+  "cdn.shopify.com/s/files/1/0253/4775/2018/", // boutique Shopify de Gree Canada (gree.ca), et elle seule
 ];
+
+/** Une entrée avec « / » vise un dossier précis d'un hébergeur partagé, jamais tout l'hébergeur. */
+function isOfficialSource(url: URL): boolean {
+  return OFFICIAL_HOSTS.some((h) => (h.includes("/") ? (url.hostname + url.pathname).startsWith(h) : url.hostname === h || url.hostname.endsWith("." + h)));
+}
 
 /**
  * Problèmes d'une ligne de la table (liste vide = ligne valide) :
@@ -131,7 +143,7 @@ function problemesDe(e: MinHeatingTempEntry): string[] {
     if (e.sourceType === "secondaire") {
       if (!e.note?.trim()) p.push("source secondaire sans note");
       if (e.confidence !== "modele" && e.confidence !== "serie") p.push("source secondaire sans confidence");
-    } else if (!OFFICIAL_HOSTS.some((h) => host === h || host.endsWith(`.${h}`))) {
+    } else if (!isOfficialSource(new URL(e.sourceFile))) {
       p.push(`hôte hors de la liste officielle : ${host}`);
     }
   } else {
