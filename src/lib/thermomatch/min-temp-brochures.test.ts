@@ -120,6 +120,20 @@ const OFFICIAL_HOSTS = [
   "samsunghvac.com", // Samsung HVAC America
   "generalww.com", // Fujitsu General America (marque GENERAL)
   "s3.amazonaws.com/enter.mehvac.com/", // compartiment S3 de Mitsubishi Electric HVAC (mehvac.com), et lui seul
+  "cooperandhunter.us", // Cooper & Hunter, filiale nord-américaine
+  "aciq.com", // ACiQ
+  "mrcool.com", // MRCOOL (support.mrcool.com)
+  "directairhvac.com", // Direct Air (Powrmatic du Canada)
+  "hvacmainline.com", // Mainline HVAC
+  "innovair.com", // Innovair
+  "comfortstarusa.com", // ComfortStar
+  "starairkontrol.com", // Star Air Kontrol
+  "breeze33.com", // Breeze33
+  "cdn.shopify.com/s/files/1/0775/3603/5052/", // boutique Shopify de ZERO HVAC (liée depuis zerohvacr.com), et elle seule
+  "emiductless.com", // EMI (ECR International)
+  "novairplus.com", // Novair Plus
+  "wabban.com", // Wabban (Emco)
+  "heatcontroller.com", // Heat Controller, fabricant de Comfort-Aire et Century
   "cdn.shopify.com/s/files/1/0253/4775/2018/", // boutique Shopify de Gree Canada (gree.ca), et elle seule
 ];
 
