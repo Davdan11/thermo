@@ -1,4 +1,5 @@
 import { seriesDisplayName } from "./series-label";
+import rawCommercialNames from "./commercial-names.json";
 
 /* ==================================================================
    Nom d'une fiche produit, tel que les gens le cherchent :
@@ -15,6 +16,26 @@ import { seriesDisplayName } from "./series-label";
  * Jamais une forme qui est aussi une autre marque du catalogue (« GE » et « GE Appliances » coexistent).
  */
 const TITLE_BRAND: Record<string, string> = { "Mitsubishi Electric": "Mitsubishi" };
+
+interface CommercialNameEntry {
+  brand: string;
+  outdoorModel: string;
+  commercialName: string;
+}
+
+const normModel = (s: string) => s.split("+")[0].toUpperCase().replace(/[^A-Z0-9]/g, "");
+const normBrand = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+const DOC_NAMES = new Map((rawCommercialNames as CommercialNameEntry[]).map((e) => [`${normBrand(e.brand)}|${normModel(e.outdoorModel)}`, e.commercialName]));
+
+/** Nom commercial imprimé par le fabricant pour ce numéro (commercial-names.json, source et citation vérifiées par le test), ou null. */
+export function documentedCommercialName(brand: string, modelNumber: string): string | null {
+  return DOC_NAMES.get(`${normBrand(brand)}|${normModel(modelNumber)}`) ?? null;
+}
+
+/** Série réduite à un code (« DM », « D5F », « 38MAR ») : ce n'est pas ce que les gens cherchent. */
+export function isSeriesCode(name: string): boolean {
+  return /^[A-Z0-9][A-Z0-9 ./-]{0,10}$/.test(name) && !/[a-z]/.test(name);
+}
 
 /**
  * Nom commercial de la série, ou null : série non identifiée, ou « série » qui décrit l'appareil
@@ -61,7 +82,9 @@ export interface ProductNames {
 }
 
 export function productNames(p: ProductNameInput): ProductNames {
-  const series = commercialSeriesName(p.seriesName, p.seriesSlug);
+  const fromSeries = commercialSeriesName(p.seriesName, p.seriesSlug);
+  // Série absente ou réduite à un code : le nom commercial que le fabricant imprime pour ce numéro, s'il est connu.
+  const series = !fromSeries || isSeriesCode(fromSeries) ? (documentedCommercialName(p.brand, p.modelNumber) ?? fromSeries) : fromSeries;
   const capacity = capacityLabel(p.capacityBtu);
   const short = [series, capacity].filter(Boolean).join(" ") || p.modelNumber;
   const full = `${p.brand} ${short}`;
