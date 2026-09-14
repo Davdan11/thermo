@@ -138,6 +138,12 @@ const OFFICIAL_HOSTS = [
   "amana-hac.com", // Amana Heating & Air Conditioning (Goodman / Daikin)
   "greecomfort.com", // Gree Comfort, site américain de Gree
   "tosot.com", // Tosot Supplies Inc. (même société que tosotca.ca)
+  "master.ca", // Groupe Master (pages produit et fiches de www.master.ca)
+  "nahvac.com", // Midea North American HVAC
+  "stelpro.com", // Stelpro
+  "rheem.com", // Rheem Manufacturing (Rheem, Ruud)
+  "myrheem.com", // dépôt de documents de Rheem (files.myrheem.com)
+  "lennox.com", // Lennox International
   "cdn.shopify.com/s/files/1/0253/4775/2018/", // boutique Shopify de Gree Canada (gree.ca), et elle seule
 ];
 
