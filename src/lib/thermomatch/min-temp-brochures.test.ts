@@ -147,6 +147,8 @@ const OFFICIAL_HOSTS = [
   "lg.com", // LG Electronics (media.us.lg.com, médiathèque de LG USA)
   "geappliancesairandwater.com", // GE Appliances, division Air & Water
   "hisense-canada.com", // Hisense Canada
+  "fujitsugeneral.com", // Fujitsu General America (GENERAL États-Unis et Canada)
+  "tranetechnologies.com", // Trane Technologies (elibrary.tranetechnologies.com)
   "samsung-files.s3.us-east-1.amazonaws.com", // compartiment S3 de Samsung HVAC America (lié depuis samsunghvac.com)
   "s3.amazonaws.com/samsung-files/", // même compartiment Samsung, autre forme d'adresse
   "images.salsify.com/image/upload/s--vRgGO7NQ--/sgscvw3lyrbddnwvydow.pdf", // fiche GE Appliances liée depuis geappliancesairandwater.com (ce fichier seul)
