@@ -4,11 +4,12 @@ import { renderToString } from "react-dom/server";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
-/* ThermoMatch — écran des résultats (cartes d'origine, haut « Le tamis ») et lien partagé.
+/* ThermoMatch — écran des résultats (cartes d'origine, haut « Le thermomètre ») et lien partagé.
    - Aucune neige : elle est réservée à la page d'accueil.
    - Jamais « prix moins subvention » : l'aide LogisVert est versée par Hydro-Québec, à part.
-   - Le tamis : disposition identique d'un rendu à l'autre (graine fixe), nombres tirés de summaryContext,
-     étape sautée quand un nombre manque (jamais de zéro inventé).
+   - « Par grand froid » : température publiée → « Chauffe jusqu'à −XX °C » en très gros ; sinon certifiée
+     climat froid → « Certifiée grand froid », sans chiffre de limite ; sinon la puissance à −15 °C.
+   - Le thermomètre : état final dans le HTML serveur, repère régional seulement avec une vraie donnée.
    - Le lien partagé est une page du site au ton sombre ; le questionnaire garde le ton clair.
    Rendu serveur (renderToString), comme les autres tests de composants. */
 
@@ -37,7 +38,7 @@ vi.mock("next/font/google", () => {
 });
 
 import { ThermoMatchResults } from "../ThermoMatchResults";
-import { layoutSieve, sieveStages } from "../tamis";
+import { planThermometre, texteThermometre } from "../thermometre";
 import ResultatsPartagesPage from "@/app/trouver-ma-thermopompe/resultats/page";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { heroTone } from "@/components/hero/routes";
@@ -46,6 +47,8 @@ import { recommendFromAnswers } from "@/lib/thermomatch/recommend";
 import type { QuestionnaireAnswers } from "@/lib/thermomatch/answers";
 
 const fr = (n: number) => n.toLocaleString("fr-CA", { maximumFractionDigits: 0 });
+/** Texte visible du HTML : sans balises ni commentaires de React. */
+const texte = (html: string) => html.replace(/<!--.*?-->/g, "").replace(/<[^>]+>/g, "");
 
 /** summaryContext connu (valeurs choisies pour se reconnaître dans le HTML). */
 const CTX = {
@@ -62,10 +65,10 @@ const CTX = {
   candidatesRetained: 212,
 };
 
-const result = (id: string, brand: string) => ({
+const result = (id: string, brand: string, produit: Record<string, unknown> = {}) => ({
   badge: "Meilleur choix",
   score: 91,
-  product: { id, brand, series: "Série Test", outdoorModel: "EXT-24", systemType: "ductless", nominalBtu: 24000, heatingCapacity5FBtuH: { min: 21000, max: 21000 }, coldClimate: true, h5Certified: true, minOperatingTempC: -30, imageUrl: null, alsoSoldAs: [] },
+  product: { id, brand, series: "Série Test", outdoorModel: "EXT-24", systemType: "ductless", nominalBtu: 24000, heatingCapacity5FBtuH: { min: 21000, max: 21000 }, coldClimate: true, h5Certified: true, minOperatingTempC: -30, imageUrl: null, alsoSoldAs: [], ...produit },
   selectedPairing: { hspf2: { min: 10.5, max: 10.5 }, seer2: { min: 22, max: 22 } },
   subsidyEstimate: 1350,
   fitRatio: 1.05,
@@ -73,10 +76,19 @@ const result = (id: string, brand: string) => ({
   reasons: ["Couvre la charge estimée."],
   warnings: [],
 });
-const RESULTS = [result("m1", "Marque Un"), result("m2", "Marque Deux"), result("m3", "Marque Trois")];
+const trois = (produit: Record<string, unknown> = {}) => [result("m1", "Marque Un", produit), result("m2", "Marque Deux", produit), result("m3", "Marque Trois", produit)];
+const RESULTS = trois();
 
-const render = (ctx: Record<string, unknown> | null) =>
-  renderToString(createElement(ThermoMatchResults, { results: RESULTS, onSelectResult: () => {}, onRetry: () => {}, summaryContext: ctx as never }));
+const renderWith = (results: unknown[], ctx: Record<string, unknown> | null) =>
+  renderToString(createElement(ThermoMatchResults, { results: results as never, onSelectResult: () => {}, onRetry: () => {}, summaryContext: ctx as never }));
+const render = (ctx: Record<string, unknown> | null) => renderWith(RESULTS, ctx);
+
+/** Bloc « Par grand froid » de chaque carte, dans l'ordre des résultats (jusqu'à la scène de l'appareil). */
+const blocsFroid = (html: string) =>
+  html
+    .split('data-grand-froid="')
+    .slice(1)
+    .map((s) => ({ kind: s.slice(0, s.indexOf('"')), texte: texte(s.slice(s.indexOf(">") + 1, s.indexOf("Photo officielle à venir"))) }));
 
 const ANSWERS = {
   postalCode: "H2X 1Y4",
@@ -97,7 +109,7 @@ const ANSWERS = {
 describe("Résultats ThermoMatch : pas de neige, pas de prix moins la subvention", () => {
   it("aucun fichier des résultats n'importe Snowfall", () => {
     const dir = path.resolve(__dirname, "..");
-    const files = ["ThermoMatchResults.tsx", "TamisHero.tsx", "tamis.ts", "SavingsBand.tsx", "ExistingUnitCompare.tsx", "EmailMyChoices.tsx", "results.css", "../resultats/page.tsx", "../resultats/SharedResults.tsx", "../resultats/LienIncomplet.tsx"];
+    const files = ["ThermoMatchResults.tsx", "ThermometreHero.tsx", "thermometre.ts", "SavingsBand.tsx", "ExistingUnitCompare.tsx", "EmailMyChoices.tsx", "results.css", "../resultats/page.tsx", "../resultats/SharedResults.tsx", "../resultats/LienIncomplet.tsx"];
     for (const f of files) expect(readFileSync(path.join(dir, f), "utf8"), f).not.toMatch(/Snowfall/);
   });
 
@@ -115,56 +127,98 @@ describe("Résultats ThermoMatch : pas de neige, pas de prix moins la subvention
   });
 });
 
-describe("Le tamis", () => {
-  it("disposition identique d'un rendu à l'autre (graine fixe), un point par machine évaluée", () => {
-    const stages = sieveStages(CTX, 3);
-    expect(stages.map((s) => [s.key, s.n])).toEqual([
-      ["evaluated", 1284],
-      ["retained", 212],
-      ["kept", 3],
-    ]);
-    const a = layoutSieve(stages, 0.8);
-    const b = layoutSieve(sieveStages({ ...CTX }, 3), 0.8);
-    expect(b).toEqual(a);
-    expect(a.dots).toHaveLength(1284);
-    expect(a.retained).toHaveLength(212);
-    expect(a.kept).toHaveLength(3);
-    for (const k of a.kept) expect(a.retained).toContain(k);
-    for (const d of a.dots) {
-      expect(d.x).toBeGreaterThan(0);
-      expect(d.x).toBeLessThan(1);
-      expect(d.y).toBeGreaterThan(0);
-      expect(d.y).toBeLessThan(1);
-    }
-    // Une autre graine donne un autre tamis : la disposition vient bien de la graine, pas du hasard.
-    expect(layoutSieve(stages, 0.8, 42).kept).not.toEqual(a.kept);
-  });
-
-  it("un nombre absent saute son étape, jamais de nombre inventé", () => {
-    expect(sieveStages({}, 3).map((s) => [s.key, s.n])).toEqual([["kept", 3]]);
-    expect(layoutSieve(sieveStages({}, 3), 1).dots).toHaveLength(3);
-
-    const noRetained = sieveStages({ candidatesEvaluated: 400 }, 3);
-    expect(noRetained.map((s) => s.key)).toEqual(["evaluated", "kept"]);
-    const l = layoutSieve(noRetained, 1);
-    expect(l.retained).toBeNull();
-    expect(l.dots).toHaveLength(400);
-    expect(l.kept).toHaveLength(3);
-
-    expect(sieveStages({ candidatesRetained: 90 }, 2).map((s) => [s.key, s.n])).toEqual([
-      ["retained", 90],
-      ["kept", 2],
-    ]);
-  });
-
-  it("les nombres du haut de page sont dans le HTML serveur, tirés de summaryContext", () => {
+describe("« Par grand froid » sur les cartes", () => {
+  it("température publiée : « Chauffe jusqu’à −30 °C » en très gros, avec sa source", () => {
     const html = render(CTX);
-    for (const v of [fr(1284), fr(212), fr(38500), fr(1750)]) expect(html).toContain(v);
-    expect(html).toContain("machines évaluées");
-    expect(html).toContain("de bon calibre pour votre maison");
-    expect(html).toContain("Un point par machine évaluée.");
-    expect(html).toContain("<canvas");
+    const blocs = blocsFroid(html);
+    expect(blocs).toHaveLength(3);
+    for (const b of blocs) {
+      expect(b.kind).toBe("publiee");
+      expect(b.texte).toMatch(/Chauffe jusqu’à\s*−30 °C/);
+      expect(b.texte).toContain("Température minimale publiée par le fabricant");
+      expect(b.texte).not.toContain("Certifiée grand froid");
+    }
+    // Au moins 44 px sur mobile, chiffres tabulaires : le plus gros texte de la carte.
+    const gros = [...html.matchAll(/<p class="([^"]*)"[^>]*>−30</g)];
+    expect(gros).toHaveLength(3);
+    for (const g of gros) {
+      expect(g[1]).toContain("text-[56px]");
+      expect(g[1]).toContain("tabular-nums");
+    }
+  });
+
+  it("sans température publiée mais certifiée climat froid : « Certifiée grand froid », sans chiffre de limite", () => {
+    const html = renderWith(trois({ minOperatingTempC: null, coldClimate: true }), CTX);
+    const blocs = blocsFroid(html);
+    expect(blocs).toHaveLength(3);
+    for (const b of blocs) {
+      expect(b.kind).toBe("certifiee");
+      expect(b.texte).toContain("Certifiée grand froid");
+      expect(b.texte).toContain("Chauffe encore à −15 °C");
+      expect(b.texte).toContain("Certification ENERGY STAR climat froid");
+      expect(b.texte).toContain(`${fr(21000)} BTU/h livrés à −15 °C`);
+      expect(b.texte).not.toMatch(/jusqu’à/i);
+    }
+    // Nulle part « jusqu’à −15 °C » : −15 °C est le point de mesure de la certification, pas la limite.
+    const tout = texte(html);
+    expect(tout).not.toMatch(/jusqu’à\s*−15/);
+    // Le thermomètre les pose au repère −15 °C, « minimum non publié ».
+    expect(tout).toContain("certifiées à −15 °C");
+    expect(tout).toContain("minimum non publié");
+  });
+
+  it("ni température publiée ni climat froid : ni « Chauffe jusqu’à » ni « Certifiée grand froid », la puissance à −15 °C", () => {
+    const html = renderWith(trois({ minOperatingTempC: null, coldClimate: false }), CTX);
+    const blocs = blocsFroid(html);
+    expect(blocs).toHaveLength(3);
+    for (const b of blocs) {
+      expect(b.kind).toBe("mesuree");
+      expect(b.texte).toContain(`${fr(21000)} BTU/h`);
+      expect(b.texte).toContain("livrés à −15 °C");
+      expect(b.texte).not.toMatch(/jusqu’à/i);
+      expect(b.texte).not.toContain("Certifiée grand froid");
+      expect(b.texte).not.toContain("Chauffe encore");
+    }
+    // Sur le thermomètre : pas posées, listées « température minimale non publiée ».
+    const tout = texte(html);
+    expect(tout).toContain("Température minimale non publiée");
+    expect(tout).not.toContain("certifiée à");
+    expect(tout).not.toContain("certifiées à");
+  });
+});
+
+describe("Le thermomètre (haut de page)", () => {
+  const MACHINES = RESULTS.map((r) => ({ key: r.product.id, brand: r.product.brand, series: r.product.series, minTemp: r.product.minOperatingTempC, coldClimate: r.product.coldClimate }));
+
+  it("HTML serveur : état final (valeurs, positions), animation en attente, texte équivalent", () => {
+    const ctx = { ...CTX, designTempC: -23 };
+    const html = render(ctx);
+    const plan = planThermometre(MACHINES, ctx);
+    expect(html).toContain('data-play="0"');
+    expect(html).not.toContain("<canvas");
+    // Le mercure s'arrête à la machine la plus froide (−30 °C), calculé côté serveur.
+    expect(plan.mercure).toBeGreaterThan(0);
+    expect(html).toContain(`height="${plan.mercure}"`);
+    const tout = texte(html);
+    expect(tout).toContain("chauffent jusqu’à −30 °C");
+    expect(tout).toContain("Jours les plus froids : −23 °C");
+    expect(tout).toContain("à Montréal");
+    for (const l of texteThermometre(plan)) expect(tout).toContain(l);
+    // Infos de l'en-tête : maison, région, charge et marge.
+    for (const v of [fr(38500), fr(1750), "2 étages", "Montréal", "±13 %"]) expect(tout).toContain(v);
     expect(html).not.toContain("NaN");
+  });
+
+  it("repère régional seulement avec une vraie température de conception", () => {
+    expect(texte(render(CTX))).not.toContain("Jours les plus froids");
+    expect(texte(render({ ...CTX, designTempC: null }))).not.toContain("Jours les plus froids");
+    expect(texte(render({ ...CTX, designTempC: -23 }))).toContain("Jours les plus froids");
+  });
+
+  it("moteur : température de conception de la région, jamais celle du repli général", () => {
+    expect(recommendFromAnswers(ANSWERS).summaryContext).toMatchObject({ region: "Montréal / Laval", designTempC: -23 });
+    expect(recommendFromAnswers({ ...ANSWERS, postalCode: "G0A 1A0" }).summaryContext).toMatchObject({ region: "Québec (Général)", designTempC: null });
+    expect(recommendFromAnswers({ ...ANSWERS, postalCode: "K1A 0B1" }).summaryContext.designTempC).toBeNull();
   });
 
   it("sans « bon calibre » ni pondération complète : rien d'inventé (ni 0, ni NaN)", () => {
@@ -186,7 +240,7 @@ describe("Lien partagé", () => {
     expect(heroTone("/trouver-ma-thermopompe")).toBe("light");
   });
 
-  it("rendu dans la page du site, sans l'en-tête fait à la main, avec le tamis et ses vrais nombres", async () => {
+  it("rendu dans la page du site, sans l'en-tête fait à la main, avec le thermomètre et ses vraies données", async () => {
     const { results, summaryContext } = recommendFromAnswers(ANSWERS);
     expect(results.length).toBeGreaterThan(0);
     nav.pathname = "/trouver-ma-thermopompe/resultats";
@@ -194,8 +248,11 @@ describe("Lien partagé", () => {
     expect(html).toContain("Résultats partagés");
     expect(html).toContain("Refaire le questionnaire");
     expect(html).toContain('id="tm-titre"');
+    expect(html).toContain('data-play="0"');
     expect(html).toContain(fr(Math.round(summaryContext.estimatedLoadBtu)));
     expect(html).toContain(fr(summaryContext.candidatesEvaluated));
+    // Repère régional tiré du moteur (Montréal / Laval, −23 °C).
+    expect(texte(html)).toContain("Jours les plus froids : −23 °C");
     expect(html).not.toContain("Refaire le test");
     expect(html).not.toMatch(/<header/);
   });
