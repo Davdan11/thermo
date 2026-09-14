@@ -3,6 +3,9 @@ export type ClimateZone = {
   designTempC: number;
 };
 
+/** Libellé du repli pour un code postal québécois hors table : sa température de conception est une valeur par défaut, pas celle de la région. */
+export const REGION_GENERALE = "Québec (Général)";
+
 // Simplified mapping of Forward Sortation Areas (FSA) in Quebec
 // Design temperatures are approximate for heating load calculations.
 const fsaMap: Record<string, ClimateZone> = {
@@ -99,7 +102,7 @@ export function resolvePostalCode(postalCode: string): ClimateZone | null {
 
   // Default fallback for any valid Quebec postal code starting with G, H, or J
   if (fsa1 === "G" || fsa1 === "H" || fsa1 === "J") {
-    return { region: "Québec (Général)", designTempC: -25 };
+    return { region: REGION_GENERALE, designTempC: -25 };
   }
 
   // Not a Quebec postal code or invalid

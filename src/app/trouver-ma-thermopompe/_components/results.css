@@ -53,3 +53,18 @@ html:has(.tm-root), body:has(.tm-root) { overflow-x: clip; }
   .tm-float, .tm-sheen { animation: none; }
   .tm-sheen { display: none; }
 }
+
+/* « Le thermomètre » (haut de page, ThermometreHero). L'état final est dans le HTML ; l'animation n'est
+   déclarée que si les scripts tournent et qu'on n'a pas demandé moins d'animations. En attente
+   (data-play="0"), elle reste figée sur sa première image ; elle part à l'entrée dans l'écran.
+   Durées et délais en ligne (thermometre.ts). Transformations et opacité seulement : aucun filtre. */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .tm-th-merc, .tm-th-pose { transform-box: fill-box; }
+  .tm-th-merc { animation: tm-th-merc 1.3s cubic-bezier(0.33, 1, 0.68, 1) both; }
+  .tm-th-pose { animation: tm-th-pose 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  .tm-th-fade { animation: tm-th-fade 0.5s ease-out both; }
+  .tm-th[data-play="0"] :is(.tm-th-merc, .tm-th-pose, .tm-th-fade) { animation-play-state: paused; }
+}
+@keyframes tm-th-merc { from { transform: translateY(-100%); } }
+@keyframes tm-th-pose { from { opacity: 0; transform: translateY(-10px); } }
+@keyframes tm-th-fade { from { opacity: 0; } }

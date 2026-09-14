@@ -9,7 +9,7 @@ import { registry } from "@/lib/data/registry";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { getLogisVertVariants } from "@/lib/subsidies/logisvert-official";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
-import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
+import { REGION_GENERALE, resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { buildCandidates, runThermoMatch, type SourceModel, type SourcePairing } from "@/lib/thermomatch";
 import { answersToRequest, type QuestionnaireAnswers } from "@/lib/thermomatch/answers";
 import { installedPriceRange } from "@/lib/prices/grille-installee";
@@ -160,6 +160,10 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
       systemKind: req.systemKind,
       region: region?.region ?? null,
       climateZone: region?.region ?? null,
+      // Froid de référence de la région (température de conception de la table des codes postaux), pour le repère
+      // « jours les plus froids » des résultats : seulement pour une région reconnue, jamais pour le repli général.
+      // La charge ne s'en sert pas (elle est uniforme pour tout le Québec).
+      designTempC: region && region.region !== REGION_GENERALE ? region.designTempC : null,
       logisVertUpdatedAt: logisVertUpdatedAt ?? null,
       // Économies de chauffage estimées : maisons aux plinthes seulement (voir savings.ts).
       savings: estimateHeatingSavings({ postalCode: answers.postalCode, currentSystem: answers.currentSystem, loadBtuH: output.load.loadBtuH }),
