@@ -74,7 +74,7 @@ export function ProductHeader({ detail, seo = null }: ProductHeaderProps) {
       zones={model.zones ?? null}
       coldClimate={detail.isColdClimate}
       discontinued={model.status === "discontinued"}
-      minTempC={configuration?.minHeatingTempC ?? null}
+      minTempC={detail.minHeatingTemp?.valueC ?? null}
       imageUrl={model.imageUrl ?? series.imageUrl ?? null}
       figures={figures}
       logisVert={seo && seo.logisVertDollars > 0 ? seo.logisVertDollars : 0}

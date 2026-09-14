@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { CompareProduct } from "@/lib/data/queries/comparator";
 import type { ComparisonHighlights, HighlightResult } from "@/lib/compare/highlights";
+import { formatMinTemp } from "@/lib/thermomatch/min-temp-source";
 
 /* ------------------------------------------------------------------
    CompareTable — grouped comparison table with subsidy section
@@ -59,10 +60,9 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
 
   // --- PERFORMANCE HIVERNALE ---
   const perfRows: RowDef[] = [
-    { ...row("Temp. min. annoncée", details.map((d) =>
-      d.configuration?.minHeatingTempC != null
-        ? `${d.configuration.minHeatingTempC} °C`
-        : null,
+    // Valeur résolue sur le serveur (catalogue, puis document du fabricant) ; inconnue = N/D.
+    { ...row("Chauffe jusqu’à", details.map((d) =>
+      d.minHeatingTemp ? formatMinTemp(d.minHeatingTemp.valueC) : null,
     )), highlight: highlights.minTemp },
   ];
   for (const temp of allTemps) {

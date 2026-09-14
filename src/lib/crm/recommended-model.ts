@@ -11,6 +11,8 @@ import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { getSeoModel } from "@/lib/seo/programmatic";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { SITE_URL } from "@/lib/seo";
+import { minHeatingTempForModel } from "@/lib/thermomatch/min-temp";
+import type { MinTempSourceType } from "@/lib/thermomatch/min-temp-source";
 
 export interface RecommendedModel {
   id: string;
@@ -29,7 +31,10 @@ export interface RecommendedModel {
   heatingBtu5F: number | null;
   hspf2: number | null;
   seer2: number | null;
+  /** Température minimale de chauffage résolue (catalogue, puis document du fabricant) ; null si inconnue. */
   minHeatingTempC: number | null;
+  /** Nature de sa source : « secondaire » = fiche du fabricant reproduite par un distributeur. */
+  minHeatingTempSource?: MinTempSourceType | null;
   coldClimate: boolean;
   logisVertDollars: number | null;
 }
@@ -56,6 +61,8 @@ export function resolveRecommendedModel(selection: string | undefined | null): R
     ? brochureForProduct(detail)
     : (model.brochureUrl ?? series?.brochureUrl ?? brochureForModelNumber(model.modelNumber, brandName) ?? brochureForSeries(brandName, series?.name) ?? null);
   const cfg = detail?.configuration ?? null;
+  // Même résolveur que la fiche produit (sinon, par le modèle, comme ThermoMatch).
+  const minTemp = detail ? detail.minHeatingTemp : minHeatingTempForModel(id);
   return {
     id,
     slug: model.slug,
@@ -70,7 +77,8 @@ export function resolveRecommendedModel(selection: string | undefined | null): R
     heatingBtu5F: cfg?.heatingCapacityMaxBtu ?? model.heatingCapacity5FMaxBtu ?? null,
     hspf2: cfg?.hspf2 ?? model.hspf2Max ?? null,
     seer2: cfg?.seer2 ?? model.seer2Max ?? null,
-    minHeatingTempC: cfg?.minHeatingTempC ?? null,
+    minHeatingTempC: minTemp?.valueC ?? null,
+    minHeatingTempSource: minTemp?.sourceType ?? null,
     coldClimate: detail?.isColdClimate ?? false,
     logisVertDollars: seo?.logisVertDollars && seo.logisVertDollars > 0 ? seo.logisVertDollars : null,
   };

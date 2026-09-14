@@ -22,6 +22,8 @@ import { getWarrantiesForModel } from "./products";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
+import { resolveMinHeatingTemp } from "@/lib/thermomatch/min-temp-brochures";
+import type { ResolvedMinHeatingTemp } from "@/lib/thermomatch/min-temp-source";
 
 /* ------------------------------------------------------------------
    Product Detail — everything needed for a product page
@@ -41,6 +43,11 @@ export interface ProductDetail {
   editorial: EditorialContent | null;
   sources: SourceReference[];
   isColdClimate: boolean;
+  /**
+   * Température minimale de chauffage résolue (catalogue d'abord, puis relevés des documents du fabricant),
+   * avec sa source ; null si inconnue. Seule valeur à afficher : ne pas relire configuration.minHeatingTempC.
+   */
+  minHeatingTemp: ResolvedMinHeatingTemp | null;
   systemTypeLabel: string;
   /** Other models in the same series (for config switching) */
   seriesSiblings: ProductModel[];
@@ -233,6 +240,8 @@ export function getProductDetail(slug: string): ProductDetail | null {
     editorial,
     sources,
     isColdClimate: model.categories.includes("cold-climate"),
+    // Résolveur unique : la configuration d'abord, puis les relevés des documents du fabricant (même numéro que ThermoMatch).
+    minHeatingTemp: resolveMinHeatingTemp({ catalogC: configuration?.minHeatingTempC, outdoorModel: model.modelNumber, brand: brand.name }),
     systemTypeLabel: SYSTEM_TYPE_LABELS[model.systemType],
     seriesSiblings,
     similarModels,

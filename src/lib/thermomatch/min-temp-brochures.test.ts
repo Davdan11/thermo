@@ -7,6 +7,7 @@ import {
   minHeatingTempFromBrochures,
   normalizeBrand,
   normalizeModelNumber,
+  type MinHeatingTempEntry,
 } from "./min-temp-brochures";
 
 describe("normalizeModelNumber", () => {
@@ -108,24 +109,57 @@ const OFFICIAL_HOSTS = [
   "senville.com",
 ];
 
-describe("min-heating-temps.json", () => {
-  it("chaque ligne est complète, plausible et pointe vers un PDF présent ou une source officielle", () => {
-    expect(entries.length).toBeGreaterThan(0);
-    for (const e of entries) {
-      expect(e.outdoorModel.length).toBeGreaterThan(3);
-      expect(e.brand.length).toBeGreaterThan(0);
-      expect(Number.isInteger(e.minHeatingTempC)).toBe(true);
-      expect(e.minHeatingTempC).toBeGreaterThanOrEqual(-40);
-      expect(e.minHeatingTempC).toBeLessThanOrEqual(0);
-      expect(e.quote.length).toBeGreaterThan(0);
-      expect(e.quote.length).toBeLessThanOrEqual(160);
-      if (/^https:\/\//.test(e.sourceFile)) {
-        const host = new URL(e.sourceFile).hostname;
-        expect(OFFICIAL_HOSTS.some((h) => host === h || host.endsWith(`.${h}`)), e.sourceFile).toBe(true);
-      } else {
-        expect(e.sourceFile).toMatch(/\.pdf$/i);
-        expect(existsSync(path.join(process.cwd(), e.sourceFile)), e.sourceFile).toBe(true);
-      }
+/**
+ * Problèmes d'une ligne de la table (liste vide = ligne valide) :
+ * - source locale : un PDF présent dans le dépôt, quelle que soit la nature de la source ;
+ * - source https « officiel » (ou sans sourceType) : hôte de la liste fermée OFFICIAL_HOSTS ;
+ * - source https « secondaire » (distributeur ou détaillant qui reproduit la fiche du fabricant pour ce
+ *   numéro exact) : acceptée hors de la liste, mais avec une note non vide et une confidence renseignée.
+ */
+function problemesDe(e: MinHeatingTempEntry): string[] {
+  const p: string[] = [];
+  if (!(e.outdoorModel.length > 3)) p.push("numéro trop court");
+  if (!(e.brand.length > 0)) p.push("marque vide");
+  if (!Number.isInteger(e.minHeatingTempC)) p.push("température non entière");
+  if (e.minHeatingTempC < -40 || e.minHeatingTempC > 0) p.push("température hors de [−40, 0] °C");
+  if (!(e.quote.length > 0 && e.quote.length <= 160)) p.push("citation vide ou trop longue");
+  if (e.sourceType !== undefined && e.sourceType !== "officiel" && e.sourceType !== "secondaire") p.push(`sourceType inconnu : ${String(e.sourceType)}`);
+  if (/^https:\/\//.test(e.sourceFile)) {
+    const host = new URL(e.sourceFile).hostname;
+    if (e.sourceType === "secondaire") {
+      if (!e.note?.trim()) p.push("source secondaire sans note");
+      if (e.confidence !== "modele" && e.confidence !== "serie") p.push("source secondaire sans confidence");
+    } else if (!OFFICIAL_HOSTS.some((h) => host === h || host.endsWith(`.${h}`))) {
+      p.push(`hôte hors de la liste officielle : ${host}`);
     }
+  } else {
+    if (!/\.pdf$/i.test(e.sourceFile)) p.push("source locale qui n'est pas un PDF");
+    else if (!existsSync(path.join(process.cwd(), e.sourceFile))) p.push(`PDF absent du dépôt : ${e.sourceFile}`);
+  }
+  return p;
+}
+
+describe("min-heating-temps.json", () => {
+  it("chaque ligne est complète, plausible et pointe vers un PDF présent, une source officielle ou une source secondaire justifiée", () => {
+    expect(entries.length).toBeGreaterThan(0);
+    const problemes = (entries as MinHeatingTempEntry[]).flatMap((e) => problemesDe(e).map((p) => `${e.brand} ${e.outdoorModel} : ${p}`));
+    expect(problemes).toEqual([]);
+  });
+
+  it("règles des sources : officielle = liste fermée, secondaire = note et confidence, locale = PDF du dépôt", () => {
+    const base = { outdoorModel: "ZZTEST24A", brand: "Marque Test", minHeatingTempC: -25, quote: "Heating -25°C" };
+    const pdf = (entries as MinHeatingTempEntry[]).find((e) => !/^https:\/\//.test(e.sourceFile))!.sourceFile;
+    // Officielle : hôte de la liste, ou refusée.
+    expect(problemesDe({ ...base, sourceFile: "https://www.carrier.com/fiche.pdf" })).toEqual([]);
+    expect(problemesDe({ ...base, sourceFile: "https://detaillant.example/fiche" })).toEqual(["hôte hors de la liste officielle : detaillant.example"]);
+    expect(problemesDe({ ...base, sourceType: "officiel", sourceFile: "https://detaillant.example/fiche" })).toHaveLength(1);
+    // Secondaire : hors liste accepté seulement avec une note et une confidence.
+    expect(problemesDe({ ...base, sourceType: "secondaire", sourceFile: "https://detaillant.example/fiche", note: "Reproduit la fiche du fabricant.", confidence: "modele" })).toEqual([]);
+    expect(problemesDe({ ...base, sourceType: "secondaire", sourceFile: "https://detaillant.example/fiche", confidence: "modele" })).toEqual(["source secondaire sans note"]);
+    expect(problemesDe({ ...base, sourceType: "secondaire", sourceFile: "https://detaillant.example/fiche", note: "  ", confidence: "modele" })).toEqual(["source secondaire sans note"]);
+    expect(problemesDe({ ...base, sourceType: "secondaire", sourceFile: "https://detaillant.example/fiche", note: "Fiche reproduite." })).toEqual(["source secondaire sans confidence"]);
+    // Locale : un PDF présent dans le dépôt, même pour une source secondaire.
+    expect(problemesDe({ ...base, sourceFile: pdf })).toEqual([]);
+    expect(problemesDe({ ...base, sourceType: "secondaire", sourceFile: "public/documents/absent-zz.pdf", note: "x", confidence: "serie" })).toEqual(["PDF absent du dépôt : public/documents/absent-zz.pdf"]);
   });
 });

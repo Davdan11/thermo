@@ -4,6 +4,7 @@ import { brandLogoPath } from "@/lib/data/brand-logos";
 import { brandTier } from "@/lib/thermomatch/tiers";
 import { installedPriceRange, money as moneyRange } from "@/lib/prices/grille-installee";
 import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
+import { formatMinTemp } from "@/lib/thermomatch/min-temp-source"; // mise en forme seulement : aucune donnée embarquée côté client
 
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
@@ -151,13 +152,15 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
   type RowValue = { rating: string; detail: string; color: string };
 
   function buildColdRow(p: CompareProduct): RowValue {
-    const minTemp = p.detail.configuration?.minHeatingTempC ?? p.detail.model.minimumOperatingTemperatureC;
+    // Température minimale résolue sur le serveur (catalogue, puis document du fabricant).
+    const minTemp = p.detail.minHeatingTemp?.valueC ?? p.detail.model.minimumOperatingTemperatureC;
     const cc = p.detail.isColdClimate;
-    if (cc && minTemp != null && minTemp <= -30) return { rating: "Excellente", detail: `${minTemp} °C · Certifié climat froid`, color: "#15803d" };
-    if (cc && minTemp != null && minTemp <= -25) return { rating: "Très bonne", detail: `${minTemp} °C · Certifié climat froid`, color: "#16a34a" };
-    if (cc && minTemp != null) return { rating: "Bonne", detail: `${minTemp} °C · Certifié climat froid`, color: "#65a30d" };
+    const jusqua = minTemp != null ? `Chauffe jusqu’à ${formatMinTemp(minTemp)}` : "";
+    if (cc && minTemp != null && minTemp <= -30) return { rating: "Excellente", detail: `${jusqua} · Certifié climat froid`, color: "#15803d" };
+    if (cc && minTemp != null && minTemp <= -25) return { rating: "Très bonne", detail: `${jusqua} · Certifié climat froid`, color: "#16a34a" };
+    if (cc && minTemp != null) return { rating: "Bonne", detail: `${jusqua} · Certifié climat froid`, color: "#65a30d" };
     if (cc) return { rating: "Bonne", detail: "Certifié climat froid", color: "#65a30d" };
-    if (minTemp != null) return { rating: "Standard", detail: `${minTemp} °C`, color: "#d97706" };
+    if (minTemp != null) return { rating: "Standard", detail: jusqua, color: "#d97706" };
     return { rating: "Standard", detail: "Non certifié climat froid", color: "#9ca3af" };
   }
 
@@ -340,7 +343,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       title: "Performance climat froid",
       specs: [
         { label: "Certifié climat froid", getter: (p) => (p.detail.isColdClimate ? "Oui, certifié" : "Non"), num: (p) => (p.detail.isColdClimate ? 1 : 0) },
-        { label: "Temp. min. d'opération", getter: (p) => { const t = p.detail.configuration?.minHeatingTempC ?? p.detail.model.minimumOperatingTemperatureC; return t != null ? `${t} °C` : "—"; }, num: (p) => p.detail.configuration?.minHeatingTempC ?? p.detail.model.minimumOperatingTemperatureC ?? null, higherIsBetter: false },
+        { label: "Chauffe jusqu’à", getter: (p) => { const t = p.detail.minHeatingTemp?.valueC ?? p.detail.model.minimumOperatingTemperatureC; return t != null ? formatMinTemp(t) : "—"; }, num: (p) => p.detail.minHeatingTemp?.valueC ?? p.detail.model.minimumOperatingTemperatureC ?? null, higherIsBetter: false },
         { label: "Réfrigérant", getter: (p) => p.detail.outdoorUnit?.refrigerant ?? "—" },
       ],
     },

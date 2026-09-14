@@ -2,6 +2,7 @@ import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { DocGlyph, Reveal, SheetHead } from "@/components/sections-v2/produit/motion";
 import { INK, LABEL, LINE, MUTE } from "@/components/sections-v2/produit/tokens";
+import { formatMinTemp } from "@/lib/thermomatch/min-temp-source";
 
 /* ------------------------------------------------------------------
    TechSpecs — grouped technical spécifications using DL
@@ -61,8 +62,9 @@ export function TechSpecs({ detail }: TechSpecsProps) {
     if (configuration.eer2 != null) {
       configRows.push({ label: "EER2", value: fr(configuration.eer2) });
     }
-    if (configuration.minHeatingTempC != null) {
-      configRows.push({ label: "Temp. min. chauffage", value: `${fr(configuration.minHeatingTempC)} °C` });
+    // Valeur résolue (catalogue, puis document du fabricant) : la même que « Chauffe jusqu'à » en tête de fiche.
+    if (detail.minHeatingTemp) {
+      configRows.push({ label: "Temp. min. chauffage", value: formatMinTemp(detail.minHeatingTemp.valueC) });
     }
     if (configuration.maxCoolingTempC != null) {
       configRows.push({ label: "Temp. max. climatisation", value: `${fr(configuration.maxCoolingTempC)} °C` });

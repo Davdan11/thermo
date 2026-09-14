@@ -1,6 +1,7 @@
 import type { ComparisonHighlights } from "@/lib/compare/highlights";
 import type { CompareProduct } from "@/lib/data/queries/comparator";
 import type { HighlightResult } from "@/lib/compare/highlights";
+import { formatMinTemp } from "@/lib/thermomatch/min-temp-source";
 
 /* ------------------------------------------------------------------
    CompareSummary — key differences in visual cards
@@ -79,9 +80,11 @@ export function CompareSummary({ highlights, products }: CompareSummaryProps) {
     result: highlights.minTemp,
     winnerName: getName(highlights.minTemp.bestIndex),
     winnerBrand: getBrand(highlights.minTemp.bestIndex),
-    value: highlights.minTemp.bestIndex !== null
-      ? `Jusqu'a ${products[highlights.minTemp.bestIndex].detail.configuration?.minHeatingTempC ?? "?"} °C`
-      : null,
+    value: (() => {
+      // Même valeur résolue que la règle lowestMinTemp (catalogue, puis document du fabricant).
+      const v = highlights.minTemp.bestIndex !== null ? products[highlights.minTemp.bestIndex].detail.minHeatingTemp?.valueC : null;
+      return v != null ? `Chauffe jusqu’à ${formatMinTemp(v)}` : null;
+    })(),
     icon: CATEGORY_ICONS.temp,
   });
 
