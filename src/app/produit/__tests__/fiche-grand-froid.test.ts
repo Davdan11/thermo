@@ -37,6 +37,27 @@ vi.mock("next/font/google", () => {
 
 import ProductPage from "@/app/produit/[slug]/page";
 import { ChauffeJusqua } from "@/components/product/ChauffeJusqua";
+import { registry } from "@/lib/data/registry";
+import { minHeatingTempForModel } from "@/lib/thermomatch/min-temp";
+
+/**
+ * Première fiche publiée (une seule configuration) dont la température est encore inconnue.
+ * Choisie dans le catalogue et non figée : chaque relevé de températures en fait passer en « connues ».
+ */
+function ficheInconnue(climatFroid: boolean): string {
+  const nbConfigs = new Map<string, number>();
+  for (const c of registry.configurations) nbConfigs.set(c.modelId, (nbConfigs.get(c.modelId) ?? 0) + 1);
+  const m = registry.models.find(
+    (x) =>
+      x.status === "published" &&
+      registry.brandById.get(x.brandId)?.activeInQuebec &&
+      (nbConfigs.get(x.id) ?? 0) <= 1 &&
+      x.categories.includes("cold-climate") === climatFroid &&
+      !minHeatingTempForModel(x.id),
+  );
+  if (!m) throw new Error(`aucune fiche inconnue (climat froid : ${climatFroid})`);
+  return m.slug;
+}
 
 /** Texte visible du HTML : sans balises ni commentaires de React. */
 const texte = (html: string) => html.replace(/<!--.*?-->/g, "").replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, "");
@@ -92,8 +113,8 @@ describe("Source secondaire : la mention le dit", () => {
 });
 
 describe("Fiche produit d'un modèle inconnu : aucune température inventée", () => {
-  it("certifié climat froid (Amana ASZS60241EA) : « Certifiée grand froid · chauffe encore à −15 °C », jamais « jusqu'à »", async () => {
-    const html = await fiche("amana-aszs60241ea");
+  it("certifié climat froid : « Certifiée grand froid · chauffe encore à −15 °C », jamais « jusqu'à »", async () => {
+    const html = await fiche(ficheInconnue(true));
     const t = texte(html);
     expect(t).toContain("Certifiée grand froid");
     expect(t).toContain("Chauffe encore à −15 °C");
@@ -104,8 +125,8 @@ describe("Fiche produit d'un modèle inconnu : aucune température inventée", (
     expect(html).not.toContain("Température minimale de chauffage");
   });
 
-  it("non certifié (Amana ASZS601810A) : ni bandeau, ni « Chauffe jusqu'à », ni « Certifiée grand froid »", async () => {
-    const html = await fiche("amana-aszs601810a");
+  it("non certifié : ni bandeau, ni « Chauffe jusqu'à », ni « Certifiée grand froid »", async () => {
+    const html = await fiche(ficheInconnue(false));
     const t = texte(html);
     expect(html).not.toContain('id="grand-froid"');
     expect(t).not.toContain("Chauffe jusqu’à");

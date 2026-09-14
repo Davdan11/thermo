@@ -134,6 +134,10 @@ const OFFICIAL_HOSTS = [
   "novairplus.com", // Novair Plus
   "wabban.com", // Wabban (Emco)
   "heatcontroller.com", // Heat Controller, fabricant de Comfort-Aire et Century
+  "goodmanmfg.com", // Goodman (Daikin)
+  "amana-hac.com", // Amana Heating & Air Conditioning (Goodman / Daikin)
+  "greecomfort.com", // Gree Comfort, site américain de Gree
+  "tosot.com", // Tosot Supplies Inc. (même société que tosotca.ca)
   "cdn.shopify.com/s/files/1/0253/4775/2018/", // boutique Shopify de Gree Canada (gree.ca), et elle seule
 ];
 
