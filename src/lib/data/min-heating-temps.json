@@ -1712,5 +1712,101 @@
     "quote": "Heating operating range -22° ~ 86° F (-25° ~ 30° C)",
     "confidence": "serie",
     "note": "Page officielle de la série DLCPRB (tailles 09 / 12 / 18, 208/230 V) ; le numéro complet n y est pas imprimé. La page se contredit (−22 °F correspondrait à −30 °C) : on retient la valeur en °C imprimée, la plus prudente."
+  },
+  {
+    "outdoorModel": "MOX430U-18HFN1-M",
+    "brand": "Midea",
+    "series": "MVBL (Moovair Central-Moov 18K)",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://moovair.com/wp-content/uploads/SUB_M_O18HOS_0_M20.pdf",
+    "page": 1,
+    "quote": "OUTDOOR TEMPERATURE OPERATING RANGE … Heating -30~24 °C -22~75 °F",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission officielle Moovair (Groupe Master) de l'unité extérieure 18K DMA18HOS20230E7 ; elle ne nomme pas MOX430U-18HFN1-M. La correspondance vient du manuel de service Moovair (numéro 22023111000271, page 14, copie ManualsLib https://www.manualslib.com/manual/3780133/Master-Moovair-22023111000271.html) : « DMA18HOS20230E7 MOX430U-18HFN1-M 22023116000162 ». La fiche officielle de l'ensemble Moovair https://cdn.master.ca/documents/en/moovair/submittals/Moovair_submittal_CENTRAL-MOOV-AHU-18000_06-2023_en_CA.pdf donne le même code d'unité extérieure 22023116000162 et « Outdoor(heating) … -30~24 °C ». Dans le texte extrait du PDF, les tildes ont disparu (« -3024 », « -2275 »)."
+  },
+  {
+    "outdoorModel": "38MARBQ18AA3",
+    "brand": "Carrier",
+    "series": "38MAR (38MARB Performance)",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://www.shareddocs.com/hvac/docs/1009/Public/00/38MARB-01PD.pdf",
+    "page": 9,
+    "quote": "Heating Outdoor DB Min - Max °F(°C) -22~86 (-30~30)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Tableau des spécifications de la fiche Product Data 38MARB-01PD : une colonne 38MARBQ18AA3, « -22~86 (-30~30) ». La fiche de soumission du modèle (https://www.shareddocs.com/hvac/docs/1009/Public/0A/38MARB-18-3-01SB.pdf, 02/2021) et la fiche 38MARB-02SB (2022) impriment aussi -22~86 (-30~30). Aucun document officiel lu n'imprime la version « (-25° ~ 30° C) » vue ailleurs."
+  },
+  {
+    "outdoorModel": "37MAHAQ33AA3",
+    "brand": "Carrier",
+    "series": "45M (Infinity 37MAHA)",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://www.shareddocs.com/hvac/docs/1009/Public/03/PDS37MAHA-01.pdf",
+    "page": 9,
+    "quote": "Heating Operating Range … Outdoor Min - Max DB °F -22~75 (°C) (-30~24)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche Product Data officielle 37MAHA (tailles 06 à 33) : même plage pour les six tailles, 37MAHAQ33AA3 compris. La fiche de soumission Carrier du modèle exact, hébergée chez un détaillant (https://hvacdirect.com/media/pdf/37MAHAQ33AA3-submittal.pdf), imprime aussi « Heating Outdoor DB Min - Max °F(°C) -22~75 »."
+  },
+  {
+    "outdoorModel": "MO1HS-H33B-2A",
+    "brand": "Midea",
+    "series": "MAC (All Easy Pro, Xtreme Heat)",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://dde2yk4t993pn.cloudfront.net/downloadsv2/R454B-US/Single-Zone%20Mini%20Split/Submittal/High%20Tier%20-%20All%20Easy%20Pro/MSEHU-H33B-2A%20&%20MO1HS-H33B-2A.pdf",
+    "page": 1,
+    "quote": "Standard Operating Range -22~75 (-30~24)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Midea « MSEHU-H33B-2A/MO1HS-H33B-2A », hébergée sur le serveur de documents qu'utilise nahvac.com (Midea North American HVAC). La ligne en chauffage est -22~75 (-30~24) ; en climatisation, -22~122 (-30~50). La fiche de la seconde combinaison, « MACHU-H36B-2A/MO1HS-H33B-2A » (https://dde2yk4t993pn.cloudfront.net/downloadsv2/R454B-US/Single-zone%20Light%20commercial/Submittal/Current%20Loop%20AHU/High%20Tier%20-%20Extreme%20Heat/MACHU-H36B-2A%20&%20MO1HS-H33B-2A.pdf), donne la même plage."
+  },
+  {
+    "outdoorModel": "BMS500-AAM036-1CSXHD",
+    "brand": "Bosch",
+    "series": "BMS (Climate 5000 Gen 4, multizone Max Performance)",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://skipthewarehouse.com/product/bosch-bms500-aam036-1csxhd-3-ton-ductless-mini-split-outdoor-heat-pump-r454b/?attachment_id=1224179&download_file=ff28c1ad3091a",
+    "page": 1,
+    "quote": "ODU Operation Range … Heating (°F / °C) -22~75 / -30~24",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Bosch « Climate 5000 Series - Gen 4, 36K Btu Multi Zone Max Performance Outdoor Unit » (numéro BMS500-AAM036-1CSXHD, pièce 8-733-962-701), PDF du fabricant hébergé chez un détaillant. La page de ce détaillant donne aussi « -22 – 75 » °F en chauffage."
+  },
+  {
+    "outdoorModel": "ESHMA33C2AN1",
+    "brand": "Elios",
+    "series": "ESH (EMC, murale climat froid)",
+    "minHeatingTempC": -30,
+    "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EMC_202509_EN_V01.pdf",
+    "page": 4,
+    "quote": "Outdoor temperature range of operation (heating) °C (°F) -30~24 (-22~75)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Elios (Groupe Master, sept. 2025) : colonne 33 000 BTU, unité extérieure ESHMA33C2AN1, unité intérieure EWHMA33C2AS1. La valeur est la même pour les cinq tailles."
+  },
+  {
+    "outdoorModel": "4TXM2324A13NU",
+    "brand": "Trane",
+    "series": "23 MZ (23 Series Ultra Low Ambient Multi-Zone)",
+    "minHeatingTempC": -35,
+    "sourceFile": "https://www.belleflamme.ca/wp-content/uploads/2024/12/MS-SVN078B-EN_07252020.pdf",
+    "page": 9,
+    "quote": "Heating Operating Range Outdoor Temperature -31 - 75°F (-35 - 24°C)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Guide d'installation Trane MS-SVN078B-EN (juillet 2020), tableau 6, page 9. Le document liste 4TXM2324A13NUAA (le numéro du moteur est ce numéro sans le suffixe). PDF du fabricant hébergé chez un détaillant Trane (Groupe BelleFlamme) ; introuvable sur elibrary.tranetechnologies.com. −31 °F vaut bien −35 °C."
+  },
+  {
+    "outdoorModel": "4TXM2318A12NU",
+    "brand": "Trane",
+    "series": "23 MZ (23 Series Ultra Low Ambient Multi-Zone)",
+    "minHeatingTempC": -35,
+    "sourceFile": "https://www.belleflamme.ca/wp-content/uploads/2024/12/MS-SVN078B-EN_07252020.pdf",
+    "page": 9,
+    "quote": "Heating Operating Range Outdoor Temperature -31 - 75°F (-35 - 24°C)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Même guide Trane MS-SVN078B-EN que 4TXM2324A13NU ; le document liste 4TXM2318A12NUAA. PDF du fabricant hébergé chez un détaillant Trane."
   }
 ]

@@ -7,8 +7,19 @@
    ou d'une page officielle du fabricant), la page et la citation exacte.
    Aucune valeur n'est déduite : seuls les chiffres imprimés dans le
    document sont retenus (°F convertis en °C, arrondis à l'entier).
+
+   Sources « secondaires » (champ sourceType) : un distributeur ou un
+   détaillant qui reproduit la fiche du fabricant pour ce numéro exact.
+   Elles ne servent que si aucune source officielle ne vise la machine,
+   et l'affichage le dit (« Selon la fiche technique du fabricant,
+   reproduite par un distributeur »).
+
+   Résolveur unique : resolveMinHeatingTemp (catalogue d'abord, puis la
+   table). Serveur seulement : il embarque la table ; les composants
+   client reçoivent la valeur résolue (voir min-temp-source.ts).
    ================================================================== */
 import rawEntries from "@/lib/data/min-heating-temps.json";
+import type { MinTempSourceType, ResolvedMinHeatingTemp } from "./min-temp-source";
 
 export interface MinHeatingTempEntry {
   outdoorModel: string;
@@ -21,9 +32,14 @@ export interface MinHeatingTempEntry {
   /** Relevé web (2026-09-14) : « modele » si le document nomme ce numéro, « serie » s'il ne vise que la série. */
   confidence?: "modele" | "serie";
   note?: string;
+  /** Absent = « officiel ». « secondaire » : distributeur ou détaillant qui reproduit la fiche du fabricant (note et confidence exigées). */
+  sourceType?: MinTempSourceType;
 }
 
 const ENTRIES = rawEntries as MinHeatingTempEntry[];
+
+/** Nature de la source d'une ligne : absente = « officiel ». */
+export const sourceTypeOf = (entry: Pick<MinHeatingTempEntry, "sourceType">): MinTempSourceType => entry.sourceType ?? "officiel";
 
 /** Longueur minimale (caractères utiles) pour accepter un numéro identique vendu sous une autre marque. */
 const MIN_LENGTH_ANY_BRAND = 8;
@@ -102,6 +118,10 @@ export function minHeatingTempEntryFromBrochures(input: {
     else if (literal(normalizeModelNumber(input.outdoorModel)).length < MIN_LENGTH_ANY_BRAND) return null;
   }
 
+  // Une source officielle prime : une reproduction par un distributeur ne sert qu'à défaut.
+  const official = pool.filter((e) => sourceTypeOf(e) === "officiel");
+  if (official.length > 0) pool = official;
+
   // Deux documents en désaccord : on ne tranche pas.
   const values = new Set(pool.map((e) => e.minHeatingTempC));
   return values.size === 1 ? pool[0] : null;
@@ -116,4 +136,34 @@ export function minHeatingTempFromBrochures(input: {
   brand?: string | null;
 }): number | null {
   return minHeatingTempEntryFromBrochures(input)?.minHeatingTempC ?? null;
+}
+
+/**
+ * Résolveur unique de la température minimale de chauffage d'une machine (fiche produit, comparateur,
+ * ThermoMatch, courriels, données structurées) :
+ * 1. la valeur du catalogue (configuration du registre), source officielle ;
+ * 2. sinon, la ligne de min-heating-temps.json retenue pour ce numéro et cette marque ;
+ * 3. sinon null — jamais de valeur déduite.
+ */
+export function resolveMinHeatingTemp(input: {
+  /** configuration.minHeatingTempC (ou la plus basse des configurations du modèle). */
+  catalogC?: number | null;
+  outdoorModel?: string | null;
+  brand?: string | null;
+}): ResolvedMinHeatingTemp | null {
+  const catalogC = input.catalogC;
+  if (typeof catalogC === "number" && Number.isFinite(catalogC)) {
+    return { valueC: catalogC, sourceType: "officiel", origin: "catalogue", sourceFile: null, page: null, quote: null, confidence: null };
+  }
+  const entry = minHeatingTempEntryFromBrochures({ outdoorModel: input.outdoorModel, brand: input.brand });
+  if (!entry) return null;
+  return {
+    valueC: entry.minHeatingTempC,
+    sourceType: sourceTypeOf(entry),
+    origin: "document",
+    sourceFile: entry.sourceFile,
+    page: entry.page ?? null,
+    quote: entry.quote,
+    confidence: entry.confidence ?? null,
+  };
 }

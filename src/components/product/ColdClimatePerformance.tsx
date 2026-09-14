@@ -1,4 +1,5 @@
 import type { PerformanceProfile } from "@/lib/data/types";
+import { formatMinTemp, minTempMention, type MinTempSourceType } from "@/lib/thermomatch/min-temp-source";
 import { ColdChart, type ColdPoint } from "@/components/sections-v2/produit/charts";
 import { Reveal, SheetHead } from "@/components/sections-v2/produit/motion";
 import { INK, LABEL, LINE, MUTE, ORANGE } from "@/components/sections-v2/produit/tokens";
@@ -13,7 +14,10 @@ import { INK, LABEL, LINE, MUTE, ORANGE } from "@/components/sections-v2/produit
 
 interface ColdClimatePerformanceProps {
   profile: PerformanceProfile;
+  /** Température minimale de chauffage résolue (ProductDetail.minHeatingTemp). */
   minHeatingTempC: number | null | undefined;
+  /** Nature de sa source, pour la mention ; absente = officiel. */
+  minHeatingTempSource?: MinTempSourceType | null;
 }
 
 const th = "sv2f-mono py-3 text-[10.5px] font-normal uppercase";
@@ -21,6 +25,7 @@ const th = "sv2f-mono py-3 text-[10.5px] font-normal uppercase";
 export function ColdClimatePerformance({
   profile,
   minHeatingTempC,
+  minHeatingTempSource,
 }: ColdClimatePerformanceProps) {
   const { dataPoints, nominalHeatingBtu } = profile;
 
@@ -40,7 +45,7 @@ export function ColdClimatePerformance({
 
   const notes: string[] = [];
   if (minHeatingTempC != null) {
-    notes.push(`Température minimale de fonctionnement annoncée : ${minHeatingTempC} °C. Cela ne garantit pas que l’appareil conserve toute sa capacité à cette température.`);
+    notes.push(`Chauffe jusqu’à ${formatMinTemp(minHeatingTempC)} : ${minTempMention(minHeatingTempSource).toLowerCase()}. Cela ne garantit pas que l’appareil conserve toute sa capacité à cette température.`);
   }
   notes.push("Une source de chauffage d’appoint peut demeurer nécessaire selon la maison, le dimensionnement et les conditions extérieures.");
   notes.push("Données à titre indicatif — consulter les fiches techniques officielles du fabricant pour les valeurs certifiées.");

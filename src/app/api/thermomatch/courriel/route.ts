@@ -73,7 +73,10 @@ export async function POST(req: NextRequest) {
       brand: p.brand,
       series: p.series ?? "",
       outdoorModel: p.outdoorModel ?? "",
+      // Résolveur unique (via recommendFromAnswers) : valeur, puis nature de sa source pour la mention.
       minTempC: typeof p.minOperatingTempC === "number" ? p.minOperatingTempC : null,
+      minTempSource: p.minOperatingTempSource ?? null,
+      coldClimate: Boolean(p.coldClimate),
       h5: typeof p.heatingCapacity5FBtuH?.min === "number" ? p.heatingCapacity5FBtuH.min : null,
       hspf2: typeof r.selectedPairing.hspf2?.min === "number" ? r.selectedPairing.hspf2.min : null,
       subsidy: typeof r.subsidyEstimate === "number" ? r.subsidyEstimate : 0,

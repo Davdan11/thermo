@@ -13,6 +13,7 @@ import { ExistingUnitCompare } from "./ExistingUnitCompare";
 import { EmailMyChoices } from "./EmailMyChoices";
 import { ThermometreHero } from "./ThermometreHero";
 import { CERTIF_C, froidDe, type Froid } from "./thermometre";
+import { minTempMention, type MinTempSourceType } from "@/lib/thermomatch/min-temp-source";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 import { categorieDe, type CategorieThermopompe } from "@/lib/garantie-legale/config";
@@ -118,6 +119,8 @@ type Card = {
   retention: number | null;
   /** Température extérieure minimale de chauffage (fabricant), si connue. */
   minTemp: number | null;
+  /** Nature de sa source (mention sous le chiffre) ; null = officiel. */
+  minTempSource: MinTempSourceType | null;
   price: { min: number; max: number; basis: string; sources: number; tierLabel: string; matchLabel: string } | null;
   /** Type de thermopompe (mention de la garantie légale de bon fonctionnement près du prix). */
   categorie: CategorieThermopompe | null;
@@ -162,6 +165,7 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     coverage: num(r?.fitRatio) ?? (h5 && load ? h5 / load : null),
     retention: h5 && num(p.nominalBtu) ? h5 / (p.nominalBtu as number) : null,
     minTemp: num(p.minOperatingTempC),
+    minTempSource: p.minOperatingTempSource === "secondaire" || p.minOperatingTempSource === "officiel" ? p.minOperatingTempSource : null,
     price: r?.priceRange && num(r.priceRange.min) != null && num(r.priceRange.max) != null ? r.priceRange : null,
     // Toutes les recommandations sont des thermopompes neuves : murale par défaut si le type manque.
     categorie: categorieDe(p.systemType, ctx?.isMultiZone ? ctx.requestedZones : 1) ?? (ctx?.isMultiZone ? "multizone" : "murale"),
@@ -544,7 +548,7 @@ function GrandFroid({ card, play, i }: { card: Card; play: boolean; i: number })
             <span style={{ fontSize: "0.42em", fontWeight: 500, letterSpacing: "-0.01em" }}>{" °C"}</span>
           </p>
           <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "8px 0 0" }}>
-            Température minimale publiée par le fabricant
+            {minTempMention(card.minTempSource)}
           </p>
         </>
       )}

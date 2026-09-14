@@ -70,7 +70,8 @@ export function highestHspf2(details: ProductDetail[]): HighlightResult {
    ------------------------------------------------------------------ */
 
 export function lowestMinTemp(details: ProductDetail[]): HighlightResult {
-  const values = details.map((d) => d.configuration?.minHeatingTempC ?? null);
+  // Valeur résolue (catalogue, puis document du fabricant) : celle de la fiche produit.
+  const values = details.map((d) => d.minHeatingTemp?.valueC ?? null);
   return findLowest(values, details.length, "temp. min. annoncée");
 }
 

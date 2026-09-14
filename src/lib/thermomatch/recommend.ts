@@ -13,7 +13,8 @@ import { REGION_GENERALE, resolvePostalCode } from "@/lib/data/geography/postal-
 import { buildCandidates, runThermoMatch, type SourceModel, type SourcePairing } from "@/lib/thermomatch";
 import { answersToRequest, type QuestionnaireAnswers } from "@/lib/thermomatch/answers";
 import { installedPriceRange } from "@/lib/prices/grille-installee";
-import { minHeatingTempFromBrochures } from "@/lib/thermomatch/min-temp-brochures";
+// Température minimale de chauffage : résolveur unique (catalogue, puis relevés des documents du fabricant).
+import { minHeatingTempForModel } from "@/lib/thermomatch/min-temp";
 import { estimateHeatingSavings } from "@/lib/thermomatch/savings";
 
 let eligibleModels: SourceModel[] | null = null;
@@ -39,27 +40,6 @@ function getEligibleModels(): SourceModel[] {
       imageUrl: m.imageUrl ?? null,
     }));
   return eligibleModels;
-}
-
-let minTempByModel: Map<string, number> | null = null;
-
-/** Température extérieure minimale de chauffage publiée par le fabricant (disponible pour quelques modèles seulement). */
-function minHeatingTempFor(modelId: string): number | null {
-  if (!minTempByModel) {
-    minTempByModel = new Map();
-    for (const c of registry.configurations) {
-      const v = (c as { minHeatingTempC?: number | null }).minHeatingTempC;
-      if (typeof v !== "number") continue;
-      const prev = minTempByModel.get(c.modelId);
-      if (prev === undefined || v < prev) minTempByModel.set(c.modelId, v);
-    }
-  }
-  const known = minTempByModel.get(modelId);
-  if (known !== undefined) return known;
-  // Sinon : température imprimée dans la brochure du fabricant (citation vérifiée, voir src/lib/data/min-heating-temps.json).
-  const m = registry.modelById.get(modelId);
-  if (!m) return null;
-  return minHeatingTempFromBrochures({ outdoorModel: m.modelNumber, brand: registry.brandById.get(m.brandId)?.name ?? null });
 }
 
 function pairingsFor(outdoorModel: string): SourcePairing[] {
@@ -93,6 +73,7 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
 
   const results = output.results.map((r) => {
     const c = r.candidate;
+    const minTemp = minHeatingTempForModel(c.id);
     return {
       rank: r.rank,
       badge: r.badge,
@@ -112,7 +93,9 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
         heatingCapacity5FBtuH: { min: c.h5Btu, max: c.h5Btu },
         h5Certified: c.h5Certified,
         heatingCapacity17FBtuH: c.h17Btu,
-        minOperatingTempC: minHeatingTempFor(c.id),
+        minOperatingTempC: minTemp?.valueC ?? null,
+        /** « officiel » ou « secondaire » (fiche du fabricant reproduite par un distributeur) ; null si inconnue. */
+        minOperatingTempSource: minTemp?.sourceType ?? null,
         tier: c.tier,
         alsoSoldAs: c.alsoSoldAs,
         imageUrl: c.imageUrl ?? null,

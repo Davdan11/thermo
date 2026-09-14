@@ -3,6 +3,7 @@ import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import type { SeoModel } from "@/lib/seo/programmatic";
 import { Arrow, Reveal, SheetHead, VRule } from "@/components/sections-v2/produit/motion";
 import { AMBER, GREEN, INK, LABEL, LINE, MUTE, ORANGE, WASH } from "@/components/sections-v2/produit/tokens";
+import { formatMinTemp, minTempMention } from "@/lib/thermomatch/min-temp-source";
 
 /* ------------------------------------------------------------------
    GoodChoiceSection — « Est-ce le bon modèle pour votre maison ? »
@@ -28,7 +29,9 @@ export function GoodChoiceSection({ detail, seo }: Props) {
   const cop5 = seo?.cop5 ?? null;
   const hspf2 = configuration?.hspf2 ?? seo?.hspf2 ?? null;
   const seer2 = configuration?.seer2 ?? seo?.seer2 ?? null;
-  const minTemp = configuration?.minHeatingTempC ?? null;
+  // Chauffe jusqu'à : valeur résolue (catalogue, puis document du fabricant), avec la mention de sa source.
+  const minTemp = detail.minHeatingTemp;
+  const minTempNote = minTemp ? `. Chauffe jusqu’à ${formatMinTemp(minTemp.valueC)} (${minTempMention(minTemp.sourceType).toLowerCase()})` : "";
   const logisVert = seo?.logisVertDollars ?? 0;
   const retention = nominal && h5 ? Math.round((h5 / nominal) * 100) : null;
   const noise = configuration?.noiseIndoorMinDbA ?? null;
@@ -48,14 +51,21 @@ export function GoodChoiceSection({ detail, seo }: Props) {
     rows.push({
       label: "Par grand froid",
       value: `${fr(h5)} BTU/h à -15 °C`,
-      note: `${retention} % de la capacité nominale (${fr(nominal)} BTU/h)${cop5 !== null ? `, COP ${cop5.toLocaleString("fr-CA", { minimumFractionDigits: 2 })} à -15 °C` : ""}${minTemp !== null ? `. Fonctionne jusqu'à ${minTemp} °C` : ""}.`,
+      note: `${retention} % de la capacité nominale (${fr(nominal)} BTU/h)${cop5 !== null ? `, COP ${cop5.toLocaleString("fr-CA", { minimumFractionDigits: 2 })} à -15 °C` : ""}${minTempNote}.`,
+    });
+  } else if (minTemp && !isColdClimate) {
+    // Pas de mesure à -15 °C ni de certification, mais une température minimale connue : on la donne.
+    rows.push({
+      label: "Par grand froid",
+      value: `Chauffe jusqu’à ${formatMinTemp(minTemp.valueC)}`,
+      note: `${minTempMention(minTemp.sourceType)}. ENERGY STAR ne publie pas de mesure à -15 °C pour cet appareil : prévoyez un appoint (plinthes) les jours de grand froid.`,
     });
   } else {
     rows.push({
       label: "Par grand froid",
       value: isColdClimate ? "Certifiée climat froid" : "Capacité à -15 °C non publiée",
       note: isColdClimate
-        ? `Certification ENERGY STAR climat froid${minTemp !== null ? `. Fonctionne jusqu'à ${minTemp} °C` : ""}.`
+        ? `Certification ENERGY STAR climat froid${minTempNote}.`
         : "ENERGY STAR ne publie pas de mesure à -15 °C pour cet appareil. Prévoyez un appoint (plinthes) les jours de grand froid.",
     });
   }

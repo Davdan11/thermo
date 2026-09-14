@@ -1,6 +1,7 @@
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import { Reveal, SheetHead } from "@/components/sections-v2/produit/motion";
 import { INK, LABEL, LINE, MUTE, ORANGE, fr } from "@/components/sections-v2/produit/tokens";
+import { formatMinTemp, minTempMention } from "@/lib/thermomatch/min-temp-source";
 
 /* ------------------------------------------------------------------
    KeySpecs — première feuille de la fiche d'ingénierie : le cartouche
@@ -43,12 +44,13 @@ export function KeySpecs({ detail }: KeySpecsProps) {
     });
   }
 
-  // Min heating temp
-  if (configuration?.minHeatingTempC != null) {
+  // Chauffe jusqu'à : valeur résolue (catalogue, sinon document du fabricant), jamais déduite ; la note dit sa source.
+  const minTemp = detail.minHeatingTemp;
+  if (minTemp) {
     specs.push({
-      label: "Temp. min. annoncée",
-      value: `${fr(configuration.minHeatingTempC)} °C`,
-      tooltip: "Température extérieure minimale annoncée. Cela ne garantit pas que l’appareil conserve toute sa capacité à cette température.",
+      label: "Chauffe jusqu’à",
+      value: formatMinTemp(minTemp.valueC),
+      tooltip: `${minTempMention(minTemp.sourceType)}. Cela ne garantit pas que l’appareil conserve toute sa capacité à cette température.`,
     });
   }
 

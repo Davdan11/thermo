@@ -1,13 +1,18 @@
 /* Les trois recommandations ThermoMatch, envoyées au visiteur qui les demande par courriel. */
 import { brandedEmail, box, p, strong, t, BRAND, SITE_URL } from "./layout";
 import { escapeHtml } from "@/lib/security/escape";
+import { MIN_TEMP_MENTION, type MinTempSourceType } from "@/lib/thermomatch/min-temp-source";
 
 export interface ThermoMatchEmailChoice {
   brand: string;
   series: string;
   outdoorModel: string;
-  /** Température extérieure minimale de chauffage publiée par le fabricant. */
+  /** Température extérieure minimale de chauffage (résolveur unique : catalogue, puis document du fabricant). */
   minTempC: number | null;
+  /** Nature de sa source : « secondaire » = fiche du fabricant reproduite par un distributeur (dit dans le courriel). */
+  minTempSource?: MinTempSourceType | null;
+  /** Certifiée ENERGY STAR climat froid (sert quand la température minimale est inconnue). */
+  coldClimate?: boolean;
   /** Capacité certifiée à −15 °C (BTU/h). */
   h5: number | null;
   hspf2: number | null;
@@ -38,7 +43,18 @@ export function getThermoMatchEmailHTML(d: ThermoMatchEmailData): string {
     .map((c, i) => {
       const rows: Array<[string, string | null]> = [
         ["Unité extérieure", c.outdoorModel || null],
-        ["Par grand froid", c.minTempC != null ? `Chauffe jusqu’à ${temp(c.minTempC)}` : c.h5 ? `${fr(c.h5)} BTU/h livrés à −15 °C` : null],
+        // Température connue : « Chauffe jusqu'à » (et la mention si la fiche vient d'un distributeur) ; sinon la
+        // certification climat froid, « chauffe encore à −15 °C » (jamais « jusqu'à ») ; sinon la puissance à −15 °C.
+        [
+          "Par grand froid",
+          c.minTempC != null
+            ? `Chauffe jusqu’à ${temp(c.minTempC)}${c.minTempSource === "secondaire" ? ` (${MIN_TEMP_MENTION.secondaire.toLowerCase()})` : ""}`
+            : c.coldClimate
+              ? `Certifiée grand froid · chauffe encore à −15 °C${c.h5 ? ` (${fr(c.h5)} BTU/h livrés)` : ""}`
+              : c.h5
+                ? `${fr(c.h5)} BTU/h livrés à −15 °C`
+                : null,
+        ],
         ["Efficacité en chauffage (HSPF2)", c.hspf2 ? fr(c.hspf2, 1) : null],
         ["Subvention LogisVert", c.subsidy > 0 ? `${fr(c.subsidy)} $ (montant officiel d’Hydro-Québec)` : null],
         ["Prix approximatif installé", c.priceMin != null && c.priceMax != null ? `${money(c.priceMin)} à ${money(c.priceMax)}, avant subvention` : null],

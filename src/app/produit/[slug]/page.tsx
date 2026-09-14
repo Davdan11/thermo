@@ -14,6 +14,8 @@ import { MotionRoot, SheetColumn } from "@/components/sections-v2/produit/motion
 import { Cartouche, SideBrochure, SideLinks, SideThermoMatch, SideThermoScan, type CartoucheRow } from "@/components/sections-v2/produit/Sidebar";
 import { SheetCta, SheetTrust } from "@/components/sections-v2/produit/Closing";
 import { fr } from "@/components/sections-v2/produit/tokens";
+import { formatMinTemp } from "@/lib/thermomatch/min-temp-source";
+import { ChauffeJusqua } from "@/components/product/ChauffeJusqua";
 import {
   ProductHeader,
   KeySpecs,
@@ -128,13 +130,15 @@ export default async function ProductPage({
   // Brochure officielle : adresse du modèle ou de la série, sinon retrouvée par les tables d'enrichissement.
   const brochureUrl = brochureForProduct(detail);
   const imageUrl = model.imageUrl ?? series.imageUrl ?? null;
+  // « Chauffe jusqu'à » : valeur résolue une fois (catalogue, puis documents du fabricant) ; null = inconnue, rien d'inventé.
+  const minTemp = detail.minHeatingTemp;
 
   /* Schema.org — Product (enriched) */
   const additionalProperties: { name: string; value: string }[] = [];
   if (model.nominalCapacityBtu) additionalProperties.push({ name: "Capacité (BTU)", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU` });
   if (configuration?.seer2) additionalProperties.push({ name: "SEER2", value: String(configuration.seer2) });
   if (configuration?.hspf2) additionalProperties.push({ name: "HSPF2", value: String(configuration.hspf2) });
-  if (configuration?.minHeatingTempC != null) additionalProperties.push({ name: "Température minimale de chauffage", value: `${configuration.minHeatingTempC}°C` });
+  if (minTemp) additionalProperties.push({ name: "Température minimale de chauffage", value: `${minTemp.valueC}°C` });
   if (configuration?.noiseIndoorMinDbA) additionalProperties.push({ name: "Niveau sonore intérieur", value: `${configuration.noiseIndoorMinDbA} dB(A)` });
   const seoModel = getSeoModel(slug);
   if (seoModel && seoModel.logisVertDollars > 0) additionalProperties.push({ name: "Subvention LogisVert", value: `${seoModel.logisVertDollars} $` });
@@ -165,7 +169,7 @@ export default async function ProductPage({
   if (model.nominalCapacityBtu) summary.push({ label: "Capacité", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU/h`, mono: true });
   if (configuration?.seer2 != null) summary.push({ label: "SEER2", value: fr(configuration.seer2), mono: true });
   if (configuration?.hspf2 != null) summary.push({ label: "HSPF2", value: fr(configuration.hspf2), mono: true });
-  if (configuration?.minHeatingTempC != null) summary.push({ label: "Temp. min", value: `${fr(configuration.minHeatingTempC)} °C`, mono: true });
+  if (minTemp) summary.push({ label: "Temp. min", value: formatMinTemp(minTemp.valueC), mono: true });
   if (configuration?.hasWifi) summary.push({ label: "Wi-Fi", value: "Intégré" });
   if (detail.outdoorUnit?.refrigerant) summary.push({ label: "Réfrigérant", value: detail.outdoorUnit.refrigerant, mono: true });
 
@@ -194,6 +198,9 @@ export default async function ProductPage({
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-[minmax(0,1fr)_310px] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_330px] xl:gap-16">
               {/* ── MAIN COLUMN ── */}
               <SheetColumn className="flex min-w-0 flex-col gap-16 lg:gap-20">
+                {/* Par grand froid : « Chauffe jusqu'à −XX °C » (ou « Certifiée grand froid »), l'argument n° 1 */}
+                <ChauffeJusqua minTemp={minTemp} coldClimate={detail.isColdClimate} />
+
                 {/* Key specs grid */}
                 <KeySpecs detail={detail} />
 
@@ -217,7 +224,8 @@ export default async function ProductPage({
                 {performanceProfile && performanceProfile.dataPoints.length > 0 && (
                   <ColdClimatePerformance
                     profile={performanceProfile}
-                    minHeatingTempC={configuration?.minHeatingTempC}
+                    minHeatingTempC={minTemp?.valueC}
+                    minHeatingTempSource={minTemp?.sourceType}
                   />
                 )}
 

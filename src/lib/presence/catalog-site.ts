@@ -16,7 +16,8 @@ import { coldTier, designTempFor } from "@/lib/seo/municipal-content";
 import { displayName, getMunicipalites, getRegion, getStation, municipalityHref } from "@/lib/seo/municipalites";
 import { GLOSSARY_TERMS, slugifyTerm } from "@/lib/glossary";
 import { getLogisVertListInfo } from "@/lib/subsidies/logisvert-meta";
-import { minHeatingTempEntryFromBrochures } from "@/lib/thermomatch/min-temp-brochures";
+import { resolveMinHeatingTemp } from "@/lib/thermomatch/min-temp-brochures";
+import { minTempSourceHref } from "@/lib/thermomatch/min-temp-source";
 import { firstSentences, shortTerm } from "./format";
 import type { CityFact, ModelFact, PresenceCatalog, TermFact } from "./catalog";
 
@@ -38,15 +39,18 @@ export function getSiteCatalog(): PresenceCatalog {
   }
 
   const models: ModelFact[] = getCanonicalModels().map((m) => {
-    let minTempC: number | null = configMin.get(m.id) ?? null;
-    let minTempSource: ModelFact["minTempSource"] = minTempC !== null ? { label: "Fiche technique du catalogue (configuration certifiée)" } : null;
-    if (minTempC === null) {
-      const e = minHeatingTempEntryFromBrochures({ outdoorModel: m.outdoorModel, brand: m.brand });
-      if (e) {
-        minTempC = e.minHeatingTempC;
-        minTempSource = { label: `Brochure du fabricant${e.page ? `, page ${e.page}` : ""} : « ${e.quote} »`, url: `/${e.sourceFile.replace(/^public\//, "")}` };
-      }
-    }
+    // Résolveur unique (catalogue, puis relevés des documents du fabricant) ; la source dit si la fiche vient d'un distributeur.
+    const r = resolveMinHeatingTemp({ catalogC: configMin.get(m.id) ?? null, outdoorModel: m.outdoorModel, brand: m.brand });
+    const minTempC: number | null = r?.valueC ?? null;
+    const url = r ? minTempSourceHref(r.sourceFile) : null;
+    const minTempSource: ModelFact["minTempSource"] = !r
+      ? null
+      : r.origin === "catalogue"
+        ? { label: "Fiche technique du catalogue (configuration certifiée)" }
+        : {
+            label: `${r.sourceType === "secondaire" ? "Fiche technique du fabricant reproduite par un distributeur" : "Brochure du fabricant"}${r.page ? `, page ${r.page}` : ""} : « ${r.quote} »`,
+            ...(url ? { url } : {}),
+          };
     return {
       slug: m.slug,
       brand: m.brand,

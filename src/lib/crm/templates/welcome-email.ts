@@ -2,6 +2,7 @@
 import { brandedEmail, box, p, strong, ul, SITE_URL, BRAND } from "./layout";
 import { escapeHtml } from "@/lib/security/escape";
 import type { RecommendedModel } from "@/lib/crm/recommended-model";
+import { MIN_TEMP_MENTION, formatMinTemp } from "@/lib/thermomatch/min-temp-source";
 
 export interface WelcomeEmailData {
   firstName: string;
@@ -22,7 +23,12 @@ function modelSection(m: RecommendedModel, attached: boolean): string {
     ["Capacité de chauffage à -15 °C", m.heatingBtu5F ? `${m.heatingBtu5F.toLocaleString("fr-CA")} BTU/h` : undefined],
     ["HSPF2 (efficacité chauffage)", m.hspf2 ? String(m.hspf2) : undefined],
     ["SEER2 (climatisation)", m.seer2 ? String(m.seer2) : undefined],
-    ["Fonctionne jusqu'à", m.minHeatingTempC != null ? `${m.minHeatingTempC} °C` : undefined],
+    [
+      "Chauffe jusqu’à",
+      m.minHeatingTempC != null
+        ? `${formatMinTemp(m.minHeatingTempC)}${m.minHeatingTempSource === "secondaire" ? ` (${MIN_TEMP_MENTION.secondaire.toLowerCase()})` : ""}`
+        : undefined,
+    ],
     ["Certifié climat froid", m.coldClimate ? "Oui" : undefined],
     ["Subvention LogisVert (jumelage officiel)", m.logisVertDollars ? `${m.logisVertDollars.toLocaleString("fr-CA")} $` : undefined],
   ];
