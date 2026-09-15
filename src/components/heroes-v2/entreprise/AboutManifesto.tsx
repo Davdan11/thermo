@@ -93,8 +93,8 @@ export function AboutManifesto({ stats }: { stats: { eligible: number; brands: n
               <span aria-hidden="true" className="absolute right-full top-0 hidden pr-3 sm:block" style={{ color: C.terra }}>
                 «
               </span>
-              <span className="sr-only">{STATEMENT}</span>
-              <span aria-hidden="true">
+              {/* Une seule occurrence de la phrase : les mots eux-mêmes. (Une copie « sr-only » la faisait lire deux fois dans le HTML.) */}
+              <span>
                 {WORDS.map((w, i) => {
                   const isVerb = VERB_WORDS.has(i);
                   const color = i < read ? (isVerb ? C.terra : C.brown) : i === read ? C.terra : C.ghost;
@@ -110,7 +110,7 @@ export function AboutManifesto({ stats }: { stats: { eligible: number; brands: n
                     </span>
                   );
                 })}
-                <span style={{ color: read >= WORDS.length ? C.terra : C.ghost, transition: "color 0.6s ease" }}>&nbsp;»</span>
+                <span aria-hidden="true" style={{ color: read >= WORDS.length ? C.terra : C.ghost, transition: "color 0.6s ease" }}>&nbsp;»</span>
               </span>
             </p>
           </div>
