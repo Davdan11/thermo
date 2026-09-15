@@ -120,6 +120,8 @@ type Card = {
   multiIndoor: boolean;
   /** Numéro AHRI de la combinaison certifiée. */
   ahri: string | null;
+  /** Nombre de têtes publié par le fabricant pour une multizone (null : non publié, jamais deviné). */
+  maxHeads: number | null;
   /** Architecture retenue par le moteur (central, central-hybrid, multi-zone, multi-single, single-zone), si connue. */
   kind: string | null;
   img: string;
@@ -195,6 +197,7 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     indoor: indoorRaw && !multiIndoor ? indoorRaw.replace(/\*+/g, "").trim() : null,
     multiIndoor,
     ahri: typeof p.ahri === "string" && p.ahri ? p.ahri : null,
+    maxHeads: num(p.maxIndoorUnits),
     kind,
     img: p.imageUrl || fallback,
     ownImage: Boolean(p.imageUrl),
@@ -235,7 +238,9 @@ function SystemUnits({ card }: { card: Card }) {
       ? `${card.indoor} (une des têtes certifiées)`
       : card.indoor;
   const note = card.multiIndoor
-    ? "Hydro-Québec certifie la combinaison « appareils sans conduits » sans nommer de tête : l’installateur choisit les têtes compatibles de la même gamme."
+    ? `Hydro-Québec certifie la combinaison « appareils sans conduits » sans nommer de tête : l’installateur choisit les têtes compatibles de la même gamme. ${
+        card.maxHeads ? `Le fabricant en accepte ${card.maxHeads} au plus sur cette unité.` : "Le nombre de têtes acceptées n’est pas publié : à confirmer à la visite."
+      }`
     : card.kind === "central-hybrid" && card.indoor
       ? "Fournaise gardée : l’installateur pose l’unité intérieure compatible (serpentin sur la fournaise ou cabinet) prise dans la liste LogisVert, ce qui garde la subvention."
       : null;

@@ -22,6 +22,8 @@ import { ORDRE_DE_GRANDEUR_LABEL, architecturePriceRange, envelopeRange, type Pr
 // Température minimale de chauffage : résolveur unique (catalogue, puis relevés des documents du fabricant).
 import { minHeatingTempForModel } from "@/lib/thermomatch/min-temp";
 import { estimateHeatingSavings } from "@/lib/thermomatch/savings";
+// Nombre de têtes qu'une multizone accepte : relevé dans les documents des fabricants (Hydro-Québec ne le publie pas).
+import { multizoneHeads } from "@/lib/data/multizone-heads";
 
 let eligibleModels: SourceModel[] | null = null;
 
@@ -132,7 +134,13 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
     backupHeatAvailable: decision.backup === "fournaise" || decision.backup === "chaudiere",
     backupLabel: decision.backup === "chaudiere" ? "chaudière" : "fournaise",
   };
-  const candidates = buildCandidates(getEligibleModels(), { loadBtuH: decision.sizingLoadBtuH, pairingsFor, pairingClass: decision.pairingClass });
+  const candidates = buildCandidates(getEligibleModels(), { loadBtuH: decision.sizingLoadBtuH, pairingsFor, pairingClass: decision.pairingClass }).filter((c) => {
+    // Multizone : jamais une unité dont le fabricant publie moins de têtes que le plan n'en demande
+    // (la Panasonic CU-2Z18ABUC en accepte deux, pas trois). Nombre non publié : la carte le dit.
+    if (decision.pairingClass !== "multi") return true;
+    const heads = multizoneHeads(c.brand, c.outdoorModel);
+    return !heads || (heads.maxIndoorUnits >= decision.heads && (heads.minIndoorUnits ?? 1) <= decision.heads);
+  });
 
   const logisVertUpdatedAt = (logisVertMetadata as { updatedAt?: string }).updatedAt;
   const output = runThermoMatch(req, candidates, { logisVertUpdatedAt });
@@ -150,6 +158,7 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
   const results = output.results.map((r, i) => {
     const c = r.candidate;
     const minTemp = minHeatingTempForModel(c.id);
+    const heads = decision.pairingClass === "multi" ? multizoneHeads(c.brand, c.outdoorModel) : null;
     return {
       rank: r.rank,
       badge: r.badge,
@@ -174,6 +183,10 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
         outdoorModel: c.outdoorModel,
         indoorModel: c.indoorModel ?? null,
         ahri: c.ahri ?? null,
+        /** Têtes acceptées par cette unité multizone, d'après le document du fabricant ; null = non publié. */
+        maxIndoorUnits: heads?.maxIndoorUnits ?? null,
+        minIndoorUnits: heads?.minIndoorUnits ?? null,
+        headsSource: heads ? { sourceType: heads.sourceType, sourceFile: heads.sourceFile } : null,
         systemType: c.systemKind,
         installKind: decision.kind,
         coldClimate: c.coldClimate,
