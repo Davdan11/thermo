@@ -11,7 +11,7 @@ import { useCallback, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import type { ComparisonData, CompareProduct } from "@/lib/data/queries/comparator";
+import type { CompareClientData, CompareClientProduct } from "@/lib/data/queries/comparator";
 import type { SelectableModelData } from "@/lib/data/queries/catalogue";
 import { CompareSelector } from "./CompareSelector";
 import { AnimatePresence, MotionConfig, motion } from "motion/react";
@@ -22,9 +22,13 @@ import { D, DuelKnob, DuelTug, EASE_DUEL } from "@/components/sections-v2/catalo
    ================================================================== */
 
 interface Props {
-  data: ComparisonData;
+  /** Fiches comparées, allégées au serveur (toCompareClientData). */
+  data: CompareClientData;
   maxCompare: number;
-  selectableModels?: SelectableModelData[];
+  /** Suggestions du panneau « Ajouter un modèle » ; la recherche passe par /api/comparer/recherche. */
+  suggestions?: SelectableModelData[];
+  /** Nombre de modèles que la recherche peut trouver. */
+  totalModels?: number;
 }
 
 /* ---- Qualitative rating system ---- */
@@ -55,7 +59,7 @@ function rateNoise(dbA: number | null | undefined): Rating {
   return "Standard";
 }
 
-function rateFeatures(p: CompareProduct): Rating {
+function rateFeatures(p: CompareClientProduct): Rating {
   const cfg = p.detail.configuration;
   if (!cfg) return "À confirmer";
   let score = 0;
@@ -70,7 +74,7 @@ function rateFeatures(p: CompareProduct): Rating {
   return "Basique";
 }
 
-function rateWarranty(p: CompareProduct): Rating {
+function rateWarranty(p: CompareClientProduct): Rating {
   const compressor = p.detail.warranties.find((w) => w.type === "compressor");
   const parts = p.detail.warranties.find((w) => w.type === "parts");
   if (!compressor && !parts) return "Limitée";
@@ -80,7 +84,7 @@ function rateWarranty(p: CompareProduct): Rating {
   return "Limitée";
 }
 
-function isVerified(p: CompareProduct): boolean {
+function isVerified(p: CompareClientProduct): boolean {
   return p.detail.model.verifiedAt != null || p.detail.configuration?.verifiedAt != null;
 }
 
@@ -129,9 +133,9 @@ function InfoIcon() {
    Main Component
    ================================================================== */
 
-export function ComparePageClient({ data, maxCompare, selectableModels }: Props) {
+export function ComparePageClient({ data, maxCompare, suggestions, totalModels }: Props) {
   const router = useRouter();
-  const { products, highlights } = data;
+  const { products } = data;
   const [copied, setCopied] = useState(false);
   const [differencesOnly, setDifferencesOnly] = useState(false);
   const [showAddPanel, setShowAddPanel] = useState(false);
@@ -151,7 +155,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
 
   type RowValue = { rating: string; detail: string; color: string };
 
-  function buildColdRow(p: CompareProduct): RowValue {
+  function buildColdRow(p: CompareClientProduct): RowValue {
     // Température minimale résolue sur le serveur (catalogue, puis document du fabricant).
     const minTemp = p.detail.minHeatingTemp?.valueC ?? p.detail.model.minimumOperatingTemperatureC;
     const cc = p.detail.isColdClimate;
@@ -164,7 +168,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "Standard", detail: "Non certifié climat froid", color: "#9ca3af" };
   }
 
-  function buildEfficiencyRow(p: CompareProduct): RowValue {
+  function buildEfficiencyRow(p: CompareClientProduct): RowValue {
     const seer = p.detail.configuration?.seer2 ?? p.detail.model.seer2Max ?? p.detail.model.seer2Min;
     const hspf = p.detail.configuration?.hspf2 ?? p.detail.model.hspf2Max ?? p.detail.model.hspf2Min;
     const parts: string[] = [];
@@ -179,7 +183,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "—", detail, color: "#9ca3af" };
   }
 
-  function buildNoiseRow(p: CompareProduct): RowValue {
+  function buildNoiseRow(p: CompareClientProduct): RowValue {
     const dbA = p.detail.configuration?.noiseIndoorMinDbA ?? p.detail.configuration?.noiseOutdoorDbA;
     if (dbA != null && dbA <= 19) return { rating: "Très silencieuse", detail: `${dbA} dB(A)`, color: "#15803d" };
     if (dbA != null && dbA <= 24) return { rating: "Silencieuse", detail: `${dbA} dB(A)`, color: "#16a34a" };
@@ -187,7 +191,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "—", detail: "Non disponible", color: "#9ca3af" };
   }
 
-  function buildFeaturesRow(p: CompareProduct): RowValue {
+  function buildFeaturesRow(p: CompareClientProduct): RowValue {
     const cfg = p.detail.configuration;
     const features: string[] = [];
     if (cfg?.hasWifi) features.push("Wi-Fi");
@@ -202,7 +206,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "—", detail, color: "#9ca3af" };
   }
 
-  function buildWarrantyRow(p: CompareProduct): RowValue {
+  function buildWarrantyRow(p: CompareClientProduct): RowValue {
     const compressor = p.detail.warranties.find((w) => w.type === "compressor");
     const parts = p.detail.warranties.find((w) => w.type === "parts");
     const labor = p.detail.warranties.find((w) => w.type === "labor");
@@ -219,7 +223,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "—", detail, color: "#9ca3af" };
   }
 
-  function buildCapacityRow(p: CompareProduct): RowValue {
+  function buildCapacityRow(p: CompareClientProduct): RowValue {
     const cool = p.detail.model.coolingCapacityMaxBtu;
     const heat5F = p.detail.model.heatingCapacity5FMaxBtu;
     const parts: string[] = [];
@@ -305,11 +309,11 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
   /* ---- Grille technique : une valeur numérique par ligne quand elle existe, pour désigner le meilleur ---- */
   type Spec = {
     label: string;
-    getter: (p: CompareProduct) => string;
-    num?: (p: CompareProduct) => number | null;
+    getter: (p: CompareClientProduct) => string;
+    num?: (p: CompareClientProduct) => number | null;
     /** false = la plus petite valeur gagne (température minimale d'opération). */
     higherIsBetter?: boolean;
-    note?: (p: CompareProduct) => string | null;
+    note?: (p: CompareClientProduct) => string | null;
     /** Ligne mise en évidence (montant LogisVert). */
     emphasis?: boolean;
     /** Ligne de prix : mention de la garantie légale de bon fonctionnement sous chaque prix affiché. */
@@ -448,7 +452,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     </tr>
   );
 
-  const headerCell = (p: CompareProduct, i: number) => {
+  const headerCell = (p: CompareClientProduct, i: number) => {
     const s = side(i);
     const logoPath = brandLogoPath(p.detail.brand.slug);
     const btu = p.detail.model.nominalCapacityBtu ?? p.detail.model.heatingCapacity5FMaxBtu ?? p.detail.model.coolingCapacityMaxBtu;
@@ -542,7 +546,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       {/* ---- Toolbar ---- */}
       <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-2.5">
-          {products.length < maxCompare && selectableModels && (
+          {products.length < maxCompare && suggestions && (
             <button
               type="button"
               onClick={() => setShowAddPanel(!showAddPanel)}
@@ -592,7 +596,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
 
       {/* ---- Add model panel ---- */}
       <AnimatePresence initial={false}>
-        {showAddPanel && selectableModels && (
+        {showAddPanel && suggestions && (
           <motion.div
             key="add"
             className="mb-10 rounded-[28px] p-5 sm:p-8"
@@ -617,7 +621,8 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
               </button>
             </div>
             <CompareSelector
-              products={selectableModels}
+              suggestions={suggestions}
+              totalModels={totalModels ?? suggestions.length}
               initialSlugs={products.map((p) => p.detail.model.slug)}
               maxCompare={maxCompare}
             />
@@ -863,10 +868,10 @@ interface VerdictItem {
   note?: string;
 }
 
-function buildVerdict(products: CompareProduct[]): VerdictItem[] {
+function buildVerdict(products: CompareClientProduct[]): VerdictItem[] {
   const items: VerdictItem[] = [];
   const fr = (n: number) => n.toLocaleString("fr-CA");
-  const name = (p: CompareProduct) => `${p.detail.brand.name} ${p.detail.model.name}`;
+  const name = (p: CompareClientProduct) => `${p.detail.brand.name} ${p.detail.model.name}`;
   const best = <T,>(vals: Array<T | null>, better: (a: T, b: T) => boolean): number | null => {
     let idx: number | null = null;
     vals.forEach((v, i) => { if (v !== null && (idx === null || better(v, vals[idx] as T))) idx = i; });

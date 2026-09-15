@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Search, X } from "lucide-react";
@@ -10,10 +10,20 @@ import { track } from "@/lib/analytics/track";
 
 /* ==================================================================
    CompareSelector — sélection de modèles à comparer
-   Reçoit la liste allégée (SelectableModelData) pour ne pas embarquer
-   tout le registre dans la page.
+   La page ne rend que les suggestions (une machine par marque) ; la
+   recherche interroge /api/comparer/recherche (anti-rebond, résultats
+   gardés en mémoire), pour ne pas sérialiser ~3 900 modèles dans le HTML.
    Présentation : langage du duel à glissière (encre sur acier / sable).
    ================================================================== */
+
+/* Mêmes valeurs que COMPARE_QUERY_MIN / _MAX et COMPARE_SEARCH_MAX (lib/data/queries/comparator,
+   module serveur : l'importer ici embarquerait le registre dans le navigateur). */
+const QUERY_MIN = 2;
+const QUERY_MAX = 80;
+const SEARCH_MAX = 60;
+const DEBOUNCE_MS = 200;
+
+type SearchState = { q: string; items: SelectableModelData[]; failed?: boolean };
 
 const INK = "#141A1F";
 const MUTE = "rgba(20,26,31,0.62)";
@@ -23,34 +33,58 @@ const SAND = "#EFE5D6";
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 interface CompareSelectorProps {
-  products: SelectableModelData[];
+  /** Suggestions calculées au serveur (machines certifiées, photo d'abord, une par marque). */
+  suggestions: SelectableModelData[];
+  /** Nombre de modèles que la recherche peut trouver (texte d'aide). */
+  totalModels: number;
   initialSlugs?: string[];
   maxCompare: number;
 }
 
-export function CompareSelector({ products, initialSlugs = [], maxCompare }: CompareSelectorProps) {
+export function CompareSelector({ suggestions, totalModels, initialSlugs = [], maxCompare }: CompareSelectorProps) {
   const router = useRouter();
   const [selected, setSelected] = useState<Set<string>>(new Set(initialSlugs));
   const [search, setSearch] = useState("");
+  const [found, setFound] = useState<SearchState | null>(null);
+  /* Réponses déjà reçues : revenir en arrière dans la saisie ne refait pas la requête. */
+  const cache = useRef(new Map<string, SelectableModelData[]>());
 
-  /* Suggestions : machines avec données certifiées, photo d'abord, une par marque, 12 au plus. */
-  const suggested = useMemo(() => {
-    const seen = new Set<string>();
-    return products
-      .filter((p) => p.hspf2 !== null)
-      .sort((a, b) => (Number(!!b.imageUrl) - Number(!!a.imageUrl)) || (b.hspf2 ?? 0) - (a.hspf2 ?? 0))
-      .filter((p) => (seen.has(p.brandSlug) ? false : (seen.add(p.brandSlug), true)))
-      .slice(0, 12);
-  }, [products]);
+  // Même normalisation que la route (minuscules, bornée) : la clé du cache est la requête envoyée.
+  const query = search.trim().slice(0, QUERY_MAX).trim().toLowerCase();
+  const isSearching = query.length >= QUERY_MIN;
 
-  const isSearching = search.trim().length >= 2;
-  const filtered = useMemo(() => {
-    if (!isSearching) return [];
-    const q = search.toLowerCase().trim();
-    return products
-      .filter((p) => `${p.brandName} ${p.name} ${p.capacityBtu ?? ""}`.toLowerCase().includes(q))
-      .slice(0, 60);
-  }, [products, search, isSearching]);
+  useEffect(() => {
+    if (!isSearching) return;
+    const known = cache.current.get(query);
+    const ctrl = new AbortController();
+    const timer = setTimeout(async () => {
+      if (known) {
+        setFound({ q: query, items: known });
+        return;
+      }
+      try {
+        const res = await fetch(`/api/comparer/recherche?q=${encodeURIComponent(query)}&limit=${SEARCH_MAX}`, { signal: ctrl.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const body = (await res.json()) as { results?: SelectableModelData[] };
+        const items = Array.isArray(body.results) ? body.results : [];
+        cache.current.set(query, items);
+        setFound({ q: query, items });
+      } catch {
+        if (!ctrl.signal.aborted) setFound({ q: query, items: [], failed: true });
+      }
+    }, known ? 0 : DEBOUNCE_MS);
+    return () => {
+      clearTimeout(timer);
+      ctrl.abort();
+    };
+  }, [query, isSearching]);
+
+  /* Pendant la requête, les résultats précédents restent affichés ; « aucun modèle » ne s'affiche
+     que pour la réponse à la requête en cours. */
+  const current = isSearching && found?.q === query ? found : null;
+  const pending = isSearching && !current;
+  const filtered = isSearching ? (current ?? found)?.items ?? [] : [];
+  const suggested = suggestions;
 
   const toggle = useCallback(
     (slug: string) => {
@@ -104,16 +138,18 @@ export function CompareSelector({ products, initialSlugs = [], maxCompare }: Com
         </h3>
       )}
       {!isSearching && (
-        <p className="mx-auto mb-8 mt-3 max-w-[600px] text-center text-sm leading-relaxed" style={{ color: MUTE }}>Une machine par marque parmi celles qui ont une photo officielle et un HSPF2 certifié. Cherchez pour voir les {products.length.toLocaleString("fr-CA")} modèles.</p>
+        <p className="mx-auto mb-8 mt-3 max-w-[600px] text-center text-sm leading-relaxed" style={{ color: MUTE }}>Une machine par marque parmi celles qui ont une photo officielle et un HSPF2 certifié. Cherchez pour voir les {totalModels.toLocaleString("fr-CA")} modèles.</p>
       )}
-      {isSearching && filtered.length === 0 && (
+      {current && current.items.length === 0 && (
         <div className="py-16 text-center">
-          <p className="text-sm" style={{ color: MUTE }}>Aucun modèle ne correspond à votre recherche.</p>
+          <p className="text-sm" style={{ color: MUTE }} role="status">
+            {current.failed ? "La recherche est momentanément indisponible. Réessayez dans un instant." : "Aucun modèle ne correspond à votre recherche."}
+          </p>
         </div>
       )}
 
       {display.length > 0 && (
-        <ul key={isSearching ? "recherche" : "suggestions"} className="m-0 grid list-none grid-cols-1 gap-3.5 p-0 sm:grid-cols-2 xl:grid-cols-3">
+        <ul key={isSearching ? "recherche" : "suggestions"} aria-busy={pending || undefined} className="m-0 grid list-none grid-cols-1 gap-3.5 p-0 sm:grid-cols-2 xl:grid-cols-3">
           {display.map((p, i) => {
             const isSelected = selected.has(p.slug);
             const disabled = !isSelected && compareDisabled;
