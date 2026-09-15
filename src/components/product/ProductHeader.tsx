@@ -3,6 +3,7 @@ import { productNames } from "@/lib/data/product-name";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import type { SeoModel } from "@/lib/seo/programmatic";
+import { mesure, type CapacitesFiche } from "@/lib/data/capacites";
 import { FicheIngenierie, type CapacityChip, type FicheFigure } from "@/components/heroes-v2/produit/FicheIngenierie";
 
 /* ------------------------------------------------------------------
@@ -10,13 +11,16 @@ import { FicheIngenierie, type CapacityChip, type FicheFigure } from "@/componen
    Composant serveur : prépare des valeurs simples à partir de la fiche
    (chiffres certifiés, LogisVert officiel, autres capacités) et les
    passe au héros animé. Rien n'est inventé : valeur absente = non
-   affichée.
+   affichée. La capacité à −15 °C est celle de la fiche (même appariement
+   que le montant LogisVert), dite « maximale » : sa condition d'essai.
    ------------------------------------------------------------------ */
 
 interface ProductHeaderProps {
   detail: ProductDetail;
   /** Données certifiées agrégées (ENERGY STAR, liste LogisVert) ; absentes pour certaines fiches. */
   seo?: SeoModel | null;
+  /** Capacités de la fiche, avec leurs conditions (src/lib/data/capacites.ts). */
+  capacites: CapacitesFiche;
 }
 
 /** Nombre de décimales réellement présentes (0, 1 ou 2). */
@@ -25,7 +29,7 @@ function decimalsOf(v: number): number {
   return Math.abs(v * 10 - Math.round(v * 10)) < 1e-9 ? 1 : 2;
 }
 
-export function ProductHeader({ detail, seo = null }: ProductHeaderProps) {
+export function ProductHeader({ detail, seo = null, capacites }: ProductHeaderProps) {
   const { model, brand, series, configuration } = detail;
   // Nom du titre : série commerciale et capacité ; le numéro de modèle reste dans la cellule « Modèle ».
   const names = productNames({ brand: brand.name, seriesName: series.name, seriesSlug: series.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber });
@@ -54,11 +58,11 @@ export function ProductHeader({ detail, seo = null }: ProductHeaderProps) {
   })();
 
   // Chiffres certifiés : mêmes sources que les métadonnées et le résumé rapide de la fiche.
-  const h5 = seo?.h5Btu ?? model.heatingCapacity5FMaxBtu ?? null;
+  const h5 = mesure(capacites, "h5")?.btu ?? null;
   const hspf2 = configuration?.hspf2 ?? seo?.hspf2 ?? model.hspf2Max ?? null;
   const seer2 = configuration?.seer2 ?? seo?.seer2 ?? model.seer2Max ?? null;
   const figures: FicheFigure[] = [];
-  if (h5) figures.push({ key: "h5", value: h5, label: "BTU/h à −15 °C", decimals: 0 });
+  if (h5) figures.push({ key: "h5", value: h5, label: "BTU/h max. à −15 °C", decimals: 0 });
   if (hspf2) figures.push({ key: "hspf2", value: hspf2, label: "HSPF2 chauffage", decimals: decimalsOf(hspf2) });
   if (seer2) figures.push({ key: "seer2", value: seer2, label: "SEER2 climatisation", decimals: decimalsOf(seer2) });
 

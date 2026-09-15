@@ -3,6 +3,7 @@ import { seriesDisplayName } from "@/lib/data/series-label";
 import { DocGlyph, Reveal, SheetHead } from "@/components/sections-v2/produit/motion";
 import { INK, LABEL, LINE, MUTE } from "@/components/sections-v2/produit/tokens";
 import { formatMinTemp } from "@/lib/thermomatch/min-temp-source";
+import type { CapacitesFiche } from "@/lib/data/capacites";
 
 /* ------------------------------------------------------------------
    TechSpecs — grouped technical spécifications using DL
@@ -12,6 +13,8 @@ import { formatMinTemp } from "@/lib/thermomatch/min-temp-source";
 
 interface TechSpecsProps {
   detail: ProductDetail;
+  /** Capacités de la fiche, avec leurs conditions (src/lib/data/capacites.ts). */
+  capacites?: CapacitesFiche;
 }
 
 interface SpecRow {
@@ -26,7 +29,7 @@ interface SpecGroup {
 
 const fr = (n: number) => n.toLocaleString("fr-CA");
 
-export function TechSpecs({ detail }: TechSpecsProps) {
+export function TechSpecs({ detail, capacites }: TechSpecsProps) {
   const { model, configuration, outdoorUnit, indoorUnit } = detail;
   const groups: SpecGroup[] = [];
 
@@ -48,7 +51,12 @@ export function TechSpecs({ detail }: TechSpecsProps) {
     const configRows: SpecRow[] = [];
 
     if (model.nominalCapacityBtu != null) {
-      configRows.push({ label: "Capacité nominale", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU/h` });
+      configRows.push({ label: "Calibre commercial", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU` });
+    }
+    // Capacités de chauffage : chacune avec sa condition d'essai ; le maintien avec son numérateur et son dénominateur.
+    for (const m of capacites?.mesures ?? []) configRows.push({ label: m.libelle, value: `${fr(m.btu)} BTU/h` });
+    if (capacites?.maintien) {
+      configRows.push({ label: "Maintien à −15 °C", value: `${capacites.maintien.pct} % (${fr(capacites.maintien.numerateur.btu)} ÷ ${fr(capacites.maintien.denominateur.btu)} BTU/h)` });
     }
     if (configuration.seer2 != null) {
       configRows.push({ label: "SEER2", value: fr(configuration.seer2) });

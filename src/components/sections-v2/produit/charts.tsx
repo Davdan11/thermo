@@ -37,7 +37,12 @@ const dec = (v: number) => (Number.isInteger(v) ? 0 : 1);
 /* ------------------------------------------------------------------
    Capacité selon la température
    ------------------------------------------------------------------ */
-export type ColdPoint = { t: number; btu: number; pct: number | null; nominal: boolean };
+/**
+ * Point de la courbe. `ref` : capacité cotée à 8,3 °C, base du maintien (100 %) ; `max` : capacité
+ * maximale (autre condition d'essai que les capacités cotées : reliée en tireté) ; `tag` : nature
+ * écrite sous la graduation (« COTÉE », « MAXIMALE »). `pct` n'est donné que sur la même base.
+ */
+export type ColdPoint = { t: number; btu: number; pct: number | null; ref: boolean; max: boolean; tag: string | null };
 
 export function ColdChart({ points, minTemp }: { points: ColdPoint[]; minTemp: number | null }) {
   const [ref, { w, h }] = useBox<HTMLDivElement>();
@@ -63,7 +68,10 @@ export function ColdChart({ points, minTemp }: { points: ColdPoint[]; minTemp: n
     const Y = (b: number) => T + (1 - b / yMax) * (B - T);
     const line = pts.map((p, i) => `${i ? "L" : "M"}${X(p.t).toFixed(1)} ${Y(p.btu).toFixed(1)}`).join(" ");
     const area = `${line} L${X(pts[pts.length - 1].t).toFixed(1)} ${B} L${X(pts[0].t).toFixed(1)} ${B} Z`;
-    const nominal = pts.find((p) => p.nominal);
+    // Trait plein entre capacités cotées ; tireté vers une capacité maximale (autre condition d'essai).
+    const solid = pts.filter((p) => !p.max).map((p, i) => `${i ? "L" : "M"}${X(p.t).toFixed(1)} ${Y(p.btu).toFixed(1)}`).join(" ");
+    const dashed = pts.flatMap((p, i) => (p.max && i > 0 ? [`M${X(pts[i - 1].t).toFixed(1)} ${Y(pts[i - 1].btu).toFixed(1)} L${X(p.t).toFixed(1)} ${Y(p.btu).toFixed(1)}`] : [])).join(" ");
+    const ref = pts.find((p) => p.ref);
     const D = reduce ? 0 : 1.6;
     const fs = narrow ? 11 : 12.5;
     const at = (i: number) => (pts.length > 1 ? (i / (pts.length - 1)) * D : 0);
@@ -86,12 +94,12 @@ export function ColdChart({ points, minTemp }: { points: ColdPoint[]; minTemp: n
           TEMP. EXTÉRIEURE — PLUS FROID →
         </motion.text>
 
-        {/* Référence nominale (100 %) */}
-        {nominal && (
+        {/* Référence : capacité cotée à 8,3 °C, base du maintien (100 %) */}
+        {ref && (
           <motion.g initial={false} animate={{ opacity: on ? 1 : 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-            <line x1={0} x2={w} y1={Y(nominal.btu)} y2={Y(nominal.btu)} stroke={LABEL} strokeWidth={1} strokeDasharray="2 5" opacity={0.7} />
-            <text x={pts.length > 1 ? (X(pts[0].t) + X(pts[1].t)) / 2 : w} y={Y(nominal.btu) + 15} textAnchor={pts.length > 1 ? "middle" : "end"} className={MONO} fontSize={10} fill={LABEL} letterSpacing="0.06em">
-              100 % · NOMINAL
+            <line x1={0} x2={w} y1={Y(ref.btu)} y2={Y(ref.btu)} stroke={LABEL} strokeWidth={1} strokeDasharray="2 5" opacity={0.7} />
+            <text x={pts.length > 1 ? (X(pts[0].t) + X(pts[1].t)) / 2 : w} y={Y(ref.btu) + 15} textAnchor={pts.length > 1 ? "middle" : "end"} className={MONO} fontSize={10} fill={LABEL} letterSpacing="0.06em">
+              100 % · COTÉE À 8,3 °C
             </text>
           </motion.g>
         )}
@@ -120,16 +128,17 @@ export function ColdChart({ points, minTemp }: { points: ColdPoint[]; minTemp: n
             <text x={X(p.t)} y={B + 21} textAnchor="middle" className={MONO} fontSize={narrow ? 10.5 : 11.5} fill={INK}>
               {fmtNum(p.t, dec(p.t))} °C
             </text>
-            {p.nominal && (
+            {p.tag && (
               <text x={X(p.t)} y={B + 35} textAnchor="middle" className={MONO} fontSize={10} fill={LABEL} letterSpacing="0.06em">
-                NOMINAL
+                {p.tag}
               </text>
             )}
           </motion.g>
         ))}
 
         {/* Courbe */}
-        <motion.path d={line} stroke={INK} strokeWidth={1.6} fill="none" strokeLinejoin="round" initial={false} animate={{ pathLength: on ? 1 : 0 }} transition={{ duration: D, ease: DRAW, delay: 0.25 }} />
+        <motion.path d={solid} stroke={INK} strokeWidth={1.6} fill="none" strokeLinejoin="round" initial={false} animate={{ pathLength: on ? 1 : 0 }} transition={{ duration: D, ease: DRAW, delay: 0.25 }} />
+        {dashed && <motion.path d={dashed} stroke={INK} strokeWidth={1.3} strokeDasharray="5 4" fill="none" initial={false} animate={{ opacity: on ? 1 : 0 }} transition={{ duration: 0.6, delay: 0.25 + D }} />}
 
         {/* Points et valeurs */}
         {pts.map((p, i) => {
@@ -137,7 +146,7 @@ export function ColdChart({ points, minTemp }: { points: ColdPoint[]; minTemp: n
           const c = key ? ORANGE : INK;
           const x = X(p.t);
           const y = Y(p.btu);
-          const pct = p.nominal ? 100 : p.pct;
+          const pct = p.pct;
           return (
             <motion.g key={`p${p.t}`} initial={false} animate={{ opacity: on ? 1 : 0, y: on ? 0 : 6 }} transition={{ duration: 0.5, ease: EASE, delay: 0.25 + at(i) + 0.1 }}>
               <circle cx={x} cy={y} r={key ? 5.5 : 4.5} fill="#FFFFFF" stroke={c} strokeWidth={key ? 1.6 : 1.25} />

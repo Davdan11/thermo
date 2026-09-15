@@ -2,6 +2,7 @@ import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import { Reveal, SheetHead } from "@/components/sections-v2/produit/motion";
 import { INK, LABEL, LINE, MUTE, ORANGE, fr } from "@/components/sections-v2/produit/tokens";
 import { formatMinTemp, minTempMention } from "@/lib/thermomatch/min-temp-source";
+import { CONDITIONS } from "@/lib/data/capacites";
 
 /* ------------------------------------------------------------------
    KeySpecs — première feuille de la fiche d'ingénierie : le cartouche
@@ -27,12 +28,12 @@ export function KeySpecs({ detail }: KeySpecsProps) {
 
   const specs: SpecItem[] = [];
 
-  // Capacity
+  // Calibre commercial : une classe de vente, pas une mesure (src/lib/data/capacites.ts).
   if (model.nominalCapacityBtu) {
     specs.push({
-      label: "Capacité nominale",
-      value: `${(model.nominalCapacityBtu / 1000).toFixed(0)} 000 BTU/h`,
-      tooltip: "Capacité de chauffage annoncée par le fabricant dans des conditions standard.",
+      label: CONDITIONS.calibre.libelle,
+      value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU`,
+      tooltip: CONDITIONS.calibre.definition,
     });
   }
 
