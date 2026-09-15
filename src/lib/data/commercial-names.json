@@ -1,5 +1,148 @@
 [
   {
+    "brand": "American Standard",
+    "outdoorModel": "4A6V0024A1",
+    "commercialName": "Platinum 20",
+    "sourceFile": "https://resource.gemaire.com/is/content/Watscocom/Gemaire/american-standard_4a6h7048a1000d_article_16389189598176859_en_cc1.pdf",
+    "page": 3,
+    "quote": "Platinum 20 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Section « Split System Heat Pumps » du Product Handbook American Standard (14-1011-35, en vigueur le 4/1/18), reproduite par Gemaire (distributeur Watsco). p. 3, tableau SH-3-A qui liste 4A6V0024A1000B et 4A6V0036A1000B."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "4A6V0036A1",
+    "commercialName": "Platinum 20",
+    "sourceFile": "https://resource.gemaire.com/is/content/Watscocom/Gemaire/american-standard_4a6h7048a1000d_article_16389189598176859_en_cc1.pdf",
+    "page": 3,
+    "quote": "Platinum 20 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Section « Split System Heat Pumps » du Product Handbook American Standard (14-1011-35, en vigueur le 4/1/18), reproduite par Gemaire (distributeur Watsco). p. 3, tableau SH-3-A qui liste 4A6V0024A1000B et 4A6V0036A1000B."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "4A6V8X24A1",
+    "commercialName": "Platinum 18",
+    "sourceFile": "https://www.ac-supply.com/content/2022%20Quick%20Reference%20Guide.pdf",
+    "page": 32,
+    "quote": "Platinum 18 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Quick Reference Guide American Standard (janvier 2022, section heat pumps du Product Handbook), reproduit par AC Supply (distributeur). p. 32, tableau SH-3-C qui liste 4A6V8X24A1000A à 4A6V8X60A1000A."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "4A6V8X48A1",
+    "commercialName": "Platinum 18",
+    "sourceFile": "https://www.ac-supply.com/content/2022%20Quick%20Reference%20Guide.pdf",
+    "page": 32,
+    "quote": "Platinum 18 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Quick Reference Guide American Standard (janvier 2022, section heat pumps du Product Handbook), reproduit par AC Supply (distributeur). p. 32, tableau SH-3-C qui liste 4A6V8X24A1000A à 4A6V8X60A1000A."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "4A6V8X60A1",
+    "commercialName": "Platinum 18",
+    "sourceFile": "https://www.ac-supply.com/content/2022%20Quick%20Reference%20Guide.pdf",
+    "page": 32,
+    "quote": "Platinum 18 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Quick Reference Guide American Standard (janvier 2022, section heat pumps du Product Handbook), reproduit par AC Supply (distributeur). p. 32, tableau SH-3-C qui liste 4A6V8X24A1000A à 4A6V8X60A1000A."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "5A6H7024A1",
+    "commercialName": "Gold 17",
+    "sourceFile": "https://www.ac-supply.com/content/2026_QUICK_REFERENCE_GUIDE.pdf",
+    "page": 39,
+    "quote": "Table SH-3-A — Gold 17 R-454B Split System Multi-Speed Heat Pump (70/100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "2026 Residential & Light Commercial Product Handbook American Standard (14-1011-43, © 2026 American Standard Heating and Air Conditioning), reproduit par AC Supply (distributeur). p. 39, tableau SH-3-A qui liste 5A6H7024A1000* à 5A6H7060A1000*."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "5A6H7036A1",
+    "commercialName": "Gold 17",
+    "sourceFile": "https://www.ac-supply.com/content/2026_QUICK_REFERENCE_GUIDE.pdf",
+    "page": 39,
+    "quote": "Table SH-3-A — Gold 17 R-454B Split System Multi-Speed Heat Pump (70/100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "2026 Residential & Light Commercial Product Handbook American Standard (14-1011-43, © 2026 American Standard Heating and Air Conditioning), reproduit par AC Supply (distributeur). p. 39, tableau SH-3-A qui liste 5A6H7024A1000* à 5A6H7060A1000*."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "5A6H7048A1",
+    "commercialName": "Gold 17",
+    "sourceFile": "https://www.ac-supply.com/content/2026_QUICK_REFERENCE_GUIDE.pdf",
+    "page": 39,
+    "quote": "Table SH-3-A — Gold 17 R-454B Split System Multi-Speed Heat Pump (70/100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "2026 Residential & Light Commercial Product Handbook American Standard (14-1011-43, © 2026 American Standard Heating and Air Conditioning), reproduit par AC Supply (distributeur). p. 39, tableau SH-3-A qui liste 5A6H7024A1000* à 5A6H7060A1000*."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "5A6H7060A1",
+    "commercialName": "Gold 17",
+    "sourceFile": "https://www.ac-supply.com/content/2026_QUICK_REFERENCE_GUIDE.pdf",
+    "page": 39,
+    "quote": "Table SH-3-A — Gold 17 R-454B Split System Multi-Speed Heat Pump (70/100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "2026 Residential & Light Commercial Product Handbook American Standard (14-1011-43, © 2026 American Standard Heating and Air Conditioning), reproduit par AC Supply (distributeur). p. 39, tableau SH-3-A qui liste 5A6H7024A1000* à 5A6H7060A1000*."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "5HPL5024A1",
+    "commercialName": "Silver 16",
+    "sourceFile": "https://www.ac-supply.com/content/2026_QUICK_REFERENCE_GUIDE.pdf",
+    "page": 43,
+    "quote": "Table SH-7-F — Silver 16 Multi-Speed Low Profile Heat Pump R-454B",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "2026 Residential & Light Commercial Product Handbook American Standard (14-1011-43), reproduit par AC Supply (distributeur). p. 43, tableau SH-7-F qui liste 5HPL5024A1000* à 5HPL5060A1000*. (Les 5HCL5 du tableau SH-7-E sont des 5HCL5036B/5HCL5060B, pas les numéros A de la liste : aucune entrée pour 5HCL5.)"
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "5HPL5036A1",
+    "commercialName": "Silver 16",
+    "sourceFile": "https://www.ac-supply.com/content/2026_QUICK_REFERENCE_GUIDE.pdf",
+    "page": 43,
+    "quote": "Table SH-7-F — Silver 16 Multi-Speed Low Profile Heat Pump R-454B",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "2026 Residential & Light Commercial Product Handbook American Standard (14-1011-43), reproduit par AC Supply (distributeur). p. 43, tableau SH-7-F qui liste 5HPL5024A1000* à 5HPL5060A1000*. (Les 5HCL5 du tableau SH-7-E sont des 5HCL5036B/5HCL5060B, pas les numéros A de la liste : aucune entrée pour 5HCL5.)"
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "5HPL5048A1",
+    "commercialName": "Silver 16",
+    "sourceFile": "https://www.ac-supply.com/content/2026_QUICK_REFERENCE_GUIDE.pdf",
+    "page": 43,
+    "quote": "Table SH-7-F — Silver 16 Multi-Speed Low Profile Heat Pump R-454B",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "2026 Residential & Light Commercial Product Handbook American Standard (14-1011-43), reproduit par AC Supply (distributeur). p. 43, tableau SH-7-F qui liste 5HPL5024A1000* à 5HPL5060A1000*. (Les 5HCL5 du tableau SH-7-E sont des 5HCL5036B/5HCL5060B, pas les numéros A de la liste : aucune entrée pour 5HCL5.)"
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "5HPL5060A1",
+    "commercialName": "Silver 16",
+    "sourceFile": "https://www.ac-supply.com/content/2026_QUICK_REFERENCE_GUIDE.pdf",
+    "page": 43,
+    "quote": "Table SH-7-F — Silver 16 Multi-Speed Low Profile Heat Pump R-454B",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "2026 Residential & Light Commercial Product Handbook American Standard (14-1011-43), reproduit par AC Supply (distributeur). p. 43, tableau SH-7-F qui liste 5HPL5024A1000* à 5HPL5060A1000*. (Les 5HCL5 du tableau SH-7-E sont des 5HCL5036B/5HCL5060B, pas les numéros A de la liste : aucune entrée pour 5HCL5.)"
+  },
+  {
     "brand": "Bosch",
     "outdoorModel": "BMS500-AAM018-1CSXHC",
     "commercialName": "Climate 5000",
@@ -2636,6 +2779,28 @@
     "note": "Page produit officielle Carrier Canada de la famille 38MPRB ; le numéro porte ce préfixe de série."
   },
   {
+    "brand": "Coleman",
+    "outdoorModel": "HC20B3621S",
+    "commercialName": "Echelon",
+    "sourceFile": "https://cdn.master.ca/virtual_branch/documents/coleman/2022/Coleman_brochure_AC21-HC20_05-2020_en_CA.pdf",
+    "page": 5,
+    "quote": "Coleman Echelon Series AC21 air conditioners and HC20 heat pumps are the most efficient",
+    "confidence": "serie",
+    "sourceType": "secondaire",
+    "note": "Brochure Coleman « Coleman Echelon Variable Capacity Residential Systems » (ECHELON-AC21-HC20_ENGES0520, 05-2020, Canada) sur le serveur de documents de Groupe Master (cdn.master.ca, distributeur de Coleman au Québec) ; ce numéro exact figure dans le tableau « HEAT PUMPS », p. 8. Brochure Coleman hébergée par Groupe Master (distributeur), sans preuve qu’il distribue officiellement Coleman : source secondaire."
+  },
+  {
+    "brand": "Coleman",
+    "outdoorModel": "HC20B6021S",
+    "commercialName": "Echelon",
+    "sourceFile": "https://cdn.master.ca/virtual_branch/documents/coleman/2022/Coleman_brochure_AC21-HC20_05-2020_en_CA.pdf",
+    "page": 5,
+    "quote": "Coleman Echelon Series AC21 air conditioners and HC20 heat pumps are the most efficient",
+    "confidence": "serie",
+    "sourceType": "secondaire",
+    "note": "Brochure Coleman « Coleman Echelon Variable Capacity Residential Systems » (ECHELON-AC21-HC20_ENGES0520, 05-2020, Canada) sur le serveur de documents de Groupe Master (cdn.master.ca, distributeur de Coleman au Québec) ; ce numéro exact figure dans le tableau « HEAT PUMPS », p. 8. Brochure Coleman hébergée par Groupe Master (distributeur), sans preuve qu’il distribue officiellement Coleman : source secondaire."
+  },
+  {
     "brand": "Conforto",
     "outdoorModel": "MHMZ218DA",
     "commercialName": "Maximum",
@@ -2678,6 +2843,72 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Brochure officielle Conforto « Maximum Heat Pump Series » : le tableau des combinaisons multizones cité commence par MHMZ218DA et liste aussi ce numéro MHMZ, quelques mots plus loin."
+  },
+  {
+    "brand": "Conforto",
+    "outdoorModel": "MHSD118DACFC",
+    "commercialName": "Maximum",
+    "sourceFile": "https://confortohvac.com/wp-content/uploads/2026/02/CONFORTO_Catalog_CanadaEN_110226.pdf",
+    "page": 16,
+    "quote": "MHSD118DACFC 1.5 Ton Maximum Series, Ducted Heat Pumps, Outdoor Unit 208/230V",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Catalogue canadien Conforto 2025-2026 : la mention figure à la page de la gamme « Centrally Ducted Heat Pump Systems with Side Discharge Condenser » (p. 15 du PDF, folio 16) ; le tableau de la page suivante (p. 16 du PDF, folio 17) nomme ce numéro comme « Outdoor Model »."
+  },
+  {
+    "brand": "Conforto",
+    "outdoorModel": "MHSD124DACFC",
+    "commercialName": "Maximum",
+    "sourceFile": "https://confortohvac.com/wp-content/uploads/2026/02/CONFORTO_Catalog_CanadaEN_110226.pdf",
+    "page": 16,
+    "quote": "MHSD124DACFC 2 Ton Maximum Series, Ducted Heat Pumps, Outdoor Unit 208/230V",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Catalogue canadien Conforto 2025-2026 : la mention figure à la page de la gamme « Centrally Ducted Heat Pump Systems with Side Discharge Condenser » (p. 15 du PDF, folio 16) ; le tableau de la page suivante (p. 16 du PDF, folio 17) nomme ce numéro comme « Outdoor Model »."
+  },
+  {
+    "brand": "Conforto",
+    "outdoorModel": "MHSD130DACFC",
+    "commercialName": "Maximum",
+    "sourceFile": "https://confortohvac.com/wp-content/uploads/2026/02/CONFORTO_Catalog_CanadaEN_110226.pdf",
+    "page": 16,
+    "quote": "MHSD130DACFC 2.5 Ton Maximum Series, Ducted Heat Pumps, Outdoor Unit 208/230V",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Catalogue canadien Conforto 2025-2026 : la mention figure à la page de la gamme « Centrally Ducted Heat Pump Systems with Side Discharge Condenser » (p. 15 du PDF, folio 16) ; le tableau de la page suivante (p. 16 du PDF, folio 17) nomme ce numéro comme « Outdoor Model »."
+  },
+  {
+    "brand": "Conforto",
+    "outdoorModel": "MHSD136DACFC",
+    "commercialName": "Maximum",
+    "sourceFile": "https://confortohvac.com/wp-content/uploads/2026/02/CONFORTO_Catalog_CanadaEN_110226.pdf",
+    "page": 16,
+    "quote": "MHSD136DACFC 3 Ton Maximum Series, Ducted Heat Pumps, Outdoor Unit 208/230V",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Catalogue canadien Conforto 2025-2026 : la mention figure à la page de la gamme « Centrally Ducted Heat Pump Systems with Side Discharge Condenser » (p. 15 du PDF, folio 16) ; le tableau de la page suivante (p. 16 du PDF, folio 17) nomme ce numéro comme « Outdoor Model »."
+  },
+  {
+    "brand": "Conforto",
+    "outdoorModel": "MHSD148DACFC",
+    "commercialName": "Maximum",
+    "sourceFile": "https://confortohvac.com/wp-content/uploads/2026/02/CONFORTO_Catalog_CanadaEN_110226.pdf",
+    "page": 16,
+    "quote": "MHSD148DACFC 4 Ton Maximum Series, Ducted Heat Pumps, Outdoor Unit 208/230V",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Catalogue canadien Conforto 2025-2026 : la mention figure à la page de la gamme « Centrally Ducted Heat Pump Systems with Side Discharge Condenser » (p. 15 du PDF, folio 16) ; le tableau de la page suivante (p. 16 du PDF, folio 17) nomme ce numéro comme « Outdoor Model »."
+  },
+  {
+    "brand": "Conforto",
+    "outdoorModel": "MHSD160DACFC",
+    "commercialName": "Maximum",
+    "sourceFile": "https://confortohvac.com/wp-content/uploads/2026/02/CONFORTO_Catalog_CanadaEN_110226.pdf",
+    "page": 16,
+    "quote": "MHSD160DACFC 5 Ton Maximum Series, Ducted Heat Pumps, Outdoor Unit 208/230V",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Catalogue canadien Conforto 2025-2026 : la mention figure à la page de la gamme « Centrally Ducted Heat Pump Systems with Side Discharge Condenser » (p. 15 du PDF, folio 16) ; le tableau de la page suivante (p. 16 du PDF, folio 17) nomme ce numéro comme « Outdoor Model »."
   },
   {
     "brand": "Convectair",
@@ -3854,6 +4085,26 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Submittal officiel Elios publié par Groupe Master (propriétaire de la marque) sur la page produit www.master.ca de ce numéro. Rubrique « Outdoor Temperature Operating Range / Plage de fonctionnement », ligne « Heating / Chauffage » = -25~24 °C / -13~75 °F (le séparateur « ~ » est un glyphe perdu à l'extraction du texte : « -2524 -1375 »). Les pages master.ca de EXHSA1832AN1 et EXHSA3652AV1 sont protégées par un captcha : non consultées, laissées inconnues. Concorde avec la gamme de produits officielle Elios 2026 (PRL_E_R454BX_1, cdn.master.ca) : « 50°C -25°C » pour ce numéro, famille « EXS »."
+  },
+  {
+    "brand": "Fujitsu",
+    "outdoorModel": "AOLH09KNAS1",
+    "commercialName": "Airstage Altair 300",
+    "sourceFile": "https://www.fujitsugeneral.com/us/products/split/wall/r32/knas1.html",
+    "quote": "AIRSTAGE Altair 300",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit Fujitsu General America (fujitsugeneral.com), titre « AIRSTAGE Altair 300 » ; AOLH09KNAS1 figure dans « Product Details (115V) » de cette même page."
+  },
+  {
+    "brand": "Fujitsu",
+    "outdoorModel": "AOLH12KNAS1",
+    "commercialName": "Airstage Altair 300",
+    "sourceFile": "https://www.fujitsugeneral.com/us/products/split/wall/r32/knas1.html",
+    "quote": "AIRSTAGE Altair 300",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit Fujitsu General America (fujitsugeneral.com), titre « AIRSTAGE Altair 300 » ; AOLH12KNAS1 figure dans « Product Details (115V) » de cette même page."
   },
   {
     "brand": "Fujitsu",
@@ -5109,6 +5360,176 @@
   },
   {
     "brand": "Gree",
+    "outdoorModel": "3VIR09HP115V1AO",
+    "commercialName": "Vireo",
+    "sourceFile": "https://www.greecomfort.com/our-products/vireo-gen3/",
+    "quote": "Vireo GEN3 – Single Zone Mini Split Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Vireo GEN3 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "3VIR09HP230V1AO",
+    "commercialName": "Vireo",
+    "sourceFile": "https://www.greecomfort.com/our-products/vireo-gen3/",
+    "quote": "Vireo GEN3 – Single Zone Mini Split Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Vireo GEN3 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "3VIR09HP230V1BO",
+    "commercialName": "Vireo",
+    "sourceFile": "https://www.greecomfort.com/our-products/vireo-gen3/",
+    "quote": "Vireo GEN3 – Single Zone Mini Split Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Vireo GEN3 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "3VIR18HP230V1AO",
+    "commercialName": "Vireo",
+    "sourceFile": "https://www.greecomfort.com/our-products/vireo-gen3/",
+    "quote": "Vireo GEN3 – Single Zone Mini Split Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Vireo GEN3 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "3VIR24HP230V1AO",
+    "commercialName": "Vireo",
+    "sourceFile": "https://www.greecomfort.com/our-products/vireo-gen3/",
+    "quote": "Vireo GEN3 – Single Zone Mini Split Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Vireo GEN3 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "3VIR24HP230V1BO",
+    "commercialName": "Vireo",
+    "sourceFile": "https://www.greecomfort.com/our-products/vireo-gen3/",
+    "quote": "Vireo GEN3 – Single Zone Mini Split Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Vireo GEN3 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "4LIV09HP115V1AO",
+    "commercialName": "Livo",
+    "sourceFile": "https://www.greecomfort.com/our-products/livo-gen4/",
+    "quote": "Livo GEN4 - Single-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Livo GEN4 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "4LIV09HP230V1AO",
+    "commercialName": "Livo",
+    "sourceFile": "https://www.greecomfort.com/our-products/livo-gen4/",
+    "quote": "Livo GEN4 - Single-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Livo GEN4 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "4LIV12HP115V1AO",
+    "commercialName": "Livo",
+    "sourceFile": "https://www.greecomfort.com/our-products/livo-gen4/",
+    "quote": "Livo GEN4 - Single-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Livo GEN4 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "4LIV12HP230V1AO",
+    "commercialName": "Livo",
+    "sourceFile": "https://www.greecomfort.com/our-products/livo-gen4/",
+    "quote": "Livo GEN4 - Single-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Livo GEN4 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "4LIV18HP230V1AO",
+    "commercialName": "Livo",
+    "sourceFile": "https://www.greecomfort.com/our-products/livo-gen4/",
+    "quote": "Livo GEN4 - Single-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Livo GEN4 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "4LIV24HP230V1AO",
+    "commercialName": "Livo",
+    "sourceFile": "https://www.greecomfort.com/our-products/livo-gen4/",
+    "quote": "Livo GEN4 - Single-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Livo GEN4 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "4LIV30HP230V1AO",
+    "commercialName": "Livo",
+    "sourceFile": "https://www.greecomfort.com/our-products/livo-gen4/",
+    "quote": "Livo GEN4 - Single-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Livo GEN4 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "4LIV36HP230V1AO",
+    "commercialName": "Livo",
+    "sourceFile": "https://www.greecomfort.com/our-products/livo-gen4/",
+    "quote": "Livo GEN4 - Single-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Livo GEN4 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "ENV09HP230V1R32AO",
+    "commercialName": "Envo",
+    "sourceFile": "https://www.greecomfort.com/our-products/envo-r32/",
+    "quote": "GREE Envo R32 Single-Zone Mini Split Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Envo R32 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "FLEXE36HP230V1AO",
+    "commercialName": "Flexx Eco",
+    "sourceFile": "https://www.greecomfort.com/our-products/flexx-eco/",
+    "quote": "Efficiency, comfort and value with the FLEXX ECO",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « FLEXX ECO » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "FLEXX24HP230V1AO",
+    "commercialName": "Flexx",
+    "sourceFile": "https://www.greecomfort.com/our-products/flexx/",
+    "quote": "FLEXX - Central AC and Heating System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « FLEXX » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
     "outdoorModel": "FLEXX36HP230V1AH",
     "commercialName": "Flexx",
     "sourceFile": "https://www.greecomfort.com/our-products/flexx/",
@@ -5136,6 +5557,56 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Page officielle Gree Comfort (greecomfort.com, Gree Amérique du Nord) « FLEXX - Central AC and Heating System » ; sa liste de documents par modèle donne ce numéro."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "FXU24HP230V1R32AO",
+    "commercialName": "Flexx Ultra",
+    "sourceFile": "https://www.greecomfort.com/our-products/flexx-ultra-r32/",
+    "quote": "FLEXX ULTRA R32 Central Heating and Cooling System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « FLEXX ULTRA R32 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "FXU48HP230V1R32AO",
+    "commercialName": "Flexx Ultra",
+    "sourceFile": "https://www.greecomfort.com/our-products/flexx-ultra-r32/",
+    "quote": "FLEXX ULTRA R32 Central Heating and Cooling System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « FLEXX ULTRA R32 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "FXU60HP230V1R32AO",
+    "commercialName": "Flexx Ultra",
+    "sourceFile": "https://www.greecomfort.com/our-products/flexx-ultra-r32/",
+    "quote": "FLEXX ULTRA R32 Central Heating and Cooling System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « FLEXX ULTRA R32 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GMV-36WL/B-T(U)",
+    "commercialName": "MultiPRO",
+    "sourceFile": "https://www.greecomfort.com/our-products/multipro/",
+    "quote": "The MultiPRO for the ultimate in comfort & flexibility.",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « MultiPRO (mini VRF multizone) » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "GMV-48WL/B-T(U)",
+    "commercialName": "MultiPRO",
+    "sourceFile": "https://www.greecomfort.com/our-products/multipro/",
+    "quote": "The MultiPRO for the ultimate in comfort & flexibility.",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « MultiPRO (mini VRF multizone) » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
   },
   {
     "brand": "Gree",
@@ -5339,6 +5810,66 @@
     "confidence": "modele",
     "sourceType": "secondaire",
     "note": "Secondaire : fiche de soumission Gree reproduite par Airtek Canada (greehvac.ca, distributeur Gree, Richmond C.-B. ; « © 2025 Airtek Canada ») ; le document nomme ce numéro. Valeur de la ligne « Heating (Min) » du tableau Operating Range (-31 °F / -35 °C)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "MULTI18HP230V1CO",
+    "commercialName": "Multi21+",
+    "sourceFile": "https://www.greecomfort.com/our-products/multi21-plus/",
+    "quote": "Multi21+ - Multi-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Multi21+ (multizone) » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "MULTI24HP230V1CO",
+    "commercialName": "Multi21+",
+    "sourceFile": "https://www.greecomfort.com/our-products/multi21-plus/",
+    "quote": "Multi21+ - Multi-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Multi21+ (multizone) » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "MULTI30HP230V1CO",
+    "commercialName": "Multi21+",
+    "sourceFile": "https://www.greecomfort.com/our-products/multi21-plus/",
+    "quote": "Multi21+ - Multi-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Multi21+ (multizone) » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "MULTI36HP230V1CO",
+    "commercialName": "Multi21+",
+    "sourceFile": "https://www.greecomfort.com/our-products/multi21-plus/",
+    "quote": "Multi21+ - Multi-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Multi21+ (multizone) » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "MULTI42HP230V1CO",
+    "commercialName": "Multi21+",
+    "sourceFile": "https://www.greecomfort.com/our-products/multi21-plus/",
+    "quote": "Multi21+ - Multi-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Multi21+ (multizone) » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
+  },
+  {
+    "brand": "Gree",
+    "outdoorModel": "VIR09HP230V1R32AO",
+    "commercialName": "Vireo",
+    "sourceFile": "https://www.greecomfort.com/our-products/vireo-r32/",
+    "quote": "GREE Vireo R32 Single-Zone Mini Split System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle Gree Comfort (greecomfort.com, site américain de Gree) « Vireo R32 » ; ce numéro exact figure dans la liste des documents par modèle (Submittals / Model)."
   },
   {
     "brand": "Haier",
@@ -5921,6 +6452,16 @@
     "note": "Fiche produit officielle GE Appliances Air & Water Solutions (geappliancesairandwater.com, division de GE Appliances, liée depuis geappliances.com), champ « Temperature Range - Heating Mode » de l'unité extérieure 5Q42RT2BEA. Le numéro du catalogue (5Q42RT2BE) correspond au 5Q42RT2BEA du fabricant (lettre de révision finale ajoutée)."
   },
   {
+    "brand": "Haier",
+    "outdoorModel": "5U42MS2HD",
+    "commercialName": "FlexFit",
+    "sourceFile": "https://www.geappliancesairandwater.com/appliance/FlexFit-Series-208-230V-5-Zones-42-000-BTU-Multi-Zone-Ductless-Mini-Split-Outdoor-Heat-Pump-System-5U42MS2HDA",
+    "quote": "FlexFit Series 208-230V 5 Zones 42,000 BTU Multi-Zone Ductless Mini-Split Outdoor Heat Pump System",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit GE Appliances Air & Water (distributeur de Haier) pour 5U42MS2HDA (suffixe de révision A), titre de la page."
+  },
+  {
     "brand": "Hisense",
     "outdoorModel": "AS-09UW1SVE00",
     "commercialName": "Hi-ULTRA",
@@ -6040,6 +6581,17 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Fiche officielle Hisense Canada « Hi-Ultra HD Horizontal Discharge » (assets.hisense-canada.com, liée depuis https://www.hisense-canada.com/en/hi-ultra-hd-horizontal-discharge). Page 2 : tableau des unités extérieures AUWR-24U3SF2, AUWR-36U3SA2, AUWR-48U3SP2, AUWR-60U3SP2 et caractéristique de série « Low temperature heating: -13°F (-25°C ). » Le catalogue Hisense Canada 2023 (copie Dubord Réfrigération) annonce aussi « Hi-ULTRA HD Central Ducted -25°C Heating ». La page américaine hisensecomfort.com « Hi-ULTRA HD » (−20 °C) vise la gamme R454B et ne nomme pas ces numéros ; sa page R410A « for service only » ne donne pas de plage. Nom commercial : titre de section du catalogue Hisense Canada 2023."
+  },
+  {
+    "brand": "Hisense",
+    "outdoorModel": "AUWR-60U3SP2",
+    "commercialName": "Hi-ULTRA HD",
+    "sourceFile": "https://dubordrefrigeration.ca/wp-content/uploads/2023/12/Hisensemurale.pdf",
+    "page": 5,
+    "quote": "Hi-ULTRA HD R410A Inverter (Heat Pump)",
+    "confidence": "serie",
+    "sourceType": "secondaire",
+    "note": "Catalogue Hisense Canada 2023-08 (www.hisense-canada.com) reproduit par Dubord Réfrigération, distributeur québécois ; AUWR-60U3SP2 figure au tableau de cette section, p. 5. La fiche officielle de hisense-canada.com liste ce numéro mais son nom n'y est imprimé qu'en image."
   },
   {
     "brand": "Keeprite",
@@ -7136,6 +7688,94 @@
   },
   {
     "brand": "Lennox",
+    "outdoorModel": "MHB009S4S-1L",
+    "commercialName": "MH-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "MH-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « MH-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MHB009S4S-1P",
+    "commercialName": "MH-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "MH-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « MH-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MHB012S4S-1L",
+    "commercialName": "MH-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "MH-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « MH-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MHB012S4S-1P",
+    "commercialName": "MH-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "MH-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « MH-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MHB018S4S-1P",
+    "commercialName": "MH-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "MH-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « MH-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MHB024S4S-1P",
+    "commercialName": "MH-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "MH-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « MH-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MLB009S4S-1P",
+    "commercialName": "ML-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "ML-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « ML-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MLB012S4S-1P",
+    "commercialName": "ML-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "ML-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « ML-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
     "outdoorModel": "MLB018S4M-1P",
     "commercialName": "ML-Series",
     "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
@@ -7144,6 +7784,28 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Brochure Mini-Split Systems 13U72 (lennox.com), p. 6 : plage de toute la série « ML-Series Mini-Split Heat Pump » ; le tableau ML-Series de la même page nomme ce numéro (multi-zone). -22 °F = -30 °C."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MLB018S4S-1P",
+    "commercialName": "ML-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "ML-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « ML-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MLB024S4S-1P",
+    "commercialName": "ML-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "ML-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « ML-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
   },
   {
     "brand": "Lennox",
@@ -7166,6 +7828,182 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Brochure Mini-Split Systems 13U72 (lennox.com), p. 6 : plage de toute la série « ML-Series Mini-Split Heat Pump » ; le tableau ML-Series de la même page nomme ce numéro (multi-zone). -22 °F = -30 °C."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MLB036S4S-1P",
+    "commercialName": "ML-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "ML-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « ML-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MLB048S4S-1P",
+    "commercialName": "ML-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 6,
+    "quote": "ML-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 6 : le numéro figure dans les tableaux placés sous l'en-tête « ML-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC009S4S-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC012S4S-1L",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC012S4S-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC018S4M-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC018S4S-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC024S4M-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC024S4S-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC030S4M-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC030S4S-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC036S4M-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC036S4S-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC048S4M-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC048S4S-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MPC060S4S-1P",
+    "commercialName": "MP-Series",
+    "sourceFile": "https://www.lennox.com/dA/ea9a0b482b/13U72_mini_split_bro_0623.pdf",
+    "page": 5,
+    "quote": "MP-Series Mini-Split Performance Specifications",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Lennox Mini-Split Systems 13U72 (lennox.com), p. 5 : le numéro figure dans les tableaux placés sous l'en-tête « MP-Series Mini-Split Performance Specifications ». Nom de même forme que « ML-Series », déjà admis dans la table pour MLB018S4M-1P ; à écarter si le propriétaire juge que c'est un code."
   },
   {
     "brand": "Lennox",
@@ -7290,6 +8128,17 @@
   },
   {
     "brand": "Lennox",
+    "outdoorModel": "VPC048H4M-3P",
+    "commercialName": "Real",
+    "sourceFile": "https://www.lennox.com/dA/8bbef928d0/508369-02+Mini-VRF+VPC.pdf",
+    "page": 1,
+    "quote": "LENNOX REAL Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Installation/Operation Instructions 508369-02 (08/2023, lennox.com), titre p. 1 « LENNOX REAL Heat Pump VPC***H4-3P » ; VPC048H4M-3P et VPC060H4M-3P nommés dans les tableaux p. 4 et p. 14. Même famille que « Real 2.0 » (VPC H5M) déjà admis."
+  },
+  {
+    "brand": "Lennox",
     "outdoorModel": "VPC048H5M-3P",
     "commercialName": "Real 2.0",
     "sourceFile": "https://www.lennox.com/dA/85b2094431/lennox+real+2.0_Flyer.pdf",
@@ -7298,6 +8147,17 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Dépliant Lennox REAL 2.0 (lennox.com) : caractéristique de la série ; le tableau p. 2 liste VPC018H5M-3P à VPC060H5M-3P avec une colonne chauffage « -22°F to 86°F ». Aucune fiche technique complète (EHB) trouvée pour la version H5M. -22 °F = -30 °C."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "VPC060H4M-3P",
+    "commercialName": "Real",
+    "sourceFile": "https://www.lennox.com/dA/8bbef928d0/508369-02+Mini-VRF+VPC.pdf",
+    "page": 1,
+    "quote": "LENNOX REAL Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Installation/Operation Instructions 508369-02 (08/2023, lennox.com), titre p. 1 « LENNOX REAL Heat Pump VPC***H4-3P » ; VPC048H4M-3P et VPC060H4M-3P nommés dans les tableaux p. 4 et p. 14. Même famille que « Real 2.0 » (VPC H5M) déjà admis."
   },
   {
     "brand": "Lennox",
@@ -7422,6 +8282,72 @@
   },
   {
     "brand": "LG",
+    "outdoorModel": "ARUB060GSS4",
+    "commercialName": "Multi V S",
+    "sourceFile": "https://media.us.lg.com/m/96d2f866954537d/original/EM_MultiV_S_LGRED_OutdoorUnits-pdf.pdf",
+    "page": 55,
+    "quote": "Multi V S ARUB060GSS4",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Manuel d'ingénierie LG « Multi V S with LGRED Outdoor Unit » (médiathèque LG USA), tableau de compatibilité par gamme, p. 55 : ligne « Multi V S ARUB060GSS4 »."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "ARUM036GSS5",
+    "commercialName": "Multi V S with LGRED",
+    "sourceFile": "https://media.us.lg.com/m/96d2f866954537d/original/EM_MultiV_S_LGRED_OutdoorUnits-pdf.pdf",
+    "page": 53,
+    "quote": "Figure 14: Multi V S with LGRED ARUM036GSS5 / ARUM048GSS5",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Manuel d'ingénierie LG « Multi V S with LGRED Outdoor Unit Engineering Manual » (médiathèque LG USA), légende de la figure 14, p. 53."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "ARUM048GSS5",
+    "commercialName": "Multi V S with LGRED",
+    "sourceFile": "https://media.us.lg.com/m/96d2f866954537d/original/EM_MultiV_S_LGRED_OutdoorUnits-pdf.pdf",
+    "page": 53,
+    "quote": "Figure 14: Multi V S with LGRED ARUM036GSS5 / ARUM048GSS5",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Manuel d'ingénierie LG « Multi V S with LGRED Outdoor Unit Engineering Manual » (médiathèque LG USA), légende de la figure 14, p. 53."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "ARUN024GSS4",
+    "commercialName": "Multi V S",
+    "sourceFile": "https://media.us.lg.com/m/7418fa7fb64fc412/original/SB_MultiV_S_HP_ARUN024GSS4-pdf.pdf",
+    "page": 1,
+    "quote": "Multi V™ S Heat Pump",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission LG (médiathèque LG USA) : titre « Multi V S Heat Pump — 2.0 Ton Outdoor Unit » sous le numéro ARUN024GSS4, p. 1."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "ARUN048GSS4",
+    "commercialName": "Multi V S",
+    "sourceFile": "https://a1ac1dcb67cc9f847a73-0b6da349d0197cd2922796e57d5f1d84.ssl.cf5.rackcdn.com/CMSFiles/PMAssets/PMAssets/Resource/general/1509/SB_MultiV_S_ARUN048GSS4_Canada.pdf",
+    "page": 1,
+    "quote": "Multi V™ S Heat Pump",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission LG Canada (ARUN048GSS4, 4.0 Ton Outdoor Unit), p. 1, hébergée sur le CDN Rackspace et liée depuis la page Multi V S de lgvrf.ca (site VRF de LG Canada, domaine hors liste fermée)."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "ARUN060GSS4",
+    "commercialName": "Multi V S",
+    "sourceFile": "https://a1ac1dcb67cc9f847a73-0b6da349d0197cd2922796e57d5f1d84.ssl.cf5.rackcdn.com/CMSFiles/PMAssets/PMAssets/Resource/general/1508/EM_MultiV_S_OutdoorUnits.pdf",
+    "page": 9,
+    "quote": "Multi V S Heat Pump Outdoor Units—ARUN024, 038, 048, 053, 060GSS4",
+    "confidence": "serie",
+    "sourceType": "secondaire",
+    "note": "Manuel d'ingénierie LG « Multi V S Outdoor Unit Engineering Manual », p. 9 ; le numéro exact ARUN060GSS4 figure au tableau 1 (General Data), p. 11. Fichier hébergé sur le CDN Rackspace et lié depuis la page Multi V S de lgvrf.ca (LG Canada, domaine hors liste fermée)."
+  },
+  {
+    "brand": "LG",
     "outdoorModel": "KUMXA181A",
     "commercialName": "Multi F with LGRED",
     "sourceFile": "https://s1.img-b.com/build.com/mediabase/specifications/lg/2069336/lg-kumxa481a-engineering-manual.pdf",
@@ -7488,6 +8414,17 @@
   },
   {
     "brand": "LG",
+    "outdoorModel": "KUMXB181A",
+    "commercialName": "Multi F",
+    "sourceFile": "https://media.us.lg.com/m/5bc80b19423aa68a/original/SB_Multi_F_ODU_R32_KUMXB181A_2025_01_07_193346.pdf",
+    "page": 1,
+    "quote": "R32 Multi F Outdoor Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission LG (médiathèque LG USA) : titre « R32 Multi F Outdoor Unit » sous le numéro KUMXB181A, p. 1."
+  },
+  {
+    "brand": "LG",
     "outdoorModel": "KUMXB241A",
     "commercialName": "Multi F",
     "sourceFile": "https://media.us.lg.com/m/3f3fb6ff989864fc/original/SB_Multi_F_ODU_R32_KUMXB241A_2025_01_07_193346.pdf",
@@ -7499,6 +8436,28 @@
   },
   {
     "brand": "LG",
+    "outdoorModel": "KUMXB301A",
+    "commercialName": "Multi F",
+    "sourceFile": "https://media.us.lg.com/m/5de4343180562f2a/original/PD_Multi_F-MAX_ODU_R32_02_25.pdf",
+    "page": 4,
+    "quote": "Multi F KUMXB301A on page 43",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Manuel de performance LG « R32 Outdoor Unit Performance Data Manual — Multi F MAX / Multi F » (médiathèque LG USA), sommaire des tableaux, p. 4."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "KUMXB361A",
+    "commercialName": "Multi F",
+    "sourceFile": "https://media.us.lg.com/m/5de4343180562f2a/original/PD_Multi_F-MAX_ODU_R32_02_25.pdf",
+    "page": 4,
+    "quote": "Multi F KUMXB361A on page 105",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Manuel de performance LG « R32 Outdoor Unit Performance Data Manual — Multi F MAX / Multi F » (médiathèque LG USA), sommaire des tableaux, p. 4."
+  },
+  {
+    "brand": "LG",
     "outdoorModel": "KUMXB481A",
     "commercialName": "Multi F MAX",
     "sourceFile": "https://media.us.lg.com/m/17e0529cd653d80b/original/SB_Multi_F_MAX_ODU_R32_KUMXB481A_2025_01_08_082120.pdf",
@@ -7507,6 +8466,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche technique (spec sheet) LG du KUMXB481A hébergée sur media.us.lg.com (médiathèque de LG Electronics USA, sous-domaine de lg.com). Page 1, « Performance: Operating Range: … Heating (°F WB) -4 to +64 » ; -4 °F = -20 °C."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "KUMXB541A",
+    "commercialName": "Multi F MAX",
+    "sourceFile": "https://media.us.lg.com/m/5de4343180562f2a/original/PD_Multi_F-MAX_ODU_R32_02_25.pdf",
+    "page": 209,
+    "quote": "Multi F MAX KUMXB541A on page 282",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Manuel de performance LG « R32 Outdoor Unit Performance Data Manual — Multi F MAX / Multi F » (médiathèque LG USA), sommaire des tableaux de la section Multi F MAX, p. 209."
   },
   {
     "brand": "LG",
@@ -7576,6 +8546,17 @@
   },
   {
     "brand": "LG",
+    "outdoorModel": "KUSXA121A",
+    "commercialName": "LGRED",
+    "sourceFile": "https://media.us.lg.com/asset/a7fe0659-84a9-4aac-8512-9a830df6c21c/original/IN_SZ_MPAHU_Quick_Start_Guide_R-32_07_25.pdf",
+    "page": 5,
+    "quote": "LGRED MPAHU models",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide d'installation rapide LG « R32 Single Zone Multi-Position Air Handling Unit » (médiathèque LG USA), p. 5 : KUSXA121A figure dans la liste « LGRED MPAHU models » (unités extérieures)."
+  },
+  {
+    "brand": "LG",
     "outdoorModel": "KUSXA181A",
     "commercialName": "LGRED",
     "sourceFile": "https://media.us.lg.com/m/2756041f3c81713e/original/EM_SZ_OneWayCassette_LGRED_R32_02_26-pdf.pdf",
@@ -7606,6 +8587,61 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche technique (spec sheet) LG « Single Zone Mid Static Ducted LGRED » du système KSUJA301A, hébergée sur media.us.lg.com (médiathèque de LG Electronics USA). Page 1 : « Outdoor Unit (ODU) - KUSXA301A » ; « Performance: Operating Range: … Heating (°F WB) -13 ~ +64 ». −13 °F = −25 °C."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "KUSXA361A",
+    "commercialName": "LGRED",
+    "sourceFile": "https://media.us.lg.com/m/5475e6f5b87c8d00/original/KSSLA361A-R32-Multi-Position-Air-Handling-Unit-LGRED-Submittal-pdf.pdf",
+    "page": 1,
+    "quote": "R32 Single Zone LGRED™ Multi-Position Air Handling Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission LG KSSLA361A (médiathèque LG USA), p. 1 : « Outdoor Unit (ODU) - KUSXA361A »."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "KUSXA421A",
+    "commercialName": "LGRED",
+    "sourceFile": "https://media.us.lg.com/asset/a7fe0659-84a9-4aac-8512-9a830df6c21c/original/IN_SZ_MPAHU_Quick_Start_Guide_R-32_07_25.pdf",
+    "page": 5,
+    "quote": "LGRED MPAHU models",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide d'installation rapide LG « R32 Single Zone Multi-Position Air Handling Unit » (médiathèque LG USA), p. 5 : KUSXA421A figure dans la liste « LGRED MPAHU models » (unités extérieures)."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "KUSXA422A",
+    "commercialName": "LGRED",
+    "sourceFile": "https://media.us.lg.com/asset/a7fe0659-84a9-4aac-8512-9a830df6c21c/original/IN_SZ_MPAHU_Quick_Start_Guide_R-32_07_25.pdf",
+    "page": 10,
+    "quote": "LGRED MPAHU",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide d'installation rapide LG « R32 Single Zone Multi-Position Air Handling Unit » (médiathèque LG USA), p. 10 : KUSXA422A figure dans le tableau de câblage sous l'en-tête « LGRED MPAHU »."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "KUSXA481A",
+    "commercialName": "LGRED",
+    "sourceFile": "https://media.us.lg.com/asset/a7fe0659-84a9-4aac-8512-9a830df6c21c/original/IN_SZ_MPAHU_Quick_Start_Guide_R-32_07_25.pdf",
+    "page": 5,
+    "quote": "LGRED MPAHU models",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide d'installation rapide LG « R32 Single Zone Multi-Position Air Handling Unit » (médiathèque LG USA), p. 5 : KUSXA481A figure dans la liste « LGRED MPAHU models » (unités extérieures)."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "KUSXA482A",
+    "commercialName": "LGRED",
+    "sourceFile": "https://media.us.lg.com/asset/a7fe0659-84a9-4aac-8512-9a830df6c21c/original/IN_SZ_MPAHU_Quick_Start_Guide_R-32_07_25.pdf",
+    "page": 10,
+    "quote": "LGRED MPAHU",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide d'installation rapide LG « R32 Single Zone Multi-Position Air Handling Unit » (médiathèque LG USA), p. 10 : KUSXA482A figure dans le tableau de câblage sous l'en-tête « LGRED MPAHU »."
   },
   {
     "brand": "LG",
@@ -7839,6 +8875,50 @@
     "note": "Engineering Manual LG « Single-Zone Ceiling-Concealed Ducted LGRED System » (R410A) hébergé sur media.us.lg.com (médiathèque de LG Electronics USA, sous-domaine de lg.com). Page 8 (spécifications) : « Operating ranges for outdoor units of 5°F to +118°F (DB) for cooling; -13°F to +64°F (WB) for heating » ; le manuel couvre les unités extérieures LUU180HHV, LUU240HHV, LUU360HHV, LUU420HHV, LUU480HHV. −13 °F = −25 °C."
   },
   {
+    "brand": "LG",
+    "outdoorModel": "ZRUM036GSS0",
+    "commercialName": "Multi V S with LGRED",
+    "sourceFile": "https://media.us.lg.com/m/4ce2ca3ddf8b63aa/original/SB_MultiV_S_wLGRED_HP_HR_R32_ZRUM036GSS0_2024_12_05_054759.pdf",
+    "page": 1,
+    "quote": "R32 Multi V™ S with LGRED° Outdoor Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission LG (médiathèque LG USA) : titre « R32 Multi V™ S with LGRED° Outdoor Unit » sous le numéro ZRUM036GSS0, p. 1."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "ZRUM048GSS0",
+    "commercialName": "Multi V S with LGRED",
+    "sourceFile": "https://media.us.lg.com/m/67e442fc8b1f15fb/original/SB_MultiV_S_wLGRED_HP_HR_R32_ZRUM048GSS0_2024_12_05_054759.pdf",
+    "page": 1,
+    "quote": "R32 Multi V™ S with LGRED° Outdoor Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission LG (médiathèque LG USA) : titre « R32 Multi V™ S with LGRED° Outdoor Unit » sous le numéro ZRUM048GSS0, p. 1."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "ZRUM060GSS0",
+    "commercialName": "Multi V S with LGRED",
+    "sourceFile": "https://media.us.lg.com/m/f8eb6dc0b7fd3b5/original/SB_MultiV_S_wLGRED_HP_HR_R32_ZRUM060GSS0_2024_12_05_054759.pdf",
+    "page": 1,
+    "quote": "R32 Multi V™ S with LGRED° Outdoor Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission LG (médiathèque LG USA) : titre « R32 Multi V™ S with LGRED° Outdoor Unit » sous le numéro ZRUM060GSS0, p. 1."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "ZRUN024GSS0",
+    "commercialName": "Multi V S with LGRED",
+    "sourceFile": "https://media.us.lg.com/m/77ff4a5d4210fab6/original/SB_MultiV_S_wLGRED_HP_R32_ZRUN024GSS0_2024_12_05_055049.pdf",
+    "page": 1,
+    "quote": "R32 Multi V™ S with LGRED° Outdoor Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission LG (médiathèque LG USA) : titre « R32 Multi V™ S with LGRED° Outdoor Unit » sous le numéro ZRUN024GSS0, p. 1."
+  },
+  {
     "brand": "Maxi AIR",
     "outdoorModel": "MAXS-2430",
     "commercialName": "Signature",
@@ -7975,6 +9055,28 @@
   },
   {
     "brand": "Midea",
+    "outdoorModel": "MO1ES-H09B-1A",
+    "commercialName": "All Easy Pro",
+    "sourceFile": "https://d8921up5618we.cloudfront.net/toolbox/product_library_files/Single_Zone_Ductless_Systems/High_Wall_Split/High_Wall_Split.pdf",
+    "page": 5,
+    "quote": "Mid Tier-ALL EASY PRO Energy Star Up to 25.8 SEER2",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Secondaire : fiche « High Wall Split » de Midea HVAC (Midea America, site mideacomfort.us), hébergée sur le CDN CloudFront d8921up5618we lié depuis la page mideacomfort.us/single.html ; ni ce domaine ni ce CDN ne sont dans la liste fermée (proposés dans domaines-proposes.json). Ce numéro exact figure à la ligne « Outdoor Unit » du tableau « Mid Tier-ALL EASY PRO », p. 5. La page officielle nahvac.com « Midea All Easy Pro Wall-Mounted Split » ne donne que les variantes 230 V (-2A). La fiche de soumission Midea du même numéro sur le CDN officiel (https://dde2yk4t993pn.cloudfront.net/downloadsv2/R454B-CA/Single-Zone%20Mini%20Split/Submittal/Mid%20Tier%20-%20All%20Easy%20Pro/MSEES-H09B-1A%20%26%20MO1ES-H09B-1A.pdf) est rangée dans le dossier « Mid Tier - All Easy Pro » mais n'imprime que « Series Name: EP Energy Star Series » (abréviation, pas de désaccord)."
+  },
+  {
+    "brand": "Midea",
+    "outdoorModel": "MO1ES-H12B-1A",
+    "commercialName": "All Easy Pro",
+    "sourceFile": "https://d8921up5618we.cloudfront.net/toolbox/product_library_files/Single_Zone_Ductless_Systems/High_Wall_Split/High_Wall_Split.pdf",
+    "page": 5,
+    "quote": "Mid Tier-ALL EASY PRO Energy Star Up to 25.8 SEER2",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Secondaire : fiche « High Wall Split » de Midea HVAC (Midea America, site mideacomfort.us), hébergée sur le CDN CloudFront d8921up5618we lié depuis la page mideacomfort.us/single.html ; ni ce domaine ni ce CDN ne sont dans la liste fermée (proposés dans domaines-proposes.json). Ce numéro exact figure à la ligne « Outdoor Unit » du tableau « Mid Tier-ALL EASY PRO », p. 5. La page officielle nahvac.com « Midea All Easy Pro Wall-Mounted Split » ne donne que les variantes 230 V (-2A). La fiche de soumission Midea du même numéro sur le CDN officiel (https://dde2yk4t993pn.cloudfront.net/downloadsv2/R454B-CA/Single-Zone%20Mini%20Split/Submittal/Mid%20Tier%20-%20All%20Easy%20Pro/MSEES-H12B-1A%20%26%20MO1ES-H12B-1A.pdf) est rangée dans le dossier « Mid Tier - All Easy Pro » mais n'imprime que « Series Name: EP Energy Star Series » (abréviation, pas de désaccord)."
+  },
+  {
+    "brand": "Midea",
     "outdoorModel": "MO1HE-H18B-2A",
     "commercialName": "Evox",
     "sourceFile": "https://dde2yk4t993pn.cloudfront.net/downloadsv2/R454B-US/EVOX/Installation%20Manual/EVOX%20ODU/MO1HE%20&%20MO1SE.pdf",
@@ -7983,6 +9085,17 @@
     "confidence": "modele",
     "sourceType": "secondaire",
     "note": "Manuel d'installation Midea « EVOX Extreme Heat Heat Pump » (CDN CloudFront de Midea ; aucune page mideacomfort.us/.ca trouvée qui renvoie vers ce fichier précis, d'où « secondaire ») ; ligne du tableau d'appariement EVOX."
+  },
+  {
+    "brand": "Mitsubishi Electric",
+    "outdoorModel": "TRUZH0361KA00NA",
+    "commercialName": "Hyper-Heating",
+    "sourceFile": "https://s3.amazonaws.com/enter.mehvac.com/DAMRoot/Original/10006/T_SUBMITTAL_TPEADA0361AA70A_TRUZH0361KA00NA_en.pdf",
+    "page": 1,
+    "quote": "36,000 BTU/H HYPER-HEATING UNIVERSAL OUTDOOR",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Mitsubishi Electric Trane HVAC US (compartiment S3 enter.mehvac.com), en-tête p. 1 ; « Outdoor Unit TRUZH0361KA00NA » sur la même page."
   },
   {
     "brand": "Moovair",
@@ -9486,6 +10599,402 @@
   },
   {
     "brand": "Rheem",
+    "outdoorModel": "RO1HFZ09AJ2H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIFHFZ09AJ2S/ RO1HFZ09AJ2H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HFZ09AJ2S",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIFHFZ09AJ2S/ RO1HFZ09AJ2S Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HFZ12AJ2H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIFHFZ12AJ2S/ RO1HFZ12AJ2H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HFZ12AJ2S",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIFHFZ12AJ2S/ RO1HFZ12AJ2S Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HFZ15AJ2H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIFHFZ15AJ2S/ RO1HFZ15AJ2H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HFZ15AJ2S",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIFHFZ15AJ2S/ RO1HFZ15AJ2S Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HFZ18AJ2H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHFZ18AJ2S/ RO1HFZ18AJ2H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HFZ24AJ2H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHFZ24AJ2S/ RO1HFZ24AJ2H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HFZ30AJ2H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHFZ30AJ2S/ RO1HFZ30AJ2H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HGZ09AJ1H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHGZ09AJ1S/ RO1HGZ09AJ1H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HGZ09AJ1S",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHGZ09AJ1S/ RO1HGZ09AJ1S Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HGZ12AJ1H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHGZ12AJ1S/ RO1HGZ12AJ1H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HGZ12AJ1S",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHGZ12AJ1S/ RO1HGZ12AJ1S Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HGZ15AJ1H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHGZ15AJ1S/ RO1HGZ15AJ1H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HGZ15AJ1S",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHGZ15AJ1S/ RO1HGZ15AJ1S Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HGZ42AJ8S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RIMHGZ42AJ8S/ RO1HGZ42AJ8S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 8, 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HGZ48AJ8S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RIMHGZ48AJ8S/ RO1HGZ48AJ8S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 8, 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ09AJ2H",
+    "commercialName": "Classic Plus",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHHZ09AJ2S/ RO1HHZ09AJ2H Classic Plus® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic Plus® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ09AJ2S",
+    "commercialName": "Classic Plus",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHHZ09AJ2S/ RO1HHZ09AJ2S Classic Plus® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic Plus® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ09AJ3S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 9,
+    "quote": "RIWHHZ09AJ3S/ RO1HHZ09AJ3S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ09AJ8S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RICHHZ09AJ8S/ RO1HHZ09AJ8S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 8), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ12AJ2S",
+    "commercialName": "Classic Plus",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 7,
+    "quote": "RIWHHZ12AJ2S/ RO1HHZ12AJ2S Classic Plus® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic Plus® Series » (p. 7), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ12AJ3S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 9,
+    "quote": "RIWHHZ12AJ3S/ RO1HHZ12AJ3S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ12AJ8S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RICHHZ12AJ8S/ RO1HHZ12AJ8S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 8), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ18AJ2S",
+    "commercialName": "Classic Plus",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RIWHHZ18AJ2S/ RO1HHZ18AJ2S Classic Plus® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic Plus® Series » (p. 8), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ18AJ3S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 9,
+    "quote": "RIWHHZ18AJ3S/ RO1HHZ18AJ3S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ18AJ8S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RICHHZ18AJ8S/ RO1HHZ18AJ8S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 8, 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ24AJ2S",
+    "commercialName": "Classic Plus",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RIWHHZ24AJ2S/ RO1HHZ24AJ2S Classic Plus® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic Plus® Series » (p. 8), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ24AJ3S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 9,
+    "quote": "RIWHHZ24AJ3S/ RO1HHZ24AJ3S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ24AJ8S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RIMHHZ24AJ8S/ RO1HHZ24AJ8S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 8, 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ30AJ3S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 9,
+    "quote": "RIWHHZ30AJ3S/ RO1HHZ30AJ3S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ30AJ8S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RIMHHZ30AJ8S/ RO1HHZ30AJ8S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 8, 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ36AJ3S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 9,
+    "quote": "RIWHHZ36AJ3S/ RO1HHZ36AJ3S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO1HHZ36AJ8S",
+    "commercialName": "Classic",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 8,
+    "quote": "RIMHHZ36AJ8S/ RO1HHZ36AJ8S Classic® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic® Series » (p. 8, 9), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO4HFZ36AJ1H",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 10,
+    "quote": "RO4HFZ36AJ1H Prestige® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Prestige® Series » (p. 10), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RO5HFZ45AJ2S",
+    "commercialName": "Classic Plus",
+    "sourceFile": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Heating_Air_Product_Guide.pdf",
+    "page": 10,
+    "quote": "RO5HFZ45AJ2S Classic Plus® Series",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Guide produit Rheem « Heating & Cooling Product Guide » (files.rheem.com), section Ductless Heat Pump Systems : la vignette de ce numéro extérieur porte « Classic Plus® Series » (p. 10), sans autre nom pour ce numéro dans le document."
+  },
+  {
+    "brand": "Rheem",
     "outdoorModel": "RP1724HJVXA",
     "commercialName": "Classic Plus",
     "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/6D836FBE-A0DE-4545-9ACC-75D388562611.pdf",
@@ -9583,6 +11092,61 @@
     "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/E592CA25-DBE6-48FE-8535-FA4628893534.pdf",
     "quote": "Endeavor® Line Prestige® Series",
     "sourceType": "officiel"
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RP2024BJV",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/7CC0A83B-A5E7-4579-857C-905B85DE18A9.pdf",
+    "page": 1,
+    "quote": "Rheem Prestige® Series Variable Speed Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Rheem « RP20 Series » (Form No. P11-811 Rev. 7), en-tête p. 1 cité ; le tableau « Available SKUs » p. 3 nomme RP2024BJVCA (« Rheem Prestige® Series Variable Speed Heat Pump »), repris p. 22."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RP2036BJV",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/7CC0A83B-A5E7-4579-857C-905B85DE18A9.pdf",
+    "page": 1,
+    "quote": "Rheem Prestige® Series Variable Speed Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Rheem « RP20 Series » (Form No. P11-811 Rev. 7), en-tête p. 1 cité ; le tableau « Available SKUs » p. 3 nomme RP2036BJVCA (« Rheem Prestige® Series Variable Speed Heat Pump »), repris p. 22."
+  },
+  {
+    "brand": "Rheem",
+    "outdoorModel": "RP2048BJV",
+    "commercialName": "Prestige",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/7CC0A83B-A5E7-4579-857C-905B85DE18A9.pdf",
+    "page": 1,
+    "quote": "Rheem Prestige® Series Variable Speed Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Rheem « RP20 Series » (Form No. P11-811 Rev. 7), en-tête p. 1 cité ; le tableau « Available SKUs » p. 3 nomme RP2048BJVCA (« Rheem Prestige® Series Variable Speed Heat Pump »), repris p. 22."
+  },
+  {
+    "brand": "Ruud",
+    "outdoorModel": "FSHSR12B1C",
+    "commercialName": "Achiever",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/507CEB96-CBB9-452E-9F40-6F0893D8D2AA.pdf",
+    "page": 2,
+    "quote": "FLOATING AIR™ ACHIEVER® SERIES | SINGLE-ZONE | WALL-MOUNTED HEAT PUMPS",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Ruud (colonne « RUUD MODEL », « DSS SUBMITTAL_FA ACHIEVER SERIES_REV 02-20-25 ») : FSHSR12B1C figure à la ligne « Outdoor Model » p. 2 et dans la liste des modèles p. 1. Document Ruud ; le document Rheem du même numéro dit Classic (règle 6)."
+  },
+  {
+    "brand": "Ruud",
+    "outdoorModel": "FSHSR24B3D",
+    "commercialName": "Achiever",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/507CEB96-CBB9-452E-9F40-6F0893D8D2AA.pdf",
+    "page": 2,
+    "quote": "FLOATING AIR™ ACHIEVER® SERIES | SINGLE-ZONE | WALL-MOUNTED HEAT PUMPS",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Ruud (colonne « RUUD MODEL », « DSS SUBMITTAL_FA ACHIEVER SERIES_REV 02-20-25 ») : FSHSR24B3D figure à la ligne « Outdoor Model » p. 2 et dans la liste des modèles p. 1. Document Ruud ; le document Rheem du même numéro dit Classic (règle 6)."
   },
   {
     "brand": "Ruud",
@@ -9706,6 +11270,50 @@
   },
   {
     "brand": "Ruud",
+    "outdoorModel": "RP1724HJVXA",
+    "commercialName": "Achiever Plus",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/4FF75C31-DDD4-4A2C-9D1A-555B5AE0732C.pdf",
+    "page": 1,
+    "quote": "Ruud Achiever Plus® Series Side Discharge Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Ruud « RP17**H Series » (Form No. P22-821 Rev. 1), en-tête p. 1 cité ; RP1724HJVXA figure au tableau « Available SKUs » p. 3 et dans les tableaux suivants. Document Ruud (le document Rheem du même numéro dit Classic Plus : règle 6)."
+  },
+  {
+    "brand": "Ruud",
+    "outdoorModel": "RP1730HJVXA",
+    "commercialName": "Achiever Plus",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/4FF75C31-DDD4-4A2C-9D1A-555B5AE0732C.pdf",
+    "page": 1,
+    "quote": "Ruud Achiever Plus® Series Side Discharge Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Ruud « RP17**H Series » (Form No. P22-821 Rev. 1), en-tête p. 1 cité ; RP1730HJVXA figure au tableau « Available SKUs » p. 3 et dans les tableaux suivants. Document Ruud (le document Rheem du même numéro dit Classic Plus : règle 6)."
+  },
+  {
+    "brand": "Ruud",
+    "outdoorModel": "RP1736HJVXA",
+    "commercialName": "Achiever Plus",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/4FF75C31-DDD4-4A2C-9D1A-555B5AE0732C.pdf",
+    "page": 1,
+    "quote": "Ruud Achiever Plus® Series Side Discharge Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Ruud « RP17**H Series » (Form No. P22-821 Rev. 1), en-tête p. 1 cité ; RP1736HJVXA figure au tableau « Available SKUs » p. 3 et dans les tableaux suivants. Document Ruud (le document Rheem du même numéro dit Classic Plus : règle 6)."
+  },
+  {
+    "brand": "Ruud",
+    "outdoorModel": "RP1748HJVXA",
+    "commercialName": "Achiever Plus",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/4FF75C31-DDD4-4A2C-9D1A-555B5AE0732C.pdf",
+    "page": 1,
+    "quote": "Ruud Achiever Plus® Series Side Discharge Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Ruud « RP17**H Series » (Form No. P22-821 Rev. 1), en-tête p. 1 cité ; RP1748HJVXA figure au tableau « Available SKUs » p. 3 et dans les tableaux suivants. Document Ruud (le document Rheem du même numéro dit Classic Plus : règle 6)."
+  },
+  {
+    "brand": "Ruud",
     "outdoorModel": "UP18AZ24AJVC",
     "commercialName": "Ultra",
     "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/D81E67A0-A777-4AAF-BF1F-8CB448787352.pdf",
@@ -9759,6 +11367,39 @@
     "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/03B04E80-2344-440E-A731-A54645A48F7A.pdf",
     "quote": "Endeavor® Line Ultra™ Series",
     "sourceType": "officiel"
+  },
+  {
+    "brand": "Ruud",
+    "outdoorModel": "UP2024BJV",
+    "commercialName": "Ultra",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/6EC2BA64-9B15-4E0C-96D3-DEA343562DA4.pdf",
+    "page": 1,
+    "quote": "Ruud Ultra™ Series Variable Speed Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Ruud « UP20 Series » (Form No. P22-811 Rev. 10), en-tête p. 1 cité ; le tableau « Available SKUs » p. 2 nomme UP2024BJVCA (« Enabled Inverter Driven Ruud Ultra™ Series Variable Speed Heat Pump »)."
+  },
+  {
+    "brand": "Ruud",
+    "outdoorModel": "UP2036BJV",
+    "commercialName": "Ultra",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/6EC2BA64-9B15-4E0C-96D3-DEA343562DA4.pdf",
+    "page": 1,
+    "quote": "Ruud Ultra™ Series Variable Speed Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Ruud « UP20 Series » (Form No. P22-811 Rev. 10), en-tête p. 1 cité ; le tableau « Available SKUs » p. 2 nomme UP2036BJVCA (« Enabled Inverter Driven Ruud Ultra™ Series Variable Speed Heat Pump »)."
+  },
+  {
+    "brand": "Ruud",
+    "outdoorModel": "UP2048BJV",
+    "commercialName": "Ultra",
+    "sourceFile": "https://files.myrheem.com/webpartners/ProductDocuments/6EC2BA64-9B15-4E0C-96D3-DEA343562DA4.pdf",
+    "page": 1,
+    "quote": "Ruud Ultra™ Series Variable Speed Heat Pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique Ruud « UP20 Series » (Form No. P22-811 Rev. 10), en-tête p. 1 cité ; le tableau « Available SKUs » p. 2 nomme UP2048BJVCA (« Enabled Inverter Driven Ruud Ultra™ Series Variable Speed Heat Pump »)."
   },
   {
     "brand": "Samsung",
@@ -9990,6 +11631,17 @@
   },
   {
     "brand": "Samsung",
+    "outdoorModel": "AJ020CXS3CH",
+    "commercialName": "Max Heat",
+    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/FJM/AJ0+CXS+CH_FJM_MH_2023/Submittals/AJ020CXS3CHAA+(JXH20S3C)+SUBMITTAL_Max+Heat+3+PORT+ODU_V3+Combos_2311A.pdf",
+    "page": 1,
+    "quote": "Samsung Max Heat® FJM Series, 3 Port Condensing Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files), en-tête « SUBMITTAL AJ020CXS3CH/AA », p. 1."
+  },
+  {
+    "brand": "Samsung",
     "outdoorModel": "AJ020DXJ2CG",
     "commercialName": "Free Joint Multi Standard",
     "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/Marketing_Dept/Literature/Samsung_RLC_Tech_Catalog_Online_Digital_v1_07302026.pdf",
@@ -10031,6 +11683,17 @@
   },
   {
     "brand": "Samsung",
+    "outdoorModel": "AJ024CXS4CH",
+    "commercialName": "Max Heat",
+    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/FJM/AJ0+CXS+CH_FJM_MH_2023/Submittals/AJ024CXS4CHAA+(JXH24S4C)+SUBMITTAL_Max+Heat+4+PORT+ODU_V3+Combos_2311A.pdf",
+    "page": 1,
+    "quote": "Samsung Max Heat® FJM Series, 4 Port Condensing Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files), en-tête « SUBMITTAL AJ024CXS4CH/AA », p. 1."
+  },
+  {
+    "brand": "Samsung",
     "outdoorModel": "AJ024DXJ3CG",
     "commercialName": "Free Joint Multi Standard",
     "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/Marketing_Dept/Literature/Samsung_RLC_Tech_Catalog_Online_Digital_v1_07302026.pdf",
@@ -10061,6 +11724,17 @@
   },
   {
     "brand": "Samsung",
+    "outdoorModel": "AJ030CXS4CH",
+    "commercialName": "Max Heat",
+    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/FJM/AJ0+CXS+CH_FJM_MH_2023/Submittals/AJ030CXS4CHAA+(JXH30S4C)+SUBMITTAL_Max+Heat+4+PORT+ODU_V3+Combos_2311A.pdf",
+    "page": 1,
+    "quote": "Samsung Max Heat® FJM Series, 4 Port Condensing Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files), en-tête « SUBMITTAL AJ030CXS4CH/AA », p. 1."
+  },
+  {
+    "brand": "Samsung",
     "outdoorModel": "AJ030DXS4CG",
     "commercialName": "Free Joint Multi Premium",
     "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/Marketing_Dept/Literature/Samsung_RLC_Tech_Catalog_Online_Digital_v1_07302026.pdf",
@@ -10088,6 +11762,17 @@
     "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/FJM/Technical+Data+Book_FJM/[TDB]+2021+Free+Joint+Multi+for+America_Max+Heat_Updated+Combos_Ver1.6_221206.pdf",
     "quote": "Free Joint Multi Max Heat, Multi-zone (AJ0**BXS*CH/AA) Technical Data Book",
     "sourceType": "officiel"
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AJ036CXS4CH",
+    "commercialName": "Max Heat",
+    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/FJM/AJ0+CXS+CH_FJM_MH_2023/Submittals/AJ036CXS4CHAA+(JXH36S4C)+SUBMITTAL_Max+Heat+4+PORT+ODU_V3+Combos_2311A.pdf",
+    "page": 1,
+    "quote": "Samsung Max Heat® FJM Series, 4 Port Condensing Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files), en-tête « SUBMITTAL AJ036CXS4CH/AA », p. 1."
   },
   {
     "brand": "Samsung",
@@ -10223,6 +11908,100 @@
   },
   {
     "brand": "Samsung",
+    "outdoorModel": "AR09CSDABWKX",
+    "commercialName": "WindFree 3.0",
+    "sourceFile": "https://www.samsunghvac.com/single-zone-high-wall-systems/WindFree-3",
+    "quote": "WindFree™* 3.0 (AR**CSDABWK*CV, R*S**ABC)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page Samsung HVAC (documents techniques) : AR09CSDABWKXCV (suffixe régional CV) figure dans la liste des modèles de cette page."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR09CSDACWKX",
+    "commercialName": "Max Heat 3.0",
+    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/RAC/WindFree+3.0_AR+C/Submittals/WindFree_3_AR+CSDABWKN/AR09CSDABWKNCV_AR09CSDACWKXCV+(RNS09ABC_RXS09ACC)_Submittal_MAX+HEAT+3.0_2304A.pdf",
+    "page": 1,
+    "quote": "Max Heat 3.0",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files) : unité extérieure AR09CSDACWKXCV (suffixe régional CV), p. 1."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR09TSFABWKX",
+    "commercialName": "WindFree 2.0",
+    "sourceFile": "https://www.samsunghvac.com/single-zone-high-wall-systems/wind-free-2",
+    "quote": "WindFree™* 2.0 (AR**TSFABWK, R*S**ABT)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page Samsung HVAC (documents techniques) : AR09TSFABWKXCV (suffixe régional CV) figure dans la liste des modèles de cette page."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR09TSFACWKX",
+    "commercialName": "Max Heat 2.0",
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/RAC/Wind+Free+2.0_Quantum+2.0_IDU+and+ODU+Inst+Manuals/Submittals/AR+TSFACWKXCV_Max+Heat+2.0/AR09TSFABWKNCV_AR09TSFACWKXCV+(RNS09ABT_RXS09ACT)_Submittal_MAX+HEAT+2.0_02092021.pdf",
+    "page": 1,
+    "quote": "Max Heat 2.0",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files) : unité extérieure AR09TSFACWKXCV (suffixe régional CV), p. 1."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR12CSDABWKX",
+    "commercialName": "WindFree 3.0",
+    "sourceFile": "https://www.samsunghvac.com/single-zone-high-wall-systems/WindFree-3",
+    "quote": "WindFree™* 3.0 (AR**CSDABWK*CV, R*S**ABC)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page Samsung HVAC (documents techniques) : AR12CSDABWKXCV (suffixe régional CV) figure dans la liste des modèles de cette page."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR12CSDACWKX",
+    "commercialName": "Max Heat 3.0",
+    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/RAC/WindFree+3.0_AR+C/Submittals/WindFree_3_AR+CSDABWKN/AR12CSDABWKNCV_AR12CSDACWKXCV+(RNS12ABC_RXS12ACC)_Submittal_MAX+HEAT+3.0_2304A.pdf",
+    "page": 1,
+    "quote": "Max Heat 3.0",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files) : unité extérieure AR12CSDACWKXCV (suffixe régional CV), p. 1."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR12TSFABWKX",
+    "commercialName": "WindFree 2.0",
+    "sourceFile": "https://www.samsunghvac.com/single-zone-high-wall-systems/wind-free-2",
+    "quote": "WindFree™* 2.0 (AR**TSFABWK, R*S**ABT)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page Samsung HVAC (documents techniques) : AR12TSFABWKXCV (suffixe régional CV) figure dans la liste des modèles de cette page."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR12TSFACWKX",
+    "commercialName": "Max Heat 2.0",
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/RAC/Wind+Free+2.0_Quantum+2.0_IDU+and+ODU+Inst+Manuals/Submittals/AR+TSFACWKXCV_Max+Heat+2.0/AR12TSFABWKNCV_AR12TSFACWKXCV+(RNS12ABT_RXS12ACT)_Submittal_MAX+HEAT+2.0_02092021.pdf",
+    "page": 1,
+    "quote": "Max Heat 2.0",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files) : unité extérieure AR12TSFACWKXCV (suffixe régional CV), p. 1."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR15BSFACWKXCV",
+    "commercialName": "Max Heat",
+    "sourceFile": "https://www.samsunghvac.com/single-zone-high-wall-systems/Wind-Free-2-Max-Heat",
+    "quote": "WindFree™ 2.0 Max Heat® Low Ambient Heating (AR***SFACWKX, RXS**AC*)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page Samsung HVAC (documents techniques) : l'unité AR15BSFACWKXCV figure dans la liste des modèles de cette page. Aucune fiche de soumission trouvée pour ce numéro ; le nom retenu est « Max Heat » tel qu'imprimé."
+  },
+  {
+    "brand": "Samsung",
     "outdoorModel": "AR15CSDABWKX",
     "commercialName": "WindFree 3.0",
     "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/RAC/WindFree+3.0_AR+C/Submittals/WindFree_3_AR+CSDABWKN/AR15CSDABWKNCV_AR15CSDABWKXCV+(RNS15AFC_RXS15ABC)_Submittal_WIND+FREE+3.0_2306A.pdf",
@@ -10231,6 +12010,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche de soumission Samsung HVAC (WindFree 3.0, unité extérieure AR15CSDABWKXCV) hébergée sur samsung-files.s3.us-east-1.amazonaws.com (Amazon S3, hébergeur partagé) ; classée officielle car la page officielle https://www.samsunghvac.com/single-zone-high-wall-systems/WindFree-3 (Samsung HVAC America), une fois rendue, renvoie vers CE fichier précis (vérifié dans le navigateur le 2026-09-14). Page 2, bloc « Operating Temperatures – Outdoor » : la plage de chauffage extérieure est « -5 ~ 75°F (-20.5 ~ 24°C) » (la plage de climatisation extérieure se termine à 115 °F, les plages intérieures sont 61~90 °F et 50~86 °F). Le numéro du catalogue (AR15CSDABWKX) est celui du fabricant sans le suffixe « CV » (AR15CSDABWKXCV). Arrondi : -20.5 °C → -20 °C (un ,5 s'arrondit vers la valeur la moins froide) ; -5 °F = -20.6 °C → -21 °C ; valeur la moins froide retenue (-20 °C)."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR15CSDACWKX",
+    "commercialName": "Max Heat 3.0",
+    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/RAC/WindFree+3.0_AR+C/Submittals/WindFree_3_AR+CSDABWKN/AR15CSDABWKNCV_AR15CSDACWKXCV+(RNS15ABC_RXS15ACC)_Submittal_MAX+HEAT+3.0_2304A.pdf",
+    "page": 1,
+    "quote": "Samsung Max Heat 3.0, wall mounted evaporator, split system",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files) : unité extérieure AR15CSDACWKXCV (suffixe régional CV), p. 1."
   },
   {
     "brand": "Samsung",
@@ -10245,6 +12035,17 @@
   },
   {
     "brand": "Samsung",
+    "outdoorModel": "AR18CSDACWKX",
+    "commercialName": "Max Heat 3.0",
+    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/RAC/WindFree+3.0_AR+C/Submittals/WindFree_3_AR+CSDABWKN/AR18CSDABWKNCV_AR18CSDACWKXCV+(RNS18ABC_RXS18ACC)_Submittal_MAX+HEAT+3.0_2304A.pdf",
+    "page": 1,
+    "quote": "Samsung Max Heat 3.0, wall mounted evaporator, split system",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files) : unité extérieure AR18CSDACWKXCV (suffixe régional CV), p. 1."
+  },
+  {
+    "brand": "Samsung",
     "outdoorModel": "AR18CSDADWKX",
     "commercialName": "WindFree 3.0",
     "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/RAC/WindFree+3.0_AR+C/Submittals/WindFree_3_AR+CSDABWKN/AR18CSDABWKNCV_AR18CSDADWKXCV+(RNS18ABC_RXS18ADC)_Submittal_WIND+FREE+3.0_2310A.pdf",
@@ -10253,6 +12054,37 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche de soumission Samsung HVAC (WindFree 3.0 (2024), unité extérieure AR18CSDADWKXCV) hébergée sur samsung-files.s3.us-east-1.amazonaws.com (Amazon S3, hébergeur partagé) ; classée officielle car la page officielle https://www.samsunghvac.com/single-zone-high-wall-systems/WindFree-3 (Samsung HVAC America), une fois rendue, renvoie vers CE fichier précis (vérifié dans le navigateur le 2026-09-14). Page 2, bloc « Operating Temperatures – Outdoor » : la plage de chauffage extérieure est « -5 ~ 75°F (-20.5 ~ 24°C) » (la plage de climatisation extérieure se termine à 115 °F, les plages intérieures sont 61~90 °F et 50~86 °F). Le numéro du catalogue (AR18CSDADWKX) est celui du fabricant sans le suffixe « CV » (AR18CSDADWKXCV). Arrondi : -20.5 °C → -20 °C (un ,5 s'arrondit vers la valeur la moins froide) ; -5 °F = -20.6 °C → -21 °C ; valeur la moins froide retenue (-20 °C)."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR18CSDAEWKX",
+    "commercialName": "Max Heat 3.0",
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/RAC/WindFree+3.0_AR+C/Submittals/WindFree_3_AR+CSDABWKN/AR18CSDABWKNCV_AR18CSDAEWKXCV+(RNS18ABC_RXS18AEC)_Submittal_MAX+HEAT+3.0_2310A.pdf",
+    "page": 1,
+    "quote": "Samsung Max Heat® 3.0, wall mounted evaporator, split system",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files) : unité extérieure AR18CSDAEWKXCV (suffixe régional CV), p. 1."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR18TSFABWKX",
+    "commercialName": "WindFree 2.0",
+    "sourceFile": "https://www.samsunghvac.com/single-zone-high-wall-systems/wind-free-2",
+    "quote": "WindFree™* 2.0 (AR**TSFABWK, R*S**ABT)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page Samsung HVAC (documents techniques) : AR18TSFABWKXCV (suffixe régional CV) figure dans la liste des modèles de cette page."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR18TSFACWKX",
+    "commercialName": "Max Heat",
+    "sourceFile": "https://www.samsunghvac.com/single-zone-high-wall-systems/Wind-Free-2-Max-Heat",
+    "quote": "WindFree™ 2.0 Max Heat® Low Ambient Heating (AR***SFACWKX, RXS**AC*)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page Samsung HVAC (documents techniques) : l'unité AR18TSFACWKXCV figure dans la liste des modèles de cette page. Aucune fiche de soumission trouvée pour ce numéro ; le nom retenu est « Max Heat » tel qu'imprimé."
   },
   {
     "brand": "Samsung",
@@ -10267,6 +12099,16 @@
   },
   {
     "brand": "Samsung",
+    "outdoorModel": "AR24CSDACWKX",
+    "commercialName": "Max Heat",
+    "sourceFile": "https://www.samsunghvac.com/single-zone-high-wall-systems/WindFree_3_MH",
+    "quote": "WindFree™* 3.0 Max Heat® (AR**CSDACWKXCV, RXS**ACC, AR**CSDAEWKXCV, RXS**AEC, AR**CSDABWKNCV, RNS**ABC, and AR24CSDADWKNCV, RNS24ADC)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page Samsung HVAC (documents techniques) : l'unité AR24CSDACWKXCV (suffixe régional CV) figure dans la liste des modèles de cette page. Aucune fiche de soumission trouvée pour ce numéro ; le nom retenu est « Max Heat » tel qu'imprimé."
+  },
+  {
+    "brand": "Samsung",
     "outdoorModel": "AR24CSDADWKX",
     "commercialName": "WindFree 3.0",
     "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/RAC/WindFree+3.0_AR+C/Submittals/WindFree_3_AR+CSDABWKN/AR24CSDADWKNCV_AR24CSDADWKXCV+(RNS24ADC_RXS24ADC)_Submittal_WIND+FREE+3.0_2310A.pdf",
@@ -10275,6 +12117,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche de soumission Samsung HVAC (WindFree 3.0 (2024), unité extérieure AR24CSDADWKXCV) hébergée sur samsung-files.s3.us-east-1.amazonaws.com (Amazon S3, hébergeur partagé) ; classée officielle car la page officielle https://www.samsunghvac.com/single-zone-high-wall-systems/WindFree-3 (Samsung HVAC America), une fois rendue, renvoie vers CE fichier précis (vérifié dans le navigateur le 2026-09-14). Page 2, bloc « Operating Temperatures – Outdoor » : la plage de chauffage extérieure est « -5 ~ 75°F (-20.5 ~ 24°C) » (la plage de climatisation extérieure se termine à 115 °F, les plages intérieures sont 61~90 °F et 50~86 °F). Le numéro du catalogue (AR24CSDADWKX) est celui du fabricant sans le suffixe « CV » (AR24CSDADWKXCV). Arrondi : -20.5 °C → -20 °C (un ,5 s'arrondit vers la valeur la moins froide) ; -5 °F = -20.6 °C → -21 °C ; valeur la moins froide retenue (-20 °C)."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AR24CSDAEWKX",
+    "commercialName": "Max Heat 3.0",
+    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/RAC/WindFree+3.0_AR+C/Submittals/WindFree_3_AR+CSDABWKN/AR24CSDADWKNCV_AR24CSDAEWKXCV+(RNS24ADC_RXS24AEC)_Submittal_MAX+HEAT+3.0_2404A.pdf",
+    "page": 1,
+    "quote": "Samsung Max Heat® 3.0, wall mounted evaporator, split system",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission Samsung HVAC (compartiment S3 samsung-files) : unité extérieure AR24CSDAEWKXCV (suffixe régional CV), p. 1."
   },
   {
     "brand": "Senville",
@@ -11611,6 +13464,126 @@
   },
   {
     "brand": "Tosot",
+    "outdoorModel": "TM18H5O",
+    "commercialName": "Multi Ultra",
+    "sourceFile": "https://tosot.com/product/multi-ultra/",
+    "quote": "TOSOT - Multi Ultra",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT « Multi Ultra » (tosot.com, Tosot Supplies Inc., même société que tosotca.ca) ; ce numéro exact figure dans la liste « Product Submittals » (« Submittal – TM18H5O »). La fiche de soumission TOSOT du même numéro (assets.tosotclima.com) est titrée « Multi ULTRA Ductless heat-pump systems »."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TM18HX4O",
+    "commercialName": "Multi Pular",
+    "sourceFile": "https://tosot.com/product/multi-pular/",
+    "quote": "TOSOT - Multi Pular",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT « Multi Pular » (tosot.com, Tosot Supplies Inc., même société que tosotca.ca) ; ce numéro exact figure dans la liste « Product Submittals » (« Submittal – TM18HX4O »)."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TM24H5O",
+    "commercialName": "Multi Ultra",
+    "sourceFile": "https://tosot.com/product/multi-ultra/",
+    "quote": "TOSOT - Multi Ultra",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT « Multi Ultra » (tosot.com, Tosot Supplies Inc., même société que tosotca.ca) ; ce numéro exact figure dans la liste « Product Submittals » (« Submittal – TM24H5O »). La fiche de soumission TOSOT du même numéro (assets.tosotclima.com) est titrée « Multi ULTRA Ductless heat-pump systems »."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TM24HX4O",
+    "commercialName": "Multi Pular",
+    "sourceFile": "https://tosot.com/product/multi-pular/",
+    "quote": "TOSOT - Multi Pular",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT « Multi Pular » (tosot.com, Tosot Supplies Inc., même société que tosotca.ca) ; ce numéro exact figure dans la liste « Product Submittals » (« Submittal – TM24HX4O »)."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TM30HX4O",
+    "commercialName": "Multi Pular",
+    "sourceFile": "https://tosot.com/product/multi-pular/",
+    "quote": "TOSOT - Multi Pular",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT « Multi Pular » (tosot.com, Tosot Supplies Inc., même société que tosotca.ca) ; ce numéro exact figure dans la liste « Product Submittals » (« Submittal – TM30HX4O »)."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TM36H5O",
+    "commercialName": "Multi Ultra",
+    "sourceFile": "https://tosot.com/product/multi-ultra/",
+    "quote": "TOSOT - Multi Ultra",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT « Multi Ultra » (tosot.com, Tosot Supplies Inc., même société que tosotca.ca) ; ce numéro exact figure dans la liste « Product Submittals » (« Submittal – TM36H5O »). La fiche de soumission TOSOT du même numéro (assets.tosotclima.com) est titrée « Multi ULTRA Ductless heat-pump systems »."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TM36HX4O",
+    "commercialName": "Multi Pular",
+    "sourceFile": "https://tosot.com/product/multi-pular/",
+    "quote": "TOSOT - Multi Pular",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT « Multi Pular » (tosot.com, Tosot Supplies Inc., même société que tosotca.ca) ; ce numéro exact figure dans la liste « Product Submittals » (« Submittal – TM36HX4O »)."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TM42H5O",
+    "commercialName": "Multi Ultra",
+    "sourceFile": "https://tosot.com/product/multi-ultra/",
+    "quote": "TOSOT - Multi Ultra",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT « Multi Ultra » (tosot.com, Tosot Supplies Inc., même société que tosotca.ca) ; ce numéro exact figure dans la liste « Product Submittals » (« Submittal – TM42H5O »). La fiche de soumission TOSOT du même numéro (assets.tosotclima.com) est titrée « Multi ULTRA Ductless heat-pump systems »."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TM42HX4O",
+    "commercialName": "Multi Pular",
+    "sourceFile": "https://tosot.com/product/multi-pular/",
+    "quote": "TOSOT - Multi Pular",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT « Multi Pular » (tosot.com, Tosot Supplies Inc., même société que tosotca.ca) ; ce numéro exact figure dans la liste « Product Submittals » (« Submittal – TM42HX4O »)."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TMVRF-36KUH",
+    "commercialName": "Mini VRF UltraHeat",
+    "sourceFile": "https://tosotca.ca/product/mini-vrf-ultraheat/",
+    "quote": "Mini VRF UltraHeat - Tosot Canada",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de Tosot Canada (tosotca.ca, TOSOT Supplies Inc., distributeur principal autorisé) « Mini VRF UltraHeat » ; ce numéro exact figure sous « Submittals » et « Models Outdoor Unit »."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TU36-32GDU",
+    "commercialName": "Nova",
+    "sourceFile": "https://tosotcomfort.com/models/nova-ducted-condenser-2-to-3-ton",
+    "quote": "NOVA Central Ducted Condenser 2-3 ton",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Secondaire : page modèle de TOSOT Comfort (tosotcomfort.com), qui se présente comme « master distributor of TOSOT HVAC Equipment in the US » (page /about) ; domaine hors de la liste fermée (proposé dans domaines-proposes.json). Titre de la page « NOVA Central Ducted Condenser 2-3 ton » ; ce numéro exact figure sous « Technical Documents & Downloads » avec la fiche de soumission TOSOT « SUBMITTAL DATA … / TU36-32GDU » (qui, elle, n'imprime pas le nom)."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TU60-32GDU",
+    "commercialName": "Nova",
+    "sourceFile": "https://tosotcomfort.com/models/nova-ducted-condenser-4-to-5-ton",
+    "quote": "NOVA Central Ducted Condenser 4-5 ton",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Secondaire : page modèle de TOSOT Comfort (tosotcomfort.com), qui se présente comme « master distributor of TOSOT HVAC Equipment in the US » (page /about) ; domaine hors de la liste fermée (proposé dans domaines-proposes.json). Titre de la page « NOVA Central Ducted Condenser 4-5 ton » ; ce numéro exact figure sous « Technical Documents & Downloads » avec la fiche de soumission TOSOT « SUBMITTAL DATA … / TU60-32GDU » (qui, elle, n'imprime pas le nom)."
+  },
+  {
+    "brand": "Tosot",
     "outdoorModel": "TW09HXCA5AO",
     "commercialName": "Charmo",
     "sourceFile": "https://tosot.com/wp-content/uploads/2026/02/SB_TW09HXCA5AITW09HXCA5AO_20250822.pdf",
@@ -11641,6 +13614,215 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche de soumission TOSOT publiée sur tosot.com (exploité par Tosot Supplies Inc., la même société que tosotca.ca, distributeur principal autorisé admis) ; le document nomme ce numéro. Ligne « Heating (Min) » du tableau Operating Range ; concorde avec order.tosotca.ca (-25 ℃)."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWL9024A1",
+    "commercialName": "XV19",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV19 R-410A Side Discharge Variable Speed Heat Pump (50-100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-B qui liste 4TWL9024A1000B à 4TWL9060A1000B."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWL9036A1",
+    "commercialName": "XV19",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV19 R-410A Side Discharge Variable Speed Heat Pump (50-100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-B qui liste 4TWL9024A1000B à 4TWL9060A1000B."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWL9048A1",
+    "commercialName": "XV19",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV19 R-410A Side Discharge Variable Speed Heat Pump (50-100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-B qui liste 4TWL9024A1000B à 4TWL9060A1000B."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWL9060A1",
+    "commercialName": "XV19",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV19 R-410A Side Discharge Variable Speed Heat Pump (50-100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-B qui liste 4TWL9024A1000B à 4TWL9060A1000B."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV0X24A1",
+    "commercialName": "XV20i",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV20i R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-A qui liste 4TWV0X24A1000A à 4TWV0X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV0X36A1",
+    "commercialName": "XV20i",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV20i R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-A qui liste 4TWV0X24A1000A à 4TWV0X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV0X48A1",
+    "commercialName": "XV20i",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV20i R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-A qui liste 4TWV0X24A1000A à 4TWV0X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV7X24A1",
+    "commercialName": "XV17",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV17 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-D qui liste 4TWV7X24A1000A à 4TWV7X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV7X36A1",
+    "commercialName": "XV17",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV17 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-D qui liste 4TWV7X24A1000A à 4TWV7X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV7X48A1",
+    "commercialName": "XV17",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV17 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-D qui liste 4TWV7X24A1000A à 4TWV7X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV7X60A1",
+    "commercialName": "XV17",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV17 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-D qui liste 4TWV7X24A1000A à 4TWV7X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV8X24A1",
+    "commercialName": "XV18",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV18 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-C qui liste 4TWV8X24A1000A à 4TWV8X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV8X36A1",
+    "commercialName": "XV18",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV18 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-C qui liste 4TWV8X24A1000A à 4TWV8X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV8X48A1",
+    "commercialName": "XV18",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV18 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-C qui liste 4TWV8X24A1000A à 4TWV8X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TWV8X60A1",
+    "commercialName": "XV18",
+    "sourceFile": "https://hvacdirect.com/media/pdf/Trane%20Products%20Spec%20Sheet.pdf",
+    "page": 32,
+    "quote": "XV18 R-410A Split System Variable Speed Heat Pump (25–100% capacity)",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Product Handbook Trane janvier 2024 (22-8301-37, © Trane) reproduit tel quel par HVACDirect.com (détaillant en ligne) ; aucune copie de cette édition trouvée sur l'eLibrary Trane. p. 32, tableau SH-1-C qui liste 4TWV8X24A1000A à 4TWV8X60A1000A."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWV0X24A1",
+    "commercialName": "20 TruComfort",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": 42,
+    "quote": "Table SH-1-A — 20 TruComfort™ Variable Speed Heat Pump with WeatherGuard™",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Product Handbook Trane 2026 (22-8301-39, eLibrary Trane Technologies), p. 42 : le tableau SH-1-A liste 5TWV0X24A1000* à 5TWV0X60A1000*. La page 13 « Trane Consumer Product Names » donne aussi 5TWV0 = « 20 TruComfort™ Variable Speed Heat Pump with WeatherGuard™ » (même forme que « 18 TruComfort » déjà admis pour 5TWV8X)."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWV0X36A1",
+    "commercialName": "20 TruComfort",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": 42,
+    "quote": "Table SH-1-A — 20 TruComfort™ Variable Speed Heat Pump with WeatherGuard™",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Product Handbook Trane 2026 (22-8301-39, eLibrary Trane Technologies), p. 42 : le tableau SH-1-A liste 5TWV0X24A1000* à 5TWV0X60A1000*. La page 13 « Trane Consumer Product Names » donne aussi 5TWV0 = « 20 TruComfort™ Variable Speed Heat Pump with WeatherGuard™ » (même forme que « 18 TruComfort » déjà admis pour 5TWV8X)."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWV0X48A1",
+    "commercialName": "20 TruComfort",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": 42,
+    "quote": "Table SH-1-A — 20 TruComfort™ Variable Speed Heat Pump with WeatherGuard™",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Product Handbook Trane 2026 (22-8301-39, eLibrary Trane Technologies), p. 42 : le tableau SH-1-A liste 5TWV0X24A1000* à 5TWV0X60A1000*. La page 13 « Trane Consumer Product Names » donne aussi 5TWV0 = « 20 TruComfort™ Variable Speed Heat Pump with WeatherGuard™ » (même forme que « 18 TruComfort » déjà admis pour 5TWV8X)."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWV0X60A1",
+    "commercialName": "20 TruComfort",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": 42,
+    "quote": "Table SH-1-A — 20 TruComfort™ Variable Speed Heat Pump with WeatherGuard™",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Product Handbook Trane 2026 (22-8301-39, eLibrary Trane Technologies), p. 42 : le tableau SH-1-A liste 5TWV0X24A1000* à 5TWV0X60A1000*. La page 13 « Trane Consumer Product Names » donne aussi 5TWV0 = « 20 TruComfort™ Variable Speed Heat Pump with WeatherGuard™ » (même forme que « 18 TruComfort » déjà admis pour 5TWV8X)."
   },
   {
     "brand": "Trane",
