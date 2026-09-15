@@ -31,6 +31,7 @@ import {
   type Crumb,
   useReducedSafe,
 } from "./shared";
+import { FROST, FROST_BG } from "@/components/sections-v2/contenu/frost-palette";
 
 /* ==================================================================
    /thermopompe et /thermopompe/[ville] — « Carte des froids ».
@@ -45,13 +46,16 @@ import {
      avec les normales de janvier et le record sur la même échelle.
    ================================================================== */
 
+/* Encres et fonds : frost-palette.ts. Le texte le plus pâle (étiquettes, fil d'Ariane, sources) tient
+   4,5:1 sur le glacier ; l'intro du héros est en « body », nettement plus foncée (vérifié par test). */
 const F = {
-  glacier: "#E4EFF5",
-  navy: "#0B2540",
-  frost: "#9CC3DA",
-  mute: "rgba(11,37,64,0.68)",
-  faint: "rgba(11,37,64,0.46)",
-  line: "rgba(11,37,64,0.14)",
+  glacier: FROST_BG.glacier,
+  navy: FROST.navy,
+  frost: FROST.frost,
+  body: FROST.body,
+  mute: FROST.mute,
+  faint: FROST.faint,
+  line: FROST.line,
 } as const;
 
 const BG = `linear-gradient(180deg, ${F.glacier} 0%, #EDF4F8 48%, #FFFFFF 100%)`;
@@ -342,11 +346,11 @@ export function FrostIndexHero({
             <div className="lg:col-span-4">
               <p
                 {...fp(
-                  { opacity: 0, y: 12, duration: 1, ease: EASE, delay: 0.45 },
+                  { y: 12, duration: 1, ease: EASE, delay: 0.45 },
                   {
                     className: "text-[16.5px] leading-[1.65]",
                     style: {
-                      color: F.mute,
+                      color: F.body,
                       margin: 0,
                       fontFamily: "var(--font-sans)",
                     },
@@ -687,13 +691,15 @@ export function FrostCityHero(p: CityProps) {
             </div>
 
             <div style={{ gridArea: "body" }} className="min-w-0 lg:pt-8">
+              {/* Intro en encre « body » (environ 8:1 sur le glacier) et sans fondu d'opacité : lisible dès le
+                  premier affichage, même capturée pendant l'entrée (elle glisse seulement). */}
               <p
                 {...fp(
-                  { opacity: 0, y: 12, duration: 1, ease: EASE, delay: 0.5 },
+                  { y: 12, duration: 1, ease: EASE, delay: 0.5 },
                   {
                     className: "max-w-[640px] text-[16.5px] leading-[1.65]",
                     style: {
-                      color: F.mute,
+                      color: F.body,
                       margin: 0,
                       fontFamily: "var(--font-sans)",
                     },
