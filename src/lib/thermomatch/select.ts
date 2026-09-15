@@ -31,9 +31,14 @@ export function compareScored(a: ScoredCandidate, b: ScoredCandidate): number {
 
 const lower = (s: string) => s.trim().toLowerCase();
 
+/** Même machine vendue sous l'autre marque (« aussi vendue sous Midea ») : pas un vrai choix de plus. */
+const soldAsOther = (a: ScoredCandidate, b: ScoredCandidate) =>
+  a.candidate.alsoSoldAs.some((brand) => lower(brand) === lower(b.candidate.brand)) ||
+  b.candidate.alsoSoldAs.some((brand) => lower(brand) === lower(a.candidate.brand));
+
 function isDistinct(c: ScoredCandidate, chosen: ScoredCandidate[]): boolean {
   return chosen.every(
-    (x) => lower(x.candidate.brand) !== lower(c.candidate.brand) && x.candidate.signature !== c.candidate.signature,
+    (x) => lower(x.candidate.brand) !== lower(c.candidate.brand) && x.candidate.signature !== c.candidate.signature && !soldAsOther(x, c),
   );
 }
 
