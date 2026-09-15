@@ -115,9 +115,9 @@ export default function PalmaresPage() {
                     <small>{fmtInt(p.totals.stations)} stations météo</small>
                   </div>
                   <div>
-                    <dt>Modèles avec un froid minimal publié</dt>
+                    <dt>Machines avec un froid minimal publié</dt>
                     <dd>{fmtInt(p.totals.modelsWithMinTemp)}</dd>
-                    <small>sur {fmtInt(p.totals.models)} au catalogue</small>
+                    <small>sur {fmtInt(p.totals.models)} machines distinctes</small>
                   </div>
                 </dl>
               ) : null}
@@ -174,7 +174,7 @@ export default function PalmaresPage() {
           </h2>
           <p className="pm-intro">
             {typo(
-              `Pour chaque température de conception de la table : combien de municipalités l'ont, et combien de modèles du catalogue ont un froid minimal publié égal ou plus bas. Seuls ${fmtInt(p.totals.modelsWithMinTemp)} des ${fmtInt(p.totals.models)} modèles publient ce chiffre : les autres ne sont pas comptés, ce qui ne veut pas dire qu'ils s'arrêtent plus tôt.`,
+              `Pour chaque température de conception de la table : combien de municipalités l'ont, et combien de machines distinctes du catalogue ont un froid minimal publié égal ou plus bas. Seuls ${fmtInt(p.totals.modelsWithMinTemp)} des ${fmtInt(p.totals.models)} machines distinctes publient ce chiffre : les autres ne sont pas comptés, ce qui ne veut pas dire qu'ils s'arrêtent plus tôt.`,
             )}
           </p>
           <div className="pm-steps">
@@ -188,7 +188,7 @@ export default function PalmaresPage() {
                   <br />
                   {s.modelsHeat === 0
                     ? "Aucun modèle du catalogue n’a de froid minimal publié aussi bas : prévoyez un appoint et demandez la limite de la machine par écrit."
-                    : `${fmtInt(s.modelsHeat)} ${s.modelsHeat > 1 ? "modèles chauffent" : "modèle chauffe"} encore selon le fabricant, dont ${fmtInt(s.modelsHeatFull)} à pleine puissance nominale au point certifié de ${fmtTemp(-15)}.`}
+                    : `${fmtInt(s.modelsHeat)} ${s.modelsHeat > 1 ? "modèles chauffent" : "modèle chauffe"} encore selon le fabricant, dont ${fmtInt(s.modelsHeatFull)} en gardant, à ${fmtTemp(-15)}, toute leur capacité cotée à 8,3 °C.`}
                 </p>
               </div>
             ))}

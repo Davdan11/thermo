@@ -47,9 +47,9 @@ export function HeroPremium({ eligible, brands, coldClimate }: { eligible: numbe
   const shade = useTransform(scrollYProgress, [0, 1], [0, 0.7]);
 
   const facts = [
-    { value: eligible, label: "modèles admissibles" },
+    { value: eligible, label: "fiches au catalogue" },
     { value: brands, label: "marques au Québec" },
-    { value: coldClimate, label: "certifiés grand froid" },
+    { value: coldClimate, label: "certifiées climat froid" },
   ];
 
   return (

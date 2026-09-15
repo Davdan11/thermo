@@ -25,7 +25,7 @@ Les deux calibres de murale les plus installés au Québec sont le 9 000 et le 1
 
 Le chiffre du calibre, 9 000 ou 12 000 BTU, décrit la capacité nominale de la machine, mesurée par le fabricant dans des conditions douces. Au Québec, c'est la capacité certifiée à -15 °C (5 °F) par ENERGY STAR qui compte, et elle n'est pas sur l'étiquette. Notre guide sur [la capacité à choisir](/guides/btu-quelle-capacite-choisir) explique le calcul en détail.
 
-Le point à retenir est que deux machines de même calibre peuvent se comporter très différemment au froid. Dans notre catalogue bâti sur la liste officielle LogisVert d'Hydro-Québec, 1 750 machines distinctes sont recensées et 1 090 d'entre elles ont une capacité certifiée à -15 °C. Parmi celles-ci, 340 gardent 100 % de leur capacité nominale à -15 °C et 480 en gardent au moins 90 %. Les autres perdent une partie de leur puissance quand il fait vraiment froid. Le calibre ne vous dit donc pas dans quel groupe se trouve la machine que l'installateur vous propose : il faut regarder la fiche.
+Le point à retenir est que deux machines de même calibre peuvent se comporter très différemment au froid. Dans notre catalogue bâti sur la liste officielle LogisVert d'Hydro-Québec, {{chiffre:machines}} machines distinctes sont recensées et {{chiffre:machines-capacite-15}} d'entre elles ont une capacité publiée à -15 °C par ENERGY STAR. Parmi celles-ci, {{chiffre:machines-maintien-100}} gardent à -15 °C 100 % de leur capacité cotée à 8,3 °C et {{chiffre:machines-maintien-90}} en gardent au moins 90 %. Les autres perdent une partie de leur puissance quand il fait vraiment froid. Le calibre ne vous dit donc pas dans quel groupe se trouve la machine que l'installateur vous propose : il faut regarder la fiche.
 
 ## La pièce ne suffit pas, la charge compte
 
@@ -81,7 +81,7 @@ Le maximum du 12 000 BTU, 2 268 dollars, correspond aux jumelages les plus perfo
 
 ## Efficacité : le HSPF2 varie plus que le calibre
 
-Le HSPF2 mesure l'efficacité saisonnière en chauffage. Dans notre catalogue, il va de 7,8 à 16,2, avec une médiane de 9,5, et 62 murales dépassent 12. Le COP certifié à -15 °C, c'est-à-dire le rendement instantané au froid, va de 1,3 à 2,89, médiane 1,94. Entre un 9 000 et un 12 000 BTU de la même série, l'efficacité change peu. Entre deux séries de même calibre, elle peut aller du simple au double. Le guide [comprendre SEER2 et HSPF2](/guides/comprendre-seer2-hspf2) explique comment lire ces valeurs, et le [comparateur](/comparer) les met côte à côte.
+Le HSPF2 mesure l'efficacité saisonnière en chauffage. Dans notre catalogue, il va de 7,8 à 16,2, avec une médiane de 9,5, et {{chiffre:machines-hspf2-sup:wall-single:12}} murales dépassent 12. Le COP certifié à -15 °C, c'est-à-dire le rendement instantané au froid, va de 1,3 à 2,89, médiane 1,94. Entre un 9 000 et un 12 000 BTU de la même série, l'efficacité change peu. Entre deux séries de même calibre, elle peut aller du simple au double. Le guide [comprendre SEER2 et HSPF2](/guides/comprendre-seer2-hspf2) explique comment lire ces valeurs, et le [comparateur](/comparer) les met côte à côte.
 
 ## Comment décider en pratique
 

@@ -11,7 +11,7 @@ keywords: ["subvention LogisVert montant", "LogisVert thermopompe 2026", "subven
 related: ["subvention-logisvert-guide-complet", "btu-quelle-capacite-choisir", "murale-ou-centrale", "ce-qui-influence-le-prix-installe"]
 faq:
   - q: "Quel est le montant LogisVert pour une thermopompe murale de 12 000 BTU?"
-    a: "D'après la liste d'Hydro-Québec, entre 350 $ et 2 268 $ selon l'appariement, avec une médiane à 535 $ sur les 148 machines subventionnées de ce calibre. Le montant dépend de la capacité certifiée à -8 °C, pas du prix ni de la marque."
+    a: "D'après la liste d'Hydro-Québec, entre 350 $ et 2 268 $ selon l'appariement, avec une médiane à 535 $ sur les {{chiffre:machines-lv:wall-single:12000}} machines distinctes subventionnées de ce calibre. Le montant dépend de la capacité certifiée à -8 °C, pas du prix ni de la marque."
   - q: "Pourquoi une centrale reçoit-elle beaucoup plus qu'une murale?"
     a: "Parce que le montant suit la capacité de chauffage certifiée. Une centrale de 36 000 BTU fournit deux à trois fois plus de chaleur à -8 °C qu'une murale de 12 000 BTU ; sa subvention médiane est de 3 096 $, contre 535 $ pour la murale."
   - q: "Le montant est-il garanti si je choisis une machine de la liste?"
@@ -20,11 +20,11 @@ faq:
     a: "Selon les programmes en vigueur, certaines aides fédérales ou municipales s'ajoutent, d'autres non. Les règles changent d'une année à l'autre : vérifiez le cumul auprès d'Hydro-Québec et du programme concerné avant de compter dessus dans votre budget."
 ---
 
-Le montant LogisVert n'est ni un pourcentage du prix ni un forfait par type de machine. C'est un montant en dollars, fixé par Hydro-Québec pour chaque appariement certifié (unité extérieure + unité intérieure), d'après sa capacité de chauffage à -8 °C. Nous chargeons cette liste telle quelle, 176 627 appariements, et nous affichons le montant exact sur chaque fiche. Voici ce que la liste dit quand on la lit calibre par calibre.
+Le montant LogisVert n'est ni un pourcentage du prix ni un forfait par type de machine. C'est un montant en dollars, fixé par Hydro-Québec pour chaque appariement certifié (unité extérieure + unité intérieure), d'après sa capacité de chauffage à -8 °C. Nous chargeons cette liste telle quelle, {{chiffre:combinaisons}} appariements, et nous affichons le montant exact sur chaque fiche. Voici ce que la liste dit quand on la lit calibre par calibre.
 
 ## Les montants par calibre, d'après la liste officielle
 
-Les chiffres ci-dessous portent sur les 1 750 machines distinctes de notre catalogue vendues au Québec, en retenant pour chacune son appariement de référence. La liste du 7 septembre 2026 sert de base ; les classements du site se recalculent à chaque mise à jour.
+Les chiffres ci-dessous portent sur les {{chiffre:machines}} machines distinctes de notre catalogue vendues au Québec, en retenant pour chacune son appariement de référence. La liste d'Hydro-Québec du {{chiffre:date-liste}}, vérifiée le {{chiffre:date-verification}}, sert de base ; les classements du site se recalculent à chaque mise à jour.
 
 | Calibre nominal | Machines | Minimum | Médiane | Maximum |
 |---|---|---|---|---|

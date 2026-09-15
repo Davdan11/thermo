@@ -4,6 +4,8 @@ import { createMetadata, fitTitle, getBreadcrumbSchema, getFaqPageSchema, getIte
 import { getLandingPage, getLandingPages, type LandingPage } from "@/lib/seo/landings";
 import { cityGroups, logisVertFacts, priceRows, PRICES_CONSULTED, resolveFactsDeep } from "@/lib/seo/landing-facts";
 import { getCapacityClass, getCapacityClasses, getRanking, type CapacityClass } from "@/lib/seo/programmatic";
+import { aCapacite15, capacitesDuModele, estClimatFroid } from "@/lib/data/chiffres";
+import { mesure } from "@/lib/data/capacites";
 import { estimateLoad } from "@/lib/thermomatch/sizing";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { AtelierHero } from "@/components/heroes-v2/marques/AtelierHero";
@@ -51,7 +53,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const cap = getCapacityClass(slug);
   if (cap) {
     return createMetadata({
-      title: fitTitle(`Thermopompe ${cap.label} : ${cap.models.length} modèles et LogisVert`, `Thermopompe ${cap.label} : ${cap.models.length} modèles comparés`, `Thermopompe ${cap.label}`),
+      title: fitTitle(`Thermopompe ${cap.label} : ${cap.models.length} machines et LogisVert`, `Thermopompe ${cap.label} : ${cap.models.length} machines comparées`, `Thermopompe ${cap.label}`),
       description: `Toutes les thermopompes ${cap.label} vendues au Québec (${cap.wallCount} murales, ${cap.centralCount} centrales) avec capacité certifiée à -15 °C, HSPF2, SEER2 et montant LogisVert officiel. Pour quelle superficie? Réponse chiffrée.`,
       canonicalPath: `/thermopompes/${cap.slug}`,
     });
@@ -160,8 +162,9 @@ function CapacityView({ cap }: { cap: CapacityClass }) {
   const area = areaRangeFor(cap.btu);
   const walls = cap.models.filter((m) => m.kind === "murale");
   const centrals = cap.models.filter((m) => m.kind === "centrale");
-  const certified = cap.models.filter((m) => m.h5Btu !== null);
-  const h5Values = certified.map((m) => m.h5Btu as number).sort((a, b) => a - b);
+  // Capacité à −15 °C et climat froid : mêmes règles que les fiches (src/lib/data/chiffres.ts).
+  const certified = cap.models.filter((m) => aCapacite15(m.id));
+  const h5Values = certified.map((m) => mesure(capacitesDuModele(m.id)!, "h5")!.btu).sort((a, b) => a - b);
   const h5Min = h5Values[0];
   const h5Max = h5Values[h5Values.length - 1];
   const brands = [...new Set(cap.models.map((m) => m.brand))];
@@ -174,7 +177,7 @@ function CapacityView({ cap }: { cap: CapacityClass }) {
     {
       question: `Combien de BTU fournit réellement une ${cap.label} à -15 °C?`,
       answer: h5Values.length
-        ? `Selon les fiches ENERGY STAR de ${certified.length} machines, entre ${h5Min.toLocaleString("fr-CA")} et ${h5Max.toLocaleString("fr-CA")} BTU/h. L'écart est énorme : c'est pour cela que la capacité nominale ne suffit pas pour choisir.`
+        ? `Selon les fiches ENERGY STAR de ${certified.length} machines, entre ${h5Min.toLocaleString("fr-CA")} et ${h5Max.toLocaleString("fr-CA")} BTU/h. L'écart est énorme : c'est pour cela que le calibre commercial ne suffit pas pour choisir.`
         : `Aucune donnée certifiée à -15 °C n'est publiée pour cette classe dans la liste actuelle.`,
     },
     {
@@ -212,7 +215,7 @@ function CapacityView({ cap }: { cap: CapacityClass }) {
           brands: brands.length,
           walls: walls.length,
           centrals: centrals.length,
-          cold: cap.coldClimateCount,
+          cold: cap.models.filter((m) => estClimatFroid(m.id)).length,
           certified: certified.length,
           h5Min: h5Values.length ? h5Min : null,
           h5Max: h5Values.length ? h5Max : null,

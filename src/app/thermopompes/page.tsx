@@ -17,6 +17,7 @@ import { CatalogueEmpty } from "@/components/product/CatalogueEmpty";
 import { CataloguePagination } from "@/components/product/CataloguePagination";
 import { CatalogueHero, type WallItem } from "@/components/product/CatalogueHero";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
+import { chiffre } from "@/lib/data/chiffres";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { registry } from "@/lib/data/registry";
 import { displayFont, serifFont } from "@/lib/fonts";
@@ -48,7 +49,7 @@ function getHeroData(): { stats: { models: number; brands: number; coldClimate: 
   }
   const wall = brands.flatMap((b) => (firstByBrand.has(b.brand.id) ? [firstByBrand.get(b.brand.id)!] : [])).slice(0, 18);
   return {
-    stats: { models: getEligibleModelCount(), brands: brands.length, coldClimate: brands.reduce((sum, b) => sum + b.coldClimateCount, 0) },
+    stats: { models: chiffre("fiches"), brands: chiffre("marques"), coldClimate: chiffre("fiches-climat-froid") },
     wall,
   };
 }

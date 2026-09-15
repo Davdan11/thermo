@@ -31,7 +31,7 @@ Une thermopompe déplace la chaleur de l'air extérieur vers l'intérieur. Son r
 Trois chiffres à retenir, tirés des certifications ENERGY STAR reprises dans la liste LogisVert d'Hydro-Québec :
 
 - **À +7 °C**, la plupart des machines affichent un COP de 3 à 4. C'est le chiffre des brochures.
-- **À -15 °C**, le COP certifié des 1 090 machines de notre base va de **1,3 à 2,89**, avec une médiane à **1,94**.
+- **À -15 °C**, le COP certifié des {{chiffre:machines-capacite-15}} machines distinctes qui le publient va de **1,3 à 2,89**, avec une médiane à **1,94**.
 - **Sur une saison entière au Québec**, une machine certifiée climat froid bien dimensionnée tourne autour de **2 à 2,6**, en comptant le dégivrage, les cycles courts et l'appoint des nuits les plus froides.
 
 C'est ce dernier chiffre, le COP saisonnier, qui décide de votre facture. Pas celui de la brochure.

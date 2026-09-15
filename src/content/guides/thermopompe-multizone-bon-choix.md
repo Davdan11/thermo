@@ -20,7 +20,7 @@ faq:
     a: "Oui, quand l'appariement complet (unité extérieure et toutes les têtes) figure dans la liste d'Hydro-Québec. Le montant est calculé sur la capacité certifiée de l'ensemble. Une tête ajoutée plus tard hors de la liste peut faire perdre l'admissibilité de l'appariement : vérifiez la combinaison exacte avant l'installation."
 ---
 
-Le multizone séduit pour une raison simple : un seul appareil dehors, deux à cinq têtes dedans, une seule facture d'installation. Il est souvent le bon choix, et souvent le mauvais, pour des raisons que les brochures n'expliquent pas. Notre base compte 142 machines multizones certifiées vendues au Québec ; voici comment les lire.
+Le multizone séduit pour une raison simple : un seul appareil dehors, deux à cinq têtes dedans, une seule facture d'installation. Il est souvent le bon choix, et souvent le mauvais, pour des raisons que les brochures n'expliquent pas. Notre base compte {{chiffre:machines-type:multi-zone}} machines multizones distinctes vendues au Québec ; voici comment les lire.
 
 ## Comment fonctionne un multizone, et ce que ça implique l'hiver
 

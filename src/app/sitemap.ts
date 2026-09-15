@@ -63,6 +63,8 @@ export default async function sitemap(props: { id: Promise<string> }): Promise<M
       entry("/glossaire", undefined, "monthly", 0.6),
       entry("/thermoscan", undefined, "monthly", 0.6),
       entry("/technologie-thermomatch", undefined, "monthly", 0.6),
+      // Méthode et définition des chiffres : bâtie sur les données, même date que le catalogue.
+      entry("/methode", DATA_DATE, "monthly", 0.6),
       entry("/comment-ca-marche", undefined, "monthly", 0.5),
       entry("/a-propos", undefined, "yearly", 0.4),
       entry("/contact", undefined, "yearly", 0.4),

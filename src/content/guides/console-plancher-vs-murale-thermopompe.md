@@ -54,7 +54,7 @@ La console est aussi à portée des enfants et des animaux, et un meuble collé 
 
 ## Le choix de modèles : la murale domine
 
-C'est la principale limite de la console. La murale est l'unité intérieure de référence : dans notre catalogue bâti sur la liste LogisVert d'Hydro-Québec, elle domine largement. Mitsubishi Electric y compte 258 fiches de murales, Gree 243, Tosot 204, Daikin 127, Fujitsu 118, LG 115. Les consoles existent chez plusieurs de ces fabricants, en simple zone ou comme tête de multizone, mais dans moins de séries et rarement dans les gammes économiques.
+C'est la principale limite de la console. La murale est l'unité intérieure de référence : dans notre catalogue bâti sur la liste LogisVert d'Hydro-Québec, elle domine largement. Mitsubishi Electric y compte {{chiffre:fiches-murales:mitsubishi-electric}} fiches de murales, Gree {{chiffre:fiches-murales:gree}}, Tosot {{chiffre:fiches-murales:tosot}}, Fujitsu {{chiffre:fiches-murales:fujitsu}}, Daikin {{chiffre:fiches-murales:daikin}}, LG {{chiffre:fiches-murales:lg}}. Les consoles existent chez plusieurs de ces fabricants, en simple zone ou comme tête de multizone, mais dans moins de séries et rarement dans les gammes économiques.
 
 Concrètement : si vous cherchez une console, le choix se fait souvent dans les gammes intermédiaire et premium, et il faut vérifier que le jumelage console figure sur la liste LogisVert avec son montant. Le [catalogue](/thermopompes) permet de filtrer par type d'unité intérieure, et la page [Marques](/marques) résume ce que chaque fabricant offre.
 

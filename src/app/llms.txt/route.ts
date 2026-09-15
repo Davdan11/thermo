@@ -1,4 +1,5 @@
 import { registry } from "@/lib/data/registry";
+import { chiffre } from "@/lib/data/chiffres";
 import { SITE_URL } from "@/lib/seo";
 import { getCities } from "@/lib/seo/cities";
 import { getHubs, getPageMunicipalities, getRegions, groupTitle } from "@/lib/seo/municipalites";
@@ -16,8 +17,8 @@ export const dynamic = "force-static";
    ================================================================== */
 
 export async function GET() {
-  const brands = registry.brands.filter((b) => b.activeInQuebec);
-  const activeModels = registry.models.filter((m) => m.status === "published" && m.isActive2026 && brands.some((b) => b.id === m.brandId)).length;
+  const brands = registry.brands.filter((b) => b.status === "published" && b.activeInQuebec);
+  const activeModels = chiffre("fiches");
   const lv = logisVertMetadata as { updatedAt?: string; count?: number };
   const lvDate = (lv.updatedAt ?? "").slice(0, 10);
   const cities = getCities();
@@ -34,10 +35,10 @@ export async function GET() {
     "",
     "## Faits citables",
     `- Marques vendues au Québec couvertes : ${brands.length} (${brands.map((b) => b.name).join(", ")}).`,
-    `- Modèles actifs documentés : ${activeModels.toLocaleString("fr-CA")}.`,
-    `- Liste LogisVert d'Hydro-Québec utilisée : ${lv.count ? lv.count.toLocaleString("fr-CA") + " lignes, " : ""}mise à jour du ${lvDate}.`,
+    `- Fiches au catalogue (une par unité extérieure publiée d'une marque vendue au Québec) : ${activeModels.toLocaleString("fr-CA")}. Ce que compte chaque chiffre : ${SITE_URL}/methode#chiffres.`,
+    `- Liste LogisVert d'Hydro-Québec utilisée : ${lv.count ? lv.count.toLocaleString("fr-CA") + " combinaisons certifiées (une par numéro AHRI), " : ""}mise à jour du ${lvDate}.`,
     "- Subvention LogisVert : montant officiel par jumelage exact unité extérieure + unité intérieure, affiché sur chaque fiche. Aucune règle de calcul simplifiée n'est publiée ici : le montant exact vient de la liste.",
-    "- Au Québec, la donnée qui compte est la capacité certifiée à -15 °C (et non la capacité nominale à 8 °C). Un chauffage d'appoint reste généralement nécessaire sous -25 °C.",
+    "- Au Québec, la donnée qui compte est la capacité certifiée à -15 °C (et non le calibre commercial inscrit sur la boîte). Un chauffage d'appoint reste généralement nécessaire sous -25 °C.",
     "- Le dimensionnement dépend de la maison (superficie, isolation, étages, année) ; le froid de référence de la région sert à estimer la relève nécessaire les jours les plus froids.",
     "",
     "## Comment le site fonctionne",

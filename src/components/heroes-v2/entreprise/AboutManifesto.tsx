@@ -48,9 +48,9 @@ WORDS.forEach((_, i) => {
 export function AboutManifesto({ stats }: { stats: { eligible: number; brands: number; coldClimate: number } }) {
   const reduce = useReducedSafe();
   const items = [
-    { value: stats.eligible, label: "modèles admissibles" },
+    { value: stats.eligible, label: "fiches au catalogue" },
     { value: stats.brands, label: "marques au Québec" },
-    { value: stats.coldClimate, label: "certifiés grand froid" },
+    { value: stats.coldClimate, label: "certifiées climat froid" },
   ].filter((s) => s.value > 0);
 
   // Mot en cours de lecture (-1 : pas commencé ; WORDS.length : lu en entier).

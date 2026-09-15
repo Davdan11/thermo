@@ -16,6 +16,7 @@ import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { getAvailableFilters } from "@/lib/data/queries/catalogue";
 import { registry } from "@/lib/data/registry";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
+import { chiffre } from "@/lib/data/chiffres";
 import { SYSTEM_TYPE_LABELS, type SystemType } from "@/lib/data/types/enums";
 import { Inter_Tight, Instrument_Serif } from "next/font/google";
 import { createMetadata } from "@/lib/seo";
@@ -56,8 +57,8 @@ const BRAND_LOGOS: BrandLogo[] = [
 export default function HomePage() {
   // Chiffres de la section « Le test du froid », calculés à partir du catalogue.
   const brandsSummary = getPublishedBrandsSummary();
-  const coldClimate = brandsSummary.reduce((sum, b) => sum + b.coldClimateCount, 0);
-  const with5F = registry.models.filter((m) => m.status === "published" && m.heatingCapacity5FMinBtu != null).length;
+  const coldClimate = chiffre("fiches-climat-froid");
+  const with5F = chiffre("fiches-capacite-15");
 
   // Types : le catalogue filtre par ?type= (valeurs SYSTEM_TYPES). Aucun modèle n'est classé « multi-zone »
   // dans le catalogue (?type=multi-zone donne 0 résultat) : la carte Multizones mène à la page
@@ -100,7 +101,7 @@ export default function HomePage() {
   return (
     <main className={`${display.variable} ${serif.variable}`} style={{ fontFamily: "var(--font-sans, 'Inter', sans-serif)", color: "#172126", backgroundColor: "#fff" }}>
 
-      <HeroPremium eligible={getEligibleModelCount()} brands={brandsSummary.length} coldClimate={coldClimate} />
+      <HeroPremium eligible={chiffre("fiches")} brands={chiffre("marques")} coldClimate={coldClimate} />
 
       {/* Le test du froid : juste après le héros. */}
       <ColdStory coldClimate={coldClimate} with5F={with5F} />
@@ -116,9 +117,9 @@ export default function HomePage() {
       <SelectionShelf models={shelfModels} />
 
       {/* Toutes les grandes marques, en bande d'encre qui mène à ThermoMatch. */}
-      <BrandsMarquee brands={BRAND_LOGOS} count={brandsSummary.length} />
+      <BrandsMarquee brands={BRAND_LOGOS} count={chiffre("marques")} />
 
-      <ThermoMatchStage models={stageModels} evaluated={getEligibleModelCount()} />
+      <ThermoMatchStage models={stageModels} evaluated={chiffre("fiches")} />
 
       {/* Les aides financières, enfin plus simples. */}
       <AidesLedger stats={getLogisVertStats()} />

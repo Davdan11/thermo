@@ -1,7 +1,7 @@
 /* ==================================================================
    « Prix : notre approche » — contenu partagé par /prix et /prix/[slug].
 
-   Le site publie des fourchettes par type et calibre, pas de prix par machine : des dizaines de milliers d'appareils admissibles,
+   Le site publie des fourchettes par type et calibre, pas de prix par machine : des milliers de fiches,
    des prix qui bougent avec les stocks et la saison, et un coût installé
    qui dépend d'abord de la maison. On documente ce qui fait varier le
    prix, ce qu'une soumission complète doit contenir, et comment un
@@ -13,16 +13,16 @@
    ================================================================== */
 
 import { SITE_URL } from "@/lib/seo";
-import { getEligibleModelCount } from "@/lib/data/queries/stats";
+import { chiffre } from "@/lib/data/chiffres";
 import { ApprocheRecu } from "@/components/sections-v2/prix/ApprocheRecu";
 import { ApprocheEtiquette } from "@/components/sections-v2/prix/ApprocheEtiquette";
 
-const nbAppareils = () => getEligibleModelCount().toLocaleString("fr-CA");
+const nbFiches = () => chiffre("fiches").toLocaleString("fr-CA");
 
 export const PRIX_FAQ: Array<{ q: string; a: string }> = [
   {
     q: "Pourquoi des fourchettes plutôt qu'un prix par machine?",
-    a: `Parce qu'un prix installé dépend de votre maison autant que de la machine : distance entre les unités, panneau électrique, conduits, accès. Avec plus de ${nbAppareils()} appareils admissibles dont les prix changent selon les stocks et la saison, un prix par modèle serait faux quelques semaines plus tard. Nous publions donc les fourchettes que le marché québécois documente, par type, calibre et gamme, avec leurs sources et leur date, et un prix écrit remis après évaluation.`,
+    a: `Parce qu'un prix installé dépend de votre maison autant que de la machine : distance entre les unités, panneau électrique, conduits, accès. Avec ${nbFiches()} fiches au catalogue, dont les prix changent selon les stocks et la saison, un prix par modèle serait faux quelques semaines plus tard. Nous publions donc les fourchettes que le marché québécois documente, par type, calibre et gamme, avec leurs sources et leur date, et un prix écrit remis après évaluation.`,
   },
   {
     q: "Comment obtenir un prix pour ma maison?",
@@ -75,8 +75,8 @@ const ETAPES = [
 export function PrixApproche({ keyword = "une thermopompe", variant = "recu" }: { keyword?: string; variant?: "recu" | "etiquette" }) {
   const data = {
     keyword,
-    count: nbAppareils(),
-    countValue: getEligibleModelCount(),
+    count: nbFiches(),
+    countValue: chiffre("fiches"),
     factors: FACTORS,
     inclus: INCLUS,
     etapes: ETAPES,
