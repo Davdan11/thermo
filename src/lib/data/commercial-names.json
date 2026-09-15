@@ -3791,6 +3791,17 @@
   },
   {
     "brand": "Elios",
+    "outdoorModel": "DEA09HOS21115S1",
+    "commercialName": "e21",
+    "sourceFile": "https://cdn.master.ca/virtual_branch/documents/elios/2022/Elios_brochure_E21_06-2022_en_CA.pdf",
+    "page": 1,
+    "quote": "The e21 ductless heat pump is loaded with standard features.",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Elios e21 (Groupe Master, cdn.master.ca) ; ce numéro exact figure à la ligne « Outdoor model » du tableau de la page 4."
+  },
+  {
+    "brand": "Elios",
     "outdoorModel": "DEA09HOS25230E8",
     "commercialName": "e25",
     "sourceFile": "https://cdn.master.ca/virtual_branch/documents/elios/2024/Elios_brochure_E25_202410_en_CA.pdf",
@@ -3824,6 +3835,50 @@
   },
   {
     "brand": "Elios",
+    "outdoorModel": "DEA18HOM23230X2",
+    "commercialName": "e23",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_O18HOM_0_E23.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 18,000BTU MULTI-ZONE ODU - E23",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA18HOM25230X3",
+    "commercialName": "e25",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_O18HOM_0_E25.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 18,000BTU MULTI-ZONE ODU - E25",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA18HOS20230E7",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://www.master.ca/media/akeneo_connector/asset_files/E/l/Elios_brochure_CENTRAL_ELIOS_FEA_01_2024_en_CA_5faa.pdf",
+    "page": 2,
+    "quote": "Central-Elios redefines home comfort",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Central-Elios 2024 (Groupe Master, www.master.ca) ; ce numéro exact figure à la ligne « Outdoor model » du tableau de la page 4."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA18HOS21230S1",
+    "commercialName": "e21",
+    "sourceFile": "https://cdn.master.ca/virtual_branch/documents/elios/2022/Elios_brochure_E21_06-2022_en_CA.pdf",
+    "page": 1,
+    "quote": "The e21 ductless heat pump is loaded with standard features.",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Elios e21 (Groupe Master, cdn.master.ca) ; ce numéro exact figure à la ligne « Outdoor model » du tableau de la page 4."
+  },
+  {
+    "brand": "Elios",
     "outdoorModel": "DEA18HOS25230E8",
     "commercialName": "e25",
     "sourceFile": "https://cdn.master.ca/virtual_branch/documents/elios/2024/Elios_brochure_E25_202410_en_CA.pdf",
@@ -3846,6 +3901,17 @@
   },
   {
     "brand": "Elios",
+    "outdoorModel": "DEA24HOS20230E7",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://www.master.ca/media/akeneo_connector/asset_files/E/l/Elios_brochure_CENTRAL_ELIOS_FEA_01_2024_en_CA_5faa.pdf",
+    "page": 2,
+    "quote": "Central-Elios redefines home comfort",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Central-Elios 2024 (Groupe Master, www.master.ca) ; ce numéro exact figure à la ligne « Outdoor model » du tableau de la page 4."
+  },
+  {
+    "brand": "Elios",
     "outdoorModel": "DEA24HOS25230E8",
     "commercialName": "e25",
     "sourceFile": "https://cdn.master.ca/virtual_branch/documents/elios/2024/Elios_brochure_E25_202410_en_CA.pdf",
@@ -3854,6 +3920,149 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Brochure officielle Elios e25 (oct. 2024, Groupe Master). Tableau qui nomme ce numéro ; même plage pour les quatre colonnes."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA27HOM23230X2",
+    "commercialName": "e23",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_O27HOM_0_E23.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 27,000BTU MULTI-ZONE ODU - E23",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA27HOM25230X3",
+    "commercialName": "e25",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_O27HOM_0_E25.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 27,000BTU MULTI-ZONE ODU - E25",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA30HOS20230E7",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://www.master.ca/media/akeneo_connector/asset_files/E/l/Elios_brochure_CENTRAL_ELIOS_FEA_01_2024_en_CA_5faa.pdf",
+    "page": 2,
+    "quote": "Central-Elios redefines home comfort",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Central-Elios 2024 (Groupe Master, www.master.ca) ; ce numéro exact figure à la ligne « Outdoor model » du tableau de la page 4."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA36HOM23230X2",
+    "commercialName": "e23",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_O36HOM_0_E23.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 36,000BTU MULTI-ZONE ODU - E23",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA36HOM25230X3",
+    "commercialName": "e25",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_O36HOM_0_E25.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 36,000BTU MULTI-ZONE ODU - E25",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA36HOS18230S5",
+    "commercialName": "E18",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_S36HID_0_E18.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 36,000BTU DUCTED - E18",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA36HOS20230E7",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://www.master.ca/media/akeneo_connector/asset_files/E/l/Elios_brochure_CENTRAL_ELIOS_FEA_01_2024_en_CA_5faa.pdf",
+    "page": 2,
+    "quote": "Central-Elios redefines home comfort",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Central-Elios 2024 (Groupe Master, www.master.ca) ; ce numéro exact figure à la ligne « Outdoor model » du tableau de la page 4."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA36HOS21230S1",
+    "commercialName": "e21",
+    "sourceFile": "https://cdn.master.ca/virtual_branch/documents/elios/2022/Elios_brochure_E21_06-2022_en_CA.pdf",
+    "page": 1,
+    "quote": "The e21 ductless heat pump is loaded with standard features.",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Elios e21 (Groupe Master, cdn.master.ca) ; ce numéro exact figure à la ligne « Outdoor model » du tableau de la page 4."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA48HOM23230X2",
+    "commercialName": "e23",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_O48HOM_0_E23.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 48,000BTU MULTI-ZONE ODU - E23",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA48HOM25230X3",
+    "commercialName": "e25",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_O48HOM_0_E25.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 48,000BTU MULTI-ZONE ODU - E25",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA48HOS18230S5",
+    "commercialName": "E18",
+    "sourceFile": "https://eliosprotech.com/wp-content/uploads/2025/07/SUB_E_S48HID_0_E18.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 48,000BTU DUCTED - E18",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Fiche de soumission Elios hébergée par la bibliothèque technique Elios (eliosprotech.com, « Elios – Technical Library », liens de contact vers master.ca) ; domaine absent de la liste fermée, proposé dans domaines-proposes.json. Ce numéro exact figure dans la fiche."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA48HOS20230E7",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://www.master.ca/media/akeneo_connector/asset_files/E/l/Elios_brochure_CENTRAL_ELIOS_FEA_01_2024_en_CA_5faa.pdf",
+    "page": 2,
+    "quote": "Central-Elios redefines home comfort",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Central-Elios 2024 (Groupe Master, www.master.ca) ; ce numéro exact figure à la ligne « Outdoor model » du tableau de la page 4."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "DEA60HOS20230E7",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://www.master.ca/media/akeneo_connector/asset_files/E/l/Elios_brochure_CENTRAL_ELIOS_FEA_01_2024_en_CA_5faa.pdf",
+    "page": 2,
+    "quote": "Central-Elios redefines home comfort",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure Central-Elios 2024 (Groupe Master, www.master.ca) ; ce numéro exact figure à la ligne « Outdoor model » du tableau de la page 4."
   },
   {
     "brand": "Elios",
@@ -3931,6 +4140,46 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Brochure officielle Elios EBC « Essential Tier » (sept. 2025, Groupe Master). Tableau « Outdoor model » qui nomme ce numéro ; ligne « Outdoor temperature range of operation (heating) » (vérifiée en extraction brute : cinq colonnes à -20, les 30 000 et 36 000 BTU à -25)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "ESHEA18R2AN1",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://eliosprotech.com/en-ca/etl/eer-central-elios-condensers-only-r454b/",
+    "quote": "CENTRAL-ELIOS – CONDENSERS ONLY – EER",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page de la bibliothèque technique Elios (eliosprotech.com, domaine proposé, absent de la liste fermée) dont le titre est cité ; ce numéro exact y figure (« Submittal ESHEA18R2AN1 ») et dans la fiche de soumission liée (SUB_E_SHEA18_0_OE1_EN_FR.pdf, « Outdoor Unit - EER »)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "ESHEA24R2AN1",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://eliosprotech.com/en-ca/etl/eer-central-elios-condensers-only-r454b/",
+    "quote": "CENTRAL-ELIOS – CONDENSERS ONLY – EER",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page de la bibliothèque technique Elios (eliosprotech.com, domaine proposé, absent de la liste fermée) dont le titre est cité ; ce numéro exact y figure (« Submittal ESHEA24R2AN1 ») et dans la fiche de soumission liée (SUB_E_SHEA24_0_OE1_EN_FR.pdf, « Outdoor Unit - EER »)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "ESHEA30R2AN1",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://eliosprotech.com/en-ca/etl/eer-central-elios-condensers-only-r454b/",
+    "quote": "CENTRAL-ELIOS – CONDENSERS ONLY – EER",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page de la bibliothèque technique Elios (eliosprotech.com, domaine proposé, absent de la liste fermée) dont le titre est cité ; ce numéro exact y figure (« Submittal ESHEA30R2AN1 ») et dans la fiche de soumission liée (SUB_E_SHEA30_0_OE1_EN_FR.pdf, « Outdoor Unit - EER »)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "ESHEA36R2AN1",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://eliosprotech.com/en-ca/etl/eer-central-elios-condensers-only-r454b/",
+    "quote": "CENTRAL-ELIOS – CONDENSERS ONLY – EER",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page de la bibliothèque technique Elios (eliosprotech.com, domaine proposé, absent de la liste fermée) dont le titre est cité ; ce numéro exact y figure (« Submittal ESHEA36R2AN1 ») et dans la fiche de soumission liée (SUB_E_SHEA36_0_OE1_EN_FR.pdf, « Outdoor Unit - EER »)."
   },
   {
     "brand": "Elios",
@@ -9275,6 +9524,17 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "DM36HOS25230E3",
+    "commercialName": "M25",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/chart/Performance_Chart_Moovair_M25_Ducted_SingleZone_en.pdf",
+    "page": 1,
+    "quote": "M25",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Tableau de performance officiel Moovair (Groupe Master, cdn.master.ca, lié depuis moovair.com) : en-tête « M25 », sous-titre « MOOVAIR 25 SEER DUCTED SINGLE ZONE HEAT PUMP » ; ce numéro exact figure dans le tableau des pages 2 et 4. Aucun autre document ne lui donne un autre nom."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "DM48HOM23230X2",
     "commercialName": "Multi-Moov",
     "sourceFile": "https://cdn.master.ca/virtual_branch/documents/moovair/Moovair_MultiMoov_brochure_en_CA.pdf",
@@ -9294,6 +9554,28 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Brochure officielle Moovair Multi-Moov (première génération), liée depuis moovair.com/en-ca/multi-moov-2021/. Tableau qui nomme ce numéro, ligne « Heating °C (°F) »."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "DM48HOS25230E3",
+    "commercialName": "M25",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/chart/Performance_Chart_Moovair_M25_Ducted_SingleZone_en.pdf",
+    "page": 1,
+    "quote": "M25",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Tableau de performance officiel Moovair (Groupe Master, cdn.master.ca, lié depuis moovair.com) : en-tête « M25 », sous-titre « MOOVAIR 25 SEER DUCTED SINGLE ZONE HEAT PUMP » ; ce numéro exact figure dans le tableau des pages 2 et 4. Aucun autre document ne lui donne un autre nom."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "DM60HOS18230E5",
+    "commercialName": "M18",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/chart/Performance_Chart_Moovair_M18-60K_en.pdf",
+    "page": 1,
+    "quote": "Moovair M18 60K HSP Ducted Single Zone 18 SEER",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Tableau de performance officiel Moovair (Groupe Master, cdn.master.ca, lié depuis moovair.com) ; ce numéro exact figure dans le tableau de la page 1. Attention : les numéros voisins DM36/DM48HOS18230E5 sont nommés « M18 » dans un tableau et figurent sous le titre « M23 » dans un autre (écartés) ; celui-ci n'apparaît que dans ce tableau M18."
   },
   {
     "brand": "Moovair",
@@ -9341,6 +9623,17 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "DMA09HOS42230E4",
+    "commercialName": "M42",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/chart/2022/Performance_Chart_Moovair_M42_2022_en_CA.pdf",
+    "page": 1,
+    "quote": "M42 42 SEER Heat+ Single Zone Wall Mount",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Tableau de performance officiel Moovair M42 (Groupe Master, cdn.master.ca, lié depuis moovair.com) ; ce numéro exact figure dans les tableaux des pages 1 et 2 (même contenu dans Performance_Chart_Moovair_M42_WallMountSingleZone_2022_en_CA.pdf)."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "DMA12HOS25230E8",
     "commercialName": "M25",
     "sourceFile": "https://cdn.master.ca/virtual_branch/documents/moovair/2024/Moovair_brochure_M-SERIES_202410_en_CA.pdf",
@@ -9360,6 +9653,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Brochure officielle Moovair M-Series (oct. 2024), liée depuis moovair.com/en-ca/m28-2022/. Tableau M28 : ligne « Outdoor (cooling/heating) °C » = -30~50/-30~30 pour les quatre colonnes ; le chiffre de chauffage est -30."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "DMA12HOS42230E4",
+    "commercialName": "M42",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/chart/2022/Performance_Chart_Moovair_M42_2022_en_CA.pdf",
+    "page": 1,
+    "quote": "M42 42 SEER Heat+ Single Zone Wall Mount",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Tableau de performance officiel Moovair M42 (Groupe Master, cdn.master.ca, lié depuis moovair.com) ; ce numéro exact figure dans les tableaux des pages 1 et 2 (même contenu dans Performance_Chart_Moovair_M42_WallMountSingleZone_2022_en_CA.pdf)."
   },
   {
     "brand": "Moovair",
@@ -9546,6 +9850,17 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "DMA36HOS28230E8",
+    "commercialName": "M28",
+    "sourceFile": "https://www.moovair.com/wp-content/uploads/SUB_M_S36HID_0_M28.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 36,000BTU DUCTED - M28",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission officielle Moovair (médiathèque de moovair.com) ; ce numéro exact figure dans la fiche (même numéro dans la fiche cassette SUB_M_S36HIC_0_M28.pdf). Aucun autre document relevé ne lui donne un autre nom."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "DMA48HOM23230X2",
     "commercialName": "Multi-Moov",
     "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2024/Moovair_brochure_MULTI-MOOV_2024-01_en_CA.pdf",
@@ -9575,6 +9890,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Page officielle moovair.com (enregistrement de produit) : la liste des modèles donne ce numéro suivi de « (Central-Moov Series …) ». Nom confirmé par les brochures Central-Moov de moovair.com."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "DMA48HOS28230E8",
+    "commercialName": "M28",
+    "sourceFile": "https://www.moovair.com/wp-content/uploads/SUB_M_S48HID_0_M28.pdf",
+    "page": 1,
+    "quote": "SUBMITTAL - 48,000BTU DUCTED - M28",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche de soumission officielle Moovair (médiathèque de moovair.com) ; ce numéro exact figure dans la fiche (même numéro dans la fiche cassette SUB_M_S48HIC_0_M28.pdf). Aucun autre document relevé ne lui donne un autre nom."
   },
   {
     "brand": "Moovair",
@@ -12178,6 +12504,16 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Page officielle Senville du système Aura SENA-24HF (R454B) ; le numéro de l'unité extérieure n'y est pas écrit. La page officielle de la pièce « AURA Outdoor Unit SENA-24HF-OG » (senville.com) l'identifie comme l'unité extérieure Aura de cette capacité. Nom commercial imprimé dans le titre de la page officielle de l'unité extérieure."
+  },
+  {
+    "brand": "Senville",
+    "outdoorModel": "SENA-28HF-MOA",
+    "commercialName": "Aura",
+    "sourceFile": "https://senville.com/28000-btu-dual-zone-ceiling-air-conditioner-sena-30hf-dic/",
+    "quote": "Mini Split Heating and Cooling by Senville - AURA Series Energy Star Mini Split",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page officielle Senville du système SENA/30HF/DIC : ce numéro exact figure sous « Technical Specifications » > « Model Number » ; la citation est le titre de la vidéo produit de la page, dont la description dit aussi « the Senville Aura Series is also fully certified by Energy Star »."
   },
   {
     "brand": "Senville",
