@@ -11,6 +11,7 @@ import { monoLogo } from "@/components/heroes-v2/marques/server";
 import { typo } from "@/components/heroes-v2/marques/shared";
 import { Calm } from "@/components/sections-v2/marques/Calm";
 import { CalibresCta, CalibresFaq, CalibresLinks, CalibresNotice, CalibresTable, CalibresTrust } from "@/components/sections-v2/marques/Calibres";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 const KINDS: Record<string, { kind: SeoKind; label: string; plural: string; intro: string }> = {
   murales: { kind: "murale", label: "murale", plural: "Thermopompes murales", intro: "sans conduits, une unité intérieure par zone" },
@@ -94,7 +95,7 @@ export default async function BrandKindPage({ params }: { params: Promise<{ slug
         lines={[typo(k.plural.split(" ")[0]), typo(`${k.plural.split(" ").slice(1).join(" ")} ${b.name}`)]}
         accent={typo(k.plural.split(" ").slice(1).join(" "))}
         intro={typo(`Thermopompes À Vendre réunit tous les modèles ${k.label}s ${b.name} vendus au Québec (${k.intro}), avec leurs données certifiées ENERGY STAR et le montant LogisVert officiel d'Hydro-Québec.`)}
-        answer={typo(`${b.name} vend ${models.length} ${k.label}s au Québec, soit ${canonical.length} machines distinctes, dont ${certified.length} avec une capacité certifiée à -15 °C publiée${maxLv > 0 ? ` et une subvention LogisVert jusqu'à ${maxLv.toLocaleString("fr-CA")} $` : ""}. Le bon calibre dépend de la charge de chauffage de votre maison, que ThermoMatch calcule en 13 questions.`)}
+        answer={typo(`${b.name} vend ${models.length} ${k.label}s au Québec, soit ${canonical.length} machines distinctes, dont ${certified.length} avec une capacité certifiée à -15 °C publiée${maxLv > 0 ? ` et une subvention LogisVert jusqu'à ${maxLv.toLocaleString("fr-CA")} $` : ""}. Le bon calibre dépend de la charge de chauffage de votre maison, que ThermoMatch calcule en ${QUESTIONS_LABEL}.`)}
         crumbs={[
           { label: "Marques", href: "/marques" },
           { label: b.name, href: `/marques/${slug}` },

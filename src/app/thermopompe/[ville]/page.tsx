@@ -31,6 +31,7 @@ import { MT_FROST, ThemedModelTable } from "@/components/sections-v2/contenu/The
 import { ThemedFaq } from "@/components/sections-v2/contenu/ThemedFaq";
 import { FrostCityHero } from "@/components/heroes-v2/contenu/Frost";
 import { MunicipalityView } from "./MunicipalityView";
+import { QUESTIONS_LABEL_MAJ } from "@/lib/thermomatch/parcours";
 
 /** Slugs hors liste pré-rendue : rendus à la demande (404 s'ils n'ont pas de page), puis mis en cache. */
 export const dynamicParams = true;
@@ -344,7 +345,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
 
       <FrostCta
         title={`Quelle thermopompe pour votre maison à ${city.name}?`}
-        text={`13 questions sur votre maison. Avec ThermoMatch, Thermopompes À Vendre applique le froid de ${city.name} (${city.designTempC} °C) à votre superficie, votre isolation et votre système actuel, puis retient trois machines parmi toutes les marques certifiées.`}
+        text={`${QUESTIONS_LABEL_MAJ} sur votre maison. Avec ThermoMatch, Thermopompes À Vendre part de votre superficie, votre isolation et votre système actuel, estime la relève nécessaire au froid de ${city.name} (${city.designTempC} °C), puis retient trois machines parmi toutes les marques certifiées.`}
       />
 
       {nearby.length > 0 && (

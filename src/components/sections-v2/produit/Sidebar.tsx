@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Camera } from "lucide-react";
 import { Arrow, CropMarks, DocGlyph, Reveal, Rule } from "./motion";
 import { INK, LABEL, LINE, MUTE, ORANGE } from "./tokens";
+import { QUESTIONS_LABEL_MAJ } from "@/lib/thermomatch/parcours";
 
 /* ==================================================================
    Colonne latérale de la fiche d'ingénierie (/produit/[slug]) :
@@ -51,7 +52,7 @@ export function SideThermoMatch({ brandName }: { brandName: string }) {
         Ce {brandName} convient-il à votre maison&nbsp;?
       </p>
       <p className="m-0 mt-2 text-[13.5px] leading-[1.55]" style={{ color: "rgba(255,255,255,.72)" }}>
-        13 questions, 2 minutes. ThermoMatch vérifie la capacité certifiée à -15 °C par rapport à votre superficie, votre isolation et votre zone climatique, puis compare avec toutes les marques.
+        {QUESTIONS_LABEL_MAJ}, quelques minutes. ThermoMatch vérifie la capacité certifiée à -15 °C par rapport à votre superficie, votre isolation et votre zone climatique, puis compare avec toutes les marques.
       </p>
       <Link href="/trouver-ma-thermopompe" className="sv2f-btn sv2f-orange mt-5 flex items-center justify-between gap-3 rounded-[3px] px-4 py-3.5 text-[14.5px] font-semibold text-white" style={{ background: ORANGE }}>
         Vérifier avec ThermoMatch

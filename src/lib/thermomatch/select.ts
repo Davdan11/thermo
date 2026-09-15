@@ -11,17 +11,34 @@
       à moins de MAX_SCORE_GAP points du #1.
    4. Les rangs suivent l'ordre des scores ; les étiquettes décrivent
       le positionnement réel de chaque machine.
+   5. Deux voisines à moins d'un point (ou au même score arrondi) sont
+      « ex æquo », et le départage est dit en clair (ties.ts).
    ================================================================== */
 
-import type { BrandTier, MatchResult, ResultBadge, ScoredCandidate } from "./types";
+import type { BrandTier, MatchResult, ResultBadge, ScoredCandidate, TieInfo } from "./types";
+import { explainTieBreak, isTie } from "./ties";
 
 export const MAX_SCORE_GAP = 15;
 
+/** Ordre du classement : le score, puis la plus proche de la charge, la plus subventionnée, l'id (stable). */
+export function compareScored(a: ScoredCandidate, b: ScoredCandidate): number {
+  if (b.score !== a.score) return b.score - a.score;
+  const fitDiff = Math.abs(a.fitRatio - 1.05) - Math.abs(b.fitRatio - 1.05);
+  if (fitDiff !== 0) return fitDiff;
+  if (b.candidate.logisVertDollars !== a.candidate.logisVertDollars) return b.candidate.logisVertDollars - a.candidate.logisVertDollars;
+  return a.candidate.id.localeCompare(b.candidate.id);
+}
+
 const lower = (s: string) => s.trim().toLowerCase();
+
+/** Même machine vendue sous l'autre marque (« aussi vendue sous Midea ») : pas un vrai choix de plus. */
+const soldAsOther = (a: ScoredCandidate, b: ScoredCandidate) =>
+  a.candidate.alsoSoldAs.some((brand) => lower(brand) === lower(b.candidate.brand)) ||
+  b.candidate.alsoSoldAs.some((brand) => lower(brand) === lower(a.candidate.brand));
 
 function isDistinct(c: ScoredCandidate, chosen: ScoredCandidate[]): boolean {
   return chosen.every(
-    (x) => lower(x.candidate.brand) !== lower(c.candidate.brand) && x.candidate.signature !== c.candidate.signature,
+    (x) => lower(x.candidate.brand) !== lower(c.candidate.brand) && x.candidate.signature !== c.candidate.signature && !soldAsOther(x, c),
   );
 }
 
@@ -67,10 +84,16 @@ export function selectTop(pool: ScoredCandidate[], count = 3): Array<Omit<MatchR
     chosen.push(next);
   }
 
-  const alternatives = chosen.slice(1).sort((a, b) => b.score - a.score);
-  return [top, ...alternatives].map((c, i) => ({
-    ...c,
-    rank: i + 1,
-    badge: badgeFor(i, c.candidate.tier),
-  }));
+  const ordered = [top, ...chosen.slice(1).sort(compareScored)];
+  return ordered.map((c, i) => {
+    const prev = ordered[i - 1];
+    const next = ordered[i + 1];
+    const tie: TieInfo | undefined =
+      next && isTie(c, next)
+        ? { withRank: i + 2, decidedBy: explainTieBreak(c, next) }
+        : prev && isTie(prev, c)
+          ? { withRank: i, decidedBy: explainTieBreak(prev, c) }
+          : undefined;
+    return { ...c, rank: i + 1, badge: badgeFor(i, c.candidate.tier), ...(tie ? { tie } : {}) };
+  });
 }

@@ -20,6 +20,7 @@ import { JsonLd, type FaqItem } from "@/components/seo/SeoBlocks";
 import { DISPLAY, EASE, MONO, typo } from "@/components/heroes-v2/marques/shared";
 import { CountUp } from "./CountUp";
 import { ColdRuler } from "./CalibresClient";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 const C = {
   bg: "#E5EBEE",
@@ -330,7 +331,7 @@ export function CalibresNotice({ title, children }: { title: string; children: R
 
 export function CalibresCta({
   title = "Trouvez la bonne thermopompe en 2 minutes",
-  text = "Répondez à 13 questions sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
+  text = `Répondez à ${QUESTIONS_LABEL} sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.`,
 }: {
   title?: string;
   text?: string;

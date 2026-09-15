@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/seo/SeoBlocks";
 import type { SeoModel } from "@/lib/seo/programmatic";
 import { BARO, DISPLAY, MONO, fr, typo } from "./tokens";
 import { Count, Grow, Item, Reveal, Stagger } from "./kit";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 /* ==================================================================
    /subventions/logisvert et /subventions/logisvert/[marque] —
@@ -237,7 +238,7 @@ export function BaroProse({ title, children }: { title: string; children: ReactN
 
 export function BaroCta({
   title = "Trouvez la bonne thermopompe en 2 minutes",
-  text = "Répondez à 13 questions sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
+  text = `Répondez à ${QUESTIONS_LABEL} sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.`,
 }: {
   title?: string;
   text?: string;

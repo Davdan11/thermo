@@ -17,11 +17,16 @@ export function SharedResults({ answers, results, summaryContext }: { answers: Q
   const router = useRouter();
 
   function requestQuote(candidate: Recommendation["results"][number]) {
-    const draft = thermoMatchAnswersToProjectDraft(Object.fromEntries(Object.entries(answers).filter(([, v]) => v !== undefined)) as Record<string, string | string[]>, true);
+    // Le type de projet vient de l'architecture retenue (centrale, multizone, murales), le modèle de la carte choisie.
+    const a = summaryContext.architecture;
+    const draft = thermoMatchAnswersToProjectDraft(
+      Object.fromEntries(Object.entries(answers).filter(([, v]) => v !== undefined)) as Record<string, string | string[]>,
+      true,
+      { kind: a.kind, heads: a.heads, label: a.label, title: a.title, confidence: a.confidence },
+    );
     if (candidate?.product) {
       draft.desiredSystem = {
         ...draft.desiredSystem,
-        systemType: candidate.product.systemType,
         selectedModelId: candidate.product.id,
         selectedBrandName: candidate.product.brand,
       };
@@ -32,7 +37,8 @@ export function SharedResults({ answers, results, summaryContext }: { answers: Q
 
   function retry() {
     try {
-      sessionStorage.setItem(STORAGE_KEY, JSON.stringify({ answers, step: 0 }));
+      // Reprend à la première question, réponses déjà remplies (ThermoMatch.tsx lit `stepId`).
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify({ answers, step: 0, stepId: "postalCode" }));
     } catch {
       /* stockage indisponible : le questionnaire repart de zéro */
     }

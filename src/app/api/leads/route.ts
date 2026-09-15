@@ -27,6 +27,7 @@ import { speedToLeadAfter } from "@/lib/telephonie/hooks"; // Chantier T : répo
 import { leadSchema, CONSENT_VERSION } from "@/lib/validation/lead";
 import { consentSummary, gateFormConsents, safePath, saveFormConsents } from "@/lib/consentements/formulaires"; // Conformité C2 : cases 3.1, 5.2, 5.3 et preuve (5.4)
 import { escapeHtml } from "@/lib/security/escape";
+import { thermoMatchCrmLines } from "@/lib/thermomatch/parcours";
 import { rateLimit, tooManyRequests, clientIp } from "@/lib/security/rate-limit";
 import { createHash } from "node:crypto";
 
@@ -76,8 +77,9 @@ export async function POST(req: NextRequest) {
   // Chantier T : texto au client dans la minute et alerte au propriétaire, après la réponse (désactivé par défaut).
   speedToLeadAfter({ kind: "soumission", journalId: entry.id, phone: lead.phone, firstName: lead.firstName, lastName: lead.lastName, city: lead.municipality });
 
-  // 3. Pipedrive, non bloquant.
-  const row = (label: string, value: unknown) => `<li><b>${label} :</b> ${escapeHtml(value ?? "Non spécifié")}</li>`;
+  // 3. Pipedrive, non bloquant. Conduits, espaces, panneau et configuration ThermoMatch viennent du brouillon de la
+  //    session : valeurs connues seulement, traduites par nos libellés (thermoMatchCrmLines).
+  const row =(label: string, value: unknown) => `<li><b>${label} :</b> ${escapeHtml(value ?? "Non spécifié")}</li>`;
   const noteHtml = `
     <h3>Détails du projet</h3>
     <ul>
@@ -89,6 +91,7 @@ export async function POST(req: NextRequest) {
       ${row("Moment préféré pour l'appel", lead.momentContact)}
       ${row("Budget estimé", lead.budgetEstime)}
       ${row("Modèle sélectionné (ThermoMatch)", marque)}
+      ${thermoMatchCrmLines(lead.draft).map(([k, v]) => row(k, v)).join("")}
       ${lead.appareilActuel ? row("Appareil actuel (ThermoScan)", lead.appareilActuel) : ""}
       ${row("Page d'origine", lead.source ?? "soumission-page")}
       ${attributionLines(attribution).map(([k, v]) => row(k, v)).join("")}

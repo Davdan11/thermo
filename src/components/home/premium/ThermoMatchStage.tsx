@@ -6,6 +6,8 @@ import Link from "next/link";
 import { AnimatePresence, motion, useInView, useScroll, useTransform } from "motion/react";
 import { AirLines, Arrow, C, CountUp, DISPLAY, EASE, RevealLines, fmt } from "./shared";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { visibleSteps } from "@/app/trouver-ma-thermopompe/_components/steps";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 /* ==================================================================
    Section ThermoMatch de l'accueil.
@@ -21,14 +23,18 @@ import { useReduced } from "@/components/heroes-v2/outils/motion";
 export type StageModel = { slug: string; brand: string; name: string; img: string; h5: number | null; hspf2: number | null; subsidy: number | null };
 
 type PhaseId = "postal" | "type" | "priority" | "analyse" | "results" | "soumission";
-/** q : numéro de la question dans le vrai questionnaire (13 questions). */
+/* Le parcours rejoué : celui d'une maison aux plinthes, chauffée étage par étage (le nombre de questions varie selon les réponses). */
+const EXEMPLE = visibleSteps({ propertyType: "maison", currentSystem: "electrique", zonesWanted: "par-etage" });
+const TOTAL_Q = EXEMPLE.length;
+const Q = (id: string) => EXEMPLE.findIndex((s) => s.id === id) + 1;
+/** q : numéro de la question dans ce parcours du vrai questionnaire. */
 const PHASES: { id: PhaseId; ms: number; step: number; q: number }[] = [
-  { id: "postal", ms: 2900, step: 0, q: 1 },
-  { id: "type", ms: 2500, step: 0, q: 2 },
-  { id: "priority", ms: 2700, step: 0, q: 11 },
-  { id: "analyse", ms: 3000, step: 1, q: 13 },
-  { id: "results", ms: 6000, step: 1, q: 13 },
-  { id: "soumission", ms: 3600, step: 2, q: 13 },
+  { id: "postal", ms: 2900, step: 0, q: Q("postalCode") },
+  { id: "type", ms: 2500, step: 0, q: Q("propertyType") },
+  { id: "priority", ms: 2700, step: 0, q: Q("priority") },
+  { id: "analyse", ms: 3000, step: 1, q: TOTAL_Q },
+  { id: "results", ms: 6000, step: 1, q: TOTAL_Q },
+  { id: "soumission", ms: 3600, step: 2, q: TOTAL_Q },
 ];
 const RESULTS = PHASES.findIndex((p) => p.id === "results");
 
@@ -97,7 +103,7 @@ export function ThermoMatchStage({ models, evaluated }: { models: StageModel[]; 
         <div>
           <p className="flex items-center gap-3 text-[12px] font-medium uppercase" style={{ letterSpacing: "0.22em", color: C.mute, margin: 0 }}>
             <span aria-hidden="true" className="inline-block h-px w-10" style={{ background: C.orange }} />
-            ThermoMatch · 13 questions
+            ThermoMatch · {QUESTIONS_LABEL}
           </p>
           <RevealLines
             id="tms-titre"
@@ -201,7 +207,7 @@ function Laptop({ children }: { children: ReactNode }) {
 
 function Screen({ phase, models, evaluated, replay }: { phase: number; models: StageModel[]; evaluated: number; replay: string }) {
   const p = PHASES[phase];
-  const status = p.id === "results" || p.id === "soumission" ? "Vos 3 recommandations" : p.id === "analyse" ? "Analyse en cours" : `Question ${p.q} sur 13`;
+  const status = p.id === "results" || p.id === "soumission" ? "Vos 3 recommandations" : p.id === "analyse" ? "Analyse en cours" : `Question ${p.q} sur ${TOTAL_Q}`;
   const best = leader(models);
   return (
     <div aria-hidden="true" className="absolute inset-0 flex flex-col" style={{ fontSize: "calc(100cqw / 60)", color: C.ink, fontFamily: DISPLAY }}>
@@ -214,7 +220,7 @@ function Screen({ phase, models, evaluated, replay }: { phase: number; models: S
         </span>
       </div>
       <div style={{ height: "0.18em", background: C.inkLine }}>
-        <motion.div style={{ height: "100%", background: C.orange, transformOrigin: "0 50%" }} initial={false} animate={{ scaleX: p.q / 13 }} transition={{ duration: 0.8, ease: EASE }} />
+        <motion.div style={{ height: "100%", background: C.orange, transformOrigin: "0 50%" }} initial={false} animate={{ scaleX: p.q / TOTAL_Q }} transition={{ duration: 0.8, ease: EASE }} />
       </div>
       <div className="relative flex-1 overflow-hidden">
         <AnimatePresence mode="wait">
@@ -227,10 +233,10 @@ function Screen({ phase, models, evaluated, replay }: { phase: number; models: S
             transition={{ duration: 0.5, ease: EASE }}
           >
             {p.id === "postal" && <PostalPane />}
-            {p.id === "type" && <OptionsPane n={2} question={`Quel type de propriété${NB}?`} options={["Maison unifamiliale", "Condo", "Duplex", "Triplex / Autre"]} pick={0} answeredBefore={1} />}
+            {p.id === "type" && <OptionsPane n={Q("propertyType")} question={`Quel type de propriété${NB}?`} options={["Maison unifamiliale", "Condo", "Duplex", "Triplex / Autre"]} pick={0} answeredBefore={1} />}
             {p.id === "priority" && (
               <OptionsPane
-                n={11}
+                n={Q("priority")}
                 question={`Qu’est-ce qui est le plus important pour vous${NB}?`}
                 options={["Économies d’énergie", "Performance par grand froid", "Silence", "Meilleur prix", "Qualité haut de gamme"]}
                 pick={1}
@@ -293,7 +299,7 @@ function PostalPane() {
   }, []);
   const done = n >= POSTAL.length;
   return (
-    <QuestionLayout n={1} question={`Quel est votre code postal${NB}?`} answered={done ? 1 : 0}>
+    <QuestionLayout n={Q("postalCode")} question={`Quel est votre code postal${NB}?`} answered={done ? 1 : 0}>
       <div className="flex items-center justify-between" style={{ border: `1px solid ${done ? C.ink : C.inkLine}`, borderRadius: 999, padding: "0.35em 0.35em 0.35em 1.2em", background: "#fff", transition: "border-color .4s" }}>
         <span className="tabular-nums" style={{ fontSize: "1.05em", fontWeight: 600, letterSpacing: "0.04em" }}>
           {POSTAL.slice(0, n)}

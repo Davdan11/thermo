@@ -14,7 +14,7 @@ import { bookableDates, CALL_WINDOWS, formatDay, type CallWindow } from "@/lib/c
    réservation de l'appel (/api/rdv), événements d'analyse.
    ──────────────────────────────────────────────────────────────────────── */
 
-import { loadProjectDraft, getProjectSummary, existingUnitSummary } from "@/lib/project/project-draft";
+import { loadProjectDraft, getProjectSummary, existingUnitSummary, typeThermopompeOf } from "@/lib/project/project-draft";
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { track } from "@/lib/analytics/track";
 import { readAttribution } from "@/lib/attribution/client";
@@ -130,7 +130,8 @@ export default function SoumissionPage() {
       setProject({
         ville: cityInfo,
         typeBatiment: draft.property?.type ?? "",
-        typeThermopompe: draft.desiredSystem?.systemType ?? "",
+        // Centrale, multizone ou murale seulement (CRM) ; la configuration détaillée, les conduits et le panneau vont dans les notes.
+        typeThermopompe: typeThermopompeOf(draft.desiredSystem?.systemType) ?? "",
         superficie: draft.property?.approximateArea ?? "",
         emplacement: "",
         echeancier: draft.timeline ?? "",
