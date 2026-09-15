@@ -1,5 +1,77 @@
 [
   {
+    "brand": "American Standard",
+    "outdoorModel": "4TXM2218A12N0",
+    "maxIndoorUnits": 2,
+    "minIndoorUnits": 1,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2218 (page 6) ; minimum publié 1 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2218A12N0 figure dans le même document (page 7, tableau des combinaisons). Document Trane, mêmes numéros 4TXM22 ; aucun document American Standard trouvé pour ce numéro."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "4TXM2221A13N0",
+    "maxIndoorUnits": 3,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2221 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2221A13N0 figure dans le même document (page 7, tableau des combinaisons). Document Trane, mêmes numéros 4TXM22 ; aucun document American Standard trouvé pour ce numéro."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "4TXM2224A14N0",
+    "maxIndoorUnits": 4,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2224 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2224A14N0 figure dans le même document (page 7, tableau des combinaisons). Document Trane, mêmes numéros 4TXM22 ; aucun document American Standard trouvé pour ce numéro."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "4TXM2230A15N0",
+    "maxIndoorUnits": 5,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2230 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2230A15N0 figure dans le même document (page 7, tableau des combinaisons). Document Trane, mêmes numéros 4TXM22 ; aucun document American Standard trouvé pour ce numéro."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "4TXM2236A15N0",
+    "maxIndoorUnits": 5,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2236 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2236A15N0 figure dans le même document (page 7, tableau des combinaisons). Document Trane, mêmes numéros 4TXM22 ; aucun document American Standard trouvé pour ce numéro."
+  },
+  {
+    "brand": "American Standard",
+    "outdoorModel": "4TXM2242A15N0",
+    "maxIndoorUnits": 5,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2242 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2242A15N0 figure dans le même document (page 7, tableau des combinaisons). Document Trane, mêmes numéros 4TXM22 ; aucun document American Standard trouvé pour ce numéro."
+  },
+  {
     "brand": "Bosch",
     "outdoorModel": "BMS500-AAM018-1CSXHC",
     "maxIndoorUnits": 2,
@@ -2931,6 +3003,86 @@
   },
   {
     "brand": "Lennox",
+    "outdoorModel": "MMLD020S6M-1P",
+    "maxIndoorUnits": 3,
+    "sourceFile": "https://www.lennoxpros.com/mmld020s6m-mz-hp-20k-208230v/p/27J95",
+    "quote": "Multi-zone compatibility pairing with various indoor mini-splits with up to 3 zones.",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page produit de LennoxPros, boutique professionnelle de Lennox (lennox.com y renvoie depuis sa navigation) ; domaine lennoxpros.com absent de OFFICIAL_HOSTS, donc « secondaire » en attendant. Phrase de la description du produit (Model/Part Number sur la même page). La brochure Lennox « R-32 Multi-Zone Mini-Split Systems » donne « Number of Zones Up to 4 » pour toute la gamme MMLD (sans nommer ce numéro) ; on retient la valeur du modèle."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MMLD024S6M-1P",
+    "maxIndoorUnits": 4,
+    "sourceFile": "https://www.lennoxpros.com/mmld024s6m-mz-hp-24k-208230v/p/27J96",
+    "quote": "Multi-zone compatibility pairing with various indoor mini-splits with up to 4 zones.",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page produit de LennoxPros, boutique professionnelle de Lennox (lennox.com y renvoie depuis sa navigation) ; domaine lennoxpros.com absent de OFFICIAL_HOSTS, donc « secondaire » en attendant. Phrase de la description du produit (Model/Part Number sur la même page). La brochure Lennox « R-32 Multi-Zone Mini-Split Systems » donne « Number of Zones Up to 4 » pour toute la gamme MMLD (sans nommer ce numéro) ; on retient la valeur du modèle."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MMLD030S6M-1P",
+    "maxIndoorUnits": 4,
+    "sourceFile": "https://www.lennoxpros.com/mmld030s6m-mz-hp-30k-208230v/p/27J97",
+    "quote": "Multi-zone compatibility pairing with various indoor mini-splits with up to 4 zones.",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page produit de LennoxPros, boutique professionnelle de Lennox (lennox.com y renvoie depuis sa navigation) ; domaine lennoxpros.com absent de OFFICIAL_HOSTS, donc « secondaire » en attendant. Phrase de la description du produit (Model/Part Number sur la même page). La brochure Lennox « R-32 Multi-Zone Mini-Split Systems » donne « Number of Zones Up to 4 » pour toute la gamme MMLD (sans nommer ce numéro) ; on retient la valeur du modèle."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MMLD036S6M-1P",
+    "maxIndoorUnits": 4,
+    "sourceFile": "https://www.lennoxpros.com/mmld036s6m-mz-hp-36k-208230v/p/27J98",
+    "quote": "Multi-zone compatibility pairing with various indoor mini-splits with up to 4 zones.",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page produit de LennoxPros, boutique professionnelle de Lennox (lennox.com y renvoie depuis sa navigation) ; domaine lennoxpros.com absent de OFFICIAL_HOSTS, donc « secondaire » en attendant. Phrase de la description du produit (Model/Part Number sur la même page). La brochure Lennox « R-32 Multi-Zone Mini-Split Systems » donne « Number of Zones Up to 4 » pour toute la gamme MMLD (sans nommer ce numéro) ; on retient la valeur du modèle."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MMPD020S6M-1P",
+    "maxIndoorUnits": 2,
+    "sourceFile": "https://www.lennoxpros.com/mmpd020s6m-mz-hp-20k-208230v/p/27J83",
+    "quote": "Multi-zone compatibility pairing with various indoor mini-splits for 2 zones.",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page produit de LennoxPros, boutique professionnelle de Lennox (lennox.com y renvoie depuis sa navigation) ; domaine lennoxpros.com absent de OFFICIAL_HOSTS, donc « secondaire » en attendant. Phrase de la description du produit (Model/Part Number sur la même page). La brochure Lennox donne « Up to 5 » pour la gamme MMPD (sans nommer ce numéro) ; on retient la valeur, plus petite, de la page du modèle."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MMPD024S6M-1P",
+    "maxIndoorUnits": 3,
+    "sourceFile": "https://www.lennoxpros.com/mmpd024s6m-mz-hp-24k-208230v/p/27J84",
+    "quote": "Multi-zone compatibility pairing with various indoor mini-splits up to 3 zones.",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page produit de LennoxPros, boutique professionnelle de Lennox (lennox.com y renvoie depuis sa navigation) ; domaine lennoxpros.com absent de OFFICIAL_HOSTS, donc « secondaire » en attendant. Phrase de la description du produit (Model/Part Number sur la même page). La brochure Lennox donne « Up to 5 » pour la gamme MMPD (sans nommer ce numéro) ; on retient la valeur, plus petite, de la page du modèle."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MMPD036S6M-1P",
+    "maxIndoorUnits": 3,
+    "sourceFile": "https://www.lennoxpros.com/mmpd036s6m-mz-hp-36k-208230v/p/27J86",
+    "quote": "Multi-zone compatibility pairing with various indoor mini-splits up to 3 zones.",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page produit de LennoxPros, boutique professionnelle de Lennox (lennox.com y renvoie depuis sa navigation) ; domaine lennoxpros.com absent de OFFICIAL_HOSTS, donc « secondaire » en attendant. Phrase de la description du produit (Model/Part Number sur la même page). La brochure Lennox donne « Up to 5 » pour la gamme MMPD (sans nommer ce numéro) ; on retient la valeur, plus petite, de la page du modèle."
+  },
+  {
+    "brand": "Lennox",
+    "outdoorModel": "MMPD048S6M-1P",
+    "maxIndoorUnits": 5,
+    "sourceFile": "https://www.lennoxpros.com/mmpd048s6m-mz-hp-48k-208230v/p/27J87",
+    "quote": "Multi-zone compatibility pairing with various indoor mini-splits with up to 5 zones.",
+    "confidence": "modele",
+    "sourceType": "secondaire",
+    "note": "Page produit de LennoxPros, boutique professionnelle de Lennox (lennox.com y renvoie depuis sa navigation) ; domaine lennoxpros.com absent de OFFICIAL_HOSTS, donc « secondaire » en attendant. Phrase de la description du produit (Model/Part Number sur la même page). La brochure Lennox donne « Up to 5 » pour la gamme MMPD (sans nommer ce numéro) ; on retient la valeur, plus petite, de la page du modèle."
+  },
+  {
+    "brand": "Lennox",
     "outdoorModel": "MPB018S4M-1P",
     "maxIndoorUnits": 2,
     "sourceFile": "https://tech.lennoxintl.com/C03e7o14l/VIu12Ch2uV/507549-07.pdf",
@@ -5730,12 +5882,23 @@
     "brand": "Samsung",
     "outdoorModel": "AJ020BXS3CH",
     "maxIndoorUnits": 3,
-    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2021+Free+Joint+Multi+MAX+HEAT_AJ0+BXS+CHAA_New+Protocol_Ver1.0_11292021B.pdf",
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2023+Free+Joint+Multi+for+America+(Low+Ambient,+60Hz,+HP)_New+Protocol_Ver3.0_231027C.pdf",
+    "page": 12,
+    "quote": "Maximum number of connectable Indoor Units EA 3 4 4 4",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Ligne de tableau du Technical Data Book Samsung « 2023 Free Joint Multi for America (Low Ambient, 60Hz, HP) », qui couvre AJ0**BXS*CH/AA et AJ0**CXS*CH/AA (lié depuis samsunghvac.com/fjm-2021/FJM-2021-MH-ODU) ; p. 12, colonnes AJ020BXS3CH/AA, AJ024BXS4CH/AA, AJ030BXS4CH/AA, AJ036BXS4CH/AA. Même chiffre dans le TDB « 2021 Free Joint Multi MAX HEAT » (p. 10). Les fiches de soumission disent « Max Heat 3 PORT / 4 PORT ODU »."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AJ020CXS3CH",
+    "maxIndoorUnits": 3,
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2023+Free+Joint+Multi+for+America+(Low+Ambient,+60Hz,+HP)_New+Protocol_Ver3.0_231027C.pdf",
     "page": 10,
     "quote": "Maximum number of connectable Indoor Units EA 3 4 4 4",
     "confidence": "modele",
     "sourceType": "officiel",
-    "note": "Ligne de tableau du Technical Data Book Samsung « 2021 Free Joint Multi MAX HEAT (AJ0**BXS*CH/AA) » ; colonnes AJ020BXS3CH/AA, AJ024BXS4CH/AA, AJ030BXS4CH/AA, AJ036BXS4CH/AA. Le texte du PDF est encodé avec un décalage de police (libellé à −29, unité « EA » à +29) : citation relue après décodage ; les chiffres ne sont pas décalés."
+    "note": "Ligne de tableau du Technical Data Book Samsung « 2023 Free Joint Multi for America (Low Ambient, 60Hz, HP) », qui couvre AJ0**BXS*CH/AA et AJ0**CXS*CH/AA (lié depuis samsunghvac.com/fjm-2021/FJM-2021-MH-ODU) ; p. 10, colonnes AJ020CXS3CH/AA, AJ024CXS4CH/AA, AJ030CXS4CH/AA, AJ036CXS4CH/AA."
   },
   {
     "brand": "Samsung",
@@ -5774,12 +5937,23 @@
     "brand": "Samsung",
     "outdoorModel": "AJ024BXS4CH",
     "maxIndoorUnits": 4,
-    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2021+Free+Joint+Multi+MAX+HEAT_AJ0+BXS+CHAA_New+Protocol_Ver1.0_11292021B.pdf",
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2023+Free+Joint+Multi+for+America+(Low+Ambient,+60Hz,+HP)_New+Protocol_Ver3.0_231027C.pdf",
+    "page": 12,
+    "quote": "Maximum number of connectable Indoor Units EA 3 4 4 4",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Ligne de tableau du Technical Data Book Samsung « 2023 Free Joint Multi for America (Low Ambient, 60Hz, HP) », qui couvre AJ0**BXS*CH/AA et AJ0**CXS*CH/AA (lié depuis samsunghvac.com/fjm-2021/FJM-2021-MH-ODU) ; p. 12, colonnes AJ020BXS3CH/AA, AJ024BXS4CH/AA, AJ030BXS4CH/AA, AJ036BXS4CH/AA. Même chiffre dans le TDB « 2021 Free Joint Multi MAX HEAT » (p. 10). Les fiches de soumission disent « Max Heat 3 PORT / 4 PORT ODU »."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AJ024CXS4CH",
+    "maxIndoorUnits": 4,
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2023+Free+Joint+Multi+for+America+(Low+Ambient,+60Hz,+HP)_New+Protocol_Ver3.0_231027C.pdf",
     "page": 10,
     "quote": "Maximum number of connectable Indoor Units EA 3 4 4 4",
     "confidence": "modele",
     "sourceType": "officiel",
-    "note": "Ligne de tableau du Technical Data Book Samsung « 2021 Free Joint Multi MAX HEAT (AJ0**BXS*CH/AA) » ; colonnes AJ020BXS3CH/AA, AJ024BXS4CH/AA, AJ030BXS4CH/AA, AJ036BXS4CH/AA. Le texte du PDF est encodé avec un décalage de police (libellé à −29, unité « EA » à +29) : citation relue après décodage ; les chiffres ne sont pas décalés."
+    "note": "Ligne de tableau du Technical Data Book Samsung « 2023 Free Joint Multi for America (Low Ambient, 60Hz, HP) », qui couvre AJ0**BXS*CH/AA et AJ0**CXS*CH/AA (lié depuis samsunghvac.com/fjm-2021/FJM-2021-MH-ODU) ; p. 10, colonnes AJ020CXS3CH/AA, AJ024CXS4CH/AA, AJ030CXS4CH/AA, AJ036CXS4CH/AA."
   },
   {
     "brand": "Samsung",
@@ -5807,12 +5981,23 @@
     "brand": "Samsung",
     "outdoorModel": "AJ030BXS4CH",
     "maxIndoorUnits": 4,
-    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2021+Free+Joint+Multi+MAX+HEAT_AJ0+BXS+CHAA_New+Protocol_Ver1.0_11292021B.pdf",
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2023+Free+Joint+Multi+for+America+(Low+Ambient,+60Hz,+HP)_New+Protocol_Ver3.0_231027C.pdf",
+    "page": 12,
+    "quote": "Maximum number of connectable Indoor Units EA 3 4 4 4",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Ligne de tableau du Technical Data Book Samsung « 2023 Free Joint Multi for America (Low Ambient, 60Hz, HP) », qui couvre AJ0**BXS*CH/AA et AJ0**CXS*CH/AA (lié depuis samsunghvac.com/fjm-2021/FJM-2021-MH-ODU) ; p. 12, colonnes AJ020BXS3CH/AA, AJ024BXS4CH/AA, AJ030BXS4CH/AA, AJ036BXS4CH/AA. Même chiffre dans le TDB « 2021 Free Joint Multi MAX HEAT » (p. 10). Les fiches de soumission disent « Max Heat 3 PORT / 4 PORT ODU »."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AJ030CXS4CH",
+    "maxIndoorUnits": 4,
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2023+Free+Joint+Multi+for+America+(Low+Ambient,+60Hz,+HP)_New+Protocol_Ver3.0_231027C.pdf",
     "page": 10,
     "quote": "Maximum number of connectable Indoor Units EA 3 4 4 4",
     "confidence": "modele",
     "sourceType": "officiel",
-    "note": "Ligne de tableau du Technical Data Book Samsung « 2021 Free Joint Multi MAX HEAT (AJ0**BXS*CH/AA) » ; colonnes AJ020BXS3CH/AA, AJ024BXS4CH/AA, AJ030BXS4CH/AA, AJ036BXS4CH/AA. Le texte du PDF est encodé avec un décalage de police (libellé à −29, unité « EA » à +29) : citation relue après décodage ; les chiffres ne sont pas décalés."
+    "note": "Ligne de tableau du Technical Data Book Samsung « 2023 Free Joint Multi for America (Low Ambient, 60Hz, HP) », qui couvre AJ0**BXS*CH/AA et AJ0**CXS*CH/AA (lié depuis samsunghvac.com/fjm-2021/FJM-2021-MH-ODU) ; p. 10, colonnes AJ020CXS3CH/AA, AJ024CXS4CH/AA, AJ030CXS4CH/AA, AJ036CXS4CH/AA."
   },
   {
     "brand": "Samsung",
@@ -5840,12 +6025,23 @@
     "brand": "Samsung",
     "outdoorModel": "AJ036BXS4CH",
     "maxIndoorUnits": 4,
-    "sourceFile": "https://s3.amazonaws.com/samsung-files/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2021+Free+Joint+Multi+MAX+HEAT_AJ0+BXS+CHAA_New+Protocol_Ver1.0_11292021B.pdf",
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2023+Free+Joint+Multi+for+America+(Low+Ambient,+60Hz,+HP)_New+Protocol_Ver3.0_231027C.pdf",
+    "page": 12,
+    "quote": "Maximum number of connectable Indoor Units EA 3 4 4 4",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Ligne de tableau du Technical Data Book Samsung « 2023 Free Joint Multi for America (Low Ambient, 60Hz, HP) », qui couvre AJ0**BXS*CH/AA et AJ0**CXS*CH/AA (lié depuis samsunghvac.com/fjm-2021/FJM-2021-MH-ODU) ; p. 12, colonnes AJ020BXS3CH/AA, AJ024BXS4CH/AA, AJ030BXS4CH/AA, AJ036BXS4CH/AA. Même chiffre dans le TDB « 2021 Free Joint Multi MAX HEAT » (p. 10). Les fiches de soumission disent « Max Heat 3 PORT / 4 PORT ODU »."
+  },
+  {
+    "brand": "Samsung",
+    "outdoorModel": "AJ036CXS4CH",
+    "maxIndoorUnits": 4,
+    "sourceFile": "https://samsung-files.s3.us-east-1.amazonaws.com/Tech_Files/FJM/Technical+Data+Book_FJM/%5BTDB%5D+2023+Free+Joint+Multi+for+America+(Low+Ambient,+60Hz,+HP)_New+Protocol_Ver3.0_231027C.pdf",
     "page": 10,
     "quote": "Maximum number of connectable Indoor Units EA 3 4 4 4",
     "confidence": "modele",
     "sourceType": "officiel",
-    "note": "Ligne de tableau du Technical Data Book Samsung « 2021 Free Joint Multi MAX HEAT (AJ0**BXS*CH/AA) » ; colonnes AJ020BXS3CH/AA, AJ024BXS4CH/AA, AJ030BXS4CH/AA, AJ036BXS4CH/AA. Le texte du PDF est encodé avec un décalage de police (libellé à −29, unité « EA » à +29) : citation relue après décodage ; les chiffres ne sont pas décalés."
+    "note": "Ligne de tableau du Technical Data Book Samsung « 2023 Free Joint Multi for America (Low Ambient, 60Hz, HP) », qui couvre AJ0**BXS*CH/AA et AJ0**CXS*CH/AA (lié depuis samsunghvac.com/fjm-2021/FJM-2021-MH-ODU) ; p. 10, colonnes AJ020CXS3CH/AA, AJ024CXS4CH/AA, AJ030CXS4CH/AA, AJ036CXS4CH/AA."
   },
   {
     "brand": "Samsung",
@@ -6608,6 +6804,78 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Ligne de tableau lue sur la page rendue (libellé, unité « units », valeur 5) ; le texte extrait du PDF sépare le libellé de la valeur."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TXM2218A12N0",
+    "maxIndoorUnits": 2,
+    "minIndoorUnits": 1,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2218 (page 6) ; minimum publié 1 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2218A12N0 figure dans le même document (page 7, tableau des combinaisons)."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TXM2221A13N0",
+    "maxIndoorUnits": 3,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2221 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2221A13N0 figure dans le même document (page 7, tableau des combinaisons)."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TXM2224A14N0",
+    "maxIndoorUnits": 4,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2224 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2224A14N0 figure dans le même document (page 7, tableau des combinaisons)."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TXM2230A15N0",
+    "maxIndoorUnits": 5,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2230 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2230A15N0 figure dans le même document (page 7, tableau des combinaisons)."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TXM2236A15N0",
+    "maxIndoorUnits": 5,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2236 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2236A15N0 figure dans le même document (page 7, tableau des combinaisons)."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "4TXM2242A15N0",
+    "maxIndoorUnits": 5,
+    "minIndoorUnits": 2,
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/trane-history-b/Literature/Product%20Data/22-1919-1D-EN_06112020",
+    "page": 6,
+    "quote": "Max. number of connectable indoor units 2 3 4 5 5 5",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product Data Trane « 22 Series Split System – Multi-Zone » : lignes de tableau « Min./Max. number of connectable indoor units », colonne 4TXM2242 (page 6) ; minimum publié 2 (« Min. number of connectable indoor units 1 2 2 2 2 2 »). Le numéro complet 4TXM2242A15N0 figure dans le même document (page 7, tableau des combinaisons)."
   },
   {
     "brand": "York",
