@@ -57,9 +57,9 @@ export function ProductCard({
             className="object-contain w-full h-full p-5 transition-transform duration-500 group-hover:scale-[1.03]"
           />
         ) : logo ? (
-          <div className="flex flex-col items-center gap-3 px-6">
+          /* Pas de photo du fabricant : son logo seul, sans promesse de photo ni appareil d'une autre marque. */
+          <div className="flex flex-col items-center px-6">
             <Image src={logo} alt={`Logo ${brand.name}`} width={180} height={64} className="object-contain w-auto h-auto max-w-[160px] max-h-[52px] opacity-90" />
-            <span className="text-[11px] tracking-wide text-[#9ca3af]">Photo officielle à venir</span>
           </div>
         ) : (
           <span className="text-sm text-[#9ca3af]">{brand.name}</span>

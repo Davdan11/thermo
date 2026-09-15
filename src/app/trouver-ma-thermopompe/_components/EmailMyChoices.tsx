@@ -8,6 +8,7 @@ import { RELANCES_CONSENT_TEXT } from "@/lib/relances/consent";
 import { readAttribution } from "@/lib/attribution/client";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
+import { Honeypot } from "@/components/forms/Honeypot";
 
 /* « Envoyez-moi mes trois choix » : le visiteur reçoit ses recommandations par
    courriel (lead : Pipedrive, alerte à l'équipe). Le code de partage vient de
@@ -152,7 +153,7 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
                   <input className={input} style={{ outline: "none" }} type="email" value={v.email} onChange={update("email")} autoComplete="email" required maxLength={160} />
                 </label>
                 {/* Pot de miel : invisible pour les humains. */}
-                <input tabIndex={-1} aria-hidden="true" autoComplete="off" value={v.website} onChange={update("website")} className="absolute left-[-9999px] h-px w-px opacity-0" />
+                <Honeypot value={v.website} onChange={update("website")} />
                 <label className="mt-2 flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.mute }}>
                   <input type="checkbox" checked={v.consent} onChange={update("consent")} className="mt-1 h-4 w-4 shrink-0 accent-[#E54B17]" />
                   <span>

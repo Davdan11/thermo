@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { fp, fpLine } from "@/components/hero/first-paint";
 import { xeMono } from "./fonts";
 import { Arrow, EASE, EMAIL, HEADER_PAD, PHONE, PHONE_HREF, UNDER_HEADER, XLink } from "./shared";
+import { visitAreasLabel } from "@/lib/rdv/booking";
 
 /* ==================================================================
    /contact — « Le numéro ».
@@ -168,9 +169,9 @@ export function ContactNumber() {
                 Zone de service
               </dt>
               <dd style={{ margin: 0 }}>
-                <span className="block text-[16px] font-semibold">Partout au Québec</span>
+                <span className="block text-[16px] font-semibold">Conseil à distance partout au Québec</span>
                 <span className="block text-[15px]" style={{ color: C.mute }}>
-                  Grand Montréal, Québec, et plus.
+                  Visite sur place dans les secteurs desservis&nbsp;: {visitAreasLabel()}.
                 </span>
               </dd>
             </div>

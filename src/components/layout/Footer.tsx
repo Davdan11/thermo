@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 import { ConsentLink } from "@/components/analytics/ConsentBanner";
 import { getActiveBrandCount, getEligibleModelCount } from "@/lib/data/queries/stats";
 import { getLogisVertListInfo } from "@/lib/subsidies/logisvert-meta";
+import { visitAreasLabel } from "@/lib/rdv/booking";
 import { BackToTop, FooterCount, FooterStage } from "./footer/FooterClient";
 import { FooterWordmark } from "./footer/FooterWordmark";
 import "./footer/footer.css";
@@ -190,9 +191,10 @@ export function Footer() {
             </p>
             <div className="ft-rv mt-8" style={at(2)}>
               <p className="ft-caps" style={{ color: "var(--ft-cream)" }}>
-                Partout au Québec
+                Zone de service
               </p>
-              <p className="ft-body mt-3">Nous desservons toutes les régions du Québec avec notre réseau d’installateurs certifiés.</p>
+              {/* Secteurs de visite tirés de la configuration des rendez-vous (src/lib/rdv/booking.ts, AREAS). */}
+              <p className="ft-body mt-3">{`Conseil à distance partout au Québec${NB}; visite sur place dans les secteurs desservis${NB}: ${visitAreasLabel()}.`}</p>
             </div>
           </div>
 
@@ -230,7 +232,8 @@ export function Footer() {
                 <ul className="ft-legal-row m-0 p-0" style={{ listStyle: "none" }}>
                   {LEGAL.map((l) => (
                     <li key={l.href}>
-                      <Link href={l.href} className="ft-link ft-small">
+                      {/* Nom accessible explicite : sans lui, les deux libellés se lisent collés (« ConfidentialitéLoi 25 »). */}
+                      <Link href={l.href} className="ft-link ft-small" aria-label={l.tag ? `${l.label}, ${l.tag}` : undefined}>
                         <span>{l.label}</span>
                         {l.tag ? <span className="ft-tag">{l.tag}</span> : null}
                       </Link>

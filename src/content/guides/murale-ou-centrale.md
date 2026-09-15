@@ -4,7 +4,7 @@ seoTitle: "Thermopompe murale, multizone ou centrale?"
 description: "Le choix dépend de vos conduits, de la disposition des pièces et de votre chauffage actuel, bien plus que de la marque. Critères, coûts relatifs, cas typiques et erreurs à éviter."
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-03-05"
-updatedAt: "2026-09-08"
+updatedAt: "2026-09-15"
 coverImage: "/images/categorie-centrale-samsung-hd.png"
 category: "choisir"
 keywords: ["thermopompe murale ou centrale", "thermopompe multizone", "thermopompe centrale conduits", "mini-split ou central"]
@@ -46,7 +46,7 @@ Une murale chauffe la pièce où elle est installée et ce qui communique avec e
 
 ## Le troisième critère : le budget et la subvention
 
-À performance équivalente, la murale simple zone est la moins chère à installer, le multizone vient ensuite, la centrale coûte le plus (appareil de traitement d'air, raccordement au réseau, électricité). Nous n'affichons pas de prix : ils dépendent de votre maison et de l'installateur, et seule une soumission écrite fait foi.
+À performance équivalente, la murale simple zone est la moins chère à installer, le multizone vient ensuite, la centrale coûte le plus (appareil de traitement d'air, raccordement au réseau, électricité). Nous ne présentons aucune offre ferme ni aucun prix de vente : le montant dépend de votre maison et de l'installateur. Les fourchettes de la page [Prix](/prix) sont des ordres de grandeur indicatifs du marché québécois ; le prix exact vient de la soumission écrite.
 
 Côté subvention, LogisVert d'Hydro-Québec fixe un montant par appariement certifié. Les grosses centrales climat froid reçoivent les montants les plus élevés de notre base ; les murales, des montants plus modestes mais sur un coût plus bas. Comparez le montant net, pas le montant brut.
 

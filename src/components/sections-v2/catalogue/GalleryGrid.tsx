@@ -188,11 +188,9 @@ function GalleryCard({
               className="h-full w-full object-contain p-6 transition-transform duration-700 ease-out group-hover:scale-[1.06]"
             />
           ) : logo ? (
-            <div className="flex flex-col items-center gap-3 px-6">
+            /* Pas de photo du fabricant : son logo seul, sans promesse de photo ni appareil d'une autre marque. */
+            <div className="flex flex-col items-center px-6">
               <Image src={logo} alt={`Logo ${brand.name}`} width={180} height={64} className="h-auto max-h-[52px] w-auto max-w-[160px] object-contain opacity-90" />
-              <span className="text-[11px] tracking-wide" style={{ color: "rgba(10,20,25,0.45)" }}>
-                Photo officielle à venir
-              </span>
             </div>
           ) : (
             <span className="text-sm" style={{ color: "rgba(10,20,25,0.45)" }}>

@@ -425,20 +425,17 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
       <GrandFroid card={card} play={inView} i={i} />
 
       {/* Scène de l'appareil */}
-      <div className="relative mx-6 mt-5 h-[170px] overflow-hidden rounded-[20px] sm:mx-7 sm:h-[190px]" style={{ background: card.ownImage ? "#fff" : C.ink }}>
+      <div data-scene="" className="relative mx-6 mt-5 h-[170px] overflow-hidden rounded-[20px] sm:mx-7 sm:h-[190px]" style={{ background: card.ownImage ? "#fff" : C.ink }}>
         {card.ownImage ? (
           <div className="tm-float absolute inset-0" style={{ animationDelay: `${i * -2}s` }}>
             <Image src={card.img} alt={`${card.brand} ${card.outdoor}`} fill sizes="(min-width: 1024px) 380px, 90vw" style={{ objectFit: "contain", padding: 18 }} />
           </div>
         ) : (
-          /* Pas de photo officielle : on n'affiche pas l'appareil d'une autre marque. */
+          /* Pas de photo du fabricant : ni l'appareil d'une autre marque, ni promesse de photo ; le nom de la marque, décoratif (déjà dans le titre). */
           <>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center" style={{ color: C.cream }}>
+            <div aria-hidden="true" className="absolute inset-0 flex flex-col items-center justify-center text-center" style={{ color: C.cream }}>
               <span style={{ fontSize: 42, fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 1 }}>{card.brand}</span>
-              <span className="text-[11px] font-semibold uppercase" style={{ letterSpacing: "0.18em", color: C.faint, marginTop: 10 }}>
-                Photo officielle à venir
-              </span>
-              <span aria-hidden="true" className="mt-4 flex gap-2">
+              <span className="mt-4 flex gap-2">
                 {[0, 1, 2].map((d) => (
                   <span key={d} className="h-[5px] w-[5px] rounded-full" style={{ background: d === i ? C.orange : "rgba(244,239,231,0.3)" }} />
                 ))}

@@ -88,7 +88,7 @@ const blocsFroid = (html: string) =>
   html
     .split('data-grand-froid="')
     .slice(1)
-    .map((s) => ({ kind: s.slice(0, s.indexOf('"')), texte: texte(s.slice(s.indexOf(">") + 1, s.indexOf("Photo officielle à venir"))) }));
+    .map((s) => ({ kind: s.slice(0, s.indexOf('"')), texte: texte(s.slice(s.indexOf(">") + 1, s.lastIndexOf("<", s.indexOf("data-scene")))) }));
 
 const ANSWERS = {
   postalCode: "H2X 1Y4",

@@ -24,7 +24,10 @@
 /* ---------- Monogramme (/marques/[slug]) ---------- */
 .mq-mono { position: relative; color: transparent; -webkit-text-stroke: var(--mq-stroke, 1.5px) #15171a; }
 .mq-mono::after {
+  /* Copie à l'encre, décorative : texte de remplacement vide, sinon le titre se lit « Thermopompes Daikin Daikin ».
+     La première déclaration sert aux navigateurs qui ignorent la syntaxe « / "" ». */
   content: attr(data-ink);
+  content: attr(data-ink) / "";
   position: absolute;
   inset: 0;
   color: #15171a;
