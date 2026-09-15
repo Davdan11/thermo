@@ -1,27 +1,110 @@
 {
+  "Amana|ASZS601810A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS602410A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS60241EA": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS603010A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS603610A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS60361EA": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS604210A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS60421EA": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS604810A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS60481EA": {
+    "nom": "2026-09-15"
+  },
+  "Amana|ASZS606010A": {
+    "nom": "2026-09-15"
+  },
   "Amana|ASZV902410A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Amana|ASZV903610A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Amana|ASZV904810A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Amana|ASZV906010A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Amana|AVZC200241A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Amana|AVZC200361A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Amana|AVZC200481A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Amana|AVZC200601B": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV6SA1810A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV6SA2410A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV6SA3010A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV6SA3610A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV6SA4210A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV6SA4810A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV6SA6010A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV7SA2410A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV7SA3610A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV7SA4210A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV7SA4810A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV7SA6010A": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV9SA241CA": {
+    "nom": "2026-09-15"
+  },
+  "Amana|AZV9SA361CA": {
+    "nom": "2026-09-15"
   },
   "American Standard|4A6L9024A1": {
     "temperature": "2026-09-14"
@@ -60,76 +143,100 @@
     "temperature": "2026-09-14"
   },
   "American Standard|4TXK2309A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK2312A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK2318A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK2324A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK2509A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK2512A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK2518A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK2524A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK2536A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK3809B10NU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK3812A10NU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK3818A10NU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXK3824A10NU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2118A12N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2124A13N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2130A14N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2136A14N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2142A15N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2218A12N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2221A13N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2224A14N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2230A15N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2236A15N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2242A15N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|4TXM2318A12NU": {
     "nom": "2026-09-14"
@@ -138,13 +245,16 @@
     "nom": "2026-09-14"
   },
   "American Standard|5HCL5024A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|5HCL5036A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|5HCL5060A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "American Standard|5HPL5024A1": {
     "temperature": "2026-09-14"
@@ -159,22 +269,28 @@
     "temperature": "2026-09-14"
   },
   "Bosch|BMS500AAS0090CSXXA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Bosch|BMS500AAS0091CSXXA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Bosch|BMS500AAS0120CSXXA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Bosch|BMS500AAS0121CSXXA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Bosch|BMS500AAS0181CSXXA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Bosch|BMS500AAS0241CSXXA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Bosch|BOVA24RXBM15S": {
     "temperature": "2026-09-14"
@@ -468,31 +584,39 @@
     "nom": "2026-09-14"
   },
   "Coleman|CH16B2421": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|CH16B3622": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|CH16B4821": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|CH16B6021": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|HC20B2421": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|HC20B3621": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|HC20B3621S": {
     "temperature": "2026-09-14"
   },
   "Coleman|HC20B4821": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|HC20B6021": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|HC20B6021S": {
     "temperature": "2026-09-14"
@@ -507,19 +631,24 @@
     "nom": "2026-09-14"
   },
   "Coleman|HMH72B241": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|HMH72B341": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|HMH72B361": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|HMH72B481": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|HMH72B601": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|UMC18CN23STG1": {
     "temperature": "2026-09-14"
@@ -534,25 +663,50 @@
     "temperature": "2026-09-14"
   },
   "Coleman|UPC09CN23STG1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|UPC12CN23STG1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|UPC18CN23STG1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|UPC24CN23STG1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|UPC36CN23STG1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Coleman|UPC48CN23STG1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Coleman|URC09CN15STG1": {
+    "nom": "2026-09-15"
+  },
+  "Coleman|URC09CN23STG1": {
+    "nom": "2026-09-15"
+  },
+  "Coleman|URC12CN15STG1": {
+    "nom": "2026-09-15"
+  },
+  "Coleman|URC12CN23STG1": {
+    "nom": "2026-09-15"
+  },
+  "Coleman|URC18CN23STG1": {
+    "nom": "2026-09-15"
+  },
+  "Coleman|URC24CN23STG1": {
+    "nom": "2026-09-15"
   },
   "Conforto|ADSZ136DA": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Conforto|MHSD118DACFC": {
     "nom": "2026-09-14"
@@ -587,17 +741,30 @@
   "Conforto|MHSZ124DA": {
     "nom": "2026-09-14"
   },
+  "Convectair|500004490": {
+    "temperature": "2026-09-15"
+  },
+  "Convectair|500004492": {
+    "temperature": "2026-09-15"
+  },
+  "Convectair|500004494": {
+    "temperature": "2026-09-15"
+  },
   "Convectair|8090O": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Convectair|8120O": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Convectair|8180O": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Convectair|8240O": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Daikin|2MXL18QMVJU": {
     "temperature": "2026-09-14"
@@ -657,19 +824,24 @@
     "temperature": "2026-09-14"
   },
   "Daikin|DZ20VC0361B": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Daikin|DZ20VC0481B": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Daikin|DZ9VCA2410A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Daikin|DZ9VCA3610A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Daikin|DZ9VCA4810A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Daikin|RX09AXVJU": {
     "temperature": "2026-09-14"
@@ -809,6 +981,24 @@
   "Daikin|RXTQ60TAVJU": {
     "temperature": "2026-09-14"
   },
+  "Daikin|RZA18AAVJU": {
+    "nom": "2026-09-15"
+  },
+  "Daikin|RZA24AAVJU": {
+    "nom": "2026-09-15"
+  },
+  "Daikin|RZA30AAVJU": {
+    "nom": "2026-09-15"
+  },
+  "Daikin|RZA36AAVJU": {
+    "nom": "2026-09-15"
+  },
+  "Daikin|RZA42AAVJU": {
+    "nom": "2026-09-15"
+  },
+  "Daikin|RZA48AAVJU": {
+    "nom": "2026-09-15"
+  },
   "Daikin|RZQ18TAVJU": {
     "temperature": "2026-09-14"
   },
@@ -825,16 +1015,20 @@
     "temperature": "2026-09-14"
   },
   "Danby|DAS090AGBAHWDBO": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Danby|DAS120AGBAHWDBO": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Dettson|EVD18O": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Dettson|EVD36OS": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Dettson|MHD18": {
     "nom": "2026-09-14"
@@ -849,7 +1043,8 @@
     "nom": "2026-09-14"
   },
   "Direct AIR|DIRM18CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM18DA251Z": {
     "nom": "2026-09-14"
@@ -858,7 +1053,8 @@
     "nom": "2026-09-14"
   },
   "Direct AIR|DIRM24CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM24DA251Z": {
     "nom": "2026-09-14"
@@ -867,223 +1063,305 @@
     "nom": "2026-09-14"
   },
   "Direct AIR|DIRM36CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM36DA254Z": {
     "nom": "2026-09-14"
   },
   "Direct AIR|DIRM36LCDA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM36MAGICPRO20OU1F": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM406HXPRO281Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM409DA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM409HXPRO281Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM412DA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM412HXPRO281Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM418CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM418DA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM418DA252Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM418HXPRO281Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM418HXPRO282Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM418MAGICPRO20OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM424CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM424DA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM424HXPRO281Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM424MAGICPRO20OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM427DA253Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM428HXPRO283Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM430CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM430DA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM430MAGICPRO20OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM436CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM436DA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM436DA254Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM436HXPRO284Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM436LCDA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM436LCHX1Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM436MAGICPRO20OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM448CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM448DA255Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM448HXPRO285Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM448LCDA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM448LCHX1Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM448MAGICPRO20OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM460CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM460LCDA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM460MAGICPRO20OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM48CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM48DA255Z": {
     "nom": "2026-09-14"
   },
   "Direct AIR|DIRM48LCDA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM60CS19OU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|DIRM60LCDA251Z": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|M2OF18HFN1M": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|M3OF27HFN1M": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|M3OH27HFN1M": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|M4OH36HFN1M": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|M5OF48HFN1M": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|M5OG48HFN1MX": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|MOB3009HFN1MX0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|MOB3012HFN1MT0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|MOB3012HFN1MV0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|MOBA3009HFN1MT0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|MOCA3118HFN1MT0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|MOD3024HFN1MT0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|MOD3124HFN1MT0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Direct AIR|MOX43017HFN1MT0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DE09HOS42230E4": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DE12HOS42230E4": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Elios|DE18HOM23230X2": {
+    "nom": "2026-09-15"
   },
   "Elios|DE24HOS25230E3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DE24HOS25230E3A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Elios|DE27HOM23230X2": {
+    "nom": "2026-09-15"
   },
   "Elios|DE27HOM25230X3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Elios|DE36HOM23230X2": {
+    "nom": "2026-09-15"
   },
   "Elios|DE36HOM25230X3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DE36HOS18230E5": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DE36HOS25230E3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Elios|DE48HOM23230X2": {
+    "nom": "2026-09-15"
   },
   "Elios|DE48HOS18230E5": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DE48HOS25230E3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DE60HOS18230E5": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA06HOS28230E8": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA09HOS21115S1": {
     "temperature": "2026-09-14"
   },
   "Elios|DEA09HOS28230E8": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA18HOS20230E7": {
     "temperature": "2026-09-14"
@@ -1095,7 +1373,8 @@
     "temperature": "2026-09-14"
   },
   "Elios|DEA24HOS28230E8": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA30HOS20230E7": {
     "temperature": "2026-09-14"
@@ -1110,7 +1389,8 @@
     "temperature": "2026-09-14"
   },
   "Elios|DEA36HOS28230E8": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA48HOS18230S5": {
     "temperature": "2026-09-14"
@@ -1119,28 +1399,55 @@
     "temperature": "2026-09-14"
   },
   "Elios|DEA48HOS28230E8": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA55HOM23230X2": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA55HOM25230X3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA60HOS18230S5": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA60HOS19230E7": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|DEA60HOS20230E7": {
     "temperature": "2026-09-14"
   },
+  "Elios|ESHEA09C2AN1": {
+    "nom": "2026-09-15"
+  },
+  "Elios|ESHEA12C2AN1": {
+    "nom": "2026-09-15"
+  },
+  "Elios|ESHEA18C2AN1": {
+    "nom": "2026-09-15"
+  },
+  "Elios|ESHEA24C2AN1": {
+    "nom": "2026-09-15"
+  },
   "Elios|ESHMA33C2AN1": {
     "nom": "2026-09-14"
   },
+  "Elios|ESHUA36R2AN1": {
+    "nom": "2026-09-15"
+  },
+  "Elios|ESHUA48R2AN1": {
+    "nom": "2026-09-15"
+  },
+  "Elios|ESHUA60R2AN1": {
+    "nom": "2026-09-15"
+  },
   "Elios|EXHSA1832AV1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Elios|MSHMB36R2AN1": {
     "nom": "2026-09-14"
@@ -1281,73 +1588,152 @@
     "temperature": "2026-09-14"
   },
   "Fujitsu|AOUK024SSAN7": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Fujitsu|AOUK036SSAN7": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Fujitsu|AOUK048SSAN7": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "GE Appliances|1G4248ED2BE": {
     "temperature": "2026-09-14"
   },
   "GE|NS18H36MA4": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "GE|NS18H60MA4": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "GE|NS22H24MA4A": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "GE|NS22H36MA4A": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "GE|NS22H48MA4A": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "GE|NS22H60MA4A": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
+  },
+  "Goodman|GSZS601810A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GSZS602410A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GSZS603010A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GSZS603610A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GSZS604210A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GSZS604810A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GSZS606010A": {
+    "nom": "2026-09-15"
   },
   "Goodman|GSZV902410A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|GSZV903610A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|GSZV904810A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|GSZV906010A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|GVZC200481A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV6SA1810A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV6SA2410A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV6SA3010A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV6SA3610A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV6SA4210A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV6SA4810A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV6SA6010A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV7SA2410A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV7SA3610A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV7SA4210A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV7SA4810A": {
+    "nom": "2026-09-15"
+  },
+  "Goodman|GZV7SA6010A": {
+    "nom": "2026-09-15"
   },
   "Goodman|MSH093E23MCAA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|MSH093G22MCAA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|MSH121G20MCAA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|MSH123E23MCAA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|MSH183E23MCAA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|MSH243E23MCAA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Goodman|MST283G22MHAA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|3VIR09HP115V1BO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|3VIR12HP115V1BO": {
     "temperature": "2026-09-14"
@@ -1371,52 +1757,68 @@
     "temperature": "2026-09-14"
   },
   "Gree|GUD24W2NHGDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUD24W2NXFDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUD24WADU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUD30W2NHGDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUD36W2NHGDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUD36W2NXFDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUD48W2NHGDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUD48W2NXFDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUD60W2NHGDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUD60W2NXFDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUHD18ND3FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUHD24ND3FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUHD30ND3FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUHD36ND3FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUHD42ND3FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GUHD48ND3FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GWH09AGCXDA3DNA1AO": {
     "temperature": "2026-09-14"
@@ -1447,6 +1849,9 @@
   },
   "Gree|GWH12AUCXDD6DNA1EO": {
     "temperature": "2026-09-14"
+  },
+  "Gree|GWH12AVDXED6DNA1AO": {
+    "nom": "2026-09-15"
   },
   "Gree|GWH12QCA3DNA1DO": {
     "temperature": "2026-09-14"
@@ -1515,7 +1920,8 @@
     "temperature": "2026-09-14"
   },
   "Gree|GWHD36ND3LO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GWHD36ND3NO": {
     "temperature": "2026-09-14"
@@ -1524,19 +1930,23 @@
     "temperature": "2026-09-14"
   },
   "Gree|GWHD42ND3LO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|GWHD42ND3NO": {
     "temperature": "2026-09-14"
   },
   "Gree|MULTIE18HP230V1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|MULTIE24HP230V1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|MULTIE30HP230V1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|TWH36ATEXHD6DNA1GO": {
     "temperature": "2026-09-14"
@@ -1556,32 +1966,68 @@
   "Gree|VIR24HP230V1BO": {
     "temperature": "2026-09-14"
   },
+  "Gree|WLUD24W2DDU": {
+    "nom": "2026-09-15"
+  },
+  "Gree|WLUD30W2DDU": {
+    "nom": "2026-09-15"
+  },
+  "Gree|WLUD36W2DDU": {
+    "nom": "2026-09-15"
+  },
+  "Gree|WLUD42W2DDU": {
+    "nom": "2026-09-15"
+  },
+  "Gree|WLUD48W2DDU": {
+    "nom": "2026-09-15"
+  },
+  "Gree|WLUD60W2DDU": {
+    "nom": "2026-09-15"
+  },
   "Gree|WLWH09ACDD3DNA1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|WLWH09AGCXDA3DNA1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Gree|WLWH09AGCXDD3DNA1AO": {
+    "nom": "2026-09-15"
   },
   "Gree|WLWH12AGCXDA3DNA1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Gree|WLWH12AGCXDD3DNA1AO": {
+    "nom": "2026-09-15"
   },
   "Gree|WLWH12YDD3DNA1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|WLWH18AWDXDD3DNA1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|WLWH18YED3DNA1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Gree|WLWH24AGEXHD3DNA1AO": {
+    "nom": "2026-09-15"
   },
   "Gree|WLWH24YED3DNA1AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|WLWH30QFXHD3DNB2AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Gree|WLWH36QFXHD3DNB2BO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Haier|1Q09ED2BE": {
     "temperature": "2026-09-14"
@@ -1611,7 +2057,8 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AO09U3R25E": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AO09U3R25SS": {
     "temperature": "2026-09-14"
@@ -1623,10 +2070,12 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AO12U3R25E": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AO12U3R25SS": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AO12U3T25P": {
     "temperature": "2026-09-14"
@@ -1635,7 +2084,8 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AO18U3R25E": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AO18U3R25SS": {
     "temperature": "2026-09-14"
@@ -1644,10 +2094,12 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AO24U3R25E": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AO24U3R25SS": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AO24U3T25U": {
     "temperature": "2026-09-14"
@@ -1662,7 +2114,8 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AOH36U3T25U": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AOH48U3T24P": {
     "temperature": "2026-09-14"
@@ -1674,7 +2127,8 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AOH60U3T25U": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AOU09U3T25U": {
     "temperature": "2026-09-14"
@@ -1692,7 +2146,8 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AS09UW3SVE": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AS09UW3SXE00": {
     "temperature": "2026-09-14"
@@ -1701,16 +2156,19 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AS12UW3SXE": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AST0924TXO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AST09UW3SVG01A": {
     "temperature": "2026-09-14"
   },
   "Hisense|AST1224TUO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AST12UW3SXG01A": {
     "temperature": "2026-09-14"
@@ -1719,10 +2177,12 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AST1824TXO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AST2424TUO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AST24UW3SDN01A": {
     "temperature": "2026-09-14"
@@ -1731,7 +2191,8 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AUW36U3ST1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AUWR2424P": {
     "temperature": "2026-09-14"
@@ -1764,34 +2225,44 @@
     "temperature": "2026-09-14"
   },
   "Hisense|AVW24H3DH2H1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AVW28H3FH2": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AVW36F3DAH2": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AVW36H3DH2H1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AVW36H3FH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AVW48F3DAH2": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AVW48H3DH2H1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AVW48H3FH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AVW60F3DAH2": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Hisense|AVW60H3FH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Keeprite|C5H0V24KAAA": {
     "nom": "2026-09-14"
@@ -1833,25 +2304,35 @@
     "nom": "2026-09-14"
   },
   "Keeprite|D5CVRAH09AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Keeprite|D5CVRAH12AAJ": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Keeprite|D5CVRAH12AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Keeprite|D5CVRAH18AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Keeprite|D5CVRAH24AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Keeprite|DLCLRBH36AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Keeprite|DLCLRBH48AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
+  },
+  "Keeprite|DLCLRCH58AAK": {
+    "temperature": "2026-09-15"
   },
   "Keeprite|DLCURAH18AAK": {
     "nom": "2026-09-14"
@@ -1895,6 +2376,18 @@
   "LG|KUMXB541A": {
     "temperature": "2026-09-14"
   },
+  "LG|KUSAB091A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSAB121A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSAB181A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSAP241A": {
+    "nom": "2026-09-15"
+  },
   "LG|KUSXA121A": {
     "temperature": "2026-09-14"
   },
@@ -1904,8 +2397,33 @@
   "LG|KUSXA481A": {
     "temperature": "2026-09-14"
   },
+  "LG|KUSXB091A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSXB121A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSXB181A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSXB241A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSXB301A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSXB361A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSXB421A": {
+    "nom": "2026-09-15"
+  },
+  "LG|KUSXB481A": {
+    "nom": "2026-09-15"
+  },
   "LG|KUSXB601A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "LG|LAU090HYV1": {
     "temperature": "2026-09-14"
@@ -1923,7 +2441,8 @@
     "temperature": "2026-09-14"
   },
   "LG|LGU121HSV3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "LG|LMU180HV": {
     "temperature": "2026-09-14"
@@ -2066,6 +2585,15 @@
   "Lennox|MHB024S4S1P": {
     "temperature": "2026-09-14"
   },
+  "Lennox|MLB036S4S2P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MLB048S4M2P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MLB048S4S2P": {
+    "nom": "2026-09-15"
+  },
   "Lennox|MMLD009S6S1P": {
     "nom": "2026-09-14"
   },
@@ -2075,62 +2603,167 @@
   "Lennox|MMLD018S6S1P": {
     "nom": "2026-09-14"
   },
+  "Lennox|MMLD024S6S1P": {
+    "nom": "2026-09-15"
+  },
   "Lennox|MMLD030S6S1P": {
     "nom": "2026-09-14"
   },
   "Lennox|MMLD036S6S1P": {
     "nom": "2026-09-14"
   },
+  "Lennox|MMLD048S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MMPD018S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MMPD024S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MMPD030S6S1P": {
+    "nom": "2026-09-15"
+  },
   "Lennox|MMPD036S6S1P": {
     "nom": "2026-09-14"
   },
+  "Lennox|MMPD048S6S1P": {
+    "nom": "2026-09-15"
+  },
   "Lennox|MPB009S4S1L": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB009S4S1P": {
+    "nom": "2026-09-15"
   },
   "Lennox|MPB012S4S1L": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB012S4S1P": {
+    "nom": "2026-09-15"
   },
   "Lennox|MPB018S4M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB018S4M2P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB018S4S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB024S4S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB030S4M2P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB036S4M1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB036S4S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB048S4M1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MPB048S4S1P": {
+    "nom": "2026-09-15"
   },
   "Lennox|MPC060S4S1P": {
     "temperature": "2026-09-14"
   },
+  "Lennox|MWHD009S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWHD012S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWHD015S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWHD018S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWLD009S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWLD012S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWLD015S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWLD018S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWLD024S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWPD009S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWPD012S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWPD015S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWPD018S6S1P": {
+    "nom": "2026-09-15"
+  },
+  "Lennox|MWPD024S6S1P": {
+    "nom": "2026-09-15"
+  },
   "Lennox|VPB036H4M3P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Lennox|VPB048H4M3P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Maxi AIR|NET52PLA12INT": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Maxi AIR|NET52PLA18INT": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Maxi AIR|NET52SUPAE12E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Maxi AIR|NET52SUPAE18E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Maxi AIR|NET53AEG12EXT": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Maxi AIR|NET53AEG18EXT": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Maxi AIR|NET53MULTI28E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Maxi AIR|NET53MULTI36E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Maxi AIR|YS21F12HRDN1": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Maxi AIR|YS21F18HRDN1": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Midea|37MAHAQ06AA3": {
     "nom": "2026-09-14"
@@ -2580,19 +3213,24 @@
     "nom": "2026-09-14"
   },
   "Midea|D5CVRAH09AAK": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|D5CVRAH12AAJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|D5CVRAH12AAK": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|D5CVRAH18AAK": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|D5CVRAH24AAK": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|DLCERBH09AAJ": {
     "nom": "2026-09-14"
@@ -2625,10 +3263,12 @@
     "nom": "2026-09-14"
   },
   "Midea|DLCLRBH36AAK": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|DLCLRBH48AAK": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|DLCLRCH36AAK": {
     "nom": "2026-09-14"
@@ -2637,7 +3277,8 @@
     "nom": "2026-09-14"
   },
   "Midea|DLCLRCH58AAK": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|DLCMHBH24CAK": {
     "nom": "2026-09-14"
@@ -2703,7 +3344,8 @@
     "nom": "2026-09-14"
   },
   "Midea|DLCSRBH06AAK": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|DLCSRBH09AAK": {
     "nom": "2026-09-14"
@@ -2739,7 +3381,8 @@
     "nom": "2026-09-14"
   },
   "Midea|DLCURAH36ACK": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|DLCURAH48AAK": {
     "nom": "2026-09-14"
@@ -2748,70 +3391,91 @@
     "nom": "2026-09-14"
   },
   "Midea|M3OF27HFN1M": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M3OX43018HFN10M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M4OD3027HFN10M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M5CVRAQ09AA3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M5CVRAQ12AA1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M5CVRAQ12AA3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M5CVRAQ18AA3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M5CVRAQ24AA3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M5OD3036HFN10M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M5OF48HFN1M": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M6OE3048HFN10M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|M6OE3060HFN10M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MASAG0921HS2GB": {
     "temperature": "2026-09-14"
   },
   "Midea|MDVV24WMN10TH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MDVV30WMN10TH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MDVV36WMN10TH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1ASH09B1A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1ASH09B2A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1ASH12B1A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1ASH12B2A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1ASH18B2A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1ASH24B2A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1BEH24B2A": {
     "nom": "2026-09-14"
@@ -2846,23 +3510,32 @@
   "Midea|MO1BUH48B2A": {
     "nom": "2026-09-14"
   },
+  "Midea|MO1BUH60B2A": {
+    "nom": "2026-09-15"
+  },
   "Midea|MO1CSH09B1A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1CSH09B2A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1CSH12B1A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1CSH12B2A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1CSH18B2A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1CSH24B2A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MO1ESH09B1A": {
     "temperature": "2026-09-14"
@@ -2964,76 +3637,99 @@
     "nom": "2026-09-14"
   },
   "Midea|MOD24HFN10AE": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOD24HFN1AA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOD3024HFN10M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOD3024HFN1MW": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOD3036HFN10M2P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOD30U30HFN1MR0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOD30U30HFN1MR0X": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOD30U36HFN1MR0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOE3048HFN10M2P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOE3060HFN10M2P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOE30U60HFN1MGAX": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOE31U36HFN1M": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX23009HFN10M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX23009HFN1BW0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX23012HFN10M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX23012HFN1MS8W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX312HFN10AE": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX330U18HFN1MR0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX418HFN10AE": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX418HFN1AA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX43018HFN10M1P": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX43024HFN1MR0W": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Midea|MOX430U18HFN1M": {
     "nom": "2026-09-14"
   },
   "Midea|MOX430U24HFN1MR0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|MUZFH09NA": {
     "temperature": "2026-09-14"
@@ -3063,34 +3759,44 @@
     "temperature": "2026-09-14"
   },
   "Mitsubishi Electric|NAXSPB12A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|NAXSST15A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|NTXSMT09A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|NTXSMT12A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|NTXSPF09A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|NTXSPF12A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|NTXSPF15A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|NTXSPF18A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|NTXSST12A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|NTXSST24A112A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|PUMYHP36NKMU": {
     "nom": "2026-09-14"
@@ -3105,22 +3811,26 @@
     "nom": "2026-09-14"
   },
   "Mitsubishi Electric|PUMYP36NKMU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|PUMYP36NKMU2": {
     "nom": "2026-09-14"
   },
   "Mitsubishi Electric|PUMYP48NKMU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|PUMYP48NKMU2": {
     "nom": "2026-09-14"
   },
   "Mitsubishi Electric|PUMYP60NKMU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|PUMYP60NKMU1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Mitsubishi Electric|PUMYP60NKMU2": {
     "nom": "2026-09-14"
@@ -3213,19 +3923,23 @@
     "temperature": "2026-09-14"
   },
   "Moovair|DM18HOS25230E3A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Moovair|DM24HOS25230E3A": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Moovair|DM36HOS18230E5": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Moovair|DM36HOS25230E3": {
     "temperature": "2026-09-14"
   },
   "Moovair|DM48HOS18230E5": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Moovair|DM48HOS25230E3": {
     "temperature": "2026-09-14"
@@ -3255,7 +3969,8 @@
     "temperature": "2026-09-14"
   },
   "Moovair|DMA55HOM25230X3": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Moovair|DMA60HOS18230S5": {
     "temperature": "2026-09-14"
@@ -3279,40 +3994,67 @@
     "nom": "2026-09-14"
   },
   "Moovair|SHC24VH2AG": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|CDHAS26B33O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Napoleon|NDHAM28O": {
+    "nom": "2026-09-15"
+  },
+  "Napoleon|NDHAM36O": {
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAMB27O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAMB36O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAMBB18O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAMBB27O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAMBB36O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAMBB48O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAMBB53O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Napoleon|NDHAS2212O": {
+    "nom": "2026-09-15"
+  },
+  "Napoleon|NDHAS2218O": {
+    "nom": "2026-09-15"
+  },
+  "Napoleon|NDHAS2224O": {
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAS22B12O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAS22B18O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAS22B24O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAS22BA12O": {
     "nom": "2026-09-14"
@@ -3323,62 +4065,93 @@
   "Napoleon|NDHAS22BA24O": {
     "nom": "2026-09-14"
   },
+  "Napoleon|NDHAS2609O": {
+    "nom": "2026-09-15"
+  },
+  "Napoleon|NDHAS2612O": {
+    "nom": "2026-09-15"
+  },
+  "Napoleon|NDHAS2618O": {
+    "nom": "2026-09-15"
+  },
+  "Napoleon|NDHAS2624O": {
+    "nom": "2026-09-15"
+  },
   "Napoleon|NDHAS26B09O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAS26B12O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAS26B18O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAS26B24O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAS26B33O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHAS26B36O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NDHBS2012O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NH2109FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NH2112FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NH2118FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NH2124FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NH2509FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NH2512FO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NH2518HO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NH2524HO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NHAS18O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NMZO27FB": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NMZO36FB": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|NS18HV48A60": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Napoleon|WSEHV2436BA1N": {
     "nom": "2026-09-14"
@@ -3388,6 +4161,12 @@
   },
   "Napoleon|WSEHV4860RA1N": {
     "nom": "2026-09-14"
+  },
+  "Ouellet|OFLX1H24AO": {
+    "temperature": "2026-09-15"
+  },
+  "Ouellet|OFLX1H48AO": {
+    "temperature": "2026-09-15"
   },
   "Panasonic|CSZ12AKUAW": {
     "nom": "2026-09-14"
@@ -3400,6 +4179,9 @@
   },
   "Panasonic|CSZ9AKUAW": {
     "nom": "2026-09-14"
+  },
+  "Panasonic|CU5E36QBU5": {
+    "nom": "2026-09-15"
   },
   "Panasonic|CUE12SD3UA": {
     "temperature": "2026-09-14"
@@ -3426,19 +4208,24 @@
     "temperature": "2026-09-14"
   },
   "Panasonic|CUXE12SKUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Panasonic|CUXE12SKUA1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Panasonic|CUXE15SKUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Panasonic|CUXE15SKUA1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Panasonic|CUXE9SKUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Payne|37MAHAQ06AA3": {
     "nom": "2026-09-14"
@@ -3807,34 +4594,44 @@
     "nom": "2026-09-14"
   },
   "Quebec Vair|NET52PLA12EXT": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Quebec Vair|NET52PLA18EXT": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Quebec Vair|NET52QVAIR12E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Quebec Vair|NET52QVAIR18E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Quebec Vair|NET52QVAIR3012E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Quebec Vair|NET52QVAIR3018E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Quebec Vair|NET53AEG12EXT": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Quebec Vair|NET53AEG18EXT": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Quebec Vair|NET53MULTI28E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Quebec Vair|NET53MULTI36E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Rheem|RD16AY24AJVC": {
     "temperature": "2026-09-14"
@@ -3849,25 +4646,29 @@
     "temperature": "2026-09-14"
   },
   "Rheem|RD16AZ24AJVUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|RD16AZ30AJHUA": {
     "temperature": "2026-09-14"
   },
   "Rheem|RD16AZ30AJVUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|RD16AZ36AJHUA": {
     "temperature": "2026-09-14"
   },
   "Rheem|RD16AZ36AJVUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|RD16AZ48AJHUA": {
     "temperature": "2026-09-14"
   },
   "Rheem|RD16AZ48AJVUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|RD17AZ24AJ3N": {
     "temperature": "2026-09-14"
@@ -4008,112 +4809,148 @@
     "temperature": "2026-09-14"
   },
   "Rheem|ROMH18FXZHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROMH24FXZHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROMH36AFXZJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROMH36FXZHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROMH45AFXZJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH09AFCJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH09AFFHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH09AFFJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH09AFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH09AHHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH09AHWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH09BFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH12AFCJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH12AFFHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH12AFFJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH12AFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH12AHHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH12AHWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH12BFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH15AFFHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH15AFFJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH15AHHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH15AHWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH18AFCJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH18AHXHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH18ASJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH18AXFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH18VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH24AHXHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH24ASJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH24AXFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH24VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH30AHXHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH30VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH36VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|ROSH48VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Rheem|RP18AZ24AJVC": {
     "temperature": "2026-09-14"
@@ -4158,25 +4995,29 @@
     "temperature": "2026-09-14"
   },
   "Ruud|RD16AZ24AJVUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RD16AZ30AJHUA": {
     "temperature": "2026-09-14"
   },
   "Ruud|RD16AZ30AJVUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RD16AZ36AJHUA": {
     "temperature": "2026-09-14"
   },
   "Ruud|RD16AZ36AJVUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RD16AZ48AJHUA": {
     "temperature": "2026-09-14"
   },
   "Ruud|RD16AZ48AJVUA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RD17AZ24AJ3N": {
     "temperature": "2026-09-14"
@@ -4203,106 +5044,140 @@
     "temperature": "2026-09-14"
   },
   "Ruud|RO1HFZ09AJ2H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HFZ09AJ2S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HFZ12AJ2H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HFZ12AJ2S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HFZ15AJ2H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HFZ15AJ2S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HFZ18AJ2H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HFZ24AJ2H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HFZ30AJ2H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HGZ09AJ1H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HGZ09AJ1S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HGZ12AJ1H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HGZ12AJ1S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HGZ15AJ1H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HGZ15AJ1S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HGZ42AJ8S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HGZ48AJ8S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ09AJ2H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ09AJ2S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ09AJ3S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ09AJ8S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ12AJ2S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ12AJ3S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ12AJ8S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ18AJ2S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ18AJ3S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ18AJ8S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ24AJ2S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ24AJ3S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ24AJ8S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ30AJ3S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ30AJ8S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ36AJ3S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO1HHZ36AJ8S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO2HFZ18AJ1H": {
     "temperature": "2026-09-14"
@@ -4311,118 +5186,156 @@
     "temperature": "2026-09-14"
   },
   "Ruud|RO4HFZ36AJ1H": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|RO5HFZ45AJ2S": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROMH18FXZHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROMH24FXZHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROMH36AFXZJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROMH36FXZHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROMH45AFXZJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH09AFCJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH09AFFHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH09AFFJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH09AFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH09AHHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH09AHWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH09BFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH12AFCJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH12AFFHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH12AFFJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH12AFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH12AHHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH12AHWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH12BFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH15AFFHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH15AFFJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH15AHHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH15AHWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH18AFCJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH18AHXHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH18ASJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH18AXFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH18VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH24AHXHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH24ASJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH24AXFWJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH24VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH30AHXHJ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH30VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH36VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|ROSH48VGSN": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Ruud|UP18AZ24AJVC": {
     "temperature": "2026-09-14"
@@ -4455,28 +5368,36 @@
     "temperature": "2026-09-14"
   },
   "Samsung|AC009BXADCH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Samsung|AC012BXADCH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Samsung|AC018BXADCH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Samsung|AC024BXADCH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Samsung|AC030BXADCH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Samsung|AC036BXADCH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Samsung|AC042BXADCH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Samsung|AC048BXADCH": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Samsung|AJ020BXS3CH": {
     "temperature": "2026-09-14"
@@ -4514,71 +5435,97 @@
   "Samsung|AM060FCMDCG1": {
     "temperature": "2026-09-14"
   },
+  "Samsung|AR36BSHUMGMX": {
+    "nom": "2026-09-15"
+  },
   "Senville|SENA09HFOQ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA09HFOZ": {
     "temperature": "2026-09-14"
   },
   "Senville|SENA12HFOQ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA12HFOZ": {
     "temperature": "2026-09-14"
   },
+  "Senville|SENA18HFMOA": {
+    "nom": "2026-09-15"
+  },
   "Senville|SENA18HFMOB": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA18HFMOQ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA18HFMOZ": {
     "temperature": "2026-09-14"
   },
   "Senville|SENA18HFOQ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA24HFOQ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA24HFOZ": {
     "temperature": "2026-09-14"
   },
   "Senville|SENA28HFMOB": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA30HFMOQ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA30HFMOZ": {
     "temperature": "2026-09-14"
   },
   "Senville|SENA33HFOQ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Senville|SENA36HFMOA": {
+    "nom": "2026-09-15"
   },
   "Senville|SENA36HFMOB": {
     "nom": "2026-09-14"
   },
   "Senville|SENA36HFMOQ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA36HFMOZ": {
     "temperature": "2026-09-14"
   },
+  "Senville|SENA48HFMOA": {
+    "nom": "2026-09-15"
+  },
   "Senville|SENA48HFMOB": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA48HFMOQ": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENA48HFMOZ": {
     "temperature": "2026-09-14"
   },
   "Senville|SENA55HFMOA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENDC24HFOG": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENDC24HFOM": {
     "temperature": "2026-09-14"
@@ -4586,23 +5533,31 @@
   "Senville|SENDC30HFOG": {
     "temperature": "2026-09-14"
   },
+  "Senville|SENDC36HFOG": {
+    "nom": "2026-09-15"
+  },
   "Senville|SENDC36HFOM": {
     "temperature": "2026-09-14"
   },
   "Senville|SENDC48HFOM": {
     "temperature": "2026-09-14"
   },
+  "Senville|SENDC60HFOG": {
+    "nom": "2026-09-15"
+  },
   "Senville|SENDC60HFOM": {
     "temperature": "2026-09-14"
   },
   "Senville|SENL09CD220OY": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENL09CDOX": {
     "temperature": "2026-09-14"
   },
   "Senville|SENL09CDOY": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Senville|SENL18CDOX": {
     "temperature": "2026-09-14"
@@ -4617,97 +5572,134 @@
     "temperature": "2026-09-14"
   },
   "Sharp|AEX12THU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Sharp|AEX12TU": {
+    "nom": "2026-09-15"
   },
   "Sharp|AEX12ZHU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Sharp|AEX12ZHU1": {
     "temperature": "2026-09-14"
   },
   "Sharp|AEX12ZU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Sharp|AEX15ZU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Sharp|AEX18THU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Sharp|AEX18TU": {
+    "nom": "2026-09-15"
   },
   "Sharp|AEX18ZHU": {
     "temperature": "2026-09-14"
   },
   "Sharp|AEX18ZHU1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Sharp|AEX18ZU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Sharp|AEX24TU": {
+    "nom": "2026-09-15"
   },
   "Sharp|AEX24ZU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Sharp|AEX2M20TU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Sharp|AEX3M24BU": {
     "temperature": "2026-09-14"
   },
   "Stelpro|CCB1H24AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|CCB1H30AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|CCB1H36AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|CCB1H48AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|CCB1H60AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|SINBH09AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|SINBH12AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|SINBH18AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|SINBH24AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|SMZ2B1VH18AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|SMZ3B1VH27AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|SMZ4B1VH36AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|SMZ5B1VH48AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Stelpro|SMZ5B1VH55AO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Supreme|NET52SUPAE12E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Supreme|NET52SUPAE18E": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Supreme|YS25E12HRDN1": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Supreme|YS25E18HRDN1": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Supreme|YS25M12HRDN1": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "TCL|H09SBH23BPC": {
     "temperature": "2026-09-14"
@@ -4743,25 +5735,32 @@
     "temperature": "2026-09-14"
   },
   "TCL|THH18HAI2NAF2U23": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|THH24HAI2NAF2U23": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|THH30HAI2NAF2U23": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|THH36HAI2NAF2U23": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|THH42HAI2NAF2U23": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|THH48HAI2NAF2U23": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|THH60HAI2NAF2U23": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|TSC09HA1I3TI22": {
     "temperature": "2026-09-14"
@@ -4785,25 +5784,31 @@
     "temperature": "2026-09-14"
   },
   "TCL|TSH09HEI1NAJ0T24": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|TSH12HDI1NAN0T23": {
     "temperature": "2026-09-14"
   },
   "TCL|TSH12HEI2NAJ0T24": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|TSH17HEI2NAL0X24": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|TSH18HEI2NAJ0T24": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|TSH22HEI2NAL0X24": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|TSH24HEI2NAJ0T24": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "TCL|TUM18HA2I2I2221ES": {
     "temperature": "2026-09-14"
@@ -4815,19 +5820,24 @@
     "temperature": "2026-09-14"
   },
   "Tempstar|D5CVRAH09AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Tempstar|D5CVRAH12AAJ": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Tempstar|D5CVRAH12AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Tempstar|D5CVRAH18AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Tempstar|D5CVRAH24AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Tempstar|DLCLRAH36AAK": {
     "nom": "2026-09-14"
@@ -4839,10 +5849,15 @@
     "nom": "2026-09-14"
   },
   "Tempstar|DLCLRBH36AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "Tempstar|DLCLRBH48AAK": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
+  },
+  "Tempstar|DLCLRCH58AAK": {
+    "temperature": "2026-09-15"
   },
   "Tempstar|DLCMRAH27CAK": {
     "nom": "2026-09-14"
@@ -4932,7 +5947,8 @@
     "nom": "2026-09-14"
   },
   "Tosot|GWH24QEXFD3DND4DO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|HPA36O": {
     "temperature": "2026-09-14"
@@ -4941,34 +5957,44 @@
     "temperature": "2026-09-14"
   },
   "Tosot|HPUA36O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|HPUA60O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|MZCOSMO18O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|MZCOSMO24O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|MZCOSMO30O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|MZCOSMO36O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|MZM18O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|MZM24O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|MZM30O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|MZM36O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|SUAORAKI12115O": {
     "temperature": "2026-09-14"
@@ -4995,13 +6021,15 @@
     "temperature": "2026-09-14"
   },
   "Tosot|TACCI7H4R30": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TACCI7H4R36": {
     "temperature": "2026-09-14"
   },
   "Tosot|TAVCI7H4R09": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TAVCI7H4R12": {
     "temperature": "2026-09-14"
@@ -5013,31 +6041,42 @@
     "temperature": "2026-09-14"
   },
   "Tosot|TAW2030H1B": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TAW2036H1B": {
     "temperature": "2026-09-14"
   },
   "Tosot|TKH02TCNAATU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TKH03TCNAATU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TKH04TCNAATU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TKH05TCNAATU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TM18H32MO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Tosot|TM18H4O": {
+    "nom": "2026-09-15"
   },
   "Tosot|TM18HMO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TM18HPO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TM18WH21MO": {
     "temperature": "2026-09-14"
@@ -5045,8 +6084,12 @@
   "Tosot|TM24H32MO": {
     "temperature": "2026-09-14"
   },
+  "Tosot|TM24H4O": {
+    "nom": "2026-09-15"
+  },
   "Tosot|TM24HMO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TM24WH21MO": {
     "temperature": "2026-09-14"
@@ -5054,8 +6097,12 @@
   "Tosot|TM30H32MO": {
     "temperature": "2026-09-14"
   },
+  "Tosot|TM30H4O": {
+    "nom": "2026-09-15"
+  },
   "Tosot|TM30HMO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TM30WH21MO": {
     "temperature": "2026-09-14"
@@ -5063,44 +6110,60 @@
   "Tosot|TM36H32MO": {
     "temperature": "2026-09-14"
   },
+  "Tosot|TM36H4O": {
+    "nom": "2026-09-15"
+  },
   "Tosot|TM36HMO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TM36WH21MO": {
     "temperature": "2026-09-14"
   },
   "Tosot|TM42H32MO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Tosot|TM42H3O": {
+    "nom": "2026-09-15"
   },
   "Tosot|TM42HMO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TM42WH21MO": {
     "temperature": "2026-09-14"
   },
   "Tosot|TM48H32MO": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TM48WH21MO": {
     "temperature": "2026-09-14"
   },
   "Tosot|TMSCI7H4R18": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TMSCI7H4R24": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TMSCI7H4R30": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TMSCI7H4R36": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TMSCI7H4R42": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TMSCI7H4R48": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TMVRF36KUH": {
     "temperature": "2026-09-14"
@@ -5112,19 +6175,23 @@
     "temperature": "2026-09-14"
   },
   "Tosot|TS12AGR32OD21": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TS12AGR32OD21L": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TS18AGR32OD21": {
     "temperature": "2026-09-14"
   },
   "Tosot|TS24AGR32OD21": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TS30AGR32OD21": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TS36AGR32OD21": {
     "temperature": "2026-09-14"
@@ -5136,7 +6203,8 @@
     "temperature": "2026-09-14"
   },
   "Tosot|TU30WGDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TU3632WEDU": {
     "temperature": "2026-09-14"
@@ -5151,7 +6219,8 @@
     "temperature": "2026-09-14"
   },
   "Tosot|TU36WGDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TU4832WEDU": {
     "temperature": "2026-09-14"
@@ -5175,7 +6244,8 @@
     "temperature": "2026-09-14"
   },
   "Tosot|TU60WGDU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Tosot|TUD24WADU": {
     "temperature": "2026-09-14"
@@ -5451,7 +6521,8 @@
     "temperature": "2026-09-14"
   },
   "Trane|4TWV0048A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TWV0060A1": {
     "temperature": "2026-09-14"
@@ -5481,85 +6552,112 @@
     "temperature": "2026-09-14"
   },
   "Trane|4TXK2309A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2312A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2318A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2324A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2509A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2512A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2518A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2524A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2530A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2536A10N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2709A10N0AA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK2712A10NAA": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK3809B10NU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK3812A10NU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK3818A10NU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXK3824A10NU": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2118A12N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2124A13N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2130A14N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2136A14N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2142A15N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2218A12N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2221A13N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2224A14N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2230A15N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2236A15N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2242A15N0": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|4TXM2318A12NU": {
     "nom": "2026-09-14"
@@ -5568,25 +6666,44 @@
     "nom": "2026-09-14"
   },
   "Trane|5HCL5024A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|5HCL5036A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|5HCL5060A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|5HPL5024A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|5HPL5036A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|5HPL5048A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Trane|5HPL5060A1": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Trane|5TWR7024A1": {
+    "nom": "2026-09-15"
+  },
+  "Trane|5TWR7036A1": {
+    "nom": "2026-09-15"
+  },
+  "Trane|5TWR7048A1": {
+    "nom": "2026-09-15"
+  },
+  "Trane|5TWR7060A1": {
+    "nom": "2026-09-15"
   },
   "Trane|5TWV0X24A1": {
     "temperature": "2026-09-14"
@@ -5600,6 +6717,18 @@
   "Trane|5TWV0X60A1": {
     "temperature": "2026-09-14"
   },
+  "Trane|5TWX7024A1": {
+    "nom": "2026-09-15"
+  },
+  "Trane|5TWX7036A1": {
+    "nom": "2026-09-15"
+  },
+  "Trane|5TWX7048A1": {
+    "nom": "2026-09-15"
+  },
+  "Trane|5TWX7060A1": {
+    "nom": "2026-09-15"
+  },
   "York|HH824E2S11": {
     "nom": "2026-09-14"
   },
@@ -5610,46 +6739,71 @@
     "nom": "2026-09-14"
   },
   "York|HMH72B241": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|HMH72B341": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|HMH72B361": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|HMH72B481": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|HMH72B601": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|YHM24B21": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|YHM36B22": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|YHM48B21": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|YHM60B21": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|YVAHP036B21S": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|YVAHP048B21S": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
   },
   "York|YVAHP060B21S": {
-    "nom": "2026-09-14"
+    "nom": "2026-09-14",
+    "temperature": "2026-09-15"
+  },
+  "York|YZV24B21": {
+    "temperature": "2026-09-15"
+  },
+  "York|YZV36B21": {
+    "temperature": "2026-09-15"
+  },
+  "York|YZV48B21": {
+    "temperature": "2026-09-15"
+  },
+  "York|YZV60B21": {
+    "temperature": "2026-09-15"
   },
   "Zephyr|ZE09CB22O": {
     "temperature": "2026-09-14"
   },
   "Zephyr|ZE09DA17EXT": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Zephyr|ZE09DB22O": {
     "temperature": "2026-09-14"
@@ -5657,17 +6811,26 @@
   "Zephyr|ZE09DB25O": {
     "temperature": "2026-09-14"
   },
+  "Zephyr|ZE12CA22EXT": {
+    "nom": "2026-09-15"
+  },
   "Zephyr|ZE12CB22O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Zephyr|ZE12DB22O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Zephyr|ZE12DB25O": {
     "temperature": "2026-09-14"
   },
   "Zephyr|ZE18CA17EXT": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Zephyr|ZE18CA22EXT": {
+    "nom": "2026-09-15"
   },
   "Zephyr|ZE18CB22O": {
     "temperature": "2026-09-14"
@@ -5676,13 +6839,20 @@
     "temperature": "2026-09-14"
   },
   "Zephyr|ZE24CB22O": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
+  },
+  "Zephyr|ZE24HPA": {
+    "nom": "2026-09-15"
   },
   "Zephyr|ZE24HPB": {
     "temperature": "2026-09-14"
   },
   "Zephyr|ZE24M322SCO": {
     "temperature": "2026-09-14"
+  },
+  "Zephyr|ZE36HPA": {
+    "nom": "2026-09-15"
   },
   "Zephyr|ZE36HPB": {
     "temperature": "2026-09-14"
@@ -5708,8 +6878,12 @@
   "Zephyr|ZE542M525": {
     "temperature": "2026-09-14"
   },
+  "Zephyr|ZE60HPA": {
+    "nom": "2026-09-15"
+  },
   "Zephyr|ZE60HPB": {
-    "temperature": "2026-09-14"
+    "temperature": "2026-09-14",
+    "nom": "2026-09-15"
   },
   "Zephyr|ZE624HPA": {
     "temperature": "2026-09-14"
