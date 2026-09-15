@@ -4,6 +4,7 @@ import { useState, type CSSProperties, type ReactNode } from "react";
 import { motion } from "motion/react";
 import { track } from "@/lib/analytics/track";
 import { readAttribution } from "@/lib/attribution/client";
+import { Honeypot } from "@/components/forms/Honeypot";
 
 /* Présentation « dossier » (sections v2 entreprise) : feuille glacier, rubriques à onglets,
    lignes tapées à la machine. Champs, noms, validation, pot de miel et envoi inchangés. */
@@ -103,9 +104,7 @@ export function PartnerForm() {
         </div>
         <div style={col} className="sm:col-span-2"><Label htmlFor="pf-brands" n={8}>Quelles marques installez-vous principalement?</Label><input id="pf-brands" type="text" placeholder="ex. Daikin, Fujitsu, Mitsubishi" className={field} style={{ ...fieldStyle, ["--xs-ph" as string]: "rgba(31,58,95,0.5)" } as CSSProperties} value={form.brands} onChange={set("brands")} /></div>
       </Rubrique>
-      <div aria-hidden="true" style={{ position: "absolute", left: -9999, width: 1, height: 1, overflow: "hidden" }}>
-        <label>Site web <input type="text" name="website" tabIndex={-1} autoComplete="off" value={form.website} onChange={set("website")} /></label>
-      </div>
+      <Honeypot value={form.website} onChange={set("website")} />
       {error && <p role="alert" className="text-[14.5px] font-semibold" style={{ color: T.error, margin: 0, padding: "12px 14px", background: "#FDF1EF", borderLeft: `3px solid ${T.error}` }}>{error}</p>}
       <div>
         <button type="submit" disabled={status === "sending"} className="xs-ring-dark group relative flex h-[60px] w-full items-center justify-between overflow-hidden px-6 text-[15.5px] font-semibold text-white" style={{ backgroundColor: T.ink, border: "none", borderRadius: 6, cursor: status === "sending" ? "wait" : "pointer", opacity: status === "sending" ? 0.75 : 1 }}>

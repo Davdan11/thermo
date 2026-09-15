@@ -16,6 +16,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { track } from "@/lib/analytics/track";
 import { readAttribution } from "@/lib/attribution/client";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { Honeypot } from "@/components/forms/Honeypot";
 
 export type LogisVertAlertTarget = { kind: "model"; modelId: string } | { kind: "brand"; brandSlug: string };
 
@@ -303,10 +304,7 @@ export function LogisVertAlertForm({ target, label, tone = "dark", amount, amoun
                 </div>
 
                 {/* Pot de miel : invisible pour les humains. */}
-                <div className="absolute" style={{ left: -9999, top: -9999 }} aria-hidden="true">
-                  <label htmlFor={`${uid}-site`}>Site web</label>
-                  <input id={`${uid}-site`} type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
-                </div>
+                <Honeypot value={website} onChange={(e) => setWebsite(e.target.value)} />
 
                 <label className="mt-4 flex cursor-pointer items-start gap-3 text-[13px] leading-[1.55]" style={{ color: p.mute }}>
                   <input

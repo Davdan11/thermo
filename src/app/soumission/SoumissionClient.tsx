@@ -23,6 +23,7 @@ import { DISPLAY, SERIF } from "@/components/heroes-v2/outils/font-stacks";
 import { Reveal, Rise } from "@/components/sections-v2/outils/kit";
 import { CarnetKicker, CarnetScanNote, HandCheckbox, MarginContinue, P, PenLoop, ProcessStrip } from "@/components/sections-v2/outils/carnet/CarnetParts";
 import { ConsentCopy, NoticeParagraph, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
+import { Honeypot } from "@/components/forms/Honeypot";
 import { projectRowLabel } from "./resume";
 
 
@@ -612,9 +613,7 @@ export default function SoumissionPage() {
             </div>
 
             {/* Pot de miel : invisible pour un humain, rempli par les robots */}
-            <div aria-hidden="true" style={{ position: "absolute", left: -9999, width: 1, height: 1, overflow: "hidden" }}>
-              <label>Site web <input type="text" name="website" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} /></label>
-            </div>
+            <Honeypot value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
 
             {/* Cases du carnet */}
             <div style={{ display: "grid", gap: 14, marginBottom: 24, paddingTop: 18, borderTop: "1px dashed rgba(23,27,30,0.22)" }}>

@@ -18,6 +18,7 @@ import { BookingHero, BookingConfirmedHero } from "@/components/heroes-v2/entrep
 import { Arrow } from "@/components/heroes-v2/entreprise/shared";
 import { EASE, Reveal, Shell } from "@/components/sections-v2/entreprise/kit";
 import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
+import { Honeypot } from "@/components/forms/Honeypot";
 
 const ORANGE = "#e54b17";
 const ORANGE_TEXT = "#b93e12";
@@ -569,10 +570,7 @@ export default function BookingClient({ faq }: { faq: Array<{ q: string; a: stri
                     <textarea id="rv-notes" rows={3} placeholder="Type de maison, appareil actuel, superficie, questions…" value={values.notes} onChange={update("notes")} className="xs-rv-field" style={{ ...input, resize: "vertical", ["--xs-ph" as string]: "#a8958a" } as CSSProperties} />
                   </div>
 
-                  <div style={{ position: "absolute", left: -9999, top: -9999 }} aria-hidden="true">
-                    <label htmlFor="rv-website">Site web</label>
-                    <input id="rv-website" type="text" tabIndex={-1} autoComplete="off" value={values.website} onChange={update("website")} />
-                  </div>
+                  <Honeypot value={values.website} onChange={update("website")} />
 
                   <label style={{ display: "flex", gap: 12, alignItems: "flex-start", fontSize: 14.5, color: MUTED, lineHeight: 1.5, marginBottom: 6, cursor: "pointer" }}>
                     <input type="checkbox" checked={values.consent} onChange={update("consent")} aria-invalid={!!errors.consent} aria-describedby={errors.consent ? "rv-consent-err" : undefined} className="xs-check-rv" style={{ marginTop: 1 }} />
