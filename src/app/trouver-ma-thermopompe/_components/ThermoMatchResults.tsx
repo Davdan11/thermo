@@ -12,24 +12,30 @@ import { SavingsBand } from "./SavingsBand";
 import { ExistingUnitCompare } from "./ExistingUnitCompare";
 import { EmailMyChoices } from "./EmailMyChoices";
 import { ThermometreHero } from "./ThermometreHero";
+import { ArchitecturePlan, categorieOfKind, type ArchitecturePlanData } from "./ArchitecturePlan";
 import { CERTIF_C, froidDe, type Froid } from "./thermometre";
 import { minTempMention, type MinTempSourceType } from "@/lib/thermomatch/min-temp-source";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 import { categorieDe, type CategorieThermopompe } from "@/lib/garantie-legale/config";
+import { ORDRE_DE_GRANDEUR_LABEL } from "@/lib/prices/grille-installee";
 
 /* ==================================================================
    ThermoMatch — écran des trois recommandations (version premium).
    1. En-tête « Le thermomètre » (ThermometreHero) : échelle de froid
       où les machines retenues se posent à leur « chauffe jusqu'à » ;
       titre, maison, région, charge estimée et marge.
-   2. Trois cartes (le meilleur choix au centre, surélevé) : score,
-      « Chauffe jusqu'à −XX °C » en très gros (ou « Certifiée grand
-      froid » quand la température n'est pas publiée), photo, part de
-      la maison couverte à -15 °C, chiffres certifiés, étiquettes
-      « le plus efficace… » calculées entre les trois.
-   3. « Ce qui les distingue » : barres critère par critère.
-   4. Prochaine étape : la soumission, avec une barre fixe sur mobile.
+   2. « Votre configuration » (ArchitecturePlan) : comment la chaleur
+      sera distribuée, le plan des zones, la relève par grand froid,
+      les options écartées et l'ordre de grandeur installé, une fois.
+   3. Trois cartes (le meilleur choix au centre, surélevé) : score (et
+      « Ex æquo » quand l'écart est sous la précision), type
+      d'installation, « Chauffe jusqu'à −XX °C » en très gros (ou
+      « Certifiée grand froid » quand la température n'est pas publiée),
+      photo, part de la maison couverte à -15 °C et relève, chiffres
+      certifiés, étiquettes « le plus efficace… » calculées entre les trois.
+   4. « Ce qui les distingue » : barres critère par critère.
+   5. Prochaine étape : la soumission, avec une barre fixe sur mobile.
    Mêmes données et mêmes props qu'avant (parcours normal et lien
    partagé). Valeur absente = N/D, jamais inventée.
    ================================================================== */
@@ -54,6 +60,8 @@ interface SummaryContext {
   logisVertUpdatedAt?: string | null;
   /** Économies de chauffage estimées (plinthes électriques seulement). */
   savings?: SavingsEstimate | null;
+  /** Architecture décidée avant les machines (absente des anciens appels : pas de bloc « Votre configuration »). */
+  architecture?: ArchitecturePlanData | null;
 }
 
 interface ThermoMatchResultsProps {
@@ -115,6 +123,14 @@ type Card = {
   cop5: number | null;
   subsidy: number;
   coverage: number | null;
+  /** « Votre maison couverte à −15 °C », ou « Espace principal couvert à −15 °C » pour une murale d'étage. */
+  coverageLabel: string;
+  /** Relève nécessaire à la température de calcul de la région (moteur). */
+  backupNote: string | null;
+  /** Type d'installation : « Centrale gainable », « Multizone, 3 têtes », « Murale × 3 ». */
+  installLabel: string | null;
+  /** Écart de score sous la précision de l'estimation avec une voisine, et le départage en clair. */
+  tie: { withRank: number; decidedBy: string } | null;
   /** Capacité à -15 °C / capacité nominale. */
   retention: number | null;
   /** Température extérieure minimale de chauffage (fabricant), si connue. */
@@ -126,7 +142,6 @@ type Card = {
   categorie: CategorieThermopompe | null;
   reasons: string[];
   warnings: string[];
-  architectureNote: string | null;
   alsoSoldAs: string[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   raw: any;
@@ -146,6 +161,19 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
   const sp = r?.selectedPairing ?? {};
   const h5 = num(p.heatingCapacity5FBtuH?.min);
   const load = num(ctx?.estimatedLoadBtu);
+  // Architecture retenue par le moteur ; anciens résultats : le type du produit et le nombre de zones.
+  const kind: string | null = typeof p.installKind === "string" ? p.installKind : null;
+  const fallback = kind
+    ? kind === "central" || kind === "central-hybrid"
+      ? FALLBACK.central
+      : kind === "multi-zone"
+        ? FALLBACK.multi
+        : FALLBACK.wall
+    : p.systemType === "central"
+      ? FALLBACK.central
+      : ctx?.isMultiZone
+        ? FALLBACK.multi
+        : FALLBACK.wall;
   return {
     key: String(p.id ?? i),
     badge: r?.badge ?? (i === 0 ? "Meilleur choix" : "Alternative"),
@@ -153,7 +181,7 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     brand: p.brand ?? "",
     series: p.series ?? "",
     outdoor: p.outdoorModel ?? "",
-    img: p.imageUrl || (p.systemType === "central" ? FALLBACK.central : ctx?.isMultiZone ? FALLBACK.multi : FALLBACK.wall),
+    img: p.imageUrl || fallback,
     ownImage: Boolean(p.imageUrl),
     coldClimate: Boolean(p.coldClimate),
     h5,
@@ -162,16 +190,19 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     seer2: num(sp.seer2?.min),
     cop5: num(sp.cop5F?.min),
     subsidy: num(r?.subsidyEstimate) ?? 0,
-    coverage: num(r?.fitRatio) ?? (h5 && load ? h5 / load : null),
+    coverage: num(r?.coverage?.ratio) ?? num(r?.fitRatio) ?? (h5 && load ? h5 / load : null),
+    coverageLabel: typeof r?.coverage?.label === "string" ? r.coverage.label : "Votre maison couverte à −15 °C",
+    backupNote: typeof r?.backupNote === "string" ? r.backupNote : null,
+    installLabel: typeof r?.installLabel === "string" ? r.installLabel : null,
+    tie: r?.tie && typeof r.tie.decidedBy === "string" ? { withRank: Number(r.tie.withRank), decidedBy: r.tie.decidedBy } : null,
     retention: h5 && num(p.nominalBtu) ? h5 / (p.nominalBtu as number) : null,
     minTemp: num(p.minOperatingTempC),
     minTempSource: p.minOperatingTempSource === "secondaire" || p.minOperatingTempSource === "officiel" ? p.minOperatingTempSource : null,
     price: r?.priceRange && num(r.priceRange.min) != null && num(r.priceRange.max) != null ? r.priceRange : null,
     // Toutes les recommandations sont des thermopompes neuves : murale par défaut si le type manque.
-    categorie: categorieDe(p.systemType, ctx?.isMultiZone ? ctx.requestedZones : 1) ?? (ctx?.isMultiZone ? "multizone" : "murale"),
+    categorie: kind ? categorieOfKind(kind) : (categorieDe(p.systemType, ctx?.isMultiZone ? ctx.requestedZones : 1) ?? (ctx?.isMultiZone ? "multizone" : "murale")),
     reasons: r?.clientReasons ?? r?.reasons ?? [],
     warnings: r?.warnings ?? [],
-    architectureNote: r?.architectureNote ?? null,
     alsoSoldAs: p.alsoSoldAs ?? [],
     raw: r,
   };
@@ -200,6 +231,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
   return (
     <div className="w-full" style={{ fontFamily: DISPLAY, color: C.cream }}>
       <ThermometreHero ctx={summaryContext ?? null} machines={cards.map((c) => ({ key: c.key, brand: c.brand, series: c.series, minTemp: c.minTemp, coldClimate: c.coldClimate }))} />
+      {summaryContext?.architecture ? <ArchitecturePlan arch={summaryContext.architecture} /> : null}
 
       <div className="mx-auto mt-10 grid max-w-[1320px] grid-cols-1 gap-5 lg:mt-16 lg:grid-cols-[1fr_1.12fr_1fr]">
         {cards.map((c, i) => (
@@ -289,6 +321,12 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
             <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.inkMute, margin: "6px 0 0" }}>
               Score ThermoMatch
             </p>
+            {/* Écart sous la précision de l'estimation : dit tel quel, le départage est expliqué plus bas. */}
+            {card.tie && (
+              <span className="mt-2 inline-block rounded-full px-2.5 py-1 text-[10.5px] font-bold uppercase" style={{ letterSpacing: "0.12em", background: "rgba(229,75,23,0.1)", color: C.orangeText }}>
+                Ex æquo
+              </span>
+            )}
           </div>
         )}
       </div>
@@ -298,6 +336,16 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
         <p className="text-[14px] font-medium" style={{ color: C.inkMute, margin: "8px 0 0" }}>
           {[card.series && `Série ${card.series}`, card.outdoor].filter(Boolean).join(" · ")}
         </p>
+        {card.installLabel && (
+          <p className="mt-3 inline-flex rounded-full px-3 py-1 text-[12px] font-semibold" style={{ border: `1px solid ${C.inkLine}`, color: C.ink, margin: "12px 0 0" }}>
+            {card.installLabel}
+          </p>
+        )}
+        {card.tie && (
+          <p className="text-[12.5px] leading-snug" style={{ color: C.inkMute, margin: "10px 0 0" }}>
+            {card.tie.decidedBy}
+          </p>
+        )}
         {tags.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
             {tags.map((t) => (
@@ -345,7 +393,7 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
       {cov != null && (
         <div className="px-6 pt-5 sm:px-7">
           <div className="flex items-baseline justify-between text-[13px]">
-            <span className="font-semibold">Votre maison couverte à −15 °C</span>
+            <span className="font-semibold">{card.coverageLabel}</span>
             <span className="font-semibold tabular-nums">
               <CountUp value={cov} play={inView} /> %
             </span>
@@ -361,8 +409,14 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
             <span aria-hidden="true" className="absolute top-[-4px] h-4 w-px" style={{ left: `${100 / 1.2}%`, background: C.ink }} />
           </div>
           <p className="text-[11.5px]" style={{ color: C.inkMute, margin: "6px 0 0" }}>
-            {cov >= 100 ? "Couvre toute la charge estimée, même au plus froid." : "Le chauffage d’appoint complète lors des grands froids."}
+            {cov >= 100 ? "Couvre toute la charge estimée à −15 °C." : "Le chauffage d’appoint complète lors des grands froids."}
           </p>
+          {/* Relève à la température de calcul de la région (moteur) : ce que la fournaise ou les plinthes doivent fournir. */}
+          {card.backupNote && (
+            <p className="text-[11.5px] leading-snug" style={{ color: C.ink, margin: "4px 0 0" }}>
+              {card.backupNote}
+            </p>
+          )}
         </div>
       )}
 
@@ -396,11 +450,12 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
         })}
       </dl>
 
-      {/* Prix approximatif : fourchette installée du marché québécois (grille de la page /prix). */}
+      {/* Ordre de grandeur installé du marché québécois (grille de la page /prix), jamais un prix de vente. Avec une
+          architecture, il est donné une fois dans « Votre configuration » ; ici seulement s'il varie d'une carte à l'autre. */}
       {card.price && (
         <div className="mx-6 mt-4 rounded-[18px] px-4 py-3.5 sm:mx-7" style={{ border: `1px solid ${C.inkLine}` }}>
           <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.14em", color: C.inkMute, margin: 0 }}>
-            Prix approximatif installé
+            Ordre de grandeur installé
           </p>
           <p className="tabular-nums" style={{ fontSize: 22, fontWeight: 600, letterSpacing: "-0.03em", margin: "4px 0 0" }}>
             {money(card.price.min)} – {money(card.price.max)}
@@ -414,7 +469,7 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
           {/* Conformité : garantie légale de bon fonctionnement, sous le prix. */}
           {card.categorie && <MentionGarantieLegale cible={card.categorie} className="text-[12px] font-semibold" style={{ color: C.ink, margin: "6px 0 0" }} />}
           <p className="text-[11.5px] leading-snug" style={{ color: C.inkMute, margin: "6px 0 0" }}>
-            Fourchette publiée au Québec pour ce type ({card.price.matchLabel}, {card.price.tierLabel}
+            {ORDRE_DE_GRANDEUR_LABEL} ({card.price.matchLabel}, {card.price.tierLabel}
             {card.price.basis === "derive" ? ", case interpolée" : ""}), avant subvention. Le prix exact vient de la soumission.
           </p>
         </div>
@@ -447,13 +502,8 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
         </div>
       )}
 
-      {(card.warnings.length > 0 || card.architectureNote) && (
+      {card.warnings.length > 0 && (
         <div className="mx-6 mt-4 space-y-2 sm:mx-7">
-          {card.architectureNote && (
-            <p className="rounded-xl px-3.5 py-2.5 text-[12.5px] leading-snug" style={{ background: "rgba(229,75,23,0.08)", color: "#8a3a17", margin: 0 }}>
-              {card.architectureNote}
-            </p>
-          )}
           {card.warnings.map((w) => (
             <p key={w} className="rounded-xl px-3.5 py-2.5 text-[12.5px] leading-snug" style={{ background: "#FFF6E0", color: "#7a5a12", margin: 0 }}>
               {w}

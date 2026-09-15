@@ -114,7 +114,7 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
           </h2>
           <ul className="mt-8 grid gap-3 text-[15px]" style={{ listStyle: "none", padding: 0, margin: "32px 0 0", color: K.mute }}>
             <li>— {topLabel} et vos deux autres choix, avec leurs chiffres par grand froid.</li>
-            <li>— Le montant LogisVert officiel et un prix approximatif installé pour chacun.</li>
+            <li>— Votre configuration, le montant LogisVert officiel de chacun et un ordre de grandeur installé.</li>
             <li>— Un lien qui rouvre ces recommandations, même sur un autre appareil.</li>
           </ul>
         </div>
