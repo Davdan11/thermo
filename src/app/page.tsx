@@ -78,7 +78,7 @@ export default function HomePage() {
     { slug: "fujitsu-aouh12ktap1", brand: "Fujitsu", img: "/images/comparer-accueil/fujitsu-aouh12ktap1.webp" },
   ].flatMap((c) => {
     const m = registry.modelBySlug.get(c.slug);
-    return m ? [{ ...c, name: m.name, h5: m.heatingCapacity5FMaxBtu ?? null, hspf2: m.hspf2Max ?? null, seer2: m.seer2Max ?? null, cop5: m.cop5FMax ?? null }] : [];
+    return m ? [{ ...c, slug: m.slug, name: m.name, h5: m.heatingCapacity5FMaxBtu ?? null, hspf2: m.hspf2Max ?? null, seer2: m.seer2Max ?? null, cop5: m.cop5FMax ?? null }] : [];
   });
   // « Modèles à découvrir » : trois modèles réels du classement grand froid (avec photo), chiffres certifiés.
   const shelfModels: ShelfModel[] = (getRanking("grand-froid", 40)?.models ?? [])

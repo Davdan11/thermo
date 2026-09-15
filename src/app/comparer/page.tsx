@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/seo";
+import { registry } from "@/lib/data/registry";
 import { getComparisonData, MAX_COMPARE } from "@/lib/data/queries/comparator";
 import { getAllCatalogueProducts, type SelectableModelData } from "@/lib/data/queries/catalogue";
 import { CompareSelector } from "@/components/compare/CompareSelector";
@@ -41,7 +42,8 @@ interface ComparerPageProps {
 export default async function ComparerPage({ searchParams }: ComparerPageProps) {
   const params = await searchParams;
   const modelsParam = typeof params.models === "string" ? params.models : "";
-  const slugs = modelsParam.split(",").map((s) => s.trim()).filter(Boolean);
+  // Lien de comparaison partagé avec d'anciennes adresses de fiches : ramenées à l'adresse actuelle.
+  const slugs = modelsParam.split(",").map((s) => s.trim()).filter(Boolean).map((s) => registry.modelBySlug.get(s)?.slug ?? s);
   const data = getComparisonData(slugs);
   const allProducts = getAllCatalogueProducts();
   // Liste sérialisée en entier dans la page (~3 900 modèles) : seulement les champs que lit le sélecteur.

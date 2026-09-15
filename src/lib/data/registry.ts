@@ -22,6 +22,7 @@ import type {
   SourceReference,
   EditorialContent,
 } from "./types";
+import { modelNumberSlug, productSlug } from "./product-name";
 
 /* ---- Import fixtures ---- */
 import { readFileSync } from "fs";
@@ -229,7 +230,66 @@ const ALL_EDITORIAL: EditorialContent[] = VALIDATED.flatMap((d) => d.editorial);
 // Build indexes
 const BRAND_BY_SLUG = new Map(ALL_BRANDS.map((b) => [b.slug, b]));
 const BRAND_BY_ID = new Map(ALL_BRANDS.map((b) => [b.id, b]));
-const MODEL_BY_SLUG = new Map(ALL_MODELS.map((m) => [m.slug, m]));
+/* Adresse des fiches (productSlug) : marque, nom commercial, capacité, puis le numéro
+   (« haier-tempo-9000-btu-ab092mcerb »). L'ancienne adresse (marque + numéro), l'identifiant et
+   toute adresse passée qui finit par le même numéro restent résolues par modelBySlug : la fiche
+   produit y répond par une redirection permanente (308) vers l'adresse actuelle. */
+const SERIES_BY_ID = new Map(ALL_SERIES.map((s) => [s.id, s]));
+const LEGACY_MODEL_SLUGS = new Map<string, ProductModel>();
+const MODELS_BY_NUMBER_END = new Map<string, Array<{ model: ProductModel; prefix: string; suffix: string }>>();
+{
+  const proposed = ALL_MODELS.map((m) => {
+    const b = BRAND_BY_ID.get(m.brandId);
+    const s = SERIES_BY_ID.get(m.seriesId);
+    if (!b || !modelNumberSlug(m.modelNumber)) return m.slug;
+    return productSlug({ brand: b.name, brandSlug: b.slug, seriesName: s?.name, seriesSlug: s?.slug, capacityBtu: m.nominalCapacityBtu, modelNumber: m.modelNumber });
+  });
+  // Une adresse proposée déjà prise (par une autre fiche, ancienne ou nouvelle) : la fiche garde la sienne.
+  const uses = new Map<string, number>();
+  const use = (slug: string) => uses.set(slug, (uses.get(slug) ?? 0) + 1);
+  ALL_MODELS.forEach((m, i) => (use(proposed[i]), proposed[i] !== m.slug && use(m.slug)));
+  ALL_MODELS.forEach((m, i) => {
+    if (proposed[i] === m.slug || uses.get(proposed[i]) !== 1) return;
+    LEGACY_MODEL_SLUGS.set(m.slug, m);
+    m.slug = proposed[i];
+  });
+  const current = new Set(ALL_MODELS.map((m) => m.slug));
+  for (const m of ALL_MODELS) {
+    if (!current.has(m.id) && !LEGACY_MODEL_SLUGS.has(m.id)) LEGACY_MODEL_SLUGS.set(m.id, m);
+    const b = BRAND_BY_ID.get(m.brandId);
+    const suffix = modelNumberSlug(m.modelNumber);
+    if (!b || !suffix) continue;
+    const end = suffix.slice(suffix.lastIndexOf("-") + 1);
+    const list = MODELS_BY_NUMBER_END.get(end) ?? [];
+    list.push({ model: m, prefix: `${b.slug}-`, suffix });
+    MODELS_BY_NUMBER_END.set(end, list);
+  }
+}
+
+/** Fiche d'une adresse passée : ancienne adresse ou identifiant, sinon « <marque>-…-<numéro> » (nom commercial d'avant). */
+function resolvePastModelSlug(slug: string): ProductModel | undefined {
+  const legacy = LEGACY_MODEL_SLUGS.get(slug);
+  if (legacy) return legacy;
+  const hits = (MODELS_BY_NUMBER_END.get(slug.slice(slug.lastIndexOf("-") + 1)) ?? []).filter(
+    (c) => slug.startsWith(c.prefix) && slug.endsWith(`-${c.suffix}`),
+  );
+  if (hits.length === 0) return undefined;
+  const longest = Math.max(...hits.map((c) => c.suffix.length));
+  const best = hits.filter((c) => c.suffix.length === longest);
+  return best.length === 1 ? best[0].model : undefined;
+}
+
+/** Index des fiches par adresse : l'adresse actuelle, sinon une adresse passée (itération : adresses actuelles seulement). */
+class ModelSlugIndex extends Map<string, ProductModel> {
+  override get(slug: string): ProductModel | undefined {
+    return super.get(slug) ?? resolvePastModelSlug(slug);
+  }
+  override has(slug: string): boolean {
+    return this.get(slug) !== undefined;
+  }
+}
+
+const MODEL_BY_SLUG = new ModelSlugIndex(ALL_MODELS.map((m) => [m.slug, m]));
 const MODEL_BY_ID = new Map(ALL_MODELS.map((m) => [m.id, m]));
 const CONFIG_BY_ID = new Map(ALL_CONFIGURATIONS.map((c) => [c.id, c]));
 const SOURCE_BY_ID = new Map(ALL_SOURCES.map((s) => [s.id, s]));

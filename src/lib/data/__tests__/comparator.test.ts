@@ -4,6 +4,7 @@
 
 import { describe, it, expect } from "vitest";
 import { getComparisonData, MAX_COMPARE } from "../queries/comparator";
+import { registry } from "../registry";
 
 /* ------------------------------------------------------------------
    Basic loading
@@ -103,14 +104,10 @@ describe("getComparisonData — no configuration mixing", () => {
 
 describe("getComparisonData — order preservation", () => {
   it("preserves the order of slugs", () => {
-    const data = getComparisonData([
-      "mitsubishi-fs-12k",
-      "daikin-aurora-18k",
-      "daikin-aurora-9k",
-    ]);
-    expect(data.products[0].detail.model.slug).toBe("mitsubishi-fs-12k");
-    expect(data.products[1].detail.model.slug).toBe("daikin-aurora-18k");
-    expect(data.products[2].detail.model.slug).toBe("daikin-aurora-9k");
+    const asked = ["mitsubishi-fs-12k", "daikin-aurora-18k", "daikin-aurora-9k"];
+    const data = getComparisonData(asked);
+    // Anciennes adresses : mêmes fiches, dans le même ordre, sous leur adresse actuelle.
+    expect(data.products.map((p) => p.detail.model.slug)).toEqual(asked.map((s) => registry.modelBySlug.get(s)!.slug));
   });
 });
 

@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { registry } from "@/lib/data/registry";
@@ -47,6 +47,15 @@ export async function generateStaticParams() {
     .map((m) => ({ slug: m.slug }));
 }
 
+/**
+ * Adresse passée (marque + numéro, ou nom commercial d'avant) : redirection permanente (308) vers
+ * l'adresse actuelle, pour garder les liens et le référencement déjà acquis.
+ */
+function redirectPastSlug(slug: string) {
+  const current = registry.modelBySlug.get(slug)?.slug;
+  if (current && current !== slug) permanentRedirect(`/produit/${current}`);
+}
+
 /* ── Metadata ── */
 
 export async function generateMetadata({
@@ -55,6 +64,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  redirectPastSlug(slug);
   const detail = getProductDetail(slug);
   if (!detail) return {};
 
@@ -121,6 +131,7 @@ export default async function ProductPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  redirectPastSlug(slug);
   const detail = getProductDetail(slug);
   if (!detail) notFound();
 

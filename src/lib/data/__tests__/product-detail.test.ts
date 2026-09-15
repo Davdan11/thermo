@@ -18,7 +18,8 @@ describe("getProductDetail — published model with full data", () => {
 
   it("loads the correct model", () => {
     expect(detail!.model.id).toBe("model-daikin-aurora-18k");
-    expect(detail!.model.slug).toBe("daikin-aurora-18k");
+    // L'ancienne adresse mène à la fiche ; l'adresse actuelle porte le nom commercial, la capacité et le numéro.
+    expect(detail!.model.slug).toBe("daikin-aurora-18000-btu-ftxs18wvju");
   });
 
   it("loads brand", () => {
@@ -84,8 +85,8 @@ describe("getProductDetail — published model with full data", () => {
       expect(sib.seriesId).toBe(detail!.model.seriesId);
       expect(sib.id).not.toBe(detail!.model.id);
     }
-    expect(detail!.seriesSiblings.some((m) => m.slug === "daikin-aurora-9k")).toBe(true);
-    expect(detail!.seriesSiblings.some((m) => m.slug === "daikin-aurora-12k")).toBe(true);
+    expect(detail!.seriesSiblings.some((m) => m.id === "model-daikin-aurora-9k")).toBe(true);
+    expect(detail!.seriesSiblings.some((m) => m.id === "model-daikin-aurora-12k")).toBe(true);
   });
 
   it("finds similar models", () => {

@@ -14,10 +14,15 @@
    réservation ni sortie.
    ================================================================== */
 
+import { registry } from "@/lib/data/registry";
 import type { Quote } from "@/lib/soumissions/types";
 import { acceptedQuoteForJob, jobCompletion } from "../commissions/link";
 import type { Job } from "../types";
 import type { InventaireData, StockItem, StockMovement } from "./types";
+
+/** Même modèle, même si un dossier garde l'adresse de fiche d'avant (les adresses suivent le nom commercial). */
+const modelKey = (slug: string) => registry.modelBySlug.get(slug)?.id ?? slug;
+const sameModel = (a: string, b: string) => a === b || modelKey(a) === modelKey(b);
 
 export interface Dossier {
   /** « job:<id> » ou « quote:<id> ». */
@@ -73,7 +78,7 @@ export function itemStock(item: StockItem, data: Pick<InventaireData, "releases"
   const exited = new Set(data.movements.filter((m) => m.itemId === item.id && m.key).map((m) => m.key!));
   const mine = item.modelSlug
     ? dossiers
-        .filter((d) => d.modelSlug === item.modelSlug && !released.has(d.ref) && !exited.has(exitKey(d.ref, item.id)))
+        .filter((d) => sameModel(d.modelSlug, item.modelSlug!) &&!released.has(d.ref) && !exited.has(exitKey(d.ref, item.id)))
         .filter((d) => !(d.completedAt && d.completedAt < item.createdAt))
         .map((d) => ({ ...d, qty: item.perJob }))
     : [];
