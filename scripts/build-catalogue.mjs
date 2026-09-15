@@ -79,12 +79,17 @@ function normalizeSeriesName(raw, brandName) {
   s = s.split(" ").map((w) => (/^[A-Z]{5,}$/.test(w) ? w[0] + w.slice(1).toLowerCase() : w)).join(" ");
   return s;
 }
+/** Unité intérieure décrite plutôt que nommée dans la liste d'Hydro-Québec : combinaison multizone (même règle que src/lib/thermomatch/candidates.ts). */
+const MULTI_INDOOR_RE = /^(combinaison d.appareils|appareils (sans|avec) conduits)/i;
 /** Une valeur qui ressemble à un numéro de modèle complet n'est pas une série. */
 const looksLikeModelNumber = (key) => key.length >= 7 && /^[a-z]{2,5}\d{2,}[a-z0-9]*$/.test(key);
 
 /* ---------------------------------------------------------------- chargement */
 const lv = JSON.parse(fs.readFileSync(LV_PATH, "utf8"));
 const lvMeta = fs.existsSync(LV_META) ? JSON.parse(fs.readFileSync(LV_META, "utf8")) : {};
+// Unités extérieures certifiées avec au moins une combinaison multizone, toutes marques confondues
+// (M2OF-18HFN1-M : combinaisons « Appareils sans conduits » sous une marque, têtes nommées sous une autre).
+const MULTI_UNITS = new Set(Object.values(lv).filter((r) => MULTI_INDOOR_RE.test(String(r.im ?? "").trim())).map((r) => normKey(r.m)));
 const prev = fs.existsSync(OUT_PATH) ? JSON.parse(fs.readFileSync(OUT_PATH, "utf8")) : {};
 const dict = fs.existsSync(DICT_PATH) ? JSON.parse(fs.readFileSync(DICT_PATH, "utf8")) : {};
 const brandMeta = fs.existsSync(META_PATH) ? JSON.parse(fs.readFileSync(META_PATH, "utf8")) : {};
@@ -180,6 +185,9 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
       const rule = prefixes.find((p) => modelNumber.startsWith(p.prefix.toUpperCase()));
       if (rule) { seriesDisplay = rule.series; seriesSource = "inferred"; if (rule.systemType) systemType = rule.systemType; }
     }
+    // Certifiée avec des combinaisons multizones (« Appareils sans conduits », « Combinaison d'appareils… » à la
+    // place d'une unité intérieure précise) : une multizone, jamais une murale simple zone ni une centrale.
+    if (MULTI_UNITS.has(unitKey)) systemType = "multi-zone";
     if (seriesDisplay) {
       if (!seriesNameTypes.has(seriesDisplay)) seriesNameTypes.set(seriesDisplay, new Set());
       seriesNameTypes.get(seriesDisplay).add(systemType);
@@ -209,7 +217,7 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
     const isMulti = /multi/i.test(seriesName);
     const categories = [anyCold ? "cold-climate" : "conventional"];
     if (systemType === "central-ducted") categories.push("ducted");
-    else categories.push("ductless", isMulti ? "multi-zone" : "single-zone");
+    else categories.push("ductless", isMulti || systemType === "multi-zone" ? "multi-zone" : "single-zone");
     if (!seriesMap.has(seriesKey)) {
       seriesMap.set(seriesKey, {
         id: seriesSlug, slug: seriesSlug, name: seriesName, brandId: brandSlug, systemType, categories: [...categories],

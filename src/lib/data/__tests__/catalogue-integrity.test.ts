@@ -6,6 +6,7 @@
 import { describe, it, expect } from "vitest";
 import { registry } from "../registry";
 import { isGenericSeries } from "../series-label";
+import { getLogisVertVariants } from "../../subsidies/logisvert-official";
 
 const norm = (v: string) => v.toLowerCase().replace(/[^a-z0-9]/g, "");
 const published = registry.models.filter((m) => m.status === "published");
@@ -59,6 +60,15 @@ describe("catalogue — propreté des données", () => {
     const withCfg = new Set(registry.configurations.map((c) => c.modelId));
     const missing = published.filter((m) => !withCfg.has(m.id));
     expect(missing.map((m) => m.slug)).toEqual([]);
+  }, 60_000);
+
+  it("une unité certifiée avec des combinaisons multizones est une multizone (jamais « murale simple zone » ni centrale)", () => {
+    // Hydro-Québec décrit l'unité intérieure (« Appareils sans conduits », « Combinaison d'appareils… ») au lieu de la nommer.
+    const multi = /^(combinaison d.appareils|appareils (sans|avec) conduits)/i;
+    const bad = published.filter(
+      (m) => m.systemType !== "multi-zone" && getLogisVertVariants(m.modelNumber).some((e) => multi.test((e.indoorModel ?? "").trim())),
+    );
+    expect(bad.map((m) => `${m.slug} (${m.systemType})`).slice(0, 20)).toEqual([]);
   }, 60_000);
 
   it("une série non identifiée n'est jamais affichée comme une vraie série", () => {

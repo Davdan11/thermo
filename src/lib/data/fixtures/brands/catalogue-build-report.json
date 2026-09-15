@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-09-08T14:13:18.527Z",
-  "logisvertUpdatedAt": "2026-09-07T16:13:58.749Z",
+  "builtAt": "2026-09-15T22:10:26.110Z",
+  "logisvertUpdatedAt": "2026-09-12T20:00:41.008Z",
   "records": {
     "total": 176627,
     "used": 176627,
@@ -9,9 +9,9 @@
   "brands": 180,
   "models": 9782,
   "series": {
-    "official": 1035,
-    "inferred": 35,
-    "unidentified": 201
+    "official": 1155,
+    "inferred": 40,
+    "unidentified": 291
   },
   "modelsBySeriesSource": {
     "official": 6254,
@@ -4917,8 +4917,8 @@
     }
   ],
   "imagesCarried": {
-    "models": 158,
-    "series": 23
+    "models": 4168,
+    "series": 522
   },
   "previous": {
     "brands": 180,

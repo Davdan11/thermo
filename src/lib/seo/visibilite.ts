@@ -57,6 +57,12 @@ export interface JournalEntry {
 export const JOURNAL_VISIBILITE: JournalEntry[] = [
   {
     date: "2026-09-15",
+    titre: "2 059 multizones n'apparaissent plus comme des murales",
+    detail:
+      "Une unité certifiée par Hydro-Québec avec des combinaisons « appareils sans conduits » est classée multizone (Trane et American Standard 4TXM, Daikin 2MX et 3MX, MDV M2OF…) : bonne étiquette sur la fiche, bonnes pages murales et multizones. Les cartes ThermoMatch montrent le système complet : l'unité dehors, l'unité intérieure certifiée avec elle et le numéro AHRI.",
+  },
+  {
+    date: "2026-09-15",
     titre: "Adresses des fiches avec le nom du modèle",
     detail:
       "« /produit/haier-tempo-9000-btu-1q09te1be » au lieu de « /produit/haier-1q09te1be » : marque, nom commercial, capacité, puis le numéro. Anciennes adresses en redirection permanente (308), plan du site et IndexNow à jour d'eux-mêmes.",

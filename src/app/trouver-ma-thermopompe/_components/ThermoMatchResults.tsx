@@ -19,6 +19,7 @@ import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 import { categorieDe, type CategorieThermopompe } from "@/lib/garantie-legale/config";
 import { ORDRE_DE_GRANDEUR_LABEL } from "@/lib/prices/grille-installee";
+import { MULTI_INDOOR_RE } from "@/lib/thermomatch/candidates";
 
 /* ==================================================================
    ThermoMatch — écran des trois recommandations (version premium).
@@ -113,6 +114,14 @@ type Card = {
   brand: string;
   series: string;
   outdoor: string;
+  /** Unité intérieure certifiée avec l'unité extérieure (liste LogisVert d'Hydro-Québec) ; null pour une multizone ou si inconnue. */
+  indoor: string | null;
+  /** Multizone : Hydro-Québec certifie la combinaison « appareils sans conduits » sans nommer de tête. */
+  multiIndoor: boolean;
+  /** Numéro AHRI de la combinaison certifiée. */
+  ahri: string | null;
+  /** Architecture retenue par le moteur (central, central-hybrid, multi-zone, multi-single, single-zone), si connue. */
+  kind: string | null;
   img: string;
   ownImage: boolean;
   coldClimate: boolean;
@@ -174,6 +183,8 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
       : ctx?.isMultiZone
         ? FALLBACK.multi
         : FALLBACK.wall;
+  const indoorRaw = String(sp.indoorModel ?? p.indoorModel ?? "").trim();
+  const multiIndoor = MULTI_INDOOR_RE.test(indoorRaw);
   return {
     key: String(p.id ?? i),
     badge: r?.badge ?? (i === 0 ? "Meilleur choix" : "Alternative"),
@@ -181,6 +192,10 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     brand: p.brand ?? "",
     series: p.series ?? "",
     outdoor: p.outdoorModel ?? "",
+    indoor: indoorRaw && !multiIndoor ? indoorRaw.replace(/\*+/g, "").trim() : null,
+    multiIndoor,
+    ahri: typeof p.ahri === "string" && p.ahri ? p.ahri : null,
+    kind,
     img: p.imageUrl || fallback,
     ownImage: Boolean(p.imageUrl),
     coldClimate: Boolean(p.coldClimate),
@@ -206,6 +221,52 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     alsoSoldAs: p.alsoSoldAs ?? [],
     raw: r,
   };
+}
+
+/**
+ * Le système complet, pas seulement la machine d'extérieur : l'unité dehors et ce qui va dedans, tel que
+ * certifié par Hydro-Québec (liste LogisVert, numéro AHRI). Multizone : la liste certifie la combinaison
+ * « appareils sans conduits » sans nommer de tête ; on le dit plutôt que d'inventer un modèle.
+ */
+function SystemUnits({ card }: { card: Card }) {
+  const inside = card.multiIndoor
+    ? "Têtes de la même marque, au choix selon les pièces"
+    : card.indoor && card.kind === "multi-zone"
+      ? `${card.indoor} (une des têtes certifiées)`
+      : card.indoor;
+  const note = card.multiIndoor
+    ? "Hydro-Québec certifie la combinaison « appareils sans conduits » sans nommer de tête : l’installateur choisit les têtes compatibles de la même gamme."
+    : card.kind === "central-hybrid" && card.indoor
+      ? "Fournaise gardée : l’installateur pose l’unité intérieure compatible (serpentin sur la fournaise ou cabinet) prise dans la liste LogisVert, ce qui garde la subvention."
+      : null;
+  const row = (label: string, value: string) => (
+    <div className="flex items-baseline gap-3">
+      <dt className="w-[64px] shrink-0 text-[10.5px] font-bold uppercase" style={{ letterSpacing: "0.14em", color: C.inkMute }}>
+        {label}
+      </dt>
+      <dd className="min-w-0 text-[14px] font-medium" style={{ color: C.ink, margin: 0, overflowWrap: "anywhere" }}>
+        {value}
+      </dd>
+    </div>
+  );
+  return (
+    <div className="mt-3">
+      <dl className="grid gap-1.5" style={{ margin: 0 }}>
+        {card.outdoor && row("Dehors", card.outdoor)}
+        {inside && row("Dedans", inside)}
+      </dl>
+      {card.ahri && !card.multiIndoor && (
+        <p className="text-[12px]" style={{ color: C.inkMute, margin: "6px 0 0" }}>
+          Combinaison certifiée AHRI n° {card.ahri}
+        </p>
+      )}
+      {note && (
+        <p className="text-[12px] leading-snug" style={{ color: C.inkMute, margin: "6px 0 0" }}>
+          {note}
+        </p>
+      )}
+    </div>
+  );
 }
 
 const valueOf = (c: Card, k: MetricKey): number | null => (k === "subsidy" ? (c.subsidy > 0 ? c.subsidy : null) : c[k]);
@@ -333,9 +394,12 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
 
       <div className="px-6 pt-5 sm:px-7">
         <h3 style={{ fontSize: top ? 34 : 30, fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, margin: 0 }}>{card.brand}</h3>
-        <p className="text-[14px] font-medium" style={{ color: C.inkMute, margin: "8px 0 0" }}>
-          {[card.series && `Série ${card.series}`, card.outdoor].filter(Boolean).join(" · ")}
-        </p>
+        {card.series && (
+          <p className="text-[14px] font-medium" style={{ color: C.inkMute, margin: "8px 0 0" }}>
+            Série {card.series}
+          </p>
+        )}
+        <SystemUnits card={card} />
         {card.installLabel && (
           <p className="mt-3 inline-flex rounded-full px-3 py-1 text-[12px] font-semibold" style={{ border: `1px solid ${C.inkLine}`, color: C.ink, margin: "12px 0 0" }}>
             {card.installLabel}
