@@ -16,6 +16,7 @@ import { SITE_URL } from "@/lib/seo";
 import { searchConsoleOverview, type GscData, type GscMetrics, type PeriodBlock, type SearchConsoleState } from "@/lib/seo/search-console";
 import { readTrackedKeywords } from "@/lib/seo/search-console-store";
 import { indexNowSummary, type IndexNowMode, type IndexNowSummary } from "@/lib/seo/indexnow";
+import { JOURNAL_VISIBILITE, visibiliteEtat } from "@/lib/seo/visibilite";
 import { Card, SectionHeader } from "@/components/gestion/kit/Card";
 import { Chip } from "@/components/gestion/kit/Chip";
 import { DataTable } from "@/components/gestion/kit/DataTable";
@@ -166,6 +167,50 @@ export default async function ReferencementPage({ searchParams }: { searchParams
       <SectionHeader n={data ? "06" : "03"} title="IndexNow" accent="Bing, Yandex, Seznam" lead="Chaque matin à 6 h 45, après le robot de nuit, et après chaque déploiement : seules les adresses ajoutées, modifiées ou retirées du plan du site sont envoyées." />
       <Reveal delay={0.04}>
         <IndexNowPanel s={inx} />
+      </Reveal>
+
+      <SectionHeader
+        id="visibilite"
+        n={data ? "07" : "04"}
+        title="Visibilité"
+        accent="ce qui a été fait"
+        lead="Où en sont les fiches, compté en direct sur le catalogue, et le journal des changements qui aident le site à être trouvé."
+      />
+      <Visibilite />
+    </>
+  );
+}
+
+/* ---------------- Visibilité : état des fiches et journal ---------------- */
+
+const pct = (n: number, total: number) => `${total ? Math.round((n / total) * 100) : 0} %`;
+
+function Visibilite() {
+  const v = visibiliteEtat();
+  return (
+    <>
+      <Reveal className="cr-grid3" delay={0.04}>
+        <KpiTile label="Fiches visibles" value={num(v.fiches)} sub="marques vendues au Québec" tone="ink" />
+        <KpiTile label="Avec leur vrai nom" value={num(v.avecNom)} sub={`${pct(v.avecNom, v.fiches)} · dans le titre et l’adresse`} />
+        <KpiTile label="« Chauffe jusqu’à »" value={num(v.avecTemperature)} sub={`${pct(v.avecTemperature, v.fiches)} · publié par le fabricant`} />
+        <KpiTile label="Dans les plans du site" value={num(v.indexables)} sub="une fiche par marque et par machine" tone="orange" />
+      </Reveal>
+      <Reveal delay={0.06}>
+        <Card title="Journal" sub="Du plus récent au plus ancien">
+          <p className="g-hint rf-flat">
+            {num(v.adressesEnrichies)} adresses de fiches portent le nom et la capacité (les anciennes redirigent). Restent {num(v.fiches - v.avecNom)} fiches sans nom commercial et{" "}
+            {num(v.fiches - v.avecTemperature)} sans « chauffe jusqu’à » : la tâche du lundi les cherche dans les documents des fabricants.
+          </p>
+          <ol className="rf-history rf-journal">
+            {JOURNAL_VISIBILITE.map((e) => (
+              <li key={`${e.date}-${e.titre}`}>
+                <span className="rf-journal__date">{day(e.date)}</span>
+                <b>{e.titre}</b>
+                <small>{e.detail}</small>
+              </li>
+            ))}
+          </ol>
+        </Card>
       </Reveal>
     </>
   );
