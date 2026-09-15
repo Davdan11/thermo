@@ -67,6 +67,10 @@ a:hover .mqs-arrow, a:focus-visible .mqs-arrow { transform: translateX(5px); }
 .mqs-mrow:hover .mqs-sticky-col { background: #ffffff; }
 .mqs-mrow .mqs-mark { transform: scaleY(0); transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
 .mqs-mrow:hover .mqs-mark, .mqs-mrow:focus-within .mqs-mark { transform: scaleY(1); }
+/* Relevé : le filet de chaque cellule et la police du numéro de modèle, répétés sur des centaines de
+   lignes, sont portés par la feuille plutôt qu’écrits en style en ligne (poids du HTML). */
+.mqs-mrow > td { border-top: 1px solid rgba(15, 34, 51, 0.14); }
+.mqs-relmono { font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, "Liberation Mono", monospace; color: rgba(15, 34, 51, 0.74); }
 .mqs-tab { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s; }
 .mqs-tab:hover, .mqs-tab:focus-visible { transform: translateY(-3px); background: #ffffff; }
 .mqs-tab .mqs-tab-mark { transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1); }

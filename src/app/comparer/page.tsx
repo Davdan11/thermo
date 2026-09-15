@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/seo";
-import { registry } from "@/lib/data/registry";
-import { getComparisonData, MAX_COMPARE } from "@/lib/data/queries/comparator";
-import { getAllCatalogueProducts, type SelectableModelData } from "@/lib/data/queries/catalogue";
+import { getComparerViewProps, MAX_COMPARE, type CompareClientDetail } from "@/lib/data/queries/comparator";
 import { CompareSelector } from "@/components/compare/CompareSelector";
 import { ComparePageClient } from "@/components/compare/ComparePageClient";
-import { getProductDetail, type ProductDetail } from "@/lib/data/queries/product-detail";
+import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { DuelGlissiere, type VsModel } from "@/components/heroes-v2/produit/DuelGlissiere";
 import { DuelIntro, DuelSection } from "@/components/sections-v2/catalogue/DuelSections";
 
@@ -15,7 +13,7 @@ const EXEMPLE_VS = [
   { slug: "daikin-rxt12avju", img: "/images/comparer-accueil/daikin-rxt12avju.webp" },
 ];
 
-function toVs(d: ProductDetail, img: string | null): VsModel {
+function toVs(d: CompareClientDetail, img: string | null): VsModel {
   return {
     slug: d.model.slug,
     brand: d.brand.name,
@@ -42,13 +40,10 @@ interface ComparerPageProps {
 export default async function ComparerPage({ searchParams }: ComparerPageProps) {
   const params = await searchParams;
   const modelsParam = typeof params.models === "string" ? params.models : "";
-  // Lien de comparaison partagé avec d'anciennes adresses de fiches : ramenées à l'adresse actuelle.
-  const slugs = modelsParam.split(",").map((s) => s.trim()).filter(Boolean).map((s) => registry.modelBySlug.get(s)?.slug ?? s);
-  const data = getComparisonData(slugs);
-  const allProducts = getAllCatalogueProducts();
-  // Liste sérialisée en entier dans la page (~3 900 modèles) : seulement les champs que lit le sélecteur.
-  const selectable: SelectableModelData[] = allProducts.map((p) => ({ slug: p.model.slug, name: p.model.name, brandName: p.brand.name, brandSlug: p.brand.slug, capacityBtu: p.model.nominalCapacityBtu ?? null, imageUrl: p.imageUrl, isColdClimate: p.isColdClimate, systemTypeLabel: p.systemTypeLabel, hspf2: p.configuration?.hspf2 ?? null }));
-  const hasComparison = data.products.length >= 2;
+  // Seulement ce que lisent les composants client : fiches comparées allégées et 12 suggestions.
+  // Le catalogue entier (~3 900 modèles) reste au serveur, cherché par /api/comparer/recherche.
+  // Les liens partagés avec d'anciennes adresses de fiches sont ramenés à l'adresse actuelle.
+  const { data, hasComparison, selector } = getComparerViewProps(modelsParam);
   const selected = data.products.map((p) => toVs(p.detail, p.imageUrl));
   const vsModels = selected.length
     ? selected.slice(0, 2)
@@ -65,13 +60,14 @@ export default async function ComparerPage({ searchParams }: ComparerPageProps) 
       {/* ── Comparaison : la scène acier / sable du héros continue, colonne vertébrale au centre ── */}
       <DuelSection>
         {hasComparison ? (
-          <ComparePageClient data={data} maxCompare={MAX_COMPARE} selectableModels={selectable} />
+          <ComparePageClient data={data} maxCompare={MAX_COMPARE} suggestions={selector.suggestions} totalModels={selector.totalModels} />
         ) : (
           <div>
             <DuelIntro max={MAX_COMPARE} />
             <CompareSelector
-              products={selectable}
-              initialSlugs={slugs.filter((s) => data.products.some((p) => p.detail.model.slug === s))}
+              suggestions={selector.suggestions}
+              totalModels={selector.totalModels}
+              initialSlugs={selector.initialSlugs}
               maxCompare={MAX_COMPARE}
             />
           </div>

@@ -8,7 +8,6 @@
    Rendu serveur ; seules les animations sont des composants client.
    ================================================================== */
 import "./sections.css";
-import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import * as motion from "motion/react-client";
@@ -19,6 +18,7 @@ import { DISPLAY, EASE, MONO, typo } from "@/components/heroes-v2/marques/shared
 import { InkNumeral } from "./InkNumeral";
 import { DriftName } from "./MonographieClient";
 import { CountUp } from "./CountUp";
+import { FichesSuite, type FicheData } from "./FichesSuite";
 
 const C = {
   cream: "#F6F1E8",
@@ -274,98 +274,36 @@ function warrantyOf(product: CatalogueProduct): string {
   return warrantyLabel || "10 ans (pièces et comp.)";
 }
 
-function Leader({ label, value, strong = false, icon }: { label: string; value: ReactNode; strong?: boolean; icon?: ReactNode }) {
-  return (
-    <div className="flex items-end gap-2 py-[7px] text-[13.5px]">
-      <dt className="flex shrink-0 items-center gap-1.5" style={{ color: C.mute }}>
-        {icon}
-        {label}
-      </dt>
-      <span aria-hidden="true" className="mqs-leader" />
-      <dd className="shrink-0 text-right tabular-nums" style={{ margin: 0, fontWeight: strong ? 700 : 600, color: C.ink }}>
-        {value}
-      </dd>
-    </div>
-  );
-}
+/** Fiches affichées au chapitre III (au-delà : lien vers le catalogue filtré). */
+const FOLIO_MAX = 48;
+/** Fiches complètes dès le HTML ; les suivantes sont rendues par segments (FichesSuite). */
+const FOLIO_PREMIER = 12;
+const FOLIO_SEGMENT = 12;
 
-function Fiche({ product, index }: { product: CatalogueProduct; index: number }) {
-  const { model, brand, configuration, isColdClimate } = product;
+/**
+ * Données d’une fiche, mises en forme au serveur (mêmes valeurs que l’ancienne fiche rendue ici) :
+ * ~0,4 Ko de JSON au lieu de l’arbre rendu de la fiche dans la charge utile de la page.
+ */
+function ficheData(product: CatalogueProduct): FicheData {
+  const { model, configuration, isColdClimate } = product;
   const logisVertDollars: number | null = (product as { logisVertDollars?: number }).logisVertDollars || null;
-  const hspf2 = configuration?.hspf2 ?? model.hspf2Min;
-  const seer2 = configuration?.seer2 ?? model.seer2Min;
-  return (
-    <article className="mqs-fiche relative flex h-full flex-col" style={{ background: C.paper, boxShadow: `0 0 0 1px ${C.line}`, fontFamily: "var(--font-sans)" }}>
-      <div className="relative aspect-[4/3] overflow-hidden" style={{ background: C.print }}>
-        {product.imageUrl ? (
-          <Image
-            src={product.imageUrl}
-            alt={product.names.full}
-            width={480}
-            height={360}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className="h-full w-full object-contain"
-            style={{ padding: "9% 10%", mixBlendMode: "multiply" }}
-          />
-        ) : (
-          <span className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-6 text-center">
-            <span style={{ fontFamily: DISPLAY, fontSize: 22, fontWeight: 800, letterSpacing: "-0.03em", color: "transparent", WebkitTextStroke: `1px ${C.ink}` }}>{brand.name}</span>
-            <span className="text-[11px] tracking-wide" style={{ color: C.mute }}>
-              Photo officielle à venir
-            </span>
-          </span>
-        )}
-        <span className="absolute left-3 top-3 text-[10.5px] uppercase tabular-nums" style={{ fontFamily: MONO, letterSpacing: "0.12em", color: C.mute }}>
-          Fig. {String(index + 1).padStart(2, "0")}
-        </span>
-        {isColdClimate ? (
-          <span className="absolute right-3 top-3 px-2 py-1 text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.14em", background: C.ink, color: C.cream }}>
-            Climat froid
-          </span>
-        ) : null}
-      </div>
-      <div className="flex flex-1 flex-col px-5 pt-5">
-        <p className="text-[11px] font-semibold uppercase" style={{ letterSpacing: "0.18em", color: C.mute, margin: 0 }}>
-          {product.systemTypeLabel}
-        </p>
-        <h3 style={{ fontFamily: DISPLAY, fontSize: 19, fontWeight: 600, letterSpacing: "-0.03em", lineHeight: 1.2, margin: "8px 0 0", color: C.ink }}>
-          <Link href={`/produit/${model.slug}`} className="after:absolute after:inset-0" style={{ color: "inherit" }}>
-            {product.names.full}
-          </Link>
-        </h3>
-        <p className="text-[12.5px] leading-snug" style={{ fontFamily: MONO, color: C.mute, margin: "8px 0 0" }}>
-          {product.names.short === model.modelNumber ? "Capacité non publiée" : model.modelNumber}
-          {model.certifiedPairings ? ` · ${model.certifiedPairings} jumelage${model.certifiedPairings > 1 ? "s" : ""} certifié${model.certifiedPairings > 1 ? "s" : ""}` : ""}
-          {product.refrigerant ? ` · ${product.refrigerant}` : ""}
-        </p>
-        <dl className="mt-auto pt-4" style={{ margin: 0 }}>
-          {hspf2 != null ? <Leader label="HSPF2" value={hspf2} /> : null}
-          {seer2 != null ? <Leader label="SEER2" value={seer2} /> : null}
-          <Leader
-            label="Chauffage jusqu’à"
-            value={model.minimumOperatingTemperatureC != null ? `${model.minimumOperatingTemperatureC}°C` : isColdClimate ? "-25°C" : "-15°C"}
-          />
-          <Leader label="Garantie" value={warrantyOf(product)} />
-          {logisVertDollars != null && logisVertDollars > 0 ? (
-            <Leader
-              label="LogisVert"
-              strong
-              value={`${logisVertDollars.toLocaleString("fr-CA")} $`}
-              icon={<Image src="/images/hydroquebec.png" alt="" width={14} height={14} className="object-contain" style={{ width: 14, height: 14, maxWidth: "none" }} />}
-            />
-          ) : null}
-        </dl>
-        <div className="relative z-20 mt-3 py-4" style={{ borderTop: `1px solid ${C.line}` }}>
-          <Link href={`/produit/${model.slug}`} className="inline-flex items-center gap-2 text-[14px] font-semibold" style={{ color: C.ink }}>
-            Voir le modèle
-            <span aria-hidden="true" className="mqs-arrow">
-              →
-            </span>
-          </Link>
-        </div>
-      </div>
-    </article>
-  );
+  const pairings = model.certifiedPairings
+    ? ` · ${model.certifiedPairings} jumelage${model.certifiedPairings > 1 ? "s" : ""} certifié${model.certifiedPairings > 1 ? "s" : ""}`
+    : "";
+  return {
+    slug: model.slug,
+    name: product.names.full,
+    brandName: product.brand.name,
+    imageUrl: product.imageUrl,
+    systemTypeLabel: product.systemTypeLabel,
+    specLine: `${product.names.short === model.modelNumber ? "Capacité non publiée" : model.modelNumber}${pairings}${product.refrigerant ? ` · ${product.refrigerant}` : ""}`,
+    isColdClimate,
+    hspf2: configuration?.hspf2 ?? model.hspf2Min ?? null,
+    seer2: configuration?.seer2 ?? model.seer2Min ?? null,
+    minTemp: model.minimumOperatingTemperatureC != null ? `${model.minimumOperatingTemperatureC}°C` : isColdClimate ? "-25°C" : "-15°C",
+    warranty: warrantyOf(product),
+    logisVert: logisVertDollars != null && logisVertDollars > 0 ? `${logisVertDollars.toLocaleString("fr-CA")} $` : null,
+  };
 }
 
 export function ModelFolio({ brandName, brandSlug, brandRawName, models }: { brandName: string; brandSlug: string; brandRawName: string; models: CatalogueProduct[] }) {
@@ -402,22 +340,14 @@ export function ModelFolio({ brandName, brandSlug, brandRawName, models }: { bra
           <div className="hidden sm:block lg:pb-4">{compare}</div>
         </header>
 
+        {/* Les 12 premières fiches sont complètes dans le HTML ; les suivantes y gardent leur nom et leur
+            lien, puis sont rendues complètes par segments à l’approche (FichesSuite). */}
         <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 xl:grid-cols-4" style={{ listStyle: "none", padding: 0 }}>
-          {models.slice(0, 48).map((product, i) => (
-            <motion.li
-              key={product.model.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.9, ease: EASE, delay: (i % 4) * 0.08 }}
-            >
-              <Fiche product={product} index={i} />
-            </motion.li>
-          ))}
+          <FichesSuite fiches={models.slice(0, FOLIO_MAX).map(ficheData)} premier={FOLIO_PREMIER} segment={FOLIO_SEGMENT} />
         </ul>
-        {models.length > 48 && (
+        {models.length > FOLIO_MAX && (
           <p className="mt-10 text-center text-[15px]" style={{ color: C.mute, fontFamily: "var(--font-sans)" }}>
-            {models.length - 48} autres modèles {brandRawName} sont au catalogue.{" "}
+            {models.length - FOLIO_MAX} autres modèles {brandRawName} sont au catalogue.{" "}
             <Link href={`/thermopompes?brand=${brandSlug}`} className="mqs-u font-semibold" style={{ color: C.ink }}>
               Voir tous les modèles {brandRawName}
             </Link>

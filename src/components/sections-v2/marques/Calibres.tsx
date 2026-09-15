@@ -10,7 +10,6 @@
    ================================================================== */
 import "./sections.css";
 import type { ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import * as motion from "motion/react-client";
 import { brandLogoPath } from "@/lib/data/brand-logos";
@@ -20,6 +19,7 @@ import { JsonLd, type FaqItem } from "@/components/seo/SeoBlocks";
 import { DISPLAY, EASE, MONO, typo } from "@/components/heroes-v2/marques/shared";
 import { CountUp } from "./CountUp";
 import { ColdRuler } from "./CalibresClient";
+import { ReleveLignes, type ReleveLigne, type ReleveTick } from "./ReleveLignes";
 import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 const C = {
@@ -111,6 +111,10 @@ export function CalibresTrust() {
    Relevé : mêmes colonnes et même ordre que ModelTable (sans marque)
    ------------------------------------------------------------------ */
 
+/** Lignes complètes dès le HTML (vignette, mini-règle) ; les suivantes par tranches de RELEVE_SEGMENT. */
+const RELEVE_PREMIER = 24;
+const RELEVE_SEGMENT = 24;
+
 export function CalibresTable({ models, caption, brandName, kindLabel }: { models: SeoModel[]; caption?: string; brandName: string; kindLabel: string }) {
   const top = models.reduce((a, m) => Math.max(a, m.nominalBtu, m.h5Btu ?? 0), 0);
   const scale = Math.max(6000, Math.ceil(top / 6000) * 6000);
@@ -118,6 +122,25 @@ export function CalibresTable({ models, caption, brandName, kindLabel }: { model
   const ticks = Array.from({ length: scale / 6000 + 1 }, (_, i) => i * 6000);
   const th = "px-4 py-3.5 text-[10.5px] font-semibold uppercase";
   const thStyle = { letterSpacing: "0.14em", color: C.mute, fontFamily: MONO, borderBottom: `1px solid ${C.navy}` } as const;
+  // Lignes mises en forme ici : le navigateur reçoit ces valeurs, pas l'arbre rendu de chaque ligne.
+  const tickList: ReleveTick[] = ticks.map((t) => ({ left: pct(t), major: t % 12000 === 0 }));
+  const lignes: ReleveLigne[] = models.map((m) => ({
+    key: m.slug,
+    href: `/produit/${m.canonicalSlug}`,
+    name: m.name,
+    outdoorModel: m.outdoorModel,
+    alsoSoldAs: m.alsoSoldAs.length > 0 ? m.alsoSoldAs.map((a) => a.brand).join(", ") : null,
+    imageUrl: m.imageUrl,
+    logo: m.imageUrl ? null : brandLogoPath(m.brandSlug),
+    type: `${m.kind === "murale" ? "Murale" : "Centrale"}${m.coldClimate ? " · grand froid" : ""}`,
+    nominal: fmt(m.nominalBtu, " BTU"),
+    nominalPct: pct(m.nominalBtu),
+    h5: m.h5Btu !== null ? fmt(m.h5Btu, " BTU") : null,
+    h5Pct: m.h5Btu !== null ? pct(m.h5Btu) : null,
+    hspf2: fmt(m.hspf2),
+    seer2: fmt(m.seer2),
+    logisVert: m.logisVertDollars > 0 ? fmt(m.logisVertDollars, " $") : "—",
+  }));
 
   return (
     <section className="relative" style={{ background: C.bg, color: C.navy, fontFamily: DISPLAY }}>
@@ -189,93 +212,9 @@ export function CalibresTable({ models, caption, brandName, kindLabel }: { model
                 </tr>
               </thead>
               <tbody>
-                {models.map((m) => {
-                  const logo = brandLogoPath(m.brandSlug);
-                  const cell = { borderTop: `1px solid ${C.line}` } as const;
-                  return (
-                    <motion.tr key={m.slug} className="mqs-mrow" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, margin: "0px 0px -6% 0px" }} transition={{ duration: 0.6 }}>
-                      <td className="mqs-sticky-col relative min-w-[220px] px-4 py-3.5 align-middle sm:min-w-[290px]" style={{ ...cell, background: C.strip }}>
-                        <span aria-hidden="true" className="mqs-mark absolute bottom-0 left-0 top-0 w-[3px] origin-top" style={{ background: C.orange }} />
-                        <div className="flex items-center gap-3">
-                          <Link
-                            href={`/produit/${m.canonicalSlug}`}
-                            className="flex h-11 w-14 shrink-0 items-center justify-center overflow-hidden"
-                            style={{ background: "#FFFFFF", boxShadow: `inset 0 0 0 1px ${C.line}` }}
-                            aria-hidden="true"
-                            tabIndex={-1}
-                          >
-                            {m.imageUrl ? (
-                              <Image src={m.imageUrl} alt="" width={56} height={44} className="h-full w-full object-contain p-1" />
-                            ) : logo ? (
-                              <Image src={logo} alt="" width={48} height={20} className="h-auto max-h-[18px] w-auto max-w-[44px] object-contain opacity-80" />
-                            ) : null}
-                          </Link>
-                          <div className="min-w-0">
-                            <Link href={`/produit/${m.canonicalSlug}`} className="font-semibold hover:underline" style={{ color: C.navy, textUnderlineOffset: 3 }}>
-                              {m.name}
-                            </Link>
-                            <div className="text-[11px]" style={{ fontFamily: MONO, color: C.mute }}>
-                              {m.outdoorModel}
-                            </div>
-                          </div>
-                        </div>
-                        {m.alsoSoldAs.length > 0 && (
-                          <div className="mt-1 text-[11px]" style={{ color: C.mute }}>
-                            Aussi : {m.alsoSoldAs.map((a) => a.brand).join(", ")}
-                          </div>
-                        )}
-                      </td>
-                      <td className="px-4 py-3.5" style={{ ...cell, color: C.mute }}>
-                        {m.kind === "murale" ? "Murale" : "Centrale"}
-                        {m.coldClimate ? " · grand froid" : ""}
-                      </td>
-                      <td className="whitespace-nowrap px-4 py-3.5 text-right tabular-nums" style={cell}>
-                        {fmt(m.nominalBtu, " BTU")}
-                      </td>
-                      <td className="px-4 py-3.5 text-right" style={cell}>
-                        <div className="flex flex-col items-end">
-                          <span className="whitespace-nowrap tabular-nums" style={{ fontWeight: 600 }}>
-                            {m.h5Btu !== null ? fmt(m.h5Btu, " BTU") : <span style={{ color: C.faint, fontWeight: 400 }}>n/d</span>}
-                          </span>
-                          {/* Mini-règle : trait marine = nominal, repère orange = certifié à -15 °C */}
-                          <span aria-hidden="true" className="relative mt-2 block h-[12px] w-[160px]">
-                            <span className="absolute inset-x-0 top-[5px] h-px" style={{ background: C.line }} />
-                            {ticks.map((t) => (
-                              <span key={t} className="absolute top-[2px] h-[7px] w-px" style={{ left: pct(t), background: C.navy, opacity: t % 12000 === 0 ? 0.42 : 0.18 }} />
-                            ))}
-                            <motion.span
-                              className="absolute left-0 top-[4px] block h-[3px] origin-left"
-                              style={{ width: pct(m.nominalBtu), background: C.navy, opacity: 0.55 }}
-                              initial={{ scaleX: 0 }}
-                              whileInView={{ scaleX: 1 }}
-                              viewport={{ once: true }}
-                              transition={{ duration: 0.9, ease: EASE, delay: 0.1 }}
-                            />
-                            {m.h5Btu !== null ? (
-                              <motion.span
-                                className="absolute top-0 block h-[12px] w-[3px] -translate-x-1/2 origin-bottom"
-                                style={{ left: pct(m.h5Btu), background: C.orange }}
-                                initial={{ scaleY: 0 }}
-                                whileInView={{ scaleY: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, ease: EASE, delay: 0.75 }}
-                              />
-                            ) : null}
-                          </span>
-                        </div>
-                      </td>
-                      <td className="px-4 py-3.5 text-right tabular-nums" style={cell}>
-                        {fmt(m.hspf2)}
-                      </td>
-                      <td className="px-4 py-3.5 text-right tabular-nums" style={cell}>
-                        {fmt(m.seer2)}
-                      </td>
-                      <td className="whitespace-nowrap px-4 py-3.5 text-right font-semibold tabular-nums" style={cell}>
-                        {m.logisVertDollars > 0 ? fmt(m.logisVertDollars, " $") : "—"}
-                      </td>
-                    </motion.tr>
-                  );
-                })}
+                {/* 24 premières lignes complètes dans le HTML ; les suivantes y gardent valeurs et liens,
+                    vignette et mini-règle arrivent par segments à l’approche (ReleveLignes). */}
+                <ReleveLignes lignes={lignes} ticks={tickList} premier={RELEVE_PREMIER} segment={RELEVE_SEGMENT} />
               </tbody>
             </table>
           </motion.div>
