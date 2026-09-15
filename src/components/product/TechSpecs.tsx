@@ -3,6 +3,7 @@ import { seriesDisplayName } from "@/lib/data/series-label";
 import { DocGlyph, Reveal, SheetHead } from "@/components/sections-v2/produit/motion";
 import { INK, LABEL, LINE, MUTE } from "@/components/sections-v2/produit/tokens";
 import { formatMinTemp } from "@/lib/thermomatch/min-temp-source";
+import { multizoneHeads } from "@/lib/data/multizone-heads";
 
 /* ------------------------------------------------------------------
    TechSpecs — grouped technical spécifications using DL
@@ -40,6 +41,14 @@ export function TechSpecs({ detail }: TechSpecsProps) {
   ];
   if (model.zones != null) {
     idRows.push({ label: "Zones", value: `${model.zones}` });
+  }
+  // Multizone : nombre de têtes intérieures publié par le fabricant (Hydro-Québec ne le publie pas). Inconnu : aucune ligne.
+  const heads = model.systemType === "multi-zone" ? multizoneHeads(detail.brand.name, model.modelNumber) : null;
+  if (heads) {
+    idRows.push({
+      label: "Têtes intérieures",
+      value: `${heads.minIndoorUnits ? `${heads.minIndoorUnits} à ${heads.maxIndoorUnits}` : `jusqu’à ${heads.maxIndoorUnits}`} (document du fabricant)`,
+    });
   }
   groups.push({ title: "Identification", rows: idRows });
 
