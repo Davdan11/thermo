@@ -41,6 +41,7 @@ const NAV = [
       { href: "/subventions", label: "Aides financières" },
       { href: "/subventions/logisvert", label: "LogisVert par marque" },
       { href: "/prix", label: "Prix : notre approche" },
+      { href: "/methode", label: "Notre méthode" },
       { href: "/calculateur-economies", label: "Calculatrice d’économies" },
       { href: "/glossaire", label: "Glossaire" },
       { href: "/faq", label: "FAQ" },

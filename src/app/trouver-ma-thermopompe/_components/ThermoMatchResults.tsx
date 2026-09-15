@@ -909,6 +909,14 @@ function HowItWorks({ ctx, kept }: { ctx: SummaryContext; kept: number }) {
           ))}
         </div>
       )}
+      {/* Méthode complète : architecture, critères et poids, départage des ex æquo, sources. */}
+      <p className="text-[12.5px] leading-relaxed" style={{ color: C.faint, margin: "20px 0 0" }}>
+        Critères, poids, départage des ex æquo et sources :{" "}
+        <Link href="/methode#thermomatch" className="underline underline-offset-4" style={{ color: C.cream }}>
+          notre méthode
+        </Link>
+        .
+      </p>
     </details>
   );
 }
