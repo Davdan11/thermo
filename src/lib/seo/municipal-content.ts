@@ -15,6 +15,7 @@
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { clampDescription, fitTitle } from "./index";
 import { fmtInt, fmtTemp, referenceHdd } from "./cities-data";
+import { aNom, deNom } from "./cities-text";
 import {
   PERIOD_LABELS,
   aggregate,
@@ -245,18 +246,19 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
       ? "Comparez les machines sur leur capacité certifiée à -15 °C."
       : gap <= 0
         ? `Les nuits de janvier sont ${fmtGap(gap)} plus froides que -15 °C : visez une machine qui garde toute sa capacité nominale à -15 °C (${fmtInt(facts.holdsFullCount)} modèles de la liste LogisVert).`
-        : `Les nuits de janvier restent ${fmtGap(gap)} au-dessus de -15 °C : la capacité certifiée à -15 °C laisse une marge la plupart des nuits.`;
+        : `Les nuits de janvier restent ${fmtGap(gap)} au-dessus de -15 °C : une machine dimensionnée sur sa capacité certifiée à -15 °C garde une marge la plupart des nuits.`;
+  // Le temps de marche de l'appoint dépend de la maison, du dimensionnement et du modèle : aucune durée promise.
   const appoint = {
-    "tres-froid": { value: "À prévoir", note: "Sous -25 °C, la capacité de toute thermopompe chute : plinthes ou fournaise en relève." },
-    froid: { value: "Utile lors des pointes", note: "Les plinthes existantes prennent le relais quelques nuits par hiver." },
-    modere: { value: "Rarement sollicité", note: "Le relais des plinthes reste exceptionnel." },
+    "tres-froid": { value: "À prévoir", note: "Sous -25 °C, la capacité des thermopompes baisse, plus ou moins selon le modèle : plinthes ou fournaise en relève, dont le temps de marche dépend de la maison et du dimensionnement." },
+    froid: { value: "Utile lors des pointes", note: "Les plinthes existantes prennent le relais lors des nuits les plus froides ; combien d'heures, cela dépend de la maison, du dimensionnement et du modèle." },
+    modere: { value: "Surtout lors des pointes", note: "Le relais des plinthes reste limité si la machine est bien dimensionnée pour la maison ; une machine trop petite les fait tourner bien plus souvent." },
   }[tier];
 
   /* ---- Héros ---- */
   const answer = [
     janMin !== null
-      ? `À ${name}, les nuits de janvier descendent en moyenne à ${fmtTemp(janMin)}${d20 !== null ? `, et ${fmtInt(d20)} jours par an passent sous -20 °C` : ""} (${st}, à ${km}).`
-      : `À ${name}, janvier affiche une moyenne de ${fmtTemp(s.janMeanC)} (${st}, à ${km}).`,
+      ? `${aNom(name, true)}, les nuits de janvier descendent en moyenne à ${fmtTemp(janMin)}${d20 !== null ? `, et ${fmtInt(d20)} jours par an passent sous -20 °C` : ""} (${st}, à ${km}).`
+      : `${aNom(name, true)}, janvier affiche une moyenne de ${fmtTemp(s.janMeanC)} (${st}, à ${km}).`,
     `Retenez la capacité certifiée à -15 °C${tier === "tres-froid" ? " et prévoyez un appoint" : ""}.`,
     pct !== null ? `${fmtPct(pct)} des ${fmtInt(dw)} logements occupés datent de 1980 ou avant.` : `${fmtInt(dw)} logements occupés en 2021.`,
   ].join(" ");
@@ -339,7 +341,7 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
       ? {
           eyebrow: "Recensement 2021",
           title: "Quand les logements ont été construits",
-          intro: `${fmtInt(c.periodTotal ?? 0)} logements occupés de ${name}, par période de construction.`,
+          intro: `${fmtInt(c.periodTotal ?? 0)} logements occupés ${deNom(name)}, par période de construction.`,
           bars: per.map((v, i) => ({ label: PERIOD_LABELS[i], value: v as number, display: fmtInt(v as number), old: i < 2 })),
           footnote: "Données-échantillon (25 %) arrondies par Statistique Canada : le total peut différer de quelques unités du nombre de logements occupés.",
         }
@@ -349,13 +351,13 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
   /* ---- Questions ---- */
   const faq: Array<{ question: string; answer: string }> = [
     {
-      question: `Quel froid faut-il prévoir à ${name}?`,
-      answer: `Selon la ${st}, à ${km} de ${name} : ${janMin !== null ? `${fmtTemp(janMin)} les nuits de janvier` : `${fmtTemp(s.janMeanC)} en janvier`}${d20 !== null ? ` et ${fmtInt(d20)} jours sous -20 °C par an` : ""}.`,
+      question: `Quel froid faut-il prévoir ${aNom(name)}?`,
+      answer: `Selon la ${st}, à ${km} ${deNom(name)} : ${janMin !== null ? `${fmtTemp(janMin)} les nuits de janvier` : `${fmtTemp(s.janMeanC)} en janvier`}${d20 !== null ? ` et ${fmtInt(d20)} jours sous -20 °C par an` : ""}.`,
     },
   ];
   if (pct !== null) {
     faq.push({
-      question: `Les maisons de ${name} sont-elles anciennes?`,
+      question: `Les maisons ${deNom(name)} sont-elles anciennes?`,
       answer: `${fmtPct(pct)} des logements occupés ont été construits en 1980 ou avant${has(gAgg?.builtTo1980Pct) && group ? `, contre ${fmtPct(gAgg!.builtTo1980Pct as number)} ${inGroup(group)}` : ""}${
         topPeriod ? ` ; la période la plus représentée est « ${topPeriod.label} » (${topPeriod.display} logements)` : ""
       }. Recensement de 2021.`,
@@ -380,13 +382,15 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
   const attribution = "Compilation : Thermopompes À Vendre. Valeurs publiées non modifiées ; distances, parts et rangs calculés.";
 
   /* ---- Métadonnées ---- */
-  const title = fitTitle(`Installation de thermopompe à ${shown} : climat local`, `Installation de thermopompe à ${shown}`, `Thermopompe à ${shown} : installation`, `Thermopompe à ${shown}`, ...(shown !== name ? [`Thermopompe à ${name} (${regionName})`] : []));
+  // « Thermopompe aux Cèdres », jamais « à Les Cèdres » (aNom).
+  const aShown = aNom(shown);
+  const title = fitTitle(`Installation de thermopompe ${aShown} : climat local`, `Installation de thermopompe ${aShown}`, `Thermopompe ${aShown} : installation`, `Thermopompe ${aShown}`, ...(shown !== name ? [`Thermopompe ${aNom(name)} (${regionName})`] : []));
   const jan = janMin !== null ? `nuits de janvier à ${fmtTemp(janMin)}` : `janvier à ${fmtTemp(s.janMeanC)}`;
   const descCandidates = [
-    `Installation de thermopompe à ${shown} : ${jan}${d20 !== null ? `, ${fmtInt(d20)} jours sous -20 °C` : ""} (station ${s.name})${pct !== null ? `, ${fmtPct(pct)} de logements de 1980 ou avant` : ""}. LogisVert.`,
-    `Thermopompe à ${shown} : ${jan}${d20 !== null ? `, ${fmtInt(d20)} jours sous -20 °C` : ""}${pct !== null ? `, ${fmtPct(pct)} de logements de 1980 ou avant` : ""}. Modèles climat froid et LogisVert.`,
-    `Thermopompe à ${shown} : ${jan}${hdd !== null ? `, ${fmtInt(hdd)} degrés-jours` : ""}. Modèles certifiés climat froid et subvention LogisVert d'Hydro-Québec.`,
-    `Thermopompe à ${shown} : ${jan}. Modèles certifiés climat froid et subvention LogisVert d'Hydro-Québec, données locales.`,
+    `Installation de thermopompe ${aShown} : ${jan}${d20 !== null ? `, ${fmtInt(d20)} jours sous -20 °C` : ""} (station ${s.name})${pct !== null ? `, ${fmtPct(pct)} de logements de 1980 ou avant` : ""}. LogisVert.`,
+    `Thermopompe ${aShown} : ${jan}${d20 !== null ? `, ${fmtInt(d20)} jours sous -20 °C` : ""}${pct !== null ? `, ${fmtPct(pct)} de logements de 1980 ou avant` : ""}. Modèles climat froid et LogisVert.`,
+    `Thermopompe ${aShown} : ${jan}${hdd !== null ? `, ${fmtInt(hdd)} degrés-jours` : ""}. Modèles certifiés climat froid et subvention LogisVert d'Hydro-Québec.`,
+    `Thermopompe ${aShown} : ${jan}. Modèles certifiés climat froid et subvention LogisVert d'Hydro-Québec, données locales.`,
   ].map((d) => d.replace(/\s+/g, " ").trim());
   const description = descCandidates.find((d) => d.length >= 110 && d.length <= 158) ?? descCandidates.find((d) => d.length <= 158) ?? clampDescription(descCandidates[0]);
 
@@ -404,7 +408,7 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
     breadcrumbs: [{ label: "Thermopompe par ville", href: "/thermopompe" }, ...(group && hub ? [{ label: groupTitle(group), href: hub }] : []), { label: name, href: path }],
     hero: {
       region: group ? `${regionName} · ${groupTitle(group)}` : regionName,
-      intro: `Installation d'une thermopompe à ${name} : le froid mesuré à la ${st}, à ${km}, et l'âge des ${fmtInt(dw)} logements du recensement de 2021.`,
+      intro: `Installation d'une thermopompe ${aNom(name)} : le froid mesuré à la ${st}, à ${km}, et l'âge des ${fmtInt(dw)} logements du recensement de 2021.`,
       answer,
       stats,
       source: `Normales ${s.period} d'Environnement et Changement climatique Canada, ${st}. Température de conception : table régionale du site (${design.fsa}).`,
