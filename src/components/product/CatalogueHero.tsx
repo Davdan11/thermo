@@ -95,9 +95,9 @@ export function CatalogueHero({ stats, wall, search }: { stats: { models: number
   const ring = pickRing(wall);
   const onRing = compact ? ring.slice(0, RING_MOBILE) : ring;
   const facts: Fact[] = [
-    { n: stats.models, l: "modèles documentés" },
+    { n: stats.models, l: "fiches au catalogue" },
     { n: stats.brands, l: "marques" },
-    { n: stats.coldClimate, l: "certifiés grand froid" },
+    { n: stats.coldClimate, l: "certifiées climat froid" },
   ];
 
   return (

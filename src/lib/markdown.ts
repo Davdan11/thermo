@@ -101,8 +101,12 @@ export async function getGuideBySlug(slug: string): Promise<Guide | null> {
     const fullPath = path.join(contentDirectory, `${slug}.md`);
     if (!fs.existsSync(fullPath)) return null;
     const raw = matter(fs.readFileSync(fullPath, "utf8"));
-    const processed = await remark().use(remarkGfm).use(html).process(raw.content);
-    return { ...toMetadata(slug, raw), contentHtml: processed.toString() };
+    // Compteurs du catalogue : jetons {{chiffre:…}} remplacés par les valeurs calculées (src/lib/data/chiffres.ts),
+    // jamais écrits à la main. Import différé : la liste des guides (plans du site) n'a pas à charger le catalogue.
+    const { resolveChiffres } = await import("@/lib/data/chiffres");
+    const processed = await remark().use(remarkGfm).use(html).process(resolveChiffres(raw.content, slug));
+    const meta = toMetadata(slug, raw);
+    return { ...meta, faq: meta.faq?.map((f) => ({ q: resolveChiffres(f.q, slug), a: resolveChiffres(f.a, slug) })), contentHtml: processed.toString() };
   } catch (error) {
     console.error(`Error loading guide ${slug}:`, error);
     return null;

@@ -13,7 +13,7 @@ faq:
   - q: "Quelle est la meilleure marque de thermopompe murale au Québec?"
     a: "Aucune marque ne domine sur tous les critères. Sur nos données certifiées, Mitsubishi Electric, Fujitsu et Moovair placent des machines en tête au COP à -15 °C ; Carrier, Moovair, Fujitsu, Bosch et LG en tête au HSPF2. La bonne marque est celle dont le modèle, dans votre calibre, a le meilleur COP au froid et un installateur sérieux près de chez vous."
   - q: "Quel HSPF2 faut-il viser pour une murale au Québec?"
-    a: "La médiane de notre base est de 9,5 et 62 murales dépassent 12. Au-dessus de 11, vous êtes dans le quart supérieur du marché. Mais au Québec, le COP certifié à -15 °C compte au moins autant : deux machines à HSPF2 égal peuvent différer de 30 % par grand froid."
+    a: "La médiane de notre base est de 9,5 et {{chiffre:machines-hspf2-sup:wall-single:12}} murales dépassent 12. Au-dessus de 11, vous êtes dans le quart supérieur du marché. Mais au Québec, le COP certifié à -15 °C compte au moins autant : deux machines à HSPF2 égal peuvent différer de 30 % par grand froid."
   - q: "Une murale 12 000 BTU chauffe-t-elle une maison entière?"
     a: "Rarement. Elle couvre bien une aire ouverte de 600 à 900 pi² ; les pièces fermées restent aux plinthes. Pour toute la maison, il faut plusieurs murales, un multizone ou une centrale. Le classement des murales sert à choisir la meilleure machine par pièce, pas à remplacer le calcul de charge."
   - q: "Les classements changent-ils souvent?"
@@ -27,18 +27,18 @@ Les palmarès de thermopompes murales qu'on trouve en ligne reposent sur des avi
 Une murale « meilleure » au Québec n'est pas la plus vendue ni la moins chère. C'est celle qui, à calibre égal :
 
 1. **garde sa capacité par grand froid** : une machine vendue 12 000 BTU peut fournir 8 000 ou 14 000 BTU/h à -15 °C selon le modèle ;
-2. **consomme le moins pour la fournir** : c'est le COP à -15 °C, de 1,3 à 2,89 sur les 1 090 machines certifiées de notre base ;
+2. **consomme le moins pour la fournir** : c'est le COP à -15 °C, de 1,3 à 2,89 sur les {{chiffre:machines-capacite-15}} machines distinctes dont ENERGY STAR publie la capacité à -15 °C ;
 3. **reste efficace sur toute la saison** : c'est le HSPF2, de 7,8 à 16,2 avec une médiane à 9,5.
 
 Le prix installé n'entre pas dans le classement : il dépend de votre maison et de l'installateur. Chaque fiche affiche l'ordre de grandeur publié au Québec pour son calibre et sa gamme ; le prix exact vient d'une soumission.
 
 ## Les marques qui dominent, critère par critère
 
-**COP à -15 °C.** En tête des machines certifiées : Carrier et sa jumelle Keeprite à 2,89 (18 000 BTU nominal, 24 000 BTU/h fournis à -15 °C), Moovair à 2,89 (DMA18HOS42), Mitsubishi Electric à 2,75 (SUZ-KA09NA2), Fujitsu à 2,62 (Airstage H-Series AOUH12KTAP1). Ces machines fournissent par grand froid plus que leur capacité nominale : c'est le meilleur indicateur d'une conception vraiment climat froid.
+**COP à -15 °C.** En tête des machines certifiées : Carrier et sa jumelle Keeprite à 2,89 (calibre de 18 000 BTU, 24 000 BTU/h au maximum à -15 °C), Moovair à 2,89 (DMA18HOS42), Mitsubishi Electric à 2,75 (SUZ-KA09NA2), Fujitsu à 2,62 (Airstage H-Series AOUH12KTAP1). Ces machines fournissent par grand froid plus que leur capacité cotée à 8,3 °C : c'est le meilleur indicateur d'une conception vraiment climat froid.
 
 **HSPF2.** Carrier 45M et Moovair MSHHA18 plafonnent à 16,2 ; Fujitsu Airstage H-Series AOUH09KTAP1 atteint 14 ; Bosch BMS500 13,6 ; LG KUSAL091A 13,5 ; Mitsubishi Electric MUZ-FX09NLHZ 13,3. Les petits calibres (9 000 BTU) dominent souvent ce critère, ce qui rappelle qu'un HSPF2 se compare à calibre égal.
 
-**Tenue de capacité.** Sur 1 090 machines certifiées, 340 gardent 100 % ou plus de leur capacité nominale à -15 °C et 480 en gardent au moins 90 %. Les autres, plus de la moitié, perdent davantage. C'est l'écart le plus ignoré des fiches de vente, et le plus coûteux en janvier.
+**Tenue de capacité.** Sur les {{chiffre:machines-capacite-15}} machines distinctes dont ENERGY STAR publie la capacité à -15 °C, {{chiffre:machines-maintien-100}} en gardent 100 % ou plus de leur capacité cotée à 8,3 °C (47 °F) et {{chiffre:machines-maintien-90}} au moins 90 % — capacité maximale à -15 °C divisée par la capacité cotée à 8,3 °C, deux valeurs ENERGY STAR du même appariement. Les autres perdent davantage, ou ne publient pas leur capacité cotée à 8,3 °C. C'est l'écart le plus ignoré des fiches de vente, et le plus coûteux en janvier.
 
 **Subvention.** Le montant LogisVert ne classe pas les machines, mais il vaut la peine d'être lu : pour une murale de 12 000 BTU, il va de 350 $ à plus de 2 200 $ selon l'appariement, avec une médiane à 535 $.
 

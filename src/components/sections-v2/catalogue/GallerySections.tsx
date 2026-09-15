@@ -88,7 +88,7 @@ export function ResultCount({ count }: { count: number }) {
   return (
     <p ref={ref} className="m-0 flex flex-wrap items-baseline gap-x-3 gap-y-1" style={{ color: INK }}>
       <span className="sr-only" aria-live="polite">
-        {count} modèles documentés
+        {count} fiches au catalogue
       </span>
       <span aria-hidden="true" className="block overflow-hidden" style={{ paddingBottom: "0.08em" }}>
         <motion.span className="block font-semibold tabular-nums" style={{ fontSize: "clamp(44px, 4.6vw, 72px)", letterSpacing: "-0.055em", lineHeight: 0.95 }} initial={reduce ? false : { y: "105%" }} animate={seen ? { y: "0%" } : undefined} transition={{ duration: 1, ease: EASE }}>
@@ -96,7 +96,7 @@ export function ResultCount({ count }: { count: number }) {
         </motion.span>
       </span>
       <motion.span aria-hidden="true" className="catg-serif block" style={{ fontSize: "clamp(26px, 2.5vw, 40px)", lineHeight: 1 }} initial={reduce ? false : { opacity: 0, x: -12 }} animate={seen ? { opacity: 1, x: 0 } : undefined} transition={{ duration: 0.9, ease: EASE, delay: 0.15 }}>
-        modèles documentés<span style={{ color: ORANGE }}>.</span>
+        fiches au catalogue<span style={{ color: ORANGE }}>.</span>
       </motion.span>
     </p>
   );

@@ -40,9 +40,9 @@ const TICKS = [
 
 function stagesFor(with5F: number) {
   return [
-    { at: "+8,3 °C", title: "La puissance sur la boîte", body: "Le chiffre écrit sur la boîte (ex. 12 000 BTU) est mesuré quand il fait doux dehors. En janvier, la thermopompe chauffe moins que ça." },
+    { at: "+8,3 °C", title: "La puissance sur la boîte", body: "Le chiffre écrit sur la boîte (ex. 12 000 BTU) est un calibre commercial, pas une mesure. La capacité cotée, elle, se mesure quand il fait doux dehors, à 8,3 °C. En janvier, la thermopompe chauffe moins que ça." },
     { at: "−8,3 °C", title: "Il commence à faire froid", body: "Plus il fait froid dehors, moins une thermopompe donne de chaleur. Thermopompes À Vendre vous montre combien chaque modèle en donne encore à −8 °C." },
-    { at: "−15 °C", title: "Le vrai test de l’hiver", body: `Combien de chaleur elle donne encore par une nuit de janvier ordinaire. C’est LE chiffre à comparer : Thermopompes À Vendre l’affiche, certifié, pour ${fmt(with5F)} modèles.` },
+    { at: "−15 °C", title: "Le vrai test de l’hiver", body: `Combien de chaleur elle donne encore par une nuit de janvier ordinaire. C’est LE chiffre à comparer : Thermopompes À Vendre l’affiche, publié par ENERGY STAR, sur ${fmt(with5F)} fiches.` },
     { at: "−25 °C", title: "Les nuits de grand froid", body: "À ce froid-là, certaines thermopompes arrêtent de chauffer. Vérifiez jusqu’où elle fonctionne, et gardez un chauffage d’appoint pour les pires nuits." },
   ];
 }
@@ -121,7 +121,7 @@ export function ColdStory({ coldClimate, with5F }: { coldClimate: number; with5F
               <strong className="font-semibold" style={{ color: C.cream }}>
                 {fmt(coldClimate)}
               </strong>{" "}
-              modèles certifiés climat froid au catalogue.
+              fiches certifiées climat froid au catalogue.
             </p>
             <Link href="/meilleures-thermopompes" tabIndex={-1} className="cs-link inline-flex w-fit items-center gap-2 text-[15px] font-semibold" style={{ color: C.cream }}>
               Voir les classements <Arrow />

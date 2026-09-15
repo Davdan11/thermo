@@ -96,7 +96,7 @@ function usePlay<T extends Element>() {
    ================================================================== */
 
 export function ManualSections({ modelCount, faq, openFaq, onToggleFaq }: { modelCount: number; faq: { id: string; question: string; answer: string }[]; openFaq: string | null; onToggleFaq: (id: string) => void }) {
-  const modelCountLabel = `Près de ${modelCount.toLocaleString("fr-CA")} modèles évalués`;
+  const modelCountLabel = `Près de ${modelCount.toLocaleString("fr-CA")} fiches évaluées`;
   return (
     <div className={`so-root ${outilsMono.variable}`} style={{ background: M.paper, color: M.ink, fontFamily: DISPLAY }}>
       <SpecStrip />

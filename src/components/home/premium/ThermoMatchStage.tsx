@@ -355,7 +355,7 @@ function AnalysePane({ evaluated }: { evaluated: number }) {
       <div>
         <p style={eyebrow}>Analyse</p>
         <p style={big}>
-          On compare <span className="tabular-nums">{fmt(evaluated)}</span> modèles admissibles.
+          On compare <span className="tabular-nums">{fmt(evaluated)}</span> fiches au catalogue.
         </p>
         <div className="grid" style={{ gridTemplateColumns: "repeat(14, 1fr)", gap: "0.6em", marginTop: "1.5em", maxWidth: "22em" }}>
           {dots.map((i) => {

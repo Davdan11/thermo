@@ -13,6 +13,8 @@
    ================================================================== */
 
 import { getSiteCatalog } from "@/lib/presence/catalog-site";
+import { capacitesDuModele } from "@/lib/data/chiffres";
+import { registry } from "@/lib/data/registry";
 import { designTempFor } from "@/lib/seo/municipal-content";
 import { displayName, getMunicipalites, getRegion, getStation, municipalDataDate, municipalityHref } from "@/lib/seo/municipalites";
 import { DATA_DATE, latestDay } from "@/lib/seo/sitemaps";
@@ -37,7 +39,13 @@ export function palmaresMunicipalities(): PalmaresMuniInput[] {
 }
 
 export function palmaresModels(): PalmaresModelInput[] {
-  return getSiteCatalog().models.map((m) => ({ minTempC: m.minTempC, holdsFullAt15: m.h5Btu !== null && m.h5Btu >= m.nominalBtu }));
+  // « Garde toute sa capacité à −15 °C » : capacité maximale à −15 °C ÷ capacité cotée à 8,3 °C (ENERGY STAR,
+  // même numéro AHRI), jamais contre la « puissance nominale » de la liste LogisVert, dont la condition n'est
+  // pas précisée (src/lib/data/capacites.ts).
+  return getSiteCatalog().models.map((m) => {
+    const id = registry.modelBySlug.get(m.slug)?.id;
+    return { minTempC: m.minTempC, holdsFullAt15: (id ? (capacitesDuModele(id)?.maintien?.pct ?? 0) : 0) >= 100 };
+  });
 }
 
 let cached: Palmares | null = null;

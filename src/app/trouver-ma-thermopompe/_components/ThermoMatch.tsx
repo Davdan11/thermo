@@ -670,7 +670,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
         // Le nombre de questions dépend des réponses (de 14 à 17) : annoncé sans chiffre exact.
         countLabel={QUESTIONS_LABEL}
         facts={[
-          ...(catalogueCount ? [{ value: catalogueCount, label: "modèles admissibles" }] : []),
+          ...(catalogueCount ? [{ value: catalogueCount, label: "fiches comparées" }] : []),
           { value: 3, label: "modèles retenus" },
         ]}
         questions={steps.map((s) => s.question)}

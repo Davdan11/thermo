@@ -24,13 +24,13 @@ export function ApprocheRecu({ keyword, count, countValue, factors, inclus, etap
           <Reveal className="min-w-0" y={24}>
             <div className="pt-8" style={{ borderTop: `1.5px solid ${INK}` }}>
               <p className="m-0 text-[11.5px] font-medium uppercase" style={{ fontFamily: MONO, letterSpacing: "0.18em", color: MUTE }}>
-                Plus de
+                Le catalogue compte
               </p>
               <p aria-hidden="true" className="m-0 mt-1 whitespace-nowrap" style={{ fontFamily: DISPLAY, fontSize: "clamp(76px, 11vw, 190px)", fontWeight: 700, letterSpacing: "-0.065em", lineHeight: 0.84 }}>
                 <Count value={countValue} duration={1.8} />
               </p>
               <p className="m-0 mt-4 text-[12px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.14em" }}>
-                appareils admissibles à LogisVert
+                fiches au catalogue
               </p>
               {/* Ligne de reçu biffée : le prix par machine que nous ne publions pas */}
               <div aria-hidden="true" className="relative mt-10 max-w-[520px] text-[13px] uppercase" style={{ fontFamily: MONO, letterSpacing: "0.06em" }}>
@@ -53,7 +53,7 @@ export function ApprocheRecu({ keyword, count, countValue, factors, inclus, etap
             </Print>
             <Reveal delay={0.15} className="mt-8 grid gap-5">
               <p className={BODY} style={{ color: "rgba(27,27,27,0.8)" }}>
-                Plus de {count} appareils sont admissibles à LogisVert. Leurs prix bougent avec les stocks, la saison et les promotions des distributeurs&nbsp;: un tableau de prix pour {keyword} serait faux quelques semaines après sa publication.
+                Le catalogue compte {count} fiches, une par unité extérieure vendue au Québec. Leurs prix bougent avec les stocks, la saison et les promotions des distributeurs&nbsp;: un tableau de prix pour {keyword} serait faux quelques semaines après sa publication.
               </p>
               <p className={BODY} style={{ color: "rgba(27,27,27,0.8)" }}>
                 Surtout, le prix installé dépend de votre maison au moins autant que de la machine. C’est pourquoi nous publions des fourchettes par type et par calibre, jamais un prix par machine&nbsp;: chaque projet reçoit un prix écrit, remis par un installateur partenaire licencié après évaluation, cas par cas.
