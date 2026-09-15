@@ -19,6 +19,7 @@ import { ASSISTANT_LIMITS } from "@/lib/assistant/limits";
 import { askAssistant, type AssistantCard, type ChatMessage } from "./client";
 import { RichText } from "./rich-text";
 import { isAssistantHiddenOn } from "./routes";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 import "./assistant-panel.css";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -364,7 +365,7 @@ export default function AssistantPanel({ onClose }: { onClose: () => void }) {
           <Link href="/trouver-ma-thermopompe" className="tav-ast-cta" onClick={() => onLink("/trouver-ma-thermopompe")}>
             <span className="tav-ast-cta-text">
               <strong>ThermoMatch</strong>
-              <span>La bonne thermopompe pour votre maison, en 13 questions</span>
+              <span>La bonne thermopompe pour votre maison, en {QUESTIONS_LABEL}</span>
             </span>
             <Arrow className="tav-ast-cta-arrow" />
           </Link>

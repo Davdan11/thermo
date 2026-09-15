@@ -23,6 +23,7 @@ import { displayFont, serifFont } from "@/lib/fonts";
 import { MotionRoot } from "@/components/sections-v2/catalogue/motion";
 import { BrandStrip, CatalogueCta, FilterTitle, ResultCount, type StripBrand } from "@/components/sections-v2/catalogue/GallerySections";
 import { GalleryGrid } from "@/components/sections-v2/catalogue/GalleryGrid";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 /** Logo monochrome (bleu nuit) pour la bande de marques ; logo couleur sinon, null si aucun logo. */
 function monoLogo(slug: string): string | null {
   const mono = `/images/marques/mono/${slug}.png`;
@@ -269,7 +270,7 @@ export default async function ThermopompesPage({
 
         <CatalogueCta
           title="Trop de modèles ? Laissez ThermoMatch trier pour vous."
-          text="Répondez à 13 questions sur votre maison. Thermopompes À Vendre retient trois machines vraiment adaptées parmi toutes les marques, sur des données certifiées, sans parti pris."
+          text={`Répondez à ${QUESTIONS_LABEL} sur votre maison. Thermopompes À Vendre retient trois machines vraiment adaptées parmi toutes les marques, sur des données certifiées, sans parti pris.`}
         />
       </MotionRoot>
     </main>

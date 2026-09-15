@@ -5,6 +5,7 @@ import { getHubs, getPageMunicipalities, getRegions, groupTitle } from "@/lib/se
 import { getAllGuides } from "@/lib/markdown";
 import { getCapacityClasses, RANKINGS, getAllBrandStats } from "@/lib/seo/programmatic";
 import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 export const dynamic = "force-static";
 
@@ -37,10 +38,10 @@ export async function GET() {
     `- Liste LogisVert d'Hydro-Québec utilisée : ${lv.count ? lv.count.toLocaleString("fr-CA") + " lignes, " : ""}mise à jour du ${lvDate}.`,
     "- Subvention LogisVert : montant officiel par jumelage exact unité extérieure + unité intérieure, affiché sur chaque fiche. Aucune règle de calcul simplifiée n'est publiée ici : le montant exact vient de la liste.",
     "- Au Québec, la donnée qui compte est la capacité certifiée à -15 °C (et non la capacité nominale à 8 °C). Un chauffage d'appoint reste généralement nécessaire sous -25 °C.",
-    "- Le dimensionnement dépend de la maison (superficie, isolation, étages, année), pas du code postal.",
+    "- Le dimensionnement dépend de la maison (superficie, isolation, étages, année) ; le froid de référence de la région sert à estimer la relève nécessaire les jours les plus froids.",
     "",
     "## Comment le site fonctionne",
-    `- ThermoMatch : ${SITE_URL}/trouver-ma-thermopompe — 13 questions, trois machines réellement différentes, score transparent sur 100 (méthode : ${SITE_URL}/technologie-thermomatch).`,
+    `- ThermoMatch : ${SITE_URL}/trouver-ma-thermopompe — ${QUESTIONS_LABEL}, l'architecture d'abord (centrale sur les conduits, multizone ou murales), puis trois machines réellement différentes, score transparent sur 100 (méthode : ${SITE_URL}/technologie-thermomatch).`,
     `- Demande de soumission gratuite, sans engagement : ${SITE_URL}/soumission — rappel sous un jour ouvrable, un seul installateur partenaire licencié RBQ par dossier.`,
     `- Comment ça marche, gratuité, coordonnées jamais vendues : ${SITE_URL}/comment-ca-marche et ${SITE_URL}/faq`,
     `- Prix installés au Québec par type, calibre et gamme (fourchettes publiées, méthode) : ${SITE_URL}/prix`,

@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "motion/react";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import { EASE, typo } from "./motion";
+import { QUESTIONS_LABEL_MAJ } from "@/lib/thermomatch/parcours";
 
 /* ==================================================================
    Galerie des résultats (/thermopompes) — équivalent de CompareSelection
@@ -335,7 +336,7 @@ function MatchBanner({ onGo }: { onGo: () => void }) {
             {typo("Trop de modèles ?")} <span className="catg-serif" style={{ fontSize: "1.08em" }}>ThermoMatch en retient trois pour votre maison<span style={{ color: ORANGE }}>.</span></span>
           </h3>
           <p className="m-0 mt-4 text-base leading-relaxed sm:text-[17px]" style={{ color: "rgba(244,239,231,0.66)" }}>
-            13 questions sur votre maison, 2 minutes. Le calcul croise la capacité certifiée à -15 °C, votre superficie, votre isolation et votre zone climatique, toutes marques confondues.
+            {QUESTIONS_LABEL_MAJ} sur votre maison, quelques minutes. Le calcul croise la capacité certifiée à -15 °C, votre superficie, votre isolation et votre zone climatique, toutes marques confondues.
           </p>
         </div>
         <div className="relative z-10 w-full shrink-0 md:w-auto">

@@ -8,6 +8,7 @@ import { motion } from "motion/react";
 import { Tick, fmtNum } from "@/components/heroes-v2/produit/Tick";
 import type { SeoModel } from "@/lib/seo/programmatic";
 import { EASE, SLAM, MaskLines, Reveal, decimalsOf, typo, useSeen } from "./motion";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 /* ==================================================================
    Affiche de combat, suite (/comparer/[paire]).
@@ -412,7 +413,7 @@ function splitTwo(s: string): [string, string] {
 
 export function PosterCta({
   title = "Trouvez la bonne thermopompe en 2 minutes",
-  text = "Répondez à 13 questions sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
+  text = `Répondez à ${QUESTIONS_LABEL} sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.`,
 }: {
   title?: string;
   text?: string;

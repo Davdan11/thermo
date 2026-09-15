@@ -3,15 +3,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { STEPS, formatPostalCode } from "./steps";
+import { formatPostalCode, pruneHidden, visibleSteps } from "./steps";
 import type { Step } from "./steps";
 import { usePostalResolve } from "@/hooks/usePostalResolve";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 import {
   saveProjectDraft,
   clearProjectDraft,
   thermoMatchAnswersToProjectDraft,
   getProjectSummary,
+  type ArchitectureSummary,
 } from "@/lib/project/project-draft";
 import { ThermoMatchResults } from "./ThermoMatchResults";
 import { ShareResultsButton } from "@/components/thermomatch/ShareResultsButton";
@@ -26,14 +28,21 @@ import { SERIF } from "@/components/heroes-v2/outils/font-stacks";
    Constants
    ---------------------------------------------------------- */
 
+/* Clé lue aussi par la soumission (SoumissionClient.tsx) et le courriel des trois choix (EmailMyChoices.tsx). */
 const STORAGE_KEY = "thermomatch-answers";
-const TOTAL_STEPS = STEPS.length;
+/** Étape sauvegardée une fois le questionnaire terminé. */
+const DONE = "resultats";
 
 type Answers = Record<string, string | string[]>;
 
 interface SavedState {
   answers: Answers;
+  /** Rang de l'étape (anciennes sessions) ; `stepId` fait foi quand il est là. */
   step: number;
+  /** Étape en cours : plus sûr que son rang, le parcours change de longueur selon les réponses. */
+  stepId?: string;
+  /** Architecture retenue par le moteur, reprise par la soumission et le CRM. */
+  architecture?: ArchitectureSummary | null;
 }
 
 /* Photos d'ambiance par étape (panneau droit) */
@@ -43,7 +52,11 @@ const STEP_BG_IMAGES: Record<string, string> = {
   area: "/images/thermomatch/area.webp",
   floors: "/images/thermomatch/floors.webp",
   currentSystem: "/images/thermomatch/currentSystem.webp",
-  heatPumpType: "/images/thermomatch/heatPumpType.webp",
+  ducts: "/images/thermomatch/currentSystem.webp",
+  zonesWanted: "/images/thermomatch/floors.webp",
+  layout: "/images/thermomatch/floors.webp",
+  placements: "/images/thermomatch/heatPumpType.webp",
+  electricalPanel: "/images/thermomatch/heatPumpType.webp",
   priority: "/images/thermomatch/priority.webp",
   budget: "/images/thermomatch/budget.webp",
   financing: "/images/thermomatch/financing.webp",
@@ -89,6 +102,23 @@ function readSavedState(): SavedState {
     /* ignore */
   }
   return { answers: {}, step: 0 };
+}
+
+/**
+ * Où reprendre : l'étape sauvegardée si elle est encore dans le parcours ; sinon (anciennes sessions,
+ * sans `stepId`) la première question sans réponse. Terminé seulement si toutes ont une réponse.
+ */
+function restoreStep(s: SavedState): { index: number; complete: boolean } {
+  const steps = visibleSteps(s.answers ?? {});
+  const last = steps.length - 1;
+  const firstOpen = steps.findIndex((x) => s.answers?.[x.id] === undefined);
+  if (s.stepId === DONE) return firstOpen === -1 ? { index: last, complete: true } : { index: firstOpen, complete: false };
+  if (s.stepId) {
+    const i = steps.findIndex((x) => x.id === s.stepId);
+    if (i >= 0) return { index: i, complete: false };
+  }
+  if (firstOpen === -1) return { index: last, complete: Number(s.step) > last };
+  return { index: Math.min(firstOpen, Math.max(0, Number(s.step) || 0)), complete: false };
 }
 
 /* ----------------------------------------------------------
@@ -204,16 +234,18 @@ function PostalTextInput({ stepId, value, placeholder, error, inputRef, onChange
 
 export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   const router = useRouter();
-  const [currentStep, setCurrentStep] = useState(() => {
-    const s = readSavedState();
-    return s.step >= TOTAL_STEPS ? TOTAL_STEPS - 1 : s.step;
-  });
+  const [currentStep, setCurrentStep] = useState(() => restoreStep(readSavedState()).index);
   const [answers, setAnswers] = useState<Answers>(
-    () => readSavedState().answers,
+    () => readSavedState().answers ?? {},
   );
   const [isComplete, setIsComplete] = useState(
-    () => readSavedState().step >= TOTAL_STEPS,
+    () => restoreStep(readSavedState()).complete,
   );
+  // Le parcours réel pour ces réponses (de 14 à 17 questions).
+  const steps = visibleSteps(answers);
+  const totalSteps = steps.length;
+  // Réponses les plus récentes, pour l'avance automatique qui part après le rendu.
+  const answersRef = useRef<Answers>(answers);
   const [error, setError] = useState<string | null>(null);
   const [showResetConfirm, setShowResetConfirm] = useState(false);
 
@@ -227,30 +259,46 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isMounted = useRef(false);
 
+  // Architecture retenue par le moteur, résumée pour la soumission (null tant que les résultats ne sont pas là).
+  const arch = summaryContext?.architecture;
+  const archSummary: ArchitectureSummary | null = arch
+    ? { kind: arch.kind, heads: arch.heads, label: arch.label, title: arch.title, confidence: arch.confidence }
+    : null;
+  const archKey = archSummary ? JSON.stringify(archSummary) : "";
+
+  useEffect(() => {
+    answersRef.current = answers;
+  }, [answers]);
+
   /* ---- Persist to sessionStorage + ProjectDraft ---- */
   useEffect(() => {
     if (!isMounted.current) {
       isMounted.current = true;
       return;
     }
+    const visible = visibleSteps(answers);
+    const architecture: ArchitectureSummary | null = archKey ? JSON.parse(archKey) : null;
     const state: SavedState = {
       answers,
-      step: isComplete ? TOTAL_STEPS : currentStep,
+      step: isComplete ? visible.length : currentStep,
+      stepId: isComplete ? DONE : visible[currentStep]?.id,
+      architecture,
     };
     sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 
     // Also persist to ProjectDraft (localStorage) for cross-page transfer
-    const draft = thermoMatchAnswersToProjectDraft(answers, isComplete);
+    const draft = thermoMatchAnswersToProjectDraft(answers, isComplete, architecture);
     saveProjectDraft(draft);
-  }, [answers, currentStep, isComplete]);
+  }, [answers, currentStep, isComplete, archKey]);
 
   /* ---- Auto-focus ---- */
+  const currentType = steps[currentStep]?.type;
   useEffect(() => {
-    if (!isComplete && STEPS[currentStep]?.type === "text") {
+    if (!isComplete && currentType === "text") {
       const t = setTimeout(() => inputRef.current?.focus(), 50);
       return () => clearTimeout(t);
     }
-  }, [currentStep, isComplete]);
+  }, [currentStep, isComplete, currentType]);
 
   /* ---- Cleanup ---- */
   useEffect(() => {
@@ -267,7 +315,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     }
     if (isComplete) {
       setIsComplete(false);
-      setCurrentStep(TOTAL_STEPS - 1);
+      setCurrentStep(totalSteps - 1);
     } else if (currentStep > 0) {
       setError(null);
       setCurrentStep((s) => s - 1);
@@ -275,8 +323,10 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   }
 
   function advanceStep() {
-    if (currentStep < TOTAL_STEPS - 1) {
-      setCurrentStep((s) => s + 1);
+    // Le parcours peut avoir changé avec la dernière réponse : on le recalcule. Les étapes déjà passées, elles, ne bougent pas.
+    const total = visibleSteps(answersRef.current).length;
+    if (currentStep < total - 1) {
+      setCurrentStep(currentStep + 1);
       setError(null);
     } else {
       setIsComplete(true);
@@ -284,7 +334,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   }
 
   function handleContinue() {
-    const step = STEPS[currentStep];
+    const step = steps[currentStep];
     const value = answers[step.id];
 
     if (step.validate) {
@@ -308,8 +358,15 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     advanceStep();
   }
 
+  /** Nouvelle réponse : les réponses des étapes qu'elle masque sont retirées. */
+  function commitAnswers(next: Answers) {
+    const clean = pruneHidden(next);
+    answersRef.current = clean;
+    setAnswers(clean);
+  }
+
   function handleRadioSelect(stepId: string, value: string) {
-    setAnswers((prev) => ({ ...prev, [stepId]: value }));
+    commitAnswers({ ...answers, [stepId]: value });
     setError(null);
     autoAdvanceTimer.current = setTimeout(() => {
       advanceStep();
@@ -318,18 +375,22 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
 
   function handleMultiToggle(stepId: string, value: string) {
     setError(null);
-    setAnswers((prev) => {
-      const current = (prev[stepId] as string[]) ?? [];
-      const updated = current.includes(value)
-        ? current.filter((v) => v !== value)
-        : [...current, value];
-      return { ...prev, [stepId]: updated };
-    });
+    const step = steps.find((s) => s.id === stepId);
+    const options = typeof step?.options === "function" ? step.options(answers) : step?.options;
+    const exclusive = new Set((options ?? []).filter((o) => o.exclusive).map((o) => o.value));
+    const current = Array.isArray(answers[stepId]) ? (answers[stepId] as string[]) : [];
+    // « Je ne sais pas » exclut les autres choix, et inversement.
+    const updated = current.includes(value)
+      ? current.filter((v) => v !== value)
+      : exclusive.has(value)
+        ? [value]
+        : [...current.filter((v) => !exclusive.has(v)), value];
+    commitAnswers({ ...answers, [stepId]: updated });
   }
 
   function handleTextChange(stepId: string, raw: string) {
     setError(null);
-    const step = STEPS.find((s) => s.id === stepId);
+    const step = steps.find((s) => s.id === stepId);
     const value = step?.id === "postalCode" ? formatPostalCode(raw) : raw;
     setAnswers((prev) => ({ ...prev, [stepId]: value }));
   }
@@ -345,10 +406,11 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   }
 
   function handleRequestQuote(selectedCandidate?: any) {
-    const draft = thermoMatchAnswersToProjectDraft(answers, true);
+    // Le type de projet vient de l'architecture retenue (centrale, multizone, murales), le modèle de la carte choisie.
+    const draft = thermoMatchAnswersToProjectDraft(answers, true, archSummary);
     if (selectedCandidate?.product) {
       draft.desiredSystem = {
-        systemType: selectedCandidate.product.systemType,
+        ...draft.desiredSystem,
         selectedModelId: selectedCandidate.product.id,
         selectedBrandName: selectedCandidate.product.brand,
       };
@@ -417,14 +479,14 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     }
 
     const summaryItems = getProjectSummary(
-      thermoMatchAnswersToProjectDraft(answers, true),
+      thermoMatchAnswersToProjectDraft(answers, true, archSummary),
     );
 
     // If we have candidates, show the new ThermoMatchResults view instead of the default generic text
     if (candidates && candidates.length > 0) {
       return (
         <div className="min-h-screen bg-[#0D1117] flex flex-col">
-          <ThermoMatchHeader currentStep={TOTAL_STEPS} totalSteps={TOTAL_STEPS} onQuit={() => setShowResetConfirm(true)} />
+          <ThermoMatchHeader currentStep={totalSteps} totalSteps={totalSteps} onQuit={() => setShowResetConfirm(true)} />
           {/* « Quitter » ouvre la même confirmation que sur l'écran sans résultats. */}
           {showResetConfirm && <ResetConfirm onKeep={() => setShowResetConfirm(false)} onReset={handleReset} />}
           <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
@@ -437,7 +499,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
                 setHasFetched(false);
                 setCandidates(null);
                 setSummaryContext(null);
-                setCurrentStep(TOTAL_STEPS - 1);
+                setCurrentStep(totalSteps - 1);
               }}
             />
             <div className="mt-10 w-full">
@@ -451,7 +513,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     return (
       <div className="min-h-screen bg-[#0D1117] text-white flex flex-col">
         {/* Header */}
-        <ThermoMatchHeader currentStep={TOTAL_STEPS} totalSteps={TOTAL_STEPS} onQuit={() => setShowResetConfirm(true)} />
+        <ThermoMatchHeader currentStep={totalSteps} totalSteps={totalSteps} onQuit={() => setShowResetConfirm(true)} />
 
         {/* Reset confirmation modal */}
         {showResetConfirm && <ResetConfirm onKeep={() => setShowResetConfirm(false)} onReset={handleReset} />}
@@ -463,7 +525,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              Vos {STEPS.length} réponses ont été enregistrées
+              Vos {totalSteps} réponses ont été enregistrées
             </div>
 
             <h1 className="text-[40px] sm:text-[52px] font-bold leading-tight tracking-tight mb-4">
@@ -533,7 +595,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   /* ============================================================
      ACTIVE STEP
      ============================================================ */
-  const step = STEPS[currentStep];
+  const step = steps[Math.min(currentStep, totalSteps - 1)];
   const currentValue = answers[step.id];
   const bgImage = STEP_BG_IMAGES[step.id] ?? STEP_BG_IMAGES.postalCode;
   const hasPropertyImages = step.id === "propertyType";
@@ -601,16 +663,17 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   if (isWelcome) {
     return (
       <CarnetWelcome
-        header={<ThermoMatchHeader currentStep={currentStep} totalSteps={TOTAL_STEPS} onQuit={handleReset} tone="light" />}
+        header={<ThermoMatchHeader currentStep={currentStep} totalSteps={totalSteps} onQuit={handleReset} tone="light" />}
         question={step.question}
         subtitle={step.subtitle}
-        totalSteps={TOTAL_STEPS}
+        totalSteps={totalSteps}
+        // Le nombre de questions dépend des réponses (de 14 à 17) : annoncé sans chiffre exact.
+        countLabel={QUESTIONS_LABEL}
         facts={[
           ...(catalogueCount ? [{ value: catalogueCount, label: "modèles admissibles" }] : []),
-          { value: TOTAL_STEPS, label: "questions" },
           { value: 3, label: "modèles retenus" },
         ]}
-        questions={STEPS.map((s) => s.question)}
+        questions={steps.map((s) => s.question)}
       >
         {inputs}
       </CarnetWelcome>
@@ -618,7 +681,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   }
 
   // Résumé en marge : mêmes lignes qu'avant (réponses données, modifiables), puis les trois questions suivantes.
-  const summaryRows = STEPS.slice(0, currentStep + 1).flatMap((s, i) => {
+  const summaryRows = steps.slice(0, currentStep + 1).flatMap((s, i) => {
     const val = answers[s.id];
     if (!val) return [];
     return [
@@ -636,19 +699,19 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
 
   return (
     <CarnetStepPage
-      header={<ThermoMatchHeader currentStep={currentStep} totalSteps={TOTAL_STEPS} onQuit={handleReset} tone="light" />}
+      header={<ThermoMatchHeader currentStep={currentStep} totalSteps={totalSteps} onQuit={handleReset} tone="light" />}
       stepKey={step.id}
       index={currentStep}
-      totalSteps={TOTAL_STEPS}
+      totalSteps={totalSteps}
       question={step.question}
       subtitle={step.subtitle}
       photo={bgImage}
       aside={
         <CarnetSummary
           rows={summaryRows}
-          upcoming={STEPS.slice(currentStep + 1, currentStep + 4).map((s, i) => ({ n: currentStep + i + 2, question: s.question }))}
-          more={STEPS.length > currentStep + 4}
-          next={currentStep < TOTAL_STEPS - 1 ? STEPS[currentStep + 1].question : undefined}
+          upcoming={steps.slice(currentStep + 1, currentStep + 4).map((s, i) => ({ n: currentStep + i + 2, question: s.question }))}
+          more={steps.length > currentStep + 4}
+          next={currentStep < totalSteps - 1 ? steps[currentStep + 1].question : undefined}
         />
       }
       footer={

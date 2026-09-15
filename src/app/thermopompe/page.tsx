@@ -91,11 +91,12 @@ export default function CitiesIndexPage() {
       </section>
       <FrostAtlas regions={regions} total={total} />
       <FrostNote>
-        <h2>Pourquoi la ville ne change pas la machine recommandée</h2>
+        <h2>Ce que votre ville change, et ce qu'elle ne change pas</h2>
         <p>
-          Partout au Québec, on achète des thermopompes conçues pour -25 °C ou -30 °C. Ce qui distingue deux maisons, c'est leur superficie,
-          leur âge, leur isolation et leur système de chauffage actuel. C'est pourquoi notre questionnaire <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> ne
-          demande votre code postal que pour vous situer et trouver des installateurs près de chez vous.
+          Partout au Québec, on achète des thermopompes conçues pour -25 °C ou -30 °C, et leurs capacités se comparent au même point de mesure,
+          -15 °C. Ce qui distingue deux maisons, c'est d'abord leur superficie, leur âge, leur isolation, leurs conduits et leur système de
+          chauffage actuel. Votre ville apporte son froid de référence : notre questionnaire <Link href="/trouver-ma-thermopompe">ThermoMatch</Link> s'en
+          sert pour estimer la relève nécessaire les jours les plus froids, et votre code postal, pour trouver des installateurs près de chez vous.
         </p>
         <p>
           Une municipalité a sa page quand elle a des données propres : son profil du recensement de 2021 et une station de normales climatiques

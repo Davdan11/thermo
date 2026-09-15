@@ -10,6 +10,7 @@ import { fp } from "@/components/hero/first-paint";
 import { CountUp } from "@/components/home/premium/shared";
 import { CARNET as P, FlowBar, splitQuestion } from "./FlowBar";
 import { DISPLAY, SERIF } from "./font-stacks";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 /* ==================================================================
    « Carnet » — premier écran du questionnaire ThermoMatch et haut de
@@ -95,6 +96,7 @@ export function CarnetWelcome({
   question,
   subtitle,
   totalSteps,
+  countLabel,
   facts,
   questions,
   children,
@@ -103,6 +105,8 @@ export function CarnetWelcome({
   question: string;
   subtitle?: string;
   totalSteps: number;
+  /** Nombre de questions annoncé (« une quinzaine de questions ») quand le parcours varie selon les réponses. */
+  countLabel?: string;
   /** Chiffres réels (catalogue, nombre de questions, modèles retenus). */
   facts: { value: number; label: string }[];
   /** Les questions du parcours, dans l'ordre (la première est en cours). */
@@ -131,7 +135,7 @@ export function CarnetWelcome({
                 n° 1
               </span>
               <span className="text-[11.5px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: P.soft }}>
-                ThermoMatch · {totalSteps} questions
+                ThermoMatch · {countLabel ?? `${totalSteps} questions`}
               </span>
             </Fade>
 
@@ -199,7 +203,7 @@ export function CarnetWelcome({
                   Dans ce carnet
                 </span>
                 <span className="text-[11px] font-medium uppercase" style={{ letterSpacing: "0.16em", color: P.faint }}>
-                  {questions.length} questions
+                  {countLabel ?? `${questions.length} questions`}
                 </span>
               </p>
             </Fade>
@@ -310,7 +314,7 @@ export function SoumissionHero({ hasDraft }: { hasDraft: boolean }) {
         <Fade delay={1.45}>
           <p className="text-[14.5px] font-semibold" style={{ margin: "18px 0 0" }}>
             <Link href="/trouver-ma-thermopompe" className="ou-link" style={{ color: P.ink, textDecoration: "none" }}>
-              Ou répondez à 13 questions et laissez ThermoMatch remplir ceci pour vous <span style={{ color: P.orange }}>→</span>
+              Ou répondez à {QUESTIONS_LABEL} et laissez ThermoMatch remplir ceci pour vous <span style={{ color: P.orange }}>→</span>
             </Link>
           </p>
         </Fade>

@@ -9,6 +9,8 @@
       montrées, construites à partir des données des outils.
    ================================================================== */
 
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
+
 /* Nombre isolé : « 12 000 », « 10,5 », « -15 », « 1 920 ». Pas les chiffres collés à des
    lettres (HSPF2, R-410A, SEER2) ni les morceaux d'un nombre plus long. */
 const NUM_RE =
@@ -32,7 +34,7 @@ export function extractNumbers(text: string): ExtractedNumber[] {
   return out;
 }
 
-/** Nombres toujours permis : 13 questions de ThermoMatch, points d'essai -8 °C et -15 °C, téléphone du site. */
+/** Nombres toujours permis : points d'essai -8 °C et -15 °C, téléphone du site, et 13 (ancien nombre de questions de ThermoMatch, encore dans d'anciennes réponses). */
 const ALWAYS_ALLOWED = new Set([8, 13, 15, 438, 900, 3224]);
 
 function roundTo(v: number, decimals: number): number {
@@ -76,7 +78,7 @@ export const SAFE_FALLBACK =
 /** Réponse quand le modèle n'a rien produit (refus, erreur de génération). */
 export const EMPTY_FALLBACK =
   "Je n'ai pas de réponse fiable à cette question. " +
-  "[ThermoMatch](/trouver-ma-thermopompe) vous guide en 13 questions, ou appelez-nous au [438-900-3224](tel:4389003224).";
+  `[ThermoMatch](/trouver-ma-thermopompe) vous guide en ${QUESTIONS_LABEL}, ou appelez-nous au [438-900-3224](tel:4389003224).`;
 
 /* ------------------------------------------------------------------
    Liens
