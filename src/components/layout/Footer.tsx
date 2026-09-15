@@ -230,7 +230,8 @@ export function Footer() {
                 <ul className="ft-legal-row m-0 p-0" style={{ listStyle: "none" }}>
                   {LEGAL.map((l) => (
                     <li key={l.href}>
-                      <Link href={l.href} className="ft-link ft-small">
+                      {/* Nom accessible explicite : sans lui, les deux libellés se lisent collés (« ConfidentialitéLoi 25 »). */}
+                      <Link href={l.href} className="ft-link ft-small" aria-label={l.tag ? `${l.label}, ${l.tag}` : undefined}>
                         <span>{l.label}</span>
                         {l.tag ? <span className="ft-tag">{l.tag}</span> : null}
                       </Link>
