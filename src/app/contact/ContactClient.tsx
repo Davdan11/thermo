@@ -9,6 +9,7 @@ import { Arrow } from "@/components/heroes-v2/entreprise/shared";
 import { ClipReveal, EASE, MaskLines, Reveal, Shell } from "@/components/sections-v2/entreprise/kit";
 import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
 import { Honeypot } from "@/components/forms/Honeypot";
+import { visitAreasLabel } from "@/lib/rdv/booking";
 
 /* Présentation « Le numéro » (sections v2 entreprise) : blanc, grand pan orange, chiffres qui
    roulent, champs à bord noir qui poussent un bloc orange au focus. Formulaire, validation,
@@ -135,8 +136,8 @@ export default function ContactPageClient() {
                       <div>
                         <dt className={dtCls} style={dtStyle}>Zone de service</dt>
                         <dd style={{ margin: "8px 0 0" }}>
-                          <span className="block text-[16px] font-bold">Partout au Québec</span>
-                          <span className="block text-[15px]" style={{ color: "rgba(255,244,236,0.88)" }}>Grand Montréal, Québec, et plus.</span>
+                          <span className="block text-[16px] font-bold">Conseil à distance partout au Québec</span>
+                          <span className="block text-[15px]" style={{ color: "rgba(255,244,236,0.88)" }}>Visite sur place dans les secteurs desservis&nbsp;: {visitAreasLabel()}.</span>
                         </dd>
                       </div>
                     </div>
