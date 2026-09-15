@@ -58,7 +58,7 @@ export function PartnersDossier() {
             ))}
           </h1>
           <p {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.55 }, { className: "max-w-[560px] text-[17px] leading-[1.65] sm:text-[18px]", style: { color: C.mute, margin: "26px 0 0" } })}>
-            Nous ne vendons pas de «&nbsp;leads&nbsp;» ou de listes de contacts froids. Nous formons des partenariats stratégiques pour connecter votre expertise avec une clientèle déjà éduquée par ThermoMatch.
+            Nous ne revendons pas de listes de contacts. Nous transmettons à un seul partenaire des projets qualifiés par ThermoMatch, rémunérés à la commission sur les contrats conclus, auprès d’une clientèle déjà éduquée.
           </p>
           <div {...fp({ opacity: 0, y: 12, duration: 0.9, ease: EASE, delay: 0.7 }, { className: "mt-9 flex flex-wrap items-center gap-3" })}>
             <XLink href="#candidature" className="inline-flex items-center gap-3 px-6 py-4 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#C93F10]" style={{ background: C.orange, borderRadius: 6 }}>
