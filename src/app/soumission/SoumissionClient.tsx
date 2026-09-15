@@ -23,6 +23,7 @@ import { DISPLAY, SERIF } from "@/components/heroes-v2/outils/font-stacks";
 import { Reveal, Rise } from "@/components/sections-v2/outils/kit";
 import { CarnetKicker, CarnetScanNote, HandCheckbox, MarginContinue, P, PenLoop, ProcessStrip } from "@/components/sections-v2/outils/carnet/CarnetParts";
 import { ConsentCopy, NoticeParagraph, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
+import { projectRowLabel } from "./resume";
 
 
 const CREAM = P.paper; // papier du « Carnet »
@@ -164,12 +165,13 @@ export default function SoumissionPage() {
     }
   }, []);
 
+  // Le visiteur voit et modifie le libellé ; l'identifiant du questionnaire reste tant qu'il n'y touche pas (CRM).
   function startEdit(key: ProjectKey) {
     setEditing(key);
-    setEditVal(project[key]);
+    setEditVal(projectRowLabel(key, project[key]));
   }
   function saveEdit(key: ProjectKey) {
-    setProject((p) => ({ ...p, [key]: editVal }));
+    if (editVal !== projectRowLabel(key, project[key])) setProject((p) => ({ ...p, [key]: editVal }));
     setEditing(null);
   }
 
@@ -461,7 +463,7 @@ export default function SoumissionPage() {
                         style={{ fontSize: 15, fontWeight: isBold ? 600 : 400, padding: "6px 2px 5px", minHeight: 36, fontFamily: "inherit", outline: "none" }}
                       />
                     ) : project[key] ? (
-                      <span style={{ fontSize: 15, fontWeight: isBold ? 600 : 500, color: P.ink }}>{project[key]}</span>
+                      <span style={{ fontSize: 15, fontWeight: isBold ? 600 : 500, color: P.ink }}>{projectRowLabel(key, project[key])}</span>
                     ) : (
                       <span style={{ fontSize: 16, color: P.faint, fontStyle: "italic", fontFamily: SERIF }}>Non précisé</span>
                     )}
