@@ -3,11 +3,13 @@
 
    Traduit les réponses brutes du questionnaire (valeurs des options de
    steps.ts) en requête typée pour le moteur. Aucune localisation n'est
-   transmise au moteur : le code postal sert à situer le client, pas à
-   choisir la machine.
+   transmise au moteur : le code postal sert à situer le client et à
+   estimer la relève des jours les plus froids (recommend.ts), pas à
+   classer les machines.
    ================================================================== */
 
 import type { BudgetBracket, HomeType, MatchRequest, Priority } from "./types";
+import type { ArchitectureInput } from "./architecture";
 
 export interface QuestionnaireAnswers {
   postalCode?: string;
@@ -15,6 +17,7 @@ export interface QuestionnaireAnswers {
   area?: string;
   floors?: string;
   currentSystem?: string;
+  /** Ancien parcours : le client choisissait le type ; relu pour les anciens liens (architecture.ts, règle L). */
   heatPumpType?: string;
   priority?: string[] | string;
   budget?: string;
@@ -23,6 +26,12 @@ export interface QuestionnaireAnswers {
   insulation?: string;
   windowShare?: string;
   basement?: string;
+  /* Architecture (parcours « architecture d'abord ») */
+  ducts?: string;
+  zonesWanted?: string;
+  layout?: string;
+  placements?: string[] | string;
+  electricalPanel?: string;
 }
 
 const AREA_FT2: Record<string, number> = {
@@ -83,13 +92,33 @@ export function answersToRequest(a: QuestionnaireAnswers): { req: MatchRequest; 
     floors,
     systemKind,
     zones,
-    backupHeatAvailable: hasFurnace,
+    // Fournaise ou chaudière conservée : elle reste en relève.
+    backupHeatAvailable: hasFurnace || a.currentSystem === "chaudiere",
     priorities,
     budget: BUDGET[a.budget ?? ""] ?? "unknown",
     constructionPeriod: oneOf(a.constructionPeriod, ["pre_1960", "1960_1980", "1981_2000", "2001_2015", "2016_plus"] as const),
     insulation: oneOf(a.insulation, ["poor", "standard", "good", "high_performance"] as const),
     windowShare: oneOf(a.windowShare, ["low", "standard", "high"] as const),
-    basement: oneOf(a.basement, ["none", "unheated", "heated"] as const),
+    // Sous-sol chauffé autrement, à exclure : il ne s'ajoute pas à la charge de la thermopompe.
+    basement: oneOf(a.basement === "heated_excluded" ? "unheated" : a.basement, ["none", "unheated", "heated"] as const),
   };
   return { req, floors };
+}
+
+const asList = (v: string[] | string | undefined): string[] => (Array.isArray(v) ? v : typeof v === "string" && v ? [v] : []);
+
+/** Les réponses dont l'étape « architecture » a besoin (architecture.ts). */
+export function architectureInputOf(a: QuestionnaireAnswers, req: MatchRequest): ArchitectureInput {
+  return {
+    homeType: req.homeType,
+    floors: req.floors,
+    basement: a.basement,
+    currentSystem: a.currentSystem,
+    ducts: a.ducts,
+    zonesWanted: a.zonesWanted,
+    layout: a.layout,
+    placements: asList(a.placements),
+    electricalPanel: a.electricalPanel,
+    heatPumpType: a.heatPumpType,
+  };
 }

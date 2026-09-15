@@ -21,17 +21,23 @@ export function buildReasons(
   const c = r.candidate;
   const reasons: string[] = [];
 
-  // 1. Capacité par rapport à la charge
+  // 1. Capacité par rapport à la charge qu'elle chauffe (toute la maison, ou sa zone)
   const ratio = r.fitRatio;
   const certified = c.h5Certified ? "certifiée" : "estimée";
-  if (ratio >= 0.95 && ratio <= 1.2) {
+  const sizing = req.sizingLoadBtuH ?? load.loadBtuH;
+  const units = req.independentUnits && req.heads && req.heads > 1 ? req.heads : 1;
+  const charge = req.sizingLabel ? `la charge estimée ${req.sizingLabel} (${fmtBtu(sizing)})` : `une charge estimée de ${fmtBtu(sizing)}`;
+  if (units > 1) {
+    // Murales indépendantes : chaque machine chauffe son espace ; la maison est couverte × N unités.
     reasons.push(
-      `Capacité ${certified} de ${fmtBtu(c.h5Btu)} à -15 °C pour une charge estimée de ${fmtBtu(load.loadBtuH)} : le bon calibre, sans surdimensionnement.`,
+      `Capacité ${certified} de ${fmtBtu(c.h5Btu)} à -15 °C par unité, pour ${charge} ; × ${units} unités : ${fmtPct((c.h5Btu * units) / load.loadBtuH)} de la charge de la maison (${fmtBtu(load.loadBtuH)}).`,
     );
+  } else if (ratio >= 0.95 && ratio <= 1.2) {
+    reasons.push(`Capacité ${certified} de ${fmtBtu(c.h5Btu)} à -15 °C pour ${charge} : le bon calibre, sans surdimensionnement.`);
   } else if (ratio < 0.95) {
     reasons.push(
       req.backupHeatAvailable
-        ? `Capacité ${certified} de ${fmtBtu(c.h5Btu)} à -15 °C, soit ${fmtPct(ratio)} de la charge estimée. Votre fournaise prend le relais lors des pointes de froid.`
+        ? `Capacité ${certified} de ${fmtBtu(c.h5Btu)} à -15 °C, soit ${fmtPct(ratio)} de la charge estimée. Votre ${req.backupLabel ?? "fournaise"} prend le relais lors des pointes de froid.`
         : `Capacité ${certified} de ${fmtBtu(c.h5Btu)} à -15 °C, soit ${fmtPct(ratio)} de la charge estimée. Vos plinthes complètent lors des grands froids.`,
     );
   } else {
@@ -77,7 +83,8 @@ export function buildWarnings(r: ScoredCandidate, req: MatchRequest): string[] {
   if (r.candidate.hspf2 === undefined) {
     w.push("Efficacité saisonnière (HSPF2) non publiée pour cet appareil.");
   }
-  if (req.zones > 1 && !r.candidate.multiZoneCapable) {
+  // Anciens appels seulement : quand l'architecture est décidée, des murales indépendantes sont voulues, pas un défaut.
+  if (!req.pairingClass && req.zones > 1 && !r.candidate.multiZoneCapable) {
     w.push("Cette unité extérieure est certifiée avec une seule unité intérieure : une configuration multizone demandera plusieurs appareils.");
   }
   return w;

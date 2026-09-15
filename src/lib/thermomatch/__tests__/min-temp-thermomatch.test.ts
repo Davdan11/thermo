@@ -66,8 +66,9 @@ describe("ThermoMatch : même température minimale qu'avant le résolveur uniqu
       expect(rec.results.length).toBeGreaterThan(0);
       for (const r of rec.results) {
         expect(r.product.minOperatingTempC, r.product.id).toBe(ancienneRegle(r.product.id));
-        // La table ne contient encore que des sources officielles.
-        expect(r.product.minOperatingTempSource).toBe(r.product.minOperatingTempC === null ? null : "officiel");
+        // Une source dès qu'une valeur est connue : officielle, ou fiche du fabricant reproduite par un distributeur.
+        if (r.product.minOperatingTempC === null) expect(r.product.minOperatingTempSource).toBeNull();
+        else expect(["officiel", "secondaire"]).toContain(r.product.minOperatingTempSource);
         if (r.product.minOperatingTempC !== null) connues++;
       }
     }
