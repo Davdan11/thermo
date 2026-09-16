@@ -13,6 +13,11 @@
       (assessCityPages, sur tout le corpus) : texte visible découpé en
       séquences de 5 mots, comparé à celui de TOUTES les autres pages.
 
+   Dans une paire trop proche, c'est la page la plus contenue dans l'autre
+   qui sort (ASYMMETRY_MARGIN) : celle qui n'apporte rien que l'autre ne
+   dise déjà. À confinement équivalent, aucune des deux n'est la copie de
+   l'autre et la priorité tranche (ville historique, population, slug).
+
    Une page qui ne passe pas reçoit « noindex, follow » et sort du plan
    du site ; elle reste accessible (liens des MRC, des voisines, de
    l'index). Rien n'est écrit à la main : le résultat est recalculé à
@@ -66,6 +71,13 @@ export const MAX_OWN_CONTAINMENT = 0.5;
  * outils de détection de quasi-doublons (Screaming Frog, par défaut) signalent une page.
  */
 export const MAX_FULL_CONTAINMENT = 0.85;
+/**
+ * Écart de confinement à partir duquel une page est tenue pour la copie de l'autre : |A ∩ B| / |A| est
+ * asymétrique, et 10 points d'écart séparent nettement la page qui reprend le texte d'une autre (un
+ * arrondissement, dont les chiffres sont ceux de sa ville) de celle qui porte en plus ses propres
+ * données. En deçà, aucune des deux n'est la copie de l'autre : la priorité tranche.
+ */
+export const ASYMMETRY_MARGIN = 0.1;
 /** Climat : station de normales à 50 km ou moins, même règle que pour avoir une page municipalité. */
 export const MAX_STATION_KM = 50;
 /** Voisinage : au moins deux pages voisines liées (villes ou municipalités) situent la ville. */
@@ -417,7 +429,7 @@ export function assessCityPages(inputs: CityPageInput[]): CityAssessment {
   const eligible = criteria.map((cs) => cs.every((c) => c.ok));
 
   // Ressemblance entre pages admissibles : la paire la plus ressemblante d'abord, la page non prioritaire sort.
-  const flagged: Array<{ i: number; j: number; own: number; full: number }> = [];
+  const flagged: Array<{ i: number; j: number; own: number; full: number; ownI: number; ownJ: number }> = [];
   for (let i = 0; i < N; i++) {
     if (!eligible[i]) continue;
     for (let j = i + 1; j < N; j++) {
@@ -425,14 +437,18 @@ export function assessCityPages(inputs: CityPageInput[]): CityAssessment {
       const v = pair(i, j);
       const own = Math.max(...v.own);
       const fl = Math.max(...v.full);
-      if (own > MAX_OWN_CONTAINMENT || fl > MAX_FULL_CONTAINMENT) flagged.push({ i, j, own, full: fl });
+      if (own > MAX_OWN_CONTAINMENT || fl > MAX_FULL_CONTAINMENT) flagged.push({ i, j, own, full: fl, ownI: v.own[0], ownJ: v.own[1] });
     }
   }
   flagged.sort((a, b) => b.own - a.own || b.full - a.full);
   const lostTo = new Map<number, { rival: number; own: number; full: number }>();
-  for (const { i, j, own, full: fl } of flagged) {
+  for (const { i, j, own, full: fl, ownI: ci, ownJ: cj } of flagged) {
     if (lostTo.has(i) || lostTo.has(j)) continue;
-    const loser = before(i, j) < 0 ? j : i;
+    // Le confinement est asymétrique : quand une page est nettement plus contenue dans l'autre que
+    // l'inverse, c'est elle qui n'apporte rien de plus, et c'est elle qui sort — même si la priorité
+    // (ville historique, population, slug) l'aurait gardée. Deux pages également contenues l'une dans
+    // l'autre n'ont pas de « copie » : la priorité tranche.
+    const loser = Math.abs(ci - cj) >= ASYMMETRY_MARGIN ? (ci > cj ? i : j) : before(i, j) < 0 ? j : i;
     lostTo.set(loser, { rival: loser === i ? j : i, own, full: fl });
   }
   const indexable = inputs.map((_, i) => eligible[i] && !lostTo.has(i));

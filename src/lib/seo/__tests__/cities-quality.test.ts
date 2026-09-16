@@ -139,11 +139,70 @@ describe("contrôle de qualité : règles", () => {
     for (let k = 0; k < 9; k++) expect(a.bySlug.get(`p${k}`)!.indexable).toBe(true);
     expect(a.bySlug.get("grande")!.maxOwnContainment).toBeLessThanOrEqual(MAX_OWN_CONTAINMENT);
   });
+
+  it("entre deux pages trop proches, celle qui ne dit rien de plus sort, même si la priorité la gardait", () => {
+    // « mince » est presque entièrement contenue dans « riche », qui porte en plus ses propres
+    // données : c'est « mince » qui sort, bien qu'elle soit plus peuplée (priorité) que « riche ».
+    const pages = [
+      fake("mince", words("c", 300), { population: 90000 }),
+      fake("riche", `${words("c", 300)} ${words("r", 400)}`, { population: 1000 }),
+      ...Array.from({ length: 9 }, (_, k) => fake(`p${k}`, words(`p${k}x`, OWN_WORDS))),
+    ];
+    const a = assessCityPages(pages);
+    expect(a.bySlug.get("riche")!.indexable).toBe(true);
+    expect(a.bySlug.get("mince")!.indexable).toBe(false);
+    expect(a.bySlug.get("mince")!.reasons.join(" ")).toMatch(/^similarite : trop proche de riche/);
+    // Deux pages aussi contenues l'une dans l'autre : aucune n'est la copie, la priorité tranche.
+    const jumelles = assessCityPages([
+      fake("peuplee", `${words("j", 290)} ${words("u", 40)}`, { population: 90000 }),
+      fake("petite", `${words("j", 290)} ${words("v", 40)}`, { population: 1000 }),
+      ...Array.from({ length: 9 }, (_, k) => fake(`q${k}`, words(`q${k}x`, OWN_WORDS))),
+    ]);
+    expect(jumelles.bySlug.get("peuplee")!.indexable).toBe(true);
+    expect(jumelles.bySlug.get("petite")!.indexable).toBe(false);
+  });
 });
 
 /* ------------------------------------------------------------------
    Toutes les pages villes (données et gabarits réels)
    ------------------------------------------------------------------ */
+/**
+ * Villes que le propriétaire refuse de voir sortir de l'index. Toutes portent des données propres :
+ * recensement de leur municipalité pour la plupart, et pour les deux arrondissements (Saint-Hubert,
+ * Jonquière) leurs codes postaux, leur zone de conception, leur station et la provenance déclarée des
+ * chiffres de leur ville. Si l'une redevient « noindex », ce test le dit.
+ */
+const PRIORITAIRES = [
+  "montreal",
+  "quebec",
+  "laval",
+  "gatineau",
+  "longueuil",
+  "sherbrooke",
+  "levis",
+  "saguenay",
+  "jonquiere",
+  "trois-rivieres",
+  "terrebonne",
+  "saint-jean-sur-richelieu",
+  "brossard",
+  "repentigny",
+  "saint-jerome",
+  "drummondville",
+  "granby",
+  "saint-hyacinthe",
+  "blainville",
+  "mirabel",
+  "saint-hubert",
+  "mascouche",
+  "saint-eustache",
+  "boucherville",
+  "boisbriand",
+  "victoriaville",
+  "shawinigan",
+  "rimouski",
+];
+
 describe("toutes les pages /thermopompe/[ville]", () => {
   const inputs = cityPageInputs();
   const a = assessCityPages(inputs);
@@ -158,6 +217,26 @@ describe("toutes les pages /thermopompe/[ville]", () => {
     for (const slug of ["montreal", "quebec", "gatineau", "sherbrooke", "trois-rivieres"]) {
       expect(a.bySlug.get(slug)!.indexable, slug).toBe(true);
     }
+    // Depuis que chaque page porte le recensement de sa municipalité (logements, périodes de
+    // construction, types, mode d'occupation, densité, rangs, écart avec la voisine d'une autre
+    // station), l'immense majorité des pages se distingue : 1 008 sur 1 024 au moment d'écrire.
+    // Le plancher protège le travail ; un chiffre exact casserait à chaque mise à jour des données.
+    expect(indexed.length).toBeGreaterThanOrEqual(1000);
+  });
+
+  it("les villes que le propriétaire veut garder restent indexées", () => {
+    const refusees = PRIORITAIRES.filter((s) => !a.bySlug.get(s)?.indexable).map((s) => `${s} : ${(a.bySlug.get(s)?.reasons ?? ["page absente"]).join(" ; ")}`);
+    expect(refusees).toEqual([]);
+  });
+
+  it("une ville historique n'est écartée que faute de station de normales assez proche", () => {
+    const historiques = a.verdicts.filter((v) => v.kind === "historique");
+    for (const v of historiques.filter((v) => !v.indexable)) {
+      expect(v.reasons.join(" "), v.slug).toMatch(new RegExp(`^climat : station .* \\(plus de ${MAX_STATION_KM} km\\)$`));
+    }
+    // Matane (Mont-Joli, 57 km) et La Sarre (Rouyn, 63 km) : aucune station plus proche ne publie de
+    // normales complètes, et rien ne doit être écrit à leur place.
+    expect(historiques.filter((v) => !v.indexable).map((v) => v.slug)).toEqual(["la-sarre", "matane"]);
   });
 
   it("une page indexée remplit tous les critères ; une page sortie en donne la raison", () => {
