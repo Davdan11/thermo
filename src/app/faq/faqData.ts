@@ -126,7 +126,7 @@ export const FAQ_ITEMS = [
     questions: [
       {
         q: "Quelles sont les garanties typiques ?",
-        a: "Le standard de l'industrie pour les bonnes marques est une garantie de 10 ans sur les pièces et le compresseur. Certaines marques haut de gamme (comme Daikin, Mitsubishi ou Fujitsu) peuvent aller jusqu'à 12 ans. La garantie sur la main-d'œuvre (le temps du technicien pour réparer) est généralement de 1 an offerte par l'installateur, bien que certains manufacturiers ou installateurs proposent des extensions jusqu'à 10 ans moyennant un supplément."
+        a: "Il n'y a pas de durée « typique » : elle change d'un fabricant à l'autre et, chez un même fabricant, d'une série à l'autre. C'est le certificat de garantie du modèle qui tranche. Sur nos fiches, une durée ne s'affiche que si nous l'avons relevée dans un document du fabricant, avec la citation et le lien vers ce document ; quand nous ne l'avons pas trouvé, la fiche dit « garantie non vérifiée » plutôt que d'afficher une durée habituelle. Trois choses à lire dans le certificat : ce qui est couvert (pièces, compresseur, et la main-d'œuvre, presque toujours exclue par le fabricant — c'est l'installateur qui la garantit) ; l'enregistrement (plusieurs fabricants exigent d'enregistrer l'appareil dans un délai serré, et plusieurs écrivent que cet enregistrement n'est pas exigé au Québec) ; les conditions (installation par un entrepreneur licencié ou certifié, propriétaire d'origine, appareil resté à son adresse d'origine). S'ajoute la garantie légale de bon fonctionnement prévue par la Loi sur la protection du consommateur, qui vient de la loi et non du fabricant : voir notre page « Garantie légale »."
       },
       {
         q: "Comment dois-je entretenir ma thermopompe ?",

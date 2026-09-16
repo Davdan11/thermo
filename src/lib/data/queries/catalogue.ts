@@ -12,7 +12,7 @@ import { productNames, type ProductNames } from "../product-name";
 import { registry } from "../registry";
 import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
-import { getWarrantiesForModel } from "./products";
+import { resolveWarranty, type ResolvedWarranty } from "../warranty";
 
 /* ------------------------------------------------------------------
    Index construits une seule fois : le registre est statique, et un
@@ -91,8 +91,11 @@ export interface CatalogueProduct {
   refrigerant: string | null;
   /** Outdoor unit model number for LogisVert lookup */
   outdoorModelNumber: string | null;
-  /** Pre-fetched warranties to avoid client-side registry imports */
-  warranties: import("../types").Warranty[];
+  /**
+   * Garantie relevée dans un document du fabricant, résolue au serveur (la carte n'importe pas le registre).
+   * null : aucun document ne couvre la fiche — la carte le dit, sans chiffre.
+   */
+  warranty: ResolvedWarranty | null;
   /** Pre-calculated LogisVert amount */
   logisVertDollars: number | null;
 }
@@ -380,7 +383,7 @@ export function getCatalogueModels(
       imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
       refrigerant,
       outdoorModelNumber,
-      warranties: getWarrantiesForModel(model.id),
+      warranty: resolveWarranty({ brand: brand.name, seriesName: series?.name, modelNumber: model.modelNumber }),
       logisVertDollars,
     };
   });
@@ -501,7 +504,7 @@ export function getAllCatalogueProducts(): CatalogueProduct[] {
       imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
       refrigerant,
       outdoorModelNumber,
-      warranties: getWarrantiesForModel(model.id),
+      warranty: resolveWarranty({ brand: brand.name, seriesName: series?.name, modelNumber: model.modelNumber }),
       logisVertDollars,
     };
   }).sort((a, b) => {

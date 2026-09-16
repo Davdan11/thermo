@@ -22,7 +22,6 @@ const LV_PATH = path.join(ROOT, "src/lib/subsidies/logisvert-official-amounts.js
 const LV_META = path.join(ROOT, "src/lib/subsidies/logisvert-metadata.json");
 const OUT_PATH = path.join(ROOT, "src/lib/data/fixtures/brands/all-auto-datasets.json");
 const DICT_PATH = path.join(ROOT, "src/lib/data/fixtures/series-dictionary.json");
-const META_PATH = path.join(ROOT, "scripts/brand-metadata.json");
 
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
@@ -92,7 +91,6 @@ const lvMeta = fs.existsSync(LV_META) ? JSON.parse(fs.readFileSync(LV_META, "utf
 const MULTI_UNITS = new Set(Object.values(lv).filter((r) => MULTI_INDOOR_RE.test(String(r.im ?? "").trim())).map((r) => normKey(r.m)));
 const prev = fs.existsSync(OUT_PATH) ? JSON.parse(fs.readFileSync(OUT_PATH, "utf8")) : {};
 const dict = fs.existsSync(DICT_PATH) ? JSON.parse(fs.readFileSync(DICT_PATH, "utf8")) : {};
-const brandMeta = fs.existsSync(META_PATH) ? JSON.parse(fs.readFileSync(META_PATH, "utf8")) : {};
 const NOW = (lvMeta.updatedAt ?? new Date().toISOString()).slice(0, 10);
 const STAMP = `${NOW}T00:00:00Z`;
 
@@ -149,6 +147,7 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
       };
 
   const seriesMap = new Map(); // seriesKey → series entity
+  /* `warranties` reste vide : les garanties viennent des relevés de documents, jamais de ce script. */
   const models = [], outdoorUnits = [], indoorUnits = [], configurations = [], performanceProfiles = [], certifications = [], warranties = [];
   const seenIndoor = new Set();
   const seriesNameTypes = new Map(); // display name → Set(systemType) pour détecter les collisions de slug
@@ -294,9 +293,8 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
       sourceId, verifiedAt: NOW,
     });
 
-    const w = brandMeta[brandSlug]?.warranties;
-    if (w?.parts) warranties.push({ id: `${modelId}-w-parts`, modelId, type: "parts", durationYears: w.parts, requiresRegistration: true, provider: "manufacturer", confidence: "estimated" });
-    if (w?.compressor) warranties.push({ id: `${modelId}-w-comp`, modelId, type: "compressor", durationYears: w.compressor, requiresRegistration: true, provider: "manufacturer", confidence: "estimated" });
+    // Aucune garantie n'est écrite ici : une durée ne s'affiche que si elle est relevée dans un
+    // document du fabricant (src/lib/data/warranties-sourced.json, résolu par src/lib/data/warranty.ts).
   }
 
   const prevSource = (prevDs?.sources ?? []).find((s) => s.id === sourceId);

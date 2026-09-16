@@ -8,6 +8,7 @@
 import type { ProductModel, SystemConfiguration, PerformanceProfile } from "../types";
 import type { SystemType } from "../types/enums";
 import { registry } from "../registry";
+import { resolveWarranty } from "../warranty";
 
 /* ------------------------------------------------------------------
    ThermoMatch filter interface
@@ -41,6 +42,7 @@ export interface ThermoMatchCandidate {
   configuration: SystemConfiguration;
   performanceProfile: PerformanceProfile | null;
   brandName: string;
+  /** Durée des pièces relevée dans un document du fabricant ; null si aucun document ne couvre la fiche. */
   warrantyPartsYears?: number | null;
 }
 
@@ -111,8 +113,10 @@ export function getThermoMatchCandidates(
         ) ?? null;
 
       const brand = registry.brandById.get(model.brandId);
-      const warranties = registry.warranties.filter((w) => w.modelId === model.id);
-      const partsWarranty = warranties.find((w) => w.type === "parts")?.durationYears ?? null;
+      const serie = registry.series.find((s) => s.id === model.seriesId);
+      const partsWarranty = brand
+        ? resolveWarranty({ brand: brand.name, seriesName: serie?.name, modelNumber: model.modelNumber })?.record.partsYears ?? null
+        : null;
 
       candidates.push({
         model,

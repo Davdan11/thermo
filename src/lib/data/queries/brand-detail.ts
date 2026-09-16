@@ -15,7 +15,7 @@ import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { productNames } from "../product-name";
 import { registry } from "../registry";
 import type { CatalogueProduct } from "./catalogue";
-import { getWarrantiesForModel } from "./products";
+import { resolveWarranty } from "../warranty";
 import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
 
@@ -210,7 +210,7 @@ export function getBrandDetail(slug: string): BrandDetail | null {
         imageUrl: model.imageUrl ?? ser?.imageUrl ?? null,
         refrigerant,
         outdoorModelNumber,
-        warranties: getWarrantiesForModel(model.id),
+        warranty: resolveWarranty({ brand: brand.name, seriesName: ser?.name, modelNumber: model.modelNumber }),
         logisVertDollars,
       };
     },

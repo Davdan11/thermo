@@ -96,7 +96,10 @@ export function highestCapacityAtTemp(
 
 /* ------------------------------------------------------------------
    Rule: Longest warranty of a specific type
-   Only compare if conditions are roughly equivalent.
+
+   Seule une durée relevée dans un document du fabricant compte. Une
+   garantie non vérifiée ne départage rien : la fiche est traitée comme
+   une donnée manquante, jamais comme une garantie plus courte.
    ------------------------------------------------------------------ */
 
 export function longestWarranty(
@@ -104,8 +107,12 @@ export function longestWarranty(
   warrantyType: string,
 ): HighlightResult {
   const values = details.map((d) => {
-    const w = d.warranties.find((w) => w.type === warrantyType);
-    return w?.durationYears ?? null;
+    const w = d.warranty?.record;
+    if (!w) return null;
+    if (warrantyType === "parts") return w.partsYears;
+    if (warrantyType === "compressor") return w.compressorYears ?? null;
+    if (warrantyType === "labor") return w.laborYears != null && w.laborYears > 0 ? w.laborYears : null;
+    return null;
   });
   return findHighest(values, details.length, `garantie ${warrantyType}`);
 }
