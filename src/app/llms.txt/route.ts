@@ -2,6 +2,7 @@ import { registry } from "@/lib/data/registry";
 import { chiffre } from "@/lib/data/chiffres";
 import { SITE_URL } from "@/lib/seo";
 import { getCities } from "@/lib/seo/cities";
+import { isCityPageIndexable } from "@/lib/seo/cities-quality";
 import { getHubs, getPageMunicipalities, getRegions, groupTitle } from "@/lib/seo/municipalites";
 import { getAllGuides } from "@/lib/markdown";
 import { getCapacityClasses, RANKINGS, getAllBrandStats } from "@/lib/seo/programmatic";
@@ -72,7 +73,9 @@ export async function GET() {
     ...guides.map((g) => `- ${g.title} : ${SITE_URL}/guides/${g.slug}${g.updatedAt ? ` (mis à jour le ${String(g.updatedAt).slice(0, 10)})` : ""}`),
     "",
     "## Villes",
-    ...cities.map((c) => `- ${c.name} (${c.region}, température de conception ${c.designTempC} °C) : ${SITE_URL}/thermopompe/${c.slug}`),
+    // Seules les pages indexées (cities-quality.ts) : une page en « noindex » n'est pas une page
+    // vers laquelle renvoyer un assistant.
+    ...cities.filter((c) => isCityPageIndexable(c.slug)).map((c) => `- ${c.name} (${c.region}, température de conception ${c.designTempC} °C) : ${SITE_URL}/thermopompe/${c.slug}`),
     "",
     "## Régions et MRC",
     `- ${getPageMunicipalities().length + cities.length} municipalités ont leur propre page (normales climatiques d'ECCC, recensement 2021 de Statistique Canada) ; les autres sont nommées, avec leurs chiffres, sur la page de leur MRC. Index par région : ${SITE_URL}/thermopompe`,

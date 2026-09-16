@@ -13,6 +13,7 @@ import type { CSSProperties } from "react";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import type { SeoModel } from "@/lib/seo/programmatic";
 import "./sections.css";
+import { FROST } from "./frost-palette";
 
 export type MtTheme = {
   ink: string;
@@ -30,10 +31,11 @@ export type MtTheme = {
 };
 
 export const MT_FROST: MtTheme = {
-  ink: "#0B2540",
-  text: "#0B2540",
-  mute: "rgba(11,37,64,0.7)",
-  faint: "rgba(11,37,64,0.5)",
+  ink: FROST.navy,
+  text: FROST.navy,
+  // Contraste WCAG AA sur le blanc et l'en-tête glacier : voir frost-palette.ts.
+  mute: FROST.mute,
+  faint: FROST.faint,
   line: "rgba(11,37,64,0.12)",
   hover: "rgba(156,195,218,0.16)",
   accent: "#1F5F8B",
