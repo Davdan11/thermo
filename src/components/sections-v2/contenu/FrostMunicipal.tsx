@@ -141,7 +141,7 @@ export function FrostPeriods({
   eyebrow?: string;
   title: string;
   intro?: string;
-  bars: Array<{ label: string; value: number; display: string; old?: boolean }>;
+  bars: Array<{ label: string; value: number; display: string; share?: string; old?: boolean }>;
   footnote?: string;
 }) {
   const reduce = useReduced();
@@ -176,7 +176,15 @@ export function FrostPeriods({
                   transition={{ duration: 1.3, ease: EASE, delay: 0.2 + i * 0.06 }}
                 />
               </span>
-              <span className="text-right tabular-nums font-semibold">{b.display}</span>
+              {/* Le nombre de logements, et sous lui sa part du parc : deux lectures, une seule colonne. */}
+              <span className="text-right tabular-nums font-semibold">
+                {b.display}
+                {b.share ? (
+                  <span className="block text-[11.5px] font-normal" style={{ color: FR.mute }}>
+                    {b.share}
+                  </span>
+                ) : null}
+              </span>
             </motion.li>
           ))}
         </ul>
