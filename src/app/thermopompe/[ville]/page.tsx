@@ -32,7 +32,7 @@ import { NEIGHBOUR_COLUMNS, buildMunicipalPage } from "@/lib/seo/municipal-conte
 import { catalogueFacts, rankingFor } from "@/lib/seo/municipal-catalogue";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { FrostCta, FrostHead, FrostNearby, FrostReadouts, FrostTrust } from "@/components/sections-v2/contenu/FrostSections";
-import { FrostPlace, FrostTable } from "@/components/sections-v2/contenu/FrostMunicipal";
+import { FrostPeriods, FrostPlace, FrostSources, FrostTable } from "@/components/sections-v2/contenu/FrostMunicipal";
 import { MT_FROST, ThemedModelTable } from "@/components/sections-v2/contenu/ThemedModelTable";
 import { ThemedFaq } from "@/components/sections-v2/contenu/ThemedFaq";
 import { FrostCityHero } from "@/components/heroes-v2/contenu/Frost";
@@ -126,6 +126,10 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
 
       <FrostReadouts layout="log" id="choix" eyebrow={p.choice.eyebrow} title={p.choice.title} rows={p.choice.rows} />
 
+      {/* Le parc résidentiel de la municipalité (recensement 2021), lu pour le chauffage : même bloc que sur une page de municipalité. */}
+      {p.housing && <FrostReadouts layout="ledger" id="logements" eyebrow={p.housing.eyebrow} title={p.housing.title} intro={p.housing.intro} rows={p.housing.rows} />}
+      {p.periods && <FrostPeriods id="construction" eyebrow={p.periods.eyebrow} title={p.periods.title} intro={p.periods.intro} bars={p.periods.bars} footnote={p.periods.footnote} />}
+
       {p.estimate && <FrostReadouts layout="ledger" id="couts" eyebrow={p.estimate.eyebrow} title={p.estimate.title} intro={p.estimate.intro} rows={p.estimate.rows} footnote={p.estimate.footnote} />}
 
       <section style={{ background: "#FFFFFF" }}>
@@ -165,6 +169,7 @@ export default async function CityPage({ params }: { params: Promise<{ ville: st
       {p.place && <FrostPlace eyebrow={p.place.eyebrow} title={p.place.title} text={p.place.text} href={p.place.href} linkLabel={p.place.linkLabel} />}
 
       <ThemedFaq items={p.faq} title={p.faqTitle} variant="frost" />
+      {p.sources.length > 0 && <FrostSources items={p.sources} attribution={p.attribution} />}
     </main>
   );
 }

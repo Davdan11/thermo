@@ -8,19 +8,43 @@
    entre pages (cityVisibleText). Chaque nombre vient des données, du
    catalogue ou des hypothèses nommées ci-dessous (affichées sur la page).
 
+   Quand la ville est une municipalité du jeu (51 des 53), la page porte
+   aussi le recensement de 2021 lu par municipal-content.ts : logements,
+   âge du parc, types, mode d'occupation, densité, rangs, périodes de
+   construction. Deux villes sont des arrondissements (Saint-Hubert,
+   Jonquière) : leurs chiffres de recensement sont ceux de leur ville, la
+   page le dit et renvoie à celle-ci plutôt que de les répéter.
+
    Ce que fait une thermopompe l'hiver dépend du bâtiment, du
    dimensionnement et du modèle : le texte le dit, sans promettre un
    nombre d'heures d'appoint ni une capacité que seules certaines
    machines atteignent.
    ================================================================== */
+import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { QUESTIONS_LABEL_MAJ } from "@/lib/thermomatch/parcours";
 import { fitTitle } from "./index";
 import { getCity, type CityProfile } from "./cities";
 import { fmtInt, fmtTemp, getCityData, referenceHdd } from "./cities-data";
 import { aNom, deNom, nameWithRegion, sameName } from "./cities-text";
 import { catalogueFacts } from "./municipal-catalogue";
-import { neighbourTable, placeBlock, type CatalogueFacts, type NeighbourRow, type PlaceBlock, type RankingSlug, type Row } from "./municipal-content";
-import { getMunicipalityForCity } from "./municipalites";
+import {
+  NEIGHBOUR_LIMIT,
+  fmtKm,
+  fmtPct,
+  housingRows,
+  neighbourStationRow,
+  neighbourSummary,
+  neighbourTable,
+  periodsBlock,
+  placeBlock,
+  type CatalogueFacts,
+  type MunicipalPage,
+  type NeighbourRow,
+  type PlaceBlock,
+  type RankingSlug,
+  type Row,
+} from "./municipal-content";
+import { getMunicipalityForCity, getStation, type Municipality } from "./municipalites";
 import { getCanonicalModels } from "./programmatic";
 
 /* ------------------------------------------------------------------
@@ -108,6 +132,10 @@ export interface CityPage {
   };
   climate: { eyebrow: string; title: string; intro: string; rows: Row[] };
   choice: { eyebrow: string; title: string; rows: Row[] };
+  /** Recensement 2021 de la municipalité, quand la ville en est une (un arrondissement n'a pas de chiffres propres). */
+  housing: { eyebrow: string; title: string; intro: string; rows: Row[] } | null;
+  /** Barres de la période de construction, même bloc que sur une page de municipalité. */
+  periods: MunicipalPage["periods"];
   estimate: { eyebrow: string; title: string; intro: string; rows: Row[]; footnote: string } | null;
   ranking: { slug: RankingSlug; title: string; intro: string; limit: number };
   palmaresLabel: string;
@@ -118,6 +146,9 @@ export interface CityPage {
   faq: Array<{ question: string; answer: string }>;
   faqTitle: string;
   service: { name: string; description: string };
+  /** Sources citées telles que constituées dans cities-data.json, plus l'attribution du site. */
+  sources: Array<{ label: string; url: string }>;
+  attribution: string;
 }
 
 export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCatalogueFacts()): CityPage {
@@ -139,6 +170,15 @@ export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCat
   const coldCount = f.coldCount;
   const holdsFull = f.holdsFullCount;
   const maxLv = f.maxLogisVert;
+
+  // Fiche de la municipalité, quand la ville en est une : Saint-Hubert et Jonquière sont des
+  // arrondissements, leur fiche est celle de Longueuil et de Saguenay, et n'est pas la leur.
+  const muni = getMunicipalityForCity(city.slug);
+  const ownMuni = muni && muni.curated === city.slug ? muni : null;
+  const parentCity = muni && !ownMuni ? muni : null;
+  // Distance à la station, mesurée depuis l'hôtel de ville (MAMH), seulement quand la fiche est la sienne.
+  const stationKm = ownMuni?.station?.km ?? null;
+  const stationInfo = ownMuni ? getStation(ownMuni.station?.key) : null;
 
   // Classement adapté à la zone : grand froid (COP et capacité à -15 °C) là où l'hiver est dur, efficacité saisonnière ailleurs
   const rankingSlug: RankingSlug = cold ? "grand-froid" : "efficacite-hspf2";
@@ -162,9 +202,13 @@ export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCat
       label: "Degrés-jours de chauffage",
       value: `${fmtInt(hdd)} par an`,
       note:
-        vsMontreal !== null
+        // Une ville desservie par la station de Montréal a, par construction, les mêmes degrés-jours :
+        // « +0 % » se lirait comme une mesure, alors que c'est le même relevé.
+        vsMontreal !== null && Math.round(vsMontreal) !== 0
           ? `${vsMontreal >= 0 ? "+" : ""}${pct(vsMontreal)} par rapport à Montréal (${fmtInt(refHdd)}). C'est la mesure du travail annuel de chauffage : plus le chiffre est élevé, plus l'efficacité saisonnière de la machine pèse sur la facture.`
-          : "Mesure du travail annuel de chauffage : plus le chiffre est élevé, plus l'efficacité saisonnière de la machine pèse sur la facture.",
+          : vsMontreal !== null
+            ? `Même relevé qu'à Montréal : les deux villes se rattachent à la station ${cl?.station ?? "de référence"}. C'est la mesure du travail annuel de chauffage : plus le chiffre est élevé, plus l'efficacité saisonnière de la machine pèse sur la facture.`
+            : "Mesure du travail annuel de chauffage : plus le chiffre est élevé, plus l'efficacité saisonnière de la machine pèse sur la facture.",
       gauge: vsMontreal !== null && refHdd ? { a: hdd, b: refHdd, aLabel: name, bLabel: "Montréal" } : undefined,
     });
   }
@@ -194,8 +238,37 @@ export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCat
   if (cl?.station) {
     climateRows.push({
       label: "Station de référence",
-      value: cl.station,
-      note: `Normales climatiques ${cl.normalsPeriod ?? ""} d'Environnement et Changement climatique Canada.`.replace("  ", " "),
+      value: stationKm !== null ? `${cl.station}, à ${fmtKm(stationKm)}` : cl.station,
+      note: `Normales climatiques ${cl.normalsPeriod ?? ""} d'Environnement et Changement climatique Canada${cl.stationId ? ` (ID ${cl.stationId}${has(stationInfo?.elevationM) ? `, ${fmtInt(stationInfo.elevationM)} m` : ""})` : ""}.${stationKm !== null ? " Distance mesurée depuis l'hôtel de ville." : ""}`.replace("  ", " "),
+    });
+  }
+  // Voisine desservie par une autre station : l'écart de degrés-jours entre deux relevés voisins.
+  const otherStation = ownMuni ? neighbourStationRow(ownMuni) : null;
+  if (otherStation) climateRows.push(otherStation);
+  // Arrondissement : la table régionale ne lui donne pas forcément la même zone qu'au centre de sa
+  // ville. L'écart se lit sur le froid de référence, alors que les normales, elles, sont les mêmes.
+  const parentPostal = parentCity?.postal ?? null;
+  const parentDesign = parentPostal ? resolvePostalCode(parentPostal) : null;
+  const parentZone =
+    parentCity && parentDesign && parentPostal && parentDesign.designTempC !== t
+      ? ` Le code postal de l'hôtel de ville ${deNom(parentCity.name)} (${parentPostal.slice(0, 3)}) relève, lui, de la zone « ${parentDesign.region} », à ${parentDesign.designTempC} °C : ${Math.abs(parentDesign.designTempC - t)} °C d'écart sur le froid de référence, pour les mêmes normales de station.`
+      : null;
+  // Codes postaux : la table régionale du site donne une température de conception par zone, et
+  // certaines villes s'étendent sur plus d'une zone.
+  const fsaZones = city.fsa.map((s) => resolvePostalCode(`${s}1A1`)).filter((z): z is NonNullable<typeof z> => !!z);
+  const zones = [...new Set(fsaZones.map((z) => `${z.region} (${z.designTempC} °C)`))];
+  const sameTemp = new Set(fsaZones.map((z) => z.designTempC)).size === 1;
+  if (city.fsa.length > 0 && zones.length > 0) {
+    climateRows.push({
+      label: city.fsa.length > 1 ? "Codes postaux couverts" : "Code postal couvert",
+      value: city.fsa.join(", "),
+      note: `${
+        zones.length === 1
+          ? `${city.fsa.length > 1 ? `Les ${city.fsa.length} préfixes relèvent` : "Ce préfixe relève"} de la zone ${zones[0]} de la table régionale${city.fsa.length > 1 ? ", d'un bout à l'autre du territoire" : ""}.`
+          : sameTemp
+            ? `Ces préfixes relèvent de ${zones.length} zones de la table régionale — ${zones.join(" ; ")} — qui donnent le même froid de référence.`
+            : `Ces préfixes relèvent de ${zones.length} zones de la table régionale : ${zones.join(" ; ")}. La page retient la première, ${zones[0]} ; vérifiez la vôtre avant de dimensionner.`
+      }${parentZone ?? ""}`,
     });
   }
 
@@ -224,19 +297,48 @@ export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCat
         : `Les plinthes existantes servent de relève quand la thermopompe n'arrive plus à suivre. Combien d'heures par hiver ${aCity} : cela dépend de l'isolation de la maison, du dimensionnement et du modèle ; une machine trop petite les fait tourner bien plus souvent.`,
     },
   ];
-  if (has(cs?.builtBefore1981Pct)) {
+  // Le parc résidentiel a sa propre section quand la ville a sa fiche de recensement : on ne le redit
+  // ici que pour un arrondissement, dont les chiffres sont ceux de sa ville et doivent être nommés comme tels.
+  if (!ownMuni && has(cs?.builtBefore1981Pct)) {
     choiceRows.push({
       label: "Parc résidentiel",
       value: `${pct(cs.builtBefore1981Pct)} des logements construits avant 1981`,
-      note: `Recensement 2021 (${fmtInt(cs.dwellings2021)} logements privés). Une maison d'avant 1981 non rénovée perd plus de chaleur : la charge réelle se mesure sur place, et l'isolation de l'enveloppe rapporte souvent autant que le calibre de la machine.`,
+      note: `Recensement 2021 (${fmtInt(cs.dwellings2021)} logements privés)${parentCity ? `, publié pour l'ensemble de la ville ${deNom(parentCity.name)} : Statistique Canada ne détaille pas l'arrondissement ${deCity}` : ""}. Une maison d'avant 1981 non rénovée perd plus de chaleur : la charge réelle se mesure sur place, et l'isolation de l'enveloppe rapporte souvent autant que le calibre de la machine.`,
     });
-  } else if (cs?.dwellings2021) {
+  } else if (!ownMuni && cs?.dwellings2021) {
     choiceRows.push({
       label: "Parc résidentiel",
       value: `${fmtInt(cs.dwellings2021)} logements privés`,
       note: `Recensement 2021${cs.population2021 ? `, ${fmtInt(cs.population2021)} habitants` : ""}. La charge de chauffage réelle se mesure sur place, maison par maison.`,
     });
   }
+  // Arrondissement (Saint-Hubert, Jonquière : voir municipalites-data.md) : dire d'où viennent les
+  // chiffres vaut mieux que les présenter comme ceux du quartier, et renvoyer à la page de la ville
+  // pour le parc résidentiel détaillé, qui n'existe qu'à cette échelle.
+  if (parentCity) {
+    const pName = parentCity.name;
+    choiceRows.push({
+      label: "Ce que couvrent ces chiffres",
+      value: `Arrondissement ${deNom(pName)}`,
+      note: `${name} est un arrondissement ${deNom(pName)} : Statistique Canada publie le recensement pour la ville entière (SDR ${parentCity.census?.csd ?? "—"}), et les chiffres de population et de logements cités ici sont ceux ${deNom(pName)}. Ce qui reste propre ${aCity} : les codes postaux ${city.fsa.join(", ")}, la zone de la table régionale qui leur donne ${t} °C de froid de référence, et les normales de la station ${cl?.station ?? "de référence"}. Le détail du parc résidentiel — périodes de construction, types de logements, mode d'occupation — se lit sur la page ${deNom(pName)}.`,
+    });
+  }
+
+  /* ---- Les logements (recensement de la municipalité) ---- */
+  const housing = ownMuni
+    ? (() => {
+        const rows = housingRows(ownMuni);
+        return rows.length
+          ? {
+              eyebrow: "Recensement 2021",
+              title: `Les logements ${deCity}`,
+              intro: `Ce que le parc résidentiel ${deCity} change au choix d'une machine : l'âge des bâtiments, le type de construction, qui décide du chauffage.`,
+              rows,
+            }
+          : null;
+      })()
+    : null;
+  const periods = ownMuni ? periodsBlock(ownMuni) : null;
 
   /* ---- Estimation locale ---- */
   const estimate = est
@@ -291,6 +393,28 @@ export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCat
         : `Oui, avec un modèle certifié climat froid bien dimensionné pour la maison. ${ACity}, la température de conception est de ${t} °C : une telle machine peut couvrir la plus grande partie de la saison ; la part laissée aux plinthes dépend de l'isolation, du dimensionnement et du modèle.`,
     },
   ];
+  // Questions tirées du recensement de la municipalité : les mêmes que sur une page de municipalité,
+  // parce que ce sont les mêmes données ; seuls les chiffres changent.
+  const oc = ownMuni?.census ?? null;
+  const topPeriod = periods ? periods.bars.reduce((a, b) => (b.value > a.value ? b : a)) : null;
+  if (oc && has(oc.builtTo1980Pct)) {
+    faq.push({
+      question: `Les maisons ${deCity} sont-elles anciennes?`,
+      answer: `${fmtPct(oc.builtTo1980Pct)} des logements occupés ont été construits en 1980 ou avant${topPeriod ? ` ; la période la plus représentée est « ${topPeriod.label} » (${fmtInt(topPeriod.value)} logements)` : ""}. Recensement de 2021. Une enveloppe d'origine change la charge de chauffage bien plus que le choix de la marque.`,
+    });
+  }
+  if (parentCity) {
+    faq.push({
+      question: `Pourquoi les chiffres de population ${deCity} sont-ils ceux ${deNom(parentCity.name)}?`,
+      answer: `Parce que Statistique Canada ne publie pas de profil de recensement distinct pour un arrondissement : population, logements et période de construction sont ceux de la ville ${deNom(parentCity.name)} (SDR ${parentCity.census?.csd ?? "—"}), et la page le dit plutôt que de les présenter comme ceux du quartier. Le climat, lui, est bien mesuré ici : ${cl?.station ? `station ${cl.station}` : "station de référence"}${has(cl?.hdd18) ? `, ${fmtInt(cl.hdd18)} degrés-jours` : ""}, avec une température de conception de ${t} °C pour les codes postaux ${city.fsa.join(" et ")}.`,
+    });
+  }
+  if (oc && has(oc.singleDetachedPct)) {
+    faq.push({
+      question: `Quel type de logement domine ${aCity}?`,
+      answer: `${fmtPct(oc.singleDetachedPct)} des logements occupés sont des maisons individuelles non attenantes${has(oc.ownerPct) ? ` et ${fmtPct(oc.ownerPct)} des ménages sont propriétaires` : ""}, d'après le recensement de 2021. Un logement attenant ou en immeuble limite l'emplacement de l'unité extérieure et oriente souvent vers une murale ou une multizone.`,
+    });
+  }
 
   /* ---- Héros ---- */
   const answer = [
@@ -318,9 +442,7 @@ export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCat
     });
   // Municipalités voisines (jeu des municipalités) et MRC de la ville. Saint-Hubert et Jonquière,
   // arrondissements, n'ont pas de fiche propre : on ne montre que la MRC de leur ville.
-  const muni = getMunicipalityForCity(city.slug);
-  const ownMuni = muni && muni.curated === city.slug ? muni : null;
-  const neighbourRows = ownMuni && ownMuni.lat !== null ? neighbourTable(ownMuni, 5) : [];
+  const neighbourRows = ownMuni && ownMuni.lat !== null ? neighbourTable(ownMuni, NEIGHBOUR_LIMIT) : [];
 
   return {
     city,
@@ -349,6 +471,8 @@ export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCat
     },
     climate: { eyebrow: "Profil climatique", title: `L'hiver ${deCity} en chiffres`, intro: "Les valeurs qui servent au calcul de charge d'une maison et au choix de la machine.", rows: climateRows },
     choice: { eyebrow: "Ce que ça change", title: `Choisir une thermopompe pour ${name}`, rows: choiceRows },
+    housing,
+    periods,
     estimate,
     ranking: {
       slug: rankingSlug,
@@ -368,7 +492,7 @@ export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCat
       neighbourRows.length > 1
         ? {
             title: "Municipalités voisines",
-            intro: "Les plus proches qui ont leur page : leur froid et leurs logements, côte à côte. Recensement 2021 et normales de la station de chaque municipalité.",
+            intro: `${neighbourSummary(ownMuni as Municipality, NEIGHBOUR_LIMIT)} Recensement 2021 et normales de la station de chaque municipalité.`,
             caption: `${name} et les municipalités voisines qui ont leur page`,
             rows: neighbourRows,
           }
@@ -380,6 +504,10 @@ export function buildCityPage(city: CityProfile, f: CityCatalogueFacts = cityCat
       name: `Comparaison et sélection de thermopompes ${aCity}`,
       description: `Comparaison neutre de toutes les marques de thermopompes vendues au Québec, avec données certifiées et montants LogisVert, pour les résidents ${deCity}.`,
     },
+    // Sources telles que constituées dans cities-data.json (station et profil de recensement cités
+    // avec leur identifiant) ; pour un arrondissement, le profil cité est celui de sa ville.
+    sources: data?.sources ?? [],
+    attribution: "Compilation : Thermopompes À Vendre. Valeurs publiées non modifiées ; parts, écarts et rangs calculés.",
   };
 }
 
@@ -413,6 +541,8 @@ export function cityVisibleText(p: CityPage, rankingText: string): string {
     CITY_FIXED_CHROME,
     `${p.climate.eyebrow} ${p.climate.title} ${p.climate.intro} ${rows(p.climate.rows)}`,
     `${p.choice.eyebrow} ${p.choice.title} ${rows(p.choice.rows)}`,
+    p.housing ? `${p.housing.eyebrow} ${p.housing.title} ${p.housing.intro} ${rows(p.housing.rows)}` : "",
+    p.periods ? `${p.periods.eyebrow} ${p.periods.title} ${p.periods.intro} ${p.periods.bars.map((b) => `${b.label} ${b.display} ${b.share ?? ""}`).join(" ")} ${p.periods.footnote}` : "",
     p.estimate ? `${p.estimate.eyebrow} ${p.estimate.title} ${p.estimate.intro} ${rows(p.estimate.rows)} Note ${p.estimate.footnote}` : "",
     `${p.ranking.title} ${p.ranking.intro} ${rankingText} ${p.palmaresLabel}`,
     `${p.cta.title} ${p.cta.text}`,
@@ -420,5 +550,6 @@ export function cityVisibleText(p: CityPage, rankingText: string): string {
     p.neighbours ? `${p.neighbours.title} ${p.neighbours.intro} ${p.neighbours.rows.map((r) => `${r.name} ${Object.values(r.cells).join(" ")}`).join(" ")}` : "",
     p.place ? `${p.place.eyebrow} ${p.place.title} ${p.place.text} ${p.place.linkLabel}` : "",
     `${p.faqTitle} ${p.faq.map((q) => `${q.question} ${q.answer}`).join(" ")}`,
+    `Sources ${p.sources.map((x) => x.label).join(" ")} ${p.attribution}`,
   ].join(" ");
 }
