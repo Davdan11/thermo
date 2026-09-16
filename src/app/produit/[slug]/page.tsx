@@ -245,8 +245,8 @@ export default async function ProductPage({
                 {/* Full tech specs */}
                 <TechSpecs detail={detail} />
 
-                {/* Warranties */}
-                <WarrantySection warranties={detail.warranties} />
+                {/* Garantie : uniquement ce qu'un document du fabricant dit, sinon rien */}
+                <WarrantySection warranty={detail.warranty} systemType={model.systemType} zones={model.zones} />
 
                 {/* Sources */}
                 <SourcesSection sources={detail.sources} />

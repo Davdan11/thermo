@@ -105,9 +105,10 @@ describe("getBrandDetail — Daikin (rich data)", () => {
     expect(aurora!.hasColdClimate).toBe(true);
   });
 
-  it("includes warranties from published models", () => {
-    expect(detail!.warranties.length).toBeGreaterThan(0);
-    expect(detail!.warranties[0].modelName).toBeTruthy();
+  it("aucune garantie inventée dans les données de la marque", () => {
+    // Les garanties affichées viennent des relevés de documents, fiche par fiche (models[].warranty).
+    expect(detail!.warranties).toEqual([]);
+    expect(detail!.models.some((m) => m.warranty != null)).toBe(true);
   });
 
   it("includes editorial content", () => {
@@ -219,17 +220,13 @@ describe("getBrandDetail — unknown brand", () => {
    ------------------------------------------------------------------ */
 
 describe("getBrandDetail — data integrity", () => {
-  it("warranties never leak between brands", () => {
-    const daikin = getBrandDetail("daikin")!;
-    const gree = getBrandDetail("gree")!;
-
-    // Daikin has warranties, Gree doesn't
-    expect(daikin.warranties.length).toBeGreaterThan(0);
-    expect(gree.warranties.every((w) => w.modelName)).toBe(true);
-
-    // Daikin's warranties reference Daikin models
-    for (const w of daikin.warranties) {
-      expect(w.modelName).toBeTruthy();
+  it("la garantie d'une fiche vient toujours d'un document de sa propre marque", () => {
+    for (const slug of ["daikin", "gree"]) {
+      const detail = getBrandDetail(slug)!;
+      expect(detail.warranties).toEqual([]);
+      for (const m of detail.models) {
+        if (m.warranty) expect(m.warranty.record.brand.toLowerCase()).toBe(detail.brand.name.toLowerCase());
+      }
     }
   }, 60_000)
 

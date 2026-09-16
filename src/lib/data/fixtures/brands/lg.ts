@@ -66,10 +66,8 @@ export const lgDataset: BrandDataset = {
     { id: "cert-lg-std-12k-cc", type: "cold_climate", configurationId: "config-lg-std-12k", coldClimate: true, status: "active", territory: "CA", sourceId: "src-lg-specs", verifiedAt: null },
     { id: "cert-lg-std-18k-cc", type: "cold_climate", configurationId: "config-lg-std-18k", coldClimate: true, status: "active", territory: "CA", sourceId: "src-lg-specs", verifiedAt: null },
   ],
-  warranties: [
-    { id: "warranty-lg-parts", modelId: "model-lg-artcool-12k", type: "parts", durationYears: 10, requiresRegistration: true, provider: "manufacturer", territory: "CA", conditions: "Enregistrement requis.", confidence: MC, sourceId: "src-lg-specs", verifiedAt: null },
-    { id: "warranty-lg-comp",  modelId: "model-lg-artcool-12k", type: "compressor", durationYears: 10, requiresRegistration: true, provider: "manufacturer", territory: "CA", conditions: "Enregistrement requis.", confidence: MC, sourceId: "src-lg-specs", verifiedAt: null },
-  ],
+  // Les garanties affichées viennent des relevés de certificats (src/lib/data/warranties-sourced.json).
+  warranties: [],
   priceObservations: [],
   editorial: [],
 };

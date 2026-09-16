@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
 import { brandLogoPath } from "@/lib/data/brand-logos";
+import { warrantyShortLabel } from "@/lib/data/warranty";
 import { EASE, typo } from "./motion";
 import { QUESTIONS_LABEL_MAJ } from "@/lib/thermomatch/parcours";
 
@@ -150,16 +151,8 @@ function GalleryCard({
 }) {
   const { model, brand, configuration, isColdClimate } = product;
 
-  const warranties = (product as { warranties?: Array<{ type: string; durationYears?: number }> }).warranties ?? [];
-  const partsWarranty = warranties.find((w) => w.type === "parts")?.durationYears;
-  const compWarranty = warranties.find((w) => w.type === "compressor")?.durationYears;
-  let warrantyLabel = "";
-  if (partsWarranty && compWarranty) {
-    if (partsWarranty === compWarranty) warrantyLabel = `Garantie ${partsWarranty} ans`;
-    else warrantyLabel = `${partsWarranty} ans (pièces) / ${compWarranty} ans (comp.)`;
-  } else if (partsWarranty) {
-    warrantyLabel = `Garantie ${partsWarranty} ans`;
-  }
+  // Garantie : la durée du document du fabricant, ou « Non vérifiée » — jamais de valeur par défaut.
+  const warrantyLabel = warrantyShortLabel(product.warranty);
   const logisVertDollars: number | null = (product as { logisVertDollars?: number }).logisVertDollars || null;
   const logo = brandLogoPath(brand.slug);
 
@@ -235,7 +228,7 @@ function GalleryCard({
             )}
             <dl className="m-0">
               <Line label={typo("Chauffage jusqu'à")} value={heatTo} />
-              <Line label="Garantie" value={warrantyLabel || "10 ans (pièces et comp.)"} />
+              <Line label="Garantie" value={product.warranty ? warrantyLabel : <span style={{ color: "rgba(10,20,25,0.55)" }}>{warrantyLabel}</span>} />
               {logisVertDollars != null && logisVertDollars > 0 && (
                 <Line
                   label={

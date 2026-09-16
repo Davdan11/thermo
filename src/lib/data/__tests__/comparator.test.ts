@@ -79,10 +79,11 @@ describe("getComparisonData — no configuration mixing", () => {
     expect(p2.detail.configuration!.modelId).toBe(p2.detail.model.id);
   });
 
-  it("warranties don't leak between products", () => {
-    const data = getComparisonData(["daikin-aurora-18k", "daikin-aurora-9k"]);
-    expect(data.products[0].detail.warranties.length).toBe(2);
-    expect(data.products[1].detail.warranties.length).toBe(0);
+  it("la garantie comparée vient du document de la marque comparée", () => {
+    const data = getComparisonData(["daikin-aurora-18k", "gree-flexx-36k"]);
+    expect(data.products[0].detail.warranties).toEqual([]);
+    expect(data.products[0].detail.warranty!.record.brand).toBe("Daikin");
+    expect(data.products[1].detail.warranty!.record.brand).toBe("Gree");
   });
 
   it("certifications are scoped to their own config", () => {
@@ -205,10 +206,10 @@ describe("getComparisonData — missing data", () => {
     const data = getComparisonData(["gree-flexx-36k", "daikin-aurora-18k"]);
     const gree = data.products[0];
     expect(gree.detail.editorial).toBeNull();
-    expect(gree.detail.warranties.length).toBe(0);
+    expect(gree.detail.warranties).toEqual([]);
     const daikin = data.products[1];
     expect(daikin.detail.editorial).toBeNull();
-    expect(daikin.detail.warranties.length).toBe(2);
+    expect(daikin.detail.warranties).toEqual([]);
   });
 
   it("zero is a valid value, not missing", () => {

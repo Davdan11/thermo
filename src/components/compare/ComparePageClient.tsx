@@ -70,16 +70,6 @@ function rateFeatures(p: CompareProduct): Rating {
   return "Basique";
 }
 
-function rateWarranty(p: CompareProduct): Rating {
-  const compressor = p.detail.warranties.find((w) => w.type === "compressor");
-  const parts = p.detail.warranties.find((w) => w.type === "parts");
-  if (!compressor && !parts) return "Limitée";
-  const years = compressor?.durationYears ?? parts?.durationYears ?? 0;
-  if (years >= 10) return "Étendue";
-  if (years >= 5) return "Standard";
-  return "Limitée";
-}
-
 function isVerified(p: CompareProduct): boolean {
   return p.detail.model.verifiedAt != null || p.detail.configuration?.verifiedAt != null;
 }
@@ -202,21 +192,21 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "—", detail, color: "#9ca3af" };
   }
 
+  /* Garantie : une mention n'est donnée que si la durée vient d'un document du fabricant.
+     Sans document, la ligne le dit et ne vaut aucune mention. */
   function buildWarrantyRow(p: CompareProduct): RowValue {
-    const compressor = p.detail.warranties.find((w) => w.type === "compressor");
-    const parts = p.detail.warranties.find((w) => w.type === "parts");
-    const labor = p.detail.warranties.find((w) => w.type === "labor");
-    const details: string[] = [];
-    if (compressor) details.push(`Compresseur ${compressor.durationYears} ans`);
-    if (parts) details.push(`Pièces ${parts.durationYears} ans`);
-    if (labor) details.push(`Main-d'œuvre ${labor.durationYears} an${labor.durationYears > 1 ? "s" : ""}`);
-    const detail = details.length > 0 ? details.join(" · ") : "Non documenté";
-    const years = compressor?.durationYears ?? parts?.durationYears ?? 0;
+    const w = p.detail.warranty?.record;
+    if (!w) return { rating: "Non vérifiée", detail: "Aucun document du fabricant relevé pour ce modèle", color: "#9ca3af" };
+    const details: string[] = [`Pièces ${w.partsYears} ans`];
+    if (w.compressorYears != null) details.push(`Compresseur ${w.compressorYears} ans`);
+    if (w.laborYears != null && w.laborYears > 0) details.push(`Main-d'œuvre ${w.laborYears} an${w.laborYears > 1 ? "s" : ""}`);
+    if (w.registrationRequired) details.push(w.registrationDays != null ? `Enregistrement dans les ${w.registrationDays} jours` : "Enregistrement exigé");
+    const detail = details.join(" · ");
+    const years = w.compressorYears ?? w.partsYears;
     if (years >= 12) return { rating: "Exceptionnelle", detail, color: "#15803d" };
     if (years >= 10) return { rating: "Étendue", detail, color: "#16a34a" };
     if (years >= 5) return { rating: "Standard", detail, color: "#d97706" };
-    if (years > 0) return { rating: "Limitée", detail, color: "#d97706" };
-    return { rating: "—", detail, color: "#9ca3af" };
+    return { rating: "Limitée", detail, color: "#d97706" };
   }
 
   function buildCapacityRow(p: CompareProduct): RowValue {
@@ -931,19 +921,23 @@ function buildVerdict(products: CompareProduct[]): VerdictItem[] {
     });
   }
 
-  // Garantie
+  // Garantie : seules les durées relevées dans un document du fabricant départagent les fiches.
   const war = products.map((p) => {
-    const c = p.detail.warranties.find((w) => w.type === "compressor")?.durationYears ?? null;
-    const pa = p.detail.warranties.find((w) => w.type === "parts")?.durationYears ?? null;
-    return c ?? pa;
+    const w = p.detail.warranty?.record;
+    return w ? w.compressorYears ?? w.partsYears : null;
   });
-  if (war.filter((v) => v !== null).length >= 2) {
+  const verifiees = war.filter((v) => v !== null).length;
+  if (verifiees >= 2) {
     const i = best(war, (a, b) => a > b)!;
     const same = war.every((v) => v === war[i]);
+    const manquantes = products.length - verifiees;
+    const reserve = manquantes > 0 ? ` ${manquantes} fiche${manquantes > 1 ? "s" : ""} sans document : garantie non vérifiée, non comparée.` : "";
     items.push({
       label: "Garantie",
       value: same ? `${war[i]} ans chacune` : `${name(products[i])} : ${war[i]} ans`,
-      note: same ? "Même durée sur le compresseur ou les pièces. La main-d'œuvre dépend de l'installateur." : `${products.map((p, j) => `${war[j] ?? "n/d"} ans (${p.detail.brand.name})`).join(" contre ")} sur le compresseur ou les pièces. La main-d'œuvre dépend de l'installateur.`,
+      note: (same
+        ? "Même durée sur le compresseur ou les pièces, d'après les documents des fabricants. La main-d'œuvre dépend de l'installateur."
+        : `${products.map((p, j) => `${war[j] ?? "non vérifiée"} ${war[j] != null ? "ans " : ""}(${p.detail.brand.name})`).join(" contre ")} sur le compresseur ou les pièces, d'après les documents des fabricants. La main-d'œuvre dépend de l'installateur.`) + reserve,
     });
   }
 

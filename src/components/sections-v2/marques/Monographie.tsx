@@ -15,6 +15,7 @@ import * as motion from "motion/react-client";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
 import type { SeriesSummary } from "@/lib/data/queries/brand-detail";
 import { GENERIC_SERIES_LABEL, isGenericSeries } from "@/lib/data/series-label";
+import { warrantyShortLabel } from "@/lib/data/warranty";
 import { DISPLAY, EASE, MONO, typo } from "@/components/heroes-v2/marques/shared";
 import { InkNumeral } from "./InkNumeral";
 import { DriftName } from "./MonographieClient";
@@ -260,18 +261,9 @@ export function CompareInterleaf({ brandName }: { brandName: string }) {
    Chapitre III : fiches de catalogue (mêmes données que ProductCard)
    ------------------------------------------------------------------ */
 
+/** Garantie de la fiche : la durée relevée dans un document du fabricant, sinon « Non vérifiée ». */
 function warrantyOf(product: CatalogueProduct): string {
-  const warranties = (product as { warranties?: Array<{ type: string; durationYears?: number }> }).warranties ?? [];
-  const partsWarranty = warranties.find((w) => w.type === "parts")?.durationYears;
-  const compWarranty = warranties.find((w) => w.type === "compressor")?.durationYears;
-  let warrantyLabel = "";
-  if (partsWarranty && compWarranty) {
-    if (partsWarranty === compWarranty) warrantyLabel = `Garantie ${partsWarranty} ans`;
-    else warrantyLabel = `${partsWarranty} ans (pièces) / ${compWarranty} ans (comp.)`;
-  } else if (partsWarranty) {
-    warrantyLabel = `Garantie ${partsWarranty} ans`;
-  }
-  return warrantyLabel || "10 ans (pièces et comp.)";
+  return warrantyShortLabel(product.warranty);
 }
 
 function Leader({ label, value, strong = false, icon }: { label: string; value: ReactNode; strong?: boolean; icon?: ReactNode }) {

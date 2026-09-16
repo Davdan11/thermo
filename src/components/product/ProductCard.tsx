@@ -3,6 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
 import { brandLogoPath } from "@/lib/data/brand-logos";
+import { warrantyShortLabel } from "@/lib/data/warranty";
 
 
 
@@ -19,18 +20,8 @@ export function ProductCard({
 }) {
   const { model, brand, configuration, isColdClimate } = product;
 
-  // Warranties should be passed down or accessed safely without importing registry on client
-  const warranties = (product as { warranties?: Array<{ type: string; durationYears?: number }> }).warranties ?? [];
-  const partsWarranty = warranties.find((w) => w.type === "parts")?.durationYears;
-  const compWarranty = warranties.find((w) => w.type === "compressor")?.durationYears;
-  
-  let warrantyLabel = "";
-  if (partsWarranty && compWarranty) {
-     if (partsWarranty === compWarranty) warrantyLabel = `Garantie ${partsWarranty} ans`;
-     else warrantyLabel = `${partsWarranty} ans (pièces) / ${compWarranty} ans (comp.)`;
-  } else if (partsWarranty) {
-     warrantyLabel = `Garantie ${partsWarranty} ans`;
-  }
+  // Garantie : la durée du document du fabricant, résolue au serveur. Sans document, aucun chiffre.
+  const warrantyLabel = warrantyShortLabel(product.warranty);
 
   // --- LogisVert subsidy lookup ---
   const logisVertDollars: number | null = (product as { logisVertDollars?: number }).logisVertDollars || null;
@@ -122,8 +113,8 @@ export function ProductCard({
           </div>
           <div className="flex items-center justify-between py-3 border-t border-[#f0ebe4]">
             <span className="text-[14px] text-[#6B7280]">Garantie</span>
-            <span className="text-[14.5px] font-semibold text-[#172126]">
-              {warrantyLabel || "10 ans (pièces et comp.)"}
+            <span className="text-[14.5px] font-semibold" style={{ color: product.warranty ? "#172126" : "#6B7280" }}>
+              {warrantyLabel}
             </span>
           </div>
           {logisVertDollars != null && logisVertDollars > 0 && (

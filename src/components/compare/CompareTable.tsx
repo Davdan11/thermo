@@ -148,31 +148,48 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
   }
 
   // --- GARANTIE ---
-  const warrantyTypes = ["parts", "compressor", "labor", "replacement"] as const;
-  const warrantyLabels: Record<string, string> = {
-    parts: "Pieces",
-    compressor: "Compresseur",
-    labor: "Main-d'oeuvre",
-    replacement: "Remplacement",
-  };
-  const warrantyRows: RowDef[] = warrantyTypes.map((wt) => {
-    const highlightKey = wt === "parts" ? "warrantyParts"
-      : wt === "compressor" ? "warrantyCompressor"
-      : undefined;
-    return {
-      ...row(`Garantie — ${warrantyLabels[wt]}`, details.map((d) => {
-        const w = d.warranties.find((w) => w.type === wt);
-        if (!w) return null;
-        let val = `${w.durationYears} ans`;
-        if (w.requiresRegistration) val += " (enregistrement requis)";
-        return val;
+  // Une durée n'apparaît que si elle est relevée dans un document du fabricant ; sinon la cellule le dit.
+  const NON_VERIFIEE = "Non vérifiée (voir le certificat du fabricant)";
+  const warrantyRows: RowDef[] = [
+    {
+      ...row("Garantie — Pièces", details.map((d) => {
+        const w = d.warranty?.record;
+        if (!w) return NON_VERIFIEE;
+        return w.registrationRequired
+          ? `${w.partsYears} ans (enregistrement exigé${w.registrationDays != null ? ` dans les ${w.registrationDays} jours` : ""})`
+          : `${w.partsYears} ans`;
       })),
-      highlight: highlightKey ? highlights[highlightKey as keyof ComparisonHighlights] : undefined,
-    };
-  });
-  if (warrantyRows.some((r) => r.values.some((v) => v !== null))) {
-    sections.push({ title: "Garantie", rows: warrantyRows });
-  }
+      highlight: highlights.warrantyParts,
+    },
+    {
+      ...row("Garantie — Compresseur", details.map((d) => {
+        const w = d.warranty?.record;
+        if (!w) return NON_VERIFIEE;
+        return w.compressorYears != null ? `${w.compressorYears} ans` : "Non précisé par le document";
+      })),
+      highlight: highlights.warrantyCompressor,
+    },
+    row("Garantie — Main-d'œuvre", details.map((d) => {
+      const w = d.warranty?.record;
+      if (!w) return NON_VERIFIEE;
+      if (w.laborYears == null) return "Non précisée par le document";
+      return w.laborYears > 0 ? `${w.laborYears} an${w.laborYears > 1 ? "s" : ""}` : "Non couverte";
+    })),
+    row("Garantie — Sans enregistrement", details.map((d) => {
+      const w = d.warranty?.record;
+      if (!w?.withoutRegistration) return null;
+      const bouts: string[] = [];
+      if (w.withoutRegistration.partsYears != null) bouts.push(`${w.withoutRegistration.partsYears} ans pièces`);
+      if (w.withoutRegistration.compressorYears != null) bouts.push(`${w.withoutRegistration.compressorYears} ans compresseur`);
+      return bouts.length ? bouts.join(" · ") : null;
+    })),
+    row("Garantie — Document", details.map((d) => {
+      const r = d.warranty;
+      if (!r) return null;
+      return `${r.record.label}${r.record.sourceType === "secondaire" ? " (reproduit par un distributeur)" : ""}`;
+    })),
+  ];
+  sections.push({ title: "Garantie", rows: warrantyRows });
 
   // --- SUBVENTIONS ---
   const subsidyRows: RowDef[] = [

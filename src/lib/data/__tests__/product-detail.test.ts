@@ -56,10 +56,12 @@ describe("getProductDetail — published model with full data", () => {
     expect(detail!.certifications[0].coldClimate).toBe(true);
   });
 
-  it("loads warranties", () => {
-    expect(detail!.warranties.length).toBe(2);
-    expect(detail!.warranties.some((w) => w.type === "compressor")).toBe(true);
-    expect(detail!.warranties.some((w) => w.type === "parts")).toBe(true);
+  it("loads the sourced warranty", () => {
+    // Le catalogue ne porte plus aucune garantie : elle vient du relevé du certificat.
+    expect(detail!.warranties).toEqual([]);
+    expect(detail!.warranty).not.toBeNull();
+    expect(detail!.warranty!.record.brand).toBe("Daikin");
+    expect(detail!.warranty!.record.sourceFile).toMatch(/^https:\/\//);
   });
 
   it("has no editorial content", () => {
@@ -197,18 +199,25 @@ describe("getProductDetail — no configuration mixing", () => {
 });
 
 /* ------------------------------------------------------------------
-   Warranties are model-scoped, not leaked
+   La garantie vient d'un document, jamais du catalogue
    ------------------------------------------------------------------ */
 
-describe("getProductDetail — warranty scoping", () => {
-  it("Aurora 18K has warranties", () => {
-    const detail = getProductDetail("daikin-aurora-18k");
-    expect(detail!.warranties.length).toBe(2);
+describe("getProductDetail — garantie sourcée", () => {
+  it("le catalogue ne porte plus aucune garantie", () => {
+    for (const slug of ["daikin-aurora-18k", "daikin-aurora-9k", "gree-flexx-36k"]) {
+      expect(getProductDetail(slug)!.warranties).toEqual([]);
+    }
   });
 
-  it("Aurora 9K does NOT inherit 18K warranties", () => {
-    const detail = getProductDetail("daikin-aurora-9k");
-    expect(detail!.warranties.length).toBe(0);
+  it("une fiche sans document n'affiche aucune durée", () => {
+    const detail = getProductDetail("panasonic-climapure-xz-12k");
+    expect(detail!.warranty).toBeNull();
+  });
+
+  it("une fiche couverte par un certificat cite son document", () => {
+    const detail = getProductDetail("daikin-aurora-18k");
+    expect(detail!.warranty!.record.quote.length).toBeGreaterThan(0);
+    expect(detail!.warranty!.record.partsYears).toBeGreaterThan(0);
   });
 });
 

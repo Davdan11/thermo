@@ -18,13 +18,13 @@ import type {
 } from "../types";
 import { registry } from "../registry";
 import type { CatalogueProduct } from "./catalogue";
-import { getWarrantiesForModel } from "./products";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { productNames } from "../product-name";
 import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
 import { resolveMinHeatingTemp } from "@/lib/thermomatch/min-temp-brochures";
 import type { ResolvedMinHeatingTemp } from "@/lib/thermomatch/min-temp-source";
+import { resolveWarranty, type ResolvedWarranty } from "../warranty";
 
 /* ------------------------------------------------------------------
    Product Detail — everything needed for a product page
@@ -39,7 +39,13 @@ export interface ProductDetail {
   indoorUnit: IndoorUnit | null;
   performanceProfile: PerformanceProfile | null;
   certifications: Certification[];
+  /** Garanties du catalogue : plus rien n'y est écrit, elles viennent des relevés de documents (voir `warranty`). */
   warranties: Warranty[];
+  /**
+   * Garantie relevée dans un document du fabricant, ou null si aucun document ne couvre la fiche.
+   * Seule valeur à afficher : ne jamais la remplacer par une durée par défaut.
+   */
+  warranty: ResolvedWarranty | null;
   prices: PriceObservation[];
   editorial: EditorialContent | null;
   sources: SourceReference[];
@@ -223,7 +229,7 @@ export function getProductDetail(slug: string): ProductDetail | null {
         imageUrl: m.imageUrl ?? ser?.imageUrl ?? null,
         refrigerant,
         outdoorModelNumber,
-        warranties: getWarrantiesForModel(m.id),
+        warranty: resolveWarranty({ brand: b.name, seriesName: ser?.name, modelNumber: m.modelNumber }),
         logisVertDollars,
       };
     });
@@ -238,6 +244,7 @@ export function getProductDetail(slug: string): ProductDetail | null {
     performanceProfile,
     certifications,
     warranties,
+    warranty: resolveWarranty({ brand: brand.name, seriesName: series.name, modelNumber: model.modelNumber }),
     prices,
     editorial,
     sources,
