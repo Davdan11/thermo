@@ -57,6 +57,30 @@ export interface JournalEntry {
 export const JOURNAL_VISIBILITE: JournalEntry[] = [
   {
     date: "2026-09-15",
+    titre: "Pages de villes : du contenu local propre à chacune, et l'indexation sous contrôle",
+    detail:
+      "Chaque page tire ses repères de ses propres données (station de normales et sa distance, écart de degrés-jours avec une voisine rattachée à une autre station, âge et type des logements, densité et rangs au Québec). Une page n'est indexée que si elle porte cette valeur locale et ne ressemble pas trop à une voisine : 1 007 pages sur 1 024, contre 778 avant l'enrichissement. Les 17 écartées restent accessibles et liées.",
+  },
+  {
+    date: "2026-09-15",
+    titre: "Un seul chiffre par notion, et la page « Notre méthode »",
+    detail:
+      "Nouvelle page /methode : d'où viennent les données (liste LogisVert d'Hydro-Québec, ENERGY STAR, documents des fabricants), comment ThermoMatch recommande, et la définition de chaque compteur. Le site entier lit ce tableau : l'accueil ne compte plus 6 410 modèles en incluant des marques non vendues ici. Les capacités des fiches disent leur condition de mesure (8,3 °C, −8,3 °C, −15 °C) et le maintien montre son calcul.",
+  },
+  {
+    date: "2026-09-15",
+    titre: "Aucune durée de garantie inventée",
+    detail:
+      "Les 15 520 garanties « estimées » recopiées d'une table maison sont retirées. 2 386 fiches affichent la garantie d'un document du fabricant, avec ses conditions, le délai d'enregistrement, la clause du Québec et la citation ; les autres disent « non vérifiée, voir le certificat du fabricant ». La Daikin 2MX18AXVJU passe de 12 à 10 ans, comme son certificat.",
+  },
+  {
+    date: "2026-09-15",
+    titre: "Pages plus légères et corrections de l'audit",
+    detail:
+      "Le comparateur n'envoie plus le catalogue au navigateur (1 053 Ko → 3 Ko) et les pages de marques sont rendues par segments (Daikin murales : 488 Ko → 215 Ko). Corrigés aussi : libellés bruts du récapitulatif de soumission, « aucune offre ferme » plutôt que « aucun prix », titre de marque lu deux fois, « photo officielle à venir », bandeau des témoins sur mobile, zone de service réelle.",
+  },
+  {
+    date: "2026-09-15",
     titre: "2 059 multizones n'apparaissent plus comme des murales",
     detail:
       "Une unité certifiée par Hydro-Québec avec des combinaisons « appareils sans conduits » est classée multizone (Trane et American Standard 4TXM, Daikin 2MX et 3MX, MDV M2OF…) : bonne étiquette sur la fiche, bonnes pages murales et multizones. Les cartes ThermoMatch montrent le système complet : l'unité dehors, l'unité intérieure certifiée avec elle et le numéro AHRI.",
