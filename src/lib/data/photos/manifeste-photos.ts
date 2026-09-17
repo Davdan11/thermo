@@ -236,9 +236,14 @@ export function marqueDuFichier(chemin: string): string | null {
   return FAMILLES[chemin]?.marque ?? null;
 }
 
-/** Règles applicables à une photo, valeurs par défaut comprises. */
-export function reglesPhoto(chemin: string) {
-  const genere = FAMILLES[chemin];
+/**
+ * Règles applicables à une photo, valeurs par défaut comprises.
+ * `marqueSiAbsente` sert au script qui régénère le manifeste : une photo qui vient d'arriver
+ * n'y figure pas encore, et sans cela elle recevrait une liste de types permis vide — donc
+ * refusée partout, et il faudrait régénérer deux fois pour qu'elle devienne posable.
+ */
+export function reglesPhoto(chemin: string, marqueSiAbsente?: string) {
+  const genere = FAMILLES[chemin] ?? (marqueSiAbsente ? { marque: marqueSiAbsente, familles: [] } : null);
   if (!genere) return null;
   const revue = PHOTOS_REVUES[chemin] ?? {};
   const montre: Montre = revue.montre ?? "exterieure";
