@@ -18,7 +18,12 @@
  * Usage :
  *   node scripts/fetch-photos-officielles.mjs --index            # (re)télécharge les index
  *   node scripts/fetch-photos-officielles.mjs --marques tempstar,keeprite [--dry-run]
+ *   node scripts/fetch-photos-officielles.mjs --liste=<fichier.json>   # adresses relevées à la main
  *   node scripts/fetch-photos-officielles.mjs --regles           # écrit les règles de rattachement
+ *
+ * Marques déjà passées (index officiel ou pages relevées) : Tempstar, Keeprite, Heil, Arcoaire,
+ * Comfortmaker, Day & Night, Payne, WeatherMaker, Bryant, Carrier, Midea, Friedrich, York,
+ * Coleman, Zephyr, Gree. Les autres n'ont pas de source officielle exploitable trouvée à ce jour.
  */
 import fs from "node:fs";
 import path from "node:path";
