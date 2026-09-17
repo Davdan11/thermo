@@ -102,8 +102,12 @@ const indoorFamilyType = (raw) => {
     const t = es.indoorFamilies[stem.slice(0, len)];
     if (t) return t;
   }
-  return null;
+  return AIR_HANDLER_RE.test(String(raw ?? "").toUpperCase().trim()) ? "S" : null;
 };
+// Cabinets et serpentins absents d'ENERGY STAR (combinaisons retirées) : le numéro les nomme sans ambiguïté.
+// Carrier et Bryant FE4A et FV4C, Daikin DV (cabinet) et CA…F / CA…EA (serpentin), Midea AVC et AVCU, Direct Air
+// MAGICPRO-AH, Forestair FAD…AH, Azur AH, AHU et AUH, et tout numéro qui porte « AIRHANDLER ».
+const AIR_HANDLER_RE = /AIR ?HANDLER|^F[EV]4[AC]N|^DV\d{2}[A-Z]EC|^CA\*?[A-Z]?\*?(F|EA)\d{4}|^AVCU?-\d{2}HWFN|MAGICPRO\d*-AH|^FAD\d{2}AH\d|^AH-\d{2}B?$|^AHU\d?-\d{2}|^AUH-\d{2}/;
 // unitKey → comptes sur toutes les marques : « exact » (combinaisons listées par ENERGY STAR) et « famille »
 // (type déduit de l'unité intérieure). Le type exact prime dès qu'il porte sur 3 combinaisons ou plus : une
 // mini-split qui accepte aussi un serpentin (Carrier 38MARBQ, 25 combinaisons mini-split sur 30 listées) reste

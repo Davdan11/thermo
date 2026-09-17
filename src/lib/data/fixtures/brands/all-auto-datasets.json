@@ -17409,7 +17409,7 @@
     "id": "ac-pro-aod30u-36hfn1-m-ga",
     "slug": "ac-pro-aod30u-36hfn1-m-ga",
     "name": "AOD30U-36HFN1-M(GA)",
-    "seriesId": "ac-pro-serie-non-identifiee",
+    "seriesId": "ac-pro-serie-non-identifiee-central-ducted",
     "brandId": "ac-pro",
     "modelNumber": "AOD30U-36HFN1-M(GA)",
     "normalizedModelNumber": "aod30u36hfn1mga",
@@ -17427,11 +17427,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -17732,7 +17731,7 @@
     "id": "ac-pro-aoe30u-48hfn1-mr0",
     "slug": "ac-pro-aoe30u-48hfn1-mr0",
     "name": "AOE30U-48HFN1-MR0",
-    "seriesId": "ac-pro-serie-non-identifiee",
+    "seriesId": "ac-pro-serie-non-identifiee-central-ducted",
     "brandId": "ac-pro",
     "modelNumber": "AOE30U-48HFN1-MR0",
     "normalizedModelNumber": "aoe30u48hfn1mr0",
@@ -17750,11 +17749,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -17786,7 +17784,7 @@
     "id": "ac-pro-aoe30u-60hfn1-mr0",
     "slug": "ac-pro-aoe30u-60hfn1-mr0",
     "name": "AOE30U-60HFN1-MR0",
-    "seriesId": "ac-pro-serie-non-identifiee",
+    "seriesId": "ac-pro-serie-non-identifiee-central-ducted",
     "brandId": "ac-pro",
     "modelNumber": "AOE30U-60HFN1-MR0",
     "normalizedModelNumber": "aoe30u60hfn1mr0",
@@ -17804,11 +17802,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -21111,7 +21108,7 @@
     "id": "ac-pro-iu-avcu-36hwfn1-m-ga",
     "modelNumber": "AVCU-36HWFN1-M(GA)",
     "brandId": "ac-pro",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "ac-pro-iu-ati-36hwfn1-m",
@@ -21147,13 +21144,13 @@
     "id": "ac-pro-iu-avc-48hwfn1-m",
     "modelNumber": "AVC-48HWFN1-M",
     "brandId": "ac-pro",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "ac-pro-iu-avc-60hwfn1-m",
     "modelNumber": "AVC-60HWFN1-M",
     "brandId": "ac-pro",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "ac-pro-iu-avbl-36hwfn1-mk3",
@@ -27197,7 +27194,7 @@
     "id": "ac-pro-com-aod30u-36hfn1-m-ga",
     "slug": "ac-pro-com-aod30u-36hfn1-m-ga",
     "name": "AOD30U-36HFN1-M(GA)",
-    "seriesId": "ac-pro-com-serie-non-identifiee",
+    "seriesId": "ac-pro-com-serie-non-identifiee-central-ducted",
     "brandId": "ac-pro-com",
     "modelNumber": "AOD30U-36HFN1-M(GA)",
     "normalizedModelNumber": "aod30u36hfn1mga",
@@ -27215,11 +27212,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -27734,7 +27730,7 @@
     "id": "ac-pro-com-aoe30u-48hfn1-mr0",
     "slug": "ac-pro-com-aoe30u-48hfn1-mr0",
     "name": "AOE30U-48HFN1-MR0",
-    "seriesId": "ac-pro-com-serie-non-identifiee",
+    "seriesId": "ac-pro-com-serie-non-identifiee-central-ducted",
     "brandId": "ac-pro-com",
     "modelNumber": "AOE30U-48HFN1-MR0",
     "normalizedModelNumber": "aoe30u48hfn1mr0",
@@ -27752,11 +27748,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 3,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -27788,7 +27783,7 @@
     "id": "ac-pro-com-aoe30u-60hfn1-mr0",
     "slug": "ac-pro-com-aoe30u-60hfn1-mr0",
     "name": "AOE30U-60HFN1-MR0",
-    "seriesId": "ac-pro-com-serie-non-identifiee",
+    "seriesId": "ac-pro-com-serie-non-identifiee-central-ducted",
     "brandId": "ac-pro-com",
     "modelNumber": "AOE30U-60HFN1-MR0",
     "normalizedModelNumber": "aoe30u60hfn1mr0",
@@ -27806,11 +27801,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 3,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -29406,7 +29400,7 @@
     "id": "ac-pro-com-iu-avcu-36hwfn1-m-ga",
     "modelNumber": "AVCU-36HWFN1-M(GA)",
     "brandId": "ac-pro-com",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "ac-pro-com-iu-avb-36hwfn1-m",
@@ -29454,13 +29448,13 @@
     "id": "ac-pro-com-iu-avc-48hwfn1-m",
     "modelNumber": "AVC-48HWFN1-M",
     "brandId": "ac-pro-com",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "ac-pro-com-iu-avc-60hwfn1-m",
     "modelNumber": "AVC-60HWFN1-M",
     "brandId": "ac-pro-com",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "ac-pro-com-iu-avbl-36hwfn1-mk3",
@@ -48935,32 +48929,6 @@
     "updatedAt": "2026-09-12T00:00:00Z"
    },
    {
-    "id": "adp-serie-non-identifiee",
-    "slug": "adp-serie-non-identifiee",
-    "name": "Série non identifiée",
-    "brandId": "adp",
-    "systemType": "wall-single",
-    "categories": [
-     "conventional",
-     "ductless",
-     "single-zone"
-    ],
-    "imageUrl": null,
-    "status": "needs_review",
-    "sources": [
-     {
-      "sourceId": "src-adp-logisvert",
-      "fields": [
-       "name"
-      ],
-      "confidence": "placeholder",
-      "verifiedAt": null
-     }
-    ],
-    "createdAt": "2026-09-12T00:00:00Z",
-    "updatedAt": "2026-09-12T00:00:00Z"
-   },
-   {
     "id": "adp-serie-non-identifiee-central-ducted",
     "slug": "adp-serie-non-identifiee-central-ducted",
     "name": "Série non identifiée",
@@ -50111,7 +50079,7 @@
     "id": "adp-auwr-60u3sp2",
     "slug": "adp-auwr-60u3sp2",
     "name": "AUWR-60U3SP2",
-    "seriesId": "adp-serie-non-identifiee",
+    "seriesId": "adp-serie-non-identifiee-central-ducted",
     "brandId": "adp",
     "modelNumber": "AUWR-60U3SP2",
     "normalizedModelNumber": "auwr60u3sp2",
@@ -50129,11 +50097,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 9,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/hisense-hi-ultra-hd-r410a-48k.webp",
@@ -53181,7 +53148,7 @@
     "id": "adp-iu-f-pett7960",
     "modelNumber": "F,PETT7960",
     "brandId": "adp",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "adp-iu-he33936",
@@ -116157,7 +116124,7 @@
     "id": "amana-avzc200241a",
     "slug": "amana-avzc200241a",
     "name": "AVZC200241A",
-    "seriesId": "amana-serie-non-identifiee",
+    "seriesId": "amana-serie-non-identifiee-central-ducted",
     "brandId": "amana",
     "modelNumber": "AVZC200241A",
     "normalizedModelNumber": "avzc200241a",
@@ -116175,11 +116142,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/amana-avzc20-officiel.webp",
@@ -117357,7 +117323,7 @@
     "id": "amana-iu-avpec25b14a",
     "modelNumber": "AVPEC25B14A",
     "brandId": "amana",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "amana-iu-avpec37c14a",
@@ -165929,6 +165895,31 @@
     "updatedAt": "2026-09-12T00:00:00Z"
    },
    {
+    "id": "azur-serie-non-identifiee-central-ducted",
+    "slug": "azur-serie-non-identifiee-central-ducted",
+    "name": "Série non identifiée",
+    "brandId": "azur",
+    "systemType": "central-ducted",
+    "categories": [
+     "conventional",
+     "ducted"
+    ],
+    "imageUrl": null,
+    "status": "needs_review",
+    "sources": [
+     {
+      "sourceId": "src-azur-logisvert",
+      "fields": [
+       "name"
+      ],
+      "confidence": "placeholder",
+      "verifiedAt": null
+     }
+    ],
+    "createdAt": "2026-09-12T00:00:00Z",
+    "updatedAt": "2026-09-12T00:00:00Z"
+   },
+   {
     "id": "azur-hi-ultra-hd",
     "slug": "azur-hi-ultra-hd",
     "name": "Hi Ultra HD",
@@ -166201,7 +166192,7 @@
     "id": "azur-az-24hpa",
     "slug": "azur-az-24hpa",
     "name": "AZ-24HPA",
-    "seriesId": "azur-serie-non-identifiee",
+    "seriesId": "azur-serie-non-identifiee-central-ducted",
     "brandId": "azur",
     "modelNumber": "AZ-24HPA",
     "normalizedModelNumber": "az24hpa",
@@ -166219,11 +166210,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -166362,7 +166352,7 @@
     "id": "azur-az-36hpa",
     "slug": "azur-az-36hpa",
     "name": "AZ-36HPA",
-    "seriesId": "azur-serie-non-identifiee",
+    "seriesId": "azur-serie-non-identifiee-central-ducted",
     "brandId": "azur",
     "modelNumber": "AZ-36HPA",
     "normalizedModelNumber": "az36hpa",
@@ -166380,11 +166370,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -166416,7 +166405,7 @@
     "id": "azur-az-36hpb",
     "slug": "azur-az-36hpb",
     "name": "AZ-36HPB",
-    "seriesId": "azur-serie-non-identifiee",
+    "seriesId": "azur-serie-non-identifiee-central-ducted",
     "brandId": "azur",
     "modelNumber": "AZ-36HPB",
     "normalizedModelNumber": "az36hpb",
@@ -166434,11 +166423,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -166631,7 +166619,7 @@
     "id": "azur-az-60hpa",
     "slug": "azur-az-60hpa",
     "name": "AZ-60HPA",
-    "seriesId": "azur-serie-non-identifiee",
+    "seriesId": "azur-serie-non-identifiee-central-ducted",
     "brandId": "azur",
     "modelNumber": "AZ-60HPA",
     "normalizedModelNumber": "az60hpa",
@@ -166649,11 +166637,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -166685,7 +166672,7 @@
     "id": "azur-az-60hpb",
     "slug": "azur-az-60hpb",
     "name": "AZ-60HPB",
-    "seriesId": "azur-serie-non-identifiee",
+    "seriesId": "azur-serie-non-identifiee-central-ducted",
     "brandId": "azur",
     "modelNumber": "AZ-60HPB",
     "normalizedModelNumber": "az60hpb",
@@ -166703,11 +166690,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -166851,7 +166837,7 @@
     "id": "azur-iu-ah-24",
     "modelNumber": "AH-24",
     "brandId": "azur",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "azur-iu-ah-24b",
@@ -166869,13 +166855,13 @@
     "id": "azur-iu-ah-36",
     "modelNumber": "AH-36",
     "brandId": "azur",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "azur-iu-ah-36b",
     "modelNumber": "AH-36B",
     "brandId": "azur",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "azur-iu-ah-48b",
@@ -166887,13 +166873,13 @@
     "id": "azur-iu-ah-60",
     "modelNumber": "AH-60",
     "brandId": "azur",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "azur-iu-ah-60b",
     "modelNumber": "AH-60B",
     "brandId": "azur",
-    "type": "wall-single"
+    "type": "central-ducted"
    }
   ],
   "configurations": [
@@ -213184,32 +213170,6 @@
   },
   "series": [
    {
-    "id": "bryant-serie-non-identifiee",
-    "slug": "bryant-serie-non-identifiee",
-    "name": "Série non identifiée",
-    "brandId": "bryant",
-    "systemType": "wall-single",
-    "categories": [
-     "conventional",
-     "ductless",
-     "single-zone"
-    ],
-    "imageUrl": null,
-    "status": "needs_review",
-    "sources": [
-     {
-      "sourceId": "src-bryant-logisvert",
-      "fields": [
-       "name"
-      ],
-      "confidence": "placeholder",
-      "verifiedAt": null
-     }
-    ],
-    "createdAt": "2026-09-12T00:00:00Z",
-    "updatedAt": "2026-09-12T00:00:00Z"
-   },
-   {
     "id": "bryant-serie-non-identifiee-central-ducted",
     "slug": "bryant-serie-non-identifiee-central-ducted",
     "name": "Série non identifiée",
@@ -213306,6 +213266,32 @@
       ],
       "confidence": "verified",
       "verifiedAt": "2026-09-12"
+     }
+    ],
+    "createdAt": "2026-09-12T00:00:00Z",
+    "updatedAt": "2026-09-12T00:00:00Z"
+   },
+   {
+    "id": "bryant-serie-non-identifiee",
+    "slug": "bryant-serie-non-identifiee",
+    "name": "Série non identifiée",
+    "brandId": "bryant",
+    "systemType": "wall-single",
+    "categories": [
+     "conventional",
+     "ductless",
+     "single-zone"
+    ],
+    "imageUrl": null,
+    "status": "needs_review",
+    "sources": [
+     {
+      "sourceId": "src-bryant-logisvert",
+      "fields": [
+       "name"
+      ],
+      "confidence": "placeholder",
+      "verifiedAt": null
      }
     ],
     "createdAt": "2026-09-12T00:00:00Z",
@@ -213627,7 +213613,7 @@
     "id": "bryant-280anv024000",
     "slug": "bryant-280anv024000",
     "name": "280ANV024000",
-    "seriesId": "bryant-serie-non-identifiee",
+    "seriesId": "bryant-serie-non-identifiee-central-ducted",
     "brandId": "bryant",
     "modelNumber": "280ANV024000",
     "normalizedModelNumber": "280anv024000",
@@ -213645,11 +213631,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/bryant-280anv-officiel.webp",
@@ -213734,7 +213719,7 @@
     "id": "bryant-280anv036000",
     "slug": "bryant-280anv036000",
     "name": "280ANV036000",
-    "seriesId": "bryant-serie-non-identifiee",
+    "seriesId": "bryant-serie-non-identifiee-central-ducted",
     "brandId": "bryant",
     "modelNumber": "280ANV036000",
     "normalizedModelNumber": "280anv036000",
@@ -213752,11 +213737,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 4,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/bryant-280anv-officiel.webp",
@@ -213841,7 +213825,7 @@
     "id": "bryant-280anv048000",
     "slug": "bryant-280anv048000",
     "name": "280ANV048000",
-    "seriesId": "bryant-serie-non-identifiee",
+    "seriesId": "bryant-serie-non-identifiee-central-ducted",
     "brandId": "bryant",
     "modelNumber": "280ANV048000",
     "normalizedModelNumber": "280anv048000",
@@ -213859,11 +213843,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/bryant-280anv-officiel.webp",
@@ -213948,7 +213931,7 @@
     "id": "bryant-280anv060000",
     "slug": "bryant-280anv060000",
     "name": "280ANV060000",
-    "seriesId": "bryant-serie-non-identifiee",
+    "seriesId": "bryant-serie-non-identifiee-central-ducted",
     "brandId": "bryant",
     "modelNumber": "280ANV060000",
     "normalizedModelNumber": "280anv060000",
@@ -213966,11 +213949,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/bryant-280anv-officiel.webp",
@@ -222051,7 +222033,7 @@
     "id": "bryant-iu-fe4anf002l-ui",
     "modelNumber": "FE4ANF002L+UI",
     "brandId": "bryant",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "bryant-iu-cnpv3617al-ui-98-6b-7a-42060v17",
@@ -222063,7 +222045,7 @@
     "id": "bryant-iu-fe4anb006l-ui",
     "modelNumber": "FE4ANB006L+UI",
     "brandId": "bryant",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "bryant-iu-cnpv3617al-ui",
@@ -222075,7 +222057,7 @@
     "id": "bryant-iu-fe4an-b-f-005l-ui",
     "modelNumber": "FE4AN(B,F)005L+UI",
     "brandId": "bryant",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "bryant-iu-csph4812al-ui",
@@ -231473,32 +231455,6 @@
     "updatedAt": "2026-09-12T00:00:00Z"
    },
    {
-    "id": "bryant-heating-and-cooling-systems-serie-non-identifiee",
-    "slug": "bryant-heating-and-cooling-systems-serie-non-identifiee",
-    "name": "Série non identifiée",
-    "brandId": "bryant-heating-and-cooling-systems",
-    "systemType": "wall-single",
-    "categories": [
-     "conventional",
-     "ductless",
-     "single-zone"
-    ],
-    "imageUrl": null,
-    "status": "needs_review",
-    "sources": [
-     {
-      "sourceId": "src-bryant-heating-and-cooling-systems-logisvert",
-      "fields": [
-       "name"
-      ],
-      "confidence": "placeholder",
-      "verifiedAt": null
-     }
-    ],
-    "createdAt": "2026-09-12T00:00:00Z",
-    "updatedAt": "2026-09-12T00:00:00Z"
-   },
-   {
     "id": "bryant-heating-and-cooling-systems-evolution-v-heat-pump-2-stage",
     "slug": "bryant-heating-and-cooling-systems-evolution-v-heat-pump-2-stage",
     "name": "Evolution V Heat Pump 2-STAGE",
@@ -232025,7 +231981,7 @@
     "id": "bryant-heating-and-cooling-systems-288bnv0250b-tstat",
     "slug": "bryant-heating-and-cooling-systems-288bnv0250b-tstat",
     "name": "288BNV0250B+TSTAT",
-    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee",
+    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee-central-ducted",
     "brandId": "bryant-heating-and-cooling-systems",
     "modelNumber": "288BNV0250B+TSTAT",
     "normalizedModelNumber": "288bnv0250btstat",
@@ -232043,11 +231999,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -232132,7 +232087,7 @@
     "id": "bryant-heating-and-cooling-systems-288bnv0250c-tstat",
     "slug": "bryant-heating-and-cooling-systems-288bnv0250c-tstat",
     "name": "288BNV0250C+TSTAT",
-    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee",
+    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee-central-ducted",
     "brandId": "bryant-heating-and-cooling-systems",
     "modelNumber": "288BNV0250C+TSTAT",
     "normalizedModelNumber": "288bnv0250ctstat",
@@ -232150,11 +232105,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -232557,7 +232511,7 @@
     "id": "bryant-heating-and-cooling-systems-288bnv0480b-tstat",
     "slug": "bryant-heating-and-cooling-systems-288bnv0480b-tstat",
     "name": "288BNV0480B+TSTAT",
-    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee",
+    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee-central-ducted",
     "brandId": "bryant-heating-and-cooling-systems",
     "modelNumber": "288BNV0480B+TSTAT",
     "normalizedModelNumber": "288bnv0480btstat",
@@ -232575,11 +232529,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -232664,7 +232617,7 @@
     "id": "bryant-heating-and-cooling-systems-288bnv0600a-tstat",
     "slug": "bryant-heating-and-cooling-systems-288bnv0600a-tstat",
     "name": "288BNV0600A+TSTAT",
-    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee",
+    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee-central-ducted",
     "brandId": "bryant-heating-and-cooling-systems",
     "modelNumber": "288BNV0600A+TSTAT",
     "normalizedModelNumber": "288bnv0600atstat",
@@ -232682,11 +232635,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -232771,7 +232723,7 @@
     "id": "bryant-heating-and-cooling-systems-288bnv0600b-tstat",
     "slug": "bryant-heating-and-cooling-systems-288bnv0600b-tstat",
     "name": "288BNV0600B+TSTAT",
-    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee",
+    "seriesId": "bryant-heating-and-cooling-systems-serie-non-identifiee-central-ducted",
     "brandId": "bryant-heating-and-cooling-systems",
     "modelNumber": "288BNV0600B+TSTAT",
     "normalizedModelNumber": "288bnv0600btstat",
@@ -232789,11 +232741,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -234171,7 +234122,7 @@
     "id": "bryant-heating-and-cooling-systems-iu-fv4cn-b-f-005l",
     "modelNumber": "FV4CN(B,F)005L",
     "brandId": "bryant-heating-and-cooling-systems",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "bryant-heating-and-cooling-systems-iu-cap3721al-ui",
@@ -234195,7 +234146,7 @@
     "id": "bryant-heating-and-cooling-systems-iu-fv4cnb006l",
     "modelNumber": "FV4CNB006L",
     "brandId": "bryant-heating-and-cooling-systems",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "bryant-heating-and-cooling-systems-iu-caa2414am-ui",
@@ -258984,8 +258935,8 @@
   },
   "series": [
    {
-    "id": "carrier-infinity-central-ducted",
-    "slug": "carrier-infinity-central-ducted",
+    "id": "carrier-infinity",
+    "slug": "carrier-infinity",
     "name": "Infinity",
     "brandId": "carrier",
     "systemType": "central-ducted",
@@ -259053,32 +259004,6 @@
       ],
       "confidence": "verified",
       "verifiedAt": "2026-09-12"
-     }
-    ],
-    "createdAt": "2026-09-12T00:00:00Z",
-    "updatedAt": "2026-09-12T00:00:00Z"
-   },
-   {
-    "id": "carrier-infinity",
-    "slug": "carrier-infinity",
-    "name": "Infinity",
-    "brandId": "carrier",
-    "systemType": "wall-single",
-    "categories": [
-     "conventional",
-     "ductless",
-     "single-zone"
-    ],
-    "imageUrl": "/images/products/official/carrier-25vna0-officiel.webp",
-    "status": "published",
-    "sources": [
-     {
-      "sourceId": "src-carrier-series-dictionary",
-      "fields": [
-       "name"
-      ],
-      "confidence": "estimated",
-      "verifiedAt": null
      }
     ],
     "createdAt": "2026-09-12T00:00:00Z",
@@ -259652,7 +259577,7 @@
     "id": "carrier-25vna024a030",
     "slug": "carrier-25vna024a030",
     "name": "Infinity 25VNA024A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA024A030",
     "normalizedModelNumber": "25vna024a030",
@@ -259705,7 +259630,7 @@
     "id": "carrier-25vna036a030",
     "slug": "carrier-25vna036a030",
     "name": "Infinity 25VNA036A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA036A030",
     "normalizedModelNumber": "25vna036a030",
@@ -259758,7 +259683,7 @@
     "id": "carrier-25vna048a030",
     "slug": "carrier-25vna048a030",
     "name": "Infinity 25VNA048A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA048A030",
     "normalizedModelNumber": "25vna048a030",
@@ -259811,7 +259736,7 @@
     "id": "carrier-25vna060a030",
     "slug": "carrier-25vna060a030",
     "name": "Infinity 25VNA060A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA060A030",
     "normalizedModelNumber": "25vna060a030",
@@ -259864,7 +259789,7 @@
     "id": "carrier-25vna424a030",
     "slug": "carrier-25vna424a030",
     "name": "Infinity 25VNA424A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA424A030",
     "normalizedModelNumber": "25vna424a030",
@@ -259917,7 +259842,7 @@
     "id": "carrier-25vna424a031",
     "slug": "carrier-25vna424a031",
     "name": "Infinity 25VNA424A031",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA424A031",
     "normalizedModelNumber": "25vna424a031",
@@ -259970,7 +259895,7 @@
     "id": "carrier-25vna436a030",
     "slug": "carrier-25vna436a030",
     "name": "Infinity 25VNA436A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA436A030",
     "normalizedModelNumber": "25vna436a030",
@@ -260023,7 +259948,7 @@
     "id": "carrier-25vna436a031",
     "slug": "carrier-25vna436a031",
     "name": "Infinity 25VNA436A031",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA436A031",
     "normalizedModelNumber": "25vna436a031",
@@ -260076,7 +260001,7 @@
     "id": "carrier-25vna448a030",
     "slug": "carrier-25vna448a030",
     "name": "Infinity 25VNA448A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA448A030",
     "normalizedModelNumber": "25vna448a030",
@@ -260182,7 +260107,7 @@
     "id": "carrier-25vna460a030",
     "slug": "carrier-25vna460a030",
     "name": "Infinity 25VNA460A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA460A030",
     "normalizedModelNumber": "25vna460a030",
@@ -260235,7 +260160,7 @@
     "id": "carrier-25vna460a031",
     "slug": "carrier-25vna460a031",
     "name": "Infinity 25VNA460A031",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA460A031",
     "normalizedModelNumber": "25vna460a031",
@@ -260288,7 +260213,7 @@
     "id": "carrier-25vna824b030",
     "slug": "carrier-25vna824b030",
     "name": "Infinity 25VNA824B030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA824B030",
     "normalizedModelNumber": "25vna824b030",
@@ -260341,7 +260266,7 @@
     "id": "carrier-25vna825a031",
     "slug": "carrier-25vna825a031",
     "name": "Infinity 25VNA825A031",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA825A031",
     "normalizedModelNumber": "25vna825a031",
@@ -260394,7 +260319,7 @@
     "id": "carrier-25vna825a032",
     "slug": "carrier-25vna825a032",
     "name": "Infinity 25VNA825A032",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA825A032",
     "normalizedModelNumber": "25vna825a032",
@@ -260447,7 +260372,7 @@
     "id": "carrier-25vna836a031",
     "slug": "carrier-25vna836a031",
     "name": "Infinity 25VNA836A031",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA836A031",
     "normalizedModelNumber": "25vna836a031",
@@ -260500,7 +260425,7 @@
     "id": "carrier-25vna836a032",
     "slug": "carrier-25vna836a032",
     "name": "Infinity 25VNA836A032",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA836A032",
     "normalizedModelNumber": "25vna836a032",
@@ -260553,7 +260478,7 @@
     "id": "carrier-25vna837a030",
     "slug": "carrier-25vna837a030",
     "name": "Infinity 25VNA837A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA837A030",
     "normalizedModelNumber": "25vna837a030",
@@ -260606,7 +260531,7 @@
     "id": "carrier-25vna837a031",
     "slug": "carrier-25vna837a031",
     "name": "Infinity 25VNA837A031",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA837A031",
     "normalizedModelNumber": "25vna837a031",
@@ -260712,7 +260637,7 @@
     "id": "carrier-25vna848a030",
     "slug": "carrier-25vna848a030",
     "name": "Infinity 25VNA848A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA848A030",
     "normalizedModelNumber": "25vna848a030",
@@ -260765,7 +260690,7 @@
     "id": "carrier-25vna848a031",
     "slug": "carrier-25vna848a031",
     "name": "Infinity 25VNA848A031",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA848A031",
     "normalizedModelNumber": "25vna848a031",
@@ -260836,11 +260761,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/carrier-25vna8-officiel.webp",
@@ -260872,7 +260796,7 @@
     "id": "carrier-25vna860a030",
     "slug": "carrier-25vna860a030",
     "name": "Infinity 25VNA860A030",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA860A030",
     "normalizedModelNumber": "25vna860a030",
@@ -260943,11 +260867,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/carrier-25vna8-officiel.webp",
@@ -260979,7 +260902,7 @@
     "id": "carrier-25vna860a031",
     "slug": "carrier-25vna860a031",
     "name": "Infinity 25VNA860A031",
-    "seriesId": "carrier-infinity-central-ducted",
+    "seriesId": "carrier-infinity",
     "brandId": "carrier",
     "modelNumber": "25VNA860A031",
     "normalizedModelNumber": "25vna860a031",
@@ -261050,11 +260973,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/carrier-25vna8-officiel.webp",
@@ -269510,13 +269432,13 @@
     "id": "carrier-iu-fv4cn-b-f-005l",
     "modelNumber": "FV4CN(B,F)005L",
     "brandId": "carrier",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "carrier-iu-fv4cnb006l",
     "modelNumber": "FV4CNB006L",
     "brandId": "carrier",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "carrier-iu-caa2414am-ui",
@@ -373574,32 +373496,6 @@
     "slug": "daikin-fit",
     "name": "Fit",
     "brandId": "daikin",
-    "systemType": "wall-single",
-    "categories": [
-     "conventional",
-     "ductless",
-     "single-zone"
-    ],
-    "imageUrl": "/images/products/official/daikin-fit-aurora-officiel.webp",
-    "status": "published",
-    "sources": [
-     {
-      "sourceId": "src-daikin-series-dictionary",
-      "fields": [
-       "name"
-      ],
-      "confidence": "estimated",
-      "verifiedAt": null
-     }
-    ],
-    "createdAt": "2026-09-12T00:00:00Z",
-    "updatedAt": "2026-09-12T00:00:00Z"
-   },
-   {
-    "id": "daikin-fit-central-ducted",
-    "slug": "daikin-fit-central-ducted",
-    "name": "Fit",
-    "brandId": "daikin",
     "systemType": "central-ducted",
     "categories": [
      "conventional",
@@ -373614,32 +373510,6 @@
        "name"
       ],
       "confidence": "estimated",
-      "verifiedAt": null
-     }
-    ],
-    "createdAt": "2026-09-12T00:00:00Z",
-    "updatedAt": "2026-09-12T00:00:00Z"
-   },
-   {
-    "id": "daikin-serie-non-identifiee",
-    "slug": "daikin-serie-non-identifiee",
-    "name": "Série non identifiée",
-    "brandId": "daikin",
-    "systemType": "wall-single",
-    "categories": [
-     "conventional",
-     "ductless",
-     "single-zone"
-    ],
-    "imageUrl": null,
-    "status": "needs_review",
-    "sources": [
-     {
-      "sourceId": "src-daikin-logisvert",
-      "fields": [
-       "name"
-      ],
-      "confidence": "placeholder",
       "verifiedAt": null
      }
     ],
@@ -373794,6 +373664,32 @@
        "name"
       ],
       "confidence": "estimated",
+      "verifiedAt": null
+     }
+    ],
+    "createdAt": "2026-09-12T00:00:00Z",
+    "updatedAt": "2026-09-12T00:00:00Z"
+   },
+   {
+    "id": "daikin-serie-non-identifiee",
+    "slug": "daikin-serie-non-identifiee",
+    "name": "Série non identifiée",
+    "brandId": "daikin",
+    "systemType": "wall-single",
+    "categories": [
+     "conventional",
+     "ductless",
+     "single-zone"
+    ],
+    "imageUrl": null,
+    "status": "needs_review",
+    "sources": [
+     {
+      "sourceId": "src-daikin-logisvert",
+      "fields": [
+       "name"
+      ],
+      "confidence": "placeholder",
       "verifiedAt": null
      }
     ],
@@ -375834,11 +375730,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/daikin-fit-aurora-18k.webp",
@@ -375888,11 +375783,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 3,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/daikin-fit-aurora-18k.webp",
@@ -375924,7 +375818,7 @@
     "id": "daikin-dz17vsa241a",
     "slug": "daikin-dz17vsa241a",
     "name": "Fit DZ17VSA241A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ17VSA241A",
     "normalizedModelNumber": "dz17vsa241a",
@@ -375977,7 +375871,7 @@
     "id": "daikin-dz17vsa241b",
     "slug": "daikin-dz17vsa241b",
     "name": "Fit DZ17VSA241B",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ17VSA241B",
     "normalizedModelNumber": "dz17vsa241b",
@@ -376030,7 +375924,7 @@
     "id": "daikin-dz17vsa301a",
     "slug": "daikin-dz17vsa301a",
     "name": "Fit DZ17VSA301A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ17VSA301A",
     "normalizedModelNumber": "dz17vsa301a",
@@ -376083,7 +375977,7 @@
     "id": "daikin-dz17vsa301b",
     "slug": "daikin-dz17vsa301b",
     "name": "Fit DZ17VSA301B",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ17VSA301B",
     "normalizedModelNumber": "dz17vsa301b",
@@ -376136,7 +376030,7 @@
     "id": "daikin-dz17vsa361a",
     "slug": "daikin-dz17vsa361a",
     "name": "Fit DZ17VSA361A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ17VSA361A",
     "normalizedModelNumber": "dz17vsa361a",
@@ -376189,7 +376083,7 @@
     "id": "daikin-dz17vsa361b",
     "slug": "daikin-dz17vsa361b",
     "name": "Fit DZ17VSA361B",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ17VSA361B",
     "normalizedModelNumber": "dz17vsa361b",
@@ -376260,11 +376154,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 3,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/daikin-fit-aurora-officiel.webp",
@@ -376314,11 +376207,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 4,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/daikin-fit-aurora-officiel.webp",
@@ -376368,11 +376260,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/daikin-fit-aurora-officiel.webp",
@@ -376422,11 +376313,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/daikin-dz17vsa-officiel.webp",
@@ -376458,7 +376348,7 @@
     "id": "daikin-dz20vc0361b",
     "slug": "daikin-dz20vc0361b",
     "name": "DZ20VC0361B",
-    "seriesId": "daikin-serie-non-identifiee",
+    "seriesId": "daikin-serie-non-identifiee-central-ducted",
     "brandId": "daikin",
     "modelNumber": "DZ20VC0361B",
     "normalizedModelNumber": "dz20vc0361b",
@@ -376476,11 +376366,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 3,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/daikin-dz20vc-officiel.webp",
@@ -376512,7 +376401,7 @@
     "id": "daikin-dz20vc0481b",
     "slug": "daikin-dz20vc0481b",
     "name": "DZ20VC0481B",
-    "seriesId": "daikin-serie-non-identifiee",
+    "seriesId": "daikin-serie-non-identifiee-central-ducted",
     "brandId": "daikin",
     "modelNumber": "DZ20VC0481B",
     "normalizedModelNumber": "dz20vc0481b",
@@ -376530,11 +376419,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/daikin-dz20vc-officiel.webp",
@@ -376566,7 +376454,7 @@
     "id": "daikin-dz6vsa1810a",
     "slug": "daikin-dz6vsa1810a",
     "name": "Fit DZ6VSA1810A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ6VSA1810A",
     "normalizedModelNumber": "dz6vsa1810a",
@@ -376619,7 +376507,7 @@
     "id": "daikin-dz6vsa2410a",
     "slug": "daikin-dz6vsa2410a",
     "name": "Fit DZ6VSA2410A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ6VSA2410A",
     "normalizedModelNumber": "dz6vsa2410a",
@@ -376725,7 +376613,7 @@
     "id": "daikin-dz6vsa3010a",
     "slug": "daikin-dz6vsa3010a",
     "name": "Fit DZ6VSA3010A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ6VSA3010A",
     "normalizedModelNumber": "dz6vsa3010a",
@@ -376778,7 +376666,7 @@
     "id": "daikin-dz6vsa3610a",
     "slug": "daikin-dz6vsa3610a",
     "name": "Fit DZ6VSA3610A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ6VSA3610A",
     "normalizedModelNumber": "dz6vsa3610a",
@@ -376884,7 +376772,7 @@
     "id": "daikin-dz6vsa4210a",
     "slug": "daikin-dz6vsa4210a",
     "name": "Fit DZ6VSA4210A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ6VSA4210A",
     "normalizedModelNumber": "dz6vsa4210a",
@@ -376990,7 +376878,7 @@
     "id": "daikin-dz6vsa4810a",
     "slug": "daikin-dz6vsa4810a",
     "name": "Fit DZ6VSA4810A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ6VSA4810A",
     "normalizedModelNumber": "dz6vsa4810a",
@@ -377096,7 +376984,7 @@
     "id": "daikin-dz6vsa6010a",
     "slug": "daikin-dz6vsa6010a",
     "name": "Fit DZ6VSA6010A",
-    "seriesId": "daikin-fit-central-ducted",
+    "seriesId": "daikin-fit",
     "brandId": "daikin",
     "modelNumber": "DZ6VSA6010A",
     "normalizedModelNumber": "dz6vsa6010a",
@@ -383198,7 +383086,7 @@
     "id": "daikin-iu-dv24fecb14a",
     "modelNumber": "DV24FECB14A",
     "brandId": "daikin",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "daikin-iu-dv36fecc14a",
@@ -383210,25 +383098,25 @@
     "id": "daikin-iu-dv48fecd14a",
     "modelNumber": "DV48FECD14A",
     "brandId": "daikin",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "daikin-iu-dv60fecd14a",
     "modelNumber": "DV60FECD14A",
     "brandId": "daikin",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "daikin-iu-caf37436d-mbvc1600-1a-txv",
     "modelNumber": "CAF37436D+MBVC1600-1A+TXV",
     "brandId": "daikin",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "daikin-iu-dv61pecd14a",
     "modelNumber": "DV61PECD14A",
     "brandId": "daikin",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "daikin-iu-dfve24bp1400a",
@@ -417923,7 +417811,7 @@
     "id": "direct-air-dirm-48cs19-ou",
     "slug": "direct-air-dirm-48cs19-ou",
     "name": "DIRM-48CS19-OU",
-    "seriesId": "direct-air-serie-non-identifiee",
+    "seriesId": "direct-air-serie-non-identifiee-central-ducted",
     "brandId": "direct-air",
     "modelNumber": "DIRM-48CS19-OU",
     "normalizedModelNumber": "dirm48cs19ou",
@@ -417941,11 +417829,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -418192,7 +418079,7 @@
     "id": "direct-air-dirm-60cs19-ou",
     "slug": "direct-air-dirm-60cs19-ou",
     "name": "DIRM-60CS19-OU",
-    "seriesId": "direct-air-serie-non-identifiee",
+    "seriesId": "direct-air-serie-non-identifiee-central-ducted",
     "brandId": "direct-air",
     "modelNumber": "DIRM-60CS19-OU",
     "normalizedModelNumber": "dirm60cs19ou",
@@ -418210,11 +418097,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -419838,7 +419724,7 @@
     "id": "direct-air-iu-dirm-48magicpro20-ah",
     "modelNumber": "DIRM-48MAGICPRO20-AH",
     "brandId": "direct-air",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "direct-air-iu-combinaison-d-appareils-avec-ou-sans-conduits",
@@ -419856,7 +419742,7 @@
     "id": "direct-air-iu-dirm-60magicpro20-ah",
     "modelNumber": "DIRM-60MAGICPRO20-AH",
     "brandId": "direct-air",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "direct-air-iu-dirm-60hp-du",
@@ -493501,6 +493387,31 @@
   },
   "series": [
    {
+    "id": "forestair-serie-non-identifiee-central-ducted",
+    "slug": "forestair-serie-non-identifiee-central-ducted",
+    "name": "Série non identifiée",
+    "brandId": "forestair",
+    "systemType": "central-ducted",
+    "categories": [
+     "conventional",
+     "ducted"
+    ],
+    "imageUrl": null,
+    "status": "needs_review",
+    "sources": [
+     {
+      "sourceId": "src-forestair-logisvert",
+      "fields": [
+       "name"
+      ],
+      "confidence": "placeholder",
+      "verifiedAt": null
+     }
+    ],
+    "createdAt": "2026-09-12T00:00:00Z",
+    "updatedAt": "2026-09-12T00:00:00Z"
+   },
+   {
     "id": "forestair-serie-non-identifiee",
     "slug": "forestair-serie-non-identifiee",
     "name": "Série non identifiée",
@@ -493636,7 +493547,7 @@
     "id": "forestair-fad36w-a-d-u",
     "slug": "forestair-fad36w-a-d-u",
     "name": "FAD36W/A-D(U)",
-    "seriesId": "forestair-serie-non-identifiee",
+    "seriesId": "forestair-serie-non-identifiee-central-ducted",
     "brandId": "forestair",
     "modelNumber": "FAD36W/A-D(U)",
     "normalizedModelNumber": "fad36wadu",
@@ -493654,11 +493565,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -493690,7 +493600,7 @@
     "id": "forestair-fad60w-a-d-u",
     "slug": "forestair-fad60w-a-d-u",
     "name": "FAD60W/A-D(U)",
-    "seriesId": "forestair-serie-non-identifiee",
+    "seriesId": "forestair-serie-non-identifiee-central-ducted",
     "brandId": "forestair",
     "modelNumber": "FAD60W/A-D(U)",
     "normalizedModelNumber": "fad60wadu",
@@ -493708,11 +493618,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 2,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -495560,13 +495469,13 @@
     "id": "forestair-iu-fad36ah2-a-d-u",
     "modelNumber": "FAD36AH2/A-D(U)",
     "brandId": "forestair",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "forestair-iu-fad60ah2-a-d-u",
     "modelNumber": "FAD60AH2/A-D(U)",
     "brandId": "forestair",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "forestair-iu-fa-h09-a23tl-i-es",
@@ -639341,7 +639250,7 @@
     "id": "hisense-auwr-60u3sp2",
     "slug": "hisense-auwr-60u3sp2",
     "name": "AUWR-60U3SP2",
-    "seriesId": "hisense-serie-non-identifiee",
+    "seriesId": "hisense-serie-non-identifiee-central-ducted",
     "brandId": "hisense",
     "modelNumber": "AUWR-60U3SP2",
     "normalizedModelNumber": "auwr60u3sp2",
@@ -639359,11 +639268,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/hisense-hi-ultra-hd-r410a-48k.webp",
@@ -640927,7 +640835,7 @@
     "id": "hisense-iu-auh-60ux3seh2",
     "modelNumber": "AUH-60UX3SEH2",
     "brandId": "hisense",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "hisense-iu-auh-60ux3teh3",
@@ -659220,15 +659128,14 @@
   },
   "series": [
    {
-    "id": "innova-serie-non-identifiee",
-    "slug": "innova-serie-non-identifiee",
+    "id": "innova-serie-non-identifiee-central-ducted",
+    "slug": "innova-serie-non-identifiee-central-ducted",
     "name": "Série non identifiée",
     "brandId": "innova",
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "imageUrl": null,
     "status": "needs_review",
@@ -659251,7 +659158,7 @@
     "id": "innova-hp36r",
     "slug": "innova-hp36r",
     "name": "HP36R",
-    "seriesId": "innova-serie-non-identifiee",
+    "seriesId": "innova-serie-non-identifiee-central-ducted",
     "brandId": "innova",
     "modelNumber": "HP36R",
     "normalizedModelNumber": "hp36r",
@@ -659269,11 +659176,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -659305,7 +659211,7 @@
     "id": "innova-hp36r410a",
     "slug": "innova-hp36r410a",
     "name": "HP36R410A",
-    "seriesId": "innova-serie-non-identifiee",
+    "seriesId": "innova-serie-non-identifiee-central-ducted",
     "brandId": "innova",
     "modelNumber": "HP36R410A",
     "normalizedModelNumber": "hp36r410a",
@@ -659323,11 +659229,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -659359,7 +659264,7 @@
     "id": "innova-thtu-heatpump24",
     "slug": "innova-thtu-heatpump24",
     "name": "THTU-HEATPUMP24",
-    "seriesId": "innova-serie-non-identifiee",
+    "seriesId": "innova-serie-non-identifiee-central-ducted",
     "brandId": "innova",
     "modelNumber": "THTU-HEATPUMP24",
     "normalizedModelNumber": "thtuheatpump24",
@@ -659377,11 +659282,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -659435,7 +659339,7 @@
     "id": "innova-iu-thah-airhandler36",
     "modelNumber": "THAH-AIRHANDLER36",
     "brandId": "innova",
-    "type": "wall-single"
+    "type": "central-ducted"
    }
   ],
   "configurations": [
@@ -677386,15 +677290,14 @@
   },
   "series": [
    {
-    "id": "k2-serie-non-identifiee",
-    "slug": "k2-serie-non-identifiee",
+    "id": "k2-serie-non-identifiee-central-ducted",
+    "slug": "k2-serie-non-identifiee-central-ducted",
     "name": "Série non identifiée",
     "brandId": "k2",
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "imageUrl": null,
     "status": "needs_review",
@@ -677417,7 +677320,7 @@
     "id": "k2-hp36r",
     "slug": "k2-hp36r",
     "name": "HP36R",
-    "seriesId": "k2-serie-non-identifiee",
+    "seriesId": "k2-serie-non-identifiee-central-ducted",
     "brandId": "k2",
     "modelNumber": "HP36R",
     "normalizedModelNumber": "hp36r",
@@ -677435,11 +677338,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -677471,7 +677373,7 @@
     "id": "k2-hp36r410a",
     "slug": "k2-hp36r410a",
     "name": "HP36R410A",
-    "seriesId": "k2-serie-non-identifiee",
+    "seriesId": "k2-serie-non-identifiee-central-ducted",
     "brandId": "k2",
     "modelNumber": "HP36R410A",
     "normalizedModelNumber": "hp36r410a",
@@ -677489,11 +677391,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -677525,7 +677426,7 @@
     "id": "k2-thtu-heatpump24",
     "slug": "k2-thtu-heatpump24",
     "name": "THTU-HEATPUMP24",
-    "seriesId": "k2-serie-non-identifiee",
+    "seriesId": "k2-serie-non-identifiee-central-ducted",
     "brandId": "k2",
     "modelNumber": "THTU-HEATPUMP24",
     "normalizedModelNumber": "thtuheatpump24",
@@ -677543,11 +677444,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -677601,7 +677501,7 @@
     "id": "k2-iu-thah-airhandler36",
     "modelNumber": "THAH-AIRHANDLER36",
     "brandId": "k2",
-    "type": "wall-single"
+    "type": "central-ducted"
    }
   ],
   "configurations": [
@@ -1010503,15 +1010403,14 @@
   },
   "series": [
    {
-    "id": "pioneer-serie-non-identifiee",
-    "slug": "pioneer-serie-non-identifiee",
+    "id": "pioneer-serie-non-identifiee-central-ducted",
+    "slug": "pioneer-serie-non-identifiee-central-ducted",
     "name": "Série non identifiée",
     "brandId": "pioneer",
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "imageUrl": null,
     "status": "needs_review",
@@ -1010548,6 +1010447,32 @@
       ],
       "confidence": "verified",
       "verifiedAt": "2026-09-12"
+     }
+    ],
+    "createdAt": "2026-09-12T00:00:00Z",
+    "updatedAt": "2026-09-12T00:00:00Z"
+   },
+   {
+    "id": "pioneer-serie-non-identifiee",
+    "slug": "pioneer-serie-non-identifiee",
+    "name": "Série non identifiée",
+    "brandId": "pioneer",
+    "systemType": "wall-single",
+    "categories": [
+     "conventional",
+     "ductless",
+     "single-zone"
+    ],
+    "imageUrl": null,
+    "status": "needs_review",
+    "sources": [
+     {
+      "sourceId": "src-pioneer-logisvert",
+      "fields": [
+       "name"
+      ],
+      "confidence": "placeholder",
+      "verifiedAt": null
      }
     ],
     "createdAt": "2026-09-12T00:00:00Z",
@@ -1010637,7 +1010562,7 @@
     "id": "pioneer-hp36r410a",
     "slug": "pioneer-hp36r410a",
     "name": "HP36R410A",
-    "seriesId": "pioneer-serie-non-identifiee",
+    "seriesId": "pioneer-serie-non-identifiee-central-ducted",
     "brandId": "pioneer",
     "modelNumber": "HP36R410A",
     "normalizedModelNumber": "hp36r410a",
@@ -1010655,11 +1010580,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -1010691,7 +1010615,7 @@
     "id": "pioneer-thtu-heatpump24",
     "slug": "pioneer-thtu-heatpump24",
     "name": "THTU-HEATPUMP24",
-    "seriesId": "pioneer-serie-non-identifiee",
+    "seriesId": "pioneer-serie-non-identifiee-central-ducted",
     "brandId": "pioneer",
     "modelNumber": "THTU-HEATPUMP24",
     "normalizedModelNumber": "thtuheatpump24",
@@ -1010709,11 +1010633,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -1013158,7 +1013081,7 @@
     "id": "pioneer-iu-thah-airhandler36",
     "modelNumber": "THAH-AIRHANDLER36",
     "brandId": "pioneer",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "pioneer-iu-dr024ghfd18ht2",
@@ -1216767,15 +1216690,14 @@
   },
   "series": [
    {
-    "id": "turbofin-serie-non-identifiee",
-    "slug": "turbofin-serie-non-identifiee",
+    "id": "turbofin-serie-non-identifiee-central-ducted",
+    "slug": "turbofin-serie-non-identifiee-central-ducted",
     "name": "Série non identifiée",
     "brandId": "turbofin",
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "imageUrl": null,
     "status": "needs_review",
@@ -1216798,7 +1216720,7 @@
     "id": "turbofin-hp36r",
     "slug": "turbofin-hp36r",
     "name": "HP36R",
-    "seriesId": "turbofin-serie-non-identifiee",
+    "seriesId": "turbofin-serie-non-identifiee-central-ducted",
     "brandId": "turbofin",
     "modelNumber": "HP36R",
     "normalizedModelNumber": "hp36r",
@@ -1216816,11 +1216738,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -1216852,7 +1216773,7 @@
     "id": "turbofin-hp36r410a",
     "slug": "turbofin-hp36r410a",
     "name": "HP36R410A",
-    "seriesId": "turbofin-serie-non-identifiee",
+    "seriesId": "turbofin-serie-non-identifiee-central-ducted",
     "brandId": "turbofin",
     "modelNumber": "HP36R410A",
     "normalizedModelNumber": "hp36r410a",
@@ -1216870,11 +1216791,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -1216906,7 +1216826,7 @@
     "id": "turbofin-thtu-heatpump24",
     "slug": "turbofin-thtu-heatpump24",
     "name": "THTU-HEATPUMP24",
-    "seriesId": "turbofin-serie-non-identifiee",
+    "seriesId": "turbofin-serie-non-identifiee-central-ducted",
     "brandId": "turbofin",
     "modelNumber": "THTU-HEATPUMP24",
     "normalizedModelNumber": "thtuheatpump24",
@@ -1216924,11 +1216844,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": null,
@@ -1216982,7 +1216901,7 @@
     "id": "turbofin-iu-thah-airhandler36",
     "modelNumber": "THAH-AIRHANDLER36",
     "brandId": "turbofin",
-    "type": "wall-single"
+    "type": "central-ducted"
    }
   ],
   "configurations": [
@@ -1269869,6 +1269788,31 @@
     "updatedAt": "2026-09-12T00:00:00Z"
    },
    {
+    "id": "zephyr-serie-non-identifiee-central-ducted",
+    "slug": "zephyr-serie-non-identifiee-central-ducted",
+    "name": "Série non identifiée",
+    "brandId": "zephyr",
+    "systemType": "central-ducted",
+    "categories": [
+     "conventional",
+     "ducted"
+    ],
+    "imageUrl": null,
+    "status": "needs_review",
+    "sources": [
+     {
+      "sourceId": "src-zephyr-logisvert",
+      "fields": [
+       "name"
+      ],
+      "confidence": "placeholder",
+      "verifiedAt": null
+     }
+    ],
+    "createdAt": "2026-09-12T00:00:00Z",
+    "updatedAt": "2026-09-12T00:00:00Z"
+   },
+   {
     "id": "zephyr-hi-ultra-hd",
     "slug": "zephyr-hi-ultra-hd",
     "name": "Hi Ultra HD",
@@ -1270842,7 +1270786,7 @@
     "id": "zephyr-ze-24hpa",
     "slug": "zephyr-ze-24hpa",
     "name": "ZE-24HPA",
-    "seriesId": "zephyr-serie-non-identifiee",
+    "seriesId": "zephyr-serie-non-identifiee-central-ducted",
     "brandId": "zephyr",
     "modelNumber": "ZE-24HPA",
     "normalizedModelNumber": "ze24hpa",
@@ -1270860,11 +1270804,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/zephyr-central-hpa-exterieure-officielle.webp",
@@ -1271003,7 +1270946,7 @@
     "id": "zephyr-ze-36hpa",
     "slug": "zephyr-ze-36hpa",
     "name": "ZE-36HPA",
-    "seriesId": "zephyr-serie-non-identifiee",
+    "seriesId": "zephyr-serie-non-identifiee-central-ducted",
     "brandId": "zephyr",
     "modelNumber": "ZE-36HPA",
     "normalizedModelNumber": "ze36hpa",
@@ -1271021,11 +1270964,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/zephyr-central-hpa-exterieure-officielle.webp",
@@ -1271487,7 +1271429,7 @@
     "id": "zephyr-ze-60hpa",
     "slug": "zephyr-ze-60hpa",
     "name": "ZE-60HPA",
-    "seriesId": "zephyr-serie-non-identifiee",
+    "seriesId": "zephyr-serie-non-identifiee-central-ducted",
     "brandId": "zephyr",
     "modelNumber": "ZE-60HPA",
     "normalizedModelNumber": "ze60hpa",
@@ -1271505,11 +1271447,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/zephyr-central-hpa-exterieure-officielle.webp",
@@ -1271541,7 +1271482,7 @@
     "id": "zephyr-ze-60hpb",
     "slug": "zephyr-ze-60hpb",
     "name": "ZE-60HPB",
-    "seriesId": "zephyr-serie-non-identifiee",
+    "seriesId": "zephyr-serie-non-identifiee-central-ducted",
     "brandId": "zephyr",
     "modelNumber": "ZE-60HPB",
     "normalizedModelNumber": "ze60hpb",
@@ -1271559,11 +1271500,10 @@
     "cop5FMin": null,
     "cop5FMax": null,
     "certifiedPairings": 1,
-    "systemType": "wall-single",
+    "systemType": "central-ducted",
     "categories": [
      "conventional",
-     "ductless",
-     "single-zone"
+     "ducted"
     ],
     "status": "published",
     "imageUrl": "/images/products/official/zephyr-central-hpb-r454b-exterieure-officielle.webp",
@@ -1272123,7 +1272063,7 @@
     "id": "zephyr-iu-ah-24",
     "modelNumber": "AH-24",
     "brandId": "zephyr",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "zephyr-iu-ah-24b",
@@ -1272135,7 +1272075,7 @@
     "id": "zephyr-iu-ah-36",
     "modelNumber": "AH-36",
     "brandId": "zephyr",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "zephyr-iu-ah-36b",
@@ -1272159,13 +1272099,13 @@
     "id": "zephyr-iu-ah-60",
     "modelNumber": "AH-60",
     "brandId": "zephyr",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "zephyr-iu-ah-60b",
     "modelNumber": "AH-60B",
     "brandId": "zephyr",
-    "type": "wall-single"
+    "type": "central-ducted"
    },
    {
     "id": "zephyr-iu-ah-624a",

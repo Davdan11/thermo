@@ -96,7 +96,7 @@ describe("catalogue — propreté des données", () => {
 
     const type = (n: string) => registry.models.find((m) => m.modelNumber === n)?.systemType;
     // Centrales sur leur propre cabinet ou serpentin, que le code « M » d'Hydro-Québec faisait passer pour des murales.
-    for (const n of ["280ANV0240A", "284ANV0240B", "ASZS604210A", "4A6V0036A1", "BOVA-60HDN1-M15G"]) expect(type(n), n).toBe("central-ducted");
+    for (const n of ["280ANV0240A", "284ANV0240B", "ASZS604210A", "4A6V0036A1", "BOVA-60HDN1-M15G", "280ANV024000", "25VNA860A030+TSTAT", "288BNV0600A+TSTAT", "DZ20VC0481B", "AOE30U-48HFN1-MR0", "HP36R"]) expect(type(n), n).toBe("central-ducted");
     // Mini-splits qui acceptent aussi un cabinet ou un serpentin : restent des mini-splits.
     for (const n of ["37MAHAQ18AA3", "38MARBQ18AA3", "SUZ-AA18NLHZ", "DLCSRBH18AAK"]) expect(type(n), n).toBe("wall-single");
   }, 60_000);
