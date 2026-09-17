@@ -8,8 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         // /api/og produit les images d'aperçu (og:image) des fiches : les robots de partage doivent pouvoir les lire.
-        // /api/presence/visuel : images signées que Meta télécharge pour publier sur Facebook et Instagram.
-        allow: ["/", "/api/og", "/api/presence/visuel/"],
+        allow: ["/", "/api/og"],
         disallow: [
           "/api/",
           "/styleguide",

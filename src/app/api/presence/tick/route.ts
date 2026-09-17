@@ -1,28 +1,26 @@
 /* ==================================================================
-   POST /api/presence/tick — passage planifié du studio de présence :
-   publie les publications approuvées dont l'heure est venue (au plus 3
-   par passage), avec nouveaux essais espacés.
+   POST /api/presence/tick — passage planifié du studio (toutes les
+   15 minutes) : retire l'ancienne file, prépare la file Facebook des
+   prochains jours, puis envoie ce qui est dû (au plus 3 éléments), avec
+   verrou, reprise limitée et aucun doublon (src/lib/social/envoi.ts).
 
-   Protégé par un secret, comme les robots des relances : le secret vit
-   dans shared/.env (PRESENCE_CRON_SECRET, 24 caractères ou plus) et le
-   script cron le lit pour appeler la route :
+   Protégé par un secret : PRESENCE_CRON_SECRET (24 caractères ou plus)
+   dans shared/.env, lu par scripts/presence-cron.sh :
      Authorization: Bearer <PRESENCE_CRON_SECRET>
    Sans secret en production, tout appel est refusé. En développement,
-   l'appel est accepté (le mode essai empêche toute publication réelle).
+   l'appel est accepté (aucun envoi réel hors production).
 
-   Crontab du VPS (toutes les 15 minutes) :
-     *\/15 * * * * /bin/bash /var/www/thermopompesavendre.ca/current/scripts/presence-cron.sh >> /var/log/thermo-presence.log 2>&1
-
-   Publication réelle seulement si NODE_ENV=production, jetons Meta
-   présents et interrupteur « Publication automatique » activé dans
-   /gestion/presence/reglages ; sinon, mode essai (aucun appel à Meta).
+   Envoi réel seulement si NODE_ENV=production, META_PAGE_ID et
+   META_PAGE_TOKEN présents et interrupteur « Publication automatique »
+   allumé dans /gestion/presence/reglages ; sinon, mode essai.
    ================================================================== */
 
 import { timingSafeEqual } from "node:crypto";
-import { tick } from "@/lib/presence/publisher";
+import { passage } from "@/lib/social/envoi";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 280;
 
 const HEADERS = { "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" };
 
@@ -45,20 +43,23 @@ function authorized(request: Request): boolean {
 export async function POST(request: Request) {
   if (!authorized(request)) return Response.json({ error: "Non autorisé." }, { status: 401, headers: HEADERS });
   try {
-    const r = await tick();
+    const r = await passage();
     return Response.json(
       {
         ok: true,
-        mode: r.real ? "reel" : "essai",
-        raisons: r.reasons,
-        dues: r.due,
-        resultats: r.results.map(({ id, outcome }) => ({
+        mode: r.reel ? "reel" : "essai",
+        raisons: r.raisons,
+        ancienneFileRetiree: r.retirees,
+        preparees: r.creees,
+        sansSujet: r.sansSujet,
+        dues: r.dues,
+        resultats: r.resultats.map(({ id, issue }) => ({
           id,
-          issue: outcome.kind,
-          ...(outcome.kind === "echec" || outcome.kind === "reessai" ? { erreur: outcome.error } : {}),
-          ...(outcome.kind === "ignoree" ? { raison: outcome.reason } : {}),
+          issue: issue.kind,
+          ...(issue.kind === "echec" || issue.kind === "reessai" ? { erreur: issue.erreur } : {}),
+          ...(issue.kind === "ignoree" ? { raison: issue.raison } : {}),
         })),
-        enRetard: r.late,
+        enRetard: r.enRetard,
       },
       { headers: HEADERS },
     );

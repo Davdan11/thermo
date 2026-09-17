@@ -1,14 +1,15 @@
-/* Studio de présence : état de la publication, calendrier du mois, file d'attente, publiées, journal. */
+/* Studio de présence : file Facebook (publications et stories), état de l'envoi, suivi des visites et des demandes, journal. */
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, FlaskConical, Radio } from "lucide-react";
+import { FlaskConical, Radio } from "lucide-react";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
-import { publishMode } from "@/lib/presence/config";
-import { SERIES_INFO } from "@/lib/presence/series";
 import { readPresence } from "@/lib/presence/store";
-import { fmtDateLong, fmtHour, fmtMonth, fmtWhen, montrealDate, montrealTime, weekdayOf } from "@/lib/presence/time";
-import { SERIES, STATUS_LABELS, type Post } from "@/lib/presence/types";
-import { byDate, isLate, kpis, MONTH_RE, monthGrid, shiftMonth, STATUS_TONE } from "@/lib/presence/view";
+import { fmtDateLong, fmtHour, fmtWhen, montrealDate, montrealTime } from "@/lib/presence/time";
+import { modeEnvoi } from "@/lib/social/envoi";
+import { approbationRequise, finPeriodeApprobation, lireSocial } from "@/lib/social/store";
+import { FORMAT_LIBELLES, STATUT_LIBELLES, type PublicationSociale } from "@/lib/social/types";
+import { suiviParPublication, type SuiviPublication } from "@/lib/social/visites";
+import { aVenir, compteurs, enRetard, GENRE_LIBELLE, STATUT_TON } from "@/lib/social/vue";
 import { Card, SectionHeader } from "@/components/gestion/kit/Card";
 import { Chip } from "@/components/gestion/kit/Chip";
 import { EmptyState } from "@/components/gestion/kit/EmptyState";
@@ -18,40 +19,41 @@ import { PrepareButton } from "@/components/gestion/presence/PrepareButton";
 import { PresenceTabs } from "@/components/gestion/presence/PresenceTabs";
 
 export const metadata: Metadata = { title: "Présence" };
+export const dynamic = "force-dynamic";
 
-const DAYS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."];
-const hour = (p: Post) => fmtHour(montrealTime(new Date(p.scheduledAt)));
-const subject = (p: Post) => (p.series === "question" && !p.text ? "Question à écrire" : p.source.subject);
-
-function Slot({ p }: { p: Post }) {
-  return (
-    <Link href={`/gestion/presence/${p.id}`} className={`pr-slot pr-slot--${p.series} is-${p.status}`} title={`${SERIES_INFO[p.series].label} · ${subject(p)} · ${STATUS_LABELS[p.status]}`}>
-      <i className="pr-dot" aria-hidden />
-      <span className="pr-slot__t">{SERIES_INFO[p.series].short}</span>
-      <span className="pr-slot__h">{hour(p)}</span>
-      <span className="g-sr">{STATUS_LABELS[p.status]}</span>
-    </Link>
-  );
-}
-
-function Row({ p, now }: { p: Post; now: Date }) {
+function Ligne({ p, maintenant, suivi }: { p: PublicationSociale; maintenant: Date; suivi?: SuiviPublication }) {
   return (
     <li>
-      <Link href={`/gestion/presence/${p.id}`} className={`pr-row pr-bg--${p.series}`}>
+      <Link href={`/gestion/presence/${p.id}`} className={`pr-row pr-row--vignette pr-bg--${p.format}`}>
         <span className="pr-row__bar" aria-hidden />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className={cx("pr-vignette", p.genre === "story" && "is-story")} src={`/gestion/api/presence/visuel/${p.id}?v=${encodeURIComponent(p.majLe)}`} alt="" loading="lazy" />
         <span className="pr-row__when">
-          <b>{fmtDateLong(p.date)}</b>
-          <span>{hour(p)}</span>
+          {/* Date sur une ligne, heure et genre dessous : rien ne se coupe au milieu de l'heure. */}
+          <b>{fmtDateLong(montrealDate(new Date(p.prevueLe)))}</b>
+          <span>
+            {fmtHour(montrealTime(new Date(p.prevueLe)))} · {GENRE_LIBELLE[p.genre]}
+          </span>
         </span>
         <span className="pr-row__main">
-          <span className="pr-row__series">{SERIES_INFO[p.series].label}</span>
-          <span className="pr-row__subject">{subject(p)}</span>
+          <span className="pr-row__series">{FORMAT_LIBELLES[p.format]}</span>
+          <span className="pr-row__subject">{p.accroche}</span>
+          {suivi && (suivi.visites || suivi.demandes) ? (
+            <span className="pr-suivi">
+              <span>
+                <b>{suivi.visites}</b> visite{suivi.visites > 1 ? "s" : ""}
+              </span>
+              <span>
+                <b>{suivi.demandes}</b> demande{suivi.demandes > 1 ? "s" : ""}
+              </span>
+            </span>
+          ) : null}
         </span>
         <span className="pr-row__end">
-          {isLate(p, now) ? <Chip tone="bad">En retard</Chip> : null}
-          {p.publish.nextAttemptAt && p.status === "planifiee" ? <Chip tone="warn">Nouvel essai prévu</Chip> : null}
-          <Chip tone={STATUS_TONE[p.status]} dot>
-            {STATUS_LABELS[p.status]}
+          {enRetard(p, maintenant) ? <Chip tone="bad">En retard</Chip> : null}
+          {p.envoi.prochainEssai && p.statut === "approuvee" ? <Chip tone="warn">Nouvel essai prévu</Chip> : null}
+          <Chip tone={STATUT_TON[p.statut]} dot>
+            {STATUT_LIBELLES[p.statut]}
           </Chip>
         </span>
       </Link>
@@ -59,25 +61,23 @@ function Row({ p, now }: { p: Post; now: Date }) {
   );
 }
 
-export default async function PresencePage({ searchParams }: { searchParams: Promise<{ mois?: string }> }) {
+export default async function PresencePage() {
   await requireAdmin();
-  const sp = await searchParams;
-  const now = new Date();
-  const today = montrealDate(now);
-  const month = sp.mois && MONTH_RE.test(sp.mois) ? sp.mois : today.slice(0, 7);
-  const data = await readPresence();
-  const mode = publishMode(data.settings);
-  const k = kpis(data, now);
-  const dates = byDate(data.posts);
-  const weeks = monthGrid(month);
-  const late = data.posts.filter((p) => isLate(p, now));
-  const failed = data.posts.filter((p) => p.status === "echec");
-  const queue = data.posts.filter((p) => (p.status === "a_approuver" || p.status === "brouillon" || p.status === "planifiee") && !isLate(p, now));
-  const published = data.posts
-    .filter((p) => p.status === "publiee")
-    .sort((a, b) => (b.publishedAt ?? "").localeCompare(a.publishedAt ?? ""))
-    .slice(0, 6);
-  const agenda = weeks.flat().filter((d) => d.slice(0, 7) === month && (dates.get(d)?.length ?? 0) > 0);
+  const maintenant = new Date();
+  const [data, presence, suivi] = await Promise.all([lireSocial(), readPresence(), suiviParPublication()]);
+  const mode = modeEnvoi(presence.settings.autoPublish);
+  const k = compteurs(data.publications, maintenant);
+  const aRegler = data.publications.filter((p) => p.statut === "echec" || enRetard(p, maintenant));
+  const file = data.publications.filter((p) => aVenir(p) && !enRetard(p, maintenant));
+  const publiees = data.publications
+    .filter((p) => p.statut === "publiee")
+    .sort((a, b) => (b.envoi.publieeLe ?? "").localeCompare(a.envoi.publieeLe ?? ""))
+    .slice(0, 20);
+  const totalVisites = publiees.reduce((n, p) => n + (suivi.get(p.id)?.visites ?? 0), 0);
+  const totalDemandes = publiees.reduce((n, p) => n + (suivi.get(p.id)?.demandes ?? 0), 0);
+  const requise = approbationRequise(data.reglages, maintenant);
+  const fin = finPeriodeApprobation(data.reglages);
+  const anciens = presence.posts.length;
 
   return (
     <>
@@ -85,159 +85,96 @@ export default async function PresencePage({ searchParams }: { searchParams: Pro
         <div>
           <p className="k-eyebrow">Présence</p>
           <h1 className="k-h1">
-            Studio <em>de publication</em>
+            Robot <em>Facebook</em>
           </h1>
-          <p className="k-lead">Facebook et Instagram, préparés d’avance à partir des données du site. Chaque chiffre a sa source ; rien ne part sans votre approbation.</p>
+          <p className="k-lead">Publications et stories préparées d’avance à partir des données du site, aux couleurs du site. Chaque chiffre a sa source ; rien ne part tant que l’interrupteur est éteint.</p>
         </div>
-        <PrepareButton />
+        <PrepareButton jours={data.reglages.joursAvance} />
       </Reveal>
 
       <PresenceTabs current="/gestion/presence" />
 
-      <div className={cx("pr-banner", mode.real ? "is-live" : "is-test")} role="status">
-        {mode.real ? <Radio size={18} aria-hidden /> : <FlaskConical size={18} aria-hidden />}
+      <div className={cx("pr-banner", mode.reel ? "is-live" : "is-test")} role="status">
+        {mode.reel ? <Radio size={18} aria-hidden /> : <FlaskConical size={18} aria-hidden />}
         <div>
-          <b>{mode.real ? "Publication réelle activée" : "Mode essai"}</b>
-          <span>{mode.real ? "Les publications approuvées partent à leur heure (passage toutes les 15 minutes)." : `Rien ne part vers Meta. ${mode.reasons.join(" ")}`}</span>
+          <b>{mode.reel ? "Envoi réel activé" : "Mode essai"}</b>
+          <span>{mode.reel ? "Les éléments approuvés partent à leur heure (passage toutes les 15 minutes)." : `Rien ne part vers Facebook. ${mode.raisons.join(" ")}`}</span>
         </div>
         <Link href="/gestion/presence/reglages" className="k-link">
           Réglages
         </Link>
       </div>
 
+      <p className="g-hint" style={{ margin: 0 }}>
+        {data.reglages.approbation.toujoursObligatoire
+          ? "Approbation obligatoire pour chaque élément (réglage)."
+          : !fin
+            ? "Période d’approbation : elle commencera à la première mise en ligne, pour 7 jours. D’ici là, chaque élément attend votre approbation."
+            : requise
+              ? `Période d’approbation en cours jusqu’au ${fmtWhen(fin)} : chaque élément attend votre approbation.`
+              : `Période d’approbation terminée le ${fmtWhen(fin)} : un élément en attente est approuvé d’office à son heure. Refusez ou modifiez-le avant, au besoin.`}
+      </p>
+
       <div className="pr-kpis">
-        <div className={cx("pr-kpi", k.toApprove > 0 && "is-hot")}>
-          <span>À approuver ou à écrire</span>
-          <b>{k.toApprove}</b>
+        <div className={cx("pr-kpi", k.enAttente > 0 && requise && "is-hot")}>
+          <span>En attente d’approbation</span>
+          <b>{k.enAttente}</b>
         </div>
         <div className="pr-kpi">
-          <span>Planifiées, 30 jours</span>
-          <b>{k.planned}</b>
+          <span>Approuvés à venir</span>
+          <b>{k.approuvees}</b>
         </div>
         <div className="pr-kpi">
-          <span>Publiées ce mois-ci</span>
-          <b>{k.publishedMonth}</b>
+          <span>Publiés ce mois-ci</span>
+          <b>{k.publieesMois}</b>
         </div>
-        <div className={cx("pr-kpi", k.failed > 0 && "is-bad")}>
+        <div className={cx("pr-kpi", k.echecs > 0 && "is-bad")}>
           <span>Échecs</span>
-          <b>{k.failed}</b>
+          <b>{k.echecs}</b>
         </div>
       </div>
 
-      {failed.length || late.length ? (
-        <Card tone="cream" title="À régler" sub="Échecs de publication et publications dont le jour est passé depuis plus de 36 heures : replanifiez, réessayez ou rejetez.">
+      {aRegler.length ? (
+        <Card tone="cream" title="À régler" sub="Échecs d’envoi, et éléments dont l’heure est passée depuis plus de 36 heures (ils ne partent pas tout seuls) : réessayez, régénérez ou refusez.">
           <ul className="pr-queue">
-            {[...failed, ...late].map((p) => (
-              <Row key={p.id} p={p} now={now} />
+            {aRegler.map((p) => (
+              <Ligne key={p.id} p={p} maintenant={maintenant} />
             ))}
           </ul>
         </Card>
       ) : null}
 
-      <SectionHeader
-        n="01"
-        title="Calendrier"
-        accent={fmtMonth(month)}
-        action={
-          <div className="pr-monthnav">
-            <Link className="k-btn k-btn--icon" href={`/gestion/presence?mois=${shiftMonth(month, -1)}`} aria-label="Mois précédent">
-              <ChevronLeft size={18} aria-hidden />
-            </Link>
-            <Link className="k-btn" href="/gestion/presence">
-              Ce mois-ci
-            </Link>
-            <Link className="k-btn k-btn--icon" href={`/gestion/presence?mois=${shiftMonth(month, 1)}`} aria-label="Mois suivant">
-              <ChevronRight size={18} aria-hidden />
-            </Link>
-          </div>
-        }
-      />
-
-      <div className="pr-cal" role="grid" aria-label={`Calendrier de ${fmtMonth(month)}`}>
-        <div className="pr-cal__head" role="row">
-          {DAYS.map((d) => (
-            <span key={d} role="columnheader">
-              {d}
-            </span>
-          ))}
-        </div>
-        {weeks.map((week) => (
-          <div key={week[0]} className="pr-cal__week" role="row">
-            {week.map((date) => {
-              const list = dates.get(date) ?? [];
-              return (
-                <div key={date} role="gridcell" className={cx("pr-day", date.slice(0, 7) !== month && "is-out", date === today && "is-today", !list.length && "is-empty")} aria-label={fmtDateLong(date)}>
-                  <span className="pr-day__n">{Number(date.slice(8))}</span>
-                  {list.map((p) => (
-                    <Slot key={p.id} p={p} />
-                  ))}
-                </div>
-              );
-            })}
-          </div>
-        ))}
-      </div>
-
-      <div className="pr-agenda" aria-label={`Publications de ${fmtMonth(month)}`}>
-        {agenda.length ? (
-          agenda.map((date) => (
-            <div key={date} className={cx("pr-agenda__day", date === today && "is-today")}>
-              <div className="pr-agenda__date">
-                <span>{DAYS[(weekdayOf(date) + 6) % 7]}</span>
-                <b>{Number(date.slice(8))}</b>
-              </div>
-              <div className="pr-agenda__list">
-                {(dates.get(date) ?? []).map((p) => (
-                  <Slot key={p.id} p={p} />
-                ))}
-              </div>
-            </div>
-          ))
-        ) : (
-          <EmptyState compact title="Rien ce mois-ci" body="Préparez les 30 prochains jours pour remplir le calendrier." />
-        )}
-      </div>
-
-      <div className="pr-legend" aria-label="Séries">
-        {SERIES.filter((s) => SERIES_INFO[s].available).map((s) => (
-          <span key={s}>
-            <i className={`pr-dot pr-dot--${s}`} aria-hidden />
-            {SERIES_INFO[s].dayLabel} · {SERIES_INFO[s].label}
-          </span>
-        ))}
-      </div>
-
-      <SectionHeader n="02" title="File d’attente" lead={queue.length ? "De la plus proche à la plus lointaine. Ouvrez une publication pour la relire, la modifier et l’approuver." : undefined} />
-      {queue.length ? (
+      <SectionHeader n="01" title="File d’attente" lead={file.length ? "De la plus proche à la plus lointaine. Ouvrez un élément pour voir l’image, modifier la légende et décider." : undefined} />
+      {file.length ? (
         <ul className="pr-queue">
-          {queue.map((p) => (
-            <Row key={p.id} p={p} now={now} />
+          {file.map((p) => (
+            <Ligne key={p.id} p={p} maintenant={maintenant} />
           ))}
         </ul>
       ) : (
-        <EmptyState title="La file est vide" body="« Préparer les 30 prochains jours » donne à chaque jour de la grille sa publication, prête à relire. Le dimanche reste libre." />
+        <EmptyState title="La file est vide" body={`Le passage planifié la remplit tout seul ; « Préparer les ${data.reglages.joursAvance} prochains jours » le fait tout de suite.`} />
       )}
 
-      <SectionHeader n="03" title="Publiées récemment" />
-      {published.length ? (
+      <SectionHeader n="02" title="Publiés" lead={publiees.length ? `Visites arrivées par le lien de chaque publication, et demandes envoyées par ces visiteurs : ${totalVisites} visite${totalVisites > 1 ? "s" : ""}, ${totalDemandes} demande${totalDemandes > 1 ? "s" : ""}.` : undefined} />
+      {publiees.length ? (
         <ul className="pr-queue">
-          {published.map((p) => (
-            <Row key={p.id} p={p} now={now} />
+          {publiees.map((p) => (
+            <Ligne key={p.id} p={p} maintenant={maintenant} suivi={suivi.get(p.id) ?? { visites: 0, demandes: 0, parType: {} }} />
           ))}
         </ul>
       ) : (
-        <EmptyState compact title="Aucune publication encore" body="Elles apparaîtront ici, avec leurs identifiants Facebook et Instagram." />
+        <EmptyState compact title="Rien de publié encore" body="Chaque publication apparaîtra ici avec son lien Facebook, ses visites et ses demandes." />
       )}
 
-      <SectionHeader n="04" title="Journal" />
-      {data.log.length ? (
+      <SectionHeader n="03" title="Journal" />
+      {data.journal.length ? (
         <ol className="pr-log">
-          {data.log.slice(0, 12).map((l, i) => (
-            <li key={`${l.at}-${i}`} className={`is-${l.level}`}>
+          {data.journal.slice(0, 15).map((l, i) => (
+            <li key={`${l.le}-${i}`} className={`is-${l.niveau}`}>
               <span>
-                <time dateTime={l.at}>{fmtWhen(l.at)}</time>
-                {l.postId ? (
-                  <Link href={`/gestion/presence/${l.postId}`} className="k-link">
+                <time dateTime={l.le}>{fmtWhen(l.le)}</time>
+                {l.publicationId ? (
+                  <Link href={`/gestion/presence/${l.publicationId}`} className="pr-log__lien">
                     {l.message}
                   </Link>
                 ) : (
@@ -248,8 +185,15 @@ export default async function PresencePage({ searchParams }: { searchParams: Pro
           ))}
         </ol>
       ) : (
-        <EmptyState compact title="Journal vide" body="Chaque préparation, approbation, essai et publication y laisse une trace." />
+        <EmptyState compact title="Journal vide" body="Chaque préparation, approbation, essai et envoi y laisse une trace." />
       )}
+
+      {anciens ? (
+        <p className="g-hint">
+          Ancienne file du studio (séries modèle, froid, LogisVert…) : {anciens} élément{anciens > 1 ? "s" : ""} gardé{anciens > 1 ? "s" : ""} pour l’historique,{" "}
+          {presence.posts.filter((p) => p.status !== "publiee" && p.status !== "rejetee").length ? `retiré${anciens > 1 ? "s" : ""} au prochain passage planifié` : `tous retirés${data.ancienneFileRetireeLe ? ` le ${montrealDate(new Date(data.ancienneFileRetireeLe))}` : ""}`} ; ils ne partent jamais.
+        </p>
+      ) : null}
     </>
   );
 }

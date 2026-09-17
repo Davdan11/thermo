@@ -2,10 +2,10 @@
 import Link from "next/link";
 
 const TABS = [
-  { href: "/gestion/presence", label: "Studio" },
+  { href: "/gestion/presence", label: "Robot Facebook" },
   { href: "/gestion/presence/articles", label: "Articles" },
   { href: "/gestion/presence/reglages", label: "Réglages" },
-  { href: "/gestion/presence/connecter", label: "Connecter Meta" },
+  { href: "/gestion/presence/connecter", label: "Connecter Facebook" },
 ] as const;
 
 export function PresenceTabs({ current }: { current: (typeof TABS)[number]["href"] }) {
