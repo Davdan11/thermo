@@ -7,6 +7,8 @@ import { describe, it, expect } from "vitest";
 import { registry } from "../registry";
 import { isGenericSeries } from "../series-label";
 import { getLogisVertVariants } from "../../subsidies/logisvert-official";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 
 const norm = (v: string) => v.toLowerCase().replace(/[^a-z0-9]/g, "");
 const published = registry.models.filter((m) => m.status === "published");
@@ -69,6 +71,34 @@ describe("catalogue — propreté des données", () => {
       (m) => m.systemType !== "multi-zone" && getLogisVertVariants(m.modelNumber).some((e) => multi.test((e.indoorModel ?? "").trim())),
     );
     expect(bad.map((m) => `${m.slug} (${m.systemType})`).slice(0, 20)).toEqual([]);
+  }, 60_000);
+
+  it("centrale ou murale : le type suit ENERGY STAR (Split System = sur conduits), pas le code « C »/« M » d'Hydro-Québec", () => {
+    const es = JSON.parse(readFileSync(join(process.cwd(), "src/lib/data/energystar-types.json"), "utf8")) as { types: Record<string, string> };
+    const ductless = new Set(["wall-single", "floor-console", "cassette", "ceiling", "multi-zone"]);
+    const bad: string[] = [];
+    for (const m of published) {
+      if (m.systemType === "multi-zone") continue;
+      let ducted = 0;
+      let mini = 0;
+      for (const e of getLogisVertVariants(m.modelNumber)) {
+        const t = es.types[e.ahri];
+        if (t === "M") mini++;
+        else if (t === "S" || t === "P") ducted++;
+      }
+      // Seulement quand ENERGY STAR type au moins 3 combinaisons et tranche nettement.
+      if (ducted + mini < 3 || ducted === mini) continue;
+      const attendu = ducted > mini ? "centrale" : "sans conduits";
+      const affiche = ductless.has(m.systemType) ? "sans conduits" : "centrale";
+      if (attendu !== affiche) bad.push(`${m.modelNumber} (${m.systemType}, ENERGY STAR ${ducted} sur conduits / ${mini} mini-split)`);
+    }
+    expect(bad.slice(0, 20)).toEqual([]);
+
+    const type = (n: string) => registry.models.find((m) => m.modelNumber === n)?.systemType;
+    // Centrales sur leur propre cabinet ou serpentin, que le code « M » d'Hydro-Québec faisait passer pour des murales.
+    for (const n of ["280ANV0240A", "284ANV0240B", "ASZS604210A", "4A6V0036A1", "BOVA-60HDN1-M15G"]) expect(type(n), n).toBe("central-ducted");
+    // Mini-splits qui acceptent aussi un cabinet ou un serpentin : restent des mini-splits.
+    for (const n of ["37MAHAQ18AA3", "38MARBQ18AA3", "SUZ-AA18NLHZ", "DLCSRBH18AAK"]) expect(type(n), n).toBe("wall-single");
   }, 60_000);
 
   it("une série non identifiée n'est jamais affichée comme une vraie série", () => {

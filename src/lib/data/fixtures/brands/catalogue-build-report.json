@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-16T00:06:25.631Z",
+  "builtAt": "2026-09-17T02:07:14.983Z",
   "logisvertUpdatedAt": "2026-09-12T20:00:41.008Z",
   "records": {
     "total": 176627,
@@ -9,9 +9,9 @@
   "brands": 180,
   "models": 9782,
   "series": {
-    "official": 1155,
+    "official": 1143,
     "inferred": 40,
-    "unidentified": 291
+    "unidentified": 323
   },
   "modelsBySeriesSource": {
     "official": 6254,
@@ -4918,7 +4918,7 @@
   ],
   "imagesCarried": {
     "models": 4168,
-    "series": 522
+    "series": 509
   },
   "previous": {
     "brands": 180,

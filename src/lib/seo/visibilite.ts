@@ -56,6 +56,12 @@ export interface JournalEntry {
 
 export const JOURNAL_VISIBILITE: JournalEntry[] = [
   {
+    date: "2026-09-16",
+    titre: "Les centrales ne sont plus classées murales",
+    detail:
+      "Le code « C »/« M » de la liste d'Hydro-Québec suit la fournaise, pas les conduits : une centrale sur son propre cabinet (Bryant 280ANV, Amana ASZS6, Bosch BOVA…) passait pour une murale. Le type suit maintenant ENERGY STAR (« Split System » = sur conduits), combinaison par combinaison ou par famille d'unité intérieure : 131 fiches passent de murale à centrale, 35 mini-splits de centrale à murale (Trane 4TXK, Keeprite DLCSRBH, Carrier 38MARBQ).",
+  },
+  {
     date: "2026-09-15",
     titre: "Pages de villes : du contenu local propre à chacune, et l'indexation sous contrôle",
     detail:

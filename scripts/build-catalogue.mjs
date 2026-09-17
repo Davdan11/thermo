@@ -89,6 +89,40 @@ const lvMeta = fs.existsSync(LV_META) ? JSON.parse(fs.readFileSync(LV_META, "utf
 // Unités extérieures certifiées avec au moins une combinaison multizone, toutes marques confondues
 // (M2OF-18HFN1-M : combinaisons « Appareils sans conduits » sous une marque, têtes nommées sous une autre).
 const MULTI_UNITS = new Set(Object.values(lv).filter((r) => MULTI_INDOOR_RE.test(String(r.im ?? "").trim())).map((r) => normKey(r.m)));
+// Centrale ou mini-split, d'après ENERGY STAR (scripts/energystar-types.mjs) : le type de chaque combinaison par
+// numéro AHRI, sinon celui de la famille de son unité intérieure (un cabinet reste un cabinet, quelle que soit
+// l'unité extérieure). Le code « C »/« M » d'Hydro-Québec suit surtout la fournaise, pas les conduits : une
+// centrale sur son propre cabinet (Bryant 280ANV + FE4) y est « M ». Il ne sert plus qu'en dernier recours.
+const ES_PATH = path.join(ROOT, "src/lib/data/energystar-types.json");
+const es = fs.existsSync(ES_PATH) ? JSON.parse(fs.readFileSync(ES_PATH, "utf8")) : { types: {}, indoorFamilies: {} };
+const indoorStem = (raw) => String(raw ?? "").toUpperCase().split(/[*(+,/&\s]/)[0].replace(/[^A-Z0-9]/g, "");
+const indoorFamilyType = (raw) => {
+  const stem = indoorStem(raw);
+  for (let len = Math.min(8, stem.length); len >= 3; len--) {
+    const t = es.indoorFamilies[stem.slice(0, len)];
+    if (t) return t;
+  }
+  return null;
+};
+// unitKey → comptes sur toutes les marques : « exact » (combinaisons listées par ENERGY STAR) et « famille »
+// (type déduit de l'unité intérieure). Le type exact prime dès qu'il porte sur 3 combinaisons ou plus : une
+// mini-split qui accepte aussi un serpentin (Carrier 38MARBQ, 25 combinaisons mini-split sur 30 listées) reste
+// une mini-split, même si ses serpentins sur fournaise se déclinent en centaines de combinaisons.
+const DUCTING = new Map();
+for (const [ahri, r] of Object.entries(lv)) {
+  const exact = es.types[ahri];
+  const t = exact ?? indoorFamilyType(r.im);
+  if (!t) continue;
+  const k = normKey(r.m);
+  const c = DUCTING.get(k) ?? { exact: { ducted: 0, ductless: 0 }, all: { ducted: 0, ductless: 0 } };
+  for (const bucket of exact ? [c.exact, c.all] : [c.all]) {
+    if (t === "M") bucket.ductless++;
+    else bucket.ducted++;
+  }
+  DUCTING.set(k, c);
+}
+const EXACT_MIN = 3;
+const DUCTLESS_TYPES = new Set(["wall-single", "floor-console", "cassette", "ceiling", "multi-zone"]);
 const prev = fs.existsSync(OUT_PATH) ? JSON.parse(fs.readFileSync(OUT_PATH, "utf8")) : {};
 const dict = fs.existsSync(DICT_PATH) ? JSON.parse(fs.readFileSync(DICT_PATH, "utf8")) : {};
 const NOW = (lvMeta.updatedAt ?? new Date().toISOString()).slice(0, 10);
@@ -183,6 +217,14 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
     } else {
       const rule = prefixes.find((p) => modelNumber.startsWith(p.prefix.toUpperCase()));
       if (rule) { seriesDisplay = rule.series; seriesSource = "inferred"; if (rule.systemType) systemType = rule.systemType; }
+    }
+    // Majorité des combinaisons typées par ENERGY STAR : sur conduits (centrale) ou mini-split. Égalité : on garde.
+    const counts = DUCTING.get(unitKey);
+    const ducting = counts ? (counts.exact.ducted + counts.exact.ductless >= EXACT_MIN ? counts.exact : counts.all) : null;
+    if (ducting && ducting.ducted !== ducting.ductless) {
+      const ducted = ducting.ducted > ducting.ductless;
+      if (ducted && DUCTLESS_TYPES.has(systemType)) systemType = "central-ducted";
+      else if (!ducted && !DUCTLESS_TYPES.has(systemType)) systemType = "wall-single";
     }
     // Certifiée avec des combinaisons multizones (« Appareils sans conduits », « Combinaison d'appareils… » à la
     // place d'une unité intérieure précise) : une multizone, jamais une murale simple zone ni une centrale.
