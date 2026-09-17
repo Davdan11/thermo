@@ -356,11 +356,11 @@ export function ComparePageClient({ data, maxCompare, suggestions, totalModels }
       title: "Subvention LogisVert",
       specs: [
         {
-          label: "Montant officiel Hydro-Québec",
+          label: "Subvention (liste officielle d’Hydro-Québec)",
           emphasis: true,
-          getter: (p) => (p.subsidy.dollars > 0 ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $${p.subsidy.isOfficial ? "" : " (estimation)"}` : "Non admissible"),
+          getter: (p) => (p.subsidy.dollars > 0 ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $` : "Absente de la liste"),
           num: (p) => (p.subsidy.dollars > 0 ? p.subsidy.dollars : null),
-          note: (p) => (p.subsidy.dollars > 0 ? `Jumelage de référence${p.subsidy.isColdClimate ? " · certifié climat froid" : ""}` : "Aucun jumelage dans la liste"),
+          note: (p) => (p.subsidy.dollars > 0 ? `Jumelage de référence${p.subsidy.isColdClimate ? " · certifié climat froid" : ""}` : "Aucun jumelage dans la liste en vigueur : aucune subvention"),
         },
       ],
     },

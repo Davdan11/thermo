@@ -85,15 +85,23 @@ describe("Scénario de l'audit : fournaise au gaz, type de système inconnu", ()
     expect(rec.results.map((r) => r.product.outdoorModel)).not.toContain("4TXM2318A12NU");
   });
 
-  it("l'ordre de grandeur installé est affiché une seule fois, avec son libellé", () => {
+  it("l'ordre de grandeur installé est affiché une seule fois, avec son libellé (ou une fois par carte si le calibre le fait varier)", () => {
     expect(arch.price).not.toBeNull();
-    expect(arch.pricePerCard).toBe(false);
-    for (const r of rec.results) expect(r.priceRange).toBeNull();
     const html = rendre(rec);
     const t = texte(html);
-    expect(compter(t, `${money(arch.price!.min)} – ${money(arch.price!.max)}`)).toBe(1);
-    expect(compter(t, "Ordre de grandeur installé")).toBe(1);
     expect(t).toContain("Ordre de grandeur indicatif du marché québécois, pas un prix de vente");
+    const prix = rec.results.map((r) => (r.priceRange ? `${r.priceRange.min}-${r.priceRange.max}` : "—"));
+    if (!arch.pricePerCard) {
+      // Même calibre partout : une seule fourchette, dans « Votre configuration ».
+      for (const r of rec.results) expect(r.priceRange).toBeNull();
+      expect(compter(t, `${money(arch.price!.min)} – ${money(arch.price!.max)}`)).toBe(1);
+      expect(compter(t, "Ordre de grandeur installé")).toBe(1);
+    } else {
+      // Les calibres diffèrent (liste en vigueur du 17 septembre 2026 : 24 000 et 32 000 BTU) : chaque carte a la sienne.
+      expect(new Set(prix).size).toBeGreaterThan(1);
+      expect(compter(t, "Ordre de grandeur installé")).toBe(rec.results.length);
+      expect(t).toContain("varie avec le calibre des machines");
+    }
   });
 
   it("égalité signalée quand les scores arrondis se confondent, avec le départage", () => {

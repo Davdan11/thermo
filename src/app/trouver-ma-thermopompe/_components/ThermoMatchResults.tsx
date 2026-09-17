@@ -186,7 +186,8 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
         ? FALLBACK.multi
         : FALLBACK.wall;
   const indoorRaw = String(sp.indoorModel ?? p.indoorModel ?? "").trim();
-  const multiIndoor = MULTI_INDOOR_RE.test(indoorRaw);
+  // Liste ENERGY STAR : une combinaison multizone n'a pas d'unité intérieure nommée.
+  const multiIndoor = MULTI_INDOOR_RE.test(indoorRaw) || (!indoorRaw && kind === "multi-zone");
   return {
     key: String(p.id ?? i),
     badge: r?.badge ?? (i === 0 ? "Meilleur choix" : "Alternative"),

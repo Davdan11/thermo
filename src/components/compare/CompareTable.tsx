@@ -196,12 +196,12 @@ export function CompareTable({ products, highlights, allTemps }: CompareTablePro
     row("Subvention LogisVert", products.map((p) =>
       p.subsidy.dollars > 0
         ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $`
-        : "Non admissible",
+        : "Absente de la liste en vigueur",
     )),
     row("Certification climat froid", products.map((p) =>
       p.subsidy.isColdClimate ? "Oui" : "Non",
     )),
-    row("Capacité utilisée", products.map((p) =>
+    row("Capacité à −8 °C utilisée", products.map((p) =>
       p.subsidy.capacityBtu > 0
         ? `${p.subsidy.capacityBtu.toLocaleString("fr-CA")} BTU/h`
         : "N/D",

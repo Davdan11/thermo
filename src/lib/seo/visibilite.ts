@@ -56,6 +56,12 @@ export interface JournalEntry {
 
 export const JOURNAL_VISIBILITE: JournalEntry[] = [
   {
+    date: "2026-09-17",
+    titre: "La liste LogisVert en vigueur remplace celle du 17 juillet 2025",
+    detail:
+      "Depuis le 26 novembre 2025, une thermopompe doit être certifiée ENERGY STAR pour donner droit à la subvention, et l'outil d'Hydro-Québec lit un fichier publié chaque jour. Le site le suit : 278 211 combinaisons au lieu de 176 627, subvention médiane de 2 028 $ au lieu de 1 570 $ (Fujitsu AOU12RLFF : 530 $ → 1 272 $). 4 082 unités ne sont plus sur la liste (LG KUSAL091A, Amana ASZS6…) : leur page répond toujours, sans montant ni estimation, mais sort du catalogue, des plans du site et de ThermoMatch. Fiches 3 948 → 3 795, machines distinctes 1 730 → 1 490, pages indexées 3 704 → 3 442. Les montants sont maintenant lus sur le disque : la mise à jour de nuit arrive en ligne sans reconstruire le site.",
+  },
+  {
     date: "2026-09-16",
     titre: "Les centrales ne sont plus classées murales",
     detail:

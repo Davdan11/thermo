@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# ATTENTION : remplacé par scripts/nightly-bot.sh (c'est lui que lance bot/run.sh depuis le cron de 5 h 30).
+# Gardé pour un passage manuel seulement. Il ne reconstruit pas le catalogue après une nouvelle liste :
+# lancer ensuite `node scripts/energystar-types.mjs && npm run build:catalogue`.
 # ==================================================================
 # Robot quotidien LogisVert (VPS) — lancé par cron, voir DEPLOIEMENT.md.
 #

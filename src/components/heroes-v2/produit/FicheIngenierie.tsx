@@ -46,6 +46,8 @@ export type FicheData = {
   zones: number | null;
   coldClimate: boolean;
   discontinued: boolean;
+  /** Unité extérieure absente de la liste LogisVert en vigueur (aucune subvention). */
+  horsListeLogisVert?: boolean;
   minTempC: number | null;
   imageUrl: string | null;
   /** Chiffres certifiés, dans l'ordre d'affichage. */
@@ -206,6 +208,7 @@ export function FicheIngenierie(d: FicheData) {
   if (d.minTempC != null) cells.push({ k: "Chauffe jusqu’à", v: `${fmtNum(d.minTempC)} °C` });
   if (d.coldClimate) cells.push({ k: "Usage", v: "Climat froid" });
   if (d.discontinued) cells.push({ k: "Statut", v: "Discontinué" });
+  if (d.horsListeLogisVert) cells.push({ k: "LogisVert", v: "Absente de la liste en vigueur" });
   cells.push({ k: "Modèle", v: d.modelNumber, mono: true });
 
   return (
@@ -419,7 +422,7 @@ function Callout({ item, n, delay, reduce }: { item: Item; n: number; delay: num
             </span>
           </span>
           <span className="mt-2 block text-[12.5px] leading-snug" style={{ color: MUTE }}>
-            <span className="fi-lnk-t">Montant officiel Hydro-Québec</span>
+            <span className="fi-lnk-t">Liste officielle d’Hydro-Québec</span>
             <span className="ml-1.5 inline-block align-[-1px]">
               <Arrow size={12} />
             </span>

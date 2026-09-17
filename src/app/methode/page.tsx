@@ -13,7 +13,7 @@ import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { getCanonicalModels, getSeoModel, RANKINGS } from "@/lib/seo/programmatic";
 import { visibiliteEtat } from "@/lib/seo/visibilite";
 import { getLogisVertListInfo } from "@/lib/subsidies/logisvert-meta";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { lireMetaLogisVert } from "@/lib/subsidies/logisvert-meta";
 import { DEFAULT_WEIGHTS, capacityWindow, weightsFor } from "@/lib/thermomatch/scoring";
 import { H5_FROM_H17_RATIO } from "@/lib/thermomatch/candidates";
 import { MAX_SCORE_GAP } from "@/lib/thermomatch/select";
@@ -91,7 +91,7 @@ export default function MethodePage() {
   const fenetre = capacityWindow(true);
   const fenetreSansAppoint = capacityWindow(false);
   const liste = Object.values(c);
-  const lvSource = (logisVertMetadata as { sourceUrl?: string; sourceFile?: string }).sourceUrl ?? null;
+  const lvSource = (lireMetaLogisVert() as { sourceUrl?: string; sourceFile?: string }).sourceUrl ?? null;
   const dates: CartoucheRow[] = [
     { label: "Liste LogisVert", value: lv.listDate ?? frDate(c.combinaisons.date), mono: true },
     ...(lv.checkedDate ? [{ label: "Vérifiée le", value: lv.checkedDate, mono: true }] : []),

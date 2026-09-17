@@ -12,7 +12,7 @@
 import { registry } from "@/lib/data/registry";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { getLogisVertVariants } from "@/lib/subsidies/logisvert-official";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { lireMetaLogisVert } from "@/lib/subsidies/logisvert-meta";
 import { REGION_GENERALE, resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { buildCandidates, estimateLoad, pairingClassOf, runThermoMatch, type SourceModel, type SourcePairing } from "@/lib/thermomatch";
 import { H5_FROM_H17_RATIO } from "@/lib/thermomatch/candidates";
@@ -142,7 +142,7 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
     return !heads || (heads.maxIndoorUnits >= decision.heads && (heads.minIndoorUnits ?? 1) <= decision.heads);
   });
 
-  const logisVertUpdatedAt = (logisVertMetadata as { updatedAt?: string }).updatedAt;
+  const logisVertUpdatedAt = (lireMetaLogisVert() as { updatedAt?: string }).updatedAt;
   const output = runThermoMatch(req, candidates, { logisVertUpdatedAt });
 
   // 3. Fourchette indicative : une par architecture, affichée une fois ; par carte seulement si les calibres la font varier.

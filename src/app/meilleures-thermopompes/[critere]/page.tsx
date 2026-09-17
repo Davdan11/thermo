@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createMetadata, fitTitle, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getCanonicalModels, getRanking, RANKINGS } from "@/lib/seo/programmatic";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { getLogisVertListInfo } from "@/lib/subsidies/logisvert-meta";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { productImage } from "@/components/seo/hero/assets";
 import { PalmaresPodiumHero } from "@/components/heroes-v2/marques/PalmaresHeroes";
@@ -43,7 +43,8 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
   const { critere } = await params;
   const r = getRanking(critere, 25);
   if (!r) notFound();
-  const updated = (logisVertMetadata as { updatedAt?: string }).updatedAt?.slice(0, 10) ?? null;
+  // Date de la liste LogisVert en vigueur (« 17 septembre 2026 »), lue à l'exécution : suit la mise à jour de nuit.
+  const updated = getLogisVertListInfo().listDate;
   const top = r.models[0];
 
   const faq = [

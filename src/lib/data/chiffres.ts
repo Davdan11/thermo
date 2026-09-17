@@ -25,7 +25,7 @@ import { registry } from "./registry";
 import type { ProductModel } from "./types";
 import { getCanonicalModels, getSeoModel, type SeoModel } from "@/lib/seo/programmatic";
 import { DATA_DATE } from "@/lib/seo/sitemaps";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { lireMetaLogisVert, listDateIsoFromMeta } from "@/lib/subsidies/logisvert-meta";
 import { capacitesDeLaFiche, energyStarCapacites, referenceDe, type CapacitesFiche } from "./capacites";
 
 export type ChiffreCle =
@@ -59,20 +59,19 @@ export interface Chiffre {
 
 const day = (iso: string | undefined | null) => (iso ? iso.slice(0, 10) : DATA_DATE);
 
-/** Date de la liste LogisVert (tirée du nom du fichier d'Hydro-Québec, « …-17-07-2025.csv.gz »), AAAA-MM-JJ. */
+/** Date de la liste LogisVert en vigueur (métadonnées : listDate, sinon nom du fichier officiel), AAAA-MM-JJ. */
 export function dateListeLogisVert(): string | null {
-  const m = String((logisVertMetadata as { sourceFile?: string }).sourceFile ?? "").match(/(\d{2})-(\d{2})-(\d{4})/);
-  return m ? `${m[3]}-${m[2]}-${m[1]}` : null;
+  return listDateIsoFromMeta(lireMetaLogisVert());
 }
 
 /* ------------------------------------------------------------------
    Ensembles comptés (calculés une fois)
    ------------------------------------------------------------------ */
 
-/** Fiches : unité extérieure publiée, marque publiée et vendue au Québec. */
+/** Fiches : unité extérieure publiée, encore dans la liste LogisVert en vigueur, marque publiée et vendue au Québec. */
 function estFiche(m: ProductModel): boolean {
   const b = registry.brandById.get(m.brandId);
-  return m.status === "published" && !!b && b.status === "published" && b.activeInQuebec;
+  return m.status === "published" && m.logisVertListed !== false && !!b && b.status === "published" && b.activeInQuebec;
 }
 
 let fichesCache: ProductModel[] | null = null;
@@ -148,7 +147,7 @@ export function chiffres(): Record<ChiffreCle, Chiffre> {
       valeur: f.length,
       libelle: "fiches au catalogue",
       titre: "Fiches",
-      definition: "Une fiche par unité extérieure publiée d'une marque vendue au Québec. Une même unité jumelée à plusieurs unités intérieures reste une seule fiche.",
+      definition: "Une fiche par unité extérieure publiée d'une marque vendue au Québec. Une même unité jumelée à plusieurs unités intérieures reste une seule fiche. Une unité retirée de la liste LogisVert en vigueur garde son adresse, mais quitte le catalogue et n'est plus comptée.",
       source: catalogue,
       date: DATA_DATE,
     },
@@ -244,11 +243,11 @@ export function chiffres(): Record<ChiffreCle, Chiffre> {
     },
     {
       cle: "combinaisons",
-      valeur: (logisVertMetadata as { count?: number }).count ?? 0,
+      valeur: (lireMetaLogisVert() as { count?: number }).count ?? 0,
       libelle: "combinaisons certifiées sur la liste LogisVert",
       titre: "Combinaisons certifiées (jumelages)",
-      definition: "Lignes de la liste LogisVert d'Hydro-Québec : une par numéro AHRI, soit une unité extérieure, une unité intérieure et, pour certaines centrales, une fournaise. Toutes marques, y compris celles qui ne sont pas vendues ici.",
-      source: "Liste LogisVert d'Hydro-Québec (fichier officiel)",
+      definition: "Combinaisons de la liste LogisVert en vigueur (thermopompes certifiées ENERGY STAR, clientèle propriétaire d'une habitation existante) : une par numéro AHRI, soit une unité extérieure, une unité intérieure et, pour certaines centrales, une fournaise. Toutes marques, y compris celles qui ne sont pas vendues ici.",
+      source: "Liste LogisVert en vigueur, fichier quotidien lu par l'outil de recherche d'Hydro-Québec",
       date: listeDate,
     },
     {
@@ -285,6 +284,7 @@ const frDate = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString(
  * - chiffre:machines-type:<type>           : machines distinctes d'un type (wall-single, multi-zone, central-ducted) ;
  * - chiffre:machines-hspf2-sup:<type>:<x>  : machines distinctes d'un type dont le HSPF2 dépasse x ;
  * - chiffre:machines-lv:<type>:<calibre>   : machines distinctes d'un type et d'un calibre commercial avec un montant LogisVert ;
+ * - chiffre:lv:<type|tous>:<calibre|tous>:<min|med|max|n> : subventions LogisVert des machines distinctes (min, médiane, max, nombre) ;
  * - chiffre:date-liste / date-verification : date de la liste LogisVert, date de notre dernière vérification.
  */
 export function jeton(token: string): string | null {
@@ -308,6 +308,21 @@ export function jeton(token: string): string | null {
     case "machines-lv": {
       const cal = Number(b);
       return a && Number.isFinite(cal) ? fr(mach.filter((s) => s.systemType === a && calibre(s) === cal && s.logisVertDollars > 0).length) : null;
+    }
+    case "lv": {
+      // chiffre:lv:<type|tous>:<calibre|tous>:<min|med|max|n> : subventions LogisVert des machines distinctes
+      // (appariement de référence, montant > 0) ; médiane = valeur du milieu, comme getLogisVertStats.
+      const stat = token.split(":")[4];
+      const cal = b === "tous" ? null : Number(b);
+      if (!a || !b || (cal !== null && !Number.isFinite(cal)) || !["min", "med", "max", "n"].includes(stat ?? "")) return null;
+      const montants = mach
+        .filter((s) => (a === "tous" || s.systemType === a) && (cal === null || calibre(s) === cal) && s.logisVertDollars > 0)
+        .map((s) => s.logisVertDollars)
+        .sort((x, y) => x - y);
+      if (stat === "n") return fr(montants.length);
+      if (montants.length === 0) return null;
+      const v = stat === "min" ? montants[0] : stat === "max" ? montants[montants.length - 1] : montants[Math.floor(montants.length / 2)];
+      return Number.isInteger(v) ? fr(v) : v.toLocaleString("fr-CA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
     case "date-liste": {
       const d = dateListeLogisVert();

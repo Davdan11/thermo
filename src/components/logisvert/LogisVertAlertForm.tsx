@@ -165,7 +165,7 @@ export function LogisVertAlertForm({ target, label, tone = "dark", amount, amoun
             Soyez prévenu si la subvention change.
           </h2>
           <p className="m-0 mt-3 max-w-[620px] text-[15px] leading-[1.65]" style={{ color: p.mute }}>
-            Hydro-Québec révise la liste LogisVert plusieurs fois par année. Laissez votre courriel&nbsp;: nous vous écrivons seulement si le montant pour{" "}
+            Hydro-Québec publie sa liste LogisVert chaque jour et nous la suivons. Laissez votre courriel&nbsp;: nous vous écrivons seulement si le montant pour{" "}
             <span style={{ color: p.text, fontWeight: 600 }}>{target.kind === "brand" ? `les thermopompes ${label}` : label}</span> monte, baisse, ou si{" "}
             {target.kind === "brand" ? "un modèle entre dans la liste ou en sort" : "le modèle entre dans la liste ou en sort"}.
           </p>

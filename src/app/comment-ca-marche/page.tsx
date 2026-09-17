@@ -6,7 +6,7 @@ import { LineHero } from "@/components/heroes-v2/contenu/LineHero";
 import { createMetadata, SITE_URL, getBreadcrumbSchema } from "@/lib/seo";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
 import { chiffre } from "@/lib/data/chiffres";
-import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { lireMetaLogisVert } from "@/lib/subsidies/logisvert-meta";
 
 export const metadata: Metadata = createMetadata({
   title: `Comment ça marche : de la question à l'installation`,
@@ -102,7 +102,7 @@ const GUARANTEES = [
 
 export default function CommentCaMarchePage() {
   const count = chiffre("fiches");
-  const updated = new Date(logisvertMetadata.updatedAt).toLocaleDateString("fr-CA", { year: "numeric", month: "long", day: "numeric" });
+  const updated = new Date(lireMetaLogisVert().updatedAt ?? Date.now()).toLocaleDateString("fr-CA", { year: "numeric", month: "long", day: "numeric" });
   const breadcrumbs = [{ label: "Comment ça marche", href: "/comment-ca-marche" }];
   return (
     <main>

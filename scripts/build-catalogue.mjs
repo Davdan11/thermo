@@ -11,6 +11,8 @@
  *    du dictionnaire (marquée « estimée ») ; sinon « Série non identifiée ». Rien n'est inventé.
  *  - Déterministe : même entrée → même sortie. Validé : rien n'est écrit si une règle échoue.
  *  - Conserve d'un build à l'autre : fiche marque, images des modèles et des séries.
+ *  - Une fiche du build précédent absente de la liste en vigueur est reprise (adresse conservée), marquée
+ *    logisVertListed = false : sans subvention, hors catalogue, ThermoMatch et compteurs.
  *
  * Usage : node scripts/build-catalogue.mjs [--dry-run] [--report chemin.json]
  */
@@ -88,7 +90,10 @@ const lv = JSON.parse(fs.readFileSync(LV_PATH, "utf8"));
 const lvMeta = fs.existsSync(LV_META) ? JSON.parse(fs.readFileSync(LV_META, "utf8")) : {};
 // Unités extérieures certifiées avec au moins une combinaison multizone, toutes marques confondues
 // (M2OF-18HFN1-M : combinaisons « Appareils sans conduits » sous une marque, têtes nommées sous une autre).
-const MULTI_UNITS = new Set(Object.values(lv).filter((r) => MULTI_INDOOR_RE.test(String(r.im ?? "").trim())).map((r) => normKey(r.m)));
+// Liste ENERGY STAR en vigueur : une combinaison multizone a une unité intérieure vide et le type « M » (même règle que
+// isMultiPairing de src/lib/thermomatch/candidates.ts).
+const isMultiRecord = (r) => MULTI_INDOOR_RE.test(String(r.im ?? "").trim()) || (!String(r.im ?? "").trim() && r.t === "M");
+const MULTI_UNITS = new Set(Object.values(lv).filter(isMultiRecord).map((r) => normKey(r.m)));
 // Centrale ou mini-split, d'après ENERGY STAR (scripts/energystar-types.mjs) : le type de chaque combinaison par
 // numéro AHRI, sinon celui de la famille de son unité intérieure (un cabinet reste un cabinet, quelle que soit
 // l'unité extérieure). Le code « C »/« M » d'Hydro-Québec suit surtout la fournaise, pas les conduits : une
@@ -357,6 +362,70 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
   };
 }
 
+/* ---------------------------------------------------------------- fiches absentes de la liste en vigueur */
+// Une fiche du build précédent dont l'unité extérieure n'est plus dans la liste de sa marque n'est pas supprimée :
+// son adresse reste en vie (pas de 404 massif quand Hydro-Québec change de liste). Elle est reprise telle quelle,
+// avec deux cas :
+//  - l'unité n'est plus dans la liste, toutes marques confondues : logisVertListed = false, date du retrait,
+//    statut « archived » (la fiche répond toujours, sans index ; toutes les listes, compteurs, sitemaps et
+//    ThermoMatch ne prennent que les fiches « published »), isActive2026 = false, thermomatchEligible = false,
+//    aucun jumelage en vigueur (certifiedPairings = 0), aucune subvention affichée ;
+//  - l'unité est encore listée, mais sous une autre marque (« AC PRO » au lieu de « AC Pro.com », rebadge ADP de
+//    Carrier) : la fiche garde sa place ; ses montants viennent de la liste par le numéro d'unité extérieure.
+const LISTED_UNITS = new Map(); // unitKey → nombre de combinaisons en vigueur, toutes marques
+for (const r of Object.values(lv)) {
+  const k = normKey(r.m);
+  if (k) LISTED_UNITS.set(k, (LISTED_UNITS.get(k) ?? 0) + 1);
+}
+const RETIRED_SINCE = lvMeta.listDate ?? NOW;
+report.carried = { retired: 0, listedUnderAnotherBrand: 0, brandsWithoutListedModel: 0 };
+const carriedIds = new Set();
+for (const [brandSlug, prevDs] of Object.entries(prev).sort((x, y) => x[0].localeCompare(y[0]))) {
+  const built = new Set((out[brandSlug]?.models ?? []).map((m) => m.normalizedModelNumber));
+  const carried = (prevDs.models ?? []).filter((m) => !built.has(m.normalizedModelNumber));
+  if (!carried.length) continue;
+  if (!out[brandSlug]) {
+    report.carried.brandsWithoutListedModel++;
+    out[brandSlug] = {
+      brand: { ...prevDs.brand, updatedAt: STAMP }, series: [], models: [], outdoorUnits: [], indoorUnits: [], configurations: [], performanceProfiles: [], certifications: [], warranties: [],
+      priceObservations: prevDs.priceObservations ?? [], sources: prevDs.sources ?? [], editorial: prevDs.editorial ?? [],
+    };
+  }
+  const ds = out[brandSlug];
+  const has = (arr, id) => arr.some((x) => x.id === id);
+  for (const m of carried) {
+    const pairings = LISTED_UNITS.get(m.normalizedModelNumber) ?? 0;
+    const model = { ...m };
+    if (pairings > 0) {
+      report.carried.listedUnderAnotherBrand++;
+      Object.assign(model, { certifiedPairings: pairings, logisVertListed: true, isActive2026: true, thermomatchEligible: true, updatedAt: STAMP });
+      if (m.logisVertListed === false && m.status === "archived") model.status = m.nominalCapacityBtu ? "published" : "needs_review";
+      delete model.logisVertRetiredAt;
+    } else {
+      report.carried.retired++;
+      Object.assign(model, { certifiedPairings: 0, logisVertListed: false, logisVertRetiredAt: m.logisVertRetiredAt ?? RETIRED_SINCE, isActive2026: false, thermomatchEligible: false });
+      if (m.status === "published") model.status = "archived";
+    }
+    ds.models.push(model);
+    carriedIds.add(model.id);
+    const s = (prevDs.series ?? []).find((x) => x.id === m.seriesId);
+    if (s && !has(ds.series, s.id)) ds.series.push(s);
+    const ou = (prevDs.outdoorUnits ?? []).find((x) => x.id === m.id);
+    if (ou && !has(ds.outdoorUnits, ou.id)) ds.outdoorUnits.push(ou);
+    for (const c of (prevDs.configurations ?? []).filter((x) => x.modelId === m.id)) {
+      if (has(ds.configurations, c.id)) continue;
+      ds.configurations.push(c);
+      const iu = c.indoorUnitId ? (prevDs.indoorUnits ?? []).find((x) => x.id === c.indoorUnitId) : null;
+      if (iu && !has(ds.indoorUnits, iu.id)) ds.indoorUnits.push(iu);
+      for (const p of (prevDs.performanceProfiles ?? []).filter((x) => x.configurationId === c.id)) ds.performanceProfiles.push(p);
+      for (const cert of (prevDs.certifications ?? []).filter((x) => x.configurationId === c.id)) {
+        // Hors liste : on ne sait plus si la combinaison est certifiée pour le Québec ; rien d'affirmé.
+        if (!has(ds.certifications, cert.id)) ds.certifications.push(pairings > 0 ? cert : { ...cert, status: "unknown" });
+      }
+    }
+  }
+}
+
 /* ---------------------------------------------------------------- validation */
 const allIds = new Set();
 let totalPairings = 0;
@@ -364,6 +433,16 @@ for (const [slug, ds] of Object.entries(out)) {
   const names = new Set();
   const seriesIds = new Set(ds.series.map((s) => s.id));
   for (const m of ds.models) {
+    if (carriedIds.has(m.id)) {
+      // Fiche reprise : mêmes garanties d'unicité et de série, jumelages comptés à part.
+      if (allIds.has(m.id)) report.errors.push(`identifiant en double : ${m.id}`);
+      allIds.add(m.id);
+      if (!seriesIds.has(m.seriesId)) report.errors.push(`série absente : ${m.id} → ${m.seriesId}`);
+      const nk = `${m.name}|${m.systemType}`;
+      if (names.has(nk)) report.errors.push(`nom en double dans ${slug} : ${m.name}`);
+      names.add(nk);
+      continue;
+    }
     if (allIds.has(m.id)) report.errors.push(`identifiant en double : ${m.id}`);
     allIds.add(m.id);
     const nk = `${m.name}|${m.systemType}`;
@@ -381,8 +460,11 @@ for (const [slug, ds] of Object.entries(out)) {
   for (const m of ds.models) if (!cfgModels.has(m.id)) report.errors.push(`aucune configuration : ${m.id}`);
 }
 if (totalPairings !== recordsUsed) report.errors.push(`jumelages comptés ${totalPairings} ≠ enregistrements utilisés ${recordsUsed}`);
-if (report.previous.models && report.models < 0.95 * report.previous.models) report.errors.push(`chute du nombre de fiches : ${report.models} < 95 % de ${report.previous.models}`);
-if (report.previous.brands && report.brands < report.previous.brands - 5) report.errors.push(`chute du nombre de marques : ${report.brands} < ${report.previous.brands}`);
+const totalModels = Object.values(out).reduce((n, d) => n + d.models.length, 0);
+report.totalModels = totalModels;
+if (report.previous.models && totalModels < 0.95 * report.previous.models) report.errors.push(`chute du nombre de fiches : ${totalModels} < 95 % de ${report.previous.models}`);
+// Marques écrites (celles de la liste en vigueur et celles gardées pour leurs fiches reprises).
+if (report.previous.brands && Object.keys(out).length < report.previous.brands - 5) report.errors.push(`chute du nombre de marques : ${Object.keys(out).length} < ${report.previous.brands}`);
 report.pairings = totalPairings;
 
 /* ---------------------------------------------------------------- sortie */
@@ -390,6 +472,7 @@ console.log(`Marques ${report.brands} · fiches ${report.models} · jumelages ${
 console.log(`Séries : officielles ${report.series.official}, estimées ${report.series.inferred}, non identifiées ${report.series.unidentified}`);
 console.log(`Fiches par source de série : ${JSON.stringify(report.modelsBySeriesSource)} · conflits ${report.seriesConflicts.length}`);
 console.log(`Images conservées : ${report.imagesCarried.models} modèles, ${report.imagesCarried.series} séries`);
+console.log(`Fiches reprises du build précédent : ${report.carried.retired} absentes de la liste en vigueur (sans subvention), ${report.carried.listedUnderAnotherBrand} listées sous une autre marque`);
 if (report.errors.length) {
   console.error(`\n✗ ${report.errors.length} erreur(s) de validation — rien n'est écrit :`);
   for (const e of report.errors.slice(0, 30)) console.error("  - " + e);

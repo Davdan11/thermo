@@ -74,6 +74,7 @@ export async function generateMetadata({
   const names = productNames(nameInput);
   const seo = getSeoModel(slug);
   const canonicalSlug = seo ? indexSlug(seo) : slug;
+  // Fiche « archived » (retirée de la liste LogisVert en vigueur) : la page répond, sans index.
   const indexable = brand.activeInQuebec && model.status === "published";
 
   const facts: string[] = [];
@@ -223,13 +224,15 @@ export default async function ProductPage({
                 {/* LogisVert subsidy */}
                 <LogisVertBadge detail={detail} />
 
-                {/* Alerte LogisVert : prévenir le visiteur si le montant de ce modèle change */}
-                <LogisVertAlertForm
-                  target={{ kind: "model", modelId: model.id }}
-                  label={names.full}
-                  tone="dark"
-                  className="-mt-6 rounded-[3px]! lg:-mt-10"
-                />
+                {/* Alerte LogisVert : prévenir le visiteur si le montant de ce modèle change (fiches de la liste en vigueur seulement) */}
+                {model.status === "published" && (
+                  <LogisVertAlertForm
+                    target={{ kind: "model", modelId: model.id }}
+                    label={names.full}
+                    tone="dark"
+                    className="-mt-6 rounded-[3px]! lg:-mt-10"
+                  />
+                )}
 
                 <PriceSection detail={detail} logisVertDollars={seoModel?.logisVertDollars ?? 0} />
 

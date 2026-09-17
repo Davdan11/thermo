@@ -251,7 +251,7 @@ export function appelDe(f: Faits): string {
 }
 
 const logisVertPhrase = (montant: number, dateListe: string | null) =>
-  `Subvention LogisVert de son appariement de référence : ${fmtMontant(montant)}, montant officiel versé au client par Hydro-Québec${dateListe ? ` (liste du ${dateListe})` : ""}.`;
+  `Subvention LogisVert de son appariement de référence : ${fmtMontant(montant)}, montant de la liste officielle d’Hydro-Québec${dateListe ? ` du ${dateListe}` : ""}, versé au client.`;
 
 function capacitePhrase(m: ModeleFaits): string {
   return m.capacite15 ? `${m.capacite15.libelle} : ${fmtBtu(m.capacite15.btu)} (${m.capacite15.source}).` : "";

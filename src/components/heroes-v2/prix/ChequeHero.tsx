@@ -4,7 +4,7 @@ import "./prix-v2.css";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useAnimationControls, useInView } from "motion/react";
-import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { frDateIso, type ListeLogisVertClient } from "@/lib/subsidies/logisvert-meta-format";
 import type { LogisVertSample } from "@/components/tools-hero/types";
 import { DISPLAY, MONO, SERIF, plexMono } from "./fonts";
 import { CountTo, EASE, fr, useAfter } from "./shared";
@@ -66,12 +66,11 @@ function amountWords(n: number): string {
 }
 
 /* ---------- Dates de la liste ---------- */
-function listDate(file: string): string | null {
-  const m = /(\d{2})-(\d{2})-(\d{4})/.exec(file);
-  if (!m) return null;
-  return new Date(Date.UTC(+m[3], +m[2] - 1, +m[1])).toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+function listDate(liste: ListeLogisVertClient): string | null {
+  return liste.listDateIso ? frDateIso(liste.listDateIso) : null;
 }
-function checkedDate(iso: string): string | null {
+function checkedDate(iso: string | null): string | null {
+  if (!iso) return null;
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return null;
   return d.toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric", timeZone: "America/Toronto" });
@@ -95,9 +94,9 @@ function wave(y: number, amp: number, len: number, phase: number, w: number): st
 const ROSETTE = Array.from({ length: 16 }, (_, i) => rosette(400, 400, 250 + i * 7, 26 + i * 1.2, 18, i * 0.39));
 const WAVES = Array.from({ length: 16 }, (_, i) => wave(14 + i * 13, 5, 120, i * 0.55, 720));
 
-export function ChequeHero({ samples }: { samples: LogisVertSample[] }) {
+export function ChequeHero({ samples, liste }: { samples: LogisVertSample[]; liste: ListeLogisVertClient }) {
   const reduce = !!useReduced();
-  const count = logisvertMetadata.count;
+  const count = liste.count;
   const play = useAfter(1100);
 
   return (
@@ -162,7 +161,7 @@ export function ChequeHero({ samples }: { samples: LogisVertSample[] }) {
 
         {samples.length > 0 && (
           <div className="min-w-0">
-            <Cheque samples={samples} count={count} />
+            <Cheque samples={samples} count={count} liste={liste} />
           </div>
         )}
       </div>
@@ -174,7 +173,7 @@ export function ChequeHero({ samples }: { samples: LogisVertSample[] }) {
    Le chèque (décoratif : les mêmes données restent dans l'outil plus bas).
    ------------------------------------------------------------------ */
 
-function Cheque({ samples, count }: { samples: LogisVertSample[]; count: number }) {
+function Cheque({ samples, count, liste }: { samples: LogisVertSample[]; count: number; liste: ListeLogisVertClient }) {
   const reduce = !!useReduced();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { margin: "0px 0px -10% 0px" });
@@ -214,8 +213,8 @@ function Cheque({ samples, count }: { samples: LogisVertSample[]; count: number 
   }, [stamped, reduce, inView, hover, samples.length]);
 
   const cur = samples[i];
-  const date = listDate(logisvertMetadata.sourceFile);
-  const checked = checkedDate(logisvertMetadata.updatedAt);
+  const date = listDate(liste);
+  const checked = checkedDate(liste.updatedAt);
 
   return (
     <div

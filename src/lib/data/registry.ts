@@ -27,10 +27,12 @@ import { modelNumberSlug, productSlug } from "./product-name";
 /* ---- Import fixtures ---- */
 import { readFileSync } from "fs";
 import { join } from "path";
+import { partagerTextes } from "./partager-textes";
 
-// Load JSON dynamically to bypass TypeScript OOM during next build
+// Lu sur le disque à l'exécution (pas d'import : mémoire du build, et le robot de nuit remplace ce fichier dans la
+// version servie puis redémarre le serveur, voir scripts/publier-donnees.sh). Textes identiques partagés : 169 → 137 Mo.
 const autoDatasetsPath = join(process.cwd(), "src/lib/data/fixtures/brands/all-auto-datasets.json");
-const allAutoDatasets = JSON.parse(readFileSync(autoDatasetsPath, "utf8")) as Record<string, BrandDataset>;
+const allAutoDatasets = partagerTextes(JSON.parse(readFileSync(autoDatasetsPath, "utf8")) as Record<string, BrandDataset>);
 
 // Manual datasets (curated models with verified specs — these override auto data)
 import { daikinDataset as daikinManual } from "./fixtures/brands/daikin";

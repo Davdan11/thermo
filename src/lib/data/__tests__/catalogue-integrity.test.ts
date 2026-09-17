@@ -7,6 +7,7 @@ import { describe, it, expect } from "vitest";
 import { registry } from "../registry";
 import { isGenericSeries } from "../series-label";
 import { getLogisVertVariants } from "../../subsidies/logisvert-official";
+import { isMultiPairing } from "@/lib/thermomatch/candidates";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
@@ -65,11 +66,8 @@ describe("catalogue — propreté des données", () => {
   }, 60_000);
 
   it("une unité certifiée avec des combinaisons multizones est une multizone (jamais « murale simple zone » ni centrale)", () => {
-    // Hydro-Québec décrit l'unité intérieure (« Appareils sans conduits », « Combinaison d'appareils… ») au lieu de la nommer.
-    const multi = /^(combinaison d.appareils|appareils (sans|avec) conduits)/i;
-    const bad = published.filter(
-      (m) => m.systemType !== "multi-zone" && getLogisVertVariants(m.modelNumber).some((e) => multi.test((e.indoorModel ?? "").trim())),
-    );
+    // Ancienne liste : unité intérieure décrite (« Appareils sans conduits »…) ; liste ENERGY STAR : unité intérieure vide sur une « M ».
+    const bad = published.filter((m) => m.systemType !== "multi-zone" && getLogisVertVariants(m.modelNumber).some((e) => isMultiPairing(e)));
     expect(bad.map((m) => `${m.slug} (${m.systemType})`).slice(0, 20)).toEqual([]);
   }, 60_000);
 

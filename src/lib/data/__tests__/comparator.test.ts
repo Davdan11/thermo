@@ -233,11 +233,17 @@ describe("getComparisonData — subsidy", () => {
     }
   });
 
-  it("cold climate products get 120$/kBTU rate", () => {
+  it("le taux vient de la liste officielle : 120 $ par 1 000 BTU/h en climat froid, 50 $ sinon, rien hors liste", () => {
     const data = getComparisonData(["daikin-aurora-18k"]);
-    if (data.products[0].detail.isColdClimate) {
-      expect(data.products[0].subsidy.rate).toBe(120);
+    const p = data.products[0];
+    if (!p.subsidy.isOfficial) {
+      // Fiche absente de la liste LogisVert en vigueur : aucun montant, aucune estimation.
+      expect(p.subsidy.dollars).toBe(0);
+      expect(p.subsidy.rate).toBe(0);
+      return;
     }
+    expect(p.subsidy.rate).toBe(p.subsidy.isColdClimate ? 120 : 50);
+    expect(p.subsidy.dollars).toBe(Math.round((p.subsidy.rate * p.subsidy.capacityBtu) / 1000));
   });
 
   it("provides imageUrl from model or series", () => {

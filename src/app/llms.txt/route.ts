@@ -6,10 +6,12 @@ import { isCityPageIndexable } from "@/lib/seo/cities-quality";
 import { getHubs, getPageMunicipalities, getRegions, groupTitle } from "@/lib/seo/municipalites";
 import { getAllGuides } from "@/lib/markdown";
 import { getCapacityClasses, RANKINGS, getAllBrandStats } from "@/lib/seo/programmatic";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { lireMetaLogisVert } from "@/lib/subsidies/logisvert-meta";
 import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 export const dynamic = "force-static";
+/* Régénéré au plus toutes les 6 heures : suit la mise à jour de nuit des données sans reconstruction. */
+export const revalidate = 21600;
 
 /* ==================================================================
    llms.txt — carte du site pour les assistants IA (ChatGPT, Perplexity,
@@ -20,7 +22,7 @@ export const dynamic = "force-static";
 export async function GET() {
   const brands = registry.brands.filter((b) => b.status === "published" && b.activeInQuebec);
   const activeModels = chiffre("fiches");
-  const lv = logisVertMetadata as { updatedAt?: string; count?: number };
+  const lv = lireMetaLogisVert() as { updatedAt?: string; count?: number };
   const lvDate = (lv.updatedAt ?? "").slice(0, 10);
   const cities = getCities();
   const guides = getAllGuides();

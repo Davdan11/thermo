@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata } from "@/lib/seo";
 import { SubventionsClient } from "./SubventionsClient";
 import { getLogisVertHeroSamples } from "@/components/tools-hero/logisvert-samples";
+import { listeLogisVertPourClient } from "@/lib/subsidies/logisvert-meta";
 
 export const metadata: Metadata = createMetadata({
   title: `Subventions pour thermopompe au Québec`,
@@ -13,5 +14,5 @@ export const metadata: Metadata = createMetadata({
 
 export default function SubventionsPage() {
   // Extraits réels de la liste officielle LogisVert pour le relevé du héros.
-  return <SubventionsClient heroSamples={getLogisVertHeroSamples()} />;
+  return <SubventionsClient heroSamples={getLogisVertHeroSamples()} liste={listeLogisVertPourClient()} />;
 }

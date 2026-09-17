@@ -57,12 +57,24 @@ export function systemKindOf(systemType: string): SystemKind | null {
 export const MULTI_INDOOR_RE = /^(combinaison d.appareils|appareils (sans|avec) conduits)/i;
 
 /**
+ * Combinaison multizone. Ancienne liste d'Hydro-Québec : libellé générique à la place de l'unité intérieure
+ * (MULTI_INDOOR_RE). Liste ENERGY STAR en vigueur : unité intérieure vide sur une mini ou multi-bibloc (« M ») ;
+ * vérifié le 17 septembre 2026 : les 4 022 combinaisons « Appareils sans conduits »/« Combinaison d'appareils… »
+ * de l'ancienne liste encore présentes ont toutes une unité intérieure vide. Le fichier ne dit plus si les têtes
+ * sont avec ou sans conduits.
+ */
+export function isMultiPairing(p: { indoorModel?: string | null; systemType?: "C" | "M" | null }): boolean {
+  const im = (p.indoorModel ?? "").trim();
+  return MULTI_INDOOR_RE.test(im) || (!im && p.systemType === "M");
+}
+
+/**
  * Classe réelle d'un appariement, d'après LogisVert plutôt que d'après le type du catalogue :
  * la Trane 4TXM2318A12NU est « central-ducted » au catalogue, mais ses appariements sont des
  * « Appareils sans conduits » (une multizone).
  */
 export function pairingClassOf(pairing: Pick<SourcePairing, "indoorModel" | "systemType">, registrySystemType: string): PairingClass {
-  if (MULTI_INDOOR_RE.test((pairing.indoorModel ?? "").trim())) return "multi";
+  if (isMultiPairing(pairing)) return "multi";
   if ((registrySystemType === "central-ducted" || registrySystemType === "hybrid") && pairing.systemType !== "M") return "central";
   return "single";
 }
@@ -123,7 +135,7 @@ export function buildCandidates(models: SourceModel[], opts: BuildOptions): Cand
     if (h5Btu <= 0) continue;
 
     // Plusieurs unités intérieures possibles ne font pas une multizone (SUZ-AA18NLHZ : sept têtes, une à la fois).
-    const multiZoneCapable = all.some((p) => MULTI_INDOOR_RE.test((p.indoorModel ?? "").trim()));
+    const multiZoneCapable = all.some((p) => isMultiPairing(p));
 
     raw.push({
       id: m.id,

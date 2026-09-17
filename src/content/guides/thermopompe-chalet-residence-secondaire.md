@@ -3,7 +3,7 @@ title: "Thermopompe au chalet : rentable ou pas, et laquelle choisir"
 description: "Occupation intermittente, hors-gel, régions froides : au chalet, la thermopompe joue un autre rôle. Quand elle est rentable et quelle machine choisir."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
-updatedAt: "2026-09-11"
+updatedAt: "2026-09-17"
 coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "choisir"
 keywords: ["thermopompe chalet", "thermopompe résidence secondaire", "chauffer un chalet thermopompe", "thermopompe hors gel chalet", "thermopompe laurentides chalet"]
@@ -70,7 +70,7 @@ Le mode le plus utilisé au chalet est le maintien à basse température pendant
 
 ## LogisVert au chalet
 
-Le programme LogisVert d'Hydro-Québec fixe un montant par jumelage certifié, quelle que soit la région. Sur la liste officielle, les machines de 12 000 BTU subventionnées reçoivent de 350 à 2 268 dollars, médiane 530 dollars ; celles de 18 000 BTU de 475 à 3 312 dollars, médiane 1 404 dollars. L'admissibilité de la résidence elle-même dépend des conditions du programme, qui évoluent : vérifiez les conditions officielles sur la page [Subventions](/subventions) et dans notre [guide complet](/guides/subvention-logisvert-guide-complet), et confirmez avec l'installateur que le jumelage proposé figure bien sur la liste.
+Le programme LogisVert d'Hydro-Québec fixe un montant par jumelage certifié, quelle que soit la région : 50 $ par 1 000 BTU/h de capacité certifiée à -8 °C pour une thermopompe certifiée ENERGY STAR, 120 $ par 1 000 BTU/h si elle est en plus certifiée climat froid. Sur la liste en vigueur, les machines de 12 000 BTU subventionnées reçoivent de {{chiffre:lv:tous:12000:min}} à {{chiffre:lv:tous:12000:max}} dollars, médiane {{chiffre:lv:tous:12000:med}} dollars ; celles de 18 000 BTU de {{chiffre:lv:tous:18000:min}} à {{chiffre:lv:tous:18000:max}} dollars, médiane {{chiffre:lv:tous:18000:med}} dollars. Deux règles à connaître avant de choisir l'appareil : la certification ENERGY STAR est obligatoire pour toute installation depuis le 26 novembre 2025, et l'unité extérieure doit afficher au moins 12 000 BTU/h de puissance nominale en climatisation, ce qui met le calibre de 9 000 BTU hors du programme. L'admissibilité de la résidence elle-même dépend des conditions du programme, qui évoluent : vérifiez les conditions officielles sur la page [Subventions](/subventions) et dans notre [guide complet](/guides/subvention-logisvert-guide-complet), et confirmez avec l'installateur que le jumelage proposé figure bien sur la liste.
 
 ## Les prix, en repères
 

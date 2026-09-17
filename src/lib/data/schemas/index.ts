@@ -125,6 +125,8 @@ export const productModelSchema = z
     
     isActive2026: z.boolean(),
     thermomatchEligible: z.boolean(),
+    logisVertListed: z.boolean().optional(),
+    logisVertRetiredAt: z.string().nullable().optional(),
     
     coolingCapacityMinBtu: positiveOrNull.optional(),
     coolingCapacityMaxBtu: positiveOrNull.optional(),

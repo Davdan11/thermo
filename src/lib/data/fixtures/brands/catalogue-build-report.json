@@ -1,24 +1,72 @@
 {
-  "builtAt": "2026-09-17T14:33:55.725Z",
-  "logisvertUpdatedAt": "2026-09-12T20:00:41.008Z",
+  "builtAt": "2026-09-17T17:51:23.446Z",
+  "logisvertUpdatedAt": "2026-09-17T17:41:25.877Z",
   "records": {
-    "total": 176627,
-    "used": 176627,
+    "total": 278211,
+    "used": 278211,
     "skipped": 0
   },
-  "brands": 180,
-  "models": 9782,
+  "brands": 270,
+  "models": 10503,
   "series": {
-    "official": 1143,
-    "inferred": 38,
-    "unidentified": 325
+    "official": 1892,
+    "inferred": 3,
+    "unidentified": 42
   },
   "modelsBySeriesSource": {
-    "official": 6254,
-    "inferred": 496,
-    "unidentified": 3032
+    "official": 10221,
+    "inferred": 36,
+    "unidentified": 246
   },
   "seriesConflicts": [
+    {
+      "brand": "ac-pro",
+      "model": "4HP17L18P-A",
+      "values": [
+        "4HP17L (251)",
+        "4HP17 (5)"
+      ]
+    },
+    {
+      "brand": "ac-pro",
+      "model": "4HP17L24P-A",
+      "values": [
+        "4HP17L (254)",
+        "4HP17 (3)"
+      ]
+    },
+    {
+      "brand": "ac-pro",
+      "model": "4HP17L30P-A",
+      "values": [
+        "4HP17L (245)",
+        "4HP17 (4)"
+      ]
+    },
+    {
+      "brand": "ac-pro",
+      "model": "4HP17L36P-A",
+      "values": [
+        "4HP17L (293)",
+        "4HP17 (4)"
+      ]
+    },
+    {
+      "brand": "ac-pro",
+      "model": "4HP17L42P-A",
+      "values": [
+        "4HP17L (66)",
+        "4HP17 (1)"
+      ]
+    },
+    {
+      "brand": "ac-pro",
+      "model": "A4OG-36HFN1-M",
+      "values": [
+        "A4OG (2)",
+        "A (1)"
+      ]
+    },
     {
       "brand": "ac-pro",
       "model": "A5OG-48HFN1-M",
@@ -47,8 +95,8 @@
       "brand": "ac-pro",
       "model": "AOX430-24HFN1-MR0",
       "values": [
-        "AVC (2)",
-        "AAC (1)"
+        "AAC (1)",
+        "AVC (1)"
       ]
     },
     {
@@ -57,6 +105,14 @@
       "values": [
         "MHP (1)",
         "MHPC (1)"
+      ]
+    },
+    {
+      "brand": "ai-air-conditioning",
+      "model": "AO21-30N1-M1",
+      "values": [
+        "AO (1)",
+        "AW (1)"
       ]
     },
     {
@@ -95,24 +151,112 @@
       "brand": "ai-air-conditioning",
       "model": "AUO18-18N2-M3",
       "values": [
-        "AUO (3)",
-        "AU (2)"
+        "AU (2)",
+        "AUO (1)"
       ]
     },
     {
       "brand": "ai-air-conditioning",
       "model": "AUO18-48N2-M3",
       "values": [
-        "AU (2)",
+        "AU (1)",
         "AUO (1)"
       ]
     },
     {
-      "brand": "aireforce",
-      "model": "DXH09PSK3IH",
+      "brand": "airease",
+      "model": "4SHP17LE118P-A",
       "values": [
-        "(24-26 SEER2) Minisplits (1)",
-        "Multizone Indoors Eight-way Compact Cassettes (1)"
+        "4SHP17LE (199)",
+        "4SHP17LE1 (121)",
+        "4HSP17LE (7)",
+        "4SHP17 (4)"
+      ]
+    },
+    {
+      "brand": "airease",
+      "model": "4SHP17LE124P-A",
+      "values": [
+        "4SHP17LE (195)",
+        "4SHP17LE1 (114)",
+        "4HSP17LE (6)",
+        "4SHP17 (1)",
+        "4SHP17L (1)"
+      ]
+    },
+    {
+      "brand": "airease",
+      "model": "4SHP17LE130P-A",
+      "values": [
+        "4SHP17LE (195)",
+        "4SHP17LE1 (127)",
+        "4HSP17LE (7)",
+        "4SHP17 (3)",
+        "4SHP17L (1)"
+      ]
+    },
+    {
+      "brand": "airease",
+      "model": "4SHP17LE136P-A",
+      "values": [
+        "4SHP17LE1 (228)",
+        "4SHP17LE (215)",
+        "4HSP17LE (7)",
+        "4SHP17 (3)",
+        "4SHP17L (1)"
+      ]
+    },
+    {
+      "brand": "airease",
+      "model": "4SHP17LE142P-A",
+      "values": [
+        "4SHP17LE1 (46)",
+        "4SHP17LE (34)",
+        "4HSP17LE (3)",
+        "4SHP17 (1)",
+        "4SHP17L (1)"
+      ]
+    },
+    {
+      "brand": "airease",
+      "model": "4SHP17LE148P-A",
+      "values": [
+        "4SHP17LE (141)",
+        "4SHP17LE1 (84)",
+        "4HSP17LE (1)"
+      ]
+    },
+    {
+      "brand": "airease",
+      "model": "A7HP14F24P-A",
+      "values": [
+        "A7HP14 (108)",
+        "A7HP14F (16)",
+        "7HP14F (8)"
+      ]
+    },
+    {
+      "brand": "airease",
+      "model": "A7HP14F30P-A",
+      "values": [
+        "A7HP14F (28)",
+        "7HP14F (2)"
+      ]
+    },
+    {
+      "brand": "airease",
+      "model": "A7HP14F36P-A",
+      "values": [
+        "A7HP14F Seies (37)",
+        "A7HP14F (3)"
+      ]
+    },
+    {
+      "brand": "airease",
+      "model": "A7HP14F42P-A",
+      "values": [
+        "A7HP14F (60)",
+        "7HP14F (4)"
       ]
     },
     {
@@ -121,30 +265,166 @@
       "values": [
         "(24-26 SEER2) Minisplits (1)",
         "Multizone Indoors Eight-way Compact Cassettes (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "D5CUHAH18AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "Crossover heat pump (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
       ]
     },
     {
       "brand": "airquest",
       "model": "DLCSRBH18AAK",
       "values": [
-        "DLC (102)",
-        "Dl (1)"
+        "DLC (15)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
       "brand": "airquest",
       "model": "DLCSRBH24AAK",
       "values": [
-        "DLC (109)",
-        "Dl (1)"
+        "DLC (12)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
-      "brand": "airtemp",
-      "model": "DXH09PSK3IH",
+      "brand": "airquest",
+      "model": "DLCURAH18ABK",
       "values": [
-        "(24-26 SEER2) Minisplits (1)",
-        "Multizone Indoors Eight-way Compact Cassettes (1)"
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "DLCURAH24AAK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "DLCURAH24ABK",
+      "values": [
+        "Dl (3)",
+        "38M (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "DLCURAH30ABK",
+      "values": [
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "DLCURAH36ABK",
+      "values": [
+        "Dl (3)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "airquest",
+      "model": "DLCURAH60ABK",
+      "values": [
+        "Dl (1)",
+        "DLC (1)"
       ]
     },
     {
@@ -153,6 +433,54 @@
       "values": [
         "(24-26 SEER2) Minisplits (1)",
         "Multizone Indoors Eight-way Compact Cassettes (1)"
+      ]
+    },
+    {
+      "brand": "allied",
+      "model": "4HP17L18P-A",
+      "values": [
+        "4HP17L (251)",
+        "4HP17 (5)"
+      ]
+    },
+    {
+      "brand": "allied",
+      "model": "4HP17L24P-A",
+      "values": [
+        "4HP17L (254)",
+        "4HP17 (3)"
+      ]
+    },
+    {
+      "brand": "allied",
+      "model": "4HP17L30P-A",
+      "values": [
+        "4HP17L (245)",
+        "4HP17 (4)"
+      ]
+    },
+    {
+      "brand": "allied",
+      "model": "4HP17L36P-A",
+      "values": [
+        "4HP17L (293)",
+        "4HP17 (4)"
+      ]
+    },
+    {
+      "brand": "allied",
+      "model": "7HP14F36P-A",
+      "values": [
+        "7HP14F Seies (30)",
+        "7HP14F (4)"
+      ]
+    },
+    {
+      "brand": "alsetria",
+      "model": "M4OG-36HFN1-M",
+      "values": [
+        "M4O (2)",
+        "M40 (1)"
       ]
     },
     {
@@ -160,31 +488,14 @@
       "model": "M5OG-48HFN1-M",
       "values": [
         "M50 (1)",
-        "M5O (1)",
-        "MSEP seris (1)"
-      ]
-    },
-    {
-      "brand": "alsetria",
-      "model": "MOE30U-48HFN1-M-[X](GA)",
-      "values": [
-        "MCD (1)",
-        "MOE (1)"
-      ]
-    },
-    {
-      "brand": "alsetria",
-      "model": "MOE30U-55HFN1-M",
-      "values": [
-        "MOE (1)",
-        "MVC (1)"
+        "M5O (1)"
       ]
     },
     {
       "brand": "american-standard",
       "model": "4A6V0X24A1",
       "values": [
-        "Platinum 20 (30)",
+        "Platinum 20 (50)",
         "XV20I (5)"
       ]
     },
@@ -192,64 +503,369 @@
       "brand": "american-standard",
       "model": "4A6V0X36A1",
       "values": [
-        "Platinum 20 (106)",
-        "XV20I (21)"
+        "Platinum 20 (189)",
+        "XV20I (23)"
       ]
     },
     {
       "brand": "american-standard",
       "model": "4A6V0X48A1",
       "values": [
-        "Platinum 20 (38)",
-        "XV20I (9)"
+        "Platinum 20 (106)",
+        "XV20I (12)"
+      ]
+    },
+    {
+      "brand": "american-standard",
+      "model": "4A6V0X60A1",
+      "values": [
+        "Platinum 20 (82)",
+        "XV20I (4)"
       ]
     },
     {
       "brand": "american-standard",
       "model": "4A6V8X24A1",
       "values": [
-        "XV18I (34)",
-        "Platinum 18 (1)"
+        "Platinum 18 (35)",
+        "XV18I (20)"
       ]
     },
     {
       "brand": "american-standard",
       "model": "4A6V8X36A1",
       "values": [
-        "Platinum 18 (51)",
-        "XV18I (50)"
+        "XV18I (69)",
+        "Platinum 18 (61)"
       ]
     },
     {
       "brand": "american-standard",
       "model": "4A6V8X48A1",
       "values": [
-        "XV18I (127)",
+        "Platinum 18 (107)",
+        "XV18I (99)",
         "Platinum XV (2)"
+      ]
+    },
+    {
+      "brand": "american-standard",
+      "model": "4A6V8X60A1",
+      "values": [
+        "Platinum 18 (43)",
+        "XV18I (43)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "D5CUHAH18AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "Crossover heat pump (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
       ]
     },
     {
       "brand": "arcoaire",
       "model": "DLCSRBH18AAK",
       "values": [
-        "DLC (102)",
-        "Dl (1)"
+        "DLC (15)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
       "brand": "arcoaire",
       "model": "DLCSRBH24AAK",
       "values": [
-        "DLC (109)",
-        "Dl (1)"
+        "DLC (12)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
       "brand": "arcoaire",
-      "model": "HVH837GKA2+TSTAT",
+      "model": "DLCURAH18ABK",
       "values": [
-        "Deluxe 19 VS HP 2-STAGE (131)",
-        "Duracomfort Deluxe 18 VS HP 2-STAGE (65)"
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "DLCURAH24AAK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "DLCURAH24ABK",
+      "values": [
+        "Dl (3)",
+        "38M (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "DLCURAH30ABK",
+      "values": [
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "DLCURAH36ABK",
+      "values": [
+        "Dl (3)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "arcoaire",
+      "model": "DLCURAH60ABK",
+      "values": [
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "4SHP17LE118P-A",
+      "values": [
+        "4SHP17LE (199)",
+        "4SHP17LE1 (121)",
+        "4HSP17LE (7)",
+        "4SHP17 (4)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "4SHP17LE124P-A",
+      "values": [
+        "4SHP17LE (196)",
+        "4SHP17LE1 (114)",
+        "4HSP17LE (6)",
+        "4SHP17 (1)",
+        "4SHP17L (1)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "4SHP17LE130P-A",
+      "values": [
+        "4SHP17LE (195)",
+        "4SHP17LE1 (127)",
+        "4HSP17LE (7)",
+        "4SHP17 (3)",
+        "4SHP17L (1)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "4SHP17LE136P-A",
+      "values": [
+        "4SHP17LE1 (228)",
+        "4SHP17LE (215)",
+        "4HSP17LE (7)",
+        "4SHP17 (3)",
+        "4SHP17L (1)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "4SHP17LE142P-A",
+      "values": [
+        "4SHP17LE1 (46)",
+        "4SHP17LE (34)",
+        "4HSP17LE (3)",
+        "4SHP17 (1)",
+        "4SHP17L (1)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "4SHP17LE148P-A",
+      "values": [
+        "4SHP17LE (141)",
+        "4SHP17LE1 (84)",
+        "4HSP17LE (1)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "A7HP14F24P-A",
+      "values": [
+        "A7HP14 (108)",
+        "A7HP14F (16)",
+        "7HP14F (8)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "A7HP14F30P-A",
+      "values": [
+        "A7HP14F (28)",
+        "7HP14F (2)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "A7HP14F36P-A",
+      "values": [
+        "A7HP14F Seies (37)",
+        "A7HP14F (3)"
+      ]
+    },
+    {
+      "brand": "armstrong-air",
+      "model": "A7HP14F42P-A",
+      "values": [
+        "A7HP14F (60)",
+        "7HP14F (4)"
+      ]
+    },
+    {
+      "brand": "aux-brand",
+      "model": "AFEB12HP230V1CO-U",
+      "values": [
+        "Q (1)",
+        "Y (1)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BHP17L18P-A",
+      "values": [
+        "BHP17L (92)",
+        "BHP17 (50)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BHP17L24P-A",
+      "values": [
+        "BHP17L (94)",
+        "BHP17 (49)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BHP17L30P-A",
+      "values": [
+        "BHP17L (89)",
+        "BHP17 (50)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BHP17L36P-A",
+      "values": [
+        "BHP17 (74)",
+        "BHP17L (57)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BHP17L42P-A",
+      "values": [
+        "BHP17 (21)",
+        "BHP17L (16)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BHP17L48P-A",
+      "values": [
+        "BHP17L (55)",
+        "BHP17 (30)"
       ]
     },
     {
@@ -269,6 +885,94 @@
       ]
     },
     {
+      "brand": "blueridge",
+      "model": "BNG2A24SCN",
+      "values": [
+        "BN (2)",
+        "BNG (1)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BNG2A48SCN",
+      "values": [
+        "BN (1)",
+        "BNG (1)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BNG3A18UCN",
+      "values": [
+        "BN (2)",
+        "BNG (2)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BNG3A24UCN",
+      "values": [
+        "BN (2)",
+        "BNG (2)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BNG3A30UCN",
+      "values": [
+        "BN (3)",
+        "BNG (2)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BNG3A36UCN",
+      "values": [
+        "BN (2)",
+        "BNG (2)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BNG3A48UCN",
+      "values": [
+        "BNG (2)",
+        "BN (1)"
+      ]
+    },
+    {
+      "brand": "blueridge",
+      "model": "BNG3A60UCN",
+      "values": [
+        "BN (2)",
+        "BNG (2)"
+      ]
+    },
+    {
+      "brand": "boreal",
+      "model": "ENX36HPJ132OA",
+      "values": [
+        "E (5)",
+        "Enermaxx (1)"
+      ]
+    },
+    {
+      "brand": "boreal",
+      "model": "ENX60HPJ132OA",
+      "values": [
+        "E (5)",
+        "Enermaxx (1)"
+      ]
+    },
+    {
+      "brand": "bosch",
+      "model": "BMS500-AAS012-0CSXRC",
+      "values": [
+        "BMS (1)",
+        "BMS500 (1)"
+      ]
+    },
+    {
       "brand": "bosch",
       "model": "BMS500-AAS024-1CSXRC",
       "values": [
@@ -277,19 +981,43 @@
       ]
     },
     {
-      "brand": "bryant",
-      "model": "37MAHAQ06AA3",
+      "brand": "breeze33",
+      "model": "4HP17L18P-A",
       "values": [
-        "45M (2)",
-        "615 (1)"
+        "4HP17L (200)",
+        "4HP17 (4)"
       ]
     },
     {
-      "brand": "bryant",
-      "model": "37MAHAQ09AA3",
+      "brand": "breeze33",
+      "model": "4HP17L24P-A",
       "values": [
-        "45M (5)",
-        "615 (1)"
+        "4HP17L (198)",
+        "4HP17 (1)"
+      ]
+    },
+    {
+      "brand": "breeze33",
+      "model": "4HP17L30P-A",
+      "values": [
+        "4HP17L (196)",
+        "4HP17 (2)"
+      ]
+    },
+    {
+      "brand": "breeze33",
+      "model": "4HP17L36P-A",
+      "values": [
+        "4HP17L (247)",
+        "4HP17 (2)"
+      ]
+    },
+    {
+      "brand": "breeze33",
+      "model": "7HP14F36P-A",
+      "values": [
+        "7HP14F Seies (30)",
+        "7HP14F (3)"
       ]
     },
     {
@@ -297,6 +1025,7 @@
       "model": "37MAHAQ12AA3",
       "values": [
         "45M (5)",
+        "37M (1)",
         "615 (1)"
       ]
     },
@@ -305,6 +1034,7 @@
       "model": "37MAHAQ18AA3",
       "values": [
         "45M (7)",
+        "37M (1)",
         "615 (1)"
       ]
     },
@@ -313,6 +1043,7 @@
       "model": "37MAHAQ24AA3",
       "values": [
         "45M (4)",
+        "37M (1)",
         "615 (1)"
       ]
     },
@@ -320,15 +1051,16 @@
       "brand": "bryant",
       "model": "37MAHAQ33AA3",
       "values": [
+        "37M (1)",
         "45M (1)",
         "615 (1)"
       ]
     },
     {
       "brand": "bryant",
-      "model": "37MARAQ09AA3",
+      "model": "37MARAQ12AA1",
       "values": [
-        "45M (4)",
+        "37M (1)",
         "615 (1)"
       ]
     },
@@ -336,7 +1068,8 @@
       "brand": "bryant",
       "model": "37MARAQ12AA3",
       "values": [
-        "45M (5)",
+        "45M (4)",
+        "37M (1)",
         "615 (1)"
       ]
     },
@@ -345,6 +1078,7 @@
       "model": "37MARAQ18AA3",
       "values": [
         "45M (7)",
+        "37M (1)",
         "615 (1)"
       ]
     },
@@ -353,6 +1087,7 @@
       "model": "37MARAQ24AA3",
       "values": [
         "45M (4)",
+        "37M (1)",
         "615 (1)"
       ]
     },
@@ -360,15 +1095,104 @@
       "brand": "bryant",
       "model": "37MARAQ30AA3",
       "values": [
+        "37M (1)",
         "45M (1)",
         "615 (1)"
       ]
     },
     {
       "brand": "bryant",
+      "model": "37MPRAQ12AA3",
+      "values": [
+        "37M (1)",
+        "615 (1)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MPRAQ18AA3",
+      "values": [
+        "37M (1)",
+        "615 (1)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MUHAQ18AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MUHAQ24AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MUHAQ30AA3",
+      "values": [
+        "37M (5)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MUHAQ36AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MUHAQ48AA3",
+      "values": [
+        "37M (2)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MUHAQ60AA3",
+      "values": [
+        "37M (3)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MURAQ24AA3",
+      "values": [
+        "37M (3)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MURAQ36AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "37MURAQ48AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "bryant",
       "model": "38MARBQ18AA3",
       "values": [
-        "38MAR (118)",
+        "38MAR (8)",
         "38M (1)"
       ]
     },
@@ -376,24 +1200,120 @@
       "brand": "bryant",
       "model": "38MARBQ24AA3",
       "values": [
-        "38MAR (117)",
+        "38MAR (6)",
         "38M (1)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "38MGRBQ36DA3",
+      "values": [
+        "38M (2)",
+        "38MG (1)"
       ]
     },
     {
       "brand": "bryant",
       "model": "38MGRBQ48EA3",
       "values": [
-        "38MG (2)",
-        "38M (1)"
+        "38M (1)",
+        "38MG (1)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "38MPRBQ12AA3",
+      "values": [
+        "38M (1)",
+        "38MP (1)"
       ]
     },
     {
       "brand": "bryant",
       "model": "38MURAQ36AB3",
       "values": [
-        "38M (2)",
+        "38M (3)",
         "38MU (1)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "DLCSRBH18AAK",
+      "values": [
+        "DLC (6)",
+        "DLCS (1)"
+      ]
+    },
+    {
+      "brand": "bryant",
+      "model": "DLCSRBH24AAK",
+      "values": [
+        "DLC (5)",
+        "DLCS (1)"
+      ]
+    },
+    {
+      "brand": "canair",
+      "model": "4C22SCH24H21",
+      "values": [
+        "4C (1)",
+        "4C22 (1)"
+      ]
+    },
+    {
+      "brand": "canair",
+      "model": "4C25SCH12H21",
+      "values": [
+        "4C (7)",
+        "4C22 (1)"
+      ]
+    },
+    {
+      "brand": "canair",
+      "model": "4C25SCH18H21",
+      "values": [
+        "4C (10)",
+        "4C22 (1)"
+      ]
+    },
+    {
+      "brand": "canair",
+      "model": "4C25SCH24H21",
+      "values": [
+        "4C (7)",
+        "4C22 (1)"
+      ]
+    },
+    {
+      "brand": "canair",
+      "model": "4C28SCH12H21",
+      "values": [
+        "4C (7)",
+        "4C22 (1)"
+      ]
+    },
+    {
+      "brand": "canair",
+      "model": "4C28SCH18H21",
+      "values": [
+        "4C (9)",
+        "4C22 (1)"
+      ]
+    },
+    {
+      "brand": "canair",
+      "model": "4C28SCH24H21",
+      "values": [
+        "4C (6)",
+        "4C22 (1)"
+      ]
+    },
+    {
+      "brand": "canair",
+      "model": "4C28SCH30H21",
+      "values": [
+        "4C (1)",
+        "4C22 (1)"
       ]
     },
     {
@@ -432,8 +1352,8 @@
       "brand": "canair",
       "model": "4CDH2048C21",
       "values": [
-        "4CDH (2)",
-        "4CD (1)"
+        "4CD (1)",
+        "4CDH (1)"
       ]
     },
     {
@@ -448,7 +1368,7 @@
       "brand": "capella",
       "model": "CCB1-H24A-O",
       "values": [
-        "CCB (2)",
+        "CCB (6)",
         "CAHB (1)"
       ]
     },
@@ -456,7 +1376,7 @@
       "brand": "capella",
       "model": "CCB1-H30A-O",
       "values": [
-        "CCB (3)",
+        "CCB (4)",
         "CAHB (1)"
       ]
     },
@@ -464,7 +1384,7 @@
       "brand": "capella",
       "model": "CCB1-H36A-O",
       "values": [
-        "CCB (2)",
+        "CCB (5)",
         "CAHB (1)"
       ]
     },
@@ -472,32 +1392,23 @@
       "brand": "capella",
       "model": "CCB1-H48A-O",
       "values": [
-        "CAHB (1)",
-        "CCB (1)"
-      ]
-    },
-    {
-      "brand": "capella",
-      "model": "CCB1-H60A-O",
-      "values": [
         "CCB (2)",
         "CAHB (1)"
       ]
     },
     {
       "brand": "capella",
-      "model": "CPPB-H09A-O",
+      "model": "CCB1-H60A-O",
       "values": [
-        "CPPB (1)",
-        "SFCB (1)",
-        "SICB (1)"
+        "CCB (4)",
+        "CAHB (1)"
       ]
     },
     {
       "brand": "capella",
       "model": "CPPB-H12A-O",
       "values": [
-        "CPPB (1)",
+        "CPPB (3)",
         "SFCB (1)",
         "SICB (1)"
       ]
@@ -506,7 +1417,7 @@
       "brand": "capella",
       "model": "CPPB-H18A-O",
       "values": [
-        "CPPB (1)",
+        "CPPB (3)",
         "SFCB (1)",
         "SICB (1)"
       ]
@@ -515,16 +1426,179 @@
       "brand": "capella",
       "model": "CPPB-H24A-O",
       "values": [
-        "CPPB (1)",
+        "CPPB (3)",
         "SFCB (1)",
         "SICB (1)"
       ]
     },
     {
       "brand": "carrier",
+      "model": "37MAHAQ12AA3",
+      "values": [
+        "45M (6)",
+        "37M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MAHAQ18AA3",
+      "values": [
+        "45M (8)",
+        "37M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MAHAQ24AA3",
+      "values": [
+        "45M (5)",
+        "37M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MAHAQ33AA3",
+      "values": [
+        "45M (2)",
+        "37M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MARAQ12AA1",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MARAQ12AA3",
+      "values": [
+        "45M (5)",
+        "37M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MARAQ18AA3",
+      "values": [
+        "45M (8)",
+        "37M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MARAQ24AA3",
+      "values": [
+        "45M (5)",
+        "37M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MARAQ30AA3",
+      "values": [
+        "45M (2)",
+        "37M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MPRAQ12AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MPRAQ18AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MUHAQ18AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MUHAQ24AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MUHAQ30AA3",
+      "values": [
+        "37M (5)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MUHAQ36AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MUHAQ48AA3",
+      "values": [
+        "37M (2)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MUHAQ60AA3",
+      "values": [
+        "37M (3)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MURAQ24AA3",
+      "values": [
+        "37M (3)",
+        "45M (1)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MURAQ36AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "37MURAQ48AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
       "model": "38MARBQ18AA3",
       "values": [
-        "38MAR (118)",
+        "38MAR (8)",
         "38M (1)"
       ]
     },
@@ -532,24 +1606,56 @@
       "brand": "carrier",
       "model": "38MARBQ24AA3",
       "values": [
-        "38MAR (117)",
+        "38MAR (6)",
         "38M (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "38MGRBQ36DA3",
+      "values": [
+        "38M (2)",
+        "38MG (1)"
       ]
     },
     {
       "brand": "carrier",
       "model": "38MGRBQ48EA3",
       "values": [
-        "38MG (2)",
-        "38M (1)"
+        "38M (1)",
+        "38MG (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "38MPRBQ12AA3",
+      "values": [
+        "38M (1)",
+        "38MP (1)"
       ]
     },
     {
       "brand": "carrier",
       "model": "38MURAQ36AB3",
       "values": [
-        "38M (1152)",
+        "38M (3)",
         "38MU (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "DLCSRBH18AAK",
+      "values": [
+        "DLC (6)",
+        "DLCS (1)"
+      ]
+    },
+    {
+      "brand": "carrier",
+      "model": "DLCSRBH24AAK",
+      "values": [
+        "DLC (5)",
+        "DLCS (1)"
       ]
     },
     {
@@ -566,6 +1672,22 @@
       "values": [
         "A (2)",
         "MCD (1)"
+      ]
+    },
+    {
+      "brand": "century",
+      "model": "HRG1524S1R-A",
+      "values": [
+        "HRG15 (75)",
+        "HRG17 (1)"
+      ]
+    },
+    {
+      "brand": "classic",
+      "model": "GRH32IC36AS",
+      "values": [
+        "All Match (1)",
+        "ZENO (1)"
       ]
     },
     {
@@ -586,25 +1708,9 @@
     },
     {
       "brand": "comfort-aire",
-      "model": "A-VHP06SA-1",
-      "values": [
-        "A-VHP (2)",
-        "A (1)"
-      ]
-    },
-    {
-      "brand": "comfort-aire",
-      "model": "A-VHP09SA-1",
-      "values": [
-        "A (4)",
-        "A-VHP (2)"
-      ]
-    },
-    {
-      "brand": "comfort-aire",
       "model": "A-VHP12SA-1",
       "values": [
-        "A (4)",
+        "A (8)",
         "A-VHP (2)"
       ]
     },
@@ -612,7 +1718,7 @@
       "brand": "comfort-aire",
       "model": "A-VHP18SA-1",
       "values": [
-        "A (5)",
+        "A (10)",
         "A-VHP (4)"
       ]
     },
@@ -620,8 +1726,8 @@
       "brand": "comfort-aire",
       "model": "A-VHP24SA-1",
       "values": [
-        "A-VHP (4)",
-        "A (3)"
+        "A (6)",
+        "A-VHP (4)"
       ]
     },
     {
@@ -665,11 +1771,103 @@
       ]
     },
     {
+      "brand": "comfort-aire",
+      "model": "HRG1524S1R-A",
+      "values": [
+        "HRG15 (78)",
+        "HRG17 (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "D5CUHAH18AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "Crossover heat pump (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
+      ]
+    },
+    {
       "brand": "comfortmaker",
       "model": "DLCSRBH18AAK",
       "values": [
-        "DLC (14)",
-        "Dl (1)"
+        "DLC (15)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
@@ -677,15 +1875,67 @@
       "model": "DLCSRBH24AAK",
       "values": [
         "DLC (12)",
-        "Dl (1)"
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
-      "brand": "comfortstar",
-      "model": "CHF09CD(O)",
+      "brand": "comfortmaker",
+      "model": "DLCURAH18ABK",
       "values": [
-        "C (4)",
-        "T1W (1)"
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "DLCURAH24AAK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "DLCURAH24ABK",
+      "values": [
+        "Dl (3)",
+        "38M (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "DLCURAH30ABK",
+      "values": [
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "DLCURAH36ABK",
+      "values": [
+        "Dl (3)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "comfortmaker",
+      "model": "DLCURAH60ABK",
+      "values": [
+        "Dl (1)",
+        "DLC (1)"
       ]
     },
     {
@@ -714,9 +1964,17 @@
     },
     {
       "brand": "comfortstar",
+      "model": "CMZ-48-4Z",
+      "values": [
+        "CM (2)",
+        "C (1)"
+      ]
+    },
+    {
+      "brand": "comfortstar",
       "model": "CMZ-54-5Z",
       "values": [
-        "C (2)",
+        "C (1)",
         "CM (1)"
       ]
     },
@@ -749,6 +2007,54 @@
     },
     {
       "brand": "comfortstar",
+      "model": "CPH3-18CD(O)",
+      "values": [
+        "CPH (2)",
+        "CPR (1)"
+      ]
+    },
+    {
+      "brand": "comfortstar",
+      "model": "CPH3-24CD(O)",
+      "values": [
+        "CPH (2)",
+        "CPR (1)"
+      ]
+    },
+    {
+      "brand": "comfortstar",
+      "model": "CPH3-30CD(O)",
+      "values": [
+        "CPH (2)",
+        "CPR (1)"
+      ]
+    },
+    {
+      "brand": "comfortstar",
+      "model": "CPH3-36CD(O)",
+      "values": [
+        "CPH (1)",
+        "CPR (1)"
+      ]
+    },
+    {
+      "brand": "comfortstar",
+      "model": "CPH3-48CD(O)",
+      "values": [
+        "CPH (1)",
+        "CPR (1)"
+      ]
+    },
+    {
+      "brand": "comfortstar",
+      "model": "CPH3-60CD(O)",
+      "values": [
+        "CPH (1)",
+        "CPR (1)"
+      ]
+    },
+    {
+      "brand": "comfortstar",
       "model": "CPH36CD(O)",
       "values": [
         "ACP (1)",
@@ -760,24 +2066,32 @@
       "brand": "comfortstar",
       "model": "CPR24CD(O)",
       "values": [
-        "AHU (2)",
         "ACP (1)",
+        "AHU (1)",
         "UACP (1)"
       ]
     },
     {
       "brand": "comfortstar",
-      "model": "CZP09CD(O)",
+      "model": "CPR3-24CD(O)",
       "values": [
-        "C (4)",
-        "T1W (1)"
+        "CPH (1)",
+        "CPR (1)"
+      ]
+    },
+    {
+      "brand": "comfortstar",
+      "model": "CPR3-36CD(O)",
+      "values": [
+        "CPH (1)",
+        "CPR (1)"
       ]
     },
     {
       "brand": "comfortstar",
       "model": "CZP12CD(O)",
       "values": [
-        "C (4)",
+        "C (3)",
         "T1W (1)"
       ]
     },
@@ -785,8 +2099,88 @@
       "brand": "comfortstar",
       "model": "CZP18CD(O)",
       "values": [
-        "C (5)",
+        "C (4)",
         "T1W (1)"
+      ]
+    },
+    {
+      "brand": "concord",
+      "model": "4HP17L18P-A",
+      "values": [
+        "4HP17L (251)",
+        "4HP17 (5)"
+      ]
+    },
+    {
+      "brand": "concord",
+      "model": "4HP17L24P-A",
+      "values": [
+        "4HP17L (254)",
+        "4HP17 (3)"
+      ]
+    },
+    {
+      "brand": "concord",
+      "model": "4HP17L30P-A",
+      "values": [
+        "4HP17L (245)",
+        "4HP17 (4)"
+      ]
+    },
+    {
+      "brand": "concord",
+      "model": "4HP17L36P-A",
+      "values": [
+        "4HP17L (293)",
+        "4HP17 (4)"
+      ]
+    },
+    {
+      "brand": "concord",
+      "model": "4HP17L42P-A",
+      "values": [
+        "4HP17L (66)",
+        "4HP17 (1)"
+      ]
+    },
+    {
+      "brand": "concord",
+      "model": "7HP14F36P-A",
+      "values": [
+        "7HP14F Seies (30)",
+        "7HP14F (4)"
+      ]
+    },
+    {
+      "brand": "conforto",
+      "model": "MHSD118DACFC",
+      "values": [
+        "MHAH (1)",
+        "MHS (1)"
+      ]
+    },
+    {
+      "brand": "conforto",
+      "model": "MHSD124DACFC",
+      "values": [
+        "MHAH (1)",
+        "MHS (1)"
+      ]
+    },
+    {
+      "brand": "conforto",
+      "model": "MHSD130DACFC",
+      "values": [
+        "MHAH (1)",
+        "MHS (1)"
+      ]
+    },
+    {
+      "brand": "conforto",
+      "model": "MHSD136DACFC",
+      "values": [
+        "MHS (2)",
+        "MHAH (1)"
       ]
     },
     {
@@ -794,7 +2188,7 @@
       "model": "WSEHV2436RA1-C",
       "values": [
         "Hyper Heat (10)",
-        "WSE (4)"
+        "WSE (2)"
       ]
     },
     {
@@ -857,8 +2251,8 @@
       "brand": "custom-comfort",
       "model": "CCOXHB24V48HP",
       "values": [
-        "CCOX (2)",
-        "CCO (1)"
+        "CCO (1)",
+        "CCOX (1)"
       ]
     },
     {
@@ -919,98 +2313,222 @@
     },
     {
       "brand": "day-night",
-      "model": "C5H0V24KAAA",
+      "model": "D5CUHAH18AAK",
       "values": [
-        "SoftSound 20 VS Heat Pump (227)",
-        "ConstantComfort 20 VS HP (86)"
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
       ]
     },
     {
       "brand": "day-night",
-      "model": "C5H0V36KAAA",
+      "model": "D5CUHAH24AAK",
       "values": [
-        "ConstantComfort 20 VS HP (269)",
-        "SoftSound 20 VS Heat Pump (5)"
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
       ]
     },
     {
       "brand": "day-night",
-      "model": "C5H0V48KAAA",
+      "model": "D5CUHAH30AAK",
       "values": [
-        "ConstantComfort 20 VS HP (336)",
-        "SoftSound 20 VS Heat Pump (18)"
+        "D5C (4)",
+        "D5F (2)"
       ]
     },
     {
       "brand": "day-night",
-      "model": "C5H0V60KAAA",
+      "model": "D5CUHAH36AAK",
       "values": [
-        "ConstantComfort 20 VS HP (140)",
-        "SoftSound 20 VS Heat Pump (32)"
+        "D5C (3)",
+        "D5F (2)"
       ]
     },
     {
       "brand": "day-night",
-      "model": "C5H3V36KAAA",
+      "model": "D5CUHAH48AAK",
       "values": [
-        "ConstantComfort 23 VS HP (514)",
-        "SoftSound 23 VS Heat Pump (37)"
+        "D5F (2)",
+        "D5C (1)"
       ]
     },
     {
       "brand": "day-night",
-      "model": "C5H3V48KAAA",
+      "model": "D5CUHAH60AAK",
       "values": [
-        "SoftSound 23 VS Heat Pump (173)",
-        "ConstantComfort 23 VS HP (119)"
+        "D5C (2)",
+        "D5F (2)"
       ]
     },
     {
       "brand": "day-night",
-      "model": "C5H3V60KAAA",
+      "model": "D5CURAH24AAK",
       "values": [
-        "ConstantComfort 23 VS HP (48)",
-        "SoftSound 23 VS Heat Pump (1)"
+        "D5C (3)",
+        "Crossover heat pump (1)",
+        "D5F (1)"
       ]
     },
     {
       "brand": "day-night",
-      "model": "CVH837GKA2+TSTAT",
+      "model": "D5CURAH36AAK",
       "values": [
-        "Softsound Deluxe 18 VS HP 2-STAGE (85)",
-        "Constantcomfort Deluxe 18 VS HP 2-STAGE (63)"
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "day-night",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "day-night",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
       ]
     },
     {
       "brand": "day-night",
       "model": "DLCSRBH18AAK",
       "values": [
-        "DLC (102)",
-        "Dl (1)"
+        "DLC (15)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
       "brand": "day-night",
       "model": "DLCSRBH24AAK",
       "values": [
-        "DLC (109)",
-        "Dl (1)"
+        "DLC (12)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
-      "brand": "direct-air",
-      "model": "DIRM4-09DA25-1Z",
+      "brand": "day-night",
+      "model": "DLCURAH18ABK",
       "values": [
-        "DIRM4 (3)",
-        "DIR (1)"
+        "Dl (2)",
+        "DLC (1)"
       ]
     },
     {
-      "brand": "direct-air",
-      "model": "DIRM4-09HXPRO28-1Z",
+      "brand": "day-night",
+      "model": "DLCURAH24AAK",
       "values": [
-        "DIRM4 (3)",
-        "DIR (1)"
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "day-night",
+      "model": "DLCURAH24ABK",
+      "values": [
+        "Dl (3)",
+        "38M (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "day-night",
+      "model": "DLCURAH30ABK",
+      "values": [
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "day-night",
+      "model": "DLCURAH36ABK",
+      "values": [
+        "Dl (3)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "day-night",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "day-night",
+      "model": "DLCURAH60ABK",
+      "values": [
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "della",
+      "model": "048-TCQ-MODU-1D2",
+      "values": [
+        "TC (1)",
+        "TCQ (1)"
+      ]
+    },
+    {
+      "brand": "della",
+      "model": "048-TCQ-MODU-1D3",
+      "values": [
+        "TC (1)",
+        "TCQ (1)"
+      ]
+    },
+    {
+      "brand": "della",
+      "model": "048-TCQ-MODU-1D4",
+      "values": [
+        "TC (1)",
+        "TCQ (1)"
+      ]
+    },
+    {
+      "brand": "della",
+      "model": "048-TCQ-MODU-1D5",
+      "values": [
+        "TC (1)",
+        "TCQ (1)"
+      ]
+    },
+    {
+      "brand": "della",
+      "model": "048-TP-12K2V-24S-OUT",
+      "values": [
+        "TP (2)",
+        "CC (1)"
+      ]
+    },
+    {
+      "brand": "della",
+      "model": "048-TP-18K2V-23S-OUT",
+      "values": [
+        "TP (2)",
+        "CC (1)",
+        "DC (1)",
+        "FC (1)"
+      ]
+    },
+    {
+      "brand": "della",
+      "model": "048-TP-23K2V-23S-OUT",
+      "values": [
+        "TP (2)",
+        "CC (1)",
+        "DC (1)",
+        "FC (1)"
       ]
     },
     {
@@ -1027,6 +2545,14 @@
       "values": [
         "DIR (2)",
         "DIRM4 (2)"
+      ]
+    },
+    {
+      "brand": "direct-air",
+      "model": "DIRM4-18CS19-OU",
+      "values": [
+        "DIRM (2)",
+        "DIR (1)"
       ]
     },
     {
@@ -1049,7 +2575,7 @@
       "brand": "direct-air",
       "model": "DIRM4-18MAGICPRO20-OU",
       "values": [
-        "DIRM (2)",
+        "DIRM (4)",
         "DIR (1)"
       ]
     },
@@ -1057,7 +2583,7 @@
       "brand": "direct-air",
       "model": "DIRM4-24CS19-OU",
       "values": [
-        "DIRM (2)",
+        "DIRM (4)",
         "DIR (1)"
       ]
     },
@@ -1081,7 +2607,7 @@
       "brand": "direct-air",
       "model": "DIRM4-24MAGICPRO20-OU",
       "values": [
-        "DIRM (2)",
+        "DIRM (4)",
         "DIR (1)"
       ]
     },
@@ -1089,8 +2615,16 @@
       "brand": "direct-air",
       "model": "DIRM4-30MAGICPRO20-OU",
       "values": [
-        "DIR (3)",
+        "DIRM (4)",
         "DIRM4 (3)",
+        "DIR (1)"
+      ]
+    },
+    {
+      "brand": "direct-air",
+      "model": "DIRM4-36CS19-OU",
+      "values": [
+        "DIR (1)",
         "DIRM (1)"
       ]
     },
@@ -1106,17 +2640,17 @@
       "brand": "direct-air",
       "model": "DIRM4-36MAGICPRO20-OU",
       "values": [
-        "DIR (2)",
+        "DIRM (5)",
         "DIRM4 (2)",
-        "DIRM (1)"
+        "DIR (1)"
       ]
     },
     {
       "brand": "direct-air",
       "model": "DIRM4-48CS19-OU",
       "values": [
-        "DIR (2)",
-        "DIRM (1)"
+        "DIRM (3)",
+        "DIR (1)"
       ]
     },
     {
@@ -1139,7 +2673,15 @@
       "brand": "direct-air",
       "model": "DIRM4-48MAGICPRO20-OU",
       "values": [
-        "DIR (2)",
+        "DIRM (3)",
+        "DIR (1)"
+      ]
+    },
+    {
+      "brand": "direct-air",
+      "model": "DIRM4-60CS19-OU",
+      "values": [
+        "DIR (1)",
         "DIRM (1)"
       ]
     },
@@ -1147,8 +2689,56 @@
       "brand": "direct-air",
       "model": "DIRM4-60MAGICPRO20-OU",
       "values": [
-        "DIRM (2)",
+        "DIRM (5)",
         "DIR (1)"
+      ]
+    },
+    {
+      "brand": "ducane",
+      "model": "4HP17L18P-A",
+      "values": [
+        "4HP17L (251)",
+        "4HP17 (5)"
+      ]
+    },
+    {
+      "brand": "ducane",
+      "model": "4HP17L24P-A",
+      "values": [
+        "4HP17L (254)",
+        "4HP17 (3)"
+      ]
+    },
+    {
+      "brand": "ducane",
+      "model": "4HP17L30P-A",
+      "values": [
+        "4HP17L (245)",
+        "4HP17 (4)"
+      ]
+    },
+    {
+      "brand": "ducane",
+      "model": "4HP17L36P-A",
+      "values": [
+        "4HP17L (293)",
+        "4HP17 (4)"
+      ]
+    },
+    {
+      "brand": "ducane",
+      "model": "4HP17L42P-A",
+      "values": [
+        "4HP17L (66)",
+        "4HP17 (1)"
+      ]
+    },
+    {
+      "brand": "ducane",
+      "model": "7HP14F36P-A",
+      "values": [
+        "7HP14F Seies (30)",
+        "7HP14F (4)"
       ]
     },
     {
@@ -1184,6 +2774,22 @@
       ]
     },
     {
+      "brand": "durastar",
+      "model": "DRHP14B42AJ2AN",
+      "values": [
+        "DRAC (4)",
+        "DRHP (3)"
+      ]
+    },
+    {
+      "brand": "durastar",
+      "model": "DRHP14B60AJ2AN",
+      "values": [
+        "DRAC (8)",
+        "DRHP (7)"
+      ]
+    },
+    {
       "brand": "eco-ac",
       "model": "EMH-5O48BBH",
       "values": [
@@ -1193,43 +2799,108 @@
     },
     {
       "brand": "eco-air",
+      "model": "ECUO-18E",
+      "values": [
+        "ECU (2)",
+        "ECUO (2)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "ECUO-18H",
+      "values": [
+        "ECU (3)",
+        "ECUO (3)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "ECUO-24E",
+      "values": [
+        "ECC (16)",
+        "ECUO (5)",
+        "ECU (4)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "ECUO-24H",
+      "values": [
+        "ECC (16)",
+        "ECUO (6)",
+        "ECU (3)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "ECUO-30H",
+      "values": [
+        "ECUO (5)",
+        "ECU (4)",
+        "ECC (1)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "ECUO-36E",
+      "values": [
+        "ECU (2)",
+        "ECUO (1)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "ECUO-36H",
+      "values": [
+        "ECUO (10)",
+        "ECU (3)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "ECUO-48E",
+      "values": [
+        "ECU (2)",
+        "ECUO (2)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "ECUO-48H",
+      "values": [
+        "ECU (3)",
+        "ECUO (3)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "ECUO-60E",
+      "values": [
+        "ECU (1)",
+        "ECUO (1)"
+      ]
+    },
+    {
+      "brand": "eco-air",
+      "model": "M4OG-36HFN1-M",
+      "values": [
+        "M4O (2)",
+        "M40 (1)"
+      ]
+    },
+    {
+      "brand": "eco-air",
       "model": "M5OG-48HFN1-M",
       "values": [
         "M50 (1)",
-        "M5O (1)",
-        "MSEP seris (1)"
-      ]
-    },
-    {
-      "brand": "eco-air",
-      "model": "MOE30U-48HFN1-M-[X1]",
-      "values": [
-        "MOE (1)",
-        "MVC (1)"
-      ]
-    },
-    {
-      "brand": "eco-air",
-      "model": "MOE30U-48HFN1-M-[X](GA)",
-      "values": [
-        "MCD (1)",
-        "MOE (1)"
-      ]
-    },
-    {
-      "brand": "eco-air",
-      "model": "MOE30U-55HFN1-M",
-      "values": [
-        "MOE (1)",
-        "MVC (1)"
+        "M5O (1)"
       ]
     },
     {
       "brand": "elios",
       "model": "DEA12HOS25230E8",
       "values": [
-        "DE (4)",
-        "DM (1)",
+        "DE (3)",
         "DUB (1)"
       ]
     },
@@ -1250,6 +2921,102 @@
       ]
     },
     {
+      "brand": "emi",
+      "model": "MHSD118DACFC",
+      "values": [
+        "MHAH (1)",
+        "MHS (1)"
+      ]
+    },
+    {
+      "brand": "emi",
+      "model": "MHSD124DACFC",
+      "values": [
+        "MHAH (1)",
+        "MHS (1)"
+      ]
+    },
+    {
+      "brand": "emi",
+      "model": "MHSD130DACFC",
+      "values": [
+        "MHAH (1)",
+        "MHS (1)"
+      ]
+    },
+    {
+      "brand": "emi",
+      "model": "MHSD136DACFC",
+      "values": [
+        "MHS (2)",
+        "MHAH (1)"
+      ]
+    },
+    {
+      "brand": "endura",
+      "model": "HBEFU-24R454B",
+      "values": [
+        "HB Endura Fusion (1)",
+        "HB Endura Fusion-Coil (1)"
+      ]
+    },
+    {
+      "brand": "endura",
+      "model": "HBEFU-36R454B",
+      "values": [
+        "HB Endura Fusion (1)",
+        "HB Endura Fusion-Coil (1)"
+      ]
+    },
+    {
+      "brand": "endura",
+      "model": "HBEFU-48R454B",
+      "values": [
+        "HB Endura Fusion (1)",
+        "HB Endura Fusion-Coil (1)"
+      ]
+    },
+    {
+      "brand": "endura",
+      "model": "HBEFU-60R454B",
+      "values": [
+        "HB Endura Fusion (1)",
+        "HB Endura Fusion-Coil (1)"
+      ]
+    },
+    {
+      "brand": "forestair",
+      "model": "FA-H24-VKCE/OD-454",
+      "values": [
+        "SIDE-DISCHARGE (1)",
+        "Split AHU (1)"
+      ]
+    },
+    {
+      "brand": "forestair",
+      "model": "FA-H36-VKCE/OD-454",
+      "values": [
+        "SIDE-DISCHARGE (1)",
+        "Split AHU (1)"
+      ]
+    },
+    {
+      "brand": "forestair",
+      "model": "FA-H48-VKCE/OD-454",
+      "values": [
+        "SIDE-DISCHARGE (1)",
+        "Split AHU (1)"
+      ]
+    },
+    {
+      "brand": "forestair",
+      "model": "FA-H60-VKCE/OD-454",
+      "values": [
+        "SIDE-DISCHARGE (1)",
+        "Split AHU (1)"
+      ]
+    },
+    {
       "brand": "franklin",
       "model": "MSH123F25MCAA",
       "values": [
@@ -1261,8 +3028,8 @@
       "brand": "franklin",
       "model": "MSH183F25MCAA",
       "values": [
-        "MST (2)",
-        "MSH (1)"
+        "MSH (2)",
+        "MST (2)"
       ]
     },
     {
@@ -1275,26 +3042,211 @@
     },
     {
       "brand": "friedrich",
+      "model": "FPHMR42A3D",
+      "values": [
+        "Floating Air Pro X Multi-Zone (2)",
+        "Floating Air Pro (1)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FRP15AY18AJ2N",
+      "values": [
+        "F (4)",
+        "F PLUS (2)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FRP15AY24AJ2N",
+      "values": [
+        "F (4)",
+        "F PLUS (2)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FRP15AY36AJ2N",
+      "values": [
+        "F (114)",
+        "F PLUS (24)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FRP15AY42AJ2N",
+      "values": [
+        "F (67)",
+        "F PLUS (62)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FRP15AY60AJ2N",
+      "values": [
+        "F (9)",
+        "F PLUS (8)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FRP18AZ24AJVC",
+      "values": [
+        "F (1)",
+        "K (1)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FRP18AZ36AJVC",
+      "values": [
+        "K (2)",
+        "F (1)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FWP14AY42AJ2N",
+      "values": [
+        "F (4)",
+        "Versus (4)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FWP14AY60AJ2N",
+      "values": [
+        "Versus (14)",
+        "F (3)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FWP15AZ18AJ2N",
+      "values": [
+        "F PLUS (40)",
+        "Versus (2)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FWP15AZ24AJ2N",
+      "values": [
+        "F PLUS (69)",
+        "Versus (2)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FWP15AZ30AJ2N",
+      "values": [
+        "F PLUS (85)",
+        "Versus (5)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FWP15AZ36AJ2N",
+      "values": [
+        "F PLUS (35)",
+        "Versus (3)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FWP15AZ42AJ2N",
+      "values": [
+        "F PLUS (9)",
+        "Versus (1)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FWP15AZ48AJ2N",
+      "values": [
+        "F PLUS (1)",
+        "Versus (1)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "FWP15AZ60AJ2N",
+      "values": [
+        "F PLUS (3)",
+        "Versus (1)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "RD17AZ24AJ3N",
+      "values": [
+        "F (16)",
+        "K (2)"
+      ]
+    },
+    {
+      "brand": "friedrich",
       "model": "RD17AZ36AJ3N",
       "values": [
-        "F - PLUS (43)",
-        "F (21)"
+        "F (25)",
+        "F - PLUS (15)"
+      ]
+    },
+    {
+      "brand": "friedrich",
+      "model": "RD17AZ48AJ3N",
+      "values": [
+        "F (20)",
+        "K (10)",
+        "F Plus (5)"
+      ]
+    },
+    {
+      "brand": "ge",
+      "model": "NS17H18SA4-A",
+      "values": [
+        "NS17H (235)",
+        "NS17 (22)"
+      ]
+    },
+    {
+      "brand": "ge",
+      "model": "NS17H24SA4-A",
+      "values": [
+        "NS17H (241)",
+        "NS17 (18)"
+      ]
+    },
+    {
+      "brand": "ge",
+      "model": "NS17H30SA4-A",
+      "values": [
+        "NS17H (234)",
+        "NS17 (20)"
+      ]
+    },
+    {
+      "brand": "ge",
+      "model": "NS17H36SA4-A",
+      "values": [
+        "NS17H (284)",
+        "NS17 (40)"
+      ]
+    },
+    {
+      "brand": "ge",
+      "model": "NS17H48SA4-A",
+      "values": [
+        "NS17H (126)",
+        "NS17 (13)"
       ]
     },
     {
       "brand": "ge",
       "model": "NS22H60MA4-A",
       "values": [
-        "NS22 (4)",
-        "NS22H (4)"
-      ]
-    },
-    {
-      "brand": "gibson",
-      "model": "DXH09PSK3IH",
-      "values": [
-        "(24-26 SEER2) Minisplits (1)",
-        "Multizone Indoors Eight-way Compact Cassettes (1)"
+        "NS22H (10)",
+        "NS22 (7)"
       ]
     },
     {
@@ -1330,15 +3282,75 @@
       ]
     },
     {
-      "brand": "gree",
-      "model": "ENV09HP230V1R32AO",
+      "brand": "grandaire",
+      "model": "D5CUHAH18AAK",
       "values": [
-        "360 air discharge cassette unit (1)",
-        "Clivia (1)",
-        "Console (1)",
-        "Ducted (1)",
-        "Floor ceiling (1)",
-        "One-way air discharge cassette unit (1)"
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "grandaire",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "grandaire",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "grandaire",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "grandaire",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "grandaire",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "grandaire",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "grandaire",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "grandaire",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
       ]
     },
     {
@@ -1351,9 +3363,17 @@
     },
     {
       "brand": "gree",
+      "model": "FXE36HP230V1R32AO",
+      "values": [
+        "Flexx Eco (1)",
+        "G (1)"
+      ]
+    },
+    {
+      "brand": "gree",
       "model": "FXU36HP230V1R32AO",
       "values": [
-        "E-Series (4)",
+        "E-Series (5)",
         "FLEXX (1)"
       ]
     },
@@ -1361,86 +3381,65 @@
       "brand": "gree",
       "model": "FXU60HP230V1R32AO",
       "values": [
-        "FLEXX (3)",
-        "E-Series (2)"
+        "E-Series (3)",
+        "FLEXX (1)"
       ]
     },
     {
       "brand": "gree",
-      "model": "GWH09ACD-D3DNA1A/O",
+      "model": "GS12HP230V1PUO",
+      "values": [
+        "All Match (3)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GS18HP230V1PUO",
+      "values": [
+        "All Match (3)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GS24HP230V1PUO",
+      "values": [
+        "All Match (3)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GS30HP230V1ASO",
+      "values": [
+        "All Match (3)",
+        "Charmo (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GS36HP230V1ASO",
+      "values": [
+        "All Match (4)",
+        "Charmo (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GS6M60HP230V1MO",
+      "values": [
+        "M-Series (2)",
+        "Free match (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWH12AGC-A3DNA1A/O",
       "values": [
         "Bora (1)",
-        "Lomo (1)"
-      ]
-    },
-    {
-      "brand": "gree",
-      "model": "GWH09AGC-D3DNA1B/O",
-      "values": [
-        "Pular (3)",
-        "Lomo (1)"
-      ]
-    },
-    {
-      "brand": "gree",
-      "model": "GWH09AGCXD-D3DNA1A/O",
-      "values": [
-        "Muse (3)",
         "Lomo (1)",
         "Pular (1)"
-      ]
-    },
-    {
-      "brand": "gree",
-      "model": "GWH09AGCXD-D6DNA4D/O",
-      "values": [
-        "Pular (2)",
-        "360 air discharge cassette unit (1)",
-        "Console (1)",
-        "Ducted (1)",
-        "Floor ceiling (1)",
-        "One-way air discharge cassette unit (1)"
-      ]
-    },
-    {
-      "brand": "gree",
-      "model": "GWH09AUCXD-A6DNA1C/O",
-      "values": [
-        "Clivia (1)",
-        "Pular (1)"
-      ]
-    },
-    {
-      "brand": "gree",
-      "model": "GWH09AUCXD-D6DNA1C/O",
-      "values": [
-        "360 air discharge cassette unit (1)",
-        "Clivia (1)",
-        "Console (1)",
-        "Ducted (1)",
-        "Floor ceiling (1)",
-        "One-way air discharge cassette unit (1)",
-        "Pular (1)"
-      ]
-    },
-    {
-      "brand": "gree",
-      "model": "GWH09AVDXE-D6DNA1A/O",
-      "values": [
-        "Airy (4)",
-        "360 air discharge cassette unit (1)",
-        "Ducted (1)"
-      ]
-    },
-    {
-      "brand": "gree",
-      "model": "GWH09AVDXE-D6DNA1B/O",
-      "values": [
-        "Ducted (2)",
-        "360 air discharge cassette unit (1)",
-        "Console (1)",
-        "Floor ceiling (1)",
-        "One-way air discharge cassette unit (1)"
       ]
     },
     {
@@ -1456,6 +3455,7 @@
       "brand": "gree",
       "model": "GWH12AGCXD-A3DNA1A/O",
       "values": [
+        "Bora (1)",
         "Lomo (1)",
         "Pular (1)"
       ]
@@ -1464,9 +3464,43 @@
       "brand": "gree",
       "model": "GWH12AGCXD-D3DNA1A/O",
       "values": [
-        "Pular (4)",
+        "Bora (1)",
         "Lomo (1)",
-        "Muse (1)"
+        "Muse (1)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWH12AGCXD-D6DNA4D/O",
+      "values": [
+        "All Match (5)",
+        "Clivia (2)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWH12ATCXB-A3DNA1C/O",
+      "values": [
+        "Charmo (1)",
+        "Cosmo (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWH12ATCXB-D3DNA1C/O",
+      "values": [
+        "Charmo (1)",
+        "Cosmo (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWH12ATCXB-D6DNA4B/O",
+      "values": [
+        "Charmo (2)",
+        "Cosmo (1)"
       ]
     },
     {
@@ -1497,7 +3531,8 @@
       "brand": "gree",
       "model": "GWH12AUCXD-D6DNA1B/O",
       "values": [
-        "Clivia (7)",
+        "Clivia (2)",
+        "All Match (1)",
         "Pular (1)"
       ]
     },
@@ -1517,9 +3552,10 @@
       "brand": "gree",
       "model": "GWH12AVDXE-D6DNA1B/O",
       "values": [
-        "Ducted (2)",
         "360 air discharge cassette unit (1)",
+        "Airy (1)",
         "Console (1)",
+        "Ducted (1)",
         "Floor ceiling (1)",
         "One-way air discharge cassette unit (1)"
       ]
@@ -1536,7 +3572,9 @@
       "brand": "gree",
       "model": "GWH12YD-D3DNA1A/O",
       "values": [
+        "Amber (1)",
         "Bora (1)",
+        "Fairy (1)",
         "Lomo (1)"
       ]
     },
@@ -1544,8 +3582,8 @@
       "brand": "gree",
       "model": "GWH18AGDXF-D3DNA1A/O",
       "values": [
-        "Pular (2)",
-        "All Match (1)"
+        "All Match (1)",
+        "Pular (1)"
       ]
     },
     {
@@ -1553,8 +3591,26 @@
       "model": "GWH18AGDXF-D6DNA4B/O",
       "values": [
         "All Match (3)",
-        "Pular (3)",
-        "Clivia (1)"
+        "Clivia (2)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWH18ATDXD-D6DNA1A/O",
+      "values": [
+        "Charmo (2)",
+        "Cosmo (1)",
+        "Shimo (1)",
+        "Zeno (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWH18ATDXD-D6DNA4F/O",
+      "values": [
+        "Charmo (2)",
+        "Shimo (1)"
       ]
     },
     {
@@ -1562,8 +3618,8 @@
       "model": "GWH18AUDXF-D6DNA1A/O",
       "values": [
         "All Match (4)",
-        "Clivia (4)",
-        "Pular (2)"
+        "Pular (2)",
+        "Clivia (1)"
       ]
     },
     {
@@ -1571,14 +3627,14 @@
       "model": "GWH18AVEXF-D6DNA1A/O",
       "values": [
         "All Match (6)",
-        "Airy (2)"
+        "Airy (1)"
       ]
     },
     {
       "brand": "gree",
       "model": "GWH18AVEXF-D6DNA1B/O",
       "values": [
-        "All Match (4)",
+        "All Match (6)",
         "Airy (1)"
       ]
     },
@@ -1586,16 +3642,19 @@
       "brand": "gree",
       "model": "GWH18YE-D3DNA1A/O",
       "values": [
+        "Amber (1)",
         "Bora (1)",
-        "Lomo (1)"
+        "Fairy (1)",
+        "Lomo (1)",
+        "Muse (1)"
       ]
     },
     {
       "brand": "gree",
       "model": "GWH24AGE-D3DNA1A/O",
       "values": [
-        "Pular (4)",
-        "Lomo (1)"
+        "Lomo (1)",
+        "Pular (1)"
       ]
     },
     {
@@ -1603,7 +3662,7 @@
       "model": "GWH24AGEXF-D6DNA4J/O",
       "values": [
         "All Match (3)",
-        "Clivia (1)",
+        "Clivia (2)",
         "Pular (1)"
       ]
     },
@@ -1611,8 +3670,26 @@
       "brand": "gree",
       "model": "GWH24AGEXH-D3DNA1A/O",
       "values": [
-        "Pular (4)",
-        "Lomo (1)"
+        "Lomo (1)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWH24ATEXF-D6DNA1F/O",
+      "values": [
+        "Charmo (2)",
+        "Cosmo (1)",
+        "Shimo (1)",
+        "Zeno (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWH24ATEXF-D6DNA4H/O",
+      "values": [
+        "Charmo (1)",
+        "Cosmo (1)"
       ]
     },
     {
@@ -1642,8 +3719,17 @@
     },
     {
       "brand": "gree",
+      "model": "GWH24QE-D3DNA1D/O",
+      "values": [
+        "Lomo (1)",
+        "Muse (1)"
+      ]
+    },
+    {
+      "brand": "gree",
       "model": "GWH24YE-D3DNA1A/O",
       "values": [
+        "Amber (1)",
         "Bora (1)",
         "Lomo (1)"
       ]
@@ -1663,34 +3749,40 @@
       "values": [
         "All Match (4)",
         "Charmo (1)",
+        "Cosmo (1)",
+        "Shimo (1)",
         "ZENO (1)"
+      ]
+    },
+    {
+      "brand": "gree",
+      "model": "GWHD(60)ND6MO",
+      "values": [
+        "M-Series (2)",
+        "Free match (1)"
       ]
     },
     {
       "brand": "gree",
       "model": "LIV36HP230V1R32AO",
       "values": [
-        "Charmo (3)",
-        "All Match (2)"
+        "All Match (2)",
+        "Charmo (1)"
       ]
     },
     {
       "brand": "gree",
-      "model": "VIR09HP230V1R32AO",
+      "model": "MUL60HP230V1R32AO",
       "values": [
-        "360 air discharge cassette unit (1)",
-        "Console (1)",
-        "Ducted (1)",
-        "Floor ceiling (1)",
-        "One-way air discharge cassette unit (1)",
-        "Pular (1)"
+        "M-Series (2)",
+        "Free match (1)"
       ]
     },
     {
       "brand": "gree",
       "model": "VIR12HP230V1R32AO",
       "values": [
-        "All Match (5)",
+        "All Match (6)",
         "Clivia (2)"
       ]
     },
@@ -1703,83 +3795,275 @@
       ]
     },
     {
+      "brand": "haxxair",
+      "model": "HVHDZ-24V2D",
+      "values": [
+        "Ultra (1)",
+        "Ultra-Coil (1)"
+      ]
+    },
+    {
+      "brand": "haxxair",
+      "model": "HVHDZ-36V2D",
+      "values": [
+        "Ultra (1)",
+        "Ultra-Coil (1)"
+      ]
+    },
+    {
+      "brand": "haxxair",
+      "model": "HVHDZ-48V2D",
+      "values": [
+        "Ultra (1)",
+        "Ultra-Coil (1)"
+      ]
+    },
+    {
+      "brand": "haxxair",
+      "model": "HVHDZ-60V2D",
+      "values": [
+        "Ultra (1)",
+        "Ultra-Coil (1)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "D5CUHAH18AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "Crossover heat pump (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "heil",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
+      ]
+    },
+    {
       "brand": "heil",
       "model": "DLCSRBH18AAK",
       "values": [
-        "DLC (102)",
-        "Dl (1)"
+        "DLC (15)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
       "brand": "heil",
       "model": "DLCSRBH24AAK",
       "values": [
-        "DLC (109)",
-        "Dl (1)"
+        "DLC (12)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
       "brand": "heil",
-      "model": "H5H0V24KAAA",
+      "model": "DLCURAH18ABK",
       "values": [
-        "Deluxe 20 VS Heat Pump (227)",
-        "Quietcomfort Deluxe 20 VS HP (86)"
+        "Dl (2)",
+        "DLC (1)"
       ]
     },
     {
       "brand": "heil",
-      "model": "H5H0V36KAAA",
+      "model": "DLCURAH24AAK",
       "values": [
-        "Quietcomfort Deluxe 20 VS HP (269)",
-        "Deluxe 20 VS Heat Pump (5)"
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
       ]
     },
     {
       "brand": "heil",
-      "model": "H5H0V48KAAA",
+      "model": "DLCURAH24ABK",
       "values": [
-        "Quietcomfort Deluxe 20 VS HP (336)",
-        "Deluxe 20 VS Heat Pump (18)"
+        "Dl (3)",
+        "38M (1)",
+        "DLC (1)"
       ]
     },
     {
       "brand": "heil",
-      "model": "H5H0V60KAAA",
+      "model": "DLCURAH30ABK",
       "values": [
-        "Quietcomfort Deluxe 20 VS HP (140)",
-        "Deluxe 20 VS Heat Pump (32)"
+        "Dl (2)",
+        "DLC (1)"
       ]
     },
     {
       "brand": "heil",
-      "model": "H5H3V36KAAA",
+      "model": "DLCURAH36ABK",
       "values": [
-        "Quietcomfort Deluxe 23 VS HP (514)",
-        "Deluxe 23 VS Heat Pump (37)"
+        "Dl (3)",
+        "DLC (1)"
       ]
     },
     {
       "brand": "heil",
-      "model": "H5H3V48KAAA",
+      "model": "DLCURAH48ABK",
       "values": [
-        "Deluxe 23 VS Heat Pump (173)",
-        "Quietcomfort Deluxe 23 VS HP (119)"
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
       ]
     },
     {
       "brand": "heil",
-      "model": "H5H3V60KAAA",
+      "model": "DLCURAH60ABK",
       "values": [
-        "Quietcomfort Deluxe 23 VS HP (48)",
-        "Deluxe 23 VS Heat Pump (1)"
+        "Dl (1)",
+        "DLC (1)"
       ]
     },
     {
-      "brand": "heil",
-      "model": "HVH837GKA2+TSTAT",
+      "brand": "hisense",
+      "model": "AOH-24U3T24P",
       "values": [
-        "Deluxe 19 VS HP 2-STAGE (131)",
-        "Quietcomfort Deluxe 18 VS HP 2-STAGE (65)"
+        "Hi-PRO HD (2)",
+        "Hi PRO HD-Coil (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AOH-36U3T24P",
+      "values": [
+        "Hi-PRO HD (2)",
+        "Hi PRO HD-Coil (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AOH-48U3T24P",
+      "values": [
+        "Hi-PRO HD (2)",
+        "Hi PRO HD-Coil (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AOH-60U3T24P",
+      "values": [
+        "Hi-PRO HD (2)",
+        "Hi PRO HD-Coil (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AUW-12U3TS1",
+      "values": [
+        "Hi UNI (4)",
+        "HiULTRA (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AUW-36U3TW1(JCH)",
+      "values": [
+        "Hi UNI (3)",
+        "Hi Uni-Coil (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AUW-48U3TH1(JCH)",
+      "values": [
+        "Hi UNI (2)",
+        "Hi Uni-Coil (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AUWR-2424P",
+      "values": [
+        "Hi-PRO HD (2)",
+        "Hi PRO HD-Coil (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AUWR-24U3SF2",
+      "values": [
+        "Hi Ultra HD (1)",
+        "USIM (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AUWR-3624P",
+      "values": [
+        "Hi-PRO HD (2)",
+        "Hi PRO HD-Coil (1)"
       ]
     },
     {
@@ -1787,7 +4071,16 @@
       "model": "AUWR-36U3SA2",
       "values": [
         "Hi Ultra HD (1)",
-        "Hi Ultra HD-Coil (1)"
+        "Hi Ultra HD-Coil (1)",
+        "USIM (1)"
+      ]
+    },
+    {
+      "brand": "hisense",
+      "model": "AUWR-4824P",
+      "values": [
+        "Hi-PRO HD (2)",
+        "Hi PRO HD-Coil (1)"
       ]
     },
     {
@@ -1799,23 +4092,43 @@
       ]
     },
     {
-      "brand": "innovair",
-      "model": "MOS09H2BH0A",
+      "brand": "hisense",
+      "model": "AUWR-6024P",
       "values": [
-        "MOS (2)",
-        "MDH (1)",
-        "MDL (1)",
-        "MHW (1)"
+        "Hi-PRO HD (2)",
+        "Hi PRO HD-Coil (1)"
       ]
     },
     {
-      "brand": "innovair",
-      "model": "MOS09H2BM0A",
+      "brand": "hitachi",
+      "model": "HVAHP036C23S",
       "values": [
-        "MOS (2)",
-        "MDH (1)",
-        "MDL (1)",
-        "MHW (1)"
+        "HMSV-A-CB (1)",
+        "HMSV-A-CB-O (1)"
+      ]
+    },
+    {
+      "brand": "hitachi",
+      "model": "HVAHP048C23S",
+      "values": [
+        "HMSV-A-CB (2)",
+        "HMSV-A-CB-O (1)"
+      ]
+    },
+    {
+      "brand": "hitachi",
+      "model": "HVAHP060C23S",
+      "values": [
+        "HMSV-A-CB (2)",
+        "HMSV-A-CB-O (1)"
+      ]
+    },
+    {
+      "brand": "hitachi",
+      "model": "PAS-36BUFASDQ1-LAC",
+      "values": [
+        "airCore700 (3)",
+        "airCore700 LAC (1)"
       ]
     },
     {
@@ -1825,7 +4138,8 @@
         "MOS (2)",
         "MDH (1)",
         "MDL (1)",
-        "MHW (1)"
+        "MHW (1)",
+        "MO (1)"
       ]
     },
     {
@@ -1834,15 +4148,15 @@
       "values": [
         "MOS (2)",
         "MDH (1)",
-        "MDL (1)",
-        "MHW (1)"
+        "MHW (1)",
+        "MO (1)"
       ]
     },
     {
       "brand": "innovair",
       "model": "MOS18H2BH0A",
       "values": [
-        "MOS (4)",
+        "MOS (5)",
         "MDH (1)",
         "MDL (1)",
         "MHW (1)"
@@ -1852,7 +4166,7 @@
       "brand": "innovair",
       "model": "MOS18H2BM0A",
       "values": [
-        "MOS (4)",
+        "MOS (5)",
         "MDH (1)",
         "MDL (1)",
         "MHW (1)"
@@ -1862,7 +4176,7 @@
       "brand": "innovair",
       "model": "MOS24H2BH0A",
       "values": [
-        "MOS (2)",
+        "MOS (3)",
         "MDH (1)",
         "MHW (1)"
       ]
@@ -1871,7 +4185,7 @@
       "brand": "innovair",
       "model": "MOS24H2BM0A",
       "values": [
-        "MOS (2)",
+        "MOS (3)",
         "MDH (1)",
         "MHW (1)"
       ]
@@ -1912,7 +4226,7 @@
       "brand": "innovair",
       "model": "SEV24H2R19",
       "values": [
-        "DEV (3)",
+        "DEV (1)",
         "SEV (1)",
         "SH (1)"
       ]
@@ -1921,7 +4235,7 @@
       "brand": "innovair",
       "model": "SHV18H2BA",
       "values": [
-        "SHV (2)",
+        "SHV (5)",
         "SAV (1)",
         "SOV (1)",
         "SWV (1)"
@@ -1939,7 +4253,7 @@
       "brand": "innovair",
       "model": "SHV24H2BA",
       "values": [
-        "SHV (2)",
+        "SHV (7)",
         "SAV (1)",
         "SOV (1)",
         "SWV (1)"
@@ -1957,7 +4271,7 @@
       "brand": "innovair",
       "model": "SHV30H2BA",
       "values": [
-        "SHV (3)",
+        "SHV (5)",
         "SAV (1)",
         "SOV (1)",
         "SWV (1)"
@@ -1975,9 +4289,9 @@
       "brand": "innovair",
       "model": "SHV36H2BB",
       "values": [
+        "SHV (5)",
         "SOV (2)",
         "SAV (1)",
-        "SHV (1)",
         "SWV (1)"
       ]
     },
@@ -2002,15 +4316,15 @@
       "brand": "innovair",
       "model": "SHV48H2BA",
       "values": [
-        "SAV (2)",
-        "SHV (1)"
+        "SHV (3)",
+        "SAV (1)"
       ]
     },
     {
       "brand": "innovair",
       "model": "SHV60H2BA",
       "values": [
-        "SHV (2)",
+        "SHV (5)",
         "SAV (1)"
       ]
     },
@@ -2018,7 +4332,7 @@
       "brand": "innovair",
       "model": "SOV18H2BA",
       "values": [
-        "SOV (4)",
+        "SOV (2)",
         "SAV (1)"
       ]
     },
@@ -2026,7 +4340,7 @@
       "brand": "innovair",
       "model": "SOV24H2BA",
       "values": [
-        "SOV (3)",
+        "SOV (8)",
         "SAV (1)",
         "SWV (1)"
       ]
@@ -2035,7 +4349,7 @@
       "brand": "innovair",
       "model": "SOV36H2BA",
       "values": [
-        "SAV (4)",
+        "SAV (1)",
         "SOV (1)",
         "SWV (1)"
       ]
@@ -2044,16 +4358,8 @@
       "brand": "innovair",
       "model": "SOV48H2BA",
       "values": [
-        "SOV (2)",
+        "SOV (3)",
         "SAV (1)"
-      ]
-    },
-    {
-      "brand": "intertherm",
-      "model": "DXH09PSK3IH",
-      "values": [
-        "(24-26 SEER2) Minisplits (1)",
-        "Multizone Indoors Eight-way Compact Cassettes (1)"
       ]
     },
     {
@@ -2065,98 +4371,314 @@
       ]
     },
     {
-      "brand": "keeprite",
-      "model": "C5H0V24KAAA",
+      "brand": "kanionco",
+      "model": "KWSMO-18IR454BHS20",
       "values": [
-        "SoftSound 20 VS Heat Pump (227)",
-        "ProComfort 20 VS HP (86)"
+        "LCAC (1)",
+        "Premium (1)"
+      ]
+    },
+    {
+      "brand": "kanionco",
+      "model": "KWSMO-27IR454BHS20",
+      "values": [
+        "LCAC (1)",
+        "Premium (1)"
+      ]
+    },
+    {
+      "brand": "kanionco",
+      "model": "KWSMO-36IR454BHS19",
+      "values": [
+        "LCAC (1)",
+        "Premium (1)"
+      ]
+    },
+    {
+      "brand": "kanionco",
+      "model": "KWSMO-42IR454BHS19",
+      "values": [
+        "LCAC (1)",
+        "Premium (1)"
       ]
     },
     {
       "brand": "keeprite",
-      "model": "C5H0V36KAAA",
+      "model": "D5CUHAH18AAK",
       "values": [
-        "ProComfort 20 VS HP (269)",
-        "SoftSound 20 VS Heat Pump (5)"
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
       ]
     },
     {
       "brand": "keeprite",
-      "model": "C5H0V48KAAA",
+      "model": "D5CUHAH24AAK",
       "values": [
-        "ProComfort 20 VS HP (336)",
-        "SoftSound 20 VS Heat Pump (18)"
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
       ]
     },
     {
       "brand": "keeprite",
-      "model": "C5H0V60KAAA",
+      "model": "D5CUHAH30AAK",
       "values": [
-        "ProComfort 20 VS HP (140)",
-        "SoftSound 20 VS Heat Pump (32)"
+        "D5C (4)",
+        "D5F (2)"
       ]
     },
     {
       "brand": "keeprite",
-      "model": "C5H3V36KAAA",
+      "model": "D5CUHAH36AAK",
       "values": [
-        "ProComfort 23 VS HP (514)",
-        "SoftSound 23 VS Heat Pump (37)"
+        "D5C (3)",
+        "D5F (2)"
       ]
     },
     {
       "brand": "keeprite",
-      "model": "C5H3V48KAAA",
+      "model": "D5CUHAH48AAK",
       "values": [
-        "SoftSound 23 VS Heat Pump (173)",
-        "ProComfort 23 VS HP (119)"
+        "D5F (2)",
+        "D5C (1)"
       ]
     },
     {
       "brand": "keeprite",
-      "model": "C5H3V60KAAA",
+      "model": "D5CUHAH60AAK",
       "values": [
-        "ProComfort 23 VS HP (48)",
-        "SoftSound 23 VS Heat Pump (1)"
+        "D5C (2)",
+        "D5F (2)"
       ]
     },
     {
       "brand": "keeprite",
-      "model": "CVH837GKA2+TSTAT",
+      "model": "D5CURAH24AAK",
       "values": [
-        "Softsound Deluxe 18 VS HP 2-STAGE (84)",
-        "Procomfort Deluxe 18 VS HP 2-STAGE (63)"
+        "D5C (3)",
+        "Crossover heat pump (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
       ]
     },
     {
       "brand": "keeprite",
       "model": "DLCSRBH18AAK",
       "values": [
-        "DLC (102)",
-        "Dl (1)"
+        "DLC (15)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
       "brand": "keeprite",
       "model": "DLCSRBH24AAK",
       "values": [
-        "DLC (109)",
-        "Dl (1)"
+        "DLC (12)",
+        "Dl (1)",
+        "DLCS (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "DLCURAH18ABK",
+      "values": [
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "DLCURAH24AAK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "DLCURAH24ABK",
+      "values": [
+        "Dl (3)",
+        "38M (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "DLCURAH30ABK",
+      "values": [
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "DLCURAH36ABK",
+      "values": [
+        "Dl (3)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "keeprite",
+      "model": "DLCURAH60ABK",
+      "values": [
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "D5CUHAH18AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
       ]
     },
     {
       "brand": "kenmore",
       "model": "DLCSRBH18AAK",
-      "values": [
-        "DLC (8)",
-        "Dl (1)"
-      ]
-    },
-    {
-      "brand": "kenmore",
-      "model": "DLCSRBH24AAK",
       "values": [
         "DLC (9)",
+        "Dl (1)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "DLCSRBH24AAK",
+      "values": [
+        "DLC (7)",
+        "Dl (1)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "DLCURAH24AAK",
+      "values": [
+        "38M (1)",
+        "Dl (1)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "DLCURAH24ABK",
+      "values": [
+        "Dl (3)",
+        "38M (1)"
+      ]
+    },
+    {
+      "brand": "kenmore",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
         "Dl (1)"
       ]
     },
@@ -2173,7 +4695,7 @@
       "model": "A-KCD24SA-1",
       "values": [
         "A (2)",
-        "A-KCD (2)"
+        "A-KCD (1)"
       ]
     },
     {
@@ -2196,24 +4718,8 @@
       "brand": "kerr",
       "model": "A-KCD60SA-1",
       "values": [
-        "A-KCD (2)",
-        "A (1)"
-      ]
-    },
-    {
-      "brand": "kerr",
-      "model": "A-KHP06SA-1",
-      "values": [
-        "A (2)",
-        "A-KHP (1)"
-      ]
-    },
-    {
-      "brand": "kerr",
-      "model": "A-KHP09SA-1",
-      "values": [
-        "A (7)",
-        "A-KHP (1)"
+        "A (1)",
+        "A-KCD (1)"
       ]
     },
     {
@@ -2242,26 +4748,18 @@
     },
     {
       "brand": "kinghome",
-      "model": "KW09XQ25SDO",
+      "model": "KD36UXO",
       "values": [
-        "360 air discharge cassette unit (1)",
-        "Clivia (1)",
-        "Console (1)",
-        "Ducted (1)",
-        "Floor ceiling (1)",
-        "One-way air discharge cassette unit (1)"
+        "CEE Ultranixx (1)",
+        "G (1)"
       ]
     },
     {
       "brand": "kinghome",
-      "model": "KW09XQ29SDO",
+      "model": "KM60X6O",
       "values": [
-        "360 air discharge cassette unit (1)",
-        "Airy (1)",
-        "Console (1)",
-        "Ducted (1)",
-        "Floor ceiling (1)",
-        "One-way air discharge cassette unit (1)"
+        "M (2)",
+        "Free match (1)"
       ]
     },
     {
@@ -2274,10 +4772,46 @@
     },
     {
       "brand": "kinghome",
+      "model": "KW12XQ29S1DO",
+      "values": [
+        "360 air discharge cassette unit (1)",
+        "Airy (1)",
+        "Console (1)",
+        "Ducted (1)",
+        "Floor ceiling (1)",
+        "One-way air discharge cassette unit (1)"
+      ]
+    },
+    {
+      "brand": "kinghome",
+      "model": "KW18XQ25S1DO",
+      "values": [
+        "ALL Match (3)",
+        "Clivia (1)"
+      ]
+    },
+    {
+      "brand": "kinghome",
+      "model": "KW18XQ29S1DO",
+      "values": [
+        "ALL Match (6)",
+        "Airy (1)"
+      ]
+    },
+    {
+      "brand": "kinghome",
+      "model": "KW24XQ29S1DO",
+      "values": [
+        "All-match (3)",
+        "Airy (1)"
+      ]
+    },
+    {
+      "brand": "kinghome",
       "model": "KW30XQ21CDO",
       "values": [
         "All Match (2)",
-        "Charmo (2)"
+        "Charmo (1)"
       ]
     },
     {
@@ -2285,7 +4819,7 @@
       "model": "KW36XQ21CDO",
       "values": [
         "ALL Match (3)",
-        "Charmo (2)"
+        "Charmo (1)"
       ]
     },
     {
@@ -2322,9 +4856,17 @@
     },
     {
       "brand": "lennox",
+      "model": "EL17XP1-042-230A",
+      "values": [
+        "Merit ML17XP1 (109)",
+        "Elite EL17XP1 (81)"
+      ]
+    },
+    {
+      "brand": "lennox",
       "model": "MLB018S4S-1P",
       "values": [
-        "M (7)",
+        "M (12)",
         "MMA (1)"
       ]
     },
@@ -2332,19 +4874,8 @@
       "brand": "lennox",
       "model": "MLB024S4S-1P",
       "values": [
-        "M (8)",
+        "M (13)",
         "MMA (1)"
-      ]
-    },
-    {
-      "brand": "lennox",
-      "model": "MMLD009S6S-1P",
-      "values": [
-        "1-Way Cassette (WindFree ) Premium (CAC) (1)",
-        "Console - Premium (CAC) (1)",
-        "Duct S (HSP) Premium (CAC) (1)",
-        "Mini 4-Way Cassette (WindFree ) Premium (CAC) (1)",
-        "Slim Duct (LSP) Premium (CAC) (1)"
       ]
     },
     {
@@ -2352,7 +4883,6 @@
       "model": "MMLD012S6S-1P",
       "values": [
         "1-Way Cassette (WindFree ) Premium (CAC) (1)",
-        "Console - Premium (CAC) (1)",
         "Duct S (HSP) Premium (CAC) (1)",
         "Mini 4-Way Cassette (WindFree ) Premium (CAC) (1)",
         "Slim Duct (LSP) Premium (CAC) (1)"
@@ -2364,7 +4894,8 @@
       "values": [
         "MMLD Mini-Split (5)",
         "Console - Premium (CAC) (1)",
-        "Multi-Position Air Handler - Premium (CAC) (1)"
+        "Multi-Position Air Handler - Premium (CAC) (1)",
+        "WindFree High-Wall - Premium (CAC) (1)"
       ]
     },
     {
@@ -2372,7 +4903,8 @@
       "model": "MMLD024S6S-1P",
       "values": [
         "MMLD Mini-Split (2)",
-        "Multi-Position Air Handler - Premium (CAC) (1)"
+        "Multi-Position Air Handler - Premium (CAC) (1)",
+        "WindFree High-Wall - Premium (CAC) (1)"
       ]
     },
     {
@@ -2387,6 +4919,8 @@
       "brand": "lennox",
       "model": "MMLD036S6S-1P",
       "values": [
+        "4-Way Cassette (WindFree ) Maxheat (1)",
+        "High-Wall - Premium (CAC) (1)",
         "MMLD Mini-Split (1)",
         "Multi-Position Air Handler - Premium (CAC) (1)"
       ]
@@ -2395,6 +4929,7 @@
       "brand": "lennox",
       "model": "MMLD048S6S-1P",
       "values": [
+        "4-Way Cassette (WindFree ) Maxheat (1)",
         "MMLD Mini-Split (1)",
         "Multi-Position Air Handler - Premium (CAC) (1)"
       ]
@@ -2427,6 +4962,7 @@
       "brand": "lennox",
       "model": "MMPD036S6S-1P",
       "values": [
+        "4-Way Cassette (WindFree ) DLX (1)",
         "MMPD Mini-Split (1)",
         "Multi-Position Air Handler - Standard (CAC) (1)"
       ]
@@ -2435,6 +4971,7 @@
       "brand": "lennox",
       "model": "MMPD048S6S-1P",
       "values": [
+        "4-Way Cassette (WindFree ) DLX (1)",
         "MMPD Mini-Split (1)",
         "Multi-Position Air Handler - Standard (CAC) (1)"
       ]
@@ -2443,7 +4980,7 @@
       "brand": "lennox",
       "model": "MPC018S4S-1P",
       "values": [
-        "M (8)",
+        "M (12)",
         "MMA (1)"
       ]
     },
@@ -2451,26 +4988,228 @@
       "brand": "lennox",
       "model": "MPC024S4S-1P",
       "values": [
-        "M (8)",
+        "M (12)",
         "MMA (1)"
+      ]
+    },
+    {
+      "brand": "lennox",
+      "model": "MWMD018S6-1P",
+      "values": [
+        "WindFree - Max heat (RAC) (1)",
+        "WindFree - Premium (RAC) (1)"
+      ]
+    },
+    {
+      "brand": "lennox",
+      "model": "MWMD024S6-1P",
+      "values": [
+        "WindFree - Max heat (RAC) (1)",
+        "WindFree - Premium (RAC) (1)"
       ]
     },
     {
       "brand": "lennox",
       "model": "SL22KLV-024-230A",
       "values": [
-        "DAVE Lennox Signature SL22KLV (42)",
-        "DAVE Lennox Signature DLSC SL22KLV (39)"
+        "DAVE Lennox Signature SL22KLV (105)",
+        "DAVE Lennox Signature DLSC SL22KLV (1)"
+      ]
+    },
+    {
+      "brand": "lennox",
+      "model": "VPD060S6M-5P",
+      "values": [
+        "DVM S Mini (2)",
+        "Mini-VRF (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "D5CUHAH18AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "DLCSRBH18AAK",
+      "values": [
+        "DLC (9)",
+        "Dl (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "DLCSRBH24AAK",
+      "values": [
+        "DLC (7)",
+        "Dl (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "DLCURAH24AAK",
+      "values": [
+        "38M (1)",
+        "Dl (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "DLCURAH24ABK",
+      "values": [
+        "Dl (3)",
+        "38M (1)"
+      ]
+    },
+    {
+      "brand": "lps-legacy",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
+        "Dl (1)"
+      ]
+    },
+    {
+      "brand": "mainline",
+      "model": "MLP15AZ24AJ2N",
+      "values": [
+        "Elite (12)",
+        "Classic PLUS/ACHIEVER PLUS (1)"
+      ]
+    },
+    {
+      "brand": "mainline",
+      "model": "MLP15AZ36AJ2N",
+      "values": [
+        "Classic PLUS/ACHIEVER PLUS (1)",
+        "Elite (1)"
+      ]
+    },
+    {
+      "brand": "mainline",
+      "model": "MLP15AZ48AJ2N",
+      "values": [
+        "Classic PLUS/ACHIEVER PLUS (1)",
+        "Elite (1)"
+      ]
+    },
+    {
+      "brand": "maxi-air",
+      "model": "MAXS-2430",
+      "values": [
+        "MAX (1)",
+        "MAXS (1)"
+      ]
+    },
+    {
+      "brand": "maxi-air",
+      "model": "MAXS-2430-454",
+      "values": [
+        "MAXS (3)",
+        "MAS (1)"
+      ]
+    },
+    {
+      "brand": "maxi-air",
+      "model": "MAXS-4260-454",
+      "values": [
+        "MAS (1)",
+        "MAXS (1)"
       ]
     },
     {
       "brand": "mdv",
       "model": "M2OA-18HFN1-M",
       "values": [
+        "M20A seris (3)",
         "M2O (2)",
         "MTI (2)",
         "MSAG (1)",
         "MSEP seris (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "M2OA-18HFN1-M-L",
+      "values": [
+        "M2O (1)",
+        "MSEP seris (1)",
+        "MTI (1)"
       ]
     },
     {
@@ -2485,10 +5224,19 @@
     },
     {
       "brand": "mdv",
+      "model": "M2OI-18HFN1-M-L",
+      "values": [
+        "M2O (1)",
+        "MSEP seris (1)",
+        "MTI (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
       "model": "M3OH-27HFN1-MQ1",
       "values": [
-        "MSAB (2)",
-        "CS (1)"
+        "CS (1)",
+        "MSAB (1)"
       ]
     },
     {
@@ -2512,6 +5260,15 @@
     },
     {
       "brand": "mdv",
+      "model": "M3OI-28HFN1-M-L",
+      "values": [
+        "M3O (1)",
+        "MSEP seris (1)",
+        "MTI (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
       "model": "M3OJ-24HFN1-M",
       "values": [
         "M3O (4)",
@@ -2521,12 +5278,31 @@
     },
     {
       "brand": "mdv",
+      "model": "M3OJ-24HFN1-M-L",
+      "values": [
+        "M3O (1)",
+        "MSEP seris (1)",
+        "MTI (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
       "model": "M3OJ-27HFN1-M",
       "values": [
+        "M3OJ (3)",
         "M3O (2)",
         "MTI (2)",
         "MSAG (1)",
         "MSEP seris (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "M3OJ-27HFN1-M-L",
+      "values": [
+        "M3O (1)",
+        "MSEP seris (1)",
+        "MTI (1)"
       ]
     },
     {
@@ -2549,7 +5325,26 @@
       "brand": "mdv",
       "model": "M4OG-30HFN1-M",
       "values": [
-        "M4O (1)",
+        "M4O (4)",
+        "MSEP seris (1)",
+        "MTI (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "M4OG-36HFN1-M",
+      "values": [
+        "MTIU (2)",
+        "CS (1)",
+        "M4OG (1)",
+        "MSEP seris (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "M4OG-36HFN1-M-L",
+      "values": [
+        "MTIU (2)",
         "MSEP seris (1)"
       ]
     },
@@ -2565,6 +5360,15 @@
     },
     {
       "brand": "mdv",
+      "model": "M4OI-36HFN1-M-L",
+      "values": [
+        "M4O (1)",
+        "MSEP seris (1)",
+        "MTI (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
       "model": "M4OX630-36HFN1-M1X",
       "values": [
         "M4O (2)",
@@ -2575,7 +5379,7 @@
     },
     {
       "brand": "mdv",
-      "model": "M5OA-55HFN1-M-[X]",
+      "model": "M5OA-55HFN1-M-[X](2)",
       "values": [
         "M5O (2)",
         "MTI (2)",
@@ -2593,7 +5397,7 @@
     },
     {
       "brand": "mdv",
-      "model": "M5OF-48HFN1-MQ1",
+      "model": "M5OF-48HFN1-MQ1(2)",
       "values": [
         "CS (1)",
         "MS (1)",
@@ -2604,9 +5408,18 @@
       "brand": "mdv",
       "model": "M5OG-48HFN1-M",
       "values": [
-        "MSEP seris (4)",
         "CS (1)",
-        "MS (1)"
+        "M5OG (1)",
+        "MS (1)",
+        "MSEP seris (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "M5OG-48HFN1-M-L",
+      "values": [
+        "CS (1)",
+        "MSEP seris (1)"
       ]
     },
     {
@@ -2617,6 +5430,15 @@
         "MTI (2)",
         "MSAG (1)",
         "MSEP seris (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "M5OG-48HFN1-M-[X]-20-L",
+      "values": [
+        "M5O (1)",
+        "MSEP seris (1)",
+        "MTI (1)"
       ]
     },
     {
@@ -2653,10 +5475,10 @@
       "brand": "mdv",
       "model": "MOD30-24HFN10-M1X",
       "values": [
+        "MCD (2)",
         "MSEP (2)",
         "MUE (2)",
         "MVB (2)",
-        "MCD (1)",
         "MSAG (1)",
         "MT (1)",
         "MTJ (1)"
@@ -2666,7 +5488,6 @@
       "brand": "mdv",
       "model": "MOD30-24HFN1-MU0W",
       "values": [
-        "MO (2)",
         "MTI (2)",
         "MAC (1)",
         "MCD (1)",
@@ -2680,33 +5501,62 @@
     },
     {
       "brand": "mdv",
+      "model": "MOD30-24HFN1-MU0W-L",
+      "values": [
+        "MCD (1)",
+        "MSEP seris (1)",
+        "MTI (1)",
+        "MUE (1)",
+        "MVC (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
       "model": "MOD30-24HFN1-MW",
       "values": [
         "MAC (2)",
+        "MVC (2)",
+        "MOD (1)",
         "MVBE (1)",
         "MVBL (1)",
-        "MVBM (1)",
-        "MVC (1)"
+        "MVBM (1)"
       ]
     },
     {
       "brand": "mdv",
       "model": "MOD30-30HFN10-M1E",
       "values": [
-        "MSAG (3)",
+        "MSAG (4)",
         "MSEP (3)",
         "MS (2)",
-        "MVB (2)"
+        "MVB (2)",
+        "MOD (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "MOD30-30HFN10-M3",
+      "values": [
+        "MOD (15)",
+        "MVBE (2)"
       ]
     },
     {
       "brand": "mdv",
       "model": "MOD30-30HFN10-M3X",
       "values": [
-        "MVB (10)",
-        "MVBM (5)",
-        "MOD (2)",
+        "MOD (46)",
+        "MVB (11)",
+        "MVBM (7)",
         "MVBL (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "MOD30-30HFN1-MS0W",
+      "values": [
+        "MS (1)",
+        "MSAG (1)"
       ]
     },
     {
@@ -2728,9 +5578,18 @@
     },
     {
       "brand": "mdv",
+      "model": "MOD30-36HFN10-M1E",
+      "values": [
+        "MSAB (1)",
+        "MSAG (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
       "model": "MOD30-36HFN10-M3",
       "values": [
-        "MVB (6)",
+        "MOD (11)",
+        "MVB (3)",
         "MVBE (2)",
         "MVBC (1)",
         "MVBL (1)"
@@ -2740,7 +5599,7 @@
       "brand": "mdv",
       "model": "MOD30U-30HFN1-M(GA)",
       "values": [
-        "MS (1)",
+        "MS (2)",
         "MSAG (1)",
         "MVB (1)"
       ]
@@ -2749,7 +5608,7 @@
       "brand": "mdv",
       "model": "MOD30U-30HFN1-MR0(X)",
       "values": [
-        "MAC (2)",
+        "MAC (1)",
         "MVB (1)",
         "MVBE (1)",
         "MVBL (1)",
@@ -2769,8 +5628,20 @@
       "model": "MOD33-24HFN1-MT0W",
       "values": [
         "MCD (1)",
+        "MS11M (1)",
         "MSAB (1)",
         "MSAG (1)",
+        "MSEP seris (1)",
+        "MTI (1)",
+        "MUE (1)",
+        "MVC (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "MOD33-24HFN1-MT0W-L",
+      "values": [
+        "MCD (1)",
         "MSEP seris (1)",
         "MTI (1)",
         "MUE (1)",
@@ -2813,8 +5684,9 @@
       "brand": "mdv",
       "model": "MOE30-60HFN10-M3X",
       "values": [
-        "MVB (6)",
-        "MVBM (2)",
+        "MOE (11)",
+        "MVB (5)",
+        "MVBM (4)",
         "MVBC (1)"
       ]
     },
@@ -2822,8 +5694,17 @@
       "brand": "mdv",
       "model": "MOE30U-36HFN1-M(GA)",
       "values": [
-        "MTI (2)",
         "MCD (1)",
+        "MTI (1)",
+        "MUE (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "MOE30U-36HFN1-M(GA)-L",
+      "values": [
+        "MCD (1)",
+        "MTI (1)",
         "MUE (1)"
       ]
     },
@@ -2831,24 +5712,42 @@
       "brand": "mdv",
       "model": "MOE30U-48HFN1-MP0(GA)",
       "values": [
-        "MUE (4)",
-        "MTI (1)"
+        "MTI (1)",
+        "MUE (1)"
       ]
     },
     {
       "brand": "mdv",
       "model": "MOE30U-48HFN1-M-[X]",
       "values": [
-        "MVC (3)",
         "MHG (1)",
-        "MTI (1)"
+        "MTI (1)",
+        "MUE (1)",
+        "MVC (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "MOE30U-48HFN1-M-[X1]",
+      "values": [
+        "MOE (1)",
+        "MVC (1)"
       ]
     },
     {
       "brand": "mdv",
       "model": "MOE30U-48HFN1-M-[X](GA)",
       "values": [
-        "MCD (2)",
+        "MCD (1)",
+        "MTI (1)",
+        "MUE (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "MOE30U-48HFN1-M-[X](GA)-L",
+      "values": [
+        "MCD (1)",
         "MTI (1)",
         "MUE (1)"
       ]
@@ -2866,91 +5765,11 @@
       "brand": "mdv",
       "model": "MOE31U-36HFN1-M",
       "values": [
-        "MAC (2)",
+        "MAC (1)",
         "MVB (1)",
         "MVBE (1)",
         "MVBL (1)",
         "MVC (1)"
-      ]
-    },
-    {
-      "brand": "mdv",
-      "model": "MOX230-06HFN10-M1X",
-      "values": [
-        "MCB (4)",
-        "MSEP (3)",
-        "MT (2)",
-        "MTI (2)",
-        "MSAG (1)"
-      ]
-    },
-    {
-      "brand": "mdv",
-      "model": "MOX230-09HFN10-B1",
-      "values": [
-        "MSEP (2)",
-        "MSAB (1)",
-        "MSAG (1)"
-      ]
-    },
-    {
-      "brand": "mdv",
-      "model": "MOX230-09HFN10-B1E",
-      "values": [
-        "MSAG (2)",
-        "MSAB (1)"
-      ]
-    },
-    {
-      "brand": "mdv",
-      "model": "MOX230-09HFN10-M1",
-      "values": [
-        "MCA (4)",
-        "MCB (4)",
-        "MFA (4)",
-        "MT (4)",
-        "MSEP (3)",
-        "MSAB (2)",
-        "MSAG (2)",
-        "MTI (2)",
-        "MTJ (2)"
-      ]
-    },
-    {
-      "brand": "mdv",
-      "model": "MOX230-09HFN10-M1E",
-      "values": [
-        "MSAG (2)",
-        "MSAB (1)"
-      ]
-    },
-    {
-      "brand": "mdv",
-      "model": "MOX230-09HFN1-BS5W",
-      "values": [
-        "MSAB (2)",
-        "MSAG (1)"
-      ]
-    },
-    {
-      "brand": "mdv",
-      "model": "MOX230-09HFN1-MT0W",
-      "values": [
-        "MS (1)",
-        "MSAB (1)",
-        "MSAG (1)"
-      ]
-    },
-    {
-      "brand": "mdv",
-      "model": "MOX230-09HFN1-MW5W",
-      "values": [
-        "MCBU (4)",
-        "MSAG (2)",
-        "MSEP seris (2)",
-        "MCA (1)",
-        "MSAB (1)",
-        "MTI (1)"
       ]
     },
     {
@@ -2964,17 +5783,32 @@
     },
     {
       "brand": "mdv",
+      "model": "MOX230-12HFN10-B1E",
+      "values": [
+        "MSAB (1)",
+        "MSAG (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
       "model": "MOX230-12HFN10-M1",
       "values": [
         "MCA (2)",
         "MCB (2)",
         "MFA (2)",
         "MSEP (2)",
-        "MT (2)",
         "MSAB (1)",
         "MSAG (1)",
-        "MTI (1)",
+        "MT (1)",
         "MTJ (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "MOX230-12HFN10-M1E",
+      "values": [
+        "MOX (1)",
+        "MSAG (1)"
       ]
     },
     {
@@ -2996,34 +5830,14 @@
         "MCBU (1)",
         "MSAB (1)",
         "MSAG (1)",
-        "MSEP seris (1)",
-        "MTI (1)"
+        "MSEP seris (1)"
       ]
     },
     {
       "brand": "mdv",
-      "model": "MOX330-09HFN10-M1X",
+      "model": "MOX230-12HFN1-MV5W-L",
       "values": [
-        "MCA (4)",
-        "MCB (4)",
-        "MFA (4)",
-        "MT (4)",
-        "MSAG (2)",
-        "MSEP seris (2)",
-        "MTI (2)",
-        "MTJ (2)",
-        "MSEP (1)"
-      ]
-    },
-    {
-      "brand": "mdv",
-      "model": "MOX330-09HFN1-MY5W",
-      "values": [
-        "MCBU (2)",
-        "MTI (2)",
-        "MCA (1)",
-        "MS11M (1)",
-        "MSAG (1)",
+        "MFA (1)",
         "MSEP seris (1)"
       ]
     },
@@ -3057,6 +5871,15 @@
     },
     {
       "brand": "mdv",
+      "model": "MOX330-12HFN1-MW5W-L",
+      "values": [
+        "MCA (1)",
+        "MFA (1)",
+        "MSEP seris (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
       "model": "MOX330-12HFPN10-M1X",
       "values": [
         "MCB (1)",
@@ -3065,33 +5888,43 @@
     },
     {
       "brand": "mdv",
-      "model": "MOX330-18HFN10-M3",
+      "model": "MOX330-18HFN10-M1E",
       "values": [
-        "MVB (9)",
-        "MVBE (1)"
+        "MS (2)",
+        "MOX (1)",
+        "MSAG (1)"
       ]
     },
     {
       "brand": "mdv",
-      "model": "MOX430-09HFN1-MZG5W",
+      "model": "MOX330-18HFN10-M3",
       "values": [
-        "MSEP seris (1)",
-        "MSOP (1)"
+        "MOX (6)",
+        "MVB (6)",
+        "MVBE (2)"
       ]
     },
     {
       "brand": "mdv",
       "model": "MOX430-12HFN1-MZ60W",
       "values": [
-        "MSEP seris (1)",
-        "MSOP (1)"
+        "MSOP (3)",
+        "MSEP seris (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "MOX430-15HFN10-M1X",
+      "values": [
+        "MSAG (1)",
+        "MSEP (1)"
       ]
     },
     {
       "brand": "mdv",
       "model": "MOX430-17HFN1-MT0W",
       "values": [
-        "MTI (3)",
+        "MTI (4)",
         "MCBU (2)",
         "MAC (1)",
         "MCA (1)",
@@ -3099,6 +5932,17 @@
         "MS11M (1)",
         "MSAG (1)",
         "MSEP seris (1)",
+        "MUE (1)",
+        "MVC (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
+      "model": "MOX430-17HFN1-MT0W-L",
+      "values": [
+        "MCA (1)",
+        "MSEP seris (1)",
+        "MTI (1)",
         "MUE (1)",
         "MVC (1)"
       ]
@@ -3141,9 +5985,10 @@
       "brand": "mdv",
       "model": "MOX430-18HFN10-M3X",
       "values": [
+        "MOX (38)",
+        "MVBM (9)",
         "MVB (8)",
-        "MVBM (3)",
-        "MVBE (1)",
+        "MVBE (2)",
         "MVBL (1)"
       ]
     },
@@ -3173,6 +6018,17 @@
     },
     {
       "brand": "mdv",
+      "model": "MOX430-18HFN1-MU0W-L",
+      "values": [
+        "MCA (1)",
+        "MSEP seris (1)",
+        "MTI (1)",
+        "MUE (1)",
+        "MVC (1)"
+      ]
+    },
+    {
+      "brand": "mdv",
       "model": "MOX430-18HFPN10-M1",
       "values": [
         "MCB (1)",
@@ -3191,18 +6047,19 @@
       "brand": "mdv",
       "model": "MOX430-24HFN10-M1E",
       "values": [
-        "MSAG (2)",
-        "MSAB (1)"
+        "MSAB (1)",
+        "MSAG (1)"
       ]
     },
     {
       "brand": "mdv",
       "model": "MOX430-24HFN10-M3",
       "values": [
+        "MOX (53)",
+        "MVBM (9)",
         "MVB (4)",
-        "MVBM (2)",
+        "MVBE (2)",
         "MVBC (1)",
-        "MVBE (1)",
         "MVBL (1)"
       ]
     },
@@ -3210,10 +6067,11 @@
       "brand": "mdv",
       "model": "MOX430-24HFN10-M3X",
       "values": [
+        "MOX (52)",
+        "MVBM (9)",
         "MVB (5)",
-        "MVBM (3)",
+        "MVBE (3)",
         "MVBC (1)",
-        "MVBE (1)",
         "MVBL (1)"
       ]
     },
@@ -3221,7 +6079,7 @@
       "brand": "mdv",
       "model": "MOX430U-18HFN1-M",
       "values": [
-        "MAC (2)",
+        "MAC (1)",
         "MVBE (1)",
         "MVBL (1)",
         "MVC (1)"
@@ -3231,8 +6089,9 @@
       "brand": "mdv",
       "model": "MOX430U-24HFN1-MR0",
       "values": [
-        "MVC (5)",
+        "MVC (2)",
         "MAC (1)",
+        "MOX (1)",
         "MVBE (1)"
       ]
     },
@@ -3251,8 +6110,9 @@
       "brand": "mdv",
       "model": "MOX630-36HFN10-M3X",
       "values": [
-        "MVB (9)",
-        "MVBM (2)",
+        "MOX (44)",
+        "MVB (8)",
+        "MVBM (7)",
         "MVBC (1)",
         "MVBL (1)"
       ]
@@ -3269,17 +6129,19 @@
       "brand": "mdv",
       "model": "MOX630-48HFN10-M3",
       "values": [
-        "MVB (5)",
-        "MVBC (1)",
-        "MVBM (1)"
+        "MOX (35)",
+        "MVB (4)",
+        "MVBM (3)",
+        "MVBC (1)"
       ]
     },
     {
       "brand": "mdv",
       "model": "MOX630-48HFN10-M3X",
       "values": [
-        "MVB (9)",
-        "MVBM (2)",
+        "MOX (28)",
+        "MVB (8)",
+        "MVBM (4)",
         "MVBC (1)"
       ]
     },
@@ -3287,24 +6149,9 @@
       "brand": "mdv",
       "model": "MOX630-60HFN10-M3",
       "values": [
-        "MVB (5)",
+        "MOX (8)",
+        "MVB (3)",
         "MVBC (1)"
-      ]
-    },
-    {
-      "brand": "midea",
-      "model": "37MAHAQ06AA3",
-      "values": [
-        "45M (2)",
-        "D5M (1)"
-      ]
-    },
-    {
-      "brand": "midea",
-      "model": "37MAHAQ09AA3",
-      "values": [
-        "45M (5)",
-        "D5M (1)"
       ]
     },
     {
@@ -3341,17 +6188,9 @@
     },
     {
       "brand": "midea",
-      "model": "37MARAQ09AA3",
-      "values": [
-        "45M (4)",
-        "D5M (1)"
-      ]
-    },
-    {
-      "brand": "midea",
       "model": "37MARAQ12AA3",
       "values": [
-        "45M (5)",
+        "45M (4)",
         "D5M (1)"
       ]
     },
@@ -3381,9 +6220,81 @@
     },
     {
       "brand": "midea",
+      "model": "37MUHAQ18AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "37MUHAQ24AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "37MUHAQ30AA3",
+      "values": [
+        "37M (5)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "37MUHAQ36AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "37MUHAQ48AA3",
+      "values": [
+        "37M (2)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "37MUHAQ60AA3",
+      "values": [
+        "37M (3)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "37MURAQ24AA3",
+      "values": [
+        "37M (3)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "37MURAQ36AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "37MURAQ48AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "midea",
       "model": "38MARBQ18AA3",
       "values": [
-        "38MAR (5)",
+        "38MAR (8)",
         "38M (1)"
       ]
     },
@@ -3391,32 +6302,138 @@
       "brand": "midea",
       "model": "38MARBQ24AA3",
       "values": [
-        "38MAR (4)",
+        "38MAR (6)",
         "38M (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "38MGRBQ36DA3",
+      "values": [
+        "38M (2)",
+        "38MG (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "38MGRBQ48EA3",
+      "values": [
+        "38M (1)",
+        "38MG (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "38MPRBQ12AA3",
+      "values": [
+        "38M (1)",
+        "38MP (1)"
       ]
     },
     {
       "brand": "midea",
       "model": "38MURAQ36AB3",
       "values": [
-        "38M (2)",
+        "38M (3)",
         "38MU (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "D5CUHAH18AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
       ]
     },
     {
       "brand": "midea",
       "model": "DLCSRBH18AAK",
       "values": [
-        "DLC (8)",
-        "Dl (1)"
+        "DLC (15)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
       "brand": "midea",
       "model": "DLCSRBH24AAK",
       "values": [
-        "DLC (9)",
-        "Dl (1)"
+        "DLC (12)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
@@ -3424,6 +6441,7 @@
       "model": "DLCURAH18ABK",
       "values": [
         "Dl (2)",
+        "DLC (1)",
         "DLF (1)"
       ]
     },
@@ -3431,7 +6449,9 @@
       "brand": "midea",
       "model": "DLCURAH24AAK",
       "values": [
-        "Dl (2)",
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)",
         "DLF (1)"
       ]
     },
@@ -3440,7 +6460,9 @@
       "model": "DLCURAH24ABK",
       "values": [
         "Dl (3)",
-        "DLF (2)"
+        "DLF (2)",
+        "38M (1)",
+        "DLC (1)"
       ]
     },
     {
@@ -3448,7 +6470,8 @@
       "model": "DLCURAH30ABK",
       "values": [
         "Dl (2)",
-        "DLF (2)"
+        "DLF (2)",
+        "DLC (1)"
       ]
     },
     {
@@ -3456,14 +6479,48 @@
       "model": "DLCURAH36ABK",
       "values": [
         "Dl (3)",
-        "DLF (2)"
+        "DLF (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "DLCURAH36ACK",
+      "values": [
+        "DLF (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "DLCURAH60ABK",
+      "values": [
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "MASAG18-21HS2GB",
+      "values": [
+        "MAS (1)",
+        "Masag (1)"
       ]
     },
     {
       "brand": "midea",
       "model": "MDV-V18WMN10T",
       "values": [
-        "ATOM X (7)",
+        "ATOM X (5)",
         "MDV (3)"
       ]
     },
@@ -3471,7 +6528,23 @@
       "brand": "midea",
       "model": "MDV-V24WMN10T",
       "values": [
-        "ATOM X (5)",
+        "ATOM X (6)",
+        "MDV (3)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "MDV-V24WMN10T(A)",
+      "values": [
+        "ATOM X (8)",
+        "MDV (3)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "MDV-V24WMN10T(B)",
+      "values": [
+        "ATOM X (11)",
         "MDV (3)"
       ]
     },
@@ -3479,7 +6552,7 @@
       "brand": "midea",
       "model": "MDV-V30WMN10T",
       "values": [
-        "ATOM X (5)",
+        "ATOM X (8)",
         "MDV (3)"
       ]
     },
@@ -3487,15 +6560,39 @@
       "brand": "midea",
       "model": "MDV-V36WMN10T",
       "values": [
-        "ATOM X (6)",
+        "ATOM X (8)",
         "MDV (3)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "MDV-V36WMN10T(A)",
+      "values": [
+        "ATOM X (11)",
+        "MDV (3)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "MDV-V36WMN10T(B)",
+      "values": [
+        "ATOM X (15)",
+        "MDV (3)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "MDV-V36WMN10T-H",
+      "values": [
+        "MDV (3)",
+        "ATOM X (2)"
       ]
     },
     {
       "brand": "midea",
       "model": "MDV-V48WMN10T",
       "values": [
-        "ATOM X (3)",
+        "ATOM X (4)",
         "MDV (3)"
       ]
     },
@@ -3503,7 +6600,23 @@
       "brand": "midea",
       "model": "MDV-V60WMN10T",
       "values": [
-        "ATOM X (5)",
+        "ATOM X (4)",
+        "MDV (3)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "MDV-V60WMN10T(A)",
+      "values": [
+        "ATOM X (14)",
+        "MDV (3)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "MDV-V60WMN10T(B)",
+      "values": [
+        "ATOM X (19)",
         "MDV (3)"
       ]
     },
@@ -3511,7 +6624,7 @@
       "brand": "midea",
       "model": "MO1BE-H18B-2A",
       "values": [
-        "MO1 (6)",
+        "MO1 (23)",
         "MAU (1)"
       ]
     },
@@ -3519,7 +6632,7 @@
       "brand": "midea",
       "model": "MO1BE-H24B-2A",
       "values": [
-        "MO1 (6)",
+        "MO1 (158)",
         "MAU (1)"
       ]
     },
@@ -3527,16 +6640,24 @@
       "brand": "midea",
       "model": "MO1BE-H36B-2A",
       "values": [
-        "MAU (7)",
-        "MO1 (2)"
+        "MO1 (28)",
+        "MAU (1)"
       ]
     },
     {
       "brand": "midea",
       "model": "MO1BE-H48B-2A",
       "values": [
-        "MAU (3)",
-        "MO1 (2)"
+        "MO1 (91)",
+        "MAU (1)"
+      ]
+    },
+    {
+      "brand": "midea",
+      "model": "MO1BE-H60B-2A",
+      "values": [
+        "MO1 (20)",
+        "MAU (1)"
       ]
     },
     {
@@ -3559,24 +6680,11 @@
     },
     {
       "brand": "midea",
-      "model": "MO1ES-H09B-2A",
-      "values": [
-        "MCA (1)",
-        "MCD (1)",
-        "MDH (1)",
-        "MDL (1)",
-        "MFA (1)",
-        "MSE (1)"
-      ]
-    },
-    {
-      "brand": "midea",
       "model": "MO1ES-H12B-2A",
       "values": [
         "MCA (1)",
         "MCD (1)",
         "MDH (1)",
-        "MDL (1)",
         "MFA (1)",
         "MSE (1)"
       ]
@@ -3610,7 +6718,7 @@
       "brand": "midea",
       "model": "MO1HE-H18B-2A",
       "values": [
-        "MO1 (6)",
+        "MO1 (118)",
         "MAU (2)"
       ]
     },
@@ -3618,7 +6726,7 @@
       "brand": "midea",
       "model": "MO1HE-H24B-2A",
       "values": [
-        "MO1 (6)",
+        "MO1 (158)",
         "MAU (2)"
       ]
     },
@@ -3626,7 +6734,7 @@
       "brand": "midea",
       "model": "MO1HE-H30B-2A",
       "values": [
-        "MO1 (8)",
+        "MO1 (112)",
         "MAU (2)"
       ]
     },
@@ -3640,39 +6748,26 @@
     },
     {
       "brand": "midea",
+      "model": "MO1HE-H42B-2A",
+      "values": [
+        "MO1 (3)",
+        "MAU (1)"
+      ]
+    },
+    {
+      "brand": "midea",
       "model": "MO1HE-H48B-2A",
       "values": [
-        "MAU (5)",
-        "MO1 (1)"
+        "MO1 (76)",
+        "MAU (2)"
       ]
     },
     {
       "brand": "midea",
       "model": "MO1HE-H60B-2A",
       "values": [
-        "MAU (4)",
-        "MO1 (2)"
-      ]
-    },
-    {
-      "brand": "midea",
-      "model": "MO1HS-H06B-2A",
-      "values": [
-        "MCA (1)",
-        "MDL (1)",
-        "MSE (1)"
-      ]
-    },
-    {
-      "brand": "midea",
-      "model": "MO1HS-H09B-2A",
-      "values": [
-        "MCA (1)",
-        "MCD (1)",
-        "MDH (1)",
-        "MDL (1)",
-        "MFA (1)",
-        "MSE (1)"
+        "MO1 (42)",
+        "MAU (2)"
       ]
     },
     {
@@ -3753,7 +6848,7 @@
       "brand": "midea",
       "model": "MO1SE-H36B-2A",
       "values": [
-        "MO1 (6)",
+        "MO1 (118)",
         "MAU (2)"
       ]
     },
@@ -3761,7 +6856,7 @@
       "brand": "moovair",
       "model": "DMA12HOS25230E8",
       "values": [
-        "DM (4)",
+        "DM (3)",
         "DMA12 (1)"
       ]
     },
@@ -3778,6 +6873,14 @@
       "model": "DMA12HOS42230E4",
       "values": [
         "DM (1)",
+        "DMA (1)"
+      ]
+    },
+    {
+      "brand": "moovair",
+      "model": "DMA24HOS25230E8",
+      "values": [
+        "DM (3)",
         "DMA (1)"
       ]
     },
@@ -3807,26 +6910,50 @@
     },
     {
       "brand": "moovair",
+      "model": "MSHEA24R2AN1",
+      "values": [
+        "MSH (2)",
+        "MAH (1)"
+      ]
+    },
+    {
+      "brand": "moovair",
+      "model": "MSHEA36R2AN1",
+      "values": [
+        "MAH (1)",
+        "MSH (1)"
+      ]
+    },
+    {
+      "brand": "moovair",
+      "model": "MSHEA48R2AN1",
+      "values": [
+        "MAH (1)",
+        "MSH (1)"
+      ]
+    },
+    {
+      "brand": "moovair",
       "model": "MSHMA18R2AN1",
       "values": [
-        "MAH (3)",
-        "MSH (3)"
+        "MSH (4)",
+        "MAH (2)"
       ]
     },
     {
       "brand": "moovair",
       "model": "MSHMA24R2AN1",
       "values": [
-        "MAH (3)",
-        "MSH (3)"
+        "MSH (4)",
+        "MAH (2)"
       ]
     },
     {
       "brand": "moovair",
       "model": "MSHMA30R2AN1",
       "values": [
-        "MSH (5)",
-        "MAH (4)"
+        "MSH (7)",
+        "MAH (2)"
       ]
     },
     {
@@ -3841,16 +6968,82 @@
       "brand": "moovair",
       "model": "MSHMA60R2AN1",
       "values": [
-        "MAH (3)",
-        "MSH (1)"
+        "MAH (2)",
+        "MSH (2)"
       ]
     },
     {
       "brand": "moovair",
       "model": "MSHMB36R2AN1",
       "values": [
-        "MSH (5)",
-        "MAH (4)"
+        "MSH (7)",
+        "MAH (2)"
+      ]
+    },
+    {
+      "brand": "mrcool",
+      "model": "CENTRAL-24-HP-C-230B00-O",
+      "values": [
+        "Central (32)",
+        "CEN (19)",
+        "MVP (1)"
+      ]
+    },
+    {
+      "brand": "mrcool",
+      "model": "CENTRAL-30-HP-C-230B00-O",
+      "values": [
+        "CEN (11)",
+        "Central (1)",
+        "MVP (1)"
+      ]
+    },
+    {
+      "brand": "mrcool",
+      "model": "CENTRAL-36-HP-C-230B00-O",
+      "values": [
+        "CEN (20)",
+        "MVP (1)"
+      ]
+    },
+    {
+      "brand": "mrcool",
+      "model": "CENTRAL-48-HP-C-230B00-O",
+      "values": [
+        "CEN (7)",
+        "MVP (1)"
+      ]
+    },
+    {
+      "brand": "mrcool",
+      "model": "CENTRAL-60-HP-C-230B00-O",
+      "values": [
+        "CEN (8)",
+        "MVP (1)"
+      ]
+    },
+    {
+      "brand": "mrcool",
+      "model": "MHP17018A-A",
+      "values": [
+        "MHP170 (22)",
+        "MHP17 (2)"
+      ]
+    },
+    {
+      "brand": "mrcool",
+      "model": "MHP17030A-A",
+      "values": [
+        "MHP170 (16)",
+        "MHP17 (1)"
+      ]
+    },
+    {
+      "brand": "mrcool",
+      "model": "MHP17036A-A",
+      "values": [
+        "MHP170 (12)",
+        "MHP17 (1)"
       ]
     },
     {
@@ -3863,17 +7056,9 @@
     },
     {
       "brand": "panasonic",
-      "model": "CU-XZ12AKUAC",
-      "values": [
-        "Climapure XZ (1)",
-        "Deluxe Z (1)"
-      ]
-    },
-    {
-      "brand": "panasonic",
       "model": "CU-XZ15AKUAC",
       "values": [
-        "Climapure XZ (1)",
+        "ClimaPure XZ (1)",
         "Deluxe Z (1)"
       ]
     },
@@ -3881,7 +7066,7 @@
       "brand": "panasonic",
       "model": "CU-XZ18AKUAC",
       "values": [
-        "Climapure XZ (1)",
+        "ClimaPure XZ (1)",
         "Deluxe Z (1)"
       ]
     },
@@ -3889,32 +7074,8 @@
       "brand": "panasonic",
       "model": "CU-XZ24AKUAC",
       "values": [
-        "Climapure XZ (1)",
+        "ClimaPure XZ (1)",
         "Deluxe Z (1)"
-      ]
-    },
-    {
-      "brand": "panasonic",
-      "model": "CU-XZ9AKUAC",
-      "values": [
-        "Climapure XZ (1)",
-        "Deluxe Z (1)"
-      ]
-    },
-    {
-      "brand": "payne",
-      "model": "37MAHAQ06AA3",
-      "values": [
-        "45M (2)",
-        "D5M (1)"
-      ]
-    },
-    {
-      "brand": "payne",
-      "model": "37MAHAQ09AA3",
-      "values": [
-        "45M (5)",
-        "D5M (1)"
       ]
     },
     {
@@ -3951,17 +7112,9 @@
     },
     {
       "brand": "payne",
-      "model": "37MARAQ09AA3",
-      "values": [
-        "45M (4)",
-        "D5M (1)"
-      ]
-    },
-    {
-      "brand": "payne",
       "model": "37MARAQ12AA3",
       "values": [
-        "45M (5)",
+        "45M (4)",
         "D5M (1)"
       ]
     },
@@ -3991,18 +7144,114 @@
     },
     {
       "brand": "payne",
+      "model": "37MUHAQ18AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "37MUHAQ24AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "37MUHAQ30AA3",
+      "values": [
+        "37M (5)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "37MUHAQ36AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "37MUHAQ48AA3",
+      "values": [
+        "37M (2)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "37MUHAQ60AA3",
+      "values": [
+        "37M (3)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "37MURAQ24AA3",
+      "values": [
+        "37M (3)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "37MURAQ36AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "37MURAQ48AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "payne",
       "model": "38MARBQ18AA3",
       "values": [
-        "38MAR (5)",
+        "38MAR (8)",
         "38M (1)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "38MARBQ24AA3",
+      "values": [
+        "38MAR (6)",
+        "38M (1)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "38MGRBQ36DA3",
+      "values": [
+        "38M (2)",
+        "38MG (1)"
       ]
     },
     {
       "brand": "payne",
       "model": "38MGRBQ48EA3",
       "values": [
-        "38MG (2)",
-        "38M (1)"
+        "38M (1)",
+        "38MG (1)"
+      ]
+    },
+    {
+      "brand": "payne",
+      "model": "38MPRBQ12AA3",
+      "values": [
+        "38M (1)",
+        "38MP (1)"
       ]
     },
     {
@@ -4018,6 +7267,7 @@
       "model": "3PAMSHH18-SZO",
       "values": [
         "3PAMS (3)",
+        "3PA (1)",
         "3PAM (1)"
       ]
     },
@@ -4031,18 +7281,17 @@
     },
     {
       "brand": "rheem",
-      "model": "RD17AZ24AJ3N",
+      "model": "FPHMR42A3D",
       "values": [
-        "K (42)",
-        "Prestige (2)"
+        "Floating Air Prestige Multi-Zone (2)",
+        "Floating Air Pro (1)"
       ]
     },
     {
       "brand": "rheem",
       "model": "RD17AZ36AJ3N",
       "values": [
-        "F - PLUS (44)",
-        "Prestige (21)",
+        "Prestige (26)",
         "Classic PLUS (13)"
       ]
     },
@@ -4050,104 +7299,232 @@
       "brand": "rheem",
       "model": "RD17AZ48AJ3N",
       "values": [
-        "F (101)",
-        "Prestige (1)"
+        "Prestige (11)",
+        "Classic Plus (6)",
+        "Achiever Plus (1)"
       ]
     },
     {
       "brand": "rheem",
-      "model": "RD17AZ60AJ3N",
+      "model": "RP15AY18AJ2N",
       "values": [
-        "F (33)",
-        "Prestige (15)"
+        "Classic PLUS (4)",
+        "Classic (1)"
       ]
     },
     {
       "brand": "rheem",
-      "model": "RD18AY24AJVC",
+      "model": "RP15AY24AJ2N",
       "values": [
-        "Prestige (16)",
-        "K (9)"
+        "Classic PLUS (3)",
+        "Classic (1)"
       ]
     },
     {
       "brand": "rheem",
-      "model": "RD18AY36AJVC",
+      "model": "RP15AY30AJ2N",
       "values": [
-        "Prestige (53)",
-        "K (39)"
+        "Classic Plus (2)",
+        "Classic (1)"
       ]
     },
     {
       "brand": "rheem",
-      "model": "RD18AY48AJVC",
+      "model": "RP15AY36AJ2N",
       "values": [
-        "Prestige (26)",
-        "K (17)"
+        "Classic PLUS (73)",
+        "Classic (1)"
       ]
     },
     {
       "brand": "rheem",
-      "model": "RD18AY60AJVC",
+      "model": "RP15AY42AJ2N",
       "values": [
-        "Prestige (22)",
-        "K (17)"
+        "Classic PLUS (66)",
+        "Classic (1)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "RP15AY48AJ2N",
+      "values": [
+        "Classic Plus (2)",
+        "Classic (1)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "RP15AY60AJ2N",
+      "values": [
+        "Classic PLUS (8)",
+        "Classic (1)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "RP15AZ18AJ2N",
+      "values": [
+        "Classic PLUS (17)",
+        "Classic (2)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "RP15AZ24AJ2N",
+      "values": [
+        "Classic PLUS (21)",
+        "Classic (6)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "RP15AZ30AJ2N",
+      "values": [
+        "Classic PLUS (24)",
+        "Classic (4)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "RP15AZ36AJ2N",
+      "values": [
+        "Classic PLUS (5)",
+        "Classic (1)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "RP15AZ60AJ2N",
+      "values": [
+        "Classic PLUS (5)",
+        "Classic (2)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "WP14AY42AJ2N",
+      "values": [
+        "Versus (5)",
+        "Select (1)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "WP15AZ18AJ2N",
+      "values": [
+        "Classic PLUS (11)",
+        "Versus (2)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "WP15AZ24AJ2N",
+      "values": [
+        "Classic PLUS (11)",
+        "Versus (9)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "WP15AZ30AJ2N",
+      "values": [
+        "Classic PLUS (16)",
+        "Versus (5)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "WP15AZ42AJ2N",
+      "values": [
+        "Classic PLUS (2)",
+        "Versus (2)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "WP15AZ48AJ2N",
+      "values": [
+        "Classic PLUS (3)",
+        "Versus (1)"
+      ]
+    },
+    {
+      "brand": "rheem",
+      "model": "WP15AZ60AJ2N",
+      "values": [
+        "Classic PLUS (2)",
+        "Versus (1)"
+      ]
+    },
+    {
+      "brand": "royalton",
+      "model": "4HP17L18P-A",
+      "values": [
+        "4HP17L (131)",
+        "4HP17 (14)"
+      ]
+    },
+    {
+      "brand": "royalton",
+      "model": "4HP17L24P-A",
+      "values": [
+        "4HP17L (135)",
+        "4HP17 (10)"
+      ]
+    },
+    {
+      "brand": "royalton",
+      "model": "4HP17L30P-A",
+      "values": [
+        "4HP17L (123)",
+        "4HP17 (12)"
+      ]
+    },
+    {
+      "brand": "royalton",
+      "model": "4HP17L36P-A",
+      "values": [
+        "4HP17L (118)",
+        "4HP17 (23)"
+      ]
+    },
+    {
+      "brand": "royalton",
+      "model": "4HP17L48P-A",
+      "values": [
+        "4HP17L (84)",
+        "4HP17 (5)"
       ]
     },
     {
       "brand": "russell",
-      "model": "RD17AZ24AJ3N",
+      "model": "RD17AZ36AJ3N",
       "values": [
-        "K (40)",
+        "Vantix (37)",
+        "F (1)"
+      ]
+    },
+    {
+      "brand": "russell",
+      "model": "SP18AZ48AJVC",
+      "values": [
+        "K (1)",
         "Vantix (1)"
       ]
     },
     {
-      "brand": "russell",
-      "model": "RD17AZ36AJ3N",
-      "values": [
-        "F - PLUS (40)",
-        "Vantix (35)"
-      ]
-    },
-    {
-      "brand": "russell",
-      "model": "RD17AZ60AJ3N",
-      "values": [
-        "F (30)",
-        "Vantix (15)"
-      ]
-    },
-    {
-      "brand": "russell",
-      "model": "RD18AY24AJVC",
-      "values": [
-        "Vantix (13)",
-        "K (9)"
-      ]
-    },
-    {
-      "brand": "russell",
-      "model": "RD18AY60AJVC",
-      "values": [
-        "K (10)",
-        "Vantix (10)"
-      ]
-    },
-    {
       "brand": "ruud",
-      "model": "RD17AZ24AJ3N",
+      "model": "FPHMR42A3D",
       "values": [
-        "K (41)",
-        "Ultra (2)"
+        "Floating Air Pro (2)",
+        "Floating Air Pro Ultra Multi-Zone (1)"
       ]
     },
     {
       "brand": "ruud",
       "model": "RD17AZ36AJ3N",
       "values": [
-        "F - PLUS (42)",
-        "Ultra (21)",
+        "Ultra (26)",
         "Achiever PLUS (18)"
       ]
     },
@@ -4155,59 +7532,171 @@
       "brand": "ruud",
       "model": "RD17AZ48AJ3N",
       "values": [
-        "F (100)",
-        "Ultra (1)"
+        "Ultra (11)",
+        "Achiever Plus (7)"
       ]
     },
     {
       "brand": "ruud",
-      "model": "RD17AZ60AJ3N",
+      "model": "RP15AY18AJ2N",
       "values": [
-        "F (32)",
-        "Ultra (15)"
+        "Achiever PLUS (4)",
+        "Ultra PLUS (2)",
+        "Achiever (1)"
       ]
     },
     {
       "brand": "ruud",
-      "model": "RD18AY24AJVC",
+      "model": "RP15AY24AJ2N",
       "values": [
-        "Ultra (16)",
-        "K (9)"
+        "Achiever PLUS (4)",
+        "Achiever (1)",
+        "Ultra PLUS (1)"
       ]
     },
     {
       "brand": "ruud",
-      "model": "RD18AY36AJVC",
+      "model": "RP15AY30AJ2N",
       "values": [
-        "Ultra (53)",
-        "K (39)"
+        "Achiever Plus (2)",
+        "Achiever (1)"
       ]
     },
     {
       "brand": "ruud",
-      "model": "RD18AY48AJVC",
+      "model": "RP15AY36AJ2N",
       "values": [
-        "Ultra (26)",
-        "K (17)"
+        "Achiever PLUS (70)",
+        "Ultra PLUS (2)",
+        "Achiever (1)"
       ]
     },
     {
       "brand": "ruud",
-      "model": "RD18AY60AJVC",
+      "model": "RP15AY42AJ2N",
       "values": [
-        "Ultra (22)",
-        "K (17)"
+        "Achiever PLUS (69)",
+        "Achiever (1)"
       ]
     },
     {
-      "brand": "samsung",
-      "model": "AC009DXSCCG",
+      "brand": "ruud",
+      "model": "RP15AY48AJ2N",
       "values": [
-        "1-Way Cassette (WindFree ) Premium (CAC) (1)",
-        "Console - Premium (CAC) (1)",
-        "Duct S (HSP) Premium (CAC) (1)",
-        "Mini 4-Way Cassette (WindFree ) Premium (CAC) (1)",
-        "Slim Duct (LSP) Premium (CAC) (1)"
+        "Achiever Plus (2)",
+        "Achiever (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "RP15AY60AJ2N",
+      "values": [
+        "Achiever PLUS (8)",
+        "Achiever (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "RP15AZ18AJ2N",
+      "values": [
+        "Achiever PLUS (16)",
+        "Classic Plus (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "RP15AZ24AJ2N",
+      "values": [
+        "Achiever PLUS (20)",
+        "Classic Plus (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "RP15AZ30AJ2N",
+      "values": [
+        "Achiever PLUS (23)",
+        "Classic Plus (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "RP15AZ36AJ2N",
+      "values": [
+        "Achiever PLUS (4)",
+        "Classic Plus (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "RP15AZ60AJ2N",
+      "values": [
+        "Achiever PLUS (4)",
+        "Classic Plus (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "WP14AY42AJ2N",
+      "values": [
+        "Versus (5)",
+        "Choice (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "WP15AZ18AJ2N",
+      "values": [
+        "Achiever PLUS (11)",
+        "Versus (3)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "WP15AZ24AJ2N",
+      "values": [
+        "Achiever PLUS (11)",
+        "Versus (10)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "WP15AZ30AJ2N",
+      "values": [
+        "Achiever PLUS (16)",
+        "Versus (6)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "WP15AZ36AJ2N",
+      "values": [
+        "Achiever PLUS (4)",
+        "Versus (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "WP15AZ42AJ2N",
+      "values": [
+        "Achiever PLUS (2)",
+        "Versus (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "WP15AZ48AJ2N",
+      "values": [
+        "Achiever PLUS (2)",
+        "Versus (1)"
+      ]
+    },
+    {
+      "brand": "ruud",
+      "model": "WP15AZ60AJ2N",
+      "values": [
+        "Achiever PLUS (2)",
+        "Versus (1)"
       ]
     },
     {
@@ -4215,7 +7704,6 @@
       "model": "AC012DXSCCG",
       "values": [
         "1-Way Cassette (WindFree ) Premium (CAC) (1)",
-        "Console - Premium (CAC) (1)",
         "Duct S (HSP) Premium (CAC) (1)",
         "Mini 4-Way Cassette (WindFree ) Premium (CAC) (1)",
         "Slim Duct (LSP) Premium (CAC) (1)"
@@ -4307,6 +7795,14 @@
     },
     {
       "brand": "samsung",
+      "model": "AC036FCUPCG",
+      "values": [
+        "Hylex - Premium (5)",
+        "Hylex (3)"
+      ]
+    },
+    {
+      "brand": "samsung",
       "model": "AC048DXADCG",
       "values": [
         "4-Way Cassette (WindFree ) Standard (CAC) (1)",
@@ -4326,10 +7822,18 @@
     },
     {
       "brand": "samsung",
-      "model": "AR09DXFAMWKX",
+      "model": "AC048FCUPCG",
       "values": [
-        "WindFree - Standard (RAC) (1)",
-        "WindFree IAQ - Standard (RAC) (1)"
+        "Hylex - Premium (5)",
+        "Hylex (2)"
+      ]
+    },
+    {
+      "brand": "samsung",
+      "model": "AC060FCUPCG",
+      "values": [
+        "Hylex - Premium (3)",
+        "Hylex (1)"
       ]
     },
     {
@@ -4351,6 +7855,14 @@
     {
       "brand": "samsung",
       "model": "AR18DXFAMWKX",
+      "values": [
+        "WindFree - Standard (RAC) (1)",
+        "WindFree IAQ - Standard (RAC) (1)"
+      ]
+    },
+    {
+      "brand": "samsung",
+      "model": "AR24DXFAMWKX",
       "values": [
         "WindFree - Standard (RAC) (1)",
         "WindFree IAQ - Standard (RAC) (1)"
@@ -4390,34 +7902,18 @@
     },
     {
       "brand": "senville",
-      "model": "SENDC-60HF-OG",
+      "model": "SENDC-48HF-OG",
       "values": [
         "SEN (1)",
         "Sendc (1)"
       ]
     },
     {
-      "brand": "slimair",
-      "model": "SHC09VE2AG",
+      "brand": "senville",
+      "model": "SENDC-60HF-OG",
       "values": [
-        "SHC (5)",
-        "SHD (1)"
-      ]
-    },
-    {
-      "brand": "slimair",
-      "model": "SHC09VH2AG",
-      "values": [
-        "SHC (2)",
-        "SHD (1)"
-      ]
-    },
-    {
-      "brand": "slimair",
-      "model": "SHC12VE2AG",
-      "values": [
-        "SHC (4)",
-        "SHD (1)"
+        "SEN (1)",
+        "Sendc (1)"
       ]
     },
     {
@@ -4461,10 +7957,135 @@
       ]
     },
     {
+      "brand": "smart-comfort",
+      "model": "D5CUHAH18AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "Crossover heat pump (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "DLCSRBH18AAK",
+      "values": [
+        "DLC (15)",
+        "Dl (1)",
+        "DLCS (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "DLCSRBH24AAK",
+      "values": [
+        "DLC (12)",
+        "Dl (1)",
+        "DLCS (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "DLCURAH24AAK",
+      "values": [
+        "38M (1)",
+        "Dl (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "DLCURAH24ABK",
+      "values": [
+        "Dl (3)",
+        "38M (1)"
+      ]
+    },
+    {
+      "brand": "smart-comfort",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
+        "Dl (1)"
+      ]
+    },
+    {
       "brand": "stelpro",
       "model": "SDB1-H24A-O",
       "values": [
-        "SDB (2)",
+        "SDB (6)",
         "SAHB (1)"
       ]
     },
@@ -4472,7 +8093,7 @@
       "brand": "stelpro",
       "model": "SDB1-H30A-O",
       "values": [
-        "SDB (3)",
+        "SDB (4)",
         "SAHB (1)"
       ]
     },
@@ -4480,7 +8101,7 @@
       "brand": "stelpro",
       "model": "SDB1-H36A-O",
       "values": [
-        "SDB (2)",
+        "SDB (5)",
         "SAHB (1)"
       ]
     },
@@ -4488,25 +8109,16 @@
       "brand": "stelpro",
       "model": "SDB1-H48A-O",
       "values": [
-        "SAHB (2)",
-        "SDB (1)"
-      ]
-    },
-    {
-      "brand": "stelpro",
-      "model": "SDB1-H60A-O",
-      "values": [
         "SDB (2)",
         "SAHB (1)"
       ]
     },
     {
       "brand": "stelpro",
-      "model": "SEPB-H09A-O",
+      "model": "SDB1-H60A-O",
       "values": [
-        "SEPB (1)",
-        "SFCB1 (1)",
-        "SICB1 (1)"
+        "SDB (4)",
+        "SAHB (1)"
       ]
     },
     {
@@ -4537,43 +8149,83 @@
       ]
     },
     {
-      "brand": "sure",
-      "model": "RD17AZ24AJ3N",
+      "brand": "sum-x",
+      "model": "SM-24HSM2-CU",
       "values": [
-        "K (40)",
+        "SM (1)",
+        "SM-COIL (1)"
+      ]
+    },
+    {
+      "brand": "sum-x",
+      "model": "SM-36HSM2-CU",
+      "values": [
+        "SM (1)",
+        "SM-COIL (1)"
+      ]
+    },
+    {
+      "brand": "sum-x",
+      "model": "SM-48HSM2-CU",
+      "values": [
+        "SM (1)",
+        "SM-COIL (1)"
+      ]
+    },
+    {
+      "brand": "sum-x",
+      "model": "SM-60HSM2-CU",
+      "values": [
+        "SM (1)",
+        "SM-COIL (1)"
+      ]
+    },
+    {
+      "brand": "sure",
+      "model": "SP17AY24AJVC",
+      "values": [
+        "NONE (43)",
+        "Vantix (3)"
+      ]
+    },
+    {
+      "brand": "sure",
+      "model": "SP17AY36AJVC",
+      "values": [
+        "NONE (113)",
+        "Vantix (10)"
+      ]
+    },
+    {
+      "brand": "sure",
+      "model": "SP17AY48AJVC",
+      "values": [
+        "NONE (104)",
+        "Vantix (7)"
+      ]
+    },
+    {
+      "brand": "sure",
+      "model": "SP17AY60AJVC",
+      "values": [
+        "NONE (46)",
+        "Vantix (3)"
+      ]
+    },
+    {
+      "brand": "sure",
+      "model": "SP18AZ48AJVC",
+      "values": [
+        "K (1)",
         "Vantix (1)"
       ]
     },
     {
-      "brand": "sure",
-      "model": "RD17AZ36AJ3N",
+      "brand": "tcl",
+      "model": "H18FMHD3XPC",
       "values": [
-        "F - PLUS (40)",
-        "Vantix (37)"
-      ]
-    },
-    {
-      "brand": "sure",
-      "model": "RD17AZ60AJ3N",
-      "values": [
-        "F (30)",
-        "Vantix (15)"
-      ]
-    },
-    {
-      "brand": "sure",
-      "model": "RD18AY24AJVC",
-      "values": [
-        "Vantix (14)",
-        "K (9)"
-      ]
-    },
-    {
-      "brand": "sure",
-      "model": "RD18AY60AJVC",
-      "values": [
-        "Vantix (11)",
-        "K (10)"
+        "Apex Multi Match Hyper Heat (2)",
+        "Apex Multi Match (1)"
       ]
     },
     {
@@ -4581,7 +8233,7 @@
       "model": "H18SBH22XPC",
       "values": [
         "Breezein (3)",
-        "Celling FLOOR-single (1)"
+        "Celling FLOOR-single (2)"
       ]
     },
     {
@@ -4589,38 +8241,473 @@
       "model": "H24SBH20XPC",
       "values": [
         "Breezein (3)",
+        "Celling FLOOR-single (2)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "H27FMHD4XPC",
+      "values": [
+        "Apex Multi Match Hyper Heat (2)",
+        "Apex Multi Match (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "H36FMHD5XPC",
+      "values": [
+        "Apex Multi Match Hyper Heat (2)",
+        "Apex Multi Match (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "H48FMHD6XPC",
+      "values": [
+        "Apex Multi Match Hyper Heat (2)",
+        "Apex Multi Match (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "H55FMHD6XPC",
+      "values": [
+        "Apex Multi Match Hyper Heat (2)",
+        "Apex Multi Match (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "THH24HES2NAGOH24",
+      "values": [
+        "THH2 (77)",
+        "TH24 (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "THH36HES2NAGOH24",
+      "values": [
+        "THH2 (125)",
+        "TH24 (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "THH48HES2NAGOH24",
+      "values": [
+        "THH2 (21)",
+        "TH24 (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "TMH18HEI2NAS0U25",
+      "values": [
+        "free match 27S HT (3)",
+        "free match 27S (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "TMH27HEI2NAS0U25",
+      "values": [
+        "free match 27S HT (3)",
+        "free match 27S (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "TMH36HEI2NAS0U25",
+      "values": [
+        "free match 27S HT (3)",
+        "free match 27S (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "TMH48HEI2NAS0U25",
+      "values": [
+        "free match 27S HT (3)",
+        "free match 27S (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "TMH55HEI2NAS0U25",
+      "values": [
+        "free match 27S HT (3)",
+        "free match 27S (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "TSH18HEI2NAN0T24",
+      "values": [
+        "DUCT-single (2)",
+        "CASSETTE-single (1)",
         "Celling FLOOR-single (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "TSH24HDI2NAJ0X25",
+      "values": [
+        "R32-Cassette-21S (1)",
+        "R32-Celing Floor-21S (1)"
+      ]
+    },
+    {
+      "brand": "tcl",
+      "model": "TSH24HEI2NAN0T24",
+      "values": [
+        "DUCT-single (2)",
+        "CASSETTE-single (1)",
+        "Celling FLOOR-single (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "D5CUHAH18AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "D5CUHAH24AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)",
+        "Crossover heat pump (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "D5CUHAH30AAK",
+      "values": [
+        "D5C (4)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "D5CUHAH36AAK",
+      "values": [
+        "D5C (3)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "D5CUHAH48AAK",
+      "values": [
+        "D5F (2)",
+        "D5C (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "D5CUHAH60AAK",
+      "values": [
+        "D5C (2)",
+        "D5F (2)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "D5CURAH24AAK",
+      "values": [
+        "D5C (3)",
+        "Crossover heat pump (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "D5CURAH36AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "D5CURAH48AAK",
+      "values": [
+        "D5C (1)",
+        "D5F (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
       ]
     },
     {
       "brand": "tempstar",
       "model": "DLCSRBH18AAK",
       "values": [
-        "DLC (80)",
-        "Dl (1)"
+        "DLC (15)",
+        "Dl (1)",
+        "DLCS (1)"
       ]
     },
     {
       "brand": "tempstar",
       "model": "DLCSRBH24AAK",
       "values": [
-        "DLC (86)",
-        "Dl (1)"
+        "DLC (12)",
+        "Dl (1)",
+        "DLCS (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "DLCURAH18ABK",
+      "values": [
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "DLCURAH24AAK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "DLCURAH24ABK",
+      "values": [
+        "Dl (3)",
+        "38M (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "DLCURAH30ABK",
+      "values": [
+        "Dl (2)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "DLCURAH36ABK",
+      "values": [
+        "Dl (3)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "DLCURAH48ABK",
+      "values": [
+        "38M (1)",
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "tempstar",
+      "model": "DLCURAH60ABK",
+      "values": [
+        "Dl (1)",
+        "DLC (1)"
+      ]
+    },
+    {
+      "brand": "tgm",
+      "model": "GRH32IT36AS",
+      "values": [
+        "All Match (1)",
+        "ZENO (1)"
+      ]
+    },
+    {
+      "brand": "thermal-zone",
+      "model": "TZID18H520ZCS",
+      "values": [
+        "TZ (4)",
+        "TZID (1)"
+      ]
+    },
+    {
+      "brand": "thermal-zone",
+      "model": "TZID24H520ZCS",
+      "values": [
+        "TZ (40)",
+        "TZID (2)"
+      ]
+    },
+    {
+      "brand": "thermal-zone",
+      "model": "TZID36H520ZCS",
+      "values": [
+        "TZ (11)",
+        "TZID (1)"
+      ]
+    },
+    {
+      "brand": "thermal-zone",
+      "model": "TZID48H520ZCS",
+      "values": [
+        "TZ (35)",
+        "TZID (2)"
+      ]
+    },
+    {
+      "brand": "thermal-zone",
+      "model": "TZID60H520ZCS",
+      "values": [
+        "TZ (8)",
+        "TZID (1)"
+      ]
+    },
+    {
+      "brand": "thermal-zone",
+      "model": "TZPLAD1524AJN",
+      "values": [
+        "Performance (6)",
+        "Classic PLUS/ACHIEVER PLUS (1)"
+      ]
+    },
+    {
+      "brand": "thermal-zone",
+      "model": "TZPLAD1536AJN",
+      "values": [
+        "Classic PLUS/ACHIEVER PLUS (1)",
+        "Performance (1)"
+      ]
+    },
+    {
+      "brand": "thermal-zone",
+      "model": "TZPLAD1548AJN",
+      "values": [
+        "Classic PLUS/ACHIEVER PLUS (1)",
+        "Performance (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "SU-AORAKI12-230/O",
+      "values": [
+        "All Match (1)",
+        "Aoraki (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "SU-AORAKI18-230/O",
+      "values": [
+        "ALL Match (3)",
+        "Aoraki (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "SU-AORAKI24-230/O",
+      "values": [
+        "All-match (3)",
+        "Clivia (1)"
       ]
     },
     {
       "brand": "tosot",
       "model": "TACCI7H4R36",
       "values": [
-        "Charmo (2)",
-        "All Match (1)"
+        "All Match (1)",
+        "Charmo (1)"
       ]
     },
     {
       "brand": "tosot",
-      "model": "TAVCI7H4R09",
+      "model": "TAVCI7H4R12",
+      "values": [
+        "All Match (5)",
+        "Clivia (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TGWHD-60ND",
+      "values": [
+        "M (2)",
+        "Free match (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TM60WH21MO",
+      "values": [
+        "M (2)",
+        "Free match (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TMH60D32MO",
+      "values": [
+        "M (2)",
+        "Free match (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TMSCI7H4R60",
+      "values": [
+        "M (2)",
+        "Free match (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TU36-R32WEDU",
+      "values": [
+        "E (3)",
+        "Flexx Ultra heat (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TU36W-EDU",
+      "values": [
+        "Ultra Heat Flexx (2)",
+        "Flexx High-efficiency (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TU60-R32WEDU",
+      "values": [
+        "E (3)",
+        "Flexx Ultra heat (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TU60W-EDU",
+      "values": [
+        "Ultra Heat Flexx (2)",
+        "Flexx High-efficiency (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TW12HAY32A1DO",
       "values": [
         "360 air discharge cassette unit (1)",
+        "Airy (1)",
         "Console (1)",
         "Ducted (1)",
         "Floor ceiling (1)",
@@ -4629,34 +8716,30 @@
     },
     {
       "brand": "tosot",
-      "model": "TU36W-EDU",
+      "model": "TW12HAY32A1DOC",
       "values": [
-        "Flexx High-efficiency (3)",
-        "Ultra Heat Flexx (2)"
+        "360 air discharge cassette unit (1)",
+        "Airy (1)",
+        "Console (1)",
+        "Ducted (1)",
+        "Floor ceiling (1)",
+        "One-way air discharge cassette unit (1)"
       ]
     },
     {
       "brand": "tosot",
-      "model": "TU60W-EDU",
+      "model": "TW12HP32A2DO",
       "values": [
-        "Flexx High-efficiency (3)",
-        "Ultra Heat Flexx (2)"
+        "All Match (5)",
+        "Clivia (2)"
       ]
     },
     {
       "brand": "tosot",
-      "model": "TW09HP32A2AO",
+      "model": "TW12HP32A2DOC",
       "values": [
-        "Clivia (1)",
-        "Pular (1)"
-      ]
-    },
-    {
-      "brand": "tosot",
-      "model": "TW09HP32A2DO",
-      "values": [
-        "Clivia (1)",
-        "Pular (1)"
+        "All Match (5)",
+        "Clivia (2)"
       ]
     },
     {
@@ -4671,15 +8754,147 @@
       "brand": "tosot",
       "model": "TW18HXP2A1DO",
       "values": [
-        "Pular (2)",
-        "All Match (1)"
+        "All Match (1)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TW24HAY32A1DO",
+      "values": [
+        "All-match (3)",
+        "Airy (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TW24HAY32A1DOC",
+      "values": [
+        "All-match (3)",
+        "Airy (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TW24HP32A2DO",
+      "values": [
+        "All-match (3)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TW24HP32A2DOC",
+      "values": [
+        "All-match (3)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TW30HC32A5DO",
+      "values": [
+        "ALL Match (3)",
+        "Charmo (1)"
       ]
     },
     {
       "brand": "tosot",
       "model": "TW36HC32A5DO",
       "values": [
+        "ALL Match (4)",
+        "Charmo (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH12AD32AO",
+      "values": [
+        "360 air discharge cassette unit (1)",
+        "Airy (1)",
+        "Console (1)",
+        "Ducted (1)",
+        "Floor ceiling (1)",
+        "One-way air discharge cassette unit (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH12AUC25R32A1DO",
+      "values": [
+        "All Match (1)",
+        "Clivia (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH12PD32AO",
+      "values": [
+        "All Match (5)",
+        "Pular (2)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH18AD32AO",
+      "values": [
+        "ALL Match (4)",
+        "Airy (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH18AUC25R32A1DO",
+      "values": [
         "ALL Match (2)",
+        "Clivia (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH18PD32AO",
+      "values": [
+        "ALL Match (3)",
+        "Pular (2)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH18PR32DO",
+      "values": [
+        "Clivia (1)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH24AD32AO",
+      "values": [
+        "All-match (3)",
+        "Airy (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH24PD32AO",
+      "values": [
+        "All-match (3)",
+        "Pular (2)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH24PR32DO",
+      "values": [
+        "Clivia (1)",
+        "Pular (1)"
+      ]
+    },
+    {
+      "brand": "tosot",
+      "model": "TWH30CD32AO",
+      "values": [
+        "All Match (3)",
         "Charmo (1)"
       ]
     },
@@ -4692,34 +8907,138 @@
       ]
     },
     {
+      "brand": "tosot",
+      "model": "TWH36CD32AO",
+      "values": [
+        "All Match (4)",
+        "Charmo (1)"
+      ]
+    },
+    {
       "brand": "trane",
       "model": "4TWV8X24A1",
       "values": [
-        "XV18I (60)",
-        "XV18 (1)"
+        "XV18 (35)",
+        "XV18I (20)"
       ]
     },
     {
       "brand": "trane",
-      "model": "4TXD2036A10NU",
+      "model": "4TWV8X36A1",
       "values": [
-        "Quest (7)",
-        "Resolute (2)"
+        "XV18I (72)",
+        "XV18 (57)"
       ]
     },
     {
       "brand": "trane",
-      "model": "4TXD2060A10NU",
+      "model": "4TWV8X48A1",
       "values": [
-        "Quest (4)",
-        "Resolute (2)"
+        "XV18 (106)",
+        "XV18I (101)"
+      ]
+    },
+    {
+      "brand": "trane",
+      "model": "4TWV8X60A1",
+      "values": [
+        "XV18I (43)",
+        "XV18 (42)"
+      ]
+    },
+    {
+      "brand": "trane",
+      "model": "5TWR5042A1",
+      "values": [
+        "15 Single-Stage Heat Pump (292)",
+        "Silver 15 (1)"
+      ]
+    },
+    {
+      "brand": "trust-air-conditioners",
+      "model": "AA18H/O44P",
+      "values": [
+        "AA (1)",
+        "Arctic (1)"
+      ]
+    },
+    {
+      "brand": "trust-air-conditioners",
+      "model": "AA24H/O44P",
+      "values": [
+        "AA (1)",
+        "Arctic (1)"
+      ]
+    },
+    {
+      "brand": "trust-air-conditioners",
+      "model": "AA30H/O44P",
+      "values": [
+        "AA (1)",
+        "Arctic (1)"
+      ]
+    },
+    {
+      "brand": "trust-air-conditioners",
+      "model": "AA36H/O44P",
+      "values": [
+        "AA (1)",
+        "CX (1)"
+      ]
+    },
+    {
+      "brand": "trust-air-conditioners",
+      "model": "AH24H/O44P",
+      "values": [
+        "AH (1)",
+        "Infinity (1)"
+      ]
+    },
+    {
+      "brand": "utl",
+      "model": "UCHA-24HDCT",
+      "values": [
+        "AHU (1)",
+        "T* (1)"
+      ]
+    },
+    {
+      "brand": "utl",
+      "model": "UCHA-36HDCT",
+      "values": [
+        "AHU (1)",
+        "T* (1)"
+      ]
+    },
+    {
+      "brand": "utl",
+      "model": "UCHA-48HDCT",
+      "values": [
+        "AHU (1)",
+        "T* (1)"
+      ]
+    },
+    {
+      "brand": "utl",
+      "model": "UCHA-60HDCT",
+      "values": [
+        "AHU (1)",
+        "T* (1)"
+      ]
+    },
+    {
+      "brand": "viessmann",
+      "model": "DLCPRBH12AAK",
+      "values": [
+        "DLC (1)",
+        "DLCP (1)"
       ]
     },
     {
       "brand": "viessmann",
       "model": "DLCSRBH18AAK",
       "values": [
-        "DLC (8)",
+        "DLC (9)",
         "Dl (1)"
       ]
     },
@@ -4732,19 +9051,75 @@
       ]
     },
     {
-      "brand": "weathermaker",
-      "model": "37MAHAQ06AA3",
+      "brand": "villatherm",
+      "model": "VHP-UCHA-24HDCT-A",
       "values": [
-        "45M (2)",
-        "D5M (1)"
+        "T2 (2)",
+        "Split AHU (1)"
       ]
     },
     {
-      "brand": "weathermaker",
-      "model": "37MAHAQ09AA3",
+      "brand": "villatherm",
+      "model": "VHP-UCHA-36HDCT-A",
       "values": [
-        "45M (5)",
-        "D5M (1)"
+        "T2 (2)",
+        "Split AHU (1)"
+      ]
+    },
+    {
+      "brand": "villatherm",
+      "model": "VHP-UCHA-48HDCT-A",
+      "values": [
+        "T2 (2)",
+        "Split AHU (1)"
+      ]
+    },
+    {
+      "brand": "villatherm",
+      "model": "VHP-UCHA-60HDCT-A",
+      "values": [
+        "T2 (2)",
+        "Split AHU (1)"
+      ]
+    },
+    {
+      "brand": "voltas",
+      "model": "VAUWR-24HCDR2",
+      "values": [
+        "Whole House Heat Pump Vertis (1)",
+        "Whole House Heat Pump Vertis -Coil (1)"
+      ]
+    },
+    {
+      "brand": "voltas",
+      "model": "VAUWR-36HCDR2",
+      "values": [
+        "Whole House Heat Pump Vertis (1)",
+        "Whole House Heat Pump Vertis -Coil (1)"
+      ]
+    },
+    {
+      "brand": "voltas",
+      "model": "VAUWR-48HCDR2",
+      "values": [
+        "Whole House Heat Pump Vertis (1)",
+        "Whole House Heat Pump Vertis -Coil (1)"
+      ]
+    },
+    {
+      "brand": "voltas",
+      "model": "VAUWR-60HCDR2",
+      "values": [
+        "Whole House Heat Pump Vertis (1)",
+        "Whole House Heat Pump Vertis -Coil (1)"
+      ]
+    },
+    {
+      "brand": "weatherking",
+      "model": "WP14AY60AJ2N",
+      "values": [
+        "Versus (15)",
+        "Classic (1)"
       ]
     },
     {
@@ -4781,17 +9156,9 @@
     },
     {
       "brand": "weathermaker",
-      "model": "37MARAQ09AA3",
-      "values": [
-        "45M (4)",
-        "D5M (1)"
-      ]
-    },
-    {
-      "brand": "weathermaker",
       "model": "37MARAQ12AA3",
       "values": [
-        "45M (5)",
+        "45M (4)",
         "D5M (1)"
       ]
     },
@@ -4821,18 +9188,114 @@
     },
     {
       "brand": "weathermaker",
+      "model": "37MUHAQ18AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "37MUHAQ24AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "37MUHAQ30AA3",
+      "values": [
+        "37M (5)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "37MUHAQ36AA3",
+      "values": [
+        "37M (4)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "37MUHAQ48AA3",
+      "values": [
+        "37M (2)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "37MUHAQ60AA3",
+      "values": [
+        "37M (3)",
+        "45M (2)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "37MURAQ24AA3",
+      "values": [
+        "37M (3)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "37MURAQ36AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "37MURAQ48AA3",
+      "values": [
+        "37M (1)",
+        "45M (1)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
       "model": "38MARBQ18AA3",
       "values": [
-        "38MAR (5)",
+        "38MAR (8)",
         "38M (1)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "38MARBQ24AA3",
+      "values": [
+        "38MAR (6)",
+        "38M (1)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "38MGRBQ36DA3",
+      "values": [
+        "38M (2)",
+        "38MG (1)"
       ]
     },
     {
       "brand": "weathermaker",
       "model": "38MGRBQ48EA3",
       "values": [
-        "38MG (2)",
-        "38M (1)"
+        "38M (1)",
+        "38MG (1)"
+      ]
+    },
+    {
+      "brand": "weathermaker",
+      "model": "38MPRBQ12AA3",
+      "values": [
+        "38M (1)",
+        "38MP (1)"
       ]
     },
     {
@@ -4900,6 +9363,90 @@
       ]
     },
     {
+      "brand": "willis",
+      "model": "AUHW12KR32-O",
+      "values": [
+        "360 air discharge cassette unit (1)",
+        "Console (1)",
+        "Ducted (1)",
+        "Floor ceiling (1)",
+        "One-way air discharge cassette unit (1)",
+        "Ultima (1)"
+      ]
+    },
+    {
+      "brand": "willis",
+      "model": "FLEX36KUHR32",
+      "values": [
+        "E (2)",
+        "Flexx R32 (2)"
+      ]
+    },
+    {
+      "brand": "willis",
+      "model": "FLEX60KUHR32",
+      "values": [
+        "E (2)",
+        "Flexx R32 (2)"
+      ]
+    },
+    {
+      "brand": "willis",
+      "model": "PUHW12KR32-O",
+      "values": [
+        "All Match (5)",
+        "Heatfinity (1)"
+      ]
+    },
+    {
+      "brand": "yiso",
+      "model": "YOHA2-36CB",
+      "values": [
+        "Pro2 (52)",
+        "Pro (2)"
+      ]
+    },
+    {
+      "brand": "yiso",
+      "model": "YOHA2-60CB",
+      "values": [
+        "Pro2 (54)",
+        "Pro (3)"
+      ]
+    },
+    {
+      "brand": "zephyr",
+      "model": "ZE-624HPA",
+      "values": [
+        "Ultra (2)",
+        "Ultra-Coil (1)"
+      ]
+    },
+    {
+      "brand": "zephyr",
+      "model": "ZE-636HPA",
+      "values": [
+        "Ultra (2)",
+        "Ultra-Coil (1)"
+      ]
+    },
+    {
+      "brand": "zephyr",
+      "model": "ZE-648HPA",
+      "values": [
+        "Ultra (2)",
+        "Ultra-Coil (1)"
+      ]
+    },
+    {
+      "brand": "zephyr",
+      "model": "ZE-660HPA",
+      "values": [
+        "Ultra (2)",
+        "Ultra-Coil (1)"
+      ]
+    },
+    {
       "brand": "zero",
       "model": "Z5SOV-48HDM-US",
       "values": [
@@ -4917,14 +9464,19 @@
     }
   ],
   "imagesCarried": {
-    "models": 4168,
-    "series": 507
+    "models": 2423,
+    "series": 442
   },
   "previous": {
     "brands": 180,
     "models": 9782
   },
   "errors": [],
-  "needsReview": 1,
-  "pairings": 176627
+  "carried": {
+    "retired": 4082,
+    "listedUnderAnotherBrand": 175,
+    "brandsWithoutListedModel": 17
+  },
+  "totalModels": 14760,
+  "pairings": 278211
 }

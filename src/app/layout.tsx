@@ -32,6 +32,11 @@ const outfit = Outfit({
   display: "swap",
 });
 
+/* Pages prérendues régénérées au plus toutes les 6 heures (ISR) : les données (liste LogisVert, catalogue) sont lues
+   sur le disque par le serveur, que le robot de nuit met à jour puis redémarre sans reconstruire le site
+   (scripts/publier-donnees.sh, qui demande aussi une régénération immédiate par /api/donnees/revalider). */
+export const revalidate = 21600;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {

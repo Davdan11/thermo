@@ -1,10 +1,10 @@
 ---
 title: "Meilleure thermopompe murale au Québec en 2026 : le classement sur données certifiées"
 seoTitle: "Meilleure thermopompe murale au Québec en 2026"
-description: "Pas d'avis sponsorisé : les murales classées sur HSPF2, COP à -15 °C et tenue de capacité, d'après ENERGY STAR et la liste LogisVert d'Hydro-Québec. Les marques qui dominent, les modèles à regarder et la méthode pour choisir la vôtre."
+description: "Pas d'avis sponsorisé : les murales classées sur le HSPF2, le COP à -15 °C et la tenue de capacité, d'après ENERGY STAR et la liste d'Hydro-Québec."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
-updatedAt: "2026-09-11"
+updatedAt: "2026-09-17"
 coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "comparer"
 keywords: ["meilleure thermopompe murale", "meilleure thermopompe Québec 2026", "thermopompe murale classement", "meilleure marque thermopompe", "thermopompe murale grand froid"]
@@ -17,7 +17,7 @@ faq:
   - q: "Une murale 12 000 BTU chauffe-t-elle une maison entière?"
     a: "Rarement. Elle couvre bien une aire ouverte de 600 à 900 pi² ; les pièces fermées restent aux plinthes. Pour toute la maison, il faut plusieurs murales, un multizone ou une centrale. Le classement des murales sert à choisir la meilleure machine par pièce, pas à remplacer le calcul de charge."
   - q: "Les classements changent-ils souvent?"
-    a: "Ils se recalculent à chaque mise à jour de la liste LogisVert d'Hydro-Québec, plusieurs fois par année. Une machine peut monter ou descendre quand un nouvel appariement certifié apparaît. La date de la liste utilisée est affichée sur chaque classement."
+    a: "Ils se recalculent à chaque mise à jour de la liste des thermopompes certifiées d'Hydro-Québec, qui est publiée chaque jour et que notre catalogue suit automatiquement. Une machine peut monter ou descendre quand un nouvel appariement certifié apparaît. La date de la liste utilisée est affichée sur chaque classement."
 ---
 
 Les palmarès de thermopompes murales qu'on trouve en ligne reposent sur des avis d'installateurs, des commissions ou des impressions. Celui-ci repose sur trois nombres certifiés par des laboratoires indépendants, publiés par ENERGY STAR et repris dans la liste LogisVert d'Hydro-Québec : le HSPF2, le COP à -15 °C et la capacité maintenue à -15 °C. Voici ce qu'ils disent du marché québécois en 2026, et comment vous en servir.
@@ -38,9 +38,11 @@ Le prix installé n'entre pas dans le classement : il dépend de votre maison et
 
 **HSPF2.** Carrier 45M et Moovair MSHHA18 plafonnent à 16,2 ; Fujitsu Airstage H-Series AOUH09KTAP1 atteint 14 ; Bosch BMS500 13,6 ; LG KUSAL091A 13,5 ; Mitsubishi Electric MUZ-FX09NLHZ 13,3. Les petits calibres (9 000 BTU) dominent souvent ce critère, ce qui rappelle qu'un HSPF2 se compare à calibre égal.
 
-**Tenue de capacité.** Sur les {{chiffre:machines-capacite-15}} machines distinctes dont ENERGY STAR publie la capacité à -15 °C, {{chiffre:machines-maintien-100}} en gardent 100 % ou plus de leur capacité cotée à 8,3 °C (47 °F) et {{chiffre:machines-maintien-90}} au moins 90 % — capacité maximale à -15 °C divisée par la capacité cotée à 8,3 °C, deux valeurs ENERGY STAR du même appariement. Les autres perdent davantage, ou ne publient pas leur capacité cotée à 8,3 °C. C'est l'écart le plus ignoré des fiches de vente, et le plus coûteux en janvier.
+**Tenue de capacité.** Sur les {{chiffre:machines-capacite-15}} machines distinctes dont ENERGY STAR publie la capacité à -15 °C, {{chiffre:machines-maintien-100}} en gardent 100 % ou plus de leur capacité cotée à 8,3 °C (47 °F) et {{chiffre:machines-maintien-90}} au moins 90 %. Il s'agit de la capacité maximale à -15 °C divisée par la capacité cotée à 8,3 °C, deux valeurs ENERGY STAR du même appariement. Les autres perdent davantage, ou ne publient pas leur capacité cotée à 8,3 °C. C'est l'écart le plus ignoré des fiches de vente, et le plus coûteux en janvier.
 
-**Subvention.** Le montant LogisVert ne classe pas les machines, mais il vaut la peine d'être lu : pour une murale de 12 000 BTU, il va de 350 $ à plus de 2 200 $ selon l'appariement, avec une médiane à 535 $.
+**Subvention.** Le montant LogisVert ne classe pas les machines, mais il vaut la peine d'être lu : pour une murale de 12 000 BTU, il va de {{chiffre:lv:wall-single:12000:min}} $ à {{chiffre:lv:wall-single:12000:max}} $ selon l'appariement, avec une médiane de {{chiffre:lv:wall-single:12000:med}} $ sur les {{chiffre:lv:wall-single:12000:n}} machines distinctes subventionnées de ce calibre. L'écart tient au barème : Hydro-Québec verse 50 $ par 1 000 BTU/h de capacité certifiée à -8 °C pour une thermopompe certifiée ENERGY STAR, et 120 $ par 1 000 BTU/h lorsqu'elle est en plus certifiée climat froid. Les machines qui dominent nos classements de tenue au froid sont donc très souvent celles qui touchent les plus gros montants : les deux critères pointent dans la même direction.
+
+Deux règles d'admissibilité valent d'être connues avant de comparer. La certification ENERGY STAR est obligatoire pour toute thermopompe installée depuis le 26 novembre 2025, et l'unité extérieure doit afficher une puissance nominale d'au moins 12 000 BTU/h en climatisation. Une excellente murale de 9 000 BTU, même très bien classée au HSPF2, ne donne donc droit à aucune aide. Le guide sur [les montants par calibre](/guides/subvention-logisvert-montants-par-calibre) détaille ces règles et les fourchettes de chaque calibre.
 
 ## Le classement complet, par calibre
 

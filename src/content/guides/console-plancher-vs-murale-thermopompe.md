@@ -4,7 +4,7 @@ seoTitle: "Console au plancher ou murale : quelle unité choisir"
 description: "Même unité extérieure, deux façons de souffler l'air : la console chauffe au sol, la murale d'en haut. Où chacune excelle, confort et prix comparés."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
-updatedAt: "2026-09-11"
+updatedAt: "2026-09-17"
 coverImage: "/images/guides/card-interior-living-room.jpg"
 category: "comparer"
 keywords: ["thermopompe console", "console au plancher thermopompe", "murale ou console", "unité intérieure thermopompe choix", "console thermopompe avis"]
@@ -60,7 +60,7 @@ Concrètement : si vous cherchez une console, le choix se fait souvent dans les 
 
 ## Efficacité et subvention : lire le jumelage
 
-Le programme LogisVert d'Hydro-Québec attribue un montant par jumelage certifié, unité extérieure plus unité intérieure. Une console et une murale reliées à la même unité extérieure peuvent avoir des montants différents, parce que leurs performances certifiées diffèrent. Sur la liste officielle, les machines de 12 000 BTU subventionnées reçoivent de 350 à 2 268 dollars, médiane 530 dollars ; celles de 18 000 BTU de 475 à 3 312 dollars, médiane 1 404 dollars. Vérifiez le montant du jumelage exact que l'installateur propose, pas celui de la série en général. Notre guide sur [les montants par calibre](/guides/subvention-logisvert-montants-par-calibre) détaille ces écarts.
+Le programme LogisVert d'Hydro-Québec attribue un montant par jumelage certifié, unité extérieure plus unité intérieure. Une console et une murale reliées à la même unité extérieure peuvent avoir des montants différents, parce que leurs performances certifiées diffèrent. Sur la liste en vigueur, les machines de 12 000 BTU subventionnées reçoivent de {{chiffre:lv:tous:12000:min}} à {{chiffre:lv:tous:12000:max}} dollars, médiane {{chiffre:lv:tous:12000:med}} dollars ; celles de 18 000 BTU de {{chiffre:lv:tous:18000:min}} à {{chiffre:lv:tous:18000:max}} dollars, médiane {{chiffre:lv:tous:18000:med}} dollars. Deux conditions cadrent le tout : la thermopompe doit être certifiée ENERGY STAR depuis le 26 novembre 2025, et son unité extérieure doit afficher au moins 12 000 BTU/h de puissance nominale en climatisation, ce qui exclut le calibre de 9 000 BTU. Vérifiez le montant du jumelage exact que l'installateur propose, pas celui de la série en général. Notre guide sur [les montants par calibre](/guides/subvention-logisvert-montants-par-calibre) détaille ces écarts.
 
 ## Le prix : demandez les deux dans la même soumission
 

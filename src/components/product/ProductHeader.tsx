@@ -81,6 +81,7 @@ export function ProductHeader({ detail, seo = null, capacites }: ProductHeaderPr
       zones={model.zones ?? null}
       coldClimate={detail.isColdClimate}
       discontinued={model.status === "discontinued"}
+      horsListeLogisVert={model.logisVertListed === false}
       minTempC={detail.minHeatingTemp?.valueC ?? null}
       imageUrl={model.imageUrl ?? series.imageUrl ?? null}
       figures={figures}

@@ -1,4 +1,6 @@
 #!/bin/bash
+# ATTENTION : ancien robot « branche de revue », non installé dans le cron du VPS (voir scripts/nightly-bot.sh).
+# La liste lue est maintenant le fichier quotidien ENERGY STAR (scripts/lib/logisvert-energystar.mjs).
 # ==================================================================
 # cron-logisvert.sh — mise à jour quotidienne des données LogisVert
 #

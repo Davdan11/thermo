@@ -79,6 +79,13 @@ export interface ProductModel {
   nominalCapacityBtu?: number | null;
   /** Nombre de jumelages (unité extérieure + intérieure) certifiés AHRI dans la liste LogisVert */
   certifiedPairings?: number | null;
+  /**
+   * false : l'unité extérieure n'est plus dans la liste LogisVert en vigueur (fiche gardée pour ne pas casser
+   * son adresse). Aucune subvention, hors catalogue, ThermoMatch, compteurs et index. Absent ou true : listée.
+   */
+  logisVertListed?: boolean;
+  /** AAAA-MM-JJ : date de la première liste en vigueur où l'unité n'apparaît plus (si logisVertListed = false). */
+  logisVertRetiredAt?: string | null;
   /** Number of indoor zones supported */
   zones?: number | null;
   systemType: SystemType;

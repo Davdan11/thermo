@@ -10,8 +10,7 @@ import type { SystemType } from "../types/enums";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { productNames, type ProductNames } from "../product-name";
 import { registry } from "../registry";
-import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
-import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
+import { logisVertDeLaFiche } from "../../subsidies/logisvert-official";
 import { resolveWarranty, type ResolvedWarranty } from "../warranty";
 
 /* ------------------------------------------------------------------
@@ -358,20 +357,9 @@ export function getCatalogueModels(
       }
     }
 
-    let logisVertDollars: number | null = null;
-    const officialEntry = outdoorModelNumber
-      ? lookupLogisVertFuzzy(outdoorModelNumber, brand.name)
-      : lookupLogisVertFuzzy(model.modelNumber, brand.name);
-    
-    if (officialEntry && officialEntry.logisVertDollars > 0) {
-      logisVertDollars = officialEntry.logisVertDollars;
-    } else {
-      const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
-      if (btu > 0) {
-        const result = calculateLogisVertSimple(btu, model.categories.includes("cold-climate"));
-        if (result.dollars > 0) logisVertDollars = result.dollars;
-      }
-    }
+    // Montant de la liste LogisVert en vigueur, sinon aucun : jamais d'estimation (une fiche absente de la liste n'est pas admissible).
+    const officialEntry = logisVertDeLaFiche(model, brand.name, outdoorModelNumber);
+    const logisVertDollars: number | null = officialEntry && officialEntry.logisVertDollars > 0 ? officialEntry.logisVertDollars : null;
 
     return {
       model,
@@ -479,20 +467,9 @@ export function getAllCatalogueProducts(): CatalogueProduct[] {
       }
     }
 
-    let logisVertDollars: number | null = null;
-    const officialEntry = outdoorModelNumber
-      ? lookupLogisVertFuzzy(outdoorModelNumber, brand.name)
-      : lookupLogisVertFuzzy(model.modelNumber, brand.name);
-    
-    if (officialEntry && officialEntry.logisVertDollars > 0) {
-      logisVertDollars = officialEntry.logisVertDollars;
-    } else {
-      const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
-      if (btu > 0) {
-        const result = calculateLogisVertSimple(btu, model.categories.includes("cold-climate"));
-        if (result.dollars > 0) logisVertDollars = result.dollars;
-      }
-    }
+    // Montant de la liste LogisVert en vigueur, sinon aucun : jamais d'estimation (une fiche absente de la liste n'est pas admissible).
+    const officialEntry = logisVertDeLaFiche(model, brand.name, outdoorModelNumber);
+    const logisVertDollars: number | null = officialEntry && officialEntry.logisVertDollars > 0 ? officialEntry.logisVertDollars : null;
 
     return {
       model,
