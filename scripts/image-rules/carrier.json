@@ -1,6 +1,16 @@
 [
   {
     "brand": "carrier",
+    "pattern": "^(38MBRB)",
+    "series": "/images/products/official/carrier-38mbrb-48k.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^(38MBRC)",
+    "series": "/images/products/official/carrier-38mbrc-36k.webp"
+  },
+  {
+    "brand": "carrier",
     "pattern": "^25VNA0",
     "series": "/images/products/official/carrier-25vna0-officiel.webp"
   },

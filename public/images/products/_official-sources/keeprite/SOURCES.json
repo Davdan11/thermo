@@ -1,5 +1,29 @@
 [
   {
+    "fichier": "keeprite-dlcerbh-officiel-site.png",
+    "image_web": "/images/products/official/keeprite-dlcerbh-officiel.webp",
+    "url": "https://www.keeprite.com/en/us/products/ductless-systems/media_1b6254c142ba4c4529eb81ea21e87ccda26c14303.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/ductless-systems/dlcerbh",
+    "date": "2026-09-17",
+    "familles": [
+      "DLCERBH"
+    ],
+    "modeles": "DLCERBH18AAK, DLCERBH24AAK, DLCERBH30AAK",
+    "note": "Photo produit « Performance Heat Pump » de l'index officiel www.keeprite.com (query-index.json). Couvre 3 fiche(s) publiée(s) sans photo."
+  },
+  {
+    "fichier": "keeprite-dlcsrb-officiel-site.png",
+    "image_web": "/images/products/official/keeprite-dlcsrb-officiel.webp",
+    "url": "https://www.keeprite.com/en/us/products/ductless-systems/media_1f3d6012ab39624cd7e03298587cc99bd75443caf.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.keeprite.com/en/us/products/ductless-systems/dlcsrb",
+    "date": "2026-09-17",
+    "familles": [
+      "DLCSRB"
+    ],
+    "modeles": "DLCSRBH18AAK, DLCSRBH24AAK, DLCSRBH30AAK, DLCSRBH30AAK11, DLCSRBH36ABK",
+    "note": "Photo produit « QuietComfort® Heat Pump » de l'index officiel www.keeprite.com (query-index.json). Couvre 5 fiche(s) publiée(s) sans photo."
+  },
+  {
     "fichier": "keeprite-cvh8-site-keeprite.com.png",
     "url": "https://www.keeprite.com/en/us/products/heat-pumps/media_1ecc529e9f2881e0a32947719bfbdc5ff981330e3.png?width=2000&format=png&optimize=medium",
     "page": "https://www.keeprite.com/en/us/products/heat-pumps/ion-18-variable-speed-heat-pump-vh8",

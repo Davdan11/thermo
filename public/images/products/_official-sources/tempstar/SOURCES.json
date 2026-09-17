@@ -1,5 +1,29 @@
 [
   {
+    "fichier": "tempstar-dlcerbh-officiel-site.png",
+    "image_web": "/images/products/official/tempstar-dlcerbh-officiel.webp",
+    "url": "https://www.tempstar.com/en/us/products/ductless-systems/media_1bd41cc66db5d0c95cf44751593c3fef0bf03064c.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.tempstar.com/en/us/products/ductless-systems/dlcerbh",
+    "date": "2026-09-17",
+    "familles": [
+      "DLCERBH"
+    ],
+    "modeles": "DLCERBH18AAK, DLCERBH24AAK, DLCERBH30AAK",
+    "note": "Photo produit « Performance Heat Pump » de l'index officiel www.tempstar.com (query-index.json). Couvre 3 fiche(s) publiée(s) sans photo."
+  },
+  {
+    "fichier": "tempstar-dlcsrb-officiel-site.png",
+    "image_web": "/images/products/official/tempstar-dlcsrb-officiel.webp",
+    "url": "https://www.tempstar.com/en/us/products/ductless-systems/media_16fc36ad03dba59214182058b40b9a9594d095ae1.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.tempstar.com/en/us/products/ductless-systems/dlcsrb",
+    "date": "2026-09-17",
+    "familles": [
+      "DLCSRB"
+    ],
+    "modeles": "DLCSRBH18AAK, DLCSRBH24AAK, DLCSRBH30AAK, DLCSRBH30AAK11, DLCSRBH36ABK",
+    "note": "Photo produit « QuietComfort® Heat Pump » de l'index officiel www.tempstar.com (query-index.json). Couvre 5 fiche(s) publiée(s) sans photo."
+  },
+  {
     "fichier": "tempstar-cvh8-site-tempstar.com.png",
     "url": "https://www.tempstar.com/en/us/products/heat-pumps/media_164471538d1a23d48b50027f1eaaabe722f9ab1fc.png?width=2000&format=png&optimize=medium",
     "page": "https://www.tempstar.com/en/us/products/heat-pumps/ion-18-variable-speed-heat-pump-vh8",

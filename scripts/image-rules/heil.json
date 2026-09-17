@@ -1,0 +1,57 @@
+[
+  {
+    "brand": "heil",
+    "pattern": "^(D5CERAH|DLCERBH)",
+    "series": "/images/products/official/heil-d5cerah-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(D5CLHA|D5CLRA|DLCLRC)",
+    "series": "/images/products/official/heil-d5clha-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(D5CMHA|DLCMHB)",
+    "series": "/images/products/official/heil-d5cmha-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(D5CMRA|DLCMRB)",
+    "series": "/images/products/official/heil-d5cmra-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(D5CPRA|DLCPRB)",
+    "series": "/images/products/official/heil-d5cpra-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(D5CSHA|D5CSRA)",
+    "series": "/images/products/official/heil-d5csha-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(D5CUHA|D5CURA)",
+    "series": "/images/products/official/heil-d5cuha-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(DLCSRB)",
+    "series": "/images/products/official/heil-dlcsrb-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(H5H0V)",
+    "series": "/images/products/official/heil-h5h0v-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(H5H3V)",
+    "series": "/images/products/official/heil-h5h3v-officiel.webp"
+  },
+  {
+    "brand": "heil",
+    "pattern": "^(HVH8)",
+    "series": "/images/products/official/heil-hvh8-officiel.webp"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "brand": "arcoaire",
+    "pattern": "^(D5CERAH|DLCERBH)",
+    "series": "/images/products/official/arcoaire-d5cerah-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(D5CLHA|D5CLRA|DLCLRC)",
+    "series": "/images/products/official/arcoaire-d5clha-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(D5CMHA|D5CMRA|DLCMRB)",
+    "series": "/images/products/official/arcoaire-d5cmha-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(D5CPRA|D5CSHA|D5CSRA)",
+    "series": "/images/products/official/arcoaire-d5cpra-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(D5CUHA|D5CURA)",
+    "series": "/images/products/official/arcoaire-d5cuha-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(DLCMHB)",
+    "series": "/images/products/official/arcoaire-dlcmhb-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(DLCPRB)",
+    "series": "/images/products/official/arcoaire-dlcprb-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(DLCSRB)",
+    "series": "/images/products/official/arcoaire-dlcsrb-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(H5H0V)",
+    "series": "/images/products/official/arcoaire-h5h0v-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(H5H3V)",
+    "series": "/images/products/official/arcoaire-h5h3v-officiel.webp"
+  },
+  {
+    "brand": "arcoaire",
+    "pattern": "^(HVH8)",
+    "series": "/images/products/official/arcoaire-hvh8-officiel.webp"
+  }
+]
