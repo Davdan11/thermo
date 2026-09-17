@@ -34,9 +34,9 @@ Le prix installé n'entre pas dans le classement : il dépend de votre maison et
 
 ## Les marques qui dominent, critère par critère
 
-**COP à -15 °C.** En tête des machines certifiées : Carrier et sa jumelle Keeprite à 2,89 (calibre de 18 000 BTU, 24 000 BTU/h au maximum à -15 °C), Moovair à 2,89 (DMA18HOS42), Mitsubishi Electric à 2,75 (SUZ-KA09NA2), Fujitsu à 2,62 (Airstage H-Series AOUH12KTAP1). Ces machines fournissent par grand froid plus que leur capacité cotée à 8,3 °C : c'est le meilleur indicateur d'une conception vraiment climat froid.
+**COP à -15 °C.** En tête des machines certifiées de la liste en vigueur : Mitsubishi Electric à 3,00 (M-Series SUZ-KA12NA et SUZ-AA18NL), Carrier et sa jumelle Bryant à 2,89 (38MP 38MPRBQ18AA3, calibre de 18 000 BTU), Fujitsu à 2,62 (Airstage H-Series AOUH12KTAP1). Ces machines fournissent par grand froid plus que leur capacité cotée à 8,3 °C : c'est le meilleur indicateur d'une conception vraiment climat froid.
 
-**HSPF2.** Carrier 45M et Moovair MSHHA18 plafonnent à 16,2 ; Fujitsu Airstage H-Series AOUH09KTAP1 atteint 14 ; Bosch BMS500 13,6 ; LG KUSAL091A 13,5 ; Mitsubishi Electric MUZ-FX09NLHZ 13,3. Les petits calibres (9 000 BTU) dominent souvent ce critère, ce qui rappelle qu'un HSPF2 se compare à calibre égal.
+**HSPF2.** Carrier 45M 37MPRAQ18AA3 et Moovair MSH MSHHA18C2AN1 plafonnent à 16,2 ; Keeprite D5F D5CPRAH18AA atteint 15,2 ; Goodman MSH MSH123G26MCAA 14,5 ; Fujitsu Airstage H-Series AOUH12KTAP1 13,7. Ce sont des 18 000 et des 12 000 BTU : les très petits calibres, qui tenaient souvent le haut de ce classement, ont quitté la liste avec la règle des 12 000 BTU/h. Un HSPF2 se compare de toute façon à calibre égal.
 
 **Tenue de capacité.** Sur les {{chiffre:machines-capacite-15}} machines distinctes dont ENERGY STAR publie la capacité à -15 °C, {{chiffre:machines-maintien-100}} en gardent 100 % ou plus de leur capacité cotée à 8,3 °C (47 °F) et {{chiffre:machines-maintien-90}} au moins 90 %. Il s'agit de la capacité maximale à -15 °C divisée par la capacité cotée à 8,3 °C, deux valeurs ENERGY STAR du même appariement. Les autres perdent davantage, ou ne publient pas leur capacité cotée à 8,3 °C. C'est l'écart le plus ignoré des fiches de vente, et le plus coûteux en janvier.
 
