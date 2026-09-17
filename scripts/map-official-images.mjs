@@ -102,7 +102,10 @@ for (const [brand, re, byCap, seriesImg] of RULES) {
   }
   const touchedSeries = new Set();
   for (const m of b.models) {
-    if (!re.test(m.modelNumber)) continue;
+    // Les règles écrites à la main visent le numéro tel qu'il est publié (« ZE-09CB22O ») ;
+    // celles écrites depuis la provenance visent la famille normalisée (« ZE09CB »). On essaie
+    // les deux, sinon une règle juste ne s'appliquerait jamais à cause d'un trait d'union.
+    if (!re.test(m.modelNumber) && !re.test(m.modelNumber.toUpperCase().replace(/[^A-Z0-9]/g, ""))) continue;
     if (poser(m, byCap ? byCap(capK(m)) : null, brand, m.modelNumber, m.systemType)) models++;
     // Un modèle qui correspond à la règle mais sans photo à sa capacité reçoit la photo de la famille.
     else if (!m.imageUrl && poser(m, seriesImg, brand, m.modelNumber, m.systemType)) models++;

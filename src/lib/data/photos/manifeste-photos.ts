@@ -183,6 +183,11 @@ export const PHOTOS_REVUES: Record<string, { montre?: Montre; logos?: readonly s
   "/images/products/official/sharp-serie-tu-systeme-officiel.webp": { montre: "murale-exterieure" },
   "/images/products/official/sharp-serie-zhu-zu-systeme-officiel.webp": { montre: "murale-exterieure" },
 
+  // --- Zephyr (TTI Climatisation, propriétaire de la marque) : les photos produit officielles
+  // montrent l'ensemble, tête murale et télécommande comprises.
+  "/images/products/official/zephyr-cb22-cb25-officiel.webp": { montre: "murale-exterieure" },
+  "/images/products/official/zephyr-multizone-r454b-officiel.webp": { montre: "gamme" },
+
   // --- Têtes murales seules. Le nom du fichier Elios dit « exterieure », la photo dit le contraire.
   "/images/products/official/elios-e19-exterieure-officielle.webp": { montre: "murale" },
   "/images/products/official/tcl-freshin-3-0-interieure-officiel.webp": { montre: "murale" },
