@@ -1,0 +1,13 @@
+Polices des visuels du robot Facebook (src/lib/social/visuels).
+
+Inter-Regular.ttf, Inter-SemiBold.ttf, Inter-ExtraBold.ttf
+  Inter, Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter).
+  Sous-ensemble latin servi par Google Fonts, instancié aux poids 400, 600 et 800
+  par scripts/social/polices/instancier.mjs.
+
+InstrumentSerif-Italic.ttf
+  Instrument Serif, Copyright 2022 The Instrument Serif Project Authors
+  (https://github.com/Instrument/instrument-serif). Sous-ensemble latin servi par Google Fonts.
+
+Ces polices sont distribuées sous la SIL Open Font License, version 1.1 :
+https://openfontlicense.org/open-font-license-official-text/
