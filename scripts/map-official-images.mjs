@@ -2,10 +2,17 @@
  * Relie les photos officielles (public/images/products/official + public/images/products/*.webp)
  * aux modèles et séries du registre, par préfixe de numéro de modèle et capacité.
  * Règles explicites, une par famille : rien n'est deviné par ressemblance de nom.
+ *
+ * Deuxième filet : toute affectation passe par le manifeste des photos
+ * (src/lib/data/photos/familles-photos.json). Une règle trop large — qui poserait une tête
+ * murale sur une centrale gainable, un logo d'une autre marque, ou la photo d'une famille
+ * voisine — est refusée et comptée dans le rapport.
+ *
  * Usage : node scripts/map-official-images.mjs [--dry-run]
  */
 import fs from "node:fs";
 import path from "node:path";
+import { refusPhoto } from "./lib/photos-manifeste.mjs";
 
 const DATA = path.join(process.cwd(), "src/lib/data/fixtures/brands/all-auto-datasets.json");
 const dry = process.argv.includes("--dry-run");
@@ -75,28 +82,39 @@ if (fs.existsSync(RULES_DIR)) {
 
 const capK = (m) => Math.round((m.nominalCapacityBtu ?? 0) / 1000);
 let models = 0, series = 0, missing = new Set();
+const refused = new Map();
+// Pose la photo seulement si le manifeste l'autorise pour cette fiche précise.
+const poser = (cible, img, brand, numero, type) => {
+  if (!img || !exists(img)) { if (img) missing.add(img); return false; }
+  const refus = refusPhoto(img, brand, numero, type);
+  if (refus) { refused.set(refus, (refused.get(refus) ?? 0) + 1); return false; }
+  cible.imageUrl = img;
+  return true;
+};
 
 for (const [brand, re, byCap, seriesImg] of RULES) {
   const b = d[brand]; if (!b) { console.log("marque absente", brand); continue; }
   const seriesById = new Map(b.series.map((s) => [s.id, s]));
+  const membres = new Map(); // seriesId → un modèle de la série
   const touchedSeries = new Set();
   for (const m of b.models) {
     if (!re.test(m.modelNumber)) continue;
-    const img = byCap ? byCap(capK(m)) : null;
-    if (img && exists(img)) { m.imageUrl = img; models++; }
-    else if (img) missing.add(img);
+    if (poser(m, byCap ? byCap(capK(m)) : null, brand, m.modelNumber, m.systemType)) models++;
     // Un modèle qui correspond à la règle mais sans photo à sa capacité reçoit la photo de la famille.
-    if (!m.imageUrl && seriesImg && exists(seriesImg)) { m.imageUrl = seriesImg; models++; }
+    else if (!m.imageUrl && poser(m, seriesImg, brand, m.modelNumber, m.systemType)) models++;
     touchedSeries.add(m.seriesId);
+    if (!membres.has(m.seriesId)) membres.set(m.seriesId, m);
   }
   if (seriesImg && !exists(seriesImg)) missing.add(seriesImg);
   // La série reçoit la photo de la famille seulement si ce n'est pas le fourre-tout « Série Standard ».
   if (seriesImg && exists(seriesImg)) {
     for (const id of touchedSeries) {
       const s = seriesById.get(id);
-      if (s && !s.imageUrl && !/s[ée]rie standard|s[ée]rie non identifi/i.test(s.name)) { s.imageUrl = seriesImg; series++; }
+      if (!s || s.imageUrl || /s[ée]rie standard|s[ée]rie non identifi/i.test(s.name)) continue;
+      const m = membres.get(id);
+      if (poser(s, seriesImg, brand, m.modelNumber, s.systemType ?? m.systemType)) series++;
     }
   }
 }
-console.log({ models, series, missing: [...missing] });
+console.log({ models, series, missing: [...missing], refusees: Object.fromEntries(refused) });
 if (!dry) fs.writeFileSync(DATA, JSON.stringify(d, null, 2));

@@ -169,11 +169,14 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
   const prefixes = [...(brandDict.prefixes ?? [])].sort((a, c) => c.prefix.length - a.prefix.length);
   const sourceId = `src-${brandSlug}-logisvert`;
   const prevModelImages = new Map((prevDs?.models ?? []).filter((m) => m.imageUrl).map((m) => [normKey(m.modelNumber), m.imageUrl]));
+  // La photo d'une série est reprise par nom ET par type de système : une série fourre-tout
+  // (« 37M » existe en murale, en multizone et en centrale gainable) ne doit pas transporter la
+  // même photo d'un type à l'autre — c'est ainsi qu'une tête murale se retrouvait sur une centrale.
   const prevSeriesImages = new Map();
   for (const s of prevDs?.series ?? []) {
     if (!s.imageUrl) continue;
     const n = normalizeSeriesName(s.name, b.name);
-    if (n) prevSeriesImages.set(normKey(brandDict.aliases?.[normKey(n)] ?? n), s.imageUrl);
+    if (n) prevSeriesImages.set(`${normKey(brandDict.aliases?.[normKey(n)] ?? n)}|${s.systemType ?? ""}`, s.imageUrl);
   }
 
   const brand = prevDs?.brand
@@ -266,7 +269,7 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
     if (!seriesMap.has(seriesKey)) {
       seriesMap.set(seriesKey, {
         id: seriesSlug, slug: seriesSlug, name: seriesName, brandId: brandSlug, systemType, categories: [...categories],
-        imageUrl: prevSeriesImages.get(normKey(seriesName)) ?? null,
+        imageUrl: prevSeriesImages.get(`${normKey(seriesName)}|${systemType}`) ?? null,
         status: seriesStatus,
         sources: [{ sourceId: seriesSource === "official" ? sourceId : seriesSource === "inferred" ? `src-${brandSlug}-series-dictionary` : sourceId, fields: ["name"], confidence: seriesConfidence, verifiedAt: seriesSource === "official" ? NOW : null }],
         createdAt: STAMP, updatedAt: STAMP,
