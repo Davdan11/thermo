@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { loadProjectDraft, type ExistingUnit } from "@/lib/project/project-draft";
+import { OMBRE, R } from "./palette";
 
 /* ThermoScan × ThermoMatch : l'appareil actuel lu par ThermoScan (gardé dans le
    brouillon de projet du navigateur) face aux trois choix. Sans scan : une
@@ -11,10 +12,10 @@ import { loadProjectDraft, type ExistingUnit } from "@/lib/project/project-draft
    comparée que si les deux HSPF2 sont connus. */
 
 const K = {
-  cream: "#F4EFE7",
-  mute: "rgba(244,239,231,0.66)",
-  faint: "rgba(244,239,231,0.42)",
-  line: "rgba(244,239,231,0.14)",
+  cream: R.ink,
+  mute: R.mute,
+  faint: R.faint,
+  line: R.line,
   orange: "#E54B17",
   green: "#5CCB8C",
 };
@@ -59,7 +60,7 @@ export function ExistingUnitCompare({ choices }: { choices: CompareChoice[] }) {
   return (
     <section aria-labelledby="tm-actuel" className="mx-auto mt-16 max-w-[1320px] overflow-hidden rounded-[28px] lg:mt-24" style={{ border: `1px solid ${K.line}`, color: K.cream }}>
       <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="px-6 py-10 sm:px-10 lg:px-12 lg:py-12" style={{ background: "rgba(244,239,231,0.04)" }}>
+        <div className="px-6 py-10 sm:px-10 lg:px-12 lg:py-12" style={{ background: R.card, boxShadow: OMBRE }}>
           <p className="text-[12px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: K.mute, margin: 0 }}>
             Votre appareil actuel · ThermoScan
           </p>

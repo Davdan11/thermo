@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 import type { CategorieThermopompe } from "@/lib/garantie-legale/config";
+import { OMBRE, R } from "./palette";
 
 /* ==================================================================
    ThermoMatch — « Votre configuration » : entre le thermomètre et les
@@ -36,17 +37,7 @@ export interface ArchitecturePlanData {
   alternative?: { note: string; decision: ArchitecturePlanData } | null;
 }
 
-const C = {
-  ink: "#0A1419",
-  panel: "#10222D",
-  cream: "#F4EFE7",
-  orange: "#E54B17",
-  mute: "rgba(244,239,231,0.66)",
-  faint: "rgba(244,239,231,0.42)",
-  /** Petit texte encore lisible sur l'encre (près de 6:1). */
-  dim: "rgba(244,239,231,0.58)",
-  line: "rgba(244,239,231,0.12)",
-};
+const C = { ...R, panel: R.inset };
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
 const fr = (n: number) => n.toLocaleString("fr-CA", { maximumFractionDigits: 0 });
 const money = (n: number) => `${fr(Math.round(n / 50) * 50)} $`;
@@ -80,7 +71,7 @@ export function ArchitecturePlan({ arch }: { arch: ArchitecturePlanData }) {
     <section
       aria-labelledby="tm-archi"
       className="mx-auto mt-10 w-full max-w-[1320px] overflow-hidden rounded-[28px] lg:mt-14"
-      style={{ border: `1px solid ${C.line}`, background: "rgba(244,239,231,0.03)", color: C.cream, fontFamily: DISPLAY }}
+      style={{ border: `1px solid ${C.line}`, background: C.card, color: C.ink, fontFamily: DISPLAY, boxShadow: OMBRE }}
     >
       <div className="grid gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-14 lg:px-14 lg:py-14">
         <div className="min-w-0">
@@ -89,12 +80,12 @@ export function ArchitecturePlan({ arch }: { arch: ArchitecturePlanData }) {
               <span aria-hidden="true" className="inline-block h-px w-10" style={{ background: C.orange }} />
               Votre configuration
             </p>
-            <span className="rounded-full px-3 py-1 text-[11.5px] font-semibold" style={{ border: `1px solid ${C.line}`, color: C.cream }}>
+            <span className="rounded-full px-3 py-1 text-[11.5px] font-semibold" style={{ border: `1px solid ${C.line}`, color: C.ink }}>
               {arch.label}
             </span>
             <span
               className="rounded-full px-3 py-1 text-[11.5px] font-semibold"
-              style={ferme ? { background: "rgba(92,203,140,0.14)", color: "#8FE0B2" } : { background: "rgba(229,75,23,0.16)", color: "#FF9C77" }}
+              style={ferme ? { background: "rgba(19,107,60,0.10)", color: C.green } : { background: "rgba(229,75,23,0.10)", color: C.orangeText }}
             >
               {ferme ? "Configuration ferme" : "À confirmer à la visite"}
             </span>
@@ -131,7 +122,7 @@ export function ArchitecturePlan({ arch }: { arch: ArchitecturePlanData }) {
               </p>
               <ul className="mt-3 space-y-3" style={{ listStyle: "none", padding: 0, margin: "12px 0 0" }}>
                 {arch.ruledOut.map((r) => (
-                  <li key={r.kind} className="rounded-[16px] px-4 py-3" style={{ background: C.panel }}>
+                  <li key={r.kind} className="rounded-[16px] px-4 py-3" style={{ background: C.panel, border: `1px solid ${C.hair}` }}>
                     <p className="text-[13.5px] font-semibold" style={{ margin: 0 }}>
                       {ECARTEE[r.kind] ?? r.kind}
                     </p>
@@ -158,7 +149,7 @@ export function ArchitecturePlan({ arch }: { arch: ArchitecturePlanData }) {
                       {c.href && (
                         <>
                           {" "}
-                          <Link href={c.href} className="font-semibold underline-offset-4 hover:underline" style={{ color: C.cream }}>
+                          <Link href={c.href} className="font-semibold underline-offset-4 hover:underline" style={{ color: C.ink }}>
                             {c.linkLabel ?? "En savoir plus"} →
                           </Link>
                         </>
@@ -186,7 +177,7 @@ export function ArchitecturePlan({ arch }: { arch: ArchitecturePlanData }) {
           </summary>
           <div className="mt-5 grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-14">
             <div className="min-w-0">
-              <p className="text-[14.5px] leading-relaxed" style={{ color: C.cream, margin: 0 }}>
+              <p className="text-[14.5px] leading-relaxed" style={{ color: C.ink, margin: 0 }}>
                 {arch.alternative.note}
               </p>
               <div className="mt-3 space-y-2 text-[14px] leading-relaxed" style={{ color: C.mute }}>
@@ -219,7 +210,7 @@ function ZonePlan({ arch }: { arch: ArchitecturePlanData }) {
       <ul className="mt-3" style={{ listStyle: "none", padding: 0, margin: "12px 0 0", borderTop: `1px solid ${C.line}` }}>
         {arch.zonePlan.map((z) => {
           const served = z.servedBy === "conduits" ? "Par les conduits" : z.servedBy === "releve" ? (RELEVE[arch.backup] ?? RELEVE.inconnu) : z.headNominalBtu ? `Tête d’environ ${fr(z.headNominalBtu)} BTU` : "Une tête murale";
-          const bar = z.servedBy === "tete" ? C.orange : z.servedBy === "conduits" ? "rgba(244,239,231,0.6)" : "rgba(244,239,231,0.22)";
+          const bar = z.servedBy === "tete" ? C.orange : z.servedBy === "conduits" ? "rgba(12,24,33,0.55)" : "rgba(12,24,33,0.20)";
           return (
             <li key={z.label} className="py-3" style={{ borderBottom: `1px solid ${C.line}` }}>
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -262,7 +253,7 @@ function PriceBox({ arch }: { arch: ArchitecturePlanData }) {
         {money(p.min)} – {money(p.max)}
       </p>
       {/* Conformité : garantie légale de bon fonctionnement, sous le prix. */}
-      <MentionGarantieLegale cible={categorieOfKind(arch.kind)} className="text-[12px] font-semibold" style={{ color: C.cream, margin: "6px 0 0" }} />
+      <MentionGarantieLegale cible={categorieOfKind(arch.kind)} className="text-[12px] font-semibold" style={{ color: C.ink, margin: "6px 0 0" }} />
       <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "8px 0 0" }}>
         {arch.priceLabel} : {p.matchLabel}, {p.tierLabel}
         {p.note ? ` (${p.note})` : p.basis === "derive" ? " (case interpolée)" : ""}, avant subvention LogisVert. Le prix exact vient de la soumission.

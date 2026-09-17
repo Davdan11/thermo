@@ -487,7 +487,8 @@ function panelCheck(c: Ctx, d: ArchitectureDecision): void {
   const lien = { href: GUIDE_PANNEAU_100A, linkLabel: "Panneau de 100 A et thermopompe : le guide" };
   if (c.panel === "100-moins") {
     d.checks.push({ text: "Panneau de 100 A : un électricien fait le calcul de charge (thermopompe, plinthes, chauffe-eau, cuisinière) avant l'installation ; il faut parfois passer à 200 A.", ...lien });
-  } else if (c.panel === "ne-sais-pas") {
+  } else if (c.panel === "ne-sais-pas" || c.panel === undefined) {
+    // Question non posée (elle vient après le résultat) ou sans réponse : même point à vérifier, jamais de panneau supposé en silence.
     d.checks.push({ text: "Intensité du panneau à vérifier (elle est inscrite sur le disjoncteur principal) : avec 100 A, un calcul de charge est nécessaire avant l'installation.", ...lien });
   }
 }

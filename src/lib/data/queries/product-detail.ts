@@ -22,6 +22,7 @@ import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { productNames } from "../product-name";
 import { logisVertDeLaFiche } from "../../subsidies/logisvert-official";
 import { resolveMinHeatingTemp } from "@/lib/thermomatch/min-temp-brochures";
+import { minHeatingTempForModel } from "@/lib/thermomatch/min-temp";
 import type { ResolvedMinHeatingTemp } from "@/lib/thermomatch/min-temp-source";
 import { resolveWarranty, type ResolvedWarranty } from "../warranty";
 
@@ -220,6 +221,7 @@ export function getProductDetail(slug: string): ProductDetail | null {
         outdoorModelNumber,
         warranty: resolveWarranty({ brand: b.name, seriesName: ser?.name, modelNumber: m.modelNumber }),
         logisVertDollars,
+        minHeatingTempC: minHeatingTempForModel(m.id)?.valueC ?? null,
       };
     });
 

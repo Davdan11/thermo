@@ -18,6 +18,7 @@ import { buildCandidates, estimateLoad, pairingClassOf, runThermoMatch, type Sou
 import { H5_FROM_H17_RATIO } from "@/lib/thermomatch/candidates";
 import { answersToRequest, architectureInputOf, type QuestionnaireAnswers } from "@/lib/thermomatch/answers";
 import { backupNoteFor, decideArchitecture, type ArchitectureDecision } from "@/lib/thermomatch/architecture";
+import { hypothesesOf } from "@/lib/thermomatch/hypotheses";
 import { ORDRE_DE_GRANDEUR_LABEL, architecturePriceRange, envelopeRange, type PriceRange } from "@/lib/prices/grille-installee";
 // Température minimale de chauffage : résolveur unique (catalogue, puis relevés des documents du fabricant).
 import { minHeatingTempForModel } from "@/lib/thermomatch/min-temp";
@@ -237,6 +238,8 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
       designTempC,
       /** Comment la chaleur sera distribuée (architecture.ts), avec l'ordre de grandeur installé, affiché une fois. */
       architecture: architectureOut(decision, blockPrice, pricePerCard),
+      /** Ce qui a été supposé faute de réponse : dit sur la fiche, levé par l'affinage (hypotheses.ts). */
+      hypotheses: hypothesesOf(answers),
       logisVertUpdatedAt: logisVertUpdatedAt ?? null,
       // Économies de chauffage estimées : maisons aux plinthes seulement (voir savings.ts), sur la part que la thermopompe chauffe.
       savings: estimateHeatingSavings({ postalCode: answers.postalCode, currentSystem: answers.currentSystem, loadBtuH: coveredLoad }),

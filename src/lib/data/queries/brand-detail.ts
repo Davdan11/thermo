@@ -17,6 +17,7 @@ import { registry } from "../registry";
 import type { CatalogueProduct } from "./catalogue";
 import { resolveWarranty } from "../warranty";
 import { logisVertDeLaFiche } from "../../subsidies/logisvert-official";
+import { minHeatingTempForModel } from "../../thermomatch/min-temp";
 
 /* ------------------------------------------------------------------
    Brand Detail — everything needed for a brand page
@@ -200,6 +201,7 @@ export function getBrandDetail(slug: string): BrandDetail | null {
         outdoorModelNumber,
         warranty: resolveWarranty({ brand: brand.name, seriesName: ser?.name, modelNumber: model.modelNumber }),
         logisVertDollars,
+        minHeatingTempC: minHeatingTempForModel(model.id)?.valueC ?? null,
       };
     },
   );

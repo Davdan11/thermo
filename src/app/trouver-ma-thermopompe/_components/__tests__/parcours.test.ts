@@ -1,8 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { STEPS, pruneHidden, visibleSteps, type Answers, type StepOption } from "../steps";
+import { SCREENS, STEPS, affinageSteps, essentielComplete, pruneHidden, visibleScreens, visibleSteps, type Answers, type StepOption } from "../steps";
+import { SCREEN_IDS } from "@/lib/thermomatch/etapes";
 
-/* Le parcours « architecture d'abord » : de 14 à 17 questions selon les réponses.
-   Une étape ne dépend que des étapes placées avant elle : changer une réponse ne change
+/* Le parcours en deux temps :
+   - l'essentiel, cinq ou six écrans, seulement ce qui change la recommandation ;
+   - l'affinage, après le résultat : emplacements, panneau, financement.
+   Une question ne dépend que des questions placées avant elle : changer une réponse ne change
    jamais ce qui a déjà été demandé. */
 
 const BASE: Answers = {
@@ -14,11 +17,8 @@ const BASE: Answers = {
   windowShare: "standard",
   basement: "unheated",
   layout: "mixte",
-  placements: ["mur-haut"],
-  electricalPanel: "200-plus",
   priority: ["economies"],
   budget: "ne-sais-pas",
-  financing: "non",
 };
 
 function combos(): Answers[] {
@@ -31,63 +31,112 @@ function combos(): Answers[] {
   return out;
 }
 
-const ids = (a: Answers) => visibleSteps(a).map((s) => s.id);
+const screenIds = (a: Answers) => visibleScreens(a, "essentiel").map((s) => s.id);
+const stepIds = (a: Answers) => visibleSteps(a).map((s) => s.id);
 const optionsOf = (options: StepOption[] | ((a: Answers) => StepOption[]) | undefined, a: Answers) => (typeof options === "function" ? options(a) : (options ?? []));
 
-describe("visibleSteps", () => {
-  it("de 14 à 17 étapes, sur toutes les combinaisons", () => {
+describe("le parcours essentiel", () => {
+  it("tient en cinq ou six écrans, sur toutes les combinaisons", () => {
     for (const a of combos()) {
-      const n = visibleSteps(a).length;
-      expect(n, JSON.stringify(a)).toBeGreaterThanOrEqual(14);
-      expect(n, JSON.stringify(a)).toBeLessThanOrEqual(17);
+      const n = visibleScreens(a, "essentiel").length;
+      expect(n, JSON.stringify(a)).toBeGreaterThanOrEqual(5);
+      expect(n, JSON.stringify(a)).toBeLessThanOrEqual(6);
     }
   });
 
-  it("changer une réponse ne change jamais la visibilité des étapes précédentes", () => {
+  it("ne pose jamais plus de quatorze questions avant le résultat, contre dix-sept avant", () => {
     for (const a of combos()) {
-      const vis = visibleSteps(a);
-      vis.forEach((s, i) => {
-        const before = vis.slice(0, i + 1).map((x) => x.id);
-        for (const o of optionsOf(s.options, a)) {
-          const changed = { ...a, [s.id]: s.type === "multi" ? [o.value] : o.value };
-          expect(ids(changed).slice(0, i + 1)).toEqual(before);
+      const n = visibleSteps(a).filter((s) => s.phase === "essentiel").length;
+      expect(n, JSON.stringify(a)).toBeLessThanOrEqual(14);
+    }
+  });
+
+  it("l'ordre des écrans est celui du compteur d'étapes", () => {
+    expect(SCREENS.filter((s) => s.phase === "essentiel").map((s) => s.id)).toEqual([...SCREEN_IDS]);
+  });
+
+  it("garde les questions qui changent le résultat, dans cet ordre", () => {
+    const essentiel = STEPS.filter((s) => s.phase === "essentiel").map((s) => s.id);
+    expect(essentiel).toEqual([
+      "postalCode", "propertyType", "area", "floors", "basement", "constructionPeriod", "insulation", "windowShare",
+      "currentSystem", "ducts", "zonesWanted", "layout", "priority", "budget",
+    ]);
+  });
+
+  it("repousse après le résultat ce qui ne sert qu'à la faisabilité et au devis", () => {
+    // Mesuré : le panneau et le financement ne changent la recommandation dans aucune maison simulée ;
+    // les emplacements, dans 15 % (un seul endroit possible dehors impose une multizone).
+    expect(STEPS.filter((s) => s.phase === "affinage").map((s) => s.id)).toEqual(["placements", "electricalPanel", "financing"]);
+    for (const s of STEPS.filter((x) => x.phase === "affinage")) expect(s.optional, s.id).toBe(true);
+  });
+
+  it("le type de thermopompe n'est plus demandé : le moteur décide", () => {
+    expect(STEPS.map((s) => s.id)).not.toContain("heatPumpType");
+  });
+
+  it("changer une réponse ne change jamais les écrans déjà passés", () => {
+    for (const a of combos()) {
+      const screens = visibleScreens(a, "essentiel");
+      screens.forEach((sc, i) => {
+        const before = screens.slice(0, i + 1).map((x) => x.id);
+        for (const step of sc.steps) {
+          for (const o of optionsOf(step.options, a)) {
+            const changed = { ...a, [step.id]: step.type === "multi" ? [o.value] : o.value };
+            expect(screenIds(changed).slice(0, i + 1)).toEqual(before);
+          }
         }
       });
     }
   });
 
-  it("le type de thermopompe n'est plus demandé : le moteur décide", () => {
-    expect(STEPS.map((s) => s.id)).not.toContain("heatPumpType");
-    expect(STEPS.map((s) => s.id)).toEqual([
-      "postalCode", "propertyType", "area", "floors", "constructionPeriod", "insulation", "windowShare", "basement",
-      "currentSystem", "ducts", "zonesWanted", "layout", "placements", "electricalPanel", "priority", "budget", "financing",
-    ]);
-  });
-
   it("condo : ni sous-sol ni conduits ; fournaise avec conduits complets : ni espaces ni emplacements", () => {
-    const condo = ids({ ...BASE, propertyType: "condo", currentSystem: "electrique" });
+    const condo = stepIds({ ...BASE, propertyType: "condo", currentSystem: "electrique" });
     expect(condo).not.toContain("basement");
     expect(condo).not.toContain("ducts");
     expect(condo).toContain("zonesWanted");
-    const fournaise = ids({ ...BASE, propertyType: "maison", currentSystem: "fournaise-gaz", ducts: "complets" });
-    expect(fournaise).toContain("ducts");
-    for (const id of ["zonesWanted", "layout", "placements"]) expect(fournaise).not.toContain(id);
+
+    const fournaise = { ...BASE, propertyType: "maison", currentSystem: "fournaise-gaz", ducts: "complets" };
+    expect(stepIds(fournaise)).toContain("ducts");
+    for (const id of ["zonesWanted", "layout", "placements"]) expect(stepIds(fournaise)).not.toContain(id);
+    // L'écran « espaces » disparaît : le parcours tombe à cinq écrans.
+    expect(screenIds(fournaise)).not.toContain("espaces");
+
     // Fournaise, conduits inconnus : la centrale est probable, on ne demande pas les espaces.
-    expect(ids({ ...BASE, propertyType: "maison", currentSystem: "fournaise-gaz", ducts: "ne-sais-pas" })).not.toContain("zonesWanted");
+    expect(stepIds({ ...BASE, propertyType: "maison", currentSystem: "fournaise-gaz", ducts: "ne-sais-pas" })).not.toContain("zonesWanted");
     // Plinthes : pas de conduits à réutiliser, on ne les demande pas.
-    expect(ids({ ...BASE, propertyType: "maison", currentSystem: "electrique" })).not.toContain("ducts");
-    // Pièce par pièce : la disposition ne change rien, on ne la demande pas.
-    expect(ids({ ...BASE, propertyType: "maison", currentSystem: "electrique", zonesWanted: "pieces" })).not.toContain("layout");
+    expect(stepIds({ ...BASE, propertyType: "maison", currentSystem: "electrique" })).not.toContain("ducts");
   });
 
-  it("une réponse restée d'une étape masquée ne compte pas", () => {
+  it("la disposition des pièces n'est demandée que quand le client dit « Conseillez-moi »", () => {
+    const base = { ...BASE, propertyType: "maison", currentSystem: "electrique" };
+    expect(stepIds({ ...base, zonesWanted: "ne-sais-pas" })).toContain("layout");
+    for (const z of ["principal", "par-etage", "pieces"]) expect(stepIds({ ...base, zonesWanted: z }), z).not.toContain("layout");
+  });
+
+  it("les conduits ne sont demandés qu'une fois le système actuel connu", () => {
+    expect(stepIds({ ...BASE, propertyType: "maison", currentSystem: undefined })).not.toContain("ducts");
+  });
+
+  it("une réponse restée d'une question masquée ne compte pas", () => {
     // Des conduits complets déclarés, puis des plinthes : la question des conduits disparaît, celle des espaces revient.
-    expect(ids({ ...BASE, propertyType: "maison", currentSystem: "electrique", ducts: "complets" })).toContain("zonesWanted");
+    expect(stepIds({ ...BASE, propertyType: "maison", currentSystem: "electrique", ducts: "complets" })).toContain("zonesWanted");
+  });
+});
+
+describe("essentielComplete", () => {
+  const maison: Answers = { ...BASE, propertyType: "maison", currentSystem: "electrique", zonesWanted: "principal" };
+  it("est vrai sans aucune réponse d'affinage : le résultat n'attend pas le panneau électrique", () => {
+    expect(essentielComplete(maison)).toBe(true);
+    expect(affinageSteps(maison).map((s) => s.id)).toEqual(["placements", "electricalPanel", "financing"]);
+  });
+  it("est faux tant qu'une question essentielle visible n'a pas de réponse", () => {
+    const sansBudget = { ...maison, budget: undefined };
+    expect(essentielComplete(sansBudget)).toBe(false);
   });
 });
 
 describe("pruneHidden", () => {
-  it("retire les réponses des étapes masquées, garde les clés des anciens liens", () => {
+  it("retire les réponses des questions masquées, garde les clés des anciens liens", () => {
     const a = pruneHidden<Answers>({ ...BASE, propertyType: "condo", currentSystem: "electrique", ducts: "complets", zonesWanted: "par-etage", heatPumpType: "centrale" });
     expect(a.ducts).toBeUndefined();
     expect(a.basement).toBeUndefined();
@@ -108,9 +157,9 @@ describe("tranches de budget selon l'architecture pressentie", () => {
   });
 });
 
-describe("sous-titre du code postal", () => {
+describe("sous-titre du premier écran", () => {
   it("le froid de la région sert à la relève, pas au calcul à −15 °C", () => {
-    const s = STEPS[0].subtitle ?? "";
+    const s = SCREENS[0].subtitle ?? "";
     expect(s).toContain("froid de référence");
     expect(s).toContain("il ne change pas le calcul à −15 °C");
     expect(s).toContain("estimer la relève nécessaire les jours les plus froids");

@@ -76,7 +76,7 @@ export function CarnetStepPage({
                   n° {index + 1}
                 </span>
                 <span className="text-[11.5px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: P.soft }}>
-                  Question {index + 1} sur {totalSteps}
+                  Étape {index + 1} sur {totalSteps}
                 </span>
               </Fade>
               <h2 className="max-w-[15em]" style={{ fontFamily: SERIF, fontWeight: 400, fontSize: "clamp(38px, min(4.6vw, 8.4vh), 78px)", lineHeight: 1, letterSpacing: "-0.02em", margin: "18px 0 0" }}>
@@ -125,6 +125,31 @@ function GluedPhoto({ src }: { src: string }) {
       </div>
       <span aria-hidden="true" className="absolute left-1/2 top-[-11px] h-[22px] w-[96px] -translate-x-1/2 rotate-[3deg]" style={{ background: "rgba(232,222,203,0.82)", boxShadow: "0 1px 2px rgba(23,27,30,0.08)" }} />
     </motion.figure>
+  );
+}
+
+/**
+ * Une question d'un écran qui en porte plusieurs : son numéro à la plume, son libellé, sa note,
+ * puis ses réponses. Les questions d'un même écran se suivent sur le papier, séparées par un blanc.
+ */
+export function CarnetField({ n, label, hint, done, children }: { n: number; label: string; hint?: string; /** Réponse déjà donnée : la puce passe à l'orange. */ done?: boolean; children: ReactNode }) {
+  return (
+    <section className="mt-9 first:mt-0">
+      <p className="flex items-baseline gap-3" style={{ margin: 0 }}>
+        <span className="w-6 shrink-0 text-[19px] leading-none" style={{ fontFamily: SERIF, fontStyle: "italic", color: done ? P.orange : P.faint }}>
+          {n}.
+        </span>
+        <span className="text-[19px] font-semibold leading-snug sm:text-[21px]" style={{ color: P.ink, letterSpacing: "-0.015em" }}>
+          {nbspMark(label)}
+        </span>
+      </p>
+      {hint ? (
+        <p className="max-w-[560px] pl-9 text-[14px] leading-[1.55]" style={{ color: P.soft, margin: "6px 0 0" }}>
+          {hint}
+        </p>
+      ) : null}
+      <div className="mt-3.5">{children}</div>
+    </section>
   );
 }
 

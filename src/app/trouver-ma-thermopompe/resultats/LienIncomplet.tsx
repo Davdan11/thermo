@@ -4,11 +4,13 @@ import "../_components/results.css";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { ThermoMatchWordmark } from "@/components/heroes-v2/outils/FlowBar";
+import { R } from "../_components/palette";
 
-/* Lien de résultats incomplet (code absent ou tronqué), sur l'encre du tamis : le champ de points est là,
-   mais aucun ne s'allume, faute de réponses à trier. Puis le chemin vers le questionnaire. */
+/* Lien de résultats incomplet (code absent ou tronqué), sur le crème de l'écran des résultats : le champ
+   de points est là, mais aucun ne s'allume, faute de réponses à trier. Puis le chemin vers le questionnaire. */
 
-const C = { cream: "#F4EFE7", orange: "#E54B17", mute: "rgba(244,239,231,0.66)" };
+const C = { cream: R.ink, orange: R.orange, mute: R.mute };
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
 const FADE = "linear-gradient(90deg, transparent 0%, #000 55%)";
@@ -26,15 +28,15 @@ export function LienIncomplet() {
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%]"
-        style={{ backgroundImage: "radial-gradient(circle, rgba(244,239,231,0.14) 1.3px, transparent 1.9px)", backgroundSize: "14px 14px", maskImage: FADE, WebkitMaskImage: FADE }}
+        style={{ backgroundImage: "radial-gradient(circle, rgba(12,24,33,0.16) 1.3px, transparent 1.9px)", backgroundSize: "14px 14px", maskImage: FADE, WebkitMaskImage: FADE }}
         initial={reduce ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.6, ease: "easeOut", delay: 0.2 }}
       />
       <div className="relative mx-auto flex min-h-[72vh] max-w-[1320px] flex-col justify-center px-5 py-20 sm:px-10 lg:px-14">
-        <motion.p {...rise(0.05)} className="flex flex-wrap items-center gap-3 text-[12px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: C.mute, margin: 0 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo-thermomatch-nav.webp" alt="ThermoMatch" width={118} height={16} style={{ width: 118, height: 16, maxWidth: "none", display: "block" }} />
+        <motion.p {...rise(0.05)} className="flex flex-wrap items-center gap-3 text-[12px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: R.faint, margin: 0 }}>
+          {/* Lettrage vectoriel : le fichier du logo est crème, fait pour l'encre. */}
+          <ThermoMatchWordmark size={12} />
           <span aria-hidden="true">·</span>
           Résultats partagés
         </motion.p>

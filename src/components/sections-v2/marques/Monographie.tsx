@@ -292,7 +292,8 @@ function ficheData(product: CatalogueProduct): FicheData {
     isColdClimate,
     hspf2: configuration?.hspf2 ?? model.hspf2Min ?? null,
     seer2: configuration?.seer2 ?? model.seer2Min ?? null,
-    minTemp: model.minimumOperatingTemperatureC != null ? `${model.minimumOperatingTemperatureC}°C` : isColdClimate ? "-25°C" : "-15°C",
+    // Temperature reellement publiee (resolue au serveur) ; null : non publiee, la fiche l'ecrit.
+    minTempC: product.minHeatingTempC,
     warranty: warrantyOf(product),
     logisVert: logisVertDollars != null && logisVertDollars > 0 ? `${logisVertDollars.toLocaleString("fr-CA")} $` : null,
   };

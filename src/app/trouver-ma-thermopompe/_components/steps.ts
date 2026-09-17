@@ -1,20 +1,42 @@
 /* ----------------------------------------------------------
-   ThermoMatch — Step definitions
+   ThermoMatch — Questions et écrans
 
-   L'architecture d'abord : les conduits, les espaces à chauffer et
-   les emplacements décident du type de thermopompe (le moteur choisit,
-   plus le client). Une étape peut dépendre des réponses (`when`) :
-   visibleSteps(a) donne le parcours réel, de 14 à 17 questions.
-   Une étape ne dépend que des étapes placées avant elle : changer une
+   Deux temps :
+   1. « Essentiel » — seulement ce qui change la recommandation
+      (superficie, année, isolation, système actuel, conduits, espaces
+      à chauffer, région, priorités, budget). Les questions qui vont
+      ensemble partagent un écran : cinq ou six écrans, puis le résultat.
+   2. « Affinage » — posé APRÈS le résultat : ce qui sert surtout à la
+      faisabilité et au devis (fenestration, emplacements des unités,
+      panneau électrique, financement). Tant qu'une réponse manque, la
+      fiche du résultat dit l'hypothèse prise (hypotheses.ts).
+
+   L'architecture d'abord : les conduits, les espaces à chauffer et les
+   emplacements décident du type de thermopompe (le moteur choisit, plus
+   le client). Une question peut dépendre des réponses (`when`) ; elle ne
+   dépend que des questions placées avant elle, si bien que changer une
    réponse ne change jamais ce qui a déjà été demandé.
    ---------------------------------------------------------- */
 
 import { answersToRequest, architectureInputOf, type QuestionnaireAnswers } from "@/lib/thermomatch/answers";
 import { architectureHint } from "@/lib/thermomatch/architecture";
-import { DUCTS_OPTIONS, LAYOUT_OPTIONS, PANEL_OPTIONS, PLACEMENT_OPTIONS, ZONES_OPTIONS } from "@/lib/thermomatch/parcours";
+import {
+  BASEMENT_OPTIONS,
+  CONSTRUCTION_OPTIONS,
+  CURRENT_SYSTEM_OPTIONS,
+  DUCTS_OPTIONS,
+  INSULATION_OPTIONS,
+  LAYOUT_OPTIONS,
+  PANEL_OPTIONS,
+  PLACEMENT_OPTIONS,
+  WINDOW_OPTIONS,
+  ZONES_OPTIONS,
+} from "@/lib/thermomatch/parcours";
 
 export type StepType = "text" | "radio" | "multi";
 export type Answers = Record<string, string | string[] | undefined>;
+/** « essentiel » : avant le résultat ; « affinage » : après, facultatif. */
+export type StepPhase = "essentiel" | "affinage";
 
 export interface StepOption {
   value: string;
@@ -31,8 +53,27 @@ export interface Step {
   options?: StepOption[] | ((answers: Answers) => StepOption[]);
   placeholder?: string;
   validate?: (value: string | string[]) => string | null;
-  /** Étape posée seulement si… ; ne lit que les réponses des étapes précédentes. */
+  /** Question posée seulement si… ; ne lit que les réponses des questions précédentes. */
   when?: (a: Answers) => boolean;
+  /** Écran qui la porte : les questions d'un même écran se répondent ensemble. */
+  screen: string;
+  phase: StepPhase;
+  /** On peut continuer sans y répondre : l'hypothèse prise est dite sur la fiche du résultat. */
+  optional?: boolean;
+}
+
+export interface ScreenMeta {
+  id: string;
+  /** Titre de l'écran, écrit à la plume (une question peut le compléter). */
+  title: string;
+  subtitle?: string;
+  phase: StepPhase;
+  /** Photo d'ambiance de l'écran. */
+  photo?: string;
+}
+
+export interface Screen extends ScreenMeta {
+  steps: Step[];
 }
 
 /* ----------------------------------------------------------
@@ -61,10 +102,15 @@ function isValidPostalCode(value: string | string[]): string | null {
 
 const isCondo = (a: Answers) => a.propertyType === "condo";
 const hasFurnace = (a: Answers) => a.currentSystem === "fournaise-gaz" || a.currentSystem === "fournaise-mazout";
-/** Les conduits : pas en condo, ni avec des plinthes ou une chaudière (aucun conduit d'air à réutiliser). */
-const asksDucts = (a: Answers) => !isCondo(a) && a.currentSystem !== "electrique" && a.currentSystem !== "chaudiere";
+/**
+ * Les conduits : une fois le système actuel connu, et seulement s'il peut y en avoir à réutiliser
+ * (pas en condo, ni avec des plinthes ou une chaudière).
+ */
+const asksDucts = (a: Answers) => a.currentSystem !== undefined && !isCondo(a) && a.currentSystem !== "electrique" && a.currentSystem !== "chaudiere";
 /** Les espaces à chauffer : sauf quand les conduits décident (complets, ou fournaise dont on ne connaît pas les conduits). */
-const asksZones = (a: Answers) => a.ducts !== "complets" && !(hasFurnace(a) && a.ducts === "ne-sais-pas");
+const asksZones = (a: Answers) => a.ducts !== "complets" && !(hasFurnace(a) && (a.ducts === undefined || a.ducts === "ne-sais-pas"));
+/** La disposition ne sert qu'à conseiller un nombre de têtes quand le client ne l'a pas choisi (architecture.ts, headsFor). */
+const asksLayout = (a: Answers) => asksZones(a) && a.zonesWanted === "ne-sais-pas";
 
 /** Architecture pressentie d'après les réponses déjà données (tranches de budget). */
 function pressentie(a: Answers) {
@@ -89,21 +135,83 @@ const MURALE_BUDGETS: StepOption[] = [
 ];
 
 /* ----------------------------------------------------------
-   Steps
+   Écrans
+   ---------------------------------------------------------- */
+
+export const SCREENS: ScreenMeta[] = [
+  {
+    id: "lieu",
+    title: "Où se trouve la maison?",
+    subtitle:
+      "Pour vous situer et trouver les installateurs de votre secteur. Votre région nous donne aussi son froid de référence : il ne change pas le calcul à −15 °C, point de mesure commun des capacités certifiées, mais il sert à estimer la relève nécessaire les jours les plus froids. L'installateur confirme le tout par un calcul CSA F280.",
+    phase: "essentiel",
+    photo: "/images/thermomatch/postalCode.webp",
+  },
+  {
+    id: "maison",
+    title: "Parlez-nous de la maison",
+    subtitle: "Ces quatre réponses donnent la charge de chauffage : c'est le cœur du calcul.",
+    phase: "essentiel",
+    photo: "/images/thermomatch/area.webp",
+  },
+  {
+    id: "enveloppe",
+    title: "Ce qui garde la chaleur",
+    subtitle: "L'âge du bâtiment et l'isolation ajustent la charge. « Je ne sais pas » est une réponse acceptable : nous prenons alors une valeur moyenne, dite sur le résultat.",
+    phase: "essentiel",
+    photo: "/images/thermomatch/floors.webp",
+  },
+  {
+    id: "chauffage",
+    title: "Votre chauffage actuel",
+    subtitle: "Ce qui chauffe aujourd'hui, et par où la chaleur circule. C'est ce qui décide du type de thermopompe.",
+    phase: "essentiel",
+    photo: "/images/thermomatch/currentSystem.webp",
+  },
+  {
+    id: "espaces",
+    title: "Ce que la thermopompe doit chauffer",
+    subtitle: "Le reste de la maison garde votre chauffage actuel.",
+    phase: "essentiel",
+    photo: "/images/thermomatch/heatPumpType.webp",
+  },
+  {
+    id: "attentes",
+    title: "Ce qui compte pour vous",
+    subtitle: "Vos priorités et votre budget ajustent le poids des critères, jamais les chiffres certifiés.",
+    phase: "essentiel",
+    photo: "/images/thermomatch/priority.webp",
+  },
+  {
+    id: "affinage",
+    title: "Affiner la recommandation",
+    subtitle: "Deux questions de faisabilité et une pour la soumission. Chacune remplace une hypothèse par votre réponse.",
+    phase: "affinage",
+  },
+];
+
+const SCREEN_ORDER = new Map(SCREENS.map((s, i) => [s.id, i]));
+
+/* ----------------------------------------------------------
+   Questions
    ---------------------------------------------------------- */
 
 export const STEPS: Step[] = [
   {
     id: "postalCode",
+    screen: "lieu",
+    phase: "essentiel",
     question: "Quel est votre code postal?",
-    subtitle:
-      "Pour vous situer et trouver les installateurs de votre secteur. Votre région nous donne aussi son froid de référence : il ne change pas le calcul à −15 °C, point de mesure commun des capacités certifiées, mais il sert à estimer la relève nécessaire les jours les plus froids. L'installateur confirme le tout par un calcul CSA F280.",
     type: "text",
     placeholder: "ex. H2X 1Y4",
     validate: isValidPostalCode,
   },
+
+  /* --- L'enveloppe qui donne la charge --- */
   {
     id: "propertyType",
+    screen: "maison",
+    phase: "essentiel",
     question: "Quel type de propriété?",
     type: "radio",
     options: [
@@ -115,8 +223,10 @@ export const STEPS: Step[] = [
   },
   {
     id: "area",
+    screen: "maison",
+    phase: "essentiel",
     question: "Quelle est la superficie approximative?",
-    subtitle: "En pieds carrés. Une estimation suffit.",
+    subtitle: "En pieds carrés, sans le sous-sol. Une estimation suffit.",
     type: "radio",
     options: [
       { value: "<1000", label: "Moins de 1 000 pi²" },
@@ -128,6 +238,8 @@ export const STEPS: Step[] = [
   },
   {
     id: "floors",
+    screen: "maison",
+    phase: "essentiel",
     question: "Combien d’étages?",
     subtitle: "Sans compter le sous-sol.",
     type: "radio",
@@ -139,112 +251,93 @@ export const STEPS: Step[] = [
     ],
   },
   {
-    id: "constructionPeriod",
-    question: "En quelle période votre maison a-t-elle été construite?",
-    subtitle: "L'âge du bâtiment est le premier indice de ses pertes de chaleur.",
-    type: "radio",
-    options: [
-      { value: "pre_1960", label: "Avant 1960" },
-      { value: "1960_1980", label: "1960 à 1980" },
-      { value: "1981_2000", label: "1981 à 2000" },
-      { value: "2001_2015", label: "2001 à 2015" },
-      { value: "2016_plus", label: "2016 ou plus récent" },
-      { value: "ne-sais-pas", label: "Je ne sais pas" },
-    ],
-  },
-  {
-    id: "insulation",
-    question: "Comment décririez-vous l'isolation?",
-    subtitle: "Murs, toit et fenêtres. Une impression générale suffit.",
-    type: "radio",
-    options: [
-      { value: "poor", label: "Faible (courants d'air, murs froids)" },
-      { value: "standard", label: "Normale pour son âge" },
-      { value: "good", label: "Bonne (rénovée, fenêtres récentes)" },
-      { value: "high_performance", label: "Très performante (Novoclimat, R-2000)" },
-      { value: "ne-sais-pas", label: "Je ne sais pas" },
-    ],
-  },
-  {
-    id: "windowShare",
-    question: "Quelle est la place des fenêtres?",
-    subtitle: "Les grandes surfaces vitrées perdent beaucoup de chaleur l'hiver.",
-    type: "radio",
-    options: [
-      { value: "low", label: "Peu de fenêtres" },
-      { value: "standard", label: "Fenestration normale" },
-      { value: "high", label: "Beaucoup de fenêtres ou grandes baies vitrées" },
-    ],
-  },
-  {
     id: "basement",
+    screen: "maison",
+    phase: "essentiel",
     question: "Y a-t-il un sous-sol?",
     subtitle: "Un sous-sol que la thermopompe doit chauffer s'ajoute à la charge.",
     type: "radio",
     when: (a) => !isCondo(a),
-    options: [
-      { value: "none", label: "Pas de sous-sol" },
-      { value: "unheated", label: "Sous-sol non chauffé ou vide sanitaire" },
-      { value: "heated", label: "Chauffé et habité : la thermopompe doit le chauffer" },
-      { value: "heated_excluded", label: "Chauffé autrement, à exclure" },
-    ],
+    options: BASEMENT_OPTIONS,
+  },
+
+  {
+    id: "constructionPeriod",
+    screen: "enveloppe",
+    phase: "essentiel",
+    question: "En quelle période a-t-elle été construite?",
+    subtitle: "L'âge du bâtiment est le premier indice de ses pertes de chaleur.",
+    type: "radio",
+    options: CONSTRUCTION_OPTIONS,
   },
   {
+    id: "insulation",
+    screen: "enveloppe",
+    phase: "essentiel",
+    question: "Comment décririez-vous l'isolation?",
+    subtitle: "Murs et toit. Une impression générale suffit.",
+    type: "radio",
+    options: INSULATION_OPTIONS,
+  },
+  {
+    // Mesuré : faire varier cette réponse change les trois machines retenues dans 98 % des maisons
+    // simulées (facteur 0,95 à 1,10 sur la charge). Elle reste donc dans le parcours essentiel.
+    id: "windowShare",
+    screen: "enveloppe",
+    phase: "essentiel",
+    question: "Quelle est la place des fenêtres?",
+    subtitle: "Les grandes surfaces vitrées perdent beaucoup de chaleur l'hiver.",
+    type: "radio",
+    options: WINDOW_OPTIONS,
+  },
+
+  /* --- Ce qui décide de l'architecture --- */
+  {
     id: "currentSystem",
+    screen: "chauffage",
+    phase: "essentiel",
     question: "Quel est votre système de chauffage actuel?",
     type: "radio",
-    options: [
-      { value: "electrique", label: "Plinthes électriques" },
-      { value: "thermopompe", label: "Thermopompe existante" },
-      { value: "fournaise-gaz", label: "Fournaise au gaz" },
-      { value: "fournaise-mazout", label: "Fournaise au mazout" },
-      { value: "chaudiere", label: "Chaudière (radiateurs à eau chaude)" },
-      { value: "autre", label: "Autre" },
-    ],
+    options: CURRENT_SYSTEM_OPTIONS,
   },
   {
     id: "ducts",
-    question: "Votre maison a-t-elle des conduits d'air (bouches au plancher ou aux murs)?",
+    screen: "chauffage",
+    phase: "essentiel",
+    question: "Y a-t-il des conduits d'air (bouches au plancher ou aux murs)?",
     subtitle: "Ils décident de l'essentiel : une thermopompe centrale s'y branche ; sans eux, la chaleur passe par des têtes murales.",
     type: "radio",
     when: asksDucts,
     options: DUCTS_OPTIONS,
   },
+
   {
     id: "zonesWanted",
+    screen: "espaces",
+    phase: "essentiel",
     question: "Quels espaces la thermopompe doit-elle chauffer?",
-    subtitle: "Le reste de la maison garde votre chauffage actuel.",
     type: "radio",
     when: asksZones,
     options: ZONES_OPTIONS,
   },
   {
     id: "layout",
+    screen: "espaces",
+    phase: "essentiel",
     question: "Comment les pièces sont-elles disposées?",
-    subtitle: "Une tête murale chauffe bien une aire ouverte, mal une pièce fermée.",
+    subtitle: "Une tête murale chauffe bien une aire ouverte, mal une pièce fermée : c'est ce qui nous fait conseiller une tête de plus ou non.",
     type: "radio",
-    when: (a) => asksZones(a) && a.zonesWanted !== "pieces",
+    when: asksLayout,
     options: LAYOUT_OPTIONS,
   },
-  {
-    id: "placements",
-    question: "Où les unités peuvent-elles aller?",
-    subtitle: "Plusieurs réponses possibles.",
-    type: "multi",
-    when: asksZones,
-    options: PLACEMENT_OPTIONS,
-  },
-  {
-    id: "electricalPanel",
-    question: "Intensité du panneau électrique (disjoncteur principal)?",
-    subtitle: "Le chiffre est inscrit sur le gros disjoncteur du haut du panneau.",
-    type: "radio",
-    options: PANEL_OPTIONS,
-  },
+
+  /* --- Vos attentes --- */
   {
     id: "priority",
+    screen: "attentes",
+    phase: "essentiel",
     question: "Qu’est-ce qui est le plus important pour vous?",
-    subtitle: "Sélectionnez une ou plusieurs priorités.",
+    subtitle: "Une ou plusieurs priorités.",
     type: "multi",
     options: [
       { value: "economies", label: "Économies d’énergie" },
@@ -256,15 +349,48 @@ export const STEPS: Step[] = [
   },
   {
     id: "budget",
+    screen: "attentes",
+    phase: "essentiel",
     question: "Quel est votre budget approximatif?",
     subtitle: "Installation incluse. Une estimation suffit.",
     type: "radio",
     // Tranches selon l'architecture pressentie : une centrale ou plusieurs têtes coûtent plus qu'une murale.
     options: (answers) => (pressentie(answers).kind === "single-zone" ? MURALE_BUDGETS : CENTRAL_BUDGETS),
   },
+
+  /* --- Affinage : après le résultat ---
+     Mesuré sur 60 maisons simulées, en faisant varier chaque réponse toutes autres égales :
+     les emplacements changent les trois machines dans 15 % des cas (par « un seul endroit possible
+     dehors », qui impose une multizone) ; le panneau électrique, dans 0 % — il ne change que les
+     points à vérifier ; le financement, dans 0 % — il ne sert qu'à la soumission. */
+  {
+    id: "placements",
+    screen: "affinage",
+    phase: "affinage",
+    optional: true,
+    question: "Où les unités peuvent-elles aller?",
+    subtitle: "Plusieurs réponses possibles. Un seul endroit possible dehors change la configuration retenue.",
+    type: "multi",
+    when: asksZones,
+    options: PLACEMENT_OPTIONS,
+  },
+  {
+    id: "electricalPanel",
+    screen: "affinage",
+    phase: "affinage",
+    optional: true,
+    question: "Intensité du panneau électrique?",
+    subtitle: "Le chiffre est inscrit sur le gros disjoncteur du haut du panneau. Il sert à savoir si un électricien devra faire un calcul de charge avant l'installation.",
+    type: "radio",
+    options: PANEL_OPTIONS,
+  },
   {
     id: "financing",
+    screen: "affinage",
+    phase: "affinage",
+    optional: true,
     question: "Avez-vous besoin de financement?",
+    subtitle: "Pour la soumission seulement : aucun effet sur la recommandation.",
     type: "radio",
     options: [
       { value: "oui", label: "Oui" },
@@ -276,14 +402,18 @@ export const STEPS: Step[] = [
 
 const STEP_IDS = new Set(STEPS.map((s) => s.id));
 
+/** Ordre stable : l'ordre des écrans, puis l'ordre de déclaration dans chaque écran. */
+const ORDERED = [...STEPS].sort((a, b) => (SCREEN_ORDER.get(a.screen) ?? 99) - (SCREEN_ORDER.get(b.screen) ?? 99) || STEPS.indexOf(a) - STEPS.indexOf(b));
+
 /**
- * Le parcours réel pour ces réponses. Chaque condition ne voit que les réponses des étapes visibles
- * placées avant elle : une réponse restée d'une étape désormais masquée ne compte pas.
+ * Le parcours réel pour ces réponses, les deux temps confondus. Chaque condition ne voit que les
+ * réponses des questions visibles placées avant elle : une réponse restée d'une question désormais
+ * masquée ne compte pas.
  */
 export function visibleSteps(a: Answers): Step[] {
   const seen: Answers = {};
   const out: Step[] = [];
-  for (const s of STEPS) {
+  for (const s of ORDERED) {
     if (s.when && !s.when(seen)) continue;
     out.push(s);
     if (a[s.id] !== undefined) seen[s.id] = a[s.id];
@@ -291,7 +421,29 @@ export function visibleSteps(a: Answers): Step[] {
   return out;
 }
 
-/** Retire les réponses des étapes masquées ; les autres clés (anciens liens : heatPumpType) restent. */
+/** Les écrans réellement posés pour ces réponses ; un écran sans question visible disparaît. */
+export function visibleScreens(a: Answers, phase?: StepPhase): Screen[] {
+  const steps = visibleSteps(a);
+  return SCREENS.filter((s) => phase === undefined || s.phase === phase)
+    .map((meta) => ({ ...meta, steps: steps.filter((s) => s.screen === meta.id) }))
+    .filter((s) => s.steps.length > 0);
+}
+
+/** Les questions d'affinage encore posables (après le résultat). */
+export function affinageSteps(a: Answers): Step[] {
+  return visibleSteps(a).filter((s) => s.phase === "affinage");
+}
+
+/** Toutes les questions essentielles visibles ont une réponse : le résultat peut être calculé. */
+export function essentielComplete(a: Answers): boolean {
+  return visibleSteps(a)
+    .filter((s) => s.phase === "essentiel" && !s.optional)
+    .every((s) => answered(a[s.id]));
+}
+
+export const answered = (v: string | string[] | undefined): boolean => (Array.isArray(v) ? v.length > 0 : typeof v === "string" && v.trim() !== "");
+
+/** Retire les réponses des questions masquées ; les autres clés (anciens liens : heatPumpType) restent. */
 export function pruneHidden<T extends Answers>(a: T): T {
   const visible = new Set(visibleSteps(a).map((s) => s.id));
   return Object.fromEntries(Object.entries(a).filter(([k, v]) => v !== undefined && (!STEP_IDS.has(k) || visible.has(k)))) as T;

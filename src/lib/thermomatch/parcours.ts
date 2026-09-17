@@ -3,14 +3,15 @@
 
    Libellés des questions d'architecture, partagés entre les étapes
    (steps.ts), le brouillon de projet, la soumission, le CRM et le
-   courriel : une seule source. Le parcours compte de 14 à 17 questions
-   selon les réponses ; les textes du site l'annoncent sans chiffre exact.
+   courriel : une seule source. Le parcours essentiel tient en cinq ou
+   six écrans (les questions qui vont ensemble sont groupées), puis
+   l'affinage facultatif vient après le résultat.
    ================================================================== */
 
 import { installLabel, type ArchitectureKind } from "./architecture";
 
-export const QUESTIONS_LABEL = "une quinzaine de questions";
-export const QUESTIONS_LABEL_MAJ = "Une quinzaine de questions";
+export const QUESTIONS_LABEL = "cinq ou six questions";
+export const QUESTIONS_LABEL_MAJ = "Cinq ou six questions";
 
 export interface ParcoursOption {
   value: string;
@@ -18,6 +19,47 @@ export interface ParcoursOption {
   /** Choix multiple : cette option exclut les autres (« Je ne sais pas »). */
   exclusive?: boolean;
 }
+
+export const CONSTRUCTION_OPTIONS: ParcoursOption[] = [
+  { value: "pre_1960", label: "Avant 1960" },
+  { value: "1960_1980", label: "1960 à 1980" },
+  { value: "1981_2000", label: "1981 à 2000" },
+  { value: "2001_2015", label: "2001 à 2015" },
+  { value: "2016_plus", label: "2016 ou plus récent" },
+  { value: "ne-sais-pas", label: "Je ne sais pas" },
+];
+
+export const INSULATION_OPTIONS: ParcoursOption[] = [
+  { value: "poor", label: "Faible (courants d'air, murs froids)" },
+  { value: "standard", label: "Normale pour son âge" },
+  { value: "good", label: "Bonne (rénovée, fenêtres récentes)" },
+  { value: "high_performance", label: "Très performante (Novoclimat, R-2000)" },
+  { value: "ne-sais-pas", label: "Je ne sais pas" },
+];
+
+export const WINDOW_OPTIONS: ParcoursOption[] = [
+  { value: "low", label: "Peu de fenêtres" },
+  { value: "standard", label: "Fenestration normale" },
+  { value: "high", label: "Beaucoup de fenêtres ou grandes baies vitrées" },
+  { value: "ne-sais-pas", label: "Je ne sais pas" },
+];
+
+export const BASEMENT_OPTIONS: ParcoursOption[] = [
+  { value: "none", label: "Pas de sous-sol" },
+  { value: "unheated", label: "Sous-sol non chauffé ou vide sanitaire" },
+  { value: "heated", label: "Chauffé et habité : la thermopompe doit le chauffer" },
+  { value: "heated_excluded", label: "Chauffé autrement, à exclure" },
+  { value: "ne-sais-pas", label: "Je ne sais pas" },
+];
+
+export const CURRENT_SYSTEM_OPTIONS: ParcoursOption[] = [
+  { value: "electrique", label: "Plinthes électriques" },
+  { value: "thermopompe", label: "Thermopompe existante" },
+  { value: "fournaise-gaz", label: "Fournaise au gaz" },
+  { value: "fournaise-mazout", label: "Fournaise au mazout" },
+  { value: "chaudiere", label: "Chaudière (radiateurs à eau chaude)" },
+  { value: "autre", label: "Autre" },
+];
 
 export const DUCTS_OPTIONS: ParcoursOption[] = [
   { value: "complets", label: "Oui, en bon état, une bouche à chaque étage habité" },
