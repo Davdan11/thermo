@@ -1,17 +1,27 @@
 [
   {
     "brand": "zephyr",
+    "pattern": "^(ZE09CB|ZE09DB|ZE12CB|ZE12DB|ZE18CB|ZE24CB)",
+    "series": "/images/products/official/zephyr-cb22-cb25-officiel.webp"
+  },
+  {
+    "brand": "zephyr",
+    "pattern": "^(ZE18M|ZE24M|ZE36M|ZE42M|ZE518M|ZE527M|ZE536M|ZE542M)",
+    "series": "/images/products/official/zephyr-multizone-r454b-officiel.webp"
+  },
+  {
+    "brand": "zephyr",
     "pattern": "^ZE-(12|18)CA22EXT$",
     "series": "/images/products/official/zephyr-ca22-exterieure-officielle.webp"
   },
   {
     "brand": "zephyr",
-    "pattern": "^ZE-(24|36|60)HPA$",
-    "series": "/images/products/official/zephyr-central-hpa-exterieure-officielle.webp"
+    "pattern": "^ZE-(24|36|48|60)HPB$",
+    "series": "/images/products/official/zephyr-central-hpb-r454b-exterieure-officielle.webp"
   },
   {
     "brand": "zephyr",
-    "pattern": "^ZE-(24|36|48|60)HPB$",
-    "series": "/images/products/official/zephyr-central-hpb-r454b-exterieure-officielle.webp"
+    "pattern": "^ZE-(24|36|60)HPA$",
+    "series": "/images/products/official/zephyr-central-hpa-exterieure-officielle.webp"
   }
 ]

@@ -11,11 +11,21 @@
       "image_web": "/images/products/official/zephyr-ca22-exterieure-officielle.webp"
     },
     {
-      "fichier": "zephyr-serie-25-r454b-exterieure-brochure.jpeg",
-      "url": "https://tticlimatisation.com/docs/ZEPHYR_25SEER_R454b-BRO0125.pdf",
-      "page_source": "https://tticlimatisation.com/produits/zephyr-25-seer-30c-r454b (brochure officielle Zephyr 25 SEER R-454B, 01-2025) ; recadrage du rendu de l'unité extérieure en page 1 — ATTENTION : arrière-plan de scène conservé (pas de fond blanc disponible)",
-      "modeles": "ZE-09/12/18/24CB25O, ZE-09/12DB25O",
-      "image_web": "/images/products/official/zephyr-serie-25-r454b-exterieure-brochure.webp"
+      "fichier": "zephyr-cb22-cb25-site.png",
+      "image_web": "/images/products/official/zephyr-cb22-cb25-officiel.webp",
+      "url": "https://tticlimatisation.com/storage/product-photos/product_1787949625.jpg",
+      "page": "https://tticlimatisation.com/produits/thermopompe-murale-zephyr-cb22",
+      "date": "2026-09-17",
+      "familles": [
+        "ZE09CB",
+        "ZE09DB",
+        "ZE12CB",
+        "ZE12DB",
+        "ZE18CB",
+        "ZE24CB"
+      ],
+      "modeles": "ZE-09CB22O, ZE-09CB25O, ZE-09DB22O, ZE-09DB25O, ZE-12CB22O, ZE-12CB25O, ZE-12DB22O, ZE-12DB25O, ZE-18CB22O, ZE-18CB25O, ZE-24CB22O, ZE-24CB25O",
+      "note": "Photo produit des pages officielles Zephyr CB22 et CB25 (même fichier sur les deux pages) chez TTI Climatisation, propriétaire de la marque Zephyr. Montre l'unité extérieure, la tête murale et la télécommande."
     },
     {
       "fichier": "zephyr-central-hpa-exterieure-officielle.jpx",
@@ -30,6 +40,32 @@
       "page_source": "https://tticlimatisation.com/produits/zephyr-centrale-30c-r454b (page produit officielle listant ZE-24HPB, ZE-36HPB, ZE-48HPB, ZE-60HPB) ; recadrage de l'unité extérieure (photo composite ventilo-convecteur + unité extérieure)",
       "modeles": "ZE-24/36/48/60HPB",
       "image_web": "/images/products/official/zephyr-central-hpb-r454b-exterieure-officielle.webp"
+    },
+    {
+      "fichier": "zephyr-multizone-r454b-site.png",
+      "image_web": "/images/products/official/zephyr-multizone-r454b-officiel.webp",
+      "url": "https://tticlimatisation.com/storage/product-photos/product_1787695802.jpg",
+      "page": "https://tticlimatisation.com/produits/zephyr-multi-zone-r454b",
+      "date": "2026-09-17",
+      "familles": [
+        "ZE18M",
+        "ZE24M",
+        "ZE36M",
+        "ZE42M",
+        "ZE518M",
+        "ZE527M",
+        "ZE536M",
+        "ZE542M"
+      ],
+      "modeles": "ZE-18M222SCO, ZE-24M322SCO, ZE-36M422SCO, ZE-42M522SCO, ZE-518M225, ZE-527M325, ZE-536M425, ZE-542M525",
+      "note": "Photo produit de la page officielle Zephyr Multi Zone R454B chez TTI Climatisation, propriétaire de la marque. Condenseur multizone au premier plan avec trois têtes murales."
+    },
+    {
+      "fichier": "zephyr-serie-25-r454b-exterieure-brochure.jpeg",
+      "url": "https://tticlimatisation.com/docs/ZEPHYR_25SEER_R454b-BRO0125.pdf",
+      "page_source": "https://tticlimatisation.com/produits/zephyr-25-seer-30c-r454b (brochure officielle Zephyr 25 SEER R-454B, 01-2025) ; recadrage du rendu de l'unité extérieure en page 1 — ATTENTION : arrière-plan de scène conservé (pas de fond blanc disponible)",
+      "modeles": "ZE-09/12/18/24CB25O, ZE-09/12DB25O",
+      "image_web": "/images/products/official/zephyr-serie-25-r454b-exterieure-brochure.webp"
     }
   ],
   "documents_consultes_sans_photo_exploitable": [

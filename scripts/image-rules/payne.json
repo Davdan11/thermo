@@ -1,6 +1,36 @@
 [
   {
     "brand": "payne",
+    "pattern": "^(37MAHA|37MARA|37MHRAQ)",
+    "series": "/images/products/official/payne-37maha-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^(37MBHA|37MBRA)",
+    "series": "/images/products/official/payne-37mbha-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^(37MGHA|37MGRA|38MGHB)",
+    "series": "/images/products/official/payne-37mgha-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^(37MPRA|38MPRB)",
+    "series": "/images/products/official/payne-37mpra-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^(37MUHA|37MURA)",
+    "series": "/images/products/official/payne-37muha-officiel.webp"
+  },
+  {
+    "brand": "payne",
+    "pattern": "^(38MHRCQ)",
+    "series": "/images/products/official/payne-38mhrcq-officiel.webp"
+  },
+  {
+    "brand": "payne",
     "pattern": "^37MBHA",
     "series": "/images/products/official/payne-38mbrc-officiel.webp"
   },

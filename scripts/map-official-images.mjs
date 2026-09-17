@@ -2,10 +2,17 @@
  * Relie les photos officielles (public/images/products/official + public/images/products/*.webp)
  * aux modèles et séries du registre, par préfixe de numéro de modèle et capacité.
  * Règles explicites, une par famille : rien n'est deviné par ressemblance de nom.
+ *
+ * Deuxième filet : toute affectation passe par le manifeste des photos
+ * (src/lib/data/photos/familles-photos.json). Une règle trop large — qui poserait une tête
+ * murale sur une centrale gainable, un logo d'une autre marque, ou la photo d'une famille
+ * voisine — est refusée et comptée dans le rapport.
+ *
  * Usage : node scripts/map-official-images.mjs [--dry-run]
  */
 import fs from "node:fs";
 import path from "node:path";
+import { refusPhoto } from "./lib/photos-manifeste.mjs";
 
 const DATA = path.join(process.cwd(), "src/lib/data/fixtures/brands/all-auto-datasets.json");
 const dry = process.argv.includes("--dry-run");
@@ -24,11 +31,10 @@ const RULES = [
   ["gree", /^GUD(24|30|36|48|60)W\/A-D/, null, "/images/products/official/gree-flexx-officiel.webp"],
   ["lg", /^LAU(090|120|150|180|240)HYV3/, (k) => ({ 9: "/images/products/lg-art-cool-9k.webp", 12: "/images/products/lg-art-cool-12k.webp", 18: "/images/products/lg-art-cool-18k.webp" }[k] ?? null), "/images/products/official/lg-art-cool-mirror-officiel.webp"],
   ["lg", /^LSU(090|120|181)HSV5/, (k) => ({ 9: "/images/products/lg-standard-9k.webp", 12: "/images/products/lg-standard-12k.webp", 18: "/images/products/lg-standard-18k.webp" }[k] ?? null), null],
-  ["carrier", /^37MAHAQ/, () => "/images/products/carrier-infinity-37mahaq-series.webp", "/images/products/official/carrier-37mahaq-exterieure-officielle.webp"],
-  ["carrier", /^37MARAQ/, () => "/images/products/carrier-performance-37maraq-series.webp", "/images/products/official/carrier-37maraq-exterieure-officielle.webp"],
-  ["carrier", /^37MGHAQ?/, () => "/images/products/carrier-infinity-37mgha-series.webp", "/images/products/official/carrier-37mgha-exterieure-officielle.webp"],
-  ["carrier", /^37MHRAQ/, () => "/images/products/carrier-comfort-37mhraq-series.webp", "/images/products/official/carrier-37mhraq-exterieure-officielle.webp"],
-  ["carrier", /^37MPRAQ/, () => "/images/products/carrier-infinity-37mpraq-series.webp", "/images/products/official/carrier-37mpraq-37mahaq-exterieure-officielle.webp"],
+  // Carrier 37M… : ces règles posaient les photos « série » (une tête murale posée au-dessus du
+  // condenseur) sur des fiches dont le numéro est celui de l'UNITÉ EXTÉRIEURE, multizones et
+  // centrales gainables comprises. Elles sont remplacées par les photos produit officielles de
+  // carrier.com, déclarées dans scripts/image-rules/carrier.json avec leur provenance.
   ["mitsubishi-electric", /^MUZ-FH(06|09|12|15|18)NA/, (k) => ({ 9: "/images/products/mitsubishi-fh-9k.webp", 12: "/images/products/mitsubishi-fh-12k.webp", 18: "/images/products/mitsubishi-fh-18k.webp" }[k] ?? null), "/images/products/official/mitsubishi-fh-exterieure-archive-officielle.webp"],
   ["mitsubishi-electric", /^MUZ-FS(06|09|12)NA/, (k) => `/images/products/mitsubishi-fs-${k}k.webp`, "/images/products/official/mitsubishi-fs-06-09-12-exterieure-officielle.webp"],
   ["mitsubishi-electric", /^MUZ-FS(15|18)NA/, (k) => `/images/products/mitsubishi-fs-${k}k.webp`, "/images/products/official/mitsubishi-fs-15-18-exterieure-officielle.webp"],
@@ -75,28 +81,51 @@ if (fs.existsSync(RULES_DIR)) {
 
 const capK = (m) => Math.round((m.nominalCapacityBtu ?? 0) / 1000);
 let models = 0, series = 0, missing = new Set();
+const refused = new Map();
+// Pose la photo seulement si le manifeste l'autorise pour cette fiche précise.
+const poser = (cible, img, brand, numero, type) => {
+  if (!img || !exists(img)) { if (img) missing.add(img); return false; }
+  const refus = refusPhoto(img, brand, numero, type);
+  if (refus) { refused.set(refus, (refused.get(refus) ?? 0) + 1); return false; }
+  cible.imageUrl = img;
+  return true;
+};
 
 for (const [brand, re, byCap, seriesImg] of RULES) {
   const b = d[brand]; if (!b) { console.log("marque absente", brand); continue; }
   const seriesById = new Map(b.series.map((s) => [s.id, s]));
+  const membres = new Map(); // seriesId → tous les modèles publiés de la série
+  for (const m of b.models) {
+    if (m.status !== "published") continue;
+    if (!membres.has(m.seriesId)) membres.set(m.seriesId, []);
+    membres.get(m.seriesId).push(m);
+  }
   const touchedSeries = new Set();
   for (const m of b.models) {
-    if (!re.test(m.modelNumber)) continue;
-    const img = byCap ? byCap(capK(m)) : null;
-    if (img && exists(img)) { m.imageUrl = img; models++; }
-    else if (img) missing.add(img);
+    // Les règles écrites à la main visent le numéro tel qu'il est publié (« ZE-09CB22O ») ;
+    // celles écrites depuis la provenance visent la famille normalisée (« ZE09CB »). On essaie
+    // les deux, sinon une règle juste ne s'appliquerait jamais à cause d'un trait d'union.
+    if (!re.test(m.modelNumber) && !re.test(m.modelNumber.toUpperCase().replace(/[^A-Z0-9]/g, ""))) continue;
+    if (poser(m, byCap ? byCap(capK(m)) : null, brand, m.modelNumber, m.systemType)) models++;
     // Un modèle qui correspond à la règle mais sans photo à sa capacité reçoit la photo de la famille.
-    if (!m.imageUrl && seriesImg && exists(seriesImg)) { m.imageUrl = seriesImg; models++; }
+    else if (!m.imageUrl && poser(m, seriesImg, brand, m.modelNumber, m.systemType)) models++;
     touchedSeries.add(m.seriesId);
   }
   if (seriesImg && !exists(seriesImg)) missing.add(seriesImg);
-  // La série reçoit la photo de la famille seulement si ce n'est pas le fourre-tout « Série Standard ».
+  // La photo d'une série retombe sur tous ses modèles qui n'en ont pas : elle ne lui est posée
+  // que si elle convient à CHACUN d'eux. Les séries fourre-tout de la liste LogisVert (« 37M »,
+  // « 45M », « Série non identifiée ») regroupent plusieurs familles et n'en reçoivent aucune.
   if (seriesImg && exists(seriesImg)) {
     for (const id of touchedSeries) {
       const s = seriesById.get(id);
-      if (s && !s.imageUrl && !/s[ée]rie standard|s[ée]rie non identifi/i.test(s.name)) { s.imageUrl = seriesImg; series++; }
+      if (!s || s.imageUrl || /s[ée]rie standard|s[ée]rie non identifi/i.test(s.name)) continue;
+      const liste = membres.get(id) ?? [];
+      const type = s.systemType ?? liste[0]?.systemType;
+      if (liste.length === 0) continue;
+      if (!liste.every((x) => refusPhoto(seriesImg, brand, x.modelNumber, type) === null)) continue;
+      if (poser(s, seriesImg, brand, liste[0].modelNumber, type)) series++;
     }
   }
 }
-console.log({ models, series, missing: [...missing] });
+console.log({ models, series, missing: [...missing], refusees: Object.fromEntries(refused) });
 if (!dry) fs.writeFileSync(DATA, JSON.stringify(d, null, 2));

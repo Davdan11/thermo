@@ -1,0 +1,114 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "start",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "start"
+      ],
+      "port": 3000
+    },
+    {
+      "name": "thermomatch-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "/Users/daviddanjou/Desktop/thermo/.claude/worktrees/agent-aa11236430e3f07eb",
+        "run",
+        "dev"
+      ],
+      "port": 3200,
+      "autoPort": true
+    },
+    {
+      "name": "snp-apercu",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "/private/tmp/claude-501/-Users-daviddanjou-Desktop-thermo/ec10cfa8-b554-4217-bc39-43d809c61e6e/scratchpad/snp-serve.cjs"
+      ],
+      "port": 5510
+    },
+    {
+      "name": "gestion-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "/Users/daviddanjou/Desktop/bellechasse-gestion",
+        "run",
+        "dev"
+      ],
+      "port": 3200,
+      "autoPort": true
+    },
+    {
+      "name": "thermo-ref",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "next",
+        "start",
+        "-p",
+        "3150"
+      ],
+      "port": 3150
+    },
+    {
+      "name": "bellechasse-ref",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "--prefix",
+        "/Users/daviddanjou/Desktop/BELLECHASSE",
+        "next",
+        "start",
+        "/Users/daviddanjou/Desktop/BELLECHASSE",
+        "-p",
+        "3160"
+      ],
+      "port": 3160
+    },
+    {
+      "name": "snp-site",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "/Users/daviddanjou/Desktop/solutionnetplus-site",
+        "run",
+        "dev"
+      ],
+      "port": 3400
+    },
+    {
+      "name": "snp-site-prod",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "--prefix",
+        "/Users/daviddanjou/Desktop/solutionnetplus-site",
+        "next",
+        "start",
+        "/Users/daviddanjou/Desktop/solutionnetplus-site",
+        "-p",
+        "3401"
+      ],
+      "port": 3401
+    },
+    {
+      "name": "thermo-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 3100,
+      "autoPort": true
+    },
+    {
+      "name": "dragon-slots",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "/private/tmp/claude-501/-Users-daviddanjou-Desktop-thermo/5deb2a97-dea6-4f7f-977d-9fd8f8967aae/scratchpad/dragon-serve.cjs"
+      ],
+      "port": 5600
+    }
+  ]
+}

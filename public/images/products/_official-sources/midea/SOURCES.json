@@ -11,6 +11,32 @@
       "image_web": "/images/products/official/midea-ep-extreme-heat-mo1es-exterieure-officielle.webp"
     },
     {
+      "fichier": "midea-mo1hs-site.png",
+      "image_web": "/images/products/official/midea-mo1hs-officiel.webp",
+      "url": "https://www.mideacomfort.us/images/new/product-detail/single-extreme-heat-pump/img-1.jpg",
+      "page": "https://www.mideacomfort.us/product-detail.html?q=single-extreme-heat",
+      "date": "2026-09-17",
+      "familles": [
+        "MO1HS"
+      ],
+      "modeles": "MO1HS-H06B-2A, MO1HS-H09B-2A, MO1HS-H12B-2A, MO1HS-H18B-2A, MO1HS-H24B-2A, MO1HS-H33B-2A",
+      "note": "Photo produit « Single-Zone Extreme Heat Pump » du site HVAC résidentiel Midea (mideacomfort.us). Les fiches Submittal officielles (MSEHU-H12B-2A & MO1HS-H12B-2A) montrent le même boîtier blanc à un ventilateur."
+    },
+    {
+      "fichier": "midea-mo1ss-mo1bs-mo1cs-site.png",
+      "image_web": "/images/products/official/midea-mo1ss-mo1bs-mo1cs-officiel.webp",
+      "url": "https://www.mideacomfort.us/images/new/product-detail/single-advanced-heat-pump/img-1.jpg",
+      "page": "https://www.mideacomfort.us/single.html",
+      "date": "2026-09-17",
+      "familles": [
+        "MO1SS",
+        "MO1BS",
+        "MO1CS"
+      ],
+      "modeles": "MO1BS-H09B-1A, MO1BS-H09B-2A, MO1BS-H12B-1A, MO1BS-H12B-2A, MO1BS-H18B-2A, MO1BS-H24B-2A, MO1BS-H30B-2A, MO1BS-H36B-2A, MO1CS-H09B-1A, MO1CS-H09B-2A, MO1CS-H12B-1A, MO1CS-H12B-2A",
+      "note": "Photo produit « Single-Zone Advance Heat Pump » du site HVAC résidentiel Midea. Midea sert la même photo de monozone pour ces familles ; les fiches Submittal officielles (MSESU & MO1SS, MSGNS & MO1BS, MSBNS & MO1CS) montrent le même boîtier blanc à un ventilateur."
+    },
+    {
       "fichier": "midea-multizone-mo6ex-exterieure-officielle.png",
       "url": "https://www.mideacomfortna.ca/images/new/product-detail/multi-advanced-heat-pump/img-1.png",
       "page_source": "https://www.mideacomfortna.ca/product-detail.html?q=multi-advanced-heat-pump (« Multi Zone Advance Heat Series », numéro de modèle indiqué : MO6EX-H48B-2A)",
