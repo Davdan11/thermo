@@ -1445,3 +1445,104 @@
     transition: none !important;
   }
 }
+
+/* ---------------- Robot Facebook : formats, aperçus, réglages ---------------- */
+
+.pr-root {
+  --pr-thermopompe-semaine: #174b60;
+  --pr-nouveautes: #2f6fa3;
+  --pr-duel: #c66e42;
+  --pr-grand-froid: #0c1821;
+  --pr-chiffre: #5d6b74;
+  --pr-subventions: #1d7a4e;
+  --pr-thermomatch: #e54b17;
+}
+.pr-bg--thermopompe-semaine { --pr-c: var(--pr-thermopompe-semaine); }
+.pr-bg--nouveautes { --pr-c: var(--pr-nouveautes); }
+.pr-bg--duel { --pr-c: var(--pr-duel); }
+.pr-bg--grand-froid { --pr-c: var(--pr-grand-froid); }
+.pr-bg--chiffre { --pr-c: var(--pr-chiffre); }
+.pr-bg--subventions { --pr-c: var(--pr-subventions); }
+.pr-bg--thermomatch { --pr-c: var(--pr-thermomatch); }
+
+.pr-row--vignette {
+  padding-left: 14px;
+}
+.pr-vignette {
+  display: block;
+  width: 64px;
+  aspect-ratio: 1080 / 1350;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--g-line);
+  background: #0c1821;
+}
+.pr-vignette.is-story {
+  aspect-ratio: 1080 / 1920;
+}
+@media (min-width: 760px) {
+  .pr-row.pr-row--vignette {
+    grid-template-columns: 64px 180px minmax(0, 1fr) auto;
+  }
+}
+.pr-apercu {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 14px;
+  border: 1px solid var(--g-line);
+  box-shadow: 0 24px 50px -34px rgba(12, 24, 33, 0.6);
+  background: #0c1821;
+}
+.pr-suivi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 13px;
+  color: var(--g-muted);
+}
+.pr-suivi b {
+  color: var(--g-ink);
+  font-variant-numeric: tabular-nums;
+}
+.pr-fieldset {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--g-line);
+  border-radius: 14px;
+}
+.pr-fieldset legend {
+  padding: 0 6px;
+  font-weight: 700;
+}
+.pr-rythme {
+  display: grid;
+  gap: 10px;
+  align-items: end;
+}
+@media (min-width: 760px) {
+  .pr-rythme {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+.pr-bassins {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.pr-bassins li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-top: 1px solid var(--g-line);
+}
+.pr-bassins b {
+  font-variant-numeric: tabular-nums;
+}

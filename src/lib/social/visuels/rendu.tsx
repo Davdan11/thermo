@@ -19,6 +19,7 @@ import path from "node:path";
 import { ImageResponse } from "next/og";
 import type { Faits, Genre } from "../types";
 import { Affiche, C, imagesDe, TAILLES, type PhotoPrete, type Ressources } from "./affiches";
+import { maquette } from "./maquettes";
 import { Metriques } from "./mesure";
 
 type Police = { name: string; data: ArrayBuffer; weight: 400 | 600 | 800; style: "normal" | "italic" };
@@ -99,10 +100,11 @@ export function preparerImage(cheminPublic: string, genre: "photo" | "logo"): Pr
   return p;
 }
 
-/** PNG du visuel d'une publication (1080 × 1350) ou d'une story (1080 × 1920). */
-export async function rendreVisuel(faits: Faits, genre: Genre): Promise<Buffer> {
+/** PNG du visuel d'une publication (1080 × 1350) ou d'une story (1080 × 1920), dans la mise en page n° `variante`. */
+export async function rendreVisuel(faits: Faits, genre: Genre, variante = 0): Promise<Buffer> {
   const { polices, metriques } = await chargerPolices();
-  const { photos, logos } = imagesDe(faits);
+  const m = maquette(faits, variante);
+  const { photos, logos } = imagesDe(m);
   const images: Ressources["images"] = {};
   for (const p of photos) {
     const img = await preparerImage(p, "photo");
@@ -112,6 +114,6 @@ export async function rendreVisuel(faits: Faits, genre: Genre): Promise<Buffer> 
     const img = await preparerImage(l, "logo");
     if (img) images[l] = img;
   }
-  const res = new ImageResponse(<Affiche faits={faits} genre={genre} ressources={{ images, metriques }} />, { ...TAILLES[genre], fonts: polices });
+  const res = new ImageResponse(<Affiche maquette={m} genre={genre} ressources={{ images, metriques }} />, { ...TAILLES[genre], fonts: polices });
   return Buffer.from(await res.arrayBuffer());
 }

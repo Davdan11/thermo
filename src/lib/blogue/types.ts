@@ -99,7 +99,7 @@ export interface BlogArticle {
   /** Dernière modification du contenu après la première publication (dateModified). */
   modifiedAt?: string;
   approvedBy?: string;
-  /** Publications Facebook et Instagram créées dans le studio à la publication. */
+  /** Éléments de l’ancienne file du studio liés à l’article (historique ; plus rien n’y est ajouté). */
   presencePostIds: string[];
   /** Dernier passage de l'assistant de style (s'il est configuré). */
   assistant?: { at: string; model: string; accepted: boolean; note: string };

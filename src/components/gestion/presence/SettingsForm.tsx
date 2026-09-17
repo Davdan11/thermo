@@ -1,93 +1,91 @@
 "use client";
 
-/* Réglages du studio : interrupteur général, rotation, séries (active, heure, story, automatique). */
+/* Réglages de la file Facebook : interrupteur, rythme, jours d'avance, approbation (date de départ, obligatoire). */
 import { useActionState, useState } from "react";
 import { saveSettingsAction, type PresenceResult } from "@/app/gestion/(prive)/presence/actions";
-import type { PresenceSettings, SeriesId } from "@/lib/presence/types";
+import type { ReglagesSociaux } from "@/lib/social/types";
 
-export interface SeriesRow {
-  id: SeriesId;
-  label: string;
-  dayLabel: string;
-  available: boolean;
-  autoAllowed: boolean;
-  /** Automatique possible maintenant (gabarit validé), sinon la raison. */
-  auto: { ok: true } | { ok: false; reason: string };
-}
-
-export function SettingsForm({ settings, rows, real }: { settings: PresenceSettings; rows: SeriesRow[]; real: boolean }) {
+export function SettingsForm({ reglages, interrupteur, reel, depart }: { reglages: ReglagesSociaux; interrupteur: boolean; reel: boolean; /** Date de départ AAAA-MM-JJ (heure de Montréal), ou vide. */ depart: string }) {
   const [state, action, pending] = useActionState<PresenceResult, FormData>(saveSettingsAction, undefined);
-  const [on, setOn] = useState(settings.autoPublish);
+  const [on, setOn] = useState(interrupteur);
 
   return (
     <form action={action} className="pr-settings">
       <label className={`pr-master${on ? " is-on" : ""}`}>
         <span className="pr-switch">
-          <input type="checkbox" name="autoPublish" checked={on} onChange={(e) => setOn(e.target.checked)} role="switch" aria-checked={on} />
+          <input type="checkbox" name="interrupteur" checked={on} onChange={(e) => setOn(e.target.checked)} role="switch" aria-checked={on} />
           <i aria-hidden />
         </span>
         <span className="pr-master__txt">
           <b>Publication automatique</b>
           <span>
             {on
-              ? real
-                ? "Activée : les publications approuvées partent à leur heure sur Facebook et Instagram."
-                : "Activée, mais le site reste en mode essai tant que la connexion Meta n’est pas complète (ou hors du serveur de production)."
-              : "Éteinte (par défaut) : rien ne part vers Meta, même avec « Publier maintenant ». Le studio montre ce qui serait envoyé."}
+              ? reel
+                ? "Allumée : les éléments approuvés partent à leur heure sur la page Facebook."
+                : "Allumée, mais le site reste en mode essai (connexion Facebook incomplète, ou hors du serveur de production)."
+              : "Éteinte (par défaut) : rien ne part vers Facebook, même avec « Publier maintenant ». Le studio montre ce qui serait envoyé."}
           </span>
         </span>
       </label>
 
-      <label className="g-field pr-rotation">
-        <span className="g-label">Rotation : pas le même modèle, la même ville ou le même terme avant</span>
-        <span className="cr-number">
-          <input name="rotationWeeks" type="number" min={1} max={52} defaultValue={settings.rotationWeeks} required />
-          <span>semaines</span>
-        </span>
-      </label>
-
-      <div className="pr-series" role="table" aria-label="Séries">
-        <div className="pr-series__head" role="row">
-          <span role="columnheader">Série</span>
-          <span role="columnheader">Active</span>
-          <span role="columnheader">Heure</span>
-          <span role="columnheader">Story</span>
-          <span role="columnheader">Automatique</span>
+      <fieldset className="pr-fieldset">
+        <legend>Rythme (heure de Montréal)</legend>
+        <div className="pr-rythme">
+          <label className="pr-check">
+            <input type="checkbox" name="pub_actif" defaultChecked={reglages.publication.actif} />
+            <span>Publications (1080 × 1350)</span>
+          </label>
+          <label className="g-field">
+            <span className="g-label">Une tous les</span>
+            <span className="cr-number">
+              <input name="pub_jours" type="number" min={1} max={14} defaultValue={reglages.publication.tousLesJours} required />
+              <span>jours</span>
+            </span>
+          </label>
+          <label className="g-field">
+            <span className="g-label">À</span>
+            <input className="g-input pr-time" type="time" name="pub_heure" step={300} defaultValue={reglages.publication.heure} required />
+          </label>
         </div>
-        {rows.map((r) => {
-          const s = settings.series[r.id];
-          const autoDisabled = !r.autoAllowed || !r.available || (!r.auto.ok && !s.auto);
-          return (
-            <div key={r.id} className={`pr-series__row${r.available ? "" : " is-off"}`} role="row">
-              <span role="cell" className="pr-series__name">
-                <i className={`pr-dot pr-dot--${r.id}`} aria-hidden />
-                <span>
-                  <b>{r.label}</b>
-                  <small>{r.available ? r.dayLabel : "Réservée à la phase 2 (outil terrain)"}</small>
-                </span>
-              </span>
-              <span role="cell" data-label="Active">
-                <input type="checkbox" name={`${r.id}_enabled`} defaultChecked={s.enabled} disabled={!r.available} aria-label={`${r.label} : active`} />
-              </span>
-              <span role="cell" data-label="Heure">
-                <input type="time" className="g-input pr-time" name={`${r.id}_time`} defaultValue={s.time} step={300} disabled={!r.available} aria-label={`${r.label} : heure`} />
-              </span>
-              <span role="cell" data-label="Story">
-                <input type="checkbox" name={`${r.id}_story`} defaultChecked={s.story} disabled={!r.available} aria-label={`${r.label} : story Instagram`} />
-              </span>
-              <span role="cell" data-label="Automatique" title={!r.auto.ok ? r.auto.reason : undefined}>
-                <input type="checkbox" name={`${r.id}_auto`} defaultChecked={s.auto} disabled={autoDisabled} aria-label={`${r.label} : publication sans approbation`} />
-                {r.id === "question" ? <small>Toujours manuelle</small> : !r.auto.ok && r.available ? <small>Après une approbation</small> : null}
-              </span>
-            </div>
-          );
-        })}
-      </div>
+        <div className="pr-rythme">
+          <label className="pr-check">
+            <input type="checkbox" name="story_actif" defaultChecked={reglages.story.actif} />
+            <span>Stories (1080 × 1920)</span>
+          </label>
+          <label className="g-field">
+            <span className="g-label">Une tous les</span>
+            <span className="cr-number">
+              <input name="story_jours" type="number" min={1} max={14} defaultValue={reglages.story.tousLesJours} required />
+              <span>jours</span>
+            </span>
+          </label>
+          <label className="g-field">
+            <span className="g-label">À</span>
+            <input className="g-input pr-time" type="time" name="story_heure" step={300} defaultValue={reglages.story.heure} required />
+          </label>
+        </div>
+        <label className="g-field">
+          <span className="g-label">File préparée à l’avance</span>
+          <span className="cr-number">
+            <input name="jours_avance" type="number" min={1} max={14} defaultValue={reglages.joursAvance} required />
+            <span>jours</span>
+          </span>
+        </label>
+      </fieldset>
 
-      <label className="pr-check">
-        <input type="checkbox" name="applyTimes" />
-        <span>Déplacer aussi les publications déjà prévues à la nouvelle heure de leur série</span>
-      </label>
+      <fieldset className="pr-fieldset">
+        <legend>Approbation</legend>
+        <p className="g-hint">Pendant les 7 jours qui suivent la première mise en ligne, chaque élément attend votre approbation. Ensuite, un élément en attente est approuvé d’office à son heure ; vous pouvez toujours le refuser ou le modifier avant.</p>
+        <label className="g-field">
+          <span className="g-label">Date de départ (première mise en ligne)</span>
+          <input className="g-input" type="date" name="depart" defaultValue={depart} />
+          <span className="g-hint">Vide : la date sera notée à la première publication réelle.</span>
+        </label>
+        <label className="pr-check">
+          <input type="checkbox" name="obligatoire" defaultChecked={reglages.approbation.toujoursObligatoire} />
+          <span>Garder l’approbation obligatoire (aucune approbation d’office, même après 7 jours)</span>
+        </label>
+      </fieldset>
 
       <div className="pr-actions__row">
         <button type="submit" className="k-btn k-btn--primary" disabled={pending}>

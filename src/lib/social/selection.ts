@@ -1,13 +1,15 @@
 /* ==================================================================
-   Choix du format et du sujet : déterministe (mêmes données, même
-   historique, même jour → même choix) et testable.
+   Choix du format, du sujet et de la mise en page : déterministe
+   (mêmes données, même historique, même jour → même choix).
    - format : jamais deux fois le même de suite pour un même genre
-     (publication, story) ; le format le moins récemment utilisé passe
-     en premier ; la saison retire ce qui n'a pas de sens (grand froid
-     l'été) ;
-   - sujet : pas le même modèle, la même ville, le même compteur ni la
-     même marque sur 60 jours (clés partagées entre formats et genres :
-     le modèle d'un duel n'est pas repris en vedette le lendemain).
+     (publication, story) ; le moins récemment utilisé d'abord ; la
+     saison retire ce qui n'a pas de sens (grand froid l'été) ;
+   - sujet : aucune clé (sujet, modèle, série, ville, paire de duel)
+     reprise sur 365 jours, publications et stories confondues. Un
+     format dont le bassin est épuisé cède sa place à un autre : on ne
+     répète jamais ;
+   - accroche et texte du visuel : jamais les mêmes sur 365 jours ;
+   - mise en page : rotation dans les variantes du format.
    Les publications refusées ne comptent pas.
    ================================================================== */
 
@@ -15,17 +17,20 @@ import { hashSeed } from "@/lib/presence/rotation";
 import { joursEntre } from "./calendrier";
 import { FORMATS, type FormatId, type Genre, type Statut, type Usage } from "./types";
 
-export const FENETRE_JOURS = 60;
+export const FENETRE_JOURS = 365;
 /** Taille du peloton de tête où l'on tire le sujet : de la variété sans sacrifier la qualité. */
 export const PELOTON = 12;
 
-/** Ce qui compte de l'historique : une publication passée ou prévue. */
+/** Ce que la sélection lit de l'historique : une publication passée ou prévue. */
 export interface Trace {
   jour: string;
   genre: Genre;
   format: FormatId;
   cles: string[];
   statut: Statut;
+  variante?: number;
+  accroche?: string;
+  texteVisuel?: string;
 }
 
 /** Formats possibles pour une saison et un genre. Une story se lit en trois secondes : pas de duel (deux colonnes de chiffres). */
@@ -50,16 +55,35 @@ export function ordreDesFormats(historique: Trace[], jour: string, genre: Genre,
   return dernier && tries.length > 1 ? [...tries.filter((f) => f !== dernier), dernier] : tries;
 }
 
-/** Clés utilisées à moins de `fenetre` jours de `jour` (avant ou après), avec le plus petit écart. */
-export function clesRecentes(historique: Trace[], jour: string, fenetre = FENETRE_JOURS): Map<string, number> {
-  const out = new Map<string, number>();
+/** Clés utilisées à moins de `fenetre` jours de `jour` (avant ou après). */
+export function clesRecentes(historique: Trace[], jour: string, fenetre = FENETRE_JOURS): Set<string> {
+  const out = new Set<string>();
   for (const t of historique) {
-    if (!compte(t)) continue;
-    const ecart = Math.abs(joursEntre(t.jour, jour));
-    if (ecart >= fenetre) continue;
-    for (const k of t.cles) if (!out.has(k) || ecart < out.get(k)!) out.set(k, ecart);
+    if (!compte(t) || Math.abs(joursEntre(t.jour, jour)) >= fenetre) continue;
+    for (const k of t.cles) out.add(k);
   }
   return out;
+}
+
+/** Accroche ou texte comparés sans casse, sans espaces ni ponctuation. */
+export function empreinte(texte: string): string {
+  return texte
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+/** Accroches et textes de visuel déjà pris à moins de `fenetre` jours. */
+export function textesRecents(historique: Trace[], jour: string, fenetre = FENETRE_JOURS): { accroches: Set<string>; visuels: Set<string> } {
+  const accroches = new Set<string>();
+  const visuels = new Set<string>();
+  for (const t of historique) {
+    if (!compte(t) || Math.abs(joursEntre(t.jour, jour)) >= fenetre) continue;
+    if (t.accroche) accroches.add(empreinte(t.accroche));
+    if (t.texteVisuel) visuels.add(empreinte(t.texteVisuel));
+  }
+  return { accroches, visuels };
 }
 
 export interface ChoixSujet<T> {
@@ -70,34 +94,31 @@ export interface ChoixSujet<T> {
   graine: string;
   fenetre?: number;
   peloton?: number;
-  /** Faut-il accepter un sujet déjà vu quand tout est pris ? (non pour les modèles et les villes). */
-  repliSiToutPris?: boolean;
 }
 
 /**
- * Sujet du jour : tiré dans le peloton de tête des candidats libres (graine stable).
- * Tout est pris : le sujet utilisé le moins récemment si `repliSiToutPris`, sinon null.
+ * Candidats libres (aucune clé vue sur la fenêtre), dans l'ordre où les essayer : le peloton de tête d'abord,
+ * à partir d'un rang tiré de la graine, puis le reste. Vide : le bassin du format est épuisé.
  */
-export function choisirSujet<T>(o: ChoixSujet<T>): T | null {
-  if (o.candidats.length === 0) return null;
-  const fenetre = o.fenetre ?? FENETRE_JOURS;
-  const prises = clesRecentes(o.historique, o.jour, fenetre);
+export function candidatsLibres<T>(o: ChoixSujet<T>): T[] {
+  const prises = clesRecentes(o.historique, o.jour, o.fenetre ?? FENETRE_JOURS);
   const libres = o.candidats.filter((c) => !o.clesDe(c).some((k) => prises.has(k)));
-  if (libres.length > 0) {
-    const tete = libres.slice(0, Math.max(1, o.peloton ?? PELOTON));
-    return tete[hashSeed(o.graine) % tete.length];
-  }
-  if (!o.repliSiToutPris) return null;
-  const age = (c: T) => Math.min(...o.clesDe(c).map((k) => prises.get(k) ?? Number.POSITIVE_INFINITY));
-  return o.candidats.slice().sort((a, b) => age(b) - age(a))[0] ?? null;
+  if (libres.length === 0) return [];
+  const n = Math.min(libres.length, Math.max(1, o.peloton ?? PELOTON));
+  const depart = hashSeed(o.graine) % n;
+  const tete = libres.slice(0, n);
+  return [...tete.slice(depart), ...tete.slice(0, depart), ...libres.slice(n)];
 }
 
-/** Les formats dont les sujets peuvent revenir (compteurs, marques, questionnaire) ; jamais un modèle ni une ville. */
-export const REPLI_PERMIS: Record<FormatId, boolean> = {
-  "thermopompe-semaine": false,
-  duel: false,
-  "grand-froid": false,
-  chiffre: true,
-  subventions: true,
-  thermomatch: true,
-};
+/** Premier candidat libre, ou null. */
+export function choisirSujet<T>(o: ChoixSujet<T>): T | null {
+  return candidatsLibres(o)[0] ?? null;
+}
+
+/** Mise en page suivante du format : celle qui suit la dernière utilisée (publications et stories confondues). */
+export function varianteSuivante(historique: Trace[], format: FormatId, jour: string, nombre: number): number {
+  if (nombre <= 1) return 0;
+  const avant = historique.filter((t) => compte(t) && t.format === format && t.jour <= jour && typeof t.variante === "number").sort((a, b) => a.jour.localeCompare(b.jour));
+  const derniere = avant[avant.length - 1]?.variante;
+  return typeof derniere === "number" ? (derniere + 1) % nombre : 0;
+}

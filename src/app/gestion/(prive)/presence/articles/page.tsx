@@ -62,7 +62,7 @@ export default async function ArticlesPage() {
           <h1 className="k-h1">
             Articles <em>du blogue</em>
           </h1>
-          <p className="k-lead">Préparés à partir des données du site, avec leurs sources. Vous relisez, vous corrigez au besoin, vous publiez : l’article part en ligne sans rebuild, et sa publication Facebook et Instagram arrive dans le studio, à approuver.</p>
+          <p className="k-lead">Préparés à partir des données du site, avec leurs sources. Vous relisez, vous corrigez au besoin, vous publiez : l’article part en ligne sans rebuild.</p>
         </div>
         <ArticlesToolbar />
       </Reveal>

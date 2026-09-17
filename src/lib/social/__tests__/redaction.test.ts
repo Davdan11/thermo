@@ -3,15 +3,18 @@ import { describe, expect, it } from "vitest";
 import { extractNumbers } from "@/lib/presence/numbers";
 import { redigerCorps } from "../generer";
 import type { RedacteurIa } from "../ia";
-import { composerTexte, gabarit, permisDe, typographier, verifierTexte } from "../redaction";
+import { accroches, composerTexte, extraireAccroche, gabarit, nombresInconnus, permisDe, typographier, verifierTexte } from "../redaction";
+import { empreinte } from "../selection";
+import { maquette, toutLeTexte, variantesDe } from "../visuels/maquettes";
 import { sujetsDu } from "../sujets";
 import { lienSuivi, lireUtm } from "../utm";
 import { FORMATS, type Faits, type FaitsDe, type Usage } from "../types";
 import { catalogueFictif } from "./fixtures";
 
 const cat = catalogueFictif();
-const tousLesSujets = (usage: Usage): Faits[] => FORMATS.flatMap((f) => sujetsDu(f, cat, usage).slice(0, 8));
-const premier = <F extends Faits["format"]>(format: F, usage: Usage = "chauffage") => sujetsDu(format, cat, usage)[0] as FaitsDe<F>;
+const JOUR = "2026-10-01";
+const tousLesSujets = (usage: Usage): Faits[] => FORMATS.flatMap((f) => sujetsDu(f, cat, usage, JOUR));
+const premier = <F extends Faits["format"]>(format: F, usage: Usage = "chauffage", filtre: (f: FaitsDe<F>) => boolean = () => true) => (sujetsDu(format, cat, usage, JOUR) as Array<FaitsDe<F>>).find(filtre) as FaitsDe<F>;
 
 const iaFixe = (texte: string | null): RedacteurIa => ({ fournisseur: "test", rediger: async () => texte });
 
@@ -21,11 +24,14 @@ const montants = (texte: string) => [...texte.matchAll(/(\d{1,3}(?:[   ]\d{3}
 function montantsOfficiels(f: Faits): number[] {
   switch (f.format) {
     case "thermopompe-semaine":
+    case "nouveautes":
       return [f.modele.logisVert];
     case "duel":
       return [f.a.logisVert, f.b.logisVert];
     case "subventions":
-      return [f.min, f.max];
+      return [f.angle.min, f.angle.max, ...(f.angle.type === "segment" ? [f.angle.meilleur.logisVert] : [])];
+    case "chiffre":
+      return f.angle.type === "classement" ? [f.angle.classement.modele.logisVert] : [];
     default:
       return [];
   }
@@ -33,18 +39,27 @@ function montantsOfficiels(f: Faits): number[] {
 
 describe("gabarits", () => {
   for (const usage of ["chauffage", "climatisation"] as const) {
-    it(`chaque gabarit passe le garde-fou (${usage}, deux tournures)`, () => {
+    it(`chaque gabarit passe le garde-fou, chaque visuel n'affiche que des faits (${usage}, toutes les tournures et mises en page)`, () => {
       const sujets = tousLesSujets(usage);
-      expect(sujets.length).toBeGreaterThan(20);
-      for (const f of sujets) for (const v of [0, 1]) expect(verifierTexte(gabarit(f, v), f), `${f.format} ${f.sujet} v${v}`).toEqual([]);
+      expect(sujets.length).toBeGreaterThan(40);
+      for (const f of sujets) {
+        const n = accroches(f).length;
+        expect(n, f.sujet).toBeGreaterThanOrEqual(3);
+        expect(new Set(accroches(f).map((a) => empreinte(a))).size, f.sujet).toBe(n);
+        for (let v = 0; v < n; v++) {
+          expect(verifierTexte(gabarit(f, v), f), `${f.format} ${f.sujet} v${v}`).toEqual([]);
+          expect(extraireAccroche(typographier(gabarit(f, v)))).toBe(typographier(accroches(f)[v]));
+        }
+        for (let v = 0; v < variantesDe(f); v++) expect(nombresInconnus(toutLeTexte(maquette(f, v)), f), `${f.format} ${f.sujet} mise en page ${v}`).toEqual([]);
+      }
     });
   }
 
   it("aucun prix de vente : les seuls montants en dollars sont les montants LogisVert officiels", () => {
     for (const usage of ["chauffage", "climatisation"] as const)
       for (const f of tousLesSujets(usage))
-        for (const v of [0, 1]) {
-          const t = gabarit(f, v);
+        for (const v of [0, 1, 2]) {
+          const t = `${gabarit(f, v)}\n${toutLeTexte(maquette(f, v))}`;
           expect(t).not.toMatch(/prix|coût|à partir de|rabais|économis/i);
           for (const m of montants(t)) expect(montantsOfficiels(f), `${f.sujet} : ${m} $`).toContain(m);
         }
@@ -62,7 +77,7 @@ describe("garde-fou", () => {
 
   it("accepte un texte qui ne reprend que les faits (espaces ordinaires dans les milliers comprises)", () => {
     expect(verifierTexte(base, f)).toEqual([]);
-    const milliers = premier("chiffre");
+    const milliers = premier("chiffre", "chauffage", (x) => x.angle.type === "compteur");
     expect(verifierTexte(`Le chiffre du jour : 3 948 fiches au catalogue, chacune pour une unité extérieure publiée. Source : catalogue du site.`, milliers)).toEqual([]);
   });
 
@@ -99,32 +114,41 @@ describe("garde-fou", () => {
 });
 
 describe("IA sous garde-fou", () => {
-  const f = premier("grand-froid");
-  const bon = `Grand froid à ${f.ville.nom} : on y dimensionne le chauffage pour ${f.ville.conceptionC} °C. Parmi les ${f.connues} machines distinctes dont la température minimale est publiée, ${f.tiennent} chauffent jusque-là ou plus bas.`;
+  const f = premier("grand-froid", "chauffage", (x) => x.angle.type === "ville");
+  const a = f.angle as Extract<typeof f.angle, { type: "ville" }>;
+  const bon = `Grand froid à ${a.ville.nom} : on y dimensionne le chauffage pour ${a.ville.conceptionC} °C. Parmi les ${a.connues} machines distinctes dont la température minimale est publiée, ${a.tiennent} chauffent jusque-là ou plus bas.`;
 
   it("garde le texte de l'IA quand il ne reprend que les faits", async () => {
     const r = await redigerCorps(f, "publication", "fb-20260917-grand-froid-pub", iaFixe(bon));
-    expect(r.redaction.mode).toBe("ia");
-    expect(r.corps).toContain(f.ville.nom);
-    expect(r.corps).toContain("−"); // vrai signe moins
+    expect(r?.redaction.mode).toBe("ia");
+    expect(r?.corps).toContain(a.ville.nom);
+    expect(r?.corps).toContain("−"); // vrai signe moins
   });
 
   it("retombe sur le gabarit si l'IA invente un chiffre, et garde la raison", async () => {
     const r = await redigerCorps(f, "publication", "fb-20260917-grand-froid-pub", iaFixe(`${bon} En moyenne, 12 nuits par hiver sous ce seuil.`));
-    expect(r.redaction.mode).toBe("gabarit");
-    expect(r.redaction.rejets?.join()).toMatch(/nombre absent des faits : 12/);
-    expect(r.corps).toBe(gabarit(f, r.corps === gabarit(f, 0) ? 0 : 1));
+    expect(r?.redaction.mode).toBe("gabarit");
+    expect(r?.redaction.rejets?.join()).toMatch(/nombre absent des faits : 12/);
+    expect([0, 1, 2].map((v) => gabarit(f, v))).toContain(r?.corps);
   });
 
   it("sans clé ou sans réponse : gabarit", async () => {
-    expect((await redigerCorps(f, "story", "fb-20260917-grand-froid-story", null)).redaction).toEqual({ mode: "gabarit" });
-    expect((await redigerCorps(f, "story", "fb-20260917-grand-froid-story", iaFixe(null))).redaction.mode).toBe("gabarit");
+    expect((await redigerCorps(f, "story", "fb-20260917-grand-froid-story", null))?.redaction).toEqual({ mode: "gabarit" });
+    expect((await redigerCorps(f, "story", "fb-20260917-grand-froid-story", iaFixe(null)))?.redaction.mode).toBe("gabarit");
+  });
+
+  it("une accroche déjà utilisée est écartée : IA rejetée, gabarit suivant ; toutes prises : rien", async () => {
+    const prises = new Set([empreinte(extraireAccroche(bon))]);
+    const r = await redigerCorps(f, "publication", "fb-x", iaFixe(bon), prises);
+    expect(r?.redaction.rejets?.join()).toMatch(/accroche déjà utilisée/);
+    const toutes = new Set(accroches(f).map((x) => empreinte(typographier(x))));
+    expect(await redigerCorps(f, "publication", "fb-x", null, toutes)).toBeNull();
   });
 
   it("chaque nombre du texte final existe dans les faits", async () => {
     const r = await redigerCorps(f, "publication", "fb-x", iaFixe(bon));
     const p = permisDe(f);
-    for (const n of extractNumbers(r.corps)) expect(p.nombres.has((Math.round(n.value * 100) / 100).toFixed(2)), n.raw).toBe(true);
+    for (const n of extractNumbers(r?.corps ?? "")) expect(p.nombres.has((Math.round(n.value * 100) / 100).toFixed(2)), n.raw).toBe(true);
   });
 });
 

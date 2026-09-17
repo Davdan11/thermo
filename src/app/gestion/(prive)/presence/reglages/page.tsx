@@ -1,36 +1,29 @@
-/* Réglages du studio : interrupteur général, séries, heures, rotation ; état de la connexion Meta (jamais un jeton). */
+/* Réglages du robot Facebook : interrupteur, rythme, approbation ; état de la connexion (nom de la page, validité du jeton), jamais un jeton. */
 import type { Metadata } from "next";
 import Link from "next/link";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
-import { metaStatus, publishMode } from "@/lib/presence/config";
-import { canEnableAuto, SERIES_INFO } from "@/lib/presence/series";
 import { readPresence } from "@/lib/presence/store";
-import { fmtWhen } from "@/lib/presence/time";
-import { SERIES } from "@/lib/presence/types";
+import { fmtWhen, montrealDate } from "@/lib/presence/time";
+import { modeEnvoi } from "@/lib/social/envoi";
+import { etatConnexion } from "@/lib/social/facebook";
+import { finPeriodeApprobation, lireSocial } from "@/lib/social/store";
 import { Card } from "@/components/gestion/kit/Card";
 import { Reveal } from "@/components/gestion/Reveal";
 import { PresenceTabs } from "@/components/gestion/presence/PresenceTabs";
-import { SettingsForm, type SeriesRow } from "@/components/gestion/presence/SettingsForm";
+import { SettingsForm } from "@/components/gestion/presence/SettingsForm";
 
 export const metadata: Metadata = { title: "Réglages de la présence" };
+export const dynamic = "force-dynamic";
 
 const CRON_LINE = "*/15 * * * * /bin/bash /var/www/thermopompesavendre.ca/current/scripts/presence-cron.sh >> /var/log/thermo-presence.log 2>&1";
 
 export default async function PresenceReglagesPage() {
   await requireAdmin();
-  const data = await readPresence();
-  const mode = publishMode(data.settings);
-  const meta = metaStatus();
+  const [data, presence, conn] = await Promise.all([lireSocial(), readPresence(), etatConnexion()]);
+  const mode = modeEnvoi(presence.settings.autoPublish);
   const cronSecret = (process.env.PRESENCE_CRON_SECRET?.trim().length ?? 0) >= 24;
-  const ownKey = (process.env.PRESENCE_SIGNING_SECRET?.trim().length ?? 0) >= 32;
-  const rows: SeriesRow[] = SERIES.map((id) => ({
-    id,
-    label: SERIES_INFO[id].label,
-    dayLabel: SERIES_INFO[id].dayLabel,
-    available: SERIES_INFO[id].available,
-    autoAllowed: SERIES_INFO[id].autoAllowed,
-    auto: canEnableAuto(id, data.approvals),
-  }));
+  const fin = finPeriodeApprobation(data.reglages);
+  const depart = data.reglages.approbation.depart ? montrealDate(new Date(data.reglages.approbation.depart)) : "";
 
   return (
     <>
@@ -40,59 +33,73 @@ export default async function PresenceReglagesPage() {
           <h1 className="k-h1">
             Réglages <em>de publication</em>
           </h1>
-          <p className="k-lead">Chaque série demande votre approbation par défaut. Elle peut passer en publication automatique une fois que vous en avez approuvé une : c’est la validation du gabarit. La question de la semaine reste toujours manuelle.</p>
+          <p className="k-lead">Facebook seulement. Rien ne part tant que « Publication automatique » est éteinte. Pendant les 7 premiers jours de mise en ligne, chaque élément attend votre approbation.</p>
         </div>
       </Reveal>
       <PresenceTabs current="/gestion/presence/reglages" />
 
-      <Card title="Connexion Meta" sub="Les jetons restent dans shared/.env, sur le serveur. Ils ne sont jamais affichés ici.">
+      <Card title="Connexion Facebook" sub="Le jeton reste dans shared/.env, sur le serveur. Il n’est jamais affiché ici : la page lit seulement le nom de la page et l’état du jeton auprès de Facebook.">
         <ul className="pr-conn">
-          <li className={meta.facebook ? "is-ok" : "is-missing"}>
-            <b>Facebook (page)</b>
-            <span>{meta.facebook ? "Connecté" : "Manquant"}</span>
+          <li className={conn.configuree ? "is-ok" : "is-missing"}>
+            <b>Variables META_PAGE_ID et META_PAGE_TOKEN</b>
+            <span>{conn.configuree ? "Présentes" : `Manquantes : ${conn.manquantes.join(", ")}`}</span>
           </li>
-          <li className={meta.instagram ? "is-ok" : "is-missing"}>
-            <b>Instagram (compte professionnel)</b>
-            <span>{meta.instagram ? "Connecté" : "Manquant"}</span>
+          {conn.configuree ? (
+            <>
+              <li className={conn.pageNom && conn.pageConcorde !== false ? "is-ok" : "is-missing"}>
+                <b>Page Facebook</b>
+                <span>{conn.pageNom ? `${conn.pageNom}${conn.pageConcorde === false ? " (ne correspond pas à META_PAGE_ID)" : ""}` : "Non lue"}</span>
+              </li>
+              <li className={conn.jetonValide ? "is-ok" : "is-missing"}>
+                <b>Jeton de page</b>
+                <span>{conn.jetonValide === undefined ? "Non vérifié" : conn.jetonValide ? `Valide${conn.expire === "jamais" ? ", n’expire pas" : conn.expire ? `, expire le ${fmtWhen(conn.expire)}` : ""}` : "Invalide ou expiré"}</span>
+              </li>
+              {conn.permissionsManquantes ? (
+                <li className={conn.permissionsManquantes.length ? "is-missing" : "is-ok"}>
+                  <b>Permissions</b>
+                  <span>{conn.permissionsManquantes.length ? `Manquantes : ${conn.permissionsManquantes.join(", ")}` : "pages_manage_posts, pages_read_engagement, pages_show_list"}</span>
+                </li>
+              ) : null}
+            </>
+          ) : null}
+          <li className="is-ok">
+            <b>Instagram</b>
+            <span>Non utilisé (Facebook seulement)</span>
           </li>
           <li>
             <b>Version de l’API Graph</b>
-            <span>
-              {meta.graphVersion}
-              {meta.graphVersionFromEnv ? "" : " (par défaut)"}
-            </span>
+            <span>{conn.version}</span>
           </li>
           <li className={cronSecret ? "is-ok" : "is-missing"}>
             <b>Passage planifié (toutes les 15 min)</b>
             <span>{cronSecret ? "Secret défini" : "PRESENCE_CRON_SECRET manquant"}</span>
           </li>
-          <li className="is-ok">
-            <b>Signature des visuels</b>
-            <span>{ownKey ? "Clé PRESENCE_SIGNING_SECRET" : "Clé dérivée du secret des sessions"}</span>
-          </li>
-          <li className={mode.real ? "is-ok" : "is-missing"}>
+          <li className={mode.reel ? "is-ok" : "is-missing"}>
             <b>Mode</b>
-            <span>{mode.real ? "Publication réelle" : "Essai"}</span>
+            <span>{mode.reel ? "Envoi réel" : "Essai"}</span>
           </li>
         </ul>
-        {meta.missing.length ? (
-          <p className="g-hint" style={{ marginTop: 12 }}>
-            À ajouter dans shared/.env : {meta.missing.join(", ")}. <Link href="/gestion/presence/connecter">Guide pas à pas</Link>
+        {conn.erreur ? (
+          <p className="g-hint pr-bad" style={{ marginTop: 12 }}>
+            {conn.erreur}
+          </p>
+        ) : null}
+        {conn.verifieLe ? (
+          <p className="g-hint" style={{ marginTop: 8 }}>
+            Vérifié {fmtWhen(conn.verifieLe)} (mis en cache 5 minutes). <Link href="/gestion/presence/connecter">Guide de connexion</Link>
           </p>
         ) : null}
       </Card>
 
       <Card title="Publication">
-        <SettingsForm settings={data.settings} rows={rows} real={mode.real} />
-        {data.settings.updatedAt ? (
-          <p className="g-hint" style={{ marginTop: 12 }}>
-            Modifié {fmtWhen(data.settings.updatedAt)}
-            {data.settings.updatedBy ? ` par ${data.settings.updatedBy}` : ""}.
-          </p>
-        ) : null}
+        <SettingsForm reglages={data.reglages} interrupteur={presence.settings.autoPublish} reel={mode.reel} depart={depart} />
+        <p className="g-hint" style={{ marginTop: 12 }}>
+          {fin ? `Fin de la période d’approbation : ${fmtWhen(fin)}.` : "La période d’approbation n’a pas commencé (aucune mise en ligne réelle)."}
+          {data.reglages.majLe ? ` Réglages modifiés ${fmtWhen(data.reglages.majLe)}${data.reglages.majPar ? ` par ${data.reglages.majPar}` : ""}.` : ""}
+        </p>
       </Card>
 
-      <Card title="Passage planifié" sub="Ligne à ajouter une fois dans la crontab du serveur (crontab -e). Elle appelle /api/presence/tick avec le secret de shared/.env.">
+      <Card title="Passage planifié" sub="Ligne déjà présente dans la crontab du serveur. Elle appelle /api/presence/tick avec le secret de shared/.env : retrait de l’ancienne file, préparation des prochains jours, envoi de ce qui est dû.">
         <pre className="pr-code">{CRON_LINE}</pre>
       </Card>
     </>

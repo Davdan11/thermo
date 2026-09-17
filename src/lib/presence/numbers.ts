@@ -1,11 +1,11 @@
 /* ==================================================================
-   Contrôle des nombres : chaque nombre d'une légende (ou d'un visuel)
-   doit exister dans la source de la publication. Sert au test
+   Contrôle des nombres : chaque nombre d'un texte doit exister dans sa
+   source. Sert au test
    « aucun chiffre inventé » et à l'avertissement de l'éditeur quand le
    propriétaire modifie une légende. Sans dépendance : client et serveur.
    ================================================================== */
 
-import type { PostSource, Slide, SourceValue } from "./types";
+import type { PostSource, SourceValue } from "./types";
 
 export interface FoundNumber {
   raw: string;
@@ -63,36 +63,4 @@ export function allowedNumbers(source: Pick<PostSource, "values" | "texts">): Se
 export function unknownNumbers(text: string, source: Pick<PostSource, "values" | "texts">): FoundNumber[] {
   const allowed = allowedNumbers(source);
   return extractNumbers(stripKnown(text, source.texts)).filter((n) => !allowed.has(key(n.value)));
-}
-
-/** Tout le texte imprimé sur des visuels. */
-export function slidesText(slides: Array<Slide | null | undefined>): string {
-  const parts: string[] = [];
-  for (const s of slides) {
-    if (!s) continue;
-    switch (s.kind) {
-      case "cover":
-        parts.push(s.eyebrow, s.kicker ?? "", s.title, s.subtitle ?? "", ...(s.facts ?? []));
-        break;
-      case "big":
-        parts.push(s.eyebrow, `${s.value} ${s.unit}`, ...s.lines, s.bar ? `${s.bar.pct} ${s.bar.label}` : "");
-        break;
-      case "rows":
-        parts.push(s.eyebrow, s.title, ...s.rows.flatMap((r) => [r.label, r.value, r.note ?? ""]));
-        break;
-      case "compare":
-        parts.push(s.eyebrow, s.a.kicker, s.a.title, s.b.kicker, s.b.title, ...s.rows.flatMap((r) => [r.label, r.a, r.b]));
-        break;
-      case "temp":
-        parts.push(s.eyebrow, s.place, `${s.value}`, s.label, ...s.marks.flatMap((m) => [`${m.t}`, m.label]));
-        break;
-      case "text":
-        parts.push(s.eyebrow, s.title, s.body);
-        break;
-      case "cta":
-        parts.push(s.eyebrow, s.title, s.body, s.url);
-        break;
-    }
-  }
-  return parts.filter(Boolean).join("\n");
 }
