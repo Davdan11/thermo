@@ -41,6 +41,8 @@ const SITES = {
   heil: { hote: "www.heil-hvac.com", index: "https://www.heil-hvac.com/query-index.json?limit=600" },
   arcoaire: { hote: "www.arcoaire.com", index: "https://www.arcoaire.com/query-index.json?limit=600" },
   comfortmaker: { hote: "www.comfortmaker.com", index: "https://www.comfortmaker.com/query-index.json?limit=600" },
+  // Day & Night publie son catalogue sur dayandnightcomfort.com (dayandnight.com n'a pas d'index).
+  "day-night": { hote: "www.dayandnightcomfort.com", index: "https://www.dayandnightcomfort.com/query-index.json?limit=600" },
   payne: { hote: "www.payne.com", index: "https://www.payne.com/query-index.json?limit=600" },
   weathermaker: { hote: "www.weathermaker.com", index: "https://www.weathermaker.com/query-index.json?limit=600" },
 };
