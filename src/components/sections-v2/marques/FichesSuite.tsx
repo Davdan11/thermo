@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { motion } from "motion/react";
 import { DISPLAY, EASE, MONO } from "@/components/heroes-v2/marques/shared";
+import { ChauffeJusquaVedette } from "@/components/product/ChauffeJusquaVedette";
 
 /* ==================================================================
    Chapitre III de /marques/[slug] : fiches de catalogue, par segments.
@@ -39,8 +40,8 @@ export interface FicheData {
   isColdClimate: boolean;
   hspf2: number | null;
   seer2: number | null;
-  /** « -25°C » */
-  minTemp: string;
+  /** Temperature minimale de chauffage publiee par le fabricant (°C) ; null : non publiee, jamais devinee. */
+  minTempC: number | null;
   warranty: string;
   /** Montant déjà mis en forme (« 1 234 $ »), null sans subvention. */
   logisVert: string | null;
@@ -106,10 +107,11 @@ function Fiche({ fiche, index }: { fiche: FicheData; index: number }) {
         <p className="text-[12.5px] leading-snug" style={{ fontFamily: MONO, color: C.mute, margin: "8px 0 0" }}>
           {fiche.specLine}
         </p>
+        {/* L’information vedette, juste sous le nom : jusqu’à quel froid le modèle chauffe. */}
+        <ChauffeJusquaVedette minTempC={fiche.minTempC} coldClimate={fiche.isColdClimate} taille="compact" className="mt-4" />
         <dl className="mt-auto pt-4" style={{ margin: 0 }}>
           {fiche.hspf2 != null ? <Leader label="HSPF2" value={fiche.hspf2} /> : null}
           {fiche.seer2 != null ? <Leader label="SEER2" value={fiche.seer2} /> : null}
-          <Leader label="Chauffage jusqu’à" value={fiche.minTemp} />
           <Leader label="Garantie" value={fiche.warranty} />
           {fiche.logisVert ? (
             <Leader

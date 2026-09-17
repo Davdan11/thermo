@@ -13,6 +13,9 @@ import { registry } from "../registry";
 import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
 import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
 import { resolveWarranty, type ResolvedWarranty } from "../warranty";
+// Température minimale de chauffage : le même résolveur que la fiche produit et ThermoMatch.
+// Le champ `model.minimumOperatingTemperatureC` n'est renseigné par aucune source : ne jamais le lire.
+import { minHeatingTempForModel } from "../../thermomatch/min-temp";
 
 /* ------------------------------------------------------------------
    Index construits une seule fois : le registre est statique, et un
@@ -98,6 +101,12 @@ export interface CatalogueProduct {
   warranty: ResolvedWarranty | null;
   /** Pre-calculated LogisVert amount */
   logisVertDollars: number | null;
+  /**
+   * Température minimale de chauffage publiée par le fabricant (°C), résolue au serveur
+   * (configurations du catalogue, puis relevés des documents). null : non publiée — la carte
+   * l'écrit plutôt que d'afficher un chiffre inventé.
+   */
+  minHeatingTempC: number | null;
 }
 
 /* ------------------------------------------------------------------
@@ -385,6 +394,7 @@ export function getCatalogueModels(
       outdoorModelNumber,
       warranty: resolveWarranty({ brand: brand.name, seriesName: series?.name, modelNumber: model.modelNumber }),
       logisVertDollars,
+      minHeatingTempC: minHeatingTempForModel(model.id)?.valueC ?? null,
     };
   });
 
@@ -506,6 +516,7 @@ export function getAllCatalogueProducts(): CatalogueProduct[] {
       outdoorModelNumber,
       warranty: resolveWarranty({ brand: brand.name, seriesName: series?.name, modelNumber: model.modelNumber }),
       logisVertDollars,
+      minHeatingTempC: minHeatingTempForModel(model.id)?.valueC ?? null,
     };
   }).sort((a, b) => {
     const brandCmp = a.brand.name.localeCompare(b.brand.name);

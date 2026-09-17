@@ -13,6 +13,8 @@ import { ExistingUnitCompare } from "./ExistingUnitCompare";
 import { EmailMyChoices } from "./EmailMyChoices";
 import { ThermometreHero } from "./ThermometreHero";
 import { ArchitecturePlan, categorieOfKind, type ArchitecturePlanData } from "./ArchitecturePlan";
+import { Affiner, type AffinageProps } from "./Affiner";
+import type { Hypothese } from "@/lib/thermomatch/hypotheses";
 import { CERTIF_C, froidDe, type Froid } from "./thermometre";
 import { minTempMention, type MinTempSourceType } from "@/lib/thermomatch/min-temp-source";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
@@ -23,22 +25,24 @@ import { MULTI_INDOOR_RE } from "@/lib/thermomatch/candidates";
 
 /* ==================================================================
    ThermoMatch — écran des trois recommandations (version premium).
-   1. En-tête « Le thermomètre » (ThermometreHero) : échelle de froid
-      où les machines retenues se posent à leur « chauffe jusqu'à » ;
-      titre, maison, région, charge estimée et marge.
-   2. « Votre configuration » (ArchitecturePlan) : comment la chaleur
+   1. En-tête « Le thermomètre » (ThermometreHero) : « Analyse terminée »,
+      titre, maison, région, charge estimée, et l'échelle de froid où
+      les machines retenues se posent à leur « chauffe jusqu'à ».
+   2. Tout de suite les trois cartes (le meilleur choix au centre,
+      surélevé). Sur chacune, l'information vedette est « Chauffe
+      jusqu'à −XX °C », juste sous le nom du modèle : c'est ce que les
+      acheteurs cherchent. Les chiffres techniques (capacité à −15 °C,
+      maintien, HSPF2, SEER2, LogisVert) restent en dessous, en petit.
+      Jamais de température devinée : sans valeur publiée par le
+      fabricant, la carte écrit « Température minimale non publiée ».
+   3. « Affiner » : les hypothèses prises et les questions qui les lèvent.
+   4. « Votre configuration » (ArchitecturePlan) : comment la chaleur
       sera distribuée, le plan des zones, la relève par grand froid,
       les options écartées et l'ordre de grandeur installé, une fois.
-   3. Trois cartes (le meilleur choix au centre, surélevé) : score (et
-      « Ex æquo » quand l'écart est sous la précision), type
-      d'installation, « Chauffe jusqu'à −XX °C » en très gros (ou
-      « Certifiée grand froid » quand la température n'est pas publiée),
-      photo, part de la maison couverte à -15 °C et relève, chiffres
-      certifiés, étiquettes « le plus efficace… » calculées entre les trois.
-   4. « Ce qui les distingue » : barres critère par critère.
-   5. Prochaine étape : la soumission, avec une barre fixe sur mobile.
-   Mêmes données et mêmes props qu'avant (parcours normal et lien
-   partagé). Valeur absente = N/D, jamais inventée.
+   5. « Ce qui les distingue » : barres critère par critère.
+   6. Prochaine étape : la soumission, avec une barre fixe sur mobile.
+   Mêmes données qu'avant (parcours normal et lien partagé).
+   Valeur absente = N/D, jamais inventée.
    ================================================================== */
 
 interface SummaryContext {
@@ -63,6 +67,8 @@ interface SummaryContext {
   savings?: SavingsEstimate | null;
   /** Architecture décidée avant les machines (absente des anciens appels : pas de bloc « Votre configuration »). */
   architecture?: ArchitecturePlanData | null;
+  /** Ce qui a été supposé faute de réponse (hypotheses.ts) ; vide quand tout est répondu. */
+  hypotheses?: Hypothese[] | null;
 }
 
 interface ThermoMatchResultsProps {
@@ -72,6 +78,8 @@ interface ThermoMatchResultsProps {
   onSelectResult: (result: any) => void;
   onRetry: () => void;
   summaryContext?: SummaryContext | null;
+  /** Bloc « Affiner » : seulement dans le parcours, pas sur un lien partagé (lecture seule). */
+  affinage?: AffinageProps;
 }
 
 const C = {
@@ -287,19 +295,20 @@ function leadersFor(cards: Card[], k: MetricKey, lower = false): number[] {
 
 /* ------------------------------------------------------------------ */
 
-export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryContext }: ThermoMatchResultsProps) {
+export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryContext, affinage }: ThermoMatchResultsProps) {
   if (!results || results.length === 0) return <Empty onRetry={onRetry} />;
 
   const cards = results.slice(0, 3).map((r, i) => toCard(r, i, summaryContext));
   const leaders = Object.fromEntries(METRICS.map((m) => [m.key, leadersFor(cards, m.key, m.lower)])) as Record<MetricKey, number[]>;
   const top = cards[0];
+  const hypotheses = summaryContext?.hypotheses ?? [];
 
   return (
     <div className="w-full" style={{ fontFamily: DISPLAY, color: C.cream }}>
       <ThermometreHero ctx={summaryContext ?? null} machines={cards.map((c) => ({ key: c.key, brand: c.brand, series: c.series, minTemp: c.minTemp, coldClimate: c.coldClimate }))} />
-      {summaryContext?.architecture ? <ArchitecturePlan arch={summaryContext.architecture} /> : null}
 
-      <div className="mx-auto mt-10 grid max-w-[1320px] grid-cols-1 gap-5 lg:mt-16 lg:grid-cols-[1fr_1.12fr_1fr]">
+      {/* Les cartes tout de suite après le bandeau : c'est ce que le client est venu chercher. */}
+      <div className="mx-auto mt-10 grid max-w-[1320px] grid-cols-1 gap-5 lg:mt-14 lg:grid-cols-[1fr_1.12fr_1fr]">
         {cards.map((c, i) => (
           <ResultCard
             key={c.key}
@@ -311,6 +320,16 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
           />
         ))}
       </div>
+
+      {/* Ce qui a été supposé, et les questions qui le lèvent. Sur un lien partagé : les hypothèses seules. */}
+      {affinage ? (
+        <Affiner {...affinage} hypotheses={hypotheses} />
+      ) : hypotheses.length > 0 ? (
+        <HypothesesSeules hypotheses={hypotheses} />
+      ) : null}
+
+      {/* « Votre configuration » : le détail, une fois les cartes vues. */}
+      {summaryContext?.architecture ? <ArchitecturePlan arch={summaryContext.architecture} /> : null}
 
       {summaryContext?.savings ? <SavingsBand s={summaryContext.savings} /> : null}
       <ExistingUnitCompare choices={cards.map((c) => ({ key: c.key, brand: c.brand, series: c.series, hspf2: c.hspf2 }))} />
@@ -404,6 +423,12 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
             Série {card.series}
           </p>
         )}
+      </div>
+
+      {/* L'information vedette, juste sous le nom : jusqu'à quel froid la machine chauffe (voir GrandFroid). */}
+      <GrandFroid card={card} play={inView} i={i} />
+
+      <div className="px-6 pt-5 sm:px-7">
         <SystemUnits card={card} />
         {card.installLabel && (
           <p className="mt-3 inline-flex rounded-full px-3 py-1 text-[12px] font-semibold" style={{ border: `1px solid ${C.inkLine}`, color: C.ink, margin: "12px 0 0" }}>
@@ -425,9 +450,6 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
           </div>
         )}
       </div>
-
-      {/* Par grand froid : jusqu'où la machine chauffe, en très gros (voir GrandFroid). */}
-      <GrandFroid card={card} play={inView} i={i} />
 
       {/* Scène de l'appareil */}
       <div data-scene="" className="relative mx-6 mt-5 h-[170px] overflow-hidden rounded-[20px] sm:mx-7 sm:h-[190px]" style={{ background: card.ownImage ? "#fff" : C.ink }}>
@@ -607,63 +629,43 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
   );
 }
 
-/* Par grand froid : ce que les acheteurs regardent en premier, en très gros.
-   - Température publiée : « Chauffe jusqu'à −XX °C », avec sa source.
+/* Par grand froid : l'information vedette de la carte, juste sous le nom du modèle. Une seule idée :
+   jusqu'à quel froid la machine chauffe.
+   - Température publiée par le fabricant : « Chauffe jusqu'à −XX °C », le chiffre en orange, en très
+     gros, insécable ; la mention de la source en petit dessous.
    - Sinon, certifiée ENERGY STAR climat froid : « Certifiée grand froid », puis « chauffe encore à
-     −15 °C » et la puissance livrée à −15 °C ; jamais de chiffre de limite (−15 °C est le point de
-     mesure de la certification, pas sa limite).
-   - Sinon : la puissance à −15 °C, comme avant, sans titre.
+     −15 °C » ; jamais de chiffre de limite (−15 °C est le point de mesure de la certification, pas
+     sa limite), et la ligne dit franchement que le minimum n'est pas publié.
+   - Sinon : « Température minimale non publiée », écrit tel quel, jamais une valeur devinée.
+   Les chiffres techniques (puissance à −15 °C, maintien) passent en petit, sous la jauge : ils ne
+   doivent pas concurrencer la température, ni laisser croire que la machine s'arrête à −15 °C.
    Même règle que le thermomètre du haut (froidDe). Valeurs en texte statique, sans compteur :
    le HTML serveur porte le chiffre final. */
 function GrandFroid({ card, play, i }: { card: Card; play: boolean; i: number }) {
   const froid = froidDe(card);
   const t = card.minTemp;
+  // « −30 °C » d'un bloc : espace insécable et nowrap, jamais coupé en fin de ligne sur téléphone.
+  const chiffre = t == null ? "" : `${t < 0 ? "−" : t > 0 ? "+" : ""}${fr(Math.abs(t), Number.isInteger(t) ? 0 : 1)}`;
+
   return (
-    <div data-grand-froid={froid} className="mx-6 mt-5 rounded-[18px] px-4 pb-4 pt-3.5 sm:mx-7 sm:px-5" style={{ background: C.ink, color: C.cream }}>
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.dim, margin: 0 }}>
-            Par grand froid
-          </p>
-          {(froid === "mesuree" || froid === "aucune") && (
-            <p style={{ fontSize: 24, fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.05, margin: "8px 0 0" }}>
-              {card.h5 != null ? (
-                <>
-                  {fr(card.h5)} BTU/h
-                  <span className="block text-[13px] font-medium" style={{ color: C.mute, letterSpacing: "0", marginTop: 5 }}>
-                    livrés à −15 °C
-                  </span>
-                </>
-              ) : (
-                "Données du fabricant"
-              )}
-            </p>
-          )}
-        </div>
-        {card.retention != null && (
-          <div className="shrink-0 text-right">
-            <p className="tabular-nums" style={{ fontSize: 24, fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, color: C.orange, margin: 0 }}>
-              {/* Plafonné à 120 %, comme dans les raisons du moteur (explain.ts), pour que la carte ne se contredise pas. */}
-              <CountUp value={Math.round(Math.min(card.retention, 1.2) * 100)} play={play} /> %
-            </p>
-            <p className="text-[10.5px] leading-tight" style={{ color: C.dim, margin: "4px 0 0" }}>
-              de sa puissance nominale
-              <br />à −15 °C
-            </p>
-          </div>
-        )}
-      </div>
+    <div data-grand-froid={froid} className="mx-6 mt-5 rounded-[20px] px-4 pb-4 pt-4 sm:mx-7 sm:px-5" style={{ background: C.ink, color: C.cream }}>
+      <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.dim, margin: 0 }}>
+        Par grand froid
+      </p>
 
       {froid === "publiee" && t != null && (
         <>
-          <p className="text-[16px] font-semibold" style={{ letterSpacing: "-0.01em", margin: "14px 0 0" }}>
+          <p className="text-[17px] font-semibold" style={{ letterSpacing: "-0.01em", margin: "10px 0 0" }}>
             Chauffe jusqu’à
           </p>
-          <p className="text-[56px] tabular-nums sm:text-[64px]" style={{ fontWeight: 600, letterSpacing: "-0.055em", lineHeight: 0.92, margin: "2px 0 0" }}>
-            {`${t < 0 ? "−" : t > 0 ? "+" : ""}${fr(Math.abs(t), Number.isInteger(t) ? 0 : 1)}`}
-            <span style={{ fontSize: "0.42em", fontWeight: 500, letterSpacing: "-0.01em" }}>{" °C"}</span>
+          <p
+            className="tabular-nums"
+            style={{ fontSize: "clamp(56px, 13.5vw, 72px)", fontWeight: 600, letterSpacing: "-0.055em", lineHeight: 0.9, margin: "4px 0 0", color: C.orange, whiteSpace: "nowrap" }}
+          >
+            {chiffre}
+            <span style={{ fontSize: "0.4em", fontWeight: 500, letterSpacing: "-0.01em" }}>{" °C"}</span>
           </p>
-          <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "8px 0 0" }}>
+          <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "10px 0 0" }}>
             {minTempMention(card.minTempSource)}
           </p>
         </>
@@ -671,31 +673,78 @@ function GrandFroid({ card, play, i }: { card: Card; play: boolean; i: number })
 
       {froid === "certifiee" && (
         <>
-          <p className="text-[36px] sm:text-[40px]" style={{ fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 0.98, margin: "14px 0 0" }}>
+          <p style={{ fontSize: "clamp(30px, 7vw, 38px)", fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, margin: "10px 0 0", color: C.orange }}>
             Certifiée grand froid
           </p>
-          <p className="text-[15px] font-semibold" style={{ margin: "12px 0 0" }}>
-            Chauffe encore à −15 °C
+          <p className="text-[16px] font-semibold" style={{ margin: "12px 0 0" }}>
+            Chauffe encore à <span style={{ whiteSpace: "nowrap" }}>{"−15 °C"}</span>
           </p>
-          <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "3px 0 0" }}>
-            Certification ENERGY STAR climat froid
-            {card.h5 != null && (
-              <>
-                <br />
-                <span className="tabular-nums">{fr(card.h5)}</span> BTU/h livrés à −15 °C{card.h5Certified ? "" : " (estimé)"}
-              </>
-            )}
+          <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "6px 0 0" }}>
+            Certification ENERGY STAR climat froid. Température minimale non publiée par le fabricant.
+          </p>
+        </>
+      )}
+
+      {(froid === "mesuree" || froid === "aucune") && (
+        <>
+          <p style={{ fontSize: "clamp(26px, 6.2vw, 32px)", fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.04, margin: "10px 0 0" }}>
+            Température minimale non publiée
+          </p>
+          <p className="text-[12.5px] leading-snug" style={{ color: C.dim, margin: "10px 0 0" }}>
+            Le fabricant ne publie pas jusqu’à quel froid cette machine chauffe, et elle n’a pas la certification
+            ENERGY STAR climat froid. Nous l’écrivons plutôt que d’avancer un chiffre.
           </p>
         </>
       )}
 
       <ColdGauge mode={froid} value={t} play={play} delay={0.5 + i * 0.1} />
-      {froid !== "publiee" && (
-        <p className="text-[11px] leading-snug" style={{ color: C.dim, margin: "8px 0 0" }}>
-          Température minimale de fonctionnement : sur la fiche du fabricant.
-        </p>
-      )}
+
+      {/* Chiffres techniques : sous la jauge, en petit. */}
+      <div className="mt-3 flex flex-wrap items-baseline gap-x-5 gap-y-1 text-[11.5px]" style={{ color: C.dim }}>
+        {card.h5 != null && (
+          <span>
+            <span className="tabular-nums font-semibold" style={{ color: C.mute }}>
+              {fr(card.h5)}
+            </span>{" "}
+            BTU/h livrés à <span style={{ whiteSpace: "nowrap" }}>{"−15 °C"}</span>
+            {card.h5Certified ? "" : " (estimé)"}
+          </span>
+        )}
+        {card.retention != null && (
+          <span>
+            {/* Plafonné à 120 %, comme dans les raisons du moteur (explain.ts), pour que la carte ne se contredise pas. */}
+            <span className="tabular-nums font-semibold" style={{ color: C.mute }}>
+              <CountUp value={Math.round(Math.min(card.retention, 1.2) * 100)} play={play} /> %
+            </span>{" "}
+            de sa puissance nominale
+          </span>
+        )}
+      </div>
     </div>
+  );
+}
+
+/* Lien partagé (lecture seule) : pas de questions à poser, mais les hypothèses restent dites. */
+function HypothesesSeules({ hypotheses }: { hypotheses: Hypothese[] }) {
+  return (
+    <section className="mx-auto mt-10 w-full max-w-[1320px] rounded-[28px] px-5 py-7 sm:px-8" style={{ background: "rgba(244,239,231,0.03)", border: `1px solid ${C.line}` }}>
+      <p className="text-[11.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.faint, margin: 0 }}>
+        Ce que nous avons supposé
+      </p>
+      <ul className="grid gap-3 md:grid-cols-2" style={{ listStyle: "none", padding: 0, margin: "16px 0 0" }}>
+        {hypotheses.map((h) => (
+          <li key={h.id} className="grid grid-cols-[10px_1fr] gap-3 text-[13.5px] leading-snug" style={{ color: C.mute }}>
+            <span aria-hidden="true" className="mt-[7px] block h-[7px] w-[7px]" style={{ background: C.orange }} />
+            <span>
+              <strong className="block font-semibold" style={{ color: C.cream }}>
+                {h.label}
+              </strong>
+              {h.text}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 

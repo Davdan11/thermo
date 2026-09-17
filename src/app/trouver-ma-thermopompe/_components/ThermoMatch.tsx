@@ -3,8 +3,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { formatPostalCode, pruneHidden, visibleSteps } from "./steps";
-import type { Step } from "./steps";
+import { affinageSteps, answered, formatPostalCode, pruneHidden, visibleScreens, visibleSteps } from "./steps";
+import type { Screen, Step } from "./steps";
 import { usePostalResolve } from "@/hooks/usePostalResolve";
 import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
@@ -18,49 +18,45 @@ import {
 import { ThermoMatchResults } from "./ThermoMatchResults";
 import { ShareResultsButton } from "@/components/thermomatch/ShareResultsButton";
 import { track } from "@/lib/analytics/track";
+import { noteEtape } from "@/lib/thermomatch/etapes-client";
 import { HC } from "@/components/hero/HeroKit";
 import { CARNET, FlowBar, ThermoMatchWordmark } from "@/components/heroes-v2/outils/FlowBar";
 import { CarnetButton, CarnetWelcome } from "@/components/heroes-v2/outils/Carnet";
-import { CarnetBack, CarnetChoice, CarnetChoices, CarnetError, CarnetNote, CarnetStepPage, CarnetSummary } from "@/components/heroes-v2/outils/CarnetSteps";
+import { CarnetBack, CarnetChoice, CarnetChoices, CarnetError, CarnetField, CarnetNote, CarnetStepPage, CarnetSummary } from "@/components/heroes-v2/outils/CarnetSteps";
 import { SERIF } from "@/components/heroes-v2/outils/font-stacks";
 
-/* ----------------------------------------------------------
-   Constants
-   ---------------------------------------------------------- */
+/* ==================================================================
+   ThermoMatch — le parcours.
+
+   Deux temps (voir steps.ts) :
+   1. Cinq ou six écrans essentiels : seulement ce qui change la
+      recommandation, les questions qui vont ensemble groupées sur un
+      même écran. Au bout : les trois machines.
+   2. L'affinage, après le résultat : emplacements, panneau, fenestration,
+      financement. Tant qu'une réponse manque, la fiche dit l'hypothèse
+      prise (src/lib/thermomatch/hypotheses.ts).
+
+   La reprise en cours de route (sessionStorage) garde l'écran atteint.
+   Chaque écran atteint est compté côté serveur, sans témoin ni tiers
+   (src/lib/thermomatch/etapes-client.ts).
+   ================================================================== */
 
 /* Clé lue aussi par la soumission (SoumissionClient.tsx) et le courriel des trois choix (EmailMyChoices.tsx). */
 const STORAGE_KEY = "thermomatch-answers";
-/** Étape sauvegardée une fois le questionnaire terminé. */
+/** Écran sauvegardé une fois le questionnaire terminé. */
 const DONE = "resultats";
 
 type Answers = Record<string, string | string[]>;
 
 interface SavedState {
   answers: Answers;
-  /** Rang de l'étape (anciennes sessions) ; `stepId` fait foi quand il est là. */
+  /** Rang de l'écran (anciennes sessions) ; `stepId` fait foi quand il est là. */
   step: number;
-  /** Étape en cours : plus sûr que son rang, le parcours change de longueur selon les réponses. */
+  /** Écran en cours : plus sûr que son rang, le parcours change de longueur selon les réponses. */
   stepId?: string;
   /** Architecture retenue par le moteur, reprise par la soumission et le CRM. */
   architecture?: ArchitectureSummary | null;
 }
-
-/* Photos d'ambiance par étape (panneau droit) */
-const STEP_BG_IMAGES: Record<string, string> = {
-  postalCode: "/images/thermomatch/postalCode.webp",
-  propertyType: "/images/thermomatch/postalCode.webp",
-  area: "/images/thermomatch/area.webp",
-  floors: "/images/thermomatch/floors.webp",
-  currentSystem: "/images/thermomatch/currentSystem.webp",
-  ducts: "/images/thermomatch/currentSystem.webp",
-  zonesWanted: "/images/thermomatch/floors.webp",
-  layout: "/images/thermomatch/floors.webp",
-  placements: "/images/thermomatch/heatPumpType.webp",
-  electricalPanel: "/images/thermomatch/heatPumpType.webp",
-  priority: "/images/thermomatch/priority.webp",
-  budget: "/images/thermomatch/budget.webp",
-  financing: "/images/thermomatch/financing.webp",
-};
 
 /* Option thumbnail images for propertyType */
 const PROPERTY_IMAGES: Record<string, string> = {
@@ -89,6 +85,18 @@ function formatAnswer(step: Step, value: string | string[] | undefined, answers:
   return value;
 }
 
+/** Libellé court d'une réponse dans le résumé en marge. */
+function summaryLabel(step: Step): string {
+  if (step.id === "postalCode") return "Ville";
+  if (step.id === "propertyType") return "Projet";
+  return step.question.replace(/\s*\?$/, "");
+}
+
+/** Ce qui manque encore sur l'écran : première question sans réponse (hors questions facultatives). */
+function missingOn(screen: Screen, a: Answers): Step | null {
+  return screen.steps.find((s) => !s.optional && !answered(a[s.id])) ?? null;
+}
+
 /* ----------------------------------------------------------
    Read saved state
    ---------------------------------------------------------- */
@@ -105,20 +113,21 @@ function readSavedState(): SavedState {
 }
 
 /**
- * Où reprendre : l'étape sauvegardée si elle est encore dans le parcours ; sinon (anciennes sessions,
- * sans `stepId`) la première question sans réponse. Terminé seulement si toutes ont une réponse.
+ * Où reprendre : l'écran sauvegardé s'il est encore dans le parcours ; sinon (anciennes sessions, dont
+ * celles d'avant les écrans groupés) le premier écran incomplet. Terminé seulement si tout est répondu.
  */
 function restoreStep(s: SavedState): { index: number; complete: boolean } {
-  const steps = visibleSteps(s.answers ?? {});
-  const last = steps.length - 1;
-  const firstOpen = steps.findIndex((x) => s.answers?.[x.id] === undefined);
+  const answers = s.answers ?? {};
+  const screens = visibleScreens(answers, "essentiel");
+  const last = Math.max(0, screens.length - 1);
+  const firstOpen = screens.findIndex((x) => missingOn(x, answers as Answers) !== null);
   if (s.stepId === DONE) return firstOpen === -1 ? { index: last, complete: true } : { index: firstOpen, complete: false };
   if (s.stepId) {
-    const i = steps.findIndex((x) => x.id === s.stepId);
+    const i = screens.findIndex((x) => x.id === s.stepId);
     if (i >= 0) return { index: i, complete: false };
   }
-  if (firstOpen === -1) return { index: last, complete: Number(s.step) > last };
-  return { index: Math.min(firstOpen, Math.max(0, Number(s.step) || 0)), complete: false };
+  if (firstOpen === -1) return { index: last, complete: screens.length > 0 };
+  return { index: firstOpen, complete: false };
 }
 
 /* ----------------------------------------------------------
@@ -241,9 +250,9 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   const [isComplete, setIsComplete] = useState(
     () => restoreStep(readSavedState()).complete,
   );
-  // Le parcours réel pour ces réponses (de 14 à 17 questions).
-  const steps = visibleSteps(answers);
-  const totalSteps = steps.length;
+  // Le parcours réel pour ces réponses : cinq ou six écrans essentiels.
+  const screens = visibleScreens(answers, "essentiel");
+  const totalSteps = screens.length;
   // Réponses les plus récentes, pour l'avance automatique qui part après le rendu.
   const answersRef = useRef<Answers>(answers);
   const [error, setError] = useState<string | null>(null);
@@ -254,6 +263,8 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   const [summaryContext, setSummaryContext] = useState<any>(null);
   const [isLoadingResults, setIsLoadingResults] = useState(false);
   const [hasFetched, setHasFetched] = useState(false);
+  /** Recalcul après une réponse d'affinage : les cartes restent à l'écran pendant le calcul. */
+  const [refining, setRefining] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -276,7 +287,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
       isMounted.current = true;
       return;
     }
-    const visible = visibleSteps(answers);
+    const visible = visibleScreens(answers, "essentiel");
     const architecture: ArchitectureSummary | null = archKey ? JSON.parse(archKey) : null;
     const state: SavedState = {
       answers,
@@ -291,14 +302,30 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     saveProjectDraft(draft);
   }, [answers, currentStep, isComplete, archKey]);
 
-  /* ---- Auto-focus ---- */
-  const currentType = steps[currentStep]?.type;
+  /* ---- Compteur d'écrans atteints (serveur, sans témoin ni tiers) ---- */
+  const reachedId = isComplete ? DONE : screens[currentStep]?.id;
   useEffect(() => {
-    if (!isComplete && currentType === "text") {
+    if (reachedId) noteEtape(reachedId);
+  }, [reachedId]);
+
+  /* ---- Un écran groupé est plus long que l'ancien : on remonte en haut à chaque changement ---- */
+  const firstRender = useRef(true);
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [currentStep, isComplete]);
+
+  /* ---- Auto-focus ---- */
+  const firstType = screens[currentStep]?.steps[0]?.type;
+  useEffect(() => {
+    if (!isComplete && firstType === "text") {
       const t = setTimeout(() => inputRef.current?.focus(), 50);
       return () => clearTimeout(t);
     }
-  }, [currentStep, isComplete, currentType]);
+  }, [currentStep, isComplete, firstType]);
 
   /* ---- Cleanup ---- */
   useEffect(() => {
@@ -323,8 +350,8 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   }
 
   function advanceStep() {
-    // Le parcours peut avoir changé avec la dernière réponse : on le recalcule. Les étapes déjà passées, elles, ne bougent pas.
-    const total = visibleSteps(answersRef.current).length;
+    // Le parcours peut avoir changé avec la dernière réponse : on le recalcule. Les écrans déjà passés, eux, ne bougent pas.
+    const total = visibleScreens(answersRef.current, "essentiel").length;
     if (currentStep < total - 1) {
       setCurrentStep(currentStep + 1);
       setError(null);
@@ -334,48 +361,45 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   }
 
   function handleContinue() {
-    const step = steps[currentStep];
-    const value = answers[step.id];
-
-    if (step.validate) {
-      const err = step.validate(value ?? "");
-      if (err) {
-        setError(err);
+    const screen = screens[Math.min(currentStep, totalSteps - 1)];
+    for (const step of screen.steps) {
+      const value = answers[step.id];
+      if (step.validate) {
+        const err = step.validate(value ?? "");
+        if (err) {
+          setError(err);
+          return;
+        }
+      }
+      if (!step.optional && !answered(value)) {
+        setError(step.type === "multi" ? `Sélectionnez au moins une option : ${summaryLabel(step)}.` : `Répondez à « ${summaryLabel(step)} ».`);
         return;
       }
     }
-    if (step.type === "multi") {
-      if (!value || (Array.isArray(value) && value.length === 0)) {
-        setError("Sélectionnez au moins une option.");
-        return;
-      }
-    }
-    if (step.type === "text" && (!value || String(value).trim() === "")) {
-      setError("Ce champ est requis.");
-      return;
-    }
-
     advanceStep();
   }
 
-  /** Nouvelle réponse : les réponses des étapes qu'elle masque sont retirées. */
-  function commitAnswers(next: Answers) {
+  /** Nouvelle réponse : les réponses des questions qu'elle masque sont retirées. */
+  function commitAnswers(next: Answers): Answers {
     const clean = pruneHidden(next);
     answersRef.current = clean;
     setAnswers(clean);
+    return clean;
   }
 
   function handleRadioSelect(stepId: string, value: string) {
-    commitAnswers({ ...answers, [stepId]: value });
+    const clean = commitAnswers({ ...answers, [stepId]: value });
     setError(null);
-    autoAdvanceTimer.current = setTimeout(() => {
-      advanceStep();
-    }, 350);
+    // L'écran s'ouvre tout seul sur le suivant seulement quand il ne reste plus rien à y répondre.
+    const screen = visibleScreens(clean, "essentiel")[currentStep];
+    if (screen && missingOn(screen, clean) === null) {
+      autoAdvanceTimer.current = setTimeout(() => advanceStep(), 350);
+    }
   }
 
   function handleMultiToggle(stepId: string, value: string) {
     setError(null);
-    const step = steps.find((s) => s.id === stepId);
+    const step = visibleSteps(answers).find((s) => s.id === stepId);
     const options = typeof step?.options === "function" ? step.options(answers) : step?.options;
     const exclusive = new Set((options ?? []).filter((o) => o.exclusive).map((o) => o.value));
     const current = Array.isArray(answers[stepId]) ? (answers[stepId] as string[]) : [];
@@ -390,8 +414,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
 
   function handleTextChange(stepId: string, raw: string) {
     setError(null);
-    const step = steps.find((s) => s.id === stepId);
-    const value = step?.id === "postalCode" ? formatPostalCode(raw) : raw;
+    const value = stepId === "postalCode" ? formatPostalCode(raw) : raw;
     setAnswers((prev) => ({ ...prev, [stepId]: value }));
   }
 
@@ -417,6 +440,35 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     }
     saveProjectDraft(draft);
     router.push("/soumission?source=thermomatch");
+  }
+
+  /** Une réponse d'affinage, donnée depuis l'écran des résultats : le calcul repart tout de suite. */
+  function handleRefine(stepId: string, value: string | string[]) {
+    const clean = commitAnswers({ ...answers, [stepId]: value });
+    setRefining(true);
+    fetchResults(clean, () => setRefining(false));
+  }
+
+  function fetchResults(a: Answers, done?: () => void) {
+    fetch("/api/thermomatch/recommend", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ answers: a }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          setCandidates(data.results);
+          setSummaryContext(data.summaryContext ?? null);
+        } else {
+          setCandidates([]);
+        }
+        done?.();
+      })
+      .catch((err) => {
+        console.error(err);
+        done?.();
+      });
   }
 
   /* ---- Fetch Results Effect ---- */
@@ -490,10 +542,11 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
           {/* « Quitter » ouvre la même confirmation que sur l'écran sans résultats. */}
           {showResetConfirm && <ResetConfirm onKeep={() => setShowResetConfirm(false)} onReset={handleReset} />}
           <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
-            <ThermoMatchResults 
-              results={candidates} 
+            <ThermoMatchResults
+              results={candidates}
               summaryContext={summaryContext}
-              onSelectResult={(candidate) => handleRequestQuote(candidate)} 
+              onSelectResult={(candidate) => handleRequestQuote(candidate)}
+              affinage={{ steps: affinageSteps(answers), answers, onAnswer: handleRefine, busy: refining }}
               onRetry={() => {
                 setIsComplete(false);
                 setHasFetched(false);
@@ -525,11 +578,11 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              Vos {totalSteps} réponses ont été enregistrées
+              Vos réponses ont été enregistrées
             </div>
 
             <h1 className="text-[40px] sm:text-[52px] font-bold leading-tight tracking-tight mb-4">
-              Votre projet est prêt à être analysé.
+              Votre projet est prêt à être analysé.
             </h1>
             <p className="text-[#9CA3AF] text-base mb-10 max-w-xl">
               Complétez votre demande en quelques minutes. Vos réponses ThermoMatch seront automatiquement transférées — aucune question en double.
@@ -593,21 +646,19 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   }
 
   /* ============================================================
-     ACTIVE STEP
+     ACTIVE SCREEN
      ============================================================ */
-  const step = steps[Math.min(currentStep, totalSteps - 1)];
-  const currentValue = answers[step.id];
-  const bgImage = STEP_BG_IMAGES[step.id] ?? STEP_BG_IMAGES.postalCode;
-  const hasPropertyImages = step.id === "propertyType";
-  const stepOptions = typeof step.options === "function" ? step.options(answers) : step.options;
-  // Premier écran du parcours : présentation « héros » (la logique de l'étape ne change pas).
+  const screen = screens[Math.min(currentStep, totalSteps - 1)];
+  // Premier écran du parcours : présentation « héros » (la logique de l'écran ne change pas).
   const isWelcome = currentStep === 0;
 
-  // Champs de réponse de l'étape : mêmes gestionnaires, mêmes rôles ARIA qu'avant ; présentation « Carnet ».
-  const inputs = (
-    <>
-      {/* ---- Text input ---- */}
-      {step.type === "text" && (
+  /** Les champs d'une question, avec les mêmes gestionnaires et rôles ARIA qu'avant. */
+  function fieldOf(step: Step) {
+    const currentValue = answers[step.id];
+    const stepOptions = typeof step.options === "function" ? step.options(answers) : step.options;
+    const hasPropertyImages = step.id === "propertyType";
+    if (step.type === "text") {
+      return (
         <PostalTextInput
           stepId={step.id}
           value={(currentValue as string) ?? ""}
@@ -619,10 +670,10 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
           tone="light"
           action={<CarnetButton onClick={handleContinue}>Continuer</CarnetButton>}
         />
-      )}
-
-      {/* ---- Radio (photos des types de propriété sur la première question à choix) ---- */}
-      {step.type === "radio" && stepOptions && (
+      );
+    }
+    if (step.type === "radio" && stepOptions) {
+      return (
         <CarnetChoices kind="radio" label={step.question}>
           {stepOptions.map((option, idx) => (
             <CarnetChoice
@@ -636,27 +687,43 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
             />
           ))}
         </CarnetChoices>
-      )}
+      );
+    }
+    if (step.type === "multi" && stepOptions) {
+      return (
+        <CarnetChoices kind="checkbox" label={step.question}>
+          {stepOptions.map((option, idx) => (
+            <CarnetChoice
+              key={option.value}
+              kind="checkbox"
+              index={idx}
+              label={option.label}
+              selected={Array.isArray(currentValue) ? currentValue.includes(option.value) : false}
+              onClick={() => handleMultiToggle(step.id, option.value)}
+            />
+          ))}
+        </CarnetChoices>
+      );
+    }
+    return null;
+  }
 
-      {/* ---- Multi select ---- */}
-      {step.type === "multi" && stepOptions && (
-        <div>
-          <CarnetChoices kind="checkbox" label={step.question}>
-            {stepOptions.map((option, idx) => (
-              <CarnetChoice
-                key={option.value}
-                kind="checkbox"
-                index={idx}
-                label={option.label}
-                selected={Array.isArray(currentValue) ? currentValue.includes(option.value) : false}
-                onClick={() => handleMultiToggle(step.id, option.value)}
-              />
-            ))}
-          </CarnetChoices>
-          {error && <CarnetError>{error}</CarnetError>}
-        </div>
-      )}
+  // Un seul champ : il se pose seul sur la page, sous le titre. Plusieurs : chacun est numéroté.
+  const single = screen.steps.length === 1;
+  const inputs = single ? (
+    <>
+      {fieldOf(screen.steps[0])}
+      {error && screen.steps[0].type !== "text" && <CarnetError>{error}</CarnetError>}
     </>
+  ) : (
+    <div>
+      {screen.steps.map((s, i) => (
+        <CarnetField key={s.id} n={i + 1} label={s.question} hint={s.subtitle} done={answered(answers[s.id])}>
+          {fieldOf(s)}
+        </CarnetField>
+      ))}
+      {error && <CarnetError>{error}</CarnetError>}
+    </div>
   );
 
   // Premier écran : page de carnet sur papier (présentation « Carnet », mêmes champs et gestionnaires).
@@ -664,61 +731,65 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     return (
       <CarnetWelcome
         header={<ThermoMatchHeader currentStep={currentStep} totalSteps={totalSteps} onQuit={handleReset} tone="light" />}
-        question={step.question}
-        subtitle={step.subtitle}
+        question={single ? screen.steps[0].question : screen.title}
+        subtitle={screen.subtitle}
         totalSteps={totalSteps}
-        // Le nombre de questions dépend des réponses (de 14 à 17) : annoncé sans chiffre exact.
+        // Le nombre d'écrans dépend des réponses (cinq ou six) : annoncé sans chiffre exact.
         countLabel={QUESTIONS_LABEL}
         facts={[
           ...(catalogueCount ? [{ value: catalogueCount, label: "fiches comparées" }] : []),
           { value: 3, label: "modèles retenus" },
         ]}
-        questions={steps.map((s) => s.question)}
+        questions={screens.map((s) => s.title)}
       >
         {inputs}
       </CarnetWelcome>
     );
   }
 
-  // Résumé en marge : mêmes lignes qu'avant (réponses données, modifiables), puis les trois questions suivantes.
-  const summaryRows = steps.slice(0, currentStep + 1).flatMap((s, i) => {
-    const val = answers[s.id];
-    if (!val) return [];
-    return [
-      {
-        key: s.id,
-        label: s.id === "postalCode" ? "Ville" : s.id === "propertyType" ? "Projet" : s.question.replace("?", ""),
-        value: formatAnswer(s, val, answers),
-        onEdit: () => {
-          setCurrentStep(i);
-          setError(null);
+  // Résumé en marge : les réponses déjà données (modifiables), puis les écrans suivants.
+  const summaryRows = screens.slice(0, currentStep + 1).flatMap((sc, i) =>
+    sc.steps.flatMap((s) => {
+      const val = answers[s.id];
+      if (!answered(val)) return [];
+      return [
+        {
+          key: s.id,
+          label: summaryLabel(s),
+          value: formatAnswer(s, val, answers),
+          onEdit: () => {
+            setCurrentStep(i);
+            setError(null);
+          },
         },
-      },
-    ];
-  });
+      ];
+    }),
+  );
 
   return (
     <CarnetStepPage
       header={<ThermoMatchHeader currentStep={currentStep} totalSteps={totalSteps} onQuit={handleReset} tone="light" />}
-      stepKey={step.id}
+      stepKey={screen.id}
       index={currentStep}
       totalSteps={totalSteps}
-      question={step.question}
-      subtitle={step.subtitle}
-      photo={bgImage}
+      question={single ? screen.steps[0].question : screen.title}
+      subtitle={single ? (screen.steps[0].subtitle ?? screen.subtitle) : screen.subtitle}
+      photo={screen.photo}
       aside={
         <CarnetSummary
           rows={summaryRows}
-          upcoming={steps.slice(currentStep + 1, currentStep + 4).map((s, i) => ({ n: currentStep + i + 2, question: s.question }))}
-          more={steps.length > currentStep + 4}
-          next={currentStep < totalSteps - 1 ? steps[currentStep + 1].question : undefined}
+          upcoming={screens.slice(currentStep + 1, currentStep + 4).map((s, i) => ({ n: currentStep + i + 2, question: s.title }))}
+          more={screens.length > currentStep + 4}
+          next={currentStep < totalSteps - 1 ? screens[currentStep + 1].title : "Vos trois recommandations"}
         />
       }
       footer={
         <>
           {currentStep > 0 && <CarnetBack onClick={handleBack} />}
-          {/* Continuer : dans la ligne du champ pour les étapes texte, ici pour les choix multiples */}
-          {step.type === "multi" && <CarnetButton onClick={handleContinue}>Continuer</CarnetButton>}
+          {/* Continuer : dans la ligne du champ pour un écran à une seule question texte, ici partout ailleurs */}
+          {!(single && screen.steps[0].type === "text") && (
+            <CarnetButton onClick={handleContinue}>{currentStep === totalSteps - 1 ? "Voir mes recommandations" : "Continuer"}</CarnetButton>
+          )}
           <CarnetNote />
         </>
       }

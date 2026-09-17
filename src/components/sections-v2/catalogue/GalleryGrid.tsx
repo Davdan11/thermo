@@ -11,6 +11,7 @@ import { brandLogoPath } from "@/lib/data/brand-logos";
 import { warrantyShortLabel } from "@/lib/data/warranty";
 import { EASE, typo } from "./motion";
 import { QUESTIONS_LABEL_MAJ } from "@/lib/thermomatch/parcours";
+import { ChauffeJusquaVedette } from "@/components/product/ChauffeJusquaVedette";
 
 /* ==================================================================
    Galerie des résultats (/thermopompes) — équivalent de CompareSelection
@@ -158,7 +159,6 @@ function GalleryCard({
 
   const hspf2 = configuration?.hspf2 != null || model.hspf2Min != null ? (configuration?.hspf2 ?? model.hspf2Min) : null;
   const seer2 = configuration?.seer2 != null || model.seer2Min != null ? (configuration?.seer2 ?? model.seer2Min) : null;
-  const heatTo = model.minimumOperatingTemperatureC != null ? `${model.minimumOperatingTemperatureC}°C` : isColdClimate ? "-25°C" : "-15°C";
 
   return (
     <motion.div
@@ -217,6 +217,9 @@ function GalleryCard({
             {product.refrigerant ? ` · ${product.refrigerant}` : ""}
           </p>
 
+          {/* L'information vedette, juste sous le nom : jusqu'à quel froid le modèle chauffe. */}
+          <ChauffeJusquaVedette minTempC={product.minHeatingTempC} coldClimate={isColdClimate} taille="compact" className="mt-4" />
+
           <div className="mt-auto w-full pt-4">
             {(hspf2 != null || seer2 != null) && (
               <dl className="m-0 flex" style={{ borderTop: "1px solid rgba(10,20,25,0.08)" }}>
@@ -225,7 +228,6 @@ function GalleryCard({
               </dl>
             )}
             <dl className="m-0">
-              <Line label={typo("Chauffage jusqu'à")} value={heatTo} />
               <Line label="Garantie" value={product.warranty ? warrantyLabel : <span style={{ color: "rgba(10,20,25,0.55)" }}>{warrantyLabel}</span>} />
               {logisVertDollars != null && logisVertDollars > 0 && (
                 <Line
@@ -273,7 +275,8 @@ function Figure({ label, value, divider = false }: { label: string; value: numbe
       <dt className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: "rgba(10,20,25,0.45)" }}>
         {label}
       </dt>
-      <dd className="m-0 mt-0.5 tabular-nums" style={{ fontSize: 30, fontWeight: 300, letterSpacing: "-0.045em", lineHeight: 1.05, color: INK }}>
+      {/* Secondaire : plus petit que la température vedette, qui reste le plus gros chiffre de la vignette. */}
+      <dd className="m-0 mt-0.5 tabular-nums" style={{ fontSize: 22, fontWeight: 400, letterSpacing: "-0.04em", lineHeight: 1.05, color: INK }}>
         {value}
       </dd>
     </div>

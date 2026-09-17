@@ -83,12 +83,33 @@ const renderWith = (results: unknown[], ctx: Record<string, unknown> | null) =>
   renderToString(createElement(ThermoMatchResults, { results: results as never, onSelectResult: () => {}, onRetry: () => {}, summaryContext: ctx as never }));
 const render = (ctx: Record<string, unknown> | null) => renderWith(RESULTS, ctx);
 
-/** Bloc « Par grand froid » de chaque carte, dans l'ordre des résultats (jusqu'à la scène de l'appareil). */
+/** Le bloc « Par grand froid » d'une carte : son HTML, borné en comptant les <div> ouverts et fermés. */
+function blocDepuis(html: string, from: number): string {
+  let i = html.indexOf(">", from) + 1;
+  const debut = i;
+  let profondeur = 1;
+  while (i < html.length && profondeur > 0) {
+    const ouvre = html.indexOf("<div", i);
+    const ferme = html.indexOf("</div", i);
+    if (ferme === -1) break;
+    if (ouvre !== -1 && ouvre < ferme) {
+      profondeur++;
+      i = ouvre + 4;
+    } else {
+      profondeur--;
+      if (profondeur === 0) return html.slice(debut, ferme);
+      i = ferme + 5;
+    }
+  }
+  return html.slice(debut, i);
+}
+
 const blocsFroid = (html: string) =>
-  html
-    .split('data-grand-froid="')
-    .slice(1)
-    .map((s) => ({ kind: s.slice(0, s.indexOf('"')), texte: texte(s.slice(s.indexOf(">") + 1, s.lastIndexOf("<", s.indexOf("data-scene")))) }));
+  [...html.matchAll(/<div data-grand-froid="([^"]+)"/g)].map((m) => ({
+    kind: m[1],
+    html: blocDepuis(html, m.index ?? 0),
+    texte: texte(blocDepuis(html, m.index ?? 0)),
+  }));
 
 const ANSWERS = {
   postalCode: "H2X 1Y4",
@@ -128,23 +149,37 @@ describe("Résultats ThermoMatch : pas de neige, pas de prix moins la subvention
 });
 
 describe("« Par grand froid » sur les cartes", () => {
-  it("température publiée : « Chauffe jusqu’à −30 °C » en très gros, avec sa source", () => {
+  it("température publiée : « Chauffe jusqu’à −30 °C » en très gros, en orange, avec sa source", () => {
     const html = render(CTX);
     const blocs = blocsFroid(html);
     expect(blocs).toHaveLength(3);
     for (const b of blocs) {
       expect(b.kind).toBe("publiee");
-      expect(b.texte).toMatch(/Chauffe jusqu’à\s*−30 °C/);
+      expect(b.texte).toMatch(/Chauffe jusqu’à\s*−30\s*°C/);
       expect(b.texte).toContain("Température minimale publiée par le fabricant");
       expect(b.texte).not.toContain("Certifiée grand froid");
+      // Le chiffre : le plus gros texte de la carte (56 px au moins sur téléphone), en orange, tabulaire.
+      const gros = b.html.match(/<p class="([^"]*)" style="([^"]*)"[^>]*>−30/);
+      expect(gros, b.html.slice(0, 400)).not.toBeNull();
+      expect(gros![1]).toContain("tabular-nums");
+      expect(gros![2]).toContain("clamp(56px");
+      expect(gros![2].toUpperCase()).toContain("#E54B17");
+      // Jamais coupé en fin de ligne : espace insécable et nowrap.
+      expect(gros![2]).toContain("nowrap");
+      expect(b.html).toContain(" °C");
     }
-    // Au moins 44 px sur mobile, chiffres tabulaires : le plus gros texte de la carte.
-    const gros = [...html.matchAll(/<p class="([^"]*)"[^>]*>−30</g)];
-    expect(gros).toHaveLength(3);
-    for (const g of gros) {
-      expect(g[1]).toContain("text-[56px]");
-      expect(g[1]).toContain("tabular-nums");
-    }
+  });
+
+  it("la température passe avant les chiffres techniques et avant la photo", () => {
+    const html = render(CTX);
+    const froid = html.indexOf("data-grand-froid");
+    const scene = html.indexOf("data-scene");
+    const btu = html.indexOf("BTU/h livrés");
+    expect(froid).toBeGreaterThan(-1);
+    expect(froid).toBeLessThan(btu);
+    expect(froid).toBeLessThan(scene);
+    // Le nom du modèle reste au-dessus de la température.
+    expect(html.indexOf("Série")).toBeLessThan(froid);
   });
 
   it("sans température publiée mais certifiée climat froid : « Certifiée grand froid », sans chiffre de limite", () => {
@@ -154,28 +189,32 @@ describe("« Par grand froid » sur les cartes", () => {
     for (const b of blocs) {
       expect(b.kind).toBe("certifiee");
       expect(b.texte).toContain("Certifiée grand froid");
-      expect(b.texte).toContain("Chauffe encore à −15 °C");
+      expect(b.texte).toMatch(/Chauffe encore à −15\s*°C/);
       expect(b.texte).toContain("Certification ENERGY STAR climat froid");
-      expect(b.texte).toContain(`${fr(21000)} BTU/h livrés à −15 °C`);
-      expect(b.texte).not.toMatch(/jusqu’à/i);
+      // La limite n'est pas publiée : la carte l'écrit, plutôt que de laisser un vide.
+      expect(b.texte).toContain("Température minimale non publiée par le fabricant");
+      expect(b.texte).toMatch(new RegExp(`${fr(21000)} BTU/h livrés à −15\\s*°C`));
+      expect(b.texte).not.toMatch(/Chauffe jusqu’à/);
     }
     // Nulle part « jusqu’à −15 °C » : −15 °C est le point de mesure de la certification, pas la limite.
     const tout = texte(html);
     expect(tout).not.toMatch(/jusqu’à\s*−15/);
     // Le thermomètre les pose au repère −15 °C, « minimum non publié ».
-    expect(tout).toContain("certifiées à −15 °C");
+    expect(tout).toMatch(/certifiées à −15\s*°C/);
     expect(tout).toContain("minimum non publié");
   });
 
-  it("ni température publiée ni climat froid : ni « Chauffe jusqu’à » ni « Certifiée grand froid », la puissance à −15 °C", () => {
+  it("ni température publiée ni climat froid : la carte écrit « Température minimale non publiée »", () => {
     const html = renderWith(trois({ minOperatingTempC: null, coldClimate: false }), CTX);
     const blocs = blocsFroid(html);
     expect(blocs).toHaveLength(3);
     for (const b of blocs) {
       expect(b.kind).toBe("mesuree");
+      // L'information vedette dit franchement ce qui manque ; aucun chiffre de limite n'est avancé.
+      expect(b.texte).toContain("Température minimale non publiée");
       expect(b.texte).toContain(`${fr(21000)} BTU/h`);
-      expect(b.texte).toContain("livrés à −15 °C");
-      expect(b.texte).not.toMatch(/jusqu’à/i);
+      expect(b.texte).toMatch(/livrés à −15\s*°C/);
+      expect(b.texte).not.toMatch(/Chauffe jusqu’à/);
       expect(b.texte).not.toContain("Certifiée grand froid");
       expect(b.texte).not.toContain("Chauffe encore");
     }

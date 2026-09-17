@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import { warrantyShortLabel } from "@/lib/data/warranty";
+import { ChauffeJusquaVedette } from "./ChauffeJusquaVedette";
 
 
 
@@ -89,6 +90,9 @@ export function ProductCard({
           {product.refrigerant ? ` · ${product.refrigerant}` : ""}
         </p>
 
+        {/* L’information vedette, juste sous le nom : jusqu’à quel froid le modèle chauffe. */}
+        <ChauffeJusquaVedette minTempC={product.minHeatingTempC} coldClimate={isColdClimate} taille="compact" className="mb-4" />
+
         {/* ---- Données ---- */}
         <div className="flex flex-col mt-auto w-full">
           {(configuration?.hspf2 != null || model.hspf2Min != null) && (
@@ -103,14 +107,6 @@ export function ProductCard({
               <span className="text-[14.5px] font-semibold text-[#172126] tabular-nums">{configuration?.seer2 ?? model.seer2Min}</span>
             </div>
           )}
-          <div className="flex items-center justify-between py-3 border-t border-[#f0ebe4]">
-            <span className="text-[14px] text-[#6B7280]">Chauffage jusqu&apos;à</span>
-            <span className="text-[14.5px] font-semibold text-[#172126] tabular-nums">
-              {model.minimumOperatingTemperatureC != null
-                ? `${model.minimumOperatingTemperatureC}°C`
-                : (isColdClimate ? "-25°C" : "-15°C")}
-            </span>
-          </div>
           <div className="flex items-center justify-between py-3 border-t border-[#f0ebe4]">
             <span className="text-[14px] text-[#6B7280]">Garantie</span>
             <span className="text-[14.5px] font-semibold" style={{ color: product.warranty ? "#172126" : "#6B7280" }}>

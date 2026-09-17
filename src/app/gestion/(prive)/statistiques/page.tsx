@@ -8,6 +8,8 @@ import { STAFF } from "@/lib/gestion/equipe/garde"; // Chantier V : propriétair
 import { loadDemandStats } from "@/lib/gestion/crm/service";
 import { parsePeriod, PERIODS } from "@/lib/gestion/statistiques";
 import { loadSiteHealth } from "@/lib/gestion/surveillance";
+import { lireEtapes } from "@/lib/thermomatch/etapes-store";
+import { ETAPE_LABELS, ETAPE_RESULTATS } from "@/lib/thermomatch/etapes";
 import { Card, SectionHeader } from "@/components/gestion/kit/Card";
 import { EmptyState } from "@/components/gestion/kit/EmptyState";
 import { KpiTile } from "@/components/gestion/kit/KpiTile";
@@ -34,7 +36,9 @@ export default async function StatistiquesPage({ searchParams }: { searchParams:
   await requireUser({ roles: STAFF }); // Chantier V
   const period = parsePeriod((await searchParams).periode);
   const now = new Date();
-  const [s, health] = await Promise.all([loadDemandStats(period, now), loadSiteHealth(now)]);
+  // Écrans atteints dans ThermoMatch : compté par notre propre serveur, sans témoin ni outil externe.
+  const joursEtapes = PERIODS.find((p) => p.id === period)?.days ?? 3650;
+  const [s, health, parcours] = await Promise.all([loadDemandStats(period, now), loadSiteHealth(now), lireEtapes(joursEtapes, now)]);
   const short = period === "tout" ? "" : `${period} j`;
   const subs = s.byKind.find((k) => k.id === "soumission")?.n ?? 0;
   const ring = new Map<string, { id: string; label: string; value: number }>();
@@ -141,7 +145,36 @@ export default async function StatistiquesPage({ searchParams }: { searchParams:
         </div>
       ) : null}
 
-      <SectionHeader n="04" title="Dernières demandes" lead="Prénom, ville et type seulement." />
+      <SectionHeader
+        n="04"
+        title="ThermoMatch"
+        accent="où les gens s’arrêtent"
+        lead="Chaque écran du questionnaire atteint au moins une fois par un visiteur. Compté par notre propre serveur : aucun témoin, aucun outil externe, aucune donnée sur la personne."
+      />
+      <Card title="Le parcours, écran par écran" sub={parcours.depuis ? `Depuis le ${parcours.depuis}` : "En attente des premières visites"}>
+        {parcours.total > 0 ? (
+          <>
+            <BarList
+              rows={parcours.etapes.map((e) => ({
+                key: e.ecran,
+                label: ETAPE_LABELS[e.ecran] ?? e.ecran,
+                n: e.n,
+                note: `${e.part === null ? "—" : pct(e.part)}${e.abandons && e.ecran !== ETAPE_RESULTATS ? ` · ${e.abandons} arrêt${e.abandons > 1 ? "s" : ""}` : ""}`,
+                tone: e.ecran === ETAPE_RESULTATS ? "orange" : "ink",
+              }))}
+              empty="Aucun écran atteint sur la période."
+            />
+            <p className="g-note">
+              {parcours.termines} visiteur{parcours.termines > 1 ? "s ont" : " a"} vu ses recommandations sur {parcours.total} qui {parcours.total > 1 ? "ont" : "a"} commencé
+              {parcours.total > 0 ? ` (${pct(parcours.termines / parcours.total)})` : ""}. La colonne « arrêts » compte ceux qui n’ont pas atteint l’écran suivant.
+            </p>
+          </>
+        ) : (
+          <EmptyState compact title="Aucun écran atteint pour l’instant : le compteur vient d’être mis en place." />
+        )}
+      </Card>
+
+      <SectionHeader n="05" title="Dernières demandes" lead="Prénom, ville et type seulement." />
       {s.recent.length ? (
         <StaggerList className="g-joblist">
           {s.recent.map((r) => (
