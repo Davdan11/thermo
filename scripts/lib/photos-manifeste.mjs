@@ -19,10 +19,21 @@ const normaliser = (s) => String(s).toUpperCase().replace(/[^A-Z0-9]/g, "");
 
 /**
  * Une photo inconnue du manifeste est refusée : elle n'a pas encore été regardée.
- * Pour en ajouter une : poser la règle de rattachement, relancer le script de rattachement avec
- * PHOTOS_NOUVELLES=1, regarder la planche-contact (`node scripts/contact-sheet.mjs`), corriger
- * `src/lib/data/photos/manifeste-photos.ts` si la photo n'est pas une simple unité extérieure,
- * puis `npx tsx scripts/audit-photos-catalogue.ts --manifeste`.
+ *
+ * La bonne façon d'en ajouter une, de bout en bout :
+ *   1. node scripts/fetch-photos-officielles.mjs --marques <marque>
+ *      (télécharge la photo chez le fabricant et écrit sa provenance dans SOURCES.json)
+ *   2. node scripts/contact-sheet.mjs …   → REGARDER chaque photo avant de l'accepter
+ *   3. corriger src/lib/data/photos/manifeste-photos.ts si la photo n'est pas une simple
+ *      unité extérieure (tête murale, gamme, page de brochure…)
+ *   4. npx tsx scripts/audit-photos-catalogue.ts --manifeste
+ *      (le manifeste prend aussi les photos en réserve, celles qui ont une provenance mais
+ *      ne sont pas encore rattachées — elles deviennent donc posables)
+ *   5. node scripts/fetch-photos-officielles.mjs --regles && node scripts/map-official-images.mjs
+ *   6. npx tsx scripts/audit-photos-catalogue.ts --corriger --manifeste
+ *
+ * PHOTOS_NOUVELLES=1 force l'admission d'une photo sans provenance enregistrée. À éviter :
+ * c'est exactement ce qui avait laissé revenir une tête murale sur une centrale gainable.
  */
 const TOLERER_NOUVELLES = process.env.PHOTOS_NOUVELLES === "1";
 
