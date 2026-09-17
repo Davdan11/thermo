@@ -193,9 +193,9 @@ export const PHOTOS_REVUES: Record<string, { montre?: Montre; logos?: readonly s
   "/images/products/midea-evox-36k.webp": { montre: "gainable" },
   "/images/products/official/midea-evox-g3-officiel.webp": { montre: "gainable" },
 
-  // --- Photos de gamme : plusieurs unités extérieures et une tête murale côte à côte.
-  "/images/products/official/coleman-hmh7-officiel.webp": { montre: "gamme" },
-  "/images/products/official/york-hmh7-officiel.webp": { montre: "gamme" },
+  // Note : coleman-hmh7-officiel.webp et york-hmh7-officiel.webp montraient une gamme (plusieurs
+  // unités extérieures et une tête murale côte à côte) ; ces deux fichiers ont été remplacés le
+  // 2026-09-17 par la photo produit officielle de l'unité extérieure HMH7 de chaque marque.
 
   // --- Marques visibles qui ne se déduisent pas du nom de fichier.
   // Les condenseurs Keeprite « DLC… » portent le logo Keeprite, souvent doublé du logo Midea
