@@ -1,6 +1,11 @@
 [
   {
     "brand": "carrier",
+    "pattern": "^(37MGHA)",
+    "series": "/images/products/official/carrier-37mgha-officiel.webp"
+  },
+  {
+    "brand": "carrier",
     "pattern": "^(38MBRB)",
     "series": "/images/products/official/carrier-38mbrb-48k.webp"
   },

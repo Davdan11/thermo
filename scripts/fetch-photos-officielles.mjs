@@ -45,6 +45,36 @@ const SITES = {
   weathermaker: { hote: "www.weathermaker.com", index: "https://www.weathermaker.com/query-index.json?limit=600" },
 };
 
+/**
+ * Marques du groupe Carrier qui n'ont pas d'index AEM : leurs pages produit servent la photo
+ * depuis images.carriercms.com, avec la famille dans le nom du fichier
+ * (…/legacy-line-heat-pump-37MHRAQ.png). On ne prend que les pages listées ici, relevées sur
+ * l'index officiel de la marque, et la famille retenue est celle du nom du fichier image.
+ */
+const PAGES_CARRIER_CMS = {
+  bryant: {
+    hote: "www.bryant.com",
+    pages: [
+      "/en/us/products/ductless-systems/37maha/",
+      "/en/us/products/ductless-systems/37mara/",
+      "/en/us/products/ductless-systems/37mgha/",
+      "/en/us/products/ductless-systems/37mgra/",
+      "/en/us/products/ductless-systems/37mhraq/",
+      "/en/us/products/ductless-systems/37mpra/",
+    ],
+  },
+  carrier: {
+    hote: "www.carrier.com",
+    pages: [
+      "/residential/en/ca/products/ductless-mini-splits/37mgha/",
+      "/residential/en/ca/products/ductless-mini-splits/37maha/",
+      "/residential/en/ca/products/ductless-mini-splits/37mara/",
+      "/residential/en/ca/products/ductless-mini-splits/37mhraq/",
+      "/residential/en/ca/products/ductless-mini-splits/37mpra/",
+    ],
+  },
+};
+
 const args = process.argv.slice(2);
 const dry = args.includes("--dry-run");
 const marquesDemandees = (args.find((a) => a.startsWith("--marques="))?.split("=")[1] ?? args[args.indexOf("--marques") + 1] ?? "")
@@ -150,6 +180,66 @@ async function traiterMarque(marque) {
   console.log(`${marque} : ${pris} photos, ${sautes} produits hors catalogue`);
 }
 
+/* ------------------------------------------------------------------ pages Carrier CMS */
+async function traiterCarrierCms(marque) {
+  const conf = PAGES_CARRIER_CMS[marque];
+  if (!conf) return;
+  const manquants = fichesSansPhoto(marque);
+  fs.mkdirSync(path.join(SOURCES, marque), { recursive: true });
+  const fichierSources = path.join(SOURCES, marque, "SOURCES.json");
+  const dejaBrut = fs.existsSync(fichierSources) ? JSON.parse(fs.readFileSync(fichierSources, "utf8")) : [];
+  const deja = Array.isArray(dejaBrut) ? dejaBrut : (dejaBrut.sources ?? []);
+  const dejaFichiers = new Set(deja.map((e) => e.image_web));
+  let pris = 0;
+
+  for (const chemin of conf.pages) {
+    const urlPage = `https://${conf.hote}${chemin}`;
+    const r = await fetch(urlPage, { headers: { "user-agent": "Mozilla/5.0" } });
+    if (!r.ok) { console.log(`   ${chemin} : HTTP ${r.status}`); continue; }
+    const html = await r.text();
+    const titre = (html.match(/<title>([^<]*)<\/title>/)?.[1] ?? "").trim();
+    // La photo produit est l'image sans transformation (…/image/upload/v<version>/…/products/…png)
+    const brute = [...html.matchAll(/images\.carriercms\.com\/image\/upload\/(v\d+\/[^"']*?products\/[^"']*?\.png)/g)]
+      .map((m) => m[1])
+      .find((p) => /ductless|heat-pump/i.test(p));
+    if (!brute) { console.log(`   ${chemin} : pas de photo produit`); continue; }
+    // La famille est écrite à la fin du nom de fichier : …-37MHRAQ.png
+    const famille = norm(path.basename(brute, ".png").split("-").pop());
+    const couverts = manquants.filter((m) => norm(m.modelNumber).startsWith(famille));
+    if (couverts.length === 0) { console.log(`   ${famille} : aucune fiche sans photo`); continue; }
+    const urlImage = `https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/${brute}`;
+    const nom = `${marque}-${famille.toLowerCase()}-officiel`;
+    const nomWeb = `/images/products/official/${nom}.webp`;
+    if (dejaFichiers.has(nomWeb)) { console.log(`   ${famille} : déjà en réserve`); continue; }
+    if (dry) { console.log(`   ${famille} (${couverts.length} fiches) ← ${urlImage}`); pris++; continue; }
+    const ri = await fetch(urlImage, { headers: { "user-agent": "Mozilla/5.0" } });
+    if (!ri.ok) { console.log(`   ${famille} : image HTTP ${ri.status}`); continue; }
+    await sharp(Buffer.from(await ri.arrayBuffer()))
+      .flatten({ background: "#ffffff" })
+      .trim({ threshold: 5 })
+      .resize({ width: 1000, height: 1000, fit: "inside", withoutEnlargement: true })
+      .webp({ quality: 88 })
+      .toFile(path.join(RACINE, "public", nomWeb));
+    deja.push({
+      fichier: `${nom}-cdn.png`,
+      image_web: nomWeb,
+      url: urlImage,
+      page: urlPage,
+      date: AUJOURDHUI,
+      familles: [famille],
+      modeles: [...new Set(couverts.map((m) => m.modelNumber))].slice(0, 12).join(", "),
+      note: `Photo produit de la page officielle « ${titre} ». La famille vient du nom du fichier servi par le CMS du fabricant.`,
+    });
+    pris++;
+    console.log(`   ${famille} : ${couverts.length} fiches ← ${nomWeb}`);
+  }
+  if (!dry) {
+    deja.sort((a, b) => String(a.image_web).localeCompare(String(b.image_web)));
+    fs.writeFileSync(fichierSources, JSON.stringify(Array.isArray(dejaBrut) ? deja : { ...dejaBrut, sources: deja }, null, 2) + "\n");
+  }
+  console.log(`${marque} : ${pris} photos`);
+}
+
 /* ------------------------------------------------------------------ règles de rattachement */
 /**
  * Écrit dans scripts/image-rules/<marque>.json une règle par photo enregistrée dans SOURCES.json :
@@ -172,6 +262,9 @@ function ecrireRegles() {
       if (!img || dejaSeries.has(img)) continue;
       if (!Array.isArray(e.familles) || e.familles.length === 0) continue;
       if (!fs.existsSync(path.join(RACINE, "public", img))) continue;
+      // Une photo au logo d'une autre marque n'a rien à faire sur les fiches de celle-ci, même
+      // si sa provenance a été classée dans ce dossier (weathermaker-37mvra rangé chez Carrier).
+      if (!path.basename(img).startsWith(`${marque}-`)) continue;
       regles.push({ brand: marque, pattern: `^(${e.familles.map(norm).sort().join("|")})`, series: img });
       ajoutees++;
     }
@@ -185,7 +278,8 @@ function ecrireRegles() {
 }
 if (args.includes("--regles")) { ecrireRegles(); process.exit(0); }
 
-for (const marque of marquesDemandees.length ? marquesDemandees : Object.keys(SITES)) {
+for (const marque of marquesDemandees.length ? marquesDemandees : [...Object.keys(SITES), ...Object.keys(PAGES_CARRIER_CMS)]) {
   console.log(`\n=== ${marque}`);
-  await traiterMarque(marque);
+  if (PAGES_CARRIER_CMS[marque]) await traiterCarrierCms(marque);
+  else await traiterMarque(marque);
 }

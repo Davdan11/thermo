@@ -96,6 +96,18 @@
     "note": "Photo produit de la page officielle Carrier Canada 37MBRA."
   },
   {
+    "fichier": "carrier-37mgha-officiel-cdn.png",
+    "image_web": "/images/products/official/carrier-37mgha-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731007042/carrier/residential-hvac/products/ductless/infinity-multi-zone-mini-split-heat-pump-with-basepan-heater-37MGHA.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/37mgha/",
+    "date": "2026-09-17",
+    "familles": [
+      "37MGHA"
+    ],
+    "modeles": "37MGHAQ18CA3, 37MGHAQ24DA3, 37MGHAQ30EA3, 37MGHAQ36EA3, 37MGHAQ48FA3, 37MGHAQ55FA3",
+    "note": "Photo produit de la page officielle « 37MGHA | Infinity Mini Split Heat Pump with Basepan Heater ». La famille vient du nom du fichier servi par le CMS du fabricant."
+  },
+  {
     "fichier": "carrier-37mgra-cdn.png",
     "image_web": "/images/products/official/carrier-37mgra-officiel.webp",
     "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731006482/carrier/residential-hvac/products/ductless/performance-multi-zone-mini-split-heat-pump-with-basepan-heater-37MGRA.png",

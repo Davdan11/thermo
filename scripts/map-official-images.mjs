@@ -95,7 +95,12 @@ const poser = (cible, img, brand, numero, type) => {
 for (const [brand, re, byCap, seriesImg] of RULES) {
   const b = d[brand]; if (!b) { console.log("marque absente", brand); continue; }
   const seriesById = new Map(b.series.map((s) => [s.id, s]));
-  const membres = new Map(); // seriesId → un modèle de la série
+  const membres = new Map(); // seriesId → tous les modèles publiés de la série
+  for (const m of b.models) {
+    if (m.status !== "published") continue;
+    if (!membres.has(m.seriesId)) membres.set(m.seriesId, []);
+    membres.get(m.seriesId).push(m);
+  }
   const touchedSeries = new Set();
   for (const m of b.models) {
     if (!re.test(m.modelNumber)) continue;
@@ -103,16 +108,20 @@ for (const [brand, re, byCap, seriesImg] of RULES) {
     // Un modèle qui correspond à la règle mais sans photo à sa capacité reçoit la photo de la famille.
     else if (!m.imageUrl && poser(m, seriesImg, brand, m.modelNumber, m.systemType)) models++;
     touchedSeries.add(m.seriesId);
-    if (!membres.has(m.seriesId)) membres.set(m.seriesId, m);
   }
   if (seriesImg && !exists(seriesImg)) missing.add(seriesImg);
-  // La série reçoit la photo de la famille seulement si ce n'est pas le fourre-tout « Série Standard ».
+  // La photo d'une série retombe sur tous ses modèles qui n'en ont pas : elle ne lui est posée
+  // que si elle convient à CHACUN d'eux. Les séries fourre-tout de la liste LogisVert (« 37M »,
+  // « 45M », « Série non identifiée ») regroupent plusieurs familles et n'en reçoivent aucune.
   if (seriesImg && exists(seriesImg)) {
     for (const id of touchedSeries) {
       const s = seriesById.get(id);
       if (!s || s.imageUrl || /s[ée]rie standard|s[ée]rie non identifi/i.test(s.name)) continue;
-      const m = membres.get(id);
-      if (poser(s, seriesImg, brand, m.modelNumber, s.systemType ?? m.systemType)) series++;
+      const liste = membres.get(id) ?? [];
+      const type = s.systemType ?? liste[0]?.systemType;
+      if (liste.length === 0) continue;
+      if (!liste.every((x) => refusPhoto(seriesImg, brand, x.modelNumber, type) === null)) continue;
+      if (poser(s, seriesImg, brand, liste[0].modelNumber, type)) series++;
     }
   }
 }
