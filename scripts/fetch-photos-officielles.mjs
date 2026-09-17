@@ -242,6 +242,64 @@ async function traiterCarrierCms(marque) {
   console.log(`${marque} : ${pris} photos`);
 }
 
+/* ------------------------------------------------------------------ liste relevée à la main */
+/**
+ * Pour les marques sans index exploitable, on relève l'adresse de la photo produit sur la page
+ * officielle et on l'écrit dans un fichier JSON :
+ *   [{ "marque", "nom", "familles": ["…"], "url", "page", "note" }]
+ * Le script télécharge, convertit et enregistre la provenance. La vérification à l'œil vient
+ * ensuite : `node scripts/contact-sheet.mjs`.
+ */
+async function traiterListe(fichier) {
+  const entrees = JSON.parse(fs.readFileSync(fichier, "utf8"));
+  const parMarque = new Map();
+  for (const e of entrees) {
+    if (!parMarque.has(e.marque)) parMarque.set(e.marque, []);
+    parMarque.get(e.marque).push(e);
+  }
+  for (const [marque, liste] of parMarque) {
+    console.log(`\n=== ${marque}`);
+    const manquants = fichesSansPhoto(marque);
+    fs.mkdirSync(path.join(SOURCES, marque), { recursive: true });
+    const fichierSources = path.join(SOURCES, marque, "SOURCES.json");
+    const dejaBrut = fs.existsSync(fichierSources) ? JSON.parse(fs.readFileSync(fichierSources, "utf8")) : [];
+    const deja = Array.isArray(dejaBrut) ? dejaBrut : (dejaBrut.sources ?? []);
+    const dejaFichiers = new Set(deja.map((x) => x.image_web));
+    for (const e of liste) {
+      const familles = e.familles.map(norm);
+      const couverts = manquants.filter((m) => familles.some((f) => norm(m.modelNumber).startsWith(f)));
+      const nomWeb = `/images/products/official/${marque}-${e.nom}-officiel.webp`;
+      if (dejaFichiers.has(nomWeb)) { console.log(`   ${e.nom} : déjà en réserve`); continue; }
+      if (dry) { console.log(`   ${e.nom} (${couverts.length} fiches) ← ${e.url}`); continue; }
+      const r = await fetch(e.url, { headers: { "user-agent": "Mozilla/5.0" } });
+      if (!r.ok) { console.log(`   ${e.nom} : HTTP ${r.status}`); continue; }
+      await sharp(Buffer.from(await r.arrayBuffer()))
+        .flatten({ background: "#ffffff" })
+        .trim({ threshold: 5 })
+        .resize({ width: 1200, height: 1200, fit: "inside", withoutEnlargement: true })
+        .webp({ quality: 88 })
+        .toFile(path.join(RACINE, "public", nomWeb));
+      deja.push({
+        fichier: `${marque}-${e.nom}-site.png`,
+        image_web: nomWeb,
+        url: e.url,
+        page: e.page,
+        date: AUJOURDHUI,
+        familles,
+        modeles: [...new Set(couverts.map((m) => m.modelNumber))].slice(0, 12).join(", "),
+        note: e.note ?? "",
+      });
+      console.log(`   ${e.nom} : ${couverts.length} fiches ← ${nomWeb}`);
+    }
+    if (!dry) {
+      deja.sort((a, b) => String(a.image_web).localeCompare(String(b.image_web)));
+      fs.writeFileSync(fichierSources, JSON.stringify(Array.isArray(dejaBrut) ? deja : { ...dejaBrut, sources: deja }, null, 2) + "\n");
+    }
+  }
+}
+const fichierListe = args.find((a) => a.startsWith("--liste="))?.split("=")[1];
+if (fichierListe) { await traiterListe(fichierListe); process.exit(0); }
+
 /* ------------------------------------------------------------------ règles de rattachement */
 /**
  * Écrit dans scripts/image-rules/<marque>.json une règle par photo enregistrée dans SOURCES.json :
