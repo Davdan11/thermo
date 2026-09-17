@@ -40,6 +40,37 @@ const catalogue = JSON.parse(
   fs.readFileSync(path.join(RACINE, "src/lib/data/fixtures/brands/all-auto-datasets.json"), "utf8"),
 ) as Record<string, JeuMarque>;
 
+/**
+ * Les fiches curées à la main (src/lib/data/fixtures/brands/<marque>.ts) remplacent les fiches
+ * automatiques dans le registre : ce sont elles que le site affiche. Elles n'utilisent qu'une
+ * poignée de photos, revues une à une le 2026-09-17 — toutes des montages « tête murale + unité
+ * extérieure » au bon logo, sur des fiches murales simple zone. Le jour où quelqu'un en ajoute
+ * ou en change une, la liste ci-dessous ne correspond plus et le test le dit : il faut alors
+ * regarder la nouvelle photo et l'inscrire ici.
+ */
+const PHOTOS_FICHES_CUREES = [
+  "/images/products/fujitsu-rls3-12k.webp",
+  "/images/products/fujitsu-rls3-9k.webp",
+  "/images/products/fujitsu-xlth-12k.webp",
+  "/images/products/fujitsu-xlth-15k.webp",
+  "/images/products/fujitsu-xlth-18k.webp",
+  "/images/products/fujitsu-xlth-24k.webp",
+  "/images/products/fujitsu-xlth-9k.webp",
+  "/images/products/midea-mission-12k.webp",
+  "/images/products/midea-mission-18k.webp",
+  "/images/products/midea-mission-24k.webp",
+  "/images/products/midea-mission-9k.webp",
+];
+const photosDesFichesCurees = (() => {
+  const dossier = path.join(RACINE, "src/lib/data/fixtures/brands");
+  const vues = new Set<string>();
+  for (const f of fs.readdirSync(dossier).filter((x) => x.endsWith(".ts"))) {
+    const texte = fs.readFileSync(path.join(dossier, f), "utf8");
+    for (const m of texte.matchAll(/imageUrl:\s*"(\/images\/[^"]+)"/g)) vues.add(m[1]);
+  }
+  return [...vues].sort();
+})();
+
 /** Une fiche publiée et la photo qu'elle affiche réellement. */
 type Fiche = { marque: string; modele: Modele; photo: string; parLaSerie: boolean };
 const fiches: Fiche[] = [];
@@ -149,6 +180,14 @@ describe("photos du catalogue", () => {
       }
     }
     expect(fautives).toEqual([]);
+  });
+
+  it("les fiches curées à la main n'utilisent que des photos déjà revues", () => {
+    // Ces fiches court-circuitent le catalogue automatique : le manifeste ne les voit pas.
+    // On vérifie au moins que leur jeu de photos n'a pas bougé depuis la dernière revue.
+    expect(photosDesFichesCurees).toEqual(PHOTOS_FICHES_CUREES);
+    const manquantes = photosDesFichesCurees.filter((p) => !fs.existsSync(path.join(RACINE, "public", p)));
+    expect(manquantes).toEqual([]);
   });
 
   it("les cas signalés par le propriétaire restent corrigés", () => {
