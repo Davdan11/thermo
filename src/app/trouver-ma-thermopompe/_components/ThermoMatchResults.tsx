@@ -22,6 +22,7 @@ import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGaran
 import { categorieDe, type CategorieThermopompe } from "@/lib/garantie-legale/config";
 import { ORDRE_DE_GRANDEUR_LABEL } from "@/lib/prices/grille-installee";
 import { MULTI_INDOOR_RE } from "@/lib/thermomatch/candidates";
+import { OMBRE, OMBRE_TOP, R } from "./palette";
 
 /* ==================================================================
    ThermoMatch — écran des trois recommandations (version premium).
@@ -82,23 +83,9 @@ interface ThermoMatchResultsProps {
   affinage?: AffinageProps;
 }
 
-const C = {
-  ink: "#0A1419",
-  panel: "#10222D",
-  cream: "#F4EFE7",
-  paper: "#FBF8F3",
-  orange: "#E54B17",
-  orangeText: "#C23F12",
-  /** Vert des montants LogisVert (lisible sur le fond papier). */
-  green: "#1A8F4E",
-  mute: "rgba(244,239,231,0.66)",
-  faint: "rgba(244,239,231,0.42)",
-  /** Petit texte sur l'encre, encore lisible (près de 6:1) : bloc « Par grand froid ». */
-  dim: "rgba(244,239,231,0.58)",
-  line: "rgba(244,239,231,0.12)",
-  inkMute: "rgba(10,20,25,0.58)",
-  inkLine: "rgba(10,20,25,0.1)",
-};
+/* Thème clair de l'écran (palette.ts). `inkMute` et `inkLine` restent nommés ainsi : ils portent
+   le même rôle qu'avant à l'intérieur des cartes (texte secondaire, filets). */
+const C = { ...R, inkMute: R.dim, inkLine: R.hair };
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
 const fr = (n: number, d = 0) => n.toLocaleString("fr-CA", { minimumFractionDigits: d, maximumFractionDigits: d });
@@ -304,7 +291,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
   const hypotheses = summaryContext?.hypotheses ?? [];
 
   return (
-    <div className="w-full" style={{ fontFamily: DISPLAY, color: C.cream }}>
+    <div className="w-full" style={{ fontFamily: DISPLAY, color: C.ink }}>
       <ThermometreHero ctx={summaryContext ?? null} machines={cards.map((c) => ({ key: c.key, brand: c.brand, series: c.series, minTemp: c.minTemp, coldClimate: c.coldClimate }))} />
 
       {/* Les cartes tout de suite après le bandeau : c'est ce que le client est venu chercher. */}
@@ -339,7 +326,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
       <NextStep top={top} onSelect={() => onSelectResult(top.raw)} />
 
       <div className="mx-auto mt-10 flex max-w-[1320px] flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[14px]">
-        <Link href="/comparer" className="font-semibold underline-offset-4 hover:underline" style={{ color: C.cream }}>
+        <Link href="/comparer" className="font-semibold underline-offset-4 hover:underline" style={{ color: C.ink }}>
           Comparer ces modèles en détail →
         </Link>
         <button type="button" onClick={onRetry} className="transition-colors hover:text-white" style={{ color: C.faint }}>
@@ -378,16 +365,15 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
       ref={ref}
       className={`relative flex flex-col overflow-hidden rounded-[28px] ${order} ${top ? "lg:-my-5" : ""}`}
       style={{
-        background: C.paper,
+        background: C.card,
         color: C.ink,
-        boxShadow: top ? "0 0 0 2px #E54B17, 0 50px 100px -45px rgba(229,75,23,0.65)" : "0 40px 80px -50px rgba(0,0,0,0.75)",
+        border: top ? "none" : `1px solid ${C.line}`,
+        boxShadow: top ? OMBRE_TOP : OMBRE,
       }}
       initial={reduce ? false : { opacity: 0, y: 70 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.1, ease: EASE, delay: 0.35 + i * 0.15 }}
     >
-      {top && !reduce && <span aria-hidden="true" className="tm-sheen" />}
-
       <div className="flex items-start justify-between gap-4 px-6 pt-6 sm:px-7 sm:pt-7">
         <span
           className="rounded-full px-3.5 py-1.5 text-[11.5px] font-bold uppercase"
@@ -452,7 +438,7 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
       </div>
 
       {/* Scène de l'appareil */}
-      <div data-scene="" className="relative mx-6 mt-5 h-[170px] overflow-hidden rounded-[20px] sm:mx-7 sm:h-[190px]" style={{ background: card.ownImage ? "#fff" : C.ink }}>
+      <div data-scene="" className="relative mx-6 mt-5 h-[170px] overflow-hidden rounded-[20px] sm:mx-7 sm:h-[190px]" style={{ background: card.ownImage ? C.card : C.inset, border: `1px solid ${C.hair}` }}>
         {card.ownImage ? (
           <div className="tm-float absolute inset-0" style={{ animationDelay: `${i * -2}s` }}>
             <Image src={card.img} alt={`${card.brand} ${card.outdoor}`} fill sizes="(min-width: 1024px) 380px, 90vw" style={{ objectFit: "contain", padding: 18 }} />
@@ -460,18 +446,18 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
         ) : (
           /* Pas de photo du fabricant : ni l'appareil d'une autre marque, ni promesse de photo ; le nom de la marque, décoratif (déjà dans le titre). */
           <>
-            <div aria-hidden="true" className="absolute inset-0 flex flex-col items-center justify-center text-center" style={{ color: C.cream }}>
+            <div aria-hidden="true" className="absolute inset-0 flex flex-col items-center justify-center text-center" style={{ color: C.ink }}>
               <span style={{ fontSize: 42, fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 1 }}>{card.brand}</span>
               <span className="mt-4 flex gap-2">
                 {[0, 1, 2].map((d) => (
-                  <span key={d} className="h-[5px] w-[5px] rounded-full" style={{ background: d === i ? C.orange : "rgba(244,239,231,0.3)" }} />
+                  <span key={d} className="h-[5px] w-[5px] rounded-full" style={{ background: d === i ? C.orange : C.line }} />
                 ))}
               </span>
             </div>
           </>
         )}
         {card.coldClimate && (
-          <span className="absolute left-3 top-3 rounded-full px-2.5 py-1 text-[10.5px] font-bold uppercase" style={{ letterSpacing: "0.12em", background: C.ink, color: C.cream }}>
+          <span className="absolute left-3 top-3 rounded-full px-2.5 py-1 text-[10.5px] font-bold uppercase" style={{ letterSpacing: "0.12em", background: "rgba(255,255,255,0.94)", color: C.ink, border: `1px solid ${C.line}` }}>
             Climat froid
           </span>
         )}
@@ -489,7 +475,7 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
           <div className="relative mt-2 h-2 rounded-full" style={{ background: C.inkLine }}>
             <motion.div
               className="h-full origin-left rounded-full"
-              style={{ width: `${Math.min(cov, 120) / 1.2}%`, background: top ? C.orange : "rgba(10,20,25,0.55)" }}
+              style={{ width: `${Math.min(cov, 120) / 1.2}%`, background: top ? C.orange : "rgba(12,24,33,0.55)" }}
               initial={{ scaleX: 0 }}
               animate={inView ? { scaleX: 1 } : undefined}
               transition={{ duration: 1.3, ease: EASE, delay: 0.6 + i * 0.1 }}
@@ -648,8 +634,12 @@ function GrandFroid({ card, play, i }: { card: Card; play: boolean; i: number })
   const chiffre = t == null ? "" : `${t < 0 ? "−" : t > 0 ? "+" : ""}${fr(Math.abs(t), Number.isInteger(t) ? 0 : 1)}`;
 
   return (
-    <div data-grand-froid={froid} className="mx-6 mt-5 rounded-[20px] px-4 pb-4 pt-4 sm:mx-7 sm:px-5" style={{ background: C.ink, color: C.cream }}>
-      <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.dim, margin: 0 }}>
+    <div
+      data-grand-froid={froid}
+      className="mx-6 mt-5 rounded-[6px] rounded-r-[20px] py-4 pl-5 pr-4 sm:mx-7 sm:pr-5"
+      style={{ background: C.inset, color: C.ink, borderLeft: `3px solid ${C.orange}`, borderTop: `1px solid ${C.hair}`, borderRight: `1px solid ${C.hair}`, borderBottom: `1px solid ${C.hair}` }}
+    >
+      <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.faint, margin: 0 }}>
         Par grand froid
       </p>
 
@@ -727,7 +717,7 @@ function GrandFroid({ card, play, i }: { card: Card; play: boolean; i: number })
 /* Lien partagé (lecture seule) : pas de questions à poser, mais les hypothèses restent dites. */
 function HypothesesSeules({ hypotheses }: { hypotheses: Hypothese[] }) {
   return (
-    <section className="mx-auto mt-10 w-full max-w-[1320px] rounded-[28px] px-5 py-7 sm:px-8" style={{ background: "rgba(244,239,231,0.03)", border: `1px solid ${C.line}` }}>
+    <section className="mx-auto mt-10 w-full max-w-[1320px] rounded-[28px] px-5 py-7 sm:px-8" style={{ background: C.card, border: `1px solid ${C.line}`, boxShadow: OMBRE }}>
       <p className="text-[11.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.faint, margin: 0 }}>
         Ce que nous avons supposé
       </p>
@@ -736,7 +726,7 @@ function HypothesesSeules({ hypotheses }: { hypotheses: Hypothese[] }) {
           <li key={h.id} className="grid grid-cols-[10px_1fr] gap-3 text-[13.5px] leading-snug" style={{ color: C.mute }}>
             <span aria-hidden="true" className="mt-[7px] block h-[7px] w-[7px]" style={{ background: C.orange }} />
             <span>
-              <strong className="block font-semibold" style={{ color: C.cream }}>
+              <strong className="block font-semibold" style={{ color: C.ink }}>
                 {h.label}
               </strong>
               {h.text}
@@ -761,11 +751,11 @@ function ColdGauge({ mode, value, play, delay }: { mode: Froid; value: number | 
   const ticks = Array.from({ length: -bas / 10 + 1 }, (_, k) => -10 * k);
   return (
     <div className="mt-3.5">
-      <div className="relative h-[6px] rounded-full" style={{ background: "rgba(244,239,231,0.14)" }}>
+      <div className="relative h-[6px] rounded-full" style={{ background: "rgba(12,24,33,0.10)" }}>
         {mode === "certifiee" && (
           <motion.div
             className="absolute inset-y-0"
-            style={{ left: `${pct * 100}%`, width: "26%", marginLeft: -3, borderRadius: "0 999px 999px 0", background: "linear-gradient(90deg, rgba(244,239,231,0.6), rgba(244,239,231,0))" }}
+            style={{ left: `${pct * 100}%`, width: "26%", marginLeft: -3, borderRadius: "0 999px 999px 0", background: "linear-gradient(90deg, rgba(12,24,33,0.55), rgba(12,24,33,0))" }}
             initial={{ opacity: 0 }}
             animate={play ? { opacity: 1 } : undefined}
             transition={{ duration: 0.9, ease: EASE, delay: delay + 1.1 }}
@@ -774,7 +764,7 @@ function ColdGauge({ mode, value, play, delay }: { mode: Froid; value: number | 
         {pct > 0 && (
           <motion.div
             className="absolute inset-y-0 left-0 origin-left rounded-full"
-            style={{ width: `${pct * 100}%`, background: mode === "publiee" ? C.orange : "rgba(244,239,231,0.6)" }}
+            style={{ width: `${pct * 100}%`, background: mode === "publiee" ? C.orange : "rgba(12,24,33,0.55)" }}
             initial={{ scaleX: 0 }}
             animate={play ? { scaleX: 1 } : undefined}
             transition={{ duration: 1.4, ease: EASE, delay }}
@@ -852,19 +842,19 @@ function Distinctions({ cards, leaders }: { cards: Card[]; leaders: Record<Metri
                   const lead = leaders[m.key].includes(ci);
                   return (
                     <div key={c.key} className="grid grid-cols-[88px_1fr_auto] items-center gap-4 sm:grid-cols-[140px_1fr_110px]">
-                      <span className="truncate text-[13.5px] font-medium" style={{ color: lead ? C.cream : C.mute }}>
+                      <span className="truncate text-[13.5px] font-medium" style={{ color: lead ? C.ink : C.mute }}>
                         {c.brand}
                       </span>
                       <div className="h-[8px] overflow-hidden rounded-full" style={{ background: C.line }}>
                         <motion.div
                           className="h-full origin-left rounded-full"
-                          style={{ width: `${v != null && max > 0 ? (Math.abs(v) / max) * 100 : 0}%`, background: lead ? C.orange : "rgba(244,239,231,0.35)" }}
+                          style={{ width: `${v != null && max > 0 ? (Math.abs(v) / max) * 100 : 0}%`, background: lead ? C.orange : "rgba(12,24,33,0.32)" }}
                           initial={{ scaleX: 0 }}
                           animate={inView ? { scaleX: 1 } : undefined}
                           transition={{ duration: 1.2, ease: EASE, delay: 0.12 * ri + 0.08 * ci }}
                         />
                       </div>
-                      <span className="text-right text-[15px] font-semibold tabular-nums" style={{ color: lead ? C.orange : C.cream }}>
+                      <span className="text-right text-[15px] font-semibold tabular-nums" style={{ color: lead ? C.orange : C.ink }}>
                         {v == null ? "N/D" : m.key === "minTemp" ? temp(v) : `${fr(v, m.d)}${m.key === "subsidy" ? " $" : ""}`}
                       </span>
                     </div>
@@ -888,7 +878,7 @@ function HowItWorks({ ctx, kept }: { ctx: SummaryContext; kept: number }) {
   const f = ctx.loadFactors;
   const w = ctx.weights;
   return (
-    <details className="tm-details mx-auto mt-10 max-w-[1320px] rounded-[22px] px-6 py-5 sm:px-8" style={{ border: `1px solid ${C.line}`, background: "rgba(244,239,231,0.03)" }}>
+    <details className="tm-details mx-auto mt-10 max-w-[1320px] rounded-[22px] px-6 py-5 sm:px-8" style={{ border: `1px solid ${C.line}`, background: C.card, boxShadow: OMBRE }}>
       <summary className="flex items-center justify-between gap-4 text-[15px] font-semibold">
         Comment ThermoMatch a calculé
         <span className="tm-plus flex h-8 w-8 items-center justify-center rounded-full text-[18px]" style={{ border: `1px solid ${C.line}` }} aria-hidden="true">
@@ -909,7 +899,7 @@ function HowItWorks({ ctx, kept }: { ctx: SummaryContext; kept: number }) {
               <li>Isolation : × {f.insulation}</li>
               <li>Fenestration : × {f.windows}</li>
               <li>Sous-sol : × {f.basement}</li>
-              <li className="pt-1 font-semibold" style={{ color: C.cream }}>
+              <li className="pt-1 font-semibold" style={{ color: C.ink }}>
                 = {fr(Math.round(ctx.estimatedLoadBtu))} BTU/h à −15 °C{typeof ctx.uncertaintyPct === "number" ? ` (±${ctx.uncertaintyPct} %)` : ""}
               </li>
             </ul>
@@ -936,7 +926,7 @@ function HowItWorks({ ctx, kept }: { ctx: SummaryContext; kept: number }) {
                   <span className="h-1.5 overflow-hidden rounded-full" style={{ background: C.line }}>
                     <span className="block h-full rounded-full" style={{ width: `${Math.round(Number(v))}%`, background: C.orange }} />
                   </span>
-                  <span className="text-right tabular-nums" style={{ color: C.cream }}>
+                  <span className="text-right tabular-nums" style={{ color: C.ink }}>
                     {Math.round(Number(v))}
                   </span>
                 </li>
@@ -963,7 +953,7 @@ function HowItWorks({ ctx, kept }: { ctx: SummaryContext; kept: number }) {
       {/* Méthode complète : architecture, critères et poids, départage des ex æquo, sources. */}
       <p className="text-[12.5px] leading-relaxed" style={{ color: C.faint, margin: "20px 0 0" }}>
         Critères, poids, départage des ex æquo et sources :{" "}
-        <Link href="/methode#thermomatch" className="underline underline-offset-4" style={{ color: C.cream }}>
+        <Link href="/methode#thermomatch" className="underline underline-offset-4" style={{ color: C.ink }}>
           notre méthode
         </Link>
         .
@@ -1064,7 +1054,7 @@ function MobileBar({ top, onSelect }: { top: Card; onSelect: () => void }) {
       {show && (
         <motion.div
           className="fixed inset-x-3 bottom-3 z-40 flex items-center justify-between gap-3 rounded-full py-2 pl-5 pr-2 lg:hidden"
-          style={{ background: "rgba(10,20,25,0.92)", border: `1px solid ${C.line}`, backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", color: C.cream, fontFamily: DISPLAY }}
+          style={{ background: "rgba(255,255,255,0.94)", border: `1px solid ${C.line}`, boxShadow: OMBRE, backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", color: C.ink, fontFamily: DISPLAY }}
           initial={{ y: 90, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 90, opacity: 0 }}
@@ -1091,7 +1081,7 @@ function MobileBar({ top, onSelect }: { top: Card; onSelect: () => void }) {
 
 function Empty({ onRetry }: { onRetry: () => void }) {
   return (
-    <div className="mx-auto max-w-[640px] py-16 text-center" style={{ fontFamily: DISPLAY, color: C.cream }}>
+    <div className="mx-auto max-w-[640px] py-16 text-center" style={{ fontFamily: DISPLAY, color: C.ink }}>
       <h3 style={{ fontSize: "clamp(28px, 3.4vw, 44px)", fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.05, margin: 0 }}>
         Aucun modèle ne respecte tous vos critères.
       </h3>
@@ -1099,7 +1089,7 @@ function Empty({ onRetry }: { onRetry: () => void }) {
         Nous préférons ne rien proposer plutôt qu’un appareil inadapté. Un conseiller peut regarder votre maison avec vous.
       </p>
       <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-        <button type="button" onClick={onRetry} className="rounded-full px-6 py-3 font-semibold" style={{ background: C.cream, color: C.ink }}>
+        <button type="button" onClick={onRetry} className="rounded-full px-6 py-3 font-semibold text-white" style={{ background: C.ink }}>
           Refaire le test
         </button>
         <Link href="/soumission" className="rounded-full px-6 py-3 font-semibold text-white" style={{ background: C.orange }}>

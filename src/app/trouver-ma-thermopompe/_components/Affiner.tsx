@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Step } from "./steps";
 import { answered } from "./steps";
 import type { Hypothese } from "@/lib/thermomatch/hypotheses";
+import { OMBRE, R } from "./palette";
 
 /* ==================================================================
    ThermoMatch — « Affiner », juste sous les trois cartes.
@@ -21,16 +22,7 @@ import type { Hypothese } from "@/lib/thermomatch/hypotheses";
       suite ; la ligne dit ce que l'hypothèse devient.
    ================================================================== */
 
-const C = {
-  ink: "#0A1419",
-  panel: "#10222D",
-  cream: "#F4EFE7",
-  orange: "#E54B17",
-  mute: "rgba(244,239,231,0.66)",
-  dim: "rgba(244,239,231,0.58)",
-  faint: "rgba(244,239,231,0.42)",
-  line: "rgba(244,239,231,0.12)",
-};
+const C = R;
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
 
 export interface AffinageProps {
@@ -50,7 +42,7 @@ export function Affiner({ steps, answers, onAnswer, busy, hypotheses }: Affinage
     <section
       aria-labelledby="tm-affiner"
       className="mx-auto mt-10 w-full max-w-[1320px] overflow-hidden rounded-[28px] px-5 py-8 sm:px-8 sm:py-10 lg:px-12"
-      style={{ background: C.panel, border: `1px solid ${C.line}`, color: C.cream, fontFamily: DISPLAY }}
+      style={{ background: C.card, border: `1px solid ${C.line}`, color: C.ink, fontFamily: DISPLAY, boxShadow: OMBRE }}
     >
       <div className="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
         <div className="min-w-0">
@@ -76,7 +68,7 @@ export function Affiner({ steps, answers, onAnswer, busy, hypotheses }: Affinage
                   <li key={h.id} className="grid grid-cols-[10px_1fr] gap-3 text-[13.5px] leading-snug" style={{ color: C.dim }}>
                     <span aria-hidden="true" className="mt-[7px] block h-[7px] w-[7px]" style={{ background: C.orange }} />
                     <span>
-                      <strong className="block text-[13.5px] font-semibold" style={{ color: C.cream }}>
+                      <strong className="block text-[13.5px] font-semibold" style={{ color: C.ink }}>
                         {h.label}
                       </strong>
                       {h.text}
@@ -136,7 +128,7 @@ function Question({ step, value, busy, onAnswer }: { step: Step; value: string |
             {step.question}
           </p>
           {done && !open ? (
-            <p className="text-[14px]" style={{ color: C.orange, margin: "6px 0 0" }}>
+            <p className="text-[14px]" style={{ color: C.orangeText, margin: "6px 0 0" }}>
               {resume}
             </p>
           ) : (
@@ -174,8 +166,8 @@ function Question({ step, value, busy, onAnswer }: { step: Step; value: string |
                 className="rounded-full px-4 py-2.5 text-left text-[14px] font-medium transition-colors disabled:opacity-50"
                 style={{
                   border: `1px solid ${on ? C.orange : C.line}`,
-                  background: on ? "rgba(229,75,23,0.14)" : "transparent",
-                  color: on ? C.cream : C.mute,
+                  background: on ? "rgba(229,75,23,0.08)" : "transparent",
+                  color: on ? C.orangeText : C.mute,
                 }}
               >
                 {o.label}

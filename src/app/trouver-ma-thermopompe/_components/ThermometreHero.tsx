@@ -3,6 +3,8 @@
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { motion } from "motion/react";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { ThermoMatchWordmark } from "@/components/heroes-v2/outils/FlowBar";
+import { OMBRE, R } from "./palette";
 import {
   CERTIF_C,
   DEPART,
@@ -22,7 +24,7 @@ import {
 
 /* ==================================================================
    ThermoMatch — « Le thermomètre » : haut de l'écran des résultats.
-   Sur l'encre des cartes : une échelle de froid verticale (0 °C à
+   Sur le papier crème : une échelle de froid verticale (0 °C à
    −35 °C, graduée tous les 5 °C). Le mercure orange descend jusqu'à la
    machine recommandée la plus froide ; chaque machine se pose, une à
    une, à la température jusqu'à laquelle elle chauffe (publiée par le
@@ -50,16 +52,7 @@ export interface ThermometreContext {
   designTempC?: number | null;
 }
 
-const C = {
-  ink: "#0A1419",
-  panel: "#10222D",
-  cream: "#F4EFE7",
-  orange: "#E54B17",
-  mute: "rgba(244,239,231,0.66)",
-  /** Texte secondaire : encore lisible sur l'encre (près de 6:1). */
-  dim: "rgba(244,239,231,0.58)",
-  line: "rgba(244,239,231,0.12)",
-};
+const C = R;
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
 const fr = (n: number) => n.toLocaleString("fr-CA", { maximumFractionDigits: 0 });
@@ -83,12 +76,12 @@ export function ThermometreHero({ ctx, machines }: { ctx: ThermometreContext | n
   const em = kept > 1 ? "calibrées pour votre maison." : "calibrée pour votre maison.";
 
   return (
-    <section aria-labelledby="tm-titre" className="relative mx-auto w-full max-w-[1320px] overflow-hidden rounded-[32px]" style={{ background: C.ink, border: `1px solid ${C.line}`, color: C.cream, fontFamily: DISPLAY }}>
+    <section aria-labelledby="tm-titre" className="relative mx-auto w-full max-w-[1320px] overflow-hidden rounded-[32px]" style={{ background: C.card, border: `1px solid ${C.line}`, color: C.ink, fontFamily: DISPLAY, boxShadow: OMBRE }}>
       <div className="grid gap-12 px-5 pb-8 pt-10 sm:px-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-16 lg:px-14 lg:pb-12 lg:pt-14">
         <div className="min-w-0">
-          <Rise delay={0.05} className="flex flex-wrap items-center gap-3 text-[12px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: C.mute }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo-thermomatch-nav.webp" alt="ThermoMatch" width={118} height={16} style={{ width: 118, height: 16, maxWidth: "none", display: "block" }} />
+          <Rise delay={0.05} className="flex flex-wrap items-center gap-3 text-[12px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: C.faint }}>
+            {/* Lettrage vectoriel : le fichier du logo est creme, fait pour l'encre. */}
+            <ThermoMatchWordmark size={12} />
             <span aria-hidden="true">·</span>
             Analyse terminée
           </Rise>
@@ -167,8 +160,8 @@ function Thermometre({ machines, ctx }: { machines: MachineThermo[]; ctx: Thermo
   const Y = (y: number) => G.pad + y;
 
   return (
-    <figure ref={ref} data-play={play ? "1" : "0"} className="tm-th m-0 lg:rounded-[24px] lg:bg-[#10222D] lg:px-8 lg:py-8">
-      <figcaption className="text-[12px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: C.mute }}>
+    <figure ref={ref} data-play={play ? "1" : "0"} className="tm-th m-0 rounded-[24px] px-5 py-6 sm:px-7 lg:px-8 lg:py-8" style={{ background: C.inset, border: `1px solid ${C.hair}` }}>
+      <figcaption className="text-[12px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: C.faint }}>
         {machines.length > 1 ? "Jusqu’à quel froid elles chauffent" : "Jusqu’à quel froid elle chauffe"}
       </figcaption>
       <ul className="sr-only">
@@ -184,20 +177,20 @@ function Thermometre({ machines, ctx }: { machines: MachineThermo[]; ctx: Thermo
               <rect x={G.tubeX} y={G.pad} width={G.tubeL} height={H} rx={G.tubeL / 2} />
             </clipPath>
             <linearGradient id={`${uid}-fondu`} x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor={C.orange} stopOpacity={0.7} />
+              <stop offset="0" stopColor={C.orange} stopOpacity={0.75} />
               <stop offset="1" stopColor={C.orange} stopOpacity={0} />
             </linearGradient>
           </defs>
 
           {/* Le tube, puis ses graduations : tous les degrés, chiffrées tous les 5 °C. */}
-          <rect x={G.tubeX} y={G.pad} width={G.tubeL} height={H} rx={G.tubeL / 2} fill="rgba(244,239,231,0.07)" stroke="rgba(244,239,231,0.16)" />
+          <rect x={G.tubeX} y={G.pad} width={G.tubeL} height={H} rx={G.tubeL / 2} fill="rgba(12,24,33,0.05)" stroke="rgba(12,24,33,0.14)" />
           {plan.graduations.map((g) => (
-            <line key={g.t} x1={G.grad} x2={G.grad + (g.majeure ? 10 : 4)} y1={Y(g.y)} y2={Y(g.y)} stroke={g.majeure ? "rgba(244,239,231,0.42)" : "rgba(244,239,231,0.16)"} strokeWidth={1} />
+            <line key={g.t} x1={G.grad} x2={G.grad + (g.majeure ? 10 : 4)} y1={Y(g.y)} y2={Y(g.y)} stroke={g.majeure ? "rgba(12,24,33,0.42)" : "rgba(12,24,33,0.16)"} strokeWidth={1} />
           ))}
           {plan.graduations
             .filter((g) => g.majeure)
             .map((g) => (
-              <text key={g.t} x={G.chiffres} y={Y(g.y)} dy="0.34em" textAnchor="end" fontSize={11.5} fill={g.t === CERTIF_C ? C.cream : C.mute} style={{ fontVariantNumeric: "tabular-nums", fontWeight: g.t === CERTIF_C ? 600 : 500 }}>
+              <text key={g.t} x={G.chiffres} y={Y(g.y)} dy="0.34em" textAnchor="end" fontSize={11.5} fill={g.t === CERTIF_C ? C.ink : C.dim} style={{ fontVariantNumeric: "tabular-nums", fontWeight: g.t === CERTIF_C ? 600 : 500 }}>
                 {tempTexte(g.t)}
               </text>
             ))}
@@ -225,7 +218,7 @@ function Thermometre({ machines, ctx }: { machines: MachineThermo[]; ctx: Thermo
       {plan.nonPubliees.length > 0 && (
         <div aria-hidden="true" className="tm-th-fade mt-3" style={{ paddingLeft: G.texte, ...anime(plan.horaire.nonPubliees) }}>
           {/* Sous l'échelle, hors de la disposition calculée : ce titre peut passer à la ligne sur mobile. */}
-          <p className="text-[11px] font-semibold uppercase leading-snug" style={{ letterSpacing: "0.14em", color: C.mute, margin: "0 0 4px" }}>
+          <p className="text-[11px] font-semibold uppercase leading-snug" style={{ letterSpacing: "0.14em", color: C.faint, margin: "0 0 4px" }}>
             Température minimale non publiée
           </p>
           {plan.nonPubliees.map((m) => (
@@ -243,8 +236,8 @@ function Trait({ e, plan, y1, y2 }: { e: Etiquette; plan: PlanThermometre; y1: n
   if (e.kind === "region") {
     return (
       <g>
-        <line x1={G.aiguille - 2} x2={G.coude} y1={y1} y2={y1} stroke={C.cream} strokeWidth={1.5} />
-        <path d={renvoi} stroke={C.cream} strokeOpacity={0.55} strokeWidth={1} />
+        <line x1={G.aiguille - 2} x2={G.coude} y1={y1} y2={y1} stroke={C.ink} strokeWidth={1.5} />
+        <path d={renvoi} stroke={C.ink} strokeOpacity={0.45} strokeWidth={1} />
       </g>
     );
   }
@@ -252,10 +245,10 @@ function Trait({ e, plan, y1, y2 }: { e: Etiquette; plan: PlanThermometre; y1: n
     const best = e.pose?.machines.some((m) => m.best) ?? false;
     return (
       <g>
-        <line x1={G.aiguille - 2} x2={G.coude} y1={y1} y2={y1} stroke={C.cream} strokeOpacity={0.6} strokeWidth={1} strokeDasharray="3 3" />
-        <path d={renvoi} stroke={C.cream} strokeOpacity={0.45} strokeWidth={1} strokeDasharray="3 3" />
+        <line x1={G.aiguille - 2} x2={G.coude} y1={y1} y2={y1} stroke={C.ink} strokeOpacity={0.5} strokeWidth={1} strokeDasharray="3 3" />
+        <path d={renvoi} stroke={C.ink} strokeOpacity={0.38} strokeWidth={1} strokeDasharray="3 3" />
         {e.pose && (
-          <line className="tm-th-pose" x1={G.aiguille} x2={G.coude} y1={y1} y2={y1} stroke={C.cream} strokeOpacity={best ? 1 : 0.75} strokeWidth={best ? 3 : 2} strokeLinecap="round" style={anime(plan.horaire.machines[e.pose.machines[0].rank])} />
+          <line className="tm-th-pose" x1={G.aiguille} x2={G.coude} y1={y1} y2={y1} stroke={C.ink} strokeOpacity={best ? 1 : 0.7} strokeWidth={best ? 3 : 2} strokeLinecap="round" style={anime(plan.horaire.machines[e.pose.machines[0].rank])} />
         )}
       </g>
     );
@@ -263,8 +256,8 @@ function Trait({ e, plan, y1, y2 }: { e: Etiquette; plan: PlanThermometre; y1: n
   const best = e.pose.machines.some((m) => m.best);
   return (
     <g className="tm-th-pose" style={anime(plan.horaire.machines[e.pose.machines[0].rank])}>
-      <line x1={G.aiguille} x2={G.coude} y1={y1} y2={y1} stroke={C.cream} strokeOpacity={best ? 1 : 0.75} strokeWidth={best ? 3 : 2} strokeLinecap="round" />
-      <path d={renvoi} stroke={C.cream} strokeOpacity={0.55} strokeWidth={1} />
+      <line x1={G.aiguille} x2={G.coude} y1={y1} y2={y1} stroke={C.ink} strokeOpacity={best ? 1 : 0.7} strokeWidth={best ? 3 : 2} strokeLinecap="round" />
+      <path d={renvoi} stroke={C.ink} strokeOpacity={0.45} strokeWidth={1} />
     </g>
   );
 }
@@ -282,7 +275,7 @@ function EtiquetteVue({ e, plan }: { e: Etiquette; plan: PlanThermometre }) {
       </>
     );
   }
-  const repere = { letterSpacing: "0.12em", color: C.mute };
+  const repere = { letterSpacing: "0.12em", color: C.faint };
   if (e.kind === "certif") {
     const ms = e.pose?.machines ?? [];
     const dernier = ms.length ? plan.horaire.machines[ms[ms.length - 1].rank] : undefined;
@@ -320,7 +313,7 @@ function EtiquetteVue({ e, plan }: { e: Etiquette; plan: PlanThermometre }) {
       ))}
       <Ligne h={LIGNE_NOTE} delai={plan.horaire.machines[ms[ms.length - 1].rank]} className="text-[12.5px]" style={{ color: C.mute }}>
         {ms.length > 1 ? "chauffent" : "chauffe"} jusqu’à{" "}
-        <strong className="tabular-nums" style={{ color: C.cream, fontWeight: 600 }}>
+        <strong className="tabular-nums" style={{ color: C.ink, fontWeight: 600 }}>
           {tempTexte(e.pose.tempC)}
         </strong>
       </Ligne>
@@ -341,15 +334,15 @@ function Ligne({ h, delai, className, style, children }: { h: number; delai?: nu
 function Nom({ m, delai }: { m: MachineRang; delai?: number }) {
   return (
     <p className={`${delai != null ? "tm-th-pose " : ""}flex min-w-0 items-center gap-2.5`} style={{ height: LIGNE_NOM, margin: 0, ...anime(delai) }}>
-      <span className="w-2.5 shrink-0 text-[13.5px] font-semibold tabular-nums" style={{ color: m.best ? C.orange : C.dim }}>
+      <span className="w-2.5 shrink-0 text-[13.5px] font-semibold tabular-nums" style={{ color: m.best ? C.orangeText : C.dim }}>
         {m.rank}
       </span>
       <span className="min-w-0 truncate text-[14.5px]" style={{ lineHeight: `${LIGNE_NOM}px`, fontWeight: m.best ? 600 : 500 }}>
         {m.brand}
-        {m.series ? <span style={{ color: C.mute, fontWeight: 400 }}>{` · ${m.series}`}</span> : null}
+        {m.series ? <span style={{ color: C.dim, fontWeight: 400 }}>{` · ${m.series}`}</span> : null}
       </span>
       {m.best && (
-        <span className="hidden shrink-0 text-[10.5px] font-semibold uppercase sm:inline" style={{ letterSpacing: "0.14em", color: C.orange }}>
+        <span className="hidden shrink-0 text-[10.5px] font-semibold uppercase sm:inline" style={{ letterSpacing: "0.14em", color: C.orangeText }}>
           Meilleur choix
         </span>
       )}

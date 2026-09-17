@@ -5,16 +5,17 @@ import { motion, useInView } from "motion/react";
 import { CountUp } from "@/components/home/premium/shared";
 import type { SavingsEstimate } from "@/lib/thermomatch/savings";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { OMBRE, R } from "./palette";
 
 /* Économies de chauffage estimées (maison aux plinthes électriques) :
    une fourchette, deux barres « plinthes / thermopompe » et les hypothèses en clair. */
 
 const K = {
-  cream: "#F4EFE7",
-  mute: "rgba(244,239,231,0.66)",
-  faint: "rgba(244,239,231,0.42)",
-  line: "rgba(244,239,231,0.14)",
-  green: "#5CCB8C",
+  cream: R.ink,
+  mute: R.mute,
+  faint: R.faint,
+  line: R.line,
+  green: R.green,
 };
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const NB = String.fromCharCode(160);
@@ -33,7 +34,7 @@ export function SavingsBand({ s }: { s: SavingsEstimate }) {
       ref={ref}
       aria-labelledby="tm-eco"
       className="mx-auto mt-16 max-w-[1320px] overflow-hidden rounded-[28px] lg:mt-24"
-      style={{ border: `1px solid ${K.line}`, background: "linear-gradient(135deg, rgba(92,203,140,0.12) 0%, rgba(244,239,231,0.02) 55%)", color: K.cream }}
+      style={{ border: `1px solid ${K.line}`, background: R.card, color: K.cream, boxShadow: OMBRE }}
     >
       <div className="grid gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-16 lg:px-14 lg:py-14">
         <div>
@@ -56,7 +57,7 @@ export function SavingsBand({ s }: { s: SavingsEstimate }) {
         </div>
 
         <div className="grid gap-7">
-          <Bar label="Aux plinthes électriques" value={`≈ ${fr(r50(s.baseboardCost))}${NB}$ par an`} solid={1} extra={0} color="rgba(244,239,231,0.55)" play={inView || reduce} delay={0.15} />
+          <Bar label="Aux plinthes électriques" value={`≈ ${fr(r50(s.baseboardCost))}${NB}$ par an`} solid={1} extra={0} color="rgba(12,24,33,0.45)" play={inView || reduce} delay={0.15} />
           <Bar
             label="Avec une thermopompe"
             value={`≈ ${fr(r50(hpBest))} à ${fr(r50(hpWorst))}${NB}$ par an`}
@@ -81,7 +82,7 @@ function Bar({ label, value, solid, extra, color, play, delay }: { label: string
           {value}
         </span>
       </div>
-      <div className="relative mt-3 h-[14px] overflow-hidden rounded-full" style={{ background: "rgba(244,239,231,0.08)" }}>
+      <div className="relative mt-3 h-[14px] overflow-hidden rounded-full" style={{ background: R.wash }}>
         <motion.div
           className="absolute inset-y-0 left-0 flex origin-left"
           style={{ width: `${Math.min(1, solid + extra) * 100}%` }}

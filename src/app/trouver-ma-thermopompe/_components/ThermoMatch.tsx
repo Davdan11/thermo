@@ -520,10 +520,10 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
   if (isComplete) {
     if (isLoadingResults || !hasFetched) {
       return (
-        <div className="min-h-screen bg-[#0D1117] flex flex-col items-center justify-center text-white">
-          <div className="w-12 h-12 border-4 border-white/20 border-t-[#C66E42] rounded-full animate-spin mb-6" />
+        <div className="min-h-screen bg-[#F8F5F0] flex flex-col items-center justify-center text-[#0C1821]">
+          <div className="w-12 h-12 border-4 border-[rgba(12,24,33,0.12)] border-t-[#E54B17] rounded-full animate-spin mb-6" />
           <h2 className="text-2xl font-bold mb-2">Analyse en cours...</h2>
-          <p className="text-[#9CA3AF]">
+          <p className="text-[rgba(12,24,33,0.62)]">
             {catalogueCount ? `Analyse de ${catalogueCount.toLocaleString("fr-CA")} fiches certifiées` : "Analyse des fiches certifiées"}
           </p>
         </div>
@@ -537,8 +537,8 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     // If we have candidates, show the new ThermoMatchResults view instead of the default generic text
     if (candidates && candidates.length > 0) {
       return (
-        <div className="min-h-screen bg-[#0D1117] flex flex-col">
-          <ThermoMatchHeader currentStep={totalSteps} totalSteps={totalSteps} onQuit={() => setShowResetConfirm(true)} />
+        <div className="min-h-screen bg-[#F8F5F0] flex flex-col">
+          <ThermoMatchHeader currentStep={totalSteps} totalSteps={totalSteps} onQuit={() => setShowResetConfirm(true)} tone="light" />
           {/* « Quitter » ouvre la même confirmation que sur l'écran sans résultats. */}
           {showResetConfirm && <ResetConfirm onKeep={() => setShowResetConfirm(false)} onReset={handleReset} />}
           <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
@@ -564,9 +564,9 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
     }
 
     return (
-      <div className="min-h-screen bg-[#0D1117] text-white flex flex-col">
+      <div className="min-h-screen bg-[#F8F5F0] text-[#0C1821] flex flex-col">
         {/* Header */}
-        <ThermoMatchHeader currentStep={totalSteps} totalSteps={totalSteps} onQuit={() => setShowResetConfirm(true)} />
+        <ThermoMatchHeader currentStep={totalSteps} totalSteps={totalSteps} onQuit={() => setShowResetConfirm(true)} tone="light" />
 
         {/* Reset confirmation modal */}
         {showResetConfirm && <ResetConfirm onKeep={() => setShowResetConfirm(false)} onReset={handleReset} />}
@@ -584,19 +584,19 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
             <h1 className="text-[40px] sm:text-[52px] font-bold leading-tight tracking-tight mb-4">
               Votre projet est prêt à être analysé.
             </h1>
-            <p className="text-[#9CA3AF] text-base mb-10 max-w-xl">
+            <p className="text-[rgba(12,24,33,0.72)] text-base mb-10 max-w-xl">
               Complétez votre demande en quelques minutes. Vos réponses ThermoMatch seront automatiquement transférées — aucune question en double.
             </p>
 
             {/* Summary */}
-            <div className="space-y-0 border-t border-white/10 mb-10">
+            <div className="space-y-0 border-t border-[rgba(12,24,33,0.10)] mb-10">
               {summaryItems.map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-start justify-between py-3.5 border-b border-white/10"
+                  className="flex items-start justify-between py-3.5 border-b border-[rgba(12,24,33,0.10)]"
                 >
-                  <span className="text-[#9CA3AF] text-sm">{item.label}</span>
-                  <span className="text-white text-sm font-semibold ml-8 text-right">
+                  <span className="text-[rgba(12,24,33,0.62)] text-sm">{item.label}</span>
+                  <span className="text-[#0C1821] text-sm font-semibold ml-8 text-right">
                     {item.value}
                   </span>
                 </div>
@@ -617,13 +617,13 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
               <button
                 type="button"
                 onClick={() => setShowResetConfirm(true)}
-                className="inline-flex items-center justify-center border border-white/20 text-white/60 hover:text-white hover:border-white/40 font-medium text-[15px] px-6 py-4 rounded-[6px] transition-colors"
+                className="inline-flex items-center justify-center border border-[rgba(12,24,33,0.2)] text-[rgba(12,24,33,0.72)] hover:text-[#0C1821] hover:border-[rgba(12,24,33,0.4)] font-medium text-[15px] px-6 py-4 rounded-[6px] transition-colors"
               >
                 Recommencer
               </button>
             </div>
 
-            <p className="text-white/60 text-sm mt-6 flex items-center gap-2">
+            <p className="text-[rgba(12,24,33,0.62)] text-sm mt-6 flex items-center gap-2">
               <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -638,7 +638,7 @@ export function ThermoMatch({ catalogueCount }: { catalogueCount?: number }) {
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: "url('/images/thermomatch/postalCode.webp')" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0D1117] via-[#0D1117]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F0] via-[#F8F5F0]/40 to-transparent" />
           </div>
         </div>
       </div>
@@ -871,15 +871,9 @@ function ThermoMatchHeader({
               <ThermoMatchWordmark size={12} />
             </span>
           ) : (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src="/images/logo-thermomatch-nav.webp"
-              alt="ThermoMatch"
-              width={118}
-              height={16}
-              className="hidden sm:block"
-              style={{ width: 118, height: 16, maxWidth: "none" }}
-            />
+            <span className="hidden sm:block">
+              <ThermoMatchWordmark size={12} />
+            </span>
           )}
           <span aria-hidden="true" className="hidden h-4 w-px sm:block" style={{ background: light ? CARNET.line : HC.line }} />
           <span className="text-[13px] font-medium" style={{ color: light ? CARNET.soft : HC.mute, fontVariantNumeric: "tabular-nums" }}>

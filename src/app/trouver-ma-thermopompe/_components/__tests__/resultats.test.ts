@@ -226,6 +226,42 @@ describe("« Par grand froid » sur les cartes", () => {
   });
 });
 
+describe("Thème clair de l'écran des résultats", () => {
+  it("aucun aplat sombre : ni l'encre de fond, ni le crème du texte des anciens blocs", () => {
+    const html = render(CTX);
+    // Anciennes couleurs du thème sombre : fond d'encre, texte crème, voiles de crème.
+    for (const couleur of ["#0A1419", "#10222D", "#0D1117", "#F4EFE7", "244,239,231"]) {
+      expect(html, couleur).not.toContain(couleur);
+    }
+  });
+
+  it("le fond de la page et les panneaux sont clairs, le texte est sur bleu nuit", () => {
+    const html = render(CTX);
+    expect(html).toContain("#0C1821");
+    expect(html).toContain("#F8F5F0");
+  });
+
+  it("la température vedette reste en orange, en gros, sur le bloc clair", () => {
+    const html = render(CTX);
+    // L'encadré « Par grand froid » : fond crème et montant orange, plutôt qu'un aplat sombre.
+    const encadres = [...html.matchAll(/<div data-grand-froid="[^"]+" class="[^"]*" style="([^"]*)"/g)];
+    expect(encadres).toHaveLength(3);
+    for (const e of encadres) {
+      expect(e[1].toUpperCase()).toContain("#F8F5F0");
+      expect(e[1].toUpperCase()).toContain("3PX SOLID #E54B17");
+    }
+    for (const b of blocsFroid(html)) {
+      const gros = b.html.match(/<p class="([^"]*)" style="([^"]*)"[^>]*>−30/);
+      expect(gros).not.toBeNull();
+      expect(gros![2].toUpperCase()).toContain("#E54B17");
+    }
+  });
+
+  it("le lettrage ThermoMatch du bandeau est vectoriel : le fichier crème n'y est plus", () => {
+    expect(render(CTX)).not.toContain("logo-thermomatch-nav.webp");
+  });
+});
+
 describe("Le thermomètre (haut de page)", () => {
   const MACHINES = RESULTS.map((r) => ({ key: r.product.id, brand: r.product.brand, series: r.product.series, minTemp: r.product.minOperatingTempC, coldClimate: r.product.coldClimate }));
 
@@ -274,8 +310,9 @@ describe("Le thermomètre (haut de page)", () => {
 });
 
 describe("Lien partagé", () => {
-  it("ton de l'en-tête : sombre sur les résultats partagés, clair sur le questionnaire", () => {
-    expect(heroTone("/trouver-ma-thermopompe/resultats")).toBe("dark");
+  it("ton de l'en-tête : clair sur le questionnaire comme sur les résultats partagés", () => {
+    // L'écran des résultats est passé au thème clair : l'en-tête du site y garde son encre.
+    expect(heroTone("/trouver-ma-thermopompe/resultats")).toBe("light");
     expect(heroTone("/trouver-ma-thermopompe")).toBe("light");
   });
 
@@ -309,10 +346,11 @@ describe("Lien partagé", () => {
     expect(chrome("/trouver-ma-thermopompe")).not.toMatch(/<header/);
   });
 
-  it("lien incomplet : page sombre avec le chemin vers le questionnaire", async () => {
+  it("lien incomplet : page sur le crème des résultats, avec le chemin vers le questionnaire", async () => {
     const html = renderToString(await ResultatsPartagesPage({ searchParams: Promise.resolve({ r: "tronqué!" }) }));
     expect(html).toContain("Ce lien de résultats");
     expect(html).toContain('href="/trouver-ma-thermopompe"');
-    expect(html).toContain("#0A1419");
+    expect(html).toContain("#F8F5F0");
+    expect(html).not.toContain("#0A1419");
   });
 });
