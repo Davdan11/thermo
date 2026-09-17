@@ -31,11 +31,10 @@ const RULES = [
   ["gree", /^GUD(24|30|36|48|60)W\/A-D/, null, "/images/products/official/gree-flexx-officiel.webp"],
   ["lg", /^LAU(090|120|150|180|240)HYV3/, (k) => ({ 9: "/images/products/lg-art-cool-9k.webp", 12: "/images/products/lg-art-cool-12k.webp", 18: "/images/products/lg-art-cool-18k.webp" }[k] ?? null), "/images/products/official/lg-art-cool-mirror-officiel.webp"],
   ["lg", /^LSU(090|120|181)HSV5/, (k) => ({ 9: "/images/products/lg-standard-9k.webp", 12: "/images/products/lg-standard-12k.webp", 18: "/images/products/lg-standard-18k.webp" }[k] ?? null), null],
-  ["carrier", /^37MAHAQ/, () => "/images/products/carrier-infinity-37mahaq-series.webp", "/images/products/official/carrier-37mahaq-exterieure-officielle.webp"],
-  ["carrier", /^37MARAQ/, () => "/images/products/carrier-performance-37maraq-series.webp", "/images/products/official/carrier-37maraq-exterieure-officielle.webp"],
-  ["carrier", /^37MGHAQ?/, () => "/images/products/carrier-infinity-37mgha-series.webp", "/images/products/official/carrier-37mgha-exterieure-officielle.webp"],
-  ["carrier", /^37MHRAQ/, () => "/images/products/carrier-comfort-37mhraq-series.webp", "/images/products/official/carrier-37mhraq-exterieure-officielle.webp"],
-  ["carrier", /^37MPRAQ/, () => "/images/products/carrier-infinity-37mpraq-series.webp", "/images/products/official/carrier-37mpraq-37mahaq-exterieure-officielle.webp"],
+  // Carrier 37M… : ces règles posaient les photos « série » (une tête murale posée au-dessus du
+  // condenseur) sur des fiches dont le numéro est celui de l'UNITÉ EXTÉRIEURE, multizones et
+  // centrales gainables comprises. Elles sont remplacées par les photos produit officielles de
+  // carrier.com, déclarées dans scripts/image-rules/carrier.json avec leur provenance.
   ["mitsubishi-electric", /^MUZ-FH(06|09|12|15|18)NA/, (k) => ({ 9: "/images/products/mitsubishi-fh-9k.webp", 12: "/images/products/mitsubishi-fh-12k.webp", 18: "/images/products/mitsubishi-fh-18k.webp" }[k] ?? null), "/images/products/official/mitsubishi-fh-exterieure-archive-officielle.webp"],
   ["mitsubishi-electric", /^MUZ-FS(06|09|12)NA/, (k) => `/images/products/mitsubishi-fs-${k}k.webp`, "/images/products/official/mitsubishi-fs-06-09-12-exterieure-officielle.webp"],
   ["mitsubishi-electric", /^MUZ-FS(15|18)NA/, (k) => `/images/products/mitsubishi-fs-${k}k.webp`, "/images/products/official/mitsubishi-fs-15-18-exterieure-officielle.webp"],

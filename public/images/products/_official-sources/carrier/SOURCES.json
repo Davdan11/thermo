@@ -72,6 +72,30 @@
     "note": "Photo produit de la page officielle Carrier Canada 27VNA3."
   },
   {
+    "fichier": "carrier-37maha-officiel-cdn.png",
+    "image_web": "/images/products/official/carrier-37maha-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731007688/carrier/residential-hvac/products/ductless/performance-series-mini-split-heat-pump-37MAHA.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/37maha/",
+    "date": "2026-09-17",
+    "familles": [
+      "37MAHA"
+    ],
+    "modeles": "37MAHAQ06AA3, 37MAHAQ09AA3, 37MAHAQ12AA3, 37MAHAQ18AA3, 37MAHAQ24AA3, 37MAHAQ33AA3",
+    "note": "Photo produit de la page officielle « 37MAHA | Infinity Ductless Mini Split Heat Pump ». La famille vient du nom du fichier servi par le CMS du fabricant."
+  },
+  {
+    "fichier": "carrier-37mara-officiel-cdn.png",
+    "image_web": "/images/products/official/carrier-37mara-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731007688/carrier/residential-hvac/products/ductless/performance-series-mini-split-heat-pump-37MARA.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/37mara/",
+    "date": "2026-09-17",
+    "familles": [
+      "37MARA"
+    ],
+    "modeles": "37MARAQ36AA3",
+    "note": "Photo produit de la page officielle « 37MARA | Performance™ Ductless Mini Split Heat Pump ». La famille vient du nom du fichier servi par le CMS du fabricant."
+  },
+  {
     "fichier": "carrier-37mbhaq-cdn.png",
     "image_web": "/images/products/official/carrier-37mbha-officiel.webp",
     "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731005940/carrier/residential-hvac/products/ductless/performance-single-zone-mini-split-heat-pump-37MBHAQ.png",
@@ -118,6 +142,30 @@
     ],
     "modeles": "37MGRAQ55FA3",
     "note": "Photo produit de la page officielle Carrier Canada 37MGRA."
+  },
+  {
+    "fichier": "carrier-37mhraq-officiel-cdn.png",
+    "image_web": "/images/products/official/carrier-37mhraq-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731007700/carrier/residential-hvac/products/ductless/comfort-mini-split-air-conditioner-37MHRAQ.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/37mhraq/",
+    "date": "2026-09-17",
+    "familles": [
+      "37MHRAQ"
+    ],
+    "modeles": "37MHRAQ12AA1, 37MHRAQ12AA3, 37MHRAQ24AA3, 37MHRAQ36AA3",
+    "note": "Photo produit de la page officielle « 37MHRAQ | Comfort™ Mini Split Heat Pump ». La famille vient du nom du fichier servi par le CMS du fabricant."
+  },
+  {
+    "fichier": "carrier-37mpra-officiel-cdn.png",
+    "image_web": "/images/products/official/carrier-37mpra-officiel.webp",
+    "url": "https://images.carriercms.com/image/upload/w_1000,q_auto:best,f_png/v1731006474/carrier/residential-hvac/products/ductless/infinity-mini-split-heat-pump-with-basepan-heater-37MPRA.png",
+    "page": "https://www.carrier.com/residential/en/ca/products/ductless-mini-splits/37mpra/",
+    "date": "2026-09-17",
+    "familles": [
+      "37MPRA"
+    ],
+    "modeles": "37MPRAQ06AA3, 37MPRAQ09AA3, 37MPRAQ12AA3, 37MPRAQ18AA3",
+    "note": "Photo produit de la page officielle « 37MPRA | Infinity&#174; Mini Split Heat Pump with Basepan Heater ». La famille vient du nom du fichier servi par le CMS du fabricant."
   },
   {
     "fichier": "carrier-38mar-cdn.png",
