@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FlaskConical, Radio } from "lucide-react";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
 import { readPresence } from "@/lib/presence/store";
-import { fmtWhen, montrealDate } from "@/lib/presence/time";
+import { fmtDateLong, fmtHour, fmtWhen, montrealDate, montrealTime } from "@/lib/presence/time";
 import { modeEnvoi } from "@/lib/social/envoi";
 import { approbationRequise, finPeriodeApprobation, lireSocial } from "@/lib/social/store";
 import { FORMAT_LIBELLES, STATUT_LIBELLES, type PublicationSociale } from "@/lib/social/types";
@@ -29,8 +29,11 @@ function Ligne({ p, maintenant, suivi }: { p: PublicationSociale; maintenant: Da
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className={cx("pr-vignette", p.genre === "story" && "is-story")} src={`/gestion/api/presence/visuel/${p.id}?v=${encodeURIComponent(p.majLe)}`} alt="" loading="lazy" />
         <span className="pr-row__when">
-          <b>{fmtWhen(p.prevueLe)}</b>
-          <span>{GENRE_LIBELLE[p.genre]}</span>
+          {/* Date sur une ligne, heure et genre dessous : rien ne se coupe au milieu de l'heure. */}
+          <b>{fmtDateLong(montrealDate(new Date(p.prevueLe)))}</b>
+          <span>
+            {fmtHour(montrealTime(new Date(p.prevueLe)))} · {GENRE_LIBELLE[p.genre]}
+          </span>
         </span>
         <span className="pr-row__main">
           <span className="pr-row__series">{FORMAT_LIBELLES[p.format]}</span>
@@ -171,7 +174,7 @@ export default async function PresencePage() {
               <span>
                 <time dateTime={l.le}>{fmtWhen(l.le)}</time>
                 {l.publicationId ? (
-                  <Link href={`/gestion/presence/${l.publicationId}`} className="k-link">
+                  <Link href={`/gestion/presence/${l.publicationId}`} className="pr-log__lien">
                     {l.message}
                   </Link>
                 ) : (
@@ -188,7 +191,7 @@ export default async function PresencePage() {
       {anciens ? (
         <p className="g-hint">
           Ancienne file du studio (séries modèle, froid, LogisVert…) : {anciens} élément{anciens > 1 ? "s" : ""} gardé{anciens > 1 ? "s" : ""} pour l’historique,{" "}
-          {presence.posts.filter((p) => p.status !== "publiee" && p.status !== "rejetee").length ? "retirés au prochain passage planifié" : `tous retirés${data.ancienneFileRetireeLe ? ` le ${montrealDate(new Date(data.ancienneFileRetireeLe))}` : ""}`} ; ils ne partent jamais.
+          {presence.posts.filter((p) => p.status !== "publiee" && p.status !== "rejetee").length ? `retiré${anciens > 1 ? "s" : ""} au prochain passage planifié` : `tous retirés${data.ancienneFileRetireeLe ? ` le ${montrealDate(new Date(data.ancienneFileRetireeLe))}` : ""}`} ; ils ne partent jamais.
         </p>
       ) : null}
     </>

@@ -16,7 +16,7 @@ export function CaptionEditor({ id, texte, lien, inconnus, disabled }: { id: str
       <input type="hidden" name="id" value={id} />
       <label className="g-field">
         <span className="g-label">Légende Facebook</span>
-        <textarea name="texte" className="g-textarea pr-editor__text" rows={12} value={valeur} onChange={(e) => setValeur(e.target.value)} disabled={disabled} maxLength={2200} />
+        <textarea name="texte" className="g-textarea pr-editor__text" rows={16} value={valeur} onChange={(e) => setValeur(e.target.value)} disabled={disabled} maxLength={2200} />
       </label>
       <div className="pr-editor__meta">
         <span className={valeur.length > 2000 ? "is-bad" : undefined}>{valeur.length} / 2000 caractères</span>
