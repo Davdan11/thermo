@@ -132,3 +132,6 @@ public/images/products/_official-sources/**
 
 # index produits téléchargés chez les fabricants (scripts/fetch-photos-officielles.mjs)
 /.cache/
+
+# Copies de travail des agents
+.claude/worktrees/
