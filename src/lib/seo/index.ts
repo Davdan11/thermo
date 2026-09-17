@@ -12,6 +12,8 @@ import type { Metadata } from "next";
 
 export const SITE_NAME = "Thermopompes À Vendre.ca";
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://thermopompesavendre.ca").replace(/\/$/, "");
+/** Profils sociaux réels de l'entreprise (vérifiés auprès de Meta le 2026-09-17 : page « Thermopompes a Vendre », nom d'utilisateur thermopompesavendre). */
+export const SOCIAL_PROFILES = { facebook: "https://www.facebook.com/thermopompesavendre" } as const;
 const SITE_DESCRIPTION =
   "Comparez les thermopompes, comprenez les prix et les subventions, et trouvez la machine adaptée à votre propriété au Québec.";
 
@@ -155,7 +157,8 @@ export function getOrganizationSchema() {
     telephone: "+1-438-900-3224",
     email: "info@thermopompesavendre.ca",
     areaServed: { "@type": "State", name: "Québec", address: { "@type": "PostalAddress", addressRegion: "QC", addressCountry: "CA" } },
-    // sameAs : à ajouter avec les URL réelles des profils sociaux quand ils existeront (jamais d'URL inventée).
+    // sameAs : URL réelles des profils sociaux seulement (jamais d'URL inventée).
+    sameAs: Object.values(SOCIAL_PROFILES),
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",

@@ -4,6 +4,7 @@ import { ConsentLink } from "@/components/analytics/ConsentBanner";
 import { getActiveBrandCount, getEligibleModelCount } from "@/lib/data/queries/stats";
 import { getLogisVertListInfo } from "@/lib/subsidies/logisvert-meta";
 import { visitAreasLabel } from "@/lib/rdv/booking";
+import { SOCIAL_PROFILES } from "@/lib/seo";
 import { BackToTop, FooterCount, FooterStage } from "./footer/FooterClient";
 import { FooterWordmark } from "./footer/FooterWordmark";
 import "./footer/footer.css";
@@ -140,6 +141,12 @@ export function Footer() {
             </a>
             <a href="mailto:info@thermopompesavendre.ca" className="ft-link ft-mail ft-rv" style={at(4)}>
               <span>info@thermopompesavendre.ca</span>
+            </a>
+            <a href={SOCIAL_PROFILES.facebook} target="_blank" rel="noopener me" className="ft-link ft-mail ft-social ft-rv" style={at(4)}>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8.1v3h2.5V21h2.9z" />
+              </svg>
+              <span>Suivez-nous sur Facebook</span>
             </a>
             <div className="ft-rv mt-8" style={at(5)}>
               <Link href="/trouver-ma-thermopompe" className="ft-pill">
