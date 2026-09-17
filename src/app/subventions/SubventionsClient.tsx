@@ -394,13 +394,13 @@ export function SubventionsClient({ heroSamples, liste }: { heroSamples: LogisVe
                   name="LogisVert (Hydro-Québec)"
                   status={checked
                     ? (logisVertResult && logisVertResult.estimatedAmountDollars > 0
-                        ? <span style={{ color: GREEN, fontSize: 24, fontWeight: 600, fontFamily: MONO, letterSpacing: "-0.03em" }}>{logisVertResult.estimatedAmountDollars} $</span>
+                        ? <span style={{ color: GREEN, fontSize: 24, fontWeight: 600, fontFamily: MONO, letterSpacing: "-0.03em" }}>{logisVertResult.estimatedAmountDollars.toLocaleString("fr-CA")} $</span>
                         : "Non admissible")
                     : "En attente"}
                   desc={checked
                     ? (logisVertResult
                         ? (logisVertResult.estimatedAmountDollars > 0
-                            ? `Subvention de la liste d'Hydro-Québec${LISTE_DATE ? ` du ${LISTE_DATE}` : ""} pour ce jumelage certifié : ${logisVertResult.ratePerKBtu} $ par 1 000 BTU/h à −8 °C${logisVertResult.isColdClimate ? " (certifié ENERGY STAR climat froid)" : " (certifié ENERGY STAR)"}, capacité de ${logisVertResult.capacityBtuUsed.toLocaleString("fr-CA")} BTU/h à −8 °C.${selected && selected.bonificationMultilogements > 0 ? ` Bonification – Multilogements : ${selected.bonificationMultilogements.toLocaleString("fr-CA")} $ de plus, seulement dans un multilogement admissible et pour une installation faite à compter du 15 juin 2026.` : ""}`
+                            ? `Subvention de la liste d'Hydro-Québec${LISTE_DATE ? ` du ${LISTE_DATE}` : ""} pour ce jumelage certifié\u00a0: ${logisVertResult.ratePerKBtu}\u00a0$ par 1 000 BTU/h à −8 °C${logisVertResult.isColdClimate ? " (certifié ENERGY STAR climat froid)" : " (certifié ENERGY STAR)"}, capacité de ${logisVertResult.capacityBtuUsed.toLocaleString("fr-CA")} BTU/h à −8 °C.${selected && selected.bonificationMultilogements > 0 ? ` Bonification – Multilogements\u00a0: ${selected.bonificationMultilogements.toLocaleString("fr-CA")}\u00a0$ de plus, seulement dans un multilogement admissible et pour une installation faite à compter du 15 juin 2026.` : ""}`
                             : "Ce jumelage n'a pas de subvention dans la liste LogisVert en vigueur.")
                         : "Cette configuration pourrait être admissible à un programme provincial en vigueur.")
                     : "Remplissez le formulaire pour consulter les résultats."}

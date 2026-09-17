@@ -65,7 +65,10 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
             {liste.listDate ? <> du <strong style={{ color: INK }}>{liste.listDate}</strong></> : null}. Une thermopompe installée
             aujourd’hui doit être certifiée ENERGY STAR<sup>®</sup> et figurer dans cette liste pour donner droit à une subvention : ce
             site n’affiche donc aucun montant pour ce modèle.
-            {retiree && model.logisVertRetiredAt ? <> Absente de la liste depuis celle du {frIso(model.logisVertRetiredAt)}.</> : null}
+            {/* La date du retrait n'est dite que si elle est plus ancienne que la liste en vigueur (sinon elle répète la phrase). */}
+            {retiree && model.logisVertRetiredAt && model.logisVertRetiredAt !== liste.listDateIso ? (
+              <> Absente de la liste depuis celle du {frIso(model.logisVertRetiredAt)}.</>
+            ) : null}
           </p>
           <p className="m-0 mt-3 max-w-[640px] text-[13px] leading-[1.6]" style={{ color: LABEL }}>
             Déjà installée ? Le montant dépend de la liste en vigueur à la date d’installation : Hydro-Québec publie les listes
@@ -93,7 +96,8 @@ export function LogisVertBadge({ detail }: LogisVertBadgeProps) {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-12">
           <div className="min-w-0">
             <Reveal as="p" className="m-0 max-w-[560px] text-[15px] leading-[1.65]" style={{ color: MUTE }}>
-              Subvention de la liste officielle d’Hydro-Québec, pour la combinaison AHRI {entry.ahri} : {entry.coldClimate ? "120" : "50"} $ par 1 000 BTU/h à −8 °C
+              {/* Espace insécable avant les deux-points : la ligne ne se coupe jamais devant « : ». */}
+              Subvention de la liste officielle d’Hydro-Québec, pour la combinaison AHRI {entry.ahri}&nbsp;: {entry.coldClimate ? "120" : "50"}&nbsp;$ par 1 000 BTU/h à −8 °C
               {entry.coldClimate ? " (certifiée ENERGY STAR climat froid)" : " (certifiée ENERGY STAR)"}, capacité de{" "}
               <strong className="whitespace-nowrap" style={{ color: INK }}>{btu.toLocaleString("fr-CA")} BTU/h à −8 °C</strong>.
             </Reveal>
