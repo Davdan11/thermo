@@ -135,3 +135,6 @@ public/images/products/_official-sources/**
 
 # Copies de travail des agents
 .claude/worktrees/
+
+# Compteur local des étapes ThermoMatch (données du serveur)
+data/thermomatch-etapes.json
