@@ -7,8 +7,9 @@ import path from "node:path";
 /* ThermoMatch — écran des résultats (cartes d'origine, haut « Le thermomètre ») et lien partagé.
    - Aucune neige : elle est réservée à la page d'accueil.
    - Jamais « prix moins subvention » : l'aide LogisVert est versée par Hydro-Québec, à part.
-   - « Par grand froid » : température publiée → « Chauffe jusqu'à −XX °C » en très gros ; sinon certifiée
-     climat froid → « Certifiée grand froid », sans chiffre de limite ; sinon la puissance à −15 °C.
+   - « Par grand froid » (plaque signalétique, en travers de la carte) : température publiée → « Chauffe
+     jusqu'à −XX °C » en très gros ; sinon certifiée climat froid → « Certifiée grand froid », sans chiffre
+     de limite ; sinon « Non publiée », jamais une valeur devinée.
    - Le thermomètre : état final dans le HTML serveur, repère régional seulement avec une vraie donnée.
    - Le lien partagé est une page du site au ton sombre ; le questionnaire garde le ton clair.
    Rendu serveur (renderToString), comme les autres tests de composants. */
@@ -149,7 +150,7 @@ describe("Résultats ThermoMatch : pas de neige, pas de prix moins la subvention
 });
 
 describe("« Par grand froid » sur les cartes", () => {
-  it("température publiée : « Chauffe jusqu’à −30 °C » en très gros, en orange, avec sa source", () => {
+  it("température publiée : « Chauffe jusqu’à −30 °C » en très gros, avec sa source", () => {
     const html = render(CTX);
     const blocs = blocsFroid(html);
     expect(blocs).toHaveLength(3);
@@ -158,15 +159,18 @@ describe("« Par grand froid » sur les cartes", () => {
       expect(b.texte).toMatch(/Chauffe jusqu’à\s*−30\s*°C/);
       expect(b.texte).toContain("Température minimale publiée par le fabricant");
       expect(b.texte).not.toContain("Certifiée grand froid");
-      // Le chiffre : le plus gros texte de la carte (56 px au moins sur téléphone), en orange, tabulaire.
-      const gros = b.html.match(/<p class="([^"]*)" style="([^"]*)"[^>]*>−30/);
+      // Le chiffre : le plus gros texte de la carte (50 px au moins sur téléphone), tabulaire, sur bleu nuit.
+      const gros = b.html.match(/<span class="([^"]*)" style="([^"]*)"[^>]*>−30/);
       expect(gros, b.html.slice(0, 400)).not.toBeNull();
       expect(gros![1]).toContain("tabular-nums");
-      expect(gros![2]).toContain("clamp(56px");
-      expect(gros![2].toUpperCase()).toContain("#E54B17");
+      expect(gros![2]).toContain("clamp(50px");
+      expect(gros![2].toUpperCase()).toContain("#0C1821");
       // Jamais coupé en fin de ligne : espace insécable et nowrap.
       expect(gros![2]).toContain("nowrap");
-      expect(b.html).toContain(" °C");
+      expect(b.html).toContain("°C");
+      // La plaque range la chaleur livrée et le maintien en lignes de fiche, sous la température.
+      expect(b.texte).toMatch(/Chaleur à −15\s*°C/);
+      expect(b.texte).toContain("Maintien de puissance");
     }
   });
 
@@ -174,7 +178,7 @@ describe("« Par grand froid » sur les cartes", () => {
     const html = render(CTX);
     const froid = html.indexOf("data-grand-froid");
     const scene = html.indexOf("data-scene");
-    const btu = html.indexOf("BTU/h livrés");
+    const btu = html.indexOf("Chaleur à");
     expect(froid).toBeGreaterThan(-1);
     expect(froid).toBeLessThan(btu);
     expect(froid).toBeLessThan(scene);
@@ -193,7 +197,7 @@ describe("« Par grand froid » sur les cartes", () => {
       expect(b.texte).toContain("Certification ENERGY STAR climat froid");
       // La limite n'est pas publiée : la carte l'écrit, plutôt que de laisser un vide.
       expect(b.texte).toContain("Température minimale non publiée par le fabricant");
-      expect(b.texte).toMatch(new RegExp(`${fr(21000)} BTU/h livrés à −15\\s*°C`));
+      expect(b.texte).toMatch(new RegExp(`Chaleur à −15\\s*°C\\s*${fr(21000)} BTU/h`));
       expect(b.texte).not.toMatch(/Chauffe jusqu’à/);
     }
     // Nulle part « jusqu’à −15 °C » : −15 °C est le point de mesure de la certification, pas la limite.
@@ -211,9 +215,9 @@ describe("« Par grand froid » sur les cartes", () => {
     for (const b of blocs) {
       expect(b.kind).toBe("mesuree");
       // L'information vedette dit franchement ce qui manque ; aucun chiffre de limite n'est avancé.
-      expect(b.texte).toContain("Température minimale non publiée");
-      expect(b.texte).toContain(`${fr(21000)} BTU/h`);
-      expect(b.texte).toMatch(/livrés à −15\s*°C/);
+      expect(b.texte).toMatch(/Température minimale\s*Non publiée/);
+      expect(b.texte).toContain("Nous l’écrivons plutôt que d’avancer un chiffre");
+      expect(b.texte).toMatch(new RegExp(`Chaleur à −15\\s*°C\\s*${fr(21000)} BTU/h`));
       expect(b.texte).not.toMatch(/Chauffe jusqu’à/);
       expect(b.texte).not.toContain("Certifiée grand froid");
       expect(b.texte).not.toContain("Chauffe encore");
@@ -241,19 +245,25 @@ describe("Thème clair de l'écran des résultats", () => {
     expect(html).toContain("#F8F5F0");
   });
 
-  it("la température vedette reste en orange, en gros, sur le bloc clair", () => {
+  it("le grand froid est une plaque : aplat crème en travers de la carte, filets d'encre, chiffre sur bleu nuit", () => {
     const html = render(CTX);
-    // L'encadré « Par grand froid » : fond crème et montant orange, plutôt qu'un aplat sombre.
-    const encadres = [...html.matchAll(/<div data-grand-froid="[^"]+" class="[^"]*" style="([^"]*)"/g)];
-    expect(encadres).toHaveLength(3);
-    for (const e of encadres) {
-      expect(e[1].toUpperCase()).toContain("#F8F5F0");
-      expect(e[1].toUpperCase()).toContain("3PX SOLID #E54B17");
+    // La plaque traverse la carte (marges négatives), à angles vifs, sans ombre : pas un panneau qui flotte.
+    const plaques = [...html.matchAll(/<div data-grand-froid="[^"]+" class="([^"]*)" style="([^"]*)"/g)];
+    expect(plaques).toHaveLength(3);
+    for (const p of plaques) {
+      expect(p[1]).toContain("-mx-6");
+      expect(p[1]).toContain("sm:-mx-7");
+      expect(p[2].toUpperCase()).toContain("#F1EDE5");
+      expect(p[2].toUpperCase()).toContain("BORDER-TOP:1PX SOLID #0C1821");
+      expect(p[2].toUpperCase()).toContain("BORDER-BOTTOM:1PX SOLID #0C1821");
+      expect(p[2]).not.toContain("border-radius");
+      expect(p[2]).not.toContain("box-shadow");
     }
     for (const b of blocsFroid(html)) {
-      const gros = b.html.match(/<p class="([^"]*)" style="([^"]*)"[^>]*>−30/);
+      const gros = b.html.match(/<span class="([^"]*)" style="([^"]*)"[^>]*>−30/);
       expect(gros).not.toBeNull();
-      expect(gros![2].toUpperCase()).toContain("#E54B17");
+      expect(gros![2].toUpperCase()).toContain("#0C1821");
+      expect(gros![2].toUpperCase()).not.toContain("#E54B17");
     }
   });
 

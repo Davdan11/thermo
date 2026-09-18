@@ -15,7 +15,7 @@ import { ThermometreHero } from "./ThermometreHero";
 import { ArchitecturePlan, categorieOfKind, type ArchitecturePlanData } from "./ArchitecturePlan";
 import { Affiner, type AffinageProps } from "./Affiner";
 import type { Hypothese } from "@/lib/thermomatch/hypotheses";
-import { CERTIF_C, froidDe, type Froid } from "./thermometre";
+import { froidDe } from "./thermometre";
 import { minTempMention, type MinTempSourceType } from "@/lib/thermomatch/min-temp-source";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
@@ -413,7 +413,7 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
       </div>
 
       {/* L'information vedette, juste sous le nom : jusqu'à quel froid la machine chauffe (voir GrandFroid). */}
-      <GrandFroid card={card} play={inView} i={i} />
+      <GrandFroid card={card} />
 
       <div className="px-6 pt-5 sm:px-7">
         <SystemUnits card={card} />
@@ -618,17 +618,46 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
 
 /* Par grand froid : l'information vedette de la carte, juste sous le nom du modèle. Une seule idée :
    jusqu'à quel froid la machine chauffe.
-   - Température publiée par le fabricant : « Chauffe jusqu'à −XX °C », le chiffre en orange, en très
-     gros, insécable ; la mention de la source en petit dessous.
-   - Sinon, certifiée ENERGY STAR climat froid : « Certifiée grand froid », puis « chauffe encore à
-     −15 °C » ; jamais de chiffre de limite (−15 °C est le point de mesure de la certification, pas
-     sa limite), et la ligne dit franchement que le minimum n'est pas publié.
-   - Sinon : « Température minimale non publiée », écrit tel quel, jamais une valeur devinée.
-   Les chiffres techniques (puissance à −15 °C, maintien) passent en petit, sous la jauge : ils ne
-   doivent pas concurrencer la température, ni laisser croire que la machine s'arrête à −15 °C.
-   Même règle que le thermomètre du haut (froidDe). Valeurs en texte statique, sans compteur :
-   le HTML serveur porte le chiffre final. */
-function GrandFroid({ card, play, i }: { card: Card; play: boolean; i: number }) {
+
+   Dessin : une plaque signalétique. Un aplat crème qui traverse la carte d'un bord à l'autre, à angles
+   vifs, tenu par un filet en haut et un filet en bas — ni panneau arrondi flottant, ni ombre, ni jauge.
+   Dedans, la grammaire d'un tableau de spécifications : étiquette à gauche, valeur alignée à droite,
+   filets d'un cheveu entre les lignes. La première ligne porte la température, et sa valeur est le plus
+   gros caractère de la carte.
+
+   Les quatre cas, et jamais un cinquième :
+   - température publiée par le fabricant : « Chauffe jusqu'à −XX °C », d'un bloc (espace insécable et
+     nowrap) ; la mention dit si elle vient du fabricant ou d'un distributeur qui reproduit sa fiche ;
+   - certifiée ENERGY STAR climat froid, sans température publiée : « Certifiée grand froid », puis
+     « chauffe encore à −15 °C » ; jamais de chiffre de limite (−15 °C est le point de mesure de la
+     certification, pas sa limite), et le pied dit que le minimum n'est pas publié ;
+   - rien de publié : « Non publiée », écrit tel quel, jamais une valeur devinée.
+   Même règle que le thermomètre du haut (froidDe). Valeurs en texte statique, sans compteur : le HTML
+   du serveur porte le chiffre final. */
+
+/** Aplat de la plaque : le crème de la marque, assombri juste assez pour se détacher du blanc de la carte. */
+const PLAQUE = "#F1EDE5";
+/** Filet intérieur de la plaque (un cheveu, plus sombre que sur blanc pour rester visible sur l'aplat). */
+const PLAQUE_FILET = "rgba(12,24,33,0.14)";
+/** Étiquettes de la plaque : mêmes capitales espacées que le reste de la carte (Dehors, À −15 °C…). */
+const ETIQUETTE = { letterSpacing: "0.14em", color: C.faint } as const;
+/** L'unité après un grand nombre : petite, en haut, détachée du chiffre (jamais collée au « 0 »). */
+const UNITE = { fontSize: "0.34em", fontWeight: 500, letterSpacing: "0.01em", verticalAlign: "0.55em", marginLeft: "0.16em" } as const;
+
+function LignePlaque({ etiquette, children, filet = true }: { etiquette: string; children: ReactNode; filet?: boolean }) {
+  return (
+    <div className="flex items-baseline justify-between gap-4" style={{ padding: "9px 0", borderBottom: filet ? `1px solid ${PLAQUE_FILET}` : "none" }}>
+      <span className="text-[10.5px] font-semibold uppercase" style={{ ...ETIQUETTE, whiteSpace: "nowrap" }}>
+        {etiquette}
+      </span>{" "}
+      <span className="text-right text-[13px] font-semibold tabular-nums" style={{ color: C.ink }}>
+        {children}
+      </span>
+    </div>
+  );
+}
+
+function GrandFroid({ card }: { card: Card }) {
   const froid = froidDe(card);
   const t = card.minTemp;
   // « −30 °C » d'un bloc : espace insécable et nowrap, jamais coupé en fin de ligne sur téléphone.
@@ -637,79 +666,65 @@ function GrandFroid({ card, play, i }: { card: Card; play: boolean; i: number })
   return (
     <div
       data-grand-froid={froid}
-      className="mx-6 mt-5 rounded-[6px] rounded-r-[20px] py-4 pl-5 pr-4 sm:mx-7 sm:pr-5"
-      style={{ background: C.inset, color: C.ink, borderLeft: `3px solid ${C.orange}`, borderTop: `1px solid ${C.hair}`, borderRight: `1px solid ${C.hair}`, borderBottom: `1px solid ${C.hair}` }}
+      /* Pleine largeur de la carte : la plaque traverse, elle ne flotte pas dedans. */
+      className="-mx-6 mt-5 px-6 sm:-mx-7 sm:px-7"
+      style={{ background: PLAQUE, color: C.ink, borderTop: `1px solid ${C.ink}`, borderBottom: `1px solid ${C.ink}`, paddingTop: 26, paddingBottom: 16 }}
     >
-      <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.faint, margin: 0 }}>
-        Par grand froid
-      </p>
+      {/* Ligne vedette : l'étiquette tient la marge gauche, la valeur tombe à droite. */}
+      <div className="flex items-baseline justify-between gap-3" style={{ paddingBottom: 12, borderBottom: `1px solid ${PLAQUE_FILET}` }}>
+        <span className="text-[10.5px] font-semibold uppercase" style={{ ...ETIQUETTE, whiteSpace: "nowrap" }}>
+          {froid === "publiee" ? "Chauffe jusqu’à" : froid === "certifiee" ? "Grand froid" : "Température minimale"}
+        </span>
 
-      {froid === "publiee" && t != null && (
-        <>
-          <p className="text-[17px] font-semibold" style={{ letterSpacing: "-0.01em", margin: "10px 0 0" }}>
-            Chauffe jusqu’à
-          </p>
-          <p
+        {froid === "publiee" && t != null && (
+          <span
             className="tabular-nums"
-            style={{ fontSize: "clamp(56px, 13.5vw, 72px)", fontWeight: 600, letterSpacing: "-0.055em", lineHeight: 0.9, margin: "4px 0 0", color: C.orange, whiteSpace: "nowrap" }}
+            style={{ fontSize: "clamp(50px, 12.5vw, 64px)", fontWeight: 600, letterSpacing: "-0.058em", lineHeight: 0.8, color: C.ink, whiteSpace: "nowrap" }}
           >
             {chiffre}
-            <span style={{ fontSize: "0.4em", fontWeight: 500, letterSpacing: "-0.01em" }}>{" °C"}</span>
-          </p>
-          <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "10px 0 0" }}>
-            {minTempMention(card.minTempSource)}
-          </p>
-        </>
-      )}
-
-      {froid === "certifiee" && (
-        <>
-          <p style={{ fontSize: "clamp(30px, 7vw, 38px)", fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, margin: "10px 0 0", color: C.orange }}>
-            Certifiée grand froid
-          </p>
-          <p className="text-[16px] font-semibold" style={{ margin: "12px 0 0" }}>
-            Chauffe encore à <span style={{ whiteSpace: "nowrap" }}>{"−15 °C"}</span>
-          </p>
-          <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "6px 0 0" }}>
-            Certification ENERGY STAR climat froid. Température minimale non publiée par le fabricant.
-          </p>
-        </>
-      )}
-
-      {(froid === "mesuree" || froid === "aucune") && (
-        <>
-          <p style={{ fontSize: "clamp(26px, 6.2vw, 32px)", fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.04, margin: "10px 0 0" }}>
-            Température minimale non publiée
-          </p>
-          <p className="text-[12.5px] leading-snug" style={{ color: C.dim, margin: "10px 0 0" }}>
-            Le fabricant ne publie pas jusqu’à quel froid cette machine chauffe, et elle n’a pas la certification
-            ENERGY STAR climat froid. Nous l’écrivons plutôt que d’avancer un chiffre.
-          </p>
-        </>
-      )}
-
-      <ColdGauge mode={froid} value={t} play={play} delay={0.5 + i * 0.1} />
-
-      {/* Chiffres techniques : sous la jauge, en petit. */}
-      <div className="mt-3 flex flex-wrap items-baseline gap-x-5 gap-y-1 text-[11.5px]" style={{ color: C.dim }}>
-        {card.h5 != null && (
-          <span>
-            <span className="tabular-nums font-semibold" style={{ color: C.mute }}>
-              {fr(card.h5)}
-            </span>{" "}
-            BTU/h livrés à <span style={{ whiteSpace: "nowrap" }}>{"−15 °C"}</span>
-            {card.h5Certified ? "" : " (estimé)"}
+            <span style={UNITE}>{"°C"}</span>
           </span>
         )}
-        {card.retention != null && (
-          <span>
-            {/* Plafonné à 120 %, comme dans les raisons du moteur (explain.ts), pour que la carte ne se contredise pas. */}
-            <span className="tabular-nums font-semibold" style={{ color: C.mute }}>
-              <CountUp value={Math.round(Math.min(card.retention, 1.2) * 100)} play={play} /> %
-            </span>{" "}
-            de sa puissance nominale
+        {froid === "certifiee" && (
+          <span style={{ fontSize: "clamp(25px, 6vw, 31px)", fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, color: C.ink, textAlign: "right" }}>
+            {/* Deux lignes à l'écran, mais un seul texte pour la copie et les lecteurs d'écran. */}
+            Certifiée{" "}
+            <span style={{ display: "block" }}>grand froid</span>
           </span>
         )}
+        {(froid === "mesuree" || froid === "aucune") && (
+          <span style={{ fontSize: "clamp(21px, 5.2vw, 26px)", fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.1, color: C.ink, textAlign: "right" }}>
+            Non publiée
+          </span>
+        )}
+      </div>
+
+      {/* Ce que la machine livre vraiment au froid : la certification mesure à −15 °C, elle ne borne pas. */}
+      {froid === "certifiee" && <LignePlaque etiquette="Chauffe encore à">{"−15 °C"}</LignePlaque>}
+      {card.h5 != null && (
+        <LignePlaque etiquette={"Chaleur à −15 °C"}>
+          {fr(card.h5)} BTU/h{card.h5Certified ? "" : " (estimé)"}
+        </LignePlaque>
+      )}
+      {/* Plafonné à 120 %, comme dans les raisons du moteur (explain.ts), pour que la carte ne se contredise pas. */}
+      {card.retention != null && (
+        <LignePlaque etiquette="Maintien de puissance" filet={false}>
+          {Math.round(Math.min(card.retention, 1.2) * 100)} %
+        </LignePlaque>
+      )}
+
+      {/* Pied de plaque : d'où vient la température, en toutes lettres et une seule fois. */}
+      <div className="grid grid-cols-[58px_1fr] gap-3" style={{ borderTop: `1px solid ${PLAQUE_FILET}`, paddingTop: 10, marginTop: 2 }}>
+        <span className="text-[10.5px] font-semibold uppercase" style={{ ...ETIQUETTE, lineHeight: 1.5 }}>
+          Source
+        </span>
+        <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: 0 }}>
+          {froid === "publiee"
+            ? minTempMention(card.minTempSource)
+            : froid === "certifiee"
+              ? "Certification ENERGY STAR climat froid : −15 °C est son point de mesure, pas sa limite. Température minimale non publiée par le fabricant."
+              : "Le fabricant ne publie pas jusqu’à quel froid cette machine chauffe, et elle n’a pas la certification ENERGY STAR climat froid. Nous l’écrivons plutôt que d’avancer un chiffre."}
+        </p>
       </div>
     </div>
   );
@@ -736,48 +751,6 @@ function HypothesesSeules({ hypotheses }: { hypotheses: Hypothese[] }) {
         ))}
       </ul>
     </section>
-  );
-}
-
-/* Jauge 0 → −30 °C (plus bas si la machine chauffe plus froid), cohérente avec le titre du bloc :
-   - publiée : barre orange jusqu'à la température du fabricant ;
-   - certifiée : barre crème jusqu'au point de mesure (−15 °C), prolongée d'un fondu : la limite n'est
-     pas publiée, la barre ne s'arrête donc pas net ;
-   - mesurée : barre crème jusqu'à −15 °C, là où la puissance est mesurée ;
-   - aucune donnée : l'échelle seule. */
-function ColdGauge({ mode, value, play, delay }: { mode: Froid; value: number | null; play: boolean; delay: number }) {
-  const bas = Math.min(-30, Math.floor(Math.min(0, value ?? 0) / 10) * 10);
-  const reach = mode === "publiee" && value != null ? value : mode === "aucune" ? 0 : CERTIF_C;
-  const pct = Math.min(1, Math.max(0, reach / bas));
-  const ticks = Array.from({ length: -bas / 10 + 1 }, (_, k) => -10 * k);
-  return (
-    <div className="mt-3.5">
-      <div className="relative h-[6px] rounded-full" style={{ background: "rgba(12,24,33,0.10)" }}>
-        {mode === "certifiee" && (
-          <motion.div
-            className="absolute inset-y-0"
-            style={{ left: `${pct * 100}%`, width: "26%", marginLeft: -3, borderRadius: "0 999px 999px 0", background: "linear-gradient(90deg, rgba(12,24,33,0.55), rgba(12,24,33,0))" }}
-            initial={{ opacity: 0 }}
-            animate={play ? { opacity: 1 } : undefined}
-            transition={{ duration: 0.9, ease: EASE, delay: delay + 1.1 }}
-          />
-        )}
-        {pct > 0 && (
-          <motion.div
-            className="absolute inset-y-0 left-0 origin-left rounded-full"
-            style={{ width: `${pct * 100}%`, background: mode === "publiee" ? C.orange : "rgba(12,24,33,0.55)" }}
-            initial={{ scaleX: 0 }}
-            animate={play ? { scaleX: 1 } : undefined}
-            transition={{ duration: 1.4, ease: EASE, delay }}
-          />
-        )}
-      </div>
-      <div className="mt-1.5 flex justify-between text-[10px] tabular-nums" style={{ color: C.dim }}>
-        {ticks.map((t) => (
-          <span key={t}>{t === 0 ? "0 °C" : temp(t)}</span>
-        ))}
-      </div>
-    </div>
   );
 }
 
