@@ -76,7 +76,7 @@ describe("ThermoMatch : même température minimale qu'avant le résolveur uniqu
     expect(connues).toBeGreaterThan(0);
   });
 
-  it("la fiche produit donne la même valeur que ThermoMatch", () => {
+  it("la fiche produit donne la même valeur que ThermoMatch", { timeout: 180_000 }, () => {
     const nbConfigs = new Map<string, number>();
     for (const c of registry.configurations) nbConfigs.set(c.modelId, (nbConfigs.get(c.modelId) ?? 0) + 1);
     let comparees = 0;
@@ -90,7 +90,7 @@ describe("ThermoMatch : même température minimale qu'avant le résolveur uniqu
     }
     expect(comparees).toBeGreaterThan(100);
     // Une fiche complète par modèle dont la température est connue : la durée croît avec la couverture.
-  }, 60_000);
+  });
 });
 
 describe("Courriel ThermoMatch : par grand froid", () => {

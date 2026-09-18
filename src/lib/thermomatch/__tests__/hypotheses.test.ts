@@ -50,7 +50,8 @@ describe("hypothesesOf", () => {
 });
 
 describe("le report des questions de faisabilité ne dégrade pas la recommandation", () => {
-  it("même maison, avec ou sans les réponses d'affinage : les mêmes trois machines", () => {
+  // Le catalogue compte maintenant plus de 10 000 fiches : trois recommandations complètes prennent du temps.
+  it("même maison, avec ou sans les réponses d'affinage : les mêmes trois machines", { timeout: 180_000 }, () => {
     const avecPanneau = { ...COURT, electricalPanel: "200-plus" };
     const avecTout = { ...COURT, electricalPanel: "200-plus", placements: ["mur-haut"] };
     expect(top3(avecPanneau)).toEqual(top3(COURT));

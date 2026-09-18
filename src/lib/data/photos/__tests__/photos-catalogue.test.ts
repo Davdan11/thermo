@@ -191,13 +191,16 @@ describe("photos du catalogue", () => {
   });
 
   it("les cas signalés par le propriétaire restent corrigés", () => {
-    // 37MURAQ est une centrale gainable : ni tête murale, ni photo d'une autre famille,
-    // ni photo au logo Payne. Si une reconstruction les ramène, ce test tombe.
-    const interdites = [
-      "/images/products/carrier-comfort-37mhraq-series.webp",
-      "/images/products/official/payne-38mura-officiel.webp",
-    ];
-    const fautives = fiches.filter((f) => /^37MURAQ/.test(f.modele.modelNumber) && interdites.includes(f.photo));
+    // 37MURAQ est une centrale gainable : jamais de tête murale (la photo de la série 37MHRAQ),
+    // et jamais le logo d'une autre marque. La photo Payne fait exception chez Payne seulement :
+    // c'est celle que Payne sert sur sa propre page 37MURA (voir _official-sources/payne/SOURCES.json).
+    const teteMurale = "/images/products/carrier-comfort-37mhraq-series.webp";
+    const photoPayne = "/images/products/official/payne-38mura-officiel.webp";
+    const fautives = fiches.filter(
+      (f) =>
+        /^37MURAQ/.test(f.modele.modelNumber) &&
+        (f.photo === teteMurale || (f.photo === photoPayne && !f.marque.startsWith("payne"))),
+    );
     expect(fautives.map(decrire)).toEqual([]);
   });
 });
