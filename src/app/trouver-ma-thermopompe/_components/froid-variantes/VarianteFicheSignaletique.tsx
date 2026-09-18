@@ -1,34 +1,34 @@
 "use client";
 
 /* ==================================================================
-   Variante C — « La fiche signalétique ».
+   Variante C — « La plaque signalétique ». Parti pris : une plaque
+   vissée en travers de la carte.
 
-   Ce que le fabricant visse sur la machine : des lignes, pas une boîte.
-   Étiquette à gauche, valeur alignée à droite, filets d'un cheveu entre
-   les lignes, aucun fond, aucun coin arrondi. La première ligne est la
-   température, et sa valeur est le plus gros caractère de la carte ;
-   les autres lignes descendent en taille, comme sur une plaque
-   signalétique ou un tableau de spécifications.
+   Un aplat légèrement teinté qui va d'un bord à l'autre de la carte,
+   à angles vifs, tenu par un filet en haut et un filet en bas : ni
+   panneau arrondi flottant, ni ombre. Dedans, la grammaire d'un
+   tableau de spécifications : étiquette à chasse fixe à gauche, valeur
+   alignée à droite, filets d'un cheveu entre les lignes. La première
+   ligne est la température, et sa valeur est le plus gros caractère de
+   la plaque.
 
    Les trois cas de la carte en production sont gardés mot pour mot :
    une valeur qui n'existe pas n'est jamais remplacée par une autre.
    ================================================================== */
 
-import { motion } from "motion/react";
-import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { froidDe } from "../thermometre";
 import { minTempMention } from "@/lib/thermomatch/min-temp-source";
 import { R } from "../palette";
 import { chiffre, fr, maintienPct, MOINS_15, MONO, UNITE, type FroidProps } from "./donnees";
 
-const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+/** Aplat de la plaque : le crème de la marque, assombri juste assez pour se détacher du blanc de la carte. */
+const PLAQUE = "#F1EDE5";
+/** Filet intérieur de la plaque (un cheveu, plus sombre que sur blanc pour rester visible sur l'aplat). */
+const FILET = "rgba(12,24,33,0.14)";
 
 function Ligne({ etiquette, children, filet = true }: { etiquette: string; children: React.ReactNode; filet?: boolean }) {
   return (
-    <div
-      className="flex items-baseline justify-between gap-4"
-      style={{ padding: "9px 0", borderBottom: filet ? `1px solid ${R.hair}` : "none" }}
-    >
+    <div className="flex items-baseline justify-between gap-4" style={{ padding: "9px 0", borderBottom: filet ? `1px solid ${FILET}` : "none" }}>
       <span className="uppercase" style={{ fontFamily: MONO, fontSize: 10, letterSpacing: "0.14em", color: R.faint, whiteSpace: "nowrap" }}>
         {etiquette}
       </span>
@@ -39,36 +39,19 @@ function Ligne({ etiquette, children, filet = true }: { etiquette: string; child
   );
 }
 
-export function VarianteFicheSignaletique({ minTemp, minTempSource, coldClimate, h5, h5Certified = true, retention, play = true, className }: FroidProps) {
-  const reduce = useReduced();
+export function VarianteFicheSignaletique({ minTemp, minTempSource, coldClimate, h5, h5Certified = true, retention, className }: FroidProps) {
   const froid = froidDe({ minTemp, coldClimate, h5 });
 
   return (
-    <div data-froid={froid} className={className}>
-      {/* Filet de tête, avec l'amorce orange de la marque : la seule couleur du bloc. */}
-      <div className="flex" style={{ height: 2 }}>
-        <motion.span
-          aria-hidden="true"
-          style={{ width: 44, background: R.orange, transformOrigin: "left" }}
-          initial={reduce ? false : { scaleX: 0 }}
-          animate={play || reduce ? { scaleX: 1 } : undefined}
-          transition={{ duration: 0.5, ease: EASE }}
-        />
-        <motion.span
-          aria-hidden="true"
-          className="flex-1"
-          style={{ height: 1, marginTop: 1, background: R.ink, transformOrigin: "left" }}
-          initial={reduce ? false : { scaleX: 0 }}
-          animate={play || reduce ? { scaleX: 1 } : undefined}
-          transition={{ duration: 1, ease: EASE, delay: 0.3 }}
-        />
-      </div>
-
+    <div
+      data-froid={froid}
+      data-variante="plaque"
+      /* Pleine largeur de la carte : la plaque traverse, elle ne flotte pas dedans. */
+      className={`-mx-6 mt-5 px-6 sm:-mx-7 sm:px-7 ${className ?? ""}`}
+      style={{ background: PLAQUE, borderTop: `1px solid ${R.ink}`, borderBottom: `1px solid ${R.ink}`, paddingTop: 16, paddingBottom: 16 }}
+    >
       {/* Ligne vedette : l'étiquette tient la marge gauche, la valeur tombe à droite. */}
-      <div
-        className="flex items-baseline justify-between gap-3"
-        style={{ padding: "26px 0 14px", borderBottom: `1px solid ${R.line}` }}
-      >
+      <div className="flex items-baseline justify-between gap-3" style={{ paddingBottom: 12, borderBottom: `1px solid ${FILET}` }}>
         <span className="uppercase" style={{ fontFamily: MONO, fontSize: 10, letterSpacing: "0.14em", color: R.faint, whiteSpace: "nowrap" }}>
           {froid === "publiee" ? "Chauffe jusqu’à" : "Grand froid"}
         </span>
@@ -76,21 +59,21 @@ export function VarianteFicheSignaletique({ minTemp, minTempSource, coldClimate,
         {froid === "publiee" && minTemp != null && (
           <span
             className="tabular-nums"
-            style={{ fontSize: "clamp(48px, 12vw, 60px)", fontWeight: 600, letterSpacing: "-0.055em", lineHeight: 0.82, color: R.ink, whiteSpace: "nowrap" }}
+            style={{ fontSize: "clamp(50px, 12.5vw, 64px)", fontWeight: 600, letterSpacing: "-0.058em", lineHeight: 0.8, color: R.ink, whiteSpace: "nowrap" }}
           >
             {chiffre(minTemp)}
             <span style={UNITE}>{"°C"}</span>
           </span>
         )}
         {froid === "certifiee" && (
-          <span style={{ fontSize: "clamp(24px, 5.8vw, 30px)", fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, color: R.ink, textAlign: "right" }}>
+          <span style={{ fontSize: "clamp(25px, 6vw, 31px)", fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, color: R.ink, textAlign: "right" }}>
             Certifiée
             <br />
             grand froid
           </span>
         )}
         {(froid === "mesuree" || froid === "aucune") && (
-          <span style={{ fontSize: "clamp(20px, 5vw, 25px)", fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.1, color: R.ink, textAlign: "right" }}>
+          <span style={{ fontSize: "clamp(21px, 5.2vw, 26px)", fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.1, color: R.ink, textAlign: "right" }}>
             Non publiée
           </span>
         )}
@@ -103,10 +86,14 @@ export function VarianteFicheSignaletique({ minTemp, minTempSource, coldClimate,
           {fr(h5)} BTU/h{h5Certified ? "" : " (estimé)"}
         </Ligne>
       )}
-      {retention != null && <Ligne etiquette="Maintien de puissance" filet={false}>{maintienPct(retention)} %</Ligne>}
+      {retention != null && (
+        <Ligne etiquette="Maintien de puissance" filet={false}>
+          {maintienPct(retention)} %
+        </Ligne>
+      )}
 
       {/* Pied de plaque : d'où vient la température, en toutes lettres et une seule fois. */}
-      <div className="grid grid-cols-[62px_1fr] gap-3" style={{ borderTop: `1px solid ${R.line}`, paddingTop: 10, marginTop: 2 }}>
+      <div className="grid grid-cols-[58px_1fr] gap-3" style={{ borderTop: `1px solid ${FILET}`, paddingTop: 10, marginTop: 2 }}>
         <span className="uppercase" style={{ fontFamily: MONO, fontSize: 10, letterSpacing: "0.14em", color: R.faint, lineHeight: 1.5 }}>
           Source
         </span>

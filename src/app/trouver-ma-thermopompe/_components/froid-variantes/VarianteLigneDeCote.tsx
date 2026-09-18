@@ -1,21 +1,20 @@
 "use client";
 
 /* ==================================================================
-   Variante B — « La ligne de cote ».
+   Variante B — « La ligne de cote ». Parti pris : un dessin technique.
 
-   La température est cotée comme sur un plan : une ligne de cote entre
-   0 °C et la température publiée, avec ses deux embouts, des
-   graduations fines au degré (majeures aux cinq degrés) et la valeur
-   annotée au-dessus de son repère. Aucun dégradé, aucun remplissage,
-   aucune pastille : un trait, des graduations, une cote.
+   La température est cotée comme sur un plan : deux lignes d'attache
+   verticales, une ligne de cote fléchée entre 0 °C et la température
+   publiée, la valeur écrite au-dessus de cette ligne, une règle
+   graduée au degré dessous et ses repères chiffrés. Aucun dégradé,
+   aucun remplissage, aucune pastille : uniquement du trait.
 
    Ce que le dessin dit, et qu'une barre de progression ne disait pas :
-   - température publiée : la cote est fermée aux deux bouts ; au-delà,
-     l'échelle continue en pointillé, sans prétendre que la machine y va ;
-   - certifiée ENERGY STAR climat froid : la cote est fermée à 0 °C,
-     ouverte de l'autre côté (trait qui se perd en pointillé) — la
-     limite n'est pas publiée, la ligne ne s'arrête donc sur rien ;
-   - rien de publié : l'échelle seule, en pointillé, sans repère.
+   - température publiée : la cote est fléchée aux deux bouts, fermée ;
+   - certifiée ENERGY STAR climat froid : elle part de 0 °C et s'ouvre
+     en tirets après le point de mesure (−15 °C) — la limite n'est pas
+     publiée, la cote ne se ferme donc sur rien ;
+   - rien de publié : la règle seule, en pointillé, sans cote.
    ================================================================== */
 
 import { motion } from "motion/react";
@@ -28,12 +27,32 @@ import { basDeLechelle, chiffre, fr, maintienPct, MOINS_15, MONO, UNITE, type Fr
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 /** Point de mesure de la certification ENERGY STAR climat froid. */
 const CERTIF = -15;
+/** Hauteur du dessin : ligne de cote en haut, règle graduée en bas. */
+const COTE_Y = 0;
+const REGLE_Y = 26;
 
-/** Embout de cote : le petit trait oblique des dessins techniques. */
-function Embout({ x, color }: { x: string; color: string }) {
+/** Flèche de cote (pointe vers l'extérieur, comme sur un plan). */
+function Fleche({ x, sens, color }: { x: string; sens: "gauche" | "droite"; color: string }) {
   return (
-    <span aria-hidden="true" className="absolute" style={{ left: x, top: 0, height: 14, width: 1, background: color, transform: "translateX(-0.5px)" }} />
+    <span
+      aria-hidden="true"
+      className="absolute"
+      style={{
+        left: x,
+        top: COTE_Y - 4,
+        width: 8,
+        height: 8,
+        background: color,
+        transform: sens === "gauche" ? "translateX(0)" : "translateX(-100%)",
+        clipPath: sens === "gauche" ? "polygon(0 50%, 100% 0, 100% 100%)" : "polygon(100% 50%, 0 0, 0 100%)",
+      }}
+    />
   );
+}
+
+/** Ligne d'attache : le trait vertical fin qui descend de la cote jusqu'à la règle. */
+function Attache({ x, color }: { x: string; color: string }) {
+  return <span aria-hidden="true" className="absolute" style={{ left: x, top: COTE_Y - 5, height: REGLE_Y + 11, width: 1, background: color, transform: "translateX(-0.5px)" }} />;
 }
 
 export function VarianteLigneDeCote({ minTemp, minTempSource, coldClimate, h5, h5Certified = true, retention, play = true, className }: FroidProps) {
@@ -47,76 +66,72 @@ export function VarianteLigneDeCote({ minTemp, minTempSource, coldClimate, h5, h
   const graduations = Array.from({ length: -bas + 1 }, (_, k) => -k);
 
   return (
-    <div data-froid={froid} className={className}>
-      <p className="uppercase" style={{ fontFamily: MONO, fontSize: 10, letterSpacing: "0.2em", color: R.faint, margin: 0 }}>
+    <div data-froid={froid} data-variante="ligne-de-cote" className={className} style={{ paddingTop: 20, paddingBottom: 6 }}>
+      <p className="uppercase" style={{ fontFamily: MONO, fontSize: 10, letterSpacing: "0.22em", color: R.faint, margin: 0 }}>
         {froid === "publiee" ? "Chauffe jusqu’à" : "Par grand froid"}
       </p>
 
-      {/* Annotation : au-dessus de son repère quand il y a une valeur à coter, à la marge sinon. */}
+      {/* La valeur cotée : au-dessus de sa ligne de cote, comme l'annotation d'un plan. */}
       {froid === "publiee" && minTemp != null ? (
-        <div className="relative" style={{ height: 78, marginTop: 14 }}>
-          <div
-            className="absolute bottom-0"
-            style={{
-              left: pct > 62 ? undefined : pos(minTemp),
-              right: pct > 62 ? `${100 - pct}%` : undefined,
-              transform: pct > 62 ? "translateX(2px)" : "translateX(-2px)",
-              textAlign: pct > 62 ? "right" : "left",
-              whiteSpace: "nowrap",
-            }}
+        <div className="relative" style={{ height: 66, marginTop: 12 }}>
+          <p
+            className="absolute bottom-0 tabular-nums"
+            style={{ left: `${pct / 2}%`, transform: "translateX(-50%)", fontSize: "clamp(50px, 12.5vw, 62px)", fontWeight: 600, letterSpacing: "-0.06em", lineHeight: 0.82, color: R.ink, margin: 0, whiteSpace: "nowrap" }}
           >
-            <p className="tabular-nums" style={{ fontSize: "clamp(58px, 15vw, 74px)", fontWeight: 600, letterSpacing: "-0.06em", lineHeight: 0.8, color: R.ink, margin: 0 }}>
-              {chiffre(minTemp)}
-              <span style={UNITE}>{"°C"}</span>
-            </p>
-          </div>
+            {chiffre(minTemp)}
+            <span style={UNITE}>{"°C"}</span>
+          </p>
         </div>
       ) : (
-        <div style={{ marginTop: 14 }}>
+        <div style={{ marginTop: 12 }}>
           {froid === "certifiee" ? (
-            <p style={{ fontSize: "clamp(28px, 6.8vw, 35px)", fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 0.95, color: R.ink, margin: 0 }}>
+            <p style={{ fontSize: "clamp(30px, 7.4vw, 38px)", fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 0.92, color: R.ink, margin: 0 }}>
               Certifiée
               <br />
               grand froid
             </p>
           ) : (
-            <p style={{ fontSize: "clamp(24px, 5.8vw, 30px)", fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.05, color: R.ink, margin: 0 }}>
+            <p style={{ fontSize: "clamp(25px, 6.2vw, 32px)", fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, color: R.ink, margin: 0 }}>
               Température minimale non publiée
             </p>
           )}
         </div>
       )}
 
-      {/* La ligne de cote elle-même. */}
-      <div className="relative" style={{ height: 15, marginTop: froid === "publiee" ? 10 : 18 }}>
-        {/* L'échelle entière, en pointillé : elle existe même là où la machine ne va pas. */}
-        <span
-          aria-hidden="true"
-          className="absolute"
-          style={{ left: 0, right: 0, top: 7, height: 1, backgroundImage: `repeating-linear-gradient(90deg, ${R.line} 0 2px, transparent 2px 5px)` }}
-        />
-        {/* La cote : trait plein de 0 °C jusqu'à la valeur. */}
+      {/* Le dessin : ligne de cote fléchée, lignes d'attache, règle graduée. */}
+      <div className="relative" style={{ height: REGLE_Y + 10, marginTop: froid === "publiee" ? 8 : 18 }}>
+        {/* Ligne de cote. */}
         {cote != null && (
-          <motion.span
-            aria-hidden="true"
-            className="absolute"
-            style={{ left: 0, width: `${pct}%`, top: 7, height: 1, background: R.ink, transformOrigin: "left" }}
-            initial={reduce ? false : { scaleX: 0 }}
-            animate={play || reduce ? { scaleX: 1 } : undefined}
-            transition={{ duration: 1.1, ease: EASE, delay: 0.15 }}
-          />
+          <>
+            <motion.span
+              aria-hidden="true"
+              className="absolute"
+              style={{ left: 0, width: `${pct}%`, top: COTE_Y, height: 1, background: R.ink, transformOrigin: "left" }}
+              initial={reduce ? false : { scaleX: 0 }}
+              animate={play || reduce ? { scaleX: 1 } : undefined}
+              transition={{ duration: 1.1, ease: EASE, delay: 0.15 }}
+            />
+            <Attache x="0%" color={R.ink} />
+            <Fleche x="0%" sens="gauche" color={R.ink} />
+            {froid === "publiee" && (
+              <>
+                <Attache x={`${pct}%`} color={R.orange} />
+                <Fleche x={`${pct}%`} sens="droite" color={R.orange} />
+              </>
+            )}
+          </>
         )}
-        {/* Fondu de la cote au-delà de −15 °C : la certification mesure, elle ne borne pas. */}
+        {/* Cote ouverte : au-delà du point de mesure, la limite n'est pas publiée. */}
         {froid === "certifiee" && (
           <motion.span
             aria-hidden="true"
             className="absolute"
             style={{
               left: `${pct}%`,
-              width: `${Math.min(26, 100 - pct)}%`,
-              top: 7,
+              width: `${Math.min(30, 100 - pct)}%`,
+              top: COTE_Y,
               height: 1,
-              backgroundImage: `repeating-linear-gradient(90deg, ${R.ink} 0 3px, transparent 3px 7px)`,
+              backgroundImage: `repeating-linear-gradient(90deg, ${R.ink} 0 4px, transparent 4px 8px)`,
               maskImage: "linear-gradient(90deg, #000, transparent)",
               WebkitMaskImage: "linear-gradient(90deg, #000, transparent)",
             }}
@@ -125,24 +140,31 @@ export function VarianteLigneDeCote({ minTemp, minTempSource, coldClimate, h5, h
             transition={{ duration: 0.8, ease: EASE, delay: 1.1 }}
           />
         )}
-        {/* Embouts : 0 °C toujours, l'autre bout seulement s'il est connu (orange quand c'est la limite publiée). */}
-        {cote != null && <Embout x="0%" color={R.ink} />}
-        {cote != null && <Embout x={`${pct}%`} color={froid === "publiee" ? R.orange : R.ink} />}
-        {froid === "publiee" && cote != null && (
-          <span aria-hidden="true" className="absolute" style={{ left: `${pct}%`, top: 3, width: 9, height: 9, background: R.orange, transform: "translateX(-100%)", clipPath: "polygon(100% 0, 100% 100%, 0 50%)" }} />
-        )}
-        {/* Graduations : au degré, majeures aux cinq degrés. */}
+
+        {/* Règle graduée : au degré, majeures aux cinq degrés. */}
+        <span
+          aria-hidden="true"
+          className="absolute"
+          style={{
+            left: 0,
+            right: 0,
+            top: REGLE_Y,
+            height: 1,
+            background: cote != null ? R.line : "transparent",
+            backgroundImage: cote != null ? undefined : `repeating-linear-gradient(90deg, ${R.line} 0 2px, transparent 2px 5px)`,
+          }}
+        />
         {graduations.map((t) => (
           <span
             key={t}
             aria-hidden="true"
             className="absolute"
-            style={{ left: pos(t), top: 8, width: 1, height: t % 5 === 0 ? 8 : 4, background: t % 5 === 0 ? R.dim : R.line, transform: "translateX(-0.5px)" }}
+            style={{ left: pos(t), top: REGLE_Y + 1, width: 1, height: t % 5 === 0 ? 7 : 3, background: t % 5 === 0 ? R.dim : R.line, transform: "translateX(-0.5px)" }}
           />
         ))}
       </div>
 
-      {/* Repères chiffrés de l'échelle. */}
+      {/* Repères chiffrés de la règle. */}
       <div className="relative" style={{ height: 14, marginTop: 2 }}>
         {[0, CERTIF, bas].map((t, i) => (
           <span
@@ -151,7 +173,7 @@ export function VarianteLigneDeCote({ minTemp, minTempSource, coldClimate, h5, h
             style={{
               left: i === 2 ? undefined : pos(t),
               right: i === 2 ? 0 : undefined,
-              transform: i === 0 ? "none" : i === 1 ? "translateX(-50%)" : "none",
+              transform: i === 1 ? "translateX(-50%)" : "none",
               fontFamily: MONO,
               fontSize: 10,
               color: R.dim,
@@ -163,7 +185,7 @@ export function VarianteLigneDeCote({ minTemp, minTempSource, coldClimate, h5, h
         ))}
       </div>
 
-      <p className="text-[12px] leading-snug" style={{ color: R.dim, margin: "22px 0 0", maxWidth: "30em" }}>
+      <p className="text-[12px] leading-snug" style={{ color: R.dim, margin: "20px 0 0", maxWidth: "30em" }}>
         {froid === "publiee" ? (
           minTempMention(minTempSource)
         ) : froid === "certifiee" ? (
