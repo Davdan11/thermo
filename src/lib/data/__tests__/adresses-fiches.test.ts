@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { registry } from "@/lib/data/registry";
-import { productSlug } from "@/lib/data/product-name";
+import { modelNumberSlug } from "@/lib/data/product-name";
 
 /* Combien d'adresses portent un nom commercial : « gree-livo-12000-btu-… » plutôt que
    « gree-12000-btu-… ». Les gens cherchent le nom ; une baisse ici est une perte de visibilité.
@@ -12,13 +12,14 @@ describe("Noms commerciaux dans les adresses", () => {
   it("la majorité des fiches actives ont un nom commercial dans leur adresse", () => {
     const nommees = actifs.filter((m) => {
       const brand = registry.brandById.get(m.brandId)!;
-      // Même adresse, sans le nom de série : si elle diffère, c'est que le nom est dans l'adresse.
-      const sansNom = productSlug({ brand: brand.name, brandSlug: brand.slug, capacityBtu: m.nominalCapacityBtu, modelNumber: m.modelNumber });
+      // La même adresse sans aucun nom : marque, capacité, numéro. Si elle diffère, un nom y figure.
+      const capacite = m.nominalCapacityBtu ? `${Math.round(m.nominalCapacityBtu / 1000)}000-btu` : null;
+      const sansNom = [brand.slug, capacite, modelNumberSlug(m.modelNumber)].filter(Boolean).join("-");
       return m.slug !== sansNom;
     });
     expect(actifs.length).toBeGreaterThan(3000);
-    // 4 octobre 2026 : 1 517 fiches sur 3 795 (40 %). La part monte à mesure que les noms sont documentés.
-    expect(nommees.length / actifs.length).toBeGreaterThan(0.35);
+    // 4 octobre 2026 : 2 478 fiches sur 3 795 (65 %). La part monte à mesure que les noms sont documentés.
+    expect(nommees.length / actifs.length).toBeGreaterThan(0.6);
   });
 
   it("chaque fiche active répond à sa propre adresse", () => {

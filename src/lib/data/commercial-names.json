@@ -1859,6 +1859,61 @@
   },
   {
     "brand": "Carrier",
+    "outdoorModel": "25SCA518A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.shareddocs.com/hvac/docs/1009/Public/08/25SCA5-01PD.pdf",
+    "page": 1,
+    "quote": "Comfort™ Series Single-Stage Heat Pump",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche Product Data officielle Carrier de la série 25SCA5 ; elle écrit les numéros 25SCA5…A003, la liste porte le même numéro en …A30."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "25SCA530A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.shareddocs.com/hvac/docs/1009/Public/08/25SCA5-01PD.pdf",
+    "page": 1,
+    "quote": "Comfort™ Series Single-Stage Heat Pump",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche Product Data officielle Carrier de la série 25SCA5 ; elle écrit les numéros 25SCA5…A003, la liste porte le même numéro en …A30."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "25SCA536A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.shareddocs.com/hvac/docs/1009/Public/08/25SCA5-01PD.pdf",
+    "page": 1,
+    "quote": "Comfort™ Series Single-Stage Heat Pump",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche Product Data officielle Carrier de la série 25SCA5 ; elle écrit les numéros 25SCA5…A003, la liste porte le même numéro en …A30."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "25SPA530A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.shareddocs.com/hvac/docs/1009/Public/0A/25SPA5-01PD.pdf",
+    "page": 1,
+    "quote": "Performance Series Single-Stage Heat Pump",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche Product Data officielle Carrier de la série 25SPA5 ; elle écrit les numéros 25SPA5…A003, la liste porte le même numéro en …A30."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "25SPA536A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.shareddocs.com/hvac/docs/1009/Public/0A/25SPA5-01PD.pdf",
+    "page": 1,
+    "quote": "Performance Series Single-Stage Heat Pump",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Fiche Product Data officielle Carrier de la série 25SPA5 ; elle écrit les numéros 25SPA5…A003, la liste porte le même numéro en …A30."
+  },
+  {
+    "brand": "Carrier",
     "outdoorModel": "25VNA837A031+TSTAT",
     "commercialName": "Infinity",
     "sourceFile": "https://www.shareddocs.com/hvac/docs/1009/Public/0E/25VNA8-04PD.pdf",
@@ -1867,6 +1922,216 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Fiche Product Data Carrier 25VNA8 « Infinity 18VS » ; 25VNA837A031 figure dans la nomenclature (vendu ici avec thermostat)."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SCA518A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27sca5/",
+    "quote": "Comfort™ 16 Heat Pump | 27SCA5 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SCA5 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SCA524A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27sca5/",
+    "quote": "Comfort™ 16 Heat Pump | 27SCA5 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SCA5 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SCA530A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27sca5/",
+    "quote": "Comfort™ 16 Heat Pump | 27SCA5 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SCA5 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SCA531A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27sca5/",
+    "quote": "Comfort™ 16 Heat Pump | 27SCA5 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SCA5 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SCA536A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27sca5/",
+    "quote": "Comfort™ 16 Heat Pump | 27SCA5 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SCA5 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SCA542A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27sca5/",
+    "quote": "Comfort™ 16 Heat Pump | 27SCA5 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SCA5 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SCA548A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27sca5/",
+    "quote": "Comfort™ 16 Heat Pump | 27SCA5 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SCA5 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SCA560A30",
+    "commercialName": "Comfort",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27sca5/",
+    "quote": "Comfort™ 16 Heat Pump | 27SCA5 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SCA5 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SPA618A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27spa6/",
+    "quote": "Performance™ 16 Heat Pump | 27SPA6 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SPA6 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SPA619A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27spa6/",
+    "quote": "Performance™ 16 Heat Pump | 27SPA6 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SPA6 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SPA624A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27spa6/",
+    "quote": "Performance™ 16 Heat Pump | 27SPA6 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SPA6 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SPA630A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27spa6/",
+    "quote": "Performance™ 16 Heat Pump | 27SPA6 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SPA6 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SPA631A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27spa6/",
+    "quote": "Performance™ 16 Heat Pump | 27SPA6 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SPA6 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SPA636A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27spa6/",
+    "quote": "Performance™ 16 Heat Pump | 27SPA6 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SPA6 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SPA642A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27spa6/",
+    "quote": "Performance™ 16 Heat Pump | 27SPA6 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SPA6 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SPA648A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27spa6/",
+    "quote": "Performance™ 16 Heat Pump | 27SPA6 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SPA6 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27SPA660A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27spa6/",
+    "quote": "Performance™ 16 Heat Pump | 27SPA6 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27SPA6 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27TPA824A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27tpa8/",
+    "quote": "Performance™ 18 Heat Pump with InteliSense | 27TPA8 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27TPA8 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27TPA836A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27tpa8/",
+    "quote": "Performance™ 18 Heat Pump with InteliSense | 27TPA8 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27TPA8 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27TPA848A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27tpa8/",
+    "quote": "Performance™ 18 Heat Pump with InteliSense | 27TPA8 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27TPA8 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27TPA860A30",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27tpa8/",
+    "quote": "Performance™ 18 Heat Pump with InteliSense | 27TPA8 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27TPA8 ; le numéro porte ce préfixe de série."
   },
   {
     "brand": "Carrier",
@@ -1920,6 +2185,16 @@
   },
   {
     "brand": "Carrier",
+    "outdoorModel": "27VNA324A030",
+    "commercialName": "Infinity",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27vna3/",
+    "quote": "Infinity® 23 Heat Pump | 27VNA3 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27VNA3 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
     "outdoorModel": "27VNA336A030",
     "commercialName": "Infinity",
     "sourceFile": "https://www.carrier.com/residential/en/ca/products/heat-pumps/27vna3/",
@@ -1947,6 +2222,46 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Page produit officielle Carrier Canada de la famille 27VNA3 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27VPA924A030",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27vpa9/",
+    "quote": "Performance™ 19 Variable-Speed Heat Pump | 27VPA9 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27VPA9 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27VPA936A030",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27vpa9/",
+    "quote": "Performance™ 19 Variable-Speed Heat Pump | 27VPA9 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27VPA9 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27VPA948A030",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27vpa9/",
+    "quote": "Performance™ 19 Variable-Speed Heat Pump | 27VPA9 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27VPA9 ; le numéro porte ce préfixe de série."
+  },
+  {
+    "brand": "Carrier",
+    "outdoorModel": "27VPA960A030",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.carrier.com/us/en/residential/heat-pumps/27vpa9/",
+    "quote": "Performance™ 19 Variable-Speed Heat Pump | 27VPA9 | Carrier",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle carrier.com de la famille 27VPA9 ; le numéro porte ce préfixe de série."
   },
   {
     "brand": "Carrier",
@@ -2956,6 +3271,50 @@
   },
   {
     "brand": "Convectair",
+    "outdoorModel": "500006192",
+    "commercialName": "Legato",
+    "sourceFile": "https://www.convectair.ca/sites/g/files/emiian446/files/2026-05/legato-multi-sell-sheet-en.pdf",
+    "page": 1,
+    "quote": "Legato Multi-Zone Heat Pump 36K BTU (ODU)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Feuille de vente officielle Convectair (Glen Dimplex Americas), liée depuis convectair.ca/en-ca/legato-multi-zone-heat-pumps. Le tableau des modèles donne la pièce 500006192 dans la même rangée que cette description. « Multi-Zone » est la catégorie, pas le nom : la gamme est Legato."
+  },
+  {
+    "brand": "Convectair",
+    "outdoorModel": "500006193",
+    "commercialName": "Legato",
+    "sourceFile": "https://www.convectair.ca/sites/g/files/emiian446/files/2026-05/legato-multi-sell-sheet-en.pdf",
+    "page": 1,
+    "quote": "Legato Multi-Zone Heat Pump 48K BTU (ODU)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Feuille de vente officielle Convectair (Glen Dimplex Americas), liée depuis convectair.ca/en-ca/legato-multi-zone-heat-pumps. Le tableau des modèles donne la pièce 500006193 dans la même rangée que cette description. « Multi-Zone » est la catégorie, pas le nom : la gamme est Legato."
+  },
+  {
+    "brand": "Convectair",
+    "outdoorModel": "500006217",
+    "commercialName": "Legato",
+    "sourceFile": "https://www.convectair.ca/sites/g/files/emiian446/files/2026-05/legato-multi-sell-sheet-en.pdf",
+    "page": 1,
+    "quote": "Legato Multi-Zone Heat Pump 18K BTU (ODU)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Feuille de vente officielle Convectair (Glen Dimplex Americas), liée depuis convectair.ca/en-ca/legato-multi-zone-heat-pumps. Le tableau des modèles donne la pièce 500006217 dans la même rangée que cette description. « Multi-Zone » est la catégorie, pas le nom : la gamme est Legato."
+  },
+  {
+    "brand": "Convectair",
+    "outdoorModel": "500006218",
+    "commercialName": "Legato",
+    "sourceFile": "https://www.convectair.ca/sites/g/files/emiian446/files/2026-05/legato-multi-sell-sheet-en.pdf",
+    "page": 1,
+    "quote": "Legato Multi-Zone Heat Pump 27K BTU (ODU)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Feuille de vente officielle Convectair (Glen Dimplex Americas), liée depuis convectair.ca/en-ca/legato-multi-zone-heat-pumps. Le tableau des modèles donne la pièce 500006218 dans la même rangée que cette description. « Multi-Zone » est la catégorie, pas le nom : la gamme est Legato."
+  },
+  {
+    "brand": "Convectair",
     "outdoorModel": "8028-C09-O",
     "commercialName": "Capella 28",
     "sourceFile": "https://www.ouellet.com/getattachment/Produits/Capella-28/Capella28_8028-C09-O_Spare-Parts-Pieces-de-rechange.pdf.aspx?lang=fr-CA",
@@ -3220,6 +3579,28 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Page officielle Daikin Comfort « DAIKIN FIT AURORA Heat Pump - DH9VS » (le titre cite aussi DH9VSA361CA)."
+  },
+  {
+    "brand": "Daikin",
+    "outdoorModel": "DH9VSA4810A",
+    "commercialName": "FIT Aurora",
+    "sourceFile": "https://daikincomfort.com/docs/default-source/fit-aurora-heat-pump-dh9vs/ss-dh9vs-r32.pdf",
+    "page": 1,
+    "quote": "Daikin FIT AURORA",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique SS-DH9VS-R32 (10/25) de Daikin Comfort. Bloc-titre de la page 1 : « DH9VS … Daikin FIT AURORA … R-32 Split System Heat Pump ». Le document ne couvre que les DH9VSA (colonnes DH9VSA241CA*, DH9VSA361CA*, DH9VSA4810A*, DH9VSA6010A* p. 3). La page produit correspondante est https://daikincomfort.com/products/heating-cooling/whole-home-systems/heat-pumps/fit-aurora-heat-pump (« DAIKIN FIT AURORA Heat Pump - DH9VS »)."
+  },
+  {
+    "brand": "Daikin",
+    "outdoorModel": "DH9VSA6010A",
+    "commercialName": "FIT Aurora",
+    "sourceFile": "https://daikincomfort.com/docs/default-source/fit-aurora-heat-pump-dh9vs/ss-dh9vs-r32.pdf",
+    "page": 1,
+    "quote": "Daikin FIT AURORA",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche technique SS-DH9VS-R32 (10/25) de Daikin Comfort. Bloc-titre de la page 1 : « DH9VS … Daikin FIT AURORA … R-32 Split System Heat Pump ». Le document ne couvre que les DH9VSA (colonnes DH9VSA241CA*, DH9VSA361CA*, DH9VSA4810A*, DH9VSA6010A* p. 3). La page produit correspondante est https://daikincomfort.com/products/heating-cooling/whole-home-systems/heat-pumps/fit-aurora-heat-pump (« DAIKIN FIT AURORA Heat Pump - DH9VS »)."
   },
   {
     "brand": "Daikin",
@@ -3629,6 +4010,16 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Page officielle Direct Air qui range ce numéro dans la « Heat Xtreme Pro Series »."
+  },
+  {
+    "brand": "Direct AIR",
+    "outdoorModel": "DIRM-30DA25-1Z",
+    "commercialName": "DA25",
+    "sourceFile": "https://directairhvac.com/ductless-system/heatpump/da25-series-heatpump/",
+    "quote": "Direct Air DA25 Series Up to 23.5 SEER Up to 11.5 HSPF",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page officielle Direct Air (Powrmatic du Canada) intitulée « Direct Air DA25 Series » ; le tableau « Specifications and Models » de cette page nomme DIRM-30DA25-1Z. Le menu du site liste la gamme sous « DA25 Series HeatPump »."
   },
   {
     "brand": "Direct AIR",
@@ -4077,6 +4468,17 @@
   },
   {
     "brand": "Elios",
+    "outdoorModel": "ESHBA12C1AN",
+    "commercialName": "EBC",
+    "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EBC_202509_EN_V01.pdf",
+    "page": 1,
+    "quote": "The EBC series of ductless wall-mounted heat pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Elios EBC (sept. 2025, Groupe Master, cdn.master.ca). Le tableau « Outdoor model » de la p. 4 nomme ESHBA12C1AN1, suffixe de version 1 du numéro ESHBA12C1AN de la fiche. La gamme de produits Elios 2026 (PRL_E_R454BX_1) place ESHBA12C1AN* dans la rangée « EBC (115V) »."
+  },
+  {
+    "brand": "Elios",
     "outdoorModel": "ESHBA12C1AN1",
     "commercialName": "EBC",
     "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EBC_202509_EN_V01.pdf",
@@ -4085,6 +4487,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Brochure officielle Elios EBC « Essential Tier » (sept. 2025, Groupe Master). Tableau « Outdoor model » qui nomme ce numéro ; ligne « Outdoor temperature range of operation (heating) » (vérifiée en extraction brute : cinq colonnes à -20, les 30 000 et 36 000 BTU à -25)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "ESHBA12C2AN",
+    "commercialName": "EBC",
+    "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EBC_202509_EN_V01.pdf",
+    "page": 1,
+    "quote": "The EBC series of ductless wall-mounted heat pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Elios EBC (sept. 2025, Groupe Master, cdn.master.ca). Le tableau « Outdoor model » de la p. 4 nomme ESHBA12C2AN1, suffixe de version 1 du numéro ESHBA12C2AN de la fiche. La gamme de produits Elios 2026 (PRL_E_R454BX_1) place ESHBA12C2AN* dans la rangée « EBC (230V) »."
   },
   {
     "brand": "Elios",
@@ -4099,6 +4512,17 @@
   },
   {
     "brand": "Elios",
+    "outdoorModel": "ESHBA18C2AN",
+    "commercialName": "EBC",
+    "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EBC_202509_EN_V01.pdf",
+    "page": 1,
+    "quote": "The EBC series of ductless wall-mounted heat pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Elios EBC (sept. 2025, Groupe Master, cdn.master.ca). Le tableau « Outdoor model » de la p. 4 nomme ESHBA18C2AN1, suffixe de version 1 du numéro ESHBA18C2AN de la fiche. La gamme de produits Elios 2026 (PRL_E_R454BX_1) place ESHBA18C2AN* dans la rangée « EBC (230V) »."
+  },
+  {
+    "brand": "Elios",
     "outdoorModel": "ESHBA18C2AN1",
     "commercialName": "EBC",
     "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EBC_202509_EN_V01.pdf",
@@ -4107,6 +4531,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Brochure officielle Elios EBC « Essential Tier » (sept. 2025, Groupe Master). Tableau « Outdoor model » qui nomme ce numéro ; ligne « Outdoor temperature range of operation (heating) » (vérifiée en extraction brute : cinq colonnes à -20, les 30 000 et 36 000 BTU à -25)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "ESHBA24C2AN",
+    "commercialName": "EBC",
+    "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EBC_202509_EN_V01.pdf",
+    "page": 1,
+    "quote": "The EBC series of ductless wall-mounted heat pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Elios EBC (sept. 2025, Groupe Master, cdn.master.ca). Le tableau « Outdoor model » de la p. 4 nomme ESHBA24C2AN1, suffixe de version 1 du numéro ESHBA24C2AN de la fiche. La gamme de produits Elios 2026 (PRL_E_R454BX_1) place ESHBA24C2AN* dans la rangée « EBC (230V) »."
   },
   {
     "brand": "Elios",
@@ -4121,6 +4556,17 @@
   },
   {
     "brand": "Elios",
+    "outdoorModel": "ESHBA30C2AN",
+    "commercialName": "EBC",
+    "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EBC_202509_EN_V01.pdf",
+    "page": 1,
+    "quote": "The EBC series of ductless wall-mounted heat pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Elios EBC (sept. 2025, Groupe Master, cdn.master.ca). Le tableau « Outdoor model » de la p. 4 nomme ESHBA30C2AN1, suffixe de version 1 du numéro ESHBA30C2AN de la fiche. La gamme de produits Elios 2026 (PRL_E_R454BX_1) place ESHBA30C2AN* dans la rangée « EBC (230V) »."
+  },
+  {
+    "brand": "Elios",
     "outdoorModel": "ESHBA30C2AN1",
     "commercialName": "EBC",
     "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EBC_202509_EN_V01.pdf",
@@ -4129,6 +4575,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Brochure officielle Elios EBC « Essential Tier » (sept. 2025, Groupe Master). Tableau « Outdoor model » qui nomme ce numéro ; ligne « Outdoor temperature range of operation (heating) » (vérifiée en extraction brute : cinq colonnes à -20, les 30 000 et 36 000 BTU à -25)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "ESHBA36C2AN",
+    "commercialName": "EBC",
+    "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EBC_202509_EN_V01.pdf",
+    "page": 1,
+    "quote": "The EBC series of ductless wall-mounted heat pumps",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Elios EBC (sept. 2025, Groupe Master, cdn.master.ca). Le tableau « Outdoor model » de la p. 4 nomme ESHBA36C2AN1, suffixe de version 1 du numéro ESHBA36C2AN de la fiche. La gamme de produits Elios 2026 (PRL_E_R454BX_1) place ESHBA36C2AN* dans la rangée « EBC (230V) »."
   },
   {
     "brand": "Elios",
@@ -4205,6 +4662,17 @@
   },
   {
     "brand": "Elios",
+    "outdoorModel": "ESHMA15C2AN1",
+    "commercialName": "EMC",
+    "sourceFile": "https://cdn.master.ca/documents/2026/elios/PRL_E_R454BX_1_EN_FR.pdf",
+    "page": 1,
+    "quote": "EMC",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Gamme de produits officielle Elios 2026 (PRL_E_R454BX_1, Groupe Master, cdn.master.ca). La rangée « Meilleur / Better » porte l'étiquette EMC à gauche et liste EWHMA15C2AS*/ESHMA15C2AN* dans la colonne 15 000 BTU ; l'astérisque remplace le suffixe de version (ici 1). La brochure officielle Elios EMC (sept. 2025) couvre la même famille mais ne détaille pas le 15 000 BTU."
+  },
+  {
+    "brand": "Elios",
     "outdoorModel": "ESHMA18C2AN1",
     "commercialName": "EMC",
     "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_EMC_202509_EN_V01.pdf",
@@ -4235,6 +4703,17 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Brochure officielle Elios EMC (sept. 2025, Groupe Master, cdn.master.ca). Tableau « Outdoor model » qui nomme ce numéro ; ligne « Outdoor temperature range of operation (heating) » = -30~24 pour les cinq colonnes."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "ESHMA24R2AN",
+    "commercialName": "Central-Elios",
+    "sourceFile": "https://cdn.master.ca/documents/en/elios/brochures/2025/Elios_Central-Elios_202509_EN_V02.pdf",
+    "page": 1,
+    "quote": "Central-Elios is a centrally ducted system",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Central-Elios (sept. 2025, Groupe Master, cdn.master.ca). Le tableau « Outdoor model » de la p. 4 nomme ESHMA24R2AN1, suffixe de version 1 du numéro ESHMA24R2AN de la fiche. La gamme de produits Elios 2026 (PRL_E_R454BX_1) place ESHMA24R2AN* dans la section « Central / Système central »."
   },
   {
     "brand": "Elios",
@@ -4334,6 +4813,50 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Submittal officiel Elios publié par Groupe Master (propriétaire de la marque) sur la page produit www.master.ca de ce numéro. Rubrique « Outdoor Temperature Operating Range / Plage de fonctionnement », ligne « Heating / Chauffage » = -25~24 °C / -13~75 °F (le séparateur « ~ » est un glyphe perdu à l'extraction du texte : « -2524 -1375 »). Les pages master.ca de EXHSA1832AN1 et EXHSA3652AV1 sont protégées par un captcha : non consultées, laissées inconnues. Concorde avec la gamme de produits officielle Elios 2026 (PRL_E_R454BX_1, cdn.master.ca) : « 50°C -25°C » pour ce numéro, famille « EXS »."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "EXHZA1832AV1",
+    "commercialName": "EXZ",
+    "sourceFile": "https://cdn.master.ca/documents/2026/elios/PRL_E_R454BX_1_EN_FR.pdf",
+    "page": 1,
+    "quote": "EXZ Ducted 20.0 8.0 Ducted 19.0 7.7 Ducted 19.4 8.8 Ducted 20.4 9.0",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Gamme de produits officielle Elios 2026 (PRL_E_R454BX_1, Groupe Master, cdn.master.ca). Section « Multi-zone outdoor units » : la famille porte l'étiquette EXZ à gauche et la colonne 18 000 BTU nomme EXHZA1832AV* (l'astérisque remplace le suffixe de version, ici 1). La famille voisine de la même section est EXS (EXHSA)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "EXHZA2742AV1",
+    "commercialName": "EXZ",
+    "sourceFile": "https://cdn.master.ca/documents/2026/elios/PRL_E_R454BX_1_EN_FR.pdf",
+    "page": 1,
+    "quote": "EXZ Ducted 20.0 8.0 Ducted 19.0 7.7 Ducted 19.4 8.8 Ducted 20.4 9.0",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Gamme de produits officielle Elios 2026 (PRL_E_R454BX_1, Groupe Master, cdn.master.ca). Section « Multi-zone outdoor units » : la famille porte l'étiquette EXZ à gauche et la colonne 27 000 BTU nomme EXHZA2742AV* (l'astérisque remplace le suffixe de version, ici 1). La famille voisine de la même section est EXS (EXHSA)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "EXHZA3652AV1",
+    "commercialName": "EXZ",
+    "sourceFile": "https://cdn.master.ca/documents/2026/elios/PRL_E_R454BX_1_EN_FR.pdf",
+    "page": 1,
+    "quote": "EXZ Ducted 20.0 8.0 Ducted 19.0 7.7 Ducted 19.4 8.8 Ducted 20.4 9.0",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Gamme de produits officielle Elios 2026 (PRL_E_R454BX_1, Groupe Master, cdn.master.ca). Section « Multi-zone outdoor units » : la famille porte l'étiquette EXZ à gauche et la colonne 36 000 BTU nomme EXHZA3652AV* (l'astérisque remplace le suffixe de version, ici 1). La famille voisine de la même section est EXS (EXHSA)."
+  },
+  {
+    "brand": "Elios",
+    "outdoorModel": "EXHZA4862AV1",
+    "commercialName": "EXZ",
+    "sourceFile": "https://cdn.master.ca/documents/2026/elios/PRL_E_R454BX_1_EN_FR.pdf",
+    "page": 1,
+    "quote": "EXZ Ducted 20.0 8.0 Ducted 19.0 7.7 Ducted 19.4 8.8 Ducted 20.4 9.0",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Gamme de produits officielle Elios 2026 (PRL_E_R454BX_1, Groupe Master, cdn.master.ca). Section « Multi-zone outdoor units » : la famille porte l'étiquette EXZ à gauche et la colonne 48 000 BTU nomme EXHZA4862AV* (l'astérisque remplace le suffixe de version, ici 1). La famille voisine de la même section est EXS (EXHSA)."
   },
   {
     "brand": "Fujitsu",
@@ -6844,6 +7367,236 @@
   },
   {
     "brand": "Keeprite",
+    "outdoorModel": "B5H6S18KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "B5H6S19KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "B5H6S24KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "B5H6S30KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "B5H6S31KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "B5H6S36KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "B5H6S42KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "B5H6S48KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "B5H6S60KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C4H5S36KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-15-heat-pump-4h5s",
+    "quote": "Ion™ 15 Heat Pump *4H5S",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com ; le corps de la page nomme le préfixe C4H5S sous « Ion™ Heat Pump »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H6S18KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "C5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H6S19KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "C5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H6S24KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "C5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H6S30KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "C5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H6S31KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "C5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H6S36KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "C5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H6S42KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "C5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H6S48KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "C5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H6S60KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "C5H6S - Ion™ Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H8T24KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-18-two-stage-heat-pump-5h8t",
+    "quote": "C5H8T - Ion™ Two-Stage Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H8T36KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-18-two-stage-heat-pump-5h8t",
+    "quote": "C5H8T - Ion™ Two-Stage Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H8T48KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-18-two-stage-heat-pump-5h8t",
+    "quote": "C5H8T - Ion™ Two-Stage Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "C5H8T60KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/ion-18-two-stage-heat-pump-5h8t",
+    "quote": "C5H8T - Ion™ Two-Stage Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Keeprite",
     "outdoorModel": "D5CERAH09AAJ",
     "commercialName": "Performance",
     "sourceFile": "https://www.keeprite.com/en/us/products/ductless-systems/d5cerah",
@@ -7859,6 +8612,226 @@
     "note": "Page produit officielle keeprite.com de la famille DLCSRB."
   },
   {
+    "brand": "Keeprite",
+    "outdoorModel": "N4H5S18KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-15-heat-pump-n4h5s",
+    "quote": "Performance 15 Heat Pump N4H5S",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N4H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N4H5S30KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-15-heat-pump-n4h5s",
+    "quote": "Performance 15 Heat Pump N4H5S",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N4H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N4H5S36KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-15-heat-pump-n4h5s",
+    "quote": "Performance 15 Heat Pump N4H5S",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N4H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H5S18KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H5S24KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H5S30KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H5S36KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H5S42KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H5S48KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H5S60KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H5S."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H8T24KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-two-stage-heat-pump-n5h8t",
+    "quote": "N5H8T - Performance Two-Stage Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H8T."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H8T36KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-two-stage-heat-pump-n5h8t",
+    "quote": "N5H8T - Performance Two-Stage Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H8T."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H8T48KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-two-stage-heat-pump-n5h8t",
+    "quote": "N5H8T - Performance Two-Stage Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H8T."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H8T60KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-two-stage-heat-pump-n5h8t",
+    "quote": "N5H8T - Performance Two-Stage Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H8T."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H9V24KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-variable-speed-heat-pump-n5h9v",
+    "quote": "N5H9V – Performance 19 Variable-Speed Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H9V."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H9V36KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-variable-speed-heat-pump-n5h9v",
+    "quote": "N5H9V – Performance 19 Variable-Speed Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H9V."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H9V48KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-variable-speed-heat-pump-n5h9v",
+    "quote": "N5H9V – Performance 19 Variable-Speed Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H9V."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "N5H9V60KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/performance-variable-speed-heat-pump-n5h9v",
+    "quote": "N5H9V – Performance 19 Variable-Speed Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille N5H9V."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "Q5H9V24KAAA",
+    "commercialName": "QuietComfort",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/quietcomfort-variable-speed-heat-pump-q5h9v",
+    "quote": "Q5H9V – QuietComfort® 19 Variable-Speed Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille Q5H9V."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "Q5H9V36KAAA",
+    "commercialName": "QuietComfort",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/quietcomfort-variable-speed-heat-pump-q5h9v",
+    "quote": "Q5H9V – QuietComfort® 19 Variable-Speed Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille Q5H9V."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "Q5H9V48KAAA",
+    "commercialName": "QuietComfort",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/quietcomfort-variable-speed-heat-pump-q5h9v",
+    "quote": "Q5H9V – QuietComfort® 19 Variable-Speed Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille Q5H9V."
+  },
+  {
+    "brand": "Keeprite",
+    "outdoorModel": "Q5H9V60KAAA",
+    "commercialName": "QuietComfort",
+    "sourceFile": "https://www.keeprite.com/en/us/products/heat-pumps/quietcomfort-variable-speed-heat-pump-q5h9v",
+    "quote": "Q5H9V – QuietComfort® 19 Variable-Speed Heat Pump | KeepRite",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle keeprite.com de la famille Q5H9V."
+  },
+  {
     "brand": "Lennox",
     "outdoorModel": "EL18KSLV-024-230A",
     "commercialName": "Elite",
@@ -8737,6 +9710,28 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Fiche technique (spec sheet) LG du KUMXB601A hébergée sur media.us.lg.com (médiathèque de LG Electronics USA, sous-domaine de lg.com). Page 1, « Performance: Operating Range: … Heating (°F WB) -4 to +64 » ; -4 °F = -20 °C."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "KUSAC181A",
+    "commercialName": "Mega",
+    "sourceFile": "https://media.us.lg.com/m/75d38490119ee3a9/original/EM_SZ_StdEff_Mega_Mega115_R32_05_25.pdf",
+    "page": 47,
+    "quote": "Mega KSSAC181A / KNSAC181A - KUSAC181A",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Engineering Manual LG « R32 Single-Zone Standard Efficiency, Mega, and Mega 115V Wall-Mounted » (05/2025), media.us.lg.com (médiathèque de LG Electronics USA, sous-domaine de lg.com). Titre de tableau p. 47 qui nomme la gamme Mega et l'unité extérieure KUSAC181A."
+  },
+  {
+    "brand": "LG",
+    "outdoorModel": "KUSAC241A",
+    "commercialName": "Mega",
+    "sourceFile": "https://media.us.lg.com/m/75d38490119ee3a9/original/EM_SZ_StdEff_Mega_Mega115_R32_05_25.pdf",
+    "page": 48,
+    "quote": "Mega KSSAC241A / KNSAC241A - KUSAC241A",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Engineering Manual LG « R32 Single-Zone Standard Efficiency, Mega, and Mega 115V Wall-Mounted » (05/2025), media.us.lg.com (médiathèque de LG Electronics USA, sous-domaine de lg.com). Titre de tableau p. 48 qui nomme la gamme Mega et l'unité extérieure KUSAC241A."
   },
   {
     "brand": "LG",
@@ -9743,6 +10738,16 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "DMA24HOS20230E",
+    "commercialName": "Central-Moov",
+    "sourceFile": "https://www.moovair.com/product-registration/",
+    "quote": "DMA24HOS20230E7 (Central-Moov Series - Air Handler)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page officielle d'enregistrement de produit de Moovair (moovair.com) : la liste déroulante des modèles donne la série de chaque numéro. Le numéro de la fiche (DMA24HOS20230E) est le même sans le chiffre de version final ; aucun autre DMA24HOS20230E* ne figure dans la liste."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "DMA24HOS20230E7",
     "commercialName": "Central-Moov",
     "sourceFile": "https://www.moovair.com/product-registration/",
@@ -9968,6 +10973,17 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "MSHEA12C2AN",
+    "commercialName": "Mistral",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 10,
+    "quote": "Moovair Mistral offers dependable heating and cooling for everyday comfort",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair M-Series 202603 (Groupe Master, cdn.master.ca). La double page 10-11 est la section Mistral : le texte de présentation est en p. 10 et le tableau « Technical specifications » de la p. 11 nomme MSHEA12C2AN1 (suffixe de version 1 du numéro MSHEA12C2AN de la fiche)."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "MSHEA12C2AN1",
     "commercialName": "Mistral",
     "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
@@ -10001,6 +11017,16 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "MSHEA18C2AN",
+    "commercialName": "Mistral",
+    "sourceFile": "https://www.moovair.com/product-registration/",
+    "quote": "MSHEA18C2AN1 (Mistral Series - Heat Pump)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page officielle d'enregistrement de produit de Moovair (moovair.com) : la liste déroulante des modèles donne la série de chaque numéro. MSHEA18C2AN1 est le suffixe de version 1 du numéro MSHEA18C2AN de la fiche. Confirmé par la brochure Moovair M-Series 202603, section Mistral (p. 10-11)."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "MSHEA18C2AN1",
     "commercialName": "Mistral",
     "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
@@ -10030,6 +11056,16 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Brochure officielle Moovair « M-Series » (cdn.master.ca, Groupe Master) ; section de deux pages consacrée au seul modèle Mistral : en-tête cité p. 10, ce numéro exact figure dans le tableau « Technical specifications » (Outdoor model), p. 11."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHEA24R2AN",
+    "commercialName": "Central-Moov",
+    "sourceFile": "https://www.moovair.com/product-registration/",
+    "quote": "MSHEA24R2AN1 (Central-Moov Series - Heat Pump)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page officielle d'enregistrement de produit de Moovair (moovair.com) : la liste déroulante des modèles donne la série de chaque numéro. MSHEA24R2AN1 est le suffixe de version 1 du numéro MSHEA24R2AN de la fiche. La brochure officielle Central-Moov 454B (2025-06, moovair.com) nomme la même unité extérieure."
   },
   {
     "brand": "Moovair",
@@ -10105,6 +11141,49 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "MSHMA12C2AN",
+    "commercialName": "Meridian",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 8,
+    "quote": "For those who seek the perfect blend of performance and affordability, Meridian is the answer",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair M-Series 202603 (Groupe Master, cdn.master.ca). La double page 8-9 est la section Meridian : le texte de présentation est en p. 8 et le tableau « Technical specifications » de la p. 9 nomme MSHMA12C2AN1 (suffixe de version 1 du numéro MSHMA12C2AN de la fiche)."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHMA15C2AN",
+    "commercialName": "Meridian",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 8,
+    "quote": "For those who seek the perfect blend of performance and affordability, Meridian is the answer",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair M-Series 202603 (Groupe Master, cdn.master.ca). La double page 8-9 est la section Meridian : le texte de présentation est en p. 8 et le tableau « Technical specifications » de la p. 9 nomme MSHMA15C2AN1 (suffixe de version 1 du numéro MSHMA15C2AN de la fiche)."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHMA18C2AN",
+    "commercialName": "Meridian",
+    "sourceFile": "https://cdn.master.ca/documents/en/moovair/brochures/2026/Moovair_MSeries_202603_EN_V03.pdf",
+    "page": 8,
+    "quote": "For those who seek the perfect blend of performance and affordability, Meridian is the answer",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Brochure officielle Moovair M-Series 202603 (Groupe Master, cdn.master.ca). La double page 8-9 est la section Meridian : le texte de présentation est en p. 8 et le tableau « Technical specifications » de la p. 9 nomme MSHMA18C2AN1 (suffixe de version 1 du numéro MSHMA18C2AN de la fiche)."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHMA18R2AN",
+    "commercialName": "Central-Moov",
+    "sourceFile": "https://www.moovair.com/product-registration/",
+    "quote": "MSHMA18R2AN1 (Central-Moov Series - Heat Pump)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page officielle d'enregistrement de produit de Moovair (moovair.com) : la liste déroulante des modèles donne la série de chaque numéro. MSHMA18R2AN1 est le suffixe de version 1 du numéro MSHMA18R2AN de la fiche. La brochure officielle Central-Moov 454B (2025-06, moovair.com) nomme MSHMA18R2AN1* dans son tableau « Outdoor Model »."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "MSHMA18R2AN1",
     "commercialName": "Central-Moov",
     "sourceFile": "https://www.moovair.com/product-registration/",
@@ -10115,6 +11194,16 @@
   },
   {
     "brand": "Moovair",
+    "outdoorModel": "MSHMA24R2AN",
+    "commercialName": "Central-Moov",
+    "sourceFile": "https://www.moovair.com/product-registration/",
+    "quote": "MSHMA24R2AN1 (Central-Moov Series - Heat Pump)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page officielle d'enregistrement de produit de Moovair (moovair.com) : la liste déroulante des modèles donne la série de chaque numéro. MSHMA24R2AN1 est le suffixe de version 1 du numéro MSHMA24R2AN de la fiche. La brochure officielle Central-Moov 454B (2025-06, moovair.com) nomme MSHMA24R2AN1* dans son tableau « Outdoor Model »."
+  },
+  {
+    "brand": "Moovair",
     "outdoorModel": "MSHMA24R2AN1",
     "commercialName": "Central-Moov",
     "sourceFile": "https://www.moovair.com/product-registration/",
@@ -10122,6 +11211,16 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Page officielle moovair.com (enregistrement de produit) : la liste des modèles donne ce numéro suivi de « (Central-Moov Series …) ». Nom confirmé par les brochures Central-Moov de moovair.com."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHMA30R2AN",
+    "commercialName": "Central-Moov",
+    "sourceFile": "https://www.moovair.com/product-registration/",
+    "quote": "MSHMA30R2AN1 (Central-Moov Series - Heat Pump)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page officielle d'enregistrement de produit de Moovair (moovair.com) : la liste déroulante des modèles donne la série de chaque numéro. MSHMA30R2AN1 est le suffixe de version 1 du numéro MSHMA30R2AN de la fiche. La brochure officielle Central-Moov 454B (2025-06, moovair.com) nomme MSHMA30R2AN1* dans son tableau « Outdoor Model »."
   },
   {
     "brand": "Moovair",
@@ -10152,6 +11251,16 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Page officielle moovair.com (enregistrement de produit) : la liste des modèles donne ce numéro suivi de « (Central-Moov Series …) ». Nom confirmé par les brochures Central-Moov de moovair.com."
+  },
+  {
+    "brand": "Moovair",
+    "outdoorModel": "MSHMB36R2AN",
+    "commercialName": "Central-Moov",
+    "sourceFile": "https://www.moovair.com/product-registration/",
+    "quote": "MSHMB36R2AN1 (Central-Moov Series - Heat Pump)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page officielle d'enregistrement de produit de Moovair (moovair.com) : la liste déroulante des modèles donne la série de chaque numéro. MSHMB36R2AN1 est le suffixe de version 1 du numéro MSHMB36R2AN de la fiche. La brochure officielle Central-Moov 454B (2025-06, moovair.com) nomme MSHMB36R2AN1* dans son tableau « Outdoor Model »."
   },
   {
     "brand": "Moovair",
@@ -10310,6 +11419,46 @@
     "confidence": "serie",
     "sourceType": "officiel",
     "note": "Page officielle Napoleon « Ultimate High-Wall Series - W-NDHAS26-SERIES » ; la fiche technique liée (NDHAS26BB Tech Sheet) liste NDHAS26BA-06-O à -33-O."
+  },
+  {
+    "brand": "Panasonic",
+    "outdoorModel": "CU - 3YM18CBUC",
+    "commercialName": "Project",
+    "sourceFile": "https://iaq.na.panasonic.com/hvac/project-series/multi-zone-outdoor-unit",
+    "quote": "Project Series - Multi-Zone Outdoor Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Titre (H1) de la page produit du site HVAC nord-américain de Panasonic (iaq.na.panasonic.com, pied de page « © 2026 Panasonic Corporation of North America »), qui liste les unités extérieures CU-3YM18CBUC, CU-4YM27CBUC, CU-5YM36CBUC et CU-6YM48CBUC. Le texte de la page dit aussi « The Panasonic Project Series provides efficient heating and cooling… ». Domaine absent de official-sources.ts (seul na.panasonic.ca y figure), d'où « secondaire » ; signalé dans domaines-G4.md."
+  },
+  {
+    "brand": "Panasonic",
+    "outdoorModel": "CU - 4YM27CBUC",
+    "commercialName": "Project",
+    "sourceFile": "https://iaq.na.panasonic.com/hvac/project-series/multi-zone-outdoor-unit",
+    "quote": "Project Series - Multi-Zone Outdoor Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Titre (H1) de la page produit du site HVAC nord-américain de Panasonic (iaq.na.panasonic.com, « © 2026 Panasonic Corporation of North America »), qui liste CU-3YM18CBUC, CU-4YM27CBUC, CU-5YM36CBUC et CU-6YM48CBUC. Domaine absent de official-sources.ts, d'où « secondaire » ; signalé dans domaines-G4.md."
+  },
+  {
+    "brand": "Panasonic",
+    "outdoorModel": "CU - 5YM36CBUC",
+    "commercialName": "Project",
+    "sourceFile": "https://iaq.na.panasonic.com/hvac/project-series/multi-zone-outdoor-unit",
+    "quote": "Project Series - Multi-Zone Outdoor Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Titre (H1) de la page produit du site HVAC nord-américain de Panasonic (iaq.na.panasonic.com, « © 2026 Panasonic Corporation of North America »), qui liste CU-3YM18CBUC, CU-4YM27CBUC, CU-5YM36CBUC et CU-6YM48CBUC. Domaine absent de official-sources.ts, d'où « secondaire » ; signalé dans domaines-G4.md."
+  },
+  {
+    "brand": "Panasonic",
+    "outdoorModel": "CU - 6YM48CBUC",
+    "commercialName": "Project",
+    "sourceFile": "https://iaq.na.panasonic.com/hvac/project-series/multi-zone-outdoor-unit",
+    "quote": "Project Series - Multi-Zone Outdoor Unit",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Titre (H1) de la page produit du site HVAC nord-américain de Panasonic (iaq.na.panasonic.com, « © 2026 Panasonic Corporation of North America »), qui liste CU-3YM18CBUC, CU-4YM27CBUC, CU-5YM36CBUC et CU-6YM48CBUC. Domaine absent de official-sources.ts, d'où « secondaire » ; signalé dans domaines-G4.md."
   },
   {
     "brand": "Panasonic",
@@ -10642,6 +11791,36 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Submittal officiel Panasonic (na.panasonic.ca) du système XZ9AKUA, outdoor CU-XZ9AKUAC : tableau « Outdoor Operation Range », chauffage minimum -15 °F (-26 °C). La page produit dit aussi -26 °C (-15 °F)."
+  },
+  {
+    "brand": "Panasonic",
+    "outdoorModel": "CU-YM12CBUC",
+    "commercialName": "Project",
+    "sourceFile": "https://iaq.na.panasonic.com/hvac/project-series/mini-split-high-wall",
+    "quote": "Project Series - Mini-Split (High Wall)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Titre (H1) de la page produit du site HVAC nord-américain de Panasonic (iaq.na.panasonic.com, « © 2026 Panasonic Corporation of North America »), qui liste les unités extérieures CU-YM9CBUC, CU-YM12CBUC, CU-YM18CBUC et CU-YM24CBUC. Domaine absent de official-sources.ts, d'où « secondaire » ; signalé dans domaines-G4.md."
+  },
+  {
+    "brand": "Panasonic",
+    "outdoorModel": "CU-YM18CBUC",
+    "commercialName": "Project",
+    "sourceFile": "https://iaq.na.panasonic.com/hvac/project-series/mini-split-high-wall",
+    "quote": "Project Series - Mini-Split (High Wall)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Titre (H1) de la page produit du site HVAC nord-américain de Panasonic (iaq.na.panasonic.com, « © 2026 Panasonic Corporation of North America »), qui liste CU-YM9CBUC, CU-YM12CBUC, CU-YM18CBUC et CU-YM24CBUC. Domaine absent de official-sources.ts, d'où « secondaire » ; signalé dans domaines-G4.md."
+  },
+  {
+    "brand": "Panasonic",
+    "outdoorModel": "CU-YM24CBUC",
+    "commercialName": "Project",
+    "sourceFile": "https://iaq.na.panasonic.com/hvac/project-series/mini-split-high-wall",
+    "quote": "Project Series - Mini-Split (High Wall)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Titre (H1) de la page produit du site HVAC nord-américain de Panasonic (iaq.na.panasonic.com, « © 2026 Panasonic Corporation of North America »), qui liste CU-YM9CBUC, CU-YM12CBUC, CU-YM18CBUC et CU-YM24CBUC. Domaine absent de official-sources.ts, d'où « secondaire » ; signalé dans domaines-G4.md."
   },
   {
     "brand": "Rheem",
@@ -12960,6 +14139,96 @@
   },
   {
     "brand": "Tempstar",
+    "outdoorModel": "B5H6S18KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "B5H6S19KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "B5H6S24KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "B5H6S30KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "B5H6S31KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "B5H6S36KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "B5H6S42KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "B5H6S48KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "B5H6S60KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-b5h6s",
+    "quote": "B5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
     "outdoorModel": "D5CERAH09AAJ",
     "commercialName": "Performance",
     "sourceFile": "https://www.tempstar.com/en/us/products/ductless-systems/d5cerah",
@@ -13799,6 +15068,356 @@
     "note": "Page produit officielle tempstar.com de la famille DLCSRB."
   },
   {
+    "brand": "Tempstar",
+    "outdoorModel": "N4H5S30KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-15-heat-pump-n4h5s",
+    "quote": "Performance 15 Heat Pump N4H5S",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N4H5S."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H5S18KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H5S."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H5S24KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H5S."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H5S30KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H5S."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H5S36KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H5S."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H5S42KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H5S."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H5S48KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H5S."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H5S60KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-heat-pump-n5h5s",
+    "quote": "N5H5S - Performance Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H5S."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H8T24KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-two-stage-heat-pump-n5h8t",
+    "quote": "N5H8T - Performance Two-Stage Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H8T."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H8T36KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-two-stage-heat-pump-n5h8t",
+    "quote": "N5H8T - Performance Two-Stage Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H8T."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H8T48KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-two-stage-heat-pump-n5h8t",
+    "quote": "N5H8T - Performance Two-Stage Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H8T."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H8T60KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-two-stage-heat-pump-n5h8t",
+    "quote": "N5H8T - Performance Two-Stage Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H8T."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H9V24KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-variable-speed-heat-pump-n5h9v",
+    "quote": "N5H9V – Performance 19 Variable-Speed Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H9V."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H9V36KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-variable-speed-heat-pump-n5h9v",
+    "quote": "N5H9V – Performance 19 Variable-Speed Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H9V."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H9V48KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-variable-speed-heat-pump-n5h9v",
+    "quote": "N5H9V – Performance 19 Variable-Speed Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H9V."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "N5H9V60KAAA",
+    "commercialName": "Performance",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/performance-variable-speed-heat-pump-n5h9v",
+    "quote": "N5H9V – Performance 19 Variable-Speed Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille N5H9V."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "Q5H9V24KAAA",
+    "commercialName": "QuietComfort",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/quietcomfort-variable-speed-heat-pump-q5h9v",
+    "quote": "Q5H9V – QuietComfort® 19 Variable-Speed Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille Q5H9V."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "Q5H9V36KAAA",
+    "commercialName": "QuietComfort",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/quietcomfort-variable-speed-heat-pump-q5h9v",
+    "quote": "Q5H9V – QuietComfort® 19 Variable-Speed Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille Q5H9V."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "Q5H9V48KAAA",
+    "commercialName": "QuietComfort",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/quietcomfort-variable-speed-heat-pump-q5h9v",
+    "quote": "Q5H9V – QuietComfort® 19 Variable-Speed Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille Q5H9V."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "Q5H9V60KAAA",
+    "commercialName": "QuietComfort",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/quietcomfort-variable-speed-heat-pump-q5h9v",
+    "quote": "Q5H9V – QuietComfort® 19 Variable-Speed Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com de la famille Q5H9V."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T4H5S30KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-15-heat-pump-4h5s",
+    "quote": "Ion™ 15 Heat Pump *4H5S",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com ; le corps de la page nomme le préfixe T4H5S sous « Ion™ Heat Pump »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T4H5S36KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-15-heat-pump-4h5s",
+    "quote": "Ion™ 15 Heat Pump *4H5S",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle tempstar.com ; le corps de la page nomme le préfixe T4H5S sous « Ion™ Heat Pump »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H6S18KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "T5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H6S19KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "T5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H6S24KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "T5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H6S30KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "T5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H6S31KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "T5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H6S36KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "T5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H6S42KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "T5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H6S48KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "T5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H6S60KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-heat-pump-5h6s",
+    "quote": "T5H6S - Ion™ Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H8T24KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-18-two-stage-heat-pump-5h8t",
+    "quote": "T5H8T - Ion™ Two-Stage Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H8T36KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-18-two-stage-heat-pump-5h8t",
+    "quote": "T5H8T - Ion™ Two-Stage Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H8T48KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-18-two-stage-heat-pump-5h8t",
+    "quote": "T5H8T - Ion™ Two-Stage Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
+    "brand": "Tempstar",
+    "outdoorModel": "T5H8T60KAAA",
+    "commercialName": "Ion",
+    "sourceFile": "https://www.tempstar.com/en/us/products/heat-pumps/ion-18-two-stage-heat-pump-5h8t",
+    "quote": "T5H8T - Ion™ Two-Stage Heat Pump | Tempstar",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Page produit officielle de la marque ; le numéro porte ce préfixe de série. À arbitrer : le catalogue étiquette cette série « Mainline / ProComfort / SmartSense », mais le site de la marque imprime « Ion »."
+  },
+  {
     "brand": "Tosot",
     "outdoorModel": "TM18H5O",
     "commercialName": "Multi Ultra",
@@ -13890,6 +15509,76 @@
   },
   {
     "brand": "Tosot",
+    "outdoorModel": "TMH18D32MO",
+    "commercialName": "Multi Ultra Heat",
+    "sourceFile": "https://tosot.com/product/multi-ultra-heat/",
+    "quote": "the TOSOT Multi Ultra Heat Series delivers dependable heating down to -30°C (-22°F)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com, TOSOT Supplies Inc.). Sa section « Product Submittals (Outdoor Units) » liste « Submittal – TMH18D32MO », ce qui rattache ce numéro à la gamme Multi Ultra Heat."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TMH24D32MO",
+    "commercialName": "Multi Ultra Heat",
+    "sourceFile": "https://tosot.com/product/multi-ultra-heat/",
+    "quote": "the TOSOT Multi Ultra Heat Series delivers dependable heating down to -30°C (-22°F)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com, TOSOT Supplies Inc.). Sa section « Product Submittals (Outdoor Units) » liste « Submittal – TMH24D32MO », ce qui rattache ce numéro à la gamme Multi Ultra Heat."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TMH30D32MO",
+    "commercialName": "Multi Ultra Heat",
+    "sourceFile": "https://tosot.com/product/multi-ultra-heat/",
+    "quote": "the TOSOT Multi Ultra Heat Series delivers dependable heating down to -30°C (-22°F)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com, TOSOT Supplies Inc.). Sa section « Product Submittals (Outdoor Units) » liste « Submittal – TMH30D32MO », ce qui rattache ce numéro à la gamme Multi Ultra Heat."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TMH36D32MO",
+    "commercialName": "Multi Ultra Heat",
+    "sourceFile": "https://tosot.com/product/multi-ultra-heat/",
+    "quote": "the TOSOT Multi Ultra Heat Series delivers dependable heating down to -30°C (-22°F)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com, TOSOT Supplies Inc.). Sa section « Product Submittals (Outdoor Units) » liste « Submittal – TMH36D32MO », ce qui rattache ce numéro à la gamme Multi Ultra Heat."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TMH42D32MO",
+    "commercialName": "Multi Ultra Heat",
+    "sourceFile": "https://tosot.com/product/multi-ultra-heat/",
+    "quote": "the TOSOT Multi Ultra Heat Series delivers dependable heating down to -30°C (-22°F)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com, TOSOT Supplies Inc.). Sa section « Product Submittals (Outdoor Units) » liste « Submittal – TMH42D32MO », ce qui rattache ce numéro à la gamme Multi Ultra Heat."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TMH48D32MO",
+    "commercialName": "Multi Ultra Heat",
+    "sourceFile": "https://tosot.com/product/multi-ultra-heat/",
+    "quote": "the TOSOT Multi Ultra Heat Series delivers dependable heating down to -30°C (-22°F)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com, TOSOT Supplies Inc.). Sa section « Product Submittals (Outdoor Units) » liste « Submittal – TMH48D32MO », ce qui rattache ce numéro à la gamme Multi Ultra Heat."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TMH60D32MO",
+    "commercialName": "Multi Ultra Heat",
+    "sourceFile": "https://tosot.com/product/multi-ultra-heat/",
+    "quote": "the TOSOT Multi Ultra Heat Series delivers dependable heating down to -30°C (-22°F)",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com, TOSOT Supplies Inc.). Sa section « Product Submittals (Outdoor Units) » liste « Submittal – TMH60D32MO », ce qui rattache ce numéro à la gamme Multi Ultra Heat."
+  },
+  {
+    "brand": "Tosot",
     "outdoorModel": "TMVRF-36KUH",
     "commercialName": "Mini VRF UltraHeat",
     "sourceFile": "https://tosotca.ca/product/mini-vrf-ultraheat/",
@@ -13917,6 +15606,56 @@
     "confidence": "modele",
     "sourceType": "secondaire",
     "note": "Secondaire : page modèle de TOSOT Comfort (tosotcomfort.com), qui se présente comme « master distributor of TOSOT HVAC Equipment in the US » (page /about) ; domaine hors de la liste fermée (proposé dans domaines-proposes.json). Titre de la page « NOVA Central Ducted Condenser 4-5 ton » ; ce numéro exact figure sous « Technical Documents & Downloads » avec la fiche de soumission TOSOT « SUBMITTAL DATA … / TU60-32GDU » (qui, elle, n'imprime pas le nom)."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TUD30-24W2/NHG-D(U)",
+    "commercialName": "Unix Eco",
+    "sourceFile": "https://tosot.com/product/unix-eco/",
+    "quote": "TOSOT - UNIX Eco",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com) dont le titre est « TOSOT - UNIX Eco ». Sa section « Product Submittals » liste la fiche du couple dont l'unité extérieure est TUD30-24W2NhG-DU, c'est-à-dire TUD30-24W2/NHG-D(U) écrit sans barre oblique ni parenthèses."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TUD36-24W2/NHE-D(U)",
+    "commercialName": "Unix Ultra Heat",
+    "sourceFile": "https://tosot.com/product/unix-ultra-heat/",
+    "quote": "TOSOT - UNIX Ultra Heat",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com) dont le titre est « TOSOT - UNIX Ultra Heat ». Sa section « Product Submittals » liste la fiche du couple dont l'unité extérieure est TUD36-24W2NhE-DU, c'est-à-dire TUD36-24W2/NHE-D(U) écrit sans barre oblique ni parenthèses."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TUD36-36W2/NHG-D(U)",
+    "commercialName": "Unix Eco",
+    "sourceFile": "https://tosot.com/product/unix-eco/",
+    "quote": "TOSOT - UNIX Eco",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com) dont le titre est « TOSOT - UNIX Eco ». Sa section « Product Submittals » liste la fiche du couple dont l'unité extérieure est TUD36-36W2NhG-DU, c'est-à-dire TUD36-36W2/NHG-D(U) écrit sans barre oblique ni parenthèses."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TUD60-48W2/NHE-D(U)",
+    "commercialName": "Unix Ultra Heat",
+    "sourceFile": "https://tosot.com/product/unix-ultra-heat/",
+    "quote": "TOSOT - UNIX Ultra Heat",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com) dont le titre est « TOSOT - UNIX Ultra Heat ». Sa section « Product Submittals » liste la fiche du couple dont l'unité extérieure est TUD60-48W2NhE-DU, c'est-à-dire TUD60-48W2/NHE-D(U) écrit sans barre oblique ni parenthèses."
+  },
+  {
+    "brand": "Tosot",
+    "outdoorModel": "TUD60-48W2/NHG-D(U)",
+    "commercialName": "Unix Eco",
+    "sourceFile": "https://tosot.com/product/unix-eco/",
+    "quote": "TOSOT - UNIX Eco",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Page produit officielle TOSOT (tosot.com) dont le titre est « TOSOT - UNIX Eco ». Sa section « Product Submittals » liste la fiche du couple dont l'unité extérieure est TUD60-48W2NhG-DU, c'est-à-dire TUD60-48W2/NHG-D(U) écrit sans barre oblique ni parenthèses."
   },
   {
     "brand": "Tosot",
@@ -14118,6 +15857,204 @@
   },
   {
     "brand": "Trane",
+    "outdoorModel": "5DCZ5024A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD009C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Dual Fuel, Priority, Convertible",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD009C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5DCZ5024A1060A à 5DCZ5060A1115A. Palier confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5DCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5DCZ5030A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD009C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Dual Fuel, Priority, Convertible",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD009C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5DCZ5024A1060A à 5DCZ5060A1115A. Palier confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5DCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5DCZ5036A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD009C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Dual Fuel, Priority, Convertible",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD009C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5DCZ5024A1060A à 5DCZ5060A1115A. Palier confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5DCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5DCZ5042A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD009C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Dual Fuel, Priority, Convertible",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD009C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5DCZ5024A1060A à 5DCZ5060A1115A. Palier confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5DCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5DCZ5048A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD009C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Dual Fuel, Priority, Convertible",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD009C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5DCZ5024A1060A à 5DCZ5060A1115A. Palier confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5DCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5DCZ5060A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD009C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Dual Fuel, Priority, Convertible",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD009C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5DCZ5024A1060A à 5DCZ5060A1115A. Palier confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5DCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5HCL5036B1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5HCL5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 16 Multi-Speed Low Profile Cold Climate Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5HCL5060B1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5HCL5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 16 Multi-Speed Low Profile Cold Climate Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5HPL5024A1000AA",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5HPL5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 16 Multi-Speed Low Profile Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5HPL5036A1000AA",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5HPL5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 16 Multi-Speed Low Profile Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5HPL5048A1000AA",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5HPL5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 16 Multi-Speed Low Profile Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWR5018A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWR5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWR5024A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWR5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWR5030A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWR5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWR5036A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWR5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWR5042A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWR5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWR5048A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWR5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWR5060A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWR5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
     "outdoorModel": "5TWV0X24A1",
     "commercialName": "20 TruComfort",
     "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
@@ -14203,5 +16140,565 @@
     "confidence": "modele",
     "sourceType": "officiel",
     "note": "Document officiel Trane (Trane Technologies eLibrary, « Product and Submittal Data ») qui nomme ce numéro. Plage de fonctionnement de conception en chauffage (et non un réglage de verrouillage) : 0 °F = -17,8 °C, arrondi à -18."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWX5018A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWX5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump with WeatherGuard ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWX5024A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWX5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump with WeatherGuard ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWX5030A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWX5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump with WeatherGuard ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWX5036A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWX5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump with WeatherGuard ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWX5042A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWX5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump with WeatherGuard ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWX5048A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWX5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump with WeatherGuard ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5TWX5060A1",
+    "commercialName": "Choice",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20Catalog/22-8301-39_05012026.pdf",
+    "page": "13",
+    "quote": "CHOICE",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Trane 2026 Product Handbook (22-8301-39), page « Trane Consumer Product Names » : tableau HEAT PUMP, colonnes TIER / MODEL FAMILY NUMBER / PRODUCT NAME. La famille 5TWX5 se trouve dans le groupe de lignes du palier CHOICE, en regard du nom de produit « 15 Single-Stage Heat Pump with WeatherGuard ». Les trois paliers de gamme sont CHOICE, PRIORITY et PREMIER ; le libellé cité est la cellule TIER de ce groupe."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5WCZ5024A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD003C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Heat Pump, Priority, Two Stage, Convertible, 2 to 5 Ton, R-454B",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD003C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5WCZ5024A1000A à 5WCZ5060A1000A. « Priority » est l’un des trois paliers de gamme grand public de Trane (Choice, Priority, Premier), confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5WCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5WCZ5030A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD003C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Heat Pump, Priority, Two Stage, Convertible, 2 to 5 Ton, R-454B",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD003C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5WCZ5024A1000A à 5WCZ5060A1000A. « Priority » est l’un des trois paliers de gamme grand public de Trane (Choice, Priority, Premier), confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5WCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5WCZ5036A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD003C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Heat Pump, Priority, Two Stage, Convertible, 2 to 5 Ton, R-454B",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD003C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5WCZ5024A1000A à 5WCZ5060A1000A. « Priority » est l’un des trois paliers de gamme grand public de Trane (Choice, Priority, Premier), confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5WCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5WCZ5042A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD003C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Heat Pump, Priority, Two Stage, Convertible, 2 to 5 Ton, R-454B",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD003C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5WCZ5024A1000A à 5WCZ5060A1000A. « Priority » est l’un des trois paliers de gamme grand public de Trane (Choice, Priority, Premier), confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5WCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5WCZ5048A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD003C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Heat Pump, Priority, Two Stage, Convertible, 2 to 5 Ton, R-454B",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD003C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5WCZ5024A1000A à 5WCZ5060A1000A. « Priority » est l’un des trois paliers de gamme grand public de Trane (Choice, Priority, Premier), confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5WCZ5."
+  },
+  {
+    "brand": "Trane",
+    "outdoorModel": "5WCZ5060A1",
+    "commercialName": "Priority",
+    "sourceFile": "https://elibrary.tranetechnologies.com/public/residential-hvac/Literature/Product%20and%20Submittal%20Data/PKGR-PSD003C-EN_07292026.pdf",
+    "page": "1",
+    "quote": "Single Packaged Heat Pump, Priority, Two Stage, Convertible, 2 to 5 Ton, R-454B",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Product and Submittal Data PKGR-PSD003C-EN (eLibrary Trane Technologies) ; titre de couverture, le document liste 5WCZ5024A1000A à 5WCZ5060A1000A. « Priority » est l’un des trois paliers de gamme grand public de Trane (Choice, Priority, Premier), confirmé au Product Handbook 2026 (22-8301-39), page « Trane Consumer Product Names », palier PRIORITY / famille 5WCZ5."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH2F18SB21",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/yh2f_techguide.pdf",
+    "page": 1,
+    "quote": "The YH2F models are part of our successful LX Series split system heat pump lineup.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Guide technique officiel York YH2F ; le guide écrit les numéros avec un « S » final (YH2F18SB21S…). Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH2F24TB21",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/yh2f_techguide.pdf",
+    "page": 1,
+    "quote": "The YH2F models are part of our successful LX Series split system heat pump lineup.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Guide technique officiel York YH2F ; le guide écrit les numéros avec un « S » final (YH2F18SB21S…). Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH2F30TB21",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/yh2f_techguide.pdf",
+    "page": 1,
+    "quote": "The YH2F models are part of our successful LX Series split system heat pump lineup.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Guide technique officiel York YH2F ; le guide écrit les numéros avec un « S » final (YH2F18SB21S…). Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH2F36TB21",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/yh2f_techguide.pdf",
+    "page": 1,
+    "quote": "The YH2F models are part of our successful LX Series split system heat pump lineup.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Guide technique officiel York YH2F ; le guide écrit les numéros avec un « S » final (YH2F18SB21S…). Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH2F42TB21",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/yh2f_techguide.pdf",
+    "page": 1,
+    "quote": "The YH2F models are part of our successful LX Series split system heat pump lineup.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Guide technique officiel York YH2F ; le guide écrit les numéros avec un « S » final (YH2F18SB21S…). Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH2F48TB21",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/yh2f_techguide.pdf",
+    "page": 1,
+    "quote": "The YH2F models are part of our successful LX Series split system heat pump lineup.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Guide technique officiel York YH2F ; le guide écrit les numéros avec un « S » final (YH2F18SB21S…). Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH2F60TB21",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/yh2f_techguide.pdf",
+    "page": 1,
+    "quote": "The YH2F models are part of our successful LX Series split system heat pump lineup.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Guide technique officiel York YH2F ; le guide écrit les numéros avec un « S » final (YH2F18SB21S…). Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH518E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/lx-yh518e2s11.html",
+    "quote": "LX, YH518E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH524E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/yh524e2s11.html",
+    "quote": "LX, YH524E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH536E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/yh536e2s11.html",
+    "quote": "LX, YH536E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH548E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/yh548e2s11.html",
+    "quote": "LX, YH548E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH560E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/yh560e2s11.html",
+    "quote": "LX, YH560E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH618E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/lx-yh618e2s11.html",
+    "quote": "LX, YH618E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH624E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/lx-yh624e2s11.html",
+    "quote": "LX, YH624E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH630E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/lx-yh630e2s11.html",
+    "quote": "LX, YH630E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH636E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/lx-yh636e2s11.html",
+    "quote": "LX, YH636E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH648E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/lx-yh648e2s11.html",
+    "quote": "LX, YH648E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH660E2S11",
+    "commercialName": "LX",
+    "sourceFile": "https://www.yorknow.com/lx-yh660e2s11.html",
+    "quote": "LX, YH660E2S11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH936E2C11",
+    "commercialName": "Affinity",
+    "sourceFile": "https://www.yorknow.com/affinity-yh936e2c11.html",
+    "quote": "Affinity, YH936E2C11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact ; la gamme imprimée est Affinity, non LX. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YH960E2C11",
+    "commercialName": "Affinity",
+    "sourceFile": "https://www.yorknow.com/affinity-yh960e2c11.html",
+    "quote": "Affinity, YH960E2C11",
+    "confidence": "modele",
+    "sourceType": "officiel",
+    "note": "Fiche produit officielle York (yorknow.com) du numéro exact ; la gamme imprimée est Affinity, non LX. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACDJ12WHAA",
+    "commercialName": "airHome 400",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome400_brochure.pdf",
+    "quote": "living space with airHome 400.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 400 ; elle nomme RAC-DJ09/12/18/24/36WHAA et RAC-EJ12WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACDJ12WHBA",
+    "commercialName": "airHome 400",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome400_brochure.pdf",
+    "quote": "living space with airHome 400.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 400 ; elle nomme RAC-DJ09/12/18/24/36WHAA et RAC-EJ12WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACDJ18WHAA",
+    "commercialName": "airHome 400",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome400_brochure.pdf",
+    "quote": "living space with airHome 400.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 400 ; elle nomme RAC-DJ09/12/18/24/36WHAA et RAC-EJ12WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACDJ18WHBA",
+    "commercialName": "airHome 400",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome400_brochure.pdf",
+    "quote": "living space with airHome 400.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 400 ; elle nomme RAC-DJ09/12/18/24/36WHAA et RAC-EJ12WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACDJ24WHAA",
+    "commercialName": "airHome 400",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome400_brochure.pdf",
+    "quote": "living space with airHome 400.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 400 ; elle nomme RAC-DJ09/12/18/24/36WHAA et RAC-EJ12WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACDJ24WHBA",
+    "commercialName": "airHome 400",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome400_brochure.pdf",
+    "quote": "living space with airHome 400.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 400 ; elle nomme RAC-DJ09/12/18/24/36WHAA et RAC-EJ12WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACDJ36WHBA",
+    "commercialName": "airHome 400",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome400_brochure.pdf",
+    "quote": "living space with airHome 400.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 400 ; elle nomme RAC-DJ09/12/18/24/36WHAA et RAC-EJ12WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACEJ12WHAA",
+    "commercialName": "airHome 400",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome400_brochure.pdf",
+    "quote": "living space with airHome 400.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 400 ; elle nomme RAC-DJ09/12/18/24/36WHAA et RAC-EJ12WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACEJ12WHBA",
+    "commercialName": "airHome 400",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome400_brochure.pdf",
+    "quote": "living space with airHome 400.",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 400 ; elle nomme RAC-DJ09/12/18/24/36WHAA et RAC-EJ12WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACGJ12WHAA",
+    "commercialName": "airHome 600",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome600_brochure.pdf",
+    "quote": "airHome 600 series is designed",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 600 ; elle nomme RAC-GJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACGJ15WHAA",
+    "commercialName": "airHome 600",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome600_brochure.pdf",
+    "quote": "airHome 600 series is designed",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 600 ; elle nomme RAC-GJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACGJ15WHBA",
+    "commercialName": "airHome 600",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome600_brochure.pdf",
+    "quote": "airHome 600 series is designed",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 600 ; elle nomme RAC-GJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACGJ18WHAA",
+    "commercialName": "airHome 600",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome600_brochure.pdf",
+    "quote": "airHome 600 series is designed",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 600 ; elle nomme RAC-GJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACGJ18WHBA",
+    "commercialName": "airHome 600",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome600_brochure.pdf",
+    "quote": "airHome 600 series is designed",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 600 ; elle nomme RAC-GJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACGJ24WHAA",
+    "commercialName": "airHome 600",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome600_brochure.pdf",
+    "quote": "airHome 600 series is designed",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 600 ; elle nomme RAC-GJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACGJ24WHBA",
+    "commercialName": "airHome 600",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome600_brochure.pdf",
+    "quote": "airHome 600 series is designed",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 600 ; elle nomme RAC-GJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACXJ12WHAA",
+    "commercialName": "airHome 800",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome800_brochure.pdf",
+    "quote": "With airHome 800, you choose state-of-the-art",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 800 ; elle nomme RAC-XJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACXJ12WHBA",
+    "commercialName": "airHome 800",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome800_brochure.pdf",
+    "quote": "With airHome 800, you choose state-of-the-art",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 800 ; elle nomme RAC-XJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACXJ18WHAA",
+    "commercialName": "airHome 800",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome800_brochure.pdf",
+    "quote": "With airHome 800, you choose state-of-the-art",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 800 ; elle nomme RAC-XJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACXJ18WHBA",
+    "commercialName": "airHome 800",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome800_brochure.pdf",
+    "quote": "With airHome 800, you choose state-of-the-art",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 800 ; elle nomme RAC-XJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
+  },
+  {
+    "brand": "York",
+    "outdoorModel": "YRACXJ24WHBA",
+    "commercialName": "airHome 800",
+    "sourceFile": "https://www.yorknow.com/pub/media/documentation/airhome800_brochure.pdf",
+    "quote": "With airHome 800, you choose state-of-the-art",
+    "confidence": "serie",
+    "sourceType": "officiel",
+    "note": "Brochure officielle airHome 800 ; elle nomme RAC-XJ09/12/18/24WHAA. Les numéros de la liste sont les mêmes avec le préfixe York « Y » ; appareils de marque Hitachi (coentreprise Johnson Controls-Hitachi) vendus sous York. Domaine yorknow.com : site de documentation du propriétaire de la marque York (Johnson Controls) — à ajouter à la liste officielle, voir domaines-G2.md."
   }
 ]

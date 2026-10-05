@@ -12,6 +12,7 @@
 export const OFFICIAL_HOSTS = [
   "moovair.com",
   "na.panasonic.ca",
+  "iaq.na.panasonic.com", // Panasonic Corporation of North America (« © 2026 Panasonic Corporation of North America »)
   "d36aiwq7h8e0h3.cloudfront.net", // documents Carrier (inRiver)
   "dde2yk4t993pn.cloudfront.net", // documents Midea
   "daikincomfort.com",
@@ -27,6 +28,7 @@ export const OFFICIAL_HOSTS = [
   "bryant.com", // Bryant, marque de Carrier
   "heil-hvac.com", // Heil, marque ICP (Carrier)
   "tempstar.com", // Tempstar, marque ICP (Carrier)
+  "yorknow.com", // bibliothèque technique York (« YORK® and yorknow.com are registered properties of Johnson Controls International plc »)
   "comfortmaker.com", // Comfortmaker, marque ICP (Carrier)
   "mitsubishitechinfo.ca", // Mitsubishi Electric Sales Canada (MESCA), distributeur officiel au Canada
   "bosch-homecomfort.com", // Bosch Home Comfort
@@ -61,7 +63,10 @@ export const OFFICIAL_HOSTS = [
   "geappliancesairandwater.com", // GE Appliances, division Air & Water
   "hisense-canada.com", // Hisense Canada
   "fujitsugeneral.com", // Fujitsu General America (GENERAL États-Unis et Canada)
+  "airstagehvac.com", // nouveau domaine de Fujitsu General America : fujitsugeneral.com y redirige (308, vérifié le 4 octobre 2026)
   "tranetechnologies.com", // Trane Technologies (elibrary.tranetechnologies.com)
+  "trane.com", // Trane (« © 2026 Trane », site grand public de la marque)
+  "americanstandardair.com", // American Standard Heating and Air Conditioning (« © 2026 American Standard Heating and Air Conditioning »)
   "ouellet.com", // Ouellet Canada, propriétaire de Convectair
   "convectair.ca", // Convectair
   "napoleon.com", // Napoleon
@@ -69,6 +74,7 @@ export const OFFICIAL_HOSTS = [
   "maxiair.ca", // Maxi-Air
   "samsung-files.s3.us-east-1.amazonaws.com", // compartiment S3 de Samsung HVAC America (lié depuis samsunghvac.com)
   "s3.amazonaws.com/samsung-files/", // même compartiment Samsung, autre forme d'adresse
+  "s3.amazonaws.com/powrmatic/powrmatic/content/", // compartiment de Powrmatic du Canada (Direct AIR) : la page Brochures de directairhvac.com y renvoie fichier par fichier
   "images.salsify.com/image/upload/s--vRgGO7NQ--/sgscvw3lyrbddnwvydow.pdf", // fiche GE Appliances liée depuis geappliancesairandwater.com (ce fichier seul)
   "images.salsify.com/image/upload/s--tgur6-EC--/h3hrzzagfpq56kcd9hkb.pdf", // fiche GE Appliances liée depuis geappliancesairandwater.com (ce fichier seul)
   "images.salsify.com/image/upload/s--BVWSPdWN--/a7mf9icabbwevmhea6r1.pdf", // fiche GE Appliances liée depuis geappliancesairandwater.com (ce fichier seul)
