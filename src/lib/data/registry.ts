@@ -25,6 +25,7 @@ import type {
 
 /* ---- Import fixtures ---- */
 import { readFileSync } from "fs";
+import { productNames } from "./product-name";
 import { join } from "path";
 
 // Load JSON dynamically to bypass TypeScript OOM during next build
@@ -229,7 +230,79 @@ const ALL_EDITORIAL: EditorialContent[] = VALIDATED.flatMap((d) => d.editorial);
 // Build indexes
 const BRAND_BY_SLUG = new Map(ALL_BRANDS.map((b) => [b.slug, b]));
 const BRAND_BY_ID = new Map(ALL_BRANDS.map((b) => [b.id, b]));
-const MODEL_BY_SLUG = new Map(ALL_MODELS.map((m) => [m.slug, m]));
+/* ---- Adresse publique des fiches ----------------------------------
+   Les gens cherchent « Haier Tempo 9000 BTU », pas « 1Q09TE1BE » : l'adresse
+   porte le nom commercial et la capacité et garde le numéro de modèle à la fin
+   (« /produit/haier-tempo-9000-btu-1q09te1be »). L'ancienne adresse reste
+   connue du registre : la fiche y répond par une redirection permanente.
+   ------------------------------------------------------------------- */
+
+const SERIES_BY_ID = new Map(ALL_SERIES.map((s) => [s.id, s]));
+
+const slugWords = (s: string) =>
+  s
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+/** Fiche par marque + fin de l'ancienne adresse (le numéro de modèle) : retrouve une fiche renommée. */
+const MODEL_BY_BRAND_TAIL = new Map<string, ProductModel>();
+
+for (const model of ALL_MODELS) {
+  const brand = BRAND_BY_ID.get(model.brandId);
+  if (!brand) continue;
+  const prefix = `${brand.slug}-`;
+  const tail = model.slug.startsWith(prefix) ? model.slug.slice(prefix.length) : model.slug;
+  MODEL_BY_BRAND_TAIL.set(`${brand.slug}|${tail}`, model);
+
+  const series = SERIES_BY_ID.get(model.seriesId);
+  const names = productNames({
+    brand: brand.name,
+    seriesName: series?.name,
+    seriesSlug: series?.slug,
+    capacityBtu: model.nominalCapacityBtu,
+    modelNumber: model.modelNumber,
+  });
+  // Le nom de la série commence parfois par la marque (« Haier Tempo ») : on ne la répète pas.
+  const nom = names.series ? slugWords(names.series) : null;
+  const serieSlug = !nom || nom === brand.slug ? null : nom.startsWith(prefix) ? nom.slice(prefix.length) : nom;
+  const btu = model.nominalCapacityBtu;
+  const next = [brand.slug, serieSlug, btu ? `${Math.round(btu / 1000)}000-btu` : null, tail]
+    .filter(Boolean)
+    .join("-");
+  if (next !== model.slug && next.length <= 90 && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(next)) {
+    model.legacySlug = model.slug;
+    model.slug = next;
+  }
+}
+
+/**
+ * Fiches par adresse : l'adresse courante, les anciennes, et toute adresse
+ * intermédiaire qui finit par le numéro de modèle de la fiche (le nom commercial
+ * ou la capacité ont pu changer depuis).
+ */
+class ModelSlugIndex extends Map<string, ProductModel> {
+  override get(slug: string): ProductModel | undefined {
+    const direct = super.get(slug);
+    if (direct) return direct;
+    // La marque la plus longue d'abord : « ge-appliances-… » n'est pas une fiche « ge ».
+    const coupes: number[] = [];
+    for (let i = slug.indexOf("-"); i > 0; i = slug.indexOf("-", i + 1)) if (BRAND_BY_SLUG.has(slug.slice(0, i))) coupes.push(i);
+    for (const i of coupes.reverse()) {
+      const brandSlug = slug.slice(0, i);
+      for (let j = i; j > 0; j = slug.indexOf("-", j + 1)) {
+        const found = MODEL_BY_BRAND_TAIL.get(`${brandSlug}|${slug.slice(j + 1)}`);
+        if (found) return found;
+      }
+    }
+    return undefined;
+  }
+}
+
+const MODEL_BY_SLUG: Map<string, ProductModel> = new ModelSlugIndex(ALL_MODELS.map((m) => [m.slug, m] as const));
+for (const m of ALL_MODELS) if (m.legacySlug && !MODEL_BY_SLUG.has(m.legacySlug)) MODEL_BY_SLUG.set(m.legacySlug, m);
 const MODEL_BY_ID = new Map(ALL_MODELS.map((m) => [m.id, m]));
 const CONFIG_BY_ID = new Map(ALL_CONFIGURATIONS.map((c) => [c.id, c]));
 const SOURCE_BY_ID = new Map(ALL_SOURCES.map((s) => [s.id, s]));

@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getProductDetail } from "@/lib/data/queries/product-detail";
 import { registry } from "@/lib/data/registry";
@@ -61,7 +61,7 @@ export async function generateMetadata({
   const { model, brand, series } = detail;
   const nameInput = { brand: brand.name, seriesName: series.name, seriesSlug: series.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber };
   const names = productNames(nameInput);
-  const seo = getSeoModel(slug);
+  const seo = getSeoModel(detail.model.slug);
   const canonicalSlug = seo ? indexSlug(seo) : slug;
   const indexable = brand.activeInQuebec && model.status === "published";
 
@@ -123,6 +123,8 @@ export default async function ProductPage({
   const { slug } = await params;
   const detail = getProductDetail(slug);
   if (!detail) notFound();
+  // L'adresse publique porte le nom commercial et la capacité : une ancienne adresse y mène (redirection permanente).
+  if (detail.model.slug !== slug) permanentRedirect(`/produit/${detail.model.slug}`);
 
   const { brand, series, model, configuration, performanceProfile } = detail;
   const names = productNames({ brand: brand.name, seriesName: series.name, seriesSlug: series.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber });
@@ -139,7 +141,7 @@ export default async function ProductPage({
   if (configuration?.hspf2) additionalProperties.push({ name: "HSPF2", value: String(configuration.hspf2) });
   if (minTemp) additionalProperties.push({ name: "Température minimale de chauffage", value: `${minTemp.valueC}°C` });
   if (configuration?.noiseIndoorMinDbA) additionalProperties.push({ name: "Niveau sonore intérieur", value: `${configuration.noiseIndoorMinDbA} dB(A)` });
-  const seoModel = getSeoModel(slug);
+  const seoModel = getSeoModel(model.slug);
   if (seoModel && seoModel.logisVertDollars > 0) additionalProperties.push({ name: "Subvention LogisVert", value: `${seoModel.logisVertDollars} $` });
 
   const productSchema = getProductSchema({

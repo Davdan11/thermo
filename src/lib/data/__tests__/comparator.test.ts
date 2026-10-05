@@ -108,9 +108,10 @@ describe("getComparisonData — order preservation", () => {
       "daikin-aurora-18k",
       "daikin-aurora-9k",
     ]);
-    expect(data.products[0].detail.model.slug).toBe("mitsubishi-fs-12k");
-    expect(data.products[1].detail.model.slug).toBe("daikin-aurora-18k");
-    expect(data.products[2].detail.model.slug).toBe("daikin-aurora-9k");
+    // Les adresses demandées sont les anciennes : l'adresse publique porte le nom et la capacité, et finit par celles-ci.
+    expect(data.products[0].detail.model.slug.endsWith("mitsubishi-fs-12k")).toBe(true);
+    expect(data.products[1].detail.model.slug.endsWith("aurora-18k")).toBe(true);
+    expect(data.products[2].detail.model.slug.endsWith("aurora-9k")).toBe(true);
   });
 });
 

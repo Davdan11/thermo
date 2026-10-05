@@ -7,6 +7,7 @@
    ================================================================== */
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { registry } from "@/lib/data/registry";
 
 export interface ObservedPrice {
   slug: string;
@@ -34,9 +35,11 @@ function load(): Map<string, ObservedPrice[]> {
       if (!Array.isArray(rows)) continue;
       for (const r of rows) {
         if (!r?.slug || typeof r.priceCad !== "number" || r.priceCad <= 0) continue;
-        const list = cache.get(r.slug) ?? [];
+        // Les relevés portent l'adresse de la fiche au moment du relevé : on les range sous l'adresse publique actuelle.
+        const slug = registry.modelBySlug.get(r.slug)?.slug ?? r.slug;
+        const list = cache.get(slug) ?? [];
         list.push(r);
-        cache.set(r.slug, list);
+        cache.set(slug, list);
       }
     } catch {
       /* fichier illisible : ignoré */

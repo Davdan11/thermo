@@ -61,7 +61,8 @@ function ficheInconnue(climatFroid: boolean): string {
 
 /** Texte visible du HTML : sans balises ni commentaires de React. */
 const texte = (html: string) => html.replace(/<!--.*?-->/g, "").replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, "");
-const fiche = async (slug: string) => renderToString(await ProductPage({ params: Promise.resolve({ slug }) }));
+// L'adresse publique porte le nom commercial : on part de l'adresse d'origine et on prend l'adresse actuelle (la page redirige l'ancienne, voir adresses-fiches).
+const fiche = async (slug: string) => renderToString(await ProductPage({ params: Promise.resolve({ slug: registry.modelBySlug.get(slug)?.slug ?? slug }) }));
 
 const OFFICIEL = "Température minimale publiée par le fabricant";
 const SECONDAIRE = "Selon la fiche technique du fabricant, reproduite par un distributeur";

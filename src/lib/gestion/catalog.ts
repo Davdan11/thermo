@@ -51,6 +51,11 @@ function toOption(m: (typeof registry.models)[number]): ModelOption {
   };
 }
 
+/** Adresse publique actuelle d'une fiche : les dossiers enregistrés avant un renommage gardent l'ancienne. */
+export function canonicalModelSlug(slug: string): string {
+  return registry.modelBySlug.get(slug)?.slug ?? slug;
+}
+
 export function modelBySlug(slug: string): ModelOption | null {
   const m = registry.modelBySlug.get(slug);
   return m ? toOption(m) : null;

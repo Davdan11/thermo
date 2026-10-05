@@ -42,6 +42,8 @@ export interface ProductSeries {
 export interface ProductModel {
   id: string;
   slug: string;
+  /** Ancienne adresse publique, conservée pour les redirections 301 */
+  legacySlug?: string;
   /** Consumer-facing name (e.g. "Oterra" or "FIT") */
   name: string;
   seriesId: string;
