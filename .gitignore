@@ -129,3 +129,12 @@ public/images/products/_official-sources/**
 /data/trousse*.tmp
 /data/plateforme*.tmp
 /data/contrats*.tmp
+
+# index produits téléchargés chez les fabricants (scripts/fetch-photos-officielles.mjs)
+/.cache/
+
+# Copies de travail des agents
+.claude/worktrees/
+
+# Compteur local des étapes ThermoMatch (données du serveur)
+data/thermomatch-etapes.json

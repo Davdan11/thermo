@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createMetadata, getBreadcrumbSchema, getCollectionPageSchema } from "@/lib/seo";
 import { getAllBrandStats } from "@/lib/seo/programmatic";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { getLogisVertListInfo } from "@/lib/subsidies/logisvert-meta";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { BarometreIndexHero } from "@/components/heroes-v2/prix/BarometreHeroes";
 import { Root } from "@/components/sections-v2/prix/kit";
@@ -19,7 +19,8 @@ export const metadata: Metadata = createMetadata({
 
 export default function LogisVertIndex() {
   const brands = getAllBrandStats().filter((b) => b.maxLogisVert > 0).sort((a, b) => b.maxLogisVert - a.maxLogisVert);
-  const updated = (logisVertMetadata as { updatedAt?: string }).updatedAt?.slice(0, 10) ?? null;
+  // Date de la liste LogisVert en vigueur (« 17 septembre 2026 »), lue à l'exécution : suit la mise à jour de nuit.
+  const updated = getLogisVertListInfo().listDate;
   return (
     <main className="bg-[#EAF5EE] text-[#0F3D2B]">
       <JsonLd

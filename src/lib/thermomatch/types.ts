@@ -13,6 +13,11 @@ export type ConstructionPeriod = "pre_1960" | "1960_1980" | "1981_2000" | "2001_
 export type InsulationLevel = "poor" | "standard" | "good" | "high_performance";
 export type WindowShare = "low" | "standard" | "high";
 export type BasementType = "none" | "unheated" | "heated";
+/**
+ * Classe d'un appariement AHRI : centrale sur conduits, multizone (une unité extérieure, plusieurs
+ * têtes : « Combinaison d'appareils », « Appareils sans/avec conduits » dans LogisVert) ou simple zone.
+ */
+export type PairingClass = "central" | "multi" | "single";
 
 /** Ce que le questionnaire fournit au moteur. */
 export interface MatchRequest {
@@ -23,7 +28,7 @@ export interface MatchRequest {
   systemKind: SystemKind | "any";
   /** Nombre de zones intérieures souhaitées (1 = murale simple ou centrale). */
   zones: number;
-  /** Fournaise gaz/mazout conservée : la thermopompe peut couvrir moins que 100 %. */
+  /** Fournaise ou chaudière conservée : la thermopompe peut couvrir moins que 100 %. */
   backupHeatAvailable: boolean;
   priorities: Priority[];
   budget: BudgetBracket;
@@ -32,6 +37,19 @@ export interface MatchRequest {
   insulation?: InsulationLevel;
   windowShare?: WindowShare;
   basement?: BasementType;
+  /* Architecture décidée avant le choix des machines (architecture.ts) */
+  /** Classe d'appariements retenue ; absente : filtre sur systemKind (anciens appels). */
+  pairingClass?: PairingClass;
+  /** Charge pour laquelle chaque machine est calibrée (zone la plus chargée, espace principal) ; absente : toute la maison. */
+  sizingLoadBtuH?: number;
+  /** Ce que couvre la charge de calibrage (« de l'espace principal »), pour les raisons. */
+  sizingLabel?: string;
+  /** Nombre d'unités intérieures ; murales indépendantes : autant de machines. */
+  heads?: number;
+  /** Murales indépendantes : une machine par espace (la couverture se compte × heads). */
+  independentUnits?: boolean;
+  /** Relève conservée, pour les raisons (« fournaise », « chaudière ») ; absente : « fournaise ». */
+  backupLabel?: string;
 }
 
 /** Résultat du calcul de charge. */
@@ -82,8 +100,10 @@ export interface Candidate {
   alsoSoldAs: string[];
   /** Empreinte technique servant à repérer les machines identiques. */
   signature: string;
-  /** L'unité extérieure est certifiée avec plusieurs unités intérieures. */
+  /** L'unité extérieure est certifiée en multizone (au moins un appariement de classe « multi »). */
   multiZoneCapable: boolean;
+  /** Classe de l'appariement retenu. */
+  pairingClass?: PairingClass;
 }
 
 export interface ScoreBreakdown {
@@ -109,11 +129,19 @@ export interface ScoredCandidate {
 
 export type ResultBadge = "Meilleur choix" | "Haut de gamme" | "Meilleure valeur" | "Alternative équilibrée";
 
+/** Égalité avec une recommandation voisine : écart sous la précision de l'estimation. */
+export interface TieInfo {
+  withRank: number;
+  /** Le départage dit en clair (ties.ts). */
+  decidedBy: string;
+}
+
 export interface MatchResult extends ScoredCandidate {
   rank: number;
   badge: ResultBadge;
   reasons: string[];
   warnings: string[];
+  tie?: TieInfo;
 }
 
 export interface MatchDiagnostics {

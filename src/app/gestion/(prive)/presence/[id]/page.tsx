@@ -1,222 +1,185 @@
-/* Fiche d'une publication : aperçus Facebook, Instagram et story ; décisions ; éditeur ; « D'où viennent les chiffres » ;
-   mode essai ; annonce Marketplace / Kijiji prête à copier. */
+/* Fiche d'un élément de la file Facebook : aperçu de l'image, décisions, légende modifiable, envoi, suivi, faits, historique.
+   Un identifiant de l'ancienne file (p-…) affiche seulement son état : ces éléments sont retirés et ne partent jamais. */
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink, TriangleAlert } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { requireAdmin } from "@/lib/gestion/auth/dal";
-import { buildAnnonce } from "@/lib/presence/annonce";
-import { composeCaption } from "@/lib/presence/captions";
-import { publishMode } from "@/lib/presence/config";
-import { unknownNumbers } from "@/lib/presence/numbers";
-import { SERIES_INFO } from "@/lib/presence/series";
-import { signedVisualSet } from "@/lib/presence/signing";
 import { readPresence } from "@/lib/presence/store";
-import { fmtWhen, montrealDate, montrealTime } from "@/lib/presence/time";
-import { POST_ID_RE, STATUS_LABELS, type SourceValue } from "@/lib/presence/types";
-import { STATUS_TONE } from "@/lib/presence/view";
+import { fmtWhen } from "@/lib/presence/time";
+import { modeEnvoi } from "@/lib/social/envoi";
+import { faitsEnClair, nombresInconnus } from "@/lib/social/redaction";
+import { approbationRequise, dejaEnvoyee, lireSocial } from "@/lib/social/store";
+import { FORMAT_LIBELLES, PUBLICATION_ID_RE, STATUT_LIBELLES } from "@/lib/social/types";
+import { suiviParPublication } from "@/lib/social/visites";
+import { GENRE_LIBELLE, STATUT_TON } from "@/lib/social/vue";
 import { Card } from "@/components/gestion/kit/Card";
 import { Chip } from "@/components/gestion/kit/Chip";
 import { Reveal } from "@/components/gestion/Reveal";
 import { CaptionEditor } from "@/components/gestion/presence/CaptionEditor";
-import { CopyButton } from "@/components/gestion/presence/CopyButton";
 import { PostActions } from "@/components/gestion/presence/PostActions";
-import { PostPreview } from "@/components/gestion/presence/PostPreview";
-import { QuestionEditor } from "@/components/gestion/presence/QuestionEditor";
 
 export const metadata: Metadata = { title: "Publication" };
+export const dynamic = "force-dynamic";
 
-const show = (v: SourceValue) => (typeof v === "boolean" ? (v ? "Oui" : "Non") : v === null ? "—" : String(v));
-const external = (u?: string) => !!u && /^https?:\/\//.test(u);
+const ANCIEN_ID_RE = /^p-\d{8}-[a-z]+(?:-\d{1,3})?$/;
+
+const Retour = () => (
+  <Link href="/gestion/presence" className="pr-back">
+    <ArrowLeft size={15} aria-hidden /> Studio
+  </Link>
+);
 
 export default async function PresencePostPage({ params }: { params: Promise<{ id: string }> }) {
   await requireAdmin();
   const { id } = await params;
-  if (!POST_ID_RE.test(id)) notFound();
-  const data = await readPresence();
-  const post = data.posts.find((p) => p.id === id);
-  if (!post) notFound();
 
-  const info = SERIES_INFO[post.series];
-  const urls = await signedVisualSet(post);
-  const storyOn = data.settings.series[post.series].story && !!urls.story;
-  const facebook = composeCaption(post, "facebook");
-  const instagram = composeCaption(post, "instagram");
-  const mode = publishMode(data.settings);
-  const pub = post.publish;
-  const locked = post.status === "publiee" || !!(pub.facebook?.postId || pub.instagram?.mediaId || pub.facebook?.photoIds?.length || pub.instagram?.containerId);
-  const unknown = post.series === "question" ? [] : unknownNumbers(post.text, post.source);
-  const scheduled = new Date(post.scheduledAt);
-  const annonce = buildAnnonce(post);
-  const title = post.series === "question" && !post.text ? "Question à écrire" : post.source.subject;
+  if (ANCIEN_ID_RE.test(id)) {
+    const ancien = (await readPresence()).posts.find((p) => p.id === id);
+    if (!ancien) notFound();
+    return (
+      <>
+        <Reveal className="k-pagehead">
+          <div style={{ minWidth: 0 }}>
+            <Retour />
+            <p className="k-eyebrow">Ancienne file · {ancien.series}</p>
+            <h1 className="k-h1 pr-title">{ancien.source?.subject ?? ancien.id}</h1>
+          </div>
+        </Reveal>
+        <Card title="Élément retiré" sub="L’ancienne file du studio est remplacée par le robot Facebook : ses éléments ne partent jamais.">
+          <dl className="pr-facts">
+            <div>
+              <dt>État</dt>
+              <dd>{ancien.status === "rejetee" ? "Retiré" : ancien.status === "publiee" ? "Publié avant le remplacement" : "Sera retiré au prochain passage planifié"}</dd>
+            </div>
+            {ancien.rejectReason ? (
+              <div>
+                <dt>Note</dt>
+                <dd>{ancien.rejectReason}</dd>
+              </div>
+            ) : null}
+          </dl>
+        </Card>
+      </>
+    );
+  }
+
+  if (!PUBLICATION_ID_RE.test(id)) notFound();
+  const maintenant = new Date();
+  const [data, presence, suivi] = await Promise.all([lireSocial(), readPresence(), suiviParPublication()]);
+  const p = data.publications.find((x) => x.id === id);
+  if (!p) notFound();
+
+  const mode = modeEnvoi(presence.settings.autoPublish);
+  const envoyee = dejaEnvoyee(p);
+  const corps = p.texte.slice(0, Math.max(0, p.texte.lastIndexOf("\n\n")));
+  const inconnus = nombresInconnus(corps, p.faits);
+  const s = suivi.get(p.id) ?? { visites: 0, demandes: 0, parType: {} };
+  const e = p.envoi;
+  const requise = approbationRequise(data.reglages, maintenant);
 
   return (
     <>
       <Reveal className="k-pagehead">
         <div style={{ minWidth: 0 }}>
-          <Link href="/gestion/presence" className="pr-back">
-            <ArrowLeft size={15} aria-hidden /> Studio
-          </Link>
+          <Retour />
           <p className="k-eyebrow">
-            {info.label} · {info.dayLabel.toLowerCase()}
+            {FORMAT_LIBELLES[p.format]} · {GENRE_LIBELLE[p.genre].toLowerCase()} {p.genre === "story" ? "1080 × 1920" : "1080 × 1350"}
           </p>
-          <h1 className="k-h1 pr-title">{title}</h1>
+          <h1 className="k-h1 pr-title">{p.faits.sujet}</h1>
           <p className="k-lead pr-when">
-            <span>{fmtWhen(post.scheduledAt)}</span>
-            <Chip tone={STATUS_TONE[post.status]} dot>
-              {STATUS_LABELS[post.status]}
+            <span>{fmtWhen(p.prevueLe)}</span>
+            <Chip tone={STATUT_TON[p.statut]} dot>
+              {STATUT_LIBELLES[p.statut]}
             </Chip>
-            {post.edited ? <Chip tone="cream">Texte modifié à la main</Chip> : null}
+            {p.modifiee ? <Chip tone="cream">Légende modifiée à la main</Chip> : null}
+            <Chip tone="cream">{p.redaction.mode === "ia" ? "Texte rédigé par l’IA, vérifié" : "Texte gabarit"}</Chip>
           </p>
         </div>
       </Reveal>
 
       <div className="pr-fiche">
         <div className="pr-fiche__preview">
-          <PostPreview images={urls.slides} story={storyOn ? urls.story : null} facebook={facebook} instagram={instagram} when={fmtWhen(post.scheduledAt)} />
-          <p className="g-hint pr-center">
-            {urls.slides.length} visuels 1080 × 1350{storyOn ? " et une story 1080 × 1920" : ""}, rendus par le site aux couleurs de la marque.
-          </p>
-          <div className="pr-thumbs" aria-label="Ouvrir les visuels">
-            {urls.slides.map((u, i) => (
-              <a key={u} href={u} target="_blank" rel="noreferrer" className="k-link">
-                Visuel {i + 1}
-              </a>
-            ))}
-            {urls.story ? (
-              <a href={urls.story} target="_blank" rel="noreferrer" className="k-link">
-                Story
-              </a>
-            ) : null}
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="pr-apercu" src={`/gestion/api/presence/visuel/${p.id}?v=${encodeURIComponent(p.majLe)}`} alt={`Visuel : ${p.texteVisuel}`} />
+          <p className="g-hint pr-center">Image rendue par le site, telle qu’elle partira (mise en page n° {p.variante + 1}).</p>
         </div>
 
         <div className="pr-fiche__side">
-          <Card title="Décision" sub={mode.real ? "Publication réelle : « Publier maintenant » envoie tout de suite." : "Mode essai : rien ne part vers Meta."}>
-            <PostActions id={post.id} status={post.status} date={montrealDate(scheduled)} time={montrealTime(scheduled)} real={mode.real} locked={locked} canRegenerate={post.series !== "question" && post.series !== "chantier" && post.series !== "blogue"} />
+          <Card title="Décision" sub={mode.reel ? "Envoi réel : « Publier maintenant » envoie tout de suite." : `Mode essai : rien ne part vers Facebook. ${mode.raisons.join(" ")}`}>
+            <PostActions id={p.id} statut={p.statut} reel={mode.reel} envoyee={envoyee} />
             <dl className="pr-facts">
-              {post.approvedBy ? (
+              {p.statut === "en_attente" && !requise ? (
                 <div>
-                  <dt>Approuvée</dt>
-                  <dd>
-                    {post.approvedBy}
-                    {post.approvedAt ? `, ${fmtWhen(post.approvedAt)}` : ""}
+                  <dt>Approbation</dt>
+                  <dd>Période d’approbation terminée : approuvé d’office à son heure si vous ne le refusez pas.</dd>
+                </div>
+              ) : null}
+              {e.derniereErreur ? (
+                <div>
+                  <dt>Dernière erreur</dt>
+                  <dd className="pr-bad">
+                    {e.derniereErreur}
+                    {e.derniereErreurLe ? ` (${fmtWhen(e.derniereErreurLe)})` : ""}
                   </dd>
                 </div>
               ) : null}
-              {post.rejectReason ? (
-                <div>
-                  <dt>Raison du rejet</dt>
-                  <dd>{post.rejectReason}</dd>
-                </div>
-              ) : null}
-              {pub.lastError ? (
-                <div>
-                  <dt>Dernière erreur</dt>
-                  <dd className="pr-bad">{pub.lastError}</dd>
-                </div>
-              ) : null}
-              {pub.nextAttemptAt && post.status === "planifiee" ? (
+              {e.prochainEssai && p.statut === "approuvee" ? (
                 <div>
                   <dt>Nouvel essai</dt>
-                  <dd>{fmtWhen(pub.nextAttemptAt)}</dd>
+                  <dd>{fmtWhen(e.prochainEssai)}</dd>
                 </div>
               ) : null}
-              {pub.attempts ? (
+              {e.tentatives ? (
                 <div>
-                  <dt>Essais de publication</dt>
-                  <dd>{pub.attempts}</dd>
+                  <dt>Essais d’envoi</dt>
+                  <dd>{e.tentatives}</dd>
                 </div>
               ) : null}
-              {pub.facebook?.postId ? (
+              {e.aVerifier ? (
+                <div>
+                  <dt>À vérifier</dt>
+                  <dd className="pr-bad">Réponse de Facebook perdue : le prochain passage vérifie sur la page avant tout nouvel essai.</dd>
+                </div>
+              ) : null}
+              {e.postId ? (
                 <div>
                   <dt>Facebook</dt>
                   <dd>
-                    <a className="k-link" href={`https://www.facebook.com/${pub.facebook.postId}`} target="_blank" rel="noreferrer">
-                      Voir la publication <ExternalLink size={12} aria-hidden />
-                    </a>
+                    {e.lien ? (
+                      <a className="k-link" href={e.lien} target="_blank" rel="noreferrer">
+                        Voir {p.genre === "story" ? "la story" : "la publication"} <ExternalLink size={12} aria-hidden />
+                      </a>
+                    ) : null}{" "}
+                    (identifiant {e.postId}
+                    {e.publieeLe ? `, ${fmtWhen(e.publieeLe)}` : ""})
                   </dd>
                 </div>
               ) : null}
-              {pub.instagram?.mediaId ? (
-                <div>
-                  <dt>Instagram</dt>
-                  <dd>Publiée (identifiant {pub.instagram.mediaId}){pub.instagram.storyMediaId ? ", story publiée" : ""}</dd>
-                </div>
-              ) : null}
+              <div>
+                <dt>Suivi</dt>
+                <dd>
+                  {s.visites} visite{s.visites > 1 ? "s" : ""} par le lien suivi, {s.demandes} demande{s.demandes > 1 ? "s" : ""}
+                  {s.demandes ? ` (${Object.entries(s.parType).map(([k, n]) => `${k} : ${n}`).join(", ")})` : ""}
+                </dd>
+              </div>
             </dl>
           </Card>
 
-          <Card title="Texte" sub="Le lien suivi (Facebook), « Lien dans la bio » (Instagram) et les mots-clics s’ajoutent seuls, selon le réseau.">
-            {post.series === "question" ? (
-              <QuestionEditor id={post.id} question={post.question?.question ?? ""} answer={post.question?.answer ?? ""} disabled={locked} />
-            ) : (
-              <CaptionEditor post={{ id: post.id, series: post.series, text: post.text, hashtags: post.hashtags, link: post.link }} source={{ values: post.source.values, texts: post.source.texts }} disabled={locked} />
-            )}
+          <Card title="Légende" sub="Le lien suivi (utm_source=facebook, utm_content = identifiant) doit rester : c’est lui qui compte les visites.">
+            <CaptionEditor id={p.id} texte={p.texte} lien={p.lien} inconnus={inconnus} disabled={envoyee} />
           </Card>
 
-          <Card title="D’où viennent les chiffres" sub={`${post.source.subject} · préparé le ${fmtWhen(post.source.generatedAt)}`}>
-            {unknown.length ? (
-              <div className="pr-warn" role="alert">
-                <TriangleAlert size={16} aria-hidden />
-                <p>
-                  Le texte enregistré contient {unknown.length === 1 ? "un nombre absent" : "des nombres absents"} de la source : <b>{[...new Set(unknown.map((n) => n.raw))].join(", ")}</b>.
-                </p>
-              </div>
-            ) : null}
-            <p className="pr-srcpage">
-              Page d’origine :{" "}
-              <a className="k-link" href={post.source.page} target="_blank" rel="noreferrer">
-                {post.source.pageLabel} <ExternalLink size={12} aria-hidden />
-              </a>
-            </p>
-            {Object.keys(post.source.values).length ? (
-              <dl className="pr-src">
-                {Object.entries(post.source.values).map(([k, v]) => (
-                  <div key={k}>
-                    <dt>{post.source.labels[k] ?? k}</dt>
-                    <dd>{show(v)}</dd>
-                  </div>
-                ))}
-              </dl>
-            ) : (
-              <p className="g-hint">Texte saisi à la main : aucune donnée du site n’est reprise.</p>
-            )}
-            {post.source.derived?.length ? (
-              <ul className="pr-datasets">
-                {post.source.derived.map((d) => (
-                  <li key={d.key}>
-                    <b>{post.source.labels[d.key] ?? d.key}</b> : {d.formula}
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-            <ul className="pr-datasets">
-              {post.source.datasets.map((d, i) => (
-                <li key={i}>
-                  {d.url ? (
-                    <a className="k-link" href={d.url} target="_blank" rel="noreferrer">
-                      {d.label}
-                      {external(d.url) ? <ExternalLink size={12} aria-hidden /> : null}
-                    </a>
-                  ) : (
-                    d.label
-                  )}
-                </li>
-              ))}
-            </ul>
-          </Card>
-
-          {pub.dryRun ? (
-            <Card title="Mode essai : ce qui aurait été envoyé" sub={`${fmtWhen(pub.dryRun.at)} · ${pub.dryRun.reasons.join(" ")}`}>
+          {e.essai ? (
+            <Card title="Mode essai : ce qui serait parti" sub={`${fmtWhen(e.essai.le)} · ${e.essai.raisons.join(" ")}`}>
               <ol className="pr-dry">
-                {pub.dryRun.requests.map((r, i) => (
+                {e.essai.requetes.map((r, i) => (
                   <li key={i}>
                     <code>
-                      {r.network === "facebook" ? "Facebook" : "Instagram"} · {r.method} {r.path}
+                      {r.methode} {r.chemin}
                     </code>
                     <span>
-                      {Object.entries(r.params)
+                      {Object.entries(r.champs)
                         .map(([k, v]) => `${k} = ${v.length > 110 ? `${v.slice(0, 110)}…` : v}`)
                         .join(" · ")}
                     </span>
@@ -226,23 +189,31 @@ export default async function PresencePostPage({ params }: { params: Promise<{ i
             </Card>
           ) : null}
 
-          {annonce ? (
-            <Card title="Annonce Marketplace / Kijiji" sub="Prête à copier. Jamais publiée automatiquement : ces plateformes l’interdisent. Ajoutez les visuels à la main.">
-              <div className="pr-annonce">
-                <div className="pr-annonce__row">
-                  <span className="g-label">Titre</span>
-                  <CopyButton text={annonce.title} label="Copier le titre" />
-                </div>
-                <p className="pr-annonce__title">{annonce.title}</p>
-                <div className="pr-annonce__row">
-                  <span className="g-label">Description</span>
-                  <CopyButton text={annonce.body} label="Copier la description" />
-                </div>
-                <pre className="pr-annonce__body">{annonce.body}</pre>
-                <p className="g-hint">Images : ouvrez « Visuel 1 », « Visuel 2 »… sous l’aperçu, puis enregistrez-les. Le prix reste à votre choix.</p>
-              </div>
-            </Card>
-          ) : null}
+          <Card title="D’où viennent les chiffres" sub={`Page du site : ${p.faits.chemin}`}>
+            <ul className="pr-datasets">
+              {faitsEnClair(p.faits).map((l, i) => (
+                <li key={i}>{l}</li>
+              ))}
+            </ul>
+            {p.redaction.rejets?.length ? <p className="g-hint">Texte de l’IA rejeté par le garde-fou : {p.redaction.rejets.join(" ; ")}.</p> : null}
+          </Card>
+
+          <Card title="Historique">
+            <ol className="pr-log">
+              {p.historique
+                .slice()
+                .reverse()
+                .map((h, i) => (
+                  <li key={`${h.le}-${i}`}>
+                    <span>
+                      <time dateTime={h.le}>{fmtWhen(h.le)}</time>
+                      {STATUT_LIBELLES[h.statut]} · {h.par}
+                      {h.note ? ` · ${h.note}` : ""}
+                    </span>
+                  </li>
+                ))}
+            </ol>
+          </Card>
         </div>
       </div>
     </>

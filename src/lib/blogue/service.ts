@@ -9,9 +9,10 @@
    - « Approuver et publier » vérifie que l'article est publiable
      (chaque nombre dans sa source, sources présentes, aucune marque
      « [À écrire] », Loi 25 pour la question de la semaine), le publie,
-     revalide les pages (ISR, sans rebuild), prépare sa publication
-     Facebook et Instagram dans le studio et avertit les moteurs de
-     recherche (point d'extension IndexNow).
+     revalide les pages (ISR, sans rebuild) et avertit les moteurs de
+     recherche (point d'extension IndexNow). L'article n'est plus
+     republié sur les réseaux : le robot Facebook (src/lib/social)
+     publie ses propres formats.
    ================================================================== */
 
 import { randomBytes } from "node:crypto";
@@ -23,7 +24,6 @@ import { proposeStyle, type StyleClient } from "./assistant";
 import { announceUrls } from "./diffusion";
 import type { BlogFacts } from "./facts";
 import { validImagePath } from "./images";
-import { queueArticlePost, type QueueOutcome } from "./presence-bridge";
 import { revalidateArticle, type Revalidator } from "./revalidate";
 import { addBlogueLog, mutateBlogue } from "./store";
 import { buildDraft, DATA_TEMPLATES, TEMPLATE_LABELS, type ArticleDraft } from "./templates";
@@ -260,7 +260,7 @@ async function afterPublicChange(slug: string, deps: ServiceDeps): Promise<void>
   }
 }
 
-export async function publishArticle(id: string, by: string, deps: ServiceDeps = {}): Promise<Result & { presence?: QueueOutcome["kind"] }> {
+export async function publishArticle(id: string, by: string, deps: ServiceDeps = {}): Promise<Result> {
   const now = deps.now ?? new Date();
   const snap = await mutateBlogue<BlogArticle | string>((d) => {
     const a = find(d, id);
@@ -278,39 +278,9 @@ export async function publishArticle(id: string, by: string, deps: ServiceDeps =
     return { result: structuredClone(a), changed: true };
   });
   if (typeof snap === "string") return fail(snap);
-
-  // Republication : publication Facebook et Instagram dans la file du studio (à approuver selon les règles du studio).
-  let outcome: QueueOutcome | null = null;
-  try {
-    outcome = await mutatePresence((pd) => {
-      const o = queueArticlePost(pd, snap, now);
-      return { result: o, changed: o.kind === "creee" };
-    });
-    if (outcome.kind !== "ignoree") {
-      const postId = outcome.post.id;
-      await mutateBlogue((d) => {
-        const a = find(d, id);
-        if (!a || a.presencePostIds.includes(postId)) return { result: null, changed: false };
-        a.presencePostIds.push(postId);
-        return { result: null, changed: true };
-      });
-    }
-  } catch (err) {
-    console.error("[blogue] publication du studio non préparée :", err instanceof Error ? err.message : err);
-  }
-
+  // L'article n'est plus republié automatiquement : le robot Facebook (src/lib/social) publie ses propres formats.
   await afterPublicChange(snap.slug, deps);
-
-  const presenceMsg = !outcome
-    ? " La publication Facebook et Instagram n’a pas pu être préparée : créez-la depuis le studio."
-    : outcome.kind === "creee"
-      ? outcome.post.status === "planifiee"
-        ? " Publication Facebook et Instagram planifiée dans le studio (gabarit déjà validé)."
-        : " Publication Facebook et Instagram préparée dans le studio, à approuver."
-      : outcome.kind === "existante"
-        ? " Sa publication Facebook et Instagram existe déjà dans le studio."
-        : ` ${outcome.reason}`;
-  return { ok: true, message: `Publié : l’article est en ligne.${presenceMsg}`, ...(outcome ? { presence: outcome.kind } : {}) };
+  return ok("Publié : l’article est en ligne.");
 }
 
 export async function unpublishArticle(id: string, by: string, deps: ServiceDeps = {}): Promise<Result> {
@@ -324,14 +294,13 @@ export async function unpublishArticle(id: string, by: string, deps: ServiceDeps
     return { result: { slug: a.slug, postIds: [...a.presencePostIds] }, changed: true };
   });
   if (typeof r === "string") return fail(r);
-  // Une publication du studio qui n'est pas encore partie ne doit pas pointer vers une page retirée.
+  // Ancienne file du studio : un élément lié à l'article qui n'est pas encore parti ne doit pas pointer vers une page retirée.
   let withdrawn = 0;
   if (r.postIds.length) {
     withdrawn = await mutatePresence((pd) => {
       let n = 0;
       for (const p of pd.posts) {
         if (!r.postIds.includes(p.id) || p.status === "publiee" || p.status === "rejetee") continue;
-        if (p.publish.facebook?.postId || p.publish.instagram?.mediaId || p.publish.facebook?.photoIds?.length || p.publish.instagram?.containerId) continue;
         p.status = "rejetee";
         p.rejectedAt = now.toISOString();
         p.rejectedBy = by;

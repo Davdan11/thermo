@@ -16,7 +16,7 @@ import { readEnvValues, resolveEnvTarget, scheduleReload, writeEnvVar, type EnvT
 export type KeyGroup = "meta" | "google-ads" | "anthropic" | "stripe" | "gemini" | "elevenlabs" | "avis" | "sauvegardes";
 
 export const KEY_GROUPS: Record<KeyGroup, { label: string; sub: string }> = {
-  meta: { label: "Meta", sub: "Facebook et Instagram (studio Présence)" },
+  meta: { label: "Meta", sub: "Page Facebook (studio Présence)" },
   "google-ads": { label: "Google Ads", sub: "API Google Ads (campagnes et conversions)" },
   anthropic: { label: "Anthropic", sub: "Assistant « Une question ? » et robot du blogue" },
   stripe: { label: "Stripe", sub: "Paiements en ligne" },
@@ -53,7 +53,7 @@ const digits = (v: string) => v.replace(/[\s-]/g, "");
 export const KEY_SPECS: KeySpec[] = [
   { name: "META_PAGE_ID", group: "meta", label: "Identifiant de la page Facebook", hint: "chiffres seulement", check: re(/^\d{5,20}$/) },
   { name: "META_PAGE_TOKEN", group: "meta", label: "Jeton de la page (longue durée)", hint: "commence par EAA", check: re(/^EAA[A-Za-z0-9]{40,600}$/) },
-  { name: "META_IG_USER_ID", group: "meta", label: "Identifiant du compte Instagram professionnel", hint: "chiffres seulement", check: re(/^\d{5,20}$/) },
+  { name: "META_IG_USER_ID", group: "meta", label: "Identifiant Instagram (facultatif : le robot publie sur Facebook seulement)", hint: "chiffres seulement", check: re(/^\d{5,20}$/) },
 
   { name: "GOOGLE_ADS_DEVELOPER_TOKEN", group: "google-ads", label: "Jeton de développeur", hint: "22 caractères environ", check: re(/^[A-Za-z0-9_-]{16,40}$/) },
   { name: "GOOGLE_ADS_CLIENT_ID", group: "google-ads", label: "ID client OAuth", hint: "se termine par .apps.googleusercontent.com", check: re(/^\d{6,20}-[a-z0-9]{10,64}\.apps\.googleusercontent\.com$/) },

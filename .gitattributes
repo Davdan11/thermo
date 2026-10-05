@@ -1,0 +1,4 @@
+# Scripts shell exécutés sur le VPS (Linux) : toujours LF, quel que soit le poste qui les modifie.
+# Un seul CR suffit à casser bash (« set: pipefail: invalid option name »), ce qui a arrêté le robot de nuit
+# du 13 au 17 septembre 2026.
+*.sh text eol=lf

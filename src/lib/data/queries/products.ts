@@ -159,6 +159,11 @@ export function getCertificationsForConfig(
 }
 
 let warrantiesByModel: Map<string, Warranty[]> | null = null;
+/**
+ * Garanties portées par le catalogue lui-même : il n'y en a plus aucune, rien n'y est écrit.
+ * La garantie d'une fiche se résout par `resolveWarranty` (src/lib/data/warranty.ts), à partir
+ * des relevés de documents des fabricants.
+ */
 export function getWarrantiesForModel(modelId: string): Warranty[] {
   if (!warrantiesByModel) {
     warrantiesByModel = new Map();

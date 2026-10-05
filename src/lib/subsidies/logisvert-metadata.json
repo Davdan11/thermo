@@ -1,7 +1,19 @@
 {
-  "updatedAt": "2026-09-12T20:00:41.008Z",
-  "sourceFile": "proprio-maison-fr-17-07-2025.csv.gz",
-  "sourceUrl": "https://www.hydroquebec.com/themes/mieux-consommer/recherche-themopompes-efficaces/data/proprio-maison-fr-17-07-2025.csv.gz",
-  "sourceSha256": "5d461c513d0d132fce8c5fdcea5956ed708571b291f7cbc253440e6e46858ada",
-  "count": 176627
+  "updatedAt": "2026-09-17T17:41:25.877Z",
+  "source": "Liste des thermopompes admissibles au programme LogisVert (certifiées ENERGY STAR), clientèle propriétaire d'une habitation existante, lue par l'outil de recherche d'Hydro-Québec",
+  "toolUrl": "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/recherche-themopompes-efficaces.html",
+  "sourceFile": "proprietaire-habitation-existante-20260917.csv.gz",
+  "sourceUrl": "https://codaservicesprod-back.devtechnucom.com/energystar/depot-csv/proprietaire-habitation-existante-20260917.csv.gz",
+  "listDate": "2026-09-17",
+  "sourceSha256": "2db6d6c056a142b547fbd194f6cff03e8c5bcd10b157296c27d812cb9588412b",
+  "contentSha256": "1a1e233627ee751ed5e3f9260b9984577e4ee980de01a0f9cc9e4d191651e130",
+  "rows": 278512,
+  "count": 278211,
+  "bonificationMultilogements": 23351,
+  "enrichedFromEnergyStar": 278207,
+  "amountRules": {
+    "a": "TTG_AF_EffAlone, « Subvention » : 50 $ par 1 000 BTU/h à −8 °C (ENERGY STAR) ou 120 $ (ENERGY STAR climat froid)",
+    "bml": "TTG_Ext5 − TTG_AF_EffAlone si program_fecc_admissible = VRAI, « Bonification – Multilogements » : total de 220 $ par 1 000 BTU/h à −8 °C, multilogements admissibles seulement, installations à compter du 15 juin 2026",
+    "guide": "https://www.hydroquebec.com/data/logisvert/logisvert-guide-participation-residentiel-fr.pdf"
+  }
 }

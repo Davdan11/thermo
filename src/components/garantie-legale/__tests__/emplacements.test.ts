@@ -184,7 +184,7 @@ describe("pages publiques qui affichent un prix de thermopompe neuve", () => {
     expect(pres(html, `${money(r.min)} – ${money(r.max)}`)).toBe(true);
   });
 
-  it("ThermoMatch : sous le prix approximatif de chaque recommandation, et rien sans prix", () => {
+  it("ThermoMatch : sous l'ordre de grandeur de chaque recommandation, et rien sans prix", () => {
     const resultat = (prix: boolean) => ({
       badge: "Meilleur choix",
       score: 90,
@@ -199,7 +199,7 @@ describe("pages publiques qui affichent un prix de thermopompe neuve", () => {
     const ctx = { estimatedLoadBtu: 10000, targetBtu: 10000, floors: 1, requestedZones: 1, isMultiZone: false, heatedAreaFt2: 1000 };
     const rendre = (prix: boolean) => renderToString(createElement(ThermoMatchResults, { results: [resultat(prix)], onSelectResult: () => {}, onRetry: () => {}, summaryContext: ctx }));
     const html = avantApres(() => rendre(true), 1);
-    expect(pres(html, "Prix approximatif installé")).toBe(true);
+    expect(pres(html, "Ordre de grandeur installé")).toBe(true);
     expect(compter(rendre(false))).toBe(0);
   });
 });

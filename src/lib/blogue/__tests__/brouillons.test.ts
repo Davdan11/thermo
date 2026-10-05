@@ -1,12 +1,7 @@
 /* Aucun chiffre inventé : chaque nombre des brouillons préparés (titre, chapeau, corps, texte de la photo) existe dans leur
-   source, avec des faits d'essai et avec les VRAIES données du site. Idem pour la publication Facebook et Instagram créée
-   à partir de chaque brouillon. LogisVert : toujours versé au client. */
+   source, avec des faits d'essai et avec les VRAIES données du site. LogisVert : toujours versé au client. */
 import { describe, expect, it } from "vitest";
-import { composeCaption } from "@/lib/presence/captions";
 import { fmtTemp } from "@/lib/presence/format";
-import { slidesText, unknownNumbers } from "@/lib/presence/numbers";
-import { normalizePresence } from "@/lib/presence/store";
-import { buildArticleGenerated } from "../presence-bridge";
 import { buildDraft, DATA_TEMPLATES, type ArticleDraft } from "../templates";
 import { articleUnknownNumbers, TODO_RE } from "../text";
 import type { BlogFacts } from "../facts";
@@ -24,11 +19,6 @@ function checkAll(f: BlogFacts) {
     if (t !== "question") {
       expect(TODO_RE.test(`${d.title}\n${d.description}\n${d.body}`), t).toBe(false);
       expect(d.description.length, t).toBeLessThanOrEqual(200);
-      // Publication du studio créée à partir de l'article : légendes et visuels sans nombre hors source.
-      const g = buildArticleGenerated({ ...a, status: "publie", publishedAt: "2026-09-14T15:00:00.000Z" }, "2026-09-14T15:00:00.000Z");
-      const post = { id: "p-20260914-blogue", series: "blogue" as const, text: g.text, hashtags: g.hashtags, link: g.link };
-      const all = [composeCaption(post, "facebook", "https://exemple.ca"), composeCaption(post, "instagram", "https://exemple.ca"), slidesText([...g.slides, g.story]), g.footnote].join("\n");
-      expect(unknownNumbers(all, g.source).map((x) => x.raw), `${t} (studio)`).toEqual([]);
     }
   }
 }
@@ -76,12 +66,11 @@ describe("brouillons : faits d’essai", () => {
   it("aucune question de la semaine n’est publiable telle quelle", () => {
     const d = buildDraft("question", fixtureFacts());
     expect(TODO_RE.test(d.title)).toBe(true);
-    expect(normalizePresence({}).settings.series.blogue.enabled).toBe(true);
   });
 });
 
 describe("brouillons : données réelles du site", () => {
-  it("chaque nombre des 5 brouillons et de leurs publications existe dans la source", { timeout: 240_000 }, async () => {
+  it("chaque nombre des 5 brouillons existe dans la source", { timeout: 240_000 }, async () => {
     const { getBlogFacts } = await import("../facts-site");
     const f = getBlogFacts(new Date("2026-09-13T14:00:00Z"));
     expect(f.models.length).toBeGreaterThan(500);

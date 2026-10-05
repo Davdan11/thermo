@@ -1,28 +1,30 @@
 /* ==================================================================
-   LogisVert Official Amounts — REAL data from Hydro-Québec
-   
-   Source: hydroquebec.com CSV (updated regularly by HQ)
-   Enriched with: ENERGY STAR API (series, SEER2, HSPF2, COP)
-   
-   The amounts are the OFFICIAL LogisVert subsidy values,
-   NOT calculated — taken directly from HQ's published data.
+   Montants LogisVert officiels — liste en vigueur d'Hydro-Québec
+
+   Source : fichier quotidien des thermopompes certifiées ENERGY STAR que
+   lit l'outil de recherche d'Hydro-Québec (propriétaire d'une habitation
+   existante), produit par scripts/scrape-logisvert.mjs ; enrichi par
+   ENERGY STAR (série, SEER2, HSPF2, COP) par numéro AHRI exact.
+
+   Les montants sont ceux de la liste, jamais recalculés :
+   - a   : « Subvention » (colonne TTG_AF_EffAlone) ;
+   - bml : « Bonification – Multilogements » (TTG_Ext5 − TTG_AF_EffAlone),
+           seulement pour les combinaisons admissibles à cette bonification.
+   Une unité extérieure absente de la liste n'a aucun montant : rien n'est
+   estimé à sa place.
    ================================================================== */
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { getLogisVertListInfo } from "./logisvert-meta";
+import { partagerTextes } from "../data/partager-textes";
 
-// Chargé par fs plutôt qu'importé : un import TypeScript d'un JSON de 34 Mo fait
-// exploser la mémoire du vérificateur de types et du lanceur de tests.
-const officialData = JSON.parse(readFileSync(join(process.cwd(), "src/lib/subsidies/logisvert-official-amounts.json"), "utf8")) as Record<string, unknown>;
-
-let modelIndex: Record<string, string[]> | null = null;
-try {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  modelIndex = require("./logisvert-model-index.json");
-} catch {
-  modelIndex = null;
-}
+// Lu sur le disque à l'exécution, jamais importé : un import d'un JSON de plus de 60 Mo fait exploser la mémoire du
+// vérificateur de types, et resterait figé dans le code compilé. Le robot de nuit remplace ce fichier dans la version
+// servie puis redémarre le serveur (scripts/publier-donnees.sh). Textes identiques partagés : 250 → 92 Mo en mémoire.
+const officialData = partagerTextes(
+  JSON.parse(readFileSync(join(process.cwd(), "src/lib/subsidies/logisvert-official-amounts.json"), "utf8")) as Record<string, unknown>,
+);
 
 /**
  * Entry from the official LogisVert amounts database.
@@ -38,8 +40,14 @@ export interface LogisVertOfficialEntry {
   outdoorModel: string;
   /** Indoor model number */
   indoorModel?: string;
-  /** LogisVert subsidy amount in $ — REAL amount from HQ */
+  /** « Subvention » LogisVert en $ (TTG_AF_EffAlone), montant de la liste officielle */
   logisVertDollars: number;
+  /**
+   * « Bonification – Multilogements » en $ (TTG_Ext5 − TTG_AF_EffAlone), présente seulement si la combinaison y est
+   * admissible. Elle s'ajoute à la subvention uniquement dans un multilogement admissible (zone de précarité
+   * énergétique, construit en 1995 ou avant…) ; jamais pour une maison.
+   */
+  bonificationMultilogements?: number;
   /** Certified heating capacity at -8°C in BTU/h */
   heatingBtu17F: number;
   /** Certified heating capacity at -15°C (5°F) in BTU/h */
@@ -118,6 +126,7 @@ function toEntry(ahri: string, e: Record<string, unknown>): LogisVertOfficialEnt
     outdoorModel: (e.m as string) || "",
     indoorModel: e.im as string | undefined,
     logisVertDollars: (e.a as number) || 0,
+    bonificationMultilogements: typeof e.bml === "number" && e.bml > 0 ? e.bml : undefined,
     heatingBtu17F: (e.h17 as number) || 0,
     heatingBtu5F: e.h5 as number | undefined,
     coolingBtu: e.c as number | undefined,
@@ -177,6 +186,21 @@ export function lookupLogisVertFuzzy(modelNumber: string, brand?: string): Logis
     }
   }
   return null;
+}
+
+/**
+ * Entrée LogisVert d'une fiche du catalogue : numéro de l'unité extérieure, sinon numéro du modèle.
+ * Une fiche absente de la liste en vigueur (logisVertListed = false, voir scripts/build-catalogue.mjs)
+ * n'a jamais de montant, même si la recherche approchée trouvait un numéro voisin.
+ * Seul point d'entrée des pages pour le montant d'une fiche : aucune estimation en l'absence de montant.
+ */
+export function logisVertDeLaFiche(
+  model: { modelNumber: string; logisVertListed?: boolean },
+  brandName: string,
+  outdoorModelNumber?: string | null,
+): LogisVertOfficialEntry | null {
+  if (model.logisVertListed === false) return null;
+  return (outdoorModelNumber ? lookupLogisVertFuzzy(outdoorModelNumber, brandName) : null) ?? lookupLogisVertFuzzy(model.modelNumber, brandName);
 }
 
 /**
@@ -240,15 +264,13 @@ export function getMaxLogisVertForBrand(brandName: string): number {
  * Get all unique LogisVert entries for an outdoor model (different indoor combos).
  */
 export function getLogisVertVariants(outdoorModel: string): LogisVertOfficialEntry[] {
-  const key = outdoorModel.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const key = normalizeModel(outdoorModel);
   const results: LogisVertOfficialEntry[] = [];
 
-  // Use model index
-  if (modelIndex && modelIndex[key]) {
-    for (const ahri of modelIndex[key]) {
-      const entry = data[ahri];
-      if (entry) results.push(toEntry(ahri, entry as Record<string, unknown>));
-    }
+  // Index normalisé construit depuis la liste elle-même (même clé que logisvert-model-index.json, écrit pour les scripts).
+  for (const ahri of getNormIndex().map.get(key) ?? []) {
+    const entry = data[ahri];
+    if (entry) results.push(toEntry(ahri, entry as Record<string, unknown>));
   }
 
   return results.sort((a, b) => b.logisVertDollars - a.logisVertDollars);

@@ -3,6 +3,8 @@ import type { CSSProperties } from "react";
 import { ConsentLink } from "@/components/analytics/ConsentBanner";
 import { getActiveBrandCount, getEligibleModelCount } from "@/lib/data/queries/stats";
 import { getLogisVertListInfo } from "@/lib/subsidies/logisvert-meta";
+import { visitAreasLabel } from "@/lib/rdv/booking";
+import { SOCIAL_PROFILES } from "@/lib/seo";
 import { BackToTop, FooterCount, FooterStage } from "./footer/FooterClient";
 import { FooterWordmark } from "./footer/FooterWordmark";
 import "./footer/footer.css";
@@ -41,6 +43,7 @@ const NAV = [
       { href: "/subventions", label: "Aides financières" },
       { href: "/subventions/logisvert", label: "LogisVert par marque" },
       { href: "/prix", label: "Prix : notre approche" },
+      { href: "/methode", label: "Notre méthode" },
       { href: "/calculateur-economies", label: "Calculatrice d’économies" },
       { href: "/glossaire", label: "Glossaire" },
       { href: "/faq", label: "FAQ" },
@@ -139,6 +142,12 @@ export function Footer() {
             <a href="mailto:info@thermopompesavendre.ca" className="ft-link ft-mail ft-rv" style={at(4)}>
               <span>info@thermopompesavendre.ca</span>
             </a>
+            <a href={SOCIAL_PROFILES.facebook} target="_blank" rel="noopener me" className="ft-link ft-mail ft-social ft-rv" style={at(4)}>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8.1v3h2.5V21h2.9z" />
+              </svg>
+              <span>Suivez-nous sur Facebook</span>
+            </a>
             <div className="ft-rv mt-8" style={at(5)}>
               <Link href="/trouver-ma-thermopompe" className="ft-pill">
                 <span className="ft-roll">
@@ -190,9 +199,10 @@ export function Footer() {
             </p>
             <div className="ft-rv mt-8" style={at(2)}>
               <p className="ft-caps" style={{ color: "var(--ft-cream)" }}>
-                Partout au Québec
+                Zone de service
               </p>
-              <p className="ft-body mt-3">Nous desservons toutes les régions du Québec avec notre réseau d’installateurs certifiés.</p>
+              {/* Secteurs de visite tirés de la configuration des rendez-vous (src/lib/rdv/booking.ts, AREAS). */}
+              <p className="ft-body mt-3">{`Conseil à distance partout au Québec${NB}; visite sur place dans les secteurs desservis${NB}: ${visitAreasLabel()}.`}</p>
             </div>
           </div>
 
@@ -230,7 +240,8 @@ export function Footer() {
                 <ul className="ft-legal-row m-0 p-0" style={{ listStyle: "none" }}>
                   {LEGAL.map((l) => (
                     <li key={l.href}>
-                      <Link href={l.href} className="ft-link ft-small">
+                      {/* Nom accessible explicite : sans lui, les deux libellés se lisent collés (« ConfidentialitéLoi 25 »). */}
+                      <Link href={l.href} className="ft-link ft-small" aria-label={l.tag ? `${l.label}, ${l.tag}` : undefined}>
                         <span>{l.label}</span>
                         {l.tag ? <span className="ft-tag">{l.tag}</span> : null}
                       </Link>

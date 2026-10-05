@@ -21,7 +21,7 @@
 import { PRICE_GRID, PRICE_GRID_CONSULTED_AT, TIER_LABEL, type PriceCell, type PriceKind, type PriceTier } from "@/lib/prices/grille-installee";
 import { getLogisVertStats } from "@/lib/subsidies/logisvert-official";
 import { getCanonicalModels, getCapacityClasses } from "@/lib/seo/programmatic";
-import { getActiveBrandCount, getEligibleModelCount } from "@/lib/data/queries/stats";
+import { chiffre, jeton } from "@/lib/data/chiffres";
 import { getCities } from "@/lib/seo/cities";
 
 const NB = " ";
@@ -196,14 +196,18 @@ function fact(token: string): string | null {
       const cls = getCapacityClasses().find((x) => x.btu === Number(a));
       return cls && cls.maxLogisVert > 0 ? dollars(cls.maxLogisVert) : null;
     }
+    // Compteurs du catalogue : une seule définition, celle de src/lib/data/chiffres.ts (/methode#chiffres).
     case "cat": {
-      if (a === "machines") return fr(getCanonicalModels().length);
+      if (a === "machines") return fr(chiffre("machines"));
       if (a === "murales") return fr(getCanonicalModels().filter((m) => m.kind === "murale").length);
       if (a === "centrales") return fr(getCanonicalModels().filter((m) => m.kind === "centrale").length);
-      if (a === "eligible") return fr(getEligibleModelCount());
-      if (a === "brands") return fr(getActiveBrandCount());
+      if (a === "eligible") return fr(chiffre("fiches"));
+      if (a === "brands") return fr(chiffre("marques"));
       return null;
     }
+    // {{chiffre:…}} : les mêmes jetons que les guides.
+    case "chiffre":
+      return jeton(token);
     case "villes":
       return a === "count" ? fr(getCities().length) : null;
     default:

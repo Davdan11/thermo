@@ -16,6 +16,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { track } from "@/lib/analytics/track";
 import { readAttribution } from "@/lib/attribution/client";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
+import { Honeypot } from "@/components/forms/Honeypot";
 
 export type LogisVertAlertTarget = { kind: "model"; modelId: string } | { kind: "brand"; brandSlug: string };
 
@@ -164,7 +165,7 @@ export function LogisVertAlertForm({ target, label, tone = "dark", amount, amoun
             Soyez prévenu si la subvention change.
           </h2>
           <p className="m-0 mt-3 max-w-[620px] text-[15px] leading-[1.65]" style={{ color: p.mute }}>
-            Hydro-Québec révise la liste LogisVert plusieurs fois par année. Laissez votre courriel&nbsp;: nous vous écrivons seulement si le montant pour{" "}
+            Hydro-Québec publie sa liste LogisVert chaque jour et nous la suivons. Laissez votre courriel&nbsp;: nous vous écrivons seulement si le montant pour{" "}
             <span style={{ color: p.text, fontWeight: 600 }}>{target.kind === "brand" ? `les thermopompes ${label}` : label}</span> monte, baisse, ou si{" "}
             {target.kind === "brand" ? "un modèle entre dans la liste ou en sort" : "le modèle entre dans la liste ou en sort"}.
           </p>
@@ -303,10 +304,7 @@ export function LogisVertAlertForm({ target, label, tone = "dark", amount, amoun
                 </div>
 
                 {/* Pot de miel : invisible pour les humains. */}
-                <div className="absolute" style={{ left: -9999, top: -9999 }} aria-hidden="true">
-                  <label htmlFor={`${uid}-site`}>Site web</label>
-                  <input id={`${uid}-site`} type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
-                </div>
+                <Honeypot value={website} onChange={(e) => setWebsite(e.target.value)} />
 
                 <label className="mt-4 flex cursor-pointer items-start gap-3 text-[13px] leading-[1.55]" style={{ color: p.mute }}>
                   <input

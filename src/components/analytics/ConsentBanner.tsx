@@ -22,6 +22,7 @@ import { useEffect, useState } from "react";
 import { AD_CONSENT_VERSION } from "@/lib/ads/config";
 import { CONSENT_META_KEY } from "@/lib/ads/consent";
 import { CONSENT_KEY, MEASUREMENT_ON, applyConsent, readConsent } from "./Analytics";
+import "./consent-banner.css";
 
 export const CONSENT_OPEN_EVENT = "tpv-consent-open";
 
@@ -59,27 +60,14 @@ export function ConsentBanner() {
         role="region"
         aria-label="Témoins et mesure d'audience"
         suppressHydrationWarning
+        className="tpv-consent"
         style={{
-          position: "fixed",
-          left: 16,
-          right: 16,
-          bottom: "calc(16px + var(--mobile-bar-offset, 0px))",
-          zIndex: 60,
-          maxWidth: 720,
-          margin: "0 auto",
-          backgroundColor: "#0C1821",
-          color: "#fff",
-          borderRadius: 8,
-          boxShadow: "0 12px 40px rgba(0,0,0,0.28)",
-          padding: "16px 20px",
           // Masqué au serveur ; le script en ligne l'affiche avant le premier rendu, puis React (visible === true).
+          // Mise en page (et version mobile, plus compacte) : consent-banner.css.
           display: visible ? "flex" : "none",
-          flexWrap: "wrap",
-          alignItems: "center",
-          gap: 12,
         }}
       >
-        <p style={{ margin: 0, flex: "1 1 320px", fontSize: 14, lineHeight: 1.5, color: "rgba(255,255,255,0.85)" }}>
+        <p className="tpv-consent-text">
           Avec votre accord, nous mesurons la fréquentation du site (Google Analytics) et l&apos;efficacité de nos publicités Google et Meta
           (Facebook, Instagram) : témoins de ces services, et identifiant du clic publicitaire gardé 90 jours dans votre navigateur puis
           joint à votre demande. Rien de cela sans votre accord, et rien n&apos;est vendu à des tiers.{" "}
@@ -87,19 +75,12 @@ export function ConsentBanner() {
             Politique de confidentialité
           </Link>
         </p>
-        <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
-          <button
-            type="button"
-            onClick={() => choose("denied")}
-            style={{ padding: "10px 16px", borderRadius: 4, border: "1px solid rgba(255,255,255,0.35)", background: "transparent", color: "#fff", fontSize: 14, fontWeight: 600, cursor: "pointer", minHeight: 44 }}
-          >
+        {/* Deux boutons de même taille, côte à côte : refuser demande exactement le même geste qu'accepter. */}
+        <div className="tpv-consent-actions">
+          <button type="button" onClick={() => choose("denied")} className="tpv-consent-btn" style={{ border: "1px solid rgba(255,255,255,0.35)", background: "transparent" }}>
             Refuser
           </button>
-          <button
-            type="button"
-            onClick={() => choose("granted")}
-            style={{ padding: "10px 18px", borderRadius: 4, border: "none", background: "#e54b17", color: "#fff", fontSize: 14, fontWeight: 700, cursor: "pointer", minHeight: 44 }}
-          >
+          <button type="button" onClick={() => choose("granted")} className="tpv-consent-btn" style={{ border: "1px solid #e54b17", background: "#e54b17" }}>
             Accepter
           </button>
         </div>

@@ -3,7 +3,7 @@ title: "9 000 ou 12 000 BTU : quelle murale pour quelle pièce"
 description: "Les deux calibres de murale les plus vendus au Québec se ressemblent sur l'étiquette. Voici ce qui les distingue à -15 °C, selon la pièce, l'isolation et la région."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
-updatedAt: "2026-09-11"
+updatedAt: "2026-09-17"
 coverImage: "/images/guides/card-interior-living-room.jpg"
 category: "choisir"
 keywords: ["thermopompe 9000 btu", "thermopompe 12000 btu", "9000 ou 12000 btu", "murale 12000 btu quelle pièce", "capacité thermopompe pièce"]
@@ -14,7 +14,7 @@ faq:
   - q: "Le 12 000 BTU coûte-t-il beaucoup plus cher que le 9 000?"
     a: "Pas nécessairement. Dans les prix installés publiés que nous relevons, les fourchettes des deux calibres se chevauchent largement : une murale de 12 000 BTU de gamme économique se vend entre 2 500 et 3 500 dollars installée, une 9 000 BTU de gamme économique entre 2 900 et 3 500 dollars. La gamme pèse plus que le calibre."
   - q: "Quel calibre reçoit la plus grosse subvention LogisVert?"
-    a: "Le 12 000 BTU, en général. Sur la liste d'Hydro-Québec, les appareils de 9 000 BTU subventionnés reçoivent entre 250 et 650 dollars, médiane 360 dollars. Ceux de 12 000 BTU reçoivent entre 350 et 2 268 dollars, médiane 530 dollars. Le montant exact dépend du jumelage précis unité extérieure et unité intérieure."
+    a: "Le 12 000 BTU, et lui seul. Hydro-Québec exige une unité extérieure d'au moins 12 000 BTU/h de puissance nominale en climatisation : aucun appareil de 9 000 BTU n'est admissible sur la liste en vigueur. Une murale de 12 000 BTU reçoit de {{chiffre:lv:wall-single:12000:min}} à {{chiffre:lv:wall-single:12000:max}} dollars, médiane {{chiffre:lv:wall-single:12000:med}} dollars, selon le jumelage précis unité extérieure et unité intérieure."
   - q: "Peut-on chauffer deux pièces fermées avec une seule murale?"
     a: "Mal. Une murale chauffe l'espace où elle souffle et ce qui communique largement avec lui. Une chambre fermée par une porte reste froide. Pour deux pièces fermées, on regarde plutôt un multizone ou une seconde murale, et on garde les plinthes en appoint dans les pièces éloignées."
 ---
@@ -25,7 +25,7 @@ Les deux calibres de murale les plus installés au Québec sont le 9 000 et le 1
 
 Le chiffre du calibre, 9 000 ou 12 000 BTU, décrit la capacité nominale de la machine, mesurée par le fabricant dans des conditions douces. Au Québec, c'est la capacité certifiée à -15 °C (5 °F) par ENERGY STAR qui compte, et elle n'est pas sur l'étiquette. Notre guide sur [la capacité à choisir](/guides/btu-quelle-capacite-choisir) explique le calcul en détail.
 
-Le point à retenir est que deux machines de même calibre peuvent se comporter très différemment au froid. Dans notre catalogue bâti sur la liste officielle LogisVert d'Hydro-Québec, 1 750 machines distinctes sont recensées et 1 090 d'entre elles ont une capacité certifiée à -15 °C. Parmi celles-ci, 340 gardent 100 % de leur capacité nominale à -15 °C et 480 en gardent au moins 90 %. Les autres perdent une partie de leur puissance quand il fait vraiment froid. Le calibre ne vous dit donc pas dans quel groupe se trouve la machine que l'installateur vous propose : il faut regarder la fiche.
+Le point à retenir est que deux machines de même calibre peuvent se comporter très différemment au froid. Dans notre catalogue bâti sur la liste officielle LogisVert d'Hydro-Québec, {{chiffre:machines}} machines distinctes sont recensées et {{chiffre:machines-capacite-15}} d'entre elles ont une capacité publiée à -15 °C par ENERGY STAR. Parmi celles-ci, {{chiffre:machines-maintien-100}} gardent à -15 °C 100 % de leur capacité cotée à 8,3 °C et {{chiffre:machines-maintien-90}} en gardent au moins 90 %. Les autres perdent une partie de leur puissance quand il fait vraiment froid. Le calibre ne vous dit donc pas dans quel groupe se trouve la machine que l'installateur vous propose : il faut regarder la fiche.
 
 ## La pièce ne suffit pas, la charge compte
 
@@ -70,18 +70,24 @@ Les fourchettes se chevauchent. Choisir un 9 000 BTU pour économiser ne tient d
 
 ## La subvention LogisVert par calibre
 
-Le programme LogisVert d'Hydro-Québec fixe un montant par jumelage certifié. Sur la liste officielle que nous synchronisons chaque nuit, les deux calibres se distinguent nettement.
+C'est ici que les deux calibres cessent d'être comparables, et c'est la principale nouveauté de 2026.
 
-| Calibre | Machines recensées | Subventionnées | Montant minimum | Médiane | Maximum |
-|---|---|---|---|---|---|
-| 9 000 BTU | 146 | 137 | 250 $ | 360 $ | 650 $ |
-| 12 000 BTU | 159 | 148 | 350 $ | 530 $ | 2 268 $ |
+Le programme LogisVert d'Hydro-Québec verse 50 $ par 1 000 BTU/h de capacité certifiée à -8 °C pour une thermopompe certifiée ENERGY STAR, et 120 $ par 1 000 BTU/h si elle est en plus certifiée climat froid. Depuis le 26 novembre 2025, cette certification ENERGY STAR est obligatoire, et l'unité extérieure doit afficher une puissance nominale d'au moins 12 000 BTU/h en climatisation.
 
-Le maximum du 12 000 BTU, 2 268 dollars, correspond aux jumelages les plus performants au froid. Le montant dépend de l'unité extérieure et de l'unité intérieure jumelées, pas seulement du calibre. Le guide sur [les montants LogisVert par calibre](/guides/subvention-logisvert-montants-par-calibre) et la page [Subventions](/subventions) détaillent les conditions.
+Le calibre de 9 000 BTU tombe sous ce seuil. Sur la liste en vigueur, publiée chaque jour par Hydro-Québec et suivie automatiquement par notre catalogue, il n'existe plus aucune machine de 9 000 BTU admissible.
+
+| Calibre de murale | Machines subventionnées | Minimum | Médiane | Maximum |
+|---|---|---|---|---|
+| 9 000 BTU | aucune, calibre non admissible | zéro | zéro | zéro |
+| 12 000 BTU | {{chiffre:lv:wall-single:12000:n}} | {{chiffre:lv:wall-single:12000:min}} $ | {{chiffre:lv:wall-single:12000:med}} $ | {{chiffre:lv:wall-single:12000:max}} $ |
+
+Le maximum du 12 000 BTU correspond aux jumelages climat froid les plus performants. Le montant dépend de l'unité extérieure et de l'unité intérieure jumelées, pas seulement du calibre. Pour une installation faite avant le 26 novembre 2025, ce sont les listes archivées d'Hydro-Québec qui s'appliquent, puisque la subvention est déterminée selon la date d'installation. Le guide sur [les montants LogisVert par calibre](/guides/subvention-logisvert-montants-par-calibre) et la page [Subventions](/subventions) détaillent les conditions.
+
+Attention à l'effet pervers : la subvention ne doit pas décider du calibre. Si la zone à chauffer demande 9 000 BTU, installer un 12 000 BTU pour toucher l'aide revient à payer quinze ans de cycles courts et de déshumidification médiocre pour un chèque unique. La subvention est un argument quand les deux calibres se valent techniquement, pas quand ils ne se valent pas.
 
 ## Efficacité : le HSPF2 varie plus que le calibre
 
-Le HSPF2 mesure l'efficacité saisonnière en chauffage. Dans notre catalogue, il va de 7,8 à 16,2, avec une médiane de 9,5, et 62 murales dépassent 12. Le COP certifié à -15 °C, c'est-à-dire le rendement instantané au froid, va de 1,3 à 2,89, médiane 1,94. Entre un 9 000 et un 12 000 BTU de la même série, l'efficacité change peu. Entre deux séries de même calibre, elle peut aller du simple au double. Le guide [comprendre SEER2 et HSPF2](/guides/comprendre-seer2-hspf2) explique comment lire ces valeurs, et le [comparateur](/comparer) les met côte à côte.
+Le HSPF2 mesure l'efficacité saisonnière en chauffage. Dans notre catalogue, il va de 7,8 à 16,2, avec une médiane de 9,5, et {{chiffre:machines-hspf2-sup:wall-single:12}} murales dépassent 12. Le COP certifié à -15 °C, c'est-à-dire le rendement instantané au froid, va de 1,3 à 2,89, médiane 1,94. Entre un 9 000 et un 12 000 BTU de la même série, l'efficacité change peu. Entre deux séries de même calibre, elle peut aller du simple au double. Le guide [comprendre SEER2 et HSPF2](/guides/comprendre-seer2-hspf2) explique comment lire ces valeurs, et le [comparateur](/comparer) les met côte à côte.
 
 ## Comment décider en pratique
 

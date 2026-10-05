@@ -66,6 +66,8 @@
 }
 .ft-phone .ft-roll > span + span { color: var(--ft-orange); }
 .ft-mail { display: inline-block; margin-top: 10px; font-size: 16px; }
+.ft-social { display: inline-flex; align-items: center; gap: 8px; }
+.ft-social svg { flex: none; }
 .ft-pill {
   display: inline-flex;
   align-items: center;

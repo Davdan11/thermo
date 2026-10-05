@@ -153,10 +153,8 @@ export const panasonicDataset: BrandDataset = {
     { id: "cert-pana-ez-24k-cc", type: "cold_climate", configurationId: "config-pana-ez-24k", coldClimate: true, status: "active", territory: "CA", sourceId: "src-panasonic-specs", verifiedAt: null },
   ],
 
-  warranties: [
-    { id: "warranty-pana-parts",      modelId: "model-pana-xz-12k", type: "parts",      durationYears: 5, requiresRegistration: false, provider: "manufacturer", territory: "CA", conditions: "Garantie limitée standard.", confidence: MC, sourceId: "src-panasonic-specs", verifiedAt: null },
-    { id: "warranty-pana-compressor", modelId: "model-pana-xz-12k", type: "compressor", durationYears: 7, requiresRegistration: false, provider: "manufacturer", territory: "CA", conditions: "Garantie compresseur prolongée.", confidence: MC, sourceId: "src-panasonic-specs", verifiedAt: null },
-  ],
+  // Les garanties affichées viennent des relevés de certificats (src/lib/data/warranties-sourced.json).
+  warranties: [],
 
   priceObservations: [],
   editorial: [],

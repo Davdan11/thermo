@@ -1,10 +1,10 @@
 ---
 title: "Thermopompe multizone : quand c'est le bon choix, et quand deux murales valent mieux"
 seoTitle: "Thermopompe multizone : quand est-ce le bon choix?"
-description: "Un compresseur pour deux à cinq têtes intérieures : ce que ça donne vraiment en chauffage l'hiver, les pièges de la capacité partagée, le coût comparé à plusieurs simples zones, et les situations où la centrale gagne."
+description: "Un compresseur pour deux à cinq têtes : ce que ça donne en chauffage l'hiver, les pièges de la capacité partagée, et quand deux simples zones font mieux."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
-updatedAt: "2026-09-11"
+updatedAt: "2026-09-17"
 coverImage: "/images/maison.jpg"
 category: "choisir"
 keywords: ["thermopompe multizone", "thermopompe multi-zones Québec", "thermopompe 2 zones", "multizone ou deux thermopompes", "thermopompe bizone"]
@@ -13,14 +13,16 @@ faq:
   - q: "Une thermopompe multizone chauffe-t-elle toute la maison l'hiver?"
     a: "Elle chauffe les pièces où se trouvent ses têtes intérieures. Une maison à étages fermés a souvent besoin de trois ou quatre têtes pour être couverte, et la capacité totale du compresseur à -15 °C doit dépasser la somme des charges de ces pièces. Sinon, les plinthes reprennent le relais dans les chambres."
   - q: "Multizone ou deux murales simples zones : lequel coûte le moins cher?"
-    a: "À l'achat, deux simples zones de 9 000 BTU coûtent souvent moins qu'un bizone de 18 000 BTU, et chacune a son propre montant LogisVert. À l'usage, deux compresseurs indépendants s'adaptent mieux à des pièces aux besoins différents. Le multizone gagne quand il n'y a qu'un seul emplacement possible pour l'unité extérieure."
+    a: "À l'achat, deux simples zones coûtent souvent moins qu'un bizone de capacité équivalente, et chacune a son propre montant LogisVert, à condition que chaque unité extérieure atteigne le minimum de 12 000 BTU/h exigé par Hydro-Québec. À l'usage, deux compresseurs indépendants s'adaptent mieux à des pièces aux besoins différents. Le multizone gagne quand il n'y a qu'un seul emplacement possible pour l'unité extérieure."
   - q: "Que se passe-t-il si une tête tombe en panne sur un multizone?"
     a: "Les autres têtes continuent de fonctionner, mais si c'est le compresseur qui tombe, toute la maison perd son chauffage d'un coup. Avec deux simples zones, une panne n'immobilise que la moitié du système. C'est un argument de résilience à peser dans les régions froides."
   - q: "Le multizone est-il admissible à LogisVert?"
-    a: "Oui, quand l'appariement complet (unité extérieure et toutes les têtes) figure dans la liste d'Hydro-Québec. Le montant est calculé sur la capacité certifiée de l'ensemble. Une tête ajoutée plus tard hors de la liste peut faire perdre l'admissibilité de l'appariement : vérifiez la combinaison exacte avant l'installation."
+    a: "Oui, quand l'appariement complet (unité extérieure et toutes les têtes) est certifié ENERGY STAR et figure dans la liste en vigueur d'Hydro-Québec. Le montant est calculé sur la capacité certifiée de l'ensemble à -8 °C. Une tête ajoutée plus tard hors de la liste peut faire perdre l'admissibilité de l'appariement : vérifiez la combinaison exacte avant l'installation."
+  - q: "Combien LogisVert donne-t-il pour un multizone?"
+    a: "Sur la liste en vigueur, notre catalogue compte {{chiffre:lv:multi-zone:tous:n}} multizones distincts subventionnés, de {{chiffre:lv:multi-zone:tous:min}} $ à {{chiffre:lv:multi-zone:tous:max}} $, avec une médiane de {{chiffre:lv:multi-zone:tous:med}} $. Le montant suit la capacité certifiée à -8 °C de l'ensemble et le barème climat froid, pas le nombre de têtes."
 ---
 
-Le multizone séduit pour une raison simple : un seul appareil dehors, deux à cinq têtes dedans, une seule facture d'installation. Il est souvent le bon choix, et souvent le mauvais, pour des raisons que les brochures n'expliquent pas. Notre base compte 142 machines multizones certifiées vendues au Québec ; voici comment les lire.
+Le multizone séduit pour une raison simple : un seul appareil dehors, deux à cinq têtes dedans, une seule facture d'installation. Il est souvent le bon choix, et souvent le mauvais, pour des raisons que les brochures n'expliquent pas. Notre base compte {{chiffre:machines-type:multi-zone}} machines multizones distinctes vendues au Québec ; voici comment les lire.
 
 ## Comment fonctionne un multizone, et ce que ça implique l'hiver
 
@@ -31,6 +33,8 @@ Un compresseur extérieur à vitesse variable alimente plusieurs unités intéri
 **La capacité à -15 °C est celle qui compte.** Comme pour toute machine climat froid, la valeur certifiée à -15 °C vaut plus que le nominal. Sur les multizones de notre base, l'écart entre les deux va de quelques pour cent à plus d'un quart.
 
 **La plus petite tête impose une charge minimale.** Un compresseur qui ne peut pas descendre assez bas cycle quand une seule petite tête demande peu. C'est le cas typique de la chambre fermée de 120 pi² branchée sur un gros compresseur : confort moyen, usure accrue.
+
+Une quatrième conséquence est souvent oubliée : les longueurs de conduite. Chaque tête demande son propre tracé de tuyauterie depuis l'unité extérieure, avec une longueur totale et un dénivelé maximaux fixés par le fabricant. Dans une maison à étages, la tête la plus éloignée est parfois hors des limites autorisées, ou impose un tracé apparent. Cela se vérifie sur place, avant la signature, pas après le percement des murs.
 
 ## Les situations où le multizone est le bon choix
 
@@ -46,9 +50,19 @@ Un compresseur extérieur à vitesse variable alimente plusieurs unités intéri
 - **Budget serré avec LogisVert** : chaque simple zone a son appariement et son montant ; le total des deux dépasse souvent celui du bizone équivalent.
 - **Résilience** : une panne de compresseur sur un multizone coupe toute la maison.
 
+## Ce que LogisVert change à l'arbitrage
+
+Le programme d'Hydro-Québec verse 50 $ par 1 000 BTU/h de capacité certifiée à -8 °C pour une thermopompe certifiée ENERGY STAR, et 120 $ par 1 000 BTU/h lorsqu'elle est en plus certifiée climat froid. Depuis le 26 novembre 2025, cette certification est obligatoire, et chaque unité extérieure doit afficher une puissance nominale d'au moins 12 000 BTU/h en climatisation.
+
+Pour un multizone, ce minimum n'est jamais un obstacle : les compresseurs bizones commencent à 18 000 BTU. Il pèse en revanche sur la stratégie des simples zones. Deux murales de 9 000 BTU ne rapportent plus rien ; deux murales de 12 000 BTU touchent chacune leur montant, médiane {{chiffre:lv:wall-single:12000:med}} $, soit un total qui dépasse la médiane de {{chiffre:lv:multi-zone:18000:med}} $ d'un bizone de 18 000 BTU. Le calcul de la solution multipliée reste donc gagnant côté subvention, à condition de ne pas descendre sous le seuil.
+
+Sur la liste en vigueur, notre catalogue compte {{chiffre:lv:multi-zone:tous:n}} multizones distincts subventionnés, de {{chiffre:lv:multi-zone:tous:min}} $ à {{chiffre:lv:multi-zone:tous:max}} $, médiane {{chiffre:lv:multi-zone:tous:med}} $. Comme partout dans le programme, le montant tient à l'appariement certifié exact et à sa certification climat froid, pas au nombre de têtes ni à la marque. La page [Subventions](/subventions) donne le montant d'une combinaison précise et notre [guide complet LogisVert](/guides/subvention-logisvert-guide-complet) détaille les conditions, dont le délai de neuf mois pour transmettre la demande.
+
 ## Quand la centrale gagne sur les deux
 
-Si la maison a déjà des conduits (fournaise électrique, au gaz ou au mazout), une centrale gainable chauffe toutes les pièces avec une seule unité intérieure, sans têtes murales, et reçoit en médiane des montants LogisVert de 2 000 à 5 000 $ selon le calibre. Le multizone n'a d'intérêt dans ce cas que pour ajouter la climatisation à des pièces mal desservies par les conduits.
+Si la maison a déjà des conduits (fournaise électrique, au gaz ou au mazout), une centrale gainable chauffe toutes les pièces avec une seule unité intérieure, sans têtes murales. Côté subvention, les centrales subventionnées de notre catalogue vont de {{chiffre:lv:central-ducted:tous:min}} $ à {{chiffre:lv:central-ducted:tous:max}} $, avec une médiane de {{chiffre:lv:central-ducted:tous:med}} $ ; par calibre, la médiane passe de {{chiffre:lv:central-ducted:24000:med}} $ à 24 000 BTU à {{chiffre:lv:central-ducted:36000:med}} $ à 36 000 BTU et {{chiffre:lv:central-ducted:48000:med}} $ à 48 000 BTU. Le multizone n'a d'intérêt dans ce cas que pour ajouter la climatisation à des pièces mal desservies par les conduits.
+
+Reste que la centrale suppose des conduits en bon état, bien équilibrés et correctement dimensionnés pour le débit d'une thermopompe, qui souffle plus longtemps et moins chaud qu'une fournaise. Des conduits sous-dimensionnés annulent l'avantage. Le guide [murale ou centrale](/guides/murale-ou-centrale) détaille ce qu'il faut vérifier avant de trancher.
 
 ## Lire une fiche multizone en quatre points
 

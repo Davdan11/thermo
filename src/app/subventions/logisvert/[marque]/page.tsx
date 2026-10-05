@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createMetadata, fitTitle, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
 import { getAllBrandStats, getBrandStats } from "@/lib/seo/programmatic";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { getLogisVertListInfo } from "@/lib/subsidies/logisvert-meta";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { BarometreBrandHero } from "@/components/heroes-v2/prix/BarometreHeroes";
 import { LogisVertAlertForm } from "@/components/logisvert/LogisVertAlertForm";
@@ -32,7 +32,8 @@ export default async function BrandSubsidyPage({ params }: { params: Promise<{ m
   const { marque } = await params;
   const b = getBrandStats(marque);
   if (!b || b.maxLogisVert <= 0) notFound();
-  const updated = (logisVertMetadata as { updatedAt?: string }).updatedAt?.slice(0, 10) ?? null;
+  // Date de la liste LogisVert en vigueur (« 17 septembre 2026 »), lue à l'exécution : suit la mise à jour de nuit.
+  const updated = getLogisVertListInfo().listDate;
   const subsidised = b.canonicalModels.filter((m) => m.logisVertDollars > 0).sort((a, z) => z.logisVertDollars - a.logisVertDollars);
   const walls = subsidised.filter((m) => m.kind === "murale");
   const centrals = subsidised.filter((m) => m.kind === "centrale");

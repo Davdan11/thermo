@@ -8,6 +8,8 @@ import { readAttribution } from "@/lib/attribution/client";
 import { Arrow } from "@/components/heroes-v2/entreprise/shared";
 import { ClipReveal, EASE, MaskLines, Reveal, Shell } from "@/components/sections-v2/entreprise/kit";
 import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
+import { Honeypot } from "@/components/forms/Honeypot";
+import { visitAreasLabel } from "@/lib/rdv/booking";
 
 /* Présentation « Le numéro » (sections v2 entreprise) : blanc, grand pan orange, chiffres qui
    roulent, champs à bord noir qui poussent un bloc orange au focus. Formulaire, validation,
@@ -134,8 +136,8 @@ export default function ContactPageClient() {
                       <div>
                         <dt className={dtCls} style={dtStyle}>Zone de service</dt>
                         <dd style={{ margin: "8px 0 0" }}>
-                          <span className="block text-[16px] font-bold">Partout au Québec</span>
-                          <span className="block text-[15px]" style={{ color: "rgba(255,244,236,0.88)" }}>Grand Montréal, Québec, et plus.</span>
+                          <span className="block text-[16px] font-bold">Conseil à distance partout au Québec</span>
+                          <span className="block text-[15px]" style={{ color: "rgba(255,244,236,0.88)" }}>Visite sur place dans les secteurs desservis&nbsp;: {visitAreasLabel()}.</span>
                         </dd>
                       </div>
                     </div>
@@ -234,9 +236,7 @@ export default function ContactPageClient() {
                       <textarea id="ct-message" required rows={5} placeholder="Comment pouvons-nous vous aider ?" value={form.message} onChange={set("message")} className={`${fieldCls} resize-none`} style={fieldStyle} />
                     </div>
 
-                    <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
-                      <label>Site web <input type="text" name="website" tabIndex={-1} autoComplete="off" value={form.website} onChange={set("website")} /></label>
-                    </div>
+                    <Honeypot value={form.website} onChange={set("website")} />
                     <label className="flex cursor-pointer items-start gap-3.5 text-[14.5px] font-medium leading-relaxed" style={{ color: C.mute }}>
                       <input
                         type="checkbox"

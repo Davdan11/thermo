@@ -17,6 +17,7 @@ import { SheetCta, SheetTrust } from "@/components/sections-v2/produit/Closing";
 import { fr } from "@/components/sections-v2/produit/tokens";
 import { formatMinTemp } from "@/lib/thermomatch/min-temp-source";
 import { ChauffeJusqua } from "@/components/product/ChauffeJusqua";
+import { capacitesDeLaFiche, mesure, referenceDe } from "@/lib/data/capacites";
 import {
   ProductHeader,
   KeySpecs,
@@ -47,6 +48,15 @@ export async function generateStaticParams() {
     .map((m) => ({ slug: m.slug }));
 }
 
+/**
+ * Adresse passée (marque + numéro, ou nom commercial d'avant) : redirection permanente (308) vers
+ * l'adresse actuelle, pour garder les liens et le référencement déjà acquis.
+ */
+function redirectPastSlug(slug: string) {
+  const current = registry.modelBySlug.get(slug)?.slug;
+  if (current && current !== slug) permanentRedirect(`/produit/${current}`);
+}
+
 /* ── Metadata ── */
 
 export async function generateMetadata({
@@ -55,19 +65,22 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  redirectPastSlug(slug);
   const detail = getProductDetail(slug);
   if (!detail) return {};
 
   const { model, brand, series } = detail;
   const nameInput = { brand: brand.name, seriesName: series.name, seriesSlug: series.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber };
   const names = productNames(nameInput);
-  const seo = getSeoModel(detail.model.slug);
+  const seo = getSeoModel(slug);
   const canonicalSlug = seo ? indexSlug(seo) : slug;
+  // Fiche « archived » (retirée de la liste LogisVert en vigueur) : la page répond, sans index.
   const indexable = brand.activeInQuebec && model.status === "published";
 
   const facts: string[] = [];
-  // La capacité nominale est déjà dans le nom (« 12 000 BTU »).
-  if (seo?.h5Btu) facts.push(`${seo.h5Btu.toLocaleString("fr-CA")} BTU/h à -15 °C`);
+  // Le calibre commercial est déjà dans le nom (« 12 000 BTU »).
+  const h5 = mesure(capacitesDeLaFiche(detail, referenceDe(seo)), "h5");
+  if (h5) facts.push(`${h5.btu.toLocaleString("fr-CA")} BTU/h à -15 °C`);
   if (seo && seo.logisVertDollars > 0) facts.push(`LogisVert ${seo.logisVertDollars.toLocaleString("fr-CA")} $`);
   if (seo?.hspf2) facts.push(`HSPF2 ${seo.hspf2.toLocaleString("fr-CA")}`);
   if (seo?.seer2) facts.push(`SEER2 ${seo.seer2.toLocaleString("fr-CA")}`);
@@ -121,12 +134,14 @@ export default async function ProductPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  redirectPastSlug(slug);
   const detail = getProductDetail(slug);
   if (!detail) notFound();
-  // L'adresse publique porte le nom commercial et la capacité : une ancienne adresse y mène (redirection permanente).
-  if (detail.model.slug !== slug) permanentRedirect(`/produit/${detail.model.slug}`);
 
-  const { brand, series, model, configuration, performanceProfile } = detail;
+  const { brand, series, model, configuration } = detail;
+  // Capacités de la fiche, chacune avec sa condition : un seul appariement, celui du montant LogisVert.
+  const seoModel = getSeoModel(slug);
+  const capacites = capacitesDeLaFiche(detail, referenceDe(seoModel));
   const names = productNames({ brand: brand.name, seriesName: series.name, seriesSlug: series.slug, capacityBtu: model.nominalCapacityBtu, modelNumber: model.modelNumber });
   // Brochure officielle : adresse du modèle ou de la série, sinon retrouvée par les tables d'enrichissement.
   const brochureUrl = brochureForProduct(detail);
@@ -136,12 +151,13 @@ export default async function ProductPage({
 
   /* Schema.org — Product (enriched) */
   const additionalProperties: { name: string; value: string }[] = [];
-  if (model.nominalCapacityBtu) additionalProperties.push({ name: "Capacité (BTU)", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU` });
+  if (model.nominalCapacityBtu) additionalProperties.push({ name: "Calibre commercial (BTU)", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU` });
+  const h5Fiche = mesure(capacites, "h5");
+  if (h5Fiche) additionalProperties.push({ name: "Capacité maximale à -15 °C (5 °F)", value: `${h5Fiche.btu.toLocaleString("fr-CA")} BTU/h` });
   if (configuration?.seer2) additionalProperties.push({ name: "SEER2", value: String(configuration.seer2) });
   if (configuration?.hspf2) additionalProperties.push({ name: "HSPF2", value: String(configuration.hspf2) });
   if (minTemp) additionalProperties.push({ name: "Température minimale de chauffage", value: `${minTemp.valueC}°C` });
   if (configuration?.noiseIndoorMinDbA) additionalProperties.push({ name: "Niveau sonore intérieur", value: `${configuration.noiseIndoorMinDbA} dB(A)` });
-  const seoModel = getSeoModel(model.slug);
   if (seoModel && seoModel.logisVertDollars > 0) additionalProperties.push({ name: "Subvention LogisVert", value: `${seoModel.logisVertDollars} $` });
 
   const productSchema = getProductSchema({
@@ -167,7 +183,7 @@ export default async function ProductPage({
   const seriesLabel = seriesDisplayName(series.name, series.slug);
   if (seriesLabel) summary.push({ label: "Série", value: seriesLabel });
   summary.push({ label: "Type", value: detail.systemTypeLabel });
-  if (model.nominalCapacityBtu) summary.push({ label: "Capacité", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU/h`, mono: true });
+  if (model.nominalCapacityBtu) summary.push({ label: "Calibre", value: `${model.nominalCapacityBtu.toLocaleString("fr-CA")} BTU`, mono: true });
   if (configuration?.seer2 != null) summary.push({ label: "SEER2", value: fr(configuration.seer2), mono: true });
   if (configuration?.hspf2 != null) summary.push({ label: "HSPF2", value: fr(configuration.hspf2), mono: true });
   if (minTemp) summary.push({ label: "Temp. min", value: formatMinTemp(minTemp.valueC), mono: true });
@@ -188,7 +204,7 @@ export default async function ProductPage({
       {/* ═══════════════════════════════════════════════════════════
           HÉROS — photo officielle sur scène, chiffres certifiés, LogisVert
           ═══════════════════════════════════════════════════════════ */}
-      <ProductHeader detail={detail} seo={seoModel} />
+      <ProductHeader detail={detail} seo={seoModel} capacites={capacites} />
 
       {/* ═══════════════════════════════════════════════════════════
           FEUILLES — la suite du dossier technique
@@ -208,23 +224,25 @@ export default async function ProductPage({
                 {/* LogisVert subsidy */}
                 <LogisVertBadge detail={detail} />
 
-                {/* Alerte LogisVert : prévenir le visiteur si le montant de ce modèle change */}
-                <LogisVertAlertForm
-                  target={{ kind: "model", modelId: model.id }}
-                  label={names.full}
-                  tone="dark"
-                  className="-mt-6 rounded-[3px]! lg:-mt-10"
-                />
+                {/* Alerte LogisVert : prévenir le visiteur si le montant de ce modèle change (fiches de la liste en vigueur seulement) */}
+                {model.status === "published" && (
+                  <LogisVertAlertForm
+                    target={{ kind: "model", modelId: model.id }}
+                    label={names.full}
+                    tone="dark"
+                    className="-mt-6 rounded-[3px]! lg:-mt-10"
+                  />
+                )}
 
                 <PriceSection detail={detail} logisVertDollars={seoModel?.logisVertDollars ?? 0} />
 
                 {/* Good choice */}
-                <GoodChoiceSection detail={detail} seo={seoModel} />
+                <GoodChoiceSection detail={detail} seo={seoModel} capacites={capacites} />
 
                 {/* Cold climate performance table */}
-                {performanceProfile && performanceProfile.dataPoints.length > 0 && (
+                {capacites.mesures.length > 0 && (
                   <ColdClimatePerformance
-                    profile={performanceProfile}
+                    capacites={capacites}
                     minHeatingTempC={minTemp?.valueC}
                     minHeatingTempSource={minTemp?.sourceType}
                   />
@@ -234,10 +252,10 @@ export default async function ProductPage({
                 {configuration && <ComfortSection configuration={configuration} />}
 
                 {/* Full tech specs */}
-                <TechSpecs detail={detail} />
+                <TechSpecs detail={detail} capacites={capacites} />
 
-                {/* Warranties */}
-                <WarrantySection warranties={detail.warranties} />
+                {/* Garantie : uniquement ce qu'un document du fabricant dit, sinon rien */}
+                <WarrantySection warranty={detail.warranty} systemType={model.systemType} zones={model.zones} />
 
                 {/* Sources */}
                 <SourcesSection sources={detail.sources} />

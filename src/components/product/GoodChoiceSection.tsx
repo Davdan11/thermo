@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ProductDetail } from "@/lib/data/queries/product-detail";
 import type { SeoModel } from "@/lib/seo/programmatic";
+import { mesure, type CapacitesFiche } from "@/lib/data/capacites";
 import { Arrow, Reveal, SheetHead, VRule } from "@/components/sections-v2/produit/motion";
 import { AMBER, GREEN, INK, LABEL, LINE, MUTE, ORANGE, WASH } from "@/components/sections-v2/produit/tokens";
 import { formatMinTemp, minTempMention } from "@/lib/thermomatch/min-temp-source";
@@ -12,20 +13,25 @@ import { formatMinTemp, minTempMention } from "@/lib/thermomatch/min-temp-source
    d'installation, tenue par grand froid, efficacité, subvention. Puis
    « Convient si / Moins indiqué si ». Aucune formule creuse, aucune
    valeur inventée : une donnée absente est dite absente.
+   Capacités : celles de la fiche (src/lib/data/capacites.ts), chacune
+   avec sa condition ; un pourcentage n'est donné qu'avec son numérateur
+   et son dénominateur, jamais contre le calibre commercial.
    Présentation : feuille « Verdict », lignes numérotées (05.1, 05.2…).
    ------------------------------------------------------------------ */
 
 interface Props {
   detail: ProductDetail;
   seo?: SeoModel | null;
+  /** Capacités de la fiche, avec leurs conditions (même appariement que le montant LogisVert). */
+  capacites: CapacitesFiche;
 }
 
 const fr = (n: number) => n.toLocaleString("fr-CA");
 
-export function GoodChoiceSection({ detail, seo }: Props) {
+export function GoodChoiceSection({ detail, seo, capacites }: Props) {
   const { model, configuration, isColdClimate, editorial } = detail;
-  const nominal = model.nominalCapacityBtu ?? seo?.nominalBtu ?? null;
-  const h5 = seo?.h5Btu ?? null;
+  const h5 = mesure(capacites, "h5")?.btu ?? null;
+  const maintien = capacites.maintien;
   const cop5 = seo?.cop5 ?? null;
   const hspf2 = configuration?.hspf2 ?? seo?.hspf2 ?? null;
   const seer2 = configuration?.seer2 ?? seo?.seer2 ?? null;
@@ -33,7 +39,6 @@ export function GoodChoiceSection({ detail, seo }: Props) {
   const minTemp = detail.minHeatingTemp;
   const minTempNote = minTemp ? `. Chauffe jusqu’à ${formatMinTemp(minTemp.valueC)} (${minTempMention(minTemp.sourceType).toLowerCase()})` : "";
   const logisVert = seo?.logisVertDollars ?? 0;
-  const retention = nominal && h5 ? Math.round((h5 / nominal) * 100) : null;
   const noise = configuration?.noiseIndoorMinDbA ?? null;
 
   /* ── Verdict : quatre lignes, une donnée chacune ── */
@@ -47,11 +52,15 @@ export function GoodChoiceSection({ detail, seo }: Props) {
     rows.push({ label: "Installation", value: `Multizone, ${model.zones ? `${model.zones} têtes` : "plusieurs têtes"}`, note: "Une unité extérieure, une tête par pièce, chacune réglée séparément." });
   }
 
-  if (h5 !== null && nominal) {
+  if (h5 !== null) {
+    // Capacité maximale à −15 °C ; le maintien, s'il est connu, dit sa base (capacité cotée à 8,3 °C du même appariement).
+    const base = maintien
+      ? `Capacité maximale publiée par ENERGY STAR : ${maintien.pct} % de sa capacité cotée à 8,3 °C (${fr(maintien.numerateur.btu)} ÷ ${fr(maintien.denominateur.btu)} BTU/h)`
+      : "Capacité maximale publiée par ENERGY STAR ; sa capacité cotée à 8,3 °C n'est pas publiée, d'où aucun pourcentage";
     rows.push({
       label: "Par grand froid",
       value: `${fr(h5)} BTU/h à -15 °C`,
-      note: `${retention} % de la capacité nominale (${fr(nominal)} BTU/h)${cop5 !== null ? `, COP ${cop5.toLocaleString("fr-CA", { minimumFractionDigits: 2 })} à -15 °C` : ""}${minTempNote}.`,
+      note: `${base}${cop5 !== null ? `, COP ${cop5.toLocaleString("fr-CA", { minimumFractionDigits: 2 })} à -15 °C` : ""}${minTempNote}.`,
     });
   } else if (minTemp && !isColdClimate) {
     // Pas de mesure à -15 °C ni de certification, mais une température minimale connue : on la donne.
@@ -106,7 +115,8 @@ export function GoodChoiceSection({ detail, seo }: Props) {
     cons.push("Une seule aire ouverte à couvrir : une murale simple zone coûte moins cher.");
   }
 
-  if (isColdClimate || (retention !== null && retention >= 70)) {
+  // Seuil climat froid d'ENERGY STAR (70 %), sur le maintien réel : capacité maximale à −15 °C ÷ capacité cotée à 8,3 °C.
+  if (isColdClimate || (maintien !== null && maintien.pct >= 70)) {
     pros.push("Vous comptez sur la thermopompe comme chauffage principal en hiver.");
   } else {
     cons.push("Vous voulez vous passer d'appoint sous -20 °C : visez une machine certifiée climat froid.");
@@ -119,7 +129,7 @@ export function GoodChoiceSection({ detail, seo }: Props) {
   if (rows.length === 0) return null;
 
   /* Couleur de la valeur : orange pour la mesure certifiée à -15 °C, vert pour un montant LogisVert. */
-  const valueColor = (label: string) => (label === "Par grand froid" && h5 !== null && nominal ? ORANGE : label === "Subvention LogisVert" && logisVert > 0 ? GREEN : INK);
+  const valueColor = (label: string) => (label === "Par grand froid" && h5 !== null ? ORANGE : label === "Subvention LogisVert" && logisVert > 0 ? GREEN : INK);
 
   return (
     <section id="bon-choix" aria-labelledby="bon-choix-title" style={{ scrollMarginTop: 110 }}>

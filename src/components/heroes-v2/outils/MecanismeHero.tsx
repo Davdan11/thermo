@@ -19,7 +19,7 @@ import { ThermoMatchWordmark } from "./FlowBar";
    six filtres par une ligne de commande, les modèles écartés quittent
    le circuit, trois ressortent à droite. Signature : des points
    circulent le long des traits (SMIL, déterministe côté serveur).
-   Chiffres affichés : le nombre de modèles évalués (catalogue), les six
+   Chiffres affichés : le nombre de fiches évaluées (catalogue), les six
    critères de la page et les trois machines retenues.
    ================================================================== */
 
@@ -246,7 +246,7 @@ function Diagram({ g, dots, pulses, moving, reduce, modelCount, play, vertical =
   const [cx, cy] = g.controlStart;
 
   return (
-    <div className="relative" style={{ aspectRatio: `${g.w} / ${g.h}` }} role="img" aria-label={`Schéma : près de ${modelCount.toLocaleString("fr-CA")} modèles évalués passent six filtres réglés par vos réponses ; trois machines sont retenues.`}>
+    <div className="relative" style={{ aspectRatio: `${g.w} / ${g.h}` }} role="img" aria-label={`Schéma : près de ${modelCount.toLocaleString("fr-CA")} fiches évaluées passent six filtres réglés par vos réponses ; trois machines sont retenues.`}>
       <svg viewBox={`0 0 ${g.w} ${g.h}`} className="absolute inset-0 h-full w-full overflow-visible" fill="none" aria-hidden="true">
         {/* Ligne de commande : vos réponses règlent chaque filtre */}
         <motion.path d={g.control} stroke={M.orange} strokeWidth={1.2} strokeDasharray="3 5" {...draw(1, 1.2)} />
@@ -307,7 +307,7 @@ function Diagram({ g, dots, pulses, moving, reduce, modelCount, play, vertical =
           Près de <CountUp value={modelCount} play={play} />
         </span>
         <span className="block whitespace-nowrap text-[12.5px]" style={{ color: M.soft }}>
-          modèles évalués
+          fiches évaluées
         </span>
       </Label>
 

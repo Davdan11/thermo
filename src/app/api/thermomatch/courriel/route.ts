@@ -87,6 +87,10 @@ export async function POST(req: NextRequest) {
   });
   const s = rec.summaryContext.savings;
   const savings = s ? { city: s.city, low: s.savingLow, high: s.savingHigh } : null;
+  // Configuration retenue et son ordre de grandeur installé, donnés une fois (par choix seulement s'ils diffèrent).
+  const arch = rec.summaryContext.architecture;
+  const configuration = `${arch.label} — ${arch.title}`;
+  const priceRange = arch.price && !arch.pricePerCard ? { min: arch.price.min, max: arch.price.max } : null;
   const shareUrl = shareUrlFor(answers, SITE_URL);
   const postalCode = typeof answers.postalCode === "string" ? answers.postalCode.toUpperCase() : undefined;
   const territory = postalCode ? getTerritoryFromPostalCode(postalCode) : undefined;
@@ -125,6 +129,7 @@ export async function POST(req: NextRequest) {
   const e = escapeHtml;
   const rows: Array<[string, string]> = [
     ["Choix", labels.join(" | ")],
+    ["Configuration", configuration],
     ["Charge estimée", `${Math.round(rec.summaryContext.estimatedLoadBtu).toLocaleString("fr-CA")} BTU/h à −15 °C`],
     ["Code postal", postalCode ?? "—"],
     ["Téléphone", d.phone ?? "—"],
@@ -156,7 +161,7 @@ export async function POST(req: NextRequest) {
       lines: [["Prénom", d.firstName], ...rows, ["Pipedrive", crm.ok ? `affaire ${crm.dealId}` : crm.reason]],
       links: [["Ouvrir ses recommandations", shareUrl]],
     }),
-    sendClientEmail(d.email, thermoMatchEmailSubject({ choices }), getThermoMatchEmailHTML({ firstName: d.firstName, choices, shareUrl, savings })),
+    sendClientEmail(d.email, thermoMatchEmailSubject({ choices }), getThermoMatchEmailHTML({ firstName: d.firstName, choices, shareUrl, savings, configuration, priceRange })),
   ]);
 
   // Rappels J+2 et J+7 : seulement si la case est cochée et que le premier courriel est bien parti.

@@ -63,7 +63,7 @@ Même la meilleure machine a une limite. Conserver vos plinthes électriques ne 
 
 ## Ce que la région change, et ne change pas
 
-Partout au Québec, on achète des machines conçues pour -25 °C ou -30 °C. Votre ville ne change pas la machine à choisir ; elle change la marge de sécurité et l'importance de l'appoint. C'est pourquoi ThermoMatch ne demande votre code postal que pour vous situer, et calcule la charge sur votre maison : superficie, année, isolation, fenestration, sous-sol.
+Partout au Québec, on achète des machines conçues pour -25 °C ou -30 °C, et leurs capacités se comparent au même point de mesure : -15 °C. Ce qui décide du modèle, c'est la maison : superficie, année, isolation, fenestration, sous-sol, conduits. Votre ville, elle, apporte son froid de référence : il change la marge de sécurité et l'importance de l'appoint. C'est pourquoi ThermoMatch calcule la charge sur votre maison, et se sert du froid de votre région pour estimer la relève nécessaire les jours les plus froids.
 
 ## Notre méthode de sélection
 

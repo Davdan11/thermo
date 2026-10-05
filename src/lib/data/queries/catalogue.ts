@@ -10,9 +10,11 @@ import type { SystemType } from "../types/enums";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { productNames, type ProductNames } from "../product-name";
 import { registry } from "../registry";
-import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
-import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
-import { getWarrantiesForModel } from "./products";
+import { logisVertDeLaFiche } from "../../subsidies/logisvert-official";
+import { resolveWarranty, type ResolvedWarranty } from "../warranty";
+// Température minimale de chauffage : le même résolveur que la fiche produit et ThermoMatch.
+// Le champ `model.minimumOperatingTemperatureC` n'est renseigné par aucune source : ne jamais le lire.
+import { minHeatingTempForModel } from "../../thermomatch/min-temp";
 
 /* ------------------------------------------------------------------
    Index construits une seule fois : le registre est statique, et un
@@ -91,10 +93,19 @@ export interface CatalogueProduct {
   refrigerant: string | null;
   /** Outdoor unit model number for LogisVert lookup */
   outdoorModelNumber: string | null;
-  /** Pre-fetched warranties to avoid client-side registry imports */
-  warranties: import("../types").Warranty[];
+  /**
+   * Garantie relevée dans un document du fabricant, résolue au serveur (la carte n'importe pas le registre).
+   * null : aucun document ne couvre la fiche — la carte le dit, sans chiffre.
+   */
+  warranty: ResolvedWarranty | null;
   /** Pre-calculated LogisVert amount */
   logisVertDollars: number | null;
+  /**
+   * Température minimale de chauffage publiée par le fabricant (°C), résolue au serveur
+   * (configurations du catalogue, puis relevés des documents). null : non publiée — la carte
+   * l'écrit plutôt que d'afficher un chiffre inventé.
+   */
+  minHeatingTempC: number | null;
 }
 
 /* ------------------------------------------------------------------
@@ -355,20 +366,9 @@ export function getCatalogueModels(
       }
     }
 
-    let logisVertDollars: number | null = null;
-    const officialEntry = outdoorModelNumber
-      ? lookupLogisVertFuzzy(outdoorModelNumber, brand.name)
-      : lookupLogisVertFuzzy(model.modelNumber, brand.name);
-    
-    if (officialEntry && officialEntry.logisVertDollars > 0) {
-      logisVertDollars = officialEntry.logisVertDollars;
-    } else {
-      const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
-      if (btu > 0) {
-        const result = calculateLogisVertSimple(btu, model.categories.includes("cold-climate"));
-        if (result.dollars > 0) logisVertDollars = result.dollars;
-      }
-    }
+    // Montant de la liste LogisVert en vigueur, sinon aucun : jamais d'estimation (une fiche absente de la liste n'est pas admissible).
+    const officialEntry = logisVertDeLaFiche(model, brand.name, outdoorModelNumber);
+    const logisVertDollars: number | null = officialEntry && officialEntry.logisVertDollars > 0 ? officialEntry.logisVertDollars : null;
 
     return {
       model,
@@ -380,8 +380,9 @@ export function getCatalogueModels(
       imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
       refrigerant,
       outdoorModelNumber,
-      warranties: getWarrantiesForModel(model.id),
+      warranty: resolveWarranty({ brand: brand.name, seriesName: series?.name, modelNumber: model.modelNumber }),
       logisVertDollars,
+      minHeatingTempC: minHeatingTempForModel(model.id)?.valueC ?? null,
     };
   });
 
@@ -476,20 +477,9 @@ export function getAllCatalogueProducts(): CatalogueProduct[] {
       }
     }
 
-    let logisVertDollars: number | null = null;
-    const officialEntry = outdoorModelNumber
-      ? lookupLogisVertFuzzy(outdoorModelNumber, brand.name)
-      : lookupLogisVertFuzzy(model.modelNumber, brand.name);
-    
-    if (officialEntry && officialEntry.logisVertDollars > 0) {
-      logisVertDollars = officialEntry.logisVertDollars;
-    } else {
-      const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
-      if (btu > 0) {
-        const result = calculateLogisVertSimple(btu, model.categories.includes("cold-climate"));
-        if (result.dollars > 0) logisVertDollars = result.dollars;
-      }
-    }
+    // Montant de la liste LogisVert en vigueur, sinon aucun : jamais d'estimation (une fiche absente de la liste n'est pas admissible).
+    const officialEntry = logisVertDeLaFiche(model, brand.name, outdoorModelNumber);
+    const logisVertDollars: number | null = officialEntry && officialEntry.logisVertDollars > 0 ? officialEntry.logisVertDollars : null;
 
     return {
       model,
@@ -501,8 +491,9 @@ export function getAllCatalogueProducts(): CatalogueProduct[] {
       imageUrl: model.imageUrl ?? series?.imageUrl ?? null,
       refrigerant,
       outdoorModelNumber,
-      warranties: getWarrantiesForModel(model.id),
+      warranty: resolveWarranty({ brand: brand.name, seriesName: series?.name, modelNumber: model.modelNumber }),
       logisVertDollars,
+      minHeatingTempC: minHeatingTempForModel(model.id)?.valueC ?? null,
     };
   }).sort((a, b) => {
     const brandCmp = a.brand.name.localeCompare(b.brand.name);

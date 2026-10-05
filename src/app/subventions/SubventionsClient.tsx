@@ -1,6 +1,6 @@
 "use client";
 
-import logisvertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { frDateIso, type ListeLogisVertClient } from "@/lib/subsidies/logisvert-meta-format";
 import { ChequeHero } from "@/components/heroes-v2/prix/ChequeHero";
 import type { LogisVertSample } from "@/components/tools-hero/types";
 import "@/components/heroes-v2/prix/prix-v2.css";
@@ -41,6 +41,13 @@ const POSTAL_MAP: Record<string, string> = {
   J2G: "Granby, QC", J2H: "Granby, QC",
   J0R: "Laurentides, QC", J8E: "Mont-Tremblant, QC",
 };
+/* ── Liste LogisVert en vigueur (fichier ENERGY STAR lu par l'outil d'Hydro-Québec) ── */
+/** Installations à compter de cette date : thermopompe certifiée ENERGY STAR (page « Archives des listes » d'Hydro-Québec). */
+const DEBUT_LISTE_ENERGY_STAR = "2025-11-26";
+/** Bonification Multilogements : installations à compter de cette date (guide de participation résidentiel, annexe II). */
+const DEBUT_BONIF_MULTILOGEMENTS = "2026-06-15";
+const ARCHIVES_HQ = "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/archives-liste-thermopompes.html";
+
 function detectCity(p: string) {
   return POSTAL_MAP[p.replace(/\s/g, "").toUpperCase().slice(0, 3)] || "";
 }
@@ -57,6 +64,8 @@ interface ProductResult {
   heatingBtu5F: number;
   isColdClimate: boolean;
   logisVertDollars: number;
+  /** « Bonification – Multilogements » ($), si la combinaison y est admissible. */
+  bonificationMultilogements: number;
   systemType: "C" | "M";
   hspf2: number;
   seer2: number;
@@ -72,7 +81,9 @@ const ROSETTE = Array.from({ length: 12 }, (_, i) => guillocheRosette(300, 300, 
    Présentation « Le chèque » (bordereau, talons, tampons) ; la logique
    de vérification, la recherche et les états sont inchangés.
    ══════════════════════════════════════════════════════════════════ */
-export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSample[] }) {
+export function SubventionsClient({ heroSamples, liste }: { heroSamples: LogisVertSample[]; liste: ListeLogisVertClient }) {
+  // Liste en vigueur, lue au serveur (props) : une mise à jour de nuit s'affiche sans reconstruction.
+  const LISTE_DATE = liste.listDateIso ? frDateIso(liste.listDateIso) : null;
   const [query, setQuery] = useState("");
   const [showDD, setShowDD] = useState(false);
   const [selected, setSelected] = useState<ProductResult | null>(null);
@@ -113,6 +124,7 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
           heatingBtu5F: Number(r.heatingBtu5F) || 0,
           isColdClimate: Boolean(r.coldClimate),
           logisVertDollars: Number(r.logisVertDollars) || 0,
+          bonificationMultilogements: Number(r.bonificationMultilogements) || 0,
           systemType: (String(r.systemType || "M")) as "C" | "M",
           hspf2: Number(r.hspf2) || 0,
           seer2: Number(r.seer2) || 0,
@@ -150,21 +162,21 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
       isColdClimate: selected.isColdClimate,
       capacityBtuUsed: selected.btu,
       isEstimate: false,
-      disclaimer: "Montant officiel tiré directement de la liste des thermopompes admissibles d'Hydro-Québec.",
+      disclaimer: "Subvention tirée de la liste des thermopompes admissibles lue par l'outil de recherche d'Hydro-Québec.",
       sourceUrl: "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/",
       asSubsidyEstimate: {
         programId: "logisvert-hq",
         programName: "LogisVert — Hydro-Québec",
         estimatedAmountCents: dollars * 100,
         currency: "CAD",
-        disclaimer: "Montant officiel Hydro-Québec.",
-        rulesVerifiedAt: logisvertMetadata.updatedAt.slice(0, 10),
+        disclaimer: "Subvention de la liste officielle d'Hydro-Québec.",
+        rulesVerifiedAt: (liste.updatedAt ?? "").slice(0, 10),
         sourceUrl: "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/",
       },
     });
 
     setTimeout(() => { setLoading(false); setChecked(true); }, 900);
-  }, [canCheck, selected]);
+  }, [canCheck, selected, liste.updatedAt]);
 
   /* ── colours (« Le chèque ») ── */
   const INK = CHEQUE.ink;
@@ -182,7 +194,7 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
     <main style={{ fontFamily: DISPLAY, colorScheme: "light", minHeight: "100vh", background: CHEQUE.cream, color: INK }}>
 
       {/* ═══ HÉROS : relevé LogisVert animé (montants réels de la liste officielle) ═══ */}
-      <ChequeHero samples={heroSamples} />
+      <ChequeHero samples={heroSamples} liste={liste} />
 
       {/* ═══ MAIN : le bordereau posé à cheval sur l'émeraude du héros ═══ */}
       <Root>
@@ -203,7 +215,7 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
             {/* En-tête du bordereau */}
             <div aria-hidden="true" className="relative flex flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-3 sm:px-8" style={{ borderBottom: `1px dashed ${BDR}`, fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.18em", textTransform: "uppercase", color: MUT }}>
               <span>Bordereau de vérification · aides financières</span>
-              <span>⑆ {logisvertMetadata.count.toLocaleString("fr-CA")} jumelages ⑈</span>
+              <span>⑆ {liste.count.toLocaleString("fr-CA")} jumelages ⑈</span>
             </div>
 
             <div className="relative grid grid-cols-1 min-[900px]:grid-cols-[minmax(420px,540px)_minmax(0,1fr)]">
@@ -382,14 +394,14 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
                   name="LogisVert (Hydro-Québec)"
                   status={checked
                     ? (logisVertResult && logisVertResult.estimatedAmountDollars > 0
-                        ? <span style={{ color: GREEN, fontSize: 24, fontWeight: 600, fontFamily: MONO, letterSpacing: "-0.03em" }}>{logisVertResult.estimatedAmountDollars} $</span>
+                        ? <span style={{ color: GREEN, fontSize: 24, fontWeight: 600, fontFamily: MONO, letterSpacing: "-0.03em" }}>{logisVertResult.estimatedAmountDollars.toLocaleString("fr-CA")} $</span>
                         : "Non admissible")
                     : "En attente"}
                   desc={checked
                     ? (logisVertResult
                         ? (logisVertResult.estimatedAmountDollars > 0
-                            ? `Montant officiel Hydro-Québec pour ce jumelage certifié (capacité de ${logisVertResult.capacityBtuUsed.toLocaleString("fr-CA")} BTU/h à -8 °C)${logisVertResult.isColdClimate ? ", appareil certifié climat froid" : ""}.`
-                            : "La capacité de ce modèle ne permet pas de se qualifier pour la subvention LogisVert.")
+                            ? `Subvention de la liste d'Hydro-Québec${LISTE_DATE ? ` du ${LISTE_DATE}` : ""} pour ce jumelage certifié\u00a0: ${logisVertResult.ratePerKBtu}\u00a0$ par 1 000 BTU/h à −8 °C${logisVertResult.isColdClimate ? " (certifié ENERGY STAR climat froid)" : " (certifié ENERGY STAR)"}, capacité de ${logisVertResult.capacityBtuUsed.toLocaleString("fr-CA")} BTU/h à −8 °C.${selected && selected.bonificationMultilogements > 0 ? ` Bonification – Multilogements\u00a0: ${selected.bonificationMultilogements.toLocaleString("fr-CA")}\u00a0$ de plus, seulement dans un multilogement admissible et pour une installation faite à compter du 15 juin 2026.` : ""}`
+                            : "Ce jumelage n'a pas de subvention dans la liste LogisVert en vigueur.")
                         : "Cette configuration pourrait être admissible à un programme provincial en vigueur.")
                     : "Remplissez le formulaire pour consulter les résultats."}
                   href="https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/"
@@ -416,11 +428,13 @@ export function SubventionsClient({ heroSamples }: { heroSamples: LogisVertSampl
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/>
                   </svg>}
                   name={"Date d’installation"}
-                  status={checked ? "À confirmer" : "En attente"}
+                  status={checked ? (date && date < DEBUT_LISTE_ENERGY_STAR ? "Liste archivée" : "À confirmer") : "En attente"}
                   desc={checked
-                    ? "L’admissibilité dépend de la date de fin des travaux ou de la mise en service."
+                    ? date && date < DEBUT_LISTE_ENERGY_STAR
+                      ? "Pour une installation faite avant le 26 novembre 2025, c’est une liste archivée d’Hydro-Québec qui s’applique : le montant ci-dessus peut être différent."
+                      : `La subvention est déterminée selon la date d’installation : le montant affiché est celui de la liste en vigueur${LISTE_DATE ? ` le ${LISTE_DATE}` : ""}.${date && date < DEBUT_BONIF_MULTILOGEMENTS && selected && selected.bonificationMultilogements > 0 ? " La bonification Multilogements ne vise que les installations faites à compter du 15 juin 2026." : ""} La demande doit être déposée au plus tard neuf mois après l’installation.`
                     : "Indiquez votre date d’installation prévue."}
-                  href="https://www.quebec.ca/habitation-et-logement/chauffage-et-climatisation"
+                  href={ARCHIVES_HQ}
                   border
                 />
               </div>

@@ -99,10 +99,11 @@ export function MonogrammeHero({ name, slug, logo, stats, types, cold, capacity,
         <div {...fp({ opacity: 0, duration: 1, ease: EASE, delay: 0.05 }, { className: "flex items-center justify-between gap-6" })}>
           <Crumbs items={crumbs} className="text-[11.5px] font-medium uppercase" style={{ letterSpacing: "0.16em", color: C.ink }} />
           {logo ? (
+            // Logo décoratif : le nom de la marque est déjà dans le titre, juste en dessous.
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={logo.src}
-              alt={`Logo ${name}`}
+              alt=""
               width={Math.round(logo.ratio * 100)}
               height={100}
               className="hidden shrink-0 sm:block"

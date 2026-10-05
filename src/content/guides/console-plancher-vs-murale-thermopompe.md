@@ -4,7 +4,7 @@ seoTitle: "Console au plancher ou murale : quelle unité choisir"
 description: "Même unité extérieure, deux façons de souffler l'air : la console chauffe au sol, la murale d'en haut. Où chacune excelle, confort et prix comparés."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
-updatedAt: "2026-09-11"
+updatedAt: "2026-09-17"
 coverImage: "/images/guides/card-interior-living-room.jpg"
 category: "comparer"
 keywords: ["thermopompe console", "console au plancher thermopompe", "murale ou console", "unité intérieure thermopompe choix", "console thermopompe avis"]
@@ -54,13 +54,13 @@ La console est aussi à portée des enfants et des animaux, et un meuble collé 
 
 ## Le choix de modèles : la murale domine
 
-C'est la principale limite de la console. La murale est l'unité intérieure de référence : dans notre catalogue bâti sur la liste LogisVert d'Hydro-Québec, elle domine largement. Mitsubishi Electric y compte 258 fiches de murales, Gree 243, Tosot 204, Daikin 127, Fujitsu 118, LG 115. Les consoles existent chez plusieurs de ces fabricants, en simple zone ou comme tête de multizone, mais dans moins de séries et rarement dans les gammes économiques.
+C'est la principale limite de la console. La murale est l'unité intérieure de référence : dans notre catalogue bâti sur la liste LogisVert d'Hydro-Québec, elle domine largement. Mitsubishi Electric y compte {{chiffre:fiches-murales:mitsubishi-electric}} fiches de murales, Gree {{chiffre:fiches-murales:gree}}, Tosot {{chiffre:fiches-murales:tosot}}, Fujitsu {{chiffre:fiches-murales:fujitsu}}, Daikin {{chiffre:fiches-murales:daikin}}, LG {{chiffre:fiches-murales:lg}}. Les consoles existent chez plusieurs de ces fabricants, en simple zone ou comme tête de multizone, mais dans moins de séries et rarement dans les gammes économiques.
 
 Concrètement : si vous cherchez une console, le choix se fait souvent dans les gammes intermédiaire et premium, et il faut vérifier que le jumelage console figure sur la liste LogisVert avec son montant. Le [catalogue](/thermopompes) permet de filtrer par type d'unité intérieure, et la page [Marques](/marques) résume ce que chaque fabricant offre.
 
 ## Efficacité et subvention : lire le jumelage
 
-Le programme LogisVert d'Hydro-Québec attribue un montant par jumelage certifié, unité extérieure plus unité intérieure. Une console et une murale reliées à la même unité extérieure peuvent avoir des montants différents, parce que leurs performances certifiées diffèrent. Sur la liste officielle, les machines de 12 000 BTU subventionnées reçoivent de 350 à 2 268 dollars, médiane 530 dollars ; celles de 18 000 BTU de 475 à 3 312 dollars, médiane 1 404 dollars. Vérifiez le montant du jumelage exact que l'installateur propose, pas celui de la série en général. Notre guide sur [les montants par calibre](/guides/subvention-logisvert-montants-par-calibre) détaille ces écarts.
+Le programme LogisVert d'Hydro-Québec attribue un montant par jumelage certifié, unité extérieure plus unité intérieure. Une console et une murale reliées à la même unité extérieure peuvent avoir des montants différents, parce que leurs performances certifiées diffèrent. Sur la liste en vigueur, les machines de 12 000 BTU subventionnées reçoivent de {{chiffre:lv:tous:12000:min}} à {{chiffre:lv:tous:12000:max}} dollars, médiane {{chiffre:lv:tous:12000:med}} dollars ; celles de 18 000 BTU de {{chiffre:lv:tous:18000:min}} à {{chiffre:lv:tous:18000:max}} dollars, médiane {{chiffre:lv:tous:18000:med}} dollars. Deux conditions cadrent le tout : la thermopompe doit être certifiée ENERGY STAR depuis le 26 novembre 2025, et son unité extérieure doit afficher au moins 12 000 BTU/h de puissance nominale en climatisation, ce qui exclut le calibre de 9 000 BTU. Vérifiez le montant du jumelage exact que l'installateur propose, pas celui de la série en général. Notre guide sur [les montants par calibre](/guides/subvention-logisvert-montants-par-calibre) détaille ces écarts.
 
 ## Le prix : demandez les deux dans la même soumission
 

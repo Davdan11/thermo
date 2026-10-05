@@ -84,4 +84,4 @@ Puis comparez à la charge de votre maison, pas à la superficie de votre voisin
 
 ## Ce que ThermoMatch fait pour vous
 
-Le questionnaire pose 13 questions sur votre maison, calcule la charge avec les facteurs ci-dessus, filtre les machines dont la capacité certifiée à -15 °C est compatible, et classe le reste sur le froid, l'efficacité, la subvention et votre budget. Il vous montre trois machines réellement différentes, avec le détail du calcul. C'est une présélection sérieuse ; le calcul CSA F280 de l'installateur reste l'étape finale avant l'achat.
+Le questionnaire pose une quinzaine de questions sur votre maison, calcule la charge avec les facteurs ci-dessus, décide d'abord comment la chaleur sera distribuée (conduits existants ou têtes murales, et combien), filtre les machines dont la capacité certifiée à -15 °C est compatible, et classe le reste sur le froid, l'efficacité, la subvention et votre budget. Il vous montre trois machines réellement différentes, avec le détail du calcul. C'est une présélection sérieuse ; le calcul CSA F280 de l'installateur reste l'étape finale avant l'achat.

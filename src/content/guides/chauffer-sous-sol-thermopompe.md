@@ -4,7 +4,7 @@ seoTitle: "Chauffer un sous-sol avec une thermopompe"
 description: "Air froid qui stagne, humidité, murs enterrés : le sous-sol a ses règles. Comment le chauffer à la thermopompe, quelle unité choisir, quel calibre viser."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
-updatedAt: "2026-09-11"
+updatedAt: "2026-09-17"
 coverImage: "/images/guides/card-interior-living-room.jpg"
 category: "choisir"
 keywords: ["thermopompe sous-sol", "chauffer sous-sol thermopompe", "console thermopompe", "murale sous-sol", "thermopompe sous-sol humidité"]
@@ -58,7 +58,9 @@ C'est l'option la plus complète et la plus coûteuse. Dans les prix installés 
 
 Parce que les murs sont enterrés, la charge de chauffage d'un sous-sol aménagé est modeste. Une tête de 9 000 BTU couvre la plupart des sous-sols de maison unifamiliale ; le 12 000 BTU s'impose pour un grand sous-sol très ouvert, un sous-sol avec une sortie au niveau du sol et de grandes fenêtres, ou une maison ancienne dont les fondations ne sont pas isolées.
 
-Sur la liste officielle LogisVert d'Hydro-Québec, notre catalogue recense 146 machines de 9 000 BTU, dont 137 subventionnées avec des montants de 250 à 650 dollars, médiane 360 dollars ; et 159 machines de 12 000 BTU, dont 148 subventionnées avec des montants de 350 à 2 268 dollars, médiane 530 dollars. Les prix installés publiés pour une murale de 9 000 BTU vont de 2 900 à 5 850 dollars selon la gamme, et pour une murale de 12 000 BTU de 2 500 à 6 200 dollars.
+Un point a changé en 2026 et il pèse sur ce choix. Pour être admissible à LogisVert, une thermopompe doit être certifiée ENERGY STAR depuis le 26 novembre 2025, et son unité extérieure doit afficher une puissance nominale d'au moins 12 000 BTU/h en climatisation. Le calibre de 9 000 BTU tombe sous ce seuil : sur la liste en vigueur, publiée chaque jour par Hydro-Québec, il n'existe plus aucune machine de 9 000 BTU subventionnée. Les murales de 12 000 BTU, elles, sont {{chiffre:lv:wall-single:12000:n}} à être subventionnées, de {{chiffre:lv:wall-single:12000:min}} à {{chiffre:lv:wall-single:12000:max}} dollars, médiane {{chiffre:lv:wall-single:12000:med}} dollars. Les prix installés publiés pour une murale de 9 000 BTU vont de 2 900 à 5 850 dollars selon la gamme, et pour une murale de 12 000 BTU de 2 500 à 6 200 dollars.
+
+Cette différence ne doit pas décider à elle seule. Un sous-sol à faible charge équipé d'un 12 000 BTU pour toucher la subvention cyclera davantage et déshumidifiera moins bien en été, ce qui est précisément le contraire de ce qu'on cherche au sous-sol. La subvention pèse dans la balance quand les deux calibres conviennent techniquement, pas quand le petit est le bon.
 
 Surdimensionner un sous-sol est une erreur fréquente et coûteuse : une machine trop grosse dans un espace à faible charge fait des cycles courts et déshumidifie mal en été, ce qui est exactement l'inverse de ce qu'on cherche au sous-sol. Le [questionnaire ThermoMatch](/trouver-ma-thermopompe) prend en compte la présence et l'état du sous-sol dans le calcul de charge de la maison ; notre guide sur [la capacité à choisir](/guides/btu-quelle-capacite-choisir) explique la méthode. Un installateur licencié confirme le calibre sur place.
 

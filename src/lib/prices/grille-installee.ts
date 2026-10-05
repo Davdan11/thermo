@@ -146,4 +146,95 @@ export function installedPriceRange(input: { systemType: string; nominalBtu: num
   return { ...cell, tierLabel: TIER_LABEL[cell.tier], matchLabel };
 }
 
+/* ------------------------------------------------------------------
+   ThermoMatch : une fourchette par architecture, pas par machine
+   ------------------------------------------------------------------ */
+
+/** Libellé obligatoire à côté de toute fourchette ThermoMatch : jamais un prix de vente. */
+export const ORDRE_DE_GRANDEUR_LABEL = "Ordre de grandeur indicatif du marché québécois, pas un prix de vente";
+
+const kBtu = (btu: number) => `${(btu / 1000).toFixed(0)} 000 BTU`;
+const frNum = (n: number) => n.toLocaleString("fr-CA");
+
+/** Case de la gamme demandée, sinon « toutes gammes », sinon l'enveloppe des gammes publiées pour ce calibre. */
+function cellFor(kind: PriceKind, key: { btu?: number; zones?: number }, tier: PriceTier): PriceCell | null {
+  const cells = PRICE_GRID.filter((c) => c.kind === kind && (key.btu == null || c.btu === key.btu) && (key.zones == null || c.zones === key.zones));
+  if (cells.length === 0) return null;
+  const hit = cells.find((c) => c.tier === tier) ?? cells.find((c) => c.tier === "toutes");
+  if (hit) return hit;
+  return {
+    kind,
+    ...key,
+    tier: "toutes",
+    min: Math.min(...cells.map((c) => c.min)),
+    max: Math.max(...cells.map((c) => c.max)),
+    sources: cells.reduce((s, c) => s + c.sources, 0),
+    basis: cells.every((c) => c.basis === "publie") ? "publie" : "derive",
+    note: "enveloppe des gammes publiées",
+  };
+}
+
+function calibreIn(list: number[], target: number): number | null {
+  const b = nearest(list, target);
+  return Math.abs(b - target) > 6000 ? null : b;
+}
+
+/**
+ * Fourchette installée d'une architecture ThermoMatch (architecture.ts) : la centrale selon son calibre,
+ * la multizone selon son nombre de zones, les murales indépendantes par addition d'une murale par zone.
+ * `nominalBtu` : calibre d'une machine précise (centrale, murale simple) ; sinon celui de l'architecture.
+ */
+export function architecturePriceRange(
+  d: { kind: string; heads: number; sizingLoadBtuH: number; zonePlan: Array<{ headNominalBtu: number | null; servedBy: string }> },
+  opts: { tier?: PriceTier; nominalBtu?: number | null } = {},
+): PriceRange | null {
+  const tier = opts.tier ?? "toutes";
+  const withLabels = (cell: PriceCell | null, matchLabel: string): PriceRange | null => (cell ? { ...cell, tierLabel: TIER_LABEL[cell.tier], matchLabel } : null);
+  if (d.kind === "central" || d.kind === "central-hybrid") {
+    const b = calibreIn(CENTRALE_BTU, opts.nominalBtu || d.sizingLoadBtuH);
+    return b ? withLabels(cellFor("centrale", { btu: b }, tier), `centrale ${kBtu(b)}`) : null;
+  }
+  if (d.kind === "multi-zone") {
+    const z = Math.min(5, Math.max(2, d.heads));
+    return withLabels(cellFor("multizone", { zones: z }, tier), `multizone ${z} zones`);
+  }
+  const tetes = d.zonePlan.filter((z) => z.servedBy === "tete" && z.headNominalBtu);
+  if (d.kind === "single-zone") {
+    const b = calibreIn(MURALE_BTU, opts.nominalBtu || tetes[0]?.headNominalBtu || d.sizingLoadBtuH);
+    return b ? withLabels(cellFor("murale", { btu: b }, tier), `murale ${kBtu(b)}`) : null;
+  }
+  // Murales indépendantes : une murale par zone, chacune au calibre de sa zone, additionnées.
+  const btus = tetes.map((z) => calibreIn(MURALE_BTU, z.headNominalBtu as number));
+  const cells = btus.map((b) => (b ? cellFor("murale", { btu: b }, tier) : null));
+  if (cells.length === 0 || cells.some((c) => !c)) return null;
+  const ok = cells as PriceCell[];
+  const list = (btus as number[]).map(frNum);
+  const liste = list.length > 1 ? `${list.slice(0, -1).join(", ")} et ${list[list.length - 1]}` : list[0];
+  return {
+    kind: "murale",
+    tier,
+    min: ok.reduce((s, c) => s + c.min, 0),
+    max: ok.reduce((s, c) => s + c.max, 0),
+    sources: 0,
+    basis: "derive",
+    note: `addition de ${ok.length} murales (${liste} BTU)`,
+    tierLabel: TIER_LABEL[tier],
+    matchLabel: `${ok.length} murales`,
+  };
+}
+
+/** Enveloppe de plusieurs fourchettes (des machines de calibres différents dans une même architecture). */
+export function envelopeRange(ranges: Array<PriceRange | null>): PriceRange | null {
+  const r = ranges.filter((x): x is PriceRange => x != null);
+  if (r.length === 0) return null;
+  return {
+    ...r[0],
+    min: Math.min(...r.map((x) => x.min)),
+    max: Math.max(...r.map((x) => x.max)),
+    basis: r.every((x) => x.basis === "publie") ? "publie" : "derive",
+    note: "selon le calibre de chaque machine",
+    matchLabel: "selon le calibre",
+  };
+}
+
 export const money = (n: number) => `${Math.round(n / 50) * 50}`.replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " $";

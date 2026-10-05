@@ -22,15 +22,17 @@ import type {
   SourceReference,
   EditorialContent,
 } from "./types";
+import { modelNumberSlug, productSlug } from "./product-name";
 
 /* ---- Import fixtures ---- */
 import { readFileSync } from "fs";
-import { productNames } from "./product-name";
 import { join } from "path";
+import { partagerTextes } from "./partager-textes";
 
-// Load JSON dynamically to bypass TypeScript OOM during next build
+// Lu sur le disque à l'exécution (pas d'import : mémoire du build, et le robot de nuit remplace ce fichier dans la
+// version servie puis redémarre le serveur, voir scripts/publier-donnees.sh). Textes identiques partagés : 169 → 137 Mo.
 const autoDatasetsPath = join(process.cwd(), "src/lib/data/fixtures/brands/all-auto-datasets.json");
-const allAutoDatasets = JSON.parse(readFileSync(autoDatasetsPath, "utf8")) as Record<string, BrandDataset>;
+const allAutoDatasets = partagerTextes(JSON.parse(readFileSync(autoDatasetsPath, "utf8")) as Record<string, BrandDataset>);
 
 // Manual datasets (curated models with verified specs — these override auto data)
 import { daikinDataset as daikinManual } from "./fixtures/brands/daikin";
@@ -230,79 +232,66 @@ const ALL_EDITORIAL: EditorialContent[] = VALIDATED.flatMap((d) => d.editorial);
 // Build indexes
 const BRAND_BY_SLUG = new Map(ALL_BRANDS.map((b) => [b.slug, b]));
 const BRAND_BY_ID = new Map(ALL_BRANDS.map((b) => [b.id, b]));
-/* ---- Adresse publique des fiches ----------------------------------
-   Les gens cherchent « Haier Tempo 9000 BTU », pas « 1Q09TE1BE » : l'adresse
-   porte le nom commercial et la capacité et garde le numéro de modèle à la fin
-   (« /produit/haier-tempo-9000-btu-1q09te1be »). L'ancienne adresse reste
-   connue du registre : la fiche y répond par une redirection permanente.
-   ------------------------------------------------------------------- */
-
+/* Adresse des fiches (productSlug) : marque, nom commercial, capacité, puis le numéro
+   (« haier-tempo-9000-btu-ab092mcerb »). L'ancienne adresse (marque + numéro), l'identifiant et
+   toute adresse passée qui finit par le même numéro restent résolues par modelBySlug : la fiche
+   produit y répond par une redirection permanente (308) vers l'adresse actuelle. */
 const SERIES_BY_ID = new Map(ALL_SERIES.map((s) => [s.id, s]));
-
-const slugWords = (s: string) =>
-  s
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-
-/** Fiche par marque + fin de l'ancienne adresse (le numéro de modèle) : retrouve une fiche renommée. */
-const MODEL_BY_BRAND_TAIL = new Map<string, ProductModel>();
-
-for (const model of ALL_MODELS) {
-  const brand = BRAND_BY_ID.get(model.brandId);
-  if (!brand) continue;
-  const prefix = `${brand.slug}-`;
-  const tail = model.slug.startsWith(prefix) ? model.slug.slice(prefix.length) : model.slug;
-  MODEL_BY_BRAND_TAIL.set(`${brand.slug}|${tail}`, model);
-
-  const series = SERIES_BY_ID.get(model.seriesId);
-  const names = productNames({
-    brand: brand.name,
-    seriesName: series?.name,
-    seriesSlug: series?.slug,
-    capacityBtu: model.nominalCapacityBtu,
-    modelNumber: model.modelNumber,
+const LEGACY_MODEL_SLUGS = new Map<string, ProductModel>();
+const MODELS_BY_NUMBER_END = new Map<string, Array<{ model: ProductModel; prefix: string; suffix: string }>>();
+{
+  const proposed = ALL_MODELS.map((m) => {
+    const b = BRAND_BY_ID.get(m.brandId);
+    const s = SERIES_BY_ID.get(m.seriesId);
+    if (!b || !modelNumberSlug(m.modelNumber)) return m.slug;
+    return productSlug({ brand: b.name, brandSlug: b.slug, seriesName: s?.name, seriesSlug: s?.slug, capacityBtu: m.nominalCapacityBtu, modelNumber: m.modelNumber });
   });
-  // Le nom de la série commence parfois par la marque (« Haier Tempo ») : on ne la répète pas.
-  const nom = names.series ? slugWords(names.series) : null;
-  const serieSlug = !nom || nom === brand.slug ? null : nom.startsWith(prefix) ? nom.slice(prefix.length) : nom;
-  const btu = model.nominalCapacityBtu;
-  const next = [brand.slug, serieSlug, btu ? `${Math.round(btu / 1000)}000-btu` : null, tail]
-    .filter(Boolean)
-    .join("-");
-  if (next !== model.slug && next.length <= 90 && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(next)) {
-    model.legacySlug = model.slug;
-    model.slug = next;
+  // Une adresse proposée déjà prise (par une autre fiche, ancienne ou nouvelle) : la fiche garde la sienne.
+  const uses = new Map<string, number>();
+  const use = (slug: string) => uses.set(slug, (uses.get(slug) ?? 0) + 1);
+  ALL_MODELS.forEach((m, i) => (use(proposed[i]), proposed[i] !== m.slug && use(m.slug)));
+  ALL_MODELS.forEach((m, i) => {
+    if (proposed[i] === m.slug || uses.get(proposed[i]) !== 1) return;
+    LEGACY_MODEL_SLUGS.set(m.slug, m);
+    m.slug = proposed[i];
+  });
+  const current = new Set(ALL_MODELS.map((m) => m.slug));
+  for (const m of ALL_MODELS) {
+    if (!current.has(m.id) && !LEGACY_MODEL_SLUGS.has(m.id)) LEGACY_MODEL_SLUGS.set(m.id, m);
+    const b = BRAND_BY_ID.get(m.brandId);
+    const suffix = modelNumberSlug(m.modelNumber);
+    if (!b || !suffix) continue;
+    const end = suffix.slice(suffix.lastIndexOf("-") + 1);
+    const list = MODELS_BY_NUMBER_END.get(end) ?? [];
+    list.push({ model: m, prefix: `${b.slug}-`, suffix });
+    MODELS_BY_NUMBER_END.set(end, list);
   }
 }
 
-/**
- * Fiches par adresse : l'adresse courante, les anciennes, et toute adresse
- * intermédiaire qui finit par le numéro de modèle de la fiche (le nom commercial
- * ou la capacité ont pu changer depuis).
- */
+/** Fiche d'une adresse passée : ancienne adresse ou identifiant, sinon « <marque>-…-<numéro> » (nom commercial d'avant). */
+function resolvePastModelSlug(slug: string): ProductModel | undefined {
+  const legacy = LEGACY_MODEL_SLUGS.get(slug);
+  if (legacy) return legacy;
+  const hits = (MODELS_BY_NUMBER_END.get(slug.slice(slug.lastIndexOf("-") + 1)) ?? []).filter(
+    (c) => slug.startsWith(c.prefix) && slug.endsWith(`-${c.suffix}`),
+  );
+  if (hits.length === 0) return undefined;
+  const longest = Math.max(...hits.map((c) => c.suffix.length));
+  const best = hits.filter((c) => c.suffix.length === longest);
+  return best.length === 1 ? best[0].model : undefined;
+}
+
+/** Index des fiches par adresse : l'adresse actuelle, sinon une adresse passée (itération : adresses actuelles seulement). */
 class ModelSlugIndex extends Map<string, ProductModel> {
   override get(slug: string): ProductModel | undefined {
-    const direct = super.get(slug);
-    if (direct) return direct;
-    // La marque la plus longue d'abord : « ge-appliances-… » n'est pas une fiche « ge ».
-    const coupes: number[] = [];
-    for (let i = slug.indexOf("-"); i > 0; i = slug.indexOf("-", i + 1)) if (BRAND_BY_SLUG.has(slug.slice(0, i))) coupes.push(i);
-    for (const i of coupes.reverse()) {
-      const brandSlug = slug.slice(0, i);
-      for (let j = i; j > 0; j = slug.indexOf("-", j + 1)) {
-        const found = MODEL_BY_BRAND_TAIL.get(`${brandSlug}|${slug.slice(j + 1)}`);
-        if (found) return found;
-      }
-    }
-    return undefined;
+    return super.get(slug) ?? resolvePastModelSlug(slug);
+  }
+  override has(slug: string): boolean {
+    return this.get(slug) !== undefined;
   }
 }
 
-const MODEL_BY_SLUG: Map<string, ProductModel> = new ModelSlugIndex(ALL_MODELS.map((m) => [m.slug, m] as const));
-for (const m of ALL_MODELS) if (m.legacySlug && !MODEL_BY_SLUG.has(m.legacySlug)) MODEL_BY_SLUG.set(m.legacySlug, m);
+const MODEL_BY_SLUG = new ModelSlugIndex(ALL_MODELS.map((m) => [m.slug, m]));
 const MODEL_BY_ID = new Map(ALL_MODELS.map((m) => [m.id, m]));
 const CONFIG_BY_ID = new Map(ALL_CONFIGURATIONS.map((c) => [c.id, c]));
 const SOURCE_BY_ID = new Map(ALL_SOURCES.map((s) => [s.id, s]));

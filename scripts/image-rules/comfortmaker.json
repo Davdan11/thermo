@@ -1,0 +1,57 @@
+[
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(C5H0V)",
+    "series": "/images/products/official/comfortmaker-c5h0v-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(C5H3V)",
+    "series": "/images/products/official/comfortmaker-c5h3v-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(CVH8)",
+    "series": "/images/products/official/comfortmaker-cvh8-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(D5CERAH|DLCERBH)",
+    "series": "/images/products/official/comfortmaker-d5cerah-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(D5CLHA|D5CLRA|DLCLRC)",
+    "series": "/images/products/official/comfortmaker-d5clha-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(D5CMHA|DLCMHB)",
+    "series": "/images/products/official/comfortmaker-d5cmha-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(D5CMRA|DLCMRB)",
+    "series": "/images/products/official/comfortmaker-d5cmra-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(D5CPRA|DLCPRB)",
+    "series": "/images/products/official/comfortmaker-d5cpra-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(D5CSHA|D5CSRA)",
+    "series": "/images/products/official/comfortmaker-d5csha-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(D5CUHA|D5CURA)",
+    "series": "/images/products/official/comfortmaker-d5cuha-officiel.webp"
+  },
+  {
+    "brand": "comfortmaker",
+    "pattern": "^(DLCSRB)",
+    "series": "/images/products/official/comfortmaker-dlcsrb-officiel.webp"
+  }
+]

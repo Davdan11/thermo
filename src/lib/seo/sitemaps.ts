@@ -1,7 +1,7 @@
 /* Découpage des sitemaps — partagé entre sitemap.ts, sitemap-index.xml et robots.ts */
 
 import { getIndexableModels } from "@/lib/seo/programmatic";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { lireMetaLogisVert } from "@/lib/subsidies/logisvert-meta";
 
 export const PRODUCTS_PER_SITEMAP = 2000;
 
@@ -10,7 +10,7 @@ export const PRODUCTS_PER_SITEMAP = 2000;
  * C'est la seule date de modification connue des pages bâties sur le catalogue : on ne publie
  * jamais la date du build, que Google finit par ignorer quand elle change à chaque déploiement.
  */
-export const DATA_DATE = ((logisVertMetadata as { updatedAt?: string }).updatedAt ?? "2026-09-01").slice(0, 10);
+export const DATA_DATE = ((lireMetaLogisVert() as { updatedAt?: string }).updatedAt ?? "2026-09-01").slice(0, 10);
 
 /** Date AAAA-MM-JJ d'un champ de front matter (gray-matter peut renvoyer un objet Date). */
 export function isoDay(value: unknown): string | undefined {

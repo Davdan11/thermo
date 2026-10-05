@@ -47,22 +47,51 @@ précédente : `ln -sfn /var/www/thermopompesavendre.ca/releases/<x> /var/www/th
 
 Éditer `shared/.env` sur le VPS puis `pm2 restart thermo --update-env`. Indispensables en production :
 `NEXT_PUBLIC_SITE_URL`, `PIPEDRIVE_API_TOKEN`, `TWILIO_AUTH_TOKEN` (sans lui les webhooks téléphoniques
-sont refusés), `RESEND_API_KEY` et `NOTIFICATION_EMAIL` pour les courriels.
+sont refusés), `RESEND_API_KEY` et `NOTIFICATION_EMAIL` pour les courriels. Utile au robot de nuit : `DONNEES_CRON_SECRET`
+(24 caractères ou plus, `openssl rand -hex 16` deux fois) pour la régénération immédiate des pages après une mise
+à jour de la liste LogisVert.
 
 
-## Robot LogisVert quotidien
+## Données LogisVert : mise à jour sans reconstruction
 
-Un cron sur le VPS (`30 5 * * *`, `/var/www/thermopompesavendre.ca/bot/run.sh`) exécute `scripts/logisvert-bot.sh` :
+La liste en vigueur est le fichier quotidien des thermopompes certifiées ENERGY STAR que lit l'outil de recherche
+d'Hydro-Québec (`proprietaire-habitation-existante-AAAAMMJJ.csv.gz`, voir l'en-tête de
+`scripts/lib/logisvert-energystar.mjs`). Le serveur lit les fichiers de données **sur le disque au démarrage**
+(`src/lib/data/registry.ts`, `src/lib/subsidies/logisvert-official.ts`, `logisvert-meta.ts`) : remplacer ces
+fichiers dans la version servie puis redémarrer suffit, une reconstruction complète (environ 30 minutes, mémoire
+tendue sur un VPS de 8 Go sans swap) n'est pas nécessaire.
 
-1. synchronise `/var/www/thermopompesavendre.ca/bot/repo` avec GitHub (clé `/root/.ssh/thermo-bot`, à inscrire dans **Settings → Deploy keys** du dépôt avec accès en écriture) ; sans synchronisation, il s'arrête sans rien déployer ;
-2. compare l'empreinte SHA-256 du fichier Hydro-Québec avec `src/lib/subsidies/logisvert-metadata.json` (`node scripts/scrape-logisvert.mjs --check`) ;
-3. si la liste a changé : régénération, `vitest`, commit « LogisVert : liste Hydro-Québec du AAAA-MM-JJ », push, puis déploiement sans interruption par `deploy-vps.sh`.
+`scripts/publier-donnees.sh <copie>` fait ce travail : vérification des JSON, sauvegarde dans
+`current/.donnees-precedentes`, remplacement atomique, `pm2 reload thermo`, attente que
+`GET /api/donnees/revalider` renvoie la nouvelle empreinte (sinon retour aux fichiers précédents), puis
+`POST /api/donnees/revalider` qui marque toutes les pages prérendues comme périmées.
 
-Journal : `/var/log/thermo-logisvert-bot.log`. Lancement manuel : `bash /var/www/thermopompesavendre.ca/bot/run.sh`.
+- Avec `DONNEES_CRON_SECRET` (24 caractères ou plus) dans `shared/.env` : les pages sont régénérées dès leur
+  prochaine visite. Sans ce secret, elles suivent en **6 heures au plus** (`export const revalidate = 21600`
+  dans `src/app/layout.tsx`, les plans du site et `llms.txt`).
+- Ce qui **demande** une reconstruction : tout changement de code ou de contenu rédigé (nouvel article, guides,
+  pages). Le robot le détecte en comparant `node scripts/empreinte-code.mjs` sur la version servie et sur sa
+  copie ; s'il y a le moindre écart, il déploie normalement (`deploy-vps.sh`).
+- Les fichiers publiés à chaud sont listés dans `scripts/publier-donnees.sh` et
+  `scripts/empreinte-code.mjs` (liste, index, métadonnées, catalogue, rapport de construction, types ENERGY STAR).
 
 ## Robot de nuit (LogisVert + blogue)
 
-`bot/run.sh` (cron 5 h 30) lance `scripts/nightly-bot.sh` : synchronisation GitHub, vérification LogisVert (voir ci-dessus), puis `scripts/blog-bot.mjs` qui publie **un article par jour**, si `shared/.env` contient `ANTHROPIC_API_KEY` (Claude) ou, à défaut, `GEMINI_API_KEY` (Gemini 2.5 Flash, palier gratuit suffisant ; c'est la configuration actuelle du VPS). La photo est générée si une clé d'images répond (`OPENAI_API_KEY` ou `GEMINI_API_KEY`), sinon une image de couverture du site est utilisée : l'article ne dépend pas de la photo. Un seul commit et un seul déploiement par nuit. Vérifier un guide écrit à la main : `node scripts/valider-guide.mjs <slug>`.
+`bot/run.sh` (cron 5 h 30) lance `scripts/nightly-bot.sh` (fins de ligne LF obligatoires : `.gitattributes` les
+force, un fichier en CRLF fait échouer bash dès `set -o pipefail`) :
+
+1. synchronise `/var/www/thermopompesavendre.ca/bot/repo` avec GitHub (clé `/root/.ssh/thermo-bot`, inscrite dans
+   **Settings → Deploy keys** du dépôt avec accès en écriture) ; sans synchronisation, il s'arrête sans rien publier ;
+2. LogisVert : `node scripts/scrape-logisvert.mjs --check` compare l'empreinte du **contenu** de la liste (sans la
+   date du jour) avec `src/lib/subsidies/logisvert-metadata.json` ; si elle a changé, il régénère la liste
+   (`scrape-logisvert.mjs`), les types ENERGY STAR (`energystar-types.mjs`) et le catalogue (`build-catalogue.mjs`) ;
+   chaque script refuse d'écrire un résultat anormal ;
+3. blogue, tests, commit, push (voir ci-dessous) ;
+4. publication : données seules et code identique à la version servie → `publier-donnees.sh` (sans reconstruction) ;
+   sinon `deploy-vps.sh` ;
+5. alertes LogisVert aux abonnés une fois les nouvelles données en ligne.
+
+Blogue : `scripts/blog-bot.mjs` publie **un article par jour**, si `shared/.env` contient `ANTHROPIC_API_KEY` (Claude) ou, à défaut, `GEMINI_API_KEY` (Gemini 2.5 Flash, palier gratuit suffisant ; c'est la configuration actuelle du VPS). La photo est générée si une clé d'images répond (`OPENAI_API_KEY` ou `GEMINI_API_KEY`), sinon une image de couverture du site est utilisée : l'article ne dépend pas de la photo. Un seul commit et un seul déploiement par nuit. Vérifier un guide écrit à la main : `node scripts/valider-guide.mjs <slug>`.
 
 - Sujets : `data/blog/sujets.json` (file d'attente, un sujet par ligne ; ajouter des sujets pour prolonger). Publiés : `data/blog/publies.json`.
 - Garde-fous : seuls les chiffres du contexte factuel (`scripts/blog-context.ts`) sont autorisés ; validation du frontmatter, de la longueur, des liens internes ; second essai avec les erreurs ; abandon sinon (journal `/var/log/thermo-nightly-bot.log`).

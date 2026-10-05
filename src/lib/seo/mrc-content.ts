@@ -7,6 +7,7 @@
    ================================================================== */
 import { clampDescription, fitTitle } from "./index";
 import { fmtInt, fmtTemp } from "./cities-data";
+import { aNom } from "./cities-text";
 import {
   aggregate,
   displayName,
@@ -270,7 +271,7 @@ export function buildHubPage(slug: string): HubPage | null {
     aggRows,
     stationRows,
     members: members.map(memberRow),
-    pages: members.filter((m) => m.page).map((m) => ({ name: `Thermopompe à ${displayName(m)}`, url: `/thermopompe/${m.slug}` })),
+    pages: members.filter((m) => m.page).map((m) => ({ name: `Thermopompe ${aNom(displayName(m))}`, url: `/thermopompe/${m.slug}` })),
     nearHubs: near,
     region: {
       title: regionName,

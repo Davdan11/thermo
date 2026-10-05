@@ -14,11 +14,15 @@
    réservation ni sortie.
    ================================================================== */
 
+import { registry } from "@/lib/data/registry";
 import type { Quote } from "@/lib/soumissions/types";
 import { acceptedQuoteForJob, jobCompletion } from "../commissions/link";
 import type { Job } from "../types";
 import type { InventaireData, StockItem, StockMovement } from "./types";
-import { canonicalModelSlug } from "../catalog";
+
+/** Même modèle, même si un dossier garde l'adresse de fiche d'avant (les adresses suivent le nom commercial). */
+const modelKey = (slug: string) => registry.modelBySlug.get(slug)?.id ?? slug;
+const sameModel = (a: string, b: string) => a === b || modelKey(a) === modelKey(b);
 
 export interface Dossier {
   /** « job:<id> » ou « quote:<id> ». */
@@ -44,14 +48,14 @@ export function dossiersFrom(jobs: Job[], quotes: Quote[]): Dossier[] {
     if (aq) linked.add(aq.quote.id);
     const slug = j.modelSlug ?? aq?.version.content.machine?.modelSlug ?? null;
     if (!slug) continue;
-    out.push({ ref: `job:${j.id}`, kind: "job", modelSlug: canonicalModelSlug(slug), label: `Job n° ${j.number}`, at: j.createdAt, jobId: j.id, completedAt: jobCompletion(j)?.completedAt ?? null });
+    out.push({ ref: `job:${j.id}`, kind: "job", modelSlug: slug, label: `Job n° ${j.number}`, at: j.createdAt, jobId: j.id, completedAt: jobCompletion(j)?.completedAt ?? null });
   }
   for (const q of quotes) {
     if (linked.has(q.id)) continue;
     const v = acceptedVersion(q);
     const slug = v?.content.machine?.modelSlug;
     if (!v?.acceptance || !slug) continue;
-    out.push({ ref: `quote:${q.id}`, kind: "soumission", modelSlug: canonicalModelSlug(slug), label: `Soumission ${q.number}`, at: v.acceptance.at, quoteId: q.id, completedAt: null });
+    out.push({ ref: `quote:${q.id}`, kind: "soumission", modelSlug: slug, label: `Soumission ${q.number}`, at: v.acceptance.at, quoteId: q.id, completedAt: null });
   }
   return out;
 }
@@ -74,7 +78,7 @@ export function itemStock(item: StockItem, data: Pick<InventaireData, "releases"
   const exited = new Set(data.movements.filter((m) => m.itemId === item.id && m.key).map((m) => m.key!));
   const mine = item.modelSlug
     ? dossiers
-        .filter((d) => d.modelSlug === canonicalModelSlug(item.modelSlug!) && !released.has(d.ref) && !exited.has(exitKey(d.ref, item.id)))
+        .filter((d) => sameModel(d.modelSlug, item.modelSlug!) &&!released.has(d.ref) && !exited.has(exitKey(d.ref, item.id)))
         .filter((d) => !(d.completedAt && d.completedAt < item.createdAt))
         .map((d) => ({ ...d, qty: item.perJob }))
     : [];

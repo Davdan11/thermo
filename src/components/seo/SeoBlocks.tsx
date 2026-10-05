@@ -30,6 +30,7 @@ import { CapacityMotif } from "@/components/seo/hero/CapacityMotif";
 import { GuideMotif } from "@/components/seo/hero/GuideMotif";
 import { getFaqPageSchema, jsonLdString } from "@/lib/seo";
 import type { SeoModel } from "@/lib/seo/programmatic";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 export function JsonLd({ data }: { data: object | object[] }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(data) }} />;
@@ -296,7 +297,7 @@ export function FaqBlock({ items, title = "Questions fréquentes" }: { items: Fa
 
 export function CtaThermoMatch({
   title = "Trouvez la bonne thermopompe en 2 minutes",
-  text = "Répondez à 13 questions sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
+  text = `Répondez à ${QUESTIONS_LABEL} sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.`,
   compact = false,
 }: {
   title?: string;

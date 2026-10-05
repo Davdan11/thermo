@@ -15,6 +15,7 @@ import { MONO } from "@/components/heroes-v2/outils/font-stacks";
 import { Corners } from "@/components/sections-v2/outils/kit";
 import "@/components/sections-v2/outils/viseur/viseur.css";
 import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
+import { Honeypot } from "@/components/forms/Honeypot";
 
 /* ==================================================================
    Outil ThermoScan (page /thermoscan). Présentation « viseur » : graphite,
@@ -439,10 +440,7 @@ function FicheForm({ device, sessionId }: {
       <div className="mb-4">
         <Field label="Téléphone (facultatif)" value={phone} onChange={setPhone} type="tel" placeholder="(514) 000-0000" />
       </div>
-      <div className="absolute" style={{ left: -9999, top: -9999 }} aria-hidden="true">
-        <label htmlFor="ts-website">Site web</label>
-        <input id="ts-website" type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
-      </div>
+      <Honeypot value={website} onChange={(e) => setWebsite(e.target.value)} />
       <label className="flex items-start gap-3 text-[12.5px] leading-relaxed mb-4 cursor-pointer" style={{ color: MUTE }}>
         <span className="vz-check">
           <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />

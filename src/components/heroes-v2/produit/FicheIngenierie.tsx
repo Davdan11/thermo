@@ -46,6 +46,8 @@ export type FicheData = {
   zones: number | null;
   coldClimate: boolean;
   discontinued: boolean;
+  /** Unité extérieure absente de la liste LogisVert en vigueur (aucune subvention). */
+  horsListeLogisVert?: boolean;
   minTempC: number | null;
   imageUrl: string | null;
   /** Chiffres certifiés, dans l'ordre d'affichage. */
@@ -192,7 +194,8 @@ export function FicheIngenierie(d: FicheData) {
     };
   }, [measure, readAspect]);
 
-  const capacity = d.capacityBtu ? `${fmtNum(d.capacityBtu)} BTU/h` : null;
+  // Calibre commercial : une classe de vente, pas une mesure de chauffage (src/lib/data/capacites.ts).
+  const capacity = d.capacityBtu ? `${fmtNum(d.capacityBtu)} BTU` : null;
   const words = d.modelName.split(/\s+/);
   const kd = Math.max(7, d.modelName.length * 0.6);
   const km = Math.max(4.2, Math.max(...words.map((w) => w.length)) * 0.62);
@@ -200,11 +203,12 @@ export function FicheIngenierie(d: FicheData) {
   const cells: { k: string; v: string; mono?: boolean }[] = [];
   if (d.seriesLabel) cells.push({ k: "Série", v: d.seriesLabel });
   cells.push({ k: "Type", v: d.typeLabel });
-  if (capacity) cells.push({ k: "Capacité nominale", v: capacity });
+  if (capacity) cells.push({ k: "Calibre commercial", v: capacity });
   if (d.zones != null && d.zones > 1) cells.push({ k: "Zones intérieures", v: String(d.zones) });
   if (d.minTempC != null) cells.push({ k: "Chauffe jusqu’à", v: `${fmtNum(d.minTempC)} °C` });
   if (d.coldClimate) cells.push({ k: "Usage", v: "Climat froid" });
   if (d.discontinued) cells.push({ k: "Statut", v: "Discontinué" });
+  if (d.horsListeLogisVert) cells.push({ k: "LogisVert", v: "Absente de la liste en vigueur" });
   cells.push({ k: "Modèle", v: d.modelNumber, mono: true });
 
   return (
@@ -296,7 +300,7 @@ export function FicheIngenierie(d: FicheData) {
           {geo && capacity && (
             <motion.div aria-hidden="true" className="pointer-events-none absolute z-10" style={{ left: geo.img.x + geo.img.w / 2, top: geo.img.y + geo.img.h + 24, ...(reduce ? {} : { x: px, y: py }) }}>
               <span {...fp({ opacity: 0, duration: 0.6, delay: 0.95 }, { className: "fi-mono block -translate-x-1/2 -translate-y-1/2 whitespace-nowrap bg-white px-2.5 text-[11px]", style: { color: INK, letterSpacing: "0.02em" } })}>
-                {capacity} · nominal
+                {capacity} · calibre
               </span>
             </motion.div>
           )}
@@ -418,7 +422,7 @@ function Callout({ item, n, delay, reduce }: { item: Item; n: number; delay: num
             </span>
           </span>
           <span className="mt-2 block text-[12.5px] leading-snug" style={{ color: MUTE }}>
-            <span className="fi-lnk-t">Montant officiel Hydro-Québec</span>
+            <span className="fi-lnk-t">Liste officielle d’Hydro-Québec</span>
             <span className="ml-1.5 inline-block align-[-1px]">
               <Arrow size={12} />
             </span>
@@ -456,7 +460,7 @@ function LeaderLine({ ln, px, py, delay, reduce }: { ln: Leader; px: MotionValue
   );
 }
 
-/* Cote de largeur sous l'appareil : capacité nominale, tracée du centre vers les bords. */
+/* Cote de largeur sous l'appareil : calibre commercial, tracé du centre vers les bords. */
 function Dimension({ geo, px, py, reduce }: { geo: Geo; px: MotionValue<number>; py: MotionValue<number>; reduce: boolean }) {
   const { x, y: iy, w, h } = geo.img;
   const x1 = x + 6;

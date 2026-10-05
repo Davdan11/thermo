@@ -4,7 +4,7 @@ import "./entreprise.css";
 import { useEffect, useState, type CSSProperties } from "react";
 import { motion, MotionConfig } from "motion/react";
 import { fp } from "@/components/hero/first-paint";
-import { ADVISORS, MODES, MODE_IDS, SLOTS, addDays, formatDateFr, hourLabel, isClosedDay, isTooSoon, todayInMontreal, weekdayOf, type ModeId } from "@/lib/rdv/booking";
+import { ADVISORS, MODES, MODE_IDS, SLOTS, addDays, formatDateFr, hourLabel, isClosedDay, isTooSoon, todayInMontreal, visitAreasLabel, weekdayOf, type ModeId } from "@/lib/rdv/booking";
 import { xeMono } from "./fonts";
 import { Arrow, EASE, HEADER_PAD, PHONE, PHONE_HREF, UNDER_HEADER, XLink, useReducedSafe } from "./shared";
 
@@ -86,7 +86,7 @@ export function BookingHero({ mode }: { mode: ModeId }) {
             </span>
           </h1>
           <p {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE, delay: 0.5 }, { className: "max-w-[540px] text-[17px] leading-[1.65] sm:text-[18px]", style: { color: C.mute, margin: "24px 0 0" } })}>
-            Un appel, une rencontre en ligne sur Google Meet ou une visite à domicile, gratuitement et sans engagement. Confirmation immédiate. Nous sommes ouverts du lundi au vendredi de 8&nbsp;h à 18&nbsp;h ; les rendez-vous se prennent de 8&nbsp;h à 17&nbsp;h.
+            Un appel ou une rencontre en ligne sur Google Meet partout au Québec, ou une visite à domicile dans les secteurs desservis ({visitAreasLabel()}), gratuitement et sans engagement. Confirmation immédiate. Nous sommes ouverts du lundi au vendredi de 8&nbsp;h à 18&nbsp;h ; les rendez-vous se prennent de 8&nbsp;h à 17&nbsp;h.
           </p>
           <div {...fp({ opacity: 0, y: 10, duration: 0.9, ease: EASE, delay: 0.65 }, { className: "mt-9 flex flex-wrap items-center gap-x-7 gap-y-4" })}>
             <XLink href="#reservation" className="inline-flex items-center gap-3 rounded-[10px] px-6 py-4 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-[#1B1512]" style={{ background: C.orange }}>

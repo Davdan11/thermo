@@ -5,6 +5,8 @@ import { FAQ_ITEMS } from "@/app/faq/faqData";
 import { GLOSSARY_TERMS } from "@/lib/glossary";
 
 export const dynamic = "force-static";
+/* Régénéré au plus toutes les 6 heures : suit la mise à jour de nuit des données sans reconstruction. */
+export const revalidate = 21600;
 
 /* ==================================================================
    llms-full.txt — version détaillée de llms.txt pour les assistants IA :

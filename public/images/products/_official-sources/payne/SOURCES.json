@@ -1,5 +1,72 @@
 [
   {
+    "fichier": "payne-37maha-officiel-site.png",
+    "image_web": "/images/products/official/payne-37maha-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/ductless-systems/media_1f3d694e153077b1282e6aceb4f5ba65edea2c822.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/ductless-systems/37mhraq",
+    "date": "2026-09-17",
+    "familles": [
+      "37MAHA",
+      "37MARA",
+      "37MHRAQ"
+    ],
+    "modeles": "37MHRAQ09AA1, 37MHRAQ09AA3, 37MHRAQ12AA1, 37MHRAQ12AA3, 37MHRAQ18AA3, 37MHRAQ24AA3, 37MHRAQ30AA3, 37MHRAQ36AA3, 37MAHAQ06AA3, 37MAHAQ09AA3, 37MAHAQ12AA3, 37MAHAQ18AA3",
+    "note": "Photo produit « Ductless System Heat Pump » de l'index officiel www.payne.com (query-index.json), servie par le fabricant pour 37MAHA, 37MARA, 37MHRAQ. Couvre 21 fiche(s) publiée(s) sans photo."
+  },
+  {
+    "fichier": "payne-37mbha-officiel-site.png",
+    "image_web": "/images/products/official/payne-37mbha-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/ductless-systems/media_147bed0cf7dbdc622ed28deeab047ece9e0716898.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/ductless-systems/37mbra",
+    "date": "2026-09-17",
+    "familles": [
+      "37MBHA",
+      "37MBRA"
+    ],
+    "modeles": "37MBRAQ36AA3, 37MBRAQ48AA3, 37MBRAQ58AA3, 37MBHAQ36AA3, 37MBHAQ48AA3, 37MBHAQ58AA3",
+    "note": "Photo produit « Single-Zone Light Commercial Heat Pump » de l'index officiel www.payne.com (query-index.json), servie par le fabricant pour 37MBHA, 37MBRA. Couvre 6 fiche(s) publiée(s) sans photo."
+  },
+  {
+    "fichier": "payne-37mgha-officiel-site.png",
+    "image_web": "/images/products/official/payne-37mgha-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/ductless-systems/media_1ac2d998cd281823de3e39d2fe97060839b74228d.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/ductless-systems/38mghb",
+    "date": "2026-09-17",
+    "familles": [
+      "37MGHA",
+      "37MGRA",
+      "38MGHB"
+    ],
+    "modeles": "38MGHBQ24CA3, 38MGHBQ30DA3, 38MGHBQ36DA3, 38MGHBQ48EA3, 37MGHAQ18CA3, 37MGHAQ24DA3, 37MGHAQ30EA3, 37MGHAQ36EA3, 37MGHAQ48FA3, 37MGHAQ55FA3, 37MGRAQ18CA3, 37MGRAQ24DA3",
+    "note": "Photo produit « Ductless System Multi-zone High-Heat Heat Pump » de l'index officiel www.payne.com (query-index.json), servie par le fabricant pour 37MGHA, 37MGRA, 38MGHB. Couvre 16 fiche(s) publiée(s) sans photo."
+  },
+  {
+    "fichier": "payne-37mpra-officiel-site.png",
+    "image_web": "/images/products/official/payne-37mpra-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/ductless-systems/media_1827d368e2b5a3a84b12bfced376041c5a0f712f2.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/ductless-systems/38mprb",
+    "date": "2026-09-17",
+    "familles": [
+      "37MPRA",
+      "38MPRB"
+    ],
+    "modeles": "38MPRBQ09AA3, 38MPRBQ12AA3, 38MPRBQ18AA3, 37MPRAQ06AA3, 37MPRAQ09AA3, 37MPRAQ12AA3, 37MPRAQ18AA3",
+    "note": "Photo produit « 42.0 SEER Ductless System Heat Pump » de l'index officiel www.payne.com (query-index.json), servie par le fabricant pour 37MPRA, 38MPRB. Couvre 7 fiche(s) publiée(s) sans photo."
+  },
+  {
+    "fichier": "payne-37muha-officiel-site.png",
+    "image_web": "/images/products/official/payne-37muha-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/heat-pumps/media_103402b1e724259db54189953d857c5e736567b1a.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/heat-pumps/37muha",
+    "date": "2026-09-17",
+    "familles": [
+      "37MUHA",
+      "37MURA"
+    ],
+    "modeles": "37MUHAQ18AA3, 37MUHAQ24AA3, 37MUHAQ30AA3, 37MUHAQ36AA3, 37MUHAQ48AA3, 37MUHAQ60AA3, 37MURAQ18AA3, 37MURAQ24AA3, 37MURAQ30AA3, 37MURAQ36AA3, 37MURAQ48AA3, 37MURAQ60AA3",
+    "note": "Photo produit « Crossover Heat Pump » de l'index officiel www.payne.com (query-index.json), servie par le fabricant pour 37MUHA, 37MURA. Couvre 12 fiche(s) publiée(s) sans photo."
+  },
+  {
     "fichier": "payne-38marb-site.png",
     "image_web": "/images/products/official/payne-38marb-officiel.webp",
     "url": "https://www.payne.com/en/us/products/ductless-systems/media_1d69ede0a1750dafd59e3fe229bde32a02b6e75d7.png?width=2000&format=png&optimize=medium",
@@ -10,6 +77,20 @@
     ],
     "modeles": "38MARBQ09…36",
     "note": "Photo produit (« Product Image ») de la page officielle Payne 38MARB."
+  },
+  {
+    "fichier": "payne-38mbrc-37mbra-37mbha-site.png",
+    "image_web": "/images/products/official/payne-38mbrc-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/ductless-systems/media_147bed0cf7dbdc622ed28deeab047ece9e0716898.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/ductless-systems/38mbrc",
+    "date": "2026-09-10",
+    "familles": [
+      "38MBRC",
+      "37MBRA",
+      "37MBHA"
+    ],
+    "modeles": "38MBRCQ36/48/58, 37MBRAQ36/48/58, 37MBHAQ36/48/58",
+    "note": "Même photo produit sur les pages officielles Payne 38MBRC, 37MBRA et 37MBHA."
   },
   {
     "fichier": "payne-38mgrb-38mghb-37mgra-site.png",
@@ -26,18 +107,16 @@
     "note": "Même photo produit sur les pages officielles Payne 38MGRB, 38MGHB et 37MGRA."
   },
   {
-    "fichier": "payne-38mbrc-37mbra-37mbha-site.png",
-    "image_web": "/images/products/official/payne-38mbrc-officiel.webp",
-    "url": "https://www.payne.com/en/us/products/ductless-systems/media_147bed0cf7dbdc622ed28deeab047ece9e0716898.png?width=2000&format=png&optimize=medium",
-    "page": "https://www.payne.com/en/us/products/ductless-systems/38mbrc",
-    "date": "2026-09-10",
+    "fichier": "payne-38mhrcq-officiel-site.png",
+    "image_web": "/images/products/official/payne-38mhrcq-officiel.webp",
+    "url": "https://www.payne.com/en/us/products/ductless-systems/media_1e690514cfcba3f772a3577cc3c92140564f9d622.png?width=2000&format=png&optimize=medium",
+    "page": "https://www.payne.com/en/us/products/ductless-systems/38mhrcq",
+    "date": "2026-09-17",
     "familles": [
-      "38MBRC",
-      "37MBRA",
-      "37MBHA"
+      "38MHRCQ"
     ],
-    "modeles": "38MBRCQ36/48/58, 37MBRAQ36/48/58, 37MBHAQ36/48/58",
-    "note": "Même photo produit sur les pages officielles Payne 38MBRC, 37MBRA et 37MBHA."
+    "modeles": "38MHRCQ09AA1, 38MHRCQ09AA3, 38MHRCQ12AA1, 38MHRCQ12AA3, 38MHRCQ18AA3, 38MHRCQ24AA3, 38MHRCQ30AA3",
+    "note": "Photo produit « 19.8 SEER Ductless System Heat Pump » de l'index officiel www.payne.com (query-index.json). Couvre 7 fiche(s) publiée(s) sans photo."
   },
   {
     "fichier": "payne-38mura-37mura-37muha-site.png",

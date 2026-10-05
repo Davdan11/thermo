@@ -18,13 +18,13 @@ import type {
 } from "../types";
 import { registry } from "../registry";
 import type { CatalogueProduct } from "./catalogue";
-import { getWarrantiesForModel } from "./products";
 import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { productNames } from "../product-name";
-import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
-import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
+import { logisVertDeLaFiche } from "../../subsidies/logisvert-official";
 import { resolveMinHeatingTemp } from "@/lib/thermomatch/min-temp-brochures";
+import { minHeatingTempForModel } from "@/lib/thermomatch/min-temp";
 import type { ResolvedMinHeatingTemp } from "@/lib/thermomatch/min-temp-source";
+import { resolveWarranty, type ResolvedWarranty } from "../warranty";
 
 /* ------------------------------------------------------------------
    Product Detail — everything needed for a product page
@@ -39,7 +39,13 @@ export interface ProductDetail {
   indoorUnit: IndoorUnit | null;
   performanceProfile: PerformanceProfile | null;
   certifications: Certification[];
+  /** Garanties du catalogue : plus rien n'y est écrit, elles viennent des relevés de documents (voir `warranty`). */
   warranties: Warranty[];
+  /**
+   * Garantie relevée dans un document du fabricant, ou null si aucun document ne couvre la fiche.
+   * Seule valeur à afficher : ne jamais la remplacer par une durée par défaut.
+   */
+  warranty: ResolvedWarranty | null;
   prices: PriceObservation[];
   editorial: EditorialContent | null;
   sources: SourceReference[];
@@ -64,8 +70,9 @@ export function getProductDetail(slug: string): ProductDetail | null {
   const model = registry.modelBySlug.get(slug);
   if (!model) return null;
 
-  // Only show published models
-  if (model.status !== "published" && model.status !== "discontinued") {
+  // Fiches publiées ; « archived » = unité retirée de la liste LogisVert en vigueur : la page répond toujours
+  // (adresse conservée), sans index ni subvention.
+  if (model.status !== "published" && model.status !== "discontinued" && model.status !== "archived") {
     return null;
   }
 
@@ -198,20 +205,9 @@ export function getProductDetail(slug: string): ProductDetail | null {
         }
       }
       
-      let logisVertDollars: number | null = null;
-      const officialEntry = outdoorModelNumber
-        ? lookupLogisVertFuzzy(outdoorModelNumber, b.name)
-        : lookupLogisVertFuzzy(m.modelNumber, b.name);
-      
-      if (officialEntry && officialEntry.logisVertDollars > 0) {
-        logisVertDollars = officialEntry.logisVertDollars;
-      } else {
-        const btu = m.nominalCapacityBtu ?? m.heatingCapacity5FMaxBtu ?? 0;
-        if (btu > 0) {
-          const result = calculateLogisVertSimple(btu, m.categories.includes("cold-climate"));
-          if (result.dollars > 0) logisVertDollars = result.dollars;
-        }
-      }
+      // Montant de la liste LogisVert en vigueur, sinon aucun : jamais d'estimation (une fiche absente de la liste n'est pas admissible).
+      const officialEntry = logisVertDeLaFiche(m, b.name, outdoorModelNumber);
+      const logisVertDollars: number | null = officialEntry && officialEntry.logisVertDollars > 0 ? officialEntry.logisVertDollars : null;
 
       return {
         model: m,
@@ -223,8 +219,9 @@ export function getProductDetail(slug: string): ProductDetail | null {
         imageUrl: m.imageUrl ?? ser?.imageUrl ?? null,
         refrigerant,
         outdoorModelNumber,
-        warranties: getWarrantiesForModel(m.id),
+        warranty: resolveWarranty({ brand: b.name, seriesName: ser?.name, modelNumber: m.modelNumber }),
         logisVertDollars,
+        minHeatingTempC: minHeatingTempForModel(m.id)?.valueC ?? null,
       };
     });
 
@@ -238,6 +235,7 @@ export function getProductDetail(slug: string): ProductDetail | null {
     performanceProfile,
     certifications,
     warranties,
+    warranty: resolveWarranty({ brand: brand.name, seriesName: series.name, modelNumber: model.modelNumber }),
     prices,
     editorial,
     sources,

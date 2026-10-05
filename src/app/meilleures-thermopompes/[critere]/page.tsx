@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createMetadata, fitTitle, getBreadcrumbSchema, getItemListSchema } from "@/lib/seo";
-import { getRanking, RANKINGS } from "@/lib/seo/programmatic";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { getCanonicalModels, getRanking, RANKINGS } from "@/lib/seo/programmatic";
+import { getLogisVertListInfo } from "@/lib/subsidies/logisvert-meta";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { productImage } from "@/components/seo/hero/assets";
 import { PalmaresPodiumHero } from "@/components/heroes-v2/marques/PalmaresHeroes";
@@ -43,7 +43,8 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
   const { critere } = await params;
   const r = getRanking(critere, 25);
   if (!r) notFound();
-  const updated = (logisVertMetadata as { updatedAt?: string }).updatedAt?.slice(0, 10) ?? null;
+  // Date de la liste LogisVert en vigueur (« 17 septembre 2026 »), lue à l'exécution : suit la mise à jour de nuit.
+  const updated = getLogisVertListInfo().listDate;
   const top = r.models[0];
 
   const faq = [
@@ -89,10 +90,10 @@ export default async function RankingPage({ params }: { params: Promise<{ criter
           logo: monoLogo(m.brandSlug)?.src ?? null,
         }))}
         intro={typo(r.def.description)}
-        answer={typo(`${r.models.length} machines vendues au Québec, classées par Thermopompes À Vendre sur ${/^[A-Z]{2}/.test(r.def.metricLabel) ? r.def.metricLabel : r.def.metricLabel.charAt(0).toLowerCase() + r.def.metricLabel.slice(1)} d'après les données d'Hydro-Québec et d'ENERGY STAR${updated ? ` (liste du ${updated})` : ""}.${r.models[0] ? ` En tête : ${r.models[0].brand} ${r.models[0].name}, ${r.def.value(r.models[0])}.` : ""} Un classement compare une seule donnée ; la bonne machine dépend aussi de votre maison, que ThermoMatch prend en compte.`)}
+        answer={typo(`Les ${r.models.length} premières des ${getCanonicalModels().filter(r.def.filter).length} machines distinctes qui publient cette donnée, classées par Thermopompes À Vendre sur ${/^[A-Z]{2}/.test(r.def.metricLabel) ? r.def.metricLabel : r.def.metricLabel.charAt(0).toLowerCase() + r.def.metricLabel.slice(1)} d'après les données d'Hydro-Québec et d'ENERGY STAR${updated ? ` (liste du ${updated})` : ""}.${r.models[0] ? ` En tête : ${r.models[0].brand} ${r.models[0].name}, ${r.def.value(r.models[0])}.` : ""} Un classement compare une seule donnée ; la bonne machine dépend aussi de votre maison, que ThermoMatch prend en compte.`)}
         crumbs={[{ label: "Meilleures thermopompes", href: "/meilleures-thermopompes" }, { label: typo(r.def.h1) }]}
         stats={[
-          { label: "Machines classées", value: String(r.models.length) },
+          { label: "Machines classées", value: `${r.models.length} sur ${getCanonicalModels().filter(r.def.filter).length}` },
           { label: "Critère", value: r.def.metricLabel },
           { label: "Source", value: "Hydro-Québec · ENERGY STAR" },
           { label: "Liste du", value: updated ?? "—" },

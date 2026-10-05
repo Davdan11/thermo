@@ -1,0 +1,57 @@
+[
+  {
+    "brand": "day-night",
+    "pattern": "^(C5H0V)",
+    "series": "/images/products/official/day-night-c5h0v-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(C5H3V)",
+    "series": "/images/products/official/day-night-c5h3v-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(CVH8)",
+    "series": "/images/products/official/day-night-cvh8-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(D5CERAH|DLCERBH)",
+    "series": "/images/products/official/day-night-d5cerah-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(D5CLHA|D5CLRA|DLCLRC)",
+    "series": "/images/products/official/day-night-d5clha-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(D5CMHA|DLCMHB)",
+    "series": "/images/products/official/day-night-d5cmha-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(D5CMRA|DLCMRB)",
+    "series": "/images/products/official/day-night-d5cmra-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(D5CPRA|DLCPRB)",
+    "series": "/images/products/official/day-night-d5cpra-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(D5CSHA|D5CSRA)",
+    "series": "/images/products/official/day-night-d5csha-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(D5CUHA|D5CURA)",
+    "series": "/images/products/official/day-night-d5cuha-officiel.webp"
+  },
+  {
+    "brand": "day-night",
+    "pattern": "^(DLCSRB)",
+    "series": "/images/products/official/day-night-dlcsrb-officiel.webp"
+  }
+]

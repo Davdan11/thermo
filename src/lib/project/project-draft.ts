@@ -7,6 +7,9 @@
    ============================================================== */
 
 import { resolvePostalCode } from "../data/geography/postal-zones";
+import { answersToRequest, architectureInputOf, type QuestionnaireAnswers } from "../thermomatch/answers";
+import { architectureHint, type ArchitectureKind } from "../thermomatch/architecture";
+import { DUCTS_OPTIONS, PANEL_OPTIONS, ZONES_OPTIONS, labelOf } from "../thermomatch/parcours";
 
 // ---- Storage key ----
 const PROJECT_DRAFT_KEY = "thermopompesavendre.projectDraft.v1";
@@ -36,14 +39,22 @@ export interface ProjectDraft {
   currentSystem: {
     heatingType?: string;
     hasExistingHeatPump?: boolean;
+    /** Intensité du panneau électrique (valeur de la question ThermoMatch). */
+    electricalPanel?: string;
   };
 
   desiredSystem: {
+    /** Architecture ThermoMatch (central, central-hybrid, single-zone, multi-zone, multi-single) ; anciens brouillons : murale, centrale, multizone. */
     systemType?: string;
     projectType?: "ajout" | "remplacement" | "nouvelle-installation";
     numberOfIndoorUnits?: number;
     centralEquipmentLocation?: string;
+    /** Conduits d'air existants (valeur de la question ThermoMatch). */
     existingDuctwork?: string;
+    /** Espaces à chauffer (valeur de la question ThermoMatch). */
+    zonesWanted?: string;
+    /** Configuration retenue par le moteur, en toutes lettres. */
+    architectureTitle?: string;
     selectedModelId?: string;
     selectedBrandName?: string;
   };
@@ -154,6 +165,7 @@ const HEATING_TYPE_MAP: Record<string, string> = {
   thermopompe: "thermopompe_murale",
   "fournaise-gaz": "gaz",
   "fournaise-mazout": "mazout",
+  chaudiere: "autre",
   autre: "autre",
 };
 
@@ -162,15 +174,61 @@ const SYSTEM_TYPE_MAP: Record<string, string> = {
   centrale: "centrale",
   multizone: "murale_multi",
   "ne-sais-pas": "inconnu",
+  // Architectures ThermoMatch
+  central: "centrale",
+  "central-hybrid": "centrale",
+  "multi-zone": "murale_multi",
+  "multi-single": "murale_multi",
+  "single-zone": "murale_simple",
 };
+
+/** Architecture retenue par le moteur ThermoMatch, telle que la soumission la reprend. */
+export interface ArchitectureSummary {
+  kind: string;
+  heads: number;
+  label: string;
+  title: string;
+  confidence?: string;
+}
+
+/**
+ * Type de projet transmis à la soumission et au CRM : « centrale », « multizone » ou « murale », seulement.
+ * Des murales indépendantes font un projet à plusieurs têtes : « multizone » (jamais « 3 murales », qu'on
+ * classerait « murale 1 tête »). Valeur inconnue : rendue telle quelle.
+ */
+export function typeThermopompeOf(systemType: string | undefined): string | undefined {
+  switch (systemType) {
+    case "central":
+    case "central-hybrid":
+    case "centrale":
+      return "centrale";
+    case "multi-zone":
+    case "multi-single":
+    case "multizone":
+      return "multizone";
+    case "single-zone":
+    case "murale":
+      return "murale";
+    default:
+      return systemType;
+  }
+}
 
 // ---- Conversion: ThermoMatch answers → ProjectDraft ----
 
 type ThermoMatchAnswers = Record<string, string | string[]>;
 
+/** Architecture que les réponses laissent pressentir (sans les résultats du moteur). */
+function hintOf(answers: ThermoMatchAnswers): { kind: ArchitectureKind; heads: number } {
+  const a = answers as unknown as QuestionnaireAnswers;
+  return architectureHint(architectureInputOf(a, answersToRequest(a).req));
+}
+
 export function thermoMatchAnswersToProjectDraft(
   answers: ThermoMatchAnswers,
   completed: boolean,
+  /** Architecture retenue par le moteur, quand les résultats sont là. */
+  architecture?: ArchitectureSummary | null,
 ): ProjectDraft {
   const postalCode = typeof answers.postalCode === "string" ? answers.postalCode : undefined;
   const propertyType = typeof answers.propertyType === "string" ? answers.propertyType : undefined;
@@ -181,6 +239,11 @@ export function thermoMatchAnswersToProjectDraft(
   const priority = Array.isArray(answers.priority) ? answers.priority : typeof answers.priority === "string" ? [answers.priority] : undefined;
   const budget = typeof answers.budget === "string" ? answers.budget : undefined;
   const financing = typeof answers.financing === "string" ? answers.financing : undefined;
+  const ducts = typeof answers.ducts === "string" ? answers.ducts : undefined;
+  const zonesWanted = typeof answers.zonesWanted === "string" ? answers.zonesWanted : undefined;
+  const electricalPanel = typeof answers.electricalPanel === "string" ? answers.electricalPanel : undefined;
+  // Architecture : celle du moteur quand les résultats sont là ; questionnaire terminé, celle que les réponses laissent pressentir.
+  const arch = architecture ?? (completed ? hintOf(answers) : null);
 
   // Detect city and climate from postal code
   let city: string | undefined;
@@ -219,10 +282,15 @@ export function thermoMatchAnswersToProjectDraft(
     currentSystem: {
       heatingType: currentSystem,
       hasExistingHeatPump: currentSystem === "thermopompe",
+      electricalPanel,
     },
 
     desiredSystem: {
-      systemType: heatPumpType,
+      systemType: arch?.kind ?? heatPumpType,
+      numberOfIndoorUnits: arch?.heads,
+      existingDuctwork: ducts,
+      zonesWanted,
+      architectureTitle: architecture?.title,
     },
 
     preferences: {
@@ -308,6 +376,7 @@ const HEATING_LABELS: Record<string, string> = {
   thermopompe: "Thermopompe existante",
   "fournaise-gaz": "Fournaise au gaz",
   "fournaise-mazout": "Fournaise au mazout",
+  chaudiere: "Chaudière (radiateurs à eau chaude)",
   autre: "Autre",
 };
 
@@ -316,9 +385,21 @@ const SYSTEM_LABELS: Record<string, string> = {
   centrale: "Centrale (ducted)",
   multizone: "Multizone",
   "ne-sais-pas": "Je ne sais pas",
+  central: "Centrale sur les conduits",
+  "central-hybrid": "Centrale biénergie (la fournaise reste en relève)",
+  "multi-zone": "Multizone",
+  "multi-single": "Murales indépendantes",
+  "single-zone": "Murale",
 };
 
 const BUDGET_LABELS: Record<string, string> = {
+  "<3000": "Moins de 3 000 $",
+  "3000-5000": "3 000 $ à 5 000 $",
+  "5000-7000": "5 000 $ à 7 000 $",
+  "7000+": "Plus de 7 000 $",
+  "<6000": "Moins de 6 000 $",
+  "6000-10000": "6 000 $ à 10 000 $",
+  "10000-15000": "10 000 $ à 15 000 $",
   "<5000": "Moins de 5 000 $",
   "5000-8000": "5 000 $ à 8 000 $",
   "8000-12000": "8 000 $ à 12 000 $",
@@ -384,10 +465,42 @@ export function getProjectSummary(draft: ProjectDraft): ProjectSummaryItem[] {
     });
   }
 
+  if (draft.desiredSystem.existingDuctwork) {
+    items.push({
+      label: "Conduits d'air",
+      value: labelOf(DUCTS_OPTIONS, draft.desiredSystem.existingDuctwork) ?? draft.desiredSystem.existingDuctwork,
+      group: "system",
+    });
+  }
+
   if (draft.desiredSystem.systemType) {
     items.push({
       label: "Type de thermopompe",
       value: SYSTEM_LABELS[draft.desiredSystem.systemType] ?? draft.desiredSystem.systemType,
+      group: "system",
+    });
+  }
+
+  if (draft.desiredSystem.architectureTitle) {
+    items.push({ label: "Configuration", value: draft.desiredSystem.architectureTitle, group: "system" });
+  }
+
+  if (draft.desiredSystem.numberOfIndoorUnits && draft.desiredSystem.numberOfIndoorUnits > 1) {
+    items.push({ label: "Unités intérieures", value: String(draft.desiredSystem.numberOfIndoorUnits), group: "system" });
+  }
+
+  if (draft.desiredSystem.zonesWanted) {
+    items.push({
+      label: "Espaces à chauffer",
+      value: labelOf(ZONES_OPTIONS, draft.desiredSystem.zonesWanted) ?? draft.desiredSystem.zonesWanted,
+      group: "system",
+    });
+  }
+
+  if (draft.currentSystem.electricalPanel) {
+    items.push({
+      label: "Panneau électrique",
+      value: labelOf(PANEL_OPTIONS, draft.currentSystem.electricalPanel) ?? draft.currentSystem.electricalPanel,
       group: "system",
     });
   }

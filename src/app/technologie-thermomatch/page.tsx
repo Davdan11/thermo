@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata } from "@/lib/seo";
 import { ThermoMatchTechClient } from "./ThermoMatchTechClient";
 import { getEligibleModelCount, roundDownHundreds } from "@/lib/data/queries/stats";
+import { chiffre } from "@/lib/data/chiffres";
 
 export const metadata: Metadata = createMetadata({
   title: `ThermoMatch : des recommandations personnalisées`,
@@ -12,7 +13,7 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function TechThermoMatchPage() {
-  const modelCount = roundDownHundreds(getEligibleModelCount());
+  const modelCount = roundDownHundreds(chiffre("fiches"));
   return (
     <main>
       <ThermoMatchTechClient modelCount={modelCount} />

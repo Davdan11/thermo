@@ -89,12 +89,20 @@ describe("palmarès : calculs", () => {
 
 describe("palmarès : données réelles (échantillon relu à la source)", () => {
   it("chaque valeur d’un échantillon vient de sa station, de la table et du catalogue", { timeout: 240_000 }, async () => {
-    const [{ getPalmares }, { getMunicipalityByCode, getStation, getMunicipalites }, { designTempFor }, { getSiteCatalog }] = await Promise.all([
+    const [{ getPalmares }, { getMunicipalityByCode, getStation, getMunicipalites }, { designTempFor }, { getSiteCatalog }, { capacitesDuModele }, { registry }] = await Promise.all([
       import("../palmares-site"),
       import("@/lib/seo/municipalites"),
       import("@/lib/seo/municipal-content"),
       import("@/lib/presence/catalog-site"),
+      import("@/lib/data/chiffres"),
+      import("@/lib/data/registry"),
     ]);
+    // « Garde toute sa capacité à −15 °C » : capacité maximale à −15 °C ÷ capacité cotée à 8,3 °C
+    // (ENERGY STAR, même numéro AHRI), jamais contre la puissance nominale de la liste LogisVert.
+    const gardeTout = (slug: string) => {
+      const id = registry.modelBySlug.get(slug)?.id;
+      return (id ? (capacitesDuModele(id)?.maintien?.pct ?? 0) : 0) >= 100;
+    };
     const p = getPalmares();
     const cat = getSiteCatalog();
     expect(p.totals.municipalities).toBeGreaterThan(900);
@@ -109,7 +117,7 @@ describe("palmarès : données réelles (échantillon relu à la source)", () =>
       expect(r.designT).toBe(designTempFor(m.postal)!.t);
       expect(r.daysBelow20).toBe(s.daysBelowMinus20 === null ? null : Math.round(s.daysBelowMinus20));
       expect(r.modelsHeat).toBe(cat.models.filter((x) => x.minTempC !== null && x.minTempC <= r.designT).length);
-      expect(r.modelsHeatFull).toBe(cat.models.filter((x) => x.minTempC !== null && x.minTempC <= r.designT && x.h5Btu !== null && x.h5Btu >= x.nominalBtu).length);
+      expect(r.modelsHeatFull).toBe(cat.models.filter((x) => x.minTempC !== null && x.minTempC <= r.designT && gardeTout(x.slug)).length);
     }
     for (let i = 1; i < p.rows.length; i++) {
       expect(p.rows[i].janMinC).toBeGreaterThanOrEqual(p.rows[i - 1].janMinC);

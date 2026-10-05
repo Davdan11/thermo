@@ -210,7 +210,7 @@ export const SETTINGS: NavSection = {
     { href: "/gestion/telephonie/reglages", label: "Téléphonie", icon: PhoneCall, keywords: "réglages appels numéro enregistrement" },
     { href: "/gestion/textos/reglages", label: "Textos", icon: MessageSquare, keywords: "réglages textos réponse automatique" },
     { href: "/gestion/presence/reglages", label: "Présence", icon: Radio, keywords: "réglages présence publications" },
-    { href: "/gestion/presence/connecter", label: "Connexion Meta", icon: Link2, keywords: "facebook instagram connecter meta" },
+    { href: "/gestion/presence/connecter", label: "Connecter Facebook", icon: Link2, keywords: "facebook connecter meta page jeton" },
     { href: "/gestion/partenaires/reglages", label: "Partenaires", icon: HardHat, keywords: "réglages partenaires seuils niveaux délais" },
     { href: "/gestion/equipe", label: "Équipe", icon: UsersRound, keywords: "vendeurs adjoints invitations rôles" },
     { href: "/gestion/securite", label: "Sécurité", icon: ShieldCheck, keywords: "journal audit sessions" },

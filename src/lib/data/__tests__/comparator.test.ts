@@ -4,6 +4,7 @@
 
 import { describe, it, expect } from "vitest";
 import { getComparisonData, MAX_COMPARE } from "../queries/comparator";
+import { registry } from "../registry";
 
 /* ------------------------------------------------------------------
    Basic loading
@@ -78,10 +79,11 @@ describe("getComparisonData — no configuration mixing", () => {
     expect(p2.detail.configuration!.modelId).toBe(p2.detail.model.id);
   });
 
-  it("warranties don't leak between products", () => {
-    const data = getComparisonData(["daikin-aurora-18k", "daikin-aurora-9k"]);
-    expect(data.products[0].detail.warranties.length).toBe(2);
-    expect(data.products[1].detail.warranties.length).toBe(0);
+  it("la garantie comparée vient du document de la marque comparée", () => {
+    const data = getComparisonData(["daikin-aurora-18k", "gree-flexx-36k"]);
+    expect(data.products[0].detail.warranties).toEqual([]);
+    expect(data.products[0].detail.warranty!.record.brand).toBe("Daikin");
+    expect(data.products[1].detail.warranty!.record.brand).toBe("Gree");
   });
 
   it("certifications are scoped to their own config", () => {
@@ -103,15 +105,10 @@ describe("getComparisonData — no configuration mixing", () => {
 
 describe("getComparisonData — order preservation", () => {
   it("preserves the order of slugs", () => {
-    const data = getComparisonData([
-      "mitsubishi-fs-12k",
-      "daikin-aurora-18k",
-      "daikin-aurora-9k",
-    ]);
-    // Les adresses demandées sont les anciennes : l'adresse publique porte le nom et la capacité, et finit par celles-ci.
-    expect(data.products[0].detail.model.slug.endsWith("mitsubishi-fs-12k")).toBe(true);
-    expect(data.products[1].detail.model.slug.endsWith("aurora-18k")).toBe(true);
-    expect(data.products[2].detail.model.slug.endsWith("aurora-9k")).toBe(true);
+    const asked = ["mitsubishi-fs-12k", "daikin-aurora-18k", "daikin-aurora-9k"];
+    const data = getComparisonData(asked);
+    // Anciennes adresses : mêmes fiches, dans le même ordre, sous leur adresse actuelle.
+    expect(data.products.map((p) => p.detail.model.slug)).toEqual(asked.map((s) => registry.modelBySlug.get(s)!.slug));
   });
 });
 
@@ -209,10 +206,10 @@ describe("getComparisonData — missing data", () => {
     const data = getComparisonData(["gree-flexx-36k", "daikin-aurora-18k"]);
     const gree = data.products[0];
     expect(gree.detail.editorial).toBeNull();
-    expect(gree.detail.warranties.length).toBe(0);
+    expect(gree.detail.warranties).toEqual([]);
     const daikin = data.products[1];
     expect(daikin.detail.editorial).toBeNull();
-    expect(daikin.detail.warranties.length).toBe(2);
+    expect(daikin.detail.warranties).toEqual([]);
   });
 
   it("zero is a valid value, not missing", () => {
@@ -236,11 +233,17 @@ describe("getComparisonData — subsidy", () => {
     }
   });
 
-  it("cold climate products get 120$/kBTU rate", () => {
+  it("le taux vient de la liste officielle : 120 $ par 1 000 BTU/h en climat froid, 50 $ sinon, rien hors liste", () => {
     const data = getComparisonData(["daikin-aurora-18k"]);
-    if (data.products[0].detail.isColdClimate) {
-      expect(data.products[0].subsidy.rate).toBe(120);
+    const p = data.products[0];
+    if (!p.subsidy.isOfficial) {
+      // Fiche absente de la liste LogisVert en vigueur : aucun montant, aucune estimation.
+      expect(p.subsidy.dollars).toBe(0);
+      expect(p.subsidy.rate).toBe(0);
+      return;
     }
+    expect(p.subsidy.rate).toBe(p.subsidy.isColdClimate ? 120 : 50);
+    expect(p.subsidy.dollars).toBe(Math.round((p.subsidy.rate * p.subsidy.capacityBtu) / 1000));
   });
 
   it("provides imageUrl from model or series", () => {

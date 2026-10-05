@@ -7,6 +7,7 @@
 import { brandLogoPath } from "@/lib/data/brand-logos";
 import type { SeoModel } from "@/lib/seo/programmatic";
 import { typo } from "@/components/heroes-v2/marques/shared";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 /** Une ligne de nomenclature (mêmes colonnes que ModelTable). */
 export type PartRow = {
@@ -64,7 +65,7 @@ export const TRUST = [
 /** Textes par défaut de CtaThermoMatch. */
 export const CTA_TITLE = "Trouvez la bonne thermopompe en 2 minutes";
 export const CTA_TEXT = typo(
-  "Répondez à 13 questions sur votre maison. ThermoMatch compare toutes les marques avec les données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
+  `Répondez à ${QUESTIONS_LABEL} sur votre maison. ThermoMatch compare toutes les marques avec les données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.`,
 );
 
 /**
@@ -72,7 +73,7 @@ export const CTA_TEXT = typo(
  * (FAQ « Service, délais et confiance », /prix, appel à l’action ThermoMatch).
  */
 export const SOUMISSION_STEPS = [
-  { title: "Vous décrivez votre projet", desc: "Dans le questionnaire ThermoMatch (13 questions) ou le formulaire de soumission. C'est gratuit et sans engagement." },
+  { title: "Vous décrivez votre projet", desc: `Dans le questionnaire ThermoMatch (${QUESTIONS_LABEL}) ou le formulaire de soumission. C'est gratuit et sans engagement.` },
   { title: "Un appel de validation", desc: "Sous un jour ouvrable, nous confirmons votre projet avec vous." },
   { title: "Un seul installateur licencié RBQ", desc: "Votre dossier va à un installateur partenaire de votre région, pas à cinq entreprises. Vos coordonnées ne sont ni vendues ni louées." },
   { title: "Une visite, puis un prix écrit", desc: "La visite se fait habituellement dans la semaine qui suit la demande. La soumission détaille l'équipement, l'installation, l'électricité, la garantie et la subvention LogisVert. Vous restez libre de refuser, sans frais ni relance." },

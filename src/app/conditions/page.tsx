@@ -69,8 +69,8 @@ export default function ConditionsPage() {
 
         <DocArticle id="prix" n={4} title="4. Prix">
           <p>
-            Nous n'affichons aucun prix de vente. Toute fourchette de coût présentée est indicative et doit être validée par une soumission écrite d'un
-            entrepreneur détenant une licence de la Régie du bâtiment du Québec.
+            Le site ne présente aucune offre ferme ni aucun prix de vente. Les fourchettes affichées sont des ordres de grandeur indicatifs du marché
+            québécois ; le prix exact vient de la soumission écrite d'un entrepreneur détenant une licence de la Régie du bâtiment du Québec.
           </p>
         </DocArticle>
 

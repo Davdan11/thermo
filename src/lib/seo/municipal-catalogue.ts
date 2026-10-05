@@ -16,13 +16,13 @@ export function catalogueFacts(): CatalogueFacts {
   return facts;
 }
 
-export function rankingFor(slug: RankingSlug) {
-  return getRanking(slug, RANKING_LIMIT)!;
+export function rankingFor(slug: RankingSlug, limit = RANKING_LIMIT) {
+  return getRanking(slug, limit)!;
 }
 
-/** Texte visible du tableau de classement (vérification d'unicité). */
-export function rankingText(slug: RankingSlug): string {
-  const r = rankingFor(slug);
+/** Texte visible du tableau de classement (vérification d'unicité ; `limit` lignes, 8 sur une ville historique). */
+export function rankingText(slug: RankingSlug, limit = RANKING_LIMIT): string {
+  const r = rankingFor(slug, limit);
   return r.models
     .map((m: SeoModel, i) => `${String(i + 1).padStart(2, "0")} ${m.name} ${m.brand} ${m.systemTypeLabel} ${m.nominalBtu} ${m.h5Btu ?? "—"} ${m.hspf2 ?? "—"} ${m.seer2 ?? "—"} ${m.logisVertDollars} ${r.def.value(m)}`)
     .join(" ");

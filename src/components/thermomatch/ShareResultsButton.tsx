@@ -2,6 +2,7 @@
 /* ==================================================================
    Bouton « Partager mes résultats » : copie le lien permanent des
    recommandations (réponses encodées dans l'URL, recalcul côté serveur).
+   Posé sous les résultats, sur le crème de l'écran : contour fin, encre.
    ================================================================== */
 import { useState } from "react";
 import { Link2, Check, Share2 } from "lucide-react";
@@ -40,22 +41,26 @@ export function ShareResultsButton({ answers, compact = false }: { answers: Ques
         <button
           type="button"
           onClick={share}
-          className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-semibold text-white transition-colors hover:bg-white/15"
-          style={{ border: "1px solid rgba(255,255,255,.22)", background: state === "copied" ? "rgba(22,163,74,.25)" : "rgba(255,255,255,.06)" }}
+          className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-semibold transition-colors"
+          style={
+            state === "copied"
+              ? { border: "1px solid rgba(19,107,60,.35)", background: "rgba(19,107,60,.08)", color: "#136B3C" }
+              : { border: "1px solid rgba(12,24,33,.20)", background: "#fff", color: "#0C1821" }
+          }
         >
           {state === "copied" ? <Check size={16} /> : <Share2 size={16} />}
           {state === "copied" ? "Lien copié" : "Partager mes résultats"}
         </button>
         {!compact && (
-          <span className="text-[13px]" style={{ color: "rgba(255,255,255,.5)" }}>
+          <span className="text-[13px]" style={{ color: "rgba(12,24,33,.62)" }}>
             Un lien à envoyer à votre conjoint ou à un installateur ; il rouvre ces recommandations.
           </span>
         )}
       </div>
       {state === "manual" && (
-        <div className="mt-3 flex items-center gap-2 rounded-lg px-3 py-2" style={{ background: "rgba(255,255,255,.06)", border: "1px solid rgba(255,255,255,.14)" }}>
-          <Link2 size={14} className="shrink-0" style={{ color: "rgba(255,255,255,.6)" }} />
-          <input readOnly value={manualUrl} onFocus={(e) => e.currentTarget.select()} className="w-full bg-transparent text-[13px] text-white outline-none" aria-label="Lien de partage" />
+        <div className="mt-3 flex items-center gap-2 rounded-lg px-3 py-2" style={{ background: "#fff", border: "1px solid rgba(12,24,33,.14)" }}>
+          <Link2 size={14} className="shrink-0" style={{ color: "rgba(12,24,33,.62)" }} />
+          <input readOnly value={manualUrl} onFocus={(e) => e.currentTarget.select()} className="w-full bg-transparent text-[13px] text-[#0C1821] outline-none" aria-label="Lien de partage" />
         </div>
       )}
     </div>

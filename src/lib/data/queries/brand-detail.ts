@@ -15,9 +15,9 @@ import { SYSTEM_TYPE_LABELS } from "../types/enums";
 import { productNames } from "../product-name";
 import { registry } from "../registry";
 import type { CatalogueProduct } from "./catalogue";
-import { getWarrantiesForModel } from "./products";
-import { lookupLogisVertFuzzy } from "../../subsidies/logisvert-official";
-import { calculateLogisVertSimple } from "../../subsidies/logisvert-calculator";
+import { resolveWarranty } from "../warranty";
+import { logisVertDeLaFiche } from "../../subsidies/logisvert-official";
+import { minHeatingTempForModel } from "../../thermomatch/min-temp";
 
 /* ------------------------------------------------------------------
    Brand Detail — everything needed for a brand page
@@ -185,20 +185,9 @@ export function getBrandDetail(slug: string): BrandDetail | null {
         }
       }
 
-      let logisVertDollars: number | null = null;
-      const officialEntry = outdoorModelNumber
-        ? lookupLogisVertFuzzy(outdoorModelNumber, brand.name)
-        : lookupLogisVertFuzzy(model.modelNumber, brand.name);
-      
-      if (officialEntry && officialEntry.logisVertDollars > 0) {
-        logisVertDollars = officialEntry.logisVertDollars;
-      } else {
-        const btu = model.nominalCapacityBtu ?? model.heatingCapacity5FMaxBtu ?? 0;
-        if (btu > 0) {
-          const result = calculateLogisVertSimple(btu, model.categories.includes("cold-climate"));
-          if (result.dollars > 0) logisVertDollars = result.dollars;
-        }
-      }
+      // Montant de la liste LogisVert en vigueur, sinon aucun : jamais d'estimation (une fiche absente de la liste n'est pas admissible).
+      const officialEntry = logisVertDeLaFiche(model, brand.name, outdoorModelNumber);
+      const logisVertDollars: number | null = officialEntry && officialEntry.logisVertDollars > 0 ? officialEntry.logisVertDollars : null;
 
       return {
         model,
@@ -210,8 +199,9 @@ export function getBrandDetail(slug: string): BrandDetail | null {
         imageUrl: model.imageUrl ?? ser?.imageUrl ?? null,
         refrigerant,
         outdoorModelNumber,
-        warranties: getWarrantiesForModel(model.id),
+        warranty: resolveWarranty({ brand: brand.name, seriesName: ser?.name, modelNumber: model.modelNumber }),
         logisVertDollars,
+        minHeatingTempC: minHeatingTempForModel(model.id)?.valueC ?? null,
       };
     },
   );

@@ -112,17 +112,26 @@ describe("highestCapacityAtTemp", () => {
    ------------------------------------------------------------------ */
 
 describe("longestWarranty", () => {
-  it("returns null when only 1 product has warranty data", () => {
-    const result = longestWarranty([aurora18k, aurora9k], "compressor");
-    // Only aurora18k has warranty data
+  // Fiche sans document du fabricant : sa garantie n'est pas vérifiée, elle ne compte pas.
+  const sansGarantie = { ...aurora9k, warranty: null };
+
+  it("une garantie non vérifiée ne départage pas", () => {
+    const result = longestWarranty([aurora18k, sansGarantie], "compressor");
     expect(result.bestIndex).toBeNull();
     expect(result.dataCount).toBe(1);
   });
 
-  it("returns null when no products have warranty data", () => {
-    const result = longestWarranty([aurora9k, flexx36k], "compressor");
+  it("aucune garantie vérifiée : aucune comparaison", () => {
+    const result = longestWarranty([sansGarantie, { ...flexx36k, warranty: null }], "compressor");
     expect(result.bestIndex).toBeNull();
     expect(result.dataCount).toBe(0);
+  });
+
+  it("deux garanties relevées : la plus longue gagne", () => {
+    // Aurora : 12 ans au certificat Daikin ; FLEXX : 7 ans au document Gree Comfort.
+    const result = longestWarranty([aurora18k, flexx36k], "compressor");
+    expect(result.dataCount).toBe(2);
+    expect(result.bestIndex).toBe(0);
   });
 });
 

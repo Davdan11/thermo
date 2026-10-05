@@ -2,6 +2,7 @@
 import { brandedEmail, box, p, strong, t, BRAND, SITE_URL } from "./layout";
 import { escapeHtml } from "@/lib/security/escape";
 import { MIN_TEMP_MENTION, type MinTempSourceType } from "@/lib/thermomatch/min-temp-source";
+import { ORDRE_DE_GRANDEUR_LABEL } from "@/lib/prices/grille-installee";
 
 export interface ThermoMatchEmailChoice {
   brand: string;
@@ -17,6 +18,7 @@ export interface ThermoMatchEmailChoice {
   h5: number | null;
   hspf2: number | null;
   subsidy: number;
+  /** Ordre de grandeur propre à ce choix : seulement quand il diffère d'un choix à l'autre (sinon `priceRange`, une fois). */
   priceMin: number | null;
   priceMax: number | null;
   url: string | null;
@@ -27,6 +29,10 @@ export interface ThermoMatchEmailData {
   choices: ThermoMatchEmailChoice[];
   shareUrl: string;
   savings?: { city: string; low: number; high: number } | null;
+  /** Configuration retenue (« Thermopompe centrale ajoutée à votre fournaise… »). */
+  configuration?: string | null;
+  /** Ordre de grandeur installé de la configuration, donné une seule fois. */
+  priceRange?: { min: number; max: number } | null;
 }
 
 const fr = (n: number, d = 0) => n.toLocaleString("fr-CA", { minimumFractionDigits: d, maximumFractionDigits: d });
@@ -57,7 +63,7 @@ export function getThermoMatchEmailHTML(d: ThermoMatchEmailData): string {
         ],
         ["Efficacité en chauffage (HSPF2)", c.hspf2 ? fr(c.hspf2, 1) : null],
         ["Subvention LogisVert", c.subsidy > 0 ? `${fr(c.subsidy)} $ (montant officiel d’Hydro-Québec)` : null],
-        ["Prix approximatif installé", c.priceMin != null && c.priceMax != null ? `${money(c.priceMin)} à ${money(c.priceMax)}, avant subvention` : null],
+        ["Ordre de grandeur installé", c.priceMin != null && c.priceMax != null ? `${money(c.priceMin)} à ${money(c.priceMax)}, avant subvention` : null],
       ];
       const link = c.url ? p(`<a href="${escapeHtml(c.url)}" style="color:#E54B17;font-weight:600;text-decoration:none;">Voir la fiche complète →</a>`, { small: true }) : "";
       return box(`${i === 0 ? "Meilleur choix" : `Choix ${i + 1}`} : ${c.brand} ${c.series}`.trim(), rows) + link;
@@ -70,19 +76,27 @@ export function getThermoMatchEmailHTML(d: ThermoMatchEmailData): string {
       )
     : "";
 
+  const configuration = d.configuration ? p(`${strong("Configuration")} : ${t(d.configuration)}.`) : "";
+  // Une seule fourchette pour la configuration, jamais un prix de vente.
+  const price = d.priceRange
+    ? p(`${strong("Ordre de grandeur installé")} : ${t(money(d.priceRange.min))} à ${t(money(d.priceRange.max))}, avant subvention. ${t(ORDRE_DE_GRANDEUR_LABEL)}.`)
+    : "";
+
   const body =
     p(`Voici les trois thermopompes que ${strong("ThermoMatch")} a retenues pour votre maison, avec les chiffres certifiés et le montant LogisVert officiel de chaque jumelage.`) +
+    configuration +
+    price +
     blocks +
     savings +
     p(`Ce lien rouvre vos recommandations à tout moment, même sur un autre appareil : <a href="${escapeHtml(d.shareUrl)}" style="color:#E54B17;font-weight:600;">vos trois choix</a>.`) +
     p(
-      "Les prix sont des fourchettes publiées au Québec pour ce type d’appareil ; le prix exact vient d’une soumission écrite, après vérification du calibre par un installateur partenaire licencié. Gratuit et sans engagement.",
+      `Les fourchettes viennent de prix publiés au Québec pour ce type d’installation : ${ORDRE_DE_GRANDEUR_LABEL.charAt(0).toLowerCase()}${ORDRE_DE_GRANDEUR_LABEL.slice(1)}. Le prix exact vient d’une soumission écrite, après vérification du calibre par un installateur partenaire licencié. Gratuit et sans engagement.`,
       { muted: true, small: true },
     );
 
   return brandedEmail({
     title: thermoMatchEmailSubject(d),
-    preheader: "Vos trois thermopompes recommandées, avec le montant LogisVert et un prix approximatif.",
+    preheader: "Vos trois thermopompes recommandées, avec le montant LogisVert et un ordre de grandeur installé.",
     firstName: d.firstName,
     body,
     cta: { label: "Recevoir ma soumission détaillée", href: `${SITE_URL}/soumission?source=thermomatch` },

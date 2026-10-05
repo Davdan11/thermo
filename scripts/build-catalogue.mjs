@@ -11,6 +11,8 @@
  *    du dictionnaire (marquée « estimée ») ; sinon « Série non identifiée ». Rien n'est inventé.
  *  - Déterministe : même entrée → même sortie. Validé : rien n'est écrit si une règle échoue.
  *  - Conserve d'un build à l'autre : fiche marque, images des modèles et des séries.
+ *  - Une fiche du build précédent absente de la liste en vigueur est reprise (adresse conservée), marquée
+ *    logisVertListed = false : sans subvention, hors catalogue, ThermoMatch et compteurs.
  *
  * Usage : node scripts/build-catalogue.mjs [--dry-run] [--report chemin.json]
  */
@@ -22,7 +24,6 @@ const LV_PATH = path.join(ROOT, "src/lib/subsidies/logisvert-official-amounts.js
 const LV_META = path.join(ROOT, "src/lib/subsidies/logisvert-metadata.json");
 const OUT_PATH = path.join(ROOT, "src/lib/data/fixtures/brands/all-auto-datasets.json");
 const DICT_PATH = path.join(ROOT, "src/lib/data/fixtures/series-dictionary.json");
-const META_PATH = path.join(ROOT, "scripts/brand-metadata.json");
 
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
@@ -79,15 +80,60 @@ function normalizeSeriesName(raw, brandName) {
   s = s.split(" ").map((w) => (/^[A-Z]{5,}$/.test(w) ? w[0] + w.slice(1).toLowerCase() : w)).join(" ");
   return s;
 }
+/** Unité intérieure décrite plutôt que nommée dans la liste d'Hydro-Québec : combinaison multizone (même règle que src/lib/thermomatch/candidates.ts). */
+const MULTI_INDOOR_RE = /^(combinaison d.appareils|appareils (sans|avec) conduits)/i;
 /** Une valeur qui ressemble à un numéro de modèle complet n'est pas une série. */
 const looksLikeModelNumber = (key) => key.length >= 7 && /^[a-z]{2,5}\d{2,}[a-z0-9]*$/.test(key);
 
 /* ---------------------------------------------------------------- chargement */
 const lv = JSON.parse(fs.readFileSync(LV_PATH, "utf8"));
 const lvMeta = fs.existsSync(LV_META) ? JSON.parse(fs.readFileSync(LV_META, "utf8")) : {};
+// Unités extérieures certifiées avec au moins une combinaison multizone, toutes marques confondues
+// (M2OF-18HFN1-M : combinaisons « Appareils sans conduits » sous une marque, têtes nommées sous une autre).
+// Liste ENERGY STAR en vigueur : une combinaison multizone a une unité intérieure vide et le type « M » (même règle que
+// isMultiPairing de src/lib/thermomatch/candidates.ts).
+const isMultiRecord = (r) => MULTI_INDOOR_RE.test(String(r.im ?? "").trim()) || (!String(r.im ?? "").trim() && r.t === "M");
+const MULTI_UNITS = new Set(Object.values(lv).filter(isMultiRecord).map((r) => normKey(r.m)));
+// Centrale ou mini-split, d'après ENERGY STAR (scripts/energystar-types.mjs) : le type de chaque combinaison par
+// numéro AHRI, sinon celui de la famille de son unité intérieure (un cabinet reste un cabinet, quelle que soit
+// l'unité extérieure). Le code « C »/« M » d'Hydro-Québec suit surtout la fournaise, pas les conduits : une
+// centrale sur son propre cabinet (Bryant 280ANV + FE4) y est « M ». Il ne sert plus qu'en dernier recours.
+const ES_PATH = path.join(ROOT, "src/lib/data/energystar-types.json");
+const es = fs.existsSync(ES_PATH) ? JSON.parse(fs.readFileSync(ES_PATH, "utf8")) : { types: {}, indoorFamilies: {} };
+const indoorStem = (raw) => String(raw ?? "").toUpperCase().split(/[*(+,/&\s]/)[0].replace(/[^A-Z0-9]/g, "");
+const indoorFamilyType = (raw) => {
+  const stem = indoorStem(raw);
+  for (let len = Math.min(8, stem.length); len >= 3; len--) {
+    const t = es.indoorFamilies[stem.slice(0, len)];
+    if (t) return t;
+  }
+  return AIR_HANDLER_RE.test(String(raw ?? "").toUpperCase().trim()) ? "S" : null;
+};
+// Cabinets et serpentins absents d'ENERGY STAR (combinaisons retirées) : le numéro les nomme sans ambiguïté.
+// Carrier et Bryant FE4A et FV4C, Daikin DV (cabinet) et CA…F / CA…EA (serpentin), Midea AVC et AVCU, Direct Air
+// MAGICPRO-AH, Forestair FAD…AH, Azur AH, AHU et AUH, et tout numéro qui porte « AIRHANDLER ».
+const AIR_HANDLER_RE = /AIR ?HANDLER|^F[EV]4[AC]N|^DV\d{2}[A-Z]EC|^CA\*?[A-Z]?\*?(F|EA)\d{4}|^AVCU?-\d{2}HWFN|MAGICPRO\d*-AH|^FAD\d{2}AH\d|^AH-\d{2}B?$|^AHU\d?-\d{2}|^AUH-\d{2}/;
+// unitKey → comptes sur toutes les marques : « exact » (combinaisons listées par ENERGY STAR) et « famille »
+// (type déduit de l'unité intérieure). Le type exact prime dès qu'il porte sur 3 combinaisons ou plus : une
+// mini-split qui accepte aussi un serpentin (Carrier 38MARBQ, 25 combinaisons mini-split sur 30 listées) reste
+// une mini-split, même si ses serpentins sur fournaise se déclinent en centaines de combinaisons.
+const DUCTING = new Map();
+for (const [ahri, r] of Object.entries(lv)) {
+  const exact = es.types[ahri];
+  const t = exact ?? indoorFamilyType(r.im);
+  if (!t) continue;
+  const k = normKey(r.m);
+  const c = DUCTING.get(k) ?? { exact: { ducted: 0, ductless: 0 }, all: { ducted: 0, ductless: 0 } };
+  for (const bucket of exact ? [c.exact, c.all] : [c.all]) {
+    if (t === "M") bucket.ductless++;
+    else bucket.ducted++;
+  }
+  DUCTING.set(k, c);
+}
+const EXACT_MIN = 3;
+const DUCTLESS_TYPES = new Set(["wall-single", "floor-console", "cassette", "ceiling", "multi-zone"]);
 const prev = fs.existsSync(OUT_PATH) ? JSON.parse(fs.readFileSync(OUT_PATH, "utf8")) : {};
 const dict = fs.existsSync(DICT_PATH) ? JSON.parse(fs.readFileSync(DICT_PATH, "utf8")) : {};
-const brandMeta = fs.existsSync(META_PATH) ? JSON.parse(fs.readFileSync(META_PATH, "utf8")) : {};
 const NOW = (lvMeta.updatedAt ?? new Date().toISOString()).slice(0, 10);
 const STAMP = `${NOW}T00:00:00Z`;
 
@@ -128,11 +174,14 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
   const prefixes = [...(brandDict.prefixes ?? [])].sort((a, c) => c.prefix.length - a.prefix.length);
   const sourceId = `src-${brandSlug}-logisvert`;
   const prevModelImages = new Map((prevDs?.models ?? []).filter((m) => m.imageUrl).map((m) => [normKey(m.modelNumber), m.imageUrl]));
+  // La photo d'une série est reprise par nom ET par type de système : une série fourre-tout
+  // (« 37M » existe en murale, en multizone et en centrale gainable) ne doit pas transporter la
+  // même photo d'un type à l'autre — c'est ainsi qu'une tête murale se retrouvait sur une centrale.
   const prevSeriesImages = new Map();
   for (const s of prevDs?.series ?? []) {
     if (!s.imageUrl) continue;
     const n = normalizeSeriesName(s.name, b.name);
-    if (n) prevSeriesImages.set(normKey(brandDict.aliases?.[normKey(n)] ?? n), s.imageUrl);
+    if (n) prevSeriesImages.set(`${normKey(brandDict.aliases?.[normKey(n)] ?? n)}|${s.systemType ?? ""}`, s.imageUrl);
   }
 
   const brand = prevDs?.brand
@@ -144,6 +193,7 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
       };
 
   const seriesMap = new Map(); // seriesKey → series entity
+  /* `warranties` reste vide : les garanties viennent des relevés de documents, jamais de ce script. */
   const models = [], outdoorUnits = [], indoorUnits = [], configurations = [], performanceProfiles = [], certifications = [], warranties = [];
   const seenIndoor = new Set();
   const seriesNameTypes = new Map(); // display name → Set(systemType) pour détecter les collisions de slug
@@ -180,6 +230,17 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
       const rule = prefixes.find((p) => modelNumber.startsWith(p.prefix.toUpperCase()));
       if (rule) { seriesDisplay = rule.series; seriesSource = "inferred"; if (rule.systemType) systemType = rule.systemType; }
     }
+    // Majorité des combinaisons typées par ENERGY STAR : sur conduits (centrale) ou mini-split. Égalité : on garde.
+    const counts = DUCTING.get(unitKey);
+    const ducting = counts ? (counts.exact.ducted + counts.exact.ductless >= EXACT_MIN ? counts.exact : counts.all) : null;
+    if (ducting && ducting.ducted !== ducting.ductless) {
+      const ducted = ducting.ducted > ducting.ductless;
+      if (ducted && DUCTLESS_TYPES.has(systemType)) systemType = "central-ducted";
+      else if (!ducted && !DUCTLESS_TYPES.has(systemType)) systemType = "wall-single";
+    }
+    // Certifiée avec des combinaisons multizones (« Appareils sans conduits », « Combinaison d'appareils… » à la
+    // place d'une unité intérieure précise) : une multizone, jamais une murale simple zone ni une centrale.
+    if (MULTI_UNITS.has(unitKey)) systemType = "multi-zone";
     if (seriesDisplay) {
       if (!seriesNameTypes.has(seriesDisplay)) seriesNameTypes.set(seriesDisplay, new Set());
       seriesNameTypes.get(seriesDisplay).add(systemType);
@@ -209,11 +270,11 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
     const isMulti = /multi/i.test(seriesName);
     const categories = [anyCold ? "cold-climate" : "conventional"];
     if (systemType === "central-ducted") categories.push("ducted");
-    else categories.push("ductless", isMulti ? "multi-zone" : "single-zone");
+    else categories.push("ductless", isMulti || systemType === "multi-zone" ? "multi-zone" : "single-zone");
     if (!seriesMap.has(seriesKey)) {
       seriesMap.set(seriesKey, {
         id: seriesSlug, slug: seriesSlug, name: seriesName, brandId: brandSlug, systemType, categories: [...categories],
-        imageUrl: prevSeriesImages.get(normKey(seriesName)) ?? null,
+        imageUrl: prevSeriesImages.get(`${normKey(seriesName)}|${systemType}`) ?? null,
         status: seriesStatus,
         sources: [{ sourceId: seriesSource === "official" ? sourceId : seriesSource === "inferred" ? `src-${brandSlug}-series-dictionary` : sourceId, fields: ["name"], confidence: seriesConfidence, verifiedAt: seriesSource === "official" ? NOW : null }],
         createdAt: STAMP, updatedAt: STAMP,
@@ -286,9 +347,8 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
       sourceId, verifiedAt: NOW,
     });
 
-    const w = brandMeta[brandSlug]?.warranties;
-    if (w?.parts) warranties.push({ id: `${modelId}-w-parts`, modelId, type: "parts", durationYears: w.parts, requiresRegistration: true, provider: "manufacturer", confidence: "estimated" });
-    if (w?.compressor) warranties.push({ id: `${modelId}-w-comp`, modelId, type: "compressor", durationYears: w.compressor, requiresRegistration: true, provider: "manufacturer", confidence: "estimated" });
+    // Aucune garantie n'est écrite ici : une durée ne s'affiche que si elle est relevée dans un
+    // document du fabricant (src/lib/data/warranties-sourced.json, résolu par src/lib/data/warranty.ts).
   }
 
   const prevSource = (prevDs?.sources ?? []).find((s) => s.id === sourceId);
@@ -305,6 +365,70 @@ for (const [brandSlug, b] of [...byBrand.entries()].sort((x, y) => x[0].localeCo
   };
 }
 
+/* ---------------------------------------------------------------- fiches absentes de la liste en vigueur */
+// Une fiche du build précédent dont l'unité extérieure n'est plus dans la liste de sa marque n'est pas supprimée :
+// son adresse reste en vie (pas de 404 massif quand Hydro-Québec change de liste). Elle est reprise telle quelle,
+// avec deux cas :
+//  - l'unité n'est plus dans la liste, toutes marques confondues : logisVertListed = false, date du retrait,
+//    statut « archived » (la fiche répond toujours, sans index ; toutes les listes, compteurs, sitemaps et
+//    ThermoMatch ne prennent que les fiches « published »), isActive2026 = false, thermomatchEligible = false,
+//    aucun jumelage en vigueur (certifiedPairings = 0), aucune subvention affichée ;
+//  - l'unité est encore listée, mais sous une autre marque (« AC PRO » au lieu de « AC Pro.com », rebadge ADP de
+//    Carrier) : la fiche garde sa place ; ses montants viennent de la liste par le numéro d'unité extérieure.
+const LISTED_UNITS = new Map(); // unitKey → nombre de combinaisons en vigueur, toutes marques
+for (const r of Object.values(lv)) {
+  const k = normKey(r.m);
+  if (k) LISTED_UNITS.set(k, (LISTED_UNITS.get(k) ?? 0) + 1);
+}
+const RETIRED_SINCE = lvMeta.listDate ?? NOW;
+report.carried = { retired: 0, listedUnderAnotherBrand: 0, brandsWithoutListedModel: 0 };
+const carriedIds = new Set();
+for (const [brandSlug, prevDs] of Object.entries(prev).sort((x, y) => x[0].localeCompare(y[0]))) {
+  const built = new Set((out[brandSlug]?.models ?? []).map((m) => m.normalizedModelNumber));
+  const carried = (prevDs.models ?? []).filter((m) => !built.has(m.normalizedModelNumber));
+  if (!carried.length) continue;
+  if (!out[brandSlug]) {
+    report.carried.brandsWithoutListedModel++;
+    out[brandSlug] = {
+      brand: { ...prevDs.brand, updatedAt: STAMP }, series: [], models: [], outdoorUnits: [], indoorUnits: [], configurations: [], performanceProfiles: [], certifications: [], warranties: [],
+      priceObservations: prevDs.priceObservations ?? [], sources: prevDs.sources ?? [], editorial: prevDs.editorial ?? [],
+    };
+  }
+  const ds = out[brandSlug];
+  const has = (arr, id) => arr.some((x) => x.id === id);
+  for (const m of carried) {
+    const pairings = LISTED_UNITS.get(m.normalizedModelNumber) ?? 0;
+    const model = { ...m };
+    if (pairings > 0) {
+      report.carried.listedUnderAnotherBrand++;
+      Object.assign(model, { certifiedPairings: pairings, logisVertListed: true, isActive2026: true, thermomatchEligible: true, updatedAt: STAMP });
+      if (m.logisVertListed === false && m.status === "archived") model.status = m.nominalCapacityBtu ? "published" : "needs_review";
+      delete model.logisVertRetiredAt;
+    } else {
+      report.carried.retired++;
+      Object.assign(model, { certifiedPairings: 0, logisVertListed: false, logisVertRetiredAt: m.logisVertRetiredAt ?? RETIRED_SINCE, isActive2026: false, thermomatchEligible: false });
+      if (m.status === "published") model.status = "archived";
+    }
+    ds.models.push(model);
+    carriedIds.add(model.id);
+    const s = (prevDs.series ?? []).find((x) => x.id === m.seriesId);
+    if (s && !has(ds.series, s.id)) ds.series.push(s);
+    const ou = (prevDs.outdoorUnits ?? []).find((x) => x.id === m.id);
+    if (ou && !has(ds.outdoorUnits, ou.id)) ds.outdoorUnits.push(ou);
+    for (const c of (prevDs.configurations ?? []).filter((x) => x.modelId === m.id)) {
+      if (has(ds.configurations, c.id)) continue;
+      ds.configurations.push(c);
+      const iu = c.indoorUnitId ? (prevDs.indoorUnits ?? []).find((x) => x.id === c.indoorUnitId) : null;
+      if (iu && !has(ds.indoorUnits, iu.id)) ds.indoorUnits.push(iu);
+      for (const p of (prevDs.performanceProfiles ?? []).filter((x) => x.configurationId === c.id)) ds.performanceProfiles.push(p);
+      for (const cert of (prevDs.certifications ?? []).filter((x) => x.configurationId === c.id)) {
+        // Hors liste : on ne sait plus si la combinaison est certifiée pour le Québec ; rien d'affirmé.
+        if (!has(ds.certifications, cert.id)) ds.certifications.push(pairings > 0 ? cert : { ...cert, status: "unknown" });
+      }
+    }
+  }
+}
+
 /* ---------------------------------------------------------------- validation */
 const allIds = new Set();
 let totalPairings = 0;
@@ -312,6 +436,16 @@ for (const [slug, ds] of Object.entries(out)) {
   const names = new Set();
   const seriesIds = new Set(ds.series.map((s) => s.id));
   for (const m of ds.models) {
+    if (carriedIds.has(m.id)) {
+      // Fiche reprise : mêmes garanties d'unicité et de série, jumelages comptés à part.
+      if (allIds.has(m.id)) report.errors.push(`identifiant en double : ${m.id}`);
+      allIds.add(m.id);
+      if (!seriesIds.has(m.seriesId)) report.errors.push(`série absente : ${m.id} → ${m.seriesId}`);
+      const nk = `${m.name}|${m.systemType}`;
+      if (names.has(nk)) report.errors.push(`nom en double dans ${slug} : ${m.name}`);
+      names.add(nk);
+      continue;
+    }
     if (allIds.has(m.id)) report.errors.push(`identifiant en double : ${m.id}`);
     allIds.add(m.id);
     const nk = `${m.name}|${m.systemType}`;
@@ -329,8 +463,11 @@ for (const [slug, ds] of Object.entries(out)) {
   for (const m of ds.models) if (!cfgModels.has(m.id)) report.errors.push(`aucune configuration : ${m.id}`);
 }
 if (totalPairings !== recordsUsed) report.errors.push(`jumelages comptés ${totalPairings} ≠ enregistrements utilisés ${recordsUsed}`);
-if (report.previous.models && report.models < 0.95 * report.previous.models) report.errors.push(`chute du nombre de fiches : ${report.models} < 95 % de ${report.previous.models}`);
-if (report.previous.brands && report.brands < report.previous.brands - 5) report.errors.push(`chute du nombre de marques : ${report.brands} < ${report.previous.brands}`);
+const totalModels = Object.values(out).reduce((n, d) => n + d.models.length, 0);
+report.totalModels = totalModels;
+if (report.previous.models && totalModels < 0.95 * report.previous.models) report.errors.push(`chute du nombre de fiches : ${totalModels} < 95 % de ${report.previous.models}`);
+// Marques écrites (celles de la liste en vigueur et celles gardées pour leurs fiches reprises).
+if (report.previous.brands && Object.keys(out).length < report.previous.brands - 5) report.errors.push(`chute du nombre de marques : ${Object.keys(out).length} < ${report.previous.brands}`);
 report.pairings = totalPairings;
 
 /* ---------------------------------------------------------------- sortie */
@@ -338,6 +475,7 @@ console.log(`Marques ${report.brands} · fiches ${report.models} · jumelages ${
 console.log(`Séries : officielles ${report.series.official}, estimées ${report.series.inferred}, non identifiées ${report.series.unidentified}`);
 console.log(`Fiches par source de série : ${JSON.stringify(report.modelsBySeriesSource)} · conflits ${report.seriesConflicts.length}`);
 console.log(`Images conservées : ${report.imagesCarried.models} modèles, ${report.imagesCarried.series} séries`);
+console.log(`Fiches reprises du build précédent : ${report.carried.retired} absentes de la liste en vigueur (sans subvention), ${report.carried.listedUnderAnotherBrand} listées sous une autre marque`);
 if (report.errors.length) {
   console.error(`\n✗ ${report.errors.length} erreur(s) de validation — rien n'est écrit :`);
   for (const e of report.errors.slice(0, 30)) console.error("  - " + e);

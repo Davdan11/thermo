@@ -9,7 +9,7 @@
    permet de la tester sans charger les 34 Mo de LogisVert.
    ================================================================== */
 
-import type { Candidate, SystemKind } from "./types";
+import type { Candidate, PairingClass, SystemKind } from "./types";
 import { brandTier, rebadgeRank } from "./tiers";
 
 /** Sous-ensemble d'un modèle du registre dont le moteur a besoin. */
@@ -35,6 +35,8 @@ export interface SourcePairing {
   seer2?: number;
   hspf2?: number;
   cop5?: number;
+  /** Type de système LogisVert : « C » centrale, « M » mini-bibloc ou multi. */
+  systemType?: "C" | "M";
 }
 
 /** Rapport médian h5/h17 observé sur 213 665 appariements ENERGY STAR de la base. */
@@ -46,6 +48,35 @@ export function systemKindOf(systemType: string): SystemKind | null {
     return "ductless";
   }
   return null;
+}
+
+/**
+ * Unité intérieure multizone dans LogisVert : un libellé générique à la place d'un numéro de modèle
+ * (« Combinaison d'appareils avec ou sans conduits », « Appareils sans conduits », « Appareils avec conduits »).
+ */
+export const MULTI_INDOOR_RE = /^(combinaison d.appareils|appareils (sans|avec) conduits)/i;
+
+/**
+ * Combinaison multizone. Ancienne liste d'Hydro-Québec : libellé générique à la place de l'unité intérieure
+ * (MULTI_INDOOR_RE). Liste ENERGY STAR en vigueur : unité intérieure vide sur une mini ou multi-bibloc (« M ») ;
+ * vérifié le 17 septembre 2026 : les 4 022 combinaisons « Appareils sans conduits »/« Combinaison d'appareils… »
+ * de l'ancienne liste encore présentes ont toutes une unité intérieure vide. Le fichier ne dit plus si les têtes
+ * sont avec ou sans conduits.
+ */
+export function isMultiPairing(p: { indoorModel?: string | null; systemType?: "C" | "M" | null }): boolean {
+  const im = (p.indoorModel ?? "").trim();
+  return MULTI_INDOOR_RE.test(im) || (!im && p.systemType === "M");
+}
+
+/**
+ * Classe réelle d'un appariement, d'après LogisVert plutôt que d'après le type du catalogue :
+ * la Trane 4TXM2318A12NU est « central-ducted » au catalogue, mais ses appariements sont des
+ * « Appareils sans conduits » (une multizone).
+ */
+export function pairingClassOf(pairing: Pick<SourcePairing, "indoorModel" | "systemType">, registrySystemType: string): PairingClass {
+  if (isMultiPairing(pairing)) return "multi";
+  if ((registrySystemType === "central-ducted" || registrySystemType === "hybrid") && pairing.systemType !== "M") return "central";
+  return "single";
 }
 
 /** Choisit, parmi les appariements d'une unité extérieure, celui dont la capacité à -15 °C colle le mieux à la charge. */
@@ -70,9 +101,12 @@ export function signatureOf(kind: SystemKind, nominal: number, p: SourcePairing)
 }
 
 export interface BuildOptions {
+  /** Charge pour laquelle choisir l'appariement de chaque machine (toute la maison, ou la zone qu'elle chauffe). */
   loadBtuH: number;
   /** Retourne tous les appariements LogisVert d'une unité extérieure. */
   pairingsFor: (outdoorModel: string) => SourcePairing[];
+  /** Ne garder que les appariements de cette classe (architecture décidée d'abord) ; absente : tous. */
+  pairingClass?: PairingClass;
 }
 
 /**
@@ -84,11 +118,14 @@ export function buildCandidates(models: SourceModel[], opts: BuildOptions): Cand
   const raw: Candidate[] = [];
 
   for (const m of models) {
-    const kind = systemKindOf(m.systemType);
-    if (!kind) continue;
-    const pairings = opts.pairingsFor(m.modelNumber);
+    if (!systemKindOf(m.systemType)) continue;
+    const all = opts.pairingsFor(m.modelNumber);
+    const pairings = opts.pairingClass ? all.filter((p) => pairingClassOf(p, m.systemType) === opts.pairingClass) : all;
     const pairing = pickPairing(pairings, opts.loadBtuH);
     if (!pairing) continue;
+    const pairingClass = pairingClassOf(pairing, m.systemType);
+    // Le type suit l'appariement : une « centrale » du catalogue appariée à des têtes murales est une multizone.
+    const kind: SystemKind = pairingClass === "central" ? "central" : "ductless";
 
     const nominal = pairing.nominalBtu ?? m.nominalCapacityBtu ?? 0;
     if (nominal <= 0) continue;
@@ -97,9 +134,8 @@ export function buildCandidates(models: SourceModel[], opts: BuildOptions): Cand
     const h5Btu = h5Certified ? pairing.heatingBtu5F! : Math.round(pairing.heatingBtu17F * H5_FROM_H17_RATIO);
     if (h5Btu <= 0) continue;
 
-    const indoorModels = new Set(pairings.map((p) => (p.indoorModel ?? "").trim()).filter(Boolean));
-    const multiZoneCapable =
-      indoorModels.size >= 3 || [...indoorModels].some((im) => /combinaison|multi/i.test(im));
+    // Plusieurs unités intérieures possibles ne font pas une multizone (SUZ-AA18NLHZ : sept têtes, une à la fois).
+    const multiZoneCapable = all.some((p) => isMultiPairing(p));
 
     raw.push({
       id: m.id,
@@ -123,6 +159,7 @@ export function buildCandidates(models: SourceModel[], opts: BuildOptions): Cand
       alsoSoldAs: [],
       signature: signatureOf(kind, nominal, pairing),
       multiZoneCapable,
+      pairingClass,
     });
   }
 

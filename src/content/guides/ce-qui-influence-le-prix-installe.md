@@ -4,14 +4,14 @@ seoTitle: "Thermopompe installée : ce qui fait varier le prix"
 description: "Pourquoi deux soumissions pour la même machine diffèrent de plusieurs milliers de dollars : électricité, ligne frigorifique, support, appareil, garantie, subvention. Comment lire une soumission et la comparer."
 author: "L'équipe ThermoMatch"
 publishedAt: "2024-06-18"
-updatedAt: "2026-09-08"
+updatedAt: "2026-09-15"
 coverImage: "/images/guides/guide-hero-bg.jpg"
 category: "prix"
 keywords: ["prix thermopompe installée", "coût installation thermopompe Québec", "soumission thermopompe", "prix thermopompe murale"]
 related: ["subvention-logisvert-guide-complet", "preparer-son-projet-installation", "murale-ou-centrale"]
 faq:
   - q: "Combien coûte une thermopompe murale installée au Québec?"
-    a: "Nous n'affichons pas de prix, parce qu'ils dépendent de votre maison, de la distance électrique, de la ligne frigorifique, de la machine et de l'installateur. Seule une soumission écrite d'un entrepreneur licencié fait foi. Ce guide explique ce qui fait varier ce montant pour que vous puissiez comparer deux soumissions."
+    a: "Nous ne présentons aucune offre ferme ni aucun prix de vente : le montant dépend de votre maison, de la distance électrique, de la ligne frigorifique, de la machine et de l'installateur. Les fourchettes de notre page Prix sont des ordres de grandeur indicatifs du marché québécois ; le prix exact vient de la soumission écrite d'un entrepreneur licencié. Ce guide explique ce qui fait varier ce montant pour que vous puissiez comparer deux soumissions."
   - q: "Pourquoi deux soumissions pour le même modèle diffèrent-elles autant?"
     a: "Parce que l'installation représente une part importante du total et varie selon la maison : circuit électrique, longueur de ligne, support, accès. Vérifiez que les deux soumissions décrivent le même appariement (numéros extérieur et intérieur), la même garantie et les mêmes inclusions."
   - q: "La subvention est-elle déduite de la soumission?"
@@ -22,9 +22,9 @@ faq:
 
 Un prix de thermopompe vu en ligne et une soumission d'installateur ne parlent pas de la même chose. Le premier est un appareil sur une palette ; la seconde est un appareil posé, raccordé, mis en service et garanti chez vous. Ce guide détaille ce qui compose la seconde, pour que vous compariez deux soumissions sur les mêmes bases.
 
-## Pourquoi nous n'affichons pas de prix
+## Pourquoi nous ne donnons pas de prix de vente
 
-Notre site n'affiche aucun prix de vente, et c'est délibéré. Un prix installé varie avec votre maison, votre installateur, la saison et le fabricant. Publier une fourchette « moyenne » induirait en erreur une fois sur deux. Ce que nous publions, ce sont les données certifiées des machines et les montants officiels de subvention, qui, eux, sont vérifiables. Le prix, c'est la soumission écrite.
+Notre site ne présente aucune offre ferme ni aucun prix de vente, et c'est délibéré : un prix installé varie avec votre maison, votre installateur, la saison et le fabricant. Les fourchettes affichées sur le site sont des ordres de grandeur indicatifs du marché québécois, pour situer un budget, pas le prix de votre projet. Ce que nous publions avec certitude, ce sont les données certifiées des machines et les montants officiels de subvention, qui, eux, sont vérifiables. Le prix exact vient de la soumission écrite.
 
 ## 1. Le circuit électrique
 

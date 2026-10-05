@@ -133,10 +133,8 @@ export const mitsubishiElectricDataset: BrandDataset = {
     { id: "cert-mits-ln-12-cc", type: "cold_climate", configurationId: "config-mits-ln-12", coldClimate: true, status: "active", territory: "CA", sourceId: "src-mitsubishi-specs", verifiedAt: null },
   ],
 
-  warranties: [
-    { id: "warranty-mits-parts",      modelId: "model-mits-fs-12", type: "parts",      durationYears: 10, requiresRegistration: true, provider: "manufacturer", territory: "CA", conditions: "Enregistrement requis.", confidence: MC, sourceId: "src-mitsubishi-specs", verifiedAt: null },
-    { id: "warranty-mits-compressor", modelId: "model-mits-fs-12", type: "compressor", durationYears: 12, requiresRegistration: true, provider: "manufacturer", territory: "CA", conditions: "Installation par entrepreneur certifié Mitsubishi.", confidence: MC, sourceId: "src-mitsubishi-specs", verifiedAt: null },
-  ],
+  // Les garanties affichées viennent des relevés de certificats (src/lib/data/warranties-sourced.json).
+  warranties: [],
 
   priceObservations: [],
   editorial: [],

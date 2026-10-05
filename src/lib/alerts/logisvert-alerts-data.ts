@@ -14,7 +14,7 @@
 import { registry } from "@/lib/data/registry";
 import { getBrandStats } from "@/lib/seo/programmatic";
 import { getLogisVertVariants, lookupLogisVertFuzzy } from "@/lib/subsidies/logisvert-official";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { lireMetaLogisVert } from "@/lib/subsidies/logisvert-meta";
 import { amountsFromValues, targetKey, type AlertSnapshot, type AlertTarget, type ModelAmounts } from "./logisvert-alerts-core";
 
 export interface TrackedModel {
@@ -51,7 +51,8 @@ function outdoorNumber(modelId: string): string | undefined {
 
 export function amountsForModel(modelId: string): ModelAmounts {
   const m = registry.modelById.get(modelId);
-  if (!m) return amountsFromValues([]);
+  // Fiche retirée de la liste en vigueur : aucun montant (la recherche approchée pourrait trouver un numéro voisin).
+  if (!m || m.logisVertListed === false) return amountsFromValues([]);
   const outdoor = outdoorNumber(m.id) ?? m.modelNumber;
   let variants = getLogisVertVariants(outdoor);
   if (variants.length === 0 && outdoor !== m.modelNumber) variants = getLogisVertVariants(m.modelNumber);
@@ -85,7 +86,7 @@ export function resolveTarget(t: AlertTarget): ResolvedTarget | null {
 }
 
 export function currentListDate(): string | null {
-  return (logisVertMetadata as { updatedAt?: string }).updatedAt ?? null;
+  return (lireMetaLogisVert() as { updatedAt?: string }).updatedAt ?? null;
 }
 
 export function snapshotFor(r: ResolvedTarget): AlertSnapshot {

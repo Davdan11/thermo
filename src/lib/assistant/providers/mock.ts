@@ -9,6 +9,7 @@
 
 import type { AssistantProvider, ProviderRunArgs } from "./types";
 import { emptyUsage } from "./types";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 const fmt = (n: unknown) => (typeof n === "number" ? n.toLocaleString("fr-CA") : String(n ?? ""));
 const firstSentence = (s: string) => (s.match(/^.*?[.!?](\s|$)/)?.[0] ?? s).trim();
@@ -55,7 +56,7 @@ export function createMockProvider(options: { delayMs?: number } = {}): Assistan
           .join("\n");
         text =
           (city?.found ? `À ${city.city}, le froid de référence pour choisir une thermopompe est de ${city.design_temp_c} °C. ` : "") +
-          `La bonne puissance dépend de votre maison (superficie, isolation, fenêtres) : [ThermoMatch](/trouver-ma-thermopompe) fait le calcul en 13 questions.` +
+          `La bonne puissance dépend de votre maison (superficie, isolation, fenêtres) : [ThermoMatch](/trouver-ma-thermopompe) fait le calcul en ${QUESTIONS_LABEL}.` +
           (lines ? `\n\nQuelques murales qui tiennent bien le froid :\n${lines}` : "");
       }
 

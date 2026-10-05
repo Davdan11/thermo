@@ -7,8 +7,9 @@ import path from "node:path";
 /* ThermoMatch — écran des résultats (cartes d'origine, haut « Le thermomètre ») et lien partagé.
    - Aucune neige : elle est réservée à la page d'accueil.
    - Jamais « prix moins subvention » : l'aide LogisVert est versée par Hydro-Québec, à part.
-   - « Par grand froid » : température publiée → « Chauffe jusqu'à −XX °C » en très gros ; sinon certifiée
-     climat froid → « Certifiée grand froid », sans chiffre de limite ; sinon la puissance à −15 °C.
+   - « Par grand froid » (plaque signalétique, en travers de la carte) : température publiée → « Chauffe
+     jusqu'à −XX °C » en très gros ; sinon certifiée climat froid → « Certifiée grand froid », sans chiffre
+     de limite ; sinon « Non publiée », jamais une valeur devinée.
    - Le thermomètre : état final dans le HTML serveur, repère régional seulement avec une vraie donnée.
    - Le lien partagé est une page du site au ton sombre ; le questionnaire garde le ton clair.
    Rendu serveur (renderToString), comme les autres tests de composants. */
@@ -83,12 +84,33 @@ const renderWith = (results: unknown[], ctx: Record<string, unknown> | null) =>
   renderToString(createElement(ThermoMatchResults, { results: results as never, onSelectResult: () => {}, onRetry: () => {}, summaryContext: ctx as never }));
 const render = (ctx: Record<string, unknown> | null) => renderWith(RESULTS, ctx);
 
-/** Bloc « Par grand froid » de chaque carte, dans l'ordre des résultats (jusqu'à la scène de l'appareil). */
+/** Le bloc « Par grand froid » d'une carte : son HTML, borné en comptant les <div> ouverts et fermés. */
+function blocDepuis(html: string, from: number): string {
+  let i = html.indexOf(">", from) + 1;
+  const debut = i;
+  let profondeur = 1;
+  while (i < html.length && profondeur > 0) {
+    const ouvre = html.indexOf("<div", i);
+    const ferme = html.indexOf("</div", i);
+    if (ferme === -1) break;
+    if (ouvre !== -1 && ouvre < ferme) {
+      profondeur++;
+      i = ouvre + 4;
+    } else {
+      profondeur--;
+      if (profondeur === 0) return html.slice(debut, ferme);
+      i = ferme + 5;
+    }
+  }
+  return html.slice(debut, i);
+}
+
 const blocsFroid = (html: string) =>
-  html
-    .split('data-grand-froid="')
-    .slice(1)
-    .map((s) => ({ kind: s.slice(0, s.indexOf('"')), texte: texte(s.slice(s.indexOf(">") + 1, s.indexOf("Photo officielle à venir"))) }));
+  [...html.matchAll(/<div data-grand-froid="([^"]+)"/g)].map((m) => ({
+    kind: m[1],
+    html: blocDepuis(html, m.index ?? 0),
+    texte: texte(blocDepuis(html, m.index ?? 0)),
+  }));
 
 const ANSWERS = {
   postalCode: "H2X 1Y4",
@@ -134,17 +156,34 @@ describe("« Par grand froid » sur les cartes", () => {
     expect(blocs).toHaveLength(3);
     for (const b of blocs) {
       expect(b.kind).toBe("publiee");
-      expect(b.texte).toMatch(/Chauffe jusqu’à\s*−30 °C/);
+      expect(b.texte).toMatch(/Chauffe jusqu’à\s*−30\s*°C/);
       expect(b.texte).toContain("Température minimale publiée par le fabricant");
       expect(b.texte).not.toContain("Certifiée grand froid");
+      // Le chiffre : le plus gros texte de la carte (50 px au moins sur téléphone), tabulaire, sur bleu nuit.
+      const gros = b.html.match(/<span class="([^"]*)" style="([^"]*)"[^>]*>−30/);
+      expect(gros, b.html.slice(0, 400)).not.toBeNull();
+      expect(gros![1]).toContain("tabular-nums");
+      expect(gros![2]).toContain("clamp(50px");
+      expect(gros![2].toUpperCase()).toContain("#0C1821");
+      // Jamais coupé en fin de ligne : espace insécable et nowrap.
+      expect(gros![2]).toContain("nowrap");
+      expect(b.html).toContain("°C");
+      // La plaque range la chaleur livrée et le maintien en lignes de fiche, sous la température.
+      expect(b.texte).toMatch(/Chaleur à −15\s*°C/);
+      expect(b.texte).toContain("Maintien de puissance");
     }
-    // Au moins 44 px sur mobile, chiffres tabulaires : le plus gros texte de la carte.
-    const gros = [...html.matchAll(/<p class="([^"]*)"[^>]*>−30</g)];
-    expect(gros).toHaveLength(3);
-    for (const g of gros) {
-      expect(g[1]).toContain("text-[56px]");
-      expect(g[1]).toContain("tabular-nums");
-    }
+  });
+
+  it("la température passe avant les chiffres techniques et avant la photo", () => {
+    const html = render(CTX);
+    const froid = html.indexOf("data-grand-froid");
+    const scene = html.indexOf("data-scene");
+    const btu = html.indexOf("Chaleur à");
+    expect(froid).toBeGreaterThan(-1);
+    expect(froid).toBeLessThan(btu);
+    expect(froid).toBeLessThan(scene);
+    // Le nom du modèle reste au-dessus de la température.
+    expect(html.indexOf("Série")).toBeLessThan(froid);
   });
 
   it("sans température publiée mais certifiée climat froid : « Certifiée grand froid », sans chiffre de limite", () => {
@@ -154,28 +193,32 @@ describe("« Par grand froid » sur les cartes", () => {
     for (const b of blocs) {
       expect(b.kind).toBe("certifiee");
       expect(b.texte).toContain("Certifiée grand froid");
-      expect(b.texte).toContain("Chauffe encore à −15 °C");
+      expect(b.texte).toMatch(/Chauffe encore à −15\s*°C/);
       expect(b.texte).toContain("Certification ENERGY STAR climat froid");
-      expect(b.texte).toContain(`${fr(21000)} BTU/h livrés à −15 °C`);
-      expect(b.texte).not.toMatch(/jusqu’à/i);
+      // La limite n'est pas publiée : la carte l'écrit, plutôt que de laisser un vide.
+      expect(b.texte).toContain("Température minimale non publiée par le fabricant");
+      expect(b.texte).toMatch(new RegExp(`Chaleur à −15\\s*°C\\s*${fr(21000)} BTU/h`));
+      expect(b.texte).not.toMatch(/Chauffe jusqu’à/);
     }
     // Nulle part « jusqu’à −15 °C » : −15 °C est le point de mesure de la certification, pas la limite.
     const tout = texte(html);
     expect(tout).not.toMatch(/jusqu’à\s*−15/);
     // Le thermomètre les pose au repère −15 °C, « minimum non publié ».
-    expect(tout).toContain("certifiées à −15 °C");
+    expect(tout).toMatch(/certifiées à −15\s*°C/);
     expect(tout).toContain("minimum non publié");
   });
 
-  it("ni température publiée ni climat froid : ni « Chauffe jusqu’à » ni « Certifiée grand froid », la puissance à −15 °C", () => {
+  it("ni température publiée ni climat froid : la carte écrit « Température minimale non publiée »", () => {
     const html = renderWith(trois({ minOperatingTempC: null, coldClimate: false }), CTX);
     const blocs = blocsFroid(html);
     expect(blocs).toHaveLength(3);
     for (const b of blocs) {
       expect(b.kind).toBe("mesuree");
-      expect(b.texte).toContain(`${fr(21000)} BTU/h`);
-      expect(b.texte).toContain("livrés à −15 °C");
-      expect(b.texte).not.toMatch(/jusqu’à/i);
+      // L'information vedette dit franchement ce qui manque ; aucun chiffre de limite n'est avancé.
+      expect(b.texte).toMatch(/Température minimale\s*Non publiée/);
+      expect(b.texte).toContain("Nous l’écrivons plutôt que d’avancer un chiffre");
+      expect(b.texte).toMatch(new RegExp(`Chaleur à −15\\s*°C\\s*${fr(21000)} BTU/h`));
+      expect(b.texte).not.toMatch(/Chauffe jusqu’à/);
       expect(b.texte).not.toContain("Certifiée grand froid");
       expect(b.texte).not.toContain("Chauffe encore");
     }
@@ -184,6 +227,48 @@ describe("« Par grand froid » sur les cartes", () => {
     expect(tout).toContain("Température minimale non publiée");
     expect(tout).not.toContain("certifiée à");
     expect(tout).not.toContain("certifiées à");
+  });
+});
+
+describe("Thème clair de l'écran des résultats", () => {
+  it("aucun aplat sombre : ni l'encre de fond, ni le crème du texte des anciens blocs", () => {
+    const html = render(CTX);
+    // Anciennes couleurs du thème sombre : fond d'encre, texte crème, voiles de crème.
+    for (const couleur of ["#0A1419", "#10222D", "#0D1117", "#F4EFE7", "244,239,231"]) {
+      expect(html, couleur).not.toContain(couleur);
+    }
+  });
+
+  it("le fond de la page et les panneaux sont clairs, le texte est sur bleu nuit", () => {
+    const html = render(CTX);
+    expect(html).toContain("#0C1821");
+    expect(html).toContain("#F8F5F0");
+  });
+
+  it("le grand froid est une plaque : aplat crème en travers de la carte, filets d'encre, chiffre sur bleu nuit", () => {
+    const html = render(CTX);
+    // La plaque traverse la carte (marges négatives), à angles vifs, sans ombre : pas un panneau qui flotte.
+    const plaques = [...html.matchAll(/<div data-grand-froid="[^"]+" class="([^"]*)" style="([^"]*)"/g)];
+    expect(plaques).toHaveLength(3);
+    for (const p of plaques) {
+      expect(p[1]).toContain("-mx-6");
+      expect(p[1]).toContain("sm:-mx-7");
+      expect(p[2].toUpperCase()).toContain("#F1EDE5");
+      expect(p[2].toUpperCase()).toContain("BORDER-TOP:1PX SOLID #0C1821");
+      expect(p[2].toUpperCase()).toContain("BORDER-BOTTOM:1PX SOLID #0C1821");
+      expect(p[2]).not.toContain("border-radius");
+      expect(p[2]).not.toContain("box-shadow");
+    }
+    for (const b of blocsFroid(html)) {
+      const gros = b.html.match(/<span class="([^"]*)" style="([^"]*)"[^>]*>−30/);
+      expect(gros).not.toBeNull();
+      expect(gros![2].toUpperCase()).toContain("#0C1821");
+      expect(gros![2].toUpperCase()).not.toContain("#E54B17");
+    }
+  });
+
+  it("le lettrage ThermoMatch du bandeau est vectoriel : le fichier crème n'y est plus", () => {
+    expect(render(CTX)).not.toContain("logo-thermomatch-nav.webp");
   });
 });
 
@@ -235,8 +320,9 @@ describe("Le thermomètre (haut de page)", () => {
 });
 
 describe("Lien partagé", () => {
-  it("ton de l'en-tête : sombre sur les résultats partagés, clair sur le questionnaire", () => {
-    expect(heroTone("/trouver-ma-thermopompe/resultats")).toBe("dark");
+  it("ton de l'en-tête : clair sur le questionnaire comme sur les résultats partagés", () => {
+    // L'écran des résultats est passé au thème clair : l'en-tête du site y garde son encre.
+    expect(heroTone("/trouver-ma-thermopompe/resultats")).toBe("light");
     expect(heroTone("/trouver-ma-thermopompe")).toBe("light");
   });
 
@@ -270,10 +356,11 @@ describe("Lien partagé", () => {
     expect(chrome("/trouver-ma-thermopompe")).not.toMatch(/<header/);
   });
 
-  it("lien incomplet : page sombre avec le chemin vers le questionnaire", async () => {
+  it("lien incomplet : page sur le crème des résultats, avec le chemin vers le questionnaire", async () => {
     const html = renderToString(await ResultatsPartagesPage({ searchParams: Promise.resolve({ r: "tronqué!" }) }));
     expect(html).toContain("Ce lien de résultats");
     expect(html).toContain('href="/trouver-ma-thermopompe"');
-    expect(html).toContain("#0A1419");
+    expect(html).toContain("#F8F5F0");
+    expect(html).not.toContain("#0A1419");
   });
 });

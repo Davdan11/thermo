@@ -8,7 +8,10 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
 import { brandLogoPath } from "@/lib/data/brand-logos";
+import { warrantyShortLabel } from "@/lib/data/warranty";
 import { EASE, typo } from "./motion";
+import { QUESTIONS_LABEL_MAJ } from "@/lib/thermomatch/parcours";
+import { ChauffeJusquaVedette } from "@/components/product/ChauffeJusquaVedette";
 
 /* ==================================================================
    Galerie des résultats (/thermopompes) — équivalent de CompareSelection
@@ -149,22 +152,13 @@ function GalleryCard({
 }) {
   const { model, brand, configuration, isColdClimate } = product;
 
-  const warranties = (product as { warranties?: Array<{ type: string; durationYears?: number }> }).warranties ?? [];
-  const partsWarranty = warranties.find((w) => w.type === "parts")?.durationYears;
-  const compWarranty = warranties.find((w) => w.type === "compressor")?.durationYears;
-  let warrantyLabel = "";
-  if (partsWarranty && compWarranty) {
-    if (partsWarranty === compWarranty) warrantyLabel = `Garantie ${partsWarranty} ans`;
-    else warrantyLabel = `${partsWarranty} ans (pièces) / ${compWarranty} ans (comp.)`;
-  } else if (partsWarranty) {
-    warrantyLabel = `Garantie ${partsWarranty} ans`;
-  }
+  // Garantie : la durée du document du fabricant, ou « Non vérifiée » — jamais de valeur par défaut.
+  const warrantyLabel = warrantyShortLabel(product.warranty);
   const logisVertDollars: number | null = (product as { logisVertDollars?: number }).logisVertDollars || null;
   const logo = brandLogoPath(brand.slug);
 
   const hspf2 = configuration?.hspf2 != null || model.hspf2Min != null ? (configuration?.hspf2 ?? model.hspf2Min) : null;
   const seer2 = configuration?.seer2 != null || model.seer2Min != null ? (configuration?.seer2 ?? model.seer2Min) : null;
-  const heatTo = model.minimumOperatingTemperatureC != null ? `${model.minimumOperatingTemperatureC}°C` : isColdClimate ? "-25°C" : "-15°C";
 
   return (
     <motion.div
@@ -187,11 +181,9 @@ function GalleryCard({
               className="h-full w-full object-contain p-6 transition-transform duration-700 ease-out group-hover:scale-[1.06]"
             />
           ) : logo ? (
-            <div className="flex flex-col items-center gap-3 px-6">
+            /* Pas de photo du fabricant : son logo seul, sans promesse de photo ni appareil d'une autre marque. */
+            <div className="flex flex-col items-center px-6">
               <Image src={logo} alt={`Logo ${brand.name}`} width={180} height={64} className="h-auto max-h-[52px] w-auto max-w-[160px] object-contain opacity-90" />
-              <span className="text-[11px] tracking-wide" style={{ color: "rgba(10,20,25,0.45)" }}>
-                Photo officielle à venir
-              </span>
             </div>
           ) : (
             <span className="text-sm" style={{ color: "rgba(10,20,25,0.45)" }}>
@@ -225,6 +217,9 @@ function GalleryCard({
             {product.refrigerant ? ` · ${product.refrigerant}` : ""}
           </p>
 
+          {/* L'information vedette, juste sous le nom : jusqu'à quel froid le modèle chauffe. */}
+          <ChauffeJusquaVedette minTempC={product.minHeatingTempC} coldClimate={isColdClimate} taille="compact" className="mt-4" />
+
           <div className="mt-auto w-full pt-4">
             {(hspf2 != null || seer2 != null) && (
               <dl className="m-0 flex" style={{ borderTop: "1px solid rgba(10,20,25,0.08)" }}>
@@ -233,8 +228,7 @@ function GalleryCard({
               </dl>
             )}
             <dl className="m-0">
-              <Line label={typo("Chauffage jusqu'à")} value={heatTo} />
-              <Line label="Garantie" value={warrantyLabel || "10 ans (pièces et comp.)"} />
+              <Line label="Garantie" value={product.warranty ? warrantyLabel : <span style={{ color: "rgba(10,20,25,0.55)" }}>{warrantyLabel}</span>} />
               {logisVertDollars != null && logisVertDollars > 0 && (
                 <Line
                   label={
@@ -281,7 +275,8 @@ function Figure({ label, value, divider = false }: { label: string; value: numbe
       <dt className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: "rgba(10,20,25,0.45)" }}>
         {label}
       </dt>
-      <dd className="m-0 mt-0.5 tabular-nums" style={{ fontSize: 30, fontWeight: 300, letterSpacing: "-0.045em", lineHeight: 1.05, color: INK }}>
+      {/* Secondaire : plus petit que la température vedette, qui reste le plus gros chiffre de la vignette. */}
+      <dd className="m-0 mt-0.5 tabular-nums" style={{ fontSize: 22, fontWeight: 400, letterSpacing: "-0.04em", lineHeight: 1.05, color: INK }}>
         {value}
       </dd>
     </div>
@@ -335,7 +330,7 @@ function MatchBanner({ onGo }: { onGo: () => void }) {
             {typo("Trop de modèles ?")} <span className="catg-serif" style={{ fontSize: "1.08em" }}>ThermoMatch en retient trois pour votre maison<span style={{ color: ORANGE }}>.</span></span>
           </h3>
           <p className="m-0 mt-4 text-base leading-relaxed sm:text-[17px]" style={{ color: "rgba(244,239,231,0.66)" }}>
-            13 questions sur votre maison, 2 minutes. Le calcul croise la capacité certifiée à -15 °C, votre superficie, votre isolation et votre zone climatique, toutes marques confondues.
+            {QUESTIONS_LABEL_MAJ} sur votre maison, quelques minutes. Le calcul croise la capacité certifiée à -15 °C, votre superficie, votre isolation et votre zone climatique, toutes marques confondues.
           </p>
         </div>
         <div className="relative z-10 w-full shrink-0 md:w-auto">

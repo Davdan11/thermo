@@ -9,6 +9,8 @@ import { SITE_URL } from "@/lib/seo";
 import { sitemapIds, sitemapLastmod } from "@/lib/seo/sitemaps";
 
 export const dynamic = "force-static";
+/* Régénéré au plus toutes les 6 heures : suit la mise à jour de nuit des données sans reconstruction. */
+export const revalidate = 21600;
 
 export async function GET() {
   // lastmod = dernière modification réelle du contenu listé (données officielles ou guide le plus récent),

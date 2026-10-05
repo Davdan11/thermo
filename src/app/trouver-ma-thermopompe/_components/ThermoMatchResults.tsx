@@ -12,26 +12,38 @@ import { SavingsBand } from "./SavingsBand";
 import { ExistingUnitCompare } from "./ExistingUnitCompare";
 import { EmailMyChoices } from "./EmailMyChoices";
 import { ThermometreHero } from "./ThermometreHero";
-import { CERTIF_C, froidDe, type Froid } from "./thermometre";
+import { ArchitecturePlan, categorieOfKind, type ArchitecturePlanData } from "./ArchitecturePlan";
+import { Affiner, type AffinageProps } from "./Affiner";
+import type { Hypothese } from "@/lib/thermomatch/hypotheses";
+import { froidDe } from "./thermometre";
 import { minTempMention, type MinTempSourceType } from "@/lib/thermomatch/min-temp-source";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { MentionGarantieLegale } from "@/components/garantie-legale/MentionGarantieLegale";
 import { categorieDe, type CategorieThermopompe } from "@/lib/garantie-legale/config";
+import { ORDRE_DE_GRANDEUR_LABEL } from "@/lib/prices/grille-installee";
+import { MULTI_INDOOR_RE } from "@/lib/thermomatch/candidates";
+import { OMBRE, OMBRE_TOP, R } from "./palette";
 
 /* ==================================================================
    ThermoMatch — écran des trois recommandations (version premium).
-   1. En-tête « Le thermomètre » (ThermometreHero) : échelle de froid
-      où les machines retenues se posent à leur « chauffe jusqu'à » ;
-      titre, maison, région, charge estimée et marge.
-   2. Trois cartes (le meilleur choix au centre, surélevé) : score,
-      « Chauffe jusqu'à −XX °C » en très gros (ou « Certifiée grand
-      froid » quand la température n'est pas publiée), photo, part de
-      la maison couverte à -15 °C, chiffres certifiés, étiquettes
-      « le plus efficace… » calculées entre les trois.
-   3. « Ce qui les distingue » : barres critère par critère.
-   4. Prochaine étape : la soumission, avec une barre fixe sur mobile.
-   Mêmes données et mêmes props qu'avant (parcours normal et lien
-   partagé). Valeur absente = N/D, jamais inventée.
+   1. En-tête « Le thermomètre » (ThermometreHero) : « Analyse terminée »,
+      titre, maison, région, charge estimée, et l'échelle de froid où
+      les machines retenues se posent à leur « chauffe jusqu'à ».
+   2. Tout de suite les trois cartes (le meilleur choix au centre,
+      surélevé). Sur chacune, l'information vedette est « Chauffe
+      jusqu'à −XX °C », juste sous le nom du modèle : c'est ce que les
+      acheteurs cherchent. Les chiffres techniques (capacité à −15 °C,
+      maintien, HSPF2, SEER2, LogisVert) restent en dessous, en petit.
+      Jamais de température devinée : sans valeur publiée par le
+      fabricant, la carte écrit « Température minimale non publiée ».
+   3. « Affiner » : les hypothèses prises et les questions qui les lèvent.
+   4. « Votre configuration » (ArchitecturePlan) : comment la chaleur
+      sera distribuée, le plan des zones, la relève par grand froid,
+      les options écartées et l'ordre de grandeur installé, une fois.
+   5. « Ce qui les distingue » : barres critère par critère.
+   6. Prochaine étape : la soumission, avec une barre fixe sur mobile.
+   Mêmes données qu'avant (parcours normal et lien partagé).
+   Valeur absente = N/D, jamais inventée.
    ================================================================== */
 
 interface SummaryContext {
@@ -54,6 +66,10 @@ interface SummaryContext {
   logisVertUpdatedAt?: string | null;
   /** Économies de chauffage estimées (plinthes électriques seulement). */
   savings?: SavingsEstimate | null;
+  /** Architecture décidée avant les machines (absente des anciens appels : pas de bloc « Votre configuration »). */
+  architecture?: ArchitecturePlanData | null;
+  /** Ce qui a été supposé faute de réponse (hypotheses.ts) ; vide quand tout est répondu. */
+  hypotheses?: Hypothese[] | null;
 }
 
 interface ThermoMatchResultsProps {
@@ -63,25 +79,13 @@ interface ThermoMatchResultsProps {
   onSelectResult: (result: any) => void;
   onRetry: () => void;
   summaryContext?: SummaryContext | null;
+  /** Bloc « Affiner » : seulement dans le parcours, pas sur un lien partagé (lecture seule). */
+  affinage?: AffinageProps;
 }
 
-const C = {
-  ink: "#0A1419",
-  panel: "#10222D",
-  cream: "#F4EFE7",
-  paper: "#FBF8F3",
-  orange: "#E54B17",
-  orangeText: "#C23F12",
-  /** Vert des montants LogisVert (lisible sur le fond papier). */
-  green: "#1A8F4E",
-  mute: "rgba(244,239,231,0.66)",
-  faint: "rgba(244,239,231,0.42)",
-  /** Petit texte sur l'encre, encore lisible (près de 6:1) : bloc « Par grand froid ». */
-  dim: "rgba(244,239,231,0.58)",
-  line: "rgba(244,239,231,0.12)",
-  inkMute: "rgba(10,20,25,0.58)",
-  inkLine: "rgba(10,20,25,0.1)",
-};
+/* Thème clair de l'écran (palette.ts). `inkMute` et `inkLine` restent nommés ainsi : ils portent
+   le même rôle qu'avant à l'intérieur des cartes (texte secondaire, filets). */
+const C = { ...R, inkMute: R.dim, inkLine: R.hair };
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
 const fr = (n: number, d = 0) => n.toLocaleString("fr-CA", { minimumFractionDigits: d, maximumFractionDigits: d });
@@ -105,6 +109,16 @@ type Card = {
   brand: string;
   series: string;
   outdoor: string;
+  /** Unité intérieure certifiée avec l'unité extérieure (liste LogisVert d'Hydro-Québec) ; null pour une multizone ou si inconnue. */
+  indoor: string | null;
+  /** Multizone : Hydro-Québec certifie la combinaison « appareils sans conduits » sans nommer de tête. */
+  multiIndoor: boolean;
+  /** Numéro AHRI de la combinaison certifiée. */
+  ahri: string | null;
+  /** Nombre de têtes publié par le fabricant pour une multizone (null : non publié, jamais deviné). */
+  maxHeads: number | null;
+  /** Architecture retenue par le moteur (central, central-hybrid, multi-zone, multi-single, single-zone), si connue. */
+  kind: string | null;
   img: string;
   ownImage: boolean;
   coldClimate: boolean;
@@ -115,6 +129,14 @@ type Card = {
   cop5: number | null;
   subsidy: number;
   coverage: number | null;
+  /** « Votre maison couverte à −15 °C », ou « Espace principal couvert à −15 °C » pour une murale d'étage. */
+  coverageLabel: string;
+  /** Relève nécessaire à la température de calcul de la région (moteur). */
+  backupNote: string | null;
+  /** Type d'installation : « Centrale gainable », « Multizone, 3 têtes », « Murale × 3 ». */
+  installLabel: string | null;
+  /** Écart de score sous la précision de l'estimation avec une voisine, et le départage en clair. */
+  tie: { withRank: number; decidedBy: string } | null;
   /** Capacité à -15 °C / capacité nominale. */
   retention: number | null;
   /** Température extérieure minimale de chauffage (fabricant), si connue. */
@@ -126,7 +148,6 @@ type Card = {
   categorie: CategorieThermopompe | null;
   reasons: string[];
   warnings: string[];
-  architectureNote: string | null;
   alsoSoldAs: string[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   raw: any;
@@ -146,6 +167,22 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
   const sp = r?.selectedPairing ?? {};
   const h5 = num(p.heatingCapacity5FBtuH?.min);
   const load = num(ctx?.estimatedLoadBtu);
+  // Architecture retenue par le moteur ; anciens résultats : le type du produit et le nombre de zones.
+  const kind: string | null = typeof p.installKind === "string" ? p.installKind : null;
+  const fallback = kind
+    ? kind === "central" || kind === "central-hybrid"
+      ? FALLBACK.central
+      : kind === "multi-zone"
+        ? FALLBACK.multi
+        : FALLBACK.wall
+    : p.systemType === "central"
+      ? FALLBACK.central
+      : ctx?.isMultiZone
+        ? FALLBACK.multi
+        : FALLBACK.wall;
+  const indoorRaw = String(sp.indoorModel ?? p.indoorModel ?? "").trim();
+  // Liste ENERGY STAR : une combinaison multizone n'a pas d'unité intérieure nommée.
+  const multiIndoor = MULTI_INDOOR_RE.test(indoorRaw) || (!indoorRaw && kind === "multi-zone");
   return {
     key: String(p.id ?? i),
     badge: r?.badge ?? (i === 0 ? "Meilleur choix" : "Alternative"),
@@ -153,7 +190,12 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     brand: p.brand ?? "",
     series: p.series ?? "",
     outdoor: p.outdoorModel ?? "",
-    img: p.imageUrl || (p.systemType === "central" ? FALLBACK.central : ctx?.isMultiZone ? FALLBACK.multi : FALLBACK.wall),
+    indoor: indoorRaw && !multiIndoor ? indoorRaw.replace(/\*+/g, "").trim() : null,
+    multiIndoor,
+    ahri: typeof p.ahri === "string" && p.ahri ? p.ahri : null,
+    maxHeads: num(p.maxIndoorUnits),
+    kind,
+    img: p.imageUrl || fallback,
     ownImage: Boolean(p.imageUrl),
     coldClimate: Boolean(p.coldClimate),
     h5,
@@ -162,19 +204,70 @@ function toCard(r: any, i: number, ctx?: SummaryContext | null): Card {
     seer2: num(sp.seer2?.min),
     cop5: num(sp.cop5F?.min),
     subsidy: num(r?.subsidyEstimate) ?? 0,
-    coverage: num(r?.fitRatio) ?? (h5 && load ? h5 / load : null),
+    coverage: num(r?.coverage?.ratio) ?? num(r?.fitRatio) ?? (h5 && load ? h5 / load : null),
+    coverageLabel: typeof r?.coverage?.label === "string" ? r.coverage.label : "Votre maison couverte à −15 °C",
+    backupNote: typeof r?.backupNote === "string" ? r.backupNote : null,
+    installLabel: typeof r?.installLabel === "string" ? r.installLabel : null,
+    tie: r?.tie && typeof r.tie.decidedBy === "string" ? { withRank: Number(r.tie.withRank), decidedBy: r.tie.decidedBy } : null,
     retention: h5 && num(p.nominalBtu) ? h5 / (p.nominalBtu as number) : null,
     minTemp: num(p.minOperatingTempC),
     minTempSource: p.minOperatingTempSource === "secondaire" || p.minOperatingTempSource === "officiel" ? p.minOperatingTempSource : null,
     price: r?.priceRange && num(r.priceRange.min) != null && num(r.priceRange.max) != null ? r.priceRange : null,
     // Toutes les recommandations sont des thermopompes neuves : murale par défaut si le type manque.
-    categorie: categorieDe(p.systemType, ctx?.isMultiZone ? ctx.requestedZones : 1) ?? (ctx?.isMultiZone ? "multizone" : "murale"),
+    categorie: kind ? categorieOfKind(kind) : (categorieDe(p.systemType, ctx?.isMultiZone ? ctx.requestedZones : 1) ?? (ctx?.isMultiZone ? "multizone" : "murale")),
     reasons: r?.clientReasons ?? r?.reasons ?? [],
     warnings: r?.warnings ?? [],
-    architectureNote: r?.architectureNote ?? null,
     alsoSoldAs: p.alsoSoldAs ?? [],
     raw: r,
   };
+}
+
+/**
+ * Le système complet, pas seulement la machine d'extérieur : l'unité dehors et ce qui va dedans, tel que
+ * certifié par Hydro-Québec (liste LogisVert, numéro AHRI). Multizone : la liste certifie la combinaison
+ * « appareils sans conduits » sans nommer de tête ; on le dit plutôt que d'inventer un modèle.
+ */
+function SystemUnits({ card }: { card: Card }) {
+  const inside = card.multiIndoor
+    ? "Têtes de la même marque, au choix selon les pièces"
+    : card.indoor && card.kind === "multi-zone"
+      ? `${card.indoor} (une des têtes certifiées)`
+      : card.indoor;
+  const note = card.multiIndoor
+    ? `Hydro-Québec certifie la combinaison « appareils sans conduits » sans nommer de tête : l’installateur choisit les têtes compatibles de la même gamme. ${
+        card.maxHeads ? `Le fabricant en accepte ${card.maxHeads} au plus sur cette unité.` : "Le nombre de têtes acceptées n’est pas publié : à confirmer à la visite."
+      }`
+    : card.kind === "central-hybrid" && card.indoor
+      ? "Fournaise gardée : l’installateur pose l’unité intérieure compatible (serpentin sur la fournaise ou cabinet) prise dans la liste LogisVert, ce qui garde la subvention."
+      : null;
+  const row = (label: string, value: string) => (
+    <div className="flex items-baseline gap-3">
+      <dt className="w-[64px] shrink-0 text-[10.5px] font-bold uppercase" style={{ letterSpacing: "0.14em", color: C.inkMute }}>
+        {label}
+      </dt>
+      <dd className="min-w-0 text-[14px] font-medium" style={{ color: C.ink, margin: 0, overflowWrap: "anywhere" }}>
+        {value}
+      </dd>
+    </div>
+  );
+  return (
+    <div className="mt-3">
+      <dl className="grid gap-1.5" style={{ margin: 0 }}>
+        {card.outdoor && row("Dehors", card.outdoor)}
+        {inside && row("Dedans", inside)}
+      </dl>
+      {card.ahri && !card.multiIndoor && (
+        <p className="text-[12px]" style={{ color: C.inkMute, margin: "6px 0 0" }}>
+          Combinaison certifiée AHRI n° {card.ahri}
+        </p>
+      )}
+      {note && (
+        <p className="text-[12px] leading-snug" style={{ color: C.inkMute, margin: "6px 0 0" }}>
+          {note}
+        </p>
+      )}
+    </div>
+  );
 }
 
 const valueOf = (c: Card, k: MetricKey): number | null => (k === "subsidy" ? (c.subsidy > 0 ? c.subsidy : null) : c[k]);
@@ -190,18 +283,20 @@ function leadersFor(cards: Card[], k: MetricKey, lower = false): number[] {
 
 /* ------------------------------------------------------------------ */
 
-export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryContext }: ThermoMatchResultsProps) {
+export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryContext, affinage }: ThermoMatchResultsProps) {
   if (!results || results.length === 0) return <Empty onRetry={onRetry} />;
 
   const cards = results.slice(0, 3).map((r, i) => toCard(r, i, summaryContext));
   const leaders = Object.fromEntries(METRICS.map((m) => [m.key, leadersFor(cards, m.key, m.lower)])) as Record<MetricKey, number[]>;
   const top = cards[0];
+  const hypotheses = summaryContext?.hypotheses ?? [];
 
   return (
-    <div className="w-full" style={{ fontFamily: DISPLAY, color: C.cream }}>
+    <div className="w-full" style={{ fontFamily: DISPLAY, color: C.ink }}>
       <ThermometreHero ctx={summaryContext ?? null} machines={cards.map((c) => ({ key: c.key, brand: c.brand, series: c.series, minTemp: c.minTemp, coldClimate: c.coldClimate }))} />
 
-      <div className="mx-auto mt-10 grid max-w-[1320px] grid-cols-1 gap-5 lg:mt-16 lg:grid-cols-[1fr_1.12fr_1fr]">
+      {/* Les cartes tout de suite après le bandeau : c'est ce que le client est venu chercher. */}
+      <div className="mx-auto mt-10 grid max-w-[1320px] grid-cols-1 gap-5 lg:mt-14 lg:grid-cols-[1fr_1.12fr_1fr]">
         {cards.map((c, i) => (
           <ResultCard
             key={c.key}
@@ -214,6 +309,16 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
         ))}
       </div>
 
+      {/* Ce qui a été supposé, et les questions qui le lèvent. Sur un lien partagé : les hypothèses seules. */}
+      {affinage ? (
+        <Affiner {...affinage} hypotheses={hypotheses} />
+      ) : hypotheses.length > 0 ? (
+        <HypothesesSeules hypotheses={hypotheses} />
+      ) : null}
+
+      {/* « Votre configuration » : le détail, une fois les cartes vues. */}
+      {summaryContext?.architecture ? <ArchitecturePlan arch={summaryContext.architecture} /> : null}
+
       {summaryContext?.savings ? <SavingsBand s={summaryContext.savings} /> : null}
       <ExistingUnitCompare choices={cards.map((c) => ({ key: c.key, brand: c.brand, series: c.series, hspf2: c.hspf2 }))} />
       <Distinctions cards={cards} leaders={leaders} />
@@ -222,7 +327,7 @@ export function ThermoMatchResults({ results, onSelectResult, onRetry, summaryCo
       <NextStep top={top} onSelect={() => onSelectResult(top.raw)} />
 
       <div className="mx-auto mt-10 flex max-w-[1320px] flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[14px]">
-        <Link href="/comparer" className="font-semibold underline-offset-4 hover:underline" style={{ color: C.cream }}>
+        <Link href="/comparer" className="font-semibold underline-offset-4 hover:underline" style={{ color: C.ink }}>
           Comparer ces modèles en détail →
         </Link>
         <button type="button" onClick={onRetry} className="transition-colors hover:text-white" style={{ color: C.faint }}>
@@ -261,16 +366,15 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
       ref={ref}
       className={`relative flex flex-col overflow-hidden rounded-[28px] ${order} ${top ? "lg:-my-5" : ""}`}
       style={{
-        background: C.paper,
+        background: C.card,
         color: C.ink,
-        boxShadow: top ? "0 0 0 2px #E54B17, 0 50px 100px -45px rgba(229,75,23,0.65)" : "0 40px 80px -50px rgba(0,0,0,0.75)",
+        border: top ? "none" : `1px solid ${C.line}`,
+        boxShadow: top ? OMBRE_TOP : OMBRE,
       }}
       initial={reduce ? false : { opacity: 0, y: 70 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.1, ease: EASE, delay: 0.35 + i * 0.15 }}
     >
-      {top && !reduce && <span aria-hidden="true" className="tm-sheen" />}
-
       <div className="flex items-start justify-between gap-4 px-6 pt-6 sm:px-7 sm:pt-7">
         <span
           className="rounded-full px-3.5 py-1.5 text-[11.5px] font-bold uppercase"
@@ -289,15 +393,40 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
             <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.inkMute, margin: "6px 0 0" }}>
               Score ThermoMatch
             </p>
+            {/* Écart sous la précision de l'estimation : dit tel quel, le départage est expliqué plus bas. */}
+            {card.tie && (
+              <span className="mt-2 inline-block rounded-full px-2.5 py-1 text-[10.5px] font-bold uppercase" style={{ letterSpacing: "0.12em", background: "rgba(229,75,23,0.1)", color: C.orangeText }}>
+                Ex æquo
+              </span>
+            )}
           </div>
         )}
       </div>
 
       <div className="px-6 pt-5 sm:px-7">
         <h3 style={{ fontSize: top ? 34 : 30, fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, margin: 0 }}>{card.brand}</h3>
-        <p className="text-[14px] font-medium" style={{ color: C.inkMute, margin: "8px 0 0" }}>
-          {[card.series && `Série ${card.series}`, card.outdoor].filter(Boolean).join(" · ")}
-        </p>
+        {card.series && (
+          <p className="text-[14px] font-medium" style={{ color: C.inkMute, margin: "8px 0 0" }}>
+            Série {card.series}
+          </p>
+        )}
+      </div>
+
+      {/* L'information vedette, juste sous le nom : jusqu'à quel froid la machine chauffe (voir GrandFroid). */}
+      <GrandFroid card={card} />
+
+      <div className="px-6 pt-5 sm:px-7">
+        <SystemUnits card={card} />
+        {card.installLabel && (
+          <p className="mt-3 inline-flex rounded-full px-3 py-1 text-[12px] font-semibold" style={{ border: `1px solid ${C.inkLine}`, color: C.ink, margin: "12px 0 0" }}>
+            {card.installLabel}
+          </p>
+        )}
+        {card.tie && (
+          <p className="text-[12.5px] leading-snug" style={{ color: C.inkMute, margin: "10px 0 0" }}>
+            {card.tie.decidedBy}
+          </p>
+        )}
         {tags.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
             {tags.map((t) => (
@@ -309,33 +438,27 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
         )}
       </div>
 
-      {/* Par grand froid : jusqu'où la machine chauffe, en très gros (voir GrandFroid). */}
-      <GrandFroid card={card} play={inView} i={i} />
-
       {/* Scène de l'appareil */}
-      <div className="relative mx-6 mt-5 h-[170px] overflow-hidden rounded-[20px] sm:mx-7 sm:h-[190px]" style={{ background: card.ownImage ? "#fff" : C.ink }}>
+      <div data-scene="" className="relative mx-6 mt-5 h-[170px] overflow-hidden rounded-[20px] sm:mx-7 sm:h-[190px]" style={{ background: card.ownImage ? C.card : C.inset, border: `1px solid ${C.hair}` }}>
         {card.ownImage ? (
           <div className="tm-float absolute inset-0" style={{ animationDelay: `${i * -2}s` }}>
             <Image src={card.img} alt={`${card.brand} ${card.outdoor}`} fill sizes="(min-width: 1024px) 380px, 90vw" style={{ objectFit: "contain", padding: 18 }} />
           </div>
         ) : (
-          /* Pas de photo officielle : on n'affiche pas l'appareil d'une autre marque. */
+          /* Pas de photo du fabricant : ni l'appareil d'une autre marque, ni promesse de photo ; le nom de la marque, décoratif (déjà dans le titre). */
           <>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center" style={{ color: C.cream }}>
+            <div aria-hidden="true" className="absolute inset-0 flex flex-col items-center justify-center text-center" style={{ color: C.ink }}>
               <span style={{ fontSize: 42, fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 1 }}>{card.brand}</span>
-              <span className="text-[11px] font-semibold uppercase" style={{ letterSpacing: "0.18em", color: C.faint, marginTop: 10 }}>
-                Photo officielle à venir
-              </span>
-              <span aria-hidden="true" className="mt-4 flex gap-2">
+              <span className="mt-4 flex gap-2">
                 {[0, 1, 2].map((d) => (
-                  <span key={d} className="h-[5px] w-[5px] rounded-full" style={{ background: d === i ? C.orange : "rgba(244,239,231,0.3)" }} />
+                  <span key={d} className="h-[5px] w-[5px] rounded-full" style={{ background: d === i ? C.orange : C.line }} />
                 ))}
               </span>
             </div>
           </>
         )}
         {card.coldClimate && (
-          <span className="absolute left-3 top-3 rounded-full px-2.5 py-1 text-[10.5px] font-bold uppercase" style={{ letterSpacing: "0.12em", background: C.ink, color: C.cream }}>
+          <span className="absolute left-3 top-3 rounded-full px-2.5 py-1 text-[10.5px] font-bold uppercase" style={{ letterSpacing: "0.12em", background: "rgba(255,255,255,0.94)", color: C.ink, border: `1px solid ${C.line}` }}>
             Climat froid
           </span>
         )}
@@ -345,7 +468,7 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
       {cov != null && (
         <div className="px-6 pt-5 sm:px-7">
           <div className="flex items-baseline justify-between text-[13px]">
-            <span className="font-semibold">Votre maison couverte à −15 °C</span>
+            <span className="font-semibold">{card.coverageLabel}</span>
             <span className="font-semibold tabular-nums">
               <CountUp value={cov} play={inView} /> %
             </span>
@@ -353,7 +476,7 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
           <div className="relative mt-2 h-2 rounded-full" style={{ background: C.inkLine }}>
             <motion.div
               className="h-full origin-left rounded-full"
-              style={{ width: `${Math.min(cov, 120) / 1.2}%`, background: top ? C.orange : "rgba(10,20,25,0.55)" }}
+              style={{ width: `${Math.min(cov, 120) / 1.2}%`, background: top ? C.orange : "rgba(12,24,33,0.55)" }}
               initial={{ scaleX: 0 }}
               animate={inView ? { scaleX: 1 } : undefined}
               transition={{ duration: 1.3, ease: EASE, delay: 0.6 + i * 0.1 }}
@@ -361,8 +484,14 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
             <span aria-hidden="true" className="absolute top-[-4px] h-4 w-px" style={{ left: `${100 / 1.2}%`, background: C.ink }} />
           </div>
           <p className="text-[11.5px]" style={{ color: C.inkMute, margin: "6px 0 0" }}>
-            {cov >= 100 ? "Couvre toute la charge estimée, même au plus froid." : "Le chauffage d’appoint complète lors des grands froids."}
+            {cov >= 100 ? "Couvre toute la charge estimée à −15 °C." : "Le chauffage d’appoint complète lors des grands froids."}
           </p>
+          {/* Relève à la température de calcul de la région (moteur) : ce que la fournaise ou les plinthes doivent fournir. */}
+          {card.backupNote && (
+            <p className="text-[11.5px] leading-snug" style={{ color: C.ink, margin: "4px 0 0" }}>
+              {card.backupNote}
+            </p>
+          )}
         </div>
       )}
 
@@ -396,11 +525,12 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
         })}
       </dl>
 
-      {/* Prix approximatif : fourchette installée du marché québécois (grille de la page /prix). */}
+      {/* Ordre de grandeur installé du marché québécois (grille de la page /prix), jamais un prix de vente. Avec une
+          architecture, il est donné une fois dans « Votre configuration » ; ici seulement s'il varie d'une carte à l'autre. */}
       {card.price && (
         <div className="mx-6 mt-4 rounded-[18px] px-4 py-3.5 sm:mx-7" style={{ border: `1px solid ${C.inkLine}` }}>
           <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.14em", color: C.inkMute, margin: 0 }}>
-            Prix approximatif installé
+            Ordre de grandeur installé
           </p>
           <p className="tabular-nums" style={{ fontSize: 22, fontWeight: 600, letterSpacing: "-0.03em", margin: "4px 0 0" }}>
             {money(card.price.min)} – {money(card.price.max)}
@@ -414,7 +544,7 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
           {/* Conformité : garantie légale de bon fonctionnement, sous le prix. */}
           {card.categorie && <MentionGarantieLegale cible={card.categorie} className="text-[12px] font-semibold" style={{ color: C.ink, margin: "6px 0 0" }} />}
           <p className="text-[11.5px] leading-snug" style={{ color: C.inkMute, margin: "6px 0 0" }}>
-            Fourchette publiée au Québec pour ce type ({card.price.matchLabel}, {card.price.tierLabel}
+            {ORDRE_DE_GRANDEUR_LABEL} ({card.price.matchLabel}, {card.price.tierLabel}
             {card.price.basis === "derive" ? ", case interpolée" : ""}), avant subvention. Le prix exact vient de la soumission.
           </p>
         </div>
@@ -447,13 +577,8 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
         </div>
       )}
 
-      {(card.warnings.length > 0 || card.architectureNote) && (
+      {card.warnings.length > 0 && (
         <div className="mx-6 mt-4 space-y-2 sm:mx-7">
-          {card.architectureNote && (
-            <p className="rounded-xl px-3.5 py-2.5 text-[12.5px] leading-snug" style={{ background: "rgba(229,75,23,0.08)", color: "#8a3a17", margin: 0 }}>
-              {card.architectureNote}
-            </p>
-          )}
           {card.warnings.map((w) => (
             <p key={w} className="rounded-xl px-3.5 py-2.5 text-[12.5px] leading-snug" style={{ background: "#FFF6E0", color: "#7a5a12", margin: 0 }}>
               {w}
@@ -491,137 +616,141 @@ function ResultCard({ card, i, tags, leads, onSelect }: { card: Card; i: number;
   );
 }
 
-/* Par grand froid : ce que les acheteurs regardent en premier, en très gros.
-   - Température publiée : « Chauffe jusqu'à −XX °C », avec sa source.
-   - Sinon, certifiée ENERGY STAR climat froid : « Certifiée grand froid », puis « chauffe encore à
-     −15 °C » et la puissance livrée à −15 °C ; jamais de chiffre de limite (−15 °C est le point de
-     mesure de la certification, pas sa limite).
-   - Sinon : la puissance à −15 °C, comme avant, sans titre.
-   Même règle que le thermomètre du haut (froidDe). Valeurs en texte statique, sans compteur :
-   le HTML serveur porte le chiffre final. */
-function GrandFroid({ card, play, i }: { card: Card; play: boolean; i: number }) {
-  const froid = froidDe(card);
-  const t = card.minTemp;
+/* Par grand froid : l'information vedette de la carte, juste sous le nom du modèle. Une seule idée :
+   jusqu'à quel froid la machine chauffe.
+
+   Dessin : une plaque signalétique. Un aplat crème qui traverse la carte d'un bord à l'autre, à angles
+   vifs, tenu par un filet en haut et un filet en bas — ni panneau arrondi flottant, ni ombre, ni jauge.
+   Dedans, la grammaire d'un tableau de spécifications : étiquette à gauche, valeur alignée à droite,
+   filets d'un cheveu entre les lignes. La première ligne porte la température, et sa valeur est le plus
+   gros caractère de la carte.
+
+   Les quatre cas, et jamais un cinquième :
+   - température publiée par le fabricant : « Chauffe jusqu'à −XX °C », d'un bloc (espace insécable et
+     nowrap) ; la mention dit si elle vient du fabricant ou d'un distributeur qui reproduit sa fiche ;
+   - certifiée ENERGY STAR climat froid, sans température publiée : « Certifiée grand froid », puis
+     « chauffe encore à −15 °C » ; jamais de chiffre de limite (−15 °C est le point de mesure de la
+     certification, pas sa limite), et le pied dit que le minimum n'est pas publié ;
+   - rien de publié : « Non publiée », écrit tel quel, jamais une valeur devinée.
+   Même règle que le thermomètre du haut (froidDe). Valeurs en texte statique, sans compteur : le HTML
+   du serveur porte le chiffre final. */
+
+/** Aplat de la plaque : le crème de la marque, assombri juste assez pour se détacher du blanc de la carte. */
+const PLAQUE = "#F1EDE5";
+/** Filet intérieur de la plaque (un cheveu, plus sombre que sur blanc pour rester visible sur l'aplat). */
+const PLAQUE_FILET = "rgba(12,24,33,0.14)";
+/** Étiquettes de la plaque : mêmes capitales espacées que le reste de la carte (Dehors, À −15 °C…). */
+const ETIQUETTE = { letterSpacing: "0.14em", color: C.faint } as const;
+/** L'unité après un grand nombre : petite, en haut, détachée du chiffre (jamais collée au « 0 »). */
+const UNITE = { fontSize: "0.34em", fontWeight: 500, letterSpacing: "0.01em", verticalAlign: "0.55em", marginLeft: "0.16em" } as const;
+
+function LignePlaque({ etiquette, children, filet = true }: { etiquette: string; children: ReactNode; filet?: boolean }) {
   return (
-    <div data-grand-froid={froid} className="mx-6 mt-5 rounded-[18px] px-4 pb-4 pt-3.5 sm:mx-7 sm:px-5" style={{ background: C.ink, color: C.cream }}>
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <p className="text-[10.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.dim, margin: 0 }}>
-            Par grand froid
-          </p>
-          {(froid === "mesuree" || froid === "aucune") && (
-            <p style={{ fontSize: 24, fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.05, margin: "8px 0 0" }}>
-              {card.h5 != null ? (
-                <>
-                  {fr(card.h5)} BTU/h
-                  <span className="block text-[13px] font-medium" style={{ color: C.mute, letterSpacing: "0", marginTop: 5 }}>
-                    livrés à −15 °C
-                  </span>
-                </>
-              ) : (
-                "Données du fabricant"
-              )}
-            </p>
-          )}
-        </div>
-        {card.retention != null && (
-          <div className="shrink-0 text-right">
-            <p className="tabular-nums" style={{ fontSize: 24, fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, color: C.orange, margin: 0 }}>
-              {/* Plafonné à 120 %, comme dans les raisons du moteur (explain.ts), pour que la carte ne se contredise pas. */}
-              <CountUp value={Math.round(Math.min(card.retention, 1.2) * 100)} play={play} /> %
-            </p>
-            <p className="text-[10.5px] leading-tight" style={{ color: C.dim, margin: "4px 0 0" }}>
-              de sa puissance nominale
-              <br />à −15 °C
-            </p>
-          </div>
-        )}
-      </div>
-
-      {froid === "publiee" && t != null && (
-        <>
-          <p className="text-[16px] font-semibold" style={{ letterSpacing: "-0.01em", margin: "14px 0 0" }}>
-            Chauffe jusqu’à
-          </p>
-          <p className="text-[56px] tabular-nums sm:text-[64px]" style={{ fontWeight: 600, letterSpacing: "-0.055em", lineHeight: 0.92, margin: "2px 0 0" }}>
-            {`${t < 0 ? "−" : t > 0 ? "+" : ""}${fr(Math.abs(t), Number.isInteger(t) ? 0 : 1)}`}
-            <span style={{ fontSize: "0.42em", fontWeight: 500, letterSpacing: "-0.01em" }}>{" °C"}</span>
-          </p>
-          <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "8px 0 0" }}>
-            {minTempMention(card.minTempSource)}
-          </p>
-        </>
-      )}
-
-      {froid === "certifiee" && (
-        <>
-          <p className="text-[36px] sm:text-[40px]" style={{ fontWeight: 600, letterSpacing: "-0.045em", lineHeight: 0.98, margin: "14px 0 0" }}>
-            Certifiée grand froid
-          </p>
-          <p className="text-[15px] font-semibold" style={{ margin: "12px 0 0" }}>
-            Chauffe encore à −15 °C
-          </p>
-          <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: "3px 0 0" }}>
-            Certification ENERGY STAR climat froid
-            {card.h5 != null && (
-              <>
-                <br />
-                <span className="tabular-nums">{fr(card.h5)}</span> BTU/h livrés à −15 °C{card.h5Certified ? "" : " (estimé)"}
-              </>
-            )}
-          </p>
-        </>
-      )}
-
-      <ColdGauge mode={froid} value={t} play={play} delay={0.5 + i * 0.1} />
-      {froid !== "publiee" && (
-        <p className="text-[11px] leading-snug" style={{ color: C.dim, margin: "8px 0 0" }}>
-          Température minimale de fonctionnement : sur la fiche du fabricant.
-        </p>
-      )}
+    <div className="flex items-baseline justify-between gap-4" style={{ padding: "9px 0", borderBottom: filet ? `1px solid ${PLAQUE_FILET}` : "none" }}>
+      <span className="text-[10.5px] font-semibold uppercase" style={{ ...ETIQUETTE, whiteSpace: "nowrap" }}>
+        {etiquette}
+      </span>{" "}
+      <span className="text-right text-[13px] font-semibold tabular-nums" style={{ color: C.ink }}>
+        {children}
+      </span>
     </div>
   );
 }
 
-/* Jauge 0 → −30 °C (plus bas si la machine chauffe plus froid), cohérente avec le titre du bloc :
-   - publiée : barre orange jusqu'à la température du fabricant ;
-   - certifiée : barre crème jusqu'au point de mesure (−15 °C), prolongée d'un fondu : la limite n'est
-     pas publiée, la barre ne s'arrête donc pas net ;
-   - mesurée : barre crème jusqu'à −15 °C, là où la puissance est mesurée ;
-   - aucune donnée : l'échelle seule. */
-function ColdGauge({ mode, value, play, delay }: { mode: Froid; value: number | null; play: boolean; delay: number }) {
-  const bas = Math.min(-30, Math.floor(Math.min(0, value ?? 0) / 10) * 10);
-  const reach = mode === "publiee" && value != null ? value : mode === "aucune" ? 0 : CERTIF_C;
-  const pct = Math.min(1, Math.max(0, reach / bas));
-  const ticks = Array.from({ length: -bas / 10 + 1 }, (_, k) => -10 * k);
+function GrandFroid({ card }: { card: Card }) {
+  const froid = froidDe(card);
+  const t = card.minTemp;
+  // « −30 °C » d'un bloc : espace insécable et nowrap, jamais coupé en fin de ligne sur téléphone.
+  const chiffre = t == null ? "" : `${t < 0 ? "−" : t > 0 ? "+" : ""}${fr(Math.abs(t), Number.isInteger(t) ? 0 : 1)}`;
+
   return (
-    <div className="mt-3.5">
-      <div className="relative h-[6px] rounded-full" style={{ background: "rgba(244,239,231,0.14)" }}>
-        {mode === "certifiee" && (
-          <motion.div
-            className="absolute inset-y-0"
-            style={{ left: `${pct * 100}%`, width: "26%", marginLeft: -3, borderRadius: "0 999px 999px 0", background: "linear-gradient(90deg, rgba(244,239,231,0.6), rgba(244,239,231,0))" }}
-            initial={{ opacity: 0 }}
-            animate={play ? { opacity: 1 } : undefined}
-            transition={{ duration: 0.9, ease: EASE, delay: delay + 1.1 }}
-          />
+    <div
+      data-grand-froid={froid}
+      /* Pleine largeur de la carte : la plaque traverse, elle ne flotte pas dedans. */
+      className="-mx-6 mt-5 px-6 sm:-mx-7 sm:px-7"
+      style={{ background: PLAQUE, color: C.ink, borderTop: `1px solid ${C.ink}`, borderBottom: `1px solid ${C.ink}`, paddingTop: 26, paddingBottom: 16 }}
+    >
+      {/* Ligne vedette : l'étiquette tient la marge gauche, la valeur tombe à droite. */}
+      <div className="flex items-baseline justify-between gap-3" style={{ paddingBottom: 12, borderBottom: `1px solid ${PLAQUE_FILET}` }}>
+        <span className="text-[10.5px] font-semibold uppercase" style={{ ...ETIQUETTE, whiteSpace: "nowrap" }}>
+          {froid === "publiee" ? "Chauffe jusqu’à" : froid === "certifiee" ? "Grand froid" : "Température minimale"}
+        </span>
+
+        {froid === "publiee" && t != null && (
+          <span
+            className="tabular-nums"
+            style={{ fontSize: "clamp(50px, 12.5vw, 64px)", fontWeight: 600, letterSpacing: "-0.058em", lineHeight: 0.8, color: C.ink, whiteSpace: "nowrap" }}
+          >
+            {chiffre}
+            <span style={UNITE}>{"°C"}</span>
+          </span>
         )}
-        {pct > 0 && (
-          <motion.div
-            className="absolute inset-y-0 left-0 origin-left rounded-full"
-            style={{ width: `${pct * 100}%`, background: mode === "publiee" ? C.orange : "rgba(244,239,231,0.6)" }}
-            initial={{ scaleX: 0 }}
-            animate={play ? { scaleX: 1 } : undefined}
-            transition={{ duration: 1.4, ease: EASE, delay }}
-          />
+        {froid === "certifiee" && (
+          <span style={{ fontSize: "clamp(25px, 6vw, 31px)", fontWeight: 600, letterSpacing: "-0.04em", lineHeight: 1, color: C.ink, textAlign: "right" }}>
+            {/* Deux lignes à l'écran, mais un seul texte pour la copie et les lecteurs d'écran. */}
+            Certifiée{" "}
+            <span style={{ display: "block" }}>grand froid</span>
+          </span>
+        )}
+        {(froid === "mesuree" || froid === "aucune") && (
+          <span style={{ fontSize: "clamp(21px, 5.2vw, 26px)", fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.1, color: C.ink, textAlign: "right" }}>
+            Non publiée
+          </span>
         )}
       </div>
-      <div className="mt-1.5 flex justify-between text-[10px] tabular-nums" style={{ color: C.dim }}>
-        {ticks.map((t) => (
-          <span key={t}>{t === 0 ? "0 °C" : temp(t)}</span>
-        ))}
+
+      {/* Ce que la machine livre vraiment au froid : la certification mesure à −15 °C, elle ne borne pas. */}
+      {froid === "certifiee" && <LignePlaque etiquette="Chauffe encore à">{"−15 °C"}</LignePlaque>}
+      {card.h5 != null && (
+        <LignePlaque etiquette={"Chaleur à −15 °C"}>
+          {fr(card.h5)} BTU/h{card.h5Certified ? "" : " (estimé)"}
+        </LignePlaque>
+      )}
+      {/* Plafonné à 120 %, comme dans les raisons du moteur (explain.ts), pour que la carte ne se contredise pas. */}
+      {card.retention != null && (
+        <LignePlaque etiquette="Maintien de puissance" filet={false}>
+          {Math.round(Math.min(card.retention, 1.2) * 100)} %
+        </LignePlaque>
+      )}
+
+      {/* Pied de plaque : d'où vient la température, en toutes lettres et une seule fois. */}
+      <div className="grid grid-cols-[58px_1fr] gap-3" style={{ borderTop: `1px solid ${PLAQUE_FILET}`, paddingTop: 10, marginTop: 2 }}>
+        <span className="text-[10.5px] font-semibold uppercase" style={{ ...ETIQUETTE, lineHeight: 1.5 }}>
+          Source
+        </span>
+        <p className="text-[12px] leading-snug" style={{ color: C.dim, margin: 0 }}>
+          {froid === "publiee"
+            ? minTempMention(card.minTempSource)
+            : froid === "certifiee"
+              ? "Certification ENERGY STAR climat froid : −15 °C est son point de mesure, pas sa limite. Température minimale non publiée par le fabricant."
+              : "Le fabricant ne publie pas jusqu’à quel froid cette machine chauffe, et elle n’a pas la certification ENERGY STAR climat froid. Nous l’écrivons plutôt que d’avancer un chiffre."}
+        </p>
       </div>
     </div>
+  );
+}
+
+/* Lien partagé (lecture seule) : pas de questions à poser, mais les hypothèses restent dites. */
+function HypothesesSeules({ hypotheses }: { hypotheses: Hypothese[] }) {
+  return (
+    <section className="mx-auto mt-10 w-full max-w-[1320px] rounded-[28px] px-5 py-7 sm:px-8" style={{ background: C.card, border: `1px solid ${C.line}`, boxShadow: OMBRE }}>
+      <p className="text-[11.5px] font-semibold uppercase" style={{ letterSpacing: "0.16em", color: C.faint, margin: 0 }}>
+        Ce que nous avons supposé
+      </p>
+      <ul className="grid gap-3 md:grid-cols-2" style={{ listStyle: "none", padding: 0, margin: "16px 0 0" }}>
+        {hypotheses.map((h) => (
+          <li key={h.id} className="grid grid-cols-[10px_1fr] gap-3 text-[13.5px] leading-snug" style={{ color: C.mute }}>
+            <span aria-hidden="true" className="mt-[7px] block h-[7px] w-[7px]" style={{ background: C.orange }} />
+            <span>
+              <strong className="block font-semibold" style={{ color: C.ink }}>
+                {h.label}
+              </strong>
+              {h.text}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
@@ -687,19 +816,19 @@ function Distinctions({ cards, leaders }: { cards: Card[]; leaders: Record<Metri
                   const lead = leaders[m.key].includes(ci);
                   return (
                     <div key={c.key} className="grid grid-cols-[88px_1fr_auto] items-center gap-4 sm:grid-cols-[140px_1fr_110px]">
-                      <span className="truncate text-[13.5px] font-medium" style={{ color: lead ? C.cream : C.mute }}>
+                      <span className="truncate text-[13.5px] font-medium" style={{ color: lead ? C.ink : C.mute }}>
                         {c.brand}
                       </span>
                       <div className="h-[8px] overflow-hidden rounded-full" style={{ background: C.line }}>
                         <motion.div
                           className="h-full origin-left rounded-full"
-                          style={{ width: `${v != null && max > 0 ? (Math.abs(v) / max) * 100 : 0}%`, background: lead ? C.orange : "rgba(244,239,231,0.35)" }}
+                          style={{ width: `${v != null && max > 0 ? (Math.abs(v) / max) * 100 : 0}%`, background: lead ? C.orange : "rgba(12,24,33,0.32)" }}
                           initial={{ scaleX: 0 }}
                           animate={inView ? { scaleX: 1 } : undefined}
                           transition={{ duration: 1.2, ease: EASE, delay: 0.12 * ri + 0.08 * ci }}
                         />
                       </div>
-                      <span className="text-right text-[15px] font-semibold tabular-nums" style={{ color: lead ? C.orange : C.cream }}>
+                      <span className="text-right text-[15px] font-semibold tabular-nums" style={{ color: lead ? C.orange : C.ink }}>
                         {v == null ? "N/D" : m.key === "minTemp" ? temp(v) : `${fr(v, m.d)}${m.key === "subsidy" ? " $" : ""}`}
                       </span>
                     </div>
@@ -723,7 +852,7 @@ function HowItWorks({ ctx, kept }: { ctx: SummaryContext; kept: number }) {
   const f = ctx.loadFactors;
   const w = ctx.weights;
   return (
-    <details className="tm-details mx-auto mt-10 max-w-[1320px] rounded-[22px] px-6 py-5 sm:px-8" style={{ border: `1px solid ${C.line}`, background: "rgba(244,239,231,0.03)" }}>
+    <details className="tm-details mx-auto mt-10 max-w-[1320px] rounded-[22px] px-6 py-5 sm:px-8" style={{ border: `1px solid ${C.line}`, background: C.card, boxShadow: OMBRE }}>
       <summary className="flex items-center justify-between gap-4 text-[15px] font-semibold">
         Comment ThermoMatch a calculé
         <span className="tm-plus flex h-8 w-8 items-center justify-center rounded-full text-[18px]" style={{ border: `1px solid ${C.line}` }} aria-hidden="true">
@@ -744,7 +873,7 @@ function HowItWorks({ ctx, kept }: { ctx: SummaryContext; kept: number }) {
               <li>Isolation : × {f.insulation}</li>
               <li>Fenestration : × {f.windows}</li>
               <li>Sous-sol : × {f.basement}</li>
-              <li className="pt-1 font-semibold" style={{ color: C.cream }}>
+              <li className="pt-1 font-semibold" style={{ color: C.ink }}>
                 = {fr(Math.round(ctx.estimatedLoadBtu))} BTU/h à −15 °C{typeof ctx.uncertaintyPct === "number" ? ` (±${ctx.uncertaintyPct} %)` : ""}
               </li>
             </ul>
@@ -771,7 +900,7 @@ function HowItWorks({ ctx, kept }: { ctx: SummaryContext; kept: number }) {
                   <span className="h-1.5 overflow-hidden rounded-full" style={{ background: C.line }}>
                     <span className="block h-full rounded-full" style={{ width: `${Math.round(Number(v))}%`, background: C.orange }} />
                   </span>
-                  <span className="text-right tabular-nums" style={{ color: C.cream }}>
+                  <span className="text-right tabular-nums" style={{ color: C.ink }}>
                     {Math.round(Number(v))}
                   </span>
                 </li>
@@ -795,6 +924,14 @@ function HowItWorks({ ctx, kept }: { ctx: SummaryContext; kept: number }) {
           ))}
         </div>
       )}
+      {/* Méthode complète : architecture, critères et poids, départage des ex æquo, sources. */}
+      <p className="text-[12.5px] leading-relaxed" style={{ color: C.faint, margin: "20px 0 0" }}>
+        Critères, poids, départage des ex æquo et sources :{" "}
+        <Link href="/methode#thermomatch" className="underline underline-offset-4" style={{ color: C.ink }}>
+          notre méthode
+        </Link>
+        .
+      </p>
     </details>
   );
 }
@@ -891,7 +1028,7 @@ function MobileBar({ top, onSelect }: { top: Card; onSelect: () => void }) {
       {show && (
         <motion.div
           className="fixed inset-x-3 bottom-3 z-40 flex items-center justify-between gap-3 rounded-full py-2 pl-5 pr-2 lg:hidden"
-          style={{ background: "rgba(10,20,25,0.92)", border: `1px solid ${C.line}`, backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", color: C.cream, fontFamily: DISPLAY }}
+          style={{ background: "rgba(255,255,255,0.94)", border: `1px solid ${C.line}`, boxShadow: OMBRE, backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", color: C.ink, fontFamily: DISPLAY }}
           initial={{ y: 90, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 90, opacity: 0 }}
@@ -918,7 +1055,7 @@ function MobileBar({ top, onSelect }: { top: Card; onSelect: () => void }) {
 
 function Empty({ onRetry }: { onRetry: () => void }) {
   return (
-    <div className="mx-auto max-w-[640px] py-16 text-center" style={{ fontFamily: DISPLAY, color: C.cream }}>
+    <div className="mx-auto max-w-[640px] py-16 text-center" style={{ fontFamily: DISPLAY, color: C.ink }}>
       <h3 style={{ fontSize: "clamp(28px, 3.4vw, 44px)", fontWeight: 600, letterSpacing: "-0.035em", lineHeight: 1.05, margin: 0 }}>
         Aucun modèle ne respecte tous vos critères.
       </h3>
@@ -926,7 +1063,7 @@ function Empty({ onRetry }: { onRetry: () => void }) {
         Nous préférons ne rien proposer plutôt qu’un appareil inadapté. Un conseiller peut regarder votre maison avec vous.
       </p>
       <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-        <button type="button" onClick={onRetry} className="rounded-full px-6 py-3 font-semibold" style={{ background: C.cream, color: C.ink }}>
+        <button type="button" onClick={onRetry} className="rounded-full px-6 py-3 font-semibold text-white" style={{ background: C.ink }}>
           Refaire le test
         </button>
         <Link href="/soumission" className="rounded-full px-6 py-3 font-semibold text-white" style={{ background: C.orange }}>

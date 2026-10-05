@@ -1,6 +1,41 @@
 [
   {
     "brand": "carrier",
+    "pattern": "^(37MAHA)",
+    "series": "/images/products/official/carrier-37maha-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^(37MARA)",
+    "series": "/images/products/official/carrier-37mara-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^(37MGHA)",
+    "series": "/images/products/official/carrier-37mgha-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^(37MHRAQ)",
+    "series": "/images/products/official/carrier-37mhraq-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^(37MPRA)",
+    "series": "/images/products/official/carrier-37mpra-officiel.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^(38MBRB)",
+    "series": "/images/products/official/carrier-38mbrb-48k.webp"
+  },
+  {
+    "brand": "carrier",
+    "pattern": "^(38MBRC)",
+    "series": "/images/products/official/carrier-38mbrc-36k.webp"
+  },
+  {
+    "brand": "carrier",
     "pattern": "^25VNA0",
     "series": "/images/products/official/carrier-25vna0-officiel.webp"
   },

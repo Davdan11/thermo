@@ -106,7 +106,7 @@ export function TypeTriptych({ types }: { types: TypePanel[] }) {
                                     ·
                                   </span>
                                   <span className="font-semibold">
-                                    <CountUp value={t.count} play={seen} /> modèles au catalogue
+                                    <CountUp value={t.count} play={seen} /> fiches au catalogue
                                   </span>
                                 </>
                               )}

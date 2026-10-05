@@ -69,6 +69,7 @@ export function pairingShape(p: Pick<PairingInfo, "indoorDescription"> | null, s
 /** Unité extérieure multizone : une classe ou une liste de têtes parmi ses jumelages, ou « Multi » dans son nom. */
 export function isMultiZone(machine: Pick<MachineInfo, "name" | "outdoorModel" | "systemType">, pairings: Array<Pick<PairingInfo, "indoorDescription">>): boolean {
   if (machine.systemType === "central-ducted") return false;
+  if (machine.systemType === "multi-zone") return true;
   if (pairings.some((p) => ["classe", "tetes"].includes(pairingShape(p, machine.systemType).kind))) return true;
   return /multi/i.test(machine.name) || /multi/i.test(machine.outdoorModel);
 }

@@ -4,7 +4,7 @@ seoTitle: "Thermopompe dans un duplex ou un triplex"
 description: "Compteurs séparés, façades contraintes, LogisVert par logement : dans un plex, le système se choisit autrement qu'en maison. Comment décider, avec les chiffres."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
-updatedAt: "2026-09-11"
+updatedAt: "2026-09-17"
 coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "choisir"
 keywords: ["thermopompe duplex", "thermopompe triplex", "thermopompe plex", "thermopompe logement locatif", "thermopompe immeuble montréal"]
@@ -13,7 +13,9 @@ faq:
   - q: "Un seul multizone peut-il chauffer les trois logements d'un triplex?"
     a: "Techniquement oui, mais presque jamais souhaitable. Un multizone partage un compresseur : la consommation devient commune alors que chaque logement a son compteur, et une panne touche tout l'immeuble. Un système par logement, avec sa propre unité extérieure, respecte les compteurs et isole les pannes."
   - q: "Qui reçoit la subvention LogisVert dans un plex?"
-    a: "Le programme s'adresse au client d'Hydro-Québec du logement où l'appareil est installé, selon des conditions d'admissibilité qui varient selon que le propriétaire occupe ou loue. Les règles précises et les montants dépendent du jumelage installé. Vérifiez les conditions officielles du programme avant l'achat et conservez les numéros d'appariement."
+    a: "Le programme s'adresse au client d'Hydro-Québec du logement où l'appareil est installé, selon des conditions d'admissibilité qui varient selon que le propriétaire occupe ou loue. Les montants dépendent du jumelage installé et de sa capacité certifiée à -8 °C. Vérifiez les conditions officielles du programme avant l'achat et conservez les numéros d'appariement."
+  - q: "Qu'est-ce que la bonification Multilogements de LogisVert?"
+    a: "Depuis les installations du 15 juin 2026, une murale certifiée ENERGY STAR climat froid installée dans un multilogement admissible reçoit 100 $ de plus par 1 000 BTU/h à -8 °C, soit 220 $ au total. L'immeuble doit être situé dans une zone de précarité énergétique désignée par Hydro-Québec, construit en 1995 ou avant, chauffé à l'électricité, avoir un compteur par logement et des locataires titulaires de l'abonnement. Les condos sont exclus."
   - q: "Où mettre les unités extérieures quand la façade est sur la rue?"
     a: "En cour arrière ou sur les murs latéraux quand ils existent, empilées sur supports muraux si l'espace au sol manque. Les règlements d'arrondissement sur la visibilité depuis la rue et les distances aux limites varient : il faut vérifier avant de choisir l'emplacement, et prévoir le passage des conduites entre les étages."
   - q: "Combien coûte une murale par logement?"
@@ -40,7 +42,7 @@ La règle pratique des installateurs est donc : un système par logement, avec s
 
 Un logement de plex est en général plus petit qu'une maison, partage ses planchers et plafonds avec des voisins chauffés, et n'expose souvent que deux façades. Sa charge de chauffage par pied carré est donc plus faible que celle d'une maison isolée de même surface, et plus élevée que celle d'un condo au centre d'un immeuble récent.
 
-Les calibres 9 000 et 12 000 BTU dominent. Sur la liste officielle LogisVert d'Hydro-Québec, notre catalogue recense 146 machines de 9 000 BTU, dont 137 subventionnées, avec des montants de 250 à 650 dollars, médiane 360 dollars ; et 159 machines de 12 000 BTU, dont 148 subventionnées, avec des montants de 350 à 2 268 dollars, médiane 530 dollars. Pour un grand logement traversant ou un rez-de-chaussée sur cave froide, le 18 000 BTU entre en jeu : 170 machines, 160 subventionnées, de 475 à 3 312 dollars, médiane 1 404 dollars.
+Les calibres 9 000 et 12 000 BTU dominent techniquement, mais un seul des deux donne droit à la subvention. Hydro-Québec exige depuis le 26 novembre 2025 une thermopompe certifiée ENERGY STAR dont l'unité extérieure affiche au moins 12 000 BTU/h de puissance nominale en climatisation : sur la liste en vigueur, il n'existe plus aucune machine de 9 000 BTU admissible. Les murales de 12 000 BTU subventionnées sont au nombre de {{chiffre:lv:wall-single:12000:n}}, de {{chiffre:lv:wall-single:12000:min}} à {{chiffre:lv:wall-single:12000:max}} dollars, médiane {{chiffre:lv:wall-single:12000:med}} dollars. Pour un grand logement traversant ou un rez-de-chaussée sur cave froide, le 18 000 BTU entre en jeu : {{chiffre:lv:wall-single:18000:n}} murales subventionnées, de {{chiffre:lv:wall-single:18000:min}} à {{chiffre:lv:wall-single:18000:max}} dollars, médiane {{chiffre:lv:wall-single:18000:med}} dollars.
 
 Le logement du rez-de-chaussée, au-dessus d'une cave ou d'un vide sanitaire, et celui du dernier étage, sous le toit, ont des charges plus élevées que le logement du milieu. Le [questionnaire ThermoMatch](/trouver-ma-thermopompe) calcule la charge de chaque logement selon son étage, sa surface et son année de construction, et propose des machines dont la capacité certifiée à -15 °C couvre le besoin. Notre guide sur [la capacité à choisir](/guides/btu-quelle-capacite-choisir) explique pourquoi la capacité au froid compte plus que le calibre nominal.
 
@@ -69,6 +71,23 @@ Le propriétaire qui occupe un logement et loue les autres se pose deux question
 Pour son propre logement, il fait le même calcul qu'un propriétaire de maison : économie sur sa facture de chauffage par rapport aux plinthes, confort d'été, subvention LogisVert. Le guide [thermopompe contre plinthes électriques](/guides/thermopompe-vs-plinthes-electriques-economies) détaille ce calcul.
 
 Pour les logements loués, l'économie de chauffage va au locataire qui paie son compteur. L'intérêt du propriétaire est alors la valeur locative et la durabilité du bâtiment. Quant à LogisVert, le programme vise le client d'Hydro-Québec du logement, avec des conditions d'admissibilité qui varient selon la situation ; il faut lire les conditions officielles sur la page [Subventions](/subventions) et dans notre [guide complet LogisVert](/guides/subvention-logisvert-guide-complet) avant l'achat, et conserver les numéros d'appariement de chaque appareil.
+
+## La bonification Multilogements, faite pour les plex
+
+C'est la nouveauté qui change le calcul d'un propriétaire de plex. Depuis les installations du 15 juin 2026, une thermopompe murale certifiée ENERGY STAR et climat froid installée dans un multilogement admissible reçoit 100 $ de plus par 1 000 BTU/h de capacité à -8 °C. Le barème passe ainsi de 120 $ à 220 $ par 1 000 BTU/h, soit près du double du montant courant pour la même machine.
+
+L'admissibilité tient à six conditions, toutes vérifiées par Hydro-Québec :
+
+- l'immeuble se trouve dans une **zone de précarité énergétique** désignée par Hydro-Québec d'après le code postal ;
+- il a été **construit en 1995 ou avant**, ce qui couvre l'essentiel du parc de plex des quartiers anciens ;
+- sa **valeur foncière par logement** se situe sous la médiane de sa région ;
+- son **chauffage principal est électrique**, plinthes comprises ;
+- il compte **un compteur par logement** ;
+- les **locataires sont titulaires de l'abonnement** auprès d'Hydro-Québec.
+
+Deux exclusions à retenir : les condos et les locaux commerciaux n'y ont pas droit, et la bonification Multilogements n'est pas cumulable avec la bonification Mesures multiples, qui ajoute 5 % du montant total quand une demande regroupe au moins deux mesures différentes. Il faut comparer les deux et retenir la plus avantageuse.
+
+Comme la bonification exige une murale climat froid, elle oriente aussi le choix d'appareil : un modèle certifié climat froid coûte souvent un peu plus cher à l'achat, mais il chauffe mieux en janvier et rapporte ici nettement plus. Le [comparateur](/comparer) indique la certification climat froid de chaque jumelage.
 
 ## Ce que ça coûte, en repères
 

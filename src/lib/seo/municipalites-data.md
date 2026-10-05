@@ -95,6 +95,26 @@ Gabarit unique (`src/lib/seo/municipal-content.ts`) : le texte ne change que par
 
 Au-delà d'un seuil, la moins peuplée de la paire perd sa page. Résultat : 1 page retirée (Saint-Célestin, municipalité, trop proche de Saint-Célestin, village : 0,534 et 0,728). Distribution des 971 pages (ressemblance maximale avec l'une des 5 voisines) : texte propre médiane 0,322, 95e centile 0,383, maximum 0,465 ; texte complet médiane 0,589, 95e centile 0,630, maximum 0,680.
 
+## Indexation (contrôle de qualité)
+
+Avoir une page et être indexée sont deux choses différentes. `src/lib/seo/cities-quality.ts` évalue, à chaque démarrage du serveur (puis en mémoire), les 1 024 pages `/thermopompe/[ville]` — 53 villes historiques et 971 municipalités — et n'indexe que celles qui passent tous les critères. Les autres reçoivent « noindex, follow » et sortent du plan du site : elles restent accessibles et liées (MRC, voisines, index).
+
+Critères de valeur locale, page par page (tous requis) :
+
+| Critère | Règle |
+|---|---|
+| `climat` | station de normales à 50 km ou moins publiant degrés-jours et janvier (ville historique : station vérifiée de `cities-data.md`, dont la distance n'est pas toujours mesurée) |
+| `territoire` | région administrative connue et territoire nommé (MRC, agglomération ou territoire hors MRC, avec lien vers sa page quand elle existe) |
+| `recensement` | population et logements occupés de 2021 publiés |
+| `parc` | part des logements construits en 1980 ou avant publiée |
+| `voisines` | au moins 2 pages voisines liées |
+| `texte-propre` | au moins 250 séquences de 5 mots propres à la page (hors gabarit) ; les pages en portent de 342 à 615 |
+| `nom` | aucune répétition du nom (« Montréal (Montréal) ») et titre porté par une seule page |
+
+Ressemblance ensuite, sur **toutes** les paires de pages : texte visible en séquences de 5 mots, confinement de Broder (`|A ∩ B| / |A|`, mesuré dans les deux sens), gabarit de chaque type de page retiré (séquences présentes sur 25 % ou plus des pages du même gabarit : 1 176 pour les villes historiques, 646 pour les municipalités). Une paire est signalée au-delà de **50 % du texte propre** (le critère qui décide) ou de **85 % du texte complet** (garde-fou : le gabarit seul fait déjà jusqu'à 76 % d'une page de ville historique). Dans une paire signalée, la page non prioritaire sort de l'index — ville historique d'abord, puis la plus peuplée.
+
+Résultat (évaluation du 2026-09-15, recalculée à chaque exécution) : **778 pages indexées sur 1 024** (43 villes historiques sur 53, 735 municipalités sur 971). Sorties : 242 pour ressemblance, 2 sans station à 50 km (Matane, La Sarre), 2 sans période de construction publiée. Parmi les villes historiques : Laval (83 % du texte de sa page dans celle de Montréal), Brossard, Saint-Hubert et Boucherville (Longueuil), Saguenay (Jonquière), Boisbriand et Saint-Eustache (Blainville), Mascouche (Repentigny). Une page revient dans l'index dès qu'elle porte assez de texte local distinct : le contrôle est recalculé, jamais écrit à la main. Vérifié par `src/lib/seo/__tests__/cities-quality.test.ts`, qui recalcule toutes les paires indépendamment.
+
 ## Rendu
 
 - `/thermopompe/[slug]` : `dynamicParams = true`, `revalidate = 604800`. Pré-rendu : 53 villes historiques et 81 municipalités de 8 000 habitants et plus (`PRERENDER_MIN_POP`) ; les 890 autres sont rendues à la première visite puis servies du cache. Un slug sans page renvoie une 404.

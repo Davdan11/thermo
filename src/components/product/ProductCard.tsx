@@ -3,6 +3,8 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
 import { brandLogoPath } from "@/lib/data/brand-logos";
+import { warrantyShortLabel } from "@/lib/data/warranty";
+import { ChauffeJusquaVedette } from "./ChauffeJusquaVedette";
 
 
 
@@ -19,18 +21,8 @@ export function ProductCard({
 }) {
   const { model, brand, configuration, isColdClimate } = product;
 
-  // Warranties should be passed down or accessed safely without importing registry on client
-  const warranties = (product as { warranties?: Array<{ type: string; durationYears?: number }> }).warranties ?? [];
-  const partsWarranty = warranties.find((w) => w.type === "parts")?.durationYears;
-  const compWarranty = warranties.find((w) => w.type === "compressor")?.durationYears;
-  
-  let warrantyLabel = "";
-  if (partsWarranty && compWarranty) {
-     if (partsWarranty === compWarranty) warrantyLabel = `Garantie ${partsWarranty} ans`;
-     else warrantyLabel = `${partsWarranty} ans (pièces) / ${compWarranty} ans (comp.)`;
-  } else if (partsWarranty) {
-     warrantyLabel = `Garantie ${partsWarranty} ans`;
-  }
+  // Garantie : la durée du document du fabricant, résolue au serveur. Sans document, aucun chiffre.
+  const warrantyLabel = warrantyShortLabel(product.warranty);
 
   // --- LogisVert subsidy lookup ---
   const logisVertDollars: number | null = (product as { logisVertDollars?: number }).logisVertDollars || null;
@@ -57,9 +49,9 @@ export function ProductCard({
             className="object-contain w-full h-full p-5 transition-transform duration-500 group-hover:scale-[1.03]"
           />
         ) : logo ? (
-          <div className="flex flex-col items-center gap-3 px-6">
+          /* Pas de photo du fabricant : son logo seul, sans promesse de photo ni appareil d'une autre marque. */
+          <div className="flex flex-col items-center px-6">
             <Image src={logo} alt={`Logo ${brand.name}`} width={180} height={64} className="object-contain w-auto h-auto max-w-[160px] max-h-[52px] opacity-90" />
-            <span className="text-[11px] tracking-wide text-[#9ca3af]">Photo officielle à venir</span>
           </div>
         ) : (
           <span className="text-sm text-[#9ca3af]">{brand.name}</span>
@@ -98,6 +90,9 @@ export function ProductCard({
           {product.refrigerant ? ` · ${product.refrigerant}` : ""}
         </p>
 
+        {/* L’information vedette, juste sous le nom : jusqu’à quel froid le modèle chauffe. */}
+        <ChauffeJusquaVedette minTempC={product.minHeatingTempC} coldClimate={isColdClimate} taille="compact" className="mb-4" />
+
         {/* ---- Données ---- */}
         <div className="flex flex-col mt-auto w-full">
           {(configuration?.hspf2 != null || model.hspf2Min != null) && (
@@ -113,17 +108,9 @@ export function ProductCard({
             </div>
           )}
           <div className="flex items-center justify-between py-3 border-t border-[#f0ebe4]">
-            <span className="text-[14px] text-[#6B7280]">Chauffage jusqu&apos;à</span>
-            <span className="text-[14.5px] font-semibold text-[#172126] tabular-nums">
-              {model.minimumOperatingTemperatureC != null
-                ? `${model.minimumOperatingTemperatureC}°C`
-                : (isColdClimate ? "-25°C" : "-15°C")}
-            </span>
-          </div>
-          <div className="flex items-center justify-between py-3 border-t border-[#f0ebe4]">
             <span className="text-[14px] text-[#6B7280]">Garantie</span>
-            <span className="text-[14.5px] font-semibold text-[#172126]">
-              {warrantyLabel || "10 ans (pièces et comp.)"}
+            <span className="text-[14.5px] font-semibold" style={{ color: product.warranty ? "#172126" : "#6B7280" }}>
+              {warrantyLabel}
             </span>
           </div>
           {logisVertDollars != null && logisVertDollars > 0 && (

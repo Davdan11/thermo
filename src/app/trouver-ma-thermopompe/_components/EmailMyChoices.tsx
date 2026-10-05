@@ -8,6 +8,8 @@ import { RELANCES_CONSENT_TEXT } from "@/lib/relances/consent";
 import { readAttribution } from "@/lib/attribution/client";
 import { useReduced } from "@/components/heroes-v2/outils/motion";
 import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/consentements/ConsentCopy"; // Conformité C2
+import { Honeypot } from "@/components/forms/Honeypot";
+import { OMBRE, R } from "./palette";
 
 /* « Envoyez-moi mes trois choix » : le visiteur reçoit ses recommandations par
    courriel (lead : Pipedrive, alerte à l'équipe). Le code de partage vient de
@@ -16,10 +18,10 @@ import { ConsentCopy, consentAnswers, useConsentTexts } from "@/components/conse
    (J+2, J+7), désabonnement en un clic. */
 
 const K = {
-  cream: "#F4EFE7",
-  mute: "rgba(244,239,231,0.66)",
-  faint: "rgba(244,239,231,0.42)",
-  line: "rgba(244,239,231,0.16)",
+  cream: R.ink,
+  mute: R.mute,
+  faint: R.faint,
+  line: R.line,
   orange: "#E54B17",
   green: "#5CCB8C",
 };
@@ -44,7 +46,7 @@ function currentShareCode(): string | null {
 }
 
 const input =
-  "h-[54px] w-full rounded-full border border-[rgba(244,239,231,0.18)] bg-[rgba(244,239,231,0.05)] px-5 text-[15px] text-[#F4EFE7] transition-colors placeholder:text-[rgba(244,239,231,0.4)] hover:border-[rgba(244,239,231,0.35)] focus-visible:border-[rgba(244,239,231,0.6)] focus-visible:shadow-[0_0_0_4px_rgba(229,75,23,0.22)]";
+  "h-[54px] w-full rounded-full border border-[rgba(12,24,33,0.16)] bg-[#F8F5F0] px-5 text-[15px] text-[#0C1821] transition-colors placeholder:text-[rgba(12,24,33,0.45)] hover:border-[rgba(12,24,33,0.32)] focus-visible:border-[#E54B17] focus-visible:shadow-[0_0_0_4px_rgba(229,75,23,0.16)]";
 
 export function EmailMyChoices({ topLabel }: { topLabel: string }) {
   const [v, setV] = useState({ firstName: "", email: "", phone: "", consent: false, followUps: false, website: "" });
@@ -102,7 +104,7 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
   }
 
   return (
-    <section aria-labelledby="tm-courriel" className="mx-auto mt-16 max-w-[1320px] overflow-hidden rounded-[28px] lg:mt-24" style={{ border: `1px solid ${K.line}`, color: K.cream, background: "rgba(244,239,231,0.03)" }}>
+    <section aria-labelledby="tm-courriel" className="mx-auto mt-16 max-w-[1320px] overflow-hidden rounded-[28px] lg:mt-24" style={{ border: `1px solid ${K.line}`, color: K.cream, background: R.card, boxShadow: OMBRE }}>
       <div className="grid gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:px-14 lg:py-14">
         <div>
           <p className="flex items-center gap-3 text-[12px] font-medium uppercase" style={{ letterSpacing: "0.2em", color: K.mute, margin: 0 }}>
@@ -114,7 +116,7 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
           </h2>
           <ul className="mt-8 grid gap-3 text-[15px]" style={{ listStyle: "none", padding: 0, margin: "32px 0 0", color: K.mute }}>
             <li>— {topLabel} et vos deux autres choix, avec leurs chiffres par grand froid.</li>
-            <li>— Le montant LogisVert officiel et un prix approximatif installé pour chacun.</li>
+            <li>— Votre configuration, le montant LogisVert officiel de chacun et un ordre de grandeur installé.</li>
             <li>— Un lien qui rouvre ces recommandations, même sur un autre appareil.</li>
           </ul>
         </div>
@@ -152,7 +154,7 @@ export function EmailMyChoices({ topLabel }: { topLabel: string }) {
                   <input className={input} style={{ outline: "none" }} type="email" value={v.email} onChange={update("email")} autoComplete="email" required maxLength={160} />
                 </label>
                 {/* Pot de miel : invisible pour les humains. */}
-                <input tabIndex={-1} aria-hidden="true" autoComplete="off" value={v.website} onChange={update("website")} className="absolute left-[-9999px] h-px w-px opacity-0" />
+                <Honeypot value={v.website} onChange={update("website")} />
                 <label className="mt-2 flex items-start gap-3 text-[13px] leading-relaxed" style={{ color: K.mute }}>
                   <input type="checkbox" checked={v.consent} onChange={update("consent")} className="mt-1 h-4 w-4 shrink-0 accent-[#E54B17]" />
                   <span>

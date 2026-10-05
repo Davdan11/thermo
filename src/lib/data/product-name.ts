@@ -91,6 +91,31 @@ export function productNames(p: ProductNameInput): ProductNames {
   return { series, capacity, short, full, withNumber: short === p.modelNumber ? full : `${full} (${p.modelNumber})` };
 }
 
+const slugPart = (s: string) =>
+  s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+/** Fin de l'adresse d'une fiche : le numéro de modèle (« ab092mcerb »), toujours présent. */
+export function modelNumberSlug(modelNumber: string): string {
+  return slugPart(modelNumber);
+}
+
+/**
+ * Adresse d'une fiche, telle qu'on la cherche : « haier-tempo-9000-btu-ab092mcerb ». Marque, nom
+ * commercial (jamais un simple code de série comme « DM » ou « A »), capacité, puis le numéro :
+ * deux fiches de la même série et de la même capacité n'ont jamais la même adresse, et les
+ * recherches par numéro trouvent la page.
+ */
+export function productSlug(p: ProductNameInput & { brandSlug: string }): string {
+  const n = productNames(p);
+  const num = modelNumberSlug(p.modelNumber);
+  const documented = documentedCommercialName(p.brand, p.modelNumber);
+  let serie = n.series && (n.series === documented || !isSeriesCode(n.series)) ? slugPart(n.series) : "";
+  if (serie.startsWith(`${p.brandSlug}-`)) serie = serie.slice(p.brandSlug.length + 1);
+  if (serie === p.brandSlug || serie === num || num.startsWith(`${serie}-`)) serie = "";
+  const capacity = n.capacity ? `${Math.round(p.capacityBtu! / 1000)}000-btu` : "";
+  return [p.brandSlug, serie, capacity, num].filter(Boolean).join("-");
+}
+
 /**
  * Titres candidats pour fitTitle, du plus parlant au plus court. Tous contiennent le numéro de modèle :
  * deux fiches de la même série et de la même capacité n'ont jamais le même titre.

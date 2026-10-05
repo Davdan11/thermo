@@ -1,10 +1,11 @@
 /* ==================================================================
    ThermoMatch v2 — Calcul de charge
 
-   Estimation préliminaire de la charge de chauffage, uniforme pour tout
-   le Québec. La localisation ne change pas la machine recommandée :
-   partout au Québec on dimensionne pour un hiver rigoureux, et le calcul
-   final se fait sur place selon la norme CSA F280.
+   Estimation préliminaire de la charge de chauffage à -15 °C, point de
+   mesure commun des capacités certifiées, uniforme pour tout le Québec.
+   Le froid de référence de la région sert ensuite à estimer la relève
+   des jours les plus froids (architecture.ts) ; le calcul final se fait
+   sur place selon la norme CSA F280.
 
    Base : 15 BTU/h par pi² pour une maison unifamiliale des années
    1981-2000, isolation standard, fenestration normale. Les facteurs

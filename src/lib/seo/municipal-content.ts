@@ -11,14 +11,22 @@
    buildMunicipalPage() est pur (données en entrée, textes en sortie) :
    la page le rend tel quel, et scripts/villes/check-unicite.ts s'en sert
    pour mesurer la ressemblance entre pages voisines (pageVisibleText).
+
+   Les repères locaux (housingRows, periodsBlock, neighbourStationRow,
+   neighbourSummary, neighbourTerritories, densityOf) servent aussi au
+   gabarit des 53 villes historiques : mêmes données, mêmes phrases, des
+   chiffres différents. Ce sont eux qui distinguent deux pages voisines
+   qui partagent la même station de normales.
    ================================================================== */
 import { resolvePostalCode } from "@/lib/data/geography/postal-zones";
 import { clampDescription, fitTitle } from "./index";
 import { fmtInt, fmtTemp, referenceHdd } from "./cities-data";
+import { aNom, deNom } from "./cities-text";
 import {
   PERIOD_LABELS,
   aggregate,
   displayName,
+  getDataset,
   getGroup,
   getRegion,
   getStation,
@@ -49,6 +57,8 @@ export interface CatalogueFacts {
 
 export const RANKING_BY_TIER: Record<ColdTier, RankingSlug> = { "tres-froid": "grand-froid", froid: "grand-froid", modere: "efficacite-hspf2" };
 export const RANKING_LIMIT = 3;
+/** Voisines montrées dans le tableau comparatif : assez pour situer la municipalité sans noyer la page. */
+export const NEIGHBOUR_LIMIT = 6;
 
 /* ---------------- Formats ---------------- */
 
@@ -57,7 +67,7 @@ export const fmtPct = (n: number) => `${fr1(n)} %`;
 export const fmtKm = (n: number) => `${n.toLocaleString("fr-CA", { maximumFractionDigits: 1 })} km`;
 const fmtGap = (n: number) => `${fr1(Math.abs(n))} °C`;
 const signPct = (n: number) => `${n >= 0 ? "+" : "−"}${Math.abs(n)} %`;
-const ordinal = (n: number) => (n === 1 ? "1re" : `${n}e`);
+const ordinal = (n: number) => (n === 1 ? "1re" : `${n.toLocaleString("fr-CA")}e`);
 const has = (n: number | null | undefined): n is number => n !== null && n !== undefined;
 
 /* ---------------- Règles ---------------- */
@@ -106,6 +116,207 @@ function versus(g: MuniGroup | null, gv: number | null, qv: number | null): stri
   return parts.join(", ");
 }
 
+/** Complément d'une part publiée (100 − x), arrondi comme elle. */
+const rest = (n: number) => Math.round((100 - n) * 10) / 10;
+/** Superficie : une décimale sous 100 km², sinon au km² près. */
+const fmtArea = (n: number) => `${n.toLocaleString("fr-CA", { maximumFractionDigits: n < 100 ? 1 : 0 })} km²`;
+
+/* ---------------- Repères locaux partagés par les deux gabarits ---------------- */
+
+/**
+ * Densité de population : habitants du recensement de 2021 ÷ superficie du répertoire des
+ * municipalités (km²). Null si l'une des deux valeurs manque.
+ */
+export function densityOf(m: Municipality): number | null {
+  const pop = m.census?.population2021;
+  const a = m.areaKm2;
+  return has(pop) && has(a) && a > 0 ? Math.round((pop / a) * 10) / 10 : null;
+}
+
+/**
+ * Rangs d'une municipalité au Québec (population, densité), parmi celles dont la valeur est publiée.
+ * Recalculés quand le jeu change (développement, tests) : le classement est une lecture des données,
+ * jamais une liste écrite à la main.
+ */
+type QRank = { map: Map<string, number>; of: number };
+let qRanksMemo: { key: unknown; pop: Map<string, number>; dens: Map<string, number>; popOf: number; densOf: number; old: QRank; sd: QRank; own: QRank } | null = null;
+
+function quebecRanks() {
+  const data = getDataset();
+  if (qRanksMemo && qRanksMemo.key === data) return qRanksMemo;
+  const rank = (value: (m: Municipality) => number | null) => {
+    const list = data.municipalities.map((m) => ({ code: m.code, v: value(m) })).filter((x): x is { code: string; v: number } => has(x.v));
+    list.sort((a, b) => b.v - a.v || a.code.localeCompare(b.code));
+    return { map: new Map(list.map((x, i) => [x.code, i + 1])), of: list.length };
+  };
+  const pop = rank((m) => m.census?.population2021 ?? null);
+  const dens = rank((m) => densityOf(m));
+  const old = rank((m) => m.census?.builtTo1980Pct ?? null);
+  const sd = rank((m) => m.census?.singleDetachedPct ?? null);
+  const own = rank((m) => m.census?.ownerPct ?? null);
+  qRanksMemo = { key: data, pop: pop.map, dens: dens.map, popOf: pop.of, densOf: dens.of, old, sd, own };
+  return qRanksMemo;
+}
+
+/**
+ * Les logements du recensement de 2021, lus pour le chauffage : âge du parc, type de construction,
+ * mode d'occupation, densité. Mêmes phrases sur les deux gabarits, parce que ce sont les mêmes
+ * données ; ce qui change d'une page à l'autre, ce sont les chiffres.
+ */
+export function housingRows(m: Municipality): Row[] {
+  const c = m.census;
+  if (!c || c.population2021 === null || c.dwellings2021 === null) return [];
+  const name = m.name;
+  // Laval, Montréal, Gatineau… sont à elles seules leur territoire : s'y comparer n'apprendrait rien
+  // (« 1re sur 1 », « 100 % des logements »). Le rang et la comparaison restent alors ceux du Québec.
+  const g0 = getGroup(m.group);
+  const members = g0 ? groupMembers(g0) : [];
+  const group = members.length > 1 ? g0 : null;
+  const gAgg = group ? aggregate(members) : null;
+  const qAgg = quebecAggregate();
+  const pop = c.population2021;
+  const dw = c.dwellings2021;
+  const pct = c.builtTo1980Pct;
+  const sd = c.singleDetachedPct ?? null;
+  const own = c.ownerPct ?? null;
+  const dens = densityOf(m);
+  const rankIn = (value: (x: Municipality) => number | null | undefined) => {
+    const list = members.filter((x) => has(value(x))).sort((a, b) => (value(b) as number) - (value(a) as number));
+    const i = list.findIndex((x) => x.code === m.code);
+    return i >= 0 ? { rank: i + 1, of: list.length } : null;
+  };
+  const popRank = rankIn((x) => x.census?.population2021);
+  const oldRank = rankIn((x) => x.census?.builtTo1980Pct);
+  const qr = quebecRanks();
+  const qPop = qr.pop.get(m.code) ?? null;
+  const qDens = qr.dens.get(m.code) ?? null;
+  const shareOfGroup = group && gAgg && gAgg.dwellings > 0 ? Math.round((dw / gAgg.dwellings) * 1000) / 10 : null;
+  const rows: Row[] = [
+    {
+      label: "Logements occupés",
+      value: fmtInt(dw),
+      note: `${fmtInt(pop)} habitants${group && popRank ? ` ; ${ordinal(popRank.rank)} municipalité la plus peuplée ${ofGroup(group)} sur ${popRank.of}` : ""}${
+        shareOfGroup !== null && group ? `, soit ${fmtPct(shareOfGroup)} des logements ${ofGroup(group)}` : ""
+      }${qPop ? ` ; ${ordinal(qPop)} du Québec sur les ${fmtInt(qr.popOf)} municipalités dont la population de 2021 est publiée` : ""}.`,
+    },
+  ];
+  if (pct !== null) {
+    rows.push({
+      label: "Construits en 1980 ou avant",
+      value: fmtPct(pct),
+      note: `${has(c.builtTo1980) ? `${fmtInt(c.builtTo1980)} logements, contre ` : ""}${versus(group, gAgg?.builtTo1980Pct ?? null, qAgg.builtTo1980Pct)}${group && oldRank ? ` ; ${ordinal(oldRank.rank)} part la plus élevée sur ${oldRank.of}` : ""}. Isolation d'origine à vérifier : la charge se mesure sur place.`,
+      gauge: has(gAgg?.builtTo1980Pct) && group ? { a: pct, b: gAgg!.builtTo1980Pct as number, aLabel: name, bLabel: group.kind === "MRC" ? "MRC" : "Territoire" } : undefined,
+    });
+  } else {
+    rows.push({ label: "Période de construction", value: "Non publiée", note: "Statistique Canada ne publie pas cette répartition pour la municipalité." });
+  }
+  if (sd !== null) {
+    rows.push({
+      label: "Maisons individuelles non attenantes",
+      value: fmtPct(sd),
+      // Là où tout le parc est en maisons individuelles, il n'y a pas de « reste » à décrire.
+      note: `${has(c.singleDetached) ? `${fmtInt(c.singleDetached)} logements, contre ` : ""}${versus(group, gAgg?.singleDetachedPct ?? null, qAgg.singleDetachedPct)} (données intégrales). ${
+        rest(sd) > 0
+          ? `Les ${fmtPct(rest(sd))} restants, soit ${has(c.singleDetached) && has(c.typeTotal) ? `${fmtInt((c.typeTotal as number) - (c.singleDetached as number))} logements` : "les autres"}, sont attenants ou en immeuble : mur mitoyen, balcon ou toit partagé, d'où une pose de l'unité extérieure à négocier et, souvent, une murale ou une multizone plutôt qu'une centrale.`
+          : "Aucun logement attenant ni en immeuble : la pose de l'unité extérieure se règle sur le terrain, sans mur mitoyen ni balcon partagé."
+      }`,
+    });
+  }
+  if (own !== null) {
+    rows.push({
+      label: "Ménages propriétaires",
+      value: fmtPct(own),
+      note: `${has(c.owners) ? `${fmtInt(c.owners)} ménages, contre ` : ""}${versus(group, gAgg?.ownerPct ?? null, qAgg.ownerPct)}. ${
+        rest(own) > 0
+          ? `Les ${fmtPct(rest(own))} de ménages locataires dépendent du propriétaire de l'immeuble pour un changement de chauffage.`
+          : "Aucun ménage locataire : le remplacement du chauffage se décide chez soi."
+      }`,
+    });
+  }
+  // Où la municipalité se situe au Québec sur les trois parts qui décident du type d'installation.
+  const qOld = qr.old.map.get(m.code) ?? null;
+  const qSd = qr.sd.map.get(m.code) ?? null;
+  const qOwn = qr.own.map.get(m.code) ?? null;
+  if (qOld || qSd || qOwn) {
+    const parts = [
+      qOld ? `${ordinal(qOld)} pour la part de logements de 1980 ou avant, sur ${fmtInt(qr.old.of)}` : null,
+      qSd ? `${ordinal(qSd)} pour celle des maisons individuelles, sur ${fmtInt(qr.sd.of)}` : null,
+      qOwn ? `${ordinal(qOwn)} pour celle des ménages propriétaires, sur ${fmtInt(qr.own.of)}` : null,
+    ].filter((x): x is string => !!x);
+    rows.push({
+      label: "Dans l'ensemble du Québec",
+      value: qOld ? `${ordinal(qOld)} parc le plus ancien` : qSd ? `${ordinal(qSd)} pour les maisons individuelles` : `${ordinal(qOwn as number)} pour les ménages propriétaires`,
+      note: `${parts.join(" ; ")}. Rangs calculés sur les municipalités dont Statistique Canada publie la part, de la plus élevée à la plus basse.`,
+    });
+  }
+  if (dens !== null && has(m.areaKm2)) {
+    rows.push({
+      label: "Densité",
+      value: `${fmtInt(dens)} habitants au km²`,
+      note: `Sur ${fmtArea(m.areaKm2)} de territoire (répertoire des municipalités du Québec)${qDens ? `, ${ordinal(qDens)} densité du Québec sur ${fmtInt(qr.densOf)}` : ""}. Plus le tissu est serré, plus la pose compose avec le voisinage : dégagement autour de l'unité extérieure, distance aux fenêtres d'à côté, bruit à la limite du terrain.`,
+    });
+  }
+  return rows;
+}
+
+/** Barres de la période de construction (données-échantillon 25 %), ou null si la série n'est pas publiée. */
+export function periodsBlock(m: Municipality): MunicipalPage["periods"] {
+  const c = m.census;
+  const per = c?.periods ?? [];
+  if (!c || per.length !== PERIOD_LABELS.length || !per.every(has)) return null;
+  const total = per.reduce((a, v) => a + (v as number), 0);
+  const share = (v: number) => (total > 0 ? Math.round((v / total) * 1000) / 10 : null);
+  // Les deux bouts de la série : le bâti d'avant 1961, et celui élevé depuis 2011 sous un code du
+  // bâtiment plus exigeant. Deux nombres publiés, pas une interprétation.
+  const oldest = per[0] as number;
+  const recent = (per[6] as number) + (per[7] as number);
+  const sOld = share(oldest);
+  const sNew = share(recent);
+  return {
+    eyebrow: "Recensement 2021",
+    title: "Quand les logements ont été construits",
+    intro: `${fmtInt(c.periodTotal ?? 0)} logements occupés ${deNom(m.name)}, par période de construction. ${fmtInt(oldest)} datent de 1960 ou avant${sOld !== null ? ` (${fmtPct(sOld)})` : ""} et ${fmtInt(recent)} ont été bâtis depuis 2011${sNew !== null ? ` (${fmtPct(sNew)})` : ""} : entre les deux, l'isolation d'origine et l'étanchéité n'ont pas les mêmes exigences, et la charge de chauffage non plus.`,
+    bars: per.map((v, i) => {
+      const s = share(v as number);
+      return { label: PERIOD_LABELS[i], value: v as number, display: fmtInt(v as number), share: s !== null ? fmtPct(s) : undefined, old: i < 2 };
+    }),
+    footnote: "Données-échantillon (25 %) arrondies par Statistique Canada : le total peut différer de quelques unités du nombre de logements occupés.",
+  };
+}
+
+/**
+ * Voisine la plus proche qui relève d'une autre station : l'écart de degrés-jours entre deux relevés
+ * voisins, mesuré, dit une fois pour toutes ce que vaut une transposition d'une municipalité à l'autre.
+ */
+export function neighbourStationRow(m: Municipality): Row | null {
+  const here = getStation(m.station?.key);
+  if (!here || here.hdd18 === null) return null;
+  const found = neighboursOf(m, 8).find(({ m: n }) => {
+    const s = getStation(n.station?.key);
+    return !!s && s.key !== here.key && s.hdd18 !== null;
+  });
+  if (!found) return null;
+  const s = getStation(found.m.station?.key) as MuniStation;
+  const gap = Math.round((s.hdd18 as number) - here.hdd18);
+  return {
+    label: "Voisine rattachée à une autre station",
+    value: `${displayName(found.m)}, à ${fmtKm(found.km)}`,
+    note: `Sa ${stationLabel(s)} totalise ${fmtInt(s.hdd18 as number)} degrés-jours, ${gap === 0 ? `autant que les ${fmtInt(here.hdd18)} d'ici` : `soit ${gap > 0 ? "+" : "−"}${fmtInt(Math.abs(gap))} par rapport aux ${fmtInt(here.hdd18)} d'ici`}. Un calcul de charge ne se transpose pas d'une municipalité à l'autre sans regarder de quelle station vient le chiffre.`,
+  };
+}
+
+/** Territoires (MRC, agglomérations) dont relèvent les voisines les plus proches, sauf le sien. */
+export function neighbourTerritories(m: Municipality, limit = 6): string[] {
+  const own = m.group;
+  const seen = new Map<string, string>();
+  for (const { m: n } of neighboursOf(m, limit)) {
+    if (!n.group || n.group === own || seen.has(n.group)) continue;
+    const g = getGroup(n.group);
+    if (g) seen.set(n.group, groupTitle(g));
+  }
+  return [...seen.values()];
+}
+
 /* ---------------- Voisines (tableau comparatif) ---------------- */
 
 export const NEIGHBOUR_COLUMNS = [
@@ -147,8 +358,33 @@ function neighbourRow(n: Municipality, km: number | null, self: boolean): Neighb
 }
 
 /** Tableau « municipalité + voisines avec page » (aussi utilisé par les pages des 53 villes historiques). */
-export function neighbourTable(m: Municipality, limit = 5): NeighbourRow[] {
+export function neighbourTable(m: Municipality, limit = NEIGHBOUR_LIMIT): NeighbourRow[] {
   return [neighbourRow(m, null, true), ...neighboursOf(m, limit).map(({ m: n, km }) => neighbourRow(n, km, false))];
+}
+
+/**
+ * Ce que le tableau des voisines montre, en une phrase : l'étendue des distances, des degrés-jours et
+ * de l'âge du parc autour de la municipalité. Lecture des mêmes valeurs, rien d'ajouté.
+ */
+export function neighbourSummary(m: Municipality, limit = NEIGHBOUR_LIMIT): string {
+  const ns = neighboursOf(m, limit);
+  if (!ns.length) return "Les plus proches qui ont leur page : leur froid et leurs logements, côte à côte.";
+  // Unité sur la seule borne haute : « de 4,5 à 9,4 km », jamais « de 4,5 km à 9,4 km ».
+  const range = (xs: number[], bare: (n: number) => string, unit: (n: number) => string) =>
+    xs.length ? (Math.min(...xs) === Math.max(...xs) ? unit(xs[0]) : `${bare(Math.min(...xs))} à ${unit(Math.max(...xs))}`) : null;
+  const num = (n: number) => n.toLocaleString("fr-CA", { maximumFractionDigits: 1 });
+  const same = (xs: number[]) => xs.length > 0 && Math.min(...xs) === Math.max(...xs);
+  const kmList = ns.map((n) => n.km);
+  const hddList = ns.map((n) => getStation(n.m.station?.key)?.hdd18).filter(has);
+  const oldList = ns.map((n) => n.m.census?.builtTo1980Pct).filter(has);
+  const kms = range(kmList, num, fmtKm);
+  const hdds = range(hddList, fmtInt, fmtInt);
+  const olds = range(oldList, fr1, fmtPct);
+  const parts = [`${ns.length > 1 ? `Les ${ns.length} plus proches qui ont leur page sont de ${kms}` : `La plus proche qui a sa page est à ${kms}`}`];
+  const many = ns.length > 1;
+  if (hdds) parts.push(same(hddList) ? `${many ? "elles partagent les mêmes" : "elle compte"} ${hdds} degrés-jours` : `leurs degrés-jours vont de ${hdds}`);
+  if (olds) parts.push(same(oldList) ? `${many ? "et la même part" : "et une part"} de logements de 1980 ou avant, ${olds}` : `leur part de logements de 1980 ou avant, de ${olds}`);
+  return `${parts.join(" ; ")}. Le froid et les logements, côte à côte.`;
 }
 
 /* ---------------- Bandeau MRC ---------------- */
@@ -165,10 +401,17 @@ export function placeBlock(m: Municipality, agg?: Aggregate): PlaceBlock | null 
   const group = getGroup(m.group);
   if (!group) return null;
   const a = agg ?? aggregate(groupMembers(group));
+  // Les voisines immédiates débordent souvent du territoire : le dire situe la municipalité mieux qu'une carte.
+  const others = neighbourTerritories(m);
+  const around = others.length ? ` Les voisines les plus proches ${deNom(m.name)} relèvent ${others.length > 1 ? "d'autres territoires" : "d'un autre territoire"} : ${others.join(", ")}.` : "";
   return {
     eyebrow: getRegion(m.region)?.name ?? "Québec",
     title: groupTitle(group),
-    text: `${a.count} municipalités, ${fmtInt(a.population)} habitants en 2021 : leurs stations, leurs logements et celles qui n'ont pas de page propre.`,
+    text: `${
+      a.count > 1
+        ? `${a.count} municipalités, ${fmtInt(a.population)} habitants en 2021 : leurs stations, leurs logements et celles qui n'ont pas de page propre.`
+        : `${displayName(m)} forme à elle seule ce territoire : ${fmtInt(a.population)} habitants en 2021, une seule station de référence.`
+    }${around}`,
     href: hubHref(group),
     linkLabel: `Toutes les municipalités ${ofGroup(group)}`,
   };
@@ -192,7 +435,7 @@ export interface MunicipalPage {
   climate: { eyebrow: string; title: string; rows: Row[] };
   sizing: { eyebrow: string; title: string; rows: Row[] };
   housing: { eyebrow: string; title: string; rows: Row[] };
-  periods: { eyebrow: string; title: string; intro: string; bars: Array<{ label: string; value: number; display: string; old: boolean }>; footnote: string } | null;
+  periods: { eyebrow: string; title: string; intro: string; bars: Array<{ label: string; value: number; display: string; share?: string; old: boolean }>; footnote: string } | null;
   neighbours: { title: string; intro: string; rows: NeighbourRow[] };
   ranking: { slug: RankingSlug; title: string; intro: string };
   cta: { title: string; text: string };
@@ -222,19 +465,11 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
   const own = c.ownerPct ?? null;
   const members = group ? groupMembers(group) : [];
   const gAgg = group ? aggregate(members) : null;
-  const qAgg = quebecAggregate();
   const ref = referenceHdd();
   const hdd = s.hdd18;
   const vsMtl = hdd !== null && ref ? Math.round(((hdd - ref) / ref) * 100) : null;
   const d20 = s.daysBelowMinus20;
   const janMin = s.janMinC;
-  const rankIn = (value: (x: Municipality) => number | null | undefined) => {
-    const list = members.filter((x) => has(value(x))).sort((a, b) => (value(b) as number) - (value(a) as number));
-    const i = list.findIndex((x) => x.code === m.code);
-    return i >= 0 ? { rank: i + 1, of: list.length } : null;
-  };
-  const popRank = rankIn((x) => x.census?.population2021);
-  const oldRank = rankIn((x) => x.census?.builtTo1980Pct);
   const path = `/thermopompe/${m.slug}`;
   const hub = hubHref(group);
 
@@ -245,18 +480,19 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
       ? "Comparez les machines sur leur capacité certifiée à -15 °C."
       : gap <= 0
         ? `Les nuits de janvier sont ${fmtGap(gap)} plus froides que -15 °C : visez une machine qui garde toute sa capacité nominale à -15 °C (${fmtInt(facts.holdsFullCount)} modèles de la liste LogisVert).`
-        : `Les nuits de janvier restent ${fmtGap(gap)} au-dessus de -15 °C : la capacité certifiée à -15 °C laisse une marge la plupart des nuits.`;
+        : `Les nuits de janvier restent ${fmtGap(gap)} au-dessus de -15 °C : une machine dimensionnée sur sa capacité certifiée à -15 °C garde une marge la plupart des nuits.`;
+  // Le temps de marche de l'appoint dépend de la maison, du dimensionnement et du modèle : aucune durée promise.
   const appoint = {
-    "tres-froid": { value: "À prévoir", note: "Sous -25 °C, la capacité de toute thermopompe chute : plinthes ou fournaise en relève." },
-    froid: { value: "Utile lors des pointes", note: "Les plinthes existantes prennent le relais quelques nuits par hiver." },
-    modere: { value: "Rarement sollicité", note: "Le relais des plinthes reste exceptionnel." },
+    "tres-froid": { value: "À prévoir", note: "Sous -25 °C, la capacité des thermopompes baisse, plus ou moins selon le modèle : plinthes ou fournaise en relève, dont le temps de marche dépend de la maison et du dimensionnement." },
+    froid: { value: "Utile lors des pointes", note: "Les plinthes existantes prennent le relais lors des nuits les plus froides ; combien d'heures, cela dépend de la maison, du dimensionnement et du modèle." },
+    modere: { value: "Surtout lors des pointes", note: "Le relais des plinthes reste limité si la machine est bien dimensionnée pour la maison ; une machine trop petite les fait tourner bien plus souvent." },
   }[tier];
 
   /* ---- Héros ---- */
   const answer = [
     janMin !== null
-      ? `À ${name}, les nuits de janvier descendent en moyenne à ${fmtTemp(janMin)}${d20 !== null ? `, et ${fmtInt(d20)} jours par an passent sous -20 °C` : ""} (${st}, à ${km}).`
-      : `À ${name}, janvier affiche une moyenne de ${fmtTemp(s.janMeanC)} (${st}, à ${km}).`,
+      ? `${aNom(name, true)}, les nuits de janvier descendent en moyenne à ${fmtTemp(janMin)}${d20 !== null ? `, et ${fmtInt(d20)} jours par an passent sous -20 °C` : ""} (${st}, à ${km}).`
+      : `${aNom(name, true)}, janvier affiche une moyenne de ${fmtTemp(s.janMeanC)} (${st}, à ${km}).`,
     `Retenez la capacité certifiée à -15 °C${tier === "tres-froid" ? " et prévoyez un appoint" : ""}.`,
     pct !== null ? `${fmtPct(pct)} des ${fmtInt(dw)} logements occupés datent de 1980 ou avant.` : `${fmtInt(dw)} logements occupés en 2021.`,
   ].join(" ");
@@ -299,6 +535,8 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
     value: km,
     note: `${st} (ID ${s.id}${s.elevationM !== null ? `, ${fmtInt(s.elevationM)} m` : ""}), la plus proche qui publie des normales complètes${m.station.fallback ? " ; aucune station 1991-2020 complète à 50 km ou moins" : ""}.`,
   });
+  const otherStation = neighbourStationRow(m);
+  if (otherStation) climateRows.push(otherStation);
 
   /* ---- Capacité ---- */
   const sizingRows: Row[] = [
@@ -307,57 +545,25 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
     { label: "Subvention LogisVert", value: `Jusqu'à ${fmtInt(facts.maxLogisVert)} $`, note: "Montant officiel d'Hydro-Québec selon l'appariement exact." },
   ];
 
-  /* ---- Logements ---- */
-  const housingRows: Row[] = [
-    {
-      label: "Logements occupés",
-      value: fmtInt(dw),
-      note: `${fmtInt(pop)} habitants${group && popRank ? ` ; ${ordinal(popRank.rank)} municipalité la plus peuplée ${ofGroup(group)} sur ${popRank.of}` : ""}.`,
-    },
-  ];
-  if (pct !== null) {
-    housingRows.push({
-      label: "Construits en 1980 ou avant",
-      value: fmtPct(pct),
-      note: `${versus(group, gAgg?.builtTo1980Pct ?? null, qAgg.builtTo1980Pct)}${group && oldRank ? ` ; ${ordinal(oldRank.rank)} part la plus élevée sur ${oldRank.of}` : ""}. Isolation d'origine à vérifier : la charge se mesure sur place.`,
-      gauge: has(gAgg?.builtTo1980Pct) && group ? { a: pct, b: gAgg!.builtTo1980Pct as number, aLabel: name, bLabel: group.kind === "MRC" ? "MRC" : "Territoire" } : undefined,
-    });
-  } else {
-    housingRows.push({ label: "Période de construction", value: "Non publiée", note: "Statistique Canada ne publie pas cette répartition pour la municipalité." });
-  }
-  if (sd !== null) {
-    housingRows.push({ label: "Maisons individuelles non attenantes", value: fmtPct(sd), note: `${versus(group, gAgg?.singleDetachedPct ?? null, qAgg.singleDetachedPct)} (données intégrales).` });
-  }
-  if (own !== null) {
-    housingRows.push({ label: "Ménages propriétaires", value: fmtPct(own), note: `${versus(group, gAgg?.ownerPct ?? null, qAgg.ownerPct)}.` });
-  }
+  /* ---- Logements (mêmes repères que sur une page de ville historique) ---- */
+  const housing = housingRows(m);
 
   /* ---- Période de construction ---- */
-  const per = c.periods ?? [];
-  const periods =
-    per.length === PERIOD_LABELS.length && per.every(has)
-      ? {
-          eyebrow: "Recensement 2021",
-          title: "Quand les logements ont été construits",
-          intro: `${fmtInt(c.periodTotal ?? 0)} logements occupés de ${name}, par période de construction.`,
-          bars: per.map((v, i) => ({ label: PERIOD_LABELS[i], value: v as number, display: fmtInt(v as number), old: i < 2 })),
-          footnote: "Données-échantillon (25 %) arrondies par Statistique Canada : le total peut différer de quelques unités du nombre de logements occupés.",
-        }
-      : null;
+  const periods = periodsBlock(m);
   const topPeriod = periods ? periods.bars.reduce((a, b) => (b.value > a.value ? b : a)) : null;
 
   /* ---- Questions ---- */
   const faq: Array<{ question: string; answer: string }> = [
     {
-      question: `Quel froid faut-il prévoir à ${name}?`,
-      answer: `Selon la ${st}, à ${km} de ${name} : ${janMin !== null ? `${fmtTemp(janMin)} les nuits de janvier` : `${fmtTemp(s.janMeanC)} en janvier`}${d20 !== null ? ` et ${fmtInt(d20)} jours sous -20 °C par an` : ""}.`,
+      question: `Quel froid faut-il prévoir ${aNom(name)}?`,
+      answer: `Selon la ${st}, à ${km} ${deNom(name)} : ${janMin !== null ? `${fmtTemp(janMin)} les nuits de janvier` : `${fmtTemp(s.janMeanC)} en janvier`}${d20 !== null ? ` et ${fmtInt(d20)} jours sous -20 °C par an` : ""}.`,
     },
   ];
   if (pct !== null) {
     faq.push({
-      question: `Les maisons de ${name} sont-elles anciennes?`,
+      question: `Les maisons ${deNom(name)} sont-elles anciennes?`,
       answer: `${fmtPct(pct)} des logements occupés ont été construits en 1980 ou avant${has(gAgg?.builtTo1980Pct) && group ? `, contre ${fmtPct(gAgg!.builtTo1980Pct as number)} ${inGroup(group)}` : ""}${
-        topPeriod ? ` ; la période la plus représentée est « ${topPeriod.label} » (${topPeriod.display} logements)` : ""
+        topPeriod ? ` ; la période la plus représentée est « ${topPeriod.label} » (${fmtInt(topPeriod.value)} logements)` : ""
       }. Recensement de 2021.`,
     });
   }
@@ -380,13 +586,15 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
   const attribution = "Compilation : Thermopompes À Vendre. Valeurs publiées non modifiées ; distances, parts et rangs calculés.";
 
   /* ---- Métadonnées ---- */
-  const title = fitTitle(`Installation de thermopompe à ${shown} : climat local`, `Installation de thermopompe à ${shown}`, `Thermopompe à ${shown} : installation`, `Thermopompe à ${shown}`, ...(shown !== name ? [`Thermopompe à ${name} (${regionName})`] : []));
+  // « Thermopompe aux Cèdres », jamais « à Les Cèdres » (aNom).
+  const aShown = aNom(shown);
+  const title = fitTitle(`Installation de thermopompe ${aShown} : climat local`, `Installation de thermopompe ${aShown}`, `Thermopompe ${aShown} : installation`, `Thermopompe ${aShown}`, ...(shown !== name ? [`Thermopompe ${aNom(name)} (${regionName})`] : []));
   const jan = janMin !== null ? `nuits de janvier à ${fmtTemp(janMin)}` : `janvier à ${fmtTemp(s.janMeanC)}`;
   const descCandidates = [
-    `Installation de thermopompe à ${shown} : ${jan}${d20 !== null ? `, ${fmtInt(d20)} jours sous -20 °C` : ""} (station ${s.name})${pct !== null ? `, ${fmtPct(pct)} de logements de 1980 ou avant` : ""}. LogisVert.`,
-    `Thermopompe à ${shown} : ${jan}${d20 !== null ? `, ${fmtInt(d20)} jours sous -20 °C` : ""}${pct !== null ? `, ${fmtPct(pct)} de logements de 1980 ou avant` : ""}. Modèles climat froid et LogisVert.`,
-    `Thermopompe à ${shown} : ${jan}${hdd !== null ? `, ${fmtInt(hdd)} degrés-jours` : ""}. Modèles certifiés climat froid et subvention LogisVert d'Hydro-Québec.`,
-    `Thermopompe à ${shown} : ${jan}. Modèles certifiés climat froid et subvention LogisVert d'Hydro-Québec, données locales.`,
+    `Installation de thermopompe ${aShown} : ${jan}${d20 !== null ? `, ${fmtInt(d20)} jours sous -20 °C` : ""} (station ${s.name})${pct !== null ? `, ${fmtPct(pct)} de logements de 1980 ou avant` : ""}. LogisVert.`,
+    `Thermopompe ${aShown} : ${jan}${d20 !== null ? `, ${fmtInt(d20)} jours sous -20 °C` : ""}${pct !== null ? `, ${fmtPct(pct)} de logements de 1980 ou avant` : ""}. Modèles climat froid et LogisVert.`,
+    `Thermopompe ${aShown} : ${jan}${hdd !== null ? `, ${fmtInt(hdd)} degrés-jours` : ""}. Modèles certifiés climat froid et subvention LogisVert d'Hydro-Québec.`,
+    `Thermopompe ${aShown} : ${jan}. Modèles certifiés climat froid et subvention LogisVert d'Hydro-Québec, données locales.`,
   ].map((d) => d.replace(/\s+/g, " ").trim());
   const description = descCandidates.find((d) => d.length >= 110 && d.length <= 158) ?? descCandidates.find((d) => d.length <= 158) ?? clampDescription(descCandidates[0]);
 
@@ -404,16 +612,16 @@ export function buildMunicipalPage(m: Municipality, facts: CatalogueFacts): Muni
     breadcrumbs: [{ label: "Thermopompe par ville", href: "/thermopompe" }, ...(group && hub ? [{ label: groupTitle(group), href: hub }] : []), { label: name, href: path }],
     hero: {
       region: group ? `${regionName} · ${groupTitle(group)}` : regionName,
-      intro: `Installation d'une thermopompe à ${name} : le froid mesuré à la ${st}, à ${km}, et l'âge des ${fmtInt(dw)} logements du recensement de 2021.`,
+      intro: `Installation d'une thermopompe ${aNom(name)} : le froid mesuré à la ${st}, à ${km}, et l'âge des ${fmtInt(dw)} logements du recensement de 2021.`,
       answer,
       stats,
       source: `Normales ${s.period} d'Environnement et Changement climatique Canada, ${st}. Température de conception : table régionale du site (${design.fsa}).`,
     },
     climate: { eyebrow: `Normales ${s.period}`, title: "Le froid à couvrir", rows: climateRows },
     sizing: { eyebrow: "Ce que ça change", title: "Quelle capacité viser", rows: sizingRows },
-    housing: { eyebrow: "Recensement 2021", title: "Les logements", rows: housingRows },
+    housing: { eyebrow: "Recensement 2021", title: "Les logements", rows: housing },
     periods,
-    neighbours: { title: "Municipalités voisines", intro: "Les plus proches qui ont leur page : leur froid et leurs logements, côte à côte.", rows: neighbourTable(m, 5) },
+    neighbours: { title: "Municipalités voisines", intro: neighbourSummary(m, NEIGHBOUR_LIMIT), rows: neighbourTable(m, NEIGHBOUR_LIMIT) },
     ranking: {
       slug: RANKING_BY_TIER[tier],
       title: tier === "modere" ? "Les plus efficaces sur une saison" : "Les machines qui tiennent ce froid",
@@ -466,7 +674,7 @@ export function pageVisibleText(p: MunicipalPage, rankingText: string): string {
     p.housing.eyebrow,
     p.housing.title,
     rows(p.housing.rows),
-    p.periods ? `${p.periods.eyebrow} ${p.periods.title} ${p.periods.intro} ${p.periods.bars.map((b) => `${b.label} ${b.display}`).join(" ")} ${p.periods.footnote}` : "",
+    p.periods ? `${p.periods.eyebrow} ${p.periods.title} ${p.periods.intro} ${p.periods.bars.map((b) => `${b.label} ${b.display} ${b.share ?? ""}`).join(" ")} ${p.periods.footnote}` : "",
     p.neighbours.title,
     p.neighbours.intro,
     p.neighbours.rows.map((r) => `${r.name} ${Object.values(r.cells).join(" ")}`).join(" "),

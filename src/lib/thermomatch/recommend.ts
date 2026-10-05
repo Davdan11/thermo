@@ -4,18 +4,27 @@
    Partagé entre POST /api/thermomatch/recommend (parcours normal) et la
    page /trouver-ma-thermopompe/resultats (lien partageable) : même
    calcul, mêmes données officielles, aucun état.
+
+   Ordre : charge → architecture (architecture.ts : comment la chaleur
+   sera distribuée) → machines de cette classe seulement, calibrées pour
+   la charge qu'elles chauffent → classement.
    ================================================================== */
 import { registry } from "@/lib/data/registry";
 import { seriesDisplayName } from "@/lib/data/series-label";
 import { getLogisVertVariants } from "@/lib/subsidies/logisvert-official";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { lireMetaLogisVert } from "@/lib/subsidies/logisvert-meta";
 import { REGION_GENERALE, resolvePostalCode } from "@/lib/data/geography/postal-zones";
-import { buildCandidates, runThermoMatch, type SourceModel, type SourcePairing } from "@/lib/thermomatch";
-import { answersToRequest, type QuestionnaireAnswers } from "@/lib/thermomatch/answers";
-import { installedPriceRange } from "@/lib/prices/grille-installee";
+import { buildCandidates, estimateLoad, pairingClassOf, runThermoMatch, type SourceModel, type SourcePairing } from "@/lib/thermomatch";
+import { H5_FROM_H17_RATIO } from "@/lib/thermomatch/candidates";
+import { answersToRequest, architectureInputOf, type QuestionnaireAnswers } from "@/lib/thermomatch/answers";
+import { backupNoteFor, decideArchitecture, type ArchitectureDecision } from "@/lib/thermomatch/architecture";
+import { hypothesesOf } from "@/lib/thermomatch/hypotheses";
+import { ORDRE_DE_GRANDEUR_LABEL, architecturePriceRange, envelopeRange, type PriceRange } from "@/lib/prices/grille-installee";
 // Température minimale de chauffage : résolveur unique (catalogue, puis relevés des documents du fabricant).
 import { minHeatingTempForModel } from "@/lib/thermomatch/min-temp";
 import { estimateHeatingSavings } from "@/lib/thermomatch/savings";
+// Nombre de têtes qu'une multizone accepte : relevé dans les documents des fabricants (Hydro-Québec ne le publie pas).
+import { multizoneHeads } from "@/lib/data/multizone-heads";
 
 let eligibleModels: SourceModel[] | null = null;
 
@@ -54,32 +63,120 @@ function pairingsFor(outdoorModel: string): SourcePairing[] {
     seer2: e.seer2,
     hspf2: e.hspf2,
     cop5: e.cop5,
+    systemType: e.systemType,
   }));
 }
 
+/* Capacités à −15 °C des appariements multizone admissibles : la multizone n'est retenue que si l'une couvre la charge. */
+let multiZoneH5s: number[] | null = null;
+
+function getMultiZoneH5s(): number[] {
+  if (multiZoneH5s) return multiZoneH5s;
+  const out: number[] = [];
+  for (const m of getEligibleModels()) {
+    for (const p of pairingsFor(m.modelNumber)) {
+      if (pairingClassOf(p, m.systemType) !== "multi") continue;
+      const h5 = p.heatingBtu5F ?? p.heatingBtu17F * H5_FROM_H17_RATIO;
+      if (h5 > 0) out.push(h5);
+    }
+  }
+  multiZoneH5s = out;
+  return out;
+}
+
+/** Au moins un appariement multizone couvre la charge à −15 °C (95 % ou plus) sans sortir de la fenêtre de calibre (180 %). */
+function multiZoneFits(loadBtuH: number): boolean {
+  return getMultiZoneH5s().some((h5) => h5 >= 0.95 * loadBtuH && h5 <= 1.8 * loadBtuH);
+}
+
+const priceOut = (p: PriceRange | null) =>
+  p ? { min: p.min, max: p.max, basis: p.basis, sources: p.sources, tierLabel: p.tierLabel, matchLabel: p.matchLabel, note: p.note ?? null } : null;
+
+/** La décision telle que l'écran et le courriel la lisent : données seulement, fourchette indicative comprise. */
+function architectureOut(d: ArchitectureDecision, price: PriceRange | null, pricePerCard: boolean) {
+  const { alternative, ...rest } = d;
+  return {
+    ...rest,
+    price: priceOut(price),
+    pricePerCard,
+    priceLabel: ORDRE_DE_GRANDEUR_LABEL,
+    alternative: alternative
+      ? { note: alternative.note, decision: { ...alternative.decision, price: priceOut(architecturePriceRange(alternative.decision)), pricePerCard: false, priceLabel: ORDRE_DE_GRANDEUR_LABEL, alternative: null } }
+      : null,
+  };
+}
+
 export type Recommendation = ReturnType<typeof recommendFromAnswers>;
+export type ArchitectureView = Recommendation["summaryContext"]["architecture"];
 
 export function recommendFromAnswers(answers: QuestionnaireAnswers) {
-  const { req, floors } = answersToRequest(answers);
-
-  // Pré-calcul de la charge pour choisir le bon appariement de chaque machine.
-  const preview = runThermoMatch(req, []);
-  const candidates = buildCandidates(getEligibleModels(), { loadBtuH: preview.load.loadBtuH, pairingsFor });
-
-  const logisVertUpdatedAt = (logisVertMetadata as { updatedAt?: string }).updatedAt;
-  const output = runThermoMatch(req, candidates, { logisVertUpdatedAt });
+  const { req: baseReq, floors } = answersToRequest(answers);
+  const load = estimateLoad(baseReq);
 
   const region = resolvePostalCode(String(answers.postalCode ?? "").toUpperCase().replace(/\s+/g, ""));
+  // Froid de référence de la région (température de conception de la table des codes postaux) : seulement pour une
+  // région reconnue, jamais pour le repli général. Il ne change ni la charge à −15 °C ni le classement ; il sert à
+  // estimer la relève des jours les plus froids.
+  const designTempC = region && region.region !== REGION_GENERALE ? region.designTempC : null;
 
-  const results = output.results.map((r) => {
+  // 1. L'architecture d'abord : comment la chaleur sera distribuée, et pour quelle charge chaque machine est calibrée.
+  const decision = decideArchitecture({ ...architectureInputOf(answers, baseReq), designTempC, region: designTempC != null ? region?.region : null, multiZoneFits }, load);
+
+  // 2. Les machines de cette classe seulement.
+  const req = {
+    ...baseReq,
+    systemKind: decision.pairingClass === "central" ? ("central" as const) : ("ductless" as const),
+    zones: decision.heads,
+    pairingClass: decision.pairingClass,
+    sizingLoadBtuH: decision.sizingLoadBtuH,
+    sizingLabel: decision.sizingLabel,
+    heads: decision.heads,
+    independentUnits: decision.kind === "multi-single",
+    backupHeatAvailable: decision.backup === "fournaise" || decision.backup === "chaudiere",
+    backupLabel: decision.backup === "chaudiere" ? "chaudière" : "fournaise",
+  };
+  const candidates = buildCandidates(getEligibleModels(), { loadBtuH: decision.sizingLoadBtuH, pairingsFor, pairingClass: decision.pairingClass }).filter((c) => {
+    // Multizone : jamais une unité dont le fabricant publie moins de têtes que le plan n'en demande
+    // (la Panasonic CU-2Z18ABUC en accepte deux, pas trois). Nombre non publié : la carte le dit.
+    if (decision.pairingClass !== "multi") return true;
+    const heads = multizoneHeads(c.brand, c.outdoorModel);
+    return !heads || (heads.maxIndoorUnits >= decision.heads && (heads.minIndoorUnits ?? 1) <= decision.heads);
+  });
+
+  const logisVertUpdatedAt = (lireMetaLogisVert() as { updatedAt?: string }).updatedAt;
+  const output = runThermoMatch(req, candidates, { logisVertUpdatedAt });
+
+  // 3. Fourchette indicative : une par architecture, affichée une fois ; par carte seulement si les calibres la font varier.
+  const cardPrices = output.results.map((r) => architecturePriceRange(decision, { nominalBtu: r.candidate.nominalBtu }));
+  const pricePerCard = new Set(cardPrices.map((p) => (p ? `${p.min}-${p.max}` : "—"))).size > 1;
+  const blockPrice = pricePerCard ? envelopeRange(cardPrices) : (cardPrices[0] ?? architecturePriceRange(decision));
+
+  // Ce que la thermopompe chauffe : toute la maison, sauf une murale pour l'espace principal.
+  const coveredLoad = decision.kind === "single-zone" ? decision.sizingLoadBtuH : load.loadBtuH;
+  const partial = decision.kind === "single-zone" && decision.levels > 1;
+  const units = decision.kind === "multi-single" ? decision.heads : 1;
+
+  const results = output.results.map((r, i) => {
     const c = r.candidate;
     const minTemp = minHeatingTempForModel(c.id);
+    const heads = decision.pairingClass === "multi" ? multizoneHeads(c.brand, c.outdoorModel) : null;
     return {
       rank: r.rank,
       badge: r.badge,
       score: r.score,
       breakdown: r.breakdown,
       fitRatio: r.fitRatio,
+      /** Égalité avec la voisine : pastille « Ex æquo » et départage en clair. */
+      tie: r.tie ?? null,
+      /** Type d'installation affiché sur la carte : « Centrale gainable », « Multizone, 3 têtes », « Murale × 3 ». */
+      installLabel: decision.label,
+      /** Part de la charge couverte à −15 °C (murales indépendantes : × N unités). */
+      coverage: {
+        ratio: Math.round(((c.h5Btu * units) / coveredLoad) * 100) / 100,
+        label: partial ? "Espace principal couvert à −15 °C" : "Votre maison couverte à −15 °C",
+      },
+      /** Relève nécessaire à la température de calcul de la région. */
+      backupNote: backupNoteFor(decision, c.h5Btu, minTemp?.valueC ?? null),
       product: {
         id: c.id,
         brand: c.brand,
@@ -87,7 +184,12 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
         outdoorModel: c.outdoorModel,
         indoorModel: c.indoorModel ?? null,
         ahri: c.ahri ?? null,
+        /** Têtes acceptées par cette unité multizone, d'après le document du fabricant ; null = non publié. */
+        maxIndoorUnits: heads?.maxIndoorUnits ?? null,
+        minIndoorUnits: heads?.minIndoorUnits ?? null,
+        headsSource: heads ? { sourceType: heads.sourceType, sourceFile: heads.sourceFile } : null,
         systemType: c.systemKind,
+        installKind: decision.kind,
         coldClimate: c.coldClimate,
         nominalBtu: c.nominalBtu,
         heatingCapacity5FBtuH: { min: c.h5Btu, max: c.h5Btu },
@@ -109,47 +211,38 @@ export function recommendFromAnswers(answers: QuestionnaireAnswers) {
       },
       subsidyEstimate: c.logisVertDollars,
       subsidyIsOfficial: true,
-      // Fourchette installée du marché québécois (grille de la page /prix) pour ce type, ce calibre et cette gamme, avant subvention.
-      priceRange: (() => {
-        const range = installedPriceRange({
-          systemType: registry.modelById.get(c.id)?.systemType ?? (c.systemKind === "central" ? "central-ducted" : "wall-single"),
-          nominalBtu: c.nominalBtu,
-          zones: req.zones,
-          brandTier: c.tier,
-        });
-        return range ? { min: range.min, max: range.max, basis: range.basis, sources: range.sources, tierLabel: range.tierLabel, matchLabel: range.matchLabel } : null;
-      })(),
+      // Ordre de grandeur installé (grille de la page /prix) : seulement quand il varie d'une carte à l'autre ;
+      // sinon il est affiché une fois, dans le bloc de l'architecture (summaryContext.architecture.price).
+      priceRange: pricePerCard ? priceOut(cardPrices[i]) : null,
       reasons: r.reasons,
       clientReasons: r.reasons,
       warnings: r.warnings,
-      architectureNote:
-        req.zones > 1
-          ? `Configuration ${req.zones} zones suggérée pour ${floors} étage${floors > 1 ? "s" : ""} : une unité intérieure par niveau. La répartition exacte est confirmée lors de la visite.`
-          : null,
     };
   });
 
   return {
     results,
     summaryContext: {
-      estimatedLoadBtu: output.load.loadBtuH,
-      targetBtu: output.load.loadBtuH,
-      uncertaintyPct: output.load.uncertaintyPct,
-      loadFactors: output.load.factors,
+      estimatedLoadBtu: load.loadBtuH,
+      targetBtu: decision.sizingLoadBtuH,
+      uncertaintyPct: load.uncertaintyPct,
+      loadFactors: load.factors,
       floors,
-      requestedZones: req.zones,
-      isMultiZone: req.zones > 1,
+      requestedZones: decision.heads,
+      isMultiZone: decision.heads > 1,
       heatedAreaFt2: req.heatedAreaFt2,
       systemKind: req.systemKind,
       region: region?.region ?? null,
       climateZone: region?.region ?? null,
-      // Froid de référence de la région (température de conception de la table des codes postaux), pour le repère
-      // « jours les plus froids » des résultats : seulement pour une région reconnue, jamais pour le repli général.
-      // La charge ne s'en sert pas (elle est uniforme pour tout le Québec).
-      designTempC: region && region.region !== REGION_GENERALE ? region.designTempC : null,
+      // Repère « jours les plus froids » du thermomètre et relève de l'architecture.
+      designTempC,
+      /** Comment la chaleur sera distribuée (architecture.ts), avec l'ordre de grandeur installé, affiché une fois. */
+      architecture: architectureOut(decision, blockPrice, pricePerCard),
+      /** Ce qui a été supposé faute de réponse : dit sur la fiche, levé par l'affinage (hypotheses.ts). */
+      hypotheses: hypothesesOf(answers),
       logisVertUpdatedAt: logisVertUpdatedAt ?? null,
-      // Économies de chauffage estimées : maisons aux plinthes seulement (voir savings.ts).
-      savings: estimateHeatingSavings({ postalCode: answers.postalCode, currentSystem: answers.currentSystem, loadBtuH: output.load.loadBtuH }),
+      // Économies de chauffage estimées : maisons aux plinthes seulement (voir savings.ts), sur la part que la thermopompe chauffe.
+      savings: estimateHeatingSavings({ postalCode: answers.postalCode, currentSystem: answers.currentSystem, loadBtuH: coveredLoad }),
       notices: output.warnings,
       weights: output.weights,
       candidatesEvaluated: output.diagnostics.afterSystemKind,

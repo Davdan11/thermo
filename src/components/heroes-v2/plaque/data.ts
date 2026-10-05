@@ -77,7 +77,7 @@ export function buildPlaque(i: PlaqueInput): PlaqueData {
     certifiedNote: hasRange ? `Selon les fiches ENERGY STAR de ${fr(i.certified)} machines` : "Valeur non publiée pour cette classe",
     ticks,
     fields: [
-      { label: "Modèles", value: fr(i.models) },
+      { label: "Machines distinctes", value: fr(i.models) },
       { label: "Marques", value: fr(i.brands) },
       { label: "Certifiées grand froid", value: fr(i.cold) },
       { label: "Murales / centrales", value: `${fr(i.walls)} / ${fr(i.centrals)}` },

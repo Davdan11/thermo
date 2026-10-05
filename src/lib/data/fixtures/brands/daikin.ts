@@ -182,10 +182,8 @@ export const daikinDataset: BrandDataset = {
     { id: "cert-daikin-atmo-12k-cc",   type: "cold_climate", configurationId: "config-daikin-atmo-12k",   coldClimate: true, status: "active", territory: "CA", sourceId: "src-daikin-specs", verifiedAt: null },
   ],
 
-  warranties: [
-    { id: "warranty-daikin-parts",      modelId: "model-daikin-aurora-18k", type: "parts",      durationYears: 12, requiresRegistration: true, provider: "manufacturer", territory: "CA", conditions: "Enregistrement requis dans les 90 jours.", confidence: MC, sourceId: "src-daikin-specs", verifiedAt: null },
-    { id: "warranty-daikin-compressor", modelId: "model-daikin-aurora-18k", type: "compressor", durationYears: 12, requiresRegistration: true, provider: "manufacturer", territory: "CA", conditions: "Enregistrement requis. Sans enregistrement : 5 ans.", confidence: MC, sourceId: "src-daikin-specs", verifiedAt: null },
-  ],
+  // Les garanties affichées viennent des relevés de certificats (src/lib/data/warranties-sourced.json).
+  warranties: [],
 
   priceObservations: [],
   editorial: [],

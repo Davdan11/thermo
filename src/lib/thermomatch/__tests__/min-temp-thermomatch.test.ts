@@ -66,8 +66,9 @@ describe("ThermoMatch : même température minimale qu'avant le résolveur uniqu
       expect(rec.results.length).toBeGreaterThan(0);
       for (const r of rec.results) {
         expect(r.product.minOperatingTempC, r.product.id).toBe(ancienneRegle(r.product.id));
-        // La table ne contient encore que des sources officielles.
-        expect(r.product.minOperatingTempSource).toBe(r.product.minOperatingTempC === null ? null : "officiel");
+        // Une source dès qu'une valeur est connue : officielle, ou fiche du fabricant reproduite par un distributeur.
+        if (r.product.minOperatingTempC === null) expect(r.product.minOperatingTempSource).toBeNull();
+        else expect(["officiel", "secondaire"]).toContain(r.product.minOperatingTempSource);
         if (r.product.minOperatingTempC !== null) connues++;
       }
     }
@@ -75,7 +76,7 @@ describe("ThermoMatch : même température minimale qu'avant le résolveur uniqu
     expect(connues).toBeGreaterThan(0);
   });
 
-  it("la fiche produit donne la même valeur que ThermoMatch", () => {
+  it("la fiche produit donne la même valeur que ThermoMatch", { timeout: 180_000 }, () => {
     const nbConfigs = new Map<string, number>();
     for (const c of registry.configurations) nbConfigs.set(c.modelId, (nbConfigs.get(c.modelId) ?? 0) + 1);
     let comparees = 0;
@@ -89,7 +90,7 @@ describe("ThermoMatch : même température minimale qu'avant le résolveur uniqu
     }
     expect(comparees).toBeGreaterThan(100);
     // Une fiche complète par modèle dont la température est connue : la durée croît avec la couverture.
-  }, 60_000);
+  });
 });
 
 describe("Courriel ThermoMatch : par grand froid", () => {

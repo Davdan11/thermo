@@ -12,6 +12,7 @@ import { MT_FROST, ThemedModelTable } from "@/components/sections-v2/contenu/The
 import { ThemedFaq } from "@/components/sections-v2/contenu/ThemedFaq";
 import { JsonLd } from "@/components/seo/SeoBlocks";
 import { getBreadcrumbSchema, getServiceSchema, SITE_URL } from "@/lib/seo";
+import { aNom, deNom } from "@/lib/seo/cities-text";
 import { NEIGHBOUR_COLUMNS, type MunicipalPage } from "@/lib/seo/municipal-content";
 import { rankingFor } from "@/lib/seo/municipal-catalogue";
 import { municipalDataDate } from "@/lib/seo/municipalites";
@@ -24,8 +25,8 @@ export function MunicipalityView({ p }: { p: MunicipalPage }) {
   const jsonLd = [
     getBreadcrumbSchema([{ name: "Accueil", url: "/" }, ...p.breadcrumbs.map((b) => ({ name: b.label, url: b.href }))]),
     getServiceSchema({
-      name: `Comparaison et sélection de thermopompes à ${p.name}`,
-      description: `Comparaison neutre des thermopompes vendues au Québec, avec données certifiées, montants LogisVert et normales climatiques de la station ${s.name}, pour les résidents de ${p.name}.`,
+      name: `Comparaison et sélection de thermopompes ${aNom(p.name)}`,
+      description: `Comparaison neutre des thermopompes vendues au Québec, avec données certifiées, montants LogisVert et normales climatiques de la station ${s.name}, pour les résidents ${deNom(p.name)}.`,
       serviceType: "Sélection de thermopompe",
       areaServed: `${p.name}, Québec`,
       url: `${SITE_URL}${p.path}`,

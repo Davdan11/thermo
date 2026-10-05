@@ -1,10 +1,12 @@
 /* ==================================================================
    Code de partage des résultats ThermoMatch.
 
-   Les réponses du questionnaire (une douzaine de clés courtes) sont
+   Les réponses du questionnaire (une vingtaine de clés courtes) sont
    sérialisées en base64url dans l'URL /trouver-ma-thermopompe/resultats?r=…
    Le serveur recalcule les recommandations à partir de ces réponses :
    rien n'est stocké, le lien reste valable tant que le catalogue existe.
+   Les anciens liens (type de thermopompe choisi, sans conduits ni
+   espaces) restent lisibles : architecture.ts les traite (règle L).
    Fonctionne côté navigateur et côté serveur.
    ================================================================== */
 import type { QuestionnaireAnswers } from "./answers";
@@ -12,6 +14,7 @@ import type { QuestionnaireAnswers } from "./answers";
 const KEYS: Array<keyof QuestionnaireAnswers> = [
   "postalCode", "propertyType", "area", "floors", "currentSystem", "heatPumpType",
   "priority", "budget", "financing", "constructionPeriod", "insulation", "windowShare", "basement",
+  "ducts", "zonesWanted", "layout", "placements", "electricalPanel",
 ];
 const MAX_CODE_LENGTH = 1200;
 

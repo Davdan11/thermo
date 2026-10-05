@@ -17,12 +17,14 @@ import { CatalogueEmpty } from "@/components/product/CatalogueEmpty";
 import { CataloguePagination } from "@/components/product/CataloguePagination";
 import { CatalogueHero, type WallItem } from "@/components/product/CatalogueHero";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
+import { chiffre } from "@/lib/data/chiffres";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { registry } from "@/lib/data/registry";
 import { displayFont, serifFont } from "@/lib/fonts";
 import { MotionRoot } from "@/components/sections-v2/catalogue/motion";
 import { BrandStrip, CatalogueCta, FilterTitle, ResultCount, type StripBrand } from "@/components/sections-v2/catalogue/GallerySections";
 import { GalleryGrid } from "@/components/sections-v2/catalogue/GalleryGrid";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 /** Logo monochrome (bleu nuit) pour la bande de marques ; logo couleur sinon, null si aucun logo. */
 function monoLogo(slug: string): string | null {
   const mono = `/images/marques/mono/${slug}.png`;
@@ -47,7 +49,7 @@ function getHeroData(): { stats: { models: number; brands: number; coldClimate: 
   }
   const wall = brands.flatMap((b) => (firstByBrand.has(b.brand.id) ? [firstByBrand.get(b.brand.id)!] : [])).slice(0, 18);
   return {
-    stats: { models: getEligibleModelCount(), brands: brands.length, coldClimate: brands.reduce((sum, b) => sum + b.coldClimateCount, 0) },
+    stats: { models: chiffre("fiches"), brands: chiffre("marques"), coldClimate: chiffre("fiches-climat-froid") },
     wall,
   };
 }
@@ -269,7 +271,7 @@ export default async function ThermopompesPage({
 
         <CatalogueCta
           title="Trop de modèles ? Laissez ThermoMatch trier pour vous."
-          text="Répondez à 13 questions sur votre maison. Thermopompes À Vendre retient trois machines vraiment adaptées parmi toutes les marques, sur des données certifiées, sans parti pris."
+          text={`Répondez à ${QUESTIONS_LABEL} sur votre maison. Thermopompes À Vendre retient trois machines vraiment adaptées parmi toutes les marques, sur des données certifiées, sans parti pris.`}
         />
       </MotionRoot>
     </main>

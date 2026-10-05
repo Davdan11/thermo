@@ -6,6 +6,8 @@ import { motion, MotionConfig } from "motion/react";
 import { typo } from "@/components/content-hero/typo";
 import { CountUp, EASE, Mask, Rule, VIEW } from "./motion";
 import "./sections.css";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
+import { FROST, FROST_BG } from "./frost-palette";
 
 /* ==================================================================
    /thermopompe et /thermopompe/[ville] — la suite de « Carte des froids ».
@@ -17,15 +19,16 @@ import "./sections.css";
    - cristaux de givre qui se forment dans les angles (aucune neige qui tombe).
    ================================================================== */
 
+/* Encres et fonds : frost-palette.ts (contraste WCAG AA vérifié par test sur chaque fond de la suite). */
 export const FR = {
-  glacier: "#E4EFF5",
-  ice: "#EEF5F9",
-  navy: "#0B2540",
-  frost: "#9CC3DA",
-  steel: "#1F5F8B",
-  mute: "rgba(11,37,64,0.7)",
-  faint: "rgba(11,37,64,0.5)",
-  line: "rgba(11,37,64,0.14)",
+  glacier: FROST_BG.glacier,
+  ice: FROST_BG.ice,
+  navy: FROST.navy,
+  frost: FROST.frost,
+  steel: FROST.steel,
+  mute: FROST.mute,
+  faint: FROST.faint,
+  line: FROST.line,
 } as const;
 
 const DISPLAY = "var(--font-display), var(--font-sans), sans-serif";
@@ -630,7 +633,7 @@ export function FrostNote({ children }: { children: ReactNode }) {
 
 export function FrostCta({
   title = "Trouvez la bonne thermopompe en 2 minutes",
-  text = "Répondez à 13 questions sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
+  text = `Répondez à ${QUESTIONS_LABEL} sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.`,
 }: {
   title?: string;
   text?: string;

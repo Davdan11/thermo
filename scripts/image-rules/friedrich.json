@@ -1,0 +1,17 @@
+[
+  {
+    "brand": "friedrich",
+    "pattern": "^(FPHFR|FPHSR)",
+    "series": "/images/products/official/friedrich-floating-air-pro-officiel.webp"
+  },
+  {
+    "brand": "friedrich",
+    "pattern": "^(FSHSR09|FSHSR12)",
+    "series": "/images/products/official/friedrich-floating-air-select-09-12-officiel.webp"
+  },
+  {
+    "brand": "friedrich",
+    "pattern": "^(FSHSR18|FSHSR24)",
+    "series": "/images/products/official/friedrich-floating-air-select-18-24-officiel.webp"
+  }
+]

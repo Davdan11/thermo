@@ -93,6 +93,15 @@ export function getArea(slug: string): Area | null {
   return AREAS.find((a) => a.slug === slug) ?? null;
 }
 
+/**
+ * Secteurs où la visite sur place est offerte, en toutes lettres (« Montréal, Laval et Lanaudière »).
+ * Tiré de AREAS : la zone de service affichée sur le site suit la configuration réelle, jamais une liste recopiée.
+ */
+export function visitAreasLabel(): string {
+  const names = AREAS.filter((a) => a.visit).map((a) => a.label);
+  return names.length > 1 ? `${names.slice(0, -1).join(", ")} et ${names[names.length - 1]}` : (names[0] ?? "");
+}
+
 export function isPostalCode(value: string): boolean {
   return /^[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d$/.test(String(value || "").trim());
 }

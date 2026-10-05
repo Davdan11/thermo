@@ -1,0 +1,54 @@
+{
+ "version": 1,
+ "records": {
+  "j_jobannxa001": {
+   "installerId": "i_installa001",
+   "updatedAt": "2026-09-20T15:00:00.000Z",
+   "jobId": "j_jobannxa001",
+   "tokens": [],
+   "checklist": {},
+   "photos": [
+    {
+     "id": "f_78SOVHVO42c",
+     "step": "exterieur",
+     "at": "2026-09-20T15:00:00.000Z",
+     "takenAt": "2026-09-20T15:00:00.000Z",
+     "bytes": 4594,
+     "width": 120,
+     "height": 90,
+     "ext": "webp",
+     "sha256": "cfaa99acc8e2e3b21972b7163addc36901d4d80cd2157589aab3b87ad35e7264",
+     "by": "installateur:i_installa001",
+     "clientId": "ph-exterieur-DCvIuf"
+    }
+   ],
+   "serials": {
+    "outdoor": [],
+    "indoor": []
+   },
+   "events": [],
+   "appliedOps": [],
+   "checklistSpec": {
+    "kind": "annexe-c",
+    "source": "Entente version 3, annexe C",
+    "items": [
+     {
+      "id": "c1",
+      "label": "Premier point fictif du chantier.",
+      "naAllowed": false
+     },
+     {
+      "id": "c2",
+      "label": "Deuxième point fictif du chantier.",
+      "naAllowed": false
+     },
+     {
+      "id": "c3",
+      "label": "Troisième point fictif du chantier.",
+      "naAllowed": false
+     }
+    ]
+   }
+  }
+ }
+}

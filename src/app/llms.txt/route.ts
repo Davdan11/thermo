@@ -1,12 +1,17 @@
 import { registry } from "@/lib/data/registry";
+import { chiffre } from "@/lib/data/chiffres";
 import { SITE_URL } from "@/lib/seo";
 import { getCities } from "@/lib/seo/cities";
+import { isCityPageIndexable } from "@/lib/seo/cities-quality";
 import { getHubs, getPageMunicipalities, getRegions, groupTitle } from "@/lib/seo/municipalites";
 import { getAllGuides } from "@/lib/markdown";
 import { getCapacityClasses, RANKINGS, getAllBrandStats } from "@/lib/seo/programmatic";
-import logisVertMetadata from "@/lib/subsidies/logisvert-metadata.json";
+import { lireMetaLogisVert } from "@/lib/subsidies/logisvert-meta";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 export const dynamic = "force-static";
+/* Régénéré au plus toutes les 6 heures : suit la mise à jour de nuit des données sans reconstruction. */
+export const revalidate = 21600;
 
 /* ==================================================================
    llms.txt — carte du site pour les assistants IA (ChatGPT, Perplexity,
@@ -15,9 +20,9 @@ export const dynamic = "force-static";
    ================================================================== */
 
 export async function GET() {
-  const brands = registry.brands.filter((b) => b.activeInQuebec);
-  const activeModels = registry.models.filter((m) => m.status === "published" && m.isActive2026 && brands.some((b) => b.id === m.brandId)).length;
-  const lv = logisVertMetadata as { updatedAt?: string; count?: number };
+  const brands = registry.brands.filter((b) => b.status === "published" && b.activeInQuebec);
+  const activeModels = chiffre("fiches");
+  const lv = lireMetaLogisVert() as { updatedAt?: string; count?: number };
   const lvDate = (lv.updatedAt ?? "").slice(0, 10);
   const cities = getCities();
   const guides = getAllGuides();
@@ -33,14 +38,14 @@ export async function GET() {
     "",
     "## Faits citables",
     `- Marques vendues au Québec couvertes : ${brands.length} (${brands.map((b) => b.name).join(", ")}).`,
-    `- Modèles actifs documentés : ${activeModels.toLocaleString("fr-CA")}.`,
-    `- Liste LogisVert d'Hydro-Québec utilisée : ${lv.count ? lv.count.toLocaleString("fr-CA") + " lignes, " : ""}mise à jour du ${lvDate}.`,
+    `- Fiches au catalogue (une par unité extérieure publiée d'une marque vendue au Québec) : ${activeModels.toLocaleString("fr-CA")}. Ce que compte chaque chiffre : ${SITE_URL}/methode#chiffres.`,
+    `- Liste LogisVert d'Hydro-Québec utilisée : ${lv.count ? lv.count.toLocaleString("fr-CA") + " combinaisons certifiées (une par numéro AHRI), " : ""}mise à jour du ${lvDate}.`,
     "- Subvention LogisVert : montant officiel par jumelage exact unité extérieure + unité intérieure, affiché sur chaque fiche. Aucune règle de calcul simplifiée n'est publiée ici : le montant exact vient de la liste.",
-    "- Au Québec, la donnée qui compte est la capacité certifiée à -15 °C (et non la capacité nominale à 8 °C). Un chauffage d'appoint reste généralement nécessaire sous -25 °C.",
-    "- Le dimensionnement dépend de la maison (superficie, isolation, étages, année), pas du code postal.",
+    "- Au Québec, la donnée qui compte est la capacité certifiée à -15 °C (et non le calibre commercial inscrit sur la boîte). Un chauffage d'appoint reste généralement nécessaire sous -25 °C.",
+    "- Le dimensionnement dépend de la maison (superficie, isolation, étages, année) ; le froid de référence de la région sert à estimer la relève nécessaire les jours les plus froids.",
     "",
     "## Comment le site fonctionne",
-    `- ThermoMatch : ${SITE_URL}/trouver-ma-thermopompe — 13 questions, trois machines réellement différentes, score transparent sur 100 (méthode : ${SITE_URL}/technologie-thermomatch).`,
+    `- ThermoMatch : ${SITE_URL}/trouver-ma-thermopompe — ${QUESTIONS_LABEL}, l'architecture d'abord (centrale sur les conduits, multizone ou murales), puis trois machines réellement différentes, score transparent sur 100 (méthode : ${SITE_URL}/technologie-thermomatch).`,
     `- Demande de soumission gratuite, sans engagement : ${SITE_URL}/soumission — rappel sous un jour ouvrable, un seul installateur partenaire licencié RBQ par dossier.`,
     `- Comment ça marche, gratuité, coordonnées jamais vendues : ${SITE_URL}/comment-ca-marche et ${SITE_URL}/faq`,
     `- Prix installés au Québec par type, calibre et gamme (fourchettes publiées, méthode) : ${SITE_URL}/prix`,
@@ -70,7 +75,9 @@ export async function GET() {
     ...guides.map((g) => `- ${g.title} : ${SITE_URL}/guides/${g.slug}${g.updatedAt ? ` (mis à jour le ${String(g.updatedAt).slice(0, 10)})` : ""}`),
     "",
     "## Villes",
-    ...cities.map((c) => `- ${c.name} (${c.region}, température de conception ${c.designTempC} °C) : ${SITE_URL}/thermopompe/${c.slug}`),
+    // Seules les pages indexées (cities-quality.ts) : une page en « noindex » n'est pas une page
+    // vers laquelle renvoyer un assistant.
+    ...cities.filter((c) => isCityPageIndexable(c.slug)).map((c) => `- ${c.name} (${c.region}, température de conception ${c.designTempC} °C) : ${SITE_URL}/thermopompe/${c.slug}`),
     "",
     "## Régions et MRC",
     `- ${getPageMunicipalities().length + cities.length} municipalités ont leur propre page (normales climatiques d'ECCC, recensement 2021 de Statistique Canada) ; les autres sont nommées, avec leurs chiffres, sur la page de leur MRC. Index par région : ${SITE_URL}/thermopompe`,

@@ -1,0 +1,73 @@
+/* ==================================================================
+   Bandeau de consentement (ConsentBanner.tsx). L'affichage (display)
+   reste piloté en ligne par le script et par React.
+   Sur mobile : marges et rembourrage réduits, texte un cran plus petit,
+   hauteur plafonnée (le texte défile au besoin), et les deux boutons
+   côte à côte, de même largeur : refuser reste aussi facile qu'accepter.
+   Rien n'est retiré : même texte, mêmes choix.
+   ================================================================== */
+
+.tpv-consent {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: calc(16px + var(--mobile-bar-offset, 0px));
+  z-index: 60;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: #0c1821;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+  padding: 16px 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.tpv-consent-text {
+  margin: 0;
+  flex: 1 1 320px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+.tpv-consent-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.tpv-consent-btn {
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 639px) {
+  .tpv-consent {
+    left: 8px;
+    right: 8px;
+    bottom: calc(8px + var(--mobile-bar-offset, 0px));
+    padding: 12px 14px;
+    gap: 10px;
+    border-radius: 6px;
+    max-height: 45vh;
+    max-height: 45svh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .tpv-consent-text {
+    flex-basis: 100%;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .tpv-consent-actions {
+    width: 100%;
+  }
+  .tpv-consent-btn {
+    flex: 1 1 0;
+  }
+}

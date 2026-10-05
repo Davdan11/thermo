@@ -4,6 +4,7 @@ import React, { useState, useCallback, Fragment } from "react";
 import { useRouter } from "next/navigation";
 import { ProductCard } from "./ProductCard";
 import type { CatalogueProduct } from "@/lib/data/queries/catalogue";
+import { QUESTIONS_LABEL_MAJ } from "@/lib/thermomatch/parcours";
 
 /* ------------------------------------------------------------------
    CompareSelection — client wrapper managing compare state
@@ -84,7 +85,7 @@ export function CompareSelection({ products }: CompareSelectionProps) {
                       Trop de modèles ? ThermoMatch en retient trois pour votre maison.
                     </h3>
                     <p className="text-white/70 text-base sm:text-lg">
-                      13 questions sur votre maison, 2 minutes. Le calcul croise la capacité certifiée à -15 °C, votre superficie, votre isolation et votre zone climatique, toutes marques confondues.
+                      {QUESTIONS_LABEL_MAJ} sur votre maison, quelques minutes. Le calcul croise la capacité certifiée à -15 °C, votre superficie, votre isolation et votre zone climatique, toutes marques confondues.
                     </p>
                   </div>
                   

@@ -11,6 +11,7 @@ import { articleAccent } from "./accents";
 import type { ArticlePart, PullQuote } from "./article-split";
 import { EASE, Mask, Rule, VIEW } from "./motion";
 import "./sections.css";
+import { QUESTIONS_LABEL } from "@/lib/thermomatch/parcours";
 
 /* ==================================================================
    /guides/[slug] — la suite de l'« Ouverture d'article ».
@@ -436,7 +437,7 @@ export function ArticleCta({ accent }: { accent: string }) {
           transition={{ duration: 1, ease: EASE, delay: 0.5 }}
         >
           {typo(
-            "Répondez à 13 questions sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.",
+            `Répondez à ${QUESTIONS_LABEL} sur votre maison. Avec ThermoMatch, Thermopompes À Vendre compare toutes les marques à partir des données certifiées d'Hydro-Québec et vous propose trois machines vraiment adaptées, sans parti pris.`,
           )}
         </motion.p>
         <motion.div

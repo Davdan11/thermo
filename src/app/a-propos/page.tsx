@@ -5,6 +5,7 @@ import { AboutSections } from "@/components/sections-v2/entreprise/AboutSections
 import { GoogleReviews } from "@/components/avis/GoogleReviews";
 import { getPublishedBrandsSummary } from "@/lib/data/queries/brand-detail";
 import { getEligibleModelCount } from "@/lib/data/queries/stats";
+import { chiffre } from "@/lib/data/chiffres";
 
 export const metadata: Metadata = createMetadata({
   title: `À propos de Thermopompes À Vendre.ca`,
@@ -19,9 +20,9 @@ export default function AProposPage() {
   // Chiffres vivants du catalogue (mêmes calculs que l’accueil).
   const brandsSummary = getPublishedBrandsSummary();
   const heroStats = {
-    eligible: getEligibleModelCount(),
-    brands: brandsSummary.length,
-    coldClimate: brandsSummary.reduce((sum, b) => sum + b.coldClimateCount, 0),
+    eligible: chiffre("fiches"),
+    brands: chiffre("marques"),
+    coldClimate: chiffre("fiches-climat-froid"),
   };
   return (
     <main style={{ fontFamily: "var(--font-sans)", colorScheme: "light" }}>

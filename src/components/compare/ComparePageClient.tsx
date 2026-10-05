@@ -11,7 +11,7 @@ import { useCallback, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import type { ComparisonData, CompareProduct } from "@/lib/data/queries/comparator";
+import type { CompareClientData, CompareClientProduct } from "@/lib/data/queries/comparator";
 import type { SelectableModelData } from "@/lib/data/queries/catalogue";
 import { CompareSelector } from "./CompareSelector";
 import { AnimatePresence, MotionConfig, motion } from "motion/react";
@@ -22,9 +22,13 @@ import { D, DuelKnob, DuelTug, EASE_DUEL } from "@/components/sections-v2/catalo
    ================================================================== */
 
 interface Props {
-  data: ComparisonData;
+  /** Fiches comparées, allégées au serveur (toCompareClientData). */
+  data: CompareClientData;
   maxCompare: number;
-  selectableModels?: SelectableModelData[];
+  /** Suggestions du panneau « Ajouter un modèle » ; la recherche passe par /api/comparer/recherche. */
+  suggestions?: SelectableModelData[];
+  /** Nombre de modèles que la recherche peut trouver. */
+  totalModels?: number;
 }
 
 /* ---- Qualitative rating system ---- */
@@ -55,7 +59,7 @@ function rateNoise(dbA: number | null | undefined): Rating {
   return "Standard";
 }
 
-function rateFeatures(p: CompareProduct): Rating {
+function rateFeatures(p: CompareClientProduct): Rating {
   const cfg = p.detail.configuration;
   if (!cfg) return "À confirmer";
   let score = 0;
@@ -70,17 +74,7 @@ function rateFeatures(p: CompareProduct): Rating {
   return "Basique";
 }
 
-function rateWarranty(p: CompareProduct): Rating {
-  const compressor = p.detail.warranties.find((w) => w.type === "compressor");
-  const parts = p.detail.warranties.find((w) => w.type === "parts");
-  if (!compressor && !parts) return "Limitée";
-  const years = compressor?.durationYears ?? parts?.durationYears ?? 0;
-  if (years >= 10) return "Étendue";
-  if (years >= 5) return "Standard";
-  return "Limitée";
-}
-
-function isVerified(p: CompareProduct): boolean {
+function isVerified(p: CompareClientProduct): boolean {
   return p.detail.model.verifiedAt != null || p.detail.configuration?.verifiedAt != null;
 }
 
@@ -129,9 +123,9 @@ function InfoIcon() {
    Main Component
    ================================================================== */
 
-export function ComparePageClient({ data, maxCompare, selectableModels }: Props) {
+export function ComparePageClient({ data, maxCompare, suggestions, totalModels }: Props) {
   const router = useRouter();
-  const { products, highlights } = data;
+  const { products } = data;
   const [copied, setCopied] = useState(false);
   const [differencesOnly, setDifferencesOnly] = useState(false);
   const [showAddPanel, setShowAddPanel] = useState(false);
@@ -151,7 +145,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
 
   type RowValue = { rating: string; detail: string; color: string };
 
-  function buildColdRow(p: CompareProduct): RowValue {
+  function buildColdRow(p: CompareClientProduct): RowValue {
     // Température minimale résolue sur le serveur (catalogue, puis document du fabricant).
     const minTemp = p.detail.minHeatingTemp?.valueC ?? p.detail.model.minimumOperatingTemperatureC;
     const cc = p.detail.isColdClimate;
@@ -164,7 +158,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "Standard", detail: "Non certifié climat froid", color: "#9ca3af" };
   }
 
-  function buildEfficiencyRow(p: CompareProduct): RowValue {
+  function buildEfficiencyRow(p: CompareClientProduct): RowValue {
     const seer = p.detail.configuration?.seer2 ?? p.detail.model.seer2Max ?? p.detail.model.seer2Min;
     const hspf = p.detail.configuration?.hspf2 ?? p.detail.model.hspf2Max ?? p.detail.model.hspf2Min;
     const parts: string[] = [];
@@ -179,7 +173,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "—", detail, color: "#9ca3af" };
   }
 
-  function buildNoiseRow(p: CompareProduct): RowValue {
+  function buildNoiseRow(p: CompareClientProduct): RowValue {
     const dbA = p.detail.configuration?.noiseIndoorMinDbA ?? p.detail.configuration?.noiseOutdoorDbA;
     if (dbA != null && dbA <= 19) return { rating: "Très silencieuse", detail: `${dbA} dB(A)`, color: "#15803d" };
     if (dbA != null && dbA <= 24) return { rating: "Silencieuse", detail: `${dbA} dB(A)`, color: "#16a34a" };
@@ -187,7 +181,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "—", detail: "Non disponible", color: "#9ca3af" };
   }
 
-  function buildFeaturesRow(p: CompareProduct): RowValue {
+  function buildFeaturesRow(p: CompareClientProduct): RowValue {
     const cfg = p.detail.configuration;
     const features: string[] = [];
     if (cfg?.hasWifi) features.push("Wi-Fi");
@@ -202,24 +196,24 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     return { rating: "—", detail, color: "#9ca3af" };
   }
 
-  function buildWarrantyRow(p: CompareProduct): RowValue {
-    const compressor = p.detail.warranties.find((w) => w.type === "compressor");
-    const parts = p.detail.warranties.find((w) => w.type === "parts");
-    const labor = p.detail.warranties.find((w) => w.type === "labor");
-    const details: string[] = [];
-    if (compressor) details.push(`Compresseur ${compressor.durationYears} ans`);
-    if (parts) details.push(`Pièces ${parts.durationYears} ans`);
-    if (labor) details.push(`Main-d'œuvre ${labor.durationYears} an${labor.durationYears > 1 ? "s" : ""}`);
-    const detail = details.length > 0 ? details.join(" · ") : "Non documenté";
-    const years = compressor?.durationYears ?? parts?.durationYears ?? 0;
+  /* Garantie : une mention n'est donnée que si la durée vient d'un document du fabricant.
+     Sans document, la ligne le dit et ne vaut aucune mention. */
+  function buildWarrantyRow(p: CompareClientProduct): RowValue {
+    const w = p.detail.warranty?.record;
+    if (!w) return { rating: "Non vérifiée", detail: "Aucun document du fabricant relevé pour ce modèle", color: "#9ca3af" };
+    const details: string[] = [`Pièces ${w.partsYears} ans`];
+    if (w.compressorYears != null) details.push(`Compresseur ${w.compressorYears} ans`);
+    if (w.laborYears != null && w.laborYears > 0) details.push(`Main-d'œuvre ${w.laborYears} an${w.laborYears > 1 ? "s" : ""}`);
+    if (w.registrationRequired) details.push(w.registrationDays != null ? `Enregistrement dans les ${w.registrationDays} jours` : "Enregistrement exigé");
+    const detail = details.join(" · ");
+    const years = w.compressorYears ?? w.partsYears;
     if (years >= 12) return { rating: "Exceptionnelle", detail, color: "#15803d" };
     if (years >= 10) return { rating: "Étendue", detail, color: "#16a34a" };
     if (years >= 5) return { rating: "Standard", detail, color: "#d97706" };
-    if (years > 0) return { rating: "Limitée", detail, color: "#d97706" };
-    return { rating: "—", detail, color: "#9ca3af" };
+    return { rating: "Limitée", detail, color: "#d97706" };
   }
 
-  function buildCapacityRow(p: CompareProduct): RowValue {
+  function buildCapacityRow(p: CompareClientProduct): RowValue {
     const cool = p.detail.model.coolingCapacityMaxBtu;
     const heat5F = p.detail.model.heatingCapacity5FMaxBtu;
     const parts: string[] = [];
@@ -305,11 +299,11 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
   /* ---- Grille technique : une valeur numérique par ligne quand elle existe, pour désigner le meilleur ---- */
   type Spec = {
     label: string;
-    getter: (p: CompareProduct) => string;
-    num?: (p: CompareProduct) => number | null;
+    getter: (p: CompareClientProduct) => string;
+    num?: (p: CompareClientProduct) => number | null;
     /** false = la plus petite valeur gagne (température minimale d'opération). */
     higherIsBetter?: boolean;
-    note?: (p: CompareProduct) => string | null;
+    note?: (p: CompareClientProduct) => string | null;
     /** Ligne mise en évidence (montant LogisVert). */
     emphasis?: boolean;
     /** Ligne de prix : mention de la garantie légale de bon fonctionnement sous chaque prix affiché. */
@@ -362,11 +356,11 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       title: "Subvention LogisVert",
       specs: [
         {
-          label: "Montant officiel Hydro-Québec",
+          label: "Subvention (liste officielle d’Hydro-Québec)",
           emphasis: true,
-          getter: (p) => (p.subsidy.dollars > 0 ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $${p.subsidy.isOfficial ? "" : " (estimation)"}` : "Non admissible"),
+          getter: (p) => (p.subsidy.dollars > 0 ? `${p.subsidy.dollars.toLocaleString("fr-CA")} $` : "Absente de la liste"),
           num: (p) => (p.subsidy.dollars > 0 ? p.subsidy.dollars : null),
-          note: (p) => (p.subsidy.dollars > 0 ? `Jumelage de référence${p.subsidy.isColdClimate ? " · certifié climat froid" : ""}` : "Aucun jumelage dans la liste"),
+          note: (p) => (p.subsidy.dollars > 0 ? `Jumelage de référence${p.subsidy.isColdClimate ? " · certifié climat froid" : ""}` : "Aucun jumelage dans la liste en vigueur : aucune subvention"),
         },
       ],
     },
@@ -448,7 +442,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
     </tr>
   );
 
-  const headerCell = (p: CompareProduct, i: number) => {
+  const headerCell = (p: CompareClientProduct, i: number) => {
     const s = side(i);
     const logoPath = brandLogoPath(p.detail.brand.slug);
     const btu = p.detail.model.nominalCapacityBtu ?? p.detail.model.heatingCapacity5FMaxBtu ?? p.detail.model.coolingCapacityMaxBtu;
@@ -542,7 +536,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
       {/* ---- Toolbar ---- */}
       <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-2.5">
-          {products.length < maxCompare && selectableModels && (
+          {products.length < maxCompare && suggestions && (
             <button
               type="button"
               onClick={() => setShowAddPanel(!showAddPanel)}
@@ -592,7 +586,7 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
 
       {/* ---- Add model panel ---- */}
       <AnimatePresence initial={false}>
-        {showAddPanel && selectableModels && (
+        {showAddPanel && suggestions && (
           <motion.div
             key="add"
             className="mb-10 rounded-[28px] p-5 sm:p-8"
@@ -617,7 +611,8 @@ export function ComparePageClient({ data, maxCompare, selectableModels }: Props)
               </button>
             </div>
             <CompareSelector
-              products={selectableModels}
+              suggestions={suggestions}
+              totalModels={totalModels ?? suggestions.length}
               initialSlugs={products.map((p) => p.detail.model.slug)}
               maxCompare={maxCompare}
             />
@@ -863,10 +858,10 @@ interface VerdictItem {
   note?: string;
 }
 
-function buildVerdict(products: CompareProduct[]): VerdictItem[] {
+function buildVerdict(products: CompareClientProduct[]): VerdictItem[] {
   const items: VerdictItem[] = [];
   const fr = (n: number) => n.toLocaleString("fr-CA");
-  const name = (p: CompareProduct) => `${p.detail.brand.name} ${p.detail.model.name}`;
+  const name = (p: CompareClientProduct) => `${p.detail.brand.name} ${p.detail.model.name}`;
   const best = <T,>(vals: Array<T | null>, better: (a: T, b: T) => boolean): number | null => {
     let idx: number | null = null;
     vals.forEach((v, i) => { if (v !== null && (idx === null || better(v, vals[idx] as T))) idx = i; });
@@ -931,19 +926,23 @@ function buildVerdict(products: CompareProduct[]): VerdictItem[] {
     });
   }
 
-  // Garantie
+  // Garantie : seules les durées relevées dans un document du fabricant départagent les fiches.
   const war = products.map((p) => {
-    const c = p.detail.warranties.find((w) => w.type === "compressor")?.durationYears ?? null;
-    const pa = p.detail.warranties.find((w) => w.type === "parts")?.durationYears ?? null;
-    return c ?? pa;
+    const w = p.detail.warranty?.record;
+    return w ? w.compressorYears ?? w.partsYears : null;
   });
-  if (war.filter((v) => v !== null).length >= 2) {
+  const verifiees = war.filter((v) => v !== null).length;
+  if (verifiees >= 2) {
     const i = best(war, (a, b) => a > b)!;
     const same = war.every((v) => v === war[i]);
+    const manquantes = products.length - verifiees;
+    const reserve = manquantes > 0 ? ` ${manquantes} fiche${manquantes > 1 ? "s" : ""} sans document : garantie non vérifiée, non comparée.` : "";
     items.push({
       label: "Garantie",
       value: same ? `${war[i]} ans chacune` : `${name(products[i])} : ${war[i]} ans`,
-      note: same ? "Même durée sur le compresseur ou les pièces. La main-d'œuvre dépend de l'installateur." : `${products.map((p, j) => `${war[j] ?? "n/d"} ans (${p.detail.brand.name})`).join(" contre ")} sur le compresseur ou les pièces. La main-d'œuvre dépend de l'installateur.`,
+      note: (same
+        ? "Même durée sur le compresseur ou les pièces, d'après les documents des fabricants. La main-d'œuvre dépend de l'installateur."
+        : `${products.map((p, j) => `${war[j] ?? "non vérifiée"} ${war[j] != null ? "ans " : ""}(${p.detail.brand.name})`).join(" contre ")} sur le compresseur ou les pièces, d'après les documents des fabricants. La main-d'œuvre dépend de l'installateur.`) + reserve,
     });
   }
 

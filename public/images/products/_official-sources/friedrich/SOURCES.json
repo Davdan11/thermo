@@ -1,0 +1,41 @@
+[
+  {
+    "fichier": "friedrich-floating-air-pro-site.png",
+    "image_web": "/images/products/official/friedrich-floating-air-pro-officiel.webp",
+    "url": "https://www.friedrich.com/hubfs/Products/Floating%20Air%C2%AE%20Pro%20Single%20Zone%20Ductless%20Split%20Systems/FA%20Pro%20Single-Zone%20Outdoor%209-36K_CLEAN_2000.jpg",
+    "page": "https://www.friedrich.com/professional/products/dss-single-zone-floating-air-pro",
+    "date": "2026-09-17",
+    "familles": [
+      "FPHFR",
+      "FPHSR"
+    ],
+    "modeles": "FPHFR09A3D, FPHFR12A3A, FPHFR12A3D, FPHFR18A3A, FPHFR18A3D, FPHFR24A3A, FPHFR24A3D, FPHFR36A3D, FPHSR09A1A, FPHSR09A1A-A, FPHSR09A1C, FPHSR09A3A",
+    "note": "Photo produit « FA Pro Single-Zone Outdoor 9-36K » de la page officielle Friedrich Floating Air Pro, qui couvre les FPHFR09/12/18/24/36A3A et les FPHSR09/12/18/24/36A1A-A3A."
+  },
+  {
+    "fichier": "friedrich-floating-air-select-09-12-site.png",
+    "image_web": "/images/products/official/friedrich-floating-air-select-09-12-officiel.webp",
+    "url": "https://www.friedrich.com/hubfs/Products/Floating%20Air%C2%AE%20Select%20Single%20Zone%20Ductless%20Split%20Systems/Floating%20Air-OD%209-12_CLEAN_2000.jpg",
+    "page": "https://www.friedrich.com/professional/products/dss-single-zone-floating-air-select",
+    "date": "2026-09-17",
+    "familles": [
+      "FSHSR09",
+      "FSHSR12"
+    ],
+    "modeles": "FSHSR09B1C, FSHSR12B1C",
+    "note": "Photo produit « Floating Air-OD 9-12 » de la page officielle Friedrich Floating Air Select (unité extérieure 9 000 et 12 000 BTU)."
+  },
+  {
+    "fichier": "friedrich-floating-air-select-18-24-site.png",
+    "image_web": "/images/products/official/friedrich-floating-air-select-18-24-officiel.webp",
+    "url": "https://www.friedrich.com/hubfs/Products/Floating%20Air%C2%AE%20Select%20Single%20Zone%20Ductless%20Split%20Systems/Floating%20Air-OD%2018-24_CLEAN_2000.jpg",
+    "page": "https://www.friedrich.com/professional/products/dss-single-zone-floating-air-select",
+    "date": "2026-09-17",
+    "familles": [
+      "FSHSR18",
+      "FSHSR24"
+    ],
+    "modeles": "FSHSR18B3D, FSHSR24B3D",
+    "note": "Photo produit « Floating Air-OD 18-24 » de la page officielle Friedrich Floating Air Select (unité extérieure 18 000 et 24 000 BTU)."
+  }
+]

@@ -3,7 +3,7 @@ title: "Thermopompe au chalet : rentable ou pas, et laquelle choisir"
 description: "Occupation intermittente, hors-gel, régions froides : au chalet, la thermopompe joue un autre rôle. Quand elle est rentable et quelle machine choisir."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-11"
-updatedAt: "2026-09-11"
+updatedAt: "2026-09-17"
 coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "choisir"
 keywords: ["thermopompe chalet", "thermopompe résidence secondaire", "chauffer un chalet thermopompe", "thermopompe hors gel chalet", "thermopompe laurentides chalet"]
@@ -14,7 +14,7 @@ faq:
   - q: "Peut-on laisser une thermopompe en hors-gel tout l'hiver?"
     a: "Beaucoup de machines permettent une consigne basse, parfois appelée mode hors-gel ou maintien, autour de 8 à 10 °C selon les fabricants. Il faut vérifier que le modèle l'offre et qu'il est certifié pour la température de conception de votre région. Gardez un appoint électrique réglé un peu plus bas, au cas où la machine s'arrête par grand froid."
   - q: "Faut-il une machine climat froid au chalet?"
-    a: "Dans les Laurentides au nord, en Mauricie, au Saguenay ou en Abitibi, oui. Mont-Laurier a une température de conception de -25 °C et un record de -45 °C, Saint-Félicien -30 °C et -44,5 °C. Dans notre catalogue, 340 machines gardent 100 % de leur capacité nominale à -15 °C : c'est dans ce groupe qu'il faut chercher."
+    a: "Dans les Laurentides au nord, en Mauricie, au Saguenay ou en Abitibi, oui. Mont-Laurier a une température de conception de -25 °C et un record de -45 °C, Saint-Félicien -30 °C et -44,5 °C. Dans notre catalogue, {{chiffre:machines-maintien-100}} machines gardent à -15 °C 100 % de leur capacité cotée à 8,3 °C : c'est dans ce groupe qu'il faut chercher."
   - q: "Quelle taille pour un chalet de 800 pieds carrés?"
     a: "Cela dépend de l'isolation, souvent faible dans les chalets anciens, et de la région. Une aire ouverte de chalet des années 1970 mal isolé demande davantage qu'un condo de même surface. Le questionnaire ThermoMatch tient compte de la période de construction et de la région ; un installateur confirme le calibre sur place."
 ---
@@ -60,7 +60,7 @@ Le mode le plus utilisé au chalet est le maintien à basse température pendant
 
 ## Quelle machine : les critères
 
-**Certifiée climat froid, avec une bonne tenue à -15 °C.** Dans notre catalogue bâti sur la liste LogisVert d'Hydro-Québec, 1 750 machines distinctes sont recensées, 1 119 sont certifiées climat froid, 340 gardent 100 % de leur capacité nominale à -15 °C et 480 en gardent au moins 90 %. Pour un chalet à -25 °C ou -30 °C de conception, cherchez dans ces groupes. Le COP certifié à -15 °C va de 1,3 à 2,89 dans le catalogue, médiane 1,94 : plus il est élevé, moins le hors-gel coûte.
+**Certifiée climat froid, avec une bonne tenue à -15 °C.** Dans notre catalogue bâti sur la liste LogisVert d'Hydro-Québec, {{chiffre:machines}} machines distinctes sont recensées, {{chiffre:machines-climat-froid}} sont certifiées climat froid par ENERGY STAR, {{chiffre:machines-maintien-100}} gardent à -15 °C 100 % de leur capacité cotée à 8,3 °C et {{chiffre:machines-maintien-90}} au moins 90 %. Pour un chalet à -25 °C ou -30 °C de conception, cherchez dans ces groupes. Le COP certifié à -15 °C va de 1,3 à 2,89 dans le catalogue, médiane 1,94 : plus il est élevé, moins le hors-gel coûte.
 
 **Une murale simple zone, le plus souvent.** Les chalets sont fréquemment des aires ouvertes de taille modeste. Une murale de 9 000, 12 000 ou 18 000 BTU couvre la pièce principale ; les chambres fermées gardent leurs plinthes en appoint. Le [classement grand froid](/meilleures-thermopompes) présente les machines qui tiennent le mieux au froid.
 
@@ -70,7 +70,7 @@ Le mode le plus utilisé au chalet est le maintien à basse température pendant
 
 ## LogisVert au chalet
 
-Le programme LogisVert d'Hydro-Québec fixe un montant par jumelage certifié, quelle que soit la région. Sur la liste officielle, les machines de 12 000 BTU subventionnées reçoivent de 350 à 2 268 dollars, médiane 530 dollars ; celles de 18 000 BTU de 475 à 3 312 dollars, médiane 1 404 dollars. L'admissibilité de la résidence elle-même dépend des conditions du programme, qui évoluent : vérifiez les conditions officielles sur la page [Subventions](/subventions) et dans notre [guide complet](/guides/subvention-logisvert-guide-complet), et confirmez avec l'installateur que le jumelage proposé figure bien sur la liste.
+Le programme LogisVert d'Hydro-Québec fixe un montant par jumelage certifié, quelle que soit la région : 50 $ par 1 000 BTU/h de capacité certifiée à -8 °C pour une thermopompe certifiée ENERGY STAR, 120 $ par 1 000 BTU/h si elle est en plus certifiée climat froid. Sur la liste en vigueur, les machines de 12 000 BTU subventionnées reçoivent de {{chiffre:lv:tous:12000:min}} à {{chiffre:lv:tous:12000:max}} dollars, médiane {{chiffre:lv:tous:12000:med}} dollars ; celles de 18 000 BTU de {{chiffre:lv:tous:18000:min}} à {{chiffre:lv:tous:18000:max}} dollars, médiane {{chiffre:lv:tous:18000:med}} dollars. Deux règles à connaître avant de choisir l'appareil : la certification ENERGY STAR est obligatoire pour toute installation depuis le 26 novembre 2025, et l'unité extérieure doit afficher au moins 12 000 BTU/h de puissance nominale en climatisation, ce qui met le calibre de 9 000 BTU hors du programme. L'admissibilité de la résidence elle-même dépend des conditions du programme, qui évoluent : vérifiez les conditions officielles sur la page [Subventions](/subventions) et dans notre [guide complet](/guides/subvention-logisvert-guide-complet), et confirmez avec l'installateur que le jumelage proposé figure bien sur la liste.
 
 ## Les prix, en repères
 
