@@ -4,7 +4,7 @@ seoTitle: "Entretien d'une thermopompe : filtres, neige et dégivrage"
 description: "Ce que vous faites vous-même chaque mois, ce que l'installateur fait chaque année, et les signes qui annoncent un problème. Un entretien simple préserve la capacité, l'efficacité et la garantie."
 author: "L'équipe ThermoMatch"
 publishedAt: "2026-09-08"
-updatedAt: "2026-09-08"
+updatedAt: "2026-11-16"
 coverImage: "/images/guides/card-outdoor-unit-neutre.jpg"
 category: "entretien"
 keywords: ["entretien thermopompe", "nettoyer filtre thermopompe", "thermopompe neige hiver", "dégivrage thermopompe vapeur"]
@@ -61,6 +61,8 @@ Un technicien vérifie ce que vous ne pouvez pas voir :
 - les températures de soufflage et le fonctionnement du dégivrage.
 
 Beaucoup de garanties exigent cette visite, avec preuve. Même sans obligation, elle préserve la capacité et l'efficacité certifiées ; une machine avec une charge de réfrigérant insuffisante peut perdre une part importante de sa capacité sans panne apparente.
+
+Le lavage en profondeur d'une thermopompe murale (serpentin intérieur, turbine, bac et drain) est un service distinct de la visite de l'installateur. Dans la grande région de Montréal, [Solution Net Plus](https://solutionnetplus.ca/services/nettoyage-climatisation-murale), une entreprise du même propriétaire que ce site, le fait à domicile.
 
 ## Les signes qui annoncent un problème
 

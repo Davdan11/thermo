@@ -47,6 +47,8 @@ const NAV = [
       { href: "/calculateur-economies", label: "Calculatrice d’économies" },
       { href: "/glossaire", label: "Glossaire" },
       { href: "/faq", label: "FAQ" },
+      // Entreprise du même propriétaire (nettoyage de thermopompes murales) : lien externe, annoncé comme tel dans le guide d'entretien.
+      { href: "https://solutionnetplus.ca/services/nettoyage-climatisation-murale", label: "Solution Net Plus : nettoyage de thermopompes murales", external: true },
     ],
   },
   {
@@ -217,9 +219,15 @@ export function Footer() {
               <ul className={k === NAV.length - 1 ? "ft-list ft-list-duo" : "ft-list"}>
                 {section.links.map((link, j) => (
                   <li key={link.href} className="ft-rv" style={at(j + 1)}>
-                    <Link href={link.href} className="ft-link">
-                      <span>{link.label}</span>
-                    </Link>
+                    {"external" in link ? (
+                      <a href={link.href} target="_blank" rel="noopener" className="ft-link">
+                        <span>{link.label}</span>
+                      </a>
+                    ) : (
+                      <Link href={link.href} className="ft-link">
+                        <span>{link.label}</span>
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
